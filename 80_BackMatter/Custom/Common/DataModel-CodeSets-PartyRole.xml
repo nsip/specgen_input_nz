@@ -1304,7 +1304,6 @@
 
 
     <!-- SIF defined code sets ... -->
-
 <if intl="au">
     <CodeSet>
 		<Intro>
@@ -1625,91 +1624,6 @@
 		<Intro>
 			<p/>
 		</Intro>
-		<ID>Relationship To Student</ID>
-		<Values>
-			<Value>
-				<Code>01</Code>
-				<Text>Parent</Text>
-			</Value>
-			<Value>
-				<Code>02</Code>
-				<Text>Step-Parent</Text>
-			</Value>
-			<Value>
-				<Code>03</Code>
-				<Text>Adoptive Parent</Text>
-			</Value>
-			<Value>
-				<Code>04</Code>
-				<Text>Foster Parent</Text>
-			</Value>
-			<Value>
-				<Code>05</Code>
-				<Text>Host Family</Text>
-			</Value>
-			<Value>
-				<Code>06</Code>
-				<Text>Relative</Text>
-			</Value>
-			<Value>
-				<Code>07</Code>
-				<Text>Friend</Text>
-			</Value>
-			<Value>
-				<Code>08</Code>
-				<Text>Self</Text>
-			</Value>
-			<Value>
-				<Code>09</Code>
-				<Text>Other</Text>
-			</Value>
-			<Value>
-				<Code>10</Code>
-				<Text>Sibling</Text>
-			</Value>
-			<Value>
-				<Code>11</Code>
-				<Text>Grandparent</Text>
-			</Value>
-			<Value>
-				<Code>12</Code>
-				<Text>Aunt/Uncle</Text>
-			</Value>
-			<Value>
-				<Code>13</Code>
-				<Text>Nephew/Niece</Text>
-			</Value>
-			<Value>
-				<Code>00</Code>
-				<Text>Spouse</Text>
-			</Value>
-			<Value>
-				<Code>32</Code>
-				<Text>Duty Manager</Text>
-			</Value>
-			<Value>
-				<Code>31</Code>
-				<Text>Supervisor</Text>
-			</Value>
-			<Value>
-				<Code>30</Code>
-				<Text>Case Worker</Text>
-			</Value>
-			<Value>
-				<Code>20</Code>
-				<Text>Guardian</Text>
-			</Value>
-			<Value>
-				<Code>99</Code>
-				<Text>Not provided</Text>
-			</Value>
-			 
-		</Values>
-	</CodeSet>    <!-- Relationship to Student -->
-    <CodeSet>
-		<Intro>
-			<p/>
-		</Intro>
 		<ID>Source Code Type</ID>
 		<Values>
 			<Value>
@@ -1799,7 +1713,104 @@
 		 
 		</Values>
 	</CodeSet>    <!-- Electronic Id -->
-	<CodeSet>
+</if>
+
+    <CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Relationship To Student</ID>
+		<Values>
+			<Value>
+				<Code>00</Code>
+				<Text>Spouse</Text>
+			</Value>
+			<Value>
+				<Code>01</Code>
+				<Text>Parent</Text>
+			</Value>
+			<Value>
+				<Code>02</Code>
+				<Text>Step-Parent</Text>
+			</Value>
+<if intl="au">         <!-- Prohibited in NZ -->
+			<Value>
+				<Code>03</Code>
+				<Text>Adoptive Parent</Text>
+			</Value>
+</if>			
+			<Value>
+				<Code>04</Code>
+				<Text>Foster Parent</Text>
+			</Value>
+			<Value>
+				<Code>05</Code>
+				<Text>Host Family</Text>
+			</Value>
+			<Value>
+				<Code>06</Code>
+				<Text>Relative</Text>
+			</Value>
+			<Value>
+				<Code>07</Code>
+				<Text>Friend</Text>
+			</Value>
+			<Value>
+				<Code>08</Code>
+				<Text>Self</Text>
+			</Value>
+			<Value>
+				<Code>09</Code>
+				<Text>Other</Text>
+			</Value>
+			<Value>
+				<Code>10</Code>
+				<Text>Sibling</Text>
+			</Value>
+			<Value>
+				<Code>11</Code>
+				<Text>Grandparent</Text>
+			</Value>
+			<Value>
+				<Code>12</Code>
+				<Text>Aunt/Uncle</Text>
+			</Value>
+			<Value>
+				<Code>13</Code>
+				<Text>Nephew/Niece</Text>
+			</Value>
+			<Value>
+				<Code>20</Code>
+				<Text>Guardian</Text>
+			</Value>
+<if intl="au">			 <!-- Not used in NZ -->
+			<Value>
+				<Code>32</Code>
+				<Text>Duty Manager</Text>
+			</Value>
+			<Value>
+				<Code>31</Code>
+				<Text>Supervisor</Text>
+			</Value>
+			<Value>
+				<Code>30</Code>
+				<Text>Case Worker</Text>
+			</Value>
+</if>			
+<if intl="nz">
+			<Value>
+				<Code>50</Code>
+				<Text>Whāngai Parent</Text>
+			</Value>
+</if>
+			<Value>
+				<Code>99</Code>
+				<Text>Not provided</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Relationship to Student -->
+    <CodeSet>
 		<Intro>
 			<p/>
 		</Intro>
@@ -1810,13 +1821,14 @@
 				<Text>Also known as or alias</Text>
 			</Value>
 			<Value>
-				<Code>BTH </Code>
+				<Code>BTH</Code>
 				<Text>Name at Birth</Text>
 			</Value>
 			<Value>
 				<Code>LGL</Code>
 				<Text>Legal Name of the client as defined by the organisation which collects it (legal not defined in this standard)</Text>
 			</Value>
+<if intl="au">			
 			<Value>
 				<Code>MDN</Code>
 				<Text>Maiden Name</Text>
@@ -1829,6 +1841,7 @@
 				<Code>OTH</Code>
 				<Text>Non specific name usage type</Text>
 			</Value>
+</if>
 			<Value>
 				<Code>PRF</Code>
 				<Text>Preferred name</Text>
@@ -1837,6 +1850,7 @@
 				<Code>PRV</Code>
 				<Text>Previous name</Text>
 			</Value>
+<if intl="au">
 			<Value>
 				<Code>STG</Code>
 				<Text>Stage name</Text>
@@ -1845,10 +1859,15 @@
 				<Code>TRB</Code>
 				<Text>Tribal Name</Text>
 			</Value>
-			 
+</if>
+<if intl="nz">
+	        <Value>
+				<Code>FON</Code>
+				<Text>Foreign Official Name</Text>
+			</Value>
+</if>			
 		</Values>
 	</CodeSet>    <!-- Name Usage Type -->
-</if>
 
 	<CodeSet>
 		<Intro>
@@ -1856,7 +1875,7 @@
 		</Intro>
 		<ID>Email Type</ID>
 		<Values>
-<if intl="au">			
+<if intl="au">
 			<Value>
 				<Code>01</Code>
 				<Text>Primary</Text>
@@ -1964,4 +1983,5 @@
 </if>
 		</Values>
 	</CodeSet>    <!-- Telephone Number Type -->
+	
 </IncludeGroup>

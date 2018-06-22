@@ -13,9 +13,9 @@
 </if>
 
 	<xi:include parse="xml" href="Common/DataModel-Codesets-PartyRole.xml"/>
+	<xi:include parse="xml" href="Common/DataModel-Codesets-Enrollment.xml"/>
 
 <if intl="au">
-	<xi:include parse="xml" href="Common/DataModel-Codesets-Enrollment.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Attendance.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Wellbeing.xml"/>
 
@@ -104,6 +104,12 @@
 			<Value>
 				<Code>14</Code>
 				<Text>Year 14 and above</Text>
+				<Description>Final value permitted in <code>SchoolEnrolment.YearLevel</code></Description>
+			</Value>
+			<Value>
+				<Code>15</Code>
+				<Text>Year 14 and above</Text>
+				<Description>Final value permitted in <code>SchoolEnrolment.FundingYearLevel</code></Description>
 			</Value>
 </if>			
 			<Value>
@@ -390,11 +396,9 @@
 -->
 </Grouping>
 
-<if intl="nz">
     <Grouping code="NZCodeSets" name="NZ Code Sets">
 		<xi:include parse="xml" href="NZ/DataModel-CodeSets-NZ.xml"/>
 		<xi:include parse="xml" href="NZ/DataModel-CodeSets-Location.xml"/>
 	</Grouping>
-</if>
 
 </IncludeGroup>

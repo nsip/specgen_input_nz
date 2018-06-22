@@ -12,8 +12,8 @@
 
 	<!-- Element types for the Student SchoolEnrollment, SectionEnrollment & StudentParticipation domains -->
 
-
-	<!-- Student Enrolment -->
+<if intl="au">
+<!-- Student Enrolment -->
 <CommonElement name="PromotionInfoType" type="true" dm="true">
  <Item>
     <Element>PromotionInfoType</Element>
@@ -110,7 +110,7 @@
     <Description>
       <p>Code indicating the type of exit for this enrollment.</p>
     </Description>
-    <Type ref="CodeSets" name="AUCodeSetsExitWithdrawalTypeType"></Type>
+    <Type ref="CodeSets" name="NZCodeSetsEnrolmentExitTypeType"></Type>
   </Item>
   
   <Item>
@@ -140,68 +140,9 @@
 		<Type ref="CommonTypes" name="OtherCodeListType"/>
 	</Item>
 </CommonElement>
-<CommonElement name="StudentSubjectChoiceListType" type="true" dm="true">
-	<Item>
-		<Element>StudentSubjectChoiceListType</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>List of Student Subject Choices where available.</p>
-		</Description>
-		<List mode="List"/>
-	</Item>
-	<Item>
-		<Element>StudentSubjectChoice</Element>
-		<Characteristics>MR</Characteristics>
-		<Description>
-			<p>Subjects Students Choose</p>
-		</Description>
-		<Type ref="CommonTypes" name="StudentSubjectChoiceType"/>
-	</Item>
-</CommonElement>
-<CommonElement name="StudentSubjectChoiceType" type="true" dm="true">
-	<Item>
-		<Element>StudentSubjectChoiceType</Element>
-		<Characteristics>MR</Characteristics>
-		<Description>
-			<p>Subjects Students Choose</p>
-		</Description>
-	</Item>
-	<Item>
-		<Element>PreferenceNumber</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Subject Priority</p>
-		</Description>
-		<Type name="xs:unsignedInt"/>
-	</Item>
-	<Item>
-		<Element>SubjectLocalId</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Local Subject Id</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"/>
-	</Item>
-	<Item>
-		<Element>StudyDescription</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Description about Study Mode.</p>
-		</Description>
-		<Type ref="CommonTypes" name="SubjectAreaType"/>
-	</Item>
-	<Item>
-		<Element>OtherSchoolLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Local Id of a school where the student studies this subject if not at the home school.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"/>
-	</Item>
-</CommonElement>
 
 
-	<!-- SectionEnrollment -->
+<!-- SectionEnrollment -->
 <CommonElement name="SchoolCourseInfoOverrideType" type="true" dm="true">
  	<Item>
 		<Element>SchoolCourseInfoOverrideType</Element>
@@ -350,6 +291,7 @@
 	</Item>  
 </CommonElement>
 
+
 <!-- StudentParticipation (in special Programs) -->
 <CommonElement name="ProgramAvailabilityType" type="true" dm="true">
 
@@ -476,6 +418,121 @@
 		<ProgramStatus>
 			<Code>S004</Code>
 		</ProgramStatus>
+	</xhtml:Example>
+</CommonElement>
+</if>
+
+
+<!-- Used by both AU & NZ -->
+<CommonElement name="StudentSubjectChoiceListType" type="true" dm="true">
+	<Item>
+		<Element>StudentSubjectChoiceListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A list of subject areas choices that can be made, or have been made by a Student.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>StudentSubjectChoice</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>An individual Subject choice that can be made, or has been made by a Student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="StudentSubjectChoiceType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Student Subject Choice List Example">
+		<SubjectChoiceList>
+			<StudentSubjectChoice>
+				<PreferenceNumber>1</PreferenceNumber>
+				<SubjectLocalId>Y11HIST</SubjectLocalId>
+				<StudyDescription>
+					<Code>Y11HIST</Code>
+					<OtherCodeList>
+						<OtherCode Codeset="Text">Year 11 History</OtherCode>
+					</OtherCodeList>
+				</StudyDescription>
+			</StudentSubjectChoice>
+			<StudentSubjectChoice>
+				<PreferenceNumber>2</PreferenceNumber>
+				<SubjectLocalId>Y11FREN</SubjectLocalId>
+				<StudyDescription>
+					<Code>Y11FREN</Code>
+					<OtherCodeList>
+						<OtherCode Codeset="Text">Year 11 French</OtherCode>
+					</OtherCodeList>
+				</StudyDescription>
+				<OtherSchoolRefId>705f1c18-356a-4862-88d1-d3e91fb21467</OtherSchoolRefId>
+				<OtherSchoolLocalId>0245</OtherSchoolLocalId>
+			</StudentSubjectChoice>
+		</SubjectChoiceList>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="StudentSubjectChoiceType" type="true" dm="true">
+	<Item>
+		<Element>StudentSubjectChoiceType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>An individual Subject choice that can be made, or has been made by a Student.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>PreferenceNumber</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The student's preference for this subject, with respect
+			to the other subject choices in the list.</p>
+		</Description>
+		<Type name="xs:unsignedInt"/>
+	</Item>    <!-- PreferenceNumber -->
+	<Item>
+		<Element>SubjectLocalId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>A code assigned by the Provider to identify the chosen subject.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>    <!-- SubjectLocalId -->
+	<Item>
+		<Element>StudyDescription</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Description about Study Mode.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SubjectAreaType"/>
+	</Item>    <!-- StudyDescription -->
+<if intl="nz">	
+	<Item>
+		<Element>OtherSchoolRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>SIF GUID a Provider (school) where the student studies this subject if not at the home school.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>    <!-- OtherSchoolRefId -->
+</if>	
+	<Item>
+		<Element>OtherSchoolLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>MoE Organisation Id of a school where the student studies this subject if not at the home school.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>    <!-- OtherSchoolLocalId -->
+	
+	<xhtml:Example xmlns="" name="Student Subject Choice Example">
+		<StudentSubjectChoice>
+			<PreferenceNumber>2</PreferenceNumber>
+			<SubjectLocalId>Y11FREN</SubjectLocalId>
+			<StudyDescription>
+				<Code>Y11FREN</Code>
+				<OtherCodeList>
+					<OtherCode Codeset="Text">Year 11 French</OtherCode>
+				</OtherCodeList>
+			</StudyDescription>
+			<OtherSchoolRefId>705f1c18-356a-4862-88d1-d3e91fb21467</OtherSchoolRefId>
+			<OtherSchoolLocalId>0245</OtherSchoolLocalId>
+		</StudentSubjectChoice>
 	</xhtml:Example>
 </CommonElement>
 

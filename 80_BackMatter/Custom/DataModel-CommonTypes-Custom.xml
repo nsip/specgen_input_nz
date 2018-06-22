@@ -14,14 +14,21 @@
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-SchoolStructure.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-PartyRole.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Location.xml"/>
+	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Calendar.xml"/>
+	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Enrollment.xml"/>
+	
+<if intl="nz">	
+	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-SchoolStructure.xml"/>
+	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-PartyRole.xml"/>
+	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Enrollment.xml"/>
+</if>
+
 
 <if intl="au">
-	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Calendar.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-TimeTable.xml"/>
 
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Curriculum.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Resource.xml"/>
-	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Enrollment.xml"/>
     <xi:include parse="xml" href="Common/DataModel-CommonTypes-Attendance.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Assessment.xml"/>	
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Wellbeing.xml"/>
@@ -703,59 +710,7 @@
 		<GraduationDate>2005-05-27</GraduationDate>
 	</xhtml:Example>
 	</CommonElement>
-	
-	<CommonElement name="OtherCodeListType" type="true" dm="true">
-	<Item>
-		<Element>OtherCodeListType</Element>
-		<Description>
-			<p>
-        List of other codes or strings that crosswalk to or serve as translations of the <code>Code</code> element paired with this common element.  If <code>Code</code> changes
-        and <code>OtherCode</code>s are supported, both <code>Code</code> and all associated <code>OtherCode</code> elements must be present.
-      </p>
-		</Description>
-		<List mode="List">
-    </List>
-	</Item>
-	<Item>
-		<Element>OtherCode</Element>
-		<Characteristics>MR</Characteristics>
-		<Description>
-			<p>
-        A state/province code, local code, other code or a text string that crosswalks to or serves as a translation of an associated <code>Code</code> element.
-      </p>
-		</Description>
-		<Type name="xs:token"/>
-	</Item>
-	<Item>
-		<Attribute>Codeset</Attribute>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>
-        Describes the <code>OtherCode</code> element content as either a state/province code, a local code, other code, or text string.
-      </p>
-		</Description>
-		<Values>
-			<Value>
-				<Code>StateProvince</Code>
-			</Value>
-			<Value>
-				<Code>Local</Code>
-			</Value>
-			<Value>
-				<Code>Other</Code>
-			</Value>
-			<Value>
-				<Code>Text</Code>
-			</Value>
-		</Values>
-	</Item>
-	<xhtml:Example xmlns="" name="Other Code List Example">
-		<OtherCodeList>
-			<OtherCode Codeset="Local">S</OtherCode>
-			<OtherCode Codeset="Text">Semester</OtherCode>
-		</OtherCodeList>
-	</xhtml:Example>
-	</CommonElement>
+
 	<CommonElement name="SIF_ExtendedElementsType" type="true" dm="true">
 	<Intro>
 		<p>
@@ -827,9 +782,8 @@
 </CommonElement>
 </if>
 
-
 <if intl="nz">
-	<CommonElement name="ObjectReferenceType" type="true" dm="true">
+<CommonElement name="ObjectReferenceType" type="true" dm="true">
 	<Item>
 		<Element>ObjectReferenceType</Element>
 		<Description>
@@ -887,4 +841,58 @@
 		<LocalId>123321A</LocalId>
 	</xhtml:Example>
 </CommonElement>
+<CommonElement name="OtherCodeListType" type="true" dm="true">
+	<Item>
+		<Element>OtherCodeListType</Element>
+		<Description>
+			<p>
+        List of other codes or strings that crosswalk to or serve as translations of the <code>Code</code> element paired with this common element.  If <code>Code</code> changes
+        and <code>OtherCode</code>s are supported, both <code>Code</code> and all associated <code>OtherCode</code> elements must be present.
+      </p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>OtherCode</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>
+        A state/province code, local code, other code or a text string that crosswalks to or serves as a translation of an associated <code>Code</code> element.
+      </p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>  <!-- OtherCode -->
+	<Item>
+		<Attribute>Codeset</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        Describes the <code>OtherCode</code> element content as either a state/province code, a local code, other code, or text string.
+      </p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>StateProvince</Code>
+			</Value>
+			<Value>
+				<Code>Local</Code>
+			</Value>
+			<Value>
+				<Code>Other</Code>
+			</Value>
+			<Value>
+				<Code>Text</Code>
+			</Value>
+		</Values>
+	</Item>  <!-- CodeSet -->
+	
+	<xhtml:Example xmlns="" name="Other Code List Example">
+		<OtherCodeList>
+			<OtherCode Codeset="Local">S</OtherCode>
+			<OtherCode Codeset="Text">Semester</OtherCode>
+		</OtherCodeList>
+	</xhtml:Example>
+</CommonElement>
+
 </IncludeGroup>

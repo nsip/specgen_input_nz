@@ -1,0 +1,788 @@
+﻿<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- NZ specific element types for the Party & Role domains -->
+
+<!-- EducationOrganisation & Provider -->
+<CommonElement name="OrganisationType" type="true" dm="true">
+	<Item>
+		<Element>OrganisationType</Element>
+		<Description>
+			<p>
+				Generic organisation that operates within the education sector.
+				e.g. Providers, Communities of Learning, Ministry local offices, etc.
+			</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>AddressList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The set of postal and other addresses that the Organisation uses</p>
+		</Description>
+		<Type ref="CommonTypes" name="AddressListType"/>
+	</Item>   <!-- AddressList -->
+	<Item>
+		<Element>CommunicationChannelList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of one or more methods of communication with the organisation</p>
+		</Description>
+		<Type ref="CommonTypes" name="CommunicationChannelListType"/>
+	</Item>   <!-- CommunicationChannelList -->
+	<Item>
+		<Element>ContactList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of one or more cotact persons related to the organisation</p>
+		</Description>
+		<Type ref="CommonTypes" name="ContactListType"/>
+	</Item>   <!-- ContactList -->
+	<Item>
+		<Element>EducationRegion</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A region of New Zealand defined by the Ministry of Education for adminstrative purposes</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsEducationRegionType"/>
+	</Item>   <!-- EducationRegion -->
+	<Item>
+		<Element>EmailList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The set of contact email addresses that the Organisation uses</p>
+		</Description>
+		<Type ref="CommonTypes" name="EmailListType"/>
+	</Item>   <!-- EmailList -->
+	<Item>
+		<Element>EntityClose</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Closing date of entity. Only present for closed providers.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>   <!-- EntityClose -->
+	<Item>
+		<Element>EntityOpen</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Opening date of entity.  For proposed schools this will
+			be the projected opening date.  For open schools this may
+			not be present.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>   <!-- EntityOpen -->
+	<Item>
+		<Element>LocationList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of one or more locations, from which the
+			organisation operates or provides a service.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocationListType"/>
+	</Item>   <!-- LocationList -->
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The normal business name of the Organisation</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>   <!-- Name -->
+	<Item>
+		<Element>PhoneNumberList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The set of contact phone numbers that the Organisation uses</p>
+		</Description>
+		<Type ref="CommonTypes" name="PhoneNumberListType"/>
+	</Item>   <!-- PhoneNumberList -->
+	<Item>
+		<Element>RelatedOrganisationList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of other organisations that are related to the Provider</p>
+		</Description>
+		<Type ref="CommonTypes" name="RelatedOrganisationListType"/>
+	</Item>   <!-- RelatedOrganisationList -->
+	<Item>
+		<Element>OperationalStatus</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Current status of the Provider</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsOperationalStatusType"/>
+	</Item>   <!-- OperationalStatus-->
+	<Item>
+		<Element>Type</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Describes the nature of the Organisation;  for Schools this indicate
+			the schooling levels offered.
+			</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsOrganisationTypeType"/>
+	</Item>   <!-- Type -->
+	
+	<xhtml:Example xmlns="" name="Organisation Example">
+		<Organisation>
+			<AddressList>
+				<Address json:force-array="true">
+					<Type json:force-string="true">2</Type>
+					<Role json:force-string="true">2</Role>
+					<Street>
+						<Line1>1175 Lake Ferry Rd</Line1>
+					</Street>
+					<Suburb>RD 1</Suburb>
+					<City>Martinborough</City>
+					<PostalCode  json:force-string="true">5781</PostalCode>
+				</Address>
+			</AddressList>
+			<CommunicationChannelList>
+				<Channel>
+					<Notes>School Attendance System (Self Service)</Notes>
+					<Type json:force-string="true">1</Type>
+					<Value>http://att.hogwarts.school.nz</Value>
+				</Channel>
+				<Channel>
+					<Notes>School Website</Notes>
+					<Type json:force-string="true">1</Type>
+					<Value>http://www.hogwarts.school.nz/</Value>
+				</Channel>
+			</CommunicationChannelList>
+			<ContactList>
+				<Contact json:force-array="true">
+					<Name>
+						<FamilyName>Dumbledore</FamilyName>
+						<GivenName>Albus</GivenName>
+						<FullName>Albus Dumbledore</FullName>
+					</Name>
+					<PositionTitle>Head Cattle Wrangler</PositionTitle>
+					<Role json:force-string="true">1</Role>
+					<AddressList>
+						<Address>
+							<Type json:force-string="true">1</Type>
+							<Role json:force-string="true">1</Role>
+							<Street>
+								<Line1>533 Hogwart's Way</Line1>
+							</Street>
+							<City>Hogsmead</City>
+							<PostalCode json:force-string="true">7733</PostalCode>
+						</Address>
+					</AddressList>
+					<EmailList/>
+					<PhoneNumberList/>
+				</Contact>
+			</ContactList>
+			<EducationRegion json:force-string="true">7</EducationRegion>
+			<EmailList>
+				<Email json:force-array="true">
+					<Notes>School Secretary</Notes>
+					<Type>06</Type>
+					<Address>stuart@gmail.com</Address>
+				</Email>
+			</EmailList>
+			<EntityOpen>2008-04-19</EntityOpen>
+			<LocationList>
+				<Location json:force-array="true">
+					<Description>Only Campus</Description>
+					<Address>
+						<Type json:force-string="true">2</Type>
+						<Role json:force-string="true">1</Role>
+						<Street>
+							<Line1>1175 Lake Ferry Rd</Line1>
+						</Street>
+						<Suburb>RD 1</Suburb>
+						<City>Martinborough</City>
+						<PostalCode json:force-string="true">5781</PostalCode>
+					</Address>
+					<GridLocation>
+						<Latitude>-41.2814719</Latitude>
+						<Longitude>175.3458472</Longitude>
+					</GridLocation>
+					<StatisticalAreaList>
+						<StatisticalArea>
+							<SpatialUnitType>GE</SpatialUnitType>
+							<Code>058</Code>
+						</StatisticalArea>
+						<StatisticalArea>
+							<SpatialUnitType>TA</SpatialUnitType>
+							<Code>050</Code>
+						</StatisticalArea>
+						<StatisticalArea>
+							<SpatialUnitType>WA</SpatialUnitType>
+							<Code>05003</Code>
+						</StatisticalArea>
+					</StatisticalAreaList>
+				</Location>
+			</LocationList>			
+			<Name>Stuart's Cattle School</Name>
+			<PhoneNumberList>
+				<PhoneNumber>
+					<Notes>School Secretary DDI</Notes>
+					<Type>0096</Type>
+					<Number>(021) 300 999</Number>
+				</PhoneNumber>
+				<PhoneNumber>
+					<Notes>Attendance Office (Automated)</Notes>
+					<Usage json:force-string="true">2</Usage>
+					<Type>0096</Type>
+					<Number>(021) 300 999</Number>
+				</PhoneNumber>
+			</PhoneNumberList>
+			<RelatedOrganisationList>
+				<RelatedOrganisation RefId="0951bacf-fc88-4ed6-8113-11a6d6335c07">
+					<LocalId json:force-string="true">99102</LocalId>
+					<Name>Tai Tokerau</Name>
+					<ObjectType>EducationOrganisation</ObjectType>
+					<OrganisationType json:force-string="true">102</OrganisationType>
+				</RelatedOrganisation>
+				<RelatedOrganisation RefId="ac0871d9-6562-4209-ae86-abdb3661842b">
+					<LocalId json:force-string="true">99204</LocalId>
+					<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
+					<ObjectType>EducationOrganisation</ObjectType>
+					<OrganisationType json:force-string="true">101</OrganisationType>
+				</RelatedOrganisation>
+			</RelatedOrganisationList>
+			<OperationalStatus>O</OperationalStatus>
+			<Type json:force-string="true">12</Type>
+		</Organisation>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="ContactListType" type="true" dm="true">
+	<Item>
+		<Element>ContactListType</Element>
+		<Description>
+			<p>A list of people's contact details</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Contact</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+		<Type ref="CommonTypes" name="ContactType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Contact List Example">
+		<ContactList>
+			<Contact>
+				<Name>
+					<FamilyName>Dumbledore</FamilyName>
+					<GivenName>Albus</GivenName>
+					<FullName>Albus Dumbledore</FullName>
+				</Name>
+				<PositionTitle>Headmaster</PositionTitle>
+				<Role json:force-string="true">1</Role>
+				<AddressList>
+					<Address json:force-array="true">
+						<Type json:force-string="true">1</Type>
+						<Role json:force-string="true">1</Role>
+						<Street>
+							<Line1>533 Hogwart's Way</Line1>
+						</Street>
+						<City>Hogsmead</City>
+						<PostalCode json:force-string="true">7733</PostalCode>
+					</Address>
+				</AddressList>
+				<EmailList/>
+				<PhoneNumberList/>
+			</Contact>
+			<Contact>
+				<Name>
+					<FamilyName>Rubeus</FamilyName>
+					<GivenName>Hagrid</GivenName>
+					<FullName>Rubeud Hagrid</FullName>
+				</Name>
+				<PositionTitle>Gamekeeper</PositionTitle>
+				<Role json:force-string="true">3</Role>
+				<AddressList>
+					<Address json:force-array="true">
+						<Type json:force-string="true">1</Type>
+						<Role json:force-string="true">1</Role>
+						<Street>
+							<Line1>The Enchanted Wood</Line1>
+							<Line2>533 Hogwart's Way</Line2>
+						</Street>
+						<City>Hogsmead</City>
+						<PostalCode json:force-string="true">7733</PostalCode>
+					</Address>
+				</AddressList>
+				<EmailList/>
+				<PhoneNumberList/>
+			</Contact>
+		</ContactList>
+	</xhtml:Example>	
+</CommonElement>
+<CommonElement name="ContactType" type="true" dm="true">
+	<Item>
+		<Element>ContactType</Element>
+		<Description>
+			<p>A particular person's contact details</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The contact's name</p>
+		</Description>
+		<Type ref="CommonTypes" name="BaseNameType"/>
+	</Item>   <!-- Name -->
+	<Item>
+		<Element>PositionTitle</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The title the contact has within the Organisation being contacted</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>   <!-- PositionTitle -->
+	<Item>
+		<Element>Role</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The role the contact plays within the Organisation being contacted</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsOrganisationContactRoleType"/>
+	</Item>   <!-- Role -->
+	<Item>
+		<Element>AddressList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+		<Type ref="CommonTypes" name="AddressListType"/>
+	</Item>   <!-- AddressList -->
+	<Item>
+		<Element>EmailList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of Email elements.</p>
+		</Description>
+		<Type ref="CommonTypes" name="EmailListType"/>
+	</Item>   <!-- EmailList -->
+	<Item>
+		<Element>PhoneNumberList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of PhoneNumber elements.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PhoneNumberListType"/>
+	</Item>   <!-- PhoneNumberList -->
+	
+	<xhtml:Example xmlns="" name="Contact Example">
+		<Contact>
+			<Name>
+				<FamilyName>Dumbledore</FamilyName>
+				<GivenName>Albus</GivenName>
+				<FullName>Albus Dumbledore</FullName>
+			</Name>
+			<PositionTitle>Head Cattle Wrangler</PositionTitle>
+			<Role json:force-string="true">1</Role>
+			<AddressList>
+				<Address json:force-array="true">
+					<Type json:force-string="true">1</Type>
+					<Role json:force-string="true">1</Role>
+					<Street>
+						<Line1>533 Hogwart's Way</Line1>
+					</Street>
+					<City>Hogsmead</City>
+					<PostalCode json:force-string="true">7733</PostalCode>
+				</Address>
+			</AddressList>
+			<EmailList/>
+			<PhoneNumberList/>
+		</Contact>
+	</xhtml:Example>
+</CommonElement>
+
+<CommonElement name="CommunicationChannelListType" type="true" dm="true">
+	<Item>
+		<Element>CommunicationChannelListType</Element>
+		<Description>
+			<p>A list of people/organisation's ccommunications channels</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Channel</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+		<Type ref="CommonTypes" name="CommunicationChannelType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="CommunicationChannelType" type="true" dm="true">
+	<Item>
+		<Element>CommunicationChannelType</Element>
+		<Description>
+			<p>A particular person or organisation's communications method</p>
+		</Description>
+		<Type complex="extension" name="BaseCommunicationChannelType"/>
+	</Item>	
+	<Item>
+		<Element>Type</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A code classifying the Communication's method</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsCommunicationChannelTypeType"/>
+	</Item>
+	<Item>
+		<Element>Value</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The unique value that provides access to the channel. eg: URL for a website;
+			Facebook page addess, Twitter handle.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Communication Channel Example">
+		<CommunicationChannel>
+			<Notes>School Attendance System (Self Service)</Notes>
+			<Type json:force-string="true">1</Type>
+			<Value>http://www.hogwarts.school.nz/Attendance</Value>
+		</CommunicationChannel>
+	</xhtml:Example>
+</CommonElement>
+
+<CommonElement name="RelatedOrganisationListType" type="true" dm="true">
+	<Item>
+		<Element>RelatedOrganisationListType</Element>
+		<Description>
+			<p>A list of an Organisation's related organisations</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>RelatedOrganisation</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+		<Type ref="CommonTypes" name="RelatedOrganisationType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Related Organisation List Example">
+		<RelatedOrganisationList>
+			<RelatedOrganisation RefId="0951bacf-fc88-4ed6-8113-11a6d6335c07">
+				<LocalId json:force-string="true">99102</LocalId>
+				<Name>Tai Tokerau</Name>
+				<ObjectType>EducationOrganisation</ObjectType>
+				<OrganisationType json:force-string="true">102</OrganisationType>
+			</RelatedOrganisation>
+			<RelatedOrganisation RefId="ac0871d9-6562-4209-ae86-abdb3661842b">
+				<LocalId json:force-string="true">99204</LocalId>
+				<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
+				<ObjectType>EducationOrganisation</ObjectType>
+				<OrganisationType json:force-string="true">101</OrganisationType>
+			</RelatedOrganisation>
+		</RelatedOrganisationList>
+	</xhtml:Example>
+</CommonElement> 
+<CommonElement name="RelatedOrganisationType" type="true" dm="true">
+	<Item>
+		<Element>RelatedOrganisationType</Element>
+		<Description>
+			<p>Extends <code>ObjectReferenceType</code> to add an extra element, <code>OrganisationType</code>,
+			describing the nature of the related organisation.</p>
+		</Description>
+		<Type complex="extension" name="ObjectReferenceType"/>
+	</Item>
+	<Item>
+		<Element>OrganisationType</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Describes the nature of the related Education Organisation.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsOrganisationTypeType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Secondary School Related Organisation">
+		<RelatedOrganisation RefId="a2f8c526-4e39-42b7-a7a6-0c7188ea5cf3">
+			<LocalId json:force-string="true">275</LocalId>
+			<Name>Hogwart's High School</Name>
+			<ObjectType>Provider</ObjectType>
+			<OrganisationType json:force-string="true">11</OrganisationType>
+		</RelatedOrganisation>
+	</xhtml:Example>
+	<xhtml:Example xmlns="" name="MoE Region Related Organisation">
+		<RelatedOrganisation RefId="0951bacf-fc88-4ed6-8113-11a6d6335c07">
+			<LocalId json:force-string="true">99102</LocalId>
+			<Name>Tai Tokerau</Name>
+			<ObjectType>EducationOrganisation</ObjectType>
+			<OrganisationType json:force-string="true">102</OrganisationType>
+		</RelatedOrganisation>
+	</xhtml:Example>
+	<xhtml:Example xmlns="" name="Kāhui Ako Related Organisation">
+		<RelatedOrganisation RefId="ac0871d9-6562-4209-ae86-abdb3661842b">
+			<LocalId json:force-string="true">99204</LocalId>
+			<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
+			<ObjectType>EducationOrganisation</ObjectType>
+			<OrganisationType json:force-string="true">101</OrganisationType>
+		</RelatedOrganisation>
+	</xhtml:Example>
+</CommonElement>
+
+<!-- Person & Demographics -->
+<CommonElement name="PersonalInfoType" type="true" dm="true">
+	<Item>
+		<Element>PersonalInfoType</Element>
+		<Description>
+			<p>A subset of PersonInfo, that is collected about Student whānau members.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>A name used by the person </p>
+		</Description>
+		<Type ref="CommonTypes" name="BaseNameType"/>
+	</Item>    <!-- Name -->
+	<Item>
+		<Element>AddressList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>The person's address(es) - one or more addresses</Description>
+		<Type ref="CommonTypes" name="AddressListType"/>
+	</Item>    <!-- AddressList -->
+	<Item>
+		<Element>EmailList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The person's e-mail address(es) - one or more emails.</p>
+		</Description>
+		<Type ref="CommonTypes" name="EmailListType"/>
+	</Item>    <!-- EmailList -->
+	<Item>
+		<Element>PhoneNumberList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The person's phone number(s) - one or more phone numbers.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PhoneNumberListType"/>
+	</Item>    <!-- PhoneNumberList -->
+	<Item>
+		<Element>HouseholdContactInfoList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The person's household/s contact information. A list of
+			one or more household’s contact information.</p>
+		</Description>
+		<Type ref="CommonTypes" name="HouseholdContactInfoListType"/>
+	</Item>    <!-- HouseholdContactInfoList -->
+	
+	<xhtml:Example xmlns="" name="PersonalInfo Example">
+		<PersonInfo>
+			<Name>
+				<FamilyName>Ridwulfa</FamilyName>
+				<GivenName>Hagrid</GivenName>
+				<FullName>Rubeus Hagrid</FullName>
+				<Type>LGL</Type>
+			</Name>
+			<AddressList>
+				<Address>
+					<Type json:force-string="true">1</Type>
+					<Role json:force-string="true">1</Role>
+					<Street>
+						<Line1>The Enchanted Wood</Line1>
+						<Line2>533 Hogwart's Way</Line2>
+					</Street>
+					<City>Hogsmead</City>
+					<PostalCode json:force-string="true">7733</PostalCode>
+				</Address>
+				<Address>
+					<Type>2</Type>
+					<Role>2</Role>
+					<Street>
+						<Line1>1175 Lake Ferry Rd</Line1>
+					</Street>
+					<Suburb>RD 1</Suburb>
+					<City>Martinborough</City>
+				</Address>
+			</AddressList>
+			<EmailList>
+				<Email json:force-array="true">
+					<Type>07</Type>
+					<Address>ridwulfa@gmail.com</Address>
+				</Email>
+			</EmailList>
+			<PhoneNumberList>
+				<PhoneNumber>
+					<Usage json:force-string="true">2</Usage>
+					<Type>0096</Type>
+					<Number>(021) 300 999</Number>
+				</PhoneNumber>
+			</PhoneNumberList>
+			<HouseholdContactInfoList>
+				<HouseholdContactInfo json:force-array="true">
+					<PreferenceNumber>1</PreferenceNumber>
+					<HouseholdContactId>7d5c3f5c-d89c-4551-9442-6b008207986e</HouseholdContactId>
+					<AddressList>
+						<Address json:force-array="true">
+							<Type json:force-string="true">1</Type>
+							<Role json:force-string="true">1</Role>
+							<Street>
+								<Line1>P O Box 81</Line1>
+							</Street>
+							<City>Martinborough</City>
+							<PostalCode json:force-string="true">5781</PostalCode>
+						</Address>
+					</AddressList>
+					<EmailList json:force-array="true">
+						<Email>
+							<Type>07</Type>
+							<Address>ridwulfa@gmail.com</Address>
+						</Email>
+					</EmailList>
+					<PhoneNumberList>
+						<PhoneNumber>
+							<Usage json:force-string="true">2</Usage>
+							<Type>0096</Type>
+							<Number>(021) 300 999</Number>
+						</PhoneNumber>
+					</PhoneNumberList>
+				</HouseholdContactInfo>
+				
+			</HouseholdContactInfoList>
+		</PersonInfo>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="VerificationEventType" type="true" dm="true">
+	<Item>
+		<Element>VerificationEventType</Element>
+		<Description>
+			<p>A record of how information about a person has been
+			verified. For example, verification of name, date of
+			birth, citizenship.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>IsConfirmed</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>If true then verification has been confirmed by MoE.</p>
+		</Description>
+		<Type name="xs:boolean"/>
+	</Item>    <!-- IsConfirmed -->
+	<Item>
+		<Element>Timestamp</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The date &amp; time that the VerificationEvent took place.</p>
+		</Description>
+		<Type name="xs:dateTime"/>
+	</Item>    <!-- TimeStamp -->
+	<Item>
+		<Element>Method</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The means by which an identity and eligibility status
+			for education services is verified.  Principally refers to
+			an identity document type (eg passport) but may also
+			include a type of business decision taken to accept an
+			assertion of identity and eligibility status (eg principal
+			discretion).</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsVerificationMethodType"/>
+	</Item>    <!-- Method -->
+	<Item>
+		<Element>ProviderRefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The RefId of the provider (eg school) that
+			provided the verification.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>    <!-- ProviderRefId -->
+	<Item>
+		<Element>ProviderLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The local identifier of the provider (eg school) that
+			provided the verification.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>    <!-- ProviderLocalId -->
+	
+	<xhtml:Example xmlns="" name="Citizenship Verification Event Example">		
+		<VerificationEvent>
+			<IsConfirmed>true</IsConfirmed>
+			<Timestamp>2003-11-30T12:34:56.7</Timestamp>
+			<Method>61002</Method>
+			<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
+			<ProviderLocalId>245</ProviderLocalId>
+		</VerificationEvent>
+	</xhtml:Example>
+	
+</CommonElement>
+<CommonElement name="EthnicityListType" type="true" dm="true">
+	<Item>
+		<Element>EthnicityListType</Element>
+		<Description>
+			<p>A list of one or more ethnic groups with which a person identifies.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Ethnicity</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+		<Type ref="CodeSets" name="NZCodeSetsEthnicityType"/>
+	</Item>
+	
+	<xhtml:Example xmlns="" name="Ethnicity List Example">
+		<EthnicityList>
+			<Ethnicity json:force-string="true">111</Ethnicity>
+			<Ethnicity json:force-string="true">42111</Ethnicity>
+		</EthnicityList>
+	</xhtml:Example>
+</CommonElement> 
+<CommonElement name="IwiAffiliationListType" type="true" dm="true">
+	<Item>
+		<Element>IwiAffiliationListType</Element>
+		<Description>
+			<p>A list of one or more Iwi with which a person affiliates.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Iwi</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+		<Type ref="CodeSets" name="NZCodeSetsIwiType"/>
+	</Item>
+	
+	<xhtml:Example xmlns="" name="Iwi List Example">
+		<IwiAffiliationList>
+			<Iwi>0702</Iwi>
+			<Iwi>0601</Iwi>
+		</IwiAffiliationList>
+	</xhtml:Example>
+</CommonElement>
+
+</IncludeGroup>

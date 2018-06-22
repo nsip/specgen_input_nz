@@ -1,8 +1,9 @@
 <IncludeGroup
 	xmlns:xi="http://www.w3.org/2001/XInclude"
-	
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
  	xmlns="http://sifassociation.org/SpecGen">
 
+	<!-- Generic types -->
 	<CodeSet>
 		<Intro>
 			<p>An enumeration of valid SIF DataObject names, to be included in Object References</p>
@@ -17,8 +18,30 @@
 				<Code>Provider</Code>
 				<Text>A recognised provider of education services such as ECE Service, School or TEI</Text>
 			</Value>
+			<Value>
+				<Code>ProviderRelationship</Code>
+				<Text>A recognised relationship between two providers of education services.</Text>
+			</Value>
+			<Value>
+				<Code>StudentPersonal</Code>
+				<Text>A person who enrols at a Provider</Text>
+			</Value>
+			<Value>
+				<Code>StudentContactPersonal</Code>
+				<Text>A person who is part ofa Student's whānau</Text>
+			</Value>
+			<Value>
+				<Code>StudentContactRelationship</Code>
+				<Text>A relationship between a person who is part of a Student's whānau and that Student</Text>
+			</Value>
+			<Value>
+				<Code>StudentProviderEnrolment</Code>
+				<Text>The record of an enrolment relationship between a Student and a Provider.</Text>
+			</Value>
 		</Values>
 	</CodeSet>    <!-- Referrable Data Object -->
+
+	<!-- Education Organisation & Provider -->
 	<CodeSet>
 		<Intro>Regions of New Zealand defined by Ministry of Education for administrative purposes.
 		(North to South):</Intro>
@@ -363,5 +386,2743 @@
 				<Text>Boys Only</Text>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Schooling Gender -->	
+	</CodeSet>    <!-- Schooling Gender -->
+
+	<!-- ProviderRelationship -->
+	<CodeSet>
+		<Intro>
+			<p>Describes the role the source Provider plays in a relationship between a pair of Providers.</p>
+		</Intro>
+		<ID>Provider Relationship Role</ID>
+		<Values>
+			<Value>
+				<Code>01</Code>
+				<Text>Client School</Text>
+				<Description>Source provider sends Students to the
+				matching 'Host School' for individual classes.</Description> 
+			</Value>
+			<Value>
+				<Code>02</Code>
+				<Text>Host School</Text>
+				<Description>Source provider hosts Students from the
+				matching 'Client School' for individual classes.</Description>
+			</Value>
+			<Value>
+				<Code>03</Code>
+				<Text>Contributing School</Text>
+				<Description>Most Students from the source provider
+				enrol at the matching 'Receiving School' once they have completed the
+				last year of instruction conducted by the 'Contributing School'.</Description>
+			</Value>
+			<Value>
+				<Code>04</Code>
+				<Text>Receivng School</Text>
+				<Description>Most Students from related provider enrol at the 'Receiving School'
+				once they have completed the last year of instruction conducted by the
+				matching 'Contributing School'.</Description>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- ProviderRelationshipRole -->
+	
+	<!-- Student & Contact Demographics -->
+	<CodeSet>
+		<Intro>
+			<p>A description of the gender identity students use to describe themselves.
+			Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/LfWjOFK1NqtZCv5i">NZ Standard for Gender Identity</a></p>
+		</Intro>
+		<ID>Gender</ID>
+		<Values>
+			<!-- Level 1 Codes -->
+			<Value>
+				<Code>1</Code>
+				<Text>Male</Text>
+				<Text xml:lang="mi">Tāne</Text>
+				<Description>Level 1 Code</Description>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Female</Text>
+				<Text xml:lang="mi">Wahine</Text>
+				<Description>Level 1 Code</Description>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Gender Diverse</Text>
+				<Text xml:lang="mi">Ira tāngata kōwhiri kore</Text>
+				<Description>Level 1 Code</Description>
+			</Value>
+			<!-- Level 2 Codes -->
+			<Value>
+				<Code>11</Code>
+				<Text>Male</Text>
+				<Text xml:lang="mi">Tāne</Text>
+				<Description>Level 2 Code</Description>
+			</Value>
+			<Value>
+				<Code>21</Code>
+				<Text>Female</Text>
+				<Text xml:lang="mi">Wahine</Text>
+				<Description>Level 2 Code</Description>
+			</Value>
+			<Value>
+				<Code>30</Code>
+				<Text>Gender diverse not further defined</Text>
+				<Text xml:lang="mi">Ira tāngata kōwhiri kore</Text>
+				<Description>Level 2 Code</Description>
+			</Value>
+			<Value>
+				<Code>31</Code>
+				<Text>Transgender Male to Female</Text>
+				<Text xml:lang="mi">Whakawahine</Text>
+				<Description>Level 2 Code</Description>
+			</Value>
+			<Value>
+				<Code>32</Code>
+				<Text>Transgender Female to Male</Text>
+				<Text xml:lang="mi">Tangata ira tāne</Text>
+				<Description>Level 2 Code</Description>
+			</Value>
+			<Value>
+				<Code>39</Code>
+				<Text>Gender diverse not elsewhere classified</Text>
+				<Text xml:lang="mi">Ira tāngata kōwhiri kore</Text>
+				<Description>Level 2 Code</Description>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Gender -->
+	<CodeSet>
+		<Intro>
+			<p>The citizenship or residency status of a person,
+			principally recorded in order to determine eligibility for
+			education services hence limited to indicating New
+			Zealand, Australian or Other residency.
+			</p>
+		</Intro>
+		<ID>Citizenship Status</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>Australian Citizen</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>NZ Citizen</Text>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Australian permanent resident</Text>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Australian Temporary entry permit</Text>
+			</Value>
+			<Value>
+				<Code>5</Code>
+				<Text>Other overseas</Text>
+				<Description>Indicates a residency other than NZ or Australia</Description>
+			</Value>
+			<Value>
+				<Code>X</Code>
+				<Text>Not provided</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Citizenship Status -->
+	<CodeSet>
+		<Intro>
+			<p>The means by which an identity and eligibility status
+			for education services is verified.  Principally refers to
+			an identity document type (eg passport) but may also
+			include a type of business decision taken to accept an
+			assertion of identity and eligibility status (eg principal
+			discretion).
+			</p>
+		</Intro>
+		<ID>Verification Method</ID>
+		<Values>
+			<Value>
+				<Code>61001</Code>
+				<Text>NZ Birth Certificate</Text>
+			</Value>
+			<Value>
+				<Code>61002</Code>
+				<Text>NZ Passport</Text>
+			</Value>
+			<Value>
+				<Code>61003</Code>
+				<Text>Australian Passport</Text>
+			</Value>
+			<Value>
+				<Code>61004</Code>
+				<Text>NZ Citizenship Certificate</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Verification Method -->
+	
+    <CodeSet>
+		<Intro>
+			<p>A standardised method of describing the usage of a
+			language by a person, potentially indicating capability
+			and preference for the language.</p>
+		</Intro>
+		<ID>Language Usage</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>First Language (Maternal)</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Secondary Language</Text>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Language Spoken at Home</Text>
+			</Value>			 
+		</Values>
+	</CodeSet>    <!-- Language Usage Type -->
+    <CodeSet>
+	<Intro>
+		<p>Language refers to recognised human communication systems, typically oral and/or written.</p>
+		<p>Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/CARS3211">Statistics NZ - Language Standard Classification 1999 v2.0.0</a></p>
+	</Intro>
+	<ID>Language</ID>
+	<Values>
+		<Value><Code>01</Code><Text>Germanic</Text></Value>
+		<Value><Code>011</Code><Text>West Germanic</Text></Value>
+		<Value><Code>01100</Code><Text>West Germanic not further defined</Text></Value>
+		<Value><Code>01110</Code><Text>Afrikaans</Text></Value>
+		<Value><Code>01111</Code><Text>Dutch</Text></Value>
+		<Value><Code>01112</Code><Text>English</Text></Value>
+		<Value><Code>01113</Code><Text>German</Text></Value>
+		<Value><Code>01114</Code><Text>Friesian</Text></Value>
+		<Value><Code>01115</Code><Text>Yiddish</Text></Value>
+		<Value><Code>01116</Code><Text>Scots</Text></Value>
+		<Value><Code>01199</Code><Text>West Germanic not elsewhere classified</Text></Value>
+		<Value><Code>012</Code><Text>North Germanic</Text></Value>
+		<Value><Code>01200</Code><Text>North Germanic not further defined</Text></Value>
+		<Value><Code>01210</Code><Text>Danish</Text></Value>
+		<Value><Code>01211</Code><Text>Norwegian</Text></Value>
+		<Value><Code>01212</Code><Text>Swedish</Text></Value>
+		<Value><Code>01213</Code><Text>Icelandic</Text></Value>
+		<Value><Code>01299</Code><Text>North Germanic not elsewhere classified</Text></Value>
+		<Value><Code>02</Code><Text>Romance</Text></Value>
+		<Value><Code>021</Code><Text>Romance</Text></Value>
+		<Value><Code>02100</Code><Text>Romance not further defined</Text></Value>
+		<Value><Code>02110</Code><Text>French</Text></Value>
+		<Value><Code>02111</Code><Text>Catalan</Text></Value>
+		<Value><Code>02112</Code><Text>Portuguese</Text></Value>
+		<Value><Code>02113</Code><Text>Spanish</Text></Value>
+		<Value><Code>02114</Code><Text>Italian</Text></Value>
+		<Value><Code>02115</Code><Text>Romanian</Text></Value>
+		<Value><Code>02199</Code><Text>Romance not elsewhere classified</Text></Value>
+		<Value><Code>03</Code><Text>Greek</Text></Value>
+		<Value><Code>031</Code><Text>Greek</Text></Value>
+		<Value><Code>03110</Code><Text>Greek</Text></Value>
+		<Value><Code>04</Code><Text>Balto-Slavic</Text></Value>
+		<Value><Code>041</Code><Text>Baltic</Text></Value>
+		<Value><Code>04100</Code><Text>Baltic not further defined</Text></Value>
+		<Value><Code>04110</Code><Text>Latvian</Text></Value>
+		<Value><Code>04111</Code><Text>Lithuanian</Text></Value>
+		<Value><Code>04199</Code><Text>Baltic not elsewhere classified</Text></Value>
+		<Value><Code>042</Code><Text>Slavic</Text></Value>
+		<Value><Code>04200</Code><Text>Slavic not further defined</Text></Value>
+		<Value><Code>04210</Code><Text>Belorussian</Text></Value>
+		<Value><Code>04211</Code><Text>Russian</Text></Value>
+		<Value><Code>04212</Code><Text>Ukrainian</Text></Value>
+		<Value><Code>04213</Code><Text>Bulgarian</Text></Value>
+		<Value><Code>04214</Code><Text>Macedonian</Text></Value>
+		<Value><Code>04215</Code><Text>Serbo-Croatian</Text></Value>
+		<Value><Code>04216</Code><Text>Slovene</Text></Value>
+		<Value><Code>04217</Code><Text>Czech</Text></Value>
+		<Value><Code>04218</Code><Text>Polish</Text></Value>
+		<Value><Code>04219</Code><Text>Slovak</Text></Value>
+		<Value><Code>04299</Code><Text>Slavic not elsewhere classified</Text></Value>
+		<Value><Code>05</Code><Text>Albanian</Text></Value>
+		<Value><Code>051</Code><Text>Albanian</Text></Value>
+		<Value><Code>05110</Code><Text>Albanian</Text></Value>
+		<Value><Code>06</Code><Text>Armenian</Text></Value>
+		<Value><Code>061</Code><Text>Armenian</Text></Value>
+		<Value><Code>06110</Code><Text>Armenian</Text></Value>
+		<Value><Code>07</Code><Text>Indo-Aryan</Text></Value>
+		<Value><Code>071</Code><Text>Indo-Aryan</Text></Value>
+		<Value><Code>07100</Code><Text>Indo-Aryan not further defined</Text></Value>
+		<Value><Code>07110</Code><Text>Hindi</Text></Value>
+		<Value><Code>07111</Code><Text>Urdu</Text></Value>
+		<Value><Code>07112</Code><Text>Fiji Hindi</Text></Value>
+		<Value><Code>07113</Code><Text>Bengali</Text></Value>
+		<Value><Code>07114</Code><Text>Oriya</Text></Value>
+		<Value><Code>07115</Code><Text>Nepalese</Text></Value>
+		<Value><Code>07116</Code><Text>Panjabi</Text></Value>
+		<Value><Code>07117</Code><Text>Sindhi</Text></Value>
+		<Value><Code>07118</Code><Text>Kashmiri</Text></Value>
+		<Value><Code>07119</Code><Text>Sinhala</Text></Value>
+		<Value><Code>07120</Code><Text>Gujarati</Text></Value>
+		<Value><Code>07121</Code><Text>Konkani</Text></Value>
+		<Value><Code>07122</Code><Text>Marathi</Text></Value>
+		<Value><Code>07123</Code><Text>Romani</Text></Value>
+		<Value><Code>07199</Code><Text>Indo-Aryan not elsewhere classified</Text></Value>
+		<Value><Code>08</Code><Text>Celtic</Text></Value>
+		<Value><Code>081</Code><Text>Celtic</Text></Value>
+		<Value><Code>08100</Code><Text>Celtic not further defined</Text></Value>
+		<Value><Code>08110</Code><Text>Welsh</Text></Value>
+		<Value><Code>08111</Code><Text>Scottish Gaelic</Text></Value>
+		<Value><Code>08112</Code><Text>Irish</Text></Value>
+		<Value><Code>08113</Code><Text>Breton</Text></Value>
+		<Value><Code>08199</Code><Text>Celtic not elsewhere classified</Text></Value>
+		<Value><Code>09</Code><Text>Iranian</Text></Value>
+		<Value><Code>091</Code><Text>Iranian</Text></Value>
+		<Value><Code>09100</Code><Text>Iranian not further defined</Text></Value>
+		<Value><Code>09110</Code><Text>Persian</Text></Value>
+		<Value><Code>09111</Code><Text>Kurdish</Text></Value>
+		<Value><Code>09112</Code><Text>Pashto</Text></Value>
+		<Value><Code>09199</Code><Text>Iranian not elsewhere classified</Text></Value>
+		<Value><Code>10</Code><Text>Turko-Altaic</Text></Value>
+		<Value><Code>101</Code><Text>Turko-Altaic</Text></Value>
+		<Value><Code>10100</Code><Text>Turko-Altaic not further defined</Text></Value>
+		<Value><Code>10110</Code><Text>Turkish</Text></Value>
+		<Value><Code>10111</Code><Text>Azeri</Text></Value>
+		<Value><Code>10199</Code><Text>Turko-Altaic not elsewhere classified</Text></Value>
+		<Value><Code>11</Code><Text>Uralic</Text></Value>
+		<Value><Code>111</Code><Text>Uralic</Text></Value>
+		<Value><Code>11100</Code><Text>Uralic not further defined</Text></Value>
+		<Value><Code>11110</Code><Text>Estonian</Text></Value>
+		<Value><Code>11111</Code><Text>Finnish</Text></Value>
+		<Value><Code>11112</Code><Text>Hungarian</Text></Value>
+		<Value><Code>11199</Code><Text>Uralic not elsewhere classified</Text></Value>
+		<Value><Code>12</Code><Text>Dravidian</Text></Value>
+		<Value><Code>121</Code><Text>Dravidian</Text></Value>
+		<Value><Code>12100</Code><Text>Dravidian not further defined</Text></Value>
+		<Value><Code>12110</Code><Text>Kannada</Text></Value>
+		<Value><Code>12111</Code><Text>Malayalam</Text></Value>
+		<Value><Code>12112</Code><Text>Tamil</Text></Value>
+		<Value><Code>12113</Code><Text>Telugu</Text></Value>
+		<Value><Code>12199</Code><Text>Dravidian not elsewhere classified</Text></Value>
+		<Value><Code>13</Code><Text>Sino-Tibeto-Burman</Text></Value>
+		<Value><Code>131</Code><Text>Sinitic</Text></Value>
+		<Value><Code>13100</Code><Text>Sinitic not further defined</Text></Value>
+		<Value><Code>13110</Code><Text>Yue</Text></Value>
+		<Value><Code>13111</Code><Text>Hakka</Text></Value>
+		<Value><Code>13112</Code><Text>Min</Text></Value>
+		<Value><Code>13113</Code><Text>Northern Chinese</Text></Value>
+		<Value><Code>13114</Code><Text>Wu</Text></Value>
+		<Value><Code>13115</Code><Text>Tieu-Chow</Text></Value>
+		<Value><Code>13199</Code><Text>Sinitic not elsewhere classified</Text></Value>
+		<Value><Code>132</Code><Text>Tibeto-Lolo-Burman</Text></Value>
+		<Value><Code>13200</Code><Text>Tibeto-Lolo-Burman not further defined</Text></Value>
+		<Value><Code>13210</Code><Text>Burmese</Text></Value>
+		<Value><Code>13211</Code><Text>Tibetan</Text></Value>
+		<Value><Code>13299</Code><Text>Tibeto-Lolo-Burman not elsewhere classified</Text></Value>
+		<Value><Code>14</Code><Text>Austroasiatic</Text></Value>
+		<Value><Code>141</Code><Text>Mon-Khmer</Text></Value>
+		<Value><Code>14100</Code><Text>Mon-Khmer not further defined</Text></Value>
+		<Value><Code>14110</Code><Text>Khmer</Text></Value>
+		<Value><Code>14199</Code><Text>Mon-Khmer not elsewhere classified</Text></Value>
+		<Value><Code>142</Code><Text>Viet-Muong</Text></Value>
+		<Value><Code>14200</Code><Text>Viet-Muong not further defined</Text></Value>
+		<Value><Code>14210</Code><Text>Vietnamese</Text></Value>
+		<Value><Code>14299</Code><Text>Viet-Muong not elsewhere classified</Text></Value>
+		<Value><Code>15</Code><Text>Tai-Kadai</Text></Value>
+		<Value><Code>151</Code><Text>Tai-Kadai</Text></Value>
+		<Value><Code>15100</Code><Text>Tai-Kadai not further defined</Text></Value>
+		<Value><Code>15110</Code><Text>Lao</Text></Value>
+		<Value><Code>15111</Code><Text>Thai</Text></Value>
+		<Value><Code>15112</Code><Text>Shan</Text></Value>
+		<Value><Code>15199</Code><Text>Tai-Kadai not elsewhere classified</Text></Value>
+		<Value><Code>16</Code><Text>Central-Eastern Malayo-Polynesian</Text></Value>
+		<Value><Code>161</Code><Text>Central Pacific</Text></Value>
+		<Value><Code>16100</Code><Text>Central Pacific not further defined</Text></Value>
+		<Value><Code>16110</Code><Text>Māori</Text></Value>
+		<Value><Code>16111</Code><Text>Samoan</Text></Value>
+		<Value><Code>16112</Code><Text>Tongan</Text></Value>
+		<Value><Code>16113</Code><Text>Cook Islands Maori</Text></Value>
+		<Value><Code>16114</Code><Text>Niuean</Text></Value>
+		<Value><Code>16115</Code><Text>Tokelauan</Text></Value>
+		<Value><Code>16116</Code><Text>Tuvaluan</Text></Value>
+		<Value><Code>16117</Code><Text>Tahitian</Text></Value>
+		<Value><Code>16118</Code><Text>Pukapukan</Text></Value>
+		<Value><Code>16119</Code><Text>Fijian</Text></Value>
+		<Value><Code>16120</Code><Text>Rotuman</Text></Value>
+		<Value><Code>16199</Code><Text>Central Pacific not elsewhere classified</Text></Value>
+		<Value><Code>162</Code><Text>Solomon Islands Languages (Non-Central-Pacific)</Text></Value>
+		<Value><Code>16210</Code><Text>Solomon Islands Languages (Non-Central-Pacific)</Text></Value>
+		<Value><Code>163</Code><Text>Micronesian</Text></Value>
+		<Value><Code>16300</Code><Text>Micronesian not further defined</Text></Value>
+		<Value><Code>16310</Code><Text>Kiribati</Text></Value>
+		<Value><Code>16311</Code><Text>Nauruan</Text></Value>
+		<Value><Code>16399</Code><Text>Micronesian not elsewhere classified</Text></Value>
+		<Value><Code>164</Code><Text>Vanuatu Languages</Text></Value>
+		<Value><Code>16410</Code><Text>Vanuatu Languages</Text></Value>
+		<Value><Code>17</Code><Text>Western Malayo-Polynesian</Text></Value>
+		<Value><Code>171</Code><Text>Western Malayo-Polynesian</Text></Value>
+		<Value><Code>17100</Code><Text>Western Malayo-Polynesian not further defined</Text></Value>
+		<Value><Code>17110</Code><Text>Bisayan</Text></Value>
+		<Value><Code>17111</Code><Text>Cebuano</Text></Value>
+		<Value><Code>17112</Code><Text>Ilokano</Text></Value>
+		<Value><Code>17113</Code><Text>Bahasa Indonesia</Text></Value>
+		<Value><Code>17114</Code><Text>Malaysian</Text></Value>
+		<Value><Code>17115</Code><Text>Tagalog</Text></Value>
+		<Value><Code>17116</Code><Text>Javanese</Text></Value>
+		<Value><Code>17199</Code><Text>Western Malayo-Polynesian not elsewhere classified</Text></Value>
+		<Value><Code>18</Code><Text>Afro-Asiatic</Text></Value>
+		<Value><Code>181</Code><Text>Cushitic</Text></Value>
+		<Value><Code>18100</Code><Text>Cushitic not further defined</Text></Value>
+		<Value><Code>18110</Code><Text>Somali</Text></Value>
+		<Value><Code>18199</Code><Text>Cushitic not elsewhere classified</Text></Value>
+		<Value><Code>182</Code><Text>Semitic</Text></Value>
+		<Value><Code>18200</Code><Text>Semitic not further defined</Text></Value>
+		<Value><Code>18210</Code><Text>Assyrian</Text></Value>
+		<Value><Code>18211</Code><Text>Arabic</Text></Value>
+		<Value><Code>18212</Code><Text>Maltese</Text></Value>
+		<Value><Code>18213</Code><Text>Amharic</Text></Value>
+		<Value><Code>18214</Code><Text>Tigrinya</Text></Value>
+		<Value><Code>18215</Code><Text>Hebrew</Text></Value>
+		<Value><Code>18299</Code><Text>Semitic not elsewhere classified</Text></Value>
+		<Value><Code>183</Code><Text>Chadic</Text></Value>
+		<Value><Code>18300</Code><Text>Chadic not further defined</Text></Value>
+		<Value><Code>18310</Code><Text>Hausa</Text></Value>
+		<Value><Code>18399</Code><Text>Chadic not elsewhere classified</Text></Value>
+		<Value><Code>19</Code><Text>Niger-Congo (Congo-Kordafanian)</Text></Value>
+		<Value><Code>191</Code><Text>Bantu languages</Text></Value>
+		<Value><Code>19100</Code><Text>Bantu not further defined</Text></Value>
+		<Value><Code>19110</Code><Text>Swahili</Text></Value>
+		<Value><Code>19111</Code><Text>Yoruba</Text></Value>
+		<Value><Code>19112</Code><Text>Zulu</Text></Value>
+		<Value><Code>19199</Code><Text>Bantu, not elsewhere classified</Text></Value>
+		<Value><Code>192</Code><Text>Other Niger-Congo</Text></Value>
+		<Value><Code>19200</Code><Text>Other Niger-Congo not further defined</Text></Value>
+		<Value><Code>19210</Code><Text>Fulani</Text></Value>
+		<Value><Code>19299</Code><Text>Other Niger-Congo not elsewhere classified</Text></Value>
+		<Value><Code>20</Code><Text>Pidgins and Creoles</Text></Value>
+		<Value><Code>201</Code><Text>Pidgins and Creoles</Text></Value>
+		<Value><Code>20100</Code><Text>Pidgins and Creoles not further defined</Text></Value>
+		<Value><Code>20110</Code><Text>Creole</Text></Value>
+		<Value><Code>20111</Code><Text>French Creole</Text></Value>
+		<Value><Code>20112</Code><Text>Pidgin English</Text></Value>
+		<Value><Code>20113</Code><Text>Neo Melanesian</Text></Value>
+		<Value><Code>20114</Code><Text>Mauritian Creole</Text></Value>
+		<Value><Code>20115</Code><Text>Tok Pisin</Text></Value>
+		<Value><Code>20116</Code><Text>Hindi Bat</Text></Value>
+		<Value><Code>20117</Code><Text>Solomon Islands Pidgin</Text></Value>
+		<Value><Code>20118</Code><Text>Bislama</Text></Value>
+		<Value><Code>20199</Code><Text>Pidgins and Creoles not elsewhere classified</Text></Value>
+		<Value><Code>21</Code><Text>Language Isolates</Text></Value>
+		<Value><Code>211</Code><Text>Japanese</Text></Value>
+		<Value><Code>21110</Code><Text>Japanese</Text></Value>
+		<Value><Code>212</Code><Text>Korean</Text></Value>
+		<Value><Code>21210</Code><Text>Korean</Text></Value>
+		<Value><Code>213</Code><Text>Basque</Text></Value>
+		<Value><Code>21310</Code><Text>Basque</Text></Value>
+		<Value><Code>219</Code><Text>Language Isolates not elsewhere classified</Text></Value>
+		<Value><Code>21999</Code><Text>Language Isolates not elsewhere classified</Text></Value>
+		<Value><Code>22</Code><Text>Miscellaneous Language Groupings</Text></Value>
+		<Value><Code>221</Code><Text>Papuan</Text></Value>
+		<Value><Code>22110</Code><Text>Papuan</Text></Value>
+		<Value><Code>222</Code><Text>Nilo-Saharan languages</Text></Value>
+		<Value><Code>22210</Code><Text>Nilo-Saharan</Text></Value>
+		<Value><Code>223</Code><Text>Miaow-Yao</Text></Value>
+		<Value><Code>22310</Code><Text>Miaow-Yao</Text></Value>
+		<Value><Code>224</Code><Text>Caucasian</Text></Value>
+		<Value><Code>22400</Code><Text>Caucasian not further defined</Text></Value>
+		<Value><Code>22410</Code><Text>Georgian</Text></Value>
+		<Value><Code>22499</Code><Text>Caucasian not elsewhere classified</Text></Value>
+		<Value><Code>225</Code><Text>Australian</Text></Value>
+		<Value><Code>22510</Code><Text>Australian</Text></Value>
+		<Value><Code>226</Code><Text>Amerind</Text></Value>
+		<Value><Code>22610</Code><Text>Amerind</Text></Value>
+		<Value><Code>229</Code><Text>Other Miscellaneous Languages</Text></Value>
+		<Value><Code>22910</Code><Text>Other Miscellaneous Languages</Text></Value>
+		<Value><Code>23</Code><Text>Artificial Languages</Text></Value>
+		<Value><Code>231</Code><Text>Artificial Languages</Text></Value>
+		<Value><Code>23100</Code><Text>Artificial Languages not further defined</Text></Value>
+		<Value><Code>23110</Code><Text>Esperanto</Text></Value>
+		<Value><Code>23199</Code><Text>Artificial Languages not elsewhere classified</Text></Value>
+		<Value><Code>24</Code><Text>Sign Language</Text></Value>
+		<Value><Code>241</Code><Text>Sign Language</Text></Value>
+		<Value><Code>24100</Code><Text>Sign Language not further defined</Text></Value>
+		<Value><Code>24110</Code><Text>New Zealand Sign Language</Text></Value>
+		<Value><Code>24111</Code><Text>Signed English</Text></Value>
+		<Value><Code>24112</Code><Text>American Sign Language</Text></Value>
+		<Value><Code>24113</Code><Text>Australian Sign Language</Text></Value>
+		<Value><Code>24114</Code><Text>British Sign Language</Text></Value>
+		<Value><Code>44</Code><Text>Don't Know</Text></Value>
+		<Value><Code>444</Code><Text>Don't Know</Text></Value>
+		<Value><Code>44444</Code><Text>Don't Know</Text></Value>
+		<Value><Code>55</Code><Text>Refused To Answer</Text></Value>
+		<Value><Code>555</Code><Text>Refused To Answer</Text></Value>
+		<Value><Code>55555</Code><Text>Refused To Answer</Text></Value>
+		<Value><Code>66</Code><Text>None (eg too young to talk)</Text></Value>
+		<Value><Code>666</Code><Text>None (eg too young to talk)</Text></Value>
+		<Value><Code>66666</Code><Text>None (eg too young to talk)</Text></Value>
+		<Value><Code>77</Code><Text>Response Unidentifiable</Text></Value>
+		<Value><Code>777</Code><Text>Response Unidentifiable</Text></Value>
+		<Value><Code>77777</Code><Text>Response Unidentifiable</Text></Value>
+		<Value><Code>88</Code><Text>Response Outside Scope</Text></Value>
+		<Value><Code>888</Code><Text>Response Outside Scope</Text></Value>
+		<Value><Code>88888</Code><Text>Response Outside Scope</Text></Value>
+		<Value><Code>99</Code><Text>Not Stated</Text></Value>
+		<Value><Code>999</Code><Text>Not Stated</Text></Value>
+		<Value><Code>99999</Code><Text>Not Stated</Text></Value>
+	</Values>
+</CodeSet>    <!-- Language -->
+
+    <CodeSet>
+		<Intro>
+			<p>Ethnicity is the ethnic group or groups that people
+			identify with or feel they belong to. Ethnicity is a
+			measure of cultural affiliation, as opposed to race,
+			ancestry, nationality or citizenship. Ethnicity is self
+			perceived and people can belong to more than one ethnic
+			group.</p>
+			<p>The permissible values consists of any value from
+			the <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/l36xYpbxsRh7IW1p">Statistics NZ - Ethnicity New Zealand Standard
+			Classification 2005 v2.0.0</a>  Depending on usage, ethnicity
+			may be defined at levels 1 to 4.
+			</p>
+		</Intro>
+		<ID>Ethnicity</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>European</Text>
+			</Value>
+			<Value>
+				<Code>10</Code>
+				<Text>European nfd</Text>
+			</Value>
+			<Value>
+				<Code>100</Code>
+				<Text>European nfd</Text>
+			</Value>
+			<Value>
+				<Code>10000</Code>
+				<Text>European nfd</Text>
+			</Value>
+			<Value>
+				<Code>11</Code>
+				<Text>New Zealand European</Text>
+			</Value>
+			<Value>
+				<Code>111</Code>
+				<Text>New Zealand European</Text>
+			</Value>
+			<Value>
+				<Code>11111</Code>
+				<Text>New Zealand European</Text>
+			</Value>
+			<Value>
+				<Code>12</Code>
+				<Text>Other European</Text>
+			</Value>
+			<Value>
+				<Code>121</Code>
+				<Text>British and Irish</Text>
+			</Value>
+			<Value>
+				<Code>12100</Code>
+				<Text>British nfd</Text>
+			</Value>
+			<Value>
+				<Code>12111</Code>
+				<Text>Celtic nfd</Text>
+			</Value>
+			<Value>
+				<Code>12112</Code>
+				<Text>Channel Islander</Text>
+			</Value>
+			<Value>
+				<Code>12113</Code>
+				<Text>Cornish</Text>
+			</Value>
+			<Value>
+				<Code>12114</Code>
+				<Text>English</Text>
+			</Value>
+			<Value>
+				<Code>12116</Code>
+				<Text>Irish</Text>
+			</Value>
+			<Value>
+				<Code>12117</Code>
+				<Text>Manx</Text>
+			</Value>
+			<Value>
+				<Code>12119</Code>
+				<Text>Scottish</Text>
+			</Value>
+			<Value>
+				<Code>12121</Code>
+				<Text>Welsh</Text>
+			</Value>
+			<Value>
+				<Code>12199</Code>
+				<Text>British nec</Text>
+			</Value>
+			<Value>
+				<Code>122</Code>
+				<Text>Dutch</Text>
+			</Value>
+			<Value>
+				<Code>12211</Code>
+				<Text>Dutch</Text>
+			</Value>
+			<Value>
+				<Code>123</Code>
+				<Text>Greek</Text>
+			</Value>
+			<Value>
+				<Code>12311</Code>
+				<Text>Greek</Text>
+			</Value>
+			<Value>
+				<Code>124</Code>
+				<Text>Polish</Text>
+			</Value>
+			<Value>
+				<Code>12411</Code>
+				<Text>Polish</Text>
+			</Value>
+			<Value>
+				<Code>125</Code>
+				<Text>South Slav</Text>
+			</Value>
+			<Value>
+				<Code>12500</Code>
+				<Text>South Slav nfd</Text>
+			</Value>
+			<Value>
+				<Code>12511</Code>
+				<Text>Croatian</Text>
+			</Value>
+			<Value>
+				<Code>12512</Code>
+				<Text>Dalmatian</Text>
+			</Value>
+			<Value>
+				<Code>12513</Code>
+				<Text>Macedonian</Text>
+			</Value>
+			<Value>
+				<Code>12514</Code>
+				<Text>Serbian</Text>
+			</Value>
+			<Value>
+				<Code>12515</Code>
+				<Text>Slovenian</Text>
+			</Value>
+			<Value>
+				<Code>12516</Code>
+				<Text>Bosnian</Text>
+			</Value>
+			<Value>
+				<Code>12599</Code>
+				<Text>South Slav nec</Text>
+			</Value>
+			<Value>
+				<Code>126</Code>
+				<Text>Italian</Text>
+			</Value>
+			<Value>
+				<Code>12611</Code>
+				<Text>Italian</Text>
+			</Value>
+			<Value>
+				<Code>127</Code>
+				<Text>German</Text>
+			</Value>
+			<Value>
+				<Code>12711</Code>
+				<Text>German</Text>
+			</Value>
+			<Value>
+				<Code>128</Code>
+				<Text>Australian</Text>
+			</Value>
+			<Value>
+				<Code>12811</Code>
+				<Text>Australian</Text>
+			</Value>
+			<Value>
+				<Code>129</Code>
+				<Text>Other European</Text>
+			</Value>
+			<Value>
+				<Code>12911</Code>
+				<Text>Albanian</Text>
+			</Value>
+			<Value>
+				<Code>12912</Code>
+				<Text>Armenian</Text>
+			</Value>
+			<Value>
+				<Code>12913</Code>
+				<Text>Austrian</Text>
+			</Value>
+			<Value>
+				<Code>12914</Code>
+				<Text>Belgian</Text>
+			</Value>
+			<Value>
+				<Code>12915</Code>
+				<Text>Bulgarian</Text>
+			</Value>
+			<Value>
+				<Code>12916</Code>
+				<Text>Belorussian</Text>
+			</Value>
+			<Value>
+				<Code>12918</Code>
+				<Text>Cypriot nfd</Text>
+			</Value>
+			<Value>
+				<Code>12919</Code>
+				<Text>Czech</Text>
+			</Value>
+			<Value>
+				<Code>12920</Code>
+				<Text>Danish</Text>
+			</Value>
+			<Value>
+				<Code>12921</Code>
+				<Text>Estonian</Text>
+			</Value>
+			<Value>
+				<Code>12922</Code>
+				<Text>Finnish</Text>
+			</Value>
+			<Value>
+				<Code>12923</Code>
+				<Text>Flemish</Text>
+			</Value>
+			<Value>
+				<Code>12924</Code>
+				<Text>French</Text>
+			</Value>
+			<Value>
+				<Code>12926</Code>
+				<Text>Hungarian</Text>
+			</Value>
+			<Value>
+				<Code>12927</Code>
+				<Text>Icelandic</Text>
+			</Value>
+			<Value>
+				<Code>12928</Code>
+				<Text>Latvian</Text>
+			</Value>
+			<Value>
+				<Code>12929</Code>
+				<Text>Lithuanian</Text>
+			</Value>
+			<Value>
+				<Code>12930</Code>
+				<Text>Maltese</Text>
+			</Value>
+			<Value>
+				<Code>12931</Code>
+				<Text>Norwegian</Text>
+			</Value>
+			<Value>
+				<Code>12932</Code>
+				<Text>Portuguese</Text>
+			</Value>
+			<Value>
+				<Code>12933</Code>
+				<Text>Romanian</Text>
+			</Value>
+			<Value>
+				<Code>12934</Code>
+				<Text>Gypsy</Text>
+			</Value>
+			<Value>
+				<Code>12935</Code>
+				<Text>Russian</Text>
+			</Value>
+			<Value>
+				<Code>12937</Code>
+				<Text>Slavic</Text>
+			</Value>
+			<Value>
+				<Code>12938</Code>
+				<Text>Slovak</Text>
+			</Value>
+			<Value>
+				<Code>12939</Code>
+				<Text>Spanish</Text>
+			</Value>
+			<Value>
+				<Code>12940</Code>
+				<Text>Swedish</Text>
+			</Value>
+			<Value>
+				<Code>12941</Code>
+				<Text>Swiss</Text>
+			</Value>
+			<Value>
+				<Code>12942</Code>
+				<Text>Ukrainian</Text>
+			</Value>
+			<Value>
+				<Code>12943</Code>
+				<Text>American</Text>
+			</Value>
+			<Value>
+				<Code>12945</Code>
+				<Text>Canadian</Text>
+			</Value>
+			<Value>
+				<Code>12947</Code>
+				<Text>New Caledonian</Text>
+			</Value>
+			<Value>
+				<Code>12948</Code>
+				<Text>South African European</Text>
+			</Value>
+			<Value>
+				<Code>12949</Code>
+				<Text>Afrikaner</Text>
+			</Value>
+			<Value>
+				<Code>12950</Code>
+				<Text>Zimbabwean European</Text>
+			</Value>
+			<Value>
+				<Code>12999</Code>
+				<Text>European nec</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Māori</Text>
+			</Value>
+			<Value>
+				<Code>21</Code>
+				<Text>Māori</Text>
+			</Value>
+			<Value>
+				<Code>211</Code>
+				<Text>Māori</Text>
+			</Value>
+			<Value>
+				<Code>21111</Code>
+				<Text>Māori</Text>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Pacific Peoples</Text>
+			</Value>
+			<Value>
+				<Code>30</Code>
+				<Text>Pacific Peoples nfd</Text>
+			</Value>
+			<Value>
+				<Code>300</Code>
+				<Text>Pacific Peoples nfd</Text>
+			</Value>
+			<Value>
+				<Code>30000</Code>
+				<Text>Pacific Peoples nfd</Text>
+			</Value>
+			<Value>
+				<Code>31</Code>
+				<Text>Samoan</Text>
+			</Value>
+			<Value>
+				<Code>311</Code>
+				<Text>Samoan</Text>
+			</Value>
+			<Value>
+				<Code>31111</Code>
+				<Text>Samoan</Text>
+			</Value>
+			<Value>
+				<Code>32</Code>
+				<Text>Cook Islands Maori</Text>
+			</Value>
+			<Value>
+				<Code>321</Code>
+				<Text>Cook Islands Maori</Text>
+			</Value>
+			<Value>
+				<Code>32100</Code>
+				<Text>Cook Islands Maori</Text>
+			</Value>
+			<Value>
+				<Code>33</Code>
+				<Text>Tongan</Text>
+			</Value>
+			<Value>
+				<Code>331</Code>
+				<Text>Tongan</Text>
+			</Value>
+			<Value>
+				<Code>33111</Code>
+				<Text>Tongan</Text>
+			</Value>
+			<Value>
+				<Code>34</Code>
+				<Text>Niuean</Text>
+			</Value>
+			<Value>
+				<Code>341</Code>
+				<Text>Niuean</Text>
+			</Value>
+			<Value>
+				<Code>34111</Code>
+				<Text>Niuean</Text>
+			</Value>
+			<Value>
+				<Code>35</Code>
+				<Text>Tokelauan</Text>
+			</Value>
+			<Value>
+				<Code>351</Code>
+				<Text>Tokelauan</Text>
+			</Value>
+			<Value>
+				<Code>35111</Code>
+				<Text>Tokelauan</Text>
+			</Value>
+			<Value>
+				<Code>36</Code>
+				<Text>Fijian</Text>
+			</Value>
+			<Value>
+				<Code>361</Code>
+				<Text>Fijian</Text>
+			</Value>
+			<Value>
+				<Code>36111</Code>
+				<Text>Fijian</Text>
+			</Value>
+			<Value>
+				<Code>37</Code>
+				<Text>Other Pacific Peoples</Text>
+			</Value>
+			<Value>
+				<Code>371</Code>
+				<Text>Other Pacific Peoples</Text>
+			</Value>
+			<Value>
+				<Code>37112</Code>
+				<Text>Indigenous Australian</Text>
+			</Value>
+			<Value>
+				<Code>37122</Code>
+				<Text>Hawaiian</Text>
+			</Value>
+			<Value>
+				<Code>37124</Code>
+				<Text>Kiribati</Text>
+			</Value>
+			<Value>
+				<Code>37130</Code>
+				<Text>Nauruan</Text>
+			</Value>
+			<Value>
+				<Code>37135</Code>
+				<Text>Papua New Guinean</Text>
+			</Value>
+			<Value>
+				<Code>37137</Code>
+				<Text>Pitcairn Islander</Text>
+			</Value>
+			<Value>
+				<Code>37138</Code>
+				<Text>Rotuman</Text>
+			</Value>
+			<Value>
+				<Code>37140</Code>
+				<Text>Tahitian</Text>
+			</Value>
+			<Value>
+				<Code>37141</Code>
+				<Text>Solomon Islander</Text>
+			</Value>
+			<Value>
+				<Code>37144</Code>
+				<Text>Tuvaluan</Text>
+			</Value>
+			<Value>
+				<Code>37145</Code>
+				<Text>Ni Vanuatu</Text>
+			</Value>
+			<Value>
+				<Code>37199</Code>
+				<Text>Pacific Peoples nec</Text>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Asian</Text>
+			</Value>
+			<Value>
+				<Code>40</Code>
+				<Text>Asian nfd</Text>
+			</Value>
+			<Value>
+				<Code>400</Code>
+				<Text>Asian nfd</Text>
+			</Value>
+			<Value>
+				<Code>40000</Code>
+				<Text>Asian nfd</Text>
+			</Value>
+			<Value>
+				<Code>41</Code>
+				<Text>Southeast Asian</Text>
+			</Value>
+			<Value>
+				<Code>410</Code>
+				<Text>Southeast Asian nfd</Text>
+			</Value>
+			<Value>
+				<Code>41000</Code>
+				<Text>Southeast Asian nfd</Text>
+			</Value>
+			<Value>
+				<Code>411</Code>
+				<Text>Filipino</Text>
+			</Value>
+			<Value>
+				<Code>41111</Code>
+				<Text>Filipino</Text>
+			</Value>
+			<Value>
+				<Code>412</Code>
+				<Text>Cambodian</Text>
+			</Value>
+			<Value>
+				<Code>41211</Code>
+				<Text>Cambodian</Text>
+			</Value>
+			<Value>
+				<Code>413</Code>
+				<Text>Vietnamese</Text>
+			</Value>
+			<Value>
+				<Code>41311</Code>
+				<Text>Vietnamese</Text>
+			</Value>
+			<Value>
+				<Code>414</Code>
+				<Text>Other Southeast Asian</Text>
+			</Value>
+			<Value>
+				<Code>41411</Code>
+				<Text>Burmese</Text>
+			</Value>
+			<Value>
+				<Code>41412</Code>
+				<Text>Indonesian</Text>
+			</Value>
+			<Value>
+				<Code>41413</Code>
+				<Text>Lao</Text>
+			</Value>
+			<Value>
+				<Code>41414</Code>
+				<Text>Malay</Text>
+			</Value>
+			<Value>
+				<Code>41415</Code>
+				<Text>Thai</Text>
+			</Value>
+			<Value>
+				<Code>41416</Code>
+				<Text>Karen</Text>
+			</Value>
+			<Value>
+				<Code>41417</Code>
+				<Text>Chin</Text>
+			</Value>
+			<Value>
+				<Code>41499</Code>
+				<Text>Southeast Asian nec</Text>
+			</Value>
+			<Value>
+				<Code>42</Code>
+				<Text>Chinese</Text>
+			</Value>
+			<Value>
+				<Code>421</Code>
+				<Text>Chinese</Text>
+			</Value>
+			<Value>
+				<Code>42100</Code>
+				<Text>Chinese nfd</Text>
+			</Value>
+			<Value>
+				<Code>42111</Code>
+				<Text>Hong Kong Chinese</Text>
+			</Value>
+			<Value>
+				<Code>42112</Code>
+				<Text>Cambodian Chinese</Text>
+			</Value>
+			<Value>
+				<Code>42113</Code>
+				<Text>Malaysian Chinese</Text>
+			</Value>
+			<Value>
+				<Code>42114</Code>
+				<Text>Singaporean Chinese</Text>
+			</Value>
+			<Value>
+				<Code>42115</Code>
+				<Text>Vietnamese Chinese</Text>
+			</Value>
+			<Value>
+				<Code>42116</Code>
+				<Text>Taiwanese</Text>
+			</Value>
+			<Value>
+				<Code>42199</Code>
+				<Text>Chinese nec</Text>
+			</Value>
+			<Value>
+				<Code>43</Code>
+				<Text>Indian</Text>
+			</Value>
+			<Value>
+				<Code>431</Code>
+				<Text>Indian</Text>
+			</Value>
+			<Value>
+				<Code>43100</Code>
+				<Text>Indian nfd</Text>
+			</Value>
+			<Value>
+				<Code>43111</Code>
+				<Text>Bengali</Text>
+			</Value>
+			<Value>
+				<Code>43112</Code>
+				<Text>Fijian Indian</Text>
+			</Value>
+			<Value>
+				<Code>43114</Code>
+				<Text>Indian Tamil</Text>
+			</Value>
+			<Value>
+				<Code>43115</Code>
+				<Text>Punjabi</Text>
+			</Value>
+			<Value>
+				<Code>43116</Code>
+				<Text>Sikh</Text>
+			</Value>
+			<Value>
+				<Code>43117</Code>
+				<Text>Anglo Indian</Text>
+			</Value>
+			<Value>
+				<Code>43118</Code>
+				<Text>Malaysian Indian</Text>
+			</Value>
+			<Value>
+				<Code>43119</Code>
+				<Text>South African Indian</Text>
+			</Value>
+			<Value>
+				<Code>43199</Code>
+				<Text>Indian nec</Text>
+			</Value>
+			<Value>
+				<Code>44</Code>
+				<Text>Other Asian</Text>
+			</Value>
+			<Value>
+				<Code>441</Code>
+				<Text>Sri Lankan</Text>
+			</Value>
+			<Value>
+				<Code>44100</Code>
+				<Text>Sri Lankan nfd</Text>
+			</Value>
+			<Value>
+				<Code>44111</Code>
+				<Text>Sinhalese</Text>
+			</Value>
+			<Value>
+				<Code>44112</Code>
+				<Text>Sri Lankan Tamil</Text>
+			</Value>
+			<Value>
+				<Code>44199</Code>
+				<Text>Sri Lankan nec</Text>
+			</Value>
+			<Value>
+				<Code>442</Code>
+				<Text>Japanese</Text>
+			</Value>
+			<Value>
+				<Code>44211</Code>
+				<Text>Japanese</Text>
+			</Value>
+			<Value>
+				<Code>443</Code>
+				<Text>Korean</Text>
+			</Value>
+			<Value>
+				<Code>44311</Code>
+				<Text>Korean</Text>
+			</Value>
+			<Value>
+				<Code>444</Code>
+				<Text>Other Asian</Text>
+			</Value>
+			<Value>
+				<Code>44411</Code>
+				<Text>Afghani</Text>
+			</Value>
+			<Value>
+				<Code>44412</Code>
+				<Text>Bangladeshi</Text>
+			</Value>
+			<Value>
+				<Code>44413</Code>
+				<Text>Nepalese</Text>
+			</Value>
+			<Value>
+				<Code>44414</Code>
+				<Text>Pakistani</Text>
+			</Value>
+			<Value>
+				<Code>44415</Code>
+				<Text>Tibetan</Text>
+			</Value>
+			<Value>
+				<Code>44416</Code>
+				<Text>Eurasian</Text>
+			</Value>
+			<Value>
+				<Code>44417</Code>
+				<Text>Bhutanese</Text>
+			</Value>
+			<Value>
+				<Code>44418</Code>
+				<Text>Maldivian</Text>
+			</Value>
+			<Value>
+				<Code>44419</Code>
+				<Text>Mongolian</Text>
+			</Value>
+			<Value>
+				<Code>44499</Code>
+				<Text>Asian nec</Text>
+			</Value>
+			<Value>
+				<Code>5</Code>
+				<Text>Middle Eastern/Latin American/African</Text>
+			</Value>
+			<Value>
+				<Code>51</Code>
+				<Text>Middle Eastern</Text>
+			</Value>
+			<Value>
+				<Code>511</Code>
+				<Text>Middle Eastern</Text>
+			</Value>
+			<Value>
+				<Code>51100</Code>
+				<Text>Middle Eastern nfd</Text>
+			</Value>
+			<Value>
+				<Code>51111</Code>
+				<Text>Algerian</Text>
+			</Value>
+			<Value>
+				<Code>51112</Code>
+				<Text>Arab</Text>
+			</Value>
+			<Value>
+				<Code>51113</Code>
+				<Text>Assyrian</Text>
+			</Value>
+			<Value>
+				<Code>51114</Code>
+				<Text>Egyptian</Text>
+			</Value>
+			<Value>
+				<Code>51115</Code>
+				<Text>Iranian/Persian</Text>
+			</Value>
+			<Value>
+				<Code>51116</Code>
+				<Text>Iraqi</Text>
+			</Value>
+			<Value>
+				<Code>51117</Code>
+				<Text>Israeli/Jewish</Text>
+			</Value>
+			<Value>
+				<Code>51118</Code>
+				<Text>Jordanian</Text>
+			</Value>
+			<Value>
+				<Code>51119</Code>
+				<Text>Kurd</Text>
+			</Value>
+			<Value>
+				<Code>51120</Code>
+				<Text>Lebanese</Text>
+			</Value>
+			<Value>
+				<Code>51122</Code>
+				<Text>Moroccan</Text>
+			</Value>
+			<Value>
+				<Code>51124</Code>
+				<Text>Palestinian</Text>
+			</Value>
+			<Value>
+				<Code>51125</Code>
+				<Text>Syrian</Text>
+			</Value>
+			<Value>
+				<Code>51127</Code>
+				<Text>Turkish</Text>
+			</Value>
+			<Value>
+				<Code>51199</Code>
+				<Text>Middle Eastern nec</Text>
+			</Value>
+			<Value>
+				<Code>52</Code>
+				<Text>Latin American</Text>
+			</Value>
+			<Value>
+				<Code>521</Code>
+				<Text>Latin American</Text>
+			</Value>
+			<Value>
+				<Code>52100</Code>
+				<Text>Latin American nfd</Text>
+			</Value>
+			<Value>
+				<Code>52111</Code>
+				<Text>Argentinian</Text>
+			</Value>
+			<Value>
+				<Code>52112</Code>
+				<Text>Bolivian</Text>
+			</Value>
+			<Value>
+				<Code>52113</Code>
+				<Text>Brazilian</Text>
+			</Value>
+			<Value>
+				<Code>52114</Code>
+				<Text>Chilean</Text>
+			</Value>
+			<Value>
+				<Code>52115</Code>
+				<Text>Colombian</Text>
+			</Value>
+			<Value>
+				<Code>52118</Code>
+				<Text>Ecuadorian</Text>
+			</Value>
+			<Value>
+				<Code>52123</Code>
+				<Text>Mexican</Text>
+			</Value>
+			<Value>
+				<Code>52127</Code>
+				<Text>Peruvian</Text>
+			</Value>
+			<Value>
+				<Code>52128</Code>
+				<Text>Puerto Rican</Text>
+			</Value>
+			<Value>
+				<Code>52129</Code>
+				<Text>Uruguayan</Text>
+			</Value>
+			<Value>
+				<Code>52130</Code>
+				<Text>Venezuelan</Text>
+			</Value>
+			<Value>
+				<Code>52199</Code>
+				<Text>Latin American nec</Text>
+			</Value>
+			<Value>
+				<Code>53</Code>
+				<Text>African</Text>
+			</Value>
+			<Value>
+				<Code>531</Code>
+				<Text>African</Text>
+			</Value>
+			<Value>
+				<Code>53100</Code>
+				<Text>African nfd</Text>
+			</Value>
+			<Value>
+				<Code>53113</Code>
+				<Text>Jamaican</Text>
+			</Value>
+			<Value>
+				<Code>53114</Code>
+				<Text>Kenyan</Text>
+			</Value>
+			<Value>
+				<Code>53115</Code>
+				<Text>Nigerian</Text>
+			</Value>
+			<Value>
+				<Code>53116</Code>
+				<Text>African American</Text>
+			</Value>
+			<Value>
+				<Code>53118</Code>
+				<Text>Caribbean</Text>
+			</Value>
+			<Value>
+				<Code>53119</Code>
+				<Text>Somali</Text>
+			</Value>
+			<Value>
+				<Code>53120</Code>
+				<Text>Eritrean</Text>
+			</Value>
+			<Value>
+				<Code>53121</Code>
+				<Text>Ethiopian</Text>
+			</Value>
+			<Value>
+				<Code>53122</Code>
+				<Text>Ghanaian</Text>
+			</Value>
+			<Value>
+				<Code>53123</Code>
+				<Text>Burundian</Text>
+			</Value>
+			<Value>
+				<Code>53124</Code>
+				<Text>Congolese</Text>
+			</Value>
+			<Value>
+				<Code>53125</Code>
+				<Text>Sudanese</Text>
+			</Value>
+			<Value>
+				<Code>53126</Code>
+				<Text>Zambian</Text>
+			</Value>
+			<Value>
+				<Code>53127</Code>
+				<Text>Other Zimbabwean</Text>
+			</Value>
+			<Value>
+				<Code>53199</Code>
+				<Text>African nec</Text>
+			</Value>
+			<Value>
+				<Code>6</Code>
+				<Text>Other Ethnicity</Text>
+			</Value>
+			<Value>
+				<Code>61</Code>
+				<Text>Other Ethnicity</Text>
+			</Value>
+			<Value>
+				<Code>611</Code>
+				<Text>Other Ethnicity</Text>
+			</Value>
+			<Value>
+				<Code>61113</Code>
+				<Text>Indigenous American</Text>
+			</Value>
+			<Value>
+				<Code>61115</Code>
+				<Text>Mauritian</Text>
+			</Value>
+			<Value>
+				<Code>61116</Code>
+				<Text>Seychellois</Text>
+			</Value>
+			<Value>
+				<Code>61117</Code>
+				<Text>Other South African</Text>
+			</Value>
+			<Value>
+				<Code>61118</Code>
+				<Text>New Zealander</Text>
+			</Value>
+			<Value>
+				<Code>61199</Code>
+				<Text>Other Ethnicity nec</Text>
+			</Value>
+			<Value>
+				<Code>9</Code>
+				<Text>Residual Categories</Text>
+			</Value>
+			<Value>
+				<Code>94</Code>
+				<Text>Don't Know</Text>
+			</Value>
+			<Value>
+				<Code>944</Code>
+				<Text>Don't Know</Text>
+			</Value>
+			<Value>
+				<Code>94444</Code>
+				<Text>Don't Know</Text>
+			</Value>
+			<Value>
+				<Code>95</Code>
+				<Text>Refused to Answer</Text>
+			</Value>
+			<Value>
+				<Code>955</Code>
+				<Text>Refused to Answer</Text>
+			</Value>
+			<Value>
+				<Code>95555</Code>
+				<Text>Refused to Answer</Text>
+			</Value>
+			<Value>
+				<Code>96</Code>
+				<Text>Repeated Value</Text>
+			</Value>
+			<Value>
+				<Code>966</Code>
+				<Text>Repeated Value</Text>
+			</Value>
+			<Value>
+				<Code>96666</Code>
+				<Text>Repeated Value</Text>
+			</Value>
+			<Value>
+				<Code>97</Code>
+				<Text>Response Unidentifiable</Text>
+			</Value>
+			<Value>
+				<Code>977</Code>
+				<Text>Response Unidentifiable</Text>
+			</Value>
+			<Value>
+				<Code>97777</Code>
+				<Text>Response Unidentifiable</Text>
+			</Value>
+			<Value>
+				<Code>98</Code>
+				<Text>Response Outside Scope</Text>
+			</Value>
+			<Value>
+				<Code>988</Code>
+				<Text>Response Outside Scope</Text>
+			</Value>
+			<Value>
+				<Code>98888</Code>
+				<Text>Response Outside Scope</Text>
+			</Value>
+			<Value>
+				<Code>99</Code>
+				<Text>Not Stated</Text>
+			</Value>
+			<Value>
+				<Code>999</Code>
+				<Text>Not Stated</Text>
+			</Value>
+			<Value>
+				<Code>99999</Code>
+				<Text>Not Stated</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Ethnicity -->
+	<CodeSet>
+		<Intro>
+			<p>An iwi, or Māori tribe, is one of the largest kinship
+			groupings and is generally made up of several hapū that
+			are all descended from a common ancestor. Hapū are
+			clusters of whānau where the whānau is usually an extended
+			family grouping consisting of children, parents, often
+			grandparents, and other closely related kin.</p>
+			<p>The permissible values consists of any value from
+			the <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/QjykuWT5BTJrGdVs">Statistics NZ - Iwi and Iwi related groups statistical standard v1.0.0.0</a></p>
+		</Intro>
+		<ID>Iwi</ID>
+		<Values>
+			<Value>
+				<Code>01</Code>
+				<Text>Te Tai Tokerau/Tāmaki-makaurau (Northland/Auckland) Region Iwi</Text>
+			</Value>
+			<Value>
+				<Code>0101</Code>
+				<Text>Te Aupōuri</Text>
+			</Value>
+			<Value>
+				<Code>0102</Code>
+				<Text>Ngāti Kahu</Text>
+			</Value>
+			<Value>
+				<Code>0103</Code>
+				<Text>Ngāti Kurī</Text>
+			</Value>
+			<Value>
+				<Code>0104</Code>
+				<Text>Ngāpuhi</Text>
+			</Value>
+			<Value>
+				<Code>0105</Code>
+				<Text>Ngāpuhi ki Whaingaroa-Ngāti Kahu ki Whaingaroa</Text>
+			</Value>
+			<Value>
+				<Code>0106</Code>
+				<Text>Te Rarawa</Text>
+			</Value>
+			<Value>
+				<Code>0107</Code>
+				<Text>Ngāi Takoto</Text>
+			</Value>
+			<Value>
+				<Code>0108</Code>
+				<Text>Ngāti Wai</Text>
+			</Value>
+			<Value>
+				<Code>0109</Code>
+				<Text>Ngāti Whātua (not Ōrākei or Kaipara)</Text>
+			</Value>
+			<Value>
+				<Code>0110</Code>
+				<Text>Te Kawerau ā Maki</Text>
+			</Value>
+			<Value>
+				<Code>0111</Code>
+				<Text>Te Uri-o-Hau</Text>
+			</Value>
+			<Value>
+				<Code>0112</Code>
+				<Text>Te Roroa</Text>
+			</Value>
+			<Value>
+				<Code>0113</Code>
+				<Text>Ngāti Whātua o Kaipara</Text>
+			</Value>
+			<Value>
+				<Code>0114</Code>
+				<Text>Ngāti Whātua o Ōrākei</Text>
+			</Value>
+			<Value>
+				<Code>0115</Code>
+				<Text>Ngāi Tai ki Tāmaki  </Text>
+			</Value>
+			<Value>
+				<Code>0116</Code>
+				<Text>Ngāti Hine (Te Tai Tokerau)</Text>
+			</Value>
+			<Value>
+				<Code>0117</Code>
+				<Text>Te Paatu</Text>
+			</Value>
+			<Value>
+				<Code>0118</Code>
+				<Text>Ngāti Manuhiri</Text>
+			</Value>
+			<Value>
+				<Code>0119</Code>
+				<Text>Ngāti Rēhua</Text>
+			</Value>
+			<Value>
+				<Code>02</Code>
+				<Text>Hauraki (Coromandel) Region Iwi</Text>
+			</Value>
+			<Value>
+				<Code>0201</Code>
+				<Text>Ngāti Hako</Text>
+			</Value>
+			<Value>
+				<Code>0202</Code>
+				<Text>Ngāti Hei</Text>
+			</Value>
+			<Value>
+				<Code>0203</Code>
+				<Text>Ngāti Maru (Hauraki)</Text>
+			</Value>
+			<Value>
+				<Code>0204</Code>
+				<Text>Ngāti Paoa</Text>
+			</Value>
+			<Value>
+				<Code>0205</Code>
+				<Text>Patukirikiri</Text>
+			</Value>
+			<Value>
+				<Code>0206</Code>
+				<Text>Ngāti Porou ki Harataunga ki Mataora</Text>
+			</Value>
+			<Value>
+				<Code>0207</Code>
+				<Text>Ngāti Pūkenga ki Waiau</Text>
+			</Value>
+			<Value>
+				<Code>0208</Code>
+				<Text>Ngāti Rāhiri Tumutumu</Text>
+			</Value>
+			<Value>
+				<Code>0210</Code>
+				<Text>Ngāti Tamaterā</Text>
+			</Value>
+			<Value>
+				<Code>0211</Code>
+				<Text>Ngāti Tara Tokanui</Text>
+			</Value>
+			<Value>
+				<Code>0212</Code>
+				<Text>Ngāti Whanaunga</Text>
+			</Value>
+			<Value>
+				<Code>03</Code>
+				<Text>Waikato/Te Rohe Pōtae (Waikato/King Country) Region Iwi</Text>
+			</Value>
+			<Value>
+				<Code>0301</Code>
+				<Text>Ngāti Haua (Waikato)</Text>
+			</Value>
+			<Value>
+				<Code>0302</Code>
+				<Text>Ngāti Maniapoto</Text>
+			</Value>
+			<Value>
+				<Code>0303</Code>
+				<Text>Raukawa (Waikato)</Text>
+			</Value>
+			<Value>
+				<Code>0304</Code>
+				<Text>Waikato</Text>
+			</Value>
+			<Value>
+				<Code>0305</Code>
+				<Text>Ngāti Te Ata</Text>
+			</Value>
+			<Value>
+				<Code>0306</Code>
+				<Text>Ngāti Hīkairo </Text>
+			</Value>
+			<Value>
+				<Code>0307</Code>
+				<Text>Rereahu</Text>
+			</Value>
+			<Value>
+				<Code>0308</Code>
+				<Text>Ngāti Tiipa</Text>
+			</Value>
+			<Value>
+				<Code>0309</Code>
+				<Text>Ngāti Korokī Kahukura</Text>
+			</Value>
+			<Value>
+				<Code>0310</Code>
+				<Text>Ngāti Tamaoho</Text>
+			</Value>
+			<Value>
+				<Code>0311</Code>
+				<Text>Te Ākitai-Waiohua</Text>
+			</Value>
+			<Value>
+				<Code>04</Code>
+				<Text>Te Arawa/Taupō (Rotorua/Taupō) Region Iwi</Text>
+			</Value>
+			<Value>
+				<Code>0401</Code>
+				<Text>Ngāti Pikiao (Te Arawa)</Text>
+			</Value>
+			<Value>
+				<Code>0402</Code>
+				<Text>Ngāti Rangiteaorere (Te Arawa)</Text>
+			</Value>
+			<Value>
+				<Code>0403</Code>
+				<Text>Ngāti Rangitihi (Te Arawa)</Text>
+			</Value>
+			<Value>
+				<Code>0404</Code>
+				<Text>Ngāti Rangiwewehi (Te Arawa)</Text>
+			</Value>
+			<Value>
+				<Code>0405</Code>
+				<Text>Tapuika (Te Arawa)</Text>
+			</Value>
+			<Value>
+				<Code>0406</Code>
+				<Text>Ngāti Tarāwhai (Te Arawa)</Text>
+			</Value>
+			<Value>
+				<Code>0407</Code>
+				<Text>Tūhourangi (Te Arawa)</Text>
+			</Value>
+			<Value>
+				<Code>0408</Code>
+				<Text>Uenuku-Kōpako (Te Arawa)</Text>
+			</Value>
+			<Value>
+				<Code>0409</Code>
+				<Text>Waitaha (Te Arawa)</Text>
+			</Value>
+			<Value>
+				<Code>0410</Code>
+				<Text>Ngāti Whakaue (Te Arawa)</Text>
+			</Value>
+			<Value>
+				<Code>0411</Code>
+				<Text>Ngāti Tūwharetoa (ki Taupō)</Text>
+			</Value>
+			<Value>
+				<Code>0412</Code>
+				<Text>Ngāti Tahu-Ngāti Whaoa (Te Arawa)</Text>
+			</Value>
+			<Value>
+				<Code>0413</Code>
+				<Text>Ngāti Mākino</Text>
+			</Value>
+			<Value>
+				<Code>0414</Code>
+				<Text>Ngāti Kearoa / Ngāti Tuarā</Text>
+			</Value>
+			<Value>
+				<Code>0415</Code>
+				<Text>Ngāti Rongomai (Te Arawa)</Text>
+			</Value>
+			<Value>
+				<Code>05</Code>
+				<Text>Tauranga Moana/Mātaatua (Bay of Plenty) Region Iwi</Text>
+			</Value>
+			<Value>
+				<Code>0501</Code>
+				<Text>Ngāti Pūkenga</Text>
+			</Value>
+			<Value>
+				<Code>0502</Code>
+				<Text>Ngāi Te Rangi </Text>
+			</Value>
+			<Value>
+				<Code>0503</Code>
+				<Text>Ngāti Ranginui</Text>
+			</Value>
+			<Value>
+				<Code>0504</Code>
+				<Text>Ngāti Awa</Text>
+			</Value>
+			<Value>
+				<Code>0505</Code>
+				<Text>Ngāti Manawa</Text>
+			</Value>
+			<Value>
+				<Code>0506</Code>
+				<Text>Ngāi Tai (Tauranga Moana/Mātaatua)</Text>
+			</Value>
+			<Value>
+				<Code>0507</Code>
+				<Text>Tūhoe</Text>
+			</Value>
+			<Value>
+				<Code>0508</Code>
+				<Text>Whakatōhea</Text>
+			</Value>
+			<Value>
+				<Code>0509</Code>
+				<Text>Te Whānau-ā-Apanui</Text>
+			</Value>
+			<Value>
+				<Code>0510</Code>
+				<Text>Ngāti Whare</Text>
+			</Value>
+			<Value>
+				<Code>0511</Code>
+				<Text>Ngā Pōtiki ā Tamapahore</Text>
+			</Value>
+			<Value>
+				<Code>0512</Code>
+				<Text>Te Upokorehe</Text>
+			</Value>
+			<Value>
+				<Code>0513</Code>
+				<Text>Ngāti Tūwharetoa ki Kawerau </Text>
+			</Value>
+			<Value>
+				<Code>06</Code>
+				<Text>Te Tai Rāwhiti (East Coast) Region Iwi</Text>
+			</Value>
+			<Value>
+				<Code>0601</Code>
+				<Text>Ngāti Porou</Text>
+			</Value>
+			<Value>
+				<Code>0602</Code>
+				<Text>Te Aitanga-a-Māhaki</Text>
+			</Value>
+			<Value>
+				<Code>0603</Code>
+				<Text>Rongowhakaata</Text>
+			</Value>
+			<Value>
+				<Code>0604</Code>
+				<Text>Ngāi Tāmanuhiri</Text>
+			</Value>
+			<Value>
+				<Code>0605</Code>
+				<Text>Te Aitanga ā Hauiti</Text>
+			</Value>
+			<Value>
+				<Code>07</Code>
+				<Text>Te Matau-a-Māui/Wairarapa (Hawke's Bay/Wairarapa) Region iwi</Text>
+			</Value>
+			<Value>
+				<Code>0701</Code>
+				<Text>Rongomaiwahine (Te Māhia)</Text>
+			</Value>
+			<Value>
+				<Code>0702</Code>
+				<Text>Ngāti Kahungunu ki Te Wairoa</Text>
+			</Value>
+			<Value>
+				<Code>0703</Code>
+				<Text>Ngāti Kahungunu ki Heretaunga</Text>
+			</Value>
+			<Value>
+				<Code>0704</Code>
+				<Text>Ngāti Kahungunu ki Wairarapa</Text>
+			</Value>
+			<Value>
+				<Code>0706</Code>
+				<Text>Rangitāne (Te Matau-a-Māui/Hawke's Bay/Wairarapa)</Text>
+			</Value>
+			<Value>
+				<Code>0707</Code>
+				<Text>Ngāti Kahungunu ki Te Whanganui-a-Orotu</Text>
+			</Value>
+			<Value>
+				<Code>0708</Code>
+				<Text>Ngāti Kahungunu ki Tamatea</Text>
+			</Value>
+			<Value>
+				<Code>0709</Code>
+				<Text>Ngāti Kahungunu ki Tamakinui a Rua</Text>
+			</Value>
+			<Value>
+				<Code>0710</Code>
+				<Text>Ngāti Pāhauwera</Text>
+			</Value>
+			<Value>
+				<Code>0711</Code>
+				<Text>Ngāti Rākaipaaka</Text>
+			</Value>
+			<Value>
+				<Code>0712</Code>
+				<Text>Ngāti Hineuru</Text>
+			</Value>
+			<Value>
+				<Code>0713</Code>
+				<Text>Maungaharuru Tangitū</Text>
+			</Value>
+			<Value>
+				<Code>0714</Code>
+				<Text>Rangitāne o Tamaki nui ā Rua</Text>
+			</Value>
+			<Value>
+				<Code>0715</Code>
+				<Text>Ngāti Ruapani ki Waikaremoana</Text>
+			</Value>
+			<Value>
+				<Code>0716</Code>
+				<Text>Te Hika o Pāpāuma</Text>
+			</Value>
+			<Value>
+				<Code>08</Code>
+				<Text>Taranaki Region Iwi</Text>
+			</Value>
+			<Value>
+				<Code>0801</Code>
+				<Text>Te Atiawa (Taranaki)</Text>
+			</Value>
+			<Value>
+				<Code>0802</Code>
+				<Text>Ngāti Maru (Taranaki)</Text>
+			</Value>
+			<Value>
+				<Code>0803</Code>
+				<Text>Ngāti Mutunga (Taranaki)</Text>
+			</Value>
+			<Value>
+				<Code>0804</Code>
+				<Text>Ngā Rauru</Text>
+			</Value>
+			<Value>
+				<Code>0805</Code>
+				<Text>Ngā Ruahine</Text>
+			</Value>
+			<Value>
+				<Code>0806</Code>
+				<Text>Ngāti Ruanui</Text>
+			</Value>
+			<Value>
+				<Code>0807</Code>
+				<Text>Ngāti Tama (Taranaki)</Text>
+			</Value>
+			<Value>
+				<Code>0808</Code>
+				<Text>Taranaki</Text>
+			</Value>
+			<Value>
+				<Code>0809</Code>
+				<Text>Tangāhoe</Text>
+			</Value>
+			<Value>
+				<Code>0810</Code>
+				<Text>Pakakohi</Text>
+			</Value>
+			<Value>
+				<Code>09</Code>
+				<Text>Whanganui/Rangitīkei (Wanganui/Rangitīkei) Region Iwi</Text>
+			</Value>
+			<Value>
+				<Code>0901</Code>
+				<Text>Ngāti Apa (Rangitīkei)</Text>
+			</Value>
+			<Value>
+				<Code>0902</Code>
+				<Text>Te Ati Haunui-a-Pāpārangi</Text>
+			</Value>
+			<Value>
+				<Code>0903</Code>
+				<Text>Ngāti Haua (Taumarunui)</Text>
+			</Value>
+			<Value>
+				<Code>0904</Code>
+				<Text>Ngāti Hauiti (Rangitīkei)</Text>
+			</Value>
+			<Value>
+				<Code>0905</Code>
+				<Text>Ngāti Whitikaupeka (Rangitīkei)</Text>
+			</Value>
+			<Value>
+				<Code>0906</Code>
+				<Text>Ngāi Te Ohuake (Rangitīkei)</Text>
+			</Value>
+			<Value>
+				<Code>0907</Code>
+				<Text>Ngāti Tamakōpiri (Rangitīkei)</Text>
+			</Value>
+			<Value>
+				<Code>0908</Code>
+				<Text>Ngāti Rangi (Ruapehu, Whanganui)</Text>
+			</Value>
+			<Value>
+				<Code>0909</Code>
+				<Text>Uenuku (Ruapehu, Waimarino)</Text>
+			</Value>
+			<Value>
+				<Code>0910</Code>
+				<Text>Tamahaki (Ruapehu, Waimarino)</Text>
+			</Value>
+			<Value>
+				<Code>0911</Code>
+				<Text>Tamakana (Ruapehu, Waimarino)</Text>
+			</Value>
+			<Value>
+				<Code>10</Code>
+				<Text>Manawatū/Horowhenua/Te Whanganui-a-Tara (Manawatū/Horowhenua/Wellington) Region Iwi</Text>
+			</Value>
+			<Value>
+				<Code>1001</Code>
+				<Text>Te Atiawa (Te Whanganui-a-Tara/Wellington)</Text>
+			</Value>
+			<Value>
+				<Code>1002</Code>
+				<Text>Muaūpoko</Text>
+			</Value>
+			<Value>
+				<Code>1003</Code>
+				<Text>Rangitāne (Manawatū)</Text>
+			</Value>
+			<Value>
+				<Code>1004</Code>
+				<Text>Ngāti Raukawa (Horowhenua/Manawatū)</Text>
+			</Value>
+			<Value>
+				<Code>1005</Code>
+				<Text>Ngāti Toarangatira (Te Whanganui-a-Tara/Wellington)</Text>
+			</Value>
+			<Value>
+				<Code>1006</Code>
+				<Text>Te Atiawa ki Whakarongotai</Text>
+			</Value>
+			<Value>
+				<Code>1007</Code>
+				<Text>Ngāti Tama ki Te Upoko o Te Ika (Te Whanganui-a-Tara/Wellington)</Text>
+			</Value>
+			<Value>
+				<Code>1008</Code>
+				<Text>Ngāti Kauwhata</Text>
+			</Value>
+			<Value>
+				<Code>1009</Code>
+				<Text>Ngāti Tukorehe </Text>
+			</Value>
+			<Value>
+				<Code>11</Code>
+				<Text>Te Waipounamu/Wharekauri (South Island/Chatham Islands) Region Iwi</Text>
+			</Value>
+			<Value>
+				<Code>1101</Code>
+				<Text>Te Atiawa (Te Waipounamu/South Island)</Text>
+			</Value>
+			<Value>
+				<Code>1102</Code>
+				<Text>Ngāti Koata</Text>
+			</Value>
+			<Value>
+				<Code>1103</Code>
+				<Text>Ngāti Kuia</Text>
+			</Value>
+			<Value>
+				<Code>1104</Code>
+				<Text>Kāti Māmoe</Text>
+			</Value>
+			<Value>
+				<Code>1105</Code>
+				<Text>Moriori</Text>
+			</Value>
+			<Value>
+				<Code>1106</Code>
+				<Text>Ngāti Mutunga (Wharekauri/Chatham Islands)</Text>
+			</Value>
+			<Value>
+				<Code>1107</Code>
+				<Text>Rangitāne (Te Waipounamu/South Island)</Text>
+			</Value>
+			<Value>
+				<Code>1108</Code>
+				<Text>Ngāti Rārua</Text>
+			</Value>
+			<Value>
+				<Code>1109</Code>
+				<Text>Ngāi Tahu / Kāi Tahu</Text>
+			</Value>
+			<Value>
+				<Code>1110</Code>
+				<Text>Ngāti Tama (Te Waipounamu/South Island)</Text>
+			</Value>
+			<Value>
+				<Code>1111</Code>
+				<Text>Ngāti Toarangatira (Te Waipounamu/South Island)</Text>
+			</Value>
+			<Value>
+				<Code>1112</Code>
+				<Text>Waitaha (Te Waipounamu/South Island)</Text>
+			</Value>
+			<Value>
+				<Code>1113</Code>
+				<Text>Ngāti Apa ki Te Rā Tō</Text>
+			</Value>
+			<Value>
+				<Code>20</Code>
+				<Text>Confederations and Waka, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2001</Code>
+				<Text>Tainui, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2002</Code>
+				<Text>Te Arawa, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2003</Code>
+				<Text>Tākitimu, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2004</Code>
+				<Text>Aotea, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2005</Code>
+				<Text>Mātaatua, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2006</Code>
+				<Text>Mahuru, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2007</Code>
+				<Text>Māmari, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2008</Code>
+				<Text>Ngātokimatawhaorua, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2009</Code>
+				<Text>Nukutere, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2010</Code>
+				<Text>Tokomaru, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2011</Code>
+				<Text>Kurahaupō, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2012</Code>
+				<Text>Muriwhenua, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2013</Code>
+				<Text>Hauraki / Pare Hauraki, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2014</Code>
+				<Text>Tūranganui a Kiwa, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2015</Code>
+				<Text>Te Tauihu o Te Waka a Māui, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2016</Code>
+				<Text>Tauranga Moana, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2017</Code>
+				<Text>Horouta, iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2018</Code>
+				<Text>Mōkai Pātea, iwi not named </Text>
+			</Value>
+			<Value>
+				<Code>21</Code>
+				<Text>Iwi named, region not known</Text>
+			</Value>
+			<Value>
+				<Code>2101</Code>
+				<Text>Te Atiawa, region not known</Text>
+			</Value>
+			<Value>
+				<Code>2102</Code>
+				<Text>Ngāti Haua, region not known</Text>
+			</Value>
+			<Value>
+				<Code>2103</Code>
+				<Text>Ngāti Maru, region not known</Text>
+			</Value>
+			<Value>
+				<Code>2104</Code>
+				<Text>Ngāti Mutunga, region not known</Text>
+			</Value>
+			<Value>
+				<Code>2105</Code>
+				<Text>Rangitāne, region not known</Text>
+			</Value>
+			<Value>
+				<Code>2106</Code>
+				<Text>Ngāti Raukawa, region not known</Text>
+			</Value>
+			<Value>
+				<Code>2107</Code>
+				<Text>Ngāti Tama, region not known</Text>
+			</Value>
+			<Value>
+				<Code>2108</Code>
+				<Text>Ngāti Toa, region not known</Text>
+			</Value>
+			<Value>
+				<Code>2109</Code>
+				<Text>Waitaha, region not known</Text>
+			</Value>
+			<Value>
+				<Code>2110</Code>
+				<Text>Ngāti Apa, region not known</Text>
+			</Value>
+			<Value>
+				<Code>2111</Code>
+				<Text>Ngāi Tai, region not known</Text>
+			</Value>
+			<Value>
+				<Code>2112</Code>
+				<Text>Ngāti Kahungunu, region not known</Text>
+			</Value>
+			<Value>
+				<Code>2113</Code>
+				<Text>Ngāti Tūwharetoa, region not known</Text>
+			</Value>
+			<Value>
+				<Code>22</Code>
+				<Text>Hapū affiliated to more than one iwi</Text>
+			</Value>
+			<Value>
+				<Code>2201</Code>
+				<Text>Hapū affiliated to more than one iwi</Text>
+			</Value>
+			<Value>
+				<Code>23</Code>
+				<Text>Region known, Iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2301</Code>
+				<Text>Te Tai Tokerau/Tāmaki-makaurau Region, Iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2302</Code>
+				<Text>Hauraki Region, Iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2303</Code>
+				<Text>Waikato/Te Rohe Pōtae Region, Iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2304</Code>
+				<Text>Te Arawa/Taupō Region, Iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2305</Code>
+				<Text>Tauranga Moana/Mātaatua Region, Iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2306</Code>
+				<Text>Te Tai Rāwhiti Region, Iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2307</Code>
+				<Text>Te Matau-a-Māui/Wairarapa Region, Iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2308</Code>
+				<Text>Taranaki Region, Iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2309</Code>
+				<Text>Whanganui/Rangitīkei Region, Iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2310</Code>
+				<Text>Manawatū/Horowhenua/Te Whanganui-a-Tara Region, Iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>2311</Code>
+				<Text>Te Waipounamu/Wharekauri Region, Iwi not named</Text>
+			</Value>
+			<Value>
+				<Code>44</Code>
+				<Text>Don't Know</Text>
+			</Value>
+			<Value>
+				<Code>4444</Code>
+				<Text>Don't Know</Text>
+			</Value>
+			<Value>
+				<Code>55</Code>
+				<Text>Refused To Answer</Text>
+			</Value>
+			<Value>
+				<Code>5555</Code>
+				<Text>Refused To Answer</Text>
+			</Value>
+			<Value>
+				<Code>77</Code>
+				<Text>Response Unidentifiable</Text>
+			</Value>
+			<Value>
+				<Code>7777</Code>
+				<Text>Response Unidentifiable</Text>
+			</Value>
+			<Value>
+				<Code>88</Code>
+				<Text>Response Outside Scope</Text>
+			</Value>
+			<Value>
+				<Code>8888</Code>
+				<Text>Response Outside Scope</Text>
+			</Value>
+			<Value>
+				<Code>99</Code>
+				<Text>Not Stated</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Not Stated</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Iwi -->
+
+	<!-- StudentProviderEnrolment -->
+	<CodeSet>
+		<Intro>
+			<p>The status of a Student Provider Enrolment.</p>
+		</Intro>
+		<ID>Provider Enrolment Status</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>Application</Text>
+				<Description>
+					<p>The enrolment is a 'pre-enrolment' application, and has not yet
+					been accepted or declined by the provider.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Accepted</Text>
+				<Description>
+					<p>The 'pre-enrolment' application has been accepted by the Provider, and has not yet
+					been taken up, or become ACTIVE.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Cancelled</Text>
+				<Description>
+					<p>The 'pre-enrolment' application has been
+					declined by the Provider, or by the Student,
+					prior to becoming an ACTIVE enrolment.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Active</Text>
+				<Description>
+					<p>The enrolment has been accepted by the
+					Provider, taken up by the Student, and the Student
+					has attended their first day.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>5</Code>
+				<Text>Withdrawn</Text>
+				<Description>The Student has left the Provider, after the enrolment was made ACTIVE</Description>
+			</Value>			
+			<Value>
+				<Code>6</Code>
+				<Text>Pending</Text>
+				<Description>
+					<p>The 'pre-enrolment' has been accepted by the
+					Provider, taken up by the Student, and the Student
+					has attended their first day; but the enrolment is unable
+					to be set to ACTIVE, because there is still an ACTIVE
+					enrolment for the Student at a (previous) provider.</p>
+					<p>Once the blocking Provider has put their
+					enrolment to WITHDRAWN, this enrolment can be
+					moved to 'ACTIVE'</p>
+				</Description>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Provider Enrolment Status -->
+	<CodeSet>
+		<Intro>
+			<p>Enrolment Exit code, derived from codeset used in School Roll Returns.</p>
+		</Intro>
+		<ID>Enrolment Exit Type</ID>
+		<Values>
+			<Value>
+				<Code>S</Code>
+				<Text>Transferred to another school in New Zealand.</Text>
+			</Value>
+			<Value>
+				<Code>H</Code>
+				<Text>Transferred to home-schooling.</Text>
+			</Value>
+			<Value>
+				<Code>O</Code>
+				<Text>Gone Overseas</Text>
+			</Value>
+			<Value>
+				<Code>D</Code>
+				<Text>Deceased</Text>
+			</Value>
+			<Value>
+				<Code>X</Code>
+				<Text>Expulsion</Text>
+				<Description>Applies to students &gt;= 16yrs old</Description>
+			</Value>
+			<Value>
+				<Code>L</Code>
+				<Text>End of Schooling</Text>
+			</Value>
+			<Value>
+				<Code>E</Code>
+				<Text>Granted Early Exemption</Text>
+				<Description>Applies to students &lt;16yrs old</Description>
+			</Value>
+			<Value>
+				<Code>K</Code>
+				<Text>Exclusion</Text>
+				<Description>Applies to students &lt;16yrs old</Description>
+			</Value>
+			<Value>
+				<Code>C</Code>
+				<Text>Continuous Absence</Text>
+			</Value>
+			<Value>
+				<Code>J</Code>
+				<Text>Eligibility Expired</Text>
+			</Value>
+			<Value>
+				<Code>P</Code>
+				<Text>Caregiver Decision</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Enrolment Exit Type -->
+	<CodeSet>
+		<Intro>
+			<p>Eligibility Criteria code, describes the criteria used to determine the eligibility of
+			a Student for enrolment and MoE funding.</p>
+		</Intro>
+		<ID>Eligibility Criteria</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>NZ Citizen (Incl. Tokelau, The Cook Is., Niue)</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Australian Citizen</Text>
+				<Description>Includes Australian permanent residents</Description>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>NZ Resident</Text>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>International Fee Paying</Text>
+			</Value>
+			<Value>
+				<Code>5</Code>
+				<Text>Student on Government approved student exchange scheme</Text>
+			</Value>
+			<Value>
+				<Code>6</Code>
+				<Text>Domestic Time-bound</Text>
+			</Value>
+			<Value>
+				<Code>7</Code>
+				<Text>MoE Approved</Text>
+			</Value>
+			<Value>
+				<Code>10</Code>
+				<Text>28 Day Waiver</Text>
+			</Value>
+			<Value>
+				<Code>11</Code>
+				<Text>Extended 28 Day Waiver</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Eligibility Criteria -->
+	<CodeSet>
+		<Intro>
+			<p>Student classification for MoE funding purposes.</p>
+			<p>Codes in this list are hierarchical. Students can only
+			be allocated one TYPE code (even though they may belong to
+			more than one of the groups listed below). To allocate a
+			code to an individual student, start at the top of the
+			list and work down. Use the first code that applies to
+			the student.</p>
+		</Intro>
+		<ID>Funding Type</ID>
+		<Values>
+			<Value>
+				<Code>FF</Code>
+				<Text>Foreign fee-paying student</Text>
+				<Description>An International student who meets full
+				tuition costs on their own or from funds provided to
+				them by sponsors other than NZAID.</Description>
+			</Value>
+			<Value>
+				<Code>AE</Code>
+				<Text>Student in Alternative Education</Text>
+				<Description>A student who is enrolled in an
+				Alternative Education programme, for Funding Year
+				Level they should be reported only between Year 9 and
+				Year 13 (inclusive).</Description>
+			</Value>
+			<Value>
+				<Code>EX</Code>
+				<Text>Foreign Exchange Student</Text>
+				<Description>A student (and dependants) studying in
+				New Zealand under an exchange programme approved by
+				the New Zealand Government.</Description>
+			</Value>
+			<Value>
+				<Code>NF</Code>
+				<Text>Not Funded</Text>
+				<Description>Code to be used for students attending on
+				Roll Count Day, but not paying fee and not funded;
+				e.g. students with Eligibility Criteria “28 Day
+				Waiver” and “Extended 28 Day Waiver”.
+				</Description>
+			</Value>
+			<Value>
+				<Code>AD</Code>
+				<Text>Returning Adult Student</Text>
+				<Description><p>A student who has returned to school
+				following a break of at least 1 year and is at least
+				19 years old on 1 January of the Roll count year.</p>
+				<p>EXAMPLE: Roll count year = 2017 if student is 19 years
+				old on 1 Jan 2017 their student type = AD if there has
+				been a break in their learning cycle.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>RA</Code>
+				<Text>Adult Student</Text>
+				<Description><p>A student who has continued at school and
+				is at least 19 on 1 January of the Roll count year.</p>
+				<p>EXAMPLE: Roll count year = 2017 if student is 19 years old on 1
+				January 2017 their student type = RA as there has not
+				been a break in the students learning cycle.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>RE</Code>
+				<Text>Regular Student</Text>
+				<Description>A New Zealand student or a student
+				treated for funding and staffing purposes as a New
+				Zealand student who is also not yet 19 years at 1 Jan of the
+				roll count year. This includes students in general
+				classrooms and those in special needs units.
+				</Description>
+			</Value>
+			<Value>
+				<Code>TPREOM</Code>
+				<Text>Teen Parent Regular Student, over max. roll</Text>
+				<Description>A regular student (i.e. a student aged
+				under 19 years at 1 January of the roll count year)
+				who meets the eligibility criteria, but whose
+				enrolment would cause the roll of the TPU to exceed
+				the set maximum.
+				</Description>
+			</Value>
+			<Value>
+				<Code>TPRAOM</Code>
+				<Text>Teen Parent Adult Student, over max. roll</Text>
+				<Description>An adult student who is enrolled in a
+				Teen Parent Unit (TPU) where the enrolment at the TPU
+				has continued beyond the end of the year in which the
+				student reached 19 years old. The enrolment of this
+				student causes the roll of the TPU to exceed the set
+				maximum.</Description>
+			</Value>
+			<Value>
+				<Code>TPAD</Code>
+				<Text>Returning Adult Student attending Teen Parent Unit</Text>
+				<Description>A student enrolling at the TPU as an
+				adult student (i.e. was at least 19 on 1st January of
+				the year when they first enrolled at the TPU), and who
+				fits within the TPU’s maximum roll.
+				</Description>
+			</Value>
+			<Value>
+				<Code>TPRE</Code>
+				<Text>Teen Parent Eligible and Enrolled Regular Student</Text>
+				<Description>A student who is enrolled in a Teen
+				Parent Unit (TPU) and is at least 19 years old on 1
+				January of the current year. These students may
+				continue to be enrolled in the TPU after the end of
+				the year in which they turn 19, their Student Type
+				however will then be changed to TPRAE – Teen Parent
+				Enrolled Continuing Adult Student.
+				</Description>
+			</Value>
+			<Value>
+				<Code>TPRAE</Code>
+				<Text>Teen Parent Eligibile and Enrolled Adult Student</Text>
+				<Description>A student who is enrolled in a Teen
+				Parent Unit (TPU) where the enrolment at the TPU has
+				continued beyond the end of the year in which the
+				student reached 19 years old.
+				</Description>
+			</Value>
+			<Value>
+				<Code>EM</Code>
+				<Text>External Student</Text>
+				<Description>A student who attends this school for
+				some courses but is enrolled at another school where a
+				majority of instruction occurs.
+				</Description>
+			</Value>
+			<Value>
+				<Code>SA</Code>
+				<Text>Satellite Student</Text>
+				<Description>Student who is in a Satellite class of a Special School.</Description>
+			</Value>
+			<Value>
+				<Code>NZ</Code>
+				<Text>Not Attending</Text>
+				<Description>A student who is not attending the school
+				on the day of the roll count and there is no
+				documentation to support their absence from the
+				school.</Description>
+			</Value>
+			<Value>
+				<Code>SF</Code>
+				<Text>Separately Funded</Text>
+				<Description>Student is enrolled in a separately funded unit.</Description>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Funding Type -->
+	<CodeSet>
+		<Intro>
+			<p>The type of exchange scheme for student enrolment where
+			the Eligibility Criteria is "Student on Government
+			approved exchange scheme" (5).</p>
+		</Intro>
+		<ID>Exchange Scheme</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>AFS Interculural Programmes NZ Inc.</Text>
+			</Value>
+			<Value>
+				<Code>7</Code>
+				<Text>NZ / German Student Exchange</Text>
+			</Value>
+			<Value>
+				<Code>8</Code>
+				<Text>NZ Institute of International Understanding</Text>
+			</Value>
+			<Value>
+				<Code>9</Code>
+				<Text>Rotary International NZ</Text>
+			</Value>
+			<Value>
+				<Code>10</Code>
+				<Text>STS High School Foundation</Text>
+			</Value>
+			<Value>
+				<Code>11</Code>
+				<Text>YFU New Zealand Inc.</Text>
+			</Value>
+			<Value>
+				<Code>12</Code>
+				<Text>World Youth Service Society (WYSS)</Text>
+			</Value>
+			<Value>
+				<Code>14</Code>
+				<Text>Student Exchange Australia New Zealand Ltd.</Text>
+			</Value>
+			<Value>
+				<Code>15</Code>
+				<Text>Tahiti Exchange</Text>
+			</Value>
+			<Value>
+				<Code>16</Code>
+				<Text>NZ - Germany Exchange - Düsseldorf</Text>
+			</Value>
+			<Value>
+				<Code>17</Code>
+				<Text>Your Education</Text>
+			</Value>
+			<Value>
+				<Code>18</Code>
+				<Text>NZ Switzerland Exchange</Text>
+			</Value>
+			<Value>
+				<Code>99</Code>
+				<Text>Exchange Agreement</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Exchange Scheme -->
+
 </IncludeGroup>

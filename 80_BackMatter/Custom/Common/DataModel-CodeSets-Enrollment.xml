@@ -5,25 +5,59 @@
 
     <CodeSet>
 		<Intro>
-			<p/>
+			<p>A type of student enrolment with a school. Allows
+			differentiation of concurrent enrolments, eg base vs
+			other.</p>
 		</Intro>
 		<ID>School Enrollment Type</ID>
 		<Values>
+			
+<if intl="au">				
 			<Value>
 				<Code>01</Code>
-				<Text>Home School</Text>
+             	<Text>Home School</Text>
 			</Value>
+</if>	
+<if intl="nz">				
+			<Value>
+				<Code>01</Code>
+             	<Text>Base School</Text>
+				<Description><p>Home School (AU) or Base School (NZ).</p>
+				<p>The school that the student is considered to be
+				primarily enrolled with, especially for the purposes
+				of reporting and Ministry funding. Typically the
+				student will spend most of their school time at this
+				school.</p>
+				</Description>
+			</Value>
+</if>	
 			<Value>
 				<Code>02</Code>
 				<Text>Other School</Text>
-			</Value>
+				<Description>
+					<p>Other School (AU only)</p>
+					<p>Indicates an enrolment with a school which is
+					not considered the student’s home
+					school. Typically the student will spend less of
+					their school time at this school.
+					</p>
+				</Description>
+			</Value>			
 			<Value>
 				<Code>03</Code>
 				<Text>Concurrent Enrolment</Text>
+				<Description><p>Concurrent Enrolment (AU &amp; NZ)</p>
+				<p>Indicates an enrolment that is concurrent with
+				other enrolments where no single enrolment is
+				considered the ‘base or home school’ enrolment.
+				</p>
+				</Description>
 			</Value>
 			 
 		</Values>
 	</CodeSet>    <!-- School Enrollment Type -->
+
+<if intl="au">
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -747,5 +781,7 @@
 			</Value>
 		 
 		</Values>
-	</CodeSet>    <!-- 0211 Program Availability -->	
+	</CodeSet>    <!-- 0211 Program Availability --> 
+</if>	
+
 </IncludeGroup>

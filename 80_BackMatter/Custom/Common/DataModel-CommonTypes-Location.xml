@@ -148,7 +148,6 @@
 		</Description>
 		<Type ref="CommonTypes" name="AddressStreetType"/>
 	</Item>     <!-- Street -->
-	
 <if intl="nz">	
 	<Item>
 		<Element>Suburb</Element>
@@ -684,6 +683,46 @@
 </if>
 
 <if intl="nz">
+<CommonElement name="CountryListType" type="true" dm="true">
+     <Item>
+		<Element>CountryListType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>Country</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>A person's country of citizenship.</p>
+		</Description>
+		<Type ref="CommonTypes" name="CountryType"/>
+	</Item>  
+  </CommonElement>
+<CommonElement name="CountryType" type="true" dm="true">
+    <Item>
+		<Element>CountryType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A country is a geopolitical entity recognised by the
+			New Zealand government. The term country may include:</p>
+			<ul>
+				<li>Independent countries recognised by the New Zealand
+				Government</li>
+				<li>Units that are recognised geographic areas</li>
+				<li>administrative subdivisions of the United Kingdom</li>
+				<li>overseas dependencies, external territories of independent
+				countries.</li>
+			</ul>
+			<p>Conforms to the International Standard
+			<a href="http://www.iso.org/iso/home/store/catalogue_ics/catalogue_detail_ics.htm?csnumber=63545">ISO
+			3166 Codes for the Representation of Names of Countries and their Subdivisions (ISO 3166-1:2013)</a>.
+			Education adopts the alpha-3 representation of this standard. </p>
+		</Description>
+		<Type ref="ExternalCodeSets" name="ISO3166CountryType"/>
+	</Item>  
+</CommonElement>
+  
 <CommonElement name="LocationListType" type="true" dm="true">
 	<Item>
 		<Element>LocationListType</Element>

@@ -1660,12 +1660,10 @@
 				<Code>O</Code>
 				<Text>Open</Text>
 			</Value>
-<if intl="nz">			
 			<Value>
 				<Code>P</Code>
 				<Text>Proposed</Text>
 			</Value>
-</if>			
 <if intl="au">
 			<Value>
 				<Code>P</Code>
@@ -1684,7 +1682,7 @@
 	</CodeSet>    <!-- Operational Status -->
 	<CodeSet>
 		<Intro>
-			<p>Sourced from DEEWR;  <if intl="nz"> and augmented for use in New Zealand</if></p>
+			<p>Sourced from DEEWR; <if intl="nz">and augmented for use in New Zealand</if></p>
 		</Intro>
 		<ID>School Co-Ed Status</ID>
 		<Values>

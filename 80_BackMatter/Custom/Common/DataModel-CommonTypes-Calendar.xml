@@ -11,6 +11,7 @@
 
 
 	<!-- Element types for the Calendar domain -->
+<if intl="au">	
 <CommonElement name="AttendanceInfoType" type="true" dm="true">
  <Item>
     <Element>AttendanceInfoType</Element>
@@ -74,44 +75,24 @@
     <Type ref="CommonTypes" name="OtherCodeListType"></Type>
   </Item>
 </CommonElement>
-<CommonElement name="YearLevelsType" type="true" dm="true">
+<CommonElement name="SchoolYearType" type="true" dm="true">
+	<Intro>
+		<p>Common element used to designate the academic school year to which an object relates.</p>
+	</Intro>
 	<Item>
-		<Element>YearLevelsType</Element>
+		<Element>SchoolYearType</Element>
 		<Description>
-			<p>
-        List of year levels.
-      </p>
+			<p>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2009").</p>
 		</Description>
-		<List mode="List">
-    </List>
+		<Type name="xs:gYear"/>
 	</Item>
-	<Item>
-		<Element>YearLevel</Element>
-		<Characteristics>MR</Characteristics>
-		<Type ref="CommonTypes" name="YearLevelType"/>
-	</Item>
-	<xhtml:Example xmlns="" name="Year Levels Example">
-		<YearLevels>
-			<YearLevel>
-				<Code>5</Code>
-			</YearLevel>
-			<YearLevel>
-				<Code>6</Code>
-			</YearLevel>
-			<YearLevel>
-				<Code>7</Code>
-			</YearLevel>
-			<YearLevel>
-				<Code>8</Code>
-			</YearLevel>
-		</YearLevels>
+	<xhtml:Example xmlns="" name="School Year Example">
+		<SchoolYear>2005</SchoolYear>
 	</xhtml:Example>
 </CommonElement>
 <CommonElement name="YearLevelType" type="true" dm="true">
 	<Intro>
-		<p>
-
-    </p>
+		<p/>
 	</Intro>
 	<Item>
 		<Element>YearLevelType</Element>
@@ -133,19 +114,45 @@
 		</YearLevel>
 	</xhtml:Example>
 </CommonElement>
-<CommonElement name="SchoolYearType" type="true" dm="true">
-	<Intro>
-		<p>Common element used to designate the academic school year to which an object relates.</p>
-	</Intro>
+</if>
+
+<CommonElement name="YearLevelsType" type="true" dm="true">
 	<Item>
-		<Element>SchoolYearType</Element>
+		<Element>YearLevelsType</Element>
 		<Description>
-			<p>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2009").</p>
+			<p>List of year levels.</p>
 		</Description>
-		<Type name="xs:gYear"/>
+		<List mode="List">
+    </List>
 	</Item>
-	<xhtml:Example xmlns="" name="School Year Example">
-		<SchoolYear>2005</SchoolYear>
+	<Item>
+		<Element>YearLevel</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CodeSets" name="AUCodeSetsYearLevelCodeType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Year Levels Example" intl="au">
+		<YearLevels>
+			<YearLevel>
+				<Code>5</Code>
+			</YearLevel>
+			<YearLevel>
+				<Code>6</Code>
+			</YearLevel>
+			<YearLevel>
+				<Code>7</Code>
+			</YearLevel>
+			<YearLevel>
+				<Code>8</Code>
+			</YearLevel>
+		</YearLevels>
+	</xhtml:Example>
+	<xhtml:Example xmlns="" name="Year Levels Example" intl="nz">
+		<YearLevels>
+			<YearLevel>5</YearLevel>
+			<YearLevel>6</YearLevel>
+			<YearLevel>7</YearLevel>
+			<YearLevel>8</YearLevel>
+		</YearLevels>
 	</xhtml:Example>
 </CommonElement>
 

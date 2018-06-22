@@ -481,7 +481,6 @@
 			</Item>
 		</CommonElement>
 
-<if intl="au">		
 		<CommonElement type="true" name='IdRefType'>
 			<Item>
 				<Element>IdRefType</Element>
@@ -489,7 +488,6 @@
 				<Type name='RefIdType'/>
 			</Item>
 		</CommonElement>
-</if>
 
 
 <!-- Unused: VersionType -->
