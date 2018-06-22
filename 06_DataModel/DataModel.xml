@@ -6,10 +6,5 @@
     xmlns="http://sifassociation.org/SpecGen">
 	
 	<!-- Include appropriate version of data model here -->
-	<if intl="au">
-		<xi:include parse="xml" href="Custom/DataModel-Custom-AU.xml"/>
-	</if>
-	<if intl="nz">
-		<xi:include parse="xml" href="Custom/DataModel-Custom-NZ.xml"/>
-	</if>	
+	<xi:include parse="xml" href="Custom/DataModel-Custom-NZ.xml"/>
 </DataObjects>

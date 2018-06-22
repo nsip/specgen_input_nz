@@ -7,10 +7,40 @@
 	
 	<Group name="SIF NZ">
 		<Intro>
-			<p></p>
+			<p>The New Zealand customisation of the SIF AU data model,
+			includes the following (high-level) changes:
+			</p>
+			<ul>
+				<li>SchoolInfo data object is replaced with Provider
+				data object, as the scope of SIF NZ data model is intended
+				to encompass early childhood education, compulsory schooling (K-12)
+				and tertiary education (higher education).
+				</li>
+
+				<li>StudentPersonal data object doesn't include Alert
+				or MedicalAlert messages; Demographics area includes
+				multiple NZ statistical standard Ethnicity and Iwi
+				affiliations.</li>
+				
+				<li>StudentContactPersonal data object is a subset of PersonInfo data object,
+				in that providers don't collect OtherNames, Demographics or Education &amp; Employment
+				information about student's whānau members.</li>
+
+				<li>ProviderRelationship data object records relationships between two education providers.</li>
+				
+				<li>StudentProviderEnrolment expands on StudentSchoolEnrollment, and has extra complexity
+				to cope with SIF NZ having Providers, rather than Schools.</li>
+			</ul>
 		</Intro>
 
 		<!-- Include data model here -->		
 		<xi:include parse="text" href="NZ/Provider.xml"/>
+		<xi:include parse="text" href="NZ/ProviderRelationship.xml"/>
+		
+		<xi:include parse="text" href="NZ/StudentPersonal.xml"/>
+		<xi:include parse="text" href="NZ/StudentContactPersonal.xml"/>
+		<xi:include parse="text" href="NZ/StudentContactRelationship.xml"/>
+		
+		<xi:include parse="text" href="NZ/StudentProviderEnrolment.xml"/>
 	</Group>
 </IncludeGroup>

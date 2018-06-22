@@ -32,7 +32,7 @@
 			 - TeachingGroups,
 			 - StaffAssignment etc... -->
 
-		<xi:include parse="text" href="Common/SchoolInfo.xml"/>
+		<xi:include parse="text" href="AU/SchoolInfo.xml"/>
 		<xi:include parse="text" href="Common/LEAInfo.xml"/>
 		<xi:include parse="text" href="Common/RoomInfo.xml"/>
 		<xi:include parse="text" href="Common/TermInfo.xml"/>
@@ -50,9 +50,9 @@
         <!-- Party & Role  -->
 		<xi:include parse="text" href="Common/PersonPicture.xml"/>
 		<xi:include parse="text" href="Common/StaffPersonal.xml"/>
-		<xi:include parse="text" href="Common/StudentPersonal.xml"/>
-		<xi:include parse="text" href="Common/StudentContactPersonal.xml"/>
-		<xi:include parse="text" href="Common/StudentContactRelationship.xml"/>
+		<xi:include parse="text" href="AU/StudentPersonal.xml"/>
+		<xi:include parse="text" href="AU/StudentContactPersonal.xml"/>
+		<xi:include parse="text" href="AU/StudentContactRelationship.xml"/>
 
 		
 		<!-- Student SchoolEnrollment, Section Enrollment & Programme Participation -->

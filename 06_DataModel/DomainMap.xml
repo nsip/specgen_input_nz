@@ -1,0 +1,62 @@
+<Section name="Domain Map"
+		 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns:xi="http://www.w3.org/2001/XInclude"
+		 xmlns:xhtml="http://www.w3.org/1999/xhtml"
+		 
+         xmlns="http://sifassociation.org/SpecGen">
+
+	<Intro>
+		<p>
+			This section presents the SIF Data Objects in each of the SIF Data Model domains, for easier navigation:
+		</p>
+		<p>
+			<img src="images/zone512.png" usemap="#DomainMap"/>
+			<map id="DomainMap" name="DomainMap">
+				<area alt="Provider" href="#Domain__Provider" shape="rect" coords="71,65,166,126"/>
+				<area alt="Student" href="#Domain__StudentWhānau" shape="rect" coords="284,331,375,390"/>
+				<area alt="Enrolment" href="#Domain__Enrolment" shape="rect" coords="206,0,301,60"/>
+			</map>
+		</p>
+	</Intro>
+
+	<Domain name="Provider">
+		<Intro>
+			<p>
+				The Provider domain describes education provider
+				entities, the relationships between them, and the
+				Staff that work at them.				
+			</p>
+		</Intro>
+		
+		<DataObject>Provider</DataObject>
+		<DataObject>ProviderRelationship</DataObject>
+	</Domain>
+
+	<Domain name="Student &amp; Whānau">
+		<Intro>
+			<p>
+				The Student domain describes Student entities, their
+				Whānau, and the relationships between them.
+			</p>
+		</Intro>
+
+		<DataObject>StudentPersonal</DataObject>
+		<DataObject>StudentContactPersonal</DataObject>
+		<DataObject>StudentContactRelationship</DataObject>
+	</Domain>
+
+	<Domain name="Enrolment">
+		<Intro>
+			<p>
+				The Enrolment domain describes transactional entities
+				whereby Students enrol at Providers, in LearningProgrammes,
+				in Sections, or in Activities.
+			</p>
+		</Intro>
+
+		<DataObject>StudentProviderEnrolment</DataObject>
+	</Domain>
+</Section>
+
+
