@@ -177,7 +177,6 @@
 		</Values>
 	</Item>
 </CommonElement>
-
 <CommonElement name="ActivityTimeType" type="true" dm="true">
  	<Item>
 		<Element>ActivityTimeType</Element>
@@ -254,9 +253,7 @@
 		<Type name="xs:date"/>
 	</Item>
  </CommonElement>
-
-
-  <CommonElement name="YearRangeType" type="true" dm="true">
+<CommonElement name="YearRangeType" type="true" dm="true">
    <Item>
     <Element>YearRangeType</Element>
 
@@ -288,7 +285,6 @@
 
 
  <!-- Activity - that is part of the TimeTable  -->
- 
 <CommonElement name="ScheduledTeacherListType" type="true" dm="true">
 	<Item>
 		<Element>ScheduledTeacherListType</Element>
@@ -322,7 +318,7 @@
 			<p>The Id (GUID) of the StaffPersonal record for the teacher supervising the event or event subset.</p>
 		</Description>
 		<Type ref="CommonTypes" relationship="" count="?:1" name="IdRefType"/>
-	</Item>
+	</Item>     <!-- StaffPersonalRefId -->
 	<Item>
 		<Element>StaffLocalId</Element>
 		<Characteristics>O</Characteristics>
@@ -330,7 +326,7 @@
 			<p>LocalId of the StaffPersonal record for the teacher supervising the event or event subset.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/>
-	</Item>
+	</Item>     <!-- StaffLocalId -->
 	<Item>
 		<Element>StartTime</Element>
 		<Characteristics>O</Characteristics>
@@ -338,7 +334,7 @@
 			<p>Start time for the subset of the event which the teacher supervises. If not present then we assume this teacher will be on the event for the full duration.</p>
 		</Description>
 		<Type name="xs:time"/>
-	</Item>
+	</Item>     <!-- StartTime -->
 	<Item>
 		<Element>FinishTime</Element>
 		<Characteristics>O</Characteristics>
@@ -346,7 +342,7 @@
 			<p>Finish time for the subset of the event which the teacher supervises. If not present then we assume this teacher will be on the event for the full duration. Either both or neither StartTime and FinishTime should be provided.</p>
 		</Description>
 		<Type name="xs:time"/>
-	</Item>
+	</Item>     <!-- FinishTime -->
 	<Item>
 		<Element>Credit</Element>
 		<Characteristics>O</Characteristics>
@@ -354,7 +350,7 @@
 			<p>How the activity is credited, from the perspective of the teacher(s) supervising the event. If a teacher is substituting for the normal teacher supervising, the credit indicates how the substituting teacher is credited.</p>
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsTeacherCoverCreditType"/>
-	</Item>
+	</Item>     <!-- Credit -->
 	<Item>
 		<Element>Supervision</Element>
 		<Characteristics>O</Characteristics>
@@ -362,7 +358,7 @@
 			<p>How intensively the teacher supervises the activity.</p>
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsTeacherCoverSupervisionType"/>
-	</Item>
+	</Item>     <!-- Supervision -->
 	<Item>
 		<Element>Weighting</Element>
 		<Characteristics>O</Characteristics>
@@ -370,7 +366,7 @@
 			<p>Weighting of credit assigned to teacher for activity. Assumes default of 1.0 assigned for classroom duty.</p>
 		</Description>
 		<Type name="xs:decimal"/>
-	</Item>
+	</Item>     <!-- Weighting -->
 </CommonElement>
 <CommonElement name="RoomListType" type="true" dm="true">
 	<Item>
@@ -390,6 +386,7 @@
 		<Type ref="CommonTypes" relationship="" count="?:1" name="IdRefType"/>
 	</Item>
 </CommonElement>
+
 <CommonElement name="LearningObjectivesType" type="true" dm="true">
 	<Item>
 		<Element>LearningObjectivesType</Element>
@@ -618,7 +615,6 @@
    </Item-->
 </CommonElement>
 
-
 <!--   Scheduled Activity ie: not included in TimeTable -->
 <CommonElement name="ScheduledActivityOverrideType" type="true" dm="true">
   <Item>
@@ -703,5 +699,4 @@
 		<Type name="xs:normalizedString"/>
 	</Item>
 </CommonElement>
-
 </IncludeGroup>

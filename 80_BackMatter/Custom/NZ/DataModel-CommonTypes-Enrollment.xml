@@ -176,22 +176,10 @@
 					<StudentSubjectChoice>
 						<PreferenceNumber>1</PreferenceNumber>
 						<SubjectLocalId>Y11HIST</SubjectLocalId>
-						<StudyDescription>
-							<Code>Y11HIST</Code>
-							<OtherCodeList>
-								<OtherCode Codeset="Text">Year 11 History</OtherCode>
-							</OtherCodeList>
-						</StudyDescription>
 					</StudentSubjectChoice>
 					<StudentSubjectChoice>
 						<PreferenceNumber>2</PreferenceNumber>
 						<SubjectLocalId>Y11FREN</SubjectLocalId>
-						<StudyDescription>
-							<Code>Y11FREN</Code>
-							<OtherCodeList>
-								<OtherCode Codeset="Text">Year 11 French</OtherCode>
-							</OtherCodeList>
-						</StudyDescription>
 						<OtherSchoolRefId>705f1c18-356a-4862-88d1-d3e91fb21467</OtherSchoolRefId>
 						<OtherSchoolLocalId>0245</OtherSchoolLocalId>
 					</StudentSubjectChoice>

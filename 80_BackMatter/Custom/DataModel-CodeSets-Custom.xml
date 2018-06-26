@@ -14,9 +14,9 @@
 
 	<xi:include parse="xml" href="Common/DataModel-Codesets-PartyRole.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Enrollment.xml"/>
+	<xi:include parse="xml" href="Common/DataModel-Codesets-Attendance.xml"/>
 
 <if intl="au">
-	<xi:include parse="xml" href="Common/DataModel-Codesets-Attendance.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Wellbeing.xml"/>
 
 	<xi:include parse="xml" href="AU/DataModel-Codesets-Location.xml"/>

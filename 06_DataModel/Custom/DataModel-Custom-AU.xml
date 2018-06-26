@@ -67,10 +67,10 @@
 		<xi:include parse="text" href="Common/LearningStandardItem.xml"/>
 
 		<!-- Student Attendance reporting summaries and granular  -->
-		<xi:include parse="text" href="Common/StudentAttendanceSummary.xml"/>
-		<xi:include parse="text" href="Common/StudentDailyAttendance.xml"/>
-		<xi:include parse="text" href="Common/StudentPeriodAttendance.xml"/>
-		<xi:include parse="text" href="Common/StudentAttendanceTimeList.xml"/>	
+		<xi:include parse="text" href="AU/StudentAttendanceSummary.xml"/>
+		<xi:include parse="text" href="AU/StudentDailyAttendance.xml"/>
+		<xi:include parse="text" href="AU/StudentPeriodAttendance.xml"/>
+		<xi:include parse="text" href="AU/StudentAttendanceTimeList.xml"/>	
 
 
 		<!-- Learning Resource -->

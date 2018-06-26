@@ -616,7 +616,7 @@
 				an identity document.
 			</p>
 		</Description>
-		<Type ref="CommonTypes" name="VerificationEvent"/>
+		<Type ref="CommonTypes" name="VerificationEventType"/>
 	</Item>    <!-- CitizenshipVerification -->
 	<Item>
 		<Element>Gender</Element>
@@ -1006,6 +1006,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsLanguageTypeType"/>
 	</Item>
+</if>
 	<Item>
 		<Element>Dialect</Element>
 		<Characteristics>O</Characteristics>
@@ -1014,7 +1015,6 @@
 		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>
-</if>
 </CommonElement>
 <CommonElement name="EmailListType" type="true" dm="true">
 	<Item>

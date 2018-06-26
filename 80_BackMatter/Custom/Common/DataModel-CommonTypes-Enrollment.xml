@@ -3,6 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xi="http://www.w3.org/2001/XInclude"
 	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http:/json.org/"
 	
 	xmlns="http://sifassociation.org/SpecGen">
 
@@ -441,7 +442,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="StudentSubjectChoiceType"/>
 	</Item>
-	<xhtml:Example xmlns="" name="Student Subject Choice List Example">
+	<xhtml:Example xmlns="" name="Student Subject Choice List Example" intl="au">
 		<SubjectChoiceList>
 			<StudentSubjectChoice>
 				<PreferenceNumber>1</PreferenceNumber>
@@ -462,6 +463,21 @@
 						<OtherCode Codeset="Text">Year 11 French</OtherCode>
 					</OtherCodeList>
 				</StudyDescription>
+				<OtherSchoolRefId>705f1c18-356a-4862-88d1-d3e91fb21467</OtherSchoolRefId>
+				<OtherSchoolLocalId>0245</OtherSchoolLocalId>
+			</StudentSubjectChoice>
+		</SubjectChoiceList>
+	</xhtml:Example>
+	
+	<xhtml:Example xmlns="" name="Student Subject Choice List Example" intl="nz">
+		<SubjectChoiceList>
+			<StudentSubjectChoice>
+				<PreferenceNumber>1</PreferenceNumber>
+				<SubjectLocalId>Y11HIST</SubjectLocalId>
+			</StudentSubjectChoice>
+			<StudentSubjectChoice>
+				<PreferenceNumber>2</PreferenceNumber>
+				<SubjectLocalId>Y11FREN</SubjectLocalId>
 				<OtherSchoolRefId>705f1c18-356a-4862-88d1-d3e91fb21467</OtherSchoolRefId>
 				<OtherSchoolLocalId>0245</OtherSchoolLocalId>
 			</StudentSubjectChoice>
@@ -493,6 +509,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/>
 	</Item>    <!-- SubjectLocalId -->
+<if intl="au">	
 	<Item>
 		<Element>StudyDescription</Element>
 		<Characteristics>O</Characteristics>
@@ -501,6 +518,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="SubjectAreaType"/>
 	</Item>    <!-- StudyDescription -->
+</if>	
 <if intl="nz">	
 	<Item>
 		<Element>OtherSchoolRefId</Element>
@@ -520,7 +538,7 @@
 		<Type ref="CommonTypes" name="LocalIdType"/>
 	</Item>    <!-- OtherSchoolLocalId -->
 	
-	<xhtml:Example xmlns="" name="Student Subject Choice Example">
+	<xhtml:Example xmlns="" name="Student Subject Choice Example" intl="au">
 		<StudentSubjectChoice>
 			<PreferenceNumber>2</PreferenceNumber>
 			<SubjectLocalId>Y11FREN</SubjectLocalId>
@@ -530,6 +548,15 @@
 					<OtherCode Codeset="Text">Year 11 French</OtherCode>
 				</OtherCodeList>
 			</StudyDescription>
+			<OtherSchoolRefId>705f1c18-356a-4862-88d1-d3e91fb21467</OtherSchoolRefId>
+			<OtherSchoolLocalId>0245</OtherSchoolLocalId>
+		</StudentSubjectChoice>
+	</xhtml:Example>
+	
+	<xhtml:Example xmlns="" name="Student Subject Choice Example" intl="nz">
+		<StudentSubjectChoice>
+			<PreferenceNumber>2</PreferenceNumber>
+			<SubjectLocalId>Y11FREN</SubjectLocalId>
 			<OtherSchoolRefId>705f1c18-356a-4862-88d1-d3e91fb21467</OtherSchoolRefId>
 			<OtherSchoolLocalId>0245</OtherSchoolLocalId>
 		</StudentSubjectChoice>
