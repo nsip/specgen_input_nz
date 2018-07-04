@@ -67,7 +67,7 @@
 	</Item>    <!-- Date -->
 	<Item>
 		<Element>SchoolYear</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>School year for which this enrollment is applicable, expressed as the four-digit year in
@@ -83,7 +83,7 @@
 	
 	<Item>
 		<Element>AttendanceTimes</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Breakdown of times that the student entered or returned to school.</p>

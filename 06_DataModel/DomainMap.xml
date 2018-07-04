@@ -17,6 +17,7 @@
 				<area title="Student &amp; Whānau" href="#Domain__StudentWhānau" shape="rect" coords="284,331,375,390"/>
 				<area title="Enrolment" href="#Domain__Enrolment" shape="rect" coords="206,0,301,60"/>
 				<area title="Attendance" href="#Domain__Attendance" shape="rect" coords="344,66,439,126"/>
+				<area title="Hauora / Wellbeing" href="#Domain__HauoraWellbeing" shape="rect" coords="37,214,132,273"/>
 			</map>
 		</p>
 	</Intro>
@@ -32,6 +33,7 @@
 		
 		<DataObject>Provider</DataObject>
 		<DataObject>ProviderRelationship</DataObject>
+		<DataObject>StaffPersonal</DataObject>
 	</Domain>
 
 	<Domain name="Student &amp; Whānau">
@@ -59,6 +61,20 @@
 		<DataObject>StudentProviderEnrolment</DataObject>
 	</Domain>
 
+	<Domain name="Hauora / Wellbeing">
+		<Intro>
+			<p>
+			</p>
+		</Intro>
+
+		<DataObject>PersonalisedPlan</DataObject>
+		<DataObject>WellbeingCharacteristic</DataObject>
+		<DataObject>WellbeingAlert</DataObject>
+		<DataObject>WellbeingEvent</DataObject>
+		<DataObject>WellbeingResponse</DataObject>
+		<DataObject>WellbeingAppeal</DataObject>
+	</Domain>
+	
 	<Domain name="Attendance">
 		<Intro>
 			<p>

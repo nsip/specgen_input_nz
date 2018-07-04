@@ -544,11 +544,11 @@
 </CommonElement>
 
 <!-- Person & Demographics -->
-<CommonElement name="PersonalInfoType" type="true" dm="true">
+<CommonElement name="BasePersonInfoType" type="true" dm="true">
 	<Item>
-		<Element>PersonalInfoType</Element>
+		<Element>BasePersonInfoType</Element>
 		<Description>
-			<p>A subset of PersonInfo, that is collected about Student whānau members.</p>
+			<p>A subset of PersonInfo, that is collected about Student whānau &amp; Staff members</p>
 		</Description>
 	</Item>
 	<Item>

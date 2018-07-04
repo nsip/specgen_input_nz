@@ -17,6 +17,7 @@
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Calendar.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Enrollment.xml"/>
     <xi:include parse="xml" href="Common/DataModel-CommonTypes-Attendance.xml"/>
+	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Wellbeing.xml"/>
 	
 <if intl="nz">	
 	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-SchoolStructure.xml"/>
@@ -30,7 +31,6 @@
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Curriculum.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Resource.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Assessment.xml"/>	
-	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Wellbeing.xml"/>
 	
 	<xi:include parse="xml" href="AU/DataModel-CommonTypes-NAPLAN.xml"/>
 	

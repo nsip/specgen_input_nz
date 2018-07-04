@@ -1917,7 +1917,7 @@
 				<Code>0096</Code>
 				<Text>Main telephone number</Text>
 			</Value>
-<if intl="au">			
+<if intl="au">
 			<Value>
 				<Code>0350</Code>
 				<Text>Alternate telephone number</Text>
@@ -1959,11 +1959,11 @@
 				<Code>2364</Code>
 				<Text>Facsimile number</Text>
 			</Value>
-<if intl="au">			
 			<Value>
 				<Code>0888</Code>
 				<Text>Mobile</Text>
 			</Value>
+<if intl="au">
 			<Value>
 				<Code>0887</Code>
 				<Text>Work Telephone Number</Text>

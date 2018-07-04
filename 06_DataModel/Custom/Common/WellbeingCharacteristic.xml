@@ -45,7 +45,7 @@
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
   
-    <Item>
+  <Item>
     <Element>WellbeingCharacteristicClassification</Element>
     <Characteristics>C</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -55,7 +55,7 @@
     <Type ref="CodeSets" name="AUCodeSetsWellbeingCharacteristicClassificationType"></Type>
   </Item>
   
-   <Item>
+  <Item>
     <Element>WellbeingCharacteristicStartDate</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
@@ -64,7 +64,7 @@
     </Description>
     <Type name="xs:date"></Type>
   </Item>
-   <Item>
+  <Item>
     <Element>WellbeingCharacteristicEndDate</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
@@ -94,7 +94,7 @@
     <Type name="xs:string"></Type>
   </Item>
   
-   <Item>
+  <Item>
     <Element>WellbeingCharacteristicCategory</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -121,7 +121,7 @@
 	</Union>	 
   </Item>
   
-    <Item>
+  <Item>
 		<Element>LocalCharacteristicCode</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
@@ -131,7 +131,7 @@
 		<Type ref="CommonTypes" name="LocalIdType"/> 
   </Item> 
   
-   <Item>
+  <Item>
     <Element>CharacteristicSeverity</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -141,7 +141,7 @@
     <Type name="xs:string"></Type>
   </Item>
   
-    <Item>
+  <Item>
     <Element>DailyManagement</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -151,7 +151,7 @@
     <Type name="xs:string"></Type>
   </Item>
   
-    <Item>
+  <Item>
     <Element>EmergencyManagement</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -161,7 +161,7 @@
     <Type name="xs:string"></Type>
   </Item>
   
-    <Item>
+  <Item>
     <Element>EmergencyResponsePlan</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -171,7 +171,7 @@
     <Type name="xs:string"></Type>
   </Item>
   
-     <Item>
+  <Item>
     <Element>Trigger</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -191,7 +191,7 @@
     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
   </Item>    
   
-    <Item>
+  <Item>
     <Element>Alert</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -201,7 +201,7 @@
     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
   </Item>    
   
-    <Item>
+  <Item>
     <Element>MedicationList</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -211,7 +211,7 @@
      <Type ref="CommonTypes" name="MedicationListType"></Type>
   </Item>
   
-   <Item>
+ <Item>
     <Element>DocumentList</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -219,19 +219,23 @@
       <p>Describes the Location of any associated documents kept in relation to this Characteristic.</p>
     </Description>
      <Type ref="CommonTypes" name="WellbeingDocumentListType"></Type>
-  </Item>
-  <Item>
+ </Item>
+
+<if intl="au"> 
+ <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
-  </Item>
-  <Item>
+  </Item>    <!-- SIF_Metadata -->
+ <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
-  </Item>
+</Item>    <!-- SIF_ExtendedElement -->
+</if>
+
   <xhtml:Example xmlns="" name="WellbeingCharacteristic">
     <WellbeingCharacteristic RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
       <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>

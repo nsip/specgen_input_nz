@@ -13,7 +13,7 @@
     <Element>PersonalisedPlan</Element>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>result of a Core Characteristic, Legal order, Pastoral Care info, ability or Student Behaviour. Will be a document, and the feeling in the room was that SIF would most usefully capture metadata around the document. Plans can be specific to a domain, but are still expected to aggregate information gathered about student in disparate locations. Extensive area and need to note in SIF only that information that needs to be transferred between systems or agencies.  Broad categories of Learning Plans that have been identified so far are Medical Plan, Learning Plan, Attendance Plan and Behavioural Plan.</p>
+      <p>The result of a Core Characteristic, Legal order, Pastoral Care info, ability or Student Behaviour. Will be a document, and the feeling in the room was that SIF would most usefully capture metadata around the document. Plans can be specific to a domain, but are still expected to aggregate information gathered about student in disparate locations. Extensive area and need to note in SIF only that information that needs to be transferred between systems or agencies.  Broad categories of Learning Plans that have been identified so far are Medical Plan, Learning Plan, Attendance Plan and Behavioural Plan.</p>
     </Description>
   </Item>
 
@@ -115,18 +115,21 @@
     <Type name="xs:anyURI"></Type>
   </Item>
   
+<if intl="au">  
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
-  </Item>
+  </Item>    <!-- SIF_Metadata -->
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
-  </Item>
+</Item>    <!-- SIF_ExtendedElement -->
+</if>
+
   <xhtml:Example xmlns="" name="PersonalisedPlan">
     <PersonalisedPlan RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
       <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>

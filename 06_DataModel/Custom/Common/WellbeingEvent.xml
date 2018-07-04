@@ -55,7 +55,7 @@
 		<Type ref="CommonTypes" name="LocalIdType"/> 
   </Item> 
    
-   <Item>
+  <Item>
     <Element>WellbeingEventNotes</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -90,7 +90,7 @@
   
  
   
-    <Item>
+  <Item>
     <Element>ReportingStaffRefId</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
@@ -100,7 +100,7 @@
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
   
-   <Item>
+  <Item>
     <Element>WellbeingEventLocationDetails</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Medium</privacyRating>
@@ -130,7 +130,7 @@
     <Type name="xs:date"></Type>
   </Item>
     
-   <Item>
+  <Item>
     <Element>WellbeingEventTime</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -140,7 +140,7 @@
     <Type name="xs:time"></Type>
   </Item>
   
-   <Item>
+  <Item>
     <Element>WellbeingEventDescription</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -150,7 +150,7 @@
     <Type name="xs:string"></Type>
   </Item>
 
-   <Item>
+  <Item>
     <Element>WellbeingEventTimePeriod</Element>
     <Characteristics>M</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -170,7 +170,7 @@
     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
   </Item>  
   
-   <Item>
+  <Item>
     <Element>PersonInvolvementList</Element>
     <Characteristics>C</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -180,7 +180,7 @@
      <Type ref="CommonTypes" name="PersonInvolvementListType"></Type>
   </Item>
   
-    <Item>
+  <Item>
     <Element>FollowUpActionList</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -190,7 +190,7 @@
      <Type ref="CommonTypes" name="FollowUpActionListType"></Type>
   </Item>
   
-   <Item>
+  <Item>
   	   	<Element>Status</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
@@ -200,7 +200,7 @@
 		<Type ref="CodeSets" name="AUCodeSetsWellbeingStatusType"/>
   	</Item>
 
-   <Item>
+  <Item>
     <Element>DocumentList</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -209,18 +209,22 @@
     </Description>
      <Type ref="CommonTypes" name="WellbeingDocumentListType"></Type>
   </Item>
+
+<if intl="au">  
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
-  </Item>
+  </Item>    <!-- SIF_Metadata -->
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
-  </Item>
+  </Item>    <!-- SIF_ExtendedElement -->
+</if>
+
   <xhtml:Example xmlns="" name="WellbeingEvent">
     <WellbeingEvent RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
       <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>

@@ -40,7 +40,7 @@
 		<Description>
 			<p>Personal Information collected about Student whānau members.</p>
 		</Description>
-		<Type ref="CommonTypes" name="PersonalInfoType"></Type>
+		<Type ref="CommonTypes" name="BasePersonInfoType"></Type>
 	</Item>    <!-- PersonInfo -->
 
 <if intl="au">

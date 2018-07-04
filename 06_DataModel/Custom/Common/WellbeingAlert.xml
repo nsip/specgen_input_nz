@@ -55,7 +55,7 @@
     <Type name="xs:date"></Type>
   </Item>
   
-   <Item>
+  <Item>
     <Element>WellbeingAlertStartDate</Element>
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
@@ -64,7 +64,7 @@
     </Description>
     <Type name="xs:date"></Type>
   </Item>
-   <Item>
+  <Item>
     <Element>WellbeingAlertEndDate</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
@@ -93,7 +93,7 @@
     </Description>
     <Type name="xs:string"></Type>
   </Item>
-   <Item>
+  <Item>
     <Element>EnrolmentRestricted</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Medium</privacyRating>
@@ -102,7 +102,7 @@
     </Description>
     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
   </Item>
-   <Item>
+  <Item>
     <Element>AlertAudience</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Medium</privacyRating>
@@ -111,7 +111,7 @@
     </Description>
     <Type name="xs:string"></Type>
   </Item>
-   <Item>
+  <Item>
     <Element>AlertSeverity</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -120,7 +120,7 @@
     </Description>
     <Type name="xs:string"></Type>
   </Item>
-    <Item>
+  <Item>
     <Element>AlertKeyContact</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Medium</privacyRating>
@@ -128,20 +128,23 @@
       <p>Key Contact to get information about this wellbeing alert from.</p>
     </Description>
     <Type name="xs:string"></Type>
-  </Item>
- 
+</Item>
+	
+ <if intl="au">
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
-  </Item>
+  </Item>    <!-- SIF_Metadata -->
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
-  </Item>
+  </Item>    <!-- SIF_ExtendedElement -->
+ </if>
+ 
   <xhtml:Example xmlns="" name="WellbeingAlert">
     <WellbeingAlert RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
       <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>

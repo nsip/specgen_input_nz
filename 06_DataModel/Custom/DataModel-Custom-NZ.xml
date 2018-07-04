@@ -24,8 +24,9 @@
 				area includes NZ statistical standard Ethnicity and
 				Iwi affiliations.</li>
 				
-				<li><code>StudentContactPersonal</code> data object is
-				a subset of PersonInfo data object, in that providers
+				<li><code>StudentContactPersonal</code> data object
+				uses <code>BasePersonInfo</code> which provides a
+				subset of the SIF AU PersonInfo data object, in that providers
 				don't collect OtherNames, Demographics or Education
 				&amp; Employment information about student's whānau
 				members.</li>
@@ -42,12 +43,21 @@
 				<li>Includes only
 				<code>StudentAttendanceTimeList</code> &amp;
 				<code>StudentAttendanceSummary</code> from SIF AU</li>
+
+				<li><code>StaffPersonal</code> data object
+				uses <code>BasePersonInfo</code> which provides a
+				subset of the SIF AU PersonInfo data object, in that providers
+				don't collect OtherNames, Demographics or Education
+				&amp; Employment information about student's whānau
+				members.</li>
 			</ul>
 		</Intro>
 
 		<!-- Include data model here -->		
 		<xi:include parse="xml" href="NZ/Provider.xml"/>
 		<xi:include parse="xml" href="NZ/ProviderRelationship.xml"/>
+
+		<xi:include parse="xml" href="NZ/StaffPersonal.xml"/>
 		
 		<xi:include parse="xml" href="NZ/StudentPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StudentContactPersonal.xml"/>
@@ -56,6 +66,15 @@
 		<xi:include parse="xml" href="NZ/StudentProviderEnrolment.xml"/>
 		
 		<xi:include parse="xml" href="NZ/StudentAttendanceSummary.xml"/>
-		<xi:include parse="xml" href="NZ/StudentAttendanceTimeList.xml"/>	
+		<xi:include parse="xml" href="NZ/StudentAttendanceTimeList.xml"/>
+
+		<!-- Wellbeing Additions-->
+		<xi:include parse="text" href="Common/PersonalisedPlan.xml"/>
+		<xi:include parse="text" href="Common/WellbeingCharacteristic.xml"/>
+		<xi:include parse="text" href="Common/WellbeingAlert.xml"/>
+
+		<xi:include parse="text" href="Common/WellbeingEvent.xml"/>
+		<xi:include parse="text" href="Common/WellbeingResponse.xml"/>
+		<xi:include parse="text" href="Common/WellbeingAppeal.xml"/>
 	</Group>
 </IncludeGroup>
