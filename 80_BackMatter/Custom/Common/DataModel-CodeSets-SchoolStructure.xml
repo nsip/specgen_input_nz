@@ -1,14 +1,12 @@
 <IncludeGroup
 	xmlns:xi="http://www.w3.org/2001/XInclude"
-	
  	xmlns="http://sifassociation.org/SpecGen">
 
 	<!-- Australian Bureau of Standards defined codesets  -->
 <if intl="au">
 	<CodeSet>
 		<Intro>
-			<p>1266.0 Australian Standard Classification of Religious Groups, 2016	
- </p>
+			<p>1266.0 Australian Standard Classification of Religious Groups, 2016</p>
 			<p>Source Data ABS: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1266.02016?OpenDocument</p>
 		</Intro>
 		<ID>Australian Standard Classification Of Religious Groups (ASCRG)</ID>
@@ -1646,12 +1644,12 @@
 		</Intro>
 		<ID>Operational Status</ID>
 		<Values>
-<if intl="au">			
-			<Value>
-				<Code>B</Code>
-				<Text>Building or Construction Started</Text>
-			</Value>
-</if>			
+		  	<if intl="au">
+				<Value>
+					<Code>B</Code>
+					<Text>Building or Construction Started</Text>
+				</Value>
+		    </if>			
 			<Value>
 				<Code>C</Code>
 				<Text>Closed</Text>
@@ -1664,20 +1662,20 @@
 				<Code>P</Code>
 				<Text>Proposed</Text>
 			</Value>
-<if intl="au">
-			<Value>
-				<Code>P</Code>
-				<Text>Pending</Text>
-			</Value>
-			<Value>
-				<Code>S</Code>
-				<Text>Site</Text>
-			</Value>
-			<Value>
-				<Code>U</Code>
-				<Text>Unstaffed</Text>
-			</Value>
-</if>			 
+	  		<if intl="au">
+				<Value>
+					<Code>P</Code>
+					<Text>Pending</Text>
+				</Value>
+				<Value>
+					<Code>S</Code>
+					<Text>Site</Text>
+				</Value>
+				<Value>
+					<Code>U</Code>
+					<Text>Unstaffed</Text>
+				</Value>
+			</if>			 
 		</Values>
 	</CodeSet>    <!-- Operational Status -->
 	<CodeSet>

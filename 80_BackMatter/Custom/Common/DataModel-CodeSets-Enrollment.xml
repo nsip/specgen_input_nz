@@ -1,6 +1,5 @@
 <IncludeGroup
 	xmlns:xi="http://www.w3.org/2001/XInclude"
-	
  	xmlns="http://sifassociation.org/SpecGen">
 
     <CodeSet>
@@ -11,14 +10,13 @@
 		</Intro>
 		<ID>School Enrollment Type</ID>
 		<Values>
-			
-<if intl="au">				
+		  <if intl="au">
 			<Value>
 				<Code>01</Code>
              	<Text>Home School</Text>
 			</Value>
-</if>	
-<if intl="nz">				
+		  </if>	
+		  <if intl="nz">
 			<Value>
 				<Code>01</Code>
              	<Text>Base School</Text>
@@ -30,7 +28,7 @@
 				school.</p>
 				</Description>
 			</Value>
-</if>	
+		  </if>	
 			<Value>
 				<Code>02</Code>
 				<Text>Other School</Text>
@@ -53,7 +51,6 @@
 				</p>
 				</Description>
 			</Value>
-			 
 		</Values>
 	</CodeSet>    <!-- School Enrollment Type -->
 
@@ -782,6 +779,6 @@
 		 
 		</Values>
 	</CodeSet>    <!-- 0211 Program Availability --> 
-</if>	
+ </if>	
 
 </IncludeGroup>

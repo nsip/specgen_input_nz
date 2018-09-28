@@ -3,7 +3,7 @@
 				  xmlns:xi="http://www.w3.org/2001/XInclude"
 				  xmlns:xhtml="http://www.w3.org/1999/xhtml"
 				  
-				  xmlns="http://sifassociation.org/SpecGen">				  
+				  xmlns="http://sifassociation.org/SpecGen">
 
 	<BuildComment>
 		<xi:include parse="text" href="90_Properties_DataModel/SIF-Specification-Title-DataModel.txt"/>

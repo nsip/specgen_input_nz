@@ -1,8 +1,7 @@
 
-<IncludeGroup
-	xmlns:xi="http://www.w3.org/2001/XInclude"
-	
- 	xmlns="http://sifassociation.org/SpecGen">
+<IncludeGroup 
+	xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xmlns="http://sifassociation.org/SpecGen">
 
 	<CodeSet>
 		<Intro>
@@ -19,17 +18,18 @@
 					<p>Also called 'Street' addresses, The most
 					general, and widely used type of address, and can
 					contain the widest variety of components.</p>
-					
+
 					<p>In general a thoroughfare address will include
 					components for a number, a roadname, and a
 					locality.</p>
-					
+
 					<p>They cannot contain any of the components
 					specific to a delivery service, rural post
 					delivery, or water address.</p>
-					
+
 					<p>These addresses are used to find a location.</p>
-					<p><em>Example:</em> 30 - 40 Lambton Quay, Wellington, 6165</p>
+					<p>
+						<em>Example:</em> 30 - 40 Lambton Quay, Wellington, 6165</p>
 				</Description>
 			</Value>
 			<Value>
@@ -44,7 +44,7 @@
 					<p>They will have the same number and roadname
 					components as the street address, and may have the
 					same region component.</p>
-					
+
 					<p>They do not have a component that identifies
 					the locality the address is within. The locality
 					and city or town components are replaced by
@@ -55,10 +55,11 @@
 					these components.
 					</p>
 
-					<p><em>Example:</em> 121 Waitaha Road, RD 1, Ross, 7885</p>
+					<p>
+						<em>Example:</em> 121 Waitaha Road, RD 1, Ross, 7885</p>
 				</Description>
 			</Value>
-			
+
 			<!-- Includes P O Box, Pvt Bag, CMB, etc. -->
 			<Value>
 				<Code>3</Code>
@@ -70,7 +71,8 @@
 					include PO Box, Private Bag, and Counter Delivery
 					addresses.</p>
 
-					<p><em>Example:</em> Private Bag 2345, Auckland, 1142</p>
+					<p>
+						<em>Example:</em> Private Bag 2345, Auckland, 1142</p>
 				</Description>
 			</Value>
 
@@ -84,20 +86,22 @@
 					name of a water feature (for example, islands,
 					rivers, bays, or peninsulas).</p>
 
-					<p><em>Example:</em> 235 Lochmara Bay, Queen Charlotte Sound, Marlborough Sounds</p>
+					<p>
+						<em>Example:</em> 235 Lochmara Bay, Queen Charlotte Sound, Marlborough Sounds</p>
 				</Description>
 			</Value>
-			
+
 			<Value>
 				<Code>5</Code>
 				<Text>Foreign Addres</Text>
 				<Description>
 					<p>A foreign address identifies a location outside of New Zealand.</p>
-					<p><em>Example:</em> Rudolf-Diesel-Strasse 14, 54595 Prüm, Germany</p>
+					<p>
+						<em>Example:</em> Rudolf-Diesel-Strasse 14, 54595 Prüm, Germany</p>
 				</Description>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- NZ Address Type -->
+	</CodeSet>	<!-- NZ Address Type -->
 	<CodeSet>
 		<Intro>
 			<p>Describes what a particular address is used for.</p>
@@ -113,7 +117,7 @@
 				<Text>Postal Address</Text>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- NZ Address Role -->
+	</CodeSet>	<!-- NZ Address Role -->
 	<CodeSet>
 		<Intro>
 			<p>Describes a spatial unit defined by Stats NZ.</p>
@@ -235,6 +239,6 @@
 				</Description>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- NZ Spatial Unit Type -->
+	</CodeSet>	<!-- NZ Spatial Unit Type -->
 
 </IncludeGroup>

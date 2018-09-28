@@ -19,219 +19,214 @@
     <xi:include parse="xml" href="Common/DataModel-CommonTypes-Attendance.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Wellbeing.xml"/>
 	
-<if intl="nz">	
-	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-SchoolStructure.xml"/>
-	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-PartyRole.xml"/>
-	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Enrollment.xml"/>
-</if>
+	<if intl="nz">	
+		<xi:include parse="xml" href="NZ/DataModel-CommonTypes-SchoolStructure.xml"/>
+		<xi:include parse="xml" href="NZ/DataModel-CommonTypes-PartyRole.xml"/>
+		<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Enrollment.xml"/>
+	</if>
 
 
-<if intl="au">
-	<xi:include parse="xml" href="Common/DataModel-CommonTypes-TimeTable.xml"/>
-	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Curriculum.xml"/>
-	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Resource.xml"/>
-	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Assessment.xml"/>	
-	
-	<xi:include parse="xml" href="AU/DataModel-CommonTypes-NAPLAN.xml"/>
-	
-    <xi:include parse="xml" href="Common/DataModel-CommonTypes-Financial.xml"/>
-	<xi:include parse="xml" href="Common/DataModel-CommonTypes-IAM.xml"/>
-	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Statistics.xml"/>
-	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Unused.xml"/>
-
-    <xi:include parse="xml" href="Common/DataModel-CommonTypes-Metadata.xml"/>
-
-
-	<CommonElement name="PartialDateType" type="true" dm="true">
-	<Item>
-		<Element>PartialDateType</Element>
-		<Description>
-			<p>A year, with an optional month/day, or an optional month by itself.</p>
-		</Description>
-		<Union>
-			<Type name="xs:date"/>
-			<Type name="xs:gYearMonth"/>
-			<Type name="xs:gYear"/>
-		</Union>
-	</Item>
-	</CommonElement>
-	<CommonElement name="GraduationDateType" type="true" dm="true">
-	<Item>
-		<Element>GraduationDateType</Element>
-		<Description>
-			<p>Date student officially graduated from secondary education.</p>
-		</Description>
-		<Type ref="CommonTypes" name="PartialDateType"/>
-	</Item>
-	<xhtml:Example xmlns="" name="Graduation Date Example">
-		<GraduationDate>2005-05-27</GraduationDate>
-	</xhtml:Example>
-	</CommonElement>
-	<CommonElement name="SIF_ExtendedElementsType" type="true" dm="true">
-	<Intro>
-		<p>
-      This element is supported at the end of all SIF objects.
-      The element is used to extend existing SIF objects with locally-defined elements.
-      Extended elements <span class="rfc2119">SHOULD NOT</span> be used to duplicate data that can be obtained from other SIF objects.
-    </p>
-	</Intro>
-	<Item>
-		<Element>SIF_ExtendedElementsType</Element>
-		<Description>
-			<p>Allows an agent to include data not yet defined within a SIF data object as name/value pairs.</p>
-		</Description>
-		<List mode="List">
-    </List>
-	</Item>
-	<Item>
-		<Element>SIF_ExtendedElement</Element>
-		<Characteristics>OR</Characteristics>
-		<Description>
-			<p>A name/value pair, the name being contained in the Name attribute, the value being the element content.</p>
-		</Description>
-		<Type ref="CommonTypes" complex="extension" name="ExtendedContentType"/>
-	</Item>
-	<Item>
-		<Attribute>Name</Attribute>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>The name of the extended element. As it is possible that names for extended elements may collide from agent to agent, it is recommended that the names of extended elements be configurable in an agent, or that agents use URIs for the names of extended elements.</p>
-		</Description>
-		<Type name="xs:normalizedString"/>
-	</Item>
-	<Item>
-		<Attribute>xsi:type</Attribute>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Allows type of element to be explicitly communicated.</p>
-		</Description>
-	</Item>
-	<Item>
-		<Attribute>SIF_Action</Attribute>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>
-        In a <code>Change</code> event, this flag can be used to indicate an element has been deleted from the parent list container.  At a minimum the key for the list must also be present.
-      </p>
-		</Description>
-		<Values>
-			<Value>
-				<Code>Delete</Code>
-			</Value>
-		</Values>
-	</Item>
-	<xhtml:Example xmlns="" skipValidate="true" name="SIF Extended Elements Example">
-		<SIF_ExtendedElements>
-			<SIF_ExtendedElement Name="ApplicationSubmissionStatus">4</SIF_ExtendedElement>
-			<SIF_ExtendedElement Name="DynamicXml">
-				<Parent xmlns="http://myapplication.com">
-					<Child n="1">one</Child>
-					<Child n="2"/>
-					<Child n="3">three</Child>
-				</Parent>
-			</SIF_ExtendedElement>
-			<SIF_ExtendedElement Name="Note" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-				<xhtml:strong>Double</xhtml:strong>-check submission status.
-      </SIF_ExtendedElement>
-		</SIF_ExtendedElements>
-	</xhtml:Example>
-</CommonElement>
-    <CommonElement name="OtherCodeListType" type="true" dm="true">
-		<Item>
-			<Element>OtherCodeListType</Element>
-			<Description>
-				<p>
-					List of other codes or strings that crosswalk to or serve as translations of the <code>Code</code> element paired with this common element.  If <code>Code</code> changes
-					and <code>OtherCode</code>s are supported, both <code>Code</code> and all associated <code>OtherCode</code> elements must be present.
-				</p>
-			</Description>
-			<List mode="List">
-			</List>
-		</Item>
-		<Item>
-			<Element>OtherCode</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>
-					A state/province code, local code, other code or a text string that crosswalks to or serves as a translation of an associated <code>Code</code> element.
-				</p>
-			</Description>
-			<Type name="xs:token"/>
-		</Item>  <!-- OtherCode -->
-		<Item>
-			<Attribute>Codeset</Attribute>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>
-					Describes the <code>OtherCode</code> element content as either a state/province code, a local code, other code, or text string.
-				</p>
-			</Description>
-			<Values>
-				<Value>
-					<Code>StateProvince</Code>
-				</Value>
-				<Value>
-					<Code>Local</Code>
-				</Value>
-				<Value>
-					<Code>Other</Code>
-				</Value>
-				<Value>
-					<Code>Text</Code>
-				</Value>
-			</Values>
-		</Item>  <!-- CodeSet -->
+  <if intl="au">
+		<xi:include parse="xml" href="Common/DataModel-CommonTypes-TimeTable.xml"/>
+		<xi:include parse="xml" href="Common/DataModel-CommonTypes-Curriculum.xml"/>
+		<xi:include parse="xml" href="Common/DataModel-CommonTypes-Resource.xml"/>
+		<xi:include parse="xml" href="Common/DataModel-CommonTypes-Assessment.xml"/>	
 		
-		<xhtml:Example xmlns="" name="Other Code List Example">
-			<OtherCodeList>
-				<OtherCode Codeset="Local">S</OtherCode>
-				<OtherCode Codeset="Text">Semester</OtherCode>
-			</OtherCodeList>
-		</xhtml:Example>
-	</CommonElement>
-</if>
+		<xi:include parse="xml" href="AU/DataModel-CommonTypes-NAPLAN.xml"/>
+		
+		<xi:include parse="xml" href="Common/DataModel-CommonTypes-Financial.xml"/>
+		<xi:include parse="xml" href="Common/DataModel-CommonTypes-IAM.xml"/>
+		<xi:include parse="xml" href="Common/DataModel-CommonTypes-Statistics.xml"/>
+		<xi:include parse="xml" href="Common/DataModel-CommonTypes-Unused.xml"/>
 
-<if intl="nz">
-	<CommonElement name="ObjectReferenceType" type="true" dm="true">
-		<Item>
-			<Element>ObjectReferenceType</Element>
-			<Description>
-				<p>A reference to another SIF Data Object</p>
-			</Description>
-		</Item>
-		<Item>
-			<Attribute>RefId</Attribute>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description><p>The GUUID of the referenced object</p></Description>
-			<Type ref="CommonTypes" name="RefIdType"/>
-		</Item>
-		<Item>
-			<Element>LocalId</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>Local identifier representing the referenced object.</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/>
-		</Item>
-		<Item>
-			<Element>Name</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description><p>The normal descriptive name of the referenced object.</p></Description>
-			<Type name="xs:string"/>
-		</Item>
-		<Item>
-			<Element>ObjectType</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The type of the referenced object:</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsReferrableDataObjectsType"/>
-		</Item>
-	</CommonElement>
-</if>
+		<xi:include parse="xml" href="Common/DataModel-CommonTypes-Metadata.xml"/>
 
+
+		<CommonElement name="PartialDateType" type="true" dm="true">
+			<Item>
+				<Element>PartialDateType</Element>
+				<Description>
+					<p>A year, with an optional month/day, or an optional month by itself.</p>
+				</Description>
+				<Union>
+					<Type name="xs:date"/>
+					<Type name="xs:gYearMonth"/>
+					<Type name="xs:gYear"/>
+				</Union>
+			</Item>
+		</CommonElement>
+		<CommonElement name="GraduationDateType" type="true" dm="true">
+			<Item>
+				<Element>GraduationDateType</Element>
+				<Description>
+					<p>Date student officially graduated from secondary education.</p>
+				</Description>
+				<Type ref="CommonTypes" name="PartialDateType"/>
+			</Item>
+			<xhtml:Example xmlns="" name="Graduation Date Example">
+				<GraduationDate>2005-05-27</GraduationDate>
+			</xhtml:Example>
+		</CommonElement>
+		<CommonElement name="SIF_ExtendedElementsType" type="true" dm="true">
+			<Intro>
+				<p>
+			This element is supported at the end of all SIF objects.
+			The element is used to extend existing SIF objects with locally-defined elements.
+			Extended elements <span class="rfc2119">SHOULD NOT</span> be used to duplicate data that can be obtained from other SIF objects.
+			</p>
+			</Intro>
+			<Item>
+				<Element>SIF_ExtendedElementsType</Element>
+				<Description>
+					<p>Allows an agent to include data not yet defined within a SIF data object as name/value pairs.</p>
+				</Description>
+				<List mode="List"/>
+			</Item>
+			<Item>
+				<Element>SIF_ExtendedElement</Element>
+				<Characteristics>OR</Characteristics>
+				<Description>
+					<p>A name/value pair, the name being contained in the Name attribute, the value being the element content.</p>
+				</Description>
+				<Type ref="CommonTypes" complex="extension" name="ExtendedContentType"/>
+			</Item>
+			<Item>
+				<Attribute>Name</Attribute>
+				<Characteristics>M</Characteristics>
+				<Description>
+					<p>The name of the extended element. As it is possible that names for extended elements may collide from agent to agent, it is recommended that the names of extended elements be configurable in an agent, or that agents use URIs for the names of extended elements.</p>
+				</Description>
+				<Type name="xs:normalizedString"/>
+			</Item>
+			<Item>
+				<Attribute>xsi:type</Attribute>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>Allows type of element to be explicitly communicated.</p>
+				</Description>
+			</Item>
+			<Item>
+				<Attribute>SIF_Action</Attribute>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>In a <code>Change</code> event, this flag can be used to indicate an element has been deleted from the parent list container.  At a minimum the key for the list must also be present.</p>
+				</Description>
+				<Values>
+					<Value>
+						<Code>Delete</Code>
+					</Value>
+				</Values>
+			</Item>
+			<xhtml:Example xmlns="" skipValidate="true" name="SIF Extended Elements Example">
+				<SIF_ExtendedElements>
+					<SIF_ExtendedElement Name="ApplicationSubmissionStatus">4</SIF_ExtendedElement>
+					<SIF_ExtendedElement Name="DynamicXml">
+						<Parent xmlns="http://myapplication.com">
+							<Child n="1">one</Child>
+							<Child n="2"/>
+							<Child n="3">three</Child>
+						</Parent>
+					</SIF_ExtendedElement>
+					<SIF_ExtendedElement Name="Note" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+						<xhtml:strong>Double</xhtml:strong>-check submission status.
+					</SIF_ExtendedElement>
+				</SIF_ExtendedElements>
+			</xhtml:Example>
+		</CommonElement>
+		<CommonElement name="OtherCodeListType" type="true" dm="true">
+			<Item>
+				<Element>OtherCodeListType</Element>
+				<Description>
+					<p>
+						List of other codes or strings that crosswalk to or serve as translations of the <code>Code</code> element paired with this common element.  If <code>Code</code> changes
+						and <code>OtherCode</code>s are supported, both <code>Code</code> and all associated <code>OtherCode</code> elements must be present.
+					</p>
+				</Description>
+				<List mode="List"/>
+			</Item>
+			<Item>
+				<Element>OtherCode</Element>
+				<Characteristics>MR</Characteristics>
+				<Description>
+					<p>
+						A state/province code, local code, other code or a text string that crosswalks to or serves as a translation of an associated <code>Code</code> element.
+					</p>
+				</Description>
+				<Type name="xs:token"/>
+			</Item>  <!-- OtherCode -->
+			<Item>
+				<Attribute>Codeset</Attribute>
+				<Characteristics>M</Characteristics>
+				<Description>
+					<p>
+						Describes the <code>OtherCode</code> element content as either a state/province code, a local code, other code, or text string.
+					</p>
+				</Description>
+				<Values>
+					<Value>
+						<Code>StateProvince</Code>
+					</Value>
+					<Value>
+						<Code>Local</Code>
+					</Value>
+					<Value>
+						<Code>Other</Code>
+					</Value>
+					<Value>
+						<Code>Text</Code>
+					</Value>
+				</Values>
+			</Item>  <!-- CodeSet -->
+			
+			<xhtml:Example xmlns="" name="Other Code List Example">
+				<OtherCodeList>
+					<OtherCode Codeset="Local">S</OtherCode>
+					<OtherCode Codeset="Text">Semester</OtherCode>
+				</OtherCodeList>
+			</xhtml:Example>
+		</CommonElement>
+  </if>
+
+  <if intl="nz">
+		<CommonElement name="ObjectReferenceType" type="true" dm="true">
+			<Item>
+				<Element>ObjectReferenceType</Element>
+				<Description>
+					<p>A reference to another SIF Data Object</p>
+				</Description>
+			</Item>
+			<Item>
+				<Attribute>RefId</Attribute>
+				<Characteristics>M</Characteristics>
+				<privacyRating>Low</privacyRating>
+				<Description><p>The GUUID of the referenced object</p></Description>
+				<Type ref="CommonTypes" name="RefIdType"/>
+			</Item>   <!-- RefId -->
+			<Item>
+				<Element>LocalId</Element>
+				<Characteristics>O</Characteristics>
+				<privacyRating>Low</privacyRating>
+				<Description>
+					<p>Local identifier representing the referenced object.</p>
+				</Description>
+				<Type ref="CommonTypes" name="LocalIdType"/>
+			</Item>   <!-- LocalId -->
+			<Item>
+				<Element>Name</Element>
+				<Characteristics>O</Characteristics>
+				<privacyRating>Low</privacyRating>
+				<Description><p>The normal descriptive name of the referenced object.</p></Description>
+				<Type name="xs:string"/>
+			</Item>   <!-- Name -->
+			<Item>
+				<Element>ObjectType</Element>
+				<Characteristics>O</Characteristics>
+				<privacyRating>Low</privacyRating>
+				<Description>
+					<p>The type of the referenced object:</p>
+				</Description>
+				<Type ref="CodeSets" name="NZCodeSetsReferrableDataObjectsType"/>
+			</Item>   <!-- ObjectType -->
+		</CommonElement>
+  </if>
 </IncludeGroup>

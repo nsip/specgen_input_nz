@@ -1,6 +1,5 @@
 <IncludeGroup
 	xmlns:xi="http://www.w3.org/2001/XInclude"
-	
  	xmlns="http://sifassociation.org/SpecGen">
 
 	<CodeSet>
@@ -264,7 +263,7 @@
 			</Value>
 		 </Values>
 	</CodeSet>    <!-- Attendance Code -->
-	<CodeSet>h
+	<CodeSet>
 		<Intro>
 			<p/>
 		</Intro>

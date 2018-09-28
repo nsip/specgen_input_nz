@@ -591,289 +591,289 @@
 		</Values>
 	</CodeSet>    <!-- Language Usage Type -->
     <CodeSet>
-	<Intro>
-		<p>Language refers to recognised human communication systems, typically oral and/or written.</p>
-		<p>Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/CARS3211">Statistics NZ - Language Standard Classification 1999 v2.0.0</a></p>
-	</Intro>
-	<ID>Language</ID>
-	<Values>
-		<Value><Code>01</Code><Text>Germanic</Text></Value>
-		<Value><Code>011</Code><Text>West Germanic</Text></Value>
-		<Value><Code>01100</Code><Text>West Germanic not further defined</Text></Value>
-		<Value><Code>01110</Code><Text>Afrikaans</Text></Value>
-		<Value><Code>01111</Code><Text>Dutch</Text></Value>
-		<Value><Code>01112</Code><Text>English</Text></Value>
-		<Value><Code>01113</Code><Text>German</Text></Value>
-		<Value><Code>01114</Code><Text>Friesian</Text></Value>
-		<Value><Code>01115</Code><Text>Yiddish</Text></Value>
-		<Value><Code>01116</Code><Text>Scots</Text></Value>
-		<Value><Code>01199</Code><Text>West Germanic not elsewhere classified</Text></Value>
-		<Value><Code>012</Code><Text>North Germanic</Text></Value>
-		<Value><Code>01200</Code><Text>North Germanic not further defined</Text></Value>
-		<Value><Code>01210</Code><Text>Danish</Text></Value>
-		<Value><Code>01211</Code><Text>Norwegian</Text></Value>
-		<Value><Code>01212</Code><Text>Swedish</Text></Value>
-		<Value><Code>01213</Code><Text>Icelandic</Text></Value>
-		<Value><Code>01299</Code><Text>North Germanic not elsewhere classified</Text></Value>
-		<Value><Code>02</Code><Text>Romance</Text></Value>
-		<Value><Code>021</Code><Text>Romance</Text></Value>
-		<Value><Code>02100</Code><Text>Romance not further defined</Text></Value>
-		<Value><Code>02110</Code><Text>French</Text></Value>
-		<Value><Code>02111</Code><Text>Catalan</Text></Value>
-		<Value><Code>02112</Code><Text>Portuguese</Text></Value>
-		<Value><Code>02113</Code><Text>Spanish</Text></Value>
-		<Value><Code>02114</Code><Text>Italian</Text></Value>
-		<Value><Code>02115</Code><Text>Romanian</Text></Value>
-		<Value><Code>02199</Code><Text>Romance not elsewhere classified</Text></Value>
-		<Value><Code>03</Code><Text>Greek</Text></Value>
-		<Value><Code>031</Code><Text>Greek</Text></Value>
-		<Value><Code>03110</Code><Text>Greek</Text></Value>
-		<Value><Code>04</Code><Text>Balto-Slavic</Text></Value>
-		<Value><Code>041</Code><Text>Baltic</Text></Value>
-		<Value><Code>04100</Code><Text>Baltic not further defined</Text></Value>
-		<Value><Code>04110</Code><Text>Latvian</Text></Value>
-		<Value><Code>04111</Code><Text>Lithuanian</Text></Value>
-		<Value><Code>04199</Code><Text>Baltic not elsewhere classified</Text></Value>
-		<Value><Code>042</Code><Text>Slavic</Text></Value>
-		<Value><Code>04200</Code><Text>Slavic not further defined</Text></Value>
-		<Value><Code>04210</Code><Text>Belorussian</Text></Value>
-		<Value><Code>04211</Code><Text>Russian</Text></Value>
-		<Value><Code>04212</Code><Text>Ukrainian</Text></Value>
-		<Value><Code>04213</Code><Text>Bulgarian</Text></Value>
-		<Value><Code>04214</Code><Text>Macedonian</Text></Value>
-		<Value><Code>04215</Code><Text>Serbo-Croatian</Text></Value>
-		<Value><Code>04216</Code><Text>Slovene</Text></Value>
-		<Value><Code>04217</Code><Text>Czech</Text></Value>
-		<Value><Code>04218</Code><Text>Polish</Text></Value>
-		<Value><Code>04219</Code><Text>Slovak</Text></Value>
-		<Value><Code>04299</Code><Text>Slavic not elsewhere classified</Text></Value>
-		<Value><Code>05</Code><Text>Albanian</Text></Value>
-		<Value><Code>051</Code><Text>Albanian</Text></Value>
-		<Value><Code>05110</Code><Text>Albanian</Text></Value>
-		<Value><Code>06</Code><Text>Armenian</Text></Value>
-		<Value><Code>061</Code><Text>Armenian</Text></Value>
-		<Value><Code>06110</Code><Text>Armenian</Text></Value>
-		<Value><Code>07</Code><Text>Indo-Aryan</Text></Value>
-		<Value><Code>071</Code><Text>Indo-Aryan</Text></Value>
-		<Value><Code>07100</Code><Text>Indo-Aryan not further defined</Text></Value>
-		<Value><Code>07110</Code><Text>Hindi</Text></Value>
-		<Value><Code>07111</Code><Text>Urdu</Text></Value>
-		<Value><Code>07112</Code><Text>Fiji Hindi</Text></Value>
-		<Value><Code>07113</Code><Text>Bengali</Text></Value>
-		<Value><Code>07114</Code><Text>Oriya</Text></Value>
-		<Value><Code>07115</Code><Text>Nepalese</Text></Value>
-		<Value><Code>07116</Code><Text>Panjabi</Text></Value>
-		<Value><Code>07117</Code><Text>Sindhi</Text></Value>
-		<Value><Code>07118</Code><Text>Kashmiri</Text></Value>
-		<Value><Code>07119</Code><Text>Sinhala</Text></Value>
-		<Value><Code>07120</Code><Text>Gujarati</Text></Value>
-		<Value><Code>07121</Code><Text>Konkani</Text></Value>
-		<Value><Code>07122</Code><Text>Marathi</Text></Value>
-		<Value><Code>07123</Code><Text>Romani</Text></Value>
-		<Value><Code>07199</Code><Text>Indo-Aryan not elsewhere classified</Text></Value>
-		<Value><Code>08</Code><Text>Celtic</Text></Value>
-		<Value><Code>081</Code><Text>Celtic</Text></Value>
-		<Value><Code>08100</Code><Text>Celtic not further defined</Text></Value>
-		<Value><Code>08110</Code><Text>Welsh</Text></Value>
-		<Value><Code>08111</Code><Text>Scottish Gaelic</Text></Value>
-		<Value><Code>08112</Code><Text>Irish</Text></Value>
-		<Value><Code>08113</Code><Text>Breton</Text></Value>
-		<Value><Code>08199</Code><Text>Celtic not elsewhere classified</Text></Value>
-		<Value><Code>09</Code><Text>Iranian</Text></Value>
-		<Value><Code>091</Code><Text>Iranian</Text></Value>
-		<Value><Code>09100</Code><Text>Iranian not further defined</Text></Value>
-		<Value><Code>09110</Code><Text>Persian</Text></Value>
-		<Value><Code>09111</Code><Text>Kurdish</Text></Value>
-		<Value><Code>09112</Code><Text>Pashto</Text></Value>
-		<Value><Code>09199</Code><Text>Iranian not elsewhere classified</Text></Value>
-		<Value><Code>10</Code><Text>Turko-Altaic</Text></Value>
-		<Value><Code>101</Code><Text>Turko-Altaic</Text></Value>
-		<Value><Code>10100</Code><Text>Turko-Altaic not further defined</Text></Value>
-		<Value><Code>10110</Code><Text>Turkish</Text></Value>
-		<Value><Code>10111</Code><Text>Azeri</Text></Value>
-		<Value><Code>10199</Code><Text>Turko-Altaic not elsewhere classified</Text></Value>
-		<Value><Code>11</Code><Text>Uralic</Text></Value>
-		<Value><Code>111</Code><Text>Uralic</Text></Value>
-		<Value><Code>11100</Code><Text>Uralic not further defined</Text></Value>
-		<Value><Code>11110</Code><Text>Estonian</Text></Value>
-		<Value><Code>11111</Code><Text>Finnish</Text></Value>
-		<Value><Code>11112</Code><Text>Hungarian</Text></Value>
-		<Value><Code>11199</Code><Text>Uralic not elsewhere classified</Text></Value>
-		<Value><Code>12</Code><Text>Dravidian</Text></Value>
-		<Value><Code>121</Code><Text>Dravidian</Text></Value>
-		<Value><Code>12100</Code><Text>Dravidian not further defined</Text></Value>
-		<Value><Code>12110</Code><Text>Kannada</Text></Value>
-		<Value><Code>12111</Code><Text>Malayalam</Text></Value>
-		<Value><Code>12112</Code><Text>Tamil</Text></Value>
-		<Value><Code>12113</Code><Text>Telugu</Text></Value>
-		<Value><Code>12199</Code><Text>Dravidian not elsewhere classified</Text></Value>
-		<Value><Code>13</Code><Text>Sino-Tibeto-Burman</Text></Value>
-		<Value><Code>131</Code><Text>Sinitic</Text></Value>
-		<Value><Code>13100</Code><Text>Sinitic not further defined</Text></Value>
-		<Value><Code>13110</Code><Text>Yue</Text></Value>
-		<Value><Code>13111</Code><Text>Hakka</Text></Value>
-		<Value><Code>13112</Code><Text>Min</Text></Value>
-		<Value><Code>13113</Code><Text>Northern Chinese</Text></Value>
-		<Value><Code>13114</Code><Text>Wu</Text></Value>
-		<Value><Code>13115</Code><Text>Tieu-Chow</Text></Value>
-		<Value><Code>13199</Code><Text>Sinitic not elsewhere classified</Text></Value>
-		<Value><Code>132</Code><Text>Tibeto-Lolo-Burman</Text></Value>
-		<Value><Code>13200</Code><Text>Tibeto-Lolo-Burman not further defined</Text></Value>
-		<Value><Code>13210</Code><Text>Burmese</Text></Value>
-		<Value><Code>13211</Code><Text>Tibetan</Text></Value>
-		<Value><Code>13299</Code><Text>Tibeto-Lolo-Burman not elsewhere classified</Text></Value>
-		<Value><Code>14</Code><Text>Austroasiatic</Text></Value>
-		<Value><Code>141</Code><Text>Mon-Khmer</Text></Value>
-		<Value><Code>14100</Code><Text>Mon-Khmer not further defined</Text></Value>
-		<Value><Code>14110</Code><Text>Khmer</Text></Value>
-		<Value><Code>14199</Code><Text>Mon-Khmer not elsewhere classified</Text></Value>
-		<Value><Code>142</Code><Text>Viet-Muong</Text></Value>
-		<Value><Code>14200</Code><Text>Viet-Muong not further defined</Text></Value>
-		<Value><Code>14210</Code><Text>Vietnamese</Text></Value>
-		<Value><Code>14299</Code><Text>Viet-Muong not elsewhere classified</Text></Value>
-		<Value><Code>15</Code><Text>Tai-Kadai</Text></Value>
-		<Value><Code>151</Code><Text>Tai-Kadai</Text></Value>
-		<Value><Code>15100</Code><Text>Tai-Kadai not further defined</Text></Value>
-		<Value><Code>15110</Code><Text>Lao</Text></Value>
-		<Value><Code>15111</Code><Text>Thai</Text></Value>
-		<Value><Code>15112</Code><Text>Shan</Text></Value>
-		<Value><Code>15199</Code><Text>Tai-Kadai not elsewhere classified</Text></Value>
-		<Value><Code>16</Code><Text>Central-Eastern Malayo-Polynesian</Text></Value>
-		<Value><Code>161</Code><Text>Central Pacific</Text></Value>
-		<Value><Code>16100</Code><Text>Central Pacific not further defined</Text></Value>
-		<Value><Code>16110</Code><Text>Māori</Text></Value>
-		<Value><Code>16111</Code><Text>Samoan</Text></Value>
-		<Value><Code>16112</Code><Text>Tongan</Text></Value>
-		<Value><Code>16113</Code><Text>Cook Islands Maori</Text></Value>
-		<Value><Code>16114</Code><Text>Niuean</Text></Value>
-		<Value><Code>16115</Code><Text>Tokelauan</Text></Value>
-		<Value><Code>16116</Code><Text>Tuvaluan</Text></Value>
-		<Value><Code>16117</Code><Text>Tahitian</Text></Value>
-		<Value><Code>16118</Code><Text>Pukapukan</Text></Value>
-		<Value><Code>16119</Code><Text>Fijian</Text></Value>
-		<Value><Code>16120</Code><Text>Rotuman</Text></Value>
-		<Value><Code>16199</Code><Text>Central Pacific not elsewhere classified</Text></Value>
-		<Value><Code>162</Code><Text>Solomon Islands Languages (Non-Central-Pacific)</Text></Value>
-		<Value><Code>16210</Code><Text>Solomon Islands Languages (Non-Central-Pacific)</Text></Value>
-		<Value><Code>163</Code><Text>Micronesian</Text></Value>
-		<Value><Code>16300</Code><Text>Micronesian not further defined</Text></Value>
-		<Value><Code>16310</Code><Text>Kiribati</Text></Value>
-		<Value><Code>16311</Code><Text>Nauruan</Text></Value>
-		<Value><Code>16399</Code><Text>Micronesian not elsewhere classified</Text></Value>
-		<Value><Code>164</Code><Text>Vanuatu Languages</Text></Value>
-		<Value><Code>16410</Code><Text>Vanuatu Languages</Text></Value>
-		<Value><Code>17</Code><Text>Western Malayo-Polynesian</Text></Value>
-		<Value><Code>171</Code><Text>Western Malayo-Polynesian</Text></Value>
-		<Value><Code>17100</Code><Text>Western Malayo-Polynesian not further defined</Text></Value>
-		<Value><Code>17110</Code><Text>Bisayan</Text></Value>
-		<Value><Code>17111</Code><Text>Cebuano</Text></Value>
-		<Value><Code>17112</Code><Text>Ilokano</Text></Value>
-		<Value><Code>17113</Code><Text>Bahasa Indonesia</Text></Value>
-		<Value><Code>17114</Code><Text>Malaysian</Text></Value>
-		<Value><Code>17115</Code><Text>Tagalog</Text></Value>
-		<Value><Code>17116</Code><Text>Javanese</Text></Value>
-		<Value><Code>17199</Code><Text>Western Malayo-Polynesian not elsewhere classified</Text></Value>
-		<Value><Code>18</Code><Text>Afro-Asiatic</Text></Value>
-		<Value><Code>181</Code><Text>Cushitic</Text></Value>
-		<Value><Code>18100</Code><Text>Cushitic not further defined</Text></Value>
-		<Value><Code>18110</Code><Text>Somali</Text></Value>
-		<Value><Code>18199</Code><Text>Cushitic not elsewhere classified</Text></Value>
-		<Value><Code>182</Code><Text>Semitic</Text></Value>
-		<Value><Code>18200</Code><Text>Semitic not further defined</Text></Value>
-		<Value><Code>18210</Code><Text>Assyrian</Text></Value>
-		<Value><Code>18211</Code><Text>Arabic</Text></Value>
-		<Value><Code>18212</Code><Text>Maltese</Text></Value>
-		<Value><Code>18213</Code><Text>Amharic</Text></Value>
-		<Value><Code>18214</Code><Text>Tigrinya</Text></Value>
-		<Value><Code>18215</Code><Text>Hebrew</Text></Value>
-		<Value><Code>18299</Code><Text>Semitic not elsewhere classified</Text></Value>
-		<Value><Code>183</Code><Text>Chadic</Text></Value>
-		<Value><Code>18300</Code><Text>Chadic not further defined</Text></Value>
-		<Value><Code>18310</Code><Text>Hausa</Text></Value>
-		<Value><Code>18399</Code><Text>Chadic not elsewhere classified</Text></Value>
-		<Value><Code>19</Code><Text>Niger-Congo (Congo-Kordafanian)</Text></Value>
-		<Value><Code>191</Code><Text>Bantu languages</Text></Value>
-		<Value><Code>19100</Code><Text>Bantu not further defined</Text></Value>
-		<Value><Code>19110</Code><Text>Swahili</Text></Value>
-		<Value><Code>19111</Code><Text>Yoruba</Text></Value>
-		<Value><Code>19112</Code><Text>Zulu</Text></Value>
-		<Value><Code>19199</Code><Text>Bantu, not elsewhere classified</Text></Value>
-		<Value><Code>192</Code><Text>Other Niger-Congo</Text></Value>
-		<Value><Code>19200</Code><Text>Other Niger-Congo not further defined</Text></Value>
-		<Value><Code>19210</Code><Text>Fulani</Text></Value>
-		<Value><Code>19299</Code><Text>Other Niger-Congo not elsewhere classified</Text></Value>
-		<Value><Code>20</Code><Text>Pidgins and Creoles</Text></Value>
-		<Value><Code>201</Code><Text>Pidgins and Creoles</Text></Value>
-		<Value><Code>20100</Code><Text>Pidgins and Creoles not further defined</Text></Value>
-		<Value><Code>20110</Code><Text>Creole</Text></Value>
-		<Value><Code>20111</Code><Text>French Creole</Text></Value>
-		<Value><Code>20112</Code><Text>Pidgin English</Text></Value>
-		<Value><Code>20113</Code><Text>Neo Melanesian</Text></Value>
-		<Value><Code>20114</Code><Text>Mauritian Creole</Text></Value>
-		<Value><Code>20115</Code><Text>Tok Pisin</Text></Value>
-		<Value><Code>20116</Code><Text>Hindi Bat</Text></Value>
-		<Value><Code>20117</Code><Text>Solomon Islands Pidgin</Text></Value>
-		<Value><Code>20118</Code><Text>Bislama</Text></Value>
-		<Value><Code>20199</Code><Text>Pidgins and Creoles not elsewhere classified</Text></Value>
-		<Value><Code>21</Code><Text>Language Isolates</Text></Value>
-		<Value><Code>211</Code><Text>Japanese</Text></Value>
-		<Value><Code>21110</Code><Text>Japanese</Text></Value>
-		<Value><Code>212</Code><Text>Korean</Text></Value>
-		<Value><Code>21210</Code><Text>Korean</Text></Value>
-		<Value><Code>213</Code><Text>Basque</Text></Value>
-		<Value><Code>21310</Code><Text>Basque</Text></Value>
-		<Value><Code>219</Code><Text>Language Isolates not elsewhere classified</Text></Value>
-		<Value><Code>21999</Code><Text>Language Isolates not elsewhere classified</Text></Value>
-		<Value><Code>22</Code><Text>Miscellaneous Language Groupings</Text></Value>
-		<Value><Code>221</Code><Text>Papuan</Text></Value>
-		<Value><Code>22110</Code><Text>Papuan</Text></Value>
-		<Value><Code>222</Code><Text>Nilo-Saharan languages</Text></Value>
-		<Value><Code>22210</Code><Text>Nilo-Saharan</Text></Value>
-		<Value><Code>223</Code><Text>Miaow-Yao</Text></Value>
-		<Value><Code>22310</Code><Text>Miaow-Yao</Text></Value>
-		<Value><Code>224</Code><Text>Caucasian</Text></Value>
-		<Value><Code>22400</Code><Text>Caucasian not further defined</Text></Value>
-		<Value><Code>22410</Code><Text>Georgian</Text></Value>
-		<Value><Code>22499</Code><Text>Caucasian not elsewhere classified</Text></Value>
-		<Value><Code>225</Code><Text>Australian</Text></Value>
-		<Value><Code>22510</Code><Text>Australian</Text></Value>
-		<Value><Code>226</Code><Text>Amerind</Text></Value>
-		<Value><Code>22610</Code><Text>Amerind</Text></Value>
-		<Value><Code>229</Code><Text>Other Miscellaneous Languages</Text></Value>
-		<Value><Code>22910</Code><Text>Other Miscellaneous Languages</Text></Value>
-		<Value><Code>23</Code><Text>Artificial Languages</Text></Value>
-		<Value><Code>231</Code><Text>Artificial Languages</Text></Value>
-		<Value><Code>23100</Code><Text>Artificial Languages not further defined</Text></Value>
-		<Value><Code>23110</Code><Text>Esperanto</Text></Value>
-		<Value><Code>23199</Code><Text>Artificial Languages not elsewhere classified</Text></Value>
-		<Value><Code>24</Code><Text>Sign Language</Text></Value>
-		<Value><Code>241</Code><Text>Sign Language</Text></Value>
-		<Value><Code>24100</Code><Text>Sign Language not further defined</Text></Value>
-		<Value><Code>24110</Code><Text>New Zealand Sign Language</Text></Value>
-		<Value><Code>24111</Code><Text>Signed English</Text></Value>
-		<Value><Code>24112</Code><Text>American Sign Language</Text></Value>
-		<Value><Code>24113</Code><Text>Australian Sign Language</Text></Value>
-		<Value><Code>24114</Code><Text>British Sign Language</Text></Value>
-		<Value><Code>44</Code><Text>Don't Know</Text></Value>
-		<Value><Code>444</Code><Text>Don't Know</Text></Value>
-		<Value><Code>44444</Code><Text>Don't Know</Text></Value>
-		<Value><Code>55</Code><Text>Refused To Answer</Text></Value>
-		<Value><Code>555</Code><Text>Refused To Answer</Text></Value>
-		<Value><Code>55555</Code><Text>Refused To Answer</Text></Value>
-		<Value><Code>66</Code><Text>None (eg too young to talk)</Text></Value>
-		<Value><Code>666</Code><Text>None (eg too young to talk)</Text></Value>
-		<Value><Code>66666</Code><Text>None (eg too young to talk)</Text></Value>
-		<Value><Code>77</Code><Text>Response Unidentifiable</Text></Value>
-		<Value><Code>777</Code><Text>Response Unidentifiable</Text></Value>
-		<Value><Code>77777</Code><Text>Response Unidentifiable</Text></Value>
-		<Value><Code>88</Code><Text>Response Outside Scope</Text></Value>
-		<Value><Code>888</Code><Text>Response Outside Scope</Text></Value>
-		<Value><Code>88888</Code><Text>Response Outside Scope</Text></Value>
-		<Value><Code>99</Code><Text>Not Stated</Text></Value>
-		<Value><Code>999</Code><Text>Not Stated</Text></Value>
-		<Value><Code>99999</Code><Text>Not Stated</Text></Value>
-	</Values>
-</CodeSet>    <!-- Language -->
+		<Intro>
+			<p>Language refers to recognised human communication systems, typically oral and/or written.</p>
+			<p>Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/CARS3211">Statistics NZ - Language Standard Classification 1999 v2.0.0</a></p>
+		</Intro>
+		<ID>Language</ID>
+		<Values>
+			<Value><Code>01</Code><Text>Germanic</Text></Value>
+			<Value><Code>011</Code><Text>West Germanic</Text></Value>
+			<Value><Code>01100</Code><Text>West Germanic not further defined</Text></Value>
+			<Value><Code>01110</Code><Text>Afrikaans</Text></Value>
+			<Value><Code>01111</Code><Text>Dutch</Text></Value>
+			<Value><Code>01112</Code><Text>English</Text></Value>
+			<Value><Code>01113</Code><Text>German</Text></Value>
+			<Value><Code>01114</Code><Text>Friesian</Text></Value>
+			<Value><Code>01115</Code><Text>Yiddish</Text></Value>
+			<Value><Code>01116</Code><Text>Scots</Text></Value>
+			<Value><Code>01199</Code><Text>West Germanic not elsewhere classified</Text></Value>
+			<Value><Code>012</Code><Text>North Germanic</Text></Value>
+			<Value><Code>01200</Code><Text>North Germanic not further defined</Text></Value>
+			<Value><Code>01210</Code><Text>Danish</Text></Value>
+			<Value><Code>01211</Code><Text>Norwegian</Text></Value>
+			<Value><Code>01212</Code><Text>Swedish</Text></Value>
+			<Value><Code>01213</Code><Text>Icelandic</Text></Value>
+			<Value><Code>01299</Code><Text>North Germanic not elsewhere classified</Text></Value>
+			<Value><Code>02</Code><Text>Romance</Text></Value>
+			<Value><Code>021</Code><Text>Romance</Text></Value>
+			<Value><Code>02100</Code><Text>Romance not further defined</Text></Value>
+			<Value><Code>02110</Code><Text>French</Text></Value>
+			<Value><Code>02111</Code><Text>Catalan</Text></Value>
+			<Value><Code>02112</Code><Text>Portuguese</Text></Value>
+			<Value><Code>02113</Code><Text>Spanish</Text></Value>
+			<Value><Code>02114</Code><Text>Italian</Text></Value>
+			<Value><Code>02115</Code><Text>Romanian</Text></Value>
+			<Value><Code>02199</Code><Text>Romance not elsewhere classified</Text></Value>
+			<Value><Code>03</Code><Text>Greek</Text></Value>
+			<Value><Code>031</Code><Text>Greek</Text></Value>
+			<Value><Code>03110</Code><Text>Greek</Text></Value>
+			<Value><Code>04</Code><Text>Balto-Slavic</Text></Value>
+			<Value><Code>041</Code><Text>Baltic</Text></Value>
+			<Value><Code>04100</Code><Text>Baltic not further defined</Text></Value>
+			<Value><Code>04110</Code><Text>Latvian</Text></Value>
+			<Value><Code>04111</Code><Text>Lithuanian</Text></Value>
+			<Value><Code>04199</Code><Text>Baltic not elsewhere classified</Text></Value>
+			<Value><Code>042</Code><Text>Slavic</Text></Value>
+			<Value><Code>04200</Code><Text>Slavic not further defined</Text></Value>
+			<Value><Code>04210</Code><Text>Belorussian</Text></Value>
+			<Value><Code>04211</Code><Text>Russian</Text></Value>
+			<Value><Code>04212</Code><Text>Ukrainian</Text></Value>
+			<Value><Code>04213</Code><Text>Bulgarian</Text></Value>
+			<Value><Code>04214</Code><Text>Macedonian</Text></Value>
+			<Value><Code>04215</Code><Text>Serbo-Croatian</Text></Value>
+			<Value><Code>04216</Code><Text>Slovene</Text></Value>
+			<Value><Code>04217</Code><Text>Czech</Text></Value>
+			<Value><Code>04218</Code><Text>Polish</Text></Value>
+			<Value><Code>04219</Code><Text>Slovak</Text></Value>
+			<Value><Code>04299</Code><Text>Slavic not elsewhere classified</Text></Value>
+			<Value><Code>05</Code><Text>Albanian</Text></Value>
+			<Value><Code>051</Code><Text>Albanian</Text></Value>
+			<Value><Code>05110</Code><Text>Albanian</Text></Value>
+			<Value><Code>06</Code><Text>Armenian</Text></Value>
+			<Value><Code>061</Code><Text>Armenian</Text></Value>
+			<Value><Code>06110</Code><Text>Armenian</Text></Value>
+			<Value><Code>07</Code><Text>Indo-Aryan</Text></Value>
+			<Value><Code>071</Code><Text>Indo-Aryan</Text></Value>
+			<Value><Code>07100</Code><Text>Indo-Aryan not further defined</Text></Value>
+			<Value><Code>07110</Code><Text>Hindi</Text></Value>
+			<Value><Code>07111</Code><Text>Urdu</Text></Value>
+			<Value><Code>07112</Code><Text>Fiji Hindi</Text></Value>
+			<Value><Code>07113</Code><Text>Bengali</Text></Value>
+			<Value><Code>07114</Code><Text>Oriya</Text></Value>
+			<Value><Code>07115</Code><Text>Nepalese</Text></Value>
+			<Value><Code>07116</Code><Text>Panjabi</Text></Value>
+			<Value><Code>07117</Code><Text>Sindhi</Text></Value>
+			<Value><Code>07118</Code><Text>Kashmiri</Text></Value>
+			<Value><Code>07119</Code><Text>Sinhala</Text></Value>
+			<Value><Code>07120</Code><Text>Gujarati</Text></Value>
+			<Value><Code>07121</Code><Text>Konkani</Text></Value>
+			<Value><Code>07122</Code><Text>Marathi</Text></Value>
+			<Value><Code>07123</Code><Text>Romani</Text></Value>
+			<Value><Code>07199</Code><Text>Indo-Aryan not elsewhere classified</Text></Value>
+			<Value><Code>08</Code><Text>Celtic</Text></Value>
+			<Value><Code>081</Code><Text>Celtic</Text></Value>
+			<Value><Code>08100</Code><Text>Celtic not further defined</Text></Value>
+			<Value><Code>08110</Code><Text>Welsh</Text></Value>
+			<Value><Code>08111</Code><Text>Scottish Gaelic</Text></Value>
+			<Value><Code>08112</Code><Text>Irish</Text></Value>
+			<Value><Code>08113</Code><Text>Breton</Text></Value>
+			<Value><Code>08199</Code><Text>Celtic not elsewhere classified</Text></Value>
+			<Value><Code>09</Code><Text>Iranian</Text></Value>
+			<Value><Code>091</Code><Text>Iranian</Text></Value>
+			<Value><Code>09100</Code><Text>Iranian not further defined</Text></Value>
+			<Value><Code>09110</Code><Text>Persian</Text></Value>
+			<Value><Code>09111</Code><Text>Kurdish</Text></Value>
+			<Value><Code>09112</Code><Text>Pashto</Text></Value>
+			<Value><Code>09199</Code><Text>Iranian not elsewhere classified</Text></Value>
+			<Value><Code>10</Code><Text>Turko-Altaic</Text></Value>
+			<Value><Code>101</Code><Text>Turko-Altaic</Text></Value>
+			<Value><Code>10100</Code><Text>Turko-Altaic not further defined</Text></Value>
+			<Value><Code>10110</Code><Text>Turkish</Text></Value>
+			<Value><Code>10111</Code><Text>Azeri</Text></Value>
+			<Value><Code>10199</Code><Text>Turko-Altaic not elsewhere classified</Text></Value>
+			<Value><Code>11</Code><Text>Uralic</Text></Value>
+			<Value><Code>111</Code><Text>Uralic</Text></Value>
+			<Value><Code>11100</Code><Text>Uralic not further defined</Text></Value>
+			<Value><Code>11110</Code><Text>Estonian</Text></Value>
+			<Value><Code>11111</Code><Text>Finnish</Text></Value>
+			<Value><Code>11112</Code><Text>Hungarian</Text></Value>
+			<Value><Code>11199</Code><Text>Uralic not elsewhere classified</Text></Value>
+			<Value><Code>12</Code><Text>Dravidian</Text></Value>
+			<Value><Code>121</Code><Text>Dravidian</Text></Value>
+			<Value><Code>12100</Code><Text>Dravidian not further defined</Text></Value>
+			<Value><Code>12110</Code><Text>Kannada</Text></Value>
+			<Value><Code>12111</Code><Text>Malayalam</Text></Value>
+			<Value><Code>12112</Code><Text>Tamil</Text></Value>
+			<Value><Code>12113</Code><Text>Telugu</Text></Value>
+			<Value><Code>12199</Code><Text>Dravidian not elsewhere classified</Text></Value>
+			<Value><Code>13</Code><Text>Sino-Tibeto-Burman</Text></Value>
+			<Value><Code>131</Code><Text>Sinitic</Text></Value>
+			<Value><Code>13100</Code><Text>Sinitic not further defined</Text></Value>
+			<Value><Code>13110</Code><Text>Yue</Text></Value>
+			<Value><Code>13111</Code><Text>Hakka</Text></Value>
+			<Value><Code>13112</Code><Text>Min</Text></Value>
+			<Value><Code>13113</Code><Text>Northern Chinese</Text></Value>
+			<Value><Code>13114</Code><Text>Wu</Text></Value>
+			<Value><Code>13115</Code><Text>Tieu-Chow</Text></Value>
+			<Value><Code>13199</Code><Text>Sinitic not elsewhere classified</Text></Value>
+			<Value><Code>132</Code><Text>Tibeto-Lolo-Burman</Text></Value>
+			<Value><Code>13200</Code><Text>Tibeto-Lolo-Burman not further defined</Text></Value>
+			<Value><Code>13210</Code><Text>Burmese</Text></Value>
+			<Value><Code>13211</Code><Text>Tibetan</Text></Value>
+			<Value><Code>13299</Code><Text>Tibeto-Lolo-Burman not elsewhere classified</Text></Value>
+			<Value><Code>14</Code><Text>Austroasiatic</Text></Value>
+			<Value><Code>141</Code><Text>Mon-Khmer</Text></Value>
+			<Value><Code>14100</Code><Text>Mon-Khmer not further defined</Text></Value>
+			<Value><Code>14110</Code><Text>Khmer</Text></Value>
+			<Value><Code>14199</Code><Text>Mon-Khmer not elsewhere classified</Text></Value>
+			<Value><Code>142</Code><Text>Viet-Muong</Text></Value>
+			<Value><Code>14200</Code><Text>Viet-Muong not further defined</Text></Value>
+			<Value><Code>14210</Code><Text>Vietnamese</Text></Value>
+			<Value><Code>14299</Code><Text>Viet-Muong not elsewhere classified</Text></Value>
+			<Value><Code>15</Code><Text>Tai-Kadai</Text></Value>
+			<Value><Code>151</Code><Text>Tai-Kadai</Text></Value>
+			<Value><Code>15100</Code><Text>Tai-Kadai not further defined</Text></Value>
+			<Value><Code>15110</Code><Text>Lao</Text></Value>
+			<Value><Code>15111</Code><Text>Thai</Text></Value>
+			<Value><Code>15112</Code><Text>Shan</Text></Value>
+			<Value><Code>15199</Code><Text>Tai-Kadai not elsewhere classified</Text></Value>
+			<Value><Code>16</Code><Text>Central-Eastern Malayo-Polynesian</Text></Value>
+			<Value><Code>161</Code><Text>Central Pacific</Text></Value>
+			<Value><Code>16100</Code><Text>Central Pacific not further defined</Text></Value>
+			<Value><Code>16110</Code><Text>Māori</Text></Value>
+			<Value><Code>16111</Code><Text>Samoan</Text></Value>
+			<Value><Code>16112</Code><Text>Tongan</Text></Value>
+			<Value><Code>16113</Code><Text>Cook Islands Maori</Text></Value>
+			<Value><Code>16114</Code><Text>Niuean</Text></Value>
+			<Value><Code>16115</Code><Text>Tokelauan</Text></Value>
+			<Value><Code>16116</Code><Text>Tuvaluan</Text></Value>
+			<Value><Code>16117</Code><Text>Tahitian</Text></Value>
+			<Value><Code>16118</Code><Text>Pukapukan</Text></Value>
+			<Value><Code>16119</Code><Text>Fijian</Text></Value>
+			<Value><Code>16120</Code><Text>Rotuman</Text></Value>
+			<Value><Code>16199</Code><Text>Central Pacific not elsewhere classified</Text></Value>
+			<Value><Code>162</Code><Text>Solomon Islands Languages (Non-Central-Pacific)</Text></Value>
+			<Value><Code>16210</Code><Text>Solomon Islands Languages (Non-Central-Pacific)</Text></Value>
+			<Value><Code>163</Code><Text>Micronesian</Text></Value>
+			<Value><Code>16300</Code><Text>Micronesian not further defined</Text></Value>
+			<Value><Code>16310</Code><Text>Kiribati</Text></Value>
+			<Value><Code>16311</Code><Text>Nauruan</Text></Value>
+			<Value><Code>16399</Code><Text>Micronesian not elsewhere classified</Text></Value>
+			<Value><Code>164</Code><Text>Vanuatu Languages</Text></Value>
+			<Value><Code>16410</Code><Text>Vanuatu Languages</Text></Value>
+			<Value><Code>17</Code><Text>Western Malayo-Polynesian</Text></Value>
+			<Value><Code>171</Code><Text>Western Malayo-Polynesian</Text></Value>
+			<Value><Code>17100</Code><Text>Western Malayo-Polynesian not further defined</Text></Value>
+			<Value><Code>17110</Code><Text>Bisayan</Text></Value>
+			<Value><Code>17111</Code><Text>Cebuano</Text></Value>
+			<Value><Code>17112</Code><Text>Ilokano</Text></Value>
+			<Value><Code>17113</Code><Text>Bahasa Indonesia</Text></Value>
+			<Value><Code>17114</Code><Text>Malaysian</Text></Value>
+			<Value><Code>17115</Code><Text>Tagalog</Text></Value>
+			<Value><Code>17116</Code><Text>Javanese</Text></Value>
+			<Value><Code>17199</Code><Text>Western Malayo-Polynesian not elsewhere classified</Text></Value>
+			<Value><Code>18</Code><Text>Afro-Asiatic</Text></Value>
+			<Value><Code>181</Code><Text>Cushitic</Text></Value>
+			<Value><Code>18100</Code><Text>Cushitic not further defined</Text></Value>
+			<Value><Code>18110</Code><Text>Somali</Text></Value>
+			<Value><Code>18199</Code><Text>Cushitic not elsewhere classified</Text></Value>
+			<Value><Code>182</Code><Text>Semitic</Text></Value>
+			<Value><Code>18200</Code><Text>Semitic not further defined</Text></Value>
+			<Value><Code>18210</Code><Text>Assyrian</Text></Value>
+			<Value><Code>18211</Code><Text>Arabic</Text></Value>
+			<Value><Code>18212</Code><Text>Maltese</Text></Value>
+			<Value><Code>18213</Code><Text>Amharic</Text></Value>
+			<Value><Code>18214</Code><Text>Tigrinya</Text></Value>
+			<Value><Code>18215</Code><Text>Hebrew</Text></Value>
+			<Value><Code>18299</Code><Text>Semitic not elsewhere classified</Text></Value>
+			<Value><Code>183</Code><Text>Chadic</Text></Value>
+			<Value><Code>18300</Code><Text>Chadic not further defined</Text></Value>
+			<Value><Code>18310</Code><Text>Hausa</Text></Value>
+			<Value><Code>18399</Code><Text>Chadic not elsewhere classified</Text></Value>
+			<Value><Code>19</Code><Text>Niger-Congo (Congo-Kordafanian)</Text></Value>
+			<Value><Code>191</Code><Text>Bantu languages</Text></Value>
+			<Value><Code>19100</Code><Text>Bantu not further defined</Text></Value>
+			<Value><Code>19110</Code><Text>Swahili</Text></Value>
+			<Value><Code>19111</Code><Text>Yoruba</Text></Value>
+			<Value><Code>19112</Code><Text>Zulu</Text></Value>
+			<Value><Code>19199</Code><Text>Bantu, not elsewhere classified</Text></Value>
+			<Value><Code>192</Code><Text>Other Niger-Congo</Text></Value>
+			<Value><Code>19200</Code><Text>Other Niger-Congo not further defined</Text></Value>
+			<Value><Code>19210</Code><Text>Fulani</Text></Value>
+			<Value><Code>19299</Code><Text>Other Niger-Congo not elsewhere classified</Text></Value>
+			<Value><Code>20</Code><Text>Pidgins and Creoles</Text></Value>
+			<Value><Code>201</Code><Text>Pidgins and Creoles</Text></Value>
+			<Value><Code>20100</Code><Text>Pidgins and Creoles not further defined</Text></Value>
+			<Value><Code>20110</Code><Text>Creole</Text></Value>
+			<Value><Code>20111</Code><Text>French Creole</Text></Value>
+			<Value><Code>20112</Code><Text>Pidgin English</Text></Value>
+			<Value><Code>20113</Code><Text>Neo Melanesian</Text></Value>
+			<Value><Code>20114</Code><Text>Mauritian Creole</Text></Value>
+			<Value><Code>20115</Code><Text>Tok Pisin</Text></Value>
+			<Value><Code>20116</Code><Text>Hindi Bat</Text></Value>
+			<Value><Code>20117</Code><Text>Solomon Islands Pidgin</Text></Value>
+			<Value><Code>20118</Code><Text>Bislama</Text></Value>
+			<Value><Code>20199</Code><Text>Pidgins and Creoles not elsewhere classified</Text></Value>
+			<Value><Code>21</Code><Text>Language Isolates</Text></Value>
+			<Value><Code>211</Code><Text>Japanese</Text></Value>
+			<Value><Code>21110</Code><Text>Japanese</Text></Value>
+			<Value><Code>212</Code><Text>Korean</Text></Value>
+			<Value><Code>21210</Code><Text>Korean</Text></Value>
+			<Value><Code>213</Code><Text>Basque</Text></Value>
+			<Value><Code>21310</Code><Text>Basque</Text></Value>
+			<Value><Code>219</Code><Text>Language Isolates not elsewhere classified</Text></Value>
+			<Value><Code>21999</Code><Text>Language Isolates not elsewhere classified</Text></Value>
+			<Value><Code>22</Code><Text>Miscellaneous Language Groupings</Text></Value>
+			<Value><Code>221</Code><Text>Papuan</Text></Value>
+			<Value><Code>22110</Code><Text>Papuan</Text></Value>
+			<Value><Code>222</Code><Text>Nilo-Saharan languages</Text></Value>
+			<Value><Code>22210</Code><Text>Nilo-Saharan</Text></Value>
+			<Value><Code>223</Code><Text>Miaow-Yao</Text></Value>
+			<Value><Code>22310</Code><Text>Miaow-Yao</Text></Value>
+			<Value><Code>224</Code><Text>Caucasian</Text></Value>
+			<Value><Code>22400</Code><Text>Caucasian not further defined</Text></Value>
+			<Value><Code>22410</Code><Text>Georgian</Text></Value>
+			<Value><Code>22499</Code><Text>Caucasian not elsewhere classified</Text></Value>
+			<Value><Code>225</Code><Text>Australian</Text></Value>
+			<Value><Code>22510</Code><Text>Australian</Text></Value>
+			<Value><Code>226</Code><Text>Amerind</Text></Value>
+			<Value><Code>22610</Code><Text>Amerind</Text></Value>
+			<Value><Code>229</Code><Text>Other Miscellaneous Languages</Text></Value>
+			<Value><Code>22910</Code><Text>Other Miscellaneous Languages</Text></Value>
+			<Value><Code>23</Code><Text>Artificial Languages</Text></Value>
+			<Value><Code>231</Code><Text>Artificial Languages</Text></Value>
+			<Value><Code>23100</Code><Text>Artificial Languages not further defined</Text></Value>
+			<Value><Code>23110</Code><Text>Esperanto</Text></Value>
+			<Value><Code>23199</Code><Text>Artificial Languages not elsewhere classified</Text></Value>
+			<Value><Code>24</Code><Text>Sign Language</Text></Value>
+			<Value><Code>241</Code><Text>Sign Language</Text></Value>
+			<Value><Code>24100</Code><Text>Sign Language not further defined</Text></Value>
+			<Value><Code>24110</Code><Text>New Zealand Sign Language</Text></Value>
+			<Value><Code>24111</Code><Text>Signed English</Text></Value>
+			<Value><Code>24112</Code><Text>American Sign Language</Text></Value>
+			<Value><Code>24113</Code><Text>Australian Sign Language</Text></Value>
+			<Value><Code>24114</Code><Text>British Sign Language</Text></Value>
+			<Value><Code>44</Code><Text>Don't Know</Text></Value>
+			<Value><Code>444</Code><Text>Don't Know</Text></Value>
+			<Value><Code>44444</Code><Text>Don't Know</Text></Value>
+			<Value><Code>55</Code><Text>Refused To Answer</Text></Value>
+			<Value><Code>555</Code><Text>Refused To Answer</Text></Value>
+			<Value><Code>55555</Code><Text>Refused To Answer</Text></Value>
+			<Value><Code>66</Code><Text>None (eg too young to talk)</Text></Value>
+			<Value><Code>666</Code><Text>None (eg too young to talk)</Text></Value>
+			<Value><Code>66666</Code><Text>None (eg too young to talk)</Text></Value>
+			<Value><Code>77</Code><Text>Response Unidentifiable</Text></Value>
+			<Value><Code>777</Code><Text>Response Unidentifiable</Text></Value>
+			<Value><Code>77777</Code><Text>Response Unidentifiable</Text></Value>
+			<Value><Code>88</Code><Text>Response Outside Scope</Text></Value>
+			<Value><Code>888</Code><Text>Response Outside Scope</Text></Value>
+			<Value><Code>88888</Code><Text>Response Outside Scope</Text></Value>
+			<Value><Code>99</Code><Text>Not Stated</Text></Value>
+			<Value><Code>999</Code><Text>Not Stated</Text></Value>
+			<Value><Code>99999</Code><Text>Not Stated</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Language -->
 
     <CodeSet>
 		<Intro>

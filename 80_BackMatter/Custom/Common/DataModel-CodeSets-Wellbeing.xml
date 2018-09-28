@@ -1,9 +1,8 @@
 <IncludeGroup
 	xmlns:xi="http://www.w3.org/2001/XInclude"
-	
  	xmlns="http://sifassociation.org/SpecGen">
 
-   <CodeSet>
+    <CodeSet>
       <Intro>
         <p>Personalised Plan categories - initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -17,128 +16,132 @@
 		  <Value><Code>L</Code><Text>Legal</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
-</CodeSet>    <!-- Personalised Plan -->
-   <CodeSet>
+    </CodeSet>    <!-- Personalised Plan -->
+    <CodeSet>
       <Intro>
         <p>Wellbeing Characteristics - High Level.  Initially provided by WA.  This code set is in draft and changes are expected.  Future changes may re-specify code values.</p> 
       </Intro>
       <ID>Wellbeing Characteristic Sub Category</ID>
-      <Values><Value><Code>MH-1</Code><Text>Adjustment Disorder</Text></Value>
-<Value><Code>MH-2</Code><Text>Anorexia</Text></Value>
-<Value><Code>MH-3</Code><Text>Anxiety Disorder</Text></Value>
-<Value><Code>MH-4</Code><Text>Attachment Disorder</Text></Value>
-<Value><Code>MH-5</Code><Text>Attention Deficit Hyperactivity Disorder (ADHD)</Text></Value>
-<Value><Code>MH-6</Code><Text>Bipolar Affective Disorder</Text></Value>
-<Value><Code>MH-7</Code><Text>Bulimia</Text></Value>
-<Value><Code>MH-8</Code><Text>Depression</Text></Value>
-<Value><Code>MH-9</Code><Text>Mixed Depression and Anxiety</Text></Value>
-<Value><Code>MH-10</Code><Text>Obsessive Compulsive  Disorder</Text></Value>
-<Value><Code>MH-11</Code><Text>Oppositional Defiance Disorder</Text></Value>
-<Value><Code>MH-12</Code><Text>Paranoia</Text></Value>
-<Value><Code>MH-13</Code><Text>Post-Traumatic Stress Disorder</Text></Value>
-<Value><Code>MH-14</Code><Text>Reactive Attachment Disorder</Text></Value>
-<Value><Code>MH-15</Code><Text>Social Anxiety Disorder</Text></Value>
-<Value><Code>MH-16</Code><Text>Tic Disorder</Text></Value>
-<Value><Code>MH-17</Code><Text>Tourette’s Syndrome</Text></Value>
-<Value><Code>MH-18</Code><Text>Conduct Disorder</Text></Value>
-<Value><Code>MS-1</Code><Text>Absence seizures epilepsy</Text></Value>
-<Value><Code>MS-2</Code><Text>Tonic Clonic epilepsy</Text></Value>
-<Value><Code>MS-3</Code><Text>Myotonic epilepsy</Text></Value>
-<Value><Code>MS-4</Code><Text>Refractory epilepsy</Text></Value>
-<Value><Code>MAA-1</Code><Text>Antibiotics -specify type(s)</Text></Value>
-<Value><Code>MAA-2</Code><Text>Dairy</Text></Value>
-<Value><Code>MAA-3</Code><Text>Egg</Text></Value>
-<Value><Code>MAA-4</Code><Text>Fruit (specify)</Text></Value>
-<Value><Code>MAA-5</Code><Text>Insect bites - nfd</Text></Value>
-<Value><Code>MAA-6</Code><Text>Bees</Text></Value>
-<Value><Code>MAA-7</Code><Text>Ants</Text></Value>
-<Value><Code>MAA-8</Code><Text>Ticks</Text></Value>
-<Value><Code>MAA-9</Code><Text>Latex</Text></Value>
-<Value><Code>MAA-10</Code><Text>Peanuts</Text></Value>
-<Value><Code>MAA-11</Code><Text>Shellfish</Text></Value>
-<Value><Code>MAA-12</Code><Text>Tree nuts</Text></Value>
-<Value><Code>MAA-13</Code><Text>Wheat</Text></Value>
-<Value><Code>MAA-14</Code><Text>Other</Text></Value>
-<Value><Code>MAIM-1</Code><Text>Coeliac Disease - Gluten</Text></Value>
-<Value><Code>MAIM-2</Code><Text>Enterocolitis Syndrome</Text></Value>
-<Value><Code>MAIM-3</Code><Text>Food Protein Induced Syndrome</Text></Value>
-<Value><Code>MB-1</Code><Text>Anaemia</Text></Value>
-<Value><Code>MB-2</Code><Text>Haemophilia</Text></Value>
-<Value><Code>MB-3</Code><Text>Thalassemia</Text></Value>
-<Value><Code>MB-4</Code><Text>Vasculitis</Text></Value>
-<Value><Code>MB-5</Code><Text>Von Willebrand's Disease</Text></Value>
-<Value><Code>MMS-1</Code><Text>Ehlers Danlos</Text></Value>
-<Value><Code>MMS-2</Code><Text>Fibromyalgia  - discuss</Text></Value>
-<Value><Code>MMS-3</Code><Text>Hip Dysplasia</Text></Value>
-<Value><Code>MMS-4</Code><Text>Joint Hypermobility</Text></Value>
-<Value><Code>MMS-5</Code><Text>Juvenile Arthritis</Text></Value>
-<Value><Code>MMS-6</Code><Text>Kohlers Disease</Text></Value>
-<Value><Code>MMS-7</Code><Text>Marfan Syndrome</Text></Value>
-<Value><Code>MMS-8</Code><Text>Meyers Dysplasia</Text></Value>
-<Value><Code>MMS-9</Code><Text>Neurofibromatosis type 1</Text></Value>
-<Value><Code>MMS-10</Code><Text>Osgood Schlatter Condition</Text></Value>
-<Value><Code>MMS-11</Code><Text>Osteo Imperfecta</Text></Value>
-<Value><Code>MMS-12</Code><Text>Scoliosis</Text></Value>
-<Value><Code>MMS-13</Code><Text>Severs Disease</Text></Value>
-<Value><Code>MMS-14</Code><Text>Talipes</Text></Value>
-<Value><Code>MMS-15</Code><Text>Von Eulenburg Disease</Text></Value>
-<Value><Code>MCM-1</Code><Text>Angelman Syndrome</Text></Value>
-<Value><Code>MCM-2</Code><Text>Charcot Marie Tooth</Text></Value>
-<Value><Code>MCM-3</Code><Text>Coffin Lowry Syndrome</Text></Value>
-<Value><Code>MCM-4</Code><Text>Coffin-Siris Syndrome</Text></Value>
-<Value><Code>MCM-5</Code><Text>Down Syndrome</Text></Value>
-<Value><Code>MCM-6</Code><Text>Foetal Alcohol Syndrome (FAS)</Text></Value>
-<Value><Code>MCM-7</Code><Text>Fragile X Syndrome</Text></Value>
-<Value><Code>MCM-8</Code><Text>G6 PD Deficiency</Text></Value>
-<Value><Code>MCM-9</Code><Text>Hyperglycemia</Text></Value>
-<Value><Code>MCM-10</Code><Text>Klinefelter Syndrome</Text></Value>
-<Value><Code>MCM-11</Code><Text>Malignant Hyperthermia</Text></Value>
-<Value><Code>MCM-12</Code><Text>MCADD - Metabolic disorder</Text></Value>
-<Value><Code>MCM-13</Code><Text>Non Ketotic</Text></Value>
-<Value><Code>MCM-14</Code><Text>Oculocutaneous Albinism</Text></Value>
-<Value><Code>MCM-15</Code><Text>Phelan-McDermid Syndrome</Text></Value>
-<Value><Code>MCM-16</Code><Text>Phenylketonuria</Text></Value>
-<Value><Code>MCM-17</Code><Text>Pierr Robyn Syndrome</Text></Value>
-<Value><Code>MCM-18</Code><Text>Potocki - Lupski Syndrome</Text></Value>
-<Value><Code>MCM-19</Code><Text>Prader Willi Syndrome</Text></Value>
-<Value><Code>MCM-20</Code><Text>Rubinstein-Taybi Syndrome</Text></Value>
-<Value><Code>MCM-21</Code><Text>ScN2A (Sodium Channel) Gene Mutation</Text></Value>
-<Value><Code>MCM-22</Code><Text>Trisomy - chromosome</Text></Value>
-<Value><Code>MCM-23</Code><Text>Trisomy 21/Down Syndrome</Text></Value>
-<Value><Code>MCM-24</Code><Text>Turners Syndrome</Text></Value>
-<Value><Code>MCM-25</Code><Text>Velocardiofacial Syndrome</Text></Value>
-<Value><Code>MCM-26</Code><Text>Wolf-Hirschhorn Syndrome</Text></Value>
-</Values></CodeSet>    <!-- Wellbeing Characteristic Sub Category -->
-   <CodeSet>
+      <Values>
+	  	<Value><Code>MH-1</Code><Text>Adjustment Disorder</Text></Value>
+		<Value><Code>MH-2</Code><Text>Anorexia</Text></Value>
+		<Value><Code>MH-3</Code><Text>Anxiety Disorder</Text></Value>
+		<Value><Code>MH-4</Code><Text>Attachment Disorder</Text></Value>
+		<Value><Code>MH-5</Code><Text>Attention Deficit Hyperactivity Disorder (ADHD)</Text></Value>
+		<Value><Code>MH-6</Code><Text>Bipolar Affective Disorder</Text></Value>
+		<Value><Code>MH-7</Code><Text>Bulimia</Text></Value>
+		<Value><Code>MH-8</Code><Text>Depression</Text></Value>
+		<Value><Code>MH-9</Code><Text>Mixed Depression and Anxiety</Text></Value>
+		<Value><Code>MH-10</Code><Text>Obsessive Compulsive  Disorder</Text></Value>
+		<Value><Code>MH-11</Code><Text>Oppositional Defiance Disorder</Text></Value>
+		<Value><Code>MH-12</Code><Text>Paranoia</Text></Value>
+		<Value><Code>MH-13</Code><Text>Post-Traumatic Stress Disorder</Text></Value>
+		<Value><Code>MH-14</Code><Text>Reactive Attachment Disorder</Text></Value>
+		<Value><Code>MH-15</Code><Text>Social Anxiety Disorder</Text></Value>
+		<Value><Code>MH-16</Code><Text>Tic Disorder</Text></Value>
+		<Value><Code>MH-17</Code><Text>Tourette’s Syndrome</Text></Value>
+		<Value><Code>MH-18</Code><Text>Conduct Disorder</Text></Value>
+		<Value><Code>MS-1</Code><Text>Absence seizures epilepsy</Text></Value>
+		<Value><Code>MS-2</Code><Text>Tonic Clonic epilepsy</Text></Value>
+		<Value><Code>MS-3</Code><Text>Myotonic epilepsy</Text></Value>
+		<Value><Code>MS-4</Code><Text>Refractory epilepsy</Text></Value>
+		<Value><Code>MAA-1</Code><Text>Antibiotics -specify type(s)</Text></Value>
+		<Value><Code>MAA-2</Code><Text>Dairy</Text></Value>
+		<Value><Code>MAA-3</Code><Text>Egg</Text></Value>
+		<Value><Code>MAA-4</Code><Text>Fruit (specify)</Text></Value>
+		<Value><Code>MAA-5</Code><Text>Insect bites - nfd</Text></Value>
+		<Value><Code>MAA-6</Code><Text>Bees</Text></Value>
+		<Value><Code>MAA-7</Code><Text>Ants</Text></Value>
+		<Value><Code>MAA-8</Code><Text>Ticks</Text></Value>
+		<Value><Code>MAA-9</Code><Text>Latex</Text></Value>
+		<Value><Code>MAA-10</Code><Text>Peanuts</Text></Value>
+		<Value><Code>MAA-11</Code><Text>Shellfish</Text></Value>
+		<Value><Code>MAA-12</Code><Text>Tree nuts</Text></Value>
+		<Value><Code>MAA-13</Code><Text>Wheat</Text></Value>
+		<Value><Code>MAA-14</Code><Text>Other</Text></Value>
+		<Value><Code>MAIM-1</Code><Text>Coeliac Disease - Gluten</Text></Value>
+		<Value><Code>MAIM-2</Code><Text>Enterocolitis Syndrome</Text></Value>
+		<Value><Code>MAIM-3</Code><Text>Food Protein Induced Syndrome</Text></Value>
+		<Value><Code>MB-1</Code><Text>Anaemia</Text></Value>
+		<Value><Code>MB-2</Code><Text>Haemophilia</Text></Value>
+		<Value><Code>MB-3</Code><Text>Thalassemia</Text></Value>
+		<Value><Code>MB-4</Code><Text>Vasculitis</Text></Value>
+		<Value><Code>MB-5</Code><Text>Von Willebrand's Disease</Text></Value>
+		<Value><Code>MMS-1</Code><Text>Ehlers Danlos</Text></Value>
+		<Value><Code>MMS-2</Code><Text>Fibromyalgia  - discuss</Text></Value>
+		<Value><Code>MMS-3</Code><Text>Hip Dysplasia</Text></Value>
+		<Value><Code>MMS-4</Code><Text>Joint Hypermobility</Text></Value>
+		<Value><Code>MMS-5</Code><Text>Juvenile Arthritis</Text></Value>
+		<Value><Code>MMS-6</Code><Text>Kohlers Disease</Text></Value>
+		<Value><Code>MMS-7</Code><Text>Marfan Syndrome</Text></Value>
+		<Value><Code>MMS-8</Code><Text>Meyers Dysplasia</Text></Value>
+		<Value><Code>MMS-9</Code><Text>Neurofibromatosis type 1</Text></Value>
+		<Value><Code>MMS-10</Code><Text>Osgood Schlatter Condition</Text></Value>
+		<Value><Code>MMS-11</Code><Text>Osteo Imperfecta</Text></Value>
+		<Value><Code>MMS-12</Code><Text>Scoliosis</Text></Value>
+		<Value><Code>MMS-13</Code><Text>Severs Disease</Text></Value>
+		<Value><Code>MMS-14</Code><Text>Talipes</Text></Value>
+		<Value><Code>MMS-15</Code><Text>Von Eulenburg Disease</Text></Value>
+		<Value><Code>MCM-1</Code><Text>Angelman Syndrome</Text></Value>
+		<Value><Code>MCM-2</Code><Text>Charcot Marie Tooth</Text></Value>
+		<Value><Code>MCM-3</Code><Text>Coffin Lowry Syndrome</Text></Value>
+		<Value><Code>MCM-4</Code><Text>Coffin-Siris Syndrome</Text></Value>
+		<Value><Code>MCM-5</Code><Text>Down Syndrome</Text></Value>
+		<Value><Code>MCM-6</Code><Text>Foetal Alcohol Syndrome (FAS)</Text></Value>
+		<Value><Code>MCM-7</Code><Text>Fragile X Syndrome</Text></Value>
+		<Value><Code>MCM-8</Code><Text>G6 PD Deficiency</Text></Value>
+		<Value><Code>MCM-9</Code><Text>Hyperglycemia</Text></Value>
+		<Value><Code>MCM-10</Code><Text>Klinefelter Syndrome</Text></Value>
+		<Value><Code>MCM-11</Code><Text>Malignant Hyperthermia</Text></Value>
+		<Value><Code>MCM-12</Code><Text>MCADD - Metabolic disorder</Text></Value>
+		<Value><Code>MCM-13</Code><Text>Non Ketotic</Text></Value>
+		<Value><Code>MCM-14</Code><Text>Oculocutaneous Albinism</Text></Value>
+		<Value><Code>MCM-15</Code><Text>Phelan-McDermid Syndrome</Text></Value>
+		<Value><Code>MCM-16</Code><Text>Phenylketonuria</Text></Value>
+		<Value><Code>MCM-17</Code><Text>Pierr Robyn Syndrome</Text></Value>
+		<Value><Code>MCM-18</Code><Text>Potocki - Lupski Syndrome</Text></Value>
+		<Value><Code>MCM-19</Code><Text>Prader Willi Syndrome</Text></Value>
+		<Value><Code>MCM-20</Code><Text>Rubinstein-Taybi Syndrome</Text></Value>
+		<Value><Code>MCM-21</Code><Text>ScN2A (Sodium Channel) Gene Mutation</Text></Value>
+		<Value><Code>MCM-22</Code><Text>Trisomy - chromosome</Text></Value>
+		<Value><Code>MCM-23</Code><Text>Trisomy 21/Down Syndrome</Text></Value>
+		<Value><Code>MCM-24</Code><Text>Turners Syndrome</Text></Value>
+		<Value><Code>MCM-25</Code><Text>Velocardiofacial Syndrome</Text></Value>
+		<Value><Code>MCM-26</Code><Text>Wolf-Hirschhorn Syndrome</Text></Value>
+	  </Values>
+	</CodeSet>    <!-- Wellbeing Characteristic Sub Category -->
+   	<CodeSet>
       <Intro>
         <p>Wellbeing Characteristics - High Level.  Initially provided by WA. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
       <ID>Wellbeing Characteristic Category</ID>
-      <Values><Value><Code>MAO</Code><Text>Allergies - other</Text></Value>
-<Value><Code>MAIM</Code><Text>Auto-immune/Immune Disorders</Text></Value>
-<Value><Code>MRD</Code><Text>Respiratory Disorder</Text></Value>
-<Value><Code>MB</Code><Text>Blood disorder</Text></Value>
-<Value><Code>MMD</Code><Text>Heart Disease/ Disorder</Text></Value>
-<Value><Code>MMS</Code><Text>Musculo – skeletal conditions</Text></Value>
-<Value><Code>MEM</Code><Text>Endocrine and Metabolic Disorders</Text></Value>
-<Value><Code>MC</Code><Text>Childhood cancer</Text></Value>
-<Value><Code>MAA</Code><Text>Allergy – Anaphylaxis</Text></Value>
-<Value><Code>MH</Code><Text>Mental and behavioural disorders</Text></Value>
-<Value><Code>MN</Code><Text>Diseases/conditions of the nervous system</Text></Value>
-<Value><Code>MS</Code><Text>Seizure disorders</Text></Value>
-<Value><Code>MCM</Code><Text>Congenital malformations, deformations and chromosomal abnormalities</Text></Value>
-<Value><Code>MI</Code><Text>Infectious Diseases</Text></Value>
-<Value><Code>MGI</Code><Text>Gastro Intestinal/Urinary conditions</Text></Value>
-<Value><Code>MND</Code><Text>Neuro/Developmental Disorders</Text></Value>
-<Value><Code>MO</Code><Text>Oral/Phalangeal Disorders</Text></Value>
-<Value><Code>MD</Code><Text>Deaf and Hard of Hearing</Text></Value>
-<Value><Code>MOP</Code><Text>Optical/ Vision Disorder</Text></Value>
-<Value><Code>M-Other</Code><Text>Medical Other</Text></Value>
-<Value><Code>D-Other</Code><Text>Disability Other</Text></Value>
-<Value><Code>S-Other</Code><Text>Special Needs Other</Text></Value>
-<Value><Code>Other</Code><Text>Other</Text></Value>
-</Values></CodeSet>	 <!-- Wellbeing Characteristic Category -->
-   <CodeSet>
+      <Values>
+	  	<Value><Code>MAO</Code><Text>Allergies - other</Text></Value>
+		<Value><Code>MAIM</Code><Text>Auto-immune/Immune Disorders</Text></Value>
+		<Value><Code>MRD</Code><Text>Respiratory Disorder</Text></Value>
+		<Value><Code>MB</Code><Text>Blood disorder</Text></Value>
+		<Value><Code>MMD</Code><Text>Heart Disease/ Disorder</Text></Value>
+		<Value><Code>MMS</Code><Text>Musculo – skeletal conditions</Text></Value>
+		<Value><Code>MEM</Code><Text>Endocrine and Metabolic Disorders</Text></Value>
+		<Value><Code>MC</Code><Text>Childhood cancer</Text></Value>
+		<Value><Code>MAA</Code><Text>Allergy – Anaphylaxis</Text></Value>
+		<Value><Code>MH</Code><Text>Mental and behavioural disorders</Text></Value>
+		<Value><Code>MN</Code><Text>Diseases/conditions of the nervous system</Text></Value>
+		<Value><Code>MS</Code><Text>Seizure disorders</Text></Value>
+		<Value><Code>MCM</Code><Text>Congenital malformations, deformations and chromosomal abnormalities</Text></Value>
+		<Value><Code>MI</Code><Text>Infectious Diseases</Text></Value>
+		<Value><Code>MGI</Code><Text>Gastro Intestinal/Urinary conditions</Text></Value>
+		<Value><Code>MND</Code><Text>Neuro/Developmental Disorders</Text></Value>
+		<Value><Code>MO</Code><Text>Oral/Phalangeal Disorders</Text></Value>
+		<Value><Code>MD</Code><Text>Deaf and Hard of Hearing</Text></Value>
+		<Value><Code>MOP</Code><Text>Optical/ Vision Disorder</Text></Value>
+		<Value><Code>M-Other</Code><Text>Medical Other</Text></Value>
+		<Value><Code>D-Other</Code><Text>Disability Other</Text></Value>
+		<Value><Code>S-Other</Code><Text>Special Needs Other</Text></Value>
+		<Value><Code>Other</Code><Text>Other</Text></Value>
+	  </Values>
+	</CodeSet>	  <!-- Wellbeing Characteristic Category -->
+    <CodeSet>
       <Intro>
         <p>Wellbeing Event Category - initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -165,7 +168,7 @@
 			<Value><Code>99</Code><Text>Other Behaviour</Text></Value>
 		</Values>
     </CodeSet>    <!-- Wellbeing Event Category -->
-   <CodeSet>
+    <CodeSet>
       <Intro>
         <p>Wellbeing Event Sub Category - initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -351,7 +354,7 @@
 			<Value><Code>M9i</Code><Text>Copyright infringement or plagiarism</Text></Value>
 		</Values>
     </CodeSet>    <!-- Wellbeing Event Sub Category -->
-   <CodeSet>
+    <CodeSet>
       <Intro>
         <p>Wellbeing Characteristic Classification - initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -363,7 +366,7 @@
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
     </CodeSet>    <!-- Wellbeing Characteristic Classification -->
-   <CodeSet>
+    <CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -378,8 +381,8 @@
 		  <Value><Code>W</Code><Text>Weekend</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
-   </CodeSet>    <!-- Wellbeing Event Time Period -->
-   <CodeSet>
+    </CodeSet>    <!-- Wellbeing Event Time Period -->
+    <CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -390,8 +393,8 @@
 		  <Value><Code>D</Code><Text>Data Record Only</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
-   </CodeSet>    <!-- Wellbeing Event Category Class -->
-   <CodeSet>
+    </CodeSet>    <!-- Wellbeing Event Category Class -->
+    <CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -407,8 +410,8 @@
 		  <Value><Code>C</Code><Text>Classroom</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
-   </CodeSet>    <!-- Wellbeing Event Location -->
-   <CodeSet>
+    </CodeSet>    <!-- Wellbeing Event Location -->
+    <CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -423,7 +426,7 @@
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
     </CodeSet>    <!-- Wellbeing Alert Category -->
-   <CodeSet>
+    <CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -434,8 +437,8 @@
 		  <Value><Code>RE</Code><Text>Rejected</Text></Value>
 		  <Value><Code>SU</Code><Text>Successful</Text></Value>
 	  </Values>
-  </CodeSet>    <!-- Wellbeing Appeal Status -->
-   <CodeSet>
+    </CodeSet>    <!-- Wellbeing Appeal Status -->
+    <CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -446,7 +449,7 @@
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
     </CodeSet>    <!-- Wellbeing Status -->
-   <CodeSet>
+    <CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -462,7 +465,7 @@
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
     </CodeSet>    <!-- Suspension Category -->
-   <CodeSet>
+   	<CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -477,7 +480,7 @@
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
     </CodeSet>    <!-- Detention Category -->
-   <CodeSet>
+    <CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>

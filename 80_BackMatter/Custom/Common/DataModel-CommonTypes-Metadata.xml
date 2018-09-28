@@ -48,8 +48,7 @@
 	<Item>
 		<Element>TimeElements</Element>
 		<Characteristics>O</Characteristics>
-		<List mode="List">
-  </List>
+		<List mode="List"/>
 	</Item>
 	<Item>
 		<Element>/TimeElement</Element>
@@ -175,8 +174,7 @@
 		<Element>SpanGaps</Element>
 		<Characteristics>O</Characteristics>
 		<Description>A container element for holding multiple possible span gaps.</Description>
-		<List mode="List">
-		</List>
+		<List mode="List"/>
 	</Item>
 	<Item>
 		<Element>/SpanGap</Element>
@@ -274,8 +272,7 @@
 	<Item>
 		<Element>/Creators</Element>
 		<Characteristics>O</Characteristics>
-		<List mode="List">
-    </List>
+		<List mode="List"/>
 	</Item>
 	<Item>
 		<Element>//Creator</Element>
@@ -303,8 +300,7 @@
       An ordered set of <code>Modified</code> elements describing which system modified the data, when
       the modification took place, and a brief description of the modification.
     </Description>
-		<List mode="List">
-		</List>
+		<List mode="List"/>
 	</Item>
 	<Item>
 		<Element>/Modified</Element>
@@ -332,8 +328,7 @@
 	<Item>
 		<Element>TimeElements</Element>
 		<Characteristics>O</Characteristics>
-		<List mode="List">
-    </List>
+		<List mode="List"/>
 	</Item>
 	<Item>
 		<Element>/TimeElement</Element>

@@ -28,7 +28,7 @@
 			<p>A lesson or activity-sized portion of a resource.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ComponentType"/>
-	</Item>
+	</Item>   <!-- Component -->
 </CommonElement>
 <CommonElement name="ComponentType" type="true" dm="true">
 	<Item>

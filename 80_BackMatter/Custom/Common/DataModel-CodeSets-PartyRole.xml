@@ -1,18 +1,19 @@
 
 <IncludeGroup
 	xmlns:xi="http://www.w3.org/2001/XInclude"
-	
+
  	xmlns="http://sifassociation.org/SpecGen">
 
 	<!-- Australian Standard Classifications ... -->
 <if intl="au">
 	<CodeSet>
-  		<Intro>
-			<p>1249.0 Australian Standard Classification of Cultural and Ethnic Groups, 2016</p>
-			<p>Source Data ABS: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1249.02016?OpenDocument</p>
-		</Intro>
-		<ID>Australian Standard Classification Of Cultural And Ethnic Groups (ASCCEG)</ID>
-		<Values><Value><Code>1101</Code><Text>Australian</Text></Value>
+  	  <Intro>
+		<p>1249.0 Australian Standard Classification of Cultural and Ethnic Groups, 2016</p>
+		<p>Source Data ABS: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1249.02016?OpenDocument</p>
+	  </Intro>
+	  <ID>Australian Standard Classification Of Cultural And Ethnic Groups (ASCCEG)</ID>
+	  <Values>
+	    <Value><Code>1101</Code><Text>Australian</Text></Value>
 		<Value><Code>1102</Code><Text>Australian Aboriginal</Text></Value>
 		<Value><Code>1103</Code><Text>Australian South Sea Islander</Text></Value>
 		<Value><Code>1104</Code><Text>Torres Strait Islander</Text></Value>
@@ -332,17 +333,17 @@
 		<Value><Code>9000</Code><Text>Sub-Saharan African, nfd</Text></Value>
 		<Value><Code>9100</Code><Text>Central and West African, nfd</Text></Value>
 		<Value><Code>9200</Code><Text>Southern and East African, nfd</Text></Value>
-	</Values>
-</CodeSet>    <!-- Cultural & Ethnic Groups -->
+	  </Values>
+    </CodeSet>    <!-- Cultural & Ethnic Groups -->
     <CodeSet>
-	<Intro>
+	  <Intro>
 		<p>ABS 1267.0 - Australian Standard Classification of Languages (ASCL), 2016</p>
 		<p>Updated to correspond to ACARA Data Standards Manual, 2017</p>
 		<p>Source Data: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02016?OpenDocument</p>
 		<p>This extract contains all 4 digit classifications and supplementary codes.</p>
-	</Intro>
-	<ID>Australian Standard Classification Of Languages (ASCL)</ID>
-	<Values>
+	  </Intro>
+	  <ID>Australian Standard Classification Of Languages (ASCL)</ID>
+	  <Values>
 		<Value><Code>1101</Code><Text>Gaelic (Scotland)</Text></Value>
 		<Value><Code>1102</Code><Text>Irish</Text></Value>
 		<Value><Code>1103</Code><Text>Welsh</Text></Value>
@@ -847,15 +848,15 @@
 		<Value><Code>9400</Code><Text>Oceanic Pidgins and Creoles, nfd</Text></Value>
 		<Value><Code>9500</Code><Text>Papua New Guinea Languages,  nfd</Text></Value>
 		<Value><Code>9700</Code><Text>Sign Languages, nfd</Text></Value>
-	</Values>
-</CodeSet>    <!-- Languages -->
+	  </Values>
+ 	</CodeSet>    <!-- Languages -->
     <CodeSet>
-	<Intro>
+	  <Intro>
 		<p>Reference: ACARA Data Standards Manual - Indigenous status</p>
 		<p>https://www.acara.edu.au/reporting/data-standards-manual-student-background-characteristics</p>
-	</Intro>
-	<ID>Indigenous Status</ID>
-	<Values>
+	  </Intro>
+	  <ID>Indigenous Status</ID>
+	  <Values>
 		<Value>
 			<Code>1</Code>
 			<Text>Aboriginal but not Torres Strait Islander Origin</Text>
@@ -877,255 +878,255 @@
 			<Text>Not Stated/Unknown</Text>
 		</Value>
 		
-	</Values>
-</CodeSet>    <!-- Indigenous Status -->
+	  </Values>
+ 	</CodeSet>    <!-- Indigenous Status -->
     <CodeSet>
-	<Intro>
+	  <Intro>
 		<p>From http://www.border.gov.au/ Australian Government - Department of Immigration and Border Protection: Updated from Source Data on 28 February, 2017 - Refer to: http://www.border.gov.au/Trav/Visa-1/Visa-listing</p>
-	</Intro>
-	<ID>Visa Sub Class</ID>
-    <Values><Value><Code>10</Code><Text>Bridging Visa A - BVA</Text></Value>
-	<Value><Code>20</Code><Text>Bridging Visa B - BVB</Text></Value>
-	<Value><Code>30</Code><Text>Bridging Visa C - BVC</Text></Value>
-	<Value><Code>40</Code><Text>Bridging Visa (Prospective Applicant) - BVD</Text></Value>
-	<Value><Code>41</Code><Text>Bridging Visa (Non-Applicant) - BVD</Text></Value>
-	<Value><Code>51</Code><Text>Bridging Visa - BVE</Text></Value>
-	<Value><Code>186</Code><Text>Employer Nomination Scheme</Text></Value>
-	<Value><Code>187</Code><Text>Regional Sponsor Migration Scheme</Text></Value>
-	<Value><Code>188</Code><Text>Business Innovation and Investment (provisional)</Text></Value>
-	<Value><Code>189</Code><Text>Skilled Independent visa </Text></Value>
-	<Value><Code>190</Code><Text>Skilled Nominated</Text></Value>
-	<Value><Code>400</Code><Text>Temporary Work (short stay)</Text></Value>
-	<Value><Code>401</Code><Text>Temporary Work (long stay)</Text></Value>
-	<Value><Code>402</Code><Text>Training and Research</Text></Value>
-	<Value><Code>403</Code><Text>Temporary Work (International Relations)</Text></Value>
-	<Value><Code>405</Code><Text>Investment Retirement</Text></Value>
-	<Value><Code>407</Code><Text>Training visa</Text></Value>
-	<Value><Code>408</Code><Text>Temporary Activity visa</Text></Value>
-	<Value><Code>410</Code><Text>Retirement</Text></Value>
-	<Value><Code>416</Code><Text>Special program visa for the Seasonal Worker Program</Text></Value>
-	<Value><Code>417</Code><Text>Working holiday</Text></Value>
-	<Value><Code>444</Code><Text>Special Category - New Zealand Citizen</Text></Value>
-	<Value><Code>459</Code><Text>Sponsored Business Visitor (short stay) (repealed)</Text></Value>
-	<Value><Code>461</Code><Text>New Zealand Citizen Family Relationship (Temporary)</Text></Value>
-	<Value><Code>462</Code><Text>Work and Holiday</Text></Value>
-	<Value><Code>488</Code><Text>Superyacht Crew</Text></Value>
-	<Value><Code>489</Code><Text>Skilled Regional (provisional)</Text></Value>
-	<Value><Code>500</Code><Text>Student visa</Text></Value>
-	<Value><Code>590</Code><Text>Student Guardian visa</Text></Value>
-	<Value><Code>600</Code><Text>Visitor</Text></Value>
-	<Value><Code>601</Code><Text>Electronic Travel Authority</Text></Value>
-	<Value><Code>602</Code><Text>Medical Treatment</Text></Value>
-	<Value><Code>651</Code><Text>eVisitor Visa</Text></Value>
-	<Value><Code>675</Code><Text>Medical treatment - short stay (repealed)</Text></Value>
-	<Value><Code>676</Code><Text>Tourist - short stay (repealed)</Text></Value>
-	<Value><Code>679</Code><Text>Sponsored Family Visitor (short stay) (repealed)</Text></Value>
-	<Value><Code>685</Code><Text>Medical treatment - Long Stay (repealed)</Text></Value>
-	<Value><Code>771</Code><Text>Transit</Text></Value>
-	<Value><Code>888</Code><Text>Business Innovation and Investment (permanent)</Text></Value>
-	<Value><Code>942</Code><Text>Crew Travel Authority</Text></Value>
-	<Value><Code>956</Code><Text>Electronic Travel Authority - Business - Long (repealed)</Text></Value>
-	<Value><Code>976</Code><Text>Electronic Travel Authority - Visitor (repealed)</Text></Value>
-	<Value><Code>977</Code><Text>Electronic Travel Authority - Business - Short (repealed)</Text></Value>
-	<Value><Code>988</Code><Text>Maritime Crew</Text></Value>
-	<Value><Code>42</Code><Text>Bridging Visa Class A (No longer issued)</Text></Value>
-	<Value><Code>50</Code><Text>Bridging Visa (General) (No longer issued)</Text></Value>
-	<Value><Code>60</Code><Text>Bridging Visa F (No longer issued)</Text></Value>
-	<Value><Code>70</Code><Text>Removal Pending Bridging Visa (No longer issued)</Text></Value>
-	<Value><Code>100</Code><Text>Spouse (No longer issued)</Text></Value>
-	<Value><Code>101</Code><Text>Child (No longer issued)</Text></Value>
-	<Value><Code>102</Code><Text>Adoption (No longer issued)</Text></Value>
-	<Value><Code>103</Code><Text>Parent (No longer issued)</Text></Value>
-	<Value><Code>104</Code><Text>Preferential family (No longer issued)</Text></Value>
-	<Value><Code>105</Code><Text>Skilled - Australian Linked (No longer issued)</Text></Value>
-	<Value><Code>106</Code><Text>Regional-linked (No longer issued)</Text></Value>
-	<Value><Code>110</Code><Text>Interdependency (No longer issued)</Text></Value>
-	<Value><Code>113</Code><Text>Aged Parent (No longer issued)</Text></Value>
-	<Value><Code>114</Code><Text>Aged Dependent Relative (No longer issued)</Text></Value>
-	<Value><Code>115</Code><Text>Remaining Relative (No longer issued)</Text></Value>
-	<Value><Code>116</Code><Text>Carer (No longer issued)</Text></Value>
-	<Value><Code>117</Code><Text>Orphan Relative (No longer issued)</Text></Value>
-	<Value><Code>118</Code><Text>Designated Parent (No longer issued)</Text></Value>
-	<Value><Code>119</Code><Text>Regional Sponsored Migration Scheme (No longer issued)</Text></Value>
-	<Value><Code>120</Code><Text>Labour Agreement (No longer issued)</Text></Value>
-	<Value><Code>121</Code><Text>Employer nomination (No longer issued)</Text></Value>
-	<Value><Code>124</Code><Text>Distinguished talent (No longer issued)</Text></Value>
-	<Value><Code>125</Code><Text>Distinguished talent and special service - independent (No longer issued)</Text></Value>
-	<Value><Code>126</Code><Text>Independent (No longer issued)</Text></Value>
-	<Value><Code>127</Code><Text>Business Owner (No longer issued)</Text></Value>
-	<Value><Code>128</Code><Text>Senior Executive (No longer issued)</Text></Value>
-	<Value><Code>129</Code><Text>State/Territory sponsored business owner  (No longer issued)</Text></Value>
-	<Value><Code>130</Code><Text>State/Territory Sponsored Senior Executive  (No longer issued)</Text></Value>
-	<Value><Code>131</Code><Text>Investment-linked (No longer issued)</Text></Value>
-	<Value><Code>132</Code><Text>Business Talent (No longer issued)</Text></Value>
-	<Value><Code>134</Code><Text>Skill Matching (No longer issued)</Text></Value>
-	<Value><Code>135</Code><Text>State/Territory nominated independent (No longer issued)</Text></Value>
-	<Value><Code>136</Code><Text>Skilled - Independent (No longer issued)</Text></Value>
-	<Value><Code>137</Code><Text>Skilled - State/Territory nominated independent (No longer issued)</Text></Value>
-	<Value><Code>138</Code><Text>Skilled - Australian sponsored (No longer issued)</Text></Value>
-	<Value><Code>139</Code><Text>Skilled Designated Area-sponsored (No longer issued)</Text></Value>
-	<Value><Code>143</Code><Text>Contributory Parent (No longer issued)</Text></Value>
-	<Value><Code>150</Code><Text>Former citizen (No longer issued)</Text></Value>
-	<Value><Code>151</Code><Text>Former resident (No longer issued)</Text></Value>
-	<Value><Code>152</Code><Text>Family of NZ citizen (No longer issued)</Text></Value>
-	<Value><Code>154</Code><Text>Resident Return (No longer issued)</Text></Value>
-	<Value><Code>155</Code><Text>Five year resident return (No longer issued)</Text></Value>
-	<Value><Code>156</Code><Text>One Year Resident Return (No longer Issued)</Text></Value>
-	<Value><Code>157</Code><Text>Three month resident return (No longer issued)</Text></Value>
-	<Value><Code>159</Code><Text>Provisional resident return (No longer issued)</Text></Value>
-	<Value><Code>160</Code><Text>Business Owner (Provisional) (No longer issued)</Text></Value>
-	<Value><Code>161</Code><Text>Senior Executive (Provisional) (No longer issued)</Text></Value>
-	<Value><Code>162</Code><Text>Investor (Provisional) (No longer issued)</Text></Value>
-	<Value><Code>163</Code><Text>State/Territory Sponsored Business Owner (Prov.) (No longer issued)</Text></Value>
-	<Value><Code>164</Code><Text>State/Territory Sponsored Senior Executive (Prov.) (No longer issued)</Text></Value>
-	<Value><Code>165</Code><Text>State/Territory Sponsored Investor (Provisional) (No longer issued)</Text></Value>
-	<Value><Code>173</Code><Text>Contributory Parent (Temporary) (No longer issued)</Text></Value>
-	<Value><Code>175</Code><Text>Skilled - independent (No longer issued)</Text></Value>
-	<Value><Code>176</Code><Text>Skilled - sponsored (No longer issued)</Text></Value>
-	<Value><Code>200</Code><Text>Refugee (No longer issued)</Text></Value>
-	<Value><Code>201</Code><Text>In-country special humanitarian (No longer issued)</Text></Value>
-	<Value><Code>202</Code><Text>Global special humanitarian (No longer issued)</Text></Value>
-	<Value><Code>203</Code><Text>Emergency rescue (No longer issued)</Text></Value>
-	<Value><Code>204</Code><Text>Woman at risk (No longer issued)</Text></Value>
-	<Value><Code>205</Code><Text>Camp clearance (No longer issued)</Text></Value>
-	<Value><Code>208</Code><Text>East Timorese in Portugal, Macau or Mozambique (No longer issued)</Text></Value>
-	<Value><Code>209</Code><Text>Citizen of former Yugoslavia - displaced person (No longer issued)</Text></Value>
-	<Value><Code>210</Code><Text>Minorities of former USSR (No longer issued)</Text></Value>
-	<Value><Code>211</Code><Text>Burmese in Burma (No longer issued)</Text></Value>
-	<Value><Code>212</Code><Text>Sudanese (No longer issued)</Text></Value>
-	<Value><Code>213</Code><Text>Burmese in Thailand (No longer issued)</Text></Value>
-	<Value><Code>214</Code><Text>Cambodian (No longer issued)</Text></Value>
-	<Value><Code>215</Code><Text>Sri Lankan - special assistance (No longer issued)</Text></Value>
-	<Value><Code>216</Code><Text>Ahmadi (No longer issued)</Text></Value>
-	<Value><Code>217</Code><Text>Vietnamese (No longer issued)</Text></Value>
-	<Value><Code>300</Code><Text>Prospective marriage (No longer issued)</Text></Value>
-	<Value><Code>302</Code><Text>Emergency (Permanent Visa Applicant) (No longer issued)</Text></Value>
-	<Value><Code>303</Code><Text>Emergency (Temporary Visa Applicant) (No longer issued)</Text></Value>
-	<Value><Code>309</Code><Text>Spouse (provisional) (No longer issued)</Text></Value>
-	<Value><Code>310</Code><Text>Interdependency (provisional) (No longer issued)</Text></Value>
-	<Value><Code>406</Code><Text>Government Agreement (No longer issued)</Text></Value>
-	<Value><Code>411</Code><Text>Exchange (No longer issued)</Text></Value>
-	<Value><Code>412</Code><Text>Independent Executive (No longer issued)</Text></Value>
-	<Value><Code>413</Code><Text>Business Executive (No longer issued)</Text></Value>
-	<Value><Code>414</Code><Text>Business Specialist (No longer issued)</Text></Value>
-	<Value><Code>415</Code><Text>Foreign government agency (No longer issued)</Text></Value>
-	<Value><Code>418</Code><Text>Educational (No longer issued)</Text></Value>
-	<Value><Code>419</Code><Text>Visiting academic (No longer issued)</Text></Value>
-	<Value><Code>420</Code><Text>Entertainment (No longer issued)</Text></Value>
-	<Value><Code>421</Code><Text>Sport (No longer issued)</Text></Value>
-	<Value><Code>422</Code><Text>Medical practitioner (No longer issued)</Text></Value>
-	<Value><Code>423</Code><Text>Media and film staff (No longer issued)</Text></Value>
-	<Value><Code>424</Code><Text>Public lecturer (No longer issued)</Text></Value>
-	<Value><Code>425</Code><Text>Family relationship (No longer issued)</Text></Value>
-	<Value><Code>426</Code><Text>Domestic worker - diplomatic or consular (No longer issued)</Text></Value>
-	<Value><Code>427</Code><Text>Domestic worker - executive (No longer issued)</Text></Value>
-	<Value><Code>428</Code><Text>Religious worker (No longer issued)</Text></Value>
-	<Value><Code>430</Code><Text>Supported dependant (No longer issued)</Text></Value>
-	<Value><Code>432</Code><Text>Expatriate (No longer issued)</Text></Value>
-	<Value><Code>435</Code><Text>Sri Lankan (No longer issued)</Text></Value>
-	<Value><Code>442</Code><Text>Occupational Trainee (No longer issued)</Text></Value>
-	<Value><Code>443</Code><Text>Citizens of former Yugoslavia (No longer issued)</Text></Value>
-	<Value><Code>445</Code><Text>Dependent Child (No longer issued)</Text></Value>
-	<Value><Code>446</Code><Text>Confirmatory (Temporary) (No longer issued)</Text></Value>
-	<Value><Code>447</Code><Text>Secondary Movement Offshore Entry (Temporary) (No longer issued)</Text></Value>
-	<Value><Code>448</Code><Text>Kosovar Safe Haven (No longer issued)</Text></Value>
-	<Value><Code>449</Code><Text>Humanitarian Stay (Temporary) (No longer issued)</Text></Value>
-	<Value><Code>450</Code><Text>Resolution of Status - Family member (Temporary) (No longer issued)</Text></Value>
-	<Value><Code>451</Code><Text>Secondary Movement Relocation (Temporary) (No longer issued)</Text></Value>
-	<Value><Code>456</Code><Text>Business - Short Stay (No longer issued)</Text></Value>
-	<Value><Code>457</Code><Text>Business - long stay (Closed to new applicants)</Text></Value>
-	<Value><Code>470</Code><Text>Professional Development (No longer issued)</Text></Value>
-	<Value><Code>471</Code><Text>Trade Skills Training (No longer issued)</Text></Value>
-	<Value><Code>475</Code><Text>Skilled Regional Sponsored (No longer issued)</Text></Value>
-	<Value><Code>476</Code><Text>Skilled - Recognised Graduate (No longer issued)</Text></Value>
-	<Value><Code>482</Code><Text>Temporary Skill Shortage (TSS)</Text></Value>
-	<Value><Code>485</Code><Text>Skilled - Graduate (No longer issued)</Text></Value>
-	<Value><Code>487</Code><Text>Skilled - Regional Sponsored (No longer issued)</Text></Value>
-	<Value><Code>495</Code><Text>Skilled Independent Regional (Temporary) (No longer issued)</Text></Value>
-	<Value><Code>496</Code><Text>Skilled - Designated Area Sponsored (Provisional) (No longer issued)</Text></Value>
-	<Value><Code>497</Code><Text>Graduate - Skilled (No longer issued)</Text></Value>
-	<Value><Code>499</Code><Text>Olympic (Support) (No longer issued)</Text></Value>
-	<Value><Code>560</Code><Text>Student (No longer issued)</Text></Value>
-	<Value><Code>562</Code><Text>Iranian Postgraduate Student (No longer issued)</Text></Value>
-	<Value><Code>563</Code><Text>Iranian Postgraduate Student Dependent (No longer issued)</Text></Value>
-	<Value><Code>570</Code><Text>Student - ELICOS (No longer issued)</Text></Value>
-	<Value><Code>571</Code><Text>Student - Schools (No longer issued)</Text></Value>
-	<Value><Code>572</Code><Text>Student - VET (No longer issued)</Text></Value>
-	<Value><Code>573</Code><Text>Student - Higher Education (No longer issued)</Text></Value>
-	<Value><Code>574</Code><Text>Student - Masters &amp; Doctorate (No longer issued)</Text></Value>
-	<Value><Code>575</Code><Text>Student - Non-Award Foundation (No longer issued)</Text></Value>
-	<Value><Code>576</Code><Text>Student - AusAID &amp; Defence (No longer issued)</Text></Value>
-	<Value><Code>580</Code><Text>Student Guardian Visa (No longer issued)</Text></Value>
-	<Value><Code>686</Code><Text>Tourist - Long Stay (No longer issued)</Text></Value>
-	<Value><Code>695</Code><Text>Temporary Provisional - Pending return (No longer issued)</Text></Value>
-	<Value><Code>773</Code><Text>Border (No longer issued)</Text></Value>
-	<Value><Code>785</Code><Text>Temporary Protection (No longer issued)</Text></Value>
-	<Value><Code>786</Code><Text>Temporary (Humanitarian Concern) (No longer issued)</Text></Value>
-	<Value><Code>800</Code><Text>Territorial Asylum (No longer issued)</Text></Value>
-	<Value><Code>801</Code><Text>Spouse (No longer issued)</Text></Value>
-	<Value><Code>802</Code><Text>Child (No longer issued)</Text></Value>
-	<Value><Code>804</Code><Text>Aged Parent (No longer issued)</Text></Value>
-	<Value><Code>805</Code><Text>Skilled (No longer issued)</Text></Value>
-	<Value><Code>806</Code><Text>Family (No longer issued)</Text></Value>
-	<Value><Code>808</Code><Text>Confirmatory Residence (No longer issued)</Text></Value>
-	<Value><Code>814</Code><Text>Interdependency (No longer issued)</Text></Value>
-	<Value><Code>819</Code><Text>Aged Parent (No longer issued)</Text></Value>
-	<Value><Code>820</Code><Text>Spouse (No longer issued)</Text></Value>
-	<Value><Code>826</Code><Text>Interdependency (No longer issued)</Text></Value>
-	<Value><Code>828</Code><Text>TEP Processing (No longer issued)</Text></Value>
-	<Value><Code>831</Code><Text>Prospective marriage spouse (No longer issued)</Text></Value>
-	<Value><Code>832</Code><Text>Close Ties (No longer issued)</Text></Value>
-	<Value><Code>833</Code><Text>Certain unlawful non-citizens (No longer issued)</Text></Value>
-	<Value><Code>834</Code><Text>Permanent resident of Norfolk Island (No longer issued)</Text></Value>
-	<Value><Code>835</Code><Text>Remaining Relative (No longer issued)</Text></Value>
-	<Value><Code>836</Code><Text>Carer (No longer issued)</Text></Value>
-	<Value><Code>837</Code><Text>Orphan Relative (No longer issued)</Text></Value>
-	<Value><Code>838</Code><Text>Aged Dependant Relative (No longer issued)</Text></Value>
-	<Value><Code>840</Code><Text>Business Owner (No longer issued)</Text></Value>
-	<Value><Code>841</Code><Text>Senior Executive (No longer issued)</Text></Value>
-	<Value><Code>842</Code><Text>State/Territory sponsored business owner (No longer issued)</Text></Value>
-	<Value><Code>843</Code><Text>State/Territory sponsored senior executive (No longer issued)</Text></Value>
-	<Value><Code>844</Code><Text>Investment-linked (No longer issued)</Text></Value>
-	<Value><Code>845</Code><Text>Established Business in Australia (No longer issued)</Text></Value>
-	<Value><Code>846</Code><Text>State/Territory Sponsored Regional Established Business (No longer issued)</Text></Value>
-	<Value><Code>850</Code><Text>Resolution Status (Temporary) (No longer issued)</Text></Value>
-	<Value><Code>851</Code><Text>Resolution of Status (No longer issued)</Text></Value>
-	<Value><Code>852</Code><Text>Witness Protection (No longer issued)</Text></Value>
-	<Value><Code>855</Code><Text>Labour Agreement (No longer issued)</Text></Value>
-	<Value><Code>856</Code><Text>Employer Nomination Scheme (No longer issued)</Text></Value>
-	<Value><Code>857</Code><Text>Regional Sponsored Migration Scheme (No longer issued)</Text></Value>
-	<Value><Code>858</Code><Text>Distinguished Talent (No longer issued)</Text></Value>
-	<Value><Code>859</Code><Text>Designated Parent (No longer issued)</Text></Value>
-	<Value><Code>861</Code><Text>Skilled - Onshore Independent New Zealand Citizen (No longer issued)</Text></Value>
-	<Value><Code>862</Code><Text>Skilled Australian-sponsored New Zealand Citizen (No longer issued)</Text></Value>
-	<Value><Code>863</Code><Text>Skilled Designated Area-sponsored New Zealand Citizen (No longer issued)</Text></Value>
-	<Value><Code>864</Code><Text>Contributory Aged Parent (Residence) (No longer issued)</Text></Value>
-	<Value><Code>866</Code><Text>Protection (No longer issued)</Text></Value>
-	<Value><Code>880</Code><Text>Skilled - Independent Overseas Student (No longer issued)</Text></Value>
-	<Value><Code>881</Code><Text>Skilled - Australian-sponsored Overseas Student (No longer issued)</Text></Value>
-	<Value><Code>882</Code><Text>Skilled - Designated Area-sponsored Overseas Student (No longer issued)</Text></Value>
-	<Value><Code>883</Code><Text>Skilled Designated Area Sponsored (Residence) (No longer issued)</Text></Value>
-	<Value><Code>884</Code><Text>Contributory Aged Parent (Temporary) (No longer issued)</Text></Value>
-	<Value><Code>885</Code><Text>Skilled - Independent (No longer issued)</Text></Value>
-	<Value><Code>886</Code><Text>Skilled - Sponsored (No longer issued)</Text></Value>
-	<Value><Code>887</Code><Text>Skilled - Regional (No longer issued)</Text></Value>
-	<Value><Code>890</Code><Text>Business Owner (No longer issued)</Text></Value>
-	<Value><Code>891</Code><Text>Investor (No longer issued)</Text></Value>
-	<Value><Code>892</Code><Text>State/Territory sponsored business owner (No longer issued)</Text></Value>
-	<Value><Code>893</Code><Text>State/Territory sponsored senior executive (No longer issued)</Text></Value>
-	<Value><Code>944</Code><Text>APEC Travel Authority (No longer issued)</Text></Value>
-	<Value><Code>995</Code><Text>Diplomatic (Temporary) (No longer issued)</Text></Value>
-	<Value><Code>998</Code><Text>Declaratory (No longer issued)</Text></Value>
-    
-</Values>
-</CodeSet>    <!-- Visa Sub Class -->
+	  </Intro>
+	  <ID>Visa Sub Class</ID>
+      <Values>
+	  	<Value><Code>10</Code><Text>Bridging Visa A - BVA</Text></Value>
+		<Value><Code>20</Code><Text>Bridging Visa B - BVB</Text></Value>
+		<Value><Code>30</Code><Text>Bridging Visa C - BVC</Text></Value>
+		<Value><Code>40</Code><Text>Bridging Visa (Prospective Applicant) - BVD</Text></Value>
+		<Value><Code>41</Code><Text>Bridging Visa (Non-Applicant) - BVD</Text></Value>
+		<Value><Code>51</Code><Text>Bridging Visa - BVE</Text></Value>
+		<Value><Code>186</Code><Text>Employer Nomination Scheme</Text></Value>
+		<Value><Code>187</Code><Text>Regional Sponsor Migration Scheme</Text></Value>
+		<Value><Code>188</Code><Text>Business Innovation and Investment (provisional)</Text></Value>
+		<Value><Code>189</Code><Text>Skilled Independent visa </Text></Value>
+		<Value><Code>190</Code><Text>Skilled Nominated</Text></Value>
+		<Value><Code>400</Code><Text>Temporary Work (short stay)</Text></Value>
+		<Value><Code>401</Code><Text>Temporary Work (long stay)</Text></Value>
+		<Value><Code>402</Code><Text>Training and Research</Text></Value>
+		<Value><Code>403</Code><Text>Temporary Work (International Relations)</Text></Value>
+		<Value><Code>405</Code><Text>Investment Retirement</Text></Value>
+		<Value><Code>407</Code><Text>Training visa</Text></Value>
+		<Value><Code>408</Code><Text>Temporary Activity visa</Text></Value>
+		<Value><Code>410</Code><Text>Retirement</Text></Value>
+		<Value><Code>416</Code><Text>Special program visa for the Seasonal Worker Program</Text></Value>
+		<Value><Code>417</Code><Text>Working holiday</Text></Value>
+		<Value><Code>444</Code><Text>Special Category - New Zealand Citizen</Text></Value>
+		<Value><Code>459</Code><Text>Sponsored Business Visitor (short stay) (repealed)</Text></Value>
+		<Value><Code>461</Code><Text>New Zealand Citizen Family Relationship (Temporary)</Text></Value>
+		<Value><Code>462</Code><Text>Work and Holiday</Text></Value>
+		<Value><Code>488</Code><Text>Superyacht Crew</Text></Value>
+		<Value><Code>489</Code><Text>Skilled Regional (provisional)</Text></Value>
+		<Value><Code>500</Code><Text>Student visa</Text></Value>
+		<Value><Code>590</Code><Text>Student Guardian visa</Text></Value>
+		<Value><Code>600</Code><Text>Visitor</Text></Value>
+		<Value><Code>601</Code><Text>Electronic Travel Authority</Text></Value>
+		<Value><Code>602</Code><Text>Medical Treatment</Text></Value>
+		<Value><Code>651</Code><Text>eVisitor Visa</Text></Value>
+		<Value><Code>675</Code><Text>Medical treatment - short stay (repealed)</Text></Value>
+		<Value><Code>676</Code><Text>Tourist - short stay (repealed)</Text></Value>
+		<Value><Code>679</Code><Text>Sponsored Family Visitor (short stay) (repealed)</Text></Value>
+		<Value><Code>685</Code><Text>Medical treatment - Long Stay (repealed)</Text></Value>
+		<Value><Code>771</Code><Text>Transit</Text></Value>
+		<Value><Code>888</Code><Text>Business Innovation and Investment (permanent)</Text></Value>
+		<Value><Code>942</Code><Text>Crew Travel Authority</Text></Value>
+		<Value><Code>956</Code><Text>Electronic Travel Authority - Business - Long (repealed)</Text></Value>
+		<Value><Code>976</Code><Text>Electronic Travel Authority - Visitor (repealed)</Text></Value>
+		<Value><Code>977</Code><Text>Electronic Travel Authority - Business - Short (repealed)</Text></Value>
+		<Value><Code>988</Code><Text>Maritime Crew</Text></Value>
+		<Value><Code>42</Code><Text>Bridging Visa Class A (No longer issued)</Text></Value>
+		<Value><Code>50</Code><Text>Bridging Visa (General) (No longer issued)</Text></Value>
+		<Value><Code>60</Code><Text>Bridging Visa F (No longer issued)</Text></Value>
+		<Value><Code>70</Code><Text>Removal Pending Bridging Visa (No longer issued)</Text></Value>
+		<Value><Code>100</Code><Text>Spouse (No longer issued)</Text></Value>
+		<Value><Code>101</Code><Text>Child (No longer issued)</Text></Value>
+		<Value><Code>102</Code><Text>Adoption (No longer issued)</Text></Value>
+		<Value><Code>103</Code><Text>Parent (No longer issued)</Text></Value>
+		<Value><Code>104</Code><Text>Preferential family (No longer issued)</Text></Value>
+		<Value><Code>105</Code><Text>Skilled - Australian Linked (No longer issued)</Text></Value>
+		<Value><Code>106</Code><Text>Regional-linked (No longer issued)</Text></Value>
+		<Value><Code>110</Code><Text>Interdependency (No longer issued)</Text></Value>
+		<Value><Code>113</Code><Text>Aged Parent (No longer issued)</Text></Value>
+		<Value><Code>114</Code><Text>Aged Dependent Relative (No longer issued)</Text></Value>
+		<Value><Code>115</Code><Text>Remaining Relative (No longer issued)</Text></Value>
+		<Value><Code>116</Code><Text>Carer (No longer issued)</Text></Value>
+		<Value><Code>117</Code><Text>Orphan Relative (No longer issued)</Text></Value>
+		<Value><Code>118</Code><Text>Designated Parent (No longer issued)</Text></Value>
+		<Value><Code>119</Code><Text>Regional Sponsored Migration Scheme (No longer issued)</Text></Value>
+		<Value><Code>120</Code><Text>Labour Agreement (No longer issued)</Text></Value>
+		<Value><Code>121</Code><Text>Employer nomination (No longer issued)</Text></Value>
+		<Value><Code>124</Code><Text>Distinguished talent (No longer issued)</Text></Value>
+		<Value><Code>125</Code><Text>Distinguished talent and special service - independent (No longer issued)</Text></Value>
+		<Value><Code>126</Code><Text>Independent (No longer issued)</Text></Value>
+		<Value><Code>127</Code><Text>Business Owner (No longer issued)</Text></Value>
+		<Value><Code>128</Code><Text>Senior Executive (No longer issued)</Text></Value>
+		<Value><Code>129</Code><Text>State/Territory sponsored business owner  (No longer issued)</Text></Value>
+		<Value><Code>130</Code><Text>State/Territory Sponsored Senior Executive  (No longer issued)</Text></Value>
+		<Value><Code>131</Code><Text>Investment-linked (No longer issued)</Text></Value>
+		<Value><Code>132</Code><Text>Business Talent (No longer issued)</Text></Value>
+		<Value><Code>134</Code><Text>Skill Matching (No longer issued)</Text></Value>
+		<Value><Code>135</Code><Text>State/Territory nominated independent (No longer issued)</Text></Value>
+		<Value><Code>136</Code><Text>Skilled - Independent (No longer issued)</Text></Value>
+		<Value><Code>137</Code><Text>Skilled - State/Territory nominated independent (No longer issued)</Text></Value>
+		<Value><Code>138</Code><Text>Skilled - Australian sponsored (No longer issued)</Text></Value>
+		<Value><Code>139</Code><Text>Skilled Designated Area-sponsored (No longer issued)</Text></Value>
+		<Value><Code>143</Code><Text>Contributory Parent (No longer issued)</Text></Value>
+		<Value><Code>150</Code><Text>Former citizen (No longer issued)</Text></Value>
+		<Value><Code>151</Code><Text>Former resident (No longer issued)</Text></Value>
+		<Value><Code>152</Code><Text>Family of NZ citizen (No longer issued)</Text></Value>
+		<Value><Code>154</Code><Text>Resident Return (No longer issued)</Text></Value>
+		<Value><Code>155</Code><Text>Five year resident return (No longer issued)</Text></Value>
+		<Value><Code>156</Code><Text>One Year Resident Return (No longer Issued)</Text></Value>
+		<Value><Code>157</Code><Text>Three month resident return (No longer issued)</Text></Value>
+		<Value><Code>159</Code><Text>Provisional resident return (No longer issued)</Text></Value>
+		<Value><Code>160</Code><Text>Business Owner (Provisional) (No longer issued)</Text></Value>
+		<Value><Code>161</Code><Text>Senior Executive (Provisional) (No longer issued)</Text></Value>
+		<Value><Code>162</Code><Text>Investor (Provisional) (No longer issued)</Text></Value>
+		<Value><Code>163</Code><Text>State/Territory Sponsored Business Owner (Prov.) (No longer issued)</Text></Value>
+		<Value><Code>164</Code><Text>State/Territory Sponsored Senior Executive (Prov.) (No longer issued)</Text></Value>
+		<Value><Code>165</Code><Text>State/Territory Sponsored Investor (Provisional) (No longer issued)</Text></Value>
+		<Value><Code>173</Code><Text>Contributory Parent (Temporary) (No longer issued)</Text></Value>
+		<Value><Code>175</Code><Text>Skilled - independent (No longer issued)</Text></Value>
+		<Value><Code>176</Code><Text>Skilled - sponsored (No longer issued)</Text></Value>
+		<Value><Code>200</Code><Text>Refugee (No longer issued)</Text></Value>
+		<Value><Code>201</Code><Text>In-country special humanitarian (No longer issued)</Text></Value>
+		<Value><Code>202</Code><Text>Global special humanitarian (No longer issued)</Text></Value>
+		<Value><Code>203</Code><Text>Emergency rescue (No longer issued)</Text></Value>
+		<Value><Code>204</Code><Text>Woman at risk (No longer issued)</Text></Value>
+		<Value><Code>205</Code><Text>Camp clearance (No longer issued)</Text></Value>
+		<Value><Code>208</Code><Text>East Timorese in Portugal, Macau or Mozambique (No longer issued)</Text></Value>
+		<Value><Code>209</Code><Text>Citizen of former Yugoslavia - displaced person (No longer issued)</Text></Value>
+		<Value><Code>210</Code><Text>Minorities of former USSR (No longer issued)</Text></Value>
+		<Value><Code>211</Code><Text>Burmese in Burma (No longer issued)</Text></Value>
+		<Value><Code>212</Code><Text>Sudanese (No longer issued)</Text></Value>
+		<Value><Code>213</Code><Text>Burmese in Thailand (No longer issued)</Text></Value>
+		<Value><Code>214</Code><Text>Cambodian (No longer issued)</Text></Value>
+		<Value><Code>215</Code><Text>Sri Lankan - special assistance (No longer issued)</Text></Value>
+		<Value><Code>216</Code><Text>Ahmadi (No longer issued)</Text></Value>
+		<Value><Code>217</Code><Text>Vietnamese (No longer issued)</Text></Value>
+		<Value><Code>300</Code><Text>Prospective marriage (No longer issued)</Text></Value>
+		<Value><Code>302</Code><Text>Emergency (Permanent Visa Applicant) (No longer issued)</Text></Value>
+		<Value><Code>303</Code><Text>Emergency (Temporary Visa Applicant) (No longer issued)</Text></Value>
+		<Value><Code>309</Code><Text>Spouse (provisional) (No longer issued)</Text></Value>
+		<Value><Code>310</Code><Text>Interdependency (provisional) (No longer issued)</Text></Value>
+		<Value><Code>406</Code><Text>Government Agreement (No longer issued)</Text></Value>
+		<Value><Code>411</Code><Text>Exchange (No longer issued)</Text></Value>
+		<Value><Code>412</Code><Text>Independent Executive (No longer issued)</Text></Value>
+		<Value><Code>413</Code><Text>Business Executive (No longer issued)</Text></Value>
+		<Value><Code>414</Code><Text>Business Specialist (No longer issued)</Text></Value>
+		<Value><Code>415</Code><Text>Foreign government agency (No longer issued)</Text></Value>
+		<Value><Code>418</Code><Text>Educational (No longer issued)</Text></Value>
+		<Value><Code>419</Code><Text>Visiting academic (No longer issued)</Text></Value>
+		<Value><Code>420</Code><Text>Entertainment (No longer issued)</Text></Value>
+		<Value><Code>421</Code><Text>Sport (No longer issued)</Text></Value>
+		<Value><Code>422</Code><Text>Medical practitioner (No longer issued)</Text></Value>
+		<Value><Code>423</Code><Text>Media and film staff (No longer issued)</Text></Value>
+		<Value><Code>424</Code><Text>Public lecturer (No longer issued)</Text></Value>
+		<Value><Code>425</Code><Text>Family relationship (No longer issued)</Text></Value>
+		<Value><Code>426</Code><Text>Domestic worker - diplomatic or consular (No longer issued)</Text></Value>
+		<Value><Code>427</Code><Text>Domestic worker - executive (No longer issued)</Text></Value>
+		<Value><Code>428</Code><Text>Religious worker (No longer issued)</Text></Value>
+		<Value><Code>430</Code><Text>Supported dependant (No longer issued)</Text></Value>
+		<Value><Code>432</Code><Text>Expatriate (No longer issued)</Text></Value>
+		<Value><Code>435</Code><Text>Sri Lankan (No longer issued)</Text></Value>
+		<Value><Code>442</Code><Text>Occupational Trainee (No longer issued)</Text></Value>
+		<Value><Code>443</Code><Text>Citizens of former Yugoslavia (No longer issued)</Text></Value>
+		<Value><Code>445</Code><Text>Dependent Child (No longer issued)</Text></Value>
+		<Value><Code>446</Code><Text>Confirmatory (Temporary) (No longer issued)</Text></Value>
+		<Value><Code>447</Code><Text>Secondary Movement Offshore Entry (Temporary) (No longer issued)</Text></Value>
+		<Value><Code>448</Code><Text>Kosovar Safe Haven (No longer issued)</Text></Value>
+		<Value><Code>449</Code><Text>Humanitarian Stay (Temporary) (No longer issued)</Text></Value>
+		<Value><Code>450</Code><Text>Resolution of Status - Family member (Temporary) (No longer issued)</Text></Value>
+		<Value><Code>451</Code><Text>Secondary Movement Relocation (Temporary) (No longer issued)</Text></Value>
+		<Value><Code>456</Code><Text>Business - Short Stay (No longer issued)</Text></Value>
+		<Value><Code>457</Code><Text>Business - long stay (Closed to new applicants)</Text></Value>
+		<Value><Code>470</Code><Text>Professional Development (No longer issued)</Text></Value>
+		<Value><Code>471</Code><Text>Trade Skills Training (No longer issued)</Text></Value>
+		<Value><Code>475</Code><Text>Skilled Regional Sponsored (No longer issued)</Text></Value>
+		<Value><Code>476</Code><Text>Skilled - Recognised Graduate (No longer issued)</Text></Value>
+		<Value><Code>482</Code><Text>Temporary Skill Shortage (TSS)</Text></Value>
+		<Value><Code>485</Code><Text>Skilled - Graduate (No longer issued)</Text></Value>
+		<Value><Code>487</Code><Text>Skilled - Regional Sponsored (No longer issued)</Text></Value>
+		<Value><Code>495</Code><Text>Skilled Independent Regional (Temporary) (No longer issued)</Text></Value>
+		<Value><Code>496</Code><Text>Skilled - Designated Area Sponsored (Provisional) (No longer issued)</Text></Value>
+		<Value><Code>497</Code><Text>Graduate - Skilled (No longer issued)</Text></Value>
+		<Value><Code>499</Code><Text>Olympic (Support) (No longer issued)</Text></Value>
+		<Value><Code>560</Code><Text>Student (No longer issued)</Text></Value>
+		<Value><Code>562</Code><Text>Iranian Postgraduate Student (No longer issued)</Text></Value>
+		<Value><Code>563</Code><Text>Iranian Postgraduate Student Dependent (No longer issued)</Text></Value>
+		<Value><Code>570</Code><Text>Student - ELICOS (No longer issued)</Text></Value>
+		<Value><Code>571</Code><Text>Student - Schools (No longer issued)</Text></Value>
+		<Value><Code>572</Code><Text>Student - VET (No longer issued)</Text></Value>
+		<Value><Code>573</Code><Text>Student - Higher Education (No longer issued)</Text></Value>
+		<Value><Code>574</Code><Text>Student - Masters &amp; Doctorate (No longer issued)</Text></Value>
+		<Value><Code>575</Code><Text>Student - Non-Award Foundation (No longer issued)</Text></Value>
+		<Value><Code>576</Code><Text>Student - AusAID &amp; Defence (No longer issued)</Text></Value>
+		<Value><Code>580</Code><Text>Student Guardian Visa (No longer issued)</Text></Value>
+		<Value><Code>686</Code><Text>Tourist - Long Stay (No longer issued)</Text></Value>
+		<Value><Code>695</Code><Text>Temporary Provisional - Pending return (No longer issued)</Text></Value>
+		<Value><Code>773</Code><Text>Border (No longer issued)</Text></Value>
+		<Value><Code>785</Code><Text>Temporary Protection (No longer issued)</Text></Value>
+		<Value><Code>786</Code><Text>Temporary (Humanitarian Concern) (No longer issued)</Text></Value>
+		<Value><Code>800</Code><Text>Territorial Asylum (No longer issued)</Text></Value>
+		<Value><Code>801</Code><Text>Spouse (No longer issued)</Text></Value>
+		<Value><Code>802</Code><Text>Child (No longer issued)</Text></Value>
+		<Value><Code>804</Code><Text>Aged Parent (No longer issued)</Text></Value>
+		<Value><Code>805</Code><Text>Skilled (No longer issued)</Text></Value>
+		<Value><Code>806</Code><Text>Family (No longer issued)</Text></Value>
+		<Value><Code>808</Code><Text>Confirmatory Residence (No longer issued)</Text></Value>
+		<Value><Code>814</Code><Text>Interdependency (No longer issued)</Text></Value>
+		<Value><Code>819</Code><Text>Aged Parent (No longer issued)</Text></Value>
+		<Value><Code>820</Code><Text>Spouse (No longer issued)</Text></Value>
+		<Value><Code>826</Code><Text>Interdependency (No longer issued)</Text></Value>
+		<Value><Code>828</Code><Text>TEP Processing (No longer issued)</Text></Value>
+		<Value><Code>831</Code><Text>Prospective marriage spouse (No longer issued)</Text></Value>
+		<Value><Code>832</Code><Text>Close Ties (No longer issued)</Text></Value>
+		<Value><Code>833</Code><Text>Certain unlawful non-citizens (No longer issued)</Text></Value>
+		<Value><Code>834</Code><Text>Permanent resident of Norfolk Island (No longer issued)</Text></Value>
+		<Value><Code>835</Code><Text>Remaining Relative (No longer issued)</Text></Value>
+		<Value><Code>836</Code><Text>Carer (No longer issued)</Text></Value>
+		<Value><Code>837</Code><Text>Orphan Relative (No longer issued)</Text></Value>
+		<Value><Code>838</Code><Text>Aged Dependant Relative (No longer issued)</Text></Value>
+		<Value><Code>840</Code><Text>Business Owner (No longer issued)</Text></Value>
+		<Value><Code>841</Code><Text>Senior Executive (No longer issued)</Text></Value>
+		<Value><Code>842</Code><Text>State/Territory sponsored business owner (No longer issued)</Text></Value>
+		<Value><Code>843</Code><Text>State/Territory sponsored senior executive (No longer issued)</Text></Value>
+		<Value><Code>844</Code><Text>Investment-linked (No longer issued)</Text></Value>
+		<Value><Code>845</Code><Text>Established Business in Australia (No longer issued)</Text></Value>
+		<Value><Code>846</Code><Text>State/Territory Sponsored Regional Established Business (No longer issued)</Text></Value>
+		<Value><Code>850</Code><Text>Resolution Status (Temporary) (No longer issued)</Text></Value>
+		<Value><Code>851</Code><Text>Resolution of Status (No longer issued)</Text></Value>
+		<Value><Code>852</Code><Text>Witness Protection (No longer issued)</Text></Value>
+		<Value><Code>855</Code><Text>Labour Agreement (No longer issued)</Text></Value>
+		<Value><Code>856</Code><Text>Employer Nomination Scheme (No longer issued)</Text></Value>
+		<Value><Code>857</Code><Text>Regional Sponsored Migration Scheme (No longer issued)</Text></Value>
+		<Value><Code>858</Code><Text>Distinguished Talent (No longer issued)</Text></Value>
+		<Value><Code>859</Code><Text>Designated Parent (No longer issued)</Text></Value>
+		<Value><Code>861</Code><Text>Skilled - Onshore Independent New Zealand Citizen (No longer issued)</Text></Value>
+		<Value><Code>862</Code><Text>Skilled Australian-sponsored New Zealand Citizen (No longer issued)</Text></Value>
+		<Value><Code>863</Code><Text>Skilled Designated Area-sponsored New Zealand Citizen (No longer issued)</Text></Value>
+		<Value><Code>864</Code><Text>Contributory Aged Parent (Residence) (No longer issued)</Text></Value>
+		<Value><Code>866</Code><Text>Protection (No longer issued)</Text></Value>
+		<Value><Code>880</Code><Text>Skilled - Independent Overseas Student (No longer issued)</Text></Value>
+		<Value><Code>881</Code><Text>Skilled - Australian-sponsored Overseas Student (No longer issued)</Text></Value>
+		<Value><Code>882</Code><Text>Skilled - Designated Area-sponsored Overseas Student (No longer issued)</Text></Value>
+		<Value><Code>883</Code><Text>Skilled Designated Area Sponsored (Residence) (No longer issued)</Text></Value>
+		<Value><Code>884</Code><Text>Contributory Aged Parent (Temporary) (No longer issued)</Text></Value>
+		<Value><Code>885</Code><Text>Skilled - Independent (No longer issued)</Text></Value>
+		<Value><Code>886</Code><Text>Skilled - Sponsored (No longer issued)</Text></Value>
+		<Value><Code>887</Code><Text>Skilled - Regional (No longer issued)</Text></Value>
+		<Value><Code>890</Code><Text>Business Owner (No longer issued)</Text></Value>
+		<Value><Code>891</Code><Text>Investor (No longer issued)</Text></Value>
+		<Value><Code>892</Code><Text>State/Territory sponsored business owner (No longer issued)</Text></Value>
+		<Value><Code>893</Code><Text>State/Territory sponsored senior executive (No longer issued)</Text></Value>
+		<Value><Code>944</Code><Text>APEC Travel Authority (No longer issued)</Text></Value>
+		<Value><Code>995</Code><Text>Diplomatic (Temporary) (No longer issued)</Text></Value>
+		<Value><Code>998</Code><Text>Declaratory (No longer issued)</Text></Value>
+      </Values>
+	</CodeSet>    <!-- Visa Sub Class -->
     <CodeSet>
-	<Intro>
+	  <Intro>
 		<p>Reference: ACARA Data Standards Manual - Parental occupation group</p>
 		<p>https://www.acara.edu.au/reporting/data-standards-manual-student-background-characteristics</p>
-	</Intro>
-	<ID>Employment Type</ID>
-	<Values>
+	  </Intro>
+	  <ID>Employment Type</ID>
+	  <Values>
 		<Value>
 			<Code>1</Code>
 			<Text>Senior management in large business organisation, government administration and defence and qualified professionals</Text>
@@ -1150,18 +1151,15 @@
 			<Code>9</Code>
 			<Text>Unknown</Text>
 		</Value>
-		
-	</Values>
-</CodeSet>    <!-- Employment Type -->
+	  </Values>
+	</CodeSet>    <!-- Employment Type -->
     <CodeSet>
-	<Intro>
-		<p>
-			<p>Reference: ACARA Data Standards Manual  - Parental school education</p>
-			<p>https://www.acara.edu.au/reporting/data-standards-manual-student-background-characteristics</p>
-		</p>
-	</Intro>
-	<ID>School Education Level Type</ID>
-	<Values>
+	  <Intro>
+		<p>Reference: ACARA Data Standards Manual  - Parental school education</p>
+		<p>https://www.acara.edu.au/reporting/data-standards-manual-student-background-characteristics</p>
+	  </Intro>
+	  <ID>School Education Level Type</ID>
+	  <Values>
 		<Value>
 			<Code>0</Code>
 			<Text>Not stated/Unknown</Text>
@@ -1183,17 +1181,15 @@
 			<Text>Year 12 or equivalent</Text>
 		</Value>
 		
-	</Values>
-</CodeSet>    <!-- School Education Level -->
+	  </Values>
+	</CodeSet>    <!-- School Education Level -->
     <CodeSet>
-	<Intro>
-		<p>
-			<p>Reference: ACARA Data Standards Manual  - Parental non-school education</p>
-			<p>https://www.acara.edu.au/reporting/data-standards-manual-student-background-characteristics</p>
-		</p>
-	</Intro>
-	<ID>Non-School Education</ID>
-	<Values>
+	  <Intro>
+		<p>Reference: ACARA Data Standards Manual  - Parental non-school education</p>
+		<p>https://www.acara.edu.au/reporting/data-standards-manual-student-background-characteristics</p>
+	  </Intro>
+	  <ID>Non-School Education</ID>
+	  <Values>
 		<Value>
 			<Code>0</Code>
 			<Text>Not stated/Unknown</Text>
@@ -1215,15 +1211,15 @@
 			<Text>No non-school qualification</Text>
 		</Value>
 		
-	</Values>
-</CodeSet>    <!-- Non-School Education Level -->
+	  </Values>
+	</CodeSet>    <!-- Non-School Education Level -->
     <CodeSet>
-	<Intro>
+	  <Intro>
 		<p>Acceptable Values for Enrolled Full-fee Paying Overseas Student (FFPOS) Status.</p>
 		<p>Source Data: NSSC Data Collection Manual 2012</p>
-	</Intro>
-	<ID>FFPOS Status Code</ID>
-	<Values>
+	  </Intro>
+	  <ID>FFPOS Status Code</ID>
+	  <Values>
 		<Value>
 			<Code>1</Code>
 			<Text>FFPOS</Text>
@@ -1237,8 +1233,8 @@
 			<Text>Not stated/Unknown</Text>
 		</Value>
 		
-	</Values>
-</CodeSet>    <!-- FFPOS Status -->
+	  </Values>
+    </CodeSet>    <!-- FFPOS Status -->
     <CodeSet>
 		<Intro>
 			<p>Reference:ACARA Data Standards Manual - Technical Specs - Sex</p>
@@ -1733,12 +1729,12 @@
 				<Code>02</Code>
 				<Text>Step-Parent</Text>
 			</Value>
-<if intl="au">         <!-- Prohibited in NZ -->
-			<Value>
+			<if intl="au">         <!-- Prohibited in NZ -->
+			  <Value>
 				<Code>03</Code>
 				<Text>Adoptive Parent</Text>
-			</Value>
-</if>			
+			  </Value>
+			</if>			
 			<Value>
 				<Code>04</Code>
 				<Text>Foster Parent</Text>
@@ -1783,31 +1779,30 @@
 				<Code>20</Code>
 				<Text>Guardian</Text>
 			</Value>
-<if intl="au">			 <!-- Not used in NZ -->
-			<Value>
+		    <if intl="au">			 <!-- Not used in NZ -->
+			  <Value>
 				<Code>32</Code>
 				<Text>Duty Manager</Text>
-			</Value>
-			<Value>
+			  </Value>
+			  <Value>
 				<Code>31</Code>
 				<Text>Supervisor</Text>
-			</Value>
-			<Value>
+			  </Value>
+			  <Value>
 				<Code>30</Code>
 				<Text>Case Worker</Text>
-			</Value>
-</if>			
-<if intl="nz">
-			<Value>
+			  </Value>
+			</if>			
+            <if intl="nz">
+			  <Value>
 				<Code>50</Code>
 				<Text>Whāngai Parent</Text>
-			</Value>
-</if>
+			  </Value>
+			</if>
 			<Value>
 				<Code>99</Code>
 				<Text>Not provided</Text>
 			</Value>
-			 
 		</Values>
 	</CodeSet>    <!-- Relationship to Student -->
     <CodeSet>
@@ -1828,7 +1823,7 @@
 				<Code>LGL</Code>
 				<Text>Legal Name of the client as defined by the organisation which collects it (legal not defined in this standard)</Text>
 			</Value>
-<if intl="au">			
+		  <if intl="au">			
 			<Value>
 				<Code>MDN</Code>
 				<Text>Maiden Name</Text>
@@ -1841,7 +1836,7 @@
 				<Code>OTH</Code>
 				<Text>Non specific name usage type</Text>
 			</Value>
-</if>
+		  </if>
 			<Value>
 				<Code>PRF</Code>
 				<Text>Preferred name</Text>
@@ -1850,7 +1845,7 @@
 				<Code>PRV</Code>
 				<Text>Previous name</Text>
 			</Value>
-<if intl="au">
+		  <if intl="au">
 			<Value>
 				<Code>STG</Code>
 				<Text>Stage name</Text>
@@ -1859,13 +1854,13 @@
 				<Code>TRB</Code>
 				<Text>Tribal Name</Text>
 			</Value>
-</if>
-<if intl="nz">
+		  </if>
+		  <if intl="nz">
 	        <Value>
 				<Code>FON</Code>
 				<Text>Foreign Official Name</Text>
 			</Value>
-</if>			
+		  </if>
 		</Values>
 	</CodeSet>    <!-- Name Usage Type -->
 
@@ -1875,7 +1870,7 @@
 		</Intro>
 		<ID>Email Type</ID>
 		<Values>
-<if intl="au">
+		  <if intl="au">
 			<Value>
 				<Code>01</Code>
 				<Text>Primary</Text>
@@ -1896,7 +1891,7 @@
 				<Code>05</Code>
 				<Text>Alternate 4</Text>
 			</Value>
-</if>			
+		  </if>			
 			<Value>
 				<Code>06</Code>
 				<Text>Work</Text>
@@ -1913,11 +1908,11 @@
 		</Intro>
 		<ID>Telephone Number Type</ID>
 		<Values>
-			<Value>
-				<Code>0096</Code>
-				<Text>Main telephone number</Text>
-			</Value>
-<if intl="au">
+		  <Value>
+			<Code>0096</Code>
+			<Text>Main telephone number</Text>
+		  </Value>
+		  <if intl="au">
 			<Value>
 				<Code>0350</Code>
 				<Text>Alternate telephone number</Text>
@@ -1954,16 +1949,16 @@
 				<Code>0486</Code>
 				<Text>Media conferencing number</Text>
 			</Value>
-</if>			
-			<Value>
-				<Code>2364</Code>
-				<Text>Facsimile number</Text>
-			</Value>
-			<Value>
-				<Code>0888</Code>
-				<Text>Mobile</Text>
-			</Value>
-<if intl="au">
+		  </if>			
+		  <Value>
+			<Code>2364</Code>
+			<Text>Facsimile number</Text>
+		  </Value>
+	      <Value>
+			<Code>0888</Code>
+			<Text>Mobile</Text>
+		  </Value>
+		  <if intl="au">
 			<Value>
 				<Code>0887</Code>
 				<Text>Work Telephone Number</Text>
@@ -1980,7 +1975,7 @@
 				<Code>0779</Code>
 				<Text>Home Mobile</Text>
 			</Value>
-</if>
+		  </if>
 		</Values>
 	</CodeSet>    <!-- Telephone Number Type -->
 	

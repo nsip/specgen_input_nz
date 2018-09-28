@@ -2,51 +2,52 @@
 	xmlns:xi="http://www.w3.org/2001/XInclude"
  	xmlns="http://sifassociation.org/SpecGen">
 
-    <Grouping code="AUCodeSets" name="AU Code Sets">
+  <Grouping code="AUCodeSets" name="AU Code Sets">
 
 	<xi:include parse="xml" href="Common/DataModel-Codesets-SchoolStructure.xml"/>
-<if intl="au">		
+
+  <if intl="au">
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Calendar.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-TimeTable.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Resource.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Curriculum.xml"/>
-</if>
+  </if>
 
 	<xi:include parse="xml" href="Common/DataModel-Codesets-PartyRole.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Enrollment.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Attendance.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Wellbeing.xml"/>
 
-<if intl="au">
+  <if intl="au">
 	<xi:include parse="xml" href="AU/DataModel-Codesets-Location.xml"/>
 	<xi:include parse="xml" href="AU/DataModel-Codesets-NAPLAN.xml"/>
-</if>
+  </if>
 
 
-<!-- Unused:  AUCodeSetsProgressLevelType -->
-<!--
-    <CodeSet>
-		<Intro>
-			<p/>
-		</Intro>
-		<ID>Progress Level</ID>
-		<Values>
-			<Value>
-				<Code>Below</Code>
-				<Text>Below level</Text>
-			</Value>
-			<Value>
-				<Code>At</Code>
-				<Text>At level</Text>
-			</Value>
-			<Value>
-				<Code>Above</Code>
-				<Text>Above level</Text>
-			</Value>
-			 
-		</Values>
+	<!-- Unused:  AUCodeSetsProgressLevelType -->
+	<!--
+		<CodeSet>
+			<Intro>
+				<p/>
+			</Intro>
+			<ID>Progress Level</ID>
+			<Values>
+				<Value>
+					<Code>Below</Code>
+					<Text>Below level</Text>
+				</Value>
+				<Value>
+					<Code>At</Code>
+					<Text>At level</Text>
+				</Value>
+				<Value>
+					<Code>Above</Code>
+					<Text>Above level</Text>
+				</Value>
+				
+			</Values>
 		</CodeSet>
--->
+	-->
 
 	<CodeSet>
 		<Intro>
@@ -74,43 +75,13 @@
 		</Values>
 	</CodeSet>      <!-- Yes or No -->
 	<CodeSet>
-		<Intro>
-      
-    </Intro>
+		<Intro/>
 		<ID>Year Level Code</ID>
 		<Values>
 			<Value>
 				<Code>1</Code>
 				<Text>Year 1</Text>
 			</Value>
-			<Value>
-				<Code>10</Code>
-				<Text>Year 10</Text>
-			</Value>
-			<Value>
-				<Code>11</Code>
-				<Text>Year 11</Text>
-			</Value>
-			<Value>
-				<Code>12</Code>
-				<Text>Year 12</Text>
-			</Value>
-			<Value>
-				<Code>13</Code>
-				<Text>Year 13</Text>
-			</Value>
-<if intl="nz">			
-			<Value>
-				<Code>14</Code>
-				<Text>Year 14 and above</Text>
-				<Description>Final value permitted in <code>SchoolEnrolment.YearLevel</code></Description>
-			</Value>
-			<Value>
-				<Code>15</Code>
-				<Text>Year 14 and above</Text>
-				<Description>Final value permitted in <code>SchoolEnrolment.FundingYearLevel</code></Description>
-			</Value>
-</if>			
 			<Value>
 				<Code>2</Code>
 				<Text>Year 2</Text>
@@ -143,257 +114,285 @@
 				<Code>9</Code>
 				<Text>Year 9</Text>
 			</Value>
-<if intl="au">			
 			<Value>
-				<Code>K</Code>
-				<Text>Kindergarten</Text>
+				<Code>10</Code>
+				<Text>Year 10</Text>
 			</Value>
 			<Value>
-				<Code>P</Code>
-				<Text>Prep</Text>
+				<Code>11</Code>
+				<Text>Year 11</Text>
 			</Value>
 			<Value>
-				<Code>K3</Code>
-				<Text>3yo Kindergarten</Text>
+				<Code>12</Code>
+				<Text>Year 12</Text>
 			</Value>
 			<Value>
-				<Code>K4</Code>
-				<Text>4yo Kindergarten</Text>
+				<Code>13</Code>
+				<Text>Year 13</Text>
 			</Value>
-			<Value>
-				<Code>CC</Code>
-				<Text>Childcare</Text>
-			</Value>
-			<Value>
-				<Code>PS</Code>
-				<Text>Pre-School</Text>
-			</Value>
-			<Value>
-				<Code>UG</Code>
-				<Text>Ungraded</Text>
-			</Value>
-			<Value>
-				<Code>11MINUS</Code>
-				<Text>11 Years and Younger</Text>
-			</Value>
-			<Value>
-				<Code>12PLUS</Code>
-				<Text>12 years and Older</Text>
-			</Value>
-			<Value>
-				<Code>UGJunSec</Code>
-				<Text>Ungraded Junior Secondary</Text>
-			</Value>
-			<Value>
-				<Code>UGPri</Code>
-				<Text>Ungraded Primary</Text>
-			</Value>
-			<Value>
-				<Code>UGSec</Code>
-				<Text>Ungraded Secondary</Text>
-			</Value>
-			<Value>
-				<Code>UGSnrSec</Code>
-				<Text>Ungraded Senior Secondary</Text>
-			</Value>
-</if>		 
+			<if intl="nz">			
+				<Value>
+					<Code>14</Code>
+					<Text>Year 14 and above</Text>
+					<Description>Final value permitted in <code>SchoolEnrolment.YearLevel</code></Description>
+				</Value>
+				<Value>
+					<Code>15</Code>
+					<Text>Year 14 and above</Text>
+					<Description>Final value permitted in <code>SchoolEnrolment.FundingYearLevel</code></Description>
+				</Value>
+			</if>
+			<if intl="au">	
+				<Value>
+					<Code>K</Code>
+					<Text>Kindergarten</Text>
+				</Value>
+				<Value>
+					<Code>P</Code>
+					<Text>Prep</Text>
+				</Value>
+				<Value>
+					<Code>K3</Code>
+					<Text>3yo Kindergarten</Text>
+				</Value>
+				<Value>
+					<Code>K4</Code>
+					<Text>4yo Kindergarten</Text>
+				</Value>
+				<Value>
+					<Code>CC</Code>
+					<Text>Childcare</Text>
+				</Value>
+				<Value>
+					<Code>PS</Code>
+					<Text>Pre-School</Text>
+				</Value>
+				<Value>
+					<Code>UG</Code>
+					<Text>Ungraded</Text>
+				</Value>
+				<Value>
+					<Code>11MINUS</Code>
+					<Text>11 Years and Younger</Text>
+				</Value>
+				<Value>
+					<Code>12PLUS</Code>
+					<Text>12 years and Older</Text>
+				</Value>
+				<Value>
+					<Code>UGJunSec</Code>
+					<Text>Ungraded Junior Secondary</Text>
+				</Value>
+				<Value>
+					<Code>UGPri</Code>
+					<Text>Ungraded Primary</Text>
+				</Value>
+				<Value>
+					<Code>UGSec</Code>
+					<Text>Ungraded Secondary</Text>
+				</Value>
+				<Value>
+					<Code>UGSnrSec</Code>
+					<Text>Ungraded Senior Secondary</Text>
+				</Value>
+			</if>		 
 		</Values>
 	</CodeSet>      <!-- Year Level Code -->
 	
-<!-- Unused:  AUCodeSetsAssessmentType -->
-<!-- 
-<CodeSet>
-		<Intro>
-			<p/>
-		</Intro>
-		<ID>Assessment Type</ID>
-		<Values>
-			<Value>
-				<Code>0075</Code>
-				<Text>Achievement test</Text>
-			</Value>
-			<Value>
-				<Code>0076</Code>
-				<Text>Advanced placement test</Text>
-			</Value>
-			<Value>
-				<Code>3462</Code>
-				<Text>Alternate assessment/ELL</Text>
-			</Value>
-			<Value>
-				<Code>0077</Code>
-				<Text>Alternate assessment/year-level standards</Text>
-			</Value>
-			<Value>
-				<Code>3461</Code>
-				<Text>Alternative assessment/modified standards</Text>
-			</Value>
-			<Value>
-				<Code>3463</Code>
-				<Text>Aptitude test</Text>
-			</Value>
-			<Value>
-				<Code>0079</Code>
-				<Text>Attitudinal test</Text>
-			</Value>
-			<Value>
-				<Code>0081</Code>
-				<Text>Cognitive and perceptual skills test</Text>
-			</Value>
-			<Value>
-				<Code>0082</Code>
-				<Text>Developmental observation</Text>
-			</Value>
-			<Value>
-				<Code>0083</Code>
-				<Text>Interest inventory</Text>
-			</Value>
-			<Value>
-				<Code>0084</Code>
-				<Text>Language proficiency test</Text>
-			</Value>
-			<Value>
-				<Code>0087</Code>
-				<Text>Manual dexterity test</Text>
-			</Value>
-			<Value>
-				<Code>0088</Code>
-				<Text>Mental ability (intelligence) test</Text>
-			</Value>
-			<Value>
-				<Code>9999</Code>
-				<Text>Other</Text>
-			</Value>
-			<Value>
-				<Code>0089</Code>
-				<Text>Performance assessment</Text>
-			</Value>
-			<Value>
-				<Code>0090</Code>
-				<Text>Personality test</Text>
-			</Value>
-			<Value>
-				<Code>0092</Code>
-				<Text>Portfolio assessment</Text>
-			</Value>
-			<Value>
-				<Code>0093</Code>
-				<Text>Psychological test</Text>
-			</Value>
-			<Value>
-				<Code>0094</Code>
-				<Text>Psychomotor test</Text>
-			</Value>
-			<Value>
-				<Code>0095</Code>
-				<Text>Reading readiness test</Text>
-			</Value>
-			 
-		</Values>
-		</CodeSet>
--->
+	<!-- Unused:  AUCodeSetsAssessmentType -->
+	<!-- 
+		<CodeSet>	
+			<Intro>
+				<p/>
+			</Intro>
+			<ID>Assessment Type</ID>
+			<Values>
+				<Value>
+					<Code>0075</Code>
+					<Text>Achievement test</Text>
+				</Value>
+				<Value>
+					<Code>0076</Code>
+					<Text>Advanced placement test</Text>
+				</Value>
+				<Value>
+					<Code>3462</Code>
+					<Text>Alternate assessment/ELL</Text>
+				</Value>
+				<Value>
+					<Code>0077</Code>
+					<Text>Alternate assessment/year-level standards</Text>
+				</Value>
+				<Value>
+					<Code>3461</Code>
+					<Text>Alternative assessment/modified standards</Text>
+				</Value>
+				<Value>
+					<Code>3463</Code>
+					<Text>Aptitude test</Text>
+				</Value>
+				<Value>
+					<Code>0079</Code>
+					<Text>Attitudinal test</Text>
+				</Value>
+				<Value>
+					<Code>0081</Code>
+					<Text>Cognitive and perceptual skills test</Text>
+				</Value>
+				<Value>
+					<Code>0082</Code>
+					<Text>Developmental observation</Text>
+				</Value>
+				<Value>
+					<Code>0083</Code>
+					<Text>Interest inventory</Text>
+				</Value>
+				<Value>
+					<Code>0084</Code>
+					<Text>Language proficiency test</Text>
+				</Value>
+				<Value>
+					<Code>0087</Code>
+					<Text>Manual dexterity test</Text>
+				</Value>
+				<Value>
+					<Code>0088</Code>
+					<Text>Mental ability (intelligence) test</Text>
+				</Value>
+				<Value>
+					<Code>9999</Code>
+					<Text>Other</Text>
+				</Value>
+				<Value>
+					<Code>0089</Code>
+					<Text>Performance assessment</Text>
+				</Value>
+				<Value>
+					<Code>0090</Code>
+					<Text>Personality test</Text>
+				</Value>
+				<Value>
+					<Code>0092</Code>
+					<Text>Portfolio assessment</Text>
+				</Value>
+				<Value>
+					<Code>0093</Code>
+					<Text>Psychological test</Text>
+				</Value>
+				<Value>
+					<Code>0094</Code>
+					<Text>Psychomotor test</Text>
+				</Value>
+				<Value>
+					<Code>0095</Code>
+					<Text>Reading readiness test</Text>
+				</Value>
+				
+			</Values>
+			</CodeSet>
+	-->
 
-<!-- Unused: AssessmentReportingMethodType -->	
-<!-- 
-<CodeSet>
-		<Intro>
-			<p/>
-		</Intro>
-		<ID>Assessment Reporting Method</ID>
-		<Values>
-			<Value>
-				<Code>0512</Code>
-				<Text>Achievement/proficiency level</Text>
-			</Value>
-			<Value>
-				<Code>0490</Code>
-				<Text>Age score</Text>
-			</Value>
-			<Value>
-				<Code>0492</Code>
-				<Text>Tertiary admission examination score</Text>
-			</Value>
-			<Value>
-				<Code>0493</Code>
-				<Text>Year equivalent or year-level indicator</Text>
-			</Value>
-			<Value>
-				<Code>3473</Code>
-				<Text>Graduation score</Text>
-			</Value>
-			<Value>
-				<Code>3474</Code>
-				<Text>Growth/value-added/indexing</Text>
-			</Value>
-			<Value>
-				<Code>3475</Code>
-				<Text>International Baccalaureate score</Text>
-			</Value>
-			<Value>
-				<Code>0144</Code>
-				<Text>Letter grade/mark</Text>
-			</Value>
-			<Value>
-				<Code>0513</Code>
-				<Text>Mastery level</Text>
-			</Value>
-			<Value>
-				<Code>0497</Code>
-				<Text>Normal curve equivalent</Text>
-			</Value>
-			<Value>
-				<Code>0498</Code>
-				<Text>Normalized standard score</Text>
-			</Value>
-			<Value>
-				<Code>0499</Code>
-				<Text>Number score</Text>
-			</Value>
-			<Value>
-				<Code>9999</Code>
-				<Text>Other</Text>
-			</Value>
-			<Value>
-				<Code>0500</Code>
-				<Text>Pass-fail</Text>
-			</Value>
-			<Value>
-				<Code>3476</Code>
-				<Text>Percentile</Text>
-			</Value>
-			<Value>
-				<Code>0502</Code>
-				<Text>Percentile rank</Text>
-			</Value>
-			<Value>
-				<Code>0503</Code>
-				<Text>Proficiency level</Text>
-			</Value>
-			<Value>
-				<Code>0504</Code>
-				<Text>Ranking</Text>
-			</Value>
-			<Value>
-				<Code>3478</Code>
-				<Text>Raw score</Text>
-			</Value>
-			<Value>
-				<Code>3479</Code>
-				<Text>Scale score</Text>
-			</Value>
-			<Value>
-				<Code>0506</Code>
-				<Text>Standard age score</Text>
-			</Value>
-			<Value>
-				<Code>3480</Code>
-				<Text>Workplace readiness score</Text>
-			</Value>
-			 
-		</Values>
-	</CodeSet>
--->
-</Grouping>
+	<!-- Unused: AssessmentReportingMethodType -->	
+	<!-- 
+		<CodeSet>
+			<Intro>
+				<p/>
+			</Intro>
+			<ID>Assessment Reporting Method</ID>
+			<Values>
+				<Value>
+					<Code>0512</Code>
+					<Text>Achievement/proficiency level</Text>
+				</Value>
+				<Value>
+					<Code>0490</Code>
+					<Text>Age score</Text>
+				</Value>
+				<Value>
+					<Code>0492</Code>
+					<Text>Tertiary admission examination score</Text>
+				</Value>
+				<Value>
+					<Code>0493</Code>
+					<Text>Year equivalent or year-level indicator</Text>
+				</Value>
+				<Value>
+					<Code>3473</Code>
+					<Text>Graduation score</Text>
+				</Value>
+				<Value>
+					<Code>3474</Code>
+					<Text>Growth/value-added/indexing</Text>
+				</Value>
+				<Value>
+					<Code>3475</Code>
+					<Text>International Baccalaureate score</Text>
+				</Value>
+				<Value>
+					<Code>0144</Code>
+					<Text>Letter grade/mark</Text>
+				</Value>
+				<Value>
+					<Code>0513</Code>
+					<Text>Mastery level</Text>
+				</Value>
+				<Value>
+					<Code>0497</Code>
+					<Text>Normal curve equivalent</Text>
+				</Value>
+				<Value>
+					<Code>0498</Code>
+					<Text>Normalized standard score</Text>
+				</Value>
+				<Value>
+					<Code>0499</Code>
+					<Text>Number score</Text>
+				</Value>
+				<Value>
+					<Code>9999</Code>
+					<Text>Other</Text>
+				</Value>
+				<Value>
+					<Code>0500</Code>
+					<Text>Pass-fail</Text>
+				</Value>
+				<Value>
+					<Code>3476</Code>
+					<Text>Percentile</Text>
+				</Value>
+				<Value>
+					<Code>0502</Code>
+					<Text>Percentile rank</Text>
+				</Value>
+				<Value>
+					<Code>0503</Code>
+					<Text>Proficiency level</Text>
+				</Value>
+				<Value>
+					<Code>0504</Code>
+					<Text>Ranking</Text>
+				</Value>
+				<Value>
+					<Code>3478</Code>
+					<Text>Raw score</Text>
+				</Value>
+				<Value>
+					<Code>3479</Code>
+					<Text>Scale score</Text>
+				</Value>
+				<Value>
+					<Code>0506</Code>
+					<Text>Standard age score</Text>
+				</Value>
+				<Value>
+					<Code>3480</Code>
+					<Text>Workplace readiness score</Text>
+				</Value>
+				
+			</Values>
+		</CodeSet>
+	-->
+  </Grouping>
 
     <Grouping code="NZCodeSets" name="NZ Code Sets">
 		<xi:include parse="xml" href="NZ/DataModel-CodeSets-NZ.xml"/>

@@ -14,7 +14,7 @@
 	<!-- NZ specific common element types for the School Structure domains:
 		 - Provider
 	-->
-
+	
 	<CommonElement name="SchoolServiceType" type="true" dm="true">
 		<Item>
 			<Element>SchoolServiceType</Element>
