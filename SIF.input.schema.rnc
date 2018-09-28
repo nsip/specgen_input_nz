@@ -73,7 +73,7 @@ html.a = element a {
 html.br = element br { empty }
 html.code = element code { text }
 
-html.dl = element dl { (mixed { sif.If.defList | (html.dt, html.dd)* })* }
+html.dl = element dl { (mixed { sif.If.defList | (html.dt, html.dd+)* })* }
 html.dt = element dt { sif.narrative }
 html.dd = element dd { (attribute style { text })?, sif.narrative}
 
@@ -94,7 +94,7 @@ html.map = element map {
   attribute id { text },
   attribute name { text },
   element area {
-     attribute alt { text},
+     attribute title { text},
 	 attribute href { text },
 	 attribute shape { "rect" | "circle" | "poly" },
 	 attribute coords { xs:string { pattern = "\d+\s*(,\s*\d+)*" } }
@@ -260,8 +260,7 @@ sif.CodeSet = element CodeSet {
 
 sif.Value = element Value {
     element Code { text },
-	element Text { text }?,
-	element Text { xml.lang, text }*,       ## Repeatable, but requires xml:lang attribute
+	element Text { xml.lang?, text }*,
 	element Description { sif.narrative }?
 }
 sif.Group = element Group {
@@ -269,7 +268,6 @@ sif.Group = element Group {
 
    (mixed {
       sif.narrative
-        | sif.If.includeGroup
         | sif.Intro
 		| sif.DataObject } )* }
 
@@ -287,7 +285,7 @@ sif.Item = element Item {
 
 	  element Characteristics { "M" | "O" | "C" | "MR" | "OR"}?,
 	  element privacyRating { "Low" | "Medium" | "High" | "Extreme"}?,
-	  element Description { (mixed { sif.If.narrative | sif.narrative})* }?,
+	  element Description { sif.narrative }?,
 	  
 	  mixed { (
 	     sif.If.Type

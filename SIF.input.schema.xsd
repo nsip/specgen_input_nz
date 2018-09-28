@@ -1,164 +1,682 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Vince Paredes (SIF Association) -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:element name="SIFSpecification">
-		<xs:annotation>
-			<xs:documentation>Describes the SIF Generator input xml. This is experimental at this time.</xs:documentation>
-		</xs:annotation>
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="BuildComment">
-					<xs:complexType/>
-				</xs:element>
-				<xs:element name="TitlePage"/>
-		<xs:element name="Section">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="any" block="" minOccurs="0"/>
-				<xs:element name="Section" minOccurs="0" maxOccurs="unbounded"/>
-				<xs:element name="CommonElements" minOccurs="0">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element ref="Intro"/>
-							<xs:element name="CommonElement">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element ref="Item" maxOccurs="unbounded"/>
-									</xs:sequence>
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="DataObjects" minOccurs="0">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="IncludeGroup">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="Group">
-											<xs:complexType>
-												<xs:sequence>
-													<xs:element name="DataObject">
-														<xs:complexType>
-															<xs:sequence>
-																<xs:element ref="Intro" minOccurs="0"/>
-																<xs:element name="Key" minOccurs="0"/>
-																<xs:element name="EventsReported" minOccurs="0"/>
-																<xs:element ref="Item" maxOccurs="unbounded"/>
-															</xs:sequence>
-														</xs:complexType>
-													</xs:element>
-												</xs:sequence>
-											</xs:complexType>
-										</xs:element>
-									</xs:sequence>
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-			</xs:sequence>
-			<xs:attribute name="name"/>
-		</xs:complexType>
-	</xs:element>
-				<xs:element name="Appendix" maxOccurs="unbounded">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element ref="Intro"/>
-							<xs:element name="CommonElement">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element ref="Item"/>
-										<xs:element name="Example"/>
-									</xs:sequence>
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-						<xs:attribute name="name"/>
-					</xs:complexType>
-				</xs:element>
-			</xs:sequence>
-		</xs:complexType>
-		
-	<xs:element name="Intro" type="xs:anyType"/>
-	<xs:element name="Type">
-		<xs:complexType>
-			<xs:attribute name="ref"/>
-			<xs:attribute name="name" use="required"/>
-		</xs:complexType>
-	</xs:element>
-	<xs:element name="Item">
-		<xs:annotation>
-			<xs:documentation>The order of the child elements may need to be standardized in the input xml</xs:documentation>
-		</xs:annotation>
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="Element" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>Use Element or Attribute but not both.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element name="Attribute" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>Use Element or Attribute but not both.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element name="Description" type="xs:anyType"/>
-				<xs:element ref="Type"/>
-				<xs:element name="Facets" type="xs:anySimpleType" minOccurs="0"/>
-				<xs:element name="Union" minOccurs="0">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="Type" minOccurs="2" maxOccurs="unbounded">
-								<xs:complexType>
-									<xs:attribute name="ref"/>
-									<xs:attribute name="name" use="required"/>
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="Values" minOccurs="0">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="Value" maxOccurs="unbounded">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="Code"/>
-										<xs:element name="Text" minOccurs="0"/>
-									</xs:sequence>
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="Characteristics" type="xs:token" minOccurs="0"/>
-				<xs:element name="Choice" minOccurs="0">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="Type" maxOccurs="unbounded">
-								<xs:complexType>
-									<xs:attribute name="ref"/>
-									<xs:attribute name="name" use="required"/>
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="ItemExample" minOccurs="0" maxOccurs="unbounded"/>
-				<xs:element name="List" minOccurs="0">
-					<xs:complexType>
-						<xs:attribute name="mode">
-							<xs:annotation>
-								<xs:documentation>Values: List,...</xs:documentation>
-							</xs:annotation>
-						</xs:attribute>
-					</xs:complexType>
-				</xs:element>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	</xs:element>
-	
+<!-- Created by Stuart McGrigor, New Zealand Ministry of Education, October 2017 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://sifassociation.org/SpecGen" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:specgen="http://sifassociation.org/SpecGen">
+  <xs:import namespace="http://www.w3.org/1999/xhtml" schemaLocation="xhtml.xsd"/>
+  <xs:import namespace="http://www.w3.org/2001/XInclude" schemaLocation="xi.xsd"/>
+  <xs:import namespace="http://www.w3.org/2001/XMLSchema" schemaLocation="xs.xsd"/>
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+  <!---->
+  <!---->
+  <xs:attributeGroup name="xml.lang">
+    <xs:annotation>
+      <xs:documentation>embedded XML Schema definitions</xs:documentation>
+    </xs:annotation>
+    <xs:attribute ref="xml:lang" use="required"/>
+  </xs:attributeGroup>
+  <!---->
+  <!---->
+  <xs:group name="sif.narrative">
+    <xs:annotation>
+      <xs:documentation>embedded HTML (with includes and if)</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="xi:include"/>
+        <xs:element ref="specgen:a"/>
+        <xs:element ref="specgen:br"/>
+        <xs:element ref="specgen:code"/>
+        <xs:element ref="specgen:dl"/>
+        <xs:element ref="specgen:em"/>
+        <xs:element ref="specgen:h1"/>
+        <xs:element ref="specgen:h2"/>
+        <xs:element ref="specgen:h3"/>
+        <xs:element ref="specgen:h4"/>
+        <xs:element ref="specgen:img"/>
+        <xs:element ref="specgen:map"/>
+        <xs:element ref="specgen:p"/>
+        <xs:element ref="specgen:span"/>
+        <xs:element ref="specgen:strong"/>
+        <xs:element ref="specgen:table"/>
+        <xs:element ref="specgen:ul"/>
+        <xs:group ref="specgen:sif.If.narrative"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:group>
+  <xs:element name="a">
+    <xs:complexType mixed="true">
+      <xs:group ref="specgen:sif.narrative"/>
+      <xs:attribute name="href"/>
+      <xs:attribute name="name"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="br">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="code" type="xs:string"/>
+  <xs:element name="dl">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="specgen:sif.If.defList"/>
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="specgen:dt"/>
+          <xs:element maxOccurs="unbounded" ref="specgen:dd"/>
+        </xs:sequence>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dt">
+    <xs:complexType mixed="true">
+      <xs:group ref="specgen:sif.narrative"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dd">
+    <xs:complexType mixed="true">
+      <xs:group ref="specgen:sif.narrative"/>
+      <xs:attribute name="style"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="em">
+    <xs:complexType mixed="true">
+      <xs:group ref="specgen:sif.narrative"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="h1">
+    <xs:complexType mixed="true">
+      <xs:group ref="specgen:sif.narrative"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="h2">
+    <xs:complexType mixed="true">
+      <xs:group ref="specgen:sif.narrative"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="h3">
+    <xs:complexType mixed="true">
+      <xs:group ref="specgen:sif.narrative"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="h4">
+    <xs:complexType mixed="true">
+      <xs:group ref="specgen:sif.narrative"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="img">
+    <xs:complexType>
+      <xs:attribute name="src" use="required"/>
+      <xs:attribute name="alt"/>
+      <xs:attribute name="title"/>
+      <xs:attribute name="width"/>
+      <xs:attribute name="style"/>
+      <xs:attribute name="usemap"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="map">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="specgen:area"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required"/>
+      <xs:attribute name="name" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="area">
+    <xs:complexType>
+      <xs:attribute name="title" use="required"/>
+      <xs:attribute name="href" use="required"/>
+      <xs:attribute name="shape" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="rect"/>
+            <xs:enumeration value="circle"/>
+            <xs:enumeration value="poly"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="coords" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="\d+\s*(,\s*\d+)*"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="p">
+    <xs:complexType mixed="true">
+      <xs:group ref="specgen:sif.narrative"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="span">
+    <xs:complexType mixed="true">
+      <xs:attribute name="class" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="strong">
+    <xs:complexType mixed="true">
+      <xs:group ref="specgen:sif.narrative"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="table">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="specgen:thead"/>
+        <xs:choice>
+          <xs:element ref="specgen:tbody"/>
+          <xs:element maxOccurs="unbounded" ref="specgen:tr"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="thead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="specgen:tr"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tbody">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="specgen:tr"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="specgen:td"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="td">
+    <xs:complexType mixed="true">
+      <xs:group ref="specgen:sif.narrative"/>
+      <xs:attribute name="class"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ul">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="specgen:li"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="li">
+    <xs:complexType mixed="true">
+      <xs:group ref="specgen:sif.narrative"/>
+    </xs:complexType>
+  </xs:element>
+  <!---->
+  <!---->
+  <xs:complexType name="anything" mixed="true">
+    <xs:annotation>
+      <xs:documentation> repeated lego blocks</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+    </xs:sequence>
+    <xs:anyAttribute processContents="skip"/>
+  </xs:complexType>
+  <xs:attributeGroup name="attr.intl">
+    <xs:attribute name="intl" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="us"/>
+          <xs:enumeration value="uk"/>
+          <xs:enumeration value="au"/>
+          <xs:enumeration value="nz"/>
+          <xs:enumeration value=""/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:group name="sif.If.narrative">
+    <xs:sequence>
+      <xs:element name="if">
+        <xs:complexType mixed="true">
+          <xs:group maxOccurs="unbounded" ref="specgen:sif.narrative"/>
+          <xs:attributeGroup ref="specgen:attr.intl"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="sif.If.includeGroup">
+    <xs:sequence>
+      <xs:element name="if">
+        <xs:complexType mixed="true">
+          <xs:choice maxOccurs="unbounded">
+            <xs:element ref="xi:include"/>
+            <xs:element ref="specgen:CommonElement"/>
+            <xs:element ref="specgen:DataObject"/>
+            <xs:element ref="specgen:Grouping"/>
+            <xs:element ref="specgen:CodeSet"/>
+          </xs:choice>
+          <xs:attributeGroup ref="specgen:attr.intl"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="sif.If.Item">
+    <xs:sequence>
+      <xs:element name="if">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="specgen:Item"/>
+          </xs:sequence>
+          <xs:attributeGroup ref="specgen:attr.intl"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="sif.If.Value">
+    <xs:sequence>
+      <xs:element name="if">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="specgen:Value"/>
+          </xs:sequence>
+          <xs:attributeGroup ref="specgen:attr.intl"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="sif.If.Type">
+    <xs:sequence>
+      <xs:element name="if">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="specgen:Type"/>
+          </xs:sequence>
+          <xs:attributeGroup ref="specgen:attr.intl"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="sif.If.defList">
+    <xs:sequence>
+      <xs:element name="if">
+        <xs:complexType>
+          <xs:sequence maxOccurs="unbounded">
+            <xs:element minOccurs="0" ref="specgen:dt"/>
+            <xs:element ref="specgen:dd"/>
+          </xs:sequence>
+          <xs:attributeGroup ref="specgen:attr.intl"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:element name="Intro">
+    <xs:complexType mixed="true">
+      <xs:group ref="specgen:sif.narrative"/>
+    </xs:complexType>
+  </xs:element>
+  <!---->
+  <!---->
+  <xs:element name="SIFSpecification">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="specgen:BuildComment"/>
+        <xs:element ref="specgen:TitlePage"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:group ref="specgen:sif.narrative"/>
+          <xs:element ref="specgen:Section"/>
+          <xs:element ref="specgen:Appendix"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:anyAttribute namespace="http://www.w3.org/2001/XMLSchema-instance" processContents="skip"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuildComment">
+    <xs:complexType mixed="true">
+      <xs:group ref="specgen:sif.narrative"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TitlePage">
+    <xs:complexType mixed="true">
+      <xs:group ref="specgen:sif.narrative"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Section">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="specgen:Section"/>
+        <xs:group ref="specgen:sif.narrative"/>
+        <xs:element ref="specgen:Intro"/>
+        <xs:element ref="specgen:DataObjects"/>
+        <xs:element ref="specgen:Domain"/>
+        <xs:element ref="specgen:Example"/>
+        <xs:group ref="specgen:xhtml.Example"/>
+      </xs:choice>
+      <xs:attribute name="name"/>
+      <xs:attribute ref="xml:base"/>
+      <xs:anyAttribute namespace="http://www.w3.org/2001/XMLSchema-instance" processContents="skip"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Example">
+    <xs:complexType mixed="true">
+      <xs:attribute name="name" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Appendix">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="specgen:sif.narrative"/>
+        <xs:element ref="specgen:Intro"/>
+        <xs:element ref="specgen:IncludeGroup"/>
+        <xs:element ref="specgen:CodeSets"/>
+      </xs:choice>
+      <xs:attribute name="name" use="required"/>
+      <xs:attribute ref="xml:base"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:group name="xhtml.Example">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="xhtml:Example"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:element name="IncludeGroup">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="specgen:sif.If.includeGroup"/>
+        <xs:element ref="xi:include"/>
+        <xs:element ref="specgen:Intro"/>
+        <xs:element ref="specgen:Group"/>
+        <xs:element ref="specgen:CommonElement"/>
+        <xs:element ref="specgen:CodeSet"/>
+        <xs:element ref="specgen:Grouping"/>
+      </xs:choice>
+      <xs:attribute ref="xml:base"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataObjects">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="specgen:sif.If.includeGroup"/>
+        <xs:element ref="specgen:IncludeGroup"/>
+        <xs:element ref="xi:include"/>
+      </xs:choice>
+      <xs:attribute ref="xml:base"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataObject">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element ref="specgen:Key"/>
+          <xs:element ref="specgen:EventsReported"/>
+        </xs:choice>
+        <xs:element minOccurs="0" ref="specgen:Intro"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:group ref="specgen:sif.If.Item"/>
+          <xs:element ref="specgen:Item"/>
+          <xs:element ref="specgen:Choice"/>
+        </xs:choice>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="specgen:xhtml.Example"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Key" type="xs:string"/>
+  <xs:element name="EventsReported">
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="true"/>
+        <xs:enumeration value="false"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="Domain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="specgen:Intro"/>
+        <xs:element maxOccurs="unbounded" name="DataObject" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CommonElement">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="specgen:Intro"/>
+        <xs:element minOccurs="0" ref="specgen:Key"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:group ref="specgen:sif.If.Item"/>
+          <xs:element ref="specgen:Item"/>
+          <xs:element ref="specgen:Choice"/>
+        </xs:choice>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="specgen:xhtml.Example"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required"/>
+      <xs:attribute name="type" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="true"/>
+            <xs:enumeration value="false"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="dm">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="true"/>
+            <xs:enumeration value="false"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Grouping">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="specgen:sif.If.includeGroup"/>
+        <xs:element ref="xi:include"/>
+        <xs:element ref="specgen:CodeSet"/>
+      </xs:choice>
+      <xs:attribute name="code" use="required"/>
+      <xs:attribute name="name" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CodeSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="specgen:Intro"/>
+        <xs:element ref="specgen:ID"/>
+        <xs:element name="Values">
+          <xs:complexType mixed="true">
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:group ref="specgen:sif.If.Value"/>
+              <xs:element ref="specgen:Value"/>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ID" type="xs:string"/>
+  <xs:element name="Value">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="specgen:Code"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="specgen:Text"/>
+        <xs:element minOccurs="0" name="Description">
+          <xs:complexType mixed="true">
+            <xs:group ref="specgen:sif.narrative"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Code" type="xs:string"/>
+  <xs:element name="Text">
+    <xs:complexType mixed="true">
+      <xs:attribute ref="xml:lang"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Group">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="specgen:sif.narrative"/>
+        <xs:element ref="specgen:Intro"/>
+        <xs:element ref="specgen:DataObject"/>
+      </xs:choice>
+      <xs:attribute name="name" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CodeSets">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="specgen:sif.If.includeGroup"/>
+        <xs:element ref="xi:include"/>
+        <xs:element ref="specgen:Grouping"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Item">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:choice>
+          <xs:element ref="specgen:Attribute"/>
+          <xs:element ref="specgen:Element"/>
+        </xs:choice>
+        <xs:element minOccurs="0" ref="specgen:Characteristics"/>
+        <xs:element minOccurs="0" ref="specgen:privacyRating"/>
+        <xs:element minOccurs="0" name="Description">
+          <xs:complexType mixed="true">
+            <xs:group ref="specgen:sif.narrative"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:group ref="specgen:sif.If.Type"/>
+          <xs:element ref="specgen:Type"/>
+          <xs:element ref="specgen:Union"/>
+          <xs:element maxOccurs="unbounded" ref="specgen:ItemExample"/>
+          <xs:element ref="specgen:List"/>
+          <xs:element ref="specgen:Values"/>
+          <xs:element ref="specgen:Facets"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="intl">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="us"/>
+            <xs:enumeration value="uk"/>
+            <xs:enumeration value="au"/>
+            <xs:enumeration value="nz"/>
+            <xs:enumeration value=""/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Attribute" type="xs:string"/>
+  <xs:element name="Element" type="xs:string"/>
+  <xs:element name="Characteristics">
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="M"/>
+        <xs:enumeration value="O"/>
+        <xs:enumeration value="C"/>
+        <xs:enumeration value="MR"/>
+        <xs:enumeration value="OR"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="privacyRating">
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="Low"/>
+        <xs:enumeration value="Medium"/>
+        <xs:enumeration value="High"/>
+        <xs:enumeration value="Extreme"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="Union">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="specgen:Type"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ItemExample" type="xs:string"/>
+  <xs:element name="List">
+    <xs:complexType>
+      <xs:attribute name="mode" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="List"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Facets">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="specgen:xs.Facets"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Type">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0">
+        <xs:element ref="xs:any"/>
+        <xs:element ref="xs:sequence"/>
+        <xs:element ref="xs:complexContent"/>
+      </xs:choice>
+      <xs:attribute name="ref"/>
+      <xs:attribute name="name"/>
+      <xs:attribute name="complex">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="extension"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="relationship"/>
+      <xs:attribute name="count">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="1:1"/>
+            <xs:enumeration value="*:1"/>
+            <xs:enumeration value="1:*"/>
+            <xs:enumeration value="1:?"/>
+            <xs:enumeration value="?:1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Choice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="specgen:Item"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Values">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="specgen:Value"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="xs.Facets" abstract="true"/>
+  <xs:element name="annotation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="specgen:documentation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="documentation" type="specgen:anything"/>
+  <xs:attributeGroup name="xs.valueInteger">
+    <xs:attribute name="value" use="required" type="xs:integer"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="xs.valueDecimal">
+    <xs:attribute name="value" use="required" type="xs:decimal"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="xs.valueString">
+    <xs:attribute name="value" use="required" type="xs:string"/>
+  </xs:attributeGroup>
 </xs:schema>
