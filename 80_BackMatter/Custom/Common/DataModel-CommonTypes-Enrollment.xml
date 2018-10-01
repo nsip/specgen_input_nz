@@ -336,8 +336,7 @@
 				<Element>ProgramFundingSourcesType</Element>
 				<Characteristics>O</Characteristics>
 				<Description>List of funding sources</Description>
-				<List mode="List">
-				</List>
+				<List mode="List"/>
 			</Item>
 			<Item>
 				<Element>ProgramFundingSource</Element>

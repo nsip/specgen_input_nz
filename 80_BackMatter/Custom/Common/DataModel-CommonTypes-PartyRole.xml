@@ -25,7 +25,7 @@
 			<Description>
 				<p>A name used by the person </p>
 			</Description>
-			<Type ref="CommonTypes" name="BaseNameType"/>
+			<Type ref="CommonTypes" name="VerifiedNameType"/>
 		</Item>    <!-- Name -->
 		<Item>
 			<Element>OtherNames</Element>
@@ -188,6 +188,14 @@
 					<GivenName>Hagrid</GivenName>
 					<FullName>Rubeus Hagrid</FullName>
 					<Type>LGL</Type>
+					<IsVerified>Y</IsVerified>
+					<NameVerification>
+						<IsConfirmed>true</IsConfirmed>
+						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
+						<Method>61002</Method>
+						<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
+						<ProviderLocalId>245</ProviderLocalId>
+					</NameVerification>					
 				</Name>
 				<OtherNames>
 					<Name>
@@ -322,7 +330,7 @@
 				<p>Notes on when / how to use the communication channel. eg: Phone after 4pm</p>
 			</Description>
 			<Type name="xs:string"/>
-		</Item>
+		</Item>    <!-- Notes -->
 		<Item>
 			<Element>Preference</Element>
 			<Characteristics>O</Characteristics>
@@ -331,7 +339,7 @@
 				when contacting person or organisation.</p>
 			</Description>
 			<Type name="xs:unsignedInt"/>
-		</Item>
+		</Item>    <!-- Preference -->
 		<Item>
 			<Element>Usage</Element>
 			<Characteristics>O</Characteristics>
@@ -339,7 +347,7 @@
 				<p>A code describing the acceptable usage of a person or organisation's communication channel</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsCommunicationUsageType"/>
-		</Item>
+		</Item>    <!-- Usage -->
 	</CommonElement>
 	<CommonElement name="BaseNameType" type="true" dm="true">
 		<Item>
@@ -460,6 +468,14 @@
 				</Description>
 				<Type ref="CodeSets" name="AUCodeSetsNameUsageTypeType"/>
 			</Item>    <!-- Type -->
+			<Item>
+				<Element>IsVerified</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					Flag indicating that this name has been verified.
+				</Description>
+				<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+			</Item>    <!-- IsVerified -->
 		</if>
 	
 		<xhtml:Example xmlns="" name="Base Name Example" intl="au">
@@ -484,9 +500,54 @@
 				<PreferredGivenName>Mel</PreferredGivenName>
 				<FullName>Melanie Joan Wesson</FullName>
 				<Type>LGL</Type>
+				<IsVerified>N</IsVerified>
 			</BaseName>
 		</xhtml:Example>
 	</CommonElement>
+
+	<if intl="nz">
+		<CommonElement name="VerifiedNameType" type="true" dm="true">
+			<Item>
+				<Element>VerifiedNameType</Element>
+				<Description>
+					<p>Extension of BaseNameType including name verification data</p>
+				</Description>
+				<Type complex="extension" name="BaseNameType"/>
+			</Item>
+			<Item>
+				<Element>NameVerification</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>
+						The verification event that verified the person's name.
+					</p>
+				</Description>
+				<Type ref="CommonTypes" name="VerificationEventType"/>
+			</Item>    <!-- NameVerification -->
+
+			<xhtml:Example xmlns="" name="Base Name Example" intl="nz">
+				<VerifiedName>
+					<FamilyName>Wesson</FamilyName>
+					<GivenName>Melanie</GivenName>
+					<MiddleName>Joan</MiddleName>
+					<FamilyNameFirst>N</FamilyNameFirst>
+					<PreferredFamilyName>Wesson</PreferredFamilyName>
+					<PreferredFamilyNameFirst>N</PreferredFamilyNameFirst>
+					<PreferredGivenName>Mel</PreferredGivenName>
+					<FullName>Melanie Joan Wesson</FullName>
+					<Type>LGL</Type>
+					<IsVerified>Y</IsVerified>
+					<NameVerification>
+						<IsConfirmed>true</IsConfirmed>
+						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
+						<Method>61002</Method>
+						<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
+						<ProviderLocalId>245</ProviderLocalId>
+					</NameVerification>
+				</VerifiedName>
+			</xhtml:Example>
+		</CommonElement>
+	</if>
 	<CommonElement name="OtherNamesType" type="true" dm="true">
 		<Item>
 			<Element>OtherNamesType</Element>
@@ -1169,6 +1230,15 @@
 			</Description>
 			<Type name="xs:normalizedString"/>
 		</Item>     <!-- Extension -->
+		<Item>
+			<Element>ListedStatus</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Indicates whether or not the phone number is available to the public.</p>
+			</Description>
+			<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+		</Item>     <!-- ListedStatus -->		
 		<xhtml:Example xmlns="" name="Phone Number Example">
 			<PhoneNumber>
 				<Notes>Not on Thursdays</Notes>
@@ -1177,6 +1247,7 @@
 				<Type>0096</Type>
 				<Number>(03) 9543 2000</Number>
 				<Extension json:force-string="true">245</Extension>
+				<ListedStatus>Y</ListedStatus>
 			</PhoneNumber>
 		</xhtml:Example>
 	</CommonElement>

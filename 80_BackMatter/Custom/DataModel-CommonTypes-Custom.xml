@@ -196,7 +196,7 @@
 				</Description>
 			</Item>
 			<Item>
-				<Attribute>RefId</Attribute>
+				<Element>RefId</Element>
 				<Characteristics>M</Characteristics>
 				<privacyRating>Low</privacyRating>
 				<Description><p>The GUUID of the referenced object</p></Description>

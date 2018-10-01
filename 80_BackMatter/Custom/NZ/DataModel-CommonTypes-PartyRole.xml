@@ -254,13 +254,15 @@
 					</PhoneNumber>
 				</PhoneNumberList>
 				<RelatedOrganisationList>
-					<RelatedOrganisation RefId="0951bacf-fc88-4ed6-8113-11a6d6335c07">
+					<RelatedOrganisation>
+						<RefId>0951bacf-fc88-4ed6-8113-11a6d6335c07</RefId>
 						<LocalId json:force-string="true">99102</LocalId>
 						<Name>Tai Tokerau</Name>
 						<ObjectType>EducationOrganisation</ObjectType>
 						<OrganisationType json:force-string="true">102</OrganisationType>
 					</RelatedOrganisation>
-					<RelatedOrganisation RefId="ac0871d9-6562-4209-ae86-abdb3661842b">
+					<RelatedOrganisation>
+						<RefId>ac0871d9-6562-4209-ae86-abdb3661842b</RefId>
 						<LocalId json:force-string="true">99204</LocalId>
 						<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
 						<ObjectType>EducationOrganisation</ObjectType>
@@ -449,7 +451,7 @@
 				<p>A code classifying the Communication's method</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsCommunicationChannelTypeType"/>
-		</Item>
+		</Item>    <!-- Type -->
 		<Item>
 			<Element>Value</Element>
 			<Characteristics>M</Characteristics>
@@ -458,7 +460,7 @@
 				Facebook page addess, Twitter handle.</p>
 			</Description>
 			<Type name="xs:string"/>
-		</Item>
+		</Item>    <!-- Value -->
 		<xhtml:Example xmlns="" name="Communication Channel Example">
 			<CommunicationChannel>
 				<Notes>School Attendance System (Self Service)</Notes>
@@ -484,13 +486,15 @@
 		</Item>
 		<xhtml:Example xmlns="" name="Related Organisation List Example">
 			<RelatedOrganisationList>
-				<RelatedOrganisation RefId="0951bacf-fc88-4ed6-8113-11a6d6335c07">
+				<RelatedOrganisation>
+					<RefId>0951bacf-fc88-4ed6-8113-11a6d6335c07</RefId>
 					<LocalId json:force-string="true">99102</LocalId>
 					<Name>Tai Tokerau</Name>
 					<ObjectType>EducationOrganisation</ObjectType>
 					<OrganisationType json:force-string="true">102</OrganisationType>
 				</RelatedOrganisation>
-				<RelatedOrganisation RefId="ac0871d9-6562-4209-ae86-abdb3661842b">
+				<RelatedOrganisation>
+				    <RefId>ac0871d9-6562-4209-ae86-abdb3661842b</RefId>
 					<LocalId json:force-string="true">99204</LocalId>
 					<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
 					<ObjectType>EducationOrganisation</ObjectType>
@@ -516,9 +520,10 @@
 				<p>Describes the nature of the related Education Organisation.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsOrganisationTypeType"/>
-		</Item>
+		</Item>    <!-- OrganisationType -->
 		<xhtml:Example xmlns="" name="Secondary School Related Organisation">
-			<RelatedOrganisation RefId="a2f8c526-4e39-42b7-a7a6-0c7188ea5cf3">
+			<RelatedOrganisation>
+				<RefId>a2f8c526-4e39-42b7-a7a6-0c7188ea5cf3</RefId>
 				<LocalId json:force-string="true">275</LocalId>
 				<Name>Hogwart's High School</Name>
 				<ObjectType>Provider</ObjectType>
@@ -526,7 +531,8 @@
 			</RelatedOrganisation>
 		</xhtml:Example>
 		<xhtml:Example xmlns="" name="MoE Region Related Organisation">
-			<RelatedOrganisation RefId="0951bacf-fc88-4ed6-8113-11a6d6335c07">
+			<RelatedOrganisation>
+				<RefId>0951bacf-fc88-4ed6-8113-11a6d6335c07</RefId>
 				<LocalId json:force-string="true">99102</LocalId>
 				<Name>Tai Tokerau</Name>
 				<ObjectType>EducationOrganisation</ObjectType>
@@ -534,7 +540,8 @@
 			</RelatedOrganisation>
 		</xhtml:Example>
 		<xhtml:Example xmlns="" name="Kāhui Ako Related Organisation">
-			<RelatedOrganisation RefId="ac0871d9-6562-4209-ae86-abdb3661842b">
+			<RelatedOrganisation>
+				<RefId>ac0871d9-6562-4209-ae86-abdb3661842b</RefId>
 				<LocalId json:force-string="true">99204</LocalId>
 				<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
 				<ObjectType>EducationOrganisation</ObjectType>
@@ -729,7 +736,7 @@
 			<Type ref="CommonTypes" name="LocalIdType"/>
 		</Item>    <!-- ProviderLocalId -->
 		
-		<xhtml:Example xmlns="" name="Citizenship Verification Event Example">		
+		<xhtml:Example xmlns="" name="Citizenship Verification Event Example">
 			<VerificationEvent>
 				<IsConfirmed>true</IsConfirmed>
 				<Timestamp>2003-11-30T12:34:56.7</Timestamp>
