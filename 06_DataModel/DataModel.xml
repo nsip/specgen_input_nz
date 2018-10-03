@@ -4,7 +4,63 @@
 	xmlns:xi="http://www.w3.org/2001/XInclude"
 	
     xmlns="http://sifassociation.org/SpecGen">
-	
-	<!-- Include appropriate version of data model here -->
-	<xi:include parse="xml" href="Custom/DataModel-Custom-NZ.xml"/>
+		
+	<Group name="SIF NZ">
+		<Intro>
+			<p>The New Zealand customisation of the SIF AU data model,
+			includes the following (high-level) changes:
+			</p>
+			<ul>
+				<li>The <code>SchoolInfo</code> data object from SIF
+				AU is replaced with <code>Provider</code> data object,
+				as the scope of SIF NZ data model is intended to
+				encompass early childhood education, compulsory
+				schooling (K-12) and tertiary education (higher
+				education).
+				</li>
+
+				<li><code>StudentPersonal</code> data object doesn't
+				include Alert or MedicalAlert messages; Demographics
+				area includes NZ statistical standard Ethnicity and
+				Iwi affiliations.</li>
+
+				<li><code>ProviderRelationship</code> data object
+				records relationships between two education
+				providers.</li>
+				
+				<li><code>StudentProviderEnrolment</code> expands on
+				StudentSchoolEnrollment, and has extra complexity to
+				cope with SIF NZ having Providers, rather than
+				Schools.</li>
+
+				<li>Includes only
+				<code>StudentAttendanceTimeList</code> &amp;
+				<code>StudentAttendanceSummary</code> from SIF AU</li>
+			</ul>
+		</Intro>
+
+		<!-- Include data model here -->		
+		<xi:include parse="xml" href="NZ/Provider.xml"/>
+		<xi:include parse="xml" href="NZ/ProviderRelationship.xml"/>
+
+		<xi:include parse="xml" href="NZ/StaffPersonal.xml"/>
+		
+		<xi:include parse="xml" href="NZ/StudentPersonal.xml"/>
+		<xi:include parse="xml" href="NZ/StudentContactPersonal.xml"/>
+		<xi:include parse="xml" href="NZ/StudentContactRelationship.xml"/>
+		
+		<xi:include parse="xml" href="NZ/StudentProviderEnrolment.xml"/>
+		
+		<xi:include parse="xml" href="NZ/StudentAttendanceSummary.xml"/>
+		<xi:include parse="xml" href="NZ/StudentAttendanceTimeList.xml"/>
+
+		<!-- Wellbeing Additions-->
+		<xi:include parse="text" href="Common/PersonalisedPlan.xml"/>
+		<xi:include parse="text" href="Common/WellbeingAlert.xml"/>
+		<xi:include parse="text" href="Common/WellbeingCharacteristic.xml"/>
+
+		<xi:include parse="text" href="Common/WellbeingEvent.xml"/>
+		<xi:include parse="text" href="Common/WellbeingResponse.xml"/>
+		<xi:include parse="text" href="Common/WellbeingAppeal.xml"/>
+	</Group>
 </DataObjects>

@@ -1,0 +1,423 @@
+<DataObject name="StudentPersonal"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+			xmlns:json="http://json.org/"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+	<Key>@RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>StudentPersonal</Element>
+	    <privacyRating>Extreme</privacyRating>
+		<Description>Contains all the personal information related to the student.</Description>
+	</Item>
+	
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The GUID of the student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>    <!-- RefId -->
+
+	<Item>
+		<Element>LocalId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The locally-assigned identifier for this student.</p>
+			<p>An alternative identifier as may be allocated by a
+			provider.</p>
+			<p>This identifier may be set for each student independently
+			for each provider. Each identifier is only available to be
+			retrieved or maintained by the provider that created it.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>    <!-- LocalId -->
+    <Item>
+		<Element>NationalStudentNumber</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The unique identifier allocated to every student in New Zealand, also known as the NSN.</p>
+		</Description>
+		<Type name="xs:positiveInteger"/>
+	</Item>    <!-- NationalStudentNumber -->
+	<Item>
+		<Element>FirstNZSchoolingDate</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The date a student first ever started schooling in New
+			Zealand. This field is used to establish most students’
+			Funding Year Level.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>    <!-- FirstNZSchoolingDate -->
+	<Item>
+		<Element>PersonInfo</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Personal Information </p>
+		</Description>
+		<Type ref="CommonTypes" name="PersonInfoType"/>
+	</Item>    <!-- PersonInfo -->
+	
+<if intl="au">
+	<Item>
+		<Element>AlertMessages</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Extreme</privacyRating>
+		<Type ref="CommonTypes"  name="AlertMessagesType"/>
+    </Item>    <!-- AlertMessages -->
+	<Item>
+		<Element>MedicalAlertMessages</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Extreme</privacyRating>
+		<Type ref="CommonTypes"  name="MedicalAlertMessagesType"/>
+    </Item>    <!-- MedicalAlertMessages -->
+	<Item>
+		<Element>StateProvinceId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The state-assigned identifier for this student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="StateProvinceIdType"/>
+	</Item>    <!-- StateProvinceId -->
+	<Item>
+		<Element>ElectronicIdList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>Electronic identifier(s) associated with this entity.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ElectronicIdListType"/>
+	</Item>    <!-- ElectronicIdList -->
+	<Item>
+		<Element>OtherIdList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>Lists all "other" identifiers associated with the student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="OtherIdListType"/>
+  	</Item>    <!-- OtherIdList -->
+</if>
+
+<if intl="au">
+	<Item>
+		<Element>ProjectedGraduationYear</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Currently projected graduation year.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ProjectedGraduationYearType"/>
+	</Item>    <!-- ProjectedGraduationYear -->
+	<Item>
+		<Element>OnTimeGraduationYear</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>First projected graduation year, usually determined when student is accepted into 9th grade.</p>
+		</Description>
+		<Type ref="CommonTypes" name="OnTimeGraduationYearType"/>
+	</Item>    <!-- OnTimeGraduationYear -->
+	<Item>
+		<Element>GraduationDate</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+      Date student officially graduated from secondary education.
+    </Description>
+		<Type ref="CommonTypes" name="GraduationDateType"/>
+	</Item>    <!-- GraduationDate -->
+	<Item>
+		<Element>MostRecent</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>
+        Container for elements reflecting the most recent enrollment of a student.  If the student is
+        currently enrolled in the district, the elements contain current information.
+      </p>
+		</Description>
+		
+    <Type ref="CommonTypes" name="StudentMostRecentContainerType"/>	
+	</Item>    <!-- MostRecent -->
+	<Item>
+		<Element>AcceptableUsePolicy</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Does the student have a current signed Acceptable Use Policy document for system access?</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+	</Item>    <!-- AcceptableUsePolicy -->
+	<Item>
+		<Element>GiftedTalented</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Is the student in Gifted/Talented programs?</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+	</Item>    <!-- GiftedTalented -->
+	<Item>
+		<Element>EconomicDisadvantage</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Does the student meet the State criteria for classification as having an economic disadvantage?</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+	</Item>    <!-- EconomicDisadvantage -->
+	<Item>
+		<Element>ESL</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>Does the student meet 'English as a Second Language Criteria'?</Description>
+		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+	</Item>    <!-- ESL -->
+	<Item>
+		<Element>ESLDateAssessed</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>Date ESL eligibility was assessed. Having access to the date the last ESL assessment took place enables a school or the department to initiate a new assessment if required.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>    <!-- ESLDateAssessed -->
+	<Item>
+		<Element>YoungCarersRole</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Is the student a carer of other family members?</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+	</Item>    <!-- YoungCarersRole -->
+	<Item>
+		<Element>Disability</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Does the student have funding for disability?</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+	</Item>    <!-- Disability -->
+	<Item>
+		<Element>IntegrationAide</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Does the Student require an Integration Aide?</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+	</Item>    <!-- IntegratonAid -->
+	<Item>
+		<Element>EducationSupport</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Is the student in receipt of education support?</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+	</Item>    <!-- EducationSupport -->
+	<Item>
+		<Element>HomeSchooledStudent</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>Student is not attending any school registered in the Australian School List. Mandatory if true.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+	</Item>    <!-- HomeSchooledStudent -->
+	<Item>
+		<Element>Sensitive</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>For local use by jurisdictions where a court order, custody order or other restriction or risk exists and the student's record needs to be treated sensitively as restrictions on use apply.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+	</Item>    <!-- Sensitive -->
+	<Item>
+		<Element>OfflineDelivery</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Note that the student is unable to sit an assessment via an online delivery mode.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+	</Item>    <!-- OfflineDelivery -->
+	<Item>
+		<Element>PrePrimaryEducation</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Care prior to kinder enrolment (eg. Family day care/home/extended care etc).</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>    <!-- PrePrimaryEducation -->
+	<Item>
+		<Element>FirstAUSchoolEnrollment</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Date of the first enrolment in an Australian School</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>    <!-- FirstAUSchoolEnrollment -->
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Extreme</privacyRating>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>    <!-- SIF_MetaData -->
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Extreme</privacyRating>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>    <!-- SIF_ExtendedElements -->
+</if>
+
+	<xhtml:Example xmlns="" name ="StudentPersonal">
+		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
+			<LocalId>S1234567</LocalId>
+			<NationalStudentNumber>2234523</NationalStudentNumber>
+			<FirstNZSchoolingDate>1996-05-04</FirstNZSchoolingDate>
+			<PersonInfo>
+				<Name>
+					<FamilyName>Hagrid</FamilyName>
+					<GivenName>Rubeus</GivenName>
+					<FullName>Rubeus Hagrid</FullName>
+					<Type>LGL</Type>
+				</Name>
+				<OtherNames>
+					<Name>
+						<FamilyName>Anderson</FamilyName>
+						<GivenName>Samuel</GivenName>
+						<FullName>Samuel Anderson</FullName>
+						<Type>AKA</Type>
+					</Name>
+					<Name>
+						<FamilyName>Rowinski</FamilyName>
+						<GivenName>Sam</GivenName>
+						<FullName>Sam Rowinski </FullName>
+						<Type>PRF</Type>
+					</Name>
+				</OtherNames>
+				<Demographics>
+					<BirthDate>1990-09-26</BirthDate>
+					<PlaceOfBirth>Dunedin</PlaceOfBirth>
+					<CountryOfBirth>ZAF</CountryOfBirth>
+					<CountriesOfCitizenship>
+						<Country>NZL</Country>
+						<Country>ZAF</Country>
+					</CountriesOfCitizenship>
+					<CountryArrivalDate>1996-05-02</CountryArrivalDate>
+					<CitizenshipStatus>1</CitizenshipStatus>
+					<CitizenshipVerification>
+						<IsConfirmed>true</IsConfirmed>
+						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
+						<Method>61002</Method>
+						<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
+						<ProviderLocalId>245</ProviderLocalId>
+					</CitizenshipVerification>
+					<Gender>2</Gender>
+					<LanguageList>
+						<Language>
+							<Code>01110</Code>
+							<LanguageType>2</LanguageType>
+						</Language>
+						<Language>
+							<Code>01112</Code>
+							<LanguageType>1</LanguageType>
+						</Language>
+					</LanguageList>
+					<EthnicityList>
+						<Ethnicity json:force-string="true">111</Ethnicity>
+						<Ethnicity json:force-string="true">42111</Ethnicity>
+					</EthnicityList>
+					<IwiAffiliationList>
+						<Iwi>0702</Iwi>
+						<Iwi>0601</Iwi>
+					</IwiAffiliationList>
+				</Demographics>
+				<AddressList>
+					<Address>
+						<Type json:force-string="true">1</Type>
+						<Role json:force-string="true">1</Role>
+						<Street>
+							<Line1>The Enchanted Wood</Line1>
+							<Line2>533 Hogwart's Way</Line2>
+						</Street>
+						<City>Hogsmead</City>
+						<PostalCode json:force-string="true">7733</PostalCode>
+					</Address>
+					<Address>
+						<Type>2</Type>
+						<Role>2</Role>
+						<Street>
+							<Line1>1175 Lake Ferry Rd</Line1>
+						</Street>
+						<Suburb>RD 1</Suburb>
+						<City>Martinborough</City>
+					</Address>
+				</AddressList>
+				<EmailList>
+					<Email json:force-array="true">
+						<Type>07</Type>
+						<Address>hagrid@gmail.com</Address>
+					</Email>
+				</EmailList>
+				<PhoneNumberList>
+					<PhoneNumber>
+						<Usage json:force-string="true">2</Usage>
+						<Type>0096</Type>
+						<Number>(021) 300 999</Number>
+					</PhoneNumber>
+				</PhoneNumberList>
+				<HouseholdContactInfoList>
+					<HouseholdContactInfo json:force-array="true">
+						<PreferenceNumber>1</PreferenceNumber>
+						<HouseholdContactId>7d5c3f5c-d89c-4551-9442-6b008207986e</HouseholdContactId>
+						<AddressList>
+							<Address json:force-array="true">
+								<Type json:force-string="true">1</Type>
+								<Role json:force-string="true">1</Role>
+								<Street>
+									<Line1>P O Box 81</Line1>
+								</Street>
+								<City>Martinborough</City>
+								<PostalCode json:force-string="true">5781</PostalCode>
+							</Address>
+						</AddressList>
+						<EmailList json:force-array="true">
+							<Email>
+								<Type>07</Type>
+								<Address>hagrid@gmail.com</Address>
+							</Email>
+						</EmailList>
+						<PhoneNumberList>
+							<PhoneNumber>
+								<Usage json:force-string="true">2</Usage>
+								<Type>0096</Type>
+								<Number>(021) 300 999</Number>
+							</PhoneNumber>
+						</PhoneNumberList>
+					</HouseholdContactInfo>
+					
+				</HouseholdContactInfoList>
+			</PersonInfo>
+		</StudentPersonal>
+	</xhtml:Example>
+</DataObject>
