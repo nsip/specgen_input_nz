@@ -1,0 +1,142 @@
+<IncludeGroup
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+ 	xmlns="http://sifassociation.org/SpecGen">
+
+
+	<!--  Borrowed from SIF AU -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Attendance Status</ID>
+		<Values>
+			<Value>
+				<Code>01</Code>
+				<Text>Excused</Text>
+			</Value>
+			<Value>
+				<Code>02</Code>
+				<Text>Unexcused</Text>
+			</Value>
+			<Value>
+				<Code>99</Code>
+				<Text>Unknown</Text>
+			</Value>
+			<Value>
+				<Code>NA</Code>
+				<Text>Not Applicable</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Attendance Status -->
+
+	<!--- Defined by SIF NZ -->
+	<CodeSet>
+		<Intro>
+			<p>The reson for non-attendance at school, or non-attendance in class.</p>
+		</Intro>
+		<ID>Attendance Code</ID>
+		<Values>
+			<Value>
+				<Code>A</Code>
+				<Text>Absent - Not in class</Text>
+			</Value>
+			<Value>
+				<Code>P</Code>
+				<Text>Present - in class</Text>
+			</Value>
+			<Value>
+				<Code>L</Code>
+				<Text>Late - in class</Text>
+			</Value>
+			<Value>
+				<Code>S</Code>
+				<Text>Sickbay - in class</Text>
+			</Value>
+			<Value>
+				<Code>D</Code>
+				<Text>Doctor/Dentist appointment</Text>
+			</Value>
+			<Value>
+				<Code>I</Code>
+				<Text>Internal appointment</Text>
+			</Value>
+			<Value>
+				<Code>E</Code>
+				<Text>Explained absence</Text>
+			</Value>
+			<Value>
+				<Code>M</Code>
+				<Text>Medical absence</Text>
+			</Value>
+			<Value>
+				<Code>J</Code>
+				<Text>Justified explained absence</Text>
+			</Value>
+			<Value>
+				<Code>T</Code>
+				<Text>Truant</Text>
+			</Value>
+			<Value>
+				<Code>V</Code>
+				<Text>Non-supervised study</Text>
+			</Value>
+			<Value>
+				<Code>N</Code>
+				<Text>School based activity</Text>
+			</Value>
+			<Value>
+				<Code>Q</Code>
+				<Text>School camp/trip</Text>
+			</Value>
+			<Value>
+				<Code>W</Code>
+				<Text>Work experience</Text>
+			</Value>
+			<Value>
+				<Code>R</Code>
+				<Text>Removed from class</Text>
+			</Value>
+			<Value>
+				<Code>X</Code>
+				<Text>Examination leave</Text>
+			</Value>
+			<Value>
+				<Code>G</Code>
+				<Text>Overseas holiday</Text>
+			</Value>
+			<Value>
+				<Code>O</Code>
+				<Text>Overseas during posting</Text>
+			</Value>
+			<Value>
+				<Code>K</Code>
+				<Text>Attending teen parent unit</Text>
+			</Value>
+			<Value>
+				<Code>AA</Code>
+				<Text>Attending alternative education</Text>
+			</Value>
+			<Value>
+				<Code>Y</Code>
+				<Text>Attending activity centre</Text>
+			</Value>
+			<Value>
+				<Code>F</Code>
+				<Text>Attending offsite course/class</Text>
+			</Value>
+			<Value>
+				<Code>H</Code>
+				<Text>Attending health camp/regional health school</Text>
+			</Value>
+			<Value>
+				<Code>C</Code>
+				<Text>Attending justice court</Text>
+			</Value>
+			<Value>
+				<Code>U</Code>
+				<Text>Stood down or suspended</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Attendance Code -->
+</IncludeGroup>

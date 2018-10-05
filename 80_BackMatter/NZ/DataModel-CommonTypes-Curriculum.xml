@@ -1,0 +1,34 @@
+﻿<IncludeGroup xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xmlns:xhtml="http://www.w3.org/1999/xhtml" 
+	xmlns:json="http://json.org/"
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+	<CommonElement name="SubjectAreaListType" type="true" dm="true">
+		<Item>
+			<Element>SubjectAreaListType</Element>
+			<Description>
+				<p>A list of code values denoting Learning Areas and Subjects from either the NZ Curriculum
+				or Te Marautanga o Aotearoa.
+				</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>SubjectArea</Element>
+			<Characteristics>OR</Characteristics>
+			<Description/>
+			<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
+		</Item>
+		<xhtml:Example xmlns="" name="NZ Subject Area List Example">
+			<SubjectAreaList>
+				<SubjectArea json:force-string="true">3</SubjectArea>
+				<SubjectArea json:force-string="true">4</SubjectArea>
+			</SubjectAreaList>
+		</xhtml:Example>
+	</CommonElement>
+</IncludeGroup>

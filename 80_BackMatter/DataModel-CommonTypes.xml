@@ -1,0 +1,65 @@
+﻿<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+	xmlns="http://sifassociation.org/SpecGen">	
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- This file has been chopped up into domain based component files -->
+	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Calendar.xml"/>
+	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Curriculum.xml"/>
+
+	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-SchoolStructure.xml"/>
+	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Location.xml"/>
+	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-PartyRole.xml"/>
+
+	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Enrolment.xml"/>
+	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Attendance.xml"/>
+	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Wellbeing.xml"/>
+
+	<CommonElement name="ObjectReferenceType" type="true" dm="true">
+		<Item>
+			<Element>ObjectReferenceType</Element>
+			<Description>
+				<p>A reference to another SIF Data Object</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>RefId</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description><p>The GUUID of the referenced object</p></Description>
+			<Type ref="CommonTypes" name="RefIdType"/>
+		</Item>   <!-- RefId -->
+		<Item>
+			<Element>LocalId</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Local identifier representing the referenced object.</p>
+			</Description>
+			<Type ref="CommonTypes" name="LocalIdType"/>
+		</Item>   <!-- LocalId -->
+		<Item>
+			<Element>Name</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description><p>The normal descriptive name of the referenced object.</p></Description>
+			<Type name="xs:string"/>
+		</Item>   <!-- Name -->
+		<Item>
+			<Element>ObjectType</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The type of the referenced object:</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsReferrableDataObjectsType"/>
+		</Item>   <!-- ObjectType -->
+	</CommonElement>
+</IncludeGroup>
