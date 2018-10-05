@@ -134,7 +134,7 @@
 			<p>Common and supporting types referenced in this specification are included here as a reference.</p>
 		</Intro>
 			<!--Section A-->
-		<xi:include parse="xml" href="80_BackMatter/Custom/DataModel-CommonTypes-Custom.xml"/>
+		<xi:include parse="xml" href="80_BackMatter/DataModel-CommonTypes.xml"/>
 		<xi:include parse="xml" href="80_BackMatter/Generic-CommonTypes.xml"/>
 	</Appendix>
 	
@@ -146,7 +146,7 @@
 			some are re-used by the New Zealand SIF Data Model</p>
 		</Intro>
 		<CodeSets>
-			<xi:include parse="xml" href="80_BackMatter/Custom/DataModel-CodeSets-Custom.xml"/>
+			<xi:include parse="xml" href="80_BackMatter/DataModel-CodeSets.xml"/>
 		  </CodeSets>
 		</Appendix>
 	
