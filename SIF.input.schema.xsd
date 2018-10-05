@@ -391,6 +391,7 @@
   <xs:element name="DataObjects">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="specgen:Group"/>
         <xs:group ref="specgen:sif.If.includeGroup"/>
         <xs:element ref="specgen:IncludeGroup"/>
         <xs:element ref="xi:include"/>
