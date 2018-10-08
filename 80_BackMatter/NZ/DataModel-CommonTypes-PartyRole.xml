@@ -1056,7 +1056,7 @@
 					indicating capability and preference for the language.</p>
 				</Description>
 				<Type ref="CodeSets" name="NZCodeSetsLanguageUsageType"/>
-			</Item>  <!-- LanguageType -->
+			</Item>  <!-- LanguageUsageType -->
 		</if>
 		<if intl="au">
 			<Item>

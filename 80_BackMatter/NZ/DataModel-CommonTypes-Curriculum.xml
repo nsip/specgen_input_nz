@@ -31,4 +31,84 @@
 			</SubjectAreaList>
 		</xhtml:Example>
 	</CommonElement>
+
+	<CommonElement name="LanguageOfInstructionListType" type="true" dm="true">
+		<Item>
+			<Element>LanguageOfInstructionListType</Element>
+			<Description>
+				<p>A list of tuples recording the number of hours per week that a Student, Course or TeachingGroup
+				is taught in one or more languages.
+				</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Language</Element>
+			<Characteristics>OR</Characteristics>
+			<Description/>
+			<Type ref="CommonData" name="LanguageOfInstructionType"/>
+		</Item>
+		<xhtml:Example xmlns="" name="LanguageOfInstructionList Example">
+			<LanguageOfInstructionList>
+				<Language>
+					<Code>16110</Code>
+					<HoursPerWeek>20.5</HoursPerWeek>
+				</Language>
+				<Language>
+					<Code>01112</Code>
+					<HoursPerWeek>9.5</HoursPerWeek>
+				</Language>
+			</LanguageOfInstructionList>
+		</xhtml:Example>
+	</CommonElement>
+
+	<CommonElement name="LanguageOfInstructionType" type="true" dm="true">
+		<Item>
+			<Element>LanguageOfInstructionType</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>How many hours (per week) is a Student, Course or TeachingGroup taught in the given language?</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Code</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The code representing the specific language that an individual uses to communicate.�</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
+		</Item>    <!-- Code -->
+		<Item>
+			<Element>HoursPerWeek</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The number of hours per week the Student, Course or TeachingGroup is taught in the nominated language.</p>
+			</Description>
+			<Type name="xs:decimal"/>
+		</Item>    <!-- HoursPerWeek -->
+		<xhtml:Example xmlns="" name="LanguageOfInstruction Example">
+			<LanguageOfInstruction>
+				<Code>01112</Code>
+				<HoursPerWeek>5.75</HoursPerWeek>
+			</LanguageOfInstruction>
+		</xhtml:Example>
+	</CommonElement>
+
+	<CommonElement name="LearningStandardReferenceListType" type="true" dm="true">
+		<Item>
+			<Element>LearningStandardReferenceListType</Element>
+			<Description>
+				<p>A list of <code>ObjectReference</code>s providing a manner of referring
+				to a collection of <code>LearningStandards</code>.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>LearningStandard</Element>
+			<Characteristics>OR</Characteristics>
+			<Description/>
+			<Type ref="CommonData" name="ObjectReferenceType"/>
+		</Item>
+	</CommonElement>
 </IncludeGroup>

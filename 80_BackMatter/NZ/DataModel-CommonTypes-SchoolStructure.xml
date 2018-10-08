@@ -236,7 +236,7 @@
 			<Description/>
 			<Type ref="CommonTypes" name="SchoolYearLevelType"/>
 		</Item>
-		<xhtml:Example xmlns="" name="NZ Year Level List Example">
+		<xhtml:Example xmlns="" name="NZ School Year Level List Example">
 			<SchoolYearList>
 				<SchoolYear>
 					<YearLevel json:force-string="true">9</YearLevel>
@@ -288,6 +288,32 @@
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsSchoolingGenderType"/>
 		</Item>
+	</CommonElement>
+
+	<CommonElement name="YearLevelListType" type="true" dm="true">
+		<Item>
+			<Element>YearLevelListType</Element>
+			<Description>
+				<p>A list of <code>NZSchoolYearLevel</code> elements, describing the Year Levels
+				taught to the Course or TeachingGroup.
+				</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>YearLevel</Element>			
+			<Characteristics>OR</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Which year level are we describing?</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYearLevelCodeType"/>
+		</Item>
+		<xhtml:Example xmlns="" name="NZ Year Level List Example">
+			<YearLevelList>
+				<YearLevel json:force-string="true">9</YearLevel>
+			</YearLevelList>
+		</xhtml:Example>
 	</CommonElement>
 
 	<CommonElement name="EnactedPolicyListType" type="true" dm="true">

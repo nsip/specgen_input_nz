@@ -49,6 +49,8 @@
 		<xi:include parse="xml" href="NZ/StudentContactPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StudentContactRelationship.xml"/>
 		
+		<xi:include parse="xml" href="NZ/ProviderCourse.xml"/>
+
 		<xi:include parse="xml" href="NZ/StudentProviderEnrolment.xml"/>
 		
 		<xi:include parse="xml" href="NZ/StudentAttendanceSummary.xml"/>

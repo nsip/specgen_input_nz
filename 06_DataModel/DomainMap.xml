@@ -34,6 +34,7 @@
 		<DataObject>Provider</DataObject>
 		<DataObject>ProviderRelationship</DataObject>
 		<DataObject>StaffPersonal</DataObject>
+		<DataObject>ProviderCourse</DataObject>
 	</Domain>
 
 	<Domain name="Student &amp; Whānau">

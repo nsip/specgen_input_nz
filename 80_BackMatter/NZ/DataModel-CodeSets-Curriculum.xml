@@ -2,6 +2,24 @@
 	xmlns:xi="http://www.w3.org/2001/XInclude"
  	xmlns="http://sifassociation.org/SpecGen">
 	
+	
+	<CodeSet>
+		<Intro>
+			<p>Codes denoting the two Curricula used in New Zealand.
+			</p>
+		</Intro>
+		<ID>Curriculum</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>New Zealand Curriculum</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Te Marautanga o Aotearoa</Text>
+			</Value>
+		</Values>
+	</CodeSet>   <!-- Curriculum -->
 	<CodeSet>
 		<Intro>
 			<p>Codes denoting Learning Areas defined by the NZ Curriculum and Te Marautanga o Aotearoa,
