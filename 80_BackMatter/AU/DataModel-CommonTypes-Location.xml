@@ -1,0 +1,196 @@
+<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:json="http://json.org/"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- CommonElement types for Location domains -->
+	
+<CommonElement name="StateProvinceType" type="true" dm="true">
+	<Item>
+		<Element>StateProvinceType</Element>
+		<Description>
+			<p>A state or province code. Note: When dealing with countries other than Australia, state/province codes/values other than those referenced here can be used.</p>
+		</Description>
+		<Union>
+			<Type ref="CodeSets" name="NZCodeSetsStateTerritoryCodeType"/>
+			<Type name="xs:token"/>
+		</Union>
+	</Item>
+	<xhtml:Example xmlns="" name="State or Province Example">
+		<StateProvince>ACT</StateProvince>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="StateProvinceIdType" type="true" dm="true">
+	<Intro>
+		<p>
+	This is a common element used to define the state or province assigned identifier associated with an entity. 
+	</p>
+	</Intro>
+	<Item>
+		<Element>StateProvinceIdType</Element>
+		<Description>
+			<p>The identifier for this entity as assigned by the state or province.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<xhtml:Example xmlns="" name="StateProvinceId Example">
+		<StateProvinceId>L65432765</StateProvinceId>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="CountryType" type="true" dm="true">
+	<Item>
+		<Element>CountryType</Element>
+		<Description>
+			<p>A country code.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsStandardAustralianClassificationOfCountriesSACCType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Country Type Example">
+		<Country>1101</Country>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="MapReferenceType" type="true" dm="true">
+	<Item>
+		<Element>MapReferenceType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A Map Reference in x-y co-ordinates.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>Type</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Type map reference</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>XCoordinate</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>X Co-ordinate of reference</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>YCoordinate</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Y Co-ordinate of reference</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	
+</CommonElement>
+<CommonElement name="StatisticalAreasType" type="true" dm="true">
+<Item>
+		<Element>StatisticalAreasType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A list of Statistical Areas associated with an address that will be referenced back to ABS 1270.  Only applicable to a physical address, e.g. not relevant for a Post Office Box.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>StatisticalArea</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>
+		The Australian Standard Geographical Classification (ASGC) has now been replaced with the Australian Statistical Geography Standard (ASGS).
+		The level and method that this is collected would need to be discussed as the lowest level is now a lot lower than the previous classification to allow for more accurate data analysis and reporting.
+		There are different levels of spatial unit references by this code set and a MeshBlock refers to the lowest level of this classification.
+		The spatial unit should be validated against the correct classification which is being elaborated upon. The referenced levels are coded in these volumes of ABS 1270 		
+	</p>
+			<p>1270.0.55.001 - Australian Statistical Geography Standard (ASGS): Volume 1 - Main Structure and Greater Capital City Statistical Areas, July 2011</p>
+			<p>1270.0.55.002 - Australian Statistical Geography Standard (ASGS): Volume 2 - Indigenous Structure, July 2011  </p>
+			<p>1270.0.55.003 - Australian Statistical Geography Standard (ASGS): Volume 3 - Non ABS Structures, July, 2012 </p>
+		</Description>
+		<Type ref="CommonTypes" name="StatisticalAreaType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="StatisticalAreaType" type="true" dm="true">
+	<Item>
+		<Element>StatisticalAreaType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>
+		The Australian Standard Geographical Classification (ASGC) has now been replaced with the Australian Statistical Geography Standard (ASGS).
+		The level and method that this is collected would need to be discussed as the lowest level is now a lot lower than the previous classification to allow for more accurate data analysis and reporting.
+		There are different levels of spatial unit references by this code set and a MeshBlock refers to the lowest level of this classification.
+		The spatial unit should be validated against the correct classification which is being elaborated upon. The referenced levels are coded in these volumes of ABS 1270 		
+	</p>
+			<p>1270.0.55.001 - Australian Statistical Geography Standard (ASGS): Volume 1 - Main Structure and Greater Capital City Statistical Areas, July 2011</p>
+			<p>1270.0.55.002 - Australian Statistical Geography Standard (ASGS): Volume 2 - Indigenous Structure, July 2011  </p>
+			<p>1270.0.55.003 - Australian Statistical Geography Standard (ASGS): Volume 3 - Non ABS Structures, July, 2012 </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Attribute>SpatialUnitType</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Type of Spatial Unit contained within the StatisticalArea Element</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>MB</Code>
+				<Text>Mesh Block</Text>
+			</Value>
+			<Value>
+				<Code>SA1</Code>
+				<Text>Statistical Area Level 1</Text>
+			</Value>
+			<Value>
+				<Code>SA2</Code>
+				<Text>Statistical Area Level 2</Text>
+			</Value>
+			<Value>
+				<Code>SA3</Code>
+				<Text>Statistical Area Level 3</Text>
+			</Value>
+			<Value>
+				<Code>SA4</Code>
+				<Text>Statistical Area Level 4</Text>
+			</Value>
+			<Value>
+				<Code>GCCSA</Code>
+				<Text>Greater Capital City Statistical Areas</Text>
+			</Value>
+			<Value>
+				<Code>S/T</Code>
+				<Text>State and Territory</Text>
+			</Value>
+			<Value>
+				<Code>LG</Code>
+				<Text>Local Government Area</Text>
+			</Value>
+			<Value>
+				<Code>TR</Code>
+				<Text>TourismRegion</Text>
+			</Value>
+			<Value>
+				<Code>ILOC</Code>
+				<Text>Indigenous Location</Text>
+			</Value>
+			<Value>
+				<Code>IARE</Code>
+				<Text>Indigenous Area</Text>
+			</Value>
+			<Value>
+				<Code>IREG</Code>
+				<Text>Indigenous Region</Text>
+			</Value>
+		</Values>
+	</Item>
+</CommonElement>
+
+</IncludeGroup>

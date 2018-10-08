@@ -1,0 +1,78 @@
+<IncludeGroup
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+ 	xmlns="http://sifassociation.org/SpecGen">
+	
+	
+	<CodeSet>
+		<Intro>
+			<p>Codes denoting the two Curricula used in New Zealand.
+			</p>
+		</Intro>
+		<ID>Curriculum</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>New Zealand Curriculum</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Te Marautanga o Aotearoa</Text>
+			</Value>
+		</Values>
+	</CodeSet>   <!-- Curriculum -->
+	<CodeSet>
+		<Intro>
+			<p>Codes denoting Learning Areas defined by the NZ Curriculum and Te Marautanga o Aotearoa,
+			as well as matching Subject Areas.
+			</p>
+		</Intro>
+		<ID>Subject Area</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>Health &amp; Physical Education / Hauora</Text>
+				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Language and Languages / Ngā Reo</Text>
+				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Mathematics / Pangarau</Text>
+				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Science / Putaiao</Text>
+				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
+			</Value>
+			<Value>
+				<Code>5</Code>
+				<Text>Social Science / Tikanga-a-iwi</Text>
+				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
+			</Value>
+			<Value>
+				<Code>6</Code>
+				<Text>Technology / Hangarau</Text>
+				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
+			</Value>
+			<Value>
+				<Code>7</Code>
+				<Text>The Arts / Ngā Toi</Text>
+				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
+			</Value>
+			<Value>
+				<Code>8</Code>
+				<Text>Te Reo Pākehā / English</Text>
+				<Description>Applicable to Te Marautanga o Aotearoa</Description>
+			</Value>
+			<Value>
+				<Code>9</Code>
+				<Text>Te Reo Māori / Māori Language and Literatur</Text>
+				<Description>Applicable to Te Marautanga o Aotearoa</Description>
+			</Value>
+		</Values>
+	</CodeSet>   <!-- Subject/Learning Area Types-->
+</IncludeGroup>

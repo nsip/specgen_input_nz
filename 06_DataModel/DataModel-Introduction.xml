@@ -149,21 +149,15 @@ whether or not they support events, e.g.:
 	<em>List</em> data should replace all corresponding data in their systems when persisting the list; likewise when a change is made to one or more
 	list items or when all items in the list are deleted, systems should send the whole list in a <code>Change</code> event.
 </p>
-<xhtml:Example xmlns="" name="Indicating an updated list of country citizenships" intl="" skipValidate="true">
+<xhtml:Example xmlns="" name="Indicating an updated list of country citizenships" skipValidate="true">
 	<CountriesOfCitizenship>
 		<CountryOfCitizenship>US</CountryOfCitizenship>
 		<CountryOfCitizenship>DE</CountryOfCitizenship>
 	</CountriesOfCitizenship>
 </xhtml:Example>
-<xhtml:Example xmlns="" name="Indicating an updated list of country citizenships" intl="au" skipValidate="true">
-	<CountriesOfCitizenship>
-		<CountryOfCitizenship>1101</CountryOfCitizenship>
-		<CountryOfCitizenship>2304</CountryOfCitizenship>
-	</CountriesOfCitizenship>
-</xhtml:Example>
 
 <p>
-	A system that supports <code>CountriesOfCitizenship</code> updates its local data to reflect <if intl="au">Australia</if> and German citizenship.
+	A system that supports <code>CountriesOfCitizenship</code> updates its local data to reflect United States and German citizenship.
 </p>
 </Section>
 </Section>

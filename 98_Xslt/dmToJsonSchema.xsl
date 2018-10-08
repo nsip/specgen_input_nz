@@ -135,7 +135,7 @@
 		</xsl:if>
 	</xsl:template>
 
-
+	
 	<!-- Item is of a named Type -->
 	<xsl:template match="specgen:Item[count(specgen:Type/@ref) gt 0]">
 		<xsl:param name="indent"/>
@@ -173,14 +173,35 @@
 	</xsl:template>
 
 
-	<!-- Item isn't a named type -->
-	<xsl:template match="specgen:Item[count(specgen:Type/@ref) eq 0]">
+	<!-- Item is untyped -->
+	<xsl:template match="specgen:Item[count(specgen:Type) eq 0]">
+		<xsl:param name="indent"/>
+		
+		<xsl:value-of select="concat($indent, specgen:Element|specgen:Attribute, ':&#x0a;')"/>
+		
+		<xsl:if test="normalize-space(specgen:Description) ne ''">
+			<xsl:value-of select="concat($indent, '  description: &gt;-&#x0a;', $indent, '    ')"/>
+			<xsl:apply-templates select="specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+		</xsl:if>
+
+		<xsl:apply-templates select="specgen:Values">
+			<xsl:with-param name="indent" select="concat($indent,'  ')"/>
+		</xsl:apply-templates>
+
+		<xsl:if test="specgen:Attribute"> 
+			<xsl:value-of select="concat($indent, '  xml:&#x0a;', $indent, '    attribute: true&#x0a;')"/>
+		</xsl:if>
+
+	</xsl:template>
+	
+	<!-- Item is Typed, but it's an unnamed type -->
+	<xsl:template match="specgen:Item[count(specgen:Type) gt 0 and count(specgen:Type/@ref) eq 0]">
 		<xsl:param name="indent"/>
 		
 		<xsl:value-of select="concat($indent, specgen:Element|specgen:Attribute, ':&#x0a;')"/>
 	
 		<!-- $ref -->
-		<xsl:choose>
+		<xsl:choose>			
 			<xsl:when test="specgen:Type/@name ne ''">
 				<xsl:apply-templates select="specgen:Type">
 					<xsl:with-param name="indent" select="$indent"/>

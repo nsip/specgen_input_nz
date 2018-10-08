@@ -8,6 +8,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
 namespace rng = "http://relaxng.org/ns/structure/1.0"
 namespace xhtml = "http://www.w3.org/1999/xhtml"
 
+namespace xml = "http://www.w3.org/XML/1998/namespace"
 namespace xs = "http://www.w3.org/2001/XMLSchema"
 namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
 namespace xi = "http://www.w3.org/2001/XInclude"
@@ -16,6 +17,8 @@ namespace xi = "http://www.w3.org/2001/XInclude"
 #
 ## embedded XML Schema definitions
 #
+xml.lang = attribute xml:lang { text }
+
 xi.include = element xi:include {
    attribute parse { "text" | "xml" },
    attribute href { text }
@@ -52,6 +55,7 @@ sif.narrative = mixed { (
 	| html.h3
 	| html.h4
 	| html.img
+	| html.map
 	| html.p
 	| html.span
 	| html.strong
@@ -69,7 +73,7 @@ html.a = element a {
 html.br = element br { empty }
 html.code = element code { text }
 
-html.dl = element dl { (mixed { sif.If.defList | (html.dt, html.dd)* })* }
+html.dl = element dl { (mixed { sif.If.defList | (html.dt, html.dd+)* })* }
 html.dt = element dt { sif.narrative }
 html.dd = element dd { (attribute style { text })?, sif.narrative}
 
@@ -83,7 +87,18 @@ html.img = element img {
    attribute alt { text }?,
    attribute title { text }?,
    attribute width { text }?,
-   attribute style { text }?
+   attribute style { text }?,
+   attribute usemap { text }?
+}
+html.map = element map {
+  attribute id { text },
+  attribute name { text },
+  element area {
+     attribute title { text},
+	 attribute href { text },
+	 attribute shape { "rect" | "circle" | "poly" },
+	 attribute coords { xs:string { pattern = "\d+\s*(,\s*\d+)*" } }
+  }+
 }
 html.p = element p  { sif.narrative}
 html.span = element span {
@@ -162,7 +177,9 @@ sif.Section = element Section {
    (mixed {
 	  sif.Section
         | sif.narrative
+		| sif.Intro
 	    | sif.DataObjects
+		| sif.Domain
 		| element Example { attribute name { text }, text }
 		| xhtml.Example } )* }
 
@@ -201,15 +218,21 @@ sif.IncludeGroup = element IncludeGroup {
 
 sif.DataObjects = element DataObjects {
    attribute xml:base { text }?,
-   (mixed  { sif.If.includeGroup | sif.IncludeGroup }* ) }
+   (mixed  { sif.Group | sif.If.includeGroup | sif.IncludeGroup | xi.include}* ) }
 
 sif.DataObject = element DataObject {
    attribute name { text },
    
    (element Key { text } | element EventsReported { "true" | "false" })+,
    element Intro { sif.narrative }?,
-   (mixed { sif.Item | sif.Choice })*,
+   (mixed { sif.If.Item | sif.Item | sif.Choice })*,
    xhtml.Example*
+}
+
+sif.Domain = element Domain {
+   attribute name { text },
+   sif.Intro,
+   element DataObject { text }+
 }
 
 sif.CommonElement = element CommonElement {
@@ -235,13 +258,16 @@ sif.CodeSet = element CodeSet {
      element Values {
 	   (mixed { sif.If.Value | sif.Value })* } }
 
-sif.Value = element Value { element Code { text }, element Text { text }, element Description { sif.narrative }? }
+sif.Value = element Value {
+    element Code { text },
+	element Text { xml.lang?, text }*,
+	element Description { sif.narrative }?
+}
 sif.Group = element Group {
    attribute name { text },
 
    (mixed {
       sif.narrative
-        | sif.If.includeGroup
         | sif.Intro
 		| sif.DataObject } )* }
 
@@ -259,7 +285,7 @@ sif.Item = element Item {
 
 	  element Characteristics { "M" | "O" | "C" | "MR" | "OR"}?,
 	  element privacyRating { "Low" | "Medium" | "High" | "Extreme"}?,
-	  element Description { (mixed { sif.If.narrative | sif.narrative})* }?,
+	  element Description { sif.narrative }?,
 	  
 	  mixed { (
 	     sif.If.Type
@@ -283,13 +309,7 @@ sif.Type = element Type {
 
 sif.Choice = element Choice { sif.Item+ }
 
-sif.Values = element Values {
-   element Value {
-      element Code { text },
-	  element Text { sif.narrative }?,
-	  element Description { sif.narrative }?
-	  
-}+ }
+sif.Values = element Values { sif.Value+ }
 
 xs.Facets = element xs:pattern { attribute value { text } }
 		  | element xs:enumeration { xs.valueString, element annotation { element documentation { anything } }? }

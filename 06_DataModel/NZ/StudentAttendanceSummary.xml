@@ -1,0 +1,226 @@
+<DataObject name="StudentAttendanceSummary"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+			xmlns:json="http://json.org/"
+			
+            xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>@StudentAttendanceSummaryRefId</Key>
+  
+  <EventsReported>true</EventsReported>
+
+  <Item>
+    <Element>StudentAttendanceSummary</Element>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>This object provides a summary of a student's daily attendance and membership information for a given school during the time period between the StartDate and EndDate, inclusive.  As such, there may be multiple instances of this object for a student in a school over the course of a school year.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>StudentAttendanceSummaryRefId</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>An ID (GUID) for this summary of attendance information being reported on. This GUID would be used to form a REST URL.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>    <!-- StudentAttendanceSummaryRefId -->
+  <Item>
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The ID (GUID) of the student for whom this attendance information is being reported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>    <!-- StudentPersonalRefId -->
+<if intl="au">
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The ID (GUID) of the school for which this attendance information is being reported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>    <!-- SchoolInfoRefId -->
+  <Item>
+    <Element>SchoolYear</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>School year for which the information is applicable.</p>
+    </Description>
+     <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>    <!-- SchoolYear -->
+</if>
+<if intl="nz">
+  <Item>
+    <Element>ProviderRefId</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The SIF ID of the Provider who is recording this attendance information.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>    <!-- ProviderRefId -->
+  <Item>
+    <Element>SchoolYear</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>School year for which the information is applicable.</p>
+    </Description>
+     <Type name="xs:gYear"/>
+  </Item>    <!-- SchoolYear -->
+</if>
+  <Item>
+    <Element>StartDate</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Starting date of this attendance reporting period.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- StartDate -->
+  <Item>
+   <Element>EndDate</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Ending date of this attendance reporting period.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- EndDate -->  
+  <Item>
+    <Element>StartDay</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Number of the school day represented in StartDate.</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>    <!-- StartDay -->
+  <Item>
+    <Element>EndDay</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Number of the school day represented in EndDate.</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>    <!-- EndDay -->
+  <Item>
+    <Element>FTE</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Full time equivalent numeric value of the student's course load during this attendance period, expressed in decimal form, where 1.00 represents a full time enrollment.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+    <Facets>
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1"/>
+      <xs:fractionDigits value="2"/>
+    </Facets>
+  </Item>    <!-- FTE -->
+  <Item>
+    <Element>DaysAttended</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The number of days the student attended school when school was in session between the StartDate and EndDate, inclusive.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>    <!-- DaysAttended -->
+  <Item>
+    <Element>ExcusedAbsences</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The number of days the student was absent from school with a valid excuse when school was in session between the StartDate and EndDate, inclusive.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>    <!-- ExcusedAbsences -->
+  <Item>
+    <Element>UnexcusedAbsences</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The number of days the student was absent from school without a valid excuse when school was in session between the StartDate and EndDate, inclusive.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>    <!-- UnexcusedAbsences -->
+  <Item>
+    <Element>DaysTardy</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The number of days the student was tardy when school was in session between the StartDate and EndDate, inclusive.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>    <!-- DaysTardy -->
+  <Item>
+    <Element>DaysInMembership</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The number of days the student was present plus the number of days the student was absent when school was in session during the period between the StartDate and EndDate, inclusive.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+</Item>    <!-- DaysInMembership -->
+<if intl="au">
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+</if>
+
+  <xhtml:Example xmlns="" name="StudentAttendanceSummary" intl="au">
+    <StudentAttendanceSummary
+        StudentAttendanceSummaryRefId="d3476fae-8647-384b-da24-31eda3583211" >
+        <StudentPersonalRefId>7c834ea9-eda1-2090-347f-83297e1c290c</StudentPersonalRefId>
+        <SchoolInfoRefId>ca285746-359d-7510-1a8c-36432a901a16</SchoolInfoRefId>
+        <SchoolYear>2015</SchoolYear>
+        <StartDate>2014-08-30</StartDate>
+        <EndDate>2015-06-10</EndDate>		
+		<StartDay>1</StartDay>
+		<EndDay>180</EndDay>
+		<FTE>1.00</FTE>
+		<DaysAttended>178</DaysAttended>
+		<ExcusedAbsences>2</ExcusedAbsences>
+		<UnexcusedAbsences>0</UnexcusedAbsences>
+		<DaysTardy>3</DaysTardy>
+		<DaysInMembership>180</DaysInMembership>
+    </StudentAttendanceSummary>
+  </xhtml:Example>
+  
+  <xhtml:Example xmlns="" name="StudentAttendanceSummary" intl="nz">
+    <StudentAttendanceSummary
+        StudentAttendanceSummaryRefId="d3476fae-8647-384b-da24-31eda3583211" >
+        <StudentPersonalRefId>7c834ea9-eda1-2090-347f-83297e1c290c</StudentPersonalRefId>
+        <ProviderRefId>ca285746-359d-7510-1a8c-36432a901a16</ProviderRefId>
+        <SchoolYear>2015</SchoolYear>
+        <StartDate>2014-08-30</StartDate>
+        <EndDate>2015-06-10</EndDate>		
+		<StartDay>1</StartDay>
+		<EndDay>180</EndDay>
+		<FTE>1.00</FTE>
+		<DaysAttended>178</DaysAttended>
+		<ExcusedAbsences>2</ExcusedAbsences>
+		<UnexcusedAbsences>0</UnexcusedAbsences>
+		<DaysTardy>3</DaysTardy>
+		<DaysInMembership>180</DaysInMembership>
+    </StudentAttendanceSummary>
+  </xhtml:Example>
+</DataObject>

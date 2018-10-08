@@ -1,0 +1,69 @@
+﻿<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+	<!-- Left over after SIF NZ borrowed some -->
+	<CommonElement name="AttendanceInfoType" type="true" dm="true">
+		<Item>
+    		<Element>AttendanceInfoType</Element>
+    		<Characteristics>O</Characteristics>
+		    <Description>
+    		  <p>Information describing how the day relates to attendance.</p>
+    		</Description>
+  		</Item>
+		<Item>
+	    	<Element>CountsTowardAttendance</Element>
+    		<Characteristics>M</Characteristics>
+    		<Description>
+      		<p>Designates whether this date should be counted toward student attendance.</p>
+    		</Description>
+    		<Values>
+				<Value>
+					<Code>Yes</Code>
+				</Value>
+				<Value>
+					<Code>No</Code>
+				</Value>
+    		</Values>
+  		</Item>
+  		<Item>
+    		<Element>AttendanceValue</Element>
+    		<Characteristics>M</Characteristics>
+    		<Description>
+      		<p>
+        		Amount of the school day in which the student should be in attendance (Format is x.x; a student who should be in attendance a full day would be represented as 1.0).  If <code>CountsTowardAttendance</code> equals <code>Yes</code> then <code>AttendanceValue</code> must be greater than zero.
+      		</p>
+    		</Description>
+    		<Type name="xs:decimal"></Type>
+    		<Facets>
+      		<xs:minInclusive value="0"/>
+      		<xs:maxInclusive value="1"/>
+      		<xs:fractionDigits value="1"/>
+    		</Facets>
+  		</Item>
+	</CommonElement>
+	<CommonElement name="CalendarDateInfoType" type="true" dm="true">
+		<Item>
+			<Element>CalendarDateInfoType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Calendar date type information.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Code</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Code indicating the type of school day.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsCalendarEventType"></Type>	
+		</Item>
+	</CommonElement>
+</IncludeGroup>

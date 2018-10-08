@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- These CommonTypes are unused by either AU or NZ -->
+	<CommonElement name="ReportPackageType" type="true">
+		<Item>
+			<Element>ReportPackageType</Element>
+			<Description>
+			This package has exactly the same structure as <code>AbstractContentPackageType</code>.  <code>ReportPackage</code>
+			can be used in addition to SIF objects specifically in reporting situations within <code>SIF_ReportObject</code>.
+			At this time, it is not a SIF object.  It cannot be requested via <code>SIF_Query</code> or <code>SIF_ExtendedQuery</code>
+			in a <code>ReportManifest</code>.  It may be included in <code>SIF_ReportObject</code> as part of an external report
+			definition.
+			</Description>
+			<Type ref="CommonTypes" complex="extension" name="AbstractContentPackageType"></Type>
+		</Item>
+	</CommonElement>
+	<CommonElement type="true" name="ServiceNameType" >
+		<Item>
+			<Element>ServiceNameType</Element>
+			<Description>
+			<p>An unenumerated SIF object name.</p>
+			</Description>
+			<Type name="xs:NCName"></Type>
+		</Item>
+	</CommonElement>
+	<CommonElement type="true" name="ObjectType" >
+		<Item>
+			<Element>ObjectType</Element>
+			<Description>
+			<p>A SIF XML object.</p>
+			</Description>
+			<Type>
+				<xs:sequence> 
+					<xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded" namespace="##any" />
+				</xs:sequence>
+			</Type>
+		</Item>
+	</CommonElement>
+	<CommonElement type="true" name="ReportDataObjectType" >
+		<Item>
+			<Element>ReportDataObjectType</Element>
+			<Description>
+			<p>A SIF XML object.</p>
+			</Description>
+			<Type>
+				<xs:sequence> 
+					<xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</Type>
+		</Item>
+	</CommonElement>
+	<!---  
+		<CommonElement type="true" name="SIF_ExampleObjectType">
+			<Item>
+				<Element>SIF_ExampleObjectType</Element>
+				<Type>
+					<xs:choice>
+						<xs:element ref="sif:StudentLocator"/>
+					<xs:choice>
+				</Type>
+			</Item>
+		</CommonElement>
+	-->	
+	<CommonElement type="true" name="MsgIdType">
+		<Item>
+			<Element>MsgIdType</Element>
+			<Description>A message identifier.</Description>
+			<Type name='GUIDType'/>
+		</Item>
+	</CommonElement>
+	<CommonElement type="true" name="VersionType">h
+		<Item>
+			<Element>VersionType</Element>
+			<Description>A SIF version number.</Description>
+			<Type name='xs:token'/>
+			<Facets>
+				<xs:maxLength value='12'/>
+				<xs:pattern value='[0-9]+[.][0-9]+(r[0-9]+)?'/>
+			</Facets>
+		</Item>
+	</CommonElement>
+	<CommonElement type="true" name="VersionWithWildcardsType">
+		<Item>
+			<Element>VersionWithWildcardsType</Element>
+			<Description>A SIF version number, with wildcards for matching multiple versions.</Description>
+			<Type name='xs:token'/>
+			<Facets>
+				<xs:maxLength value='12'/>
+				<xs:pattern value='\*|([0-9]+[.]\*)|([0-9]+[.][0-9]+r\*)|([0-9]+[.][0-9]+(r[0-9]+)?)'/>
+			</Facets>
+		</Item>
+	</CommonElement>
+	<CommonElement type="true" name="DefinedProtocolsType">
+		<Item>
+			<Element>DefinedProtocolsType</Element>
+			<Description>The transport protocols defined in SIF.</Description>
+			<Values>
+				<Value>
+					<Code>HTTPS</Code>
+				</Value>
+				<Value>
+					<Code>HTTP</Code>
+				</Value>
+			</Values>
+		</Item>
+	</CommonElement>
+	<CommonElement type="true" name="SelectedContentType">
+		<Item>
+			<Element>SelectedContentType</Element>
+			<Description>Allows an XML fragment selected from an object to be used in an element with XML validation skipped.</Description>
+			<Type>
+				<xs:complexContent mixed="true">
+					<xs:restriction base="xs:anyType">
+						<xs:sequence>
+							<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:restriction>
+				</xs:complexContent>
+			</Type>
+
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="GlobalRefIdPointerType" type="true" dm="true">
+		<Item>
+			<Element>GlobalRefIdPointerType</Element>
+			<Description></Description>
+		</Item>     
+		<Item>
+			<Element>ParentObjectRefId</Element>
+			<Description></Description>
+			<Type ref="CommonTypes" name = "IdRefType"/>
+		</Item>       
+		<Item>
+			<Attribute>SIF_Object</Attribute>
+			<Description></Description>
+			<Values>
+				<Value>
+					<Code>StudentPersonal</Code>
+				</Value>
+			</Values>
+		</Item>                     
+	</CommonElement>
+</IncludeGroup>

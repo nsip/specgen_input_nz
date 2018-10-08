@@ -1,0 +1,370 @@
+﻿<IncludeGroup
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xmlns:xhtml="http://www.w3.org/1999/xhtml" 
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+	<!-- Borrowed from SIF AU -->
+	<CommonElement name="StudentSubjectChoiceListType" type="true" dm="true">
+		<Item>
+			<Element>StudentSubjectChoiceListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of subject areas choices that can be made, or have been made by a Student.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>StudentSubjectChoice</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>An individual Subject choice that can be made, or has been made by a Student.</p>
+			</Description>
+			<Type ref="CommonTypes" name="StudentSubjectChoiceType"/>
+		</Item>
+		<xhtml:Example xmlns="" name="Student Subject Choice List Example" intl="au">
+			<SubjectChoiceList>
+				<StudentSubjectChoice>
+					<PreferenceNumber>1</PreferenceNumber>
+					<SubjectLocalId>Y11HIST</SubjectLocalId>
+					<StudyDescription>
+						<Code>Y11HIST</Code>
+						<OtherCodeList>
+							<OtherCode Codeset="Text">Year 11 History</OtherCode>
+						</OtherCodeList>
+					</StudyDescription>
+				</StudentSubjectChoice>
+				<StudentSubjectChoice>
+					<PreferenceNumber>2</PreferenceNumber>
+					<SubjectLocalId>Y11FREN</SubjectLocalId>
+					<StudyDescription>
+						<Code>Y11FREN</Code>
+						<OtherCodeList>
+							<OtherCode Codeset="Text">Year 11 French</OtherCode>
+						</OtherCodeList>
+					</StudyDescription>
+					<OtherSchoolRefId>705f1c18-356a-4862-88d1-d3e91fb21467</OtherSchoolRefId>
+					<OtherSchoolLocalId>0245</OtherSchoolLocalId>
+				</StudentSubjectChoice>
+			</SubjectChoiceList>
+		</xhtml:Example>
+
+		<xhtml:Example xmlns="" name="Student Subject Choice List Example" intl="nz">
+			<SubjectChoiceList>
+				<StudentSubjectChoice>
+					<PreferenceNumber>1</PreferenceNumber>
+					<SubjectLocalId>Y11HIST</SubjectLocalId>
+				</StudentSubjectChoice>
+				<StudentSubjectChoice>
+					<PreferenceNumber>2</PreferenceNumber>
+					<SubjectLocalId>Y11FREN</SubjectLocalId>
+					<OtherSchoolRefId>705f1c18-356a-4862-88d1-d3e91fb21467</OtherSchoolRefId>
+					<OtherSchoolLocalId>0245</OtherSchoolLocalId>
+				</StudentSubjectChoice>
+			</SubjectChoiceList>
+		</xhtml:Example>
+	</CommonElement>
+	<CommonElement name="StudentSubjectChoiceType" type="true" dm="true">
+		<Item>
+			<Element>StudentSubjectChoiceType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>An individual Subject choice that can be made, or has been made by a Student.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>PreferenceNumber</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The student's preference for this subject, with respect
+			to the other subject choices in the list.</p>
+			</Description>
+			<Type name="xs:unsignedInt"/>
+		</Item>		<!-- PreferenceNumber -->
+		<Item>
+			<Element>SubjectLocalId</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>A code assigned by the Provider to identify the chosen subject.</p>
+			</Description>
+			<Type ref="CommonTypes" name="LocalIdType"/>
+		</Item>		<!-- SubjectLocalId -->
+		<if intl="au">
+			<Item>
+				<Element>StudyDescription</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>Description about Study Mode.</p>
+				</Description>
+				<Type ref="CommonTypes" name="SubjectAreaType"/>
+			</Item>			<!-- StudyDescription -->
+		</if>
+		<if intl="nz">
+			<Item>
+				<Element>OtherSchoolRefId</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>SIF GUID a Provider (school) where the student studies this subject if not at the home school.</p>
+				</Description>
+				<Type ref="CommonTypes" name="LocalIdType"/>
+			</Item>			<!-- OtherSchoolRefId -->
+		</if>
+		<Item>
+			<Element>OtherSchoolLocalId</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>MoE Organisation Id of a school where the student studies this subject if not at the home school.</p>
+			</Description>
+			<Type ref="CommonTypes" name="LocalIdType"/>
+		</Item>		<!-- OtherSchoolLocalId -->
+
+		<xhtml:Example xmlns="" name="Student Subject Choice Example" intl="au">
+			<StudentSubjectChoice>
+				<PreferenceNumber>2</PreferenceNumber>
+				<SubjectLocalId>Y11FREN</SubjectLocalId>
+				<StudyDescription>
+					<Code>Y11FREN</Code>
+					<OtherCodeList>
+						<OtherCode Codeset="Text">Year 11 French</OtherCode>
+					</OtherCodeList>
+				</StudyDescription>
+				<OtherSchoolRefId>705f1c18-356a-4862-88d1-d3e91fb21467</OtherSchoolRefId>
+				<OtherSchoolLocalId>0245</OtherSchoolLocalId>
+			</StudentSubjectChoice>
+		</xhtml:Example>
+
+		<xhtml:Example xmlns="" name="Student Subject Choice Example" intl="nz">
+			<StudentSubjectChoice>
+				<PreferenceNumber>2</PreferenceNumber>
+				<SubjectLocalId>Y11FREN</SubjectLocalId>
+				<OtherSchoolRefId>705f1c18-356a-4862-88d1-d3e91fb21467</OtherSchoolRefId>
+				<OtherSchoolLocalId>0245</OtherSchoolLocalId>
+			</StudentSubjectChoice>
+		</xhtml:Example>
+	</CommonElement>
+
+
+	<!-- Defined by SIF NZ -->
+	<CommonElement name="EarlyChildhoodEnrolmentType" type="true" dm="true">
+		<Item>
+			<Element>EarlyChildhoodEnrolmentType</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Defines information related to a student's enrolment at
+			a an Early Childhood Education (ECE) Provider.</p>
+				<p>Placeholder for future expansion.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>
+	</CommonElement>
+	<CommonElement name="SchoolEnrolmentType" type="true" dm="true">
+		<Item>
+			<Element>SchoolEnrolmentType</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Defines information related to a student's enrolment at a school education Provider.</p>
+				<p>StudentSchoolEnrolment instances must not span multiple school years.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>EligibilityCriteria</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Code describing the criteria used to determine the eligibility
+			of the Student for enrolment and MoE funding.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsEligibilityCriteriaType"/>
+		</Item>		<!-- EligibilityCriteria -->
+		<Item>
+			<Element>ExitType</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Code describing why the Student exited from the enrolment.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsEnrolmentExitTypeType"/>
+		</Item>		<!-- ExitType -->
+		<Item>
+			<Element>FTE</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Full-time equivalent numeric value of the student's
+			course load during this enrollment, expressed in decimal
+			form, where 1.00 represents a full-time enrolment.</p>
+			</Description>
+			<Type name="xs:decimal"></Type>
+			<Facets>
+				<xs:minInclusive value="0"/>
+				<xs:maxInclusive value="1"/>
+				<xs:fractionDigits value="2"/>
+			</Facets>
+		</Item>		<!-- FTE -->
+		<Item>
+			<Element>FundingType</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Code describing the student's classification for MoE funding purposes.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsFundingTypeType"/>
+		</Item>		<!-- FundingType -->
+		<Item>
+			<Element>FundingYearLevel</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Code describing the actual number of years that the student has attended a school. </p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYearLevelCodeType"/>
+		</Item>		<!-- FundingYearLevel -->
+		<Item>
+			<Element>Homeroom</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Textual description of the Student's homeroom for the
+			year. eg. "Room 7" or even "Mrs Brown - Room 6"</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>		<!-- Homeroom -->
+		<Item>
+			<Element>InternationalEnrolment</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Additional information collected for international enrolments.</p>
+			</Description>
+			<Type ref="CommonTypes" name="InternationalSchoolEnrolmentType"/>
+		</Item>		<!-- InternationalEnrolment -->
+		<Item>
+			<Element>MembershipType</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The type of this enrolment as it relates to the school
+			identified in ProviderRefId.  Allows differentiation of
+			concurrent enrolments, eg base vs other. </p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsSchoolEnrollmentTypeType"></Type>
+		</Item>		<!-- MembershipType -->
+		<Item>
+			<Element>SchoolYear</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>School year for which this enrolment is applicable,
+			expressed as the four-digit year in which the school year
+			ends (eg 2018).</p>
+			</Description>
+			<Type name="xs:gYear"/>
+		</Item>		<!-- SchoolYear -->
+		<Item>
+			<Element>SubjectChoiceList</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Student’s choice of subject areas to be studied during the school year. </p>
+			</Description>
+			<Type ref="CommonTypes" name="StudentSubjectChoiceListType"/>
+		</Item>		<!-- SubjectChoiceList -->
+		<Item>
+			<Element>YearLevel</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Code describing the Year or academic level of student
+			(current or last?).  The year level of the student’s class
+			cohort and the level at which the student spends most of
+			their time at school.  While a student may be enrolled in
+			subjects at varying instructional year levels, in relation
+			to the student enrolment this value represents the year
+			level at which the student is considered to be
+			predominantly taught. For example – Year 10, Year 11 the
+			actual number of years that the student has attended a
+			school. </p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYearLevelCodeType"/>
+		</Item>		<!-- YearLevel -->
+
+		<xhtml:Example xmlns="" name="School Enrolment">
+			<StudentSchoolEnrolment>
+				<EligibilityCriteria>5</EligibilityCriteria>
+				<ExitType>J</ExitType>
+				<FTE>1.0</FTE>
+				<FundingType>EX</FundingType>
+				<FundingYearLevel>11</FundingYearLevel>
+				<Homeroom>Potions Lab.</Homeroom>
+				<InternationalEnrolment>
+					<NZArrivalDate>2018-05-02</NZArrivalDate>
+					<ExchangeScheme>9</ExchangeScheme>
+				</InternationalEnrolment>
+				<MembershipType>01</MembershipType>
+				<SchoolYear>2018</SchoolYear>
+				<SubjectChoiceList>
+					<StudentSubjectChoice>
+						<PreferenceNumber>1</PreferenceNumber>
+						<SubjectLocalId>Y11HIST</SubjectLocalId>
+					</StudentSubjectChoice>
+					<StudentSubjectChoice>
+						<PreferenceNumber>2</PreferenceNumber>
+						<SubjectLocalId>Y11FREN</SubjectLocalId>
+						<OtherSchoolRefId>705f1c18-356a-4862-88d1-d3e91fb21467</OtherSchoolRefId>
+						<OtherSchoolLocalId>0245</OtherSchoolLocalId>
+					</StudentSubjectChoice>
+				</SubjectChoiceList>
+				<YearLevel>11</YearLevel>
+			</StudentSchoolEnrolment>
+		</xhtml:Example>
+	</CommonElement>
+	<CommonElement name="InternationalSchoolEnrolmentType" type="true" dm="true">
+		<Item>
+			<Element>InternationalSchoolEnrolmentType</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Additional information collected for international enrolments.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>NZArrivalDate</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>The date the Student arrived in New Zealand.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>		<!-- NZArrivalDate -->
+		<Item>
+			<Element>TuitionWeeklyFee</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>The amount paid by the Student per Week (GST excl) as a tuition fee.</p>
+			</Description>
+			<Type name="xs:decimal"/>
+		</Item>		<!-- TuitionWeeklyFee -->
+		<Item>
+			<Element>ExchangeScheme</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Which government approved exchange scheme is the student part of?</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsExchangeSchemeType"/>
+		</Item>		<!-- ExchangeScheme -->
+		<xhtml:Example xmlns="" name="International School Enrolment">
+			<InternationalEnrolment>
+				<NZArrivalDate>1996-05-02</NZArrivalDate>
+				<ExchangeScheme>9</ExchangeScheme>
+			</InternationalEnrolment>
+		</xhtml:Example>
+	</CommonElement>
+</IncludeGroup>

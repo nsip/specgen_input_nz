@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:specgen="http://sifassociation.org/SpecGen">
+  <xs:import namespace="http://sifassociation.org/SpecGen" schemaLocation="fred.xsd"/>
+  <xs:import namespace="http://www.w3.org/1999/xhtml" schemaLocation="xhtml.xsd"/>
+  <xs:import namespace="http://www.w3.org/2001/XInclude" schemaLocation="xi.xsd"/>
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+  <xs:element name="any">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+      </xs:sequence>
+      <xs:attribute name="processContents" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="lax"/>
+            <xs:enumeration value="skip"/>
+            <xs:enumeration value="strict"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="minOccurs" type="xs:nonNegativeInteger"/>
+      <xs:attribute name="maxOccurs">
+        <xs:simpleType>
+          <xs:union memberTypes="xs:nonNegativeInteger">
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="unbounded"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:union>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="namespace">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="##any"/>
+            <xs:enumeration value="##other"/>
+            <xs:enumeration value="##local"/>
+            <xs:enumeration value="##targetNamespace"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sequence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="xs:any"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="complexContent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##targetNamespace" processContents="skip"/>
+      </xs:sequence>
+      <xs:attribute name="mixed" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="true"/>
+            <xs:enumeration value="false"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pattern" substitutionGroup="specgen:xs.Facets">
+    <xs:complexType>
+      <xs:attribute name="value" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enumeration" substitutionGroup="specgen:xs.Facets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="specgen:annotation"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="specgen:xs.valueString"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="whiteSpace" substitutionGroup="specgen:xs.Facets">
+    <xs:complexType>
+      <xs:attribute name="value">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="collapse"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="length" substitutionGroup="specgen:xs.Facets">
+    <xs:complexType>
+      <xs:attributeGroup ref="specgen:xs.valueInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="minLength" substitutionGroup="specgen:xs.Facets">
+    <xs:complexType>
+      <xs:attributeGroup ref="specgen:xs.valueInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="maxLength" substitutionGroup="specgen:xs.Facets">
+    <xs:complexType>
+      <xs:attributeGroup ref="specgen:xs.valueInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="totalDigits" substitutionGroup="specgen:xs.Facets">
+    <xs:complexType>
+      <xs:attributeGroup ref="specgen:xs.valueInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fractionDigits" substitutionGroup="specgen:xs.Facets">
+    <xs:complexType>
+      <xs:attributeGroup ref="specgen:xs.valueInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="minInclusive" substitutionGroup="specgen:xs.Facets">
+    <xs:complexType>
+      <xs:attributeGroup ref="specgen:xs.valueDecimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="maxInclusive" substitutionGroup="specgen:xs.Facets">
+    <xs:complexType>
+      <xs:attributeGroup ref="specgen:xs.valueDecimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="minExclusive" substitutionGroup="specgen:xs.Facets">
+    <xs:complexType>
+      <xs:attributeGroup ref="specgen:xs.valueDecimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="maxExclusive" substitutionGroup="specgen:xs.Facets">
+    <xs:complexType>
+      <xs:attributeGroup ref="specgen:xs.valueDecimal"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

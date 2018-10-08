@@ -32,12 +32,7 @@
 	<li>The SIF Implementation Specification defines architecture requirements and communication protocols for software components and the interfaces between them; it makes no assumption of specific hardware or software products needed to develop SIF-enabled applications and/or middleware implementations, other than their ability to support technologies leveraged as the foundation for SIF, most prominently XML and HTTP(S) and including JSON and REST.</li>
 	</ul>
 
-	<if intl="au">
-		<xi:include parse="text" href="custom/Custom-Preamble-AU.xml"/>
-	</if>
-	<if intl="nz">
-		<xi:include parse="text" href="custom/Custom-Preamble-NZ.xml"/>
-	</if>
+	<xi:include parse="text" href="custom/Custom-Preamble-NZ.xml"/>
 	
 		</Section>
 		<Section name="SIF Interoperability Framework Association">

@@ -1,0 +1,222 @@
+<IncludeGroup
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+ 	xmlns="http://sifassociation.org/SpecGen">
+
+  <Grouping code="NZCodeSets" name="NZ Code Sets">
+
+	  <!-- First up comes the code sets that originated in the SIF AU Data Model
+		   We have agreed to rename them from AU Code Sets to NZ Code Sets, as the
+		   effort required to keep them in sync between AU & NZ is too much, for
+		   very little gain.
+
+           NOTE:  We're still doing the <if intl="au"> thing, to chop out those AU defined
+		   code sets that we're not (currently) using in the SIF NZ Data Model.
+	  -->
+
+	  
+	  <CodeSet>
+		  <Intro>
+			  <p/>
+		  </Intro>
+		  <ID>Yes Or No Category</ID>
+		  <Values>
+			  <Value>
+				  <Code>N</Code>
+				  <Text>No</Text>
+			  </Value>
+			  <Value>
+				  <Code>U</Code>
+				  <Text>Unknown</Text>
+			  </Value>
+			  <Value>
+				  <Code>X</Code>
+				  <Text>Not Provided</Text>
+			  </Value>
+			  <Value>
+				  <Code>Y</Code>
+				  <Text>Yes</Text>
+			  </Value>
+			  
+		  </Values>
+	  </CodeSet>      <!-- Yes or No -->
+	  <CodeSet>
+		  <Intro/>
+		  <ID>Year Level Code</ID>
+		  <Values>
+			  <Value>
+				  <Code>1</Code>
+				  <Text>Year 1</Text>
+			  </Value>
+			  <Value>
+				  <Code>2</Code>
+				  <Text>Year 2</Text>
+			  </Value>
+			  <Value>
+				  <Code>3</Code>
+				  <Text>Year 3</Text>
+			  </Value>
+			  <Value>
+				  <Code>4</Code>
+				  <Text>Year 4</Text>
+			  </Value>
+			  <Value>
+				  <Code>5</Code>
+				  <Text>Year 5</Text>
+			  </Value>
+			  <Value>
+				  <Code>6</Code>
+				  <Text>Year 6</Text>
+			  </Value>
+			  <Value>
+				  <Code>7</Code>
+				  <Text>Year 7</Text>
+			  </Value>
+			  <Value>
+				  <Code>8</Code>
+				  <Text>Year 8</Text>
+			  </Value>
+			  <Value>
+				  <Code>9</Code>
+				  <Text>Year 9</Text>
+			  </Value>
+			  <Value>
+				  <Code>10</Code>
+				  <Text>Year 10</Text>
+			  </Value>
+			  <Value>
+				  <Code>11</Code>
+				  <Text>Year 11</Text>
+			  </Value>
+			  <Value>
+				  <Code>12</Code>
+				  <Text>Year 12</Text>
+			  </Value>
+			  <Value>
+				  <Code>13</Code>
+				  <Text>Year 13</Text>
+			  </Value>
+			  <if intl="nz">			
+				  <Value>
+					  <Code>14</Code>
+					  <Text>Year 14 and above</Text>
+					  <Description>Final value permitted in <code>SchoolEnrolment.YearLevel</code></Description>
+				  </Value>
+				  <Value>
+					  <Code>15</Code>
+					  <Text>Year 14 and above</Text>
+					  <Description>Final value permitted in <code>SchoolEnrolment.FundingYearLevel</code></Description>
+				  </Value>
+			  </if>
+			  <if intl="au">	
+				  <Value>
+					  <Code>K</Code>
+					  <Text>Kindergarten</Text>
+				  </Value>
+				  <Value>
+					  <Code>P</Code>
+					  <Text>Prep</Text>
+				  </Value>
+				  <Value>
+					  <Code>K3</Code>
+					  <Text>3yo Kindergarten</Text>
+				  </Value>
+				  <Value>
+					  <Code>K4</Code>
+					  <Text>4yo Kindergarten</Text>
+				  </Value>
+				  <Value>
+					  <Code>CC</Code>
+					  <Text>Childcare</Text>
+				  </Value>
+				  <Value>
+					  <Code>PS</Code>
+					  <Text>Pre-School</Text>
+				  </Value>
+				  <Value>
+					  <Code>UG</Code>
+					  <Text>Ungraded</Text>
+				  </Value>
+				  <Value>
+					  <Code>11MINUS</Code>
+					  <Text>11 Years and Younger</Text>
+				  </Value>
+				  <Value>
+					  <Code>12PLUS</Code>
+					  <Text>12 years and Older</Text>
+				  </Value>
+				  <Value>
+					  <Code>UGJunSec</Code>
+					  <Text>Ungraded Junior Secondary</Text>
+				  </Value>
+				  <Value>
+					  <Code>UGPri</Code>
+					  <Text>Ungraded Primary</Text>
+				  </Value>
+				  <Value>
+					  <Code>UGSec</Code>
+					  <Text>Ungraded Secondary</Text>
+				  </Value>
+				  <Value>
+					  <Code>UGSnrSec</Code>
+					  <Text>Ungraded Senior Secondary</Text>
+				  </Value>
+			  </if>		 
+		  </Values>
+	  </CodeSet>      <!-- Year Level Code -->
+	  <CodeSet>
+		<Intro>
+			<p>An enumeration of valid SIF DataObject names, to be included in Object References</p>
+		</Intro>
+		<ID>Referrable Data Objects</ID>
+		<Values>
+			<Value>
+				<Code>EducationOrganisation</Code>
+				<Text>An organisation other than a Provider</Text>
+			</Value>
+			<Value>
+				<Code>Provider</Code>
+				<Text>A recognised provider of education services such as ECE Service, School or TEI</Text>
+			</Value>
+			<Value>
+				<Code>ProviderRelationship</Code>
+				<Text>A recognised relationship between two providers of education services.</Text>
+			</Value>
+			<Value>
+				<Code>StudentPersonal</Code>
+				<Text>A person who enrols at a Provider</Text>
+			</Value>
+			<Value>
+				<Code>StudentContactPersonal</Code>
+				<Text>A person who is part ofa Student's whānau</Text>
+			</Value>
+			<Value>
+				<Code>StudentContactRelationship</Code>
+				<Text>A relationship between a person who is part of a Student's whānau and that Student</Text>
+			</Value>
+			<Value>
+				<Code>StudentProviderEnrolment</Code>
+				<Text>The record of an enrolment relationship between a Student and a Provider.</Text>
+			</Value>
+			<Value>
+				<Code>StudentAttendanceTimeList</Code>
+				<Text>Record of a Student's attendance or absence from school or class on a particular day.</Text>
+			</Value>
+			<Value>
+				<Code>StudentAttendanceSummary</Code>
+				<Text>
+					Aggregate summary of Student's attendance and absence from school across a particular time period.
+				</Text>
+			</Value>
+		</Values>
+	  </CodeSet>      <!-- Referrable Data Object -->
+
+	  <xi:include parse="xml" href="NZ/DataModel-CodeSets-PartyRole.xml"/>
+	  <xi:include parse="xml" href="NZ/DataModel-CodeSets-Location.xml"/>
+	  <xi:include parse="xml" href="NZ/DataModel-CodeSets-Provider.xml"/>
+	  <xi:include parse="xml" href="NZ/DataModel-Codesets-Curriculum.xml"/>
+	  <xi:include parse="xml" href="NZ/DataModel-Codesets-Calendar.xml"/>
+	  <xi:include parse="xml" href="NZ/DataModel-CodeSets-Enrolment.xml"/>
+	  <xi:include parse="xml" href="NZ/DataModel-Codesets-Attendance.xml"/>
+	  <xi:include parse="xml" href="NZ/DataModel-Codesets-Wellbeing.xml"/>
+  </Grouping>
+</IncludeGroup>

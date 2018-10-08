@@ -3,7 +3,7 @@
 				  xmlns:xi="http://www.w3.org/2001/XInclude"
 				  xmlns:xhtml="http://www.w3.org/1999/xhtml"
 				  
-				  xmlns="http://sifassociation.org/SpecGen">				  
+				  xmlns="http://sifassociation.org/SpecGen">
 
 	<BuildComment>
 		<xi:include parse="text" href="90_Properties_DataModel/SIF-Specification-Title-DataModel.txt"/>
@@ -25,12 +25,14 @@
 		<br/>
 		<br/>
 		<p>
-			<if intl="au">
-				<img src="images/zone.jpg"/>
-   			</if>
-			<if intl="nz">
-				<img src="images/zone.png" width="512"/>
-   			</if>
+			<img src="images/zone512.png" usemap="#DomainMap"/>
+			<map id="DomainMap" name="DomainMap">
+				<area title="Provider" href="DomainMap.html#Domain__Provider" shape="rect" coords="71,65,166,126"/>
+				<area title="Student &amp; Whānau" href="DomainMap.html#Domain__StudentWhānau" shape="rect" coords="284,331,375,390"/>
+				<area title="Enrolment" href="DomainMap.html#Domain__Enrolment" shape="rect" coords="206,0,301,60"/>
+				<area title="Attendance" href="DomainMap.html#Domain__Attendance" shape="rect" coords="344,66,439,126"/>
+				<area title="Hauora" href="DomainMap.html#Domain__HauoraWellbeing" shape="rect" coords="37,214,132,273"/>
+			</map>
 		</p>
 		<br/>
 		<br/>
@@ -86,7 +88,6 @@
 				<em>SIF_Message</em> schemas define every data object element as optional per SIF's Publish/Subscribe and SIF Request/Response Models; 
 				<em>DataModel</em> schemas maintain the cardinality of all data object elements.
 			</dd>
-<if intl="nz">
 	        <dd><br/></dd>	
 			<dt>JSON Schemas</dt>
 			<dd>
@@ -101,8 +102,6 @@
 				Open API definition <a href="JSON/OpenAPI.json"> (json)</a>
 				<a href="JSON/OpenAPI.yaml">(yaml)</a>
 			</dd>
-
-</if>			
 		</dl>
 		<p>Please refer to the <a href="errata/">errata</a> for this document, which may include some normative corrections.</p>
 		<p>This document is also available in these non-normative formats: <a href="ImplementationSpecification.zip">ZIP archive</a>, <a href="ImplementationSpecification.pdf">PDF (for printing as a single file)</a>,
@@ -125,7 +124,9 @@
 		<xi:include parse="text" href="06_DataModel/DataModel-Introduction.xml"/>
    		<xi:include parse="xml" href="06_DataModel/DataModel.xml"/>
 	</Section>
-	
+
+	<!--  Domain Map to help navigating -->
+	<xi:include parse="xml" href="06_DataModel/DomainMap.xml"/>
 	
 	<!--Back Matter-->
 	<Appendix name="Common Types">
@@ -133,7 +134,7 @@
 			<p>Common and supporting types referenced in this specification are included here as a reference.</p>
 		</Intro>
 			<!--Section A-->
-		<xi:include parse="xml" href="80_BackMatter/Custom/DataModel-CommonTypes-Custom.xml"/>
+		<xi:include parse="xml" href="80_BackMatter/DataModel-CommonTypes.xml"/>
 		<xi:include parse="xml" href="80_BackMatter/Generic-CommonTypes.xml"/>
 	</Appendix>
 	
@@ -145,7 +146,7 @@
 			some are re-used by the New Zealand SIF Data Model</p>
 		</Intro>
 		<CodeSets>
-			<xi:include parse="xml" href="80_BackMatter/Custom/DataModel-CodeSets-Custom.xml"/>
+			<xi:include parse="xml" href="80_BackMatter/DataModel-CodeSets.xml"/>
 		  </CodeSets>
 		</Appendix>
 	

@@ -1,0 +1,304 @@
+<DataObject name="ProviderCourse"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+		  xmlns:json="http://json.org/"
+
+      xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>ProviderCourse</Element>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Description of a Provider defined Course that Students enrol in, and may be assessed for, and achieve passes in.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>RefId</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The ID (GUID) that uniquely identifies the Provider defined Course.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>    <!-- RefId -->
+  <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The human readable locally defined identifier for the Course, set by the Provider that defines and offers the Course.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- LocalId -->
+  <Item>
+    <Element>ProviderRefId</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The ID (GUID) that identifies the Provider (school) that defines and offers the Course.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>    <!-- ProviderRefId -->
+  <Item>
+    <Element>ProviderLocalId</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The MoE defined identifier for the Provider (school) that defines and offers the Course.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- ProviderLocalId -->
+  
+  <if intl="au">
+    <Item>
+      <Element>SchoolYear</Element>
+      <Characteristics>C</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>
+          School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g. <code>2007</code>).
+        </p>
+      </Description>
+      <Type ref="CommonTypes" name="SchoolYearType"></Type>
+    </Item>    <!-- SchoolYear -->
+    <Item>
+      <Element>TermInfoRefId</Element>
+      <Characteristics>C</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>
+          The ID (GUID) that uniquely identifies this TermInfo (reportable time period).
+          Either SchoolYear or TermInfoRefId must be provided.
+        </p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"></Type>
+    </Item>    <!-- TermInfoRefId -->
+    <Item>
+      <Element>CourseCode</Element>
+      <Characteristics>M</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>School-defined local code for the course.</p>
+      </Description>
+      <Type name='xs:normalizedString'/>
+    </Item>    <!-- CourseCode -->
+    <Item>
+      <Element>StateCourseCode</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>State-defined standard course code used to report information about courses.</p>
+      </Description>
+      <Type name='xs:normalizedString'/>
+    </Item>    <!-- StateCourseCode -->
+    <Item>
+      <Element>DistrictCourseCode</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The corresponding district course code.</p>
+      </Description>
+      <Type name='xs:normalizedString'/>
+    </Item>    <!-- DistrictCourseCode -->
+  </if>
+
+  <Item>
+      <Element>Curriculum</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Which of New Zealand's two Curricula is covered by the Course.</p>
+      </Description>
+      <Type ref="CodeSets" name="NZCodeSetsCurriculumType"></Type>
+  </Item>    <!-- Curriculum -->
+  <Item>
+      <Element>SubjectAreaList</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Subject matter areas covered by the Course.</p>
+      </Description>
+      <Type ref="CommonTypes" name="SubjectAreaListType"></Type>
+  </Item>    <!-- SubjectAreaList -->
+  <Item>
+      <Element>YearLevelList</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Year Levels covered by the Course.</p>
+      </Description>
+      <Type ref="CommonTypes" name="YearLevelListType"></Type>
+  </Item>    <!-- YearLevelList -->
+  <Item>
+      <Element>Title</Element>
+      <Characteristics>M</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Title of the Course.</p>
+      </Description>
+      <Type name='xs:normalizedString'/>
+  </Item>    <!-- Title -->
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Textual description of the Course.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- Description -->
+  <Item>
+    <Element>Duration</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The number of weeks the course is taught for.</p>
+    </Description>
+    <Type name='xs:unsignedInt'/>
+  </Item>    <!-- Duration -->  
+  <Item>
+    <Element>Credits</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The number of credits awarded upon Course completion.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>    <!-- Credits -->
+  <Item>
+    <Element>LanguageOfInstructionList</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The language of instruction for the Course.</p>
+    </Description>
+    <Type ref="CommonData" name='LanguageOfInstructionListType'/>
+  </Item>    <!-- LanguageOfInstructionList -->
+  <Item>
+    <Element>LearningStandardList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of <code>ObjectReference</code>s to the LearningStandards covered by the Course.</p>
+    </Description>
+    <Type ref="CommonData" name='LearningStandardReferenceListType'/>
+  </Item>    <!-- LearningStandardList -->
+
+  <if intl="au">
+    <Item>
+      <Element>InstructionalLevel</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>An indication of the general nature and difficulty of instruction provided.</p>
+      </Description>
+      <Type name='xs:normalizedString'/>
+    </Item>     <!-- InstructionalLevel -->
+    <Item>
+      <Element>CoreAcademicCourse</Element>
+
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Does the course meet the state definition of a core academic course?</p>
+      </Description>
+      <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+    </Item>    <!-- CoreAcademicCourse -->
+    <Item>
+      <Element>GraduationRequirement</Element>
+
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Does the state require that the course be completed for graduation?</p>
+      </Description>
+      <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+    </Item>    <!-- GraduationRequirement -->
+    <Item>
+      <Element>Department</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Department with jurisdiction over this course.</p>
+      </Description>
+      <Type name="xs:normalizedString"></Type>
+    </Item>    <!-- Department -->
+    <Item>
+      <Element>CourseContent</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Description of course content.</p>
+      </Description>
+      <Type name='xs:normalizedString'/>
+    </Item>    <!-- CourseContent -->
+  </if>
+
+  <xhtml:Example xmlns="" name="SchoolCourseInfo Example" intl="au">
+    <SchoolCourseInfo RefId="9D75101A-8C3D-00AA-001A-0000A2E35B35">
+      <SchoolInfoRefId>101A8C3D-00AA-001A-0000-A2E35B359D75</SchoolInfoRefId>
+      <SchoolYear>2006</SchoolYear>
+      <CourseCode>CS101</CourseCode>
+      <StateCourseCode>08-001</StateCourseCode>
+      <DistrictCourseCode>CS101</DistrictCourseCode>
+      <SubjectAreaList>
+        <SubjectArea>
+          <Code>Graphic Arts</Code>
+        </SubjectArea>
+      </SubjectAreaList>
+      <CourseTitle>Gif, JPeg, or Png: What's the Difference?</CourseTitle>
+      <Description>Explore the various types of files related to graphic arts.</Description>
+      <InstructionalLevel>0571</InstructionalLevel>
+      <CourseCredits>2</CourseCredits>
+      <CoreAcademicCourse>N</CoreAcademicCourse>
+      <GraduationRequirement>N</GraduationRequirement>
+    </SchoolCourseInfo>
+  </xhtml:Example>
+
+  <xhtml:Example xmlns="" name="ProviderCourse Example" intl="nz">
+    <ProviderCourse>
+      <RefId>9D75101A-8C3D-00AA-001A-0000A2E35B35</RefId>
+      <LocalId>12CHEM</LocalId>
+      <ProviderRefId>101A8C3D-00AA-001A-0000-A2E35B359D75</ProviderRefId>
+      <ProviderLocalId>208</ProviderLocalId>
+      <Curriculum>1</Curriculum>
+      <SubjectAreaList>
+        <SubjectArea json:force-string="true" json:force-array="true">4</SubjectArea>
+      </SubjectAreaList>
+      <YearLevelList>
+        <YearLevel json:force-string="true" json:force-array="true">12</YearLevel>
+      </YearLevelList>
+      <Title>Year 12 Chemistry</Title>
+      <Description>Organic &amp; Inorganic Chemistry for NCEA Level 2</Description>
+      <Duration>35</Duration>
+      <Credits>11</Credits>
+			<LanguageOfInstructionList>
+				<Language json:force-array="true">
+					<Code>01112</Code>
+					<HoursPerWeek>4.8</HoursPerWeek>
+				</Language>
+			</LanguageOfInstructionList>
+      <LearningStandardList>
+        <LearningStandard>
+          <RefId>ac0871d9-6562-4209-ae86-face3661842b</RefId>
+          <LocalId>91165-v2</LocalId>
+          <Name>Demonstrate understanding of the properties of selected organic compounds</Name>
+        </LearningStandard>
+        <LearningStandard>
+          <RefId>ac0871d9-6562-4209-ae86-aabb3661842b</RefId>
+          <LocalId>91166-v2</LocalId>
+          <Name>Demonstrate understanding of chemical reactivity</Name>
+        </LearningStandard>
+        <LearningStandard>
+          <RefId>ac0871d9-6562-4209-ae86-aabb3661842b</RefId>
+          <LocalId>91167-v2</LocalId>
+          <Name>Demonstrate understanding of oxidation-reduction</Name>
+        </LearningStandard>
+      </LearningStandardList>
+    </ProviderCourse>
+  </xhtml:Example>
+</DataObject>

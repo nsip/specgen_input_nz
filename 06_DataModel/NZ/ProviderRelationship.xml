@@ -1,0 +1,135 @@
+<DataObject name="ProviderRelationship" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:xi="http://www.w3.org/2001/XInclude" 
+  xmlns:xhtml="http://www.w3.org/1999/xhtml" 
+  xmlns:json="http://json.org/" 
+  xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>ProviderRelationship</Element>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Records a recognised relationship between two education Providers. The two providers
+         are referred	 to as the Source Provider and the Related Provider.
+      </p>
+      <p>RelationshipType records the nature of the relationship between the two providers, and gives
+      guidance on which Provider is the Source Provider and which is the Related Provider.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>RefId</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The SIF GUID for the relationship between two providers.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>  <!-- RefId -->
+  <Item>
+    <Element>RelationshipType</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The SIF GUID for the source provider in the relationship.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsProviderRelationshipTypeType"/>
+  </Item>  <!-- SourceProviderRefId -->
+  <Item>
+    <Element>SourceProviderRefId</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The SIF GUID for the source provider in the relationship.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>  <!-- SourceProviderRefId -->
+  <Item>
+    <Element>SourceProviderLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The MoE organisation Id for the source provider in the relationship.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>  <!-- SourceProviderLocalId -->
+  <Item>
+    <Element>SourceProviderAgreementDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date the source Provider in the relationship registered their agreement to the relationship.
+      nil value if the source Provider is yet to register their agreement ot the relationship.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>  <!-- SourceProviderAgreementDate -->
+  <Item>
+    <Element>RelatedProviderRefId</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The SIF GUID for the related provider in the relationship.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>  <!-- RelatedProviderRefId -->
+  <Item>
+    <Element>RelatedProviderLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The MoE organisation Id for the related provider in the relationship.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>  <!-- RelatedProviderLocalId -->
+  <Item>
+    <Element>EffectiveDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date from which the provider relationship is active.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>  <!-- EffectiveDate -->
+  <Item>
+    <Element>RelatedProviderAgreementDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date the related Provider in the relationship registered their agreement to the relationship.
+      nil value if the related Provider is yet to register their agreement ot the relationship.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>  <!-- RelatedProviderAgreementDate -->
+  <Item>
+    <Element>ExpirationDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date after which the provider relationship is no longer active.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>  <!-- ExpirationDate -->
+  <Item>
+    <Element>YearLevelList</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of YearLevels, denoting the year levels of the
+		  learners being hosted or sent from the client or contributing provider</p>
+    </Description>
+    <Type ref="CommonTypes" name="YearLevelsType"/>
+  </Item>  <!-- YearLevelList -->
+  <Item>
+    <Element>SubjectAreaList</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of Subject or Learning Areas, denoting the curriculum subjects or learning areas that 
+      the learners being sent by the Source Provider are taught at the Related Provider.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SubjectAreaListType"/>
+  </Item>  <!-- YearLevelList -->
+  </DataObject>

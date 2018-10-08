@@ -1,0 +1,93 @@
+<Section name="Domain Map"
+		 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns:xi="http://www.w3.org/2001/XInclude"
+		 xmlns:xhtml="http://www.w3.org/1999/xhtml"
+		 
+         xmlns="http://sifassociation.org/SpecGen">
+
+	<Intro>
+		<p>
+			This section presents the SIF Data Objects in each of the SIF Data Model domains, for easier navigation:
+		</p>
+		<p>
+			<img src="images/zone512.png" usemap="#DomainMap"/>
+			<map id="DomainMap" name="DomainMap">
+				<area title="Provider" href="#Domain__Provider" shape="rect" coords="71,65,166,126"/>
+				<area title="Student &amp; Whānau" href="#Domain__StudentWhānau" shape="rect" coords="284,331,375,390"/>
+				<area title="Enrolment" href="#Domain__Enrolment" shape="rect" coords="206,0,301,60"/>
+				<area title="Attendance" href="#Domain__Attendance" shape="rect" coords="344,66,439,126"/>
+				<area title="Hauora / Wellbeing" href="#Domain__HauoraWellbeing" shape="rect" coords="37,214,132,273"/>
+			</map>
+		</p>
+	</Intro>
+
+	<Domain name="Provider">
+		<Intro>
+			<p>
+				The Provider domain describes education provider
+				entities, the relationships between them, and the
+				Staff that work at them.				
+			</p>
+		</Intro>
+		
+		<DataObject>Provider</DataObject>
+		<DataObject>ProviderRelationship</DataObject>
+		<DataObject>StaffPersonal</DataObject>
+		<DataObject>ProviderCourse</DataObject>
+	</Domain>
+
+	<Domain name="Student &amp; Whānau">
+		<Intro>
+			<p>
+				The Student domain describes Student entities, their
+				Whānau, and the relationships between them.
+			</p>
+		</Intro>
+
+		<DataObject>StudentPersonal</DataObject>
+		<DataObject>StudentContactPersonal</DataObject>
+		<DataObject>StudentContactRelationship</DataObject>
+	</Domain>
+
+	<Domain name="Enrolment">
+		<Intro>
+			<p>
+				The Enrolment domain describes transactional entities
+				whereby Students enrol at Providers, in LearningProgrammes,
+				in Sections, or in Activities.
+			</p>
+		</Intro>
+
+		<DataObject>StudentProviderEnrolment</DataObject>
+	</Domain>
+
+	<Domain name="Hauora / Wellbeing">
+		<Intro>
+			<p>
+			</p>
+		</Intro>
+
+		<DataObject>PersonalisedPlan</DataObject>
+		<DataObject>WellbeingCharacteristic</DataObject>
+		<DataObject>WellbeingAlert</DataObject>
+		<DataObject>WellbeingEvent</DataObject>
+		<DataObject>WellbeingResponse</DataObject>
+		<DataObject>WellbeingAppeal</DataObject>
+	</Domain>
+	
+	<Domain name="Attendance">
+		<Intro>
+			<p>
+				The Attendance domain describes transactional entities that
+				record a Student's attendance at &amp; absence from Providers.
+				Attendance is recorded at either Day, Half-Day or individual Period granuality
+				at the choice of the Provider; and reported back in summary form.
+			</p>
+		</Intro>
+		<DataObject>StudentAttendanceTimeList</DataObject>
+		<DataObject>StudentAttendanceSummary</DataObject>
+	</Domain>
+</Section>
+
+
