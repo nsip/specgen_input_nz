@@ -384,26 +384,64 @@
 			discretion).
 			</p>
 		</Intro>
-		<ID>Verification Method</ID>
+		<ID>Verification Source</ID>
 		<Values>
 			<Value>
-				<Code>61001</Code>
+				<Code>1</Code>
 				<Text>NZ Birth Certificate</Text>
+				<Description>Applies if the child was born before 1 Jan 2006</Description>
 			</Value>
 			<Value>
-				<Code>61002</Code>
+				<Code>2</Code>
+				<Text>NZ Birth Certificate (with confirmation of NZ Citizen by Birth)</Text>
+				<Description>Applies if the child was born on or after 1 Jan 2006</Description>
+			</Value>
+			<Value>
+				<Code>3</Code>
 				<Text>NZ Passport</Text>
+				<Description>Including COK, TKL or NIU (Current or Expired)</Description>
 			</Value>
 			<Value>
-				<Code>61003</Code>
-				<Text>Australian Passport</Text>
-			</Value>
-			<Value>
-				<Code>61004</Code>
+				<Code>4</Code>
 				<Text>NZ Citizenship Certificate</Text>
 			</Value>
+			<Value>
+				<Code>5</Code>
+				<Text>COK, TKL or NIU Birth Certificate</Text>
+				<Description>Applies if the child was born before 1 Jan 2006</Description>
+			</Value>
+			<Value>
+				<Code>6</Code>
+				<Text>COK, TKL or NIU Birth Certificate (with confirmation of NZ Citizen by Birth)</Text>
+				<Description>Applies if the child was born on or after 1 Jan 2006</Description>
+			</Value>
+			<Value>
+				<Code>7</Code>
+				<Text>Certificate of Naturalisation (COK, TKL or NIU)</Text>
+			</Value>			
+			<Value>
+				<Code>8</Code>
+				<Text>Certificate of Registration (COK, TKL or NIU)</Text>
+			</Value>			
+			<Value>
+				<Code>9</Code>
+				<Text>Letter of Confirmation (COK, TKL or NIU)</Text>
+			</Value>			
+			<Value>
+				<Code>10</Code>
+				<Text>Other Passport with NZ residence class Visa or other evidence of NZ residency</Text>
+			</Value>
+			<Value>
+				<Code>11</Code>
+				<Text>Australian Passport</Text>
+				<Description>Current or Expired</Description>
+			</Value>
+			<Value>
+				<Code>12</Code>
+				<Text>Visa (Domestic)</Text>
+			</Value>
 		</Values>
-	</CodeSet>    <!-- Verification Method -->
+	</CodeSet>    <!-- Verification Source -->
 	
     <CodeSet>
 		<Intro>
@@ -2594,4 +2632,204 @@
 		</Values>
 	</CodeSet>    <!-- Iwi -->
 
+	<CodeSet>
+		<Intro>
+			<p>Religious affiliation is the self-identified association of a person with a religion,
+			 denomination or sub-denominational religious group.</p>
+
+			<p>The permissible values consists of any value from
+			the <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/CARS2902">Statistics NZ - Relgious Affiliation 1999 v1.0.0.0</a></p>
+		</Intro>
+		<ID>Religion</ID>
+		<Values>
+			<Value><Code>0</Code><Text>No Religion</Text></Value>
+			<Value><Code>000</Code><Text>No Religion</Text></Value>
+			<Value><Code>00000</Code><Text>No Religion</Text></Value>
+			<Value><Code>1</Code><Text>Buddhist</Text></Value>
+			<Value><Code>101</Code><Text>Buddhist</Text></Value>
+			<Value><Code>10100</Code><Text>Buddhist nfd</Text></Value>
+			<Value><Code>10101</Code><Text>Zen Buddhist</Text></Value>
+			<Value><Code>10199</Code><Text>Buddhist nec</Text></Value>
+			<Value><Code>2</Code><Text>Christian</Text></Value>
+			<Value><Code>200</Code><Text>Christian nfd</Text></Value>
+			<Value><Code>20000</Code><Text>Christian nfd</Text></Value>
+			<Value><Code>201</Code><Text>Adventist</Text></Value>
+			<Value><Code>20100</Code><Text>Adventist nfd</Text></Value>
+			<Value><Code>20101</Code><Text>Christadelphian</Text></Value>
+			<Value><Code>20102</Code><Text>Seventh Day Adventist</Text></Value>
+			<Value><Code>20103</Code><Text>Worldwide Church of God</Text></Value>
+			<Value><Code>20199</Code><Text>Adventist nec</Text></Value>
+			<Value><Code>202</Code><Text>Anglican</Text></Value>
+			<Value><Code>20201</Code><Text>Anglican</Text></Value>
+			<Value><Code>203</Code><Text>Asian Christian</Text></Value>
+			<Value><Code>20301</Code><Text>Chinese Christian</Text></Value>
+			<Value><Code>20302</Code><Text>Korean Christian</Text></Value>
+			<Value><Code>204</Code><Text>Baptist</Text></Value>
+			<Value><Code>20400</Code><Text>Baptist nfd</Text></Value>
+			<Value><Code>20401</Code><Text>Bible Baptist</Text></Value>
+			<Value><Code>20402</Code><Text>Independent Baptist</Text></Value>
+			<Value><Code>20403</Code><Text>Reformed Baptist</Text></Value>
+			<Value><Code>20499</Code><Text>Baptist nec</Text></Value>
+			<Value><Code>205</Code><Text>Brethren</Text></Value>
+			<Value><Code>20500</Code><Text>Brethren nfd</Text></Value>
+			<Value><Code>20501</Code><Text>Exclusive Brethren</Text></Value>
+			<Value><Code>20502</Code><Text>Open Brethren</Text></Value>
+			<Value><Code>20503</Code><Text>Plymouth Brethren</Text></Value>
+			<Value><Code>20599</Code><Text>Brethren nec</Text></Value>
+			<Value><Code>206</Code><Text>Catholic</Text></Value>
+			<Value><Code>20600</Code><Text>Catholic nfd</Text></Value>
+			<Value><Code>20601</Code><Text>Roman Catholic</Text></Value>
+			<Value><Code>20699</Code><Text>Catholic nec</Text></Value>
+			<Value><Code>207</Code><Text>Church of Christ and Associated Churches of Christ</Text></Value>
+			<Value><Code>20700</Code><Text>Church of Christ nfd</Text></Value>
+			<Value><Code>20701</Code><Text>Associated Churches of Christ</Text></Value>
+			<Value><Code>20799</Code><Text>Other Church of Christ and Churches of Christ nec</Text></Value>
+			<Value><Code>208</Code><Text>Evangelical, Born Again and Fundamentalist</Text></Value>
+			<Value><Code>20801</Code><Text>Evangelical</Text></Value>
+			<Value><Code>20802</Code><Text>Born Again</Text></Value>
+			<Value><Code>20803</Code><Text>Fundamentalist</Text></Value>
+			<Value><Code>20804</Code><Text>Independent Evangelical Churches</Text></Value>
+			<Value><Code>209</Code><Text>Jehovah's Witnesses</Text></Value>
+			<Value><Code>20901</Code><Text>Jehovah's Witnesses</Text></Value>
+			<Value><Code>210</Code><Text>Latter-day Saints</Text></Value>
+			<Value><Code>21001</Code><Text>Latter-day Saints</Text></Value>
+			<Value><Code>211</Code><Text>Lutheran</Text></Value>
+			<Value><Code>21101</Code><Text>Lutheran</Text></Value>
+			<Value><Code>212</Code><Text>Methodist</Text></Value>
+			<Value><Code>21200</Code><Text>Methodist nfd</Text></Value>
+			<Value><Code>21201</Code><Text>Tongan Methodist</Text></Value>
+			<Value><Code>21299</Code><Text>Methodist nec</Text></Value>
+			<Value><Code>213</Code><Text>Orthodox</Text></Value>
+			<Value><Code>21300</Code><Text>Orthodox nfd</Text></Value>
+			<Value><Code>21301</Code><Text>Assyrian Orthodox</Text></Value>
+			<Value><Code>21302</Code><Text>Coptic Orthodox</Text></Value>
+			<Value><Code>21303</Code><Text>Greek Orthodox</Text></Value>
+			<Value><Code>21304</Code><Text>Russian Orthodox</Text></Value>
+			<Value><Code>21305</Code><Text>Serbian Orthodox</Text></Value>
+			<Value><Code>21399</Code><Text>Orthodox nec</Text></Value>
+			<Value><Code>214</Code><Text>Pentecostal</Text></Value>
+			<Value><Code>21400</Code><Text>Pentecostal nfd</Text></Value>
+			<Value><Code>21401</Code><Text>Apostolic Church of New Zealand</Text></Value>
+			<Value><Code>21402</Code><Text>Assemblies of God</Text></Value>
+			<Value><Code>21403</Code><Text>Christian Fellowship</Text></Value>
+			<Value><Code>21404</Code><Text>Christian Outreach</Text></Value>
+			<Value><Code>21405</Code><Text>Christian Revival Crusade</Text></Value>
+			<Value><Code>21406</Code><Text>Elim</Text></Value>
+			<Value><Code>21407</Code><Text>Full Gospel</Text></Value>
+			<Value><Code>21408</Code><Text>Independent Pentecostal</Text></Value>
+			<Value><Code>21409</Code><Text>New Life Centres</Text></Value>
+			<Value><Code>21410</Code><Text>Revival Centres</Text></Value>
+			<Value><Code>21411</Code><Text>United Pentecostal</Text></Value>
+			<Value><Code>21412</Code><Text>Vineyard Christian Fellowship</Text></Value>
+			<Value><Code>21499</Code><Text>Pentecostal nec</Text></Value>
+			<Value><Code>215</Code><Text>Presbyterian, Congregational and Reformed</Text></Value>
+			<Value><Code>21501</Code><Text>Presbyterian</Text></Value>
+			<Value><Code>21502</Code><Text>Congregational</Text></Value>
+			<Value><Code>21503</Code><Text>Cook Island Congregational</Text></Value>
+			<Value><Code>21504</Code><Text>Samoan Congregational</Text></Value>
+			<Value><Code>21505</Code><Text>Reformed</Text></Value>
+			<Value><Code>216</Code><Text>Protestant nfd</Text></Value>
+			<Value><Code>21600</Code><Text>Protestant nfd</Text></Value>
+			<Value><Code>217</Code><Text>Salvation Army</Text></Value>
+			<Value><Code>21701</Code><Text>Salvation Army</Text></Value>
+			<Value><Code>218</Code><Text>Uniting/Union Church and Ecumenical</Text></Value>
+			<Value><Code>21801</Code><Text>Uniting/Union Church</Text></Value>
+			<Value><Code>21802</Code><Text>Ecumenical</Text></Value>
+			<Value><Code>299</Code><Text>Other Christian</Text></Value>
+			<Value><Code>29901</Code><Text>Christian and Missionary Alliance</Text></Value>
+			<Value><Code>29902</Code><Text>Christian Science</Text></Value>
+			<Value><Code>29903</Code><Text>Church of God</Text></Value>
+			<Value><Code>29904</Code><Text>Commonwealth Covenant Church</Text></Value>
+			<Value><Code>29905</Code><Text>Liberal Catholic</Text></Value>
+			<Value><Code>29906</Code><Text>Metropolitan</Text></Value>
+			<Value><Code>29907</Code><Text>Nazarene</Text></Value>
+			<Value><Code>29908</Code><Text>Religious Society of Friends (Quaker)</Text></Value>
+			<Value><Code>29909</Code><Text>Unitarian</Text></Value>
+			<Value><Code>29999</Code><Text>Christian nec</Text></Value>
+			<Value><Code>3</Code><Text>Hindu</Text></Value>
+			<Value><Code>301</Code><Text>Hindu</Text></Value>
+			<Value><Code>30100</Code><Text>Hindu nfd</Text></Value>
+			<Value><Code>30101</Code><Text>Hare Krishna</Text></Value>
+			<Value><Code>30102</Code><Text>Yoga</Text></Value>
+			<Value><Code>30199</Code><Text>Hindu nec</Text></Value>
+			<Value><Code>4</Code><Text>Islam/Muslim</Text></Value>
+			<Value><Code>401</Code><Text>Islam/Muslim</Text></Value>
+			<Value><Code>40100</Code><Text>Islam/Muslim nfd</Text></Value>
+			<Value><Code>40101</Code><Text>Sufi</Text></Value>
+			<Value><Code>40199</Code><Text>Islam/Muslim nec</Text></Value>
+			<Value><Code>5</Code><Text>Judaism/Jewish</Text></Value>
+			<Value><Code>501</Code><Text>Judaism/Jewish</Text></Value>
+			<Value><Code>50101</Code><Text>Judaism/Jewish</Text></Value>
+			<Value><Code>6</Code><Text>Māori Christian</Text></Value>
+			<Value><Code>600</Code><Text>Māori Christian nfd</Text></Value>
+			<Value><Code>60000</Code><Text>Māori Christian nfd</Text></Value>
+			<Value><Code>601</Code><Text>Ratana</Text></Value>
+			<Value><Code>60101</Code><Text>Ratana</Text></Value>
+			<Value><Code>602</Code><Text>Ringatū</Text></Value>
+			<Value><Code>60201</Code><Text>Ringatū</Text></Value>
+			<Value><Code>609</Code><Text>Other Māori Christian</Text></Value>
+			<Value><Code>60999</Code><Text>Māori Christian nec</Text></Value>
+			<Value><Code>7</Code><Text>Spiritualism and New Age Religions</Text></Value>
+			<Value><Code>700</Code><Text>New Age nfd</Text></Value>
+			<Value><Code>70000</Code><Text>New Age nfd</Text></Value>
+			<Value><Code>701</Code><Text>Church of Scientology</Text></Value>
+			<Value><Code>70101</Code><Text>Church of Scientology</Text></Value>
+			<Value><Code>702</Code><Text>Nature and Earth Based Religions</Text></Value>
+			<Value><Code>70200</Code><Text>Nature and Earth Based Religions nfd</Text></Value>
+			<Value><Code>70201</Code><Text>Animist</Text></Value>
+			<Value><Code>70202</Code><Text>Druid</Text></Value>
+			<Value><Code>70203</Code><Text>Pantheist</Text></Value>
+			<Value><Code>70204</Code><Text>Wiccan</Text></Value>
+			<Value><Code>70299</Code><Text>Nature and Earth Based Religions nec</Text></Value>
+			<Value><Code>703</Code><Text>Satanism</Text></Value>
+			<Value><Code>70301</Code><Text>Satanism</Text></Value>
+			<Value><Code>704</Code><Text>Spiritualist</Text></Value>
+			<Value><Code>70401</Code><Text>Spiritualist</Text></Value>
+			<Value><Code>709</Code><Text>Other New Age Religions</Text></Value>
+			<Value><Code>70901</Code><Text>Rastafarianism</Text></Value>
+			<Value><Code>70999</Code><Text>Other New Age Religions nec</Text></Value>
+			<Value><Code>8</Code><Text>Other Religions</Text></Value>
+			<Value><Code>800</Code><Text>Other Religion nfd</Text></Value>
+			<Value><Code>80000</Code><Text>Other Religion nfd</Text></Value>
+			<Value><Code>801</Code><Text>Baha'i</Text></Value>
+			<Value><Code>80101</Code><Text>Baha'i</Text></Value>
+			<Value><Code>802</Code><Text>Chinese Religions</Text></Value>
+			<Value><Code>80200</Code><Text>Chinese Religions nfd</Text></Value>
+			<Value><Code>80201</Code><Text>Confucianism</Text></Value>
+			<Value><Code>80202</Code><Text>Taoism</Text></Value>
+			<Value><Code>80299</Code><Text>Chinese Religions nec</Text></Value>
+			<Value><Code>803</Code><Text>Jainism</Text></Value>
+			<Value><Code>80301</Code><Text>Jainism</Text></Value>
+			<Value><Code>804</Code><Text>Japanese Religions</Text></Value>
+			<Value><Code>80400</Code><Text>Japanese Religion nfd</Text></Value>
+			<Value><Code>80401</Code><Text>Mahikari</Text></Value>
+			<Value><Code>80402</Code><Text>Shinto</Text></Value>
+			<Value><Code>80403</Code><Text>Tenrikyo</Text></Value>
+			<Value><Code>80499</Code><Text>Japanese Religion nec</Text></Value>
+			<Value><Code>805</Code><Text>Māori Religion</Text></Value>
+			<Value><Code>80500</Code><Text>Māori Religion nfd</Text></Value>
+			<Value><Code>80501</Code><Text>Hauhau</Text></Value>
+			<Value><Code>80599</Code><Text>Māori Religion nec</Text></Value>
+			<Value><Code>806</Code><Text>Sikh</Text></Value>
+			<Value><Code>80601</Code><Text>Sikh</Text></Value>
+			<Value><Code>807</Code><Text>Theism</Text></Value>
+			<Value><Code>80701</Code><Text>Theism</Text></Value>
+			<Value><Code>808</Code><Text>Zoroastrian</Text></Value>
+			<Value><Code>80801</Code><Text>Zoroastrian</Text></Value>
+			<Value><Code>809</Code><Text>Other Religions</Text></Value>
+			<Value><Code>80901</Code><Text>Unification Church (Moonist)</Text></Value>
+			<Value><Code>80999</Code><Text>Other Religions nec</Text></Value>
+			<Value><Code>9</Code><Text>Residual Categories</Text></Value>
+			<Value><Code>944</Code><Text>Don't Know</Text></Value>
+			<Value><Code>94444</Code><Text>Don't Know</Text></Value>
+			<Value><Code>955</Code><Text>Object to answering</Text></Value>
+			<Value><Code>95555</Code><Text>Object to answering</Text></Value>
+			<Value><Code>977</Code><Text>Religion Unidentifiable</Text></Value>
+			<Value><Code>97777</Code><Text>Religion Unidentifiable</Text></Value>
+			<Value><Code>988</Code><Text>Response Outside Scope</Text></Value>
+			<Value><Code>98888</Code><Text>Response Outside Scope</Text></Value>
+			<Value><Code>999</Code><Text>Not Stated</Text></Value>
+			<Value><Code>99999</Code><Text>Not Stated</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Religion -->
 </IncludeGroup>

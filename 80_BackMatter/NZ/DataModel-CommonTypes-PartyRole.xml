@@ -194,13 +194,15 @@
 					<FullName>Rubeus Hagrid</FullName>
 					<Type>LGL</Type>
 					<IsVerified>Y</IsVerified>
-					<NameVerification>
+					<Verification>
+						<Source json:force-string="true">2</Source>
+						<DocumentSerialNumber>L905673</DocumentSerialNumber>
+						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 						<IsConfirmed>true</IsConfirmed>
 						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-						<Method>61002</Method>
 						<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
 						<ProviderLocalId>245</ProviderLocalId>
-					</NameVerification>					
+					</Verification>					
 				</Name>
 				<OtherNames>
 					<Name>
@@ -227,9 +229,11 @@
 					<CountryArrivalDate>1996-05-02</CountryArrivalDate>
 					<CitizenshipStatus>1</CitizenshipStatus>
 					<CitizenshipVerification>
+						<Source json:force-string="true">2</Source>
+						<DocumentSerialNumber>L905673</DocumentSerialNumber>
+						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 						<IsConfirmed>true</IsConfirmed>
 						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-						<Method>61002</Method>
 						<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
 						<ProviderLocalId>245</ProviderLocalId>
 					</CitizenshipVerification>
@@ -249,9 +253,13 @@
 						<Ethnicity json:force-string="true">42111</Ethnicity>
 					</EthnicityList>
 					<IwiAffiliationList>
-						<Iwi>0702</Iwi>
-						<Iwi>0601</Iwi>
+						<IwiAffiliation>0702</IwiAffiliation>
+						<IwiAffiliation>0601</IwiAffiliation>
 					</IwiAffiliationList>
+					<ReligiousAffiliationList>
+						<ReligiousAffiliation>212</ReligiousAffiliation>
+						<ReligiousAffiliation>215</ReligiousAffiliation>
+					</ReligiousAffiliationList>
 				</Demographics>
 				<AddressList>
 					<Address>
@@ -518,7 +526,7 @@
 			<Type complex="extension" name="BaseNameType"/>
 		</Item>
 		<Item>
-			<Element>NameVerification</Element>
+			<Element>Verification</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>
@@ -526,9 +534,9 @@
 				</p>
 			</Description>
 			<Type ref="CommonTypes" name="VerificationEventType"/>
-		</Item>    <!-- NameVerification -->
+		</Item>    <!-- Verification -->
 
-		<xhtml:Example xmlns="" name="Base Name Example" intl="nz">
+		<xhtml:Example xmlns="" name="Verified Name Example" intl="nz">
 			<VerifiedName>
 				<FamilyName>Wesson</FamilyName>
 				<GivenName>Melanie</GivenName>
@@ -540,13 +548,15 @@
 				<FullName>Melanie Joan Wesson</FullName>
 				<Type>LGL</Type>
 				<IsVerified>Y</IsVerified>
-				<NameVerification>
+				<Verification>
+					<Source json:force-string="true">2</Source>
+					<DocumentSerialNumber>L905673</DocumentSerialNumber>
+					<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 					<IsConfirmed>true</IsConfirmed>
 					<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-					<Method>61002</Method>
 					<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
 					<ProviderLocalId>245</ProviderLocalId>
-				</NameVerification>
+				</Verification>
 			</VerifiedName>
 		</xhtml:Example>
 	</CommonElement>
@@ -569,7 +579,7 @@
 				<Type ref="CommonTypes" name="OtherNameType"/>
 			</if>	
 			<if intl="nz">
-				<Type ref="CommonTypes" name="BaseNameType"/>
+				<Type ref="CommonTypes" name="VerifiedNameType"/>
 			</if>	
 		</Item>    <!-- Name -->
 		<xhtml:Example xmlns="" name="Other Names Example" intl="au">
@@ -593,12 +603,23 @@
 					<GivenName>Samuel</GivenName>
 					<FullName>Samuel Anderson</FullName>
 					<Type>AKA</Type>
+					<IsVerified>N</IsVerified>
 				</Name>
 				<Name>
 					<FamilyName>Rowinski</FamilyName>
 					<GivenName>Sam</GivenName>
 					<FullName>Sam Rowinski </FullName>
 					<Type>PRF</Type>
+					<IsVerified>Y</IsVerified>
+					<Verification>
+						<Source json:force-string="true">2</Source>
+						<DocumentSerialNumber>L905673</DocumentSerialNumber>
+						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
+						<IsConfirmed>true</IsConfirmed>
+						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
+						<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
+						<ProviderLocalId>245</ProviderLocalId>
+					</Verification>					
 				</Name>
 			</OtherNames>
 		</xhtml:Example>
@@ -709,6 +730,14 @@
 				</Description>
 				<Type ref="CommonTypes" name="IwiAffiliationList"/>
 			</Item>    <!-- IwiAffiliationList -->
+			<Item>
+			<Element>ReligiousAffiliationList</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>A list of one or more religions with which the person has an affiliation.</p>
+				</Description>
+				<Type ref="CommonTypes" name="ReligiousAffiliationList"/>
+			</Item>    <!-- ReligiousAffiliationList -->
 		</if>	
 	
 		<if intl="au">
@@ -949,13 +978,15 @@
 				<CountryArrivalDate>1996-05-02</CountryArrivalDate>
 				<CitizenshipStatus>1</CitizenshipStatus>
 				<CitizenshipVerification>
+					<Source json:force-string="true">2</Source>
+					<DocumentSerialNumber>L905673</DocumentSerialNumber>
+					<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 					<IsConfirmed>true</IsConfirmed>
 					<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-					<Method>61002</Method>
 					<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
 					<ProviderLocalId>245</ProviderLocalId>
 				</CitizenshipVerification>
-				<Gender>2</Gender>
+				<Gender json:force-string="true">2</Gender>
 				<LanguageList>
 					<Language>
 						<Code>01110</Code>
@@ -971,9 +1002,13 @@
 					<Ethnicity json:force-string="true">42111</Ethnicity>
 				</EthnicityList>
 				<IwiAffiliationList>
-					<Iwi>0702</Iwi>
-					<Iwi>0601</Iwi>
+					<IwiAffiliation>0702</IwiAffiliation>
+					<IwiAffiliation>0601</IwiAffiliation>
 				</IwiAffiliationList>
+				<ReligiousAffiliationList>
+					<ReligiousAffiliation>212</ReligiousAffiliation>
+					<ReligiousAffiliation>215</ReligiousAffiliation>
+				</ReligiousAffiliationList>
 			</Demographics>
 		</xhtml:Example>
 	</CommonElement>
@@ -2116,6 +2151,37 @@
 			</Description>
 		</Item>
 		<Item>
+			<Element>Source</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Code denoting the source of the person's identity or eligibility verificaiton. 
+				Principally refers to an identity document type (eg passport) but may also
+				include a type of business decision taken to accept an
+				assertion of identity and eligibility status (eg principal
+				discretion).</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsVerificationSourceType"/>
+		</Item>    <!-- Source -->
+		<Item>
+			<Element>DocumentSerialNumber</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The serial number on the document that was used to verify the name or birthdate.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- DocumentSerialNumber -->
+		<Item>
+			<Element>DocumentExpiryDate</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The expiry date on the document that was used to verify the name or birthdate.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>    <!-- DocumentExpiryDate -->
+		<Item>
 			<Element>IsConfirmed</Element>
 			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
@@ -2133,20 +2199,6 @@
 			</Description>
 			<Type name="xs:dateTime"/>
 		</Item>    <!-- TimeStamp -->
-		<Item>
-			<Element>Method</Element>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The means by which an identity and eligibility status
-				for education services is verified.  Principally refers to
-				an identity document type (eg passport) but may also
-				include a type of business decision taken to accept an
-				assertion of identity and eligibility status (eg principal
-				discretion).</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsVerificationMethodType"/>
-		</Item>    <!-- Method -->
 		<Item>
 			<Element>ProviderRefId</Element>
 			<Characteristics>M</Characteristics>
@@ -2170,9 +2222,11 @@
 		
 		<xhtml:Example xmlns="" name="Citizenship Verification Event Example">
 			<VerificationEvent>
+				<Source json:force-string="true">2</Source>
+				<DocumentSerialNumber>L905673</DocumentSerialNumber>
+				<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 				<IsConfirmed>true</IsConfirmed>
 				<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-				<Method>61002</Method>
 				<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
 				<ProviderLocalId>245</ProviderLocalId>
 			</VerificationEvent>
@@ -2210,7 +2264,7 @@
 			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>Iwi</Element>
+			<Element>IwiAffiliation</Element>
 			<Characteristics>MR</Characteristics>
 			<Description/>
 			<Type ref="CodeSets" name="NZCodeSetsIwiType"/>
@@ -2218,9 +2272,31 @@
 		
 		<xhtml:Example xmlns="" name="Iwi List Example">
 			<IwiAffiliationList>
-				<Iwi>0702</Iwi>
-				<Iwi>0601</Iwi>
+				<IwiAffiliation>0702</IwiAffiliation>
+				<IwiAffiliation>0601</IwiAffiliation>
 			</IwiAffiliationList>
+		</xhtml:Example>
+	</CommonElement>
+	<CommonElement name="ReligiousAffiliationListType" type="true" dm="true">
+		<Item>
+			<Element>ReligiousAffiliationListType</Element>
+			<Description>
+				<p>A list of one or more religions with which a person affiliates.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>ReligiousAffiliation</Element>
+			<Characteristics>MR</Characteristics>
+			<Description/>
+			<Type ref="CodeSets" name="NZCodeSetsReligionType"/>
+		</Item>
+		
+		<xhtml:Example xmlns="" name="Relgious Affiliation List Example">
+			<ReligiousAffiliationList>
+				<ReligiousAffiliation>212</ReligiousAffiliation>
+				<ReligiousAffiliation>215</ReligiousAffiliation>
+			</ReligiousAffiliationList>
 		</xhtml:Example>
 	</CommonElement>
 

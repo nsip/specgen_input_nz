@@ -15,7 +15,7 @@
 	</Item>
 	
 	<Item>
-		<Attribute>RefId</Attribute>
+		<Element>RefId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
@@ -23,7 +23,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
 	</Item>    <!-- RefId -->
-
+	
 	<Item>
 		<Element>LocalId</Element>
 		<Characteristics>M</Characteristics>
@@ -68,7 +68,7 @@
 		<Type ref="CommonTypes" name="PersonInfoType"/>
 	</Item>    <!-- PersonInfo -->
 	
-<if intl="au">
+  <if intl="au">
 	<Item>
 		<Element>AlertMessages</Element>
 		<Characteristics>O</Characteristics>
@@ -108,9 +108,6 @@
 		</Description>
 		<Type ref="CommonTypes" name="OtherIdListType"/>
   	</Item>    <!-- OtherIdList -->
-</if>
-
-<if intl="au">
 	<Item>
 		<Element>ProjectedGraduationYear</Element>
 		<Characteristics>O</Characteristics>
@@ -134,8 +131,8 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-      Date student officially graduated from secondary education.
-    </Description>
+      		Date student officially graduated from secondary education.
+		</Description>
 		<Type ref="CommonTypes" name="GraduationDateType"/>
 	</Item>    <!-- GraduationDate -->
 	<Item>
@@ -144,12 +141,11 @@
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>
-        Container for elements reflecting the most recent enrollment of a student.  If the student is
-        currently enrolled in the district, the elements contain current information.
-      </p>
+				Container for elements reflecting the most recent enrollment of a student.  If the student is
+				currently enrolled in the district, the elements contain current information.
+      		</p>
 		</Description>
-		
-    <Type ref="CommonTypes" name="StudentMostRecentContainerType"/>	
+    	<Type ref="CommonTypes" name="StudentMostRecentContainerType"/>	
 	</Item>    <!-- MostRecent -->
 	<Item>
 		<Element>AcceptableUsePolicy</Element>
@@ -287,10 +283,11 @@
 		<privacyRating>Extreme</privacyRating>
 		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
 	</Item>    <!-- SIF_ExtendedElements -->
-</if>
+  </if>
 
 	<xhtml:Example xmlns="" name ="StudentPersonal">
-		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
+		<StudentPersonal>
+			<RefId>7C834EA9-EDA1-2090-347F-83297E1C290C</RefId>
 			<LocalId>S1234567</LocalId>
 			<NationalStudentNumber>2234523</NationalStudentNumber>
 			<FirstNZSchoolingDate>1996-05-04</FirstNZSchoolingDate>
@@ -300,6 +297,16 @@
 					<GivenName>Rubeus</GivenName>
 					<FullName>Rubeus Hagrid</FullName>
 					<Type>LGL</Type>
+					<IsVerified>Y</IsVerified>
+					<Verification>
+						<Source json:force-string="true">2</Source>
+						<DocumentSerialNumber>L905673</DocumentSerialNumber>
+						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
+						<IsConfirmed>true</IsConfirmed>
+						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
+						<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
+						<ProviderLocalId>245</ProviderLocalId>
+					</Verification>					
 				</Name>
 				<OtherNames>
 					<Name>
@@ -307,12 +314,14 @@
 						<GivenName>Samuel</GivenName>
 						<FullName>Samuel Anderson</FullName>
 						<Type>AKA</Type>
+						<IsVerified>N</IsVerified>
 					</Name>
 					<Name>
 						<FamilyName>Rowinski</FamilyName>
 						<GivenName>Sam</GivenName>
 						<FullName>Sam Rowinski </FullName>
 						<Type>PRF</Type>
+						<IsVerified>N</IsVerified>
 					</Name>
 				</OtherNames>
 				<Demographics>
@@ -326,9 +335,11 @@
 					<CountryArrivalDate>1996-05-02</CountryArrivalDate>
 					<CitizenshipStatus>1</CitizenshipStatus>
 					<CitizenshipVerification>
+						<Source json:force-string="true">2</Source>
+						<DocumentSerialNumber>L905673</DocumentSerialNumber>
+						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 						<IsConfirmed>true</IsConfirmed>
 						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-						<Method>61002</Method>
 						<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
 						<ProviderLocalId>245</ProviderLocalId>
 					</CitizenshipVerification>
@@ -348,9 +359,13 @@
 						<Ethnicity json:force-string="true">42111</Ethnicity>
 					</EthnicityList>
 					<IwiAffiliationList>
-						<Iwi>0702</Iwi>
-						<Iwi>0601</Iwi>
+						<IwiAffiliation>0702</IwiAffiliation>
+						<IwiAffiliation>0601</IwiAffiliation>
 					</IwiAffiliationList>
+					<ReligiousAffiliationList>
+						<ReligiousAffiliation>212</ReligiousAffiliation>
+						<ReligiousAffiliation>215</ReligiousAffiliation>
+					</ReligiousAffiliationList>
 				</Demographics>
 				<AddressList>
 					<Address>
