@@ -4,11 +4,11 @@
 			xmlns:xi="http://www.w3.org/2001/XInclude"
 			xmlns:xhtml="http://www.w3.org/1999/xhtml"
 			xmlns:json="http://json.org/"
-
-            xmlns="http://sifassociation.org/SpecGen">
+			
+      xmlns="http://sifassociation.org/SpecGen">
 	
 	<EventsReported>true</EventsReported>
-	<Key>@StudentContactRelationshipRefId</Key>
+	<Key>StudentContactRelationshipRefId</Key>
 	
 	<Item>
 		<Element>StudentContactRelationship</Element>
@@ -18,14 +18,14 @@
 		</Description>
 	</Item>
 	<Item>
-		<Attribute>StudentContactRelationshipRefId</Attribute>
+		<Element>RefId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The SIF GUID for the student contact relationship.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"></Type>
-	</Item>   <!-- StudentContactRelationshipRefId -->
+	</Item>   <!-- RefId -->
 	<Item>
 		<Element>StudentPersonalRefId</Element>
 		<Characteristics>M</Characteristics>
@@ -40,16 +40,16 @@
 		<Description>SIF GUID for the student contact.</Description>
 		<Type ref='CommonTypes' name='IdRefType'/>
 	</Item>   <!-- StudentContactPersonalRefId -->
-<if intl="nz">  
+  <if intl="nz">
+		<Item>
+			<Element>ProviderRefId</Element>
+			<Characteristics>C</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>SIF GUID for the Provider associated with the relationship.</Description>
+			<Type ref='CommonTypes' name='IdRefType'/>
+		</Item>   <!-- ProviderRefId -->
+  </if>
 	<Item>
-		<Element>ProviderRefId</Element>
-		<Characteristics>C</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>SIF GUID for the Provider associated with the relationship.</Description>
-		<Type ref='CommonTypes' name='IdRefType'/>
-	</Item>   <!-- ProviderRefId -->
-</if>
-    <Item>
 		<Element>Relationship</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
@@ -88,7 +88,7 @@
 		<Type name="xs:unsignedInt"></Type>
 	</Item>   <!-- ContactSequence -->
 	
-<if intl="au">
+  <if intl="au">
 	<Item>
 		<Element>ParentRelationshipStatus</Element>
 		<Characteristics>O</Characteristics>
@@ -147,7 +147,7 @@
 		<privacyRating>High</privacyRating>
 		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
 	</Item>   <!-- SIF_ExtendedElements -->
-</if>
+  </if>
 
   <xhtml:Example xmlns='' name="StudentContactRelationship" intl="au">
     <StudentContactRelationship StudentContactRelationshipRefId = "7572B261-0947-583A-463D-BB345291B332">
@@ -180,8 +180,10 @@
         <ContactSequenceSource>P</ContactSequenceSource>
       </StudentContactRelationship>
   </xhtml:Example>
+
   <xhtml:Example xmlns='' name="StudentContactRelationship" intl="nz">
-    <StudentContactRelationship StudentContactRelationshipRefId="7572B261-0947-583A-463D-BB345291B332">
+    <StudentContactRelationship>
+			<RefId>7572B261-0947-583A-463D-BB345291B332</RefId>
       <StudentPersonalRefId>DEE34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
       <StudentContactPersonalRefId>6472B261-0947-583A-463D-BB345291B001</StudentContactPersonalRefId>
 	  <ProviderRefId>4661c4c8-fd03-4fc6-8af7-5084338494db</ProviderRefId>
@@ -189,8 +191,8 @@
         <Code>01</Code>
       </Relationship>
       <HouseholdList>
-        <Household>FamilyA</Household>
-        <Household>FamilyB</Household>
+        <HouseholdId>FamilyA</HouseholdId>
+        <HouseholdId>FamilyB</HouseholdId>
       </HouseholdList>
       <ContactFlags>
         <ParentLegalGuardian>Y</ParentLegalGuardian>
@@ -199,7 +201,7 @@
         <AccessToRecords>U</AccessToRecords>
         <ReceivesAssessmentReport>Y</ReceivesAssessmentReport>
         <EmergencyContact>Y</EmergencyContact>
-		<CivilDefenseEmergencyContact>N</CivilDefenseEmergencyContact>
+		<CivilDefenceEmergencyContact>N</CivilDefenceEmergencyContact>
         <DisciplinaryContact>N</DisciplinaryContact>
         <AttendanceContact>N</AttendanceContact>
         <PrimaryCareProvider>U</PrimaryCareProvider>

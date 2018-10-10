@@ -2832,4 +2832,17 @@
 			<Value><Code>99999</Code><Text>Not Stated</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Religion -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code denoting the type of healthcare service provided by a StudentContact</p>
+		</Intro>
+		<ID>Healthcare Service Type</ID>
+		<Values>
+			<Value><Code>1</Code><Text>Doctor</Text></Value>
+			<Value><Code>2</Code><Text>Dentist</Text></Value>
+			<Value><Code>3</Code><Text>Therapist</Text></Value>
+			<Value><Code>4</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>
 </IncludeGroup>

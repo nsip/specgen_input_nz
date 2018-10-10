@@ -6,7 +6,7 @@
 			xmlns:json="http://json.org/"
 			
             xmlns="http://sifassociation.org/SpecGen">
-  <Key>@RefId</Key>
+  <Key>RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
     <Element>Provider</Element>

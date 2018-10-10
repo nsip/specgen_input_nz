@@ -6,6 +6,7 @@
 			xmlns:json="http://json.org/"
 
             xmlns="http://sifassociation.org/SpecGen">
+
 	<EventsReported>true</EventsReported>
 	<Key>@RefId</Key>
 	<Item>
@@ -16,7 +17,7 @@
 		</Description>
 	</Item>
 	<Item>
-		<Attribute>RefId</Attribute>
+		<Element>RefId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>The SIF GUID that uniquely identifies the Student Contact.</Description>
@@ -33,66 +34,87 @@
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"></Type>
 	</Item>    <!-- LocalId -->
+	<Item>
+		<Element>HasBOTVote</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>Records that this Whānau member holds the Whānau's Board of Trustees vote.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+	</Item>    <!-- HasBOTVote -->
     <Item>
 		<Element>PersonInfo</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>High</privacyRating>
 		<Description>
-			<p>Personal Information collected about Student whānau members.</p>
+			<p>Personal Information collected about the StudentContact, when that contact is a member
+			of the Student's whānau.</p>
 		</Description>
 		<Type ref="CommonTypes" name="PersonInfoType"></Type>
 	</Item>    <!-- PersonInfo -->
+    <Item>
+		<Element>HealthcareServiceInfo</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Information about the StudentContact, when that contact is a healthcare service.
+			Details about the actual healthcare pratitioner are kept in the PersonInfo fields.</p>
+		</Description>
+		<Type ref="CommonTypes" name="HealthcareServiceInfoType"></Type>
+	</Item>    <!-- HealthcareServiceInfo -->
 
-<if intl="au">
-	<Item>
-		<Element>OtherIdList</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>Lists all "other" identifiers associated with the contact.</p>
-		</Description>
-		<Type ref="CommonTypes" name="OtherIdListType"/>
-  	</Item>
-	<Item>
-		<Element>EmploymentType</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>Code that defines employment type. This is compulsory for Parents or Guardians of the Student.</p>
-		</Description>
-		<Type ref="CodeSets" name="NZCodeSetsEmploymentTypeType"></Type>
-	</Item>
-	<Item>
-		<Element>SchoolEducationalLevel</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>The highest level of education completed by the contact person.</p>
-		</Description>
-		<Type ref="CommonTypes" name="EducationalLevelType"></Type>
-	</Item>
-	<Item>
-		<Element>NonSchoolEducation</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>This reflects the level of the Contact's Non-School Education.</p>
-		</Description>
-		<Type ref="CodeSets" name="NZCodeSetsNonSchoolEducationType"></Type>
-	</Item>
-	<Item>
-		<Element>SIF_Metadata</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Type ref="CommonTypes" name="SIF_MetadataType"></Type>
-	</Item>
-	<Item>
-		<Element>SIF_ExtendedElements</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
-	</Item>
-</if>
+	<if intl="au">
+		<Item>
+			<Element>OtherIdList</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Medium</privacyRating>
+			<Description>
+				<p>Lists all "other" identifiers associated with the contact.</p>
+			</Description>
+			<Type ref="CommonTypes" name="OtherIdListType"/>
+		</Item>    <!--  OtherIdList -->
+		<Item>
+			<Element>EmploymentType</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Medium</privacyRating>
+			<Description>
+				<p>Code that defines employment type. This is compulsory for Parents or Guardians of the Student.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsEmploymentTypeType"></Type>
+		</Item>    <!-- EmploymentType -->
+		<Item>
+			<Element>SchoolEducationalLevel</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Medium</privacyRating>
+			<Description>
+				<p>The highest level of education completed by the contact person.</p>
+			</Description>
+			<Type ref="CommonTypes" name="EducationalLevelType"></Type>
+		</Item>    <!-- SchoolEducationalLevel -->
+		<Item>
+			<Element>NonSchoolEducation</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Medium</privacyRating>
+			<Description>
+				<p>This reflects the level of the Contact's Non-School Education.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsNonSchoolEducationType"></Type>
+		</Item>    <!-- NonSchoolEducation -->
+		<Item>
+			<Element>SIF_Metadata</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+		</Item>    <!-- SIF_MetaData -->
+		<Item>
+			<Element>SIF_ExtendedElements</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+		</Item>    <!-- SIF_ExtendedElements -->
+	</if>
+
 	<xhtml:Example xmlns='' name="StudentContactPersonal Example" intl="au">
 		<StudentContactPersonal RefId='7C834EA9-EDA1-2090-347F-83297E1C290F'>
 			<LocalId>P1234567</LocalId>
@@ -210,9 +232,12 @@
 			<NonSchoolEducation>6</NonSchoolEducation>
 		</StudentContactPersonal>
 	</xhtml:Example>
-	<xhtml:Example xmlns='' name="StudentContactPersonal Example" intl="nz">
-		<StudentContactPersonal RefId='7C834EA9-EDA1-2090-347F-83297E1C290F'>
+
+	<xhtml:Example xmlns='' name="StudentContactPersonal Family Member Example" intl="nz">
+		<StudentContactPersonal>
+			<RefId>7C834EA9-EDA1-2090-347F-83297E1C290F</RefId>
 			<LocalId>P1234567</LocalId>
+			<HasBOTVote>N</HasBOTVote>
 			<PersonInfo>
 				<Name>
 					<FamilyName>Hagrid</FamilyName>
@@ -286,6 +311,53 @@
 					
 				</HouseholdContactInfoList>
 			</PersonInfo>
+			<HealthcareServiceInfo>
+				<OrganisationName>Martinborough Medical Centre</OrganisationName>
+				<Notes>Dr Phillips</Notes>
+				<Type json:force-string="true">1</Type>
+			</HealthcareServiceInfo>
+		</StudentContactPersonal>
+	</xhtml:Example>
+
+	<xhtml:Example xmlns='' name="StudentContactPersonal Doctor Example" intl="nz">
+		<StudentContactPersonal>
+		    <RefId>7C834EA9-EDA1-2090-347F-FACE7E1C290F</RefId>
+			<LocalId>P1234567</LocalId>
+			<HasBOTVote>N</HasBOTVote>
+			<PersonInfo>
+				<Name>
+					<FullName>Dr Phillips</FullName>
+				</Name>
+				<AddressList>
+					<Address>
+						<Type json:force-string="true">1</Type>
+						<Role json:force-string="true">1</Role>
+						<Street>
+							<Line1>Regent St.</Line1>
+						</Street>
+						<City>Martinborough</City>
+						<PostalCode json:force-string="true">5741</PostalCode>
+					</Address>
+				</AddressList>
+				<EmailList>
+					<Email json:force-array="true">
+						<Type>07</Type>
+						<Address>Phillips@mboroHealth.com</Address>
+					</Email>
+				</EmailList>
+				<PhoneNumberList>
+					<PhoneNumber>
+						<Usage json:force-string="true">2</Usage>
+						<Type>0096</Type>
+						<Number>(021) 300 999</Number>
+					</PhoneNumber>
+				</PhoneNumberList>
+			</PersonInfo>
+			<HealthcareServiceInfo>
+				<OrganisationName>Martinborough Medical Centre</OrganisationName>
+				<Notes>Dr Amy also knows about the epilepsy</Notes>
+				<Type json:force-string="true">1</Type>
+			</HealthcareServiceInfo>
 		</StudentContactPersonal>
 	</xhtml:Example>
 </DataObject>

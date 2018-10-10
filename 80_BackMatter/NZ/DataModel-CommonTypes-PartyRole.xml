@@ -1386,7 +1386,7 @@
 		</Item>     <!-- EmergencyContact -->
 		<if intl="nz">
 			<Item>
-				<Element>CivilDefenseEmergencyContact</Element>
+				<Element>CivilDefenceEmergencyContact</Element>
 				<Characteristics>C</Characteristics>
 				<Description>
 					<p>Should this contact be notified in case of civil defense emergency
@@ -1474,6 +1474,14 @@
 				</Description>
 				<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
 			</Item>     <!-- CourtOrder -->
+			<Item>
+				<Element>HealthContact</Element>
+				<Characteristics>C</Characteristics>
+				<Description>
+					<p>Is this student contact a healthcare provider for the student?</p>
+				</Description>
+				<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+			</Item>     <!-- HealthContact -->
 		</if>
 	
 	</CommonElement>
@@ -1590,7 +1598,12 @@
 			<List mode="List"/>
 		</Item> 
 		<Item>
+		  <if intl="au">
 			<Element>Household</Element>
+		  </if>
+		  <if intl="nz">
+			<Element>HouseholdId</Element>
+		  </if>
 			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>Repeatable element containing the HouseholdContactId of a household identifier from the Student's
@@ -2298,6 +2311,52 @@
 				<ReligiousAffiliation>215</ReligiousAffiliation>
 			</ReligiousAffiliationList>
 		</xhtml:Example>
+	</CommonElement>
+
+	<!-- StudentContactPersonal details -->
+	<CommonElement name="HealthcareServiceInfoType" type="true" dm="true">
+		<Item>
+			<Element>HealthcareServiceInfoType</Element>
+			<Description>
+				<p>Details of a healthcare service provided by the student contact, for example if the contact is a doctor or dentist.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>OrganisationName</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The name of the healthcare service, eg: 'Martinborough Health Centre'</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- OrganisationName -->
+		<Item>
+			<Element>Notes</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Who at the healthservice is the Student's regular e.g. 'Dr Phillips'</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- Notes -->
+		<Item>
+			<Element>Type</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>What kind of healthcare service is provided to the Student by the contact?</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsHealthcareServiceTypeType"/>
+		</Item>    <!-- Type -->
+
+		<xhtml:Example xmlns="" name="Healthcare Service Info Example">
+			<HealthcareServiceInfo>
+				<OrganisationName>Martinborough Medical Centre</OrganisationName>
+				<Notes>Dr Amy also knows about the epilepsy</Notes>
+				<Type json:force-string="true">1</Type>
+			</HealthcareServiceInfo>
+		</xhtml:Example>
+		
 	</CommonElement>
 
 </IncludeGroup>
