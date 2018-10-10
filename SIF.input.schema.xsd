@@ -399,6 +399,15 @@
       <xs:attribute ref="xml:base"/>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Key" type="xs:string"/>
+  <xs:element name="EventsReported">
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="true"/>
+        <xs:enumeration value="false"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
   <xs:element name="DataObject">
     <xs:complexType mixed="true">
       <xs:sequence>
@@ -416,15 +425,6 @@
       </xs:sequence>
       <xs:attribute name="name" use="required"/>
     </xs:complexType>
-  </xs:element>
-  <xs:element name="Key" type="xs:string"/>
-  <xs:element name="EventsReported">
-    <xs:simpleType>
-      <xs:restriction base="xs:token">
-        <xs:enumeration value="true"/>
-        <xs:enumeration value="false"/>
-      </xs:restriction>
-    </xs:simpleType>
   </xs:element>
   <xs:element name="Domain">
     <xs:complexType>
@@ -499,11 +499,7 @@
       <xs:sequence>
         <xs:element ref="specgen:Code"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="specgen:Text"/>
-        <xs:element minOccurs="0" name="Description">
-          <xs:complexType mixed="true">
-            <xs:group ref="specgen:sif.narrative"/>
-          </xs:complexType>
-        </xs:element>
+        <xs:element minOccurs="0" ref="specgen:Description"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -511,6 +507,11 @@
   <xs:element name="Text">
     <xs:complexType mixed="true">
       <xs:attribute ref="xml:lang"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Description">
+    <xs:complexType mixed="true">
+      <xs:group ref="specgen:sif.narrative"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="Group">
@@ -532,6 +533,8 @@
       </xs:choice>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Attribute" type="xs:string"/>
+  <xs:element name="Element" type="xs:string"/>
   <xs:element name="Item">
     <xs:complexType mixed="true">
       <xs:sequence>
@@ -541,11 +544,7 @@
         </xs:choice>
         <xs:element minOccurs="0" ref="specgen:Characteristics"/>
         <xs:element minOccurs="0" ref="specgen:privacyRating"/>
-        <xs:element minOccurs="0" name="Description">
-          <xs:complexType mixed="true">
-            <xs:group ref="specgen:sif.narrative"/>
-          </xs:complexType>
-        </xs:element>
+        <xs:element minOccurs="0" ref="specgen:Description"/>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:group ref="specgen:sif.If.Type"/>
           <xs:element ref="specgen:Type"/>
@@ -569,8 +568,6 @@
       </xs:attribute>
     </xs:complexType>
   </xs:element>
-  <xs:element name="Attribute" type="xs:string"/>
-  <xs:element name="Element" type="xs:string"/>
   <xs:element name="Characteristics">
     <xs:simpleType>
       <xs:restriction base="xs:token">

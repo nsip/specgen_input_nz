@@ -220,10 +220,13 @@ sif.DataObjects = element DataObjects {
    attribute xml:base { text }?,
    (mixed  { sif.Group | sif.If.includeGroup | sif.IncludeGroup | xi.include}* ) }
 
+sif.Key = element Key { text }
+sif.EventsReported = element EventsReported { "true" | "false"}
+
 sif.DataObject = element DataObject {
    attribute name { text },
    
-   (element Key { text } | element EventsReported { "true" | "false" })+,
+   (sif.Key | sif.EventsReported)+,
    element Intro { sif.narrative }?,
    (mixed { sif.If.Item | sif.Item | sif.Choice })*,
    xhtml.Example*
@@ -278,10 +281,13 @@ sif.CodeSets = element CodeSets {
       | sif.Grouping} )* }
 
 
+sif.Attribute = element Attribute { text }
+sif.Element = element Element { text }
+
 sif.Item = element Item {
       attr.intl?,
 	  
-      (element Attribute { text } | element Element { text }),
+      (sif.Attribute | sif.Element),
 
 	  element Characteristics { "M" | "O" | "C" | "MR" | "OR"}?,
 	  element privacyRating { "Low" | "Medium" | "High" | "Extreme"}?,
