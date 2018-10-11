@@ -22,14 +22,90 @@
 			<Element>SubjectArea</Element>
 			<Characteristics>OR</Characteristics>
 			<Description/>
-			<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
-		</Item>
+			<Type ref="CodeSets" name="NZCodeSetsLearningAreaType"/>
+		</Item>      <!-- SubjectArea -->
 		<xhtml:Example xmlns="" name="NZ Subject Area List Example">
 			<SubjectAreaList>
 				<SubjectArea json:force-string="true">3</SubjectArea>
 				<SubjectArea json:force-string="true">4</SubjectArea>
 			</SubjectAreaList>
 		</xhtml:Example>
+	</CommonElement>
+
+	<CommonElement name="StaffSubjectListType" type="true" dm="true">
+		<Item>
+			<Element>StaffSubjectListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Subject(s) Staff member is eligible to teach.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>StaffSubject</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>This element contains Staff subjects they are eligible to teach together with the teaching preference.</p>
+			</Description>
+			<Type ref="CommonTypes" name="StaffSubjectType"/>
+		</Item>      <!-- StaffSubject -->
+	</CommonElement>
+
+	<CommonElement name="StaffSubjectType" type="true" dm="true">
+		<Item>
+			<Element>StaffSubjectType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>This element contains Staff subjects they are eligible to teach together with the teaching preference.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>PreferenceNumber</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Priority of Subject to Teach.</p>
+			</Description>
+			<Type name="xs:unsignedInt"/>
+		</Item>      <!-- Preference -->
+		<if intl="nz">
+			<Item>
+				<Element>Code</Element>
+				<Characteristics>M</Characteristics>
+				<Description>
+					<p>NZ education standardised code denoting LearningArea / SubjectArea</p>
+				</Description>
+				<Type ref="CodeSets" name="NZCodeSetsLearningAreaType"/>
+			</Item>       <!-- Code -->
+			<Item>
+				<Element>YearLevels</Element>
+				<Characteristics>M</Characteristics>
+				<Description>
+					<p>Staff assignment to this particular subject area / learning area applies
+					 only for students enrolled in a particular set of year levels.   
+					 e.g.  "Asst. Head of Dept (Maths, Jnr)" could ony be responsible for Students in 
+					 year levels 9 &amp; 10, who are learning Mathematics.</p>
+				</Description>
+				<Type ref="CommonTypes" name="YearLevelList"/>
+			</Item>       <!-- YearLevelList -->
+		</if>
+		<if intl="au">
+			<Item>
+				<Element>SubjectLocalId</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>Local Subject Id</p>
+				</Description>
+				<Type ref="CommonTypes" name="LocalIdType"/>
+			</Item>       <!-- SubjectLocalId -->
+			<Item>
+				<Element>TimeTableSubjectRefId</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>RefId of TimeTableSubject</p>
+				</Description>
+				<Type ref="CommonTypes" name="RefIdType"/>
+			</Item>      <!-- TimeTableSubjectRefId -->
+		</if>
 	</CommonElement>
 
 	<CommonElement name="LanguageOfInstructionListType" type="true" dm="true">

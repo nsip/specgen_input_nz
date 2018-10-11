@@ -19,6 +19,10 @@
 				education).
 				</li>
 
+				<li>The <code>EducationOrganisation</code> is added in the NZ data model
+				and describes education organisations (such as Kahui Ako) that are known
+				to the NZ education system, but are not themselves Providers.</li>
+
 				<li><code>StudentPersonal</code> data object doesn't
 				include Alert or MedicalAlert messages; Demographics
 				area includes NZ statistical standard Ethnicity and
@@ -40,10 +44,12 @@
 		</Intro>
 
 		<!-- Include data model here -->		
-		<xi:include parse="xml" href="NZ/Provider.xml"/>
+		<xi:include parse="xml" href="NZ/Provider.xml"/>		
 		<xi:include parse="xml" href="NZ/ProviderRelationship.xml"/>
+		<xi:include parse="xml" href="NZ/EducationOrganisation.xml"/>
 
 		<xi:include parse="xml" href="NZ/StaffPersonal.xml"/>
+		<xi:include parse="xml" href="NZ/StaffAssignment.xml"/>
 		
 		<xi:include parse="xml" href="NZ/StudentPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StudentContactPersonal.xml"/>

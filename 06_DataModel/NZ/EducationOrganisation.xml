@@ -1,0 +1,106 @@
+<DataObject name="EducationOrganisation"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+			xmlns:json="http://json.org/"
+			
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>EducationOrganisation</Element>
+	<privacyRating>Low</privacyRating>
+    <Description>A generic organisation that operates within the education sector; but doesn’t provide education 
+        services. e.g. Communities of Learning | Kāhui Ako, Ministry local offices, 
+        Industry training organisations, etc. 
+    </Description>
+  </Item>
+  <Item>
+    <Element>RefId</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The SIF GUID used by systems to identify the organisation.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item> <!-- RefId -->
+  <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Ministry of Education number used by the education sector to identify the organisation.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item> <!-- LocalId -->
+  <Item>
+    <Element>Organisation</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The generic organisation details about the organisation</p>
+    </Description>
+    <Type ref="CommonTypes" name="OrganisationType"></Type>
+  </Item> <!-- Organisation -->
+    
+  <xhtml:Example xmlns="" name="Kāhui Ako Education Organisation Example">
+    <EducationOrganisation>
+		<RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
+		<LocalId>99204</LocalId>
+		<Organisation>
+			<AddressList>
+				<Address json:force-array="true">
+					<Type>2</Type>
+					<Role>2</Role>
+					<Street>
+						<Line1>1175 Lake Ferry Rd</Line1>
+					</Street>
+					<Suburb>RD 1</Suburb>
+					<City>Martinborough</City>
+				</Address>
+			</AddressList>
+			<CommunicationChannelList/>
+			<ContactList>
+				<Contact>
+					<Name>
+						<FamilyName>Dumbledore</FamilyName>
+						<GivenName>Albus</GivenName>
+						<FullName>Albus Dumbledore</FullName>
+					</Name>
+					<PositionTitle>Headmaster</PositionTitle>
+					<Role json:force-string="true">1</Role>
+					<AddressList>
+						<Address>
+							<Type json:force-string="true">1</Type>
+							<Role json:force-string="true">1</Role>
+							<Street>
+								<Line1>533 Hogwart's Way</Line1>
+							</Street>
+							<City>Hogsmead</City>
+							<PostalCode json:force-string="true">7733</PostalCode>
+						</Address>
+					</AddressList>
+					<EmailList/>
+					<PhoneNumberList/>
+				</Contact>
+    			</ContactList>
+                <EmailList>
+                    <Email json:force-array="true">
+                        <Type>07</Type>
+                        <Address>stuart@gmail.com</Address>
+                    </Email>
+                </EmailList>
+			<LocationList/>
+			<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
+			<PhoneNumberList>
+				<PhoneNumber>
+					<Notes>Lead School Secretary DDI</Notes>
+					<Type>0096</Type>
+					<Number>(021) 300 999</Number>
+				</PhoneNumber>
+			</PhoneNumberList>
+			<Type>2</Type>
+		</Organisation>
+     </EducationOrganisation>
+  </xhtml:Example>
+</DataObject>

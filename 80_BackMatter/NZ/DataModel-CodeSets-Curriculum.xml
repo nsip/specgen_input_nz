@@ -26,7 +26,7 @@
 			as well as matching Subject Areas.
 			</p>
 		</Intro>
-		<ID>Subject Area</ID>
+		<ID>Learning Area</ID>
 		<Values>
 			<Value>
 				<Code>1</Code>
@@ -74,5 +74,5 @@
 				<Description>Applicable to Te Marautanga o Aotearoa</Description>
 			</Value>
 		</Values>
-	</CodeSet>   <!-- Subject/Learning Area Types-->
+	</CodeSet>   <!-- Learning/Subject Area Types-->
 </IncludeGroup>
