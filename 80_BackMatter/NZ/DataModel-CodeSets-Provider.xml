@@ -444,7 +444,7 @@
 				last year of instruction conducted by the Contributing School.</Description>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- ProviderRelationshipRole -->
+	</CodeSet>    <!-- Provider Relationship Role -->
 	
 	<!-- StaffAssignment -->
 	<CodeSet>
@@ -656,4 +656,52 @@
 			<Value><Code>O</Code><Text>On Leave</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Staff Status -->
+
+	<!-- TeachingGroup -->
+	<CodeSet>
+		<Intro>
+			<p>Provides the means of identifying the type of group such as Roll class, Subject class or House and allows systems to treat them accordingly</p>
+		</Intro>
+		<ID>Teaching Group Type</ID>
+		<Values>
+			<Value>
+				<Code>1</Code><Text>Roll Class</Text>
+				<Description>The TeachingGroup is a class only used for taking daily attendance.</Description>
+			</Value>
+			<Value>
+				<Code>2</Code><Text>Subject Class</Text>
+				<Description>The TeachingGroup is a class used for teaching.</Description>
+			</Value>
+			<Value>
+				<Code>3</Code><Text>Suspended</Text>
+				<Description>The TeachingGroup is used for Sporting, Wellbeing and Pastoral care functions.</Description>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Teaching Group Type -->
+	<CodeSet>
+		<Intro>
+			<p>Provides the means of identifying the type of group such as Roll class, Subject class or House and allows systems to treat them accordingly</p>
+		</Intro>
+		<ID>Teaching Group Teacher Role</ID>
+		<Values>
+			<Value>
+				<Code>1</Code><Text>Teacher</Text>
+				<Description>The staff member is (one of) the TeachingGroups teachers.</Description>
+			</Value>
+			<Value>
+				<Code>2</Code><Text>Teacher's Aide</Text>
+				<Description>The staff member is a teacher's aide, assisting some or all students in the TeachingGroup.</Description>
+			</Value>
+			<Value>
+				<Code>3</Code><Text>Lab Assistant</Text>
+				<Description>The staff member is a Lab Assistant assisting some or all students in the TeachingGroup.</Description>
+			</Value>
+			<Value>
+				<Code>4</Code><Text>Co Teacher</Text>
+				<Description>The staff member is a co-teacher, providing mentoring and moderation 
+				to the TeachingGroup's actual teacher(s).</Description>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Teaching Group Teacher Role -->
+
 </IncludeGroup>

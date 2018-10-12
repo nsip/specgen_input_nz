@@ -12,37 +12,39 @@
 
 
 	<!-- Borrowed from SIF AU -->
-	<CommonElement name="TeacherListType" type="true" dm="true">
+
+	<CommonElement name="StaffListType" type="true" dm="true">
 		<Item>
-			<Element>TeacherListType</Element>
+			<Element>StaffListType</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>A List of teachers associated with the group –  may or may not include the teacher timetabled in the schedule.</p>
+				<p>A List of staff members associated with the TeachingGroup or AssessmentTask.</p>
 			</Description>
 			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>TeachingGroupTeacher</Element>
+			<Element>StaffMember</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>Teacher associated with the Teaching group –  may or may not be the teacher timetabled in the schedule</p>
 			</Description>
-			<Type ref="CommonTypes" name="TeachingGroupTeacherType"/>
-		</Item>    <!-- TeachingGroupTeacher -->
+			<Type ref="CommonTypes" name="StaffListStaffMemberType"/>
+		</Item>    <!-- StaffListStaffMember -->
 	</CommonElement>
-	<CommonElement name="TeachingGroupTeacherType" type="true" dm="true">
+	<CommonElement name="StaffListStaffMemberType" type="true" dm="true">
 		<Item>
-			<Element>TeachingGroupTeacherType</Element>
+			<Element>StaffListStaffMemberType</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>
-				<p>Teacher associated with the Teaching group –  may or may not be the teacher timetabled in the schedule</p>
+				<p>The individual staff member as a member of the StaffListStaffMember who marked the assessment.
+				 May or may not be the teacher scheduled in the timetable.</p>
 			</Description>
-		</Item>    <!-- TeachingGroupTeacherType -->
+		</Item>
 		<Item>
 			<Element>StaffPersonalRefId</Element>
 			<Characteristics>C</Characteristics>
 			<Description>
-				<p>GUID from the StaffPersonal Object that identifies the Staff member.  Either StaffPersonalRefidId or StaffLocalId should be supplied.</p>
+				<p>RefId of the Staff member. Either StaffPersonalRefidId or StaffLocalId should be supplied.</p>
 			</Description>
 			<Type ref="CommonTypes" relationship="" count="?:1" name="IdRefType"/>
 		</Item>    <!-- StaffPersonalRefId -->
@@ -60,22 +62,93 @@
 			<Description>
 				<p>Name of Staff Member.</p>
 			</Description>
-			<if intl="au">		
+			<if intl="au">
 				<Type ref="CommonTypes" name="NameOfRecordType"/>
 			</if>	
 			<if intl="nz">
 				<Type ref="CommonTypes" name="BaseNameType"/>
 			</if>
 		</Item>    <!-- Name -->
-		<Item>
-			<Element>Association</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>Association with the Teaching Group (free format for this release)</p>
-			</Description>
-			<Type name="xs:normalizedString"/>
-		</Item>    <!-- Association -->
+
+		<if intl="au">
+			<Item>
+				<Element>Association</Element>
+				<Characteristics>M</Characteristics>
+				<Description>
+					<p>Association with the Teaching Group (free format for this release)</p>
+				</Description>
+				<Type name="xs:normalizedString"/>
+			</Item>    <!-- Association -->
+		</if>
+		<if intl="nz">
+			<Item>
+				<Element>Role</Element>
+				<Characteristics>M</Characteristics>
+				<Description>
+					<p>Code describing the staff member's role in the TeachingGroup.  e.g.  Teacher,
+					 Teacher's Aide, Lab Assistant, Co-Teacher.</p>
+					 <p>Note: This role may affect the Teacher's access to the students' data for 
+					 those students who are members of the TeachingGroup.</p>
+				</Description>
+				<Type  ref="CodeSets" name="NZCodeSetsTeachingGroupTeacherRole"/>
+			</Item>    <!-- Role -->
+		</if>
 	</CommonElement>
+	<CommonElement name="StudentListType" type="true" dm="true">
+		<Item>
+			<Element>StudentListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of references to the set of Students who are assigned to 
+					the Teaching Group, SchoolCourse or AssessmentTask.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Student</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Student reference in the StudentList.</p>
+			</Description>
+			<Type ref="CommonTypes" name="StudentListStudentType"/>
+		</Item>       <!-- Student -->
+	</CommonElement>
+	<CommonElement name="StudentListStudentType" type="true" dm="true">
+		<Item>
+			<Element>StudentListStudentType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Repeatable element, being the reference Ids and/or name of a Student in the list of Students.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>StudentPersonalRefId</Element>
+			<Characteristics>C</Characteristics>
+			<Description>
+				<p>RefId of the Student who is a member of the StudentList. Either StudentPersonalRefidId 
+					or StudentLocalId should be supplied.</p>
+			</Description>
+			<Type ref="CommonTypes" relationship="" count="?:1" name="IdRefType"/>
+		</Item>       <!-- StudentPersonalRefId -->
+		<Item>
+			<Element>StudentLocalId</Element>
+			<Characteristics>C</Characteristics>
+			<Description>
+				<p>Local Id of the Student who is a member of the StudentList. Either StudentPersonalRefidId or
+					 StudentLocalId should be supplied.</p>
+			</Description>
+			<Type ref="CommonTypes" name="LocalIdType"/>
+		</Item>       <!-- StudentPersonalLocalId -->
+		<Item>
+			<Element>Name</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Name of the Student who is a member of the StudentList.</p>
+			</Description>
+			<Type ref="CommonTypes" name="BaseNameType"/>
+		</Item>       <!-- Name -->
+	</CommonElement>
+
 
 	<!-- Defined by SIF NZ 	-->
 	

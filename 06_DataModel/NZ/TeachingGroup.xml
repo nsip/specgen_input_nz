@@ -1,0 +1,425 @@
+<DataObject name="TeachingGroup"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+			xmlns:json="http://json.org/"
+
+      xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>TeachingGroup</Element>
+	  <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>Identifies a particular class or other group of students in a particular time table.  Such groups 
+        can have multiple staff assigned in a variety of roles, may be assignes students from multiple year levels
+        and may be taught multiple courses.
+        </p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>RefId</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The GUID of the TeachingGroup</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>       <!-- RefId -->
+  <Item>
+    <Element>LocalId</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>LocalId of the Teaching Group (previously ClassIndicator).</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>       <!-- LocalId -->
+  <Item>
+    <Element>ShortName</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Short free format label that describes the group.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>       <!-- ShortName -->
+  <Item>
+    <Element>LongName</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Longer description if required.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>       <!-- LongName -->
+  <Item>
+    <Element>GroupType</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Provides the means of identifying the type of group such as roll class or subject class 
+        for instance and treat them accordingly.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsTeachingGroupTypeType"/>
+  </Item>       <!-- GroupType -->
+  
+  <if intl="au">
+    <Item>
+      <Element>Set</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Set Number (UK)</p>
+      </Description>
+      <Type name="xs:normalizedString"></Type>
+    </Item>       <!-- Set -->
+    <Item>
+      <Element>Block</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Block (UK)</p>
+      </Description>
+      <Type name="xs:normalizedString"></Type>
+    </Item>       <!-- BLock -->
+    <Item>
+      <Element>CurriculumLevel</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Assessment Stage eg VELS Level</p>
+      </Description>
+      <Type name="xs:normalizedString"></Type>
+    </Item>       <!-- CurriculumLevel -->
+  </if>
+  <Item>
+    <Element>ProviderRefId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>RefId  of the Provider who defines the TeachingGroup. Either ProviderRefId 
+      or ProviderLocalId must be provided.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>        <!-- ProviderRefId -->
+  <Item>
+    <Element>ProviderLocalId</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>LocalId of the Provider who defines the TeachingGroup. Either ProviderRefId or
+       ProviderLocalId must be provided.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>        <!-- ProviderLocalId -->
+
+  <Item>
+    <Element>ProviderCourseRefId</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>RefId of the course being taught to the TeachingGroup. Either ProviderCourseRefId or 
+        ProviderCourseLocalId must be provided.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>        <!-- ProvderCourseRefId -->
+  <Item>
+    <Element>ProviderCourseLocalId</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>LocalId of the course being taught to the TeachingGroup. Either ProviderCourseRefId or
+         ProviderCourseLocalId must be provided.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>        <!-- ProviderCourseLocalId -->
+
+  <Item>
+    <Element>SchoolYear</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The SchoolYear that the class represented by the TeachingGroup is being taught.</p>
+    </Description>
+    <Type name="xs:gYear"></Type>
+  </Item>       <!-- SchoolYear -->
+
+  <if intl="nz">
+    <Item>
+      <Element>BeginDate</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The start date of the first Timetable that the class represented by the TeachingGroup
+          is being taught in the nominated school year.</p>
+      </Description>
+      <Type name="xs:date"></Type>
+    </Item>       <!-- BeginDate -->
+    <Item>
+      <Element>EndDate</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The end date of the last Timetable that the class represented by the TeachingGroup
+          is being taught in the nominated school year.</p>
+      </Description>
+      <Type name="xs:date"></Type>
+    </Item>       <!-- EndDate -->
+  </if>
+
+  <if intl="au">
+    <Item>
+      <Element>TimeTableSubjectRefId</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>GUID of TimeTableSubject object this teaching group belongs to.</p>
+      </Description>
+      <Type ref="CommonTypes" name="RefIdType"></Type>
+    </Item>         <!-- TimeTableSubjectRefId -->
+    <Item>
+      <Element>TimeTableSubjectLocalId</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Local subject Id.</p>
+      </Description>
+      <Type ref="CommonTypes" name="LocalIdType"></Type>
+    </Item>         <!-- TimeTableSubjectLocalID -->
+    <Item>
+      <Element>Semester</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Semester, Term, or Quarter subject offered.</p>
+      </Description>
+      <Type name="xs:unsignedInt"></Type>
+    </Item>         <!-- Semester -->
+  </if>
+  
+  <Item>
+    <Element>StudentList</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>List of Students in this Teaching Group</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentListType"></Type>
+  </Item>       <!-- StudentList -->
+
+  <Item>
+    <Element>TeacherList</Element>
+
+    <Characteristics>O</Characteristics>
+  	<privacyRating>Medium</privacyRating>
+    <Description>
+      <p>A List of staff associated with the group –  may or may not include the teacher timetabled in the schedule.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StaffListType"></Type>
+  </Item>       <!-- TeacherList -->
+
+  <if intl="nz">
+    <Item>
+      <Element>SubjectAreaList</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Medium</privacyRating>
+      <Description>
+        <p>List of codes denoting the Learning or Subject Areas of the Course the TeachingGroup is being taught.</p>
+      </Description>
+      <Type ref="CommonTypes" name="SubjectAreaListType"></Type>
+    </Item>       <!-- SubjectAreaList -->
+
+    <Item>
+      <Element>YearLevelList</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Medium</privacyRating>
+      <Description>
+        <p>For Subject Class teaching groups: the list of codes denoting the Year Levels
+          of the Course the TeachingGroup is being taught.</p>
+        <p>For Roll Class teaching groups, the Year Levels of the students
+          in the roll class group.</p>
+      </Description>
+      <Type ref="CommonTypes" name="YearLevelListType"></Type>
+    </Item>       <!-- YearLevelList -->
+  </if>
+
+  <if intl="au">
+    <Item>
+      <Element>MinClassSize</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Minimum class size.</p>
+      </Description>
+      <Type name='xs:integer'/>
+    </Item>        <!-- MinClassSize -->
+    <Item>
+      <Element>MaxClassSize</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Maximum class size</p>
+      </Description>
+      <Type name='xs:integer'/>
+    </Item>        <!-- MaxClassSize -->
+    <Item>
+      <Element>TeachingGroupPeriodList</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>A List of schedule information that can be published by an SIS which is a subset of information available in the TimeTableCell object.</p>
+        <p>PeriodId or StartTime must be provided.</p>
+      </Description>
+      <Type ref="CommonTypes" name="TeachingGroupPeriodListType"></Type>
+    </Item>        <!-- TeachingGroupPeriodList -->
+    <Item>
+      <Element>SIF_Metadata</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Medium</privacyRating>
+      <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    </Item>        <!-- SIF_Metadata -->
+    <Item>
+      <Element>SIF_ExtendedElements</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Medium</privacyRating>
+      <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    </Item>        <!-- SIF_ExtendedElements -->
+  </if>
+
+  <xhtml:Example xmlns="" name="TeachingGroup" intl="au">
+    <TeachingGroup RefId="64A309DA-063A-2E35-B359-D75101A8C3D1">
+      <SchoolYear>2008</SchoolYear>
+      <LocalId>20087ASPN</LocalId>
+      <ShortName>7A SPN</ShortName>
+      <LongName>Year 7A Maths – Space and Numbers</LongName>
+      <Set>4</Set>
+      <Block>6</Block>
+      <CurriculumLevel>VELS Level 5</CurriculumLevel>
+      <StudentList>
+        <TeachingGroupStudent>
+          <StudentPersonalRefId>9897466F-200E-4BC1-B9AE-D1507DA15CEF</StudentPersonalRefId>
+          <StudentLocalId>SMI001</StudentLocalId>
+          <Name Type="LGL">
+            <FamilyName>Smith</FamilyName>
+            <GivenName>Peter</GivenName>
+          </Name>
+        </TeachingGroupStudent>
+        <TeachingGroupStudent>
+          <StudentPersonalRefId>7C834EA9-EDA1-2090-347F-83297E1C290D</StudentPersonalRefId>
+          <StudentLocalId>SMI002</StudentLocalId>
+          <Name Type="LGL">
+            <FamilyName>Smith</FamilyName>
+            <GivenName>Jennifer</GivenName>
+          </Name>
+        </TeachingGroupStudent>
+        <TeachingGroupStudent>
+          <StudentPersonalRefId>7C834EA9-EDA1-2090-347F-83297E1C290E</StudentPersonalRefId>
+          <StudentLocalId>SMI003</StudentLocalId>
+          <Name Type="LGL">
+            <FamilyName>Smith</FamilyName>
+            <GivenName>Terence</GivenName>
+          </Name>
+        </TeachingGroupStudent>
+      </StudentList>
+      <TeacherList>
+        <TeachingGroupTeacher>
+          <StaffPersonalRefId>A8C3A2E3-5B35-9D75-101D-00AA001A0000</StaffPersonalRefId>
+          <StaffLocalId>SMI1</StaffLocalId>
+          <Name Type="LGL">
+            <FamilyName>Smith</FamilyName>
+            <GivenName>Thomas</GivenName>
+          </Name>
+          <Association>Class Teacher</Association>
+        </TeachingGroupTeacher>
+        <TeachingGroupTeacher>
+          <StaffPersonalRefId>A8CCCCE3-5B35-9D75-101D-00AA001A0000</StaffPersonalRefId>
+          <StaffLocalId>LONG2</StaffLocalId>
+          <Name Type="LGL">
+            <FamilyName>Long</FamilyName>
+            <GivenName>Tamara</GivenName>
+           
+          </Name>
+          <Association>Integration Aide</Association>
+        </TeachingGroupTeacher>
+      </TeacherList>
+      <TeachingGroupPeriodList>
+         <TeachingGroupPeriod>
+			 <DayId>M</DayId>
+			 <PeriodId>2</PeriodId>
+         </TeachingGroupPeriod>
+         <TeachingGroupPeriod>
+			 <DayId>F</DayId>
+			 <PeriodId>6</PeriodId>
+         </TeachingGroupPeriod>
+      </TeachingGroupPeriodList>
+    </TeachingGroup>
+
+    
+  </xhtml:Example>
+
+  <xhtml:Example xmlns="" name="TeachingGroup" intl="nz">
+    <TeachingGroup>
+      <RefId>64A309DA-063A-2E35-B359-D75101A8C3D1</RefId>
+      <LocalId>20087ASPN</LocalId>
+      <ShortName>7A SPN</ShortName>
+      <LongName>Year 7A Maths - Space and Numbers</LongName>
+      <GroupType json:force-string="true">2</GroupType>
+      <ProviderRefId>64A309DA-063A-2E35-B359-FACEA8C12312</ProviderRefId>
+      <ProviderLocalId>234</ProviderLocalId>
+      <ProviderCourseRefId>64A309DA-063A-2E35-B359-DEFACEDA8C31</ProviderCourseRefId>
+      <ProviderCourseLocalId>7ASPN</ProviderCourseLocalId>
+      <SchoolYear>2018</SchoolYear>
+      <BeginDate>2018-02-04</BeginDate>
+      <EndDate>2018-12-05</EndDate>
+      <StudentList>
+        <Student>
+          <StudentPersonalRefId>9897466F-200E-4BC1-B9AE-D1507DA15CEF</StudentPersonalRefId>
+          <StudentLocalId>SMI001</StudentLocalId>
+          <Name>
+            <FamilyName>Smith</FamilyName>
+            <GivenName>Peter</GivenName>
+          </Name>
+        </Student>
+        <Student>
+          <StudentPersonalRefId>7C834EA9-EDA1-2090-347F-83297E1C290D</StudentPersonalRefId>
+          <StudentLocalId>SMI002</StudentLocalId>
+          <Name>
+            <FamilyName>Smith</FamilyName>
+            <GivenName>Jennifer</GivenName>
+          </Name>
+        </Student>
+        <Student>
+          <StudentPersonalRefId>7C834EA9-EDA1-2090-347F-83297E1C290E</StudentPersonalRefId>
+          <StudentLocalId>SMI003</StudentLocalId>
+          <Name>
+            <FamilyName>Smith</FamilyName>
+            <GivenName>Terence</GivenName>
+          </Name>
+        </Student>
+      </StudentList>
+      <TeacherList>
+        <StaffMember>
+          <StaffPersonalRefId>A8C3A2E3-5B35-9D75-101D-00AA001A0000</StaffPersonalRefId>
+          <StaffLocalId>SMI1</StaffLocalId>
+          <Name>
+            <FamilyName>Smith</FamilyName>
+            <GivenName>Thomas</GivenName>
+          </Name>
+          <Role json:force-string="true">1</Role>
+        </StaffMember>
+        <StaffMember>
+          <StaffPersonalRefId>A8CCCCE3-5B35-9D75-101D-00AA001A0000</StaffPersonalRefId>
+          <StaffLocalId>LONG2</StaffLocalId>
+          <Name>
+            <FamilyName>Long</FamilyName>
+            <GivenName>Tamara</GivenName>
+          </Name>
+          <Role  json:force-string="true">2</Role>
+        </StaffMember>
+      </TeacherList>
+    </TeachingGroup>  
+  </xhtml:Example>
+  </DataObject>
