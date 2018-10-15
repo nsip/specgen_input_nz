@@ -1,0 +1,439 @@
+<DataObject name="LearningStandard"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+			xmlns:json="http://json.org/"
+
+      xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>LearningStandard</Element>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A curriculum standard or the like published by a national body, professional association or 
+      other interested party. The LearningStandard describes a set of learning that students are 
+      expected to undertake.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>RefId</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Unique identifier (GUID) that uniquely identifies the particular version or edition of the Learning Standard.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>    <!-- RefId -->
+  <Item>
+    <Element>Title</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The name of the LearningStandard. eg: "Demonstrate understanding of chemical reactivity"</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- Title -->
+
+  <if intl="nz">
+    <Item>
+      <Element>Code</Element>
+      <Characteristics>M</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Code assigned by the LearningStandard publisher to identify the LearningStandard.
+          This may not uniquely identify the LearningStandard, where there may be 
+          multiple editions or versions of a particular LearningStandard.</p>          
+        <p>The natural id may be formed by combining Publisher Id, Code &amp; VersionNo.</p>
+      </Description>
+      <Type ref="CommonTypes" name="LocalIdType"/>
+    </Item>    <!-- Code -->
+    <Item>
+      <Element>VersionNo</Element>
+      <Characteristics>M</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The version number of the LearningStandard.</p>
+      </Description>
+      <Type name="xs:decimal"/>
+    </Item>    <!-- VersionNo -->
+    <Item>
+      <Element>PublisherRefId</Element>
+      <Characteristics>M</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Unique identifier (GUID) for the EducationOrganisation that published the LearningStandard</p>
+      </Description>
+      <Type ref="CommonTypes" name="LocalIdType"/>
+    </Item>    <!-- PublisherRefId -->
+  </if>
+
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+        <p>Description of the standards document.</p>
+    </Description>
+   <Type name="xs:string"></Type>
+  </Item>    <!-- Description -->
+
+  <if intl="au">
+    <Item>
+      <Element>RichDescription</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Description of the curriculum document that allows pictures as well as text..</p>
+      </Description>
+      <Type ref="CommonTypes" name="AbstractContentElementType"></Type>
+    </Item>    <!-- RichDescription -->
+    <Item>
+      <Element>Source</Element>
+      <Characteristics>M</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>
+          Defines source of standard document.  This is the descriptive type of the organization listed in <code>Organization</code>. It serves to describe the type of the standards contained within the document.
+        </p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>National</Code>
+        </Value>
+        <Value>
+          <Code>State</Code>
+        </Value>
+        <Value>
+          <Code>Regional</Code>
+        </Value>
+        <Value>
+          <Code>District</Code>
+        </Value>
+        <Value>
+          <Code>Site</Code>
+        </Value>
+        <Value>
+          <Code>Classroom</Code>
+        </Value>
+        <Value>
+          <Code>Publisher</Code>
+        </Value>
+      </Values>
+    </Item>    <!-- Source -->
+    <Item>
+      <Element>Organizations</Element>
+      <Characteristics>M</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Type ref="CommonTypes" name="OrganizationsType"></Type>
+    </Item>    <!-- Organizations -->
+    <Item>
+      <Element>Authors</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Type ref="CommonTypes" name="AuthorsType"></Type>
+    </Item>    <!-- Authors -->
+    <Item>
+      <Element>OrganizationContactPoint</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>A brief description of how to contact the organization maintaining the standards. It could be a phone number, email address, or URL.</p>
+      </Description>
+      <Type name="xs:string"></Type>
+    </Item>    <!-- OrganizationContactPoint -->
+  </if>
+
+  <Item>
+    <Element>SubjectAreas</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Which standard MoE Learning / Subject Areas is this LearningStandard part of?</p>
+    </Description>
+    <if intl="au">
+      <Type ref="CommonTypes" name="ACStrandAreaListType"/>
+    </if>
+    <if intl="nz">
+      <Type ref="CommonTypes" name="SubjectAreaListType"/>
+    </if>
+  </Item>    <!-- SubjectAreas -->
+  
+  <if intl="nz">
+    <Item>
+      <Element>Status</Element>
+      <Characteristics>M</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>A code denoting the current status of the LearningStandard, as set by the Publisher.</p>
+      </Description>
+      <Type ref="CodeSets" name="NZCodeSetsLearningStandardStatus"/>
+    </Item>      <!-- Status -->
+    <Item>
+      <Element>PublicationDate</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>This is the date that the publishing organization published the standard.</p>
+      </Description>
+      <Type name="xs:date"/>
+    </Item>      <!-- PublicationDate -->
+    <Item>
+      <Element>SupercededDate</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The date the publishing organization superceded (or will supercede) 
+        the LearningStandard. May be future dated.</p>
+      </Description>
+      <Type name="xs:date"/>
+    </Item>      <!-- SupercededDate -->
+    <Item>
+      <Element>DiscontinuedDate</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The date the publishing organization discontinued (or will discontinue) 
+          the LearningStandard.  May be future dated.</p>
+      </Description>
+      <Type name="xs:date"/>
+    </Item>      <!-- DiscontinuedDate -->
+    <Item>
+      <Element>Credits</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The number of course (or other qualification) credits that will be 
+          achieved by passing this LearningStandard.</p>
+      </Description>
+      <Type name="xs:decimal"/>
+    </Item>      <!-- Credits -->
+    <Item>
+      <Element>NCEALevel</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Where the publisher is NZQA, Which NCEA Level applies to the LearningStandard?</p>
+      </Description>
+      <Type name="xs:decimal"/>
+    </Item>      <!-- NCEALevel -->
+    <Item>
+      <Element>AssessmentMode</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Code denoting how the LearningStandard is assessed.</p>
+      </Description>
+      <Type ref="CodeSets" name="NZCodeSetsAssessmentModeType"/>
+    </Item>      <!-- AssessmentMode -->
+    <Item>
+      <Element>RelatedLearningStandardList</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>A list of related LearningStandard references</p>
+      </Description>
+      <Type ref="CommonTypes" name="RelatedLearningStandardsListType"/>
+    </Item>      <!-- RelatedLearningStandardList -->
+  </if>
+
+  <if intl="au">
+    <Item>
+      <Element>DocumentStatus</Element>
+      <Characteristics>M</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description></Description>
+      <Values>
+        <Value>
+          <Code>Draft</Code>
+        </Value>
+        <Value>
+          <Code>Adopted</Code>
+        </Value>
+        <Value>
+          <Code>Archived</Code>
+        </Value>
+        <Value>
+          <Code>Unknown</Code>
+        </Value>
+      </Values>
+    </Item>      <!-- DocumentStatus -->
+    <Item>
+      <Element>DocumentDate</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The date the current status was achieved.</p>
+      </Description>
+      <Type name="xs:date"></Type>
+    </Item>      <!-- DocumentDate -->
+    <Item>
+      <Element>LocalAdoptionDate</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The date the local organization adopted this standard document</p>
+      </Description>
+      <Type name="xs:date"></Type>
+    </Item>      <!-- LocalAdoptionDate -->
+    <Item>
+      <Element>LocalArchiveDate</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The date the local organization stopped using this standard document and superseded by a new document.</p>
+      </Description>
+      <Type name="xs:date"></Type>
+    </Item>      <!-- LocalArchiveDate -->
+    <Item>
+      <Element>EndOfLifeDate</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>This is the date that the governing organization retired this document.&#160;</p>
+      </Description>
+      <Type name="xs:date"></Type>
+    </Item>      <!-- EndOfLifeDate -->
+    <Item>
+      <Element>Copyright</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Copyright for document.</p>
+      </Description>
+      <Type ref="CommonTypes" name="CopyRightContainerType"></Type>
+    </Item>      <!-- Copyright -->
+    <Item>
+      <Element>YearLevels</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>SIF common YearLevels element</p>
+      </Description>
+      <Type ref="CommonTypes" name="YearLevelsType"></Type>
+    </Item>      <!-- YearLevels -->
+    <Item>
+      <Element>RepositoryDate</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Date document data was added to the repository</p>
+      </Description>
+      <Type name="xs:date"></Type>
+    </Item>      <!-- RepositoryDate -->
+    <Item>
+      <Element>LearningStandardItemRefId</Element>
+      <Characteristics>M</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Link to the first/top LearningStandardItem in the standard hierarchy</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"></Type>
+    </Item>      <!-- LearningStandardItemRefId -->
+    <Item>
+      <Element>RelatedLearningStandards</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Type ref="CommonTypes" name="LearningStandardsDocumentType"></Type>
+    </Item>      <!-- RelatedLearningStandards -->
+    <Item>
+      <Element>SIF_Metadata</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    </Item>      <!-- SIF_Metadata -->
+    <Item>
+      <Element>SIF_ExtendedElements</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    </Item>      <!-- SIF_ExtendedElements -->
+  </if>
+
+  <xhtml:Example xmlns="" name="LearningStandardDocument" intl="au">
+    <LearningStandardDocument RefId="A5A575C7-8917-5101-B8E7-F08ED123A823">
+      <Title>Australian National Curriculum: History</Title>
+      <Description>
+          AIMS: The aim of the History curriculum is to instill in students an appreciation in the diversity of the past and how they inform current developments etc etc.
+          RATIONALE: History is essential for an informed citizenry and has always been a cornerstone of education.
+      </Description>
+      <Source>National</Source>
+      <Organizations>
+        <Organization>ACARA</Organization>
+      </Organizations>
+      <Authors>
+        <Author>Joe Bloggs</Author>
+      </Authors>
+      <OrganizationContactPoint>http://www.acara.edu.au</OrganizationContactPoint>
+      <SubjectAreas>
+        <ACStrandSubjectArea>
+          <ACStrand>H</ACStrand>
+          <SubjectArea>
+            <Code>Hist</Code>
+              <OtherCodeList>
+              <OtherCode Codeset="Text">History</OtherCode>
+            </OtherCodeList>
+          </SubjectArea>
+        </ACStrandSubjectArea>
+      </SubjectAreas>
+      <DocumentStatus>Adopted</DocumentStatus>
+      <DocumentDate>2010-04-15</DocumentDate>
+      <LocalAdoptionDate>2011-01-06</LocalAdoptionDate>
+      <EndOfLifeDate>2011-04-15</EndOfLifeDate>
+      <Copyright>
+        <Date>2010-06-05</Date>
+        <Holder>ACARA</Holder>
+      </Copyright>
+      <YearLevels>
+        <YearLevel>
+          <Code>11</Code>
+        </YearLevel>
+        <YearLevel>
+          <Code>12</Code>
+        </YearLevel>
+      </YearLevels>
+      <RepositoryDate>2011-04-15</RepositoryDate>
+      <LearningStandardItemRefId>667A87E2-1B4B-9470-CE61-568576DF921E</LearningStandardItemRefId>
+      <RelatedLearningStandards>
+        <LearningStandardDocumentRefId>B87A87E2-1B4B-9470-CE61-568576DF921E</LearningStandardDocumentRefId>
+      </RelatedLearningStandards>
+    </LearningStandardDocument>
+  </xhtml:Example>
+
+  <xhtml:Example xmlns="" name="NZQA Learning Standard Example" intl="nz">
+    <LearningStandard>
+      <RefId>A5A575C7-8917-5101-B8E7-F08ED123A823</RefId>
+      <Title>Chemistry</Title>
+      <Code>91165</Code>
+      <VersionNo>2</VersionNo>
+      <PublisherRefId>A5A575C7-8917-5101-B8E7-FACED123A823F</PublisherRefId>
+      <Description>Demonstrate understanding of the properties of selected organic compounds</Description>
+      <SubjectAreas>
+        <SubjectArea>4</SubjectArea>
+      </SubjectAreas>
+      <Status json:force-string="true">2</Status>
+      <Credits>4</Credits>
+      <NCEALevel json:force-string="true">2</NCEALevel>
+      <AssessmentMode json:force-string="true">1</AssessmentMode>
+    </LearningStandard>
+  </xhtml:Example>
+
+  <xhtml:Example xmlns="" name="Cambridge Learning Standard Example" intl="nz">
+    <LearningStandard>
+      <RefId>A5A575C7-8917-5101-B8E7-FACED123A823</RefId>
+      <Title>Pure Mathematics</Title>
+      <Code>9709</Code>
+      <VersionNo>2018</VersionNo>
+      <PublisherRefId>A5A575C7-8917-5101-B8E7-FACED000A823F</PublisherRefId>
+      <Description>Cambridge International AS Mathematics (2018) - Pure Mathematics</Description>
+      <SubjectAreas>
+        <SubjectArea>3</SubjectArea>
+      </SubjectAreas>
+      <Status json:force-string="true">2</Status>
+      <AssessmentMode json:force-string="true">1</AssessmentMode>
+    </LearningStandard>
+  </xhtml:Example>
+</DataObject>

@@ -75,4 +75,76 @@
 			</Value>
 		</Values>
 	</CodeSet>   <!-- Learning/Subject Area Types-->
+	<CodeSet>
+		<Intro>
+			<p>Codes denoting the status of the LearningStandard throughout its life-cycle.</p>
+		</Intro>
+		<ID>Learning Standard Status</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>Candidate</Text>
+				<Description>
+					<p>The LearningStandard is being developed, and is not yet ready
+					 for use in teaching and assessment.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Published</Text>
+				<Description>
+					<p>The LearningStandard is available for use in teaching and assessment.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Superceded</Text>
+				<Description>
+					<p>The LearningStandard has been superceded (probably by a subsequent 
+						version of the standard) but this version is still available for
+						 use in teaching and assessment.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Discontinued</Text>
+				<Description>
+					<p>The LearningStandard is no longer available for use in teaching and assessment.</p>
+				</Description>
+			</Value>
+		</Values>
+	</CodeSet>   <!-- LearningStandardStatus -->
+	<CodeSet>
+		<Intro>
+			<p>Codes denoting the status of the LearningStandard throughout its life-cycle.</p>
+		</Intro>
+		<ID>Learning Standard Relationship Type</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>Predecessor</Text>
+				<Description>
+					<p>The related LearningStandard is a predecessor to this LearningStandard,
+						 and is superceded by it.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Successor</Text>
+				<Description>
+					<p>The related LearningStandard is a successor to this LearningStandard, 
+						and it supercedes this LearningStandard.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Prerequisite</Text>
+				<Description>
+					<p>The related LearningStandard is a prerequisite to this LearningStandard, 
+						and students should have completed the learning in that LearningStandard 
+						before embarking on the learning in this one.</p>
+				</Description>
+			</Value>
+		</Values>
+	</CodeSet>   <!-- LearningStandardRelationshipType -->
 </IncludeGroup>

@@ -187,4 +187,47 @@
 			<Type ref="CommonData" name="ObjectReferenceType"/>
 		</Item>
 	</CommonElement>
+
+	<CommonElement name="RelatedLearningStandardsListType" type="true" dm="true">
+		<Item>
+			<Element>RelatedLearningStandardsListType</Element>
+			<Description>
+				<p>A list of <code>ObjectReference</code>s to related <code>LearningStandards</code>.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>RelatedLearningStandard</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>A member of the related LearningStandard list.</Description>
+			<Type ref="CommonData" name="RelatedLearningStandardType"/>
+		</Item>
+	</CommonElement>
+	
+	<CommonElement name="RelatedLearningStandardType" type="true" dm="true">
+		<Item>
+			<Element>RelatedLearningStandardType</Element>
+			<Description>
+				<p>A member of a list of related LearningStandard references.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>LearningStandardRefId</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>GUID Reference to a related LearningStandard</p>
+			</Description>
+			<Type ref="CommonTypes" name="IdRefType"/>
+		</Item>    <!-- LearningStandardRefId -->
+		<Item>
+			<Element>Relationship</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Code describing the relationship from a LearningStandard to a related LearningStandard.</p>
+			</Description>
+			<Type ref="NZCodeSets" name="NZCodeSetsLearningStandardRelationshipTypeType"/>
+		</Item>   <!-- Relationship -->
+	</CommonElement>	
 </IncludeGroup>

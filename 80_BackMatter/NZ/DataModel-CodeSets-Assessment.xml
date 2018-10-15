@@ -1,0 +1,30 @@
+<IncludeGroup
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+ 	xmlns="http://sifassociation.org/SpecGen">
+	
+	
+	<CodeSet>
+		<Intro>
+			<p>Codes denoting how an assessment of a student's learning is to be made.</p>
+		</Intro>
+		<ID>Assessment Mode</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>External</Text>
+				<Description>
+					<p>Student's learning is assessed by an external agency, commonly 
+						by setting one or more examinations.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Internal</Text>
+				<Description>
+					<p>Student's learning is assessed by the teacher who is actively 
+						engaged in teaching the student.</p>
+				</Description>
+			</Value>
+		</Values>
+	</CodeSet>   <!-- Assessment Mode -->
+</IncludeGroup>

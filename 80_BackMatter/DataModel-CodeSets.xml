@@ -214,6 +214,7 @@
 	  <xi:include parse="xml" href="NZ/DataModel-CodeSets-Location.xml"/>
 	  <xi:include parse="xml" href="NZ/DataModel-CodeSets-Provider.xml"/>
 	  <xi:include parse="xml" href="NZ/DataModel-Codesets-Curriculum.xml"/>
+	  <xi:include parse="xml" href="NZ/DataModel-Codesets-Assessment.xml"/>
 	  <xi:include parse="xml" href="NZ/DataModel-Codesets-Calendar.xml"/>
 	  <xi:include parse="xml" href="NZ/DataModel-CodeSets-Enrolment.xml"/>
 	  <xi:include parse="xml" href="NZ/DataModel-Codesets-Attendance.xml"/>

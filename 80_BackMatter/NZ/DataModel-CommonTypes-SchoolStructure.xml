@@ -148,6 +148,40 @@
 			<Type ref="CommonTypes" name="BaseNameType"/>
 		</Item>       <!-- Name -->
 	</CommonElement>
+	<CommonElement name="RoomListType" type="true" dm="true">
+		<Item>
+			<Element>RoomListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>List of rooms in which the scheduled activity is held. Used for onsite venues which are
+					 represented in the source system as rooms. Can include large venues (ovals, library, etc), 
+					 if they have been represented as rooms; source system practice varies.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<if intl="au">
+			<Item>
+				<Element>RoomInfoRefId</Element>
+				<Characteristics>MR</Characteristics>
+				<Description>
+					<p>The Id (GUID) of the Room in which the scheduled activity is held.</p>
+				</Description>
+				<Type ref="CommonTypes" relationship="" count="?:1" name="IdRefType"/>
+			</Item>     <!-- RoomInfoRefId -->
+		</if>
+		<if intl="nz">
+			<Item>
+				<Element>RoomId</Element>
+				<Characteristics>MR</Characteristics>
+				<Description>
+					<p>The school's local identifier for the Room in which the teaching
+					 or scheduled activity is held.</p>
+					<p>Note:  Does not refer to a Room SIF data object.</p>
+				</Description>
+				<Type ref="CommonTypes" name="LocalIdType"/>
+			</Item>     <!-- RoomId -->
+		</if>		
+	</CommonElement>
 
 
 	<!-- Defined by SIF NZ 	-->

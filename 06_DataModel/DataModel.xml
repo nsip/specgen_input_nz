@@ -43,11 +43,12 @@
 			</ul>
 		</Intro>
 
-		<!-- Include data model here -->		
+		<!-- Providers and other education oranisations -->
 		<xi:include parse="xml" href="NZ/Provider.xml"/>		
 		<xi:include parse="xml" href="NZ/ProviderRelationship.xml"/>
 		<xi:include parse="xml" href="NZ/EducationOrganisation.xml"/>
 
+		<!-- Staff, Students & their whānau -->
 		<xi:include parse="xml" href="NZ/StaffPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StaffAssignment.xml"/>
 		
@@ -55,15 +56,19 @@
 		<xi:include parse="xml" href="NZ/StudentContactPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StudentContactRelationship.xml"/>
 		
+		<!-- Curriculum, Courses & Learning Standards -->
 		<xi:include parse="xml" href="NZ/ProviderCourse.xml"/>
+		<xi:include parse="xml" href="NZ/LearningStandard.xml"/>
 		<xi:include parse="xml" href="NZ/TeachingGroup.xml"/>
 
+		<!-- Student Enrolment -->
 		<xi:include parse="xml" href="NZ/StudentProviderEnrolment.xml"/>
 		
+		<!-- Student Attendance -->
 		<xi:include parse="xml" href="NZ/StudentAttendanceSummary.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAttendanceTimeList.xml"/>
 
-		<!-- Wellbeing Additions-->
+		<!-- Student Hauora / Wellbeing -->
 		<xi:include parse="text" href="NZ/PersonalisedPlan.xml"/>
 		<xi:include parse="text" href="NZ/WellbeingAlert.xml"/>
 		<xi:include parse="text" href="NZ/WellbeingCharacteristic.xml"/>
