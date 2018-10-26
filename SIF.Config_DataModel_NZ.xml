@@ -12,6 +12,7 @@
 		<jsonExamplesXslt>98_Xslt/xmlToJson.xsl</jsonExamplesXslt>
 		<resolveExtensions>true</resolveExtensions>
 		<isDraft>true</isDraft>
+		<documentEnumerationsCompletely>true</documentEnumerationsCompletely>
 	</globalSettings>
 	
 	<htmlDocuments>

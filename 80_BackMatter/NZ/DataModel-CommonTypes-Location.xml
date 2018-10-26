@@ -206,7 +206,17 @@
 			</Description>
 			<Type name="xs:normalizedString"/>
 		</Item>     <!-- PostalCode -->
-		<if intl="au">	
+		<if intl="nz">
+			<Item>
+				<Element>Location</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>Details of the location when the address describes a location in New Zealand</p>
+				</Description>
+				<Type ref="CommonData" name="LocationType"/>
+			</Item>     <!-- Location -->
+		</if>
+		<if intl="au">
 			<Item>
 				<Element>GridLocation</Element>
 				<Characteristics>O</Characteristics>

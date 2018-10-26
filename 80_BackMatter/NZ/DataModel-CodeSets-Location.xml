@@ -7,7 +7,10 @@
 	<CodeSet>
 		<Intro>
 			<p>
-				Describes classes of address as recognised by Land Information NZ.
+				Address type allows an address to be categorised according to its component structure.
+				Address type can be used to build processing rules for validating, managing and presenting
+				addresses. Address type is independent of the use of the address by any party. To describe
+				how a party may use an address (residence, billing, term address etc).
 			</p>
 		</Intro>
 		<ID>Address Type</ID>
@@ -35,7 +38,7 @@
 			</Value>
 			<Value>
 				<Code>2</Code>
-				<Text>Rural</Text>
+				<Text>Rural Post Delivery</Text>
 				<Description>
 					<p>Defined by New Zealand Post, these addresses
 					are assigned by NZ Post for customers who purchase
@@ -94,7 +97,7 @@
 
 			<Value>
 				<Code>5</Code>
-				<Text>Foreign Addres</Text>
+				<Text>Foreign Address</Text>
 				<Description>
 					<p>A foreign address identifies a location outside of New Zealand.</p>
 					<p>
@@ -105,24 +108,29 @@
 	</CodeSet>	<!-- NZ Address Type -->
 	<CodeSet>
 		<Intro>
-			<p>Describes what a particular address is used for.</p>
+			<p>A standardised description of the role or usage of an address by a party 
+			(person or organisation). Where a party has more than one address, this
+			provides context for deciding which address to use.</p>
 		</Intro>
 		<ID>Address Role</ID>
 		<Values>
 			<Value>
 				<Code>1</Code>
-				<Text>Residental Address</Text>
+				<Text>Residential Address</Text>
+				<Description>Applies to addresses associated with persons</Description>
 			</Value>
 			<Value>
 				<Code>2</Code>
 				<Text>Postal Address</Text>
+				<Description>Applies to addresses associated with persons or organisations</Description>
 			</Value>
 		</Values>
 	</CodeSet>	<!-- NZ Address Role -->
 </if>	
 	<CodeSet>
 		<Intro>
-			<p>Describes a spatial unit defined by Stats NZ.</p>
+			<p>A classification of geographical boundaries or statistical 
+				areas as defined by Statistics NZ’s geographic hierarchy.</p>
 		</Intro>
 		<ID>Spatial Unit Type</ID>
 		<Values>
@@ -136,15 +144,17 @@
 					authorities in size. Area units must either define
 					or aggregate to define, regional councils,
 					territorial authorities and urban areas.</p>
+					<a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/F7Wta5k7vAmJyxrU">Statistics NZ Classification of Area Unit 2013 v1.0.0</a>
 				</Description>
-			</Value>
+			</Value>    <!-- Area Unit -->
 			<Value>
 				<Code>GE</Code>
-				<Text>General Electoral Distric</Text>
+				<Text>General Electoral District</Text>
 				<Description>
 					<p>The general electoral districts as constituted under the Electoral Act 1993.</p>
+					<a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/jtyxBHBzNNas41gu">Statistics NZ General Electoral District 2014 v1.0.0</a>
 				</Description>
-			</Value>
+			</Value>    <!-- General Electorate District -->
 			<Value>
 				<Code>CB</Code>
 				<Text>Community Board</Text>
@@ -154,8 +164,9 @@
 					Auckland Council. They enable democratic decision
 					making by, and on behalf of communities within the
 					local board area.</p>
+					<a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/ZIK9xfNmA6k4hw2B">Statistics NZ Community Board 2013 v1.0.0</a>
 				</Description>
-			</Value>
+			</Value>    <!-- Community Board -->
 			<Value>
 				<Code>ME</Code>
 				<Text>Māori Electoral District</Text>
@@ -163,8 +174,9 @@
 					<p>Māori electoral districts are the voting
 					districts for parliamentary elections for people
 					who choose to be on the Māori Electoral Roll.</p>
+					<a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/pW9dZ6VeAMFKkHbQ">Statistics NZ Māori Electoral District 2014 v1.0.0</a>
 				</Description>
-			</Value>
+			</Value>    <!-- Maori Electoral District -->
 			<Value>
 				<Code>MB</Code>
 				<Text>Mesh Block</Text>
@@ -178,8 +190,9 @@
 					borders on another to form a network covering all
 					of New Zealand, including coasts and inlets and
 					extending out to the 200-mile economic zone.</p>
+					<a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/EUVhZI6UWCZ6JA1F">Statistics NZ Statistical Standard for Meshblock 2013 v1.0.0</a>
 				</Description>
-			</Value>
+			</Value>    <!-- Mesh Block -->
 			<Value>
 				<Code>RC</Code>
 				<Text>Regional Council</Text>
@@ -195,8 +208,9 @@
 					also considered factors such as natural resource
 					management, land use planning and environmental
 					matters.</p>
+					<a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/MSQo0eUwerxmc3Lw">Statistics NZ Regional Council 2013 v1.0.0</a>
 				</Description>
-			</Value>
+			</Value>    <!-- Regional Council -->
 			<Value>
 				<Code>TA</Code>
 				<Text>Territorial Authority</Text>
@@ -207,8 +221,9 @@
 					are 67 territorial authorities consisting of 12
 					city councils, 53 districts, Auckland Council, and
 					Chatham Islands Council.</p>
+					<a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/pJACqzvmZ2qy3YDW">Statistics NZ Territorial Authority 2013 v1.0.0</a>
 				</Description>
-			</Value>
+			</Value>    <!-- Territorial Authority -->
 			<Value>
 				<Code>UA</Code>
 				<Text>Urban Area</Text>
@@ -225,8 +240,9 @@
 					concentrated urban or semi-urban settlements
 					without the distortions of administrative
 					boundaries.</p>
+					<a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/IaYI8w2nLBVWQxrf">Statistics NZ Urban Area 2013 v2.0.0</a>
 				</Description>
-			</Value>
+			</Value>    <!-- Urban Area -->
 			<Value>
 				<Code>WA</Code>
 				<Text>Ward</Text>
@@ -238,8 +254,9 @@
 					for the recognition of communities within a
 					district and to increase community involvement in
 					the local government system.</p>
+					<a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/qI6phchSiGr3QmGQ">Statistics NZ Ward 2013 v1.0.0</a>
 				</Description>
-			</Value>
+			</Value>    <!-- Ward -->
 		</Values>
 	</CodeSet>	<!-- NZ Spatial Unit Type -->
 
