@@ -10,7 +10,7 @@
 				Address type allows an address to be categorised according to its component structure.
 				Address type can be used to build processing rules for validating, managing and presenting
 				addresses. Address type is independent of the use of the address by any party. To describe
-				how a party may use an address (residence, billing, term address etc).
+				how a party may use an address (residence, billing, term address etc) see AddressRoleType
 			</p>
 		</Intro>
 		<ID>Address Type</ID>
@@ -21,19 +21,20 @@
 				<Description>
 					<p>Also called 'Street' addresses, The most
 					general, and widely used type of address, and can
-					contain the widest variety of components.</p>
+					contain the widest variety of components</p>
 
 					<p>In general a thoroughfare address will include
 					components for a number, a roadname, and a
 					locality.</p>
-
+ 
 					<p>They cannot contain any of the components
 					specific to a delivery service, rural post
 					delivery, or water address.</p>
+ 
+					<p>These addresses are used to 
+					find a location.</p>
 
-					<p>These addresses are used to find a location.</p>
-					<p>
-						<em>Example:</em> 30 - 40 Lambton Quay, Wellington, 6165</p>
+					<p>Example: 30 - 40 Lambton Quay, Wellington, 6165</p>
 				</Description>
 			</Value>
 			<Value>
@@ -176,7 +177,7 @@
 					who choose to be on the Māori Electoral Roll.</p>
 					<a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/pW9dZ6VeAMFKkHbQ">Statistics NZ Māori Electoral District 2014 v1.0.0</a>
 				</Description>
-			</Value>    <!-- Maori Electoral District -->
+			</Value>    <!-- Māori Electoral District -->
 			<Value>
 				<Code>MB</Code>
 				<Text>Mesh Block</Text>

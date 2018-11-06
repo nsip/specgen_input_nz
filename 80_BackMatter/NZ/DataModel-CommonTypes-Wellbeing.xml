@@ -113,7 +113,7 @@
 					<p>Category of event.</p>
 				</Description>
 				<Union>
-					<Type ref="CodeSets" name="NZCodeSetsEventCategoryType"/>
+					<Type ref="CodeSets" name="NZCodeSetsWellbeingEventCategoryType"/>
 					<Type name="xs:string"/>
 				</Union>	 
 			</Item>	   <!-- EventCategory -->
@@ -141,7 +141,7 @@
 				<Characteristics>MR</Characteristics>
 				<Description></Description>
 				<Union>
-					<Type ref="CodeSets" name="NZCodeSetsEventSubCategoryType"/>
+					<Type ref="CodeSets" name="NZCodeSetsWellbeingEventSubCategoryType"/>
 					<Type name="xs:string"/>
 				</Union>	 
 			</Item>    <!-- WellbeingEventSubCategory -->

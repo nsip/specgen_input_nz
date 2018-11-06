@@ -6,7 +6,7 @@
 	<!--  Borrowed from SIF AU -->
 	<CodeSet>
 		<Intro>
-			<p/>
+			<p>Code denoting the status of the attendance record: Excused, Unexcused, Unknown, etc.</p>
 		</Intro>
 		<ID>Attendance Status</ID>
 		<Values>
@@ -33,7 +33,7 @@
 	<!--- Defined by SIF NZ -->
 	<CodeSet>
 		<Intro>
-			<p>The reson for non-attendance at school, or non-attendance in class.</p>
+			<p>Code denoting presence, absence The reson for non-attendance at school, or non-attendance in class.</p>
 		</Intro>
 		<ID>Attendance Code</ID>
 		<Values>
@@ -79,7 +79,7 @@
 			</Value>
 			<Value>
 				<Code>V</Code>
-				<Text>Non-supervised study</Text>
+				<Text>Non Supervised study</Text>
 			</Value>
 			<Value>
 				<Code>N</Code>
@@ -87,7 +87,7 @@
 			</Value>
 			<Value>
 				<Code>Q</Code>
-				<Text>School camp/trip</Text>
+				<Text>School trip/camp</Text>
 			</Value>
 			<Value>
 				<Code>W</Code>

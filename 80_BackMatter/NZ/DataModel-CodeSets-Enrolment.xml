@@ -127,11 +127,11 @@
 		<Values>
 			<Value>
 				<Code>S</Code>
-				<Text>Transferred to another school in New Zealand.</Text>
+				<Text>Transferred to NZ School</Text>
 			</Value>
 			<Value>
 				<Code>H</Code>
-				<Text>Transferred to home-schooling.</Text>
+				<Text>Transferred to Home Schooling</Text>
 			</Value>
 			<Value>
 				<Code>O</Code>
@@ -144,7 +144,7 @@
 			<Value>
 				<Code>X</Code>
 				<Text>Expulsion</Text>
-				<Description>Applies to students &gt;= 16yrs old</Description>
+				<Description>Applies to students at least 16yrs old</Description>
 			</Value>
 			<Value>
 				<Code>L</Code>
@@ -153,12 +153,12 @@
 			<Value>
 				<Code>E</Code>
 				<Text>Granted Early Exemption</Text>
-				<Description>Applies to students &lt;16yrs old</Description>
+				<Description>Applies to students less than 16yrs old</Description>
 			</Value>
 			<Value>
 				<Code>K</Code>
 				<Text>Exclusion</Text>
-				<Description>Applies to students &lt;16yrs old</Description>
+				<Description>Applies to students less than 16yrs old</Description>
 			</Value>
 			<Value>
 				<Code>C</Code>
@@ -176,19 +176,18 @@
 	</CodeSet>    <!-- Enrolment Exit Type -->
 	<CodeSet>
 		<Intro>
-			<p>Eligibility Criteria code, describes the criteria used to determine the eligibility of
-			a Student for enrolment and MoE funding.</p>
+			<p>The criteria used to determine the eligibility status of a Student for enrolment and MoE funding purposes.</p>
 		</Intro>
 		<ID>Eligibility Criteria</ID>
 		<Values>
 			<Value>
 				<Code>1</Code>
-				<Text>NZ Citizen (Incl. Tokelau, The Cook Is., Niue)</Text>
+				<Text>NZ Citizen (Incl. TKL, COK, NIU)</Text>
 			</Value>
 			<Value>
 				<Code>2</Code>
-				<Text>Australian Citizen</Text>
-				<Description>Includes Australian permanent residents</Description>
+				<Text>AU Citizen</Text>
+				<Description>Includes Australian permanent residents.</Description>
 			</Value>
 			<Value>
 				<Code>3</Code>
@@ -200,7 +199,7 @@
 			</Value>
 			<Value>
 				<Code>5</Code>
-				<Text>Student on Government approved student exchange scheme</Text>
+				<Text>Govt. Approved Exchange Scheme</Text>
 			</Value>
 			<Value>
 				<Code>6</Code>
@@ -382,7 +381,7 @@
 		<Values>
 			<Value>
 				<Code>1</Code>
-				<Text>AFS Interculural Programmes NZ Inc.</Text>
+				<Text>AFS Intercultural Programmes NZ Inc.</Text>
 			</Value>
 			<Value>
 				<Code>7</Code>

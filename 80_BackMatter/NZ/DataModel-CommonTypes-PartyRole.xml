@@ -1596,21 +1596,30 @@
 				that the StudentContact is also a member of.</p>
 			</Description>
 			<List mode="List"/>
-		</Item> 
-		<Item>
-		  <if intl="au">
-			<Element>Household</Element>
-		  </if>
-		  <if intl="nz">
-			<Element>HouseholdId</Element>
-		  </if>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>Repeatable element containing the HouseholdContactId of a household identifier from the Student's
-				HouseholdContactInfoList, that the StudentContact is also a member of.</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/>
-		</Item>    <!-- Household -->
+		</Item>
+
+		<if intl="au">
+			<Item>
+				<Element>Household</Element>
+				<Characteristics>MR</Characteristics>
+				<Description>
+					<p>Repeatable element containing the HouseholdContactId of a household identifier from 
+					the Student's HouseholdContactInfoList, that the StudentContact is also a member of.</p>
+				</Description>
+				<Type ref="CommonTypes" name="LocalIdType"/>
+			</Item>    <!-- Household -->
+		</if>
+		<if intl="nz">
+			<Item>
+				<Element>HouseholdId</Element>
+				<Characteristics>MR</Characteristics>
+				<Description>
+					<p>Repeatable element containing the HouseholdContactId of a household identifier from 
+					the Student's HouseholdContactInfoList, that the StudentContact is also a member of.</p>
+				</Description>
+				<Type ref="CommonTypes" name="LocalIdType"/>
+			</Item>    <!-- HouseholdId -->
+		</if>
 	</CommonElement>
 
 

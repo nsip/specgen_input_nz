@@ -225,11 +225,11 @@
 			<NewEntrantPolicyList>
 				<EnactedPolicy>
 					<EffectiveTo>2018-12-31</EffectiveTo>
-					<Policy>AgeEntry</Policy>
+					<Policy>1</Policy>
 				</EnactedPolicy>
 				<EnactedPolicy>
 					<EffectiveFrom>2019-01-01</EffectiveFrom>
-					<Policy>CohortEntry</Policy>
+					<Policy>2</Policy>
 				</EnactedPolicy>
 			</NewEntrantPolicyList>
 			<DefinitionList>

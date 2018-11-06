@@ -150,7 +150,7 @@
       <Intro>
         <p>Wellbeing Event Category - initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
-      <ID>Event Category</ID>
+      <ID>Wellbeing Event Category</ID>
 			<Values>
 				<Value><Code>B1</Code><Text>Safe</Text></Value>
 				<Value><Code>B2</Code><Text>Caring</Text></Value>
@@ -178,7 +178,7 @@
       <Intro>
         <p>Wellbeing Event Sub Category - initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
-      <ID>Event Sub Category</ID>
+      <ID>Wellbeing Event Sub Category</ID>
       <Values>
 				<Value><Code>B1a</Code><Text>Resolves issues peacefully</Text></Value>
 				<Value><Code>B1b</Code><Text>Plays in a friendly way</Text></Value>
@@ -482,7 +482,7 @@
 
    	<CodeSet>
       <Intro>
-        <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
+        <p>Standard codes denoting the detention category a Wellbeing Response belongs to.</p>
       </Intro>
       <ID>Detention Category</ID>
       <Values>
@@ -510,5 +510,31 @@
 				<Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
 		</CodeSet>    <!-- Wellbeing Response Category -->
+
+    <CodeSet>
+      <Intro>
+        <p>Standard codes denoting the classification of the Wellbeing Document.</p>
+      </Intro>
+      <ID>Document Classification</ID>
+      <Values>
+				<Value><Code>101</Code><Text>In-Confidence</Text></Value>
+				<Value><Code>102</Code><Text>Sensitive</Text></Value>
+				<Value><Code>103</Code><Text>Not Classified</Text></Value>
+      </Values>
+    </CodeSet>    <!-- Document Classification -->
+
+    <CodeSet>
+      <Intro>
+        <p>Standard codes denoting the follow-up action category of the Wellbeing Event.</p>
+      </Intro>
+      <ID>Follow Up Action Category</ID>
+      <Values>
+				<Value><Code>101</Code><Text>Award</Text></Value>
+				<Value><Code>102</Code><Text>Detention</Text></Value>
+				<Value><Code>103</Code><Text>Personalised Plan</Text></Value>
+				<Value><Code>104</Code><Text>Suspension</Text></Value>
+				<Value><Code>105</Code><Text>Other</Text></Value>
+      </Values>
+    </CodeSet>    <!-- Follow Up Action Category -->
 
 </IncludeGroup>

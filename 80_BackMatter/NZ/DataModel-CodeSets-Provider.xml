@@ -6,7 +6,7 @@
 	<!-- Borrowed from SIF AU -->
 	<CodeSet>
 		<Intro>
-			<p/>
+			<p>Indicates the operational status of an organisation.</p>
 		</Intro>
 		<ID>Operational Status</ID>
 		<Values>
@@ -19,15 +19,16 @@
 			<Value>
 				<Code>C</Code>
 				<Text>Closed</Text>
-			</Value>
+			</Value>    <!-- C Closed -->
 			<Value>
 				<Code>O</Code>
 				<Text>Open</Text>
-			</Value>
+			</Value>    <!-- O  Open -->
 			<Value>
 				<Code>P</Code>
 				<Text>Proposed</Text>
-			</Value>
+				<Description>SIF AU uses the term ‘Pending’</Description>
+			</Value>    <!-- P Proposed -->
 	  		<if intl="au">
 				<Value>
 					<Code>P</Code>
@@ -46,31 +47,32 @@
 	</CodeSet>    <!-- Operational Status -->
 	<CodeSet>
 		<Intro>
-			<p>Sourced from DEEWR; <if intl="nz">and augmented for use in New Zealand</if></p>
+			<p>A summary description of the gender of students that a school accepts, indicating the 
+				type of school from a gender perspective.</p>
 		</Intro>
 		<ID>School Co-Ed Status</ID>
 		<Values>
 			<Value>
 				<Code>C</Code>
 				<Text>Co-Educational</Text>
-			</Value>
+			</Value>    <!-- C - Co-Educational -->
 			<Value>
 				<Code>F</Code>
 				<Text>Girls School</Text>
-			</Value>
+			</Value>    <!-- F - Girls School -->
 			<Value>
 				<Code>M</Code>
 				<Text>Boys School</Text>
-			</Value>
+			</Value>    <!-- M - Boys School -->
 			<if intl="nz">
 				<Value>
 					<Code>C1</Code>
 					<Text>Primary Co-Ed, Secondary Girls</Text>
-				</Value>
+				</Value>    <!-- C1 - Primary Co-Ed, Secondary Girls -->
 				<Value>
 					<Code>C2</Code>
 					<Text>Junior Boys, Senior Co-Ed</Text>
-				</Value>
+				</Value>    <!-- C2 - Junior Boys, Senior Co-Ed -->
 			</if>
 		</Values>
 	</CodeSet>    <!-- School Co-Ed Status -->
@@ -78,119 +80,119 @@
 
 	<!-- Defined by SIF NZ - Education Organisation & Provider -->
 	<CodeSet>
-		<Intro>Regions of New Zealand defined by Ministry of Education for administrative purposes.
-		(North to South):</Intro>
+		<Intro>
+			Regions of New Zealand defined by Ministry of Education for administrative purposes.
+		</Intro>
 		<ID>Education Region</ID>
 		<Values>
 			<Value>
 				<Code>1</Code>
 				<Text>Auckland</Text>
-			</Value>
+			</Value>    <!-- 1 - Auckland -->
 			<Value>
 				<Code>2</Code>
 				<Text>Bay of Plenty, Waiariki</Text>
-			</Value>
+			</Value>    <!-- 2 - Bay of Plenty -->
 			<Value>
 				<Code>3</Code>
-				<Text>Canterbury and Chatham Islands</Text>
-			</Value>
+				<Text>Canterbury, Chatham Islands</Text>
+			</Value>    <!-- 3 - Canterbury -->
 			<Value>
 				<Code>4</Code>
 				<Text>Hawke's Bay, Tairāwhiti</Text>
-			</Value>
+			</Value>    <!-- 4 - Hawke's Bay -->
 			<Value>
 				<Code>5</Code>
 				<Text>Nelson, Marlborough, West Coast</Text>
-			</Value>
+			</Value>    <!-- 5 - Nelson, Marlborough, West Coast -->
 			<Value>
 				<Code>6</Code>
 				<Text>Otago, Southland</Text>
-			</Value>
+			</Value>    <!-- 6 - Otago, Southland -->
 			<Value>
 				<Code>7</Code>
 				<Text>Tai Tokerau</Text>
-			</Value>
+			</Value>    <!-- 7 - Tai Tokerau -->
 			<Value>
 				<Code>8</Code>
 				<Text>Taranaki, Whanganui, Manawatū</Text>
-			</Value>
+			</Value>    <!-- 8 - Taranaki, Whanganui, Manawatu -->
 			<Value>
 				<Code>9</Code>
 				<Text>Waikato</Text>
-			</Value>
+			</Value>    <!-- 9 - Waikato -->
 			<Value>
 				<Code>10</Code>
 				<Text>Wellington</Text>
-			</Value>
+			</Value>    <!-- 10 - Wellington -->
 		</Values>
 	</CodeSet>    <!-- Education Region -->
 	<CodeSet>
-		<Intro>
-			Codes describing the nature of an Education Organisation; for Schools this
-		    indicates the schooling levels offered.
+		<Intro>Describes the organisation type of the provider, indicating the services provided,
+			function or purpose of the organisation.
 		</Intro>
 		<ID>Organisation Type</ID>
 		<Values>
 			<Value>
 				<Code>1</Code>
 				<Text>Composite (Year 1-10)</Text>
-			</Value>
+			</Value>    <!-- 1 - Composite (Year 1-10) -->
 			<Value>
 				<Code>2</Code>
 				<Text>Composite (Year 1-15)</Text>
-			</Value>
+			</Value>    <!-- 2 - Composite (Year 1-15) -->
 			<Value>
 				<Code>3</Code>
-				<Text>Contributing (Year 1-6)</Text>
-			</Value>
+				<Text>Contributing Primary (Year 1-6)</Text>
+			</Value>    <!-- 3 - Contributing Primary (Year 1-6) -->
 			<Value>
 				<Code>4</Code>
 				<Text>Correspondence School</Text>
-			</Value>
+			</Value>    <!-- 4 - Correspondence School -->
 			<Value>
 				<Code>5</Code>
 				<Text>Full Primary (Year 1-8)</Text>
-			</Value>
+			</Value>    <!-- 5 - Full Primary (Year 1-8) -->
 			<Value>
 				<Code>6</Code>
-				<Text>Intermediate (Year 7 &amp; 8)</Text>
-			</Value>
+				<Text>Intermediate (Year 7-8)</Text>
+			</Value>    <!-- 6 - Intermediate (Year 7-8) -->
 			<Value>
 				<Code>7</Code>
 				<Text>Restricted Composite (Year 7-10)</Text>
-			</Value>
+			</Value>    <!-- 7 - Restricted Composite (Year 7-10) -->
 			<Value>
 				<Code>8</Code>
-				<Text>Secondary (Year 7-10)</Text>
-			</Value>
+				<Text>Junior Secondary (Year 7-10)</Text>
+			</Value>    <!-- 8 - Junior Secondary (Year 7-10) -->
 			<Value>
 				<Code>9</Code>
-				<Text>Secondary (Year 11-15)</Text>
-			</Value>
+				<Text>Senior Secondary (Year 11-15)</Text>
+			</Value>    <!-- 9 - Senior Secondary (Year 11-15) -->
 			<Value>
 				<Code>10</Code>
 				<Text>Secondary (Year 7-15)</Text>
-			</Value>
+			</Value>    <!-- 10 - Secondary (Year 7-15) -->
 			<Value>
 				<Code>11</Code>
 				<Text>Secondary (Year 9-15)</Text>
-			</Value>
+			</Value>    <!-- 11 - Secondary (Year 9-15) -->
 			<Value>
 				<Code>12</Code>
 				<Text>Special School</Text>
-			</Value>
+			</Value>    <!-- 12 - Special School -->
 			<Value>
 				<Code>13</Code>
 				<Text>Teen Parent Unit</Text>
-			</Value>
+			</Value>    <!-- 13 - Teen Parent Unit -->
 			<Value>
 				<Code>14</Code>
 				<Text>Activity Centre</Text>
-			</Value>
+			</Value>    <!-- 14 - Activity Centre -->
 
 			<Value>
 				<Code>101</Code>
-				<Text>Community of Learning|Kāhui Ako</Text>
+				<Text>Community of Learning | Kāhui Ako</Text>
 			</Value>
 			<Value>
 				<Code>102</Code>
@@ -200,7 +202,10 @@
 	</CodeSet>    <!-- Organisation Type -->
 	<CodeSet>
 		<Intro>
-			Codes describing the nature of a person or organisation's communications channel.
+		  <p>A standardised method of describing a communication channel used to communicate with or
+		   	find information about a party. Provides a more generic definition than phone and email. Intended 
+			to provide for future requirements to record social network channels, eg Facebook &amp;amp; Twitter
+			 identifiers for a school.</p>
 		</Intro>
 		<ID>Communication Channel Type</ID>
 		<Values>
@@ -213,7 +218,10 @@
 	</CodeSet>    <!-- Communication Channel Type -->
 	<CodeSet>
 		<Intro>
-			Codes describing acceptable usage of a person or organisation's communication channel.
+			<p>A standardised method of describing how (or when) a communication channel may be used to
+				communicate with a party. Where a party has more than one electronic contact type (eg several
+				phone numbers), this provides context for deciding which to use. A communication usage type
+				may apply to a phone number, email address or generic communication channel.</p>
 		</Intro>
 		<ID>Communication Usage</ID>
 		<Values>
@@ -227,12 +235,12 @@
 				<Code>2</Code>
 				<Text>SMS/TXT</Text>
 				<Description>Allows the school to decide which of a caregiver's communication channels is to be used
-				when sending an SMS (or TXT) message.</Description>
+				when sending an SMS (TXT) message.</Description>
 			</Value>
 			<Value>
 				<Code>3</Code>
 				<Text>Unexplained Absence</Text>
-				<Description>Allows the school to decide which of the caregiver's communication channels is to be used
+				<Description>Allows the school to decide which of a caregiver's communication channels is to be used
 				when reporting a learner's unexplained absence.</Description>
 			</Value>
 			<Value>
@@ -265,20 +273,22 @@
 	</CodeSet>    <!-- Contact Role -->
 	<CodeSet>
 		<Intro>
-			Codes describing state legislated policies that can be adopted by schools.
+			<p>A policy that a school may choose to implement as part of its operating rules. For example, 
+				policies may concern student behaviour, clothing/appearance, wellbeing and new entrant enrolment.</p>
 		</Intro>
 		<ID>Enacted Policy</ID>
 		<Values>
 			<Value>
-				<Code>AgeEntry</Code>
-				<Text>New entrants policy choice whereby children may start
-				school on or soon after their 5th birthday</Text>
+				<Code>1</Code>
+				<Text>Age Entry</Text>
+				<Description>Indicates that new starters will start on the next school
+					 day following their 5 birthday.</Description>
 			</Value>
 			<Value>
-				<Code>CohortEntry</Code>
-				<Text>New entrants policy choice whereby children may
-				start school only on specific notified dates after
-				their 5th birthday.</Text>
+				<Code>2</Code>
+				<Text>CohortEntry</Text>
+				<Description>Indicates that new starters will start in a cohort group
+					 only on specific notified dates after their 5th birthday.</Description>
 			</Value>
 		</Values>
 	</CodeSet>	  <!-- Enacted Policy -->
@@ -403,8 +413,10 @@
 	</CodeSet>	  <!-- School Definition -->
 	<CodeSet>
 		<Intro>
-			<p>A description of the gender of students that the school accepts for a certain
-			year level or other instructional grouping.</p>
+			<p>A description of the gender of students that the school accepts at a certain year 
+				level or other instructional grouping.</p>
+			<p> For use at the year level or course only, rather than school level. For instance
+			 a school may accept boys only in year 11 but both girls and boys at years 12 and 13.</p>
 		</Intro>
 		<ID>Schooling Gender</ID>
 		<Values>

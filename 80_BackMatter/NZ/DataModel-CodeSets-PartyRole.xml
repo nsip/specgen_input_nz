@@ -6,7 +6,9 @@
 	<!-- Picked up from SIF AU -->
     <CodeSet>
 		<Intro>
-			<p/>
+			<p>A standardised method of describing the personal relationship between two persons.
+			 Such a relationship arises from two persons belonging to the same family or closer 
+			 community or as a consequence of sharing living arrangements.</p>
 		</Intro>
 		<ID>Relationship To Student</ID>
 		<Values>
@@ -90,6 +92,7 @@
 			  <Value>
 				<Code>50</Code>
 				<Text>Whāngai Parent</Text>
+				<Description>NZ usage only</Description>
 			  </Value>
 			</if>
 			<Value>
@@ -100,119 +103,142 @@
 	</CodeSet>    <!-- Relationship to Student -->
     <CodeSet>
 		<Intro>
-			<p/>
+			<p>A standardised method of describing the usage of a name by a person.
+				 Where a person has more than one current name, the usage type indicates
+				 which name may be used according to the purpose.</p>
+			<p>Code values are based on SIF Australia 3.4.</p>
 		</Intro>
 		<ID>Name Usage Type</ID>
 		<Values>
 			<Value>
 				<Code>AKA</Code>
-				<Text>Also known as or alias</Text>
-			</Value>
+				<Text>Also Known As</Text>
+				<Description>AKA or Alias</Description>
+			</Value>    <!-- AKA -->
 			<Value>
 				<Code>BTH</Code>
 				<Text>Name at Birth</Text>
-			</Value>
+			</Value>    <!-- BTH -->
 			<Value>
 				<Code>LGL</Code>
-				<Text>Legal Name of the client as defined by the organisation which collects it (legal not defined in this standard)</Text>
-			</Value>
-		  <if intl="au">			
+				<Text>Legal Name</Text>
+				<Description>
+					<p>Legal Name or Official Name as defined by the organisation which collects it 
+						(legal name is not defined in this standard)</p>
+				</Description>
+			</Value>    <!-- LGL -->
+		  <if intl="au">
 			<Value>
 				<Code>MDN</Code>
 				<Text>Maiden Name</Text>
-			</Value>
+			</Value>    <!-- MDN -->
 			<Value>
 				<Code>NEW</Code>
 				<Text>New born identification name</Text>
-			</Value>
+			</Value>    <!-- NEW -->
 			<Value>
 				<Code>OTH</Code>
 				<Text>Non specific name usage type</Text>
-			</Value>
+			</Value>    <!-- OTH -->
 		  </if>
 			<Value>
 				<Code>PRF</Code>
-				<Text>Preferred name</Text>
-			</Value>
+				<Text>Preferred Name</Text>
+				<Description>
+					<p>The name by which an individual prefers to be known and addressed.</p>
+					<p>Only usage type applicable for student name usage (other types
+					 are not supported by NSI).</p>
+				</Description>
+			</Value>    <!-- PRF -->
 			<Value>
 				<Code>PRV</Code>
 				<Text>Previous name</Text>
-			</Value>
+			</Value>    <!-- PRV -->
 		  <if intl="au">
 			<Value>
 				<Code>STG</Code>
 				<Text>Stage name</Text>
-			</Value>
+			</Value>    <!-- STG -->
 			<Value>
 				<Code>TRB</Code>
 				<Text>Tribal Name</Text>
-			</Value>
+			</Value>    <!-- TRB -->
 		  </if>
 		  <if intl="nz">
 	        <Value>
 				<Code>FON</Code>
 				<Text>Foreign Official Name</Text>
+				<Description>
+					<p>Included for future usage in NZ, especially for tertiary students.</p>
+				</Description>
 			</Value>
 		  </if>
 		</Values>
 	</CodeSet>    <!-- Name Usage Type -->
 	<CodeSet>
 		<Intro>
-			<p/>
+			<p>A standardised method of describing an electronic mail address used as contact method
+				 by a party. Where a party has more than one email address, this may provide context
+				 for deciding which email address to use.</p>
 		</Intro>
 		<ID>Email Type</ID>
 		<Values>
-		  <if intl="au">
 			<Value>
 				<Code>01</Code>
 				<Text>Primary</Text>
-			</Value>
+				<Description>Applicable to organisations, eg schools</Description>
+			</Value>    <!-- Primary -->
+		  <if intl="au">
 			<Value>
 				<Code>02</Code>
 				<Text>Alternate 1</Text>
-			</Value>
+			</Value>    <!-- Alternate 1 -->
 			<Value>
 				<Code>03</Code>
 				<Text>Alternate 2</Text>
-			</Value>
+			</Value>    <!-- Alternate 2 -->
 			<Value>
 				<Code>04</Code>
 				<Text>Alternate 3</Text>
-			</Value>
+			</Value>    <!-- Alternate 3 -->
 			<Value>
 				<Code>05</Code>
 				<Text>Alternate 4</Text>
-			</Value>
-		  </if>			
+			</Value>    <!-- Alternate 4 -->
+		  </if>
 			<Value>
 				<Code>06</Code>
 				<Text>Work</Text>
-			</Value>
+				<Description>Only used for persons</Description>
+			</Value>    <!-- Work -->
 			<Value>
 				<Code>07</Code>
 				<Text>Personal</Text>
-			</Value>			 
+				<Description>Only used for persons</Description>
+			</Value>    <!-- Personal -->
 		</Values>
 	</CodeSet>    <!-- Email Type -->
 	<CodeSet>
 		<Intro>
-			<p/>
+			<p>A standardised method of describing a telecommunications device used as contact
+				method by a party. Where a party has more than one phone number, this may provide
+				context for deciding which number to use.</p>
 		</Intro>
 		<ID>Telephone Number Type</ID>
 		<Values>
 		  <Value>
 			<Code>0096</Code>
 			<Text>Main telephone number</Text>
-		  </Value>
+		  </Value>      <!-- 0096 - Main phone no -->
 		  <if intl="au">
 			<Value>
 				<Code>0350</Code>
 				<Text>Alternate telephone number</Text>
-			</Value>
+			</Value>    <!-- 0350 - Alt phone no -->
 			<Value>
 				<Code>0359</Code>
 				<Text>Answering service</Text>
-			</Value>
+			</Value>    <!-- 0359 - Answering Srvice -->
 			<Value>
 				<Code>0370</Code>
 				<Text>Beeper number</Text>
@@ -245,37 +271,38 @@
 		  <Value>
 			<Code>2364</Code>
 			<Text>Facsimile number</Text>
-		  </Value>
+		  </Value>     <!-- 2364 - Facsimilie number -->
+		  <Value>
+		  		<Code>0777</Code>
+				<Text>Home Telephone Number</Text>
+				<Description>Person usage only</Description>
+		  </Value>     <!-- 0777 - Home phone no -->
+		  <Value>
+				<Code>0779</Code>
+				<Text>Home Mobile</Text>
+				<Description>Person usage only</Description>
+		  </Value>     <!-- 0779 - Home mobil -->
 	      <Value>
 			<Code>0888</Code>
 			<Text>Mobile</Text>
-		  </Value>
-		  <if intl="au">
-			<Value>
-				<Code>0887</Code>
-				<Text>Work Telephone Number</Text>
-			</Value>
-			<Value>
+		  </Value>     <!-- 0888 - Mobile no -->
+		  <Value>
 				<Code>0889</Code>
 				<Text>Work Mobile</Text>
-			</Value>
-			<Value>
-				<Code>0777</Code>
-				<Text>Home Telephone Number</Text>
-			</Value>
-			<Value>
-				<Code>0779</Code>
-				<Text>Home Mobile</Text>
-			</Value>
-		  </if>
+		  </Value>     <!-- 0887 - Work Mobile no -->
+		  <Value>
+				<Code>0887</Code>
+				<Text>Work Telephone Number</Text>
+		  </Value>     <!-- 0887 - Work landline no -->
 		</Values>
 	</CodeSet>    <!-- Telephone Number Type -->
 
 	<!-- Defined by NZ - Student & Contact Demographics -->
 	<CodeSet>
 		<Intro>
-			<p>A description of the gender identity students use to describe themselves.
-			Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/LfWjOFK1NqtZCv5i">NZ Standard for Gender Identity</a></p>
+			<p>A Person may identify as having a Gender (or Gender Identity). Biological sex and sexual
+				orientation are related but different concepts.
+			Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/LfWjOFK1NqtZCv5i">Statistics NZ Standard for Gender Identity</a></p>
 		</Intro>
 		<ID>Gender</ID>
 		<Values>
@@ -284,56 +311,56 @@
 				<Code>1</Code>
 				<Text>Male</Text>
 				<Text xml:lang="mi">Tāne</Text>
-				<Description>Level 1 Code</Description>
+				<Description>Level 1</Description>
 			</Value>
 			<Value>
 				<Code>2</Code>
 				<Text>Female</Text>
 				<Text xml:lang="mi">Wahine</Text>
-				<Description>Level 1 Code</Description>
+				<Description>Level 1</Description>
 			</Value>
 			<Value>
 				<Code>3</Code>
 				<Text>Gender Diverse</Text>
 				<Text xml:lang="mi">Ira tāngata kōwhiri kore</Text>
-				<Description>Level 1 Code</Description>
+				<Description>Level 1</Description>
 			</Value>
 			<!-- Level 2 Codes -->
 			<Value>
 				<Code>11</Code>
 				<Text>Male</Text>
 				<Text xml:lang="mi">Tāne</Text>
-				<Description>Level 2 Code</Description>
+				<Description>Level 2</Description>
 			</Value>
 			<Value>
 				<Code>21</Code>
 				<Text>Female</Text>
 				<Text xml:lang="mi">Wahine</Text>
-				<Description>Level 2 Code</Description>
+				<Description>Level 2</Description>
 			</Value>
 			<Value>
 				<Code>30</Code>
 				<Text>Gender diverse not further defined</Text>
 				<Text xml:lang="mi">Ira tāngata kōwhiri kore</Text>
-				<Description>Level 2 Code</Description>
+				<Description>Level 2</Description>
 			</Value>
 			<Value>
 				<Code>31</Code>
 				<Text>Transgender Male to Female</Text>
 				<Text xml:lang="mi">Whakawahine</Text>
-				<Description>Level 2 Code</Description>
+				<Description>Level 2</Description>
 			</Value>
 			<Value>
 				<Code>32</Code>
 				<Text>Transgender Female to Male</Text>
 				<Text xml:lang="mi">Tangata ira tāne</Text>
-				<Description>Level 2 Code</Description>
+				<Description>Level 2</Description>
 			</Value>
 			<Value>
 				<Code>39</Code>
 				<Text>Gender diverse not elsewhere classified</Text>
 				<Text xml:lang="mi">Ira tāngata kōwhiri kore</Text>
-				<Description>Level 2 Code</Description>
+				<Description>Level 2</Description>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Gender -->
@@ -342,8 +369,8 @@
 			<p>The citizenship or residency status of a person,
 			principally recorded in order to determine eligibility for
 			education services hence limited to indicating New
-			Zealand, Australian or Other residency.
-			</p>
+			Zealand, Australian or Other residency.</p>
+			<p>Based on SIF Australia AUCodeSetsAustralianCitizenshipStatusType</p>
 		</Intro>
 		<ID>Citizenship Status</ID>
 		<Values>
@@ -355,18 +382,25 @@
 				<Code>2</Code>
 				<Text>NZ Citizen</Text>
 			</Value>
-			<Value>
-				<Code>3</Code>
-				<Text>Australian permanent resident</Text>
-			</Value>
-			<Value>
-				<Code>4</Code>
-				<Text>Australian Temporary entry permit</Text>
-			</Value>
+			<if intl="au">
+				<Value>
+					<Code>3</Code>
+					<Text>Australian permanent resident</Text>
+				</Value>
+				<Value>
+					<Code>4</Code>
+					<Text>Australian Temporary entry permit</Text>
+				</Value>
+			</if>
 			<Value>
 				<Code>5</Code>
 				<Text>Other overseas</Text>
 				<Description>Indicates a residency other than NZ or Australia</Description>
+			</Value>
+			<Value>
+				<Code>6</Code>
+				<Text>NZ Resident</Text>
+				<Description>Includes Australian residents classified as NZ resident once arrived in NZ</Description>
 			</Value>
 			<Value>
 				<Code>X</Code>
@@ -376,13 +410,9 @@
 	</CodeSet>    <!-- Citizenship Status -->
 	<CodeSet>
 		<Intro>
-			<p>The means by which an identity and eligibility status
-			for education services is verified.  Principally refers to
-			an identity document type (eg passport) but may also
-			include a type of business decision taken to accept an
-			assertion of identity and eligibility status (eg principal
-			discretion).
-			</p>
+			<p>Records the source of the identity or eligibility verification, that has been made.
+				Mostly it is merely a record of the kind of document that has been presented; but 
+				occasionally it is down to Principal or Ministry discretion / approval.</p>
 		</Intro>
 		<ID>Verification Source</ID>
 		<Values>
@@ -399,7 +429,7 @@
 			<Value>
 				<Code>3</Code>
 				<Text>NZ Passport</Text>
-				<Description>Including COK, TKL or NIU (Current or Expired)</Description>
+				<Description>Including COK, TKL or NIU. (Current or Expired)</Description>
 			</Value>
 			<Value>
 				<Code>4</Code>
@@ -407,47 +437,58 @@
 			</Value>
 			<Value>
 				<Code>5</Code>
-				<Text>COK, TKL or NIU Birth Certificate</Text>
-				<Description>Applies if the child was born before 1 Jan 2006</Description>
+				<Text>Birth Certificate (COK, TKL, NIU)</Text>
+				<Description>If the child was born before 1 Jan 2006</Description>
 			</Value>
 			<Value>
 				<Code>6</Code>
-				<Text>COK, TKL or NIU Birth Certificate (with confirmation of NZ Citizen by Birth)</Text>
-				<Description>Applies if the child was born on or after 1 Jan 2006</Description>
+				<Text>Birth Certificate (COK, TKL, NIU) (with confirmation of NZ Citizen by Birth)</Text>
+				<Description>Applies if the child was born on or after 1 Jan 2006.</Description>
 			</Value>
 			<Value>
 				<Code>7</Code>
-				<Text>Certificate of Naturalisation (COK, TKL or NIU)</Text>
+				<Text>Certification of Naturalisation (COK, TKL, NIU)</Text>
 			</Value>			
 			<Value>
 				<Code>8</Code>
-				<Text>Certificate of Registration (COK, TKL or NIU)</Text>
+				<Text>Certification of Registration (COK, TKL, NIU)</Text>
 			</Value>			
 			<Value>
 				<Code>9</Code>
-				<Text>Letter of Confirmation (COK, TKL or NIU)</Text>
+				<Text>Letter of Confirmation (COK, TKL, NIU)</Text>
 			</Value>			
 			<Value>
 				<Code>10</Code>
-				<Text>Other Passport with NZ residence class Visa or other evidence of NZ residency</Text>
+				<Text>Other Passport with NZ residence class Visa</Text>
+				<Description>Or other evidence of NZ residency</Description>
 			</Value>
 			<Value>
 				<Code>11</Code>
 				<Text>Australian Passport</Text>
-				<Description>Current or Expired</Description>
+				<Description>(Current or Expired)</Description>
 			</Value>
 			<Value>
 				<Code>12</Code>
-				<Text>Visa (Domestic)</Text>
+				<Text>Visa Domestic</Text>
+			</Value>
+			<Value>
+				<Code>13</Code>
+				<Text>Visa with conditions of study</Text>
+			</Value>
+			<Value>
+				<Code>21</Code>
+				<Text>Principal Discretion</Text>
+			</Value>
+			<Value>
+				<Code>22</Code>
+				<Text>MoE Approval</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Verification Source -->
-	
     <CodeSet>
 		<Intro>
-			<p>A standardised method of describing the usage of a
-			language by a person, potentially indicating capability
-			and preference for the language.</p>
+			<p>A standardised method of describing the usage of a language by a person, 
+				potentially indicating capability and preference for the language.</p>
 		</Intro>
 		<ID>Language Usage</ID>
 		<Values>
@@ -461,14 +502,14 @@
 			</Value>
 			<Value>
 				<Code>3</Code>
-				<Text>Language Spoken at Home</Text>
+				<Text>Spoken at Home</Text>
 			</Value>			 
 		</Values>
 	</CodeSet>    <!-- Language Usage Type -->
     <CodeSet>
 		<Intro>
-			<p>Language refers to recognised human communication systems, typically oral and/or written.</p>
-			<p>Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/CARS3211">Statistics NZ - Language Standard Classification 1999 v2.0.0</a></p>
+			<p>Language refers to recognised human communication systems, typically oral and/or written.
+				Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/CARS3211">Statistics NZ - Language Standard Classification 1999 v2.0.0</a></p>
 		</Intro>
 		<ID>Language</ID>
 		<Values>
@@ -729,6 +770,7 @@
 			<Value><Code>24112</Code><Text>American Sign Language</Text></Value>
 			<Value><Code>24113</Code><Text>Australian Sign Language</Text></Value>
 			<Value><Code>24114</Code><Text>British Sign Language</Text></Value>
+			<Value><Code>24199</Code><Text>Sign Language not elsewhere classified</Text></Value>
 			<Value><Code>44</Code><Text>Don't Know</Text></Value>
 			<Value><Code>444</Code><Text>Don't Know</Text></Value>
 			<Value><Code>44444</Code><Text>Don't Know</Text></Value>
@@ -749,7 +791,6 @@
 			<Value><Code>99999</Code><Text>Not Stated</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Language -->
-
     <CodeSet>
 		<Intro>
 			<p>Ethnicity is the ethnic group or groups that people
@@ -1824,8 +1865,7 @@
 			clusters of whānau where the whānau is usually an extended
 			family grouping consisting of children, parents, often
 			grandparents, and other closely related kin.</p>
-			<p>The permissible values consists of any value from
-			the <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/QjykuWT5BTJrGdVs">Statistics NZ - Iwi and Iwi related groups statistical standard v1.0.0.0</a></p>
+			<p>Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/QjykuWT5BTJrGdVs">Statistics NZ - Iwi and Iwi related groups statistical standard v1.0.0.0</a></p>
 		</Intro>
 		<ID>Iwi</ID>
 		<Values>
@@ -1983,7 +2023,7 @@
 			</Value>
 			<Value>
 				<Code>0306</Code>
-				<Text>Ngāti Hīkairo </Text>
+				<Text>Ngāti Hīkairo</Text>
 			</Value>
 			<Value>
 				<Code>0307</Code>
@@ -2631,14 +2671,12 @@
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Iwi -->
-
 	<CodeSet>
 		<Intro>
 			<p>Religious affiliation is the self-identified association of a person with a religion,
 			 denomination or sub-denominational religious group.</p>
 
-			<p>The permissible values consists of any value from
-			the <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/CARS2902">Statistics NZ - Relgious Affiliation 1999 v1.0.0.0</a></p>
+			<p>Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/CARS2902">Statistics NZ - Religious Affiliation 1999 v1.0.0.0</a></p>
 		</Intro>
 		<ID>Religion</ID>
 		<Values>
@@ -2832,10 +2870,9 @@
 			<Value><Code>99999</Code><Text>Not Stated</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Religion -->
-
 	<CodeSet>
 		<Intro>
-			<p>Code denoting the type of healthcare service provided by a StudentContact</p>
+			<p>Code denoting the type of healthcare service provided by a StudentContact.</p>
 		</Intro>
 		<ID>Healthcare Service Type</ID>
 		<Values>
@@ -2844,5 +2881,5 @@
 			<Value><Code>3</Code><Text>Therapist</Text></Value>
 			<Value><Code>4</Code><Text>Other</Text></Value>
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Healthcare Service -->
 </IncludeGroup>
