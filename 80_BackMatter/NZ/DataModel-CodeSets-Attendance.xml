@@ -33,7 +33,7 @@
 	<!--- Defined by SIF NZ -->
 	<CodeSet>
 		<Intro>
-			<p>Code denoting presence, absence The reson for non-attendance at school, or non-attendance in class.</p>
+			<p>Code denoting presence, absence or the reason for non-attendance at school, or class.</p>
 		</Intro>
 		<ID>Attendance Code</ID>
 		<Values>
@@ -59,7 +59,7 @@
 			</Value>
 			<Value>
 				<Code>I</Code>
-				<Text>Internal appointment</Text>
+				<Text>Internal school appointment</Text>
 			</Value>
 			<Value>
 				<Code>E</Code>

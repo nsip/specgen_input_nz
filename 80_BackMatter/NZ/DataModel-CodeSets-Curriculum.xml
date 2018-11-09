@@ -77,7 +77,7 @@
 	</CodeSet>   <!-- Learning/Subject Area Types-->
 	<CodeSet>
 		<Intro>
-			<p>Codes denoting the status of the LearningStandard throughout its life-cycle.</p>
+			<p>A code denoting the status of the LearningStandard throughout its life-cycle.</p>
 		</Intro>
 		<ID>Learning Standard Status</ID>
 		<Values>
@@ -116,7 +116,7 @@
 	</CodeSet>   <!-- LearningStandardStatus -->
 	<CodeSet>
 		<Intro>
-			<p>Codes denoting the status of the LearningStandard throughout its life-cycle.</p>
+			<p>A code denoting the nature of the relationship with another LearningStandard</p>
 		</Intro>
 		<ID>Learning Standard Relationship Type</ID>
 		<Values>

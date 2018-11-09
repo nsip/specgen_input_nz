@@ -750,7 +750,7 @@
 	<CodeSet>
 		<Intro>
 			<p>A country is a geopolitical entity recognised by the
-			New Zealand government. The term country may include:</p>
+			New Zealand government. The term country may include</p>
 			<ul>
 				<li>Independent countries recognised by the New Zealand
 				Government</li>
@@ -761,7 +761,7 @@
 			</ul>
 			<p>Conforms to the International Standard <a href="http://www.iso.org/iso/home/store/catalogue_ics/catalogue_detail_ics.htm?csnumber=63545">ISO 3166 Codes
 			for the Representation of Names of Countries and their
-			Subdivisions (ISO 3166-1:2013)</a>.  Education adopts the
+			Subdivisions (ISO 3166-1:2013).</a>  Education adopts the
 			alpha-3 representation of this standard. </p>
 		</Intro>
 		<ID>3166 Country</ID>

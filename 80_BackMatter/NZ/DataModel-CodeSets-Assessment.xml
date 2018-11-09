@@ -16,7 +16,7 @@
 					<p>Student's learning is assessed by an external agency, commonly 
 						by setting one or more examinations.</p>
 				</Description>
-			</Value>
+			</Value>    <!--  External -->
 			<Value>
 				<Code>2</Code>
 				<Text>Internal</Text>
@@ -24,7 +24,7 @@
 					<p>Student's learning is assessed by the teacher who is actively 
 						engaged in teaching the student.</p>
 				</Description>
-			</Value>
+			</Value>    <!-- Internal -->
 		</Values>
 	</CodeSet>   <!-- Assessment Mode -->
 	<CodeSet>
@@ -36,27 +36,27 @@
 			<Value>
 				<Code>101</Code>
 				<Text>Internal Exam/Assessment</Text>
-			</Value>
+			</Value>    <!-- Internal Exam/Assessment -->
 			<Value>
 				<Code>102</Code>
 				<Text>External Exam/Assessment</Text>
-			</Value>
+			</Value>    <!-- External Exam/Assessment -->
 			<Value>
 				<Code>103</Code>
 				<Text>Mock</Text>
-			</Value>
+			</Value>    <!-- Mock -->
 			<Value>
-				<Code>104></Code>
+				<Code>104</Code>
 				<Text>Portfolio</Text>
-			</Value>
+			</Value>    <!-- Portfolio -->
 			<Value>
 				<Code>105</Code>
 				<Text>Practical</Text>
-			</Value>
+			</Value>    <!-- Practical -->
 			<Value>
 				<Code>106</Code>
 				<Text>Other</Text>
-			</Value>
+			</Value>    <!-- Other -->
 		</Values>
 	</CodeSet>   <!-- Assessment Type -->
 </IncludeGroup>

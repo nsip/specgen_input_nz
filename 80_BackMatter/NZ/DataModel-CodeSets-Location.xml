@@ -127,7 +127,7 @@
 			</Value>
 		</Values>
 	</CodeSet>	<!-- NZ Address Role -->
-</if>	
+</if>
 	<CodeSet>
 		<Intro>
 			<p>A classification of geographical boundaries or statistical 
