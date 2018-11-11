@@ -29,7 +29,7 @@
 	</CodeSet>   <!-- Assessment Mode -->
 	<CodeSet>
 		<Intro>
-			<p>Code denoting how an assessment of student's learning is to be made.</p>
+			<p>Standard codes denoting the type of assessment the student is sitting for the assessment task.</p>
 		</Intro>
 		<ID>Assessment Type</ID>
 		<Values>
