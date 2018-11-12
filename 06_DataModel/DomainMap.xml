@@ -1,93 +1,144 @@
-<Section name="Domain Map"
-		 xmlns:xs="http://www.w3.org/2001/XMLSchema"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xmlns:xi="http://www.w3.org/2001/XInclude"
-		 xmlns:xhtml="http://www.w3.org/1999/xhtml"
-		 
-         xmlns="http://sifassociation.org/SpecGen">
+	<Section name="Domain Map"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+			
+			xmlns="http://sifassociation.org/SpecGen">
 
-	<Intro>
-		<p>
-			This section presents the SIF Data Objects in each of the SIF Data Model domains, for easier navigation:
-		</p>
-		<p>
-			<img src="images/zone512.png" usemap="#DomainMap"/>
-			<map id="DomainMap" name="DomainMap">
-				<area title="Provider" href="#Domain__Provider" shape="rect" coords="71,65,166,126"/>
-				<area title="Student &amp; Whānau" href="#Domain__StudentWhānau" shape="rect" coords="284,331,375,390"/>
-				<area title="Enrolment" href="#Domain__Enrolment" shape="rect" coords="206,0,301,60"/>
-				<area title="Attendance" href="#Domain__Attendance" shape="rect" coords="344,66,439,126"/>
-				<area title="Hauora / Wellbeing" href="#Domain__HauoraWellbeing" shape="rect" coords="37,214,132,273"/>
-			</map>
-		</p>
-	</Intro>
-
-	<Domain name="Provider">
 		<Intro>
 			<p>
-				The Provider domain describes education provider
-				entities, the relationships between them, and the
-				Staff that work at them.				
+				This section presents the SIF Data Objects in each of the SIF Data Model domains, for easier navigation:
+			</p>
+			<p>
+				<img src="images/zone512.png" usemap="#DomainMap"/>
+				<map id="DomainMap" name="DomainMap">
+					<area title="Provider" href="#Domain__Provider" shape="rect" coords="71,65,166,126"/>
+					<area title="Student &amp; Whānau" href="#Domain__StudentWhānau" shape="rect" coords="284,331,375,390"/>
+					<area title="Enrolment" href="#Domain__Enrolment" shape="rect" coords="206,0,301,60"/>
+					<area title="Attendance" href="#Domain__Attendance" shape="rect" coords="344,66,439,126"/>
+					<area title="Hauora / Wellbeing" href="#Domain__HauoraWellbeing" shape="rect" coords="37,214,132,273"/>
+					<area title="Assessment &amp; Attainment" href="#Domain__AssessmentAttainment" shape="rect" coords="378,214,471,272"/> 
+				</map>
 			</p>
 		</Intro>
+
+		<Domain name="Provider">
+			<Intro>
+				<p>
+					The Provider domain describes education provider
+					entities, the relationships between them, and the
+					Staff that work at them.				
+				</p>
+				<img src="images/SIFNZ-LogicalModel-ProviderDomain.png" usemap="#ProviderMap"/>
+			</Intro>
+			
+			<DataObject coords="130,132,349,217">Provider</DataObject>
+			<DataObject coords="535,132,681,180">EducationOrganisation</DataObject>
+			<DataObject coords="457,261,569,321">ProviderRelationship</DataObject>
+			<DataObject coords="26,50,114,84">StaffPersonal</DataObject>
+			<DataObject coords="379,37,468,105">StaffAssignment</DataObject>
+			<DataObject coords="237,400,328,469">ProviderCourse</DataObject>
+			<DataObject coords="41,402,130,470">TeachingGroup</DataObject>
+		</Domain>
+
+		<Domain name="Student &amp; Whānau">
+			<Intro>
+				<p>
+					The Student domain describes Student entities, their
+					Whānau, and the relationships between them.
+				</p>
+				<img src="images/SIFNZ-LogicalModel-StudentDomain.png" useMap="#Student &amp; WhānauMap"/>
+			</Intro>
+
+			<DataObject coords="24,35,122,240">StudentPersonal</DataObject>
+			<DataObject coords="526,76,677,117">StudentContactPersonal</DataObject>
+			<DataObject coords="253,77,411,118">StudentContactRelationship</DataObject>
+		</Domain>
+
+		<Domain name="Enrolment">
+			<Intro>
+				<p>
+					The Enrolment domain describes transactional entities
+					whereby Students enrol at Providers, in LearningProgrammes,
+					in Sections, or in Activities.
+				</p>
+				<img src="images/SIFNZ-LogicalModel-EnrolmentDomain.png" useMap="#EnrolmentMap"/>
+			</Intro>
+			<DataObject coords="35,179,183,212">StudentProviderEnrolment</DataObject>
+			<DataObject coords="23,34,159,94">StudentPersonal</DataObject>
+			<DataObject coords="43,386,150,424">Provider</DataObject>
+			<DataObject coords="291,111,429,158">ProviderCourse</DataObject>
+			<DataObject coords="455,257,575,322">TeachingGroup</DataObject>
+			<DataObject coords="660,271,773,301">StaffPersonal</DataObject>
+		</Domain>
+
+		<Domain name="Hauora / Wellbeing">
+			<Intro>
+				<p>
+				The Hauora / Wellbing domain records everything from Student's health conditions
+				through behavioural incidents (both good and bad) to Student's aspirations and goals
+				participation in extra-curricular activities and the provision of Learning Support programmes.
+				</p>
+				<img src="images/SIFNZ-LogicalModel-WellbeingDomain.png" useMap="#Hauora / WellbeingMap"/>
+			</Intro>
+
+			<DataObject coords="24,340,121,377">WellbeingCharacteristic</DataObject>
+			<DataObject coords="155,268,244,318">WellbeingAlert</DataObject>
+			<DataObject coords="286,340,384,380">WellbeingEvent</DataObject>
+			<DataObject coords="418,387,505,426">WellbeingResponse</DataObject>
+			<DataObject coords="538,441,627,477">WellbeingAppeal</DataObject>
+			<DataObject coords="618,343,761,380">StudentActivityParticipation</DataObject>
+			<DataObject coords="800,342,981,378">StudentLearningSupportParticipation</DataObject>
+			<DataObject coords="722,282,846,313">StudentDocument</DataObject>
+			<DataObject coords="399,50,498,79">StudentVoice</DataObject>
+			<DataObject coords="356,145,544,213">StudentPersonal</DataObject>
+			<DataObject coords="298,503,454,574">Provider</DataObject>
+		</Domain>
 		
-		<DataObject>Provider</DataObject>
-		<DataObject>ProviderRelationship</DataObject>
-		<DataObject>StaffPersonal</DataObject>
-		<DataObject>ProviderCourse</DataObject>
-	</Domain>
+		<Domain name="Attendance">
+			<Intro>
+				<p>
+					The Attendance domain describes transactional entities that
+					record a Student's attendance at &amp; absence from Providers.
+					Attendance is recorded at either Day, Half-Day or individual Period granuality
+					at the choice of the Provider; and reported back in summary form.
+				</p>
+				<img src="images/SIFNZ-LogicalModel-AttendanceDomain.png" useMap="#AttendanceMap"/>
+			</Intro>
+			<DataObject coords="76,34,300,87">StudentPersonal</DataObject>
+			<DataObject coords="516,65,935,122">Provider</DataObject>
+			<DataObject coords="220,189,379,224">StudentAttendanceTimeList</DataObject>
+			<DataObject coords="25,145,187,183">StudentAttendanceSummary</DataObject>
+			<DataObject coords="425,474,550,508">ScheduledActivity</DataObject>
+			<DataObject coords="745,235,835,269">TimeTable</DataObject>
+			<DataObject coords="603,335,719,370">TimeTableCell</DataObject>
+			<DataObject coords="476,245,565,277">Session</DataObject>
+		</Domain>
 
-	<Domain name="Student &amp; Whānau">
-		<Intro>
-			<p>
-				The Student domain describes Student entities, their
-				Whānau, and the relationships between them.
-			</p>
-		</Intro>
-
-		<DataObject>StudentPersonal</DataObject>
-		<DataObject>StudentContactPersonal</DataObject>
-		<DataObject>StudentContactRelationship</DataObject>
-	</Domain>
-
-	<Domain name="Enrolment">
-		<Intro>
-			<p>
-				The Enrolment domain describes transactional entities
-				whereby Students enrol at Providers, in LearningProgrammes,
-				in Sections, or in Activities.
-			</p>
-		</Intro>
-
-		<DataObject>StudentProviderEnrolment</DataObject>
-	</Domain>
-
-	<Domain name="Hauora / Wellbeing">
-		<Intro>
-			<p>
-			</p>
-		</Intro>
-
-		<DataObject>PersonalisedPlan</DataObject>
-		<DataObject>WellbeingCharacteristic</DataObject>
-		<DataObject>WellbeingAlert</DataObject>
-		<DataObject>WellbeingEvent</DataObject>
-		<DataObject>WellbeingResponse</DataObject>
-		<DataObject>WellbeingAppeal</DataObject>
-	</Domain>
-	
-	<Domain name="Attendance">
-		<Intro>
-			<p>
-				The Attendance domain describes transactional entities that
-				record a Student's attendance at &amp; absence from Providers.
-				Attendance is recorded at either Day, Half-Day or individual Period granuality
-				at the choice of the Provider; and reported back in summary form.
-			</p>
-		</Intro>
-		<DataObject>StudentAttendanceTimeList</DataObject>
-		<DataObject>StudentAttendanceSummary</DataObject>
-	</Domain>
-</Section>
+		<Domain name="Assessment &amp; Attainment">
+			<Intro>
+				<p>
+					The Assessment domain describes transactional entities that
+					record assessment of Student's learning. The domain covers
+					everything from a simple in-class assessment task (eg grading assignment, test or essay)
+					through to end of Course or year final marks, and on to formal external assessments
+					performed by external agencies (eg. NZQA, Cambridge International Education,  International 
+					Baccalaureate, etc). 
+				</p>
+				<img src="images/SIFNZ-LogicalModel-AssessmentDomain.png" useMap="#Assessment &amp; AttainmentMap"/>
+			</Intro>
+			<DataObject coords="25,35,122,437">StudentPersonal</DataObject>
+			<DataObject coords="298,80,397,123">StudentAssessmentRegistration</DataObject>
+			<DataObject coords="520,137,619,205">AssessmentTask</DataObject>
+			<DataObject coords="302,172,407,205">StudentAssessment</DataObject>
+			<DataObject coords="181,246,296,287">AssessmentTaskResult</DataObject>
+			<DataObject coords="272,363,397,398">StudentAttainment</DataObject>
+			<DataObject coords="590,414,705,447">LearningStandard</DataObject>
+			<DataObject coords="697,267,812,321">ProviderCourse</DataObject>
+			<DataObject coords="872,181,961,249">Provider</DataObject>
+			<DataObject coords="710,47,809,87">TeachingGroup</DataObject>
+		</Domain>
+	</Section>
 
 
