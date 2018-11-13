@@ -131,9 +131,10 @@
 			<DataObject coords="25,35,122,437">StudentPersonal</DataObject>
 			<DataObject coords="298,80,397,123">StudentAssessmentRegistration</DataObject>
 			<DataObject coords="520,137,619,205">AssessmentTask</DataObject>
-			<DataObject coords="302,172,407,205">StudentAssessment</DataObject>
+			<DataObject coords="302,172,429,205">StudentAssessmentTask</DataObject>
 			<DataObject coords="181,246,296,287">AssessmentTaskResult</DataObject>
 			<DataObject coords="272,363,397,398">StudentAttainment</DataObject>
+			<DataObject coords="31,519,122,547">Credential</DataObject>
 			<DataObject coords="590,414,705,447">LearningStandard</DataObject>
 			<DataObject coords="697,267,812,321">ProviderCourse</DataObject>
 			<DataObject coords="872,181,961,249">Provider</DataObject>
