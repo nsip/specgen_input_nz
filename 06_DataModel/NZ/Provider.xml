@@ -14,7 +14,7 @@
     <Description>A recognised provider of education services in the New Zealand
 	education system.  Providers may operate in the Early Childhood, Compulsory Schooling or Tertiary sectors.
     </Description>
-  </Item>
+  </Item> <!-- Provider -->
   <Item>
     <Element>RefId</Element>
     <Characteristics>M</Characteristics>
