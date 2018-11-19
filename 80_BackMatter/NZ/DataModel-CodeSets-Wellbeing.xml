@@ -3,10 +3,59 @@
  	xmlns="http://sifassociation.org/SpecGen">
 
 
-		<!-- Borrowed from SIF AU -->
+	<!-- Laregely borrowed from SIF AU -->
+
     <CodeSet>
       <Intro>
-        <p>Wellbeing Characteristics - High Level.  Initially provided by WA.  This code set is in draft and changes are expected.  Future changes may re-specify code values.</p> 
+        <p>Standard codes denoting the severity of a Wellbeing Characteristic or Alert.</p>
+      </Intro>
+      <ID>Wellbeing Severity</ID>
+      <Values>
+				<Value><Code>101</Code><Text>Very High</Text></Value>
+				<Value><Code>102</Code><Text>High</Text></Value>
+				<Value><Code>103</Code><Text>Medium</Text></Value>
+				<Value><Code>104</Code><Text>Low</Text></Value>
+				<Value><Code>105</Code><Text>Very Low</Text></Value>
+      </Values>
+    </CodeSet>    <!-- Wellbeing Severity -->
+
+    <CodeSet>
+      <Intro>
+        <p>Standard codes denoting the status of the Wellbeing Response.</p>
+      </Intro>
+      <ID>Wellbeing Status</ID>
+      <Values>
+				<Value><Code>U</Code><Text>Unresolved</Text></Value>
+				<Value><Code>R</Code><Text>Resolved</Text></Value>
+				<Value><Code>O</Code><Text>Other</Text></Value>
+      </Values>
+    </CodeSet>    <!-- Wellbeing Status -->
+
+
+
+	<!-- Wellbeing Alert classification codes -->
+    <CodeSet>
+      <Intro>
+        <p>Standard codes denoting the category of the Wellbeing Alert.</p>
+      </Intro>
+      <ID>Wellbeing Alert Category</ID>
+      <Values>
+				<Value><Code>M</Code><Text>Medical</Text></Value>
+				<Value><Code>L</Code><Text>Legal</Text></Value>
+				<Value><Code>D</Code><Text>Discipline</Text></Value>
+				<Value><Code>E</Code><Text>Educational</Text></Value>
+				<Value><Code>S</Code><Text>SpecialNeeds/Disability</Text></Value>
+				<Value><Code>P</Code><Text>Plan Review</Text></Value>
+				<Value><Code>O</Code><Text>Other</Text></Value>
+      </Values>
+    </CodeSet>    <!-- Wellbeing Alert Category -->
+
+
+
+	<!-- Wellbeing Characteristic classification codes -->
+    <CodeSet>
+      <Intro>
+        <p>Standard codes denoting the Sub-Categories of a Wellbeing Characteristic.</p> 
       </Intro>
       <ID>Wellbeing Characteristic Sub Category</ID>
       <Values>
@@ -96,258 +145,43 @@
 				<Value><Code>MCM-25</Code><Text>Velocardiofacial Syndrome</Text></Value>
 				<Value><Code>MCM-26</Code><Text>Wolf-Hirschhorn Syndrome</Text></Value>
 	  	</Values>
-		</CodeSet>    <!-- Wellbeing Characteristic Sub Category -->
+	</CodeSet>    <!-- Wellbeing Characteristic Sub Category -->
 
    	<CodeSet>
       <Intro>
-        <p>Wellbeing Characteristics - High Level.  Initially provided by WA. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
+        <p>Standard codes denoting the Categories of a Wellbeing Characteristic.</p>
       </Intro>
       <ID>Wellbeing Characteristic Category</ID>
       <Values>
 	  		<Value><Code>MAO</Code><Text>Allergies - other</Text></Value>
-				<Value><Code>MAIM</Code><Text>Auto-immune/Immune Disorders</Text></Value>
-				<Value><Code>MRD</Code><Text>Respiratory Disorder</Text></Value>
-				<Value><Code>MB</Code><Text>Blood disorder</Text></Value>
-				<Value><Code>MMD</Code><Text>Heart Disease/ Disorder</Text></Value>
-				<Value><Code>MMS</Code><Text>Musculo – skeletal conditions</Text></Value>
-				<Value><Code>MEM</Code><Text>Endocrine and Metabolic Disorders</Text></Value>
-				<Value><Code>MC</Code><Text>Childhood cancer</Text></Value>
-				<Value><Code>MAA</Code><Text>Allergy – Anaphylaxis</Text></Value>
-				<Value><Code>MH</Code><Text>Mental and behavioural disorders</Text></Value>
-				<Value><Code>MN</Code><Text>Diseases/conditions of the nervous system</Text></Value>
-				<Value><Code>MS</Code><Text>Seizure disorders</Text></Value>
-				<Value><Code>MCM</Code><Text>Congenital malformations, deformations and chromosomal abnormalities</Text></Value>
-				<Value><Code>MI</Code><Text>Infectious Diseases</Text></Value>
-				<Value><Code>MGI</Code><Text>Gastro Intestinal/Urinary conditions</Text></Value>
-				<Value><Code>MND</Code><Text>Neuro/Developmental Disorders</Text></Value>
-				<Value><Code>MO</Code><Text>Oral/Phalangeal Disorders</Text></Value>
-				<Value><Code>MD</Code><Text>Deaf and Hard of Hearing</Text></Value>
-				<Value><Code>MOP</Code><Text>Optical/ Vision Disorder</Text></Value>
-				<Value><Code>M-Other</Code><Text>Medical Other</Text></Value>
-				<Value><Code>D-Other</Code><Text>Disability Other</Text></Value>
-				<Value><Code>S-Other</Code><Text>Special Needs Other</Text></Value>
-				<Value><Code>Other</Code><Text>Other</Text></Value>
+			<Value><Code>MAIM</Code><Text>Auto-immune/Immune Disorders</Text></Value>
+			<Value><Code>MRD</Code><Text>Respiratory Disorder</Text></Value>
+			<Value><Code>MB</Code><Text>Blood disorder</Text></Value>
+			<Value><Code>MMD</Code><Text>Heart Disease/ Disorder</Text></Value>
+			<Value><Code>MMS</Code><Text>Musculo – skeletal conditions</Text></Value>
+			<Value><Code>MEM</Code><Text>Endocrine and Metabolic Disorders</Text></Value>
+			<Value><Code>MC</Code><Text>Childhood cancer</Text></Value>
+			<Value><Code>MAA</Code><Text>Allergy – Anaphylaxis</Text></Value>
+			<Value><Code>MH</Code><Text>Mental and behavioural disorders</Text></Value>
+			<Value><Code>MN</Code><Text>Diseases/conditions of the nervous system</Text></Value>
+			<Value><Code>MS</Code><Text>Seizure disorders</Text></Value>
+			<Value><Code>MCM</Code><Text>Congenital malformations, deformations and chromosomal abnormalities</Text></Value>
+			<Value><Code>MI</Code><Text>Infectious Diseases</Text></Value>
+			<Value><Code>MGI</Code><Text>Gastro Intestinal/Urinary conditions</Text></Value>
+			<Value><Code>MND</Code><Text>Neuro/Developmental Disorders</Text></Value>
+			<Value><Code>MO</Code><Text>Oral/Phalangeal Disorders</Text></Value>
+			<Value><Code>MD</Code><Text>Deaf and Hard of Hearing</Text></Value>
+			<Value><Code>MOP</Code><Text>Optical/ Vision Disorder</Text></Value>
+			<Value><Code>M-Other</Code><Text>Medical Other</Text></Value>
+			<Value><Code>D-Other</Code><Text>Disability Other</Text></Value>
+			<Value><Code>S-Other</Code><Text>Special Needs Other</Text></Value>
+			<Value><Code>Other</Code><Text>Other</Text></Value>
 	  	</Values>
-		</CodeSet>	  <!-- Wellbeing Characteristic Category -->
+	</CodeSet>	  <!-- Wellbeing Characteristic Category -->
 
     <CodeSet>
       <Intro>
-        <p>Wellbeing Event Category - initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
-      </Intro>
-      <ID>Wellbeing Event Category</ID>
-			<Values>
-				<Value><Code>B1</Code><Text>Safe</Text></Value>
-				<Value><Code>B2</Code><Text>Caring</Text></Value>
-				<Value><Code>B3</Code><Text>Respectful</Text></Value>
-				<Value><Code>B4</Code><Text>Responsible</Text></Value>
-				<Value><Code>B5</Code><Text>Enterprising</Text></Value>
-				<Value><Code>B6</Code><Text>Effort</Text></Value>
-				<Value><Code>B7</Code><Text>Citizenship</Text></Value>
-				<Value><Code>B8</Code><Text>Cooperation</Text></Value>
-				<Value><Code>B9</Code><Text>Leadership</Text></Value>
-				<Value><Code>M1</Code><Text>Aggressive physical contact against staff</Text></Value>
-				<Value><Code>M2</Code><Text>Abuse, threats, harassment or intimidation of staff</Text></Value>
-				<Value><Code>M3</Code><Text>Aggressive physical contact against a student</Text></Value>
-				<Value><Code>M4</Code><Text>Abuse, threats, harassment or intimidation of a student</Text></Value>
-				<Value><Code>M5</Code><Text>Damage to or theft of property</Text></Value>
-				<Value><Code>M6</Code><Text>Other violation of Code of Conduct (classroom managed)</Text></Value>
-				<Value><Code>M7</Code><Text>Possession, use or supply of substances or objects with restricted sale</Text></Value>
-				<Value><Code>M8</Code><Text>Possession, use or supply of illegal substances or objects</Text></Value>
-				<Value><Code>M9</Code><Text>E-breaches</Text></Value>
-				<Value><Code>99</Code><Text>Other Behaviour</Text></Value>
-			</Values>
-		</CodeSet>    <!-- Wellbeing Event Category -->
-    
-		<CodeSet>
-      <Intro>
-        <p>Wellbeing Event Sub Category - initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
-      </Intro>
-      <ID>Wellbeing Event Sub Category</ID>
-      <Values>
-				<Value><Code>B1a</Code><Text>Resolves issues peacefully</Text></Value>
-				<Value><Code>B1b</Code><Text>Plays in a friendly way</Text></Value>
-				<Value><Code>B1c</Code><Text>Uses equipment safely</Text></Value>
-				<Value><Code>B1d</Code><Text>Understands the purpose and need for rules</Text></Value>
-				<Value><Code>B1e</Code><Text>Seeks help from a responsible adult</Text></Value>
-				<Value><Code>B1f</Code><Text>Alerts others to risks and dangers</Text></Value>
-				<Value><Code>B1g</Code><Text>Moves away from danger</Text></Value>
-				<Value><Code>B1h</Code><Text>Uses protective interruption with peers</Text></Value>
-				<Value><Code>B1i</Code><Text>Observes and listens before acting</Text></Value>
-				<Value><Code>B2a</Code><Text>Helps someone or something in need</Text></Value>
-				<Value><Code>B2b</Code><Text>Shows empathy</Text></Value>
-				<Value><Code>B2c</Code><Text>Shows compassion</Text></Value>
-				<Value><Code>B2d</Code><Text>Is forgiving</Text></Value>
-				<Value><Code>B2e</Code><Text>Talks in a friendly way</Text></Value>
-				<Value><Code>B3a</Code><Text>Shows intercultural understanding</Text></Value>
-				<Value><Code>B3b</Code><Text>Acknowledges authority</Text></Value>
-				<Value><Code>B3c</Code><Text>Shows courtesy</Text></Value>
-				<Value><Code>B3d</Code><Text>Is polite</Text></Value>
-				<Value><Code>B3e</Code><Text>Accepts difference</Text></Value>
-				<Value><Code>B3f</Code><Text>Acknowledges the rights of others</Text></Value>
-				<Value><Code>B3g</Code><Text>Uses appropriate language/tone</Text></Value>
-				<Value><Code>B3h</Code><Text>Gives value to others’ opinions</Text></Value>
-				<Value><Code>B3i</Code><Text>Maintains appropriate personal space</Text></Value>
-				<Value><Code>B3j</Code><Text>Shows consideration of impact of actions on others</Text></Value>
-				<Value><Code>B4a</Code><Text>Is honest</Text></Value>
-				<Value><Code>B4b</Code><Text>Acts with integrity</Text></Value>
-				<Value><Code>B4c</Code><Text>Self regulates</Text></Value>
-				<Value><Code>B4d</Code><Text>Co-regulates</Text></Value>
-				<Value><Code>B4e</Code><Text>Helps others to regulate</Text></Value>
-				<Value><Code>B4f</Code><Text>Is trustworthy</Text></Value>
-				<Value><Code>B4g</Code><Text>Copes with frustration</Text></Value>
-				<Value><Code>B4h</Code><Text>Accepts accountability</Text></Value>
-				<Value><Code>B4i</Code><Text>Owns consequences of actions</Text></Value>
-				<Value><Code>B4j</Code><Text>Is organised</Text></Value>
-				<Value><Code>B5a</Code><Text>Thinks critically</Text></Value>
-				<Value><Code>B5b</Code><Text>Is creative</Text></Value>
-				<Value><Code>B5c</Code><Text>Is timely</Text></Value>
-				<Value><Code>B5d</Code><Text>Takes considered risks</Text></Value>
-				<Value><Code>B5e</Code><Text>Takes a problem solving approach</Text></Value>
-				<Value><Code>B5f</Code><Text>Is adaptable</Text></Value>
-				<Value><Code>B5g</Code><Text>Shows independence</Text></Value>
-				<Value><Code>B5h</Code><Text>Takes initiative</Text></Value>
-				<Value><Code>B5i</Code><Text>Shows persistence</Text></Value>
-				<Value><Code>B5j</Code><Text>Shows courage</Text></Value>
-				<Value><Code>B5k</Code><Text>Negotiates</Text></Value>
-				<Value><Code>B5l</Code><Text>Is persuasive</Text></Value>
-				<Value><Code>B5m</Code><Text>Builds social support (networks)</Text></Value>
-				<Value><Code>B5n</Code><Text>Innovates</Text></Value>
-				<Value><Code>B5o</Code><Text>Shows determination</Text></Value>
-				<Value><Code>B6a</Code><Text>Pays attention</Text></Value>
-				<Value><Code>B6b</Code><Text>Tries hard</Text></Value>
-				<Value><Code>B6c</Code><Text>Completes work</Text></Value>
-				<Value><Code>B6d</Code><Text>Perseveres</Text></Value>
-				<Value><Code>B6e</Code><Text>Asks questions</Text></Value>
-				<Value><Code>B6f</Code><Text>Shows desire to learn</Text></Value>
-				<Value><Code>B6g</Code><Text>Stays on task</Text></Value>
-				<Value><Code>B6h</Code><Text>Participates constructively</Text></Value>
-				<Value><Code>B6i</Code><Text>Shows commitment to identified goals</Text></Value>
-				<Value><Code>B7a</Code><Text>Promotes justice</Text></Value>
-				<Value><Code>B7b</Code><Text>Follows rules and laws</Text></Value>
-				<Value><Code>B7c</Code><Text>Stands up for others appropriately</Text></Value>
-				<Value><Code>B7d</Code><Text>Puts others’ needs before own</Text></Value>
-				<Value><Code>B7e</Code><Text>Contributes to the school/class</Text></Value>
-				<Value><Code>B7f</Code><Text>Contributes to the community</Text></Value>
-				<Value><Code>B7g</Code><Text>Is involved</Text></Value>
-				<Value><Code>B7h</Code><Text>Belongs</Text></Value>
-				<Value><Code>B7i</Code><Text>Promotes harmony</Text></Value>
-				<Value><Code>B7j</Code><Text>Gives back to the greater good</Text></Value>
-				<Value><Code>B7k</Code><Text>Becomes informed</Text></Value>
-				<Value><Code>B7l</Code><Text>Uses procedures and protocols</Text></Value>
-				<Value><Code>B7m</Code><Text>Participates in democratic decision making</Text></Value>
-				<Value><Code>B7n</Code><Text>Helps others to reach their goals</Text></Value>
-				<Value><Code>B8a</Code><Text>Is fair</Text></Value>
-				<Value><Code>B8b</Code><Text>Shows mutuality (sharing a feeling, action or relationship)</Text></Value>
-				<Value><Code>B8c</Code><Text>Shows reciprocity (“I scratch your back, you scratch mine)</Text></Value>
-				<Value><Code>B8d</Code><Text>Shows goodwill</Text></Value>
-				<Value><Code>B8e</Code><Text>Is attentive to others’ reactions</Text></Value>
-				<Value><Code>B8f</Code><Text>Is open to dialogue/discussion</Text></Value>
-				<Value><Code>B8g</Code><Text>Works to be a valued member of a team</Text></Value>
-				<Value><Code>B8h</Code><Text>Offers others choices</Text></Value>
-				<Value><Code>B9a</Code><Text>Inspires others</Text></Value>
-				<Value><Code>B9b</Code><Text>Represents others</Text></Value>
-				<Value><Code>B9c</Code><Text>Delegates to others</Text></Value>
-				<Value><Code>B9d</Code><Text>Shows self confidence</Text></Value>
-				<Value><Code>B9e</Code><Text>Shows assertiveness</Text></Value>
-				<Value><Code>B9f</Code><Text>Stays positive</Text></Value>
-				<Value><Code>B9g</Code><Text>Shoulders blame</Text></Value>
-				<Value><Code>B9h</Code><Text>Sets an example</Text></Value>
-				<Value><Code>B9i</Code><Text>Communicates effectively</Text></Value>
-				<Value><Code>B9j</Code><Text>Shows wisdom</Text></Value>
-				<Value><Code>M1a</Code><Text>Striking - Staff</Text></Value>
-				<Value><Code>M1b</Code><Text>Pushing or barging - Staff</Text></Value>
-				<Value><Code>M1c</Code><Text>Use of a weapon or object - Staff</Text></Value>
-				<Value><Code>M1d</Code><Text>Projectile - Staff</Text></Value>
-				<Value><Code>M1e</Code><Text>Struggling to be free of a physical restraint - Staff</Text></Value>
-				<Value><Code>M1f</Code><Text>Unintentional but negligent contact - Staff</Text></Value>
-				<Value><Code>M2a</Code><Text>Verbal abuse - Staff</Text></Value>
-				<Value><Code>M2b</Code><Text>Non-Verbal abuse - Staff</Text></Value>
-				<Value><Code>M2c</Code><Text>Verbal threat - Staff</Text></Value>
-				<Value><Code>M2d</Code><Text>Threatening gesture - Staff</Text></Value>
-				<Value><Code>M2e</Code><Text>Disrespectful or challenging language - Staff</Text></Value>
-				<Value><Code>M2f</Code><Text>Malicious gossip - Staff</Text></Value>
-				<Value><Code>M2g</Code><Text>Sexual harassment - Staff</Text></Value>
-				<Value><Code>M3a</Code><Text>Striking - Student</Text></Value>
-				<Value><Code>M3b</Code><Text>Pushing or barging - Student</Text></Value>
-				<Value><Code>M3c</Code><Text>Use of a weapon or object - Student</Text></Value>
-				<Value><Code>M3d</Code><Text>Projectile - Student</Text></Value>
-				<Value><Code>M3e</Code><Text>Struggling to be free of violation of personal space or deprivation of liberty - Student</Text></Value>
-				<Value><Code>M3f</Code><Text>Unintentional but negligent contact - Student</Text></Value>
-				<Value><Code>M4a</Code><Text>Verbal abuse - Student</Text></Value>
-				<Value><Code>M4b</Code><Text>Non-Verbal abuse - Student</Text></Value>
-				<Value><Code>M4c</Code><Text>Verbal threat - Student</Text></Value>
-				<Value><Code>M4d</Code><Text>Threatening gesture - Student</Text></Value>
-				<Value><Code>M4e</Code><Text>Malicious gossip - Student</Text></Value>
-				<Value><Code>M4f</Code><Text>Exclusion of peer - Student</Text></Value>
-				<Value><Code>M4g</Code><Text>Teasing - Student</Text></Value>
-				<Value><Code>M4h</Code><Text>Unhelpful bystander actions - Student</Text></Value>
-				<Value><Code>M4i</Code><Text>Sexual harassment - Student</Text></Value>
-				<Value><Code>M5a</Code><Text>Theft of personal property</Text></Value>
-				<Value><Code>M5b</Code><Text>Theft of school property</Text></Value>
-				<Value><Code>M5c</Code><Text>Deliberate damage to personal property</Text></Value>
-				<Value><Code>M5d</Code><Text>Incidental damage through negligence</Text></Value>
-				<Value><Code>M5e</Code><Text>Graffiti</Text></Value>
-				<Value><Code>M5f</Code><Text>Buildings and glass</Text></Value>
-				<Value><Code>M5g</Code><Text>Fittings and fixtures</Text></Value>
-				<Value><Code>M5h</Code><Text>Furniture</Text></Value>
-				<Value><Code>M5i</Code><Text>Equipment</Text></Value>
-				<Value><Code>M5j</Code><Text>Vehicles</Text></Value>
-				<Value><Code>M5k</Code><Text>Garden and plants</Text></Value>
-				<Value><Code>M6a</Code><Text>Active refusal to follow reasonable instructions</Text></Value>
-				<Value><Code>M6b</Code><Text>Passive non-compliance</Text></Value>
-				<Value><Code>M6c</Code><Text>Disruptive</Text></Value>
-				<Value><Code>M6d</Code><Text>Defiant</Text></Value>
-				<Value><Code>M6e</Code><Text>Unclear boundaries</Text></Value>
-				<Value><Code>M6f</Code><Text>Erratic</Text></Value>
-				<Value><Code>M6g</Code><Text>Impulsive</Text></Value>
-				<Value><Code>M6h</Code><Text>Uninterested</Text></Value>
-				<Value><Code>M6i</Code><Text>Inattentive</Text></Value>
-				<Value><Code>M6j</Code><Text>Unresponsive</Text></Value>
-				<Value><Code>M6k</Code><Text>Unprepared</Text></Value>
-				<Value><Code>M6l</Code><Text>Out of bounds</Text></Value>
-				<Value><Code>M6n</Code><Text>Dress code breach without reasonable explanation</Text></Value>
-				<Value><Code>M6o</Code><Text>Lateness</Text></Value>
-				<Value><Code>M6p</Code><Text>Class-work avoidance</Text></Value>
-				<Value><Code>M6q</Code><Text>Unsafe</Text></Value>
-				<Value><Code>M6r</Code><Text>Out of class without permission</Text></Value>
-				<Value><Code>M6s</Code><Text>Annoying</Text></Value>
-				<Value><Code>M6t</Code><Text>Inappropriate language</Text></Value>
-				<Value><Code>M6u</Code><Text>Academic dishonesty</Text></Value>
-				<Value><Code>M6v</Code><Text>Loud</Text></Value>
-				<Value><Code>M6w</Code><Text>Out of seat</Text></Value>
-				<Value><Code>M6x</Code><Text>Failure to use manners</Text></Value>
-				<Value><Code>M6y</Code><Text>Littering</Text></Value>
-				<Value><Code>M6z</Code><Text>Disorderly</Text></Value>
-				<Value><Code>M7a</Code><Text>Cigarette</Text></Value>
-				<Value><Code>M7b</Code><Text>Alcohol</Text></Value>
-				<Value><Code>M7c</Code><Text>Over-the-counter medication</Text></Value>
-				<Value><Code>M7d</Code><Text>ADHD medication</Text></Value>
-				<Value><Code>M7e</Code><Text>Other prescription medication</Text></Value>
-				<Value><Code>M7f</Code><Text>Aerosol</Text></Value>
-				<Value><Code>M7g</Code><Text>Solvents</Text></Value>
-				<Value><Code>M7h</Code><Text>Inappropriate sexual material</Text></Value>
-				<Value><Code>M8a</Code><Text>Knife or blade</Text></Value>
-				<Value><Code>M8b</Code><Text>Firearm</Text></Value>
-				<Value><Code>M8c</Code><Text>Amphetamines</Text></Value>
-				<Value><Code>M8d</Code><Text>Marijuana</Text></Value>
-				<Value><Code>M8e</Code><Text>Drug implement or paraphernalia</Text></Value>
-				<Value><Code>M8f</Code><Text>Other illegal drug</Text></Value>
-				<Value><Code>M8g</Code><Text>Other illegal weapon</Text></Value>
-				<Value><Code>M9a</Code><Text>Cyberbullying</Text></Value>
-				<Value><Code>M9b</Code><Text>Hacking</Text></Value>
-				<Value><Code>M9c</Code><Text>Breach of Department acceptable use agreement</Text></Value>
-				<Value><Code>M9d</Code><Text>Breach of Students Online policy</Text></Value>
-				<Value><Code>M9e</Code><Text>Persistent personal use of a MED when not permitted</Text></Value>
-				<Value><Code>M9f</Code><Text>Inappropriate audio or video recording</Text></Value>
-				<Value><Code>M9g</Code><Text>Inappropriate uploading of text, images or audio</Text></Value>
-				<Value><Code>M9h</Code><Text>Public posting of messages that bring the school or Department into disrepute</Text></Value>
-				<Value><Code>M9i</Code><Text>Copyright infringement or plagiarism</Text></Value>
-			</Values>
-    </CodeSet>    <!-- Wellbeing Event Sub Category -->
-
-    <CodeSet>
-      <Intro>
-        <p>Wellbeing Characteristic Classification - initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
+        <p>Standard codes denoting the classification of the Wellbeing Characteristic.</p>
       </Intro>
       <ID>Wellbeing Characteristic Classification</ID>
       <Values>
@@ -358,9 +192,227 @@
       </Values>
     </CodeSet>    <!-- Wellbeing Characteristic Classification -->
 
+
+
+	<!-- Wellbeing Event classification codes -->
     <CodeSet>
       <Intro>
-        <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
+        <p>Standard codes denoting the category of the Wellbeing Event.</p>
+      </Intro>
+      <ID>Wellbeing Event Category</ID>
+		<Values>
+			<Value><Code>B1</Code><Text>Safe</Text></Value>
+			<Value><Code>B2</Code><Text>Caring</Text></Value>
+			<Value><Code>B3</Code><Text>Respectful</Text></Value>
+			<Value><Code>B4</Code><Text>Responsible</Text></Value>
+			<Value><Code>B5</Code><Text>Enterprising</Text></Value>
+			<Value><Code>B6</Code><Text>Effort</Text></Value>
+			<Value><Code>B7</Code><Text>Citizenship</Text></Value>
+			<Value><Code>B8</Code><Text>Cooperation</Text></Value>
+			<Value><Code>B9</Code><Text>Leadership</Text></Value>
+			<Value><Code>M1</Code><Text>Aggressive physical contact against staff</Text></Value>
+			<Value><Code>M2</Code><Text>Abuse, threats, harassment or intimidation of staff</Text></Value>
+			<Value><Code>M3</Code><Text>Aggressive physical contact against a student</Text></Value>
+			<Value><Code>M4</Code><Text>Abuse, threats, harassment or intimidation of a student</Text></Value>
+			<Value><Code>M5</Code><Text>Damage to, or theft of property</Text></Value>
+			<Value><Code>M6</Code><Text>Other violation of Code of Conduct (classroom managed)</Text></Value>
+			<Value><Code>M7</Code><Text>Possession, use or supply of substances or objects with restricted sale</Text></Value>
+			<Value><Code>M8</Code><Text>Possession, use or supply of illegal substances or objects</Text></Value>
+			<Value><Code>M9</Code><Text>E-breaches</Text></Value>
+			<Value><Code>99</Code><Text>Other Behaviour</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Event Category -->
+    
+	<CodeSet>
+      <Intro>
+        <p>Standard codes denoting the sub-category of the Wellbeing Event.</p>
+      </Intro>
+      <ID>Wellbeing Event Sub Category</ID>
+      <Values>
+			<Value><Code>B1a</Code><Text>Resolves issues peacefully</Text></Value>
+			<Value><Code>B1b</Code><Text>Plays in a friendly way</Text></Value>
+			<Value><Code>B1c</Code><Text>Uses equipment safely</Text></Value>
+			<Value><Code>B1d</Code><Text>Understands the purpose and need for rules</Text></Value>
+			<Value><Code>B1e</Code><Text>Seeks help from a responsible adult</Text></Value>
+			<Value><Code>B1f</Code><Text>Alerts others to risks and dangers</Text></Value>
+			<Value><Code>B1g</Code><Text>Moves away from danger</Text></Value>
+			<Value><Code>B1h</Code><Text>Uses protective interruption with peers</Text></Value>
+			<Value><Code>B1i</Code><Text>Observes and listens before acting</Text></Value>
+			<Value><Code>B2a</Code><Text>Helps someone or something in need</Text></Value>
+			<Value><Code>B2b</Code><Text>Shows empathy</Text></Value>
+			<Value><Code>B2c</Code><Text>Shows compassion</Text></Value>
+			<Value><Code>B2d</Code><Text>Is forgiving</Text></Value>
+			<Value><Code>B2e</Code><Text>Talks in a friendly way</Text></Value>
+			<Value><Code>B3a</Code><Text>Shows intercultural understanding</Text></Value>
+			<Value><Code>B3b</Code><Text>Acknowledges authority</Text></Value>
+			<Value><Code>B3c</Code><Text>Shows courtesy</Text></Value>
+			<Value><Code>B3d</Code><Text>Is polite</Text></Value>
+			<Value><Code>B3e</Code><Text>Accepts difference</Text></Value>
+			<Value><Code>B3f</Code><Text>Acknowledges the rights of others</Text></Value>
+			<Value><Code>B3g</Code><Text>Uses appropriate language/tone</Text></Value>
+			<Value><Code>B3h</Code><Text>Gives value to others' opinions</Text></Value>
+			<Value><Code>B3i</Code><Text>Maintains appropriate personal space</Text></Value>
+			<Value><Code>B3j</Code><Text>Shows consideration of impact of actions on others</Text></Value>
+			<Value><Code>B4a</Code><Text>Is honest</Text></Value>
+			<Value><Code>B4b</Code><Text>Acts with integrity</Text></Value>
+			<Value><Code>B4c</Code><Text>Self regulates</Text></Value>
+			<Value><Code>B4d</Code><Text>Co-regulates</Text></Value>
+			<Value><Code>B4e</Code><Text>Helps others to regulate</Text></Value>
+			<Value><Code>B4f</Code><Text>Is trustworthy</Text></Value>
+			<Value><Code>B4g</Code><Text>Copes with frustration</Text></Value>
+			<Value><Code>B4h</Code><Text>Accepts accountability</Text></Value>
+			<Value><Code>B4i</Code><Text>Owns consequences of actions</Text></Value>
+			<Value><Code>B4j</Code><Text>Is organised</Text></Value>
+			<Value><Code>B5a</Code><Text>Thinks critically</Text></Value>
+			<Value><Code>B5b</Code><Text>Is creative</Text></Value>
+			<Value><Code>B5c</Code><Text>Is timely</Text></Value>
+			<Value><Code>B5d</Code><Text>Takes considered risks</Text></Value>
+			<Value><Code>B5e</Code><Text>Takes a problem solving approach</Text></Value>
+			<Value><Code>B5f</Code><Text>Is adaptable</Text></Value>
+			<Value><Code>B5g</Code><Text>Shows independence</Text></Value>
+			<Value><Code>B5h</Code><Text>Takes initiative</Text></Value>
+			<Value><Code>B5i</Code><Text>Shows persistence</Text></Value>
+			<Value><Code>B5j</Code><Text>Shows courage</Text></Value>
+			<Value><Code>B5k</Code><Text>Negotiates</Text></Value>
+			<Value><Code>B5l</Code><Text>Is persuasive</Text></Value>
+			<Value><Code>B5m</Code><Text>Builds social support (networks)</Text></Value>
+			<Value><Code>B5n</Code><Text>Innovates</Text></Value>
+			<Value><Code>B5o</Code><Text>Shows determination</Text></Value>
+			<Value><Code>B6a</Code><Text>Pays attention</Text></Value>
+			<Value><Code>B6b</Code><Text>Tries hard</Text></Value>
+			<Value><Code>B6c</Code><Text>Completes work</Text></Value>
+			<Value><Code>B6d</Code><Text>Perseveres</Text></Value>
+			<Value><Code>B6e</Code><Text>Asks questions</Text></Value>
+			<Value><Code>B6f</Code><Text>Shows desire to learn</Text></Value>
+			<Value><Code>B6g</Code><Text>Stays on task</Text></Value>
+			<Value><Code>B6h</Code><Text>Participates constructively</Text></Value>
+			<Value><Code>B6i</Code><Text>Shows commitment to identified goals</Text></Value>
+			<Value><Code>B7a</Code><Text>Promotes justice</Text></Value>
+			<Value><Code>B7b</Code><Text>Follows rules and laws</Text></Value>
+			<Value><Code>B7c</Code><Text>Stands up for others appropriately</Text></Value>
+			<Value><Code>B7d</Code><Text>Puts others' needs before own</Text></Value>
+			<Value><Code>B7e</Code><Text>Contributes to the school/class</Text></Value>
+			<Value><Code>B7f</Code><Text>Contributes to the community</Text></Value>
+			<Value><Code>B7g</Code><Text>Is involved</Text></Value>
+			<Value><Code>B7h</Code><Text>Belongs</Text></Value>
+			<Value><Code>B7i</Code><Text>Promotes harmony</Text></Value>
+			<Value><Code>B7j</Code><Text>Gives back to the greater good</Text></Value>
+			<Value><Code>B7k</Code><Text>Becomes informed</Text></Value>
+			<Value><Code>B7l</Code><Text>Uses procedures and protocols</Text></Value>
+			<Value><Code>B7m</Code><Text>Participates in democratic decision making</Text></Value>
+			<Value><Code>B7n</Code><Text>Helps others to reach their goals</Text></Value>
+			<Value><Code>B8a</Code><Text>Is fair</Text></Value>
+			<Value><Code>B8b</Code><Text>Shows mutuality (sharing a feeling, action or relationship)</Text></Value>
+			<Value><Code>B8c</Code><Text>Shows reciprocity ("I scratch your back, you scratch mine")</Text></Value>
+			<Value><Code>B8d</Code><Text>Shows goodwill</Text></Value>
+			<Value><Code>B8e</Code><Text>Is attentive to others' reactions</Text></Value>
+			<Value><Code>B8f</Code><Text>Is open to dialogue/discussion</Text></Value>
+			<Value><Code>B8g</Code><Text>Works to be a valued member of a team</Text></Value>
+			<Value><Code>B8h</Code><Text>Offers others choices</Text></Value>
+			<Value><Code>B9a</Code><Text>Inspires others</Text></Value>
+			<Value><Code>B9b</Code><Text>Represents others</Text></Value>
+			<Value><Code>B9c</Code><Text>Delegates to others</Text></Value>
+			<Value><Code>B9d</Code><Text>Shows self confidence</Text></Value>
+			<Value><Code>B9e</Code><Text>Shows assertiveness</Text></Value>
+			<Value><Code>B9f</Code><Text>Stays positive</Text></Value>
+			<Value><Code>B9g</Code><Text>Shoulders blame</Text></Value>
+			<Value><Code>B9h</Code><Text>Sets an example</Text></Value>
+			<Value><Code>B9i</Code><Text>Communicates effectively</Text></Value>
+			<Value><Code>B9j</Code><Text>Shows wisdom</Text></Value>
+			<Value><Code>M1a</Code><Text>Striking - Staff</Text></Value>
+			<Value><Code>M1b</Code><Text>Pushing or barging - Staff</Text></Value>
+			<Value><Code>M1c</Code><Text>Use of a weapon or object - Staff</Text></Value>
+			<Value><Code>M1d</Code><Text>Projectile - Staff</Text></Value>
+			<Value><Code>M1e</Code><Text>Struggling to be free of a physical restraint - Staff</Text></Value>
+			<Value><Code>M1f</Code><Text>Unintentional but negligent contact - Staff</Text></Value>
+			<Value><Code>M2a</Code><Text>Verbal abuse - Staff</Text></Value>
+			<Value><Code>M2b</Code><Text>Non-Verbal abuse - Staff</Text></Value>
+			<Value><Code>M2c</Code><Text>Verbal threat - Staff</Text></Value>
+			<Value><Code>M2d</Code><Text>Threatening gesture - Staff</Text></Value>
+			<Value><Code>M2e</Code><Text>Disrespectful or challenging language - Staff</Text></Value>
+			<Value><Code>M2f</Code><Text>Malicious gossip - Staff</Text></Value>
+			<Value><Code>M2g</Code><Text>Sexual harassment - Staff</Text></Value>
+			<Value><Code>M3a</Code><Text>Striking - Student</Text></Value>
+			<Value><Code>M3b</Code><Text>Pushing or barging - Student</Text></Value>
+			<Value><Code>M3c</Code><Text>Use of a weapon or object - Student</Text></Value>
+			<Value><Code>M3d</Code><Text>Projectile - Student</Text></Value>
+			<Value><Code>M3e</Code><Text>Struggling to be free of violation of personal space or deprivation of liberty - Student</Text></Value>
+			<Value><Code>M3f</Code><Text>Unintentional but negligent contact - Student</Text></Value>
+			<Value><Code>M4a</Code><Text>Verbal abuse - Student</Text></Value>
+			<Value><Code>M4b</Code><Text>Non-Verbal abuse - Student</Text></Value>
+			<Value><Code>M4c</Code><Text>Verbal threat - Student</Text></Value>
+			<Value><Code>M4d</Code><Text>Threatening gesture - Student</Text></Value>
+			<Value><Code>M4e</Code><Text>Malicious gossip - Student</Text></Value>
+			<Value><Code>M4f</Code><Text>Exclusion of peer - Student</Text></Value>
+			<Value><Code>M4g</Code><Text>Teasing - Student</Text></Value>
+			<Value><Code>M4h</Code><Text>Unhelpful bystander actions - Student</Text></Value>
+			<Value><Code>M4i</Code><Text>Sexual harassment - Student</Text></Value>
+			<Value><Code>M5a</Code><Text>Theft of personal property</Text></Value>
+			<Value><Code>M5b</Code><Text>Theft of school property</Text></Value>
+			<Value><Code>M5c</Code><Text>Deliberate damage to personal property</Text></Value>
+			<Value><Code>M5d</Code><Text>Incidental damage through negligence</Text></Value>
+			<Value><Code>M5e</Code><Text>Graffiti</Text></Value>
+			<Value><Code>M5f</Code><Text>Buildings and glass</Text></Value>
+			<Value><Code>M5g</Code><Text>Fittings and fixtures</Text></Value>
+			<Value><Code>M5h</Code><Text>Furniture</Text></Value>
+			<Value><Code>M5i</Code><Text>Equipment</Text></Value>
+			<Value><Code>M5j</Code><Text>Vehicles</Text></Value>
+			<Value><Code>M5k</Code><Text>Garden and plants</Text></Value>
+			<Value><Code>M6a</Code><Text>Active refusal to follow reasonable instructions</Text></Value>
+			<Value><Code>M6b</Code><Text>Passive non-compliance</Text></Value>
+			<Value><Code>M6c</Code><Text>Disruptive</Text></Value>
+			<Value><Code>M6d</Code><Text>Defiant</Text></Value>
+			<Value><Code>M6e</Code><Text>Unclear boundaries</Text></Value>
+			<Value><Code>M6f</Code><Text>Erratic</Text></Value>
+			<Value><Code>M6g</Code><Text>Impulsive</Text></Value>
+			<Value><Code>M6h</Code><Text>Uninterested</Text></Value>
+			<Value><Code>M6i</Code><Text>Inattentive</Text></Value>
+			<Value><Code>M6j</Code><Text>Unresponsive</Text></Value>
+			<Value><Code>M6k</Code><Text>Unprepared</Text></Value>
+			<Value><Code>M6l</Code><Text>Out of bounds</Text></Value>
+			<Value><Code>M6n</Code><Text>Dress code breach without reasonable explanation</Text></Value>
+			<Value><Code>M6o</Code><Text>Lateness</Text></Value>
+			<Value><Code>M6p</Code><Text>Class-work avoidance</Text></Value>
+			<Value><Code>M6q</Code><Text>Unsafe</Text></Value>
+			<Value><Code>M6r</Code><Text>Out of class without permission</Text></Value>
+			<Value><Code>M6s</Code><Text>Annoying</Text></Value>
+			<Value><Code>M6t</Code><Text>Inappropriate language</Text></Value>
+			<Value><Code>M6u</Code><Text>Academic dishonesty</Text></Value>
+			<Value><Code>M6v</Code><Text>Loud</Text></Value>
+			<Value><Code>M6w</Code><Text>Out of seat</Text></Value>
+			<Value><Code>M6x</Code><Text>Failure to use manners</Text></Value>
+			<Value><Code>M6y</Code><Text>Littering</Text></Value>
+			<Value><Code>M6z</Code><Text>Disorderly</Text></Value>
+			<Value><Code>M7a</Code><Text>Cigarette / e-cigarette</Text></Value>
+			<Value><Code>M7b</Code><Text>Alcohol</Text></Value>
+			<Value><Code>M7c</Code><Text>Over-the-counter medication</Text></Value>
+			<Value><Code>M7d</Code><Text>ADHD medication</Text></Value>
+			<Value><Code>M7e</Code><Text>Other prescription medication</Text></Value>
+			<Value><Code>M7f</Code><Text>Aerosol</Text></Value>
+			<Value><Code>M7g</Code><Text>Solvents</Text></Value>
+			<Value><Code>M7h</Code><Text>Inappropriate sexual material</Text></Value>
+			<Value><Code>M8a</Code><Text>Knife or blade</Text></Value>
+			<Value><Code>M8b</Code><Text>Firearm</Text></Value>
+			<Value><Code>M8c</Code><Text>Amphetamines</Text></Value>
+			<Value><Code>M8d</Code><Text>Marijuana</Text></Value>
+			<Value><Code>M8e</Code><Text>Drug implement or paraphernalia</Text></Value>
+			<Value><Code>M8f</Code><Text>Other illegal drug</Text></Value>
+			<Value><Code>M8g</Code><Text>Other illegal weapon</Text></Value>
+			<Value><Code>M9a</Code><Text>Cyberbullying</Text></Value>
+			<Value><Code>M9b</Code><Text>Hacking</Text></Value>
+			<Value><Code>M9c</Code><Text>Breach of Department acceptable use agreement</Text></Value>
+			<Value><Code>M9d</Code><Text>Breach of Students Online policy</Text></Value>
+			<Value><Code>M9e</Code><Text>Persistent personal use of a MED when not permitted</Text></Value>
+			<Value><Code>M9f</Code><Text>Inappropriate audio or video recording</Text></Value>
+			<Value><Code>M9g</Code><Text>Inappropriate uploading of text, images or audio</Text></Value>
+			<Value><Code>M9h</Code><Text>Public posting of messages that bring the school or Department into disrepute</Text></Value>
+			<Value><Code>M9i</Code><Text>Copyright infringement or plagiarism</Text></Value>
+		</Values>
+    </CodeSet>    <!-- Wellbeing Event Sub Category -->
+
+    <CodeSet>
+      <Intro>
+        <p>Standard codes denoting the time period of the Wellbeing Event.</p>
       </Intro>
       <ID>Wellbeing Event Time Period</ID>
       <Values>
@@ -377,7 +429,7 @@
 
     <CodeSet>
       <Intro>
-        <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
+        <p>Standard codes denoting the category class of the Wellbeing Event.</p>
       </Intro>
       <ID>Wellbeing Event Category Class</ID>
       <Values>
@@ -388,68 +440,12 @@
       </Values>
     </CodeSet>    <!-- Wellbeing Event Category Class -->
 
-    <CodeSet>
-      <Intro>
-        <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
-      </Intro>
-      <ID>Wellbeing Event Location</ID>
-      <Values>
-				<Value><Code>Off</Code><Text>Off-site</Text></Value>
-				<Value><Code>On</Code><Text>On school site - not further defined</Text></Value>
-				<Value><Code>Ex</Code><Text>School Excursion</Text></Value>
-				<Value><Code>In</Code><Text>School Incursion</Text></Value>
-				<Value><Code>Ov</Code><Text>Oval</Text></Value>
-				<Value><Code>P</Code><Text>Playground</Text></Value>
-				<Value><Code>L</Code><Text>Library</Text></Value>
-				<Value><Code>C</Code><Text>Classroom</Text></Value>
-				<Value><Code>O</Code><Text>Other</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Wellbeing Event Location -->
 
-    <CodeSet>
-      <Intro>
-        <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
-      </Intro>
-      <ID>Wellbeing Alert Category</ID>
-      <Values>
-				<Value><Code>M</Code><Text>Medical</Text></Value>
-				<Value><Code>L</Code><Text>Legal</Text></Value>
-				<Value><Code>D</Code><Text>Discipline</Text></Value>
-				<Value><Code>E</Code><Text>Educational</Text></Value>
-				<Value><Code>S</Code><Text>SpecialNeeds/Disability</Text></Value>
-				<Value><Code>P</Code><Text>Plan Review</Text></Value>
-				<Value><Code>O</Code><Text>Other</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Wellbeing Alert Category -->
 
+	<!-- Wellbeing Response classification codes -->
     <CodeSet>
       <Intro>
-        <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
-      </Intro>
-      <ID>Wellbeing Appeal Status</ID>
-      <Values>
-				<Value><Code>N</Code><Text>In Progress</Text></Value>
-				<Value><Code>N/S</Code><Text>Not Specified</Text></Value>
-				<Value><Code>RE</Code><Text>Rejected</Text></Value>
-				<Value><Code>SU</Code><Text>Successful</Text></Value>
-	  	</Values>
-    </CodeSet>    <!-- Wellbeing Appeal Status -->
-
-    <CodeSet>
-      <Intro>
-        <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
-      </Intro>
-      <ID>Wellbeing Status</ID>
-      <Values>
-				<Value><Code>U</Code><Text>Unresolved</Text></Value>
-				<Value><Code>R</Code><Text>Resolved</Text></Value>
-				<Value><Code>O</Code><Text>Other</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Wellbeing Status -->
-
-    <CodeSet>
-      <Intro>
-        <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
+        <p>Standard codes denoting the suspension category a Wellbeing Response belongs to.</p>
       </Intro>
       <ID>Suspension Category</ID>
       <Values>
@@ -482,7 +478,7 @@
 
     <CodeSet>
       <Intro>
-        <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
+        <p>Standard codes denoting the category a Wellbeing Response belongs to.</p>
       </Intro>
       <ID>Wellbeing Response Category</ID>
       <Values>
@@ -493,9 +489,58 @@
 				<Value><Code>M</Code><Text>MultipleResponse</Text></Value>
 				<Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
-		</CodeSet>    <!-- Wellbeing Response Category -->
+	</CodeSet>    <!-- Wellbeing Response Category -->
 
     <CodeSet>
+      <Intro>
+        <p>Standard codes denoting the type of award that has been achieved as part of a Wellbeing Response.</p>
+      </Intro>
+      <ID>Wellbeing Award Type</ID>
+      <Values>
+				<Value><Code>101</Code><Text>Certificate</Text></Value>
+				<Value><Code>102</Code><Text>Trophy</Text></Value>
+				<Value><Code>103</Code><Text>Letter of Recognition</Text></Value>
+				<Value><Code>104</Code><Text>Other</Text></Value>
+      </Values>
+    </CodeSet>    <!-- Wellbeing Award Type -->
+
+
+
+	<!-- Wellbeing Appeal classification codes -->
+    <CodeSet>
+      <Intro>
+        <p>Standard codes denoting the status of the Wellbeing Appeal.</p>
+      </Intro>
+      <ID>Wellbeing Appeal Status</ID>
+      <Values>
+				<Value><Code>N</Code><Text>In Progress</Text></Value>
+				<Value><Code>N/S</Code><Text>Not Specified</Text></Value>
+				<Value><Code>RE</Code><Text>Rejected</Text></Value>
+				<Value><Code>SU</Code><Text>Successful</Text></Value>
+	  	</Values>
+    </CodeSet>    <!-- Wellbeing Appeal Status -->
+
+
+
+
+	<!-- Student Document classification codes -->
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the category of the student document.</p>
+		</Intro>
+		<ID>Student Document Category</ID>
+		<Values>
+			<Value><Code>Ac</Code><Text>Academic</Text></Value>
+			<Value><Code>At</Code><Text>Attendance</Text></Value>
+			<Value><Code>B</Code><Text>Behavioural</Text></Value>
+			<Value><Code>L</Code><Text>Legal</Text></Value>
+			<Value><Code>M</Code><Text>Medical</Text></Value>
+			<Value><Code>O</Code><Text>Other</Text></Value>
+			<Value><Code>S</Code><Text>Special Needs</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Student Document Category -->
+    
+	<CodeSet>
       <Intro>
         <p>Standard codes denoting the classification of the Wellbeing Document.</p>
       </Intro>
@@ -516,75 +561,132 @@
 				<Value><Code>101</Code><Text>Individualised Behavioural Plan</Text></Value>
 				<Value><Code>102</Code><Text>Individualised Education Plan</Text></Value>
       </Values>
-    </CodeSet>    <!-- Document Classification -->
+    </CodeSet>    <!-- Document Type -->
 
-		<CodeSet>
-			<Intro>
-				<p>Standard codes denoting the learning support agency that is supporting the student, 
-					e.g. Resource Teacher Literacy (RTLit) and Resource Teacher Learning and Behaviour (RTLB).</p>
-			</Intro>
-			<ID>Learning Support Agency</ID>
-			<Values>
-				<Value><Code>101</Code><Text>RTLit</Text><Description>Resource Teacher Literacy</Description></Value>
-				<Value><Code>102</Code><Text>RTLB</Text><Description>Resource Teacher Learning and Behaviour</Description></Value>
-				<Value><Code>103</Code><Text>Other</Text></Value>
-			</Values>
-		</CodeSet>    <!-- Learning Support Agency -->
-		
-		<CodeSet>
-			<Intro>
-				<p>Standard codes denoting the learning support group the student is receiving support in,
-					 e.g. physical, and learning.</p>
-			</Intro>
-			<ID>Learning Support Group</ID>
-			<Values>
-				<Value><Code>101</Code><Text>Physical</Text></Value>
-				<Value><Code>102</Code><Text>Learning</Text></Value>
-				<Value><Code>103</Code><Text>Other</Text></Value>
-			</Values>
-		</CodeSet>    <!-- Learning Support Group -->
 
-		<CodeSet>
-			<Intro>
-				<p>Standard codes denoting the learning support intervention type,
-					 e.g. ESOL, First STEPs, MST.</p>
-			</Intro>
-			<ID>Learning Support Intervention Type</ID>
-			<Values>
-				<Value><Code>101</Code><Text>First STEPs</Text></Value>
-				<Value><Code>102</Code><Text>ESOL</Text></Value>
-				<Value><Code>103</Code><Text>MST</Text></Value>
-				<Value><Code>104</Code><Text>Rainbow Reading</Text></Value>
-				<Value><Code>105</Code><Text>Read. Rec 2014</Text></Value>
-				<Value><Code>106</Code><Text>STEPS</Text></Value>
-				<Value><Code>107</Code><Text>TA - Reading</Text></Value>
-				<Value><Code>108</Code><Text>RTLB</Text></Value>
-				<Value><Code>109</Code><Text>RTLit</Text></Value>
-				<Value><Code>110</Code><Text>Early Words</Text></Value>
-				<Value><Code>111</Code><Text>Reading Recovery</Text></Value>
-				<Value><Code>112</Code><Text>Other</Text></Value>
-			</Values>
-		</CodeSet>    <!-- Learning Support Intervention Type -->
 
-		<CodeSet>
-			<Intro>
-				<p>Standard codes denoting the learning support type the student is receiving, e.g. Vision, Speech, 
-					Hearing, Social Skills, Behaviour, Mental Health, Autism, Reading, Writing, Mathematics etc.</p>
-			</Intro>
-			<ID>Learning Support Type</ID>
-			<Values>
-				<Value><Code>101</Code><Text>Vision</Text></Value>
-				<Value><Code>102</Code><Text>Speech</Text></Value>
-				<Value><Code>103</Code><Text>Hearing</Text></Value>
-				<Value><Code>104</Code><Text>Social Skills</Text></Value>
-				<Value><Code>105</Code><Text>Behaviour</Text></Value>
-				<Value><Code>106</Code><Text>Mental Health</Text></Value>
-				<Value><Code>107</Code><Text>Autism</Text></Value>
-				<Value><Code>108</Code><Text>Reading</Text></Value>
-				<Value><Code>109</Code><Text>Writing</Text></Value>
-				<Value><Code>110</Code><Text>Mathematics</Text></Value>
-				<Value><Code>111</Code><Text>Dyslexic</Text></Value>
-				<Value><Code>112</Code><Text>Other</Text></Value>
-			</Values>
-		</CodeSet>    <!-- Learning Support Type -->
+
+	<!-- Learning Support classification codes -->
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the learning support agency that is supporting the student, 
+				e.g. Resource Teacher Literacy (RTLit) and Resource Teacher Learning and Behaviour (RTLB).</p>
+		</Intro>
+		<ID>Learning Support Agency</ID>
+		<Values>
+			<Value><Code>101</Code><Text>RTLit</Text><Description>Resource Teacher Literacy</Description></Value>
+			<Value><Code>102</Code><Text>RTLB</Text><Description>Resource Teacher Learning and Behaviour</Description></Value>
+			<Value><Code>103</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Agency -->
+	
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the learning support group the student is receiving support in,
+					e.g. physical, and learning.</p>
+		</Intro>
+		<ID>Learning Support Group</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Physical</Text></Value>
+			<Value><Code>102</Code><Text>Learning</Text></Value>
+			<Value><Code>103</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Group -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the learning support intervention type,
+					e.g. ESOL, First STEPs, MST.</p>
+		</Intro>
+		<ID>Learning Support Intervention Type</ID>
+		<Values>
+			<Value><Code>101</Code><Text>First STEPs</Text></Value>
+			<Value><Code>102</Code><Text>ESOL</Text></Value>
+			<Value><Code>103</Code><Text>MST</Text></Value>
+			<Value><Code>104</Code><Text>Rainbow Reading</Text></Value>
+			<Value><Code>105</Code><Text>Read. Rec 2014</Text></Value>
+			<Value><Code>106</Code><Text>STEPS</Text></Value>
+			<Value><Code>107</Code><Text>TA - Reading</Text></Value>
+			<Value><Code>108</Code><Text>RTLB</Text></Value>
+			<Value><Code>109</Code><Text>RTLit</Text></Value>
+			<Value><Code>110</Code><Text>Early Words</Text></Value>
+			<Value><Code>111</Code><Text>Reading Recovery</Text></Value>
+			<Value><Code>112</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Intervention Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the learning support type the student is receiving, e.g. Vision, Speech, 
+				Hearing, Social Skills, Behaviour, Mental Health, Autism, Reading, Writing, Mathematics etc.</p>
+		</Intro>
+		<ID>Learning Support Type</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Vision</Text></Value>
+			<Value><Code>102</Code><Text>Speech</Text></Value>
+			<Value><Code>103</Code><Text>Hearing</Text></Value>
+			<Value><Code>104</Code><Text>Social Skills</Text></Value>
+			<Value><Code>105</Code><Text>Behaviour</Text></Value>
+			<Value><Code>106</Code><Text>Mental Health</Text></Value>
+			<Value><Code>107</Code><Text>Autism</Text></Value>
+			<Value><Code>108</Code><Text>Reading</Text></Value>
+			<Value><Code>109</Code><Text>Writing</Text></Value>
+			<Value><Code>110</Code><Text>Mathematics</Text></Value>
+			<Value><Code>111</Code><Text>Dyslexic</Text></Value>
+			<Value><Code>112</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Type -->
+
+
+
+
+	<!-- Student Activity & Student Voice classification codes -->
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the group of the activity the student is participating
+					in, e.g. sport, art, cultural, music.</p>
+		</Intro>
+		<ID>Student Activity Group</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Sport</Text></Value>
+			<Value><Code>102</Code><Text>Art</Text></Value>
+			<Value><Code>103</Code><Text>Cultural</Text></Value>
+			<Value><Code>104</Code><Text>Music</Text></Value>
+			<Value><Code>105</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Student Activity Group -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the type of activity the student is 
+				participating in, e.g. rugby, drama, Kapa Haka, Violin.</p>
+		</Intro>
+		<ID>Student Activity Type</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Rugby</Text></Value>
+			<Value><Code>102</Code><Text>Netball</Text></Value>
+			<Value><Code>103</Code><Text>Cricket</Text></Value>
+			<Value><Code>104</Code><Text>Drama</Text></Value>
+			<Value><Code>105</Code><Text>Debate</Text></Value>
+			<Value><Code>106</Code><Text>Te Reo</Text></Value>
+			<Value><Code>107</Code><Text>Kapa Haka</Text></Value>
+			<Value><Code>108</Code><Text>Guitar</Text></Value>
+			<Value><Code>109</Code><Text>Violin</Text></Value>
+			<Value><Code>110</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Student Activity Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the type of interest the student likes to do.</p>
+		</Intro>
+		<ID>Student Interest Type</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Sports</Text></Value>
+			<Value><Code>102</Code><Text>Arts</Text></Value>
+			<Value><Code>103</Code><Text>Cultural</Text></Value>
+			<Value><Code>104</Code><Text>Music</Text></Value>
+			<Value><Code>105</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Student Interest Type -->
 </IncludeGroup>

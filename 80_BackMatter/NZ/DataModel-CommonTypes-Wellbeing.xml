@@ -147,39 +147,6 @@
 			</Item>    <!-- WellbeingEventSubCategory -->
 		</CommonElement>
 		
-		<CommonElement name="WellbeingEventLocationDetailsType" type="true" dm="true">
-			<Item>
-				<Element>WellbeingEventLocationDetailsType</Element>
-				<Description>
-					<p>Container for the location details of a WellbeingEvent.</p>
-				</Description>
-			</Item> 
-			<Item>
-				<Element>EventLocation</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>Categorisation of location of Wellbeing event.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsWellbeingEventLocationType"/>
-			</Item>    <!-- EventLocation -->
-			<Item>
-				<Element>Class</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>If the event happened during a class, - Subject or Class the event occurred in. Free text for additional info if required.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-			</Item>    <!-- Class -->
-			<Item>
-				<Element>FurtherLocationNotes</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>More information if required about the location.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-			</Item>    <!-- FurtherLocationNotes -->
-		</CommonElement>
-		
 		<CommonElement name="FollowUpActionListType" type="true" dm="true">
 			<Item>
 				<Element>FollowUpActionListType</Element>

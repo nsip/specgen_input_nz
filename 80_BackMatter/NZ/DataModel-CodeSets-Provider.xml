@@ -702,20 +702,23 @@
 			<Value>
 				<Code>1</Code><Text>Roll Class</Text>
 				<Description>The TeachingGroup is a class only used for taking daily attendance.</Description>
-			</Value>
+			</Value>    <!-- Roll Class -->
 			<Value>
 				<Code>2</Code><Text>Subject Class</Text>
 				<Description>The TeachingGroup is a class used for teaching.</Description>
-			</Value>
+			</Value>    <!-- Subject Class -->
 			<Value>
-				<Code>3</Code><Text>Suspended</Text>
+				<Code>3</Code><Text>House</Text>
 				<Description>The TeachingGroup is used for Sporting, Wellbeing and Pastoral care functions.</Description>
-			</Value>
+			</Value>   <!-- House -->
 		</Values>
 	</CodeSet>    <!-- Teaching Group Type -->
+	
 	<CodeSet>
 		<Intro>
-			<p>Provides the means of identifying the type of group such as Roll class, Subject class or House and allows systems to treat them accordingly</p>
+			<p>Describes the role a staff members plays in a TeachingGroup. This role may affect system
+				 access to student data for the students in the TeachingGroup. Note: This level of access-control
+				 may be too fine-grained.</p>
 		</Intro>
 		<ID>Teaching Group Teacher Role</ID>
 		<Values>
@@ -732,7 +735,7 @@
 				<Description>The staff member is a Lab Assistant assisting some or all students in the TeachingGroup.</Description>
 			</Value>
 			<Value>
-				<Code>4</Code><Text>Co Teacher</Text>
+				<Code>4</Code><Text>Co-Teacher</Text>
 				<Description>The staff member is a co-teacher, providing mentoring and moderation 
 				to the TeachingGroup's actual teacher(s).</Description>
 			</Value>

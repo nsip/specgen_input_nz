@@ -285,14 +285,14 @@
 		<Values>
 			<Value>
 				<Code>FF</Code>
-				<Text>Foreign fee-paying student</Text>
+				<Text>Foreign Fee Paying</Text>
 				<Description>An International student who meets full
 				tuition costs on their own or from funds provided to
 				them by sponsors other than NZAID.</Description>
 			</Value>
 			<Value>
 				<Code>AE</Code>
-				<Text>Student in Alternative Education</Text>
+				<Text>Alternative Education</Text>
 				<Description>A student who is enrolled in an
 				Alternative Education programme, for Funding Year
 				Level they should be reported only between Year 9 and
@@ -300,7 +300,7 @@
 			</Value>
 			<Value>
 				<Code>EX</Code>
-				<Text>Foreign Exchange Student</Text>
+				<Text>Foreign Exchange</Text>
 				<Description>A student (and dependants) studying in
 				New Zealand under an exchange programme approved by
 				the New Zealand Government.</Description>
@@ -316,7 +316,7 @@
 			</Value>
 			<Value>
 				<Code>AD</Code>
-				<Text>Returning Adult Student</Text>
+				<Text>Returning Adult</Text>
 				<Description><p>A student who has returned to school
 				following a break of at least 1 year and is at least
 				19 years old on 1 January of the Roll count year.</p>
@@ -347,7 +347,7 @@
 			</Value>
 			<Value>
 				<Code>TPREOM</Code>
-				<Text>Teen Parent Regular Student, over max. roll</Text>
+				<Text>Teen Parent, Regular Student, over max roll</Text>
 				<Description>A regular student (i.e. a student aged
 				under 19 years at 1 January of the roll count year)
 				who meets the eligibility criteria, but whose
@@ -357,7 +357,7 @@
 			</Value>
 			<Value>
 				<Code>TPRAOM</Code>
-				<Text>Teen Parent Adult Student, over max. roll</Text>
+				<Text>Teen Parent, Adult Student over max. roll</Text>
 				<Description>An adult student who is enrolled in a
 				Teen Parent Unit (TPU) where the enrolment at the TPU
 				has continued beyond the end of the year in which the
@@ -367,7 +367,7 @@
 			</Value>
 			<Value>
 				<Code>TPAD</Code>
-				<Text>Returning Adult Student attending Teen Parent Unit</Text>
+				<Text>Teen Parent, Adult Student</Text>
 				<Description>A student enrolling at the TPU as an
 				adult student (i.e. was at least 19 on 1st January of
 				the year when they first enrolled at the TPU), and who
@@ -376,7 +376,7 @@
 			</Value>
 			<Value>
 				<Code>TPRE</Code>
-				<Text>Teen Parent Eligible and Enrolled Regular Student</Text>
+				<Text>Teen Parent, Regular Student</Text>
 				<Description>A student who is enrolled in a Teen
 				Parent Unit (TPU) and is at least 19 years old on 1
 				January of the current year. These students may
@@ -388,7 +388,7 @@
 			</Value>
 			<Value>
 				<Code>TPRAE</Code>
-				<Text>Teen Parent Eligibile and Enrolled Adult Student</Text>
+				<Text>Teen Parent, Eligible and Enrolled Adult Student</Text>
 				<Description>A student who is enrolled in a Teen
 				Parent Unit (TPU) where the enrolment at the TPU has
 				continued beyond the end of the year in which the
@@ -409,7 +409,7 @@
 				<Description>Student who is in a Satellite class of a Special School.</Description>
 			</Value>
 			<Value>
-				<Code>NZ</Code>
+				<Code>NA</Code>
 				<Text>Not Attending</Text>
 				<Description>A student who is not attending the school
 				on the day of the roll count and there is no

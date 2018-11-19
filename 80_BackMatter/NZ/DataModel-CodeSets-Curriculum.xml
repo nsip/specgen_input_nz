@@ -20,6 +20,7 @@
 			</Value>
 		</Values>
 	</CodeSet>   <!-- Curriculum -->
+
 	<CodeSet>
 		<Intro>
 			<p>Codes denoting Learning Areas defined by the NZ Curriculum and Te Marautanga o Aotearoa,
@@ -30,7 +31,7 @@
 		<Values>
 			<Value>
 				<Code>1</Code>
-				<Text>Health &amp; Physical Education / Hauora</Text>
+				<Text>Health and Physical Education / Hauora</Text>
 				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
@@ -50,7 +51,7 @@
 			</Value>
 			<Value>
 				<Code>5</Code>
-				<Text>Social Science / Tikanga-a-iwi</Text>
+				<Text>Social Sciences / Tikanga-a-iwi</Text>
 				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
@@ -65,16 +66,17 @@
 			</Value>
 			<Value>
 				<Code>8</Code>
-				<Text>Te Reo Pākehā / English</Text>
+				<Text>Te Reo Pākehā / English Language</Text>
 				<Description>Applicable to Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
 				<Code>9</Code>
-				<Text>Te Reo Māori / Māori Language and Literatur</Text>
+				<Text>Te Reo Māori / Māori Language and Literature</Text>
 				<Description>Applicable to Te Marautanga o Aotearoa</Description>
 			</Value>
 		</Values>
 	</CodeSet>   <!-- Learning/Subject Area Types-->
+
 	<CodeSet>
 		<Intro>
 			<p>A code denoting the status of the LearningStandard throughout its life-cycle.</p>
@@ -114,6 +116,7 @@
 			</Value>
 		</Values>
 	</CodeSet>   <!-- LearningStandardStatus -->
+
 	<CodeSet>
 		<Intro>
 			<p>A code denoting the nature of the relationship with another LearningStandard</p>
@@ -147,6 +150,7 @@
 			</Value>
 		</Values>
 	</CodeSet>   <!-- LearningStandardRelationshipType -->
+
 	<CodeSet>
 		<Intro>
 			<p>A code denoting the status of the Credential throughout its life-cycle.</p>

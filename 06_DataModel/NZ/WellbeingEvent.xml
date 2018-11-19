@@ -103,13 +103,13 @@
   </Item>
   
   <Item>
-    <Element>WellbeingEventLocationDetails</Element>
+    <Element>LocationDescription</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>Medium</privacyRating>
+	  <privacyRating>Medium</privacyRating>
     <Description>
       <p>Details of Event Location.</p>
     </Description>
-     <Type ref="CommonTypes" name="WellbeingEventLocationDetailsType"></Type>
+     <Type name="xs:normalizedString"></Type>
   </Item>
 
   <Item>

@@ -16,7 +16,7 @@
 	  
 	  <CodeSet>
 		  <Intro>
-			  <p/>
+			  <p>A reusable code set for yes, no, unknown and not provided values.</p>
 		  </Intro>
 		  <ID>Yes Or No Category</ID>
 		  <Values>
@@ -39,130 +39,155 @@
 			  
 		  </Values>
 	  </CodeSet>      <!-- Yes or No -->
+
 	  <CodeSet>
-		  <Intro/>
-		  <ID>Year Level Code</ID>
-		  <Values>
-			  <Value>
-				  <Code>1</Code>
-				  <Text>Year 1</Text>
-			  </Value>
-			  <Value>
-				  <Code>2</Code>
-				  <Text>Year 2</Text>
-			  </Value>
-			  <Value>
-				  <Code>3</Code>
-				  <Text>Year 3</Text>
-			  </Value>
-			  <Value>
-				  <Code>4</Code>
-				  <Text>Year 4</Text>
-			  </Value>
-			  <Value>
-				  <Code>5</Code>
-				  <Text>Year 5</Text>
-			  </Value>
-			  <Value>
-				  <Code>6</Code>
-				  <Text>Year 6</Text>
-			  </Value>
-			  <Value>
-				  <Code>7</Code>
-				  <Text>Year 7</Text>
-			  </Value>
-			  <Value>
-				  <Code>8</Code>
-				  <Text>Year 8</Text>
-			  </Value>
-			  <Value>
-				  <Code>9</Code>
-				  <Text>Year 9</Text>
-			  </Value>
-			  <Value>
-				  <Code>10</Code>
-				  <Text>Year 10</Text>
-			  </Value>
-			  <Value>
-				  <Code>11</Code>
-				  <Text>Year 11</Text>
-			  </Value>
-			  <Value>
-				  <Code>12</Code>
-				  <Text>Year 12</Text>
-			  </Value>
-			  <Value>
-				  <Code>13</Code>
-				  <Text>Year 13</Text>
-			  </Value>
-			  <if intl="nz">			
-				  <Value>
-					  <Code>14</Code>
-					  <Text>Year 14 and above</Text>
-					  <Description>Final value permitted in <code>SchoolEnrolment.YearLevel</code></Description>
-				  </Value>
-				  <Value>
-					  <Code>15</Code>
-					  <Text>Year 14 and above</Text>
-					  <Description>Final value permitted in <code>SchoolEnrolment.FundingYearLevel</code></Description>
-				  </Value>
-			  </if>
-			  <if intl="au">	
-				  <Value>
-					  <Code>K</Code>
-					  <Text>Kindergarten</Text>
-				  </Value>
-				  <Value>
-					  <Code>P</Code>
-					  <Text>Prep</Text>
-				  </Value>
-				  <Value>
-					  <Code>K3</Code>
-					  <Text>3yo Kindergarten</Text>
-				  </Value>
-				  <Value>
-					  <Code>K4</Code>
-					  <Text>4yo Kindergarten</Text>
-				  </Value>
-				  <Value>
-					  <Code>CC</Code>
-					  <Text>Childcare</Text>
-				  </Value>
-				  <Value>
-					  <Code>PS</Code>
-					  <Text>Pre-School</Text>
-				  </Value>
-				  <Value>
-					  <Code>UG</Code>
-					  <Text>Ungraded</Text>
-				  </Value>
-				  <Value>
-					  <Code>11MINUS</Code>
-					  <Text>11 Years and Younger</Text>
-				  </Value>
-				  <Value>
-					  <Code>12PLUS</Code>
-					  <Text>12 years and Older</Text>
-				  </Value>
-				  <Value>
-					  <Code>UGJunSec</Code>
-					  <Text>Ungraded Junior Secondary</Text>
-				  </Value>
-				  <Value>
-					  <Code>UGPri</Code>
-					  <Text>Ungraded Primary</Text>
-				  </Value>
-				  <Value>
-					  <Code>UGSec</Code>
-					  <Text>Ungraded Secondary</Text>
-				  </Value>
-				  <Value>
-					  <Code>UGSnrSec</Code>
-					  <Text>Ungraded Senior Secondary</Text>
-				  </Value>
-			  </if>		 
+		<Intro>
+		  	<p>Year Level defines the values that are valid for describing Funding Year Level and 
+			  	Current Year Level for a student enrolment.</p>
+
+			<p>Current Year Level indicates the year level of the student’s class cohort and the level
+				at which the student spends most of their time at school. While a student may be enrolled
+				in subjects at varying instructional year levels, in relation to the student enrolment 
+				this value represents the year level at which the student is considered to be 
+				predominantly taught.</p>
+
+			<p>Funding Year Level measures the actual number of years that the student has attended a school. 
+				It provides the Ministry with a method of counting students for funding purposes which 
+				is independent of the way schools are organised or the particular programme of study that 
+				a student may undertake. Funding Year Level for most students is based on the date they 
+				first started school.</p>
+
+			<p>School Year Level is used to indicate the instructional year levels offered by a school, i.e. 
+				those years for which student enrolments may be accepted.</p>
+		</Intro>
+		<ID>Year Level Code</ID>
+		<Values>
+			<Value>
+				<Code>0</Code>
+				<Text>Year 0</Text>
+				<Description>Only applies to Funding Year level</Description>
+			</Value>
+			<Value>
+				<Code>1</Code>
+				<Text>Year 1</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Year 2</Text>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Year 3</Text>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Year 4</Text>
+			</Value>
+			<Value>
+				<Code>5</Code>
+				<Text>Year 5</Text>
+			</Value>
+			<Value>
+				<Code>6</Code>
+				<Text>Year 6</Text>
+			</Value>
+			<Value>
+				<Code>7</Code>
+				<Text>Year 7</Text>
+			</Value>
+			<Value>
+				<Code>8</Code>
+				<Text>Year 8</Text>
+			</Value>
+			<Value>
+				<Code>9</Code>
+				<Text>Year 9</Text>
+			</Value>
+			<Value>
+				<Code>10</Code>
+				<Text>Year 10</Text>
+			</Value>
+			<Value>
+				<Code>11</Code>
+				<Text>Year 11</Text>
+			</Value>
+			<Value>
+				<Code>12</Code>
+				<Text>Year 12</Text>
+			</Value>
+			<Value>
+				<Code>13</Code>
+				<Text>Year 13</Text>
+			</Value>
+			<if intl="nz">
+				<Value>
+					<Code>14</Code>
+					<Text>Year 14</Text>
+					<Description>For Current Year Level this code indicates Year 14 and above</Description>
+				</Value>
+				<Value>
+					<Code>15</Code>
+					<Text>Year 15</Text>
+					<Description>Only applies to Funding Year Level</Description>
+				</Value>
+			</if>
+			<if intl="au">
+				<Value>
+					<Code>K</Code>
+					<Text>Kindergarten</Text>
+				</Value>
+				<Value>
+					<Code>P</Code>
+					<Text>Prep</Text>
+				</Value>
+				<Value>
+					<Code>K3</Code>
+					<Text>3yo Kindergarten</Text>
+				</Value>
+				<Value>
+					<Code>K4</Code>
+					<Text>4yo Kindergarten</Text>
+				</Value>
+				<Value>
+					<Code>CC</Code>
+					<Text>Childcare</Text>
+				</Value>
+				<Value>
+					<Code>PS</Code>
+					<Text>Pre-School</Text>
+				</Value>
+				<Value>
+					<Code>UG</Code>
+					<Text>Ungraded</Text>
+				</Value>
+				<Value>
+					<Code>11MINUS</Code>
+					<Text>11 Years and Younger</Text>
+				</Value>
+				<Value>
+					<Code>12PLUS</Code>
+					<Text>12 years and Older</Text>
+				</Value>
+				<Value>
+					<Code>UGJunSec</Code>
+					<Text>Ungraded Junior Secondary</Text>
+				</Value>
+				<Value>
+					<Code>UGPri</Code>
+					<Text>Ungraded Primary</Text>
+				</Value>
+				<Value>
+					<Code>UGSec</Code>
+					<Text>Ungraded Secondary</Text>
+				</Value>
+				<Value>
+					<Code>UGSnrSec</Code>
+					<Text>Ungraded Senior Secondary</Text>
+				</Value>
+			</if>		 
 		  </Values>
 	  </CodeSet>      <!-- Year Level Code -->
+
 	  <CodeSet>
 		<Intro>
 			<p>An enumeration of valid SIF DataObject names, to be included in Object References</p>
