@@ -6,22 +6,6 @@
 		<!-- Borrowed from SIF AU -->
     <CodeSet>
       <Intro>
-        <p>Personalised Plan categories - initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
-      </Intro>
-      <ID>Personalised Plan</ID>
-      <Values>
-		  <Value><Code>M</Code><Text>Medical</Text></Value>
-		  <Value><Code>At</Code><Text>Attendance</Text></Value>
-		  <Value><Code>Ac</Code><Text>Academic</Text></Value>
-		  <Value><Code>B</Code><Text>Behavioural</Text></Value>
-		  <Value><Code>S</Code><Text>Special Needs</Text></Value>
-		  <Value><Code>L</Code><Text>Legal</Text></Value>
-		  <Value><Code>O</Code><Text>Other</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Personalised Plan -->
-
-    <CodeSet>
-      <Intro>
         <p>Wellbeing Characteristics - High Level.  Initially provided by WA.  This code set is in draft and changes are expected.  Future changes may re-specify code values.</p> 
       </Intro>
       <ID>Wellbeing Characteristic Sub Category</ID>
@@ -525,16 +509,82 @@
 
     <CodeSet>
       <Intro>
-        <p>Standard codes denoting the follow-up action category of the Wellbeing Event.</p>
+        <p>Standard codes denoting the type of Document.</p>
       </Intro>
-      <ID>Follow Up Action Category</ID>
+      <ID>Document Type</ID>
       <Values>
-				<Value><Code>101</Code><Text>Award</Text></Value>
-				<Value><Code>102</Code><Text>Detention</Text></Value>
-				<Value><Code>103</Code><Text>Personalised Plan</Text></Value>
-				<Value><Code>104</Code><Text>Suspension</Text></Value>
-				<Value><Code>105</Code><Text>Other</Text></Value>
+				<Value><Code>101</Code><Text>Individualised Behavioural Plan</Text></Value>
+				<Value><Code>102</Code><Text>Individualised Education Plan</Text></Value>
       </Values>
-    </CodeSet>    <!-- Follow Up Action Category -->
+    </CodeSet>    <!-- Document Classification -->
 
+		<CodeSet>
+			<Intro>
+				<p>Standard codes denoting the learning support agency that is supporting the student, 
+					e.g. Resource Teacher Literacy (RTLit) and Resource Teacher Learning and Behaviour (RTLB).</p>
+			</Intro>
+			<ID>Learning Support Agency</ID>
+			<Values>
+				<Value><Code>101</Code><Text>RTLit</Text><Description>Resource Teacher Literacy</Description></Value>
+				<Value><Code>102</Code><Text>RTLB</Text><Description>Resource Teacher Learning and Behaviour</Description></Value>
+				<Value><Code>103</Code><Text>Other</Text></Value>
+			</Values>
+		</CodeSet>    <!-- Learning Support Agency -->
+		
+		<CodeSet>
+			<Intro>
+				<p>Standard codes denoting the learning support group the student is receiving support in,
+					 e.g. physical, and learning.</p>
+			</Intro>
+			<ID>Learning Support Group</ID>
+			<Values>
+				<Value><Code>101</Code><Text>Physical</Text></Value>
+				<Value><Code>102</Code><Text>Learning</Text></Value>
+				<Value><Code>103</Code><Text>Other</Text></Value>
+			</Values>
+		</CodeSet>    <!-- Learning Support Group -->
+
+		<CodeSet>
+			<Intro>
+				<p>Standard codes denoting the learning support intervention type,
+					 e.g. ESOL, First STEPs, MST.</p>
+			</Intro>
+			<ID>Learning Support Intervention Type</ID>
+			<Values>
+				<Value><Code>101</Code><Text>First STEPs</Text></Value>
+				<Value><Code>102</Code><Text>ESOL</Text></Value>
+				<Value><Code>103</Code><Text>MST</Text></Value>
+				<Value><Code>104</Code><Text>Rainbow Reading</Text></Value>
+				<Value><Code>105</Code><Text>Read. Rec 2014</Text></Value>
+				<Value><Code>106</Code><Text>STEPS</Text></Value>
+				<Value><Code>107</Code><Text>TA - Reading</Text></Value>
+				<Value><Code>108</Code><Text>RTLB</Text></Value>
+				<Value><Code>109</Code><Text>RTLit</Text></Value>
+				<Value><Code>110</Code><Text>Early Words</Text></Value>
+				<Value><Code>111</Code><Text>Reading Recovery</Text></Value>
+				<Value><Code>112</Code><Text>Other</Text></Value>
+			</Values>
+		</CodeSet>    <!-- Learning Support Intervention Type -->
+
+		<CodeSet>
+			<Intro>
+				<p>Standard codes denoting the learning support type the student is receiving, e.g. Vision, Speech, 
+					Hearing, Social Skills, Behaviour, Mental Health, Autism, Reading, Writing, Mathematics etc.</p>
+			</Intro>
+			<ID>Learning Support Type</ID>
+			<Values>
+				<Value><Code>101</Code><Text>Vision</Text></Value>
+				<Value><Code>102</Code><Text>Speech</Text></Value>
+				<Value><Code>103</Code><Text>Hearing</Text></Value>
+				<Value><Code>104</Code><Text>Social Skills</Text></Value>
+				<Value><Code>105</Code><Text>Behaviour</Text></Value>
+				<Value><Code>106</Code><Text>Mental Health</Text></Value>
+				<Value><Code>107</Code><Text>Autism</Text></Value>
+				<Value><Code>108</Code><Text>Reading</Text></Value>
+				<Value><Code>109</Code><Text>Writing</Text></Value>
+				<Value><Code>110</Code><Text>Mathematics</Text></Value>
+				<Value><Code>111</Code><Text>Dyslexic</Text></Value>
+				<Value><Code>112</Code><Text>Other</Text></Value>
+			</Values>
+		</CodeSet>    <!-- Learning Support Type -->
 </IncludeGroup>

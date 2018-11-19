@@ -12,10 +12,18 @@
     <Element>StaffAssignment</Element>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>
-        This object defines information related to a staff member's assignment(s); commonly, this will be
-        a school assignment.
-      </p>
+      <p>Records assignment of a Staff member to a particular role at a Provider or
+        other EducationOrganisation. A staff member can have multiple concurrent roles
+        at Schools (via Provider data object) and Kāhui Ako (via the EducationOrganisation data object);
+        each role would be a separate StaffAssignment record.</p>
+        
+      <p>Role assignments can be restricted to categories of Students with the StaffSubjectList 
+        and YearLevelList. This allows for assignment to roles with particular responsibility for 
+        general cohorts of students, such as "Head of Department (Maths)" or "Year 8 Student Dean".</p>
+
+      <p>While assignment to student contact roles such as Subject Teacher, Homeroom Teacher, Whānau Teacher
+        or House Master is made with this data object; Details of the particular group of specific students 
+        the staff member is responsible for are made via the TeachingGroup data object.</p>
     </Description>
   </Item>
   <Item>

@@ -253,7 +253,10 @@
 	</CodeSet>    <!-- Communication Usage -->
 	<CodeSet>
 		<Intro>
-			Codes describing a standardised role held by a contact within an organisation.
+			<p>The role played by a person in an organisation where that person is recorded as a
+				 contact. The role definition is used to recognise similar functions across organisations,
+				 however individuals with the same role may be given different position titles that differ
+				 from the generic role description. For example, a principal may have a title of ‘headmaster’.</p>
 		</Intro>
 		<ID>Organisation Contact Role</ID>
 		<Values>
@@ -270,7 +273,7 @@
 				<Text>Director</Text>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Contact Role -->
+	</CodeSet>    <!-- Organisation Contact Role -->
 	<CodeSet>
 		<Intro>
 			<p>A policy that a school may choose to implement as part of its operating rules. For example, 
@@ -294,13 +297,15 @@
 	</CodeSet>	  <!-- Enacted Policy -->
 	<CodeSet>
 		<Intro>
-			The authority by which a Provider is authorised to provide education services.
+			The authority by which the Provider is authorised to provide education services.
+			Describes the ownership/operation or registration status of an Educational institution.
 		</Intro>
 		<ID>Provider Authority</ID>
 		<Values>
 			<Value>
 				<Code>1</Code>
 				<Text>State</Text>
+				<Description>Also known as 'State:Non-integrated'</Description>
 			</Value>
 			<Value>
 				<Code>2</Code>
@@ -327,7 +332,8 @@
 	</CodeSet>	  <!-- Provider Authority -->
 	<CodeSet>
 		<Intro>
-			Criteria for defining the nature of a school.
+			<p>A school-specific definition of a provider, describing the school according to 
+				specialist services or facilities that it provides for students or for teaching staff.</p>
 		</Intro>
 		<ID>School Definition</ID>
 		<Values>
@@ -344,6 +350,7 @@
 			<Value>
 				<Code>103</Code>
 				<Text>Bilingual School</Text>
+				<Description>Historic: Not to be used</Description>
 			</Value>
 			<Value>
 				<Code>104</Code>
@@ -352,17 +359,10 @@
 			<Value>
 				<Code>105</Code>
 				<Text>Contributing with Year 7 &amp; 8 Bilingual Students</Text>
+				<Description>Contributing School - but is able to retain Y7 &amp;amp; 8 bilingual students</Description>
 			</Value>
 			<Value>
 				<Code>106</Code>
-				<Text>Restricted Composite (Year 7-9)</Text>
-			</Value>
-			<Value>
-				<Code>107</Code>
-				<Text>Restricted Composite (Year 7-10)</Text>
-			</Value>
-			<Value>
-				<Code>108</Code>
 				<Text>School with Boarding Facilities</Text>
 			</Value>
 			
@@ -382,7 +382,7 @@
 			</Value>
 			<Value>
 				<Code>204</Code>
-				<Text>School for Intellectual Disabilities</Text>
+				<Text>School for Intellectual Impairments</Text>
 			</Value>
 			<Value>
 				<Code>205</Code>
@@ -399,14 +399,17 @@
 			<Value>
 				<Code>301</Code>
 				<Text>Normal School</Text>
+				<Description>A school with extra resources for teacher training purposes</Description>
 			</Value>
 			<Value>
 				<Code>302</Code>
 				<Text>Model School</Text>
+				<Description>Set up like a rural school, for teacher training purposes</Description>
 			</Value>
 			<Value>
 				<Code>303</Code>
 				<Text>Normal School (Model Classes)</Text>
+				<Description>Normal School with Model Classes</Description>
 			</Value>
 					
 		</Values>
@@ -438,25 +441,38 @@
 	<!-- ProviderRelationship -->
 	<CodeSet>
 		<Intro>
-			<p>Describes the nature of a relationship between a pair of Providers.</p>
+			<p>A code describing the nature of the relationship between the pair of Providers</p>
 		</Intro>
 		<ID>Provider Relationship Type</ID>
 		<Values>
 			<Value>
-				<Code>01</Code>
-				<Text>Client &amp; Host School</Text>
-				<Description>Source provider sends Students to the
-				matching Related provider for individual classes.</Description> 
+				<Code>1</Code>
+				<Text>Contributor &amp; Receiver</Text>
+				<Description>Source Provider contributes learners to the related Provider, once the learners have
+					completed education at the source Provider.</Description> 
 			</Value>
 			<Value>
-				<Code>02</Code>
-				<Text>Contributing &amp; Receiving Schools</Text>
-				<Description>Students from the Source Provider
-				enrol at the matching Related Provider once they have completed the
-				last year of instruction conducted by the Contributing School.</Description>
+				<Code>2</Code>
+				<Text>Client &amp; Host</Text>
+				<Description>Source Provider sends learners to the related Provider for the provision of some classes.
+					Exact student and class details will be recorded in co-enrolment flavour of
+					StudentProviderEnrolment.</Description>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Teen Parent Unit &amp; Host</Text>
+				<Description>Source Provider is a Teen Parent Unit which is operated as part of the related Provider.
+					Learners who are also parents attend classes at both the Teen Parent Unit and the host school.</Description>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Activity Centre &amp; Host</Text>
+				<Description>Source Provider is an Activity Centre which is operated as part of the related Provider.
+					Learners who have been identified as being at risk of disengaging from mainstream Schooling
+					attend classes at both the Activity Centre and the host school.</Description>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Provider Relationship Role -->
+	</CodeSet>    <!-- Provider Relationship Type -->
 	
 	<!-- StaffAssignment -->
 	<CodeSet>
@@ -465,7 +481,7 @@
 		</Intro>
 		<ID>Staff Role</ID>
 		<Values>
-			<Value><Code>1100</Code><Text>Teacher in school (n.f.d)</Text></Value>
+			<Value><Code>1100</Code><Text>Teacher in school n.f.d.</Text></Value>
 			<Value><Code>1101</Code><Text>Primary Teacher</Text></Value>
 			<Value><Code>1102</Code><Text>Secondary teacher</Text></Value>
 			<Value><Code>1103</Code><Text>Principal</Text></Value>
@@ -481,7 +497,9 @@
 			<Value><Code>1205</Code><Text>Psychologist</Text></Value>
 			<Value><Code>1206</Code><Text>Social worker</Text></Value>
 			<Value><Code>1207</Code><Text>Student welfare worker</Text></Value>
-			<Value><Code>1208</Code><Text>Indigenous Education Worker</Text></Value>
+			<if intl="au">
+				<Value><Code>1208</Code><Text>Indigenous Education Worker</Text></Value>
+			</if>
 			<Value><Code>1299</Code><Text>Other Specialist support in school</Text></Value>
 			<Value><Code>1300</Code><Text>Administration and clerical in school n.f.d.</Text></Value>
 			<Value><Code>1301</Code><Text>Teacher Aide</Text></Value>
@@ -507,154 +525,159 @@
 			<Value><Code>2103</Code><Text>General Manager</Text></Value>
 			<Value><Code>2198</Code><Text>Principal and other School Executive out of school</Text></Value>
 			<Value><Code>2199</Code><Text>Other Executive</Text></Value>
-			<Value><Code>2200</Code><Text>Specialist support out of scope n.f.d.</Text></Value>
-			<Value><Code>2201</Code><Text>Community Participation Officer</Text></Value>
-			<Value><Code>2202</Code><Text>Computer Support Officer</Text></Value>
-			<Value><Code>2203</Code><Text>Coordinator - out of school Specialist Support</Text></Value>
-			<Value><Code>2204</Code><Text>Curriculum Officer</Text></Value>
-			<Value><Code>2205</Code><Text>Curriculum Program Manager</Text></Value>
-			<Value><Code>2206</Code><Text>Education Officer - out of school Specialist Support</Text></Value>
-			<Value><Code>2207</Code><Text>Education Program Manager</Text></Value>
-			<Value><Code>2208</Code><Text>Home Liaison Officer</Text></Value>
-			<Value><Code>2209</Code><Text>Learning Support Leader</Text></Value>
-			<Value><Code>2210</Code><Text>Librarian - out of school Specialist Support</Text></Value>
-			<Value><Code>2211</Code><Text>Moderator</Text></Value>
-			<Value><Code>2212</Code><Text>Occupational Therapist</Text></Value>
-			<Value><Code>2213</Code><Text>On-line Education Officer</Text></Value>
-			<Value><Code>2214</Code><Text>Policy Officer - out of school Specialist Support</Text></Value>
-			<Value><Code>2215</Code><Text>Principal Education Officer</Text></Value>
-			<Value><Code>2216</Code><Text>Professional Services Officer</Text></Value>
-			<Value><Code>2217</Code><Text>Project Coordinator</Text></Value>
-			<Value><Code>2218</Code><Text>Registered Nurse</Text></Value>
-			<Value><Code>2219</Code><Text>Senior Education Officer</Text></Value>
-			<Value><Code>2220</Code><Text>Social Welfare Officer</Text></Value>
-			<Value><Code>2221</Code><Text>Speech Language Pathologist</Text></Value>
-			<Value><Code>2222</Code><Text>Sports Coordinator</Text></Value>
-			<Value><Code>2223</Code><Text>Staff Development Officer</Text></Value>
-			<Value><Code>2224</Code><Text>Training Officer - out of school Specialist Support</Text></Value>
-			<Value><Code>2298</Code><Text>Teachers - out of school Specialist Support</Text></Value>
-			<Value><Code>2299</Code><Text>Other specialist support out of school</Text></Value>
-			<Value><Code>2300</Code><Text>Administration and clerical out of school  n.f.d.</Text></Value>
-			<Value><Code>2301</Code><Text>Accounts Certifying Officer</Text></Value>
-			<Value><Code>2302</Code><Text>Administrative and Clerical officer</Text></Value>
-			<Value><Code>2303</Code><Text>Administrative Assistant</Text></Value>
-			<Value><Code>2304</Code><Text>Administrative Officer</Text></Value>
-			<Value><Code>2305</Code><Text>Budget Officer</Text></Value>
-			<Value><Code>2306</Code><Text>Clerk</Text></Value>
-			<Value><Code>2307</Code><Text>Finance and Administration Officer</Text></Value>
-			<Value><Code>2308</Code><Text>Finance Officer</Text></Value>
-			<Value><Code>2309</Code><Text>General Ledger Officer</Text></Value>
-			<Value><Code>2310</Code><Text>Receptionist</Text></Value>
-			<Value><Code>2311</Code><Text>Senior Auditor</Text></Value>
-			<Value><Code>2312</Code><Text>Services Clerk</Text></Value>
-			<Value><Code>2313</Code><Text>Aboriginal Education Coordinator</Text></Value>
-			<Value><Code>2314</Code><Text>Aboriginal Education Worker</Text></Value>
-			<Value><Code>2315</Code><Text>Assistant Manager</Text></Value>
-			<Value><Code>2316</Code><Text>Client Services Officer</Text></Value>
-			<Value><Code>2317</Code><Text>Coordinator - out of school Administration</Text></Value>
-			<Value><Code>2318</Code><Text>District Officer</Text></Value>
-			<Value><Code>2319</Code><Text>Education Officer - out of school Administration</Text></Value>
-			<Value><Code>2320</Code><Text>Enrolment Officer</Text></Value>
-			<Value><Code>2321</Code><Text>Examiner</Text></Value>
-			<Value><Code>2322</Code><Text>Liaison Officer</Text></Value>
-			<Value><Code>2323</Code><Text>Librarian - out of school Administration</Text></Value>
-			<Value><Code>2324</Code><Text>Library Technician</Text></Value>
-			<Value><Code>2325</Code><Text>Manager</Text></Value>
-			<Value><Code>2326</Code><Text>Operational Services Officer</Text></Value>
-			<Value><Code>2327</Code><Text>Professional Officers</Text></Value>
-			<Value><Code>2328</Code><Text>Program Coordinator</Text></Value>
-			<Value><Code>2329</Code><Text>Project Manager</Text></Value>
-			<Value><Code>2330</Code><Text>Project Officer</Text></Value>
-			<Value><Code>2331</Code><Text>Project Support Officer</Text></Value>
-			<Value><Code>2332</Code><Text>Public Servant</Text></Value>
-			<Value><Code>2333</Code><Text>School Services Officer</Text></Value>
-			<Value><Code>2334</Code><Text>School Support Officer</Text></Value>
-			<Value><Code>2335</Code><Text>Senior Investigator</Text></Value>
-			<Value><Code>2336</Code><Text>Senior Professional Officers</Text></Value>
-			<Value><Code>2337</Code><Text>Senior Project Officer/Project Officer</Text></Value>
-			<Value><Code>2338</Code><Text>Student Services co ordinator</Text></Value>
-			<Value><Code>2339</Code><Text>Student Support Officer</Text></Value>
-			<Value><Code>2340</Code><Text>Assistant Editor</Text></Value>
-			<Value><Code>2341</Code><Text>Communications Officer</Text></Value>
-			<Value><Code>2342</Code><Text>Corporate Services Officer</Text></Value>
-			<Value><Code>2343</Code><Text>Designer</Text></Value>
-			<Value><Code>2344</Code><Text>Desktop Publisher</Text></Value>
-			<Value><Code>2345</Code><Text>Editor</Text></Value>
-			<Value><Code>2346</Code><Text>Graphic Designer</Text></Value>
-			<Value><Code>2347</Code><Text>Journalist/Media and Marketing</Text></Value>
-			<Value><Code>2348</Code><Text>Photographer</Text></Value>
-			<Value><Code>2349</Code><Text>Printer</Text></Value>
-			<Value><Code>2350</Code><Text>Production Officer/Coordinator</Text></Value>
-			<Value><Code>2351</Code><Text>Public Relations Officer</Text></Value>
-			<Value><Code>2352</Code><Text>Advisor</Text></Value>
-			<Value><Code>2353</Code><Text>Executive Assistant</Text></Value>
-			<Value><Code>2354</Code><Text>Executive Officer</Text></Value>
-			<Value><Code>2355</Code><Text>Executive Secretary</Text></Value>
-			<Value><Code>2356</Code><Text>Personal Assistant</Text></Value>
-			<Value><Code>2357</Code><Text>Secretary</Text></Value>
-			<Value><Code>2358</Code><Text>Human Resources Services Officer</Text></Value>
-			<Value><Code>2359</Code><Text>Personnel (and Payroll) Officer</Text></Value>
-			<Value><Code>2360</Code><Text>Personnel Officer</Text></Value>
-			<Value><Code>2361</Code><Text>Recruitment Officer</Text></Value>
-			<Value><Code>2362</Code><Text>Training Officer - out of school Administration</Text></Value>
-			<Value><Code>2363</Code><Text>Workers Compensation Officer</Text></Value>
-			<Value><Code>2364</Code><Text>Workforce Management Officer</Text></Value>
-			<Value><Code>2365</Code><Text>Audio Visual Communications Program Officer</Text></Value>
-			<Value><Code>2366</Code><Text>Business Systems Analyst</Text></Value>
-			<Value><Code>2367</Code><Text>Computer Systems Officer</Text></Value>
-			<Value><Code>2368</Code><Text>Computer Technician</Text></Value>
-			<Value><Code>2369</Code><Text>Data Management Officer</Text></Value>
-			<Value><Code>2370</Code><Text>Information Analyst</Text></Value>
-			<Value><Code>2371</Code><Text>Information Manager</Text></Value>
-			<Value><Code>2372</Code><Text>Information Officer</Text></Value>
-			<Value><Code>2373</Code><Text>Information Technology Officers</Text></Value>
-			<Value><Code>2374</Code><Text>Network Administrator</Text></Value>
-			<Value><Code>2375</Code><Text>Policy Officer n.f.d.</Text></Value>
-			<Value><Code>2376</Code><Text>Performance Measurement Officer</Text></Value>
-			<Value><Code>2377</Code><Text>Policy Officer - out of school Administration</Text></Value>
-			<Value><Code>2378</Code><Text>Research Officer</Text></Value>
-			<Value><Code>2379</Code><Text>Review Officer</Text></Value>
-			<Value><Code>2380</Code><Text>Senior Research Officer/Research Officer</Text></Value>
-			<Value><Code>2381</Code><Text>Other policy officer</Text></Value>
-			<Value><Code>2382</Code><Text>Despatch Officer</Text></Value>
-			<Value><Code>2383</Code><Text>Driver</Text></Value>
-			<Value><Code>2384</Code><Text>Facilities Services Officer</Text></Value>
-			<Value><Code>2385</Code><Text>Housing and Transport Officer</Text></Value>
-			<Value><Code>2386</Code><Text>Indexer</Text></Value>
-			<Value><Code>2387</Code><Text>Legal Officer</Text></Value>
-			<Value><Code>2388</Code><Text>Store Person</Text></Value>
-			<Value><Code>2389</Code><Text>Store Supervisor</Text></Value>
-			<Value><Code>2390</Code><Text>Supply Officer</Text></Value>
-			<Value><Code>2391</Code><Text>Team Leader</Text></Value>
-			<Value><Code>2392</Code><Text>Technical Officer - out of school Administration</Text></Value>
-			<Value><Code>2393</Code><Text>Technician</Text></Value>
-			<Value><Code>2394</Code><Text>Transport Officer</Text></Value>
-			<Value><Code>2397</Code><Text>Public service officers n.f.d.</Text></Value>
-			<Value><Code>2398</Code><Text>Teachers -  Out of School Administration</Text></Value>
-			<Value><Code>2399</Code><Text>Other Administration and clerical out of school</Text></Value>
-			<Value><Code>2400</Code><Text>Building Operations out of school n.f.d.</Text></Value>
-			<Value><Code>2401</Code><Text>Building maintenance worker - out of school</Text></Value>
-			<Value><Code>2402</Code><Text>Bus Driver - out of school</Text></Value>
-			<Value><Code>2403</Code><Text>Canteen assistant - out of school</Text></Value>
-			<Value><Code>2404</Code><Text>Caretaker - out of school</Text></Value>
-			<Value><Code>2405</Code><Text>Cook</Text></Value>
-			<Value><Code>2406</Code><Text>Courier</Text></Value>
-			<Value><Code>2408</Code><Text>Gardener - out of school</Text></Value>
-			<Value><Code>2407</Code><Text>Farm Worker - out of school</Text></Value>
-			<Value><Code>2409</Code><Text>Greenkeeper</Text></Value>
-			<Value><Code>2410</Code><Text>Groundsman</Text></Value>
-			<Value><Code>2411</Code><Text>Handyman</Text></Value>
-			<Value><Code>2412</Code><Text>House Officer</Text></Value>
-			<Value><Code>2413</Code><Text>Janitor</Text></Value>
-			<Value><Code>2414</Code><Text>Kitchen Hand</Text></Value>
-			<Value><Code>2415</Code><Text>Maintenance Officer</Text></Value>
-			<Value><Code>2416</Code><Text>School Attendant</Text></Value>
-			<Value><Code>2417</Code><Text>Security Officer</Text></Value>
-			<Value><Code>2418</Code><Text>Technical Officer - out of school Building Operations</Text></Value>
-			<Value><Code>2499</Code><Text>Other Building Operations and general maintenance out of school</Text></Value>
-			<Value><Code>2999</Code><Text>Out of School Staff out of scope</Text></Value>			
+
+
+			<if intl="au">
+				<!-- Out of School roles come from 'School District' or 'Regional Office' etc. -->
+				<Value><Code>2200</Code><Text>Specialist support out of scope n.f.d.</Text></Value>
+				<Value><Code>2201</Code><Text>Community Participation Officer</Text></Value>
+				<Value><Code>2202</Code><Text>Computer Support Officer</Text></Value>
+				<Value><Code>2203</Code><Text>Coordinator - out of school Specialist Support</Text></Value>
+				<Value><Code>2204</Code><Text>Curriculum Officer</Text></Value>
+				<Value><Code>2205</Code><Text>Curriculum Program Manager</Text></Value>
+				<Value><Code>2206</Code><Text>Education Officer - out of school Specialist Support</Text></Value>
+				<Value><Code>2207</Code><Text>Education Program Manager</Text></Value>
+				<Value><Code>2208</Code><Text>Home Liaison Officer</Text></Value>
+				<Value><Code>2209</Code><Text>Learning Support Leader</Text></Value>
+				<Value><Code>2210</Code><Text>Librarian - out of school Specialist Support</Text></Value>
+				<Value><Code>2211</Code><Text>Moderator</Text></Value>
+				<Value><Code>2212</Code><Text>Occupational Therapist</Text></Value>
+				<Value><Code>2213</Code><Text>On-line Education Officer</Text></Value>
+				<Value><Code>2214</Code><Text>Policy Officer - out of school Specialist Support</Text></Value>
+				<Value><Code>2215</Code><Text>Principal Education Officer</Text></Value>
+				<Value><Code>2216</Code><Text>Professional Services Officer</Text></Value>
+				<Value><Code>2217</Code><Text>Project Coordinator</Text></Value>
+				<Value><Code>2218</Code><Text>Registered Nurse</Text></Value>
+				<Value><Code>2219</Code><Text>Senior Education Officer</Text></Value>
+				<Value><Code>2220</Code><Text>Social Welfare Officer</Text></Value>
+				<Value><Code>2221</Code><Text>Speech Language Pathologist</Text></Value>
+				<Value><Code>2222</Code><Text>Sports Coordinator</Text></Value>
+				<Value><Code>2223</Code><Text>Staff Development Officer</Text></Value>
+				<Value><Code>2224</Code><Text>Training Officer - out of school Specialist Support</Text></Value>
+				<Value><Code>2298</Code><Text>Teachers - out of school Specialist Support</Text></Value>
+				<Value><Code>2299</Code><Text>Other specialist support out of school</Text></Value>
+				<Value><Code>2300</Code><Text>Administration and clerical out of school  n.f.d.</Text></Value>
+				<Value><Code>2301</Code><Text>Accounts Certifying Officer</Text></Value>
+				<Value><Code>2302</Code><Text>Administrative and Clerical officer</Text></Value>
+				<Value><Code>2303</Code><Text>Administrative Assistant</Text></Value>
+				<Value><Code>2304</Code><Text>Administrative Officer</Text></Value>
+				<Value><Code>2305</Code><Text>Budget Officer</Text></Value>
+				<Value><Code>2306</Code><Text>Clerk</Text></Value>
+				<Value><Code>2307</Code><Text>Finance and Administration Officer</Text></Value>
+				<Value><Code>2308</Code><Text>Finance Officer</Text></Value>
+				<Value><Code>2309</Code><Text>General Ledger Officer</Text></Value>
+				<Value><Code>2310</Code><Text>Receptionist</Text></Value>
+				<Value><Code>2311</Code><Text>Senior Auditor</Text></Value>
+				<Value><Code>2312</Code><Text>Services Clerk</Text></Value>
+				<Value><Code>2313</Code><Text>Aboriginal Education Coordinator</Text></Value>
+				<Value><Code>2314</Code><Text>Aboriginal Education Worker</Text></Value>
+				<Value><Code>2315</Code><Text>Assistant Manager</Text></Value>
+				<Value><Code>2316</Code><Text>Client Services Officer</Text></Value>
+				<Value><Code>2317</Code><Text>Coordinator - out of school Administration</Text></Value>
+				<Value><Code>2318</Code><Text>District Officer</Text></Value>
+				<Value><Code>2319</Code><Text>Education Officer - out of school Administration</Text></Value>
+				<Value><Code>2320</Code><Text>Enrolment Officer</Text></Value>
+				<Value><Code>2321</Code><Text>Examiner</Text></Value>
+				<Value><Code>2322</Code><Text>Liaison Officer</Text></Value>
+				<Value><Code>2323</Code><Text>Librarian - out of school Administration</Text></Value>
+				<Value><Code>2324</Code><Text>Library Technician</Text></Value>
+				<Value><Code>2325</Code><Text>Manager</Text></Value>
+				<Value><Code>2326</Code><Text>Operational Services Officer</Text></Value>
+				<Value><Code>2327</Code><Text>Professional Officers</Text></Value>
+				<Value><Code>2328</Code><Text>Program Coordinator</Text></Value>
+				<Value><Code>2329</Code><Text>Project Manager</Text></Value>
+				<Value><Code>2330</Code><Text>Project Officer</Text></Value>
+				<Value><Code>2331</Code><Text>Project Support Officer</Text></Value>
+				<Value><Code>2332</Code><Text>Public Servant</Text></Value>
+				<Value><Code>2333</Code><Text>School Services Officer</Text></Value>
+				<Value><Code>2334</Code><Text>School Support Officer</Text></Value>
+				<Value><Code>2335</Code><Text>Senior Investigator</Text></Value>
+				<Value><Code>2336</Code><Text>Senior Professional Officers</Text></Value>
+				<Value><Code>2337</Code><Text>Senior Project Officer/Project Officer</Text></Value>
+				<Value><Code>2338</Code><Text>Student Services co ordinator</Text></Value>
+				<Value><Code>2339</Code><Text>Student Support Officer</Text></Value>
+				<Value><Code>2340</Code><Text>Assistant Editor</Text></Value>
+				<Value><Code>2341</Code><Text>Communications Officer</Text></Value>
+				<Value><Code>2342</Code><Text>Corporate Services Officer</Text></Value>
+				<Value><Code>2343</Code><Text>Designer</Text></Value>
+				<Value><Code>2344</Code><Text>Desktop Publisher</Text></Value>
+				<Value><Code>2345</Code><Text>Editor</Text></Value>
+				<Value><Code>2346</Code><Text>Graphic Designer</Text></Value>
+				<Value><Code>2347</Code><Text>Journalist/Media and Marketing</Text></Value>
+				<Value><Code>2348</Code><Text>Photographer</Text></Value>
+				<Value><Code>2349</Code><Text>Printer</Text></Value>
+				<Value><Code>2350</Code><Text>Production Officer/Coordinator</Text></Value>
+				<Value><Code>2351</Code><Text>Public Relations Officer</Text></Value>
+				<Value><Code>2352</Code><Text>Advisor</Text></Value>
+				<Value><Code>2353</Code><Text>Executive Assistant</Text></Value>
+				<Value><Code>2354</Code><Text>Executive Officer</Text></Value>
+				<Value><Code>2355</Code><Text>Executive Secretary</Text></Value>
+				<Value><Code>2356</Code><Text>Personal Assistant</Text></Value>
+				<Value><Code>2357</Code><Text>Secretary</Text></Value>
+				<Value><Code>2358</Code><Text>Human Resources Services Officer</Text></Value>
+				<Value><Code>2359</Code><Text>Personnel (and Payroll) Officer</Text></Value>
+				<Value><Code>2360</Code><Text>Personnel Officer</Text></Value>
+				<Value><Code>2361</Code><Text>Recruitment Officer</Text></Value>
+				<Value><Code>2362</Code><Text>Training Officer - out of school Administration</Text></Value>
+				<Value><Code>2363</Code><Text>Workers Compensation Officer</Text></Value>
+				<Value><Code>2364</Code><Text>Workforce Management Officer</Text></Value>
+				<Value><Code>2365</Code><Text>Audio Visual Communications Program Officer</Text></Value>
+				<Value><Code>2366</Code><Text>Business Systems Analyst</Text></Value>
+				<Value><Code>2367</Code><Text>Computer Systems Officer</Text></Value>
+				<Value><Code>2368</Code><Text>Computer Technician</Text></Value>
+				<Value><Code>2369</Code><Text>Data Management Officer</Text></Value>
+				<Value><Code>2370</Code><Text>Information Analyst</Text></Value>
+				<Value><Code>2371</Code><Text>Information Manager</Text></Value>
+				<Value><Code>2372</Code><Text>Information Officer</Text></Value>
+				<Value><Code>2373</Code><Text>Information Technology Officers</Text></Value>
+				<Value><Code>2374</Code><Text>Network Administrator</Text></Value>
+				<Value><Code>2375</Code><Text>Policy Officer n.f.d.</Text></Value>
+				<Value><Code>2376</Code><Text>Performance Measurement Officer</Text></Value>
+				<Value><Code>2377</Code><Text>Policy Officer - out of school Administration</Text></Value>
+				<Value><Code>2378</Code><Text>Research Officer</Text></Value>
+				<Value><Code>2379</Code><Text>Review Officer</Text></Value>
+				<Value><Code>2380</Code><Text>Senior Research Officer/Research Officer</Text></Value>
+				<Value><Code>2381</Code><Text>Other policy officer</Text></Value>
+				<Value><Code>2382</Code><Text>Despatch Officer</Text></Value>
+				<Value><Code>2383</Code><Text>Driver</Text></Value>
+				<Value><Code>2384</Code><Text>Facilities Services Officer</Text></Value>
+				<Value><Code>2385</Code><Text>Housing and Transport Officer</Text></Value>
+				<Value><Code>2386</Code><Text>Indexer</Text></Value>
+				<Value><Code>2387</Code><Text>Legal Officer</Text></Value>
+				<Value><Code>2388</Code><Text>Store Person</Text></Value>
+				<Value><Code>2389</Code><Text>Store Supervisor</Text></Value>
+				<Value><Code>2390</Code><Text>Supply Officer</Text></Value>
+				<Value><Code>2391</Code><Text>Team Leader</Text></Value>
+				<Value><Code>2392</Code><Text>Technical Officer - out of school Administration</Text></Value>
+				<Value><Code>2393</Code><Text>Technician</Text></Value>
+				<Value><Code>2394</Code><Text>Transport Officer</Text></Value>
+				<Value><Code>2397</Code><Text>Public service officers n.f.d.</Text></Value>
+				<Value><Code>2398</Code><Text>Teachers -  Out of School Administration</Text></Value>
+				<Value><Code>2399</Code><Text>Other Administration and clerical out of school</Text></Value>
+				<Value><Code>2400</Code><Text>Building Operations out of school n.f.d.</Text></Value>
+				<Value><Code>2401</Code><Text>Building maintenance worker - out of school</Text></Value>
+				<Value><Code>2402</Code><Text>Bus Driver - out of school</Text></Value>
+				<Value><Code>2403</Code><Text>Canteen assistant - out of school</Text></Value>
+				<Value><Code>2404</Code><Text>Caretaker - out of school</Text></Value>
+				<Value><Code>2405</Code><Text>Cook</Text></Value>
+				<Value><Code>2406</Code><Text>Courier</Text></Value>
+				<Value><Code>2408</Code><Text>Gardener - out of school</Text></Value>
+				<Value><Code>2407</Code><Text>Farm Worker - out of school</Text></Value>
+				<Value><Code>2409</Code><Text>Greenkeeper</Text></Value>
+				<Value><Code>2410</Code><Text>Groundsman</Text></Value>
+				<Value><Code>2411</Code><Text>Handyman</Text></Value>
+				<Value><Code>2412</Code><Text>House Officer</Text></Value>
+				<Value><Code>2413</Code><Text>Janitor</Text></Value>
+				<Value><Code>2414</Code><Text>Kitchen Hand</Text></Value>
+				<Value><Code>2415</Code><Text>Maintenance Officer</Text></Value>
+				<Value><Code>2416</Code><Text>School Attendant</Text></Value>
+				<Value><Code>2417</Code><Text>Security Officer</Text></Value>
+				<Value><Code>2418</Code><Text>Technical Officer - out of school Building Operations</Text></Value>
+				<Value><Code>2499</Code><Text>Other Building Operations and general maintenance out of school</Text></Value>
+				<Value><Code>2999</Code><Text>Out of School Staff out of scope</Text></Value>
+			</if>
 		</Values>
-	</CodeSet>    <!-- Staf fRole -->
+	</CodeSet>    <!-- Staff Role -->
 
 	<CodeSet>
 		<Intro>

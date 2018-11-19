@@ -69,12 +69,11 @@
 		<xi:include parse="xml" href="NZ/StudentAttendanceTimeList.xml"/>
 
 		<!-- Student Hauora / Wellbeing -->
-		<xi:include parse="text" href="NZ/PersonalisedPlan.xml"/>
-		<xi:include parse="text" href="NZ/WellbeingAlert.xml"/>
-		<xi:include parse="text" href="NZ/WellbeingCharacteristic.xml"/>
+		<xi:include parse="xml" href="NZ/WellbeingAlert.xml"/>
+		<xi:include parse="xml" href="NZ/WellbeingCharacteristic.xml"/>
 
-		<xi:include parse="text" href="NZ/WellbeingEvent.xml"/>
-		<xi:include parse="text" href="NZ/WellbeingResponse.xml"/>
-		<xi:include parse="text" href="NZ/WellbeingAppeal.xml"/>
+		<xi:include parse="xml" href="NZ/WellbeingEvent.xml"/>
+		<xi:include parse="xml" href="NZ/WellbeingResponse.xml"/>
+		<xi:include parse="xml" href="NZ/WellbeingAppeal.xml"/>
 	</Group>
 </DataObjects>

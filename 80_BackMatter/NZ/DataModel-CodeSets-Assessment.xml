@@ -27,6 +27,7 @@
 			</Value>    <!-- Internal -->
 		</Values>
 	</CodeSet>   <!-- Assessment Mode -->
+
 	<CodeSet>
 		<Intro>
 			<p>Standard codes denoting the type of assessment the student is sitting for the assessment task.</p>
@@ -58,5 +59,98 @@
 				<Text>Other</Text>
 			</Value>    <!-- Other -->
 		</Values>
-	</CodeSet>   <!-- Assessment Type -->
+	</CodeSet>    <!-- Assessment Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>The type of score metric used for an assessment task result.</p>
+		</Intro>
+		<ID>Score Metric</ID>
+		<Values>
+			<Value>
+				<Code>101</Code>
+				<Text>Raw</Text>
+			</Value>    <!-- Raw -->
+			<Value>
+				<Code>102</Code>
+				<Text>Scale</Text>
+			</Value>    <!-- Scale -->
+			<Value>
+				<Code>103</Code>
+				<Text>Margin of Error</Text>
+			</Value>    <!-- Margin of Error -->
+			<Value>
+				<Code>104</Code>
+				<Text>Stanine</Text>
+			</Value>    <!-- Stanine -->
+			<Value>
+				<Code>105</Code>
+				<Text>Year Level</Text>
+			</Value>    <!-- Year Level -->
+			<Value>
+				<Code>106</Code>
+				<Text>NA</Text>
+				<Description>NZQA Assessment Standards: Not Achieved, Achieved</Description>
+			</Value>    <!-- NA -->
+			<Value>
+				<Code>106</Code>
+				<Text>NAME</Text>
+				<Description>NZQA Achievement Standards: Not Achieved, Achieved, Achieved with Merit, Achieved with Excellence</Description>
+			</Value>    <!-- NA -->
+		</Values>
+	</CodeSet>    <!-- Score Metric -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting special assessment conditions that a student
+				requires when sitting an assessment.</p>
+		</Intro>
+		<ID>Special Assessment Condition</ID>
+		<Values>
+			<Value>
+				<Code>101</Code>
+				<Text>Braille Paper</Text>
+			</Value>    <!-- Braille Paper -->
+			<Value>
+				<Code>102</Code>
+				<Text>Computer OR Writer</Text>
+			</Value>    <!-- Computer OR Writer -->
+			<Value>
+				<Code>103</Code>
+				<Text>Enlarged Paper</Text>
+			</Value>    <!-- Enlarged Paper -->
+			<Value>
+				<Code>104</Code>
+				<Text>Extra Time</Text>
+			</Value>    <!-- Extra Time -->
+			<Value>
+				<Code>105</Code>
+				<Text>Other</Text>
+			</Value>    <!-- Other -->
+			<Value>
+				<Code>106</Code>
+				<Text>Reader</Text>
+			</Value>    <!-- Reader -->
+			<Value>
+				<Code>107</Code>
+				<Text>Rest Breaks</Text>
+			</Value>    <!-- Rest Breaks -->
+			<Value>
+				<Code>108</Code>
+				<Text>Separate Accommodation</Text>
+			</Value>    <!-- Separate Accommodation -->
+			<Value>
+				<Code>109</Code>
+				<Text>Signing Reader</Text>
+			</Value>    <!-- Signing Reader -->
+			<Value>
+				<Code>110</Code>
+				<Text>Signing Supervisor</Text>
+			</Value>    <!-- Signing Supervisor -->
+			<Value>
+				<Code>111</Code>
+				<Text>Special Paper</Text>
+			</Value>    <!-- Special Paper -->
+		</Values>
+	</CodeSet>    <!-- Special Assessment Conditions -->
 </IncludeGroup>

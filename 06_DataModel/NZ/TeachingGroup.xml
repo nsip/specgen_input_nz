@@ -13,8 +13,8 @@
     <Element>TeachingGroup</Element>
 	  <privacyRating>Medium</privacyRating>
     <Description>
-      <p>Identifies a particular class or other group of students in a particular time table.  Such groups 
-        can have multiple staff assigned in a variety of roles, may be assignes students from multiple year levels
+      <p>Identifies a particular class or other group of students.  Such groups 
+        can have multiple staff assigned in a variety of roles, may be assigned students from multiple year levels
         and may be taught multiple courses.
         </p>
     </Description>

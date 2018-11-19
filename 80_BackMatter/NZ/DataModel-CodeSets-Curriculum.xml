@@ -26,7 +26,7 @@
 			as well as matching Subject Areas.
 			</p>
 		</Intro>
-		<ID>Learning Area</ID>
+		<ID>Subject Area</ID>
 		<Values>
 			<Value>
 				<Code>1</Code>
@@ -147,4 +147,43 @@
 			</Value>
 		</Values>
 	</CodeSet>   <!-- LearningStandardRelationshipType -->
+	<CodeSet>
+		<Intro>
+			<p>A code denoting the status of the Credential throughout its life-cycle.</p>
+		</Intro>
+		<ID>Credential Status</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>Candidate</Text>
+				<Description>
+					<p>The Credential is being developed, and is not yet available 
+						for granting as an Attainment.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Published</Text>
+				<Description>
+					<p>The Credential is available for granting as an Attainment</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Superceded</Text>
+				<Description>
+					<p>The Credential has been superceded 
+						(probably by a subsequent Credential) but this version is still 
+						available for granting as an Attainment.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Discontinued</Text>
+				<Description>
+					<p>The Credential is no longer available granting as an Attainment</p>
+				</Description>
+			</Value>
+		</Values>
+	</CodeSet>   <!-- CredentialStatus -->
 </IncludeGroup>

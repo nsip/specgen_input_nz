@@ -8,15 +8,16 @@
 	    xmlns="http://sifassociation.org/SpecGen">
 
 
-  <Key>@RefId</Key>
+  <Key>RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
     <Element>StaffPersonal</Element>
 	  <privacyRating>High</privacyRating>
     <Description>
-      <p>
-        This object contains all the personal information relating to a staff member, who might be a teacher or other employee of the school or district.
-      </p>
+      <p>All the personal contact and demographic information relating to a staff member,
+				who might be a teacher or other employee of a Provider.</p>
+      <p>Non personal information relating to the staff member's relationship with Providers
+        is stored in the StaffAssignment data object.</p>
     </Description>
   </Item>
   <Item>

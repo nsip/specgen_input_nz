@@ -171,41 +171,161 @@
 		<Values>
 			<Value>
 				<Code>EducationOrganisation</Code>
-				<Text>An organisation other than a Provider</Text>
+				<Text>EducationOrganisation</Text>
+				<Description>An organisation other than a Provider</Description>
 			</Value>
 			<Value>
 				<Code>Provider</Code>
-				<Text>A recognised provider of education services such as ECE Service, School or TEI</Text>
+				<Text>Provider</Text>
+				<Description>A recognised provider of education services such as ECE Service, School or TEI</Description>
 			</Value>
 			<Value>
 				<Code>ProviderRelationship</Code>
-				<Text>A recognised relationship between two providers of education services.</Text>
+				<Text>ProviderRelationship</Text>
+				<Description>A recognised relationship between two providers of education service.</Description>
+			</Value>
+			<Value>
+				<Code>ProviderCourse</Code>
+				<Text>ProviderCourse</Text>
+				<Description>A Provider defined Course that Students enrol in, and may be assessed for,
+					and achieve passes in.
+				</Description>
+			</Value>
+			<Value>
+				<Code>LearningStandard</Code>
+				<Text>LearningStandard</Text>
+				<Description>A curriculum standard or the like published by a national body, 
+					 professional association or other interested party. The LearningStandard describes a set of
+					 learning that students are expected to undertake.
+				</Description>
+			</Value>
+			<Value>
+				<Code>StaffPersonal</Code>
+				<Text>StaffPersonal</Text>
+				<Description>All the personal, contact and demographic information relating to a staff member,
+					who might be a teacher or other employee of a Provider.
+				</Description>
+			</Value>
+			<Value>
+				<Code>StaffAssignment</Code>
+				<Text>StaffAssignment</Text>
+				<Description>Records assignment of a Staff member to a particular Role at a Provider or other
+					EducationOrganisation.
+				</Description>
 			</Value>
 			<Value>
 				<Code>StudentPersonal</Code>
-				<Text>A person who enrols at a Provider</Text>
+				<Text>StudentPersonal</Text>
+				<Description>Contains all the personal information related to the student.</Description>
 			</Value>
 			<Value>
 				<Code>StudentContactPersonal</Code>
-				<Text>A person who is part ofa Student's whānau</Text>
+				<Text>StudentContactPersonal</Text>
+				<Description>Contains all the personal information about a person who is a part of a Student's whānau.</Description>
 			</Value>
 			<Value>
 				<Code>StudentContactRelationship</Code>
-				<Text>A relationship between a person who is part of a Student's whānau and that Student</Text>
+				<Text>StudentContactRelationship</Text>
+				<Description>A relationship between a person who is a part of a Student's whānau and that Student</Description>
 			</Value>
 			<Value>
 				<Code>StudentProviderEnrolment</Code>
-				<Text>The record of an enrolment relationship between a Student and a Provider.</Text>
+				<Text>StudentProviderEnrolment</Text>
+				<Description>A student’s association with an education provider for the purpose of receiving
+					educational services.</Description>
+			</Value>
+			<Value>
+				<Code>TeachingGroup</Code>
+				<Text>TeachingGroup</Text>
+				<Description>Identifies a particular class or other group of students.</Description>
 			</Value>
 			<Value>
 				<Code>StudentAttendanceTimeList</Code>
-				<Text>Record of a Student's attendance or absence from school or class on a particular day.</Text>
+				<Text>StudentAttendanceTimeList</Text>
+				<Description>Records detail about the attendance spans for a single Student at a single Provider
+					during a single day.</Description>
 			</Value>
 			<Value>
 				<Code>StudentAttendanceSummary</Code>
-				<Text>
-					Aggregate summary of Student's attendance and absence from school across a particular time period.
-				</Text>
+				<Text>StudentAttendanceSummary</Text>
+				<Description>Provides a summary of a student's daily attendance and membership information for a given
+					provider during the time period between the StartDate and EndDate, inclusive.</Description>
+			</Value>
+			<Value>
+				<Code>AssessmentTask</Code>
+				<Text>AssessmentTask</Text>
+				<Description>Provides information about a particular assignment or other assessment task, to be
+					undertaken by one or more Students at some time.  Defines the task separately from
+					each student's attempting the task.</Description>
+			</Value>
+			<Value>
+				<Code>AssessmentTaskRegistration</Code>
+				<Text>AssessmentTaskRegistration</Text>
+				<Description>The student's registration for an assessment task they are intending to participate in.</Description>
+			</Value>
+			<Value>
+				<Code>StudentAssessmentTask</Code>
+				<Text>StudentAssessmentTask</Text>
+				<Description>Record of a student's attempt at a particular assessment task.</Description>
+			</Value>
+			<Value>
+				<Code>AssessmentTaskResult</Code>
+				<Text>AssessmentTaskResult</Text>
+				<Description>Records the result achieved by a single student at a particular assessment task.</Description>
+			</Value>
+			<Value>
+				<Code>StudentAttainment</Code>
+				<Text>StudentAttainment</Text>
+				<Description>Records a student gaining an Attainment e.g. NCEA Qualification, Learning Standard etc.</Description>
+			</Value>
+			<Value>
+				<Code>WellbeingAlert</Code>
+				<Text>WellbeingAlert</Text>
+				<Description>Alert indicating to teachers and systems that this student has a 'concern' that needs
+					to be known for 'duty of care', which could be Medical, Legal or other.
+				</Description>
+			</Value>
+			<Value>
+				<Code>WellbeingCharacteristic</Code>
+				<Text>WellbeingCharacteristic</Text>
+				<Description>Core Wellbeing Characteristic that is integral to the Student. This may be a Medical
+					condition, special needs or a characteristic such as a known disability or any other 
+					characteristic or condition that is student specific and impacts their learning.</Description>
+			</Value>
+			<Value>
+				<Code>WellbeingEvent</Code>
+				<Text>WellbeingEvent</Text>
+				<Description>Record of an event happening that impacts on a school's duty of care to its students.
+					The event records both positive and negative behaviours and is not just the recording
+					of a discipline incident or an accident.</Description>
+			</Value>
+			<Value>
+				<Code>WellbeingResponse</Code>
+				<Text>WellbeingResponse</Text>
+				<Description>A record of the outcome and follow ups generated by a WellbeingEvent.</Description>
+			</Value>
+			<Value>
+				<Code>WellbeingAppeal</Code>
+				<Text>WellbeingAppeal</Text>
+				<Description>Records detail of any appeal or request made by involved parties in regard to
+					a negative/punitive Wellbeing Response that was the result of a student Wellbeing Event.</Description>
+			</Value>
+			<Value>
+				<Code>StudentVoice</Code>
+				<Text>StudentVoice</Text>
+				<Description>Information about a student's interests and academic, career and social goals.</Description>
+			</Value>
+			<Value>
+				<Code>StudentActivityParticipation</Code>
+				<Text>StudentActivityParticipation</Text>
+				<Description>Provides information on a co-curricular or extra-curricular activity in which
+					a student participates during a given school year.</Description>
+			</Value>
+			<Value>
+				<Code>StudentLearningSupportParticipation</Code>
+				<Text>StudentLearningSupportParticipation</Text>
+				<Description>Contains information pertaining to a student's participation in learning 
+					support.</Description>
 			</Value>
 		</Values>
 	  </CodeSet>      <!-- Referrable Data Object -->

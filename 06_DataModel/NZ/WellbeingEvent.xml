@@ -13,7 +13,9 @@
     <Element>WellbeingEvent</Element>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>Event that impacts on a student’s duty of care.  This has been modelled by Sentral as an Incident, by CEOM as a behaviour support incident and by WA previously as an "Incident Report" but looking to move to terminology such as a “Wellbeing Event”.  There is an emphasis that this ‘event’ was needed to track both ‘positive’ and ‘negative’ behaviours and it not just the recording of a discipline incident or an accident.  This event is specific to a student, and is not global (e.g. a pandemic). Where an event involves more than one student, they can be listed in the person’s involved.  Where the event has an impact on a student’s wellbeing an individual record for each student should be generated.  E.g. where a student is reporting that another student fell off his bike, then the reporting student is listed as a person involved.</p>
+      <p>Record of an event happening that impacts on a school's duty of care to its students.
+					The event records both 'positive' and 'negative' behaviours and is not just the recording
+					of a discipline incident or an accident.</p>
     </Description>
   </Item>
 
