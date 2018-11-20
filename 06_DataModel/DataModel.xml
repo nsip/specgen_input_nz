@@ -75,5 +75,8 @@
 		<xi:include parse="xml" href="NZ/WellbeingEvent.xml"/>
 		<xi:include parse="xml" href="NZ/WellbeingResponse.xml"/>
 		<xi:include parse="xml" href="NZ/WellbeingAppeal.xml"/>
+
+		<!-- Aromatawai / Assessment -->
+		<xi:include parse="xml" href="NZ/AssessmentTask.xml"/>
 	</Group>
 </DataObjects>

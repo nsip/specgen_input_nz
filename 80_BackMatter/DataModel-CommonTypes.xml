@@ -23,6 +23,9 @@
 	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Attendance.xml"/>
 	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Wellbeing.xml"/>
 
+	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Assessment.xml"/>
+
+	<!--  Genuinely common data types re-used across multiple of the above domains -->
 	<CommonElement name="ObjectReferenceType" type="true" dm="true">
 		<Item>
 			<Element>ObjectReferenceType</Element>
@@ -71,5 +74,28 @@
 				<ObjectType>EducationOrganisation</ObjectType>
 			</ObjectReference>
 		</xhtml:Example>
+	</CommonElement>
+
+	<CommonElement name="PrerequisiteListType" type="true" dm="true">
+		<Item>
+			<Element>PrerequisiteListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>References to ProviderCourses, LearningStandards, Credentials, or AssessmentTasks that
+					 the student must have completed or passed to engage in futher courses, 
+					 activities and assessment tasks.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Prerequisite</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>A reference to a ProviderCourse, LearningStandard, Credential, or AssessmentTask that
+					 the student must have completed or passed to engage in futher courses, 
+					 activities and assessment tasks.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>
 	</CommonElement>
 </IncludeGroup>

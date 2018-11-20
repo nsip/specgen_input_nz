@@ -185,7 +185,6 @@
 
 
 	<!-- Defined by SIF NZ 	-->
-	
 	<CommonElement name="SchoolServiceType" type="true" dm="true">
 		<Item>
 			<Element>SchoolServiceType</Element>
