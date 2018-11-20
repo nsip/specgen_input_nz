@@ -56,10 +56,11 @@
 		<xi:include parse="xml" href="NZ/StudentContactPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StudentContactRelationship.xml"/>
 		
-		<!-- Curriculum, Courses & Learning Standards -->
+		<!-- Curriculum, Courses, Learning Standards & Credentials -->
+		<xi:include parse="xml" href="NZ/TeachingGroup.xml"/>
 		<xi:include parse="xml" href="NZ/ProviderCourse.xml"/>
 		<xi:include parse="xml" href="NZ/LearningStandard.xml"/>
-		<xi:include parse="xml" href="NZ/TeachingGroup.xml"/>
+		<xi:include parse="xml" href="NZ/Credential.xml"/>
 
 		<!-- Student Enrolment -->
 		<xi:include parse="xml" href="NZ/StudentProviderEnrolment.xml"/>
