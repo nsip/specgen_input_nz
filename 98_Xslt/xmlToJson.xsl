@@ -32,10 +32,14 @@
        Frank Schwichtenberg - Namespace prefix name bug.
        Wilson Cheung - Bug report and fix for invalid number serialization.
        Danny Cohn - Bug report and fix for invalid floating point number serialization.
+
      Copyright:
       2006-2014, Bram Stein
       Licensed under the new BSD License.
       All rights reserved.
+
+      Edits by Stuart McGrigor (StuMcG)
+       - Make sure comments from original XML don't corrupt the JSON output
   -->
   <xsl:param name="debug" as="xs:boolean" select="false()"/>
   <xsl:param name="use-rabbitfish" as="xs:boolean" select="true()"/>
@@ -179,8 +183,8 @@
         <json:member>
           <xsl:copy-of select="json:create-string($node)"/>
           <json:value>
-			<xsl:copy-of select="$node/@json:force-string"/>
-            <xsl:copy-of select="json:create-children($node)"/>
+			    <xsl:copy-of select="$node/@json:force-string"/>
+          <xsl:copy-of select="json:create-children($node)"/>
           </json:value>
         </json:member>
       </xsl:otherwise>
@@ -192,7 +196,7 @@
     <xsl:choose>
       <xsl:when test="exists($node/child::text()) and count($node/child::node()) eq 1">
           <xsl:choose>
-			<xsl:when test="(count($node/namespace::*) gt 0 and $use-namespaces) or count($node/@*[(not(../@json:force-array) or count(.|../@json:force-array)=2) and (not(../@json:force-string) or count(.|../@json:force-string)=2)]) gt 0">            
+          <xsl:when test="(count($node/namespace::*) gt 0 and $use-namespaces) or count($node/@*[(not(../@json:force-array) or count(.|../@json:force-array)=2) and (not(../@json:force-string) or count(.|../@json:force-string)=2)]) gt 0">            
             <json:object>
               <xsl:copy-of select="json:create-namespaces($node)"/>
               <xsl:copy-of select="json:create-attributes($node)"/>
@@ -369,7 +373,13 @@
   </xsl:template>
 
   <xsl:template match="json:member" mode="json">
-    <xsl:text/><member><xsl:apply-templates mode="json"/></member><xsl:text/>
+    <!-- StuMcG
+          Comments in the original XML end up as json:member with an empty json:name and json:value;
+          There's no way to include comments in JSON; so just dump them
+    -->
+    <xsl:if test="string-length(json:name) gt 0">
+      <xsl:text/><member><xsl:apply-templates mode="json"/></member><xsl:text/>
+    </xsl:if>
   </xsl:template>
 
   <xsl:function name="json:encode-string" as="xs:string">
