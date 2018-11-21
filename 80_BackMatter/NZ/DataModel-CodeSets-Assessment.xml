@@ -67,6 +67,7 @@
 		</Intro>
 		<ID>Score Metric</ID>
 		<Values>
+			<!-- PAT test metrics -->
 			<Value>
 				<Code>101</Code>
 				<Text>Raw</Text>
@@ -87,6 +88,8 @@
 				<Code>105</Code>
 				<Text>Year Level</Text>
 			</Value>    <!-- Year Level -->
+
+			<!-- NZQA metrics -->
 			<Value>
 				<Code>106</Code>
 				<Text>NA</Text>
@@ -97,6 +100,13 @@
 				<Text>NAME</Text>
 				<Description>NZQA Achievement Standards: Not Achieved, Achieved, Achieved with Merit, Achieved with Excellence</Description>
 			</Value>    <!-- NA -->
+
+			<!--asTTle metrics -->
+			<Value>
+				<Code>108</Code>
+				<Text>Curriculum Level</Text>
+				<Description>Student is assessed to be at one of the levels defined by The National Curriculum: 1A, 1B through 5A, 5B</Description>
+			</Value>
 		</Values>
 	</CodeSet>    <!-- Score Metric -->
 

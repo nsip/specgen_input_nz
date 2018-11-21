@@ -79,5 +79,6 @@
 
 		<!-- Aromatawai / Assessment -->
 		<xi:include parse="xml" href="NZ/AssessmentTask.xml"/>
+		<xi:include parse="xml" href="NZ/AssessmentTaskResult.xml"/>
 	</Group>
 </DataObjects>

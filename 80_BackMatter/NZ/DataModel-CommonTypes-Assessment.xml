@@ -296,4 +296,107 @@
 			<Type ref="CodeSets" name="NZCodeSetsSpecialAssessmentConditionType"/>
 		</Item>
 	</CommonElement>
+
+	<CommonElement name="AssessmentResultScoreListType" type="true" dm="true">
+		<Item>
+			<Element>AssessmentResultScoreListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of scores for the assessment task result.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>ResultScore</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>An Assessment Result Score that is a member of the related AssessmentResultScoreList.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AssessmentScoreType"/>
+		</Item>     <!-- ResultScore -->
+
+		<xhtml:Example xmlns="" name="PAT Result Score List Example" intl="nz">
+			<ResultScoreList>
+				<ResultScore>
+					<ScoreMetric>101</ScoreMetric>  <!-- Raw Score -->
+					<ScoreValue>25</ScoreValue>
+				</ResultScore>
+				<ResultScore>
+					<ScoreMetric>102</ScoreMetric>  <!-- Scale Score -->
+					<ScoreValue>38.5</ScoreValue>
+				</ResultScore>
+				<ResultScore>
+					<ScoreMetric>103</ScoreMetric>  <!-- Margin of Error -->
+					<ScoreValue>5.0</ScoreValue>
+				</ResultScore>
+				<ResultScore>
+					<ScoreMetric>104</ScoreMetric>  <!-- Stanine -->
+					<ScoreValue>6</ScoreValue>
+				</ResultScore>
+				<ResultScore>
+					<ScoreMetric>105</ScoreMetric>  <!-- Year Level -->
+					<ScoreValue>4</ScoreValue>
+				</ResultScore>				
+			</ResultScoreList>
+  		</xhtml:Example>
+		  
+		<xhtml:Example xmlns="" name="asTTle Result Score List Example" intl="nz">
+			<ResultScoreList>
+				<ResultScore>
+					<Competency>Ideas</Competency>
+					<ScoreMetric>101</ScoreMetric>  <!-- Raw Score -->
+					<ScoreValue>1234</ScoreValue>
+				</ResultScore>
+				<ResultScore>
+					<Competency>Ideas</Competency>
+					<ScoreMetric>108</ScoreMetric>  <!-- Curriculum Level -->
+					<ScoreValue>5B</ScoreValue>
+				</ResultScore>
+				<ResultScore>
+					<Competency>Overall</Competency>
+					<ScoreMetric>101</ScoreMetric>  <!-- Raw Score -->
+					<ScoreValue>1591</ScoreValue>
+				</ResultScore>
+				<ResultScore>
+					<Competency>Overall</Competency>
+					<ScoreMetric>108</ScoreMetric>  <!-- Curriculum Level -->
+					<ScoreValue>5B</ScoreValue>
+				</ResultScore>
+			</ResultScoreList>
+  		</xhtml:Example>
+	</CommonElement>
+
+	<CommonElement name="AssessmentScoreType" type="true" dm="true">
+		<Item>
+			<Element>AssessmentScoreType</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>An individual result score for the assessment task.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Competency</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>String describing a particular competency that is being reported in the assessment.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- Competency -->
+		<Item>
+			<Element>ScoreMetric</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A code denoting the type of metric the ScoreValue represents.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsScoreMetricType"/>
+		</Item>    <!-- ScoreMetric -->		
+		<Item>
+			<Element>ScoreValue</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The actual score </p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>    <!-- ScoreValue -->
+	</CommonElement>
 </IncludeGroup>
