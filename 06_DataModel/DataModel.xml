@@ -81,5 +81,6 @@
 		<xi:include parse="xml" href="NZ/AssessmentTask.xml"/>
 		<xi:include parse="xml" href="NZ/AssessmentTaskResult.xml"/>
 		<xi:include parse="xml" href="NZ/AssessmentTaskRegistration.xml"/>
+		<xi:include parse="xml" href="NZ/StudentAssessmentTask.xml"/>
 	</Group>
 </DataObjects>

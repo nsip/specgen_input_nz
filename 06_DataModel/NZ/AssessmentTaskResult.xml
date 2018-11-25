@@ -28,7 +28,7 @@
 
   <if intl="nz">  
     <Item>
-      <Element>AssessmentTasktRefId</Element>
+      <Element>AssessmentTaskRefId</Element>
       <Characteristics>M</Characteristics>
       <privacyRating>Low</privacyRating>
       <Description>
@@ -202,14 +202,14 @@
       <Type name="xs:date"></Type>
     </Item>    <!-- DateAssessed -->
     <Item>
-      <Element>DateNotified</Element>
+      <Element>DateStudentNotified</Element>
       <Characteristics>O</Characteristics>
       <privacyRating>Low</privacyRating>
       <Description>
         <p>The date the student was notified of their final mark for the assessment task.</p>
       </Description>
       <Type name="xs:date"></Type>
-    </Item>    <!-- DateNotified -->
+    </Item>    <!-- DateStudentNotified -->
     <Item>
       <Element>AssessmentResultIteration</Element>
       <Characteristics>O</Characteristics>
@@ -229,14 +229,14 @@
       <Type ref="CommonTypes" name="AssessmentResultScoreListType"></Type>
     </Item>    <!-- ResultScoreList -->
     <Item>
-      <Element>FinalMarkScore</Element>
+      <Element>FinalMarkValue</Element>
       <Characteristics>O</Characteristics>
       <privacyRating>Low</privacyRating>
       <Description>
         <p>The final mark that was given to the student for this assessment task.</p>
       </Description>
       <Type name="xs:normalizedString"></Type>
-    </Item>    <!-- FinalMarkScore -->
+    </Item>    <!-- FinalMarkValue -->
   </if>
 
   <if intl="au">
