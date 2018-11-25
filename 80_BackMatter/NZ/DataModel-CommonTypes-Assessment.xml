@@ -1,7 +1,9 @@
 ﻿<IncludeGroup xmlns:xs="http://www.w3.org/2001/XMLSchema" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:xi="http://www.w3.org/2001/XInclude" 
-	xmlns:xhtml="http://www.w3.org/1999/xhtml" 
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
 	xmlns="http://sifassociation.org/SpecGen">
 
 	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
@@ -398,5 +400,123 @@
 			</Description>
 			<Type name="xs:normalizedString"></Type>
 		</Item>    <!-- ScoreValue -->
+	</CommonElement>
+
+	<CommonElement name="JustificationListType" type="true" dm="true">
+		<Item>
+			<Element>JustificationListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list identifying the assessment task results that justify the student
+					 achieving this attainment.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Justification</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>A generic reference to an assessment task result or other student attainment
+					 that justifies the student achieving this attainment.</p>
+			</Description>
+			<Type ref="CommonTypes" name="JustificationType"/>
+		</Item>     <!-- Justification -->
+
+		<xhtml:Example xmlns="" name="Multiple Unit Standards Justification List">
+			<JustificationList>
+				<Justification>
+					<RefId>2752a16b-b62a-4973-9d44-23e13e1c037b</RefId>
+					<LocalId>91165-v2</LocalId>
+					<Name>Demonstrate understanding of the properties of selected organic compounds</Name>
+					<ObjectType>AssessmentTaskResult</ObjectType>
+					<AssessmentMode json:force-string="true">2</AssessmentMode>
+					<Result>Achieved</Result>
+					<Date>2016-06-28</Date>
+					<CreditValue>4</CreditValue>					
+				</Justification>
+				<Justification>
+					<RefId>eca0da5d-94af-4223-aaa6-7c0083006efd</RefId>
+					<LocalId>91166-v2</LocalId>
+					<Name>Demonstrate understanding of chemical reactivity</Name>
+					<ObjectType>AssessmentTaskResult</ObjectType>
+					<AssessmentMode json:force-string="true">1</AssessmentMode>
+					<Result>Achieved with merit</Result>
+					<Date>2016-06-01</Date>
+					<CreditValue>3</CreditValue>					
+				</Justification>				
+				<Justification>
+					<RefId>12f4761d-5e97-4e12-804e-e16d882c86c7</RefId>
+					<LocalId>91167-v2</LocalId>
+					<Name>Demonstrate understanding of oxidation-reduction</Name>
+					<ObjectType>AssessmentTaskResult</ObjectType>
+					<AssessmentMode json:force-string="true">2</AssessmentMode>
+					<Result>Achieved</Result>
+					<Date>2016-06-01</Date>
+					<CreditValue>3</CreditValue>										
+				</Justification>				
+			</JustificationList>
+  		</xhtml:Example>	  
+	</CommonElement>
+
+	<CommonElement name="JustificationType" type="true" dm="true">
+		<Item>
+			<Element>JustificationType</Element>
+			<Description>
+				<p>Details of an assessment task result or other student attainment that 
+					justifies the student achieving this attainment.
+				</p>
+			</Description>
+			<Type complex="extension" name="ObjectReferenceType"/>
+		</Item>
+
+		<Item>
+			<Element>AssessmentMode</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>A Code denoting how the owner of the e-mail address describes it.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsAssessmentMode"/>
+		</Item>    <!-- AssessmentMode -->
+
+		<Item>
+			<Element>Result</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The final result of the assessment task that justifies the attainment.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>   <!-- Result -->
+
+		<Item>
+			<Element>Date</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date the justifying assessment task was achieved.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>   <!-- Date -->
+
+		<Item>
+			<Element>CreditValue</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The number of credits the justifying assessment task contributes towards this attainment.</p>
+			</Description>
+			<Type name="xs:decimal"/>
+		</Item>   <!-- CreditValue -->
+
+		<xhtml:Example xmlns="" name="Justification Example">
+			<Justification>
+				<RefId>eca0da5d-94af-4223-aaa6-7c0083006efd</RefId>
+				<LocalId>91166-v2</LocalId>
+				<Name>Demonstrate understanding of chemical reactivity</Name>
+				<ObjectType>AssessmentTaskResult</ObjectType>
+				<AssessmentMode json:force-string="true">1</AssessmentMode>
+				<Result>Achieved with merit</Result>
+				<Date>2016-06-01</Date>
+				<CreditValue>3</CreditValue>
+			</Justification>						
+		</xhtml:Example>
 	</CommonElement>
 </IncludeGroup>

@@ -225,6 +225,14 @@
 				</Description>
 			</Value>
 			<Value>
+				<Code>Credential</Code>
+				<Text>Credential</Text>
+				<Description>A qualification or other award published by a national body, professional association
+					 or other interested party. The Credential recognises a set of learning that students have
+					 undertaken and successfully completed.
+				</Description>
+			</Value>			
+			<Value>
 				<Code>StaffPersonal</Code>
 				<Text>StaffPersonal</Text>
 				<Description>All the personal, contact and demographic information relating to a staff member,

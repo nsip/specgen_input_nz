@@ -3,7 +3,8 @@
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			xmlns:xi="http://www.w3.org/2001/XInclude"
 			xmlns:xhtml="http://www.w3.org/1999/xhtml"
-	
+			xmlns:json="http://json.org/"
+
       xmlns="http://sifassociation.org/SpecGen">
 	
   <Key>RefId</Key>
@@ -192,8 +193,8 @@
         </StaffMember>
       </InvigilatorStaffList>
       <DateTimeAssessmentScheduled>2018-11-25T09:00:00+12:00</DateTimeAssessmentScheduled>
-      <AssessmentType>102</AssessmentType>   <!-- External Exam -->
-      <SubjectArea>4</SubjectArea>
+      <AssessmentType json:force-string="true">102</AssessmentType>   <!-- External Exam -->
+      <SubjectArea json:force-string="true">4</SubjectArea>
       <YearLevel>11</YearLevel>
     </StudentAssessmentTask>
   </xhtml:Example>
