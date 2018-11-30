@@ -119,7 +119,7 @@
 		<xsl:text>            application/xml:&#x0a;</xsl:text>
 		<xsl:text>              schema:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('                $ref: ''#/components/schemas/', @name, 's''&#x0a;')"/>
-		<xsl:apply-templates select="xhtml:Example[1]" mode="xml"/>
+		<xsl:call-template name="includeExamples"/>
 	</xsl:template>
 
 	<xsl:template match="specgen:DataObject" mode="schemasSingle">
@@ -134,10 +134,22 @@
 		</xsl:apply-templates>
 	</xsl:template>
 
+	<xsl:template name="includeExamples">
+		<xsl:if test="boolean(xhtml:Example)">
+			<xsl:text>          examples:&#x0a;</xsl:text>
+			<xsl:apply-templates select="xhtml:Example[1]" mode="json"/>
+			<xsl:apply-templates select="xhtml:Example[1]" mode="xml"/>
+		</xsl:if>
+	</xsl:template>
+
+	<xsl:template match="xhtml:Example" mode="json">
+		<xsl:text>            application/json: &gt;-&#x0a;</xsl:text>
+		<xsl:value-of select="xfn:jsonString(*, '             ')"/>
+	</xsl:template>
+
 	<xsl:template match="xhtml:Example" mode="xml">
-	<xsl:text>          examples:&#x0a;</xsl:text>
-	<xsl:text>            application/xml: &gt;-&#x0a;</xsl:text>
-	<xsl:value-of select="concat('             ', xfn:xmlString(*), '&#x0a;')"/>
+		<xsl:text>            application/xml: &gt;-&#x0a;</xsl:text>
+		<xsl:value-of select="xfn:xmlString(*, '              ')"/>
 	</xsl:template>
 
 	<xsl:template match="specgen:DataObject" mode="schemasList">
@@ -428,10 +440,26 @@
 	<!-- Custom function XML to string -->
 	<xsl:function name="xfn:xmlString" as="xs:string">
 		<xsl:param name="inXml"/>
+		<xsl:param name="pfx"/>
+
 		<xsl:variable name="outStr">
-			<xsl:apply-templates select="$inXml" mode="nodetostring"/>
+			<xsl:apply-templates select="$inXml" mode="nodetostring">
+				<xsl:with-param name="pfx"><xsl:value-of select="$pfx"/></xsl:with-param>
+			</xsl:apply-templates>
 		</xsl:variable>
-		<xsl:value-of select="replace(normalize-space($outStr), '&gt; &lt;', '&gt;&lt;')"/>
+		<xsl:value-of select="$outStr"/>
+	</xsl:function>
+
+	<xsl:function name="xfn:jsonString" as="xs:string">
+		<xsl:param name="inXml"/>
+		<xsl:param name="pfx"/>
+
+		<xsl:variable name="outStr">
+			<xsl:apply-templates select="$inXml" mode="nodetojson">
+				<xsl:with-param name="pfx"><xsl:value-of select="$pfx"/></xsl:with-param>
+			</xsl:apply-templates>
+		</xsl:variable>
+		<xsl:value-of select="$outStr"/>
 	</xsl:function>
 
 	<xsl:variable name="q">
@@ -441,42 +469,31 @@
 
 
 	<xsl:template match="*" mode="selfclosetag">
-		<xsl:text>&lt;</xsl:text>
-		<xsl:value-of select="name()"/>
-		<xsl:apply-templates select="@*" mode="attribs"/>
-		<xsl:text>/&gt;</xsl:text>
-	</xsl:template>
-
-	<xsl:template match="*" mode="opentag">
-		<xsl:text>&lt;</xsl:text>
-		<xsl:value-of select="name()"/>
+		<xsl:value-of select="concat('&lt;', name())"/>
 		<xsl:apply-templates select="@*[not(namespace-uri() = 'http://json.org/')]" mode="attribs"/>
-		<xsl:text>&gt;</xsl:text>
-	</xsl:template>
-
-	<xsl:template match="*" mode="closetag">
-		<xsl:text>&lt;/</xsl:text>
-		<xsl:value-of select="name()"/>
-		<xsl:text>&gt;</xsl:text>
+		<xsl:text>/&gt;&#x0a;</xsl:text>
 	</xsl:template>
 
 	<xsl:template match="* | text()" mode="nodetostring">
+		<xsl:param name="pfx"/>
+
 		<xsl:choose>
 			<xsl:when test="boolean(name())">
 				<xsl:choose>
-					<!--
-						if element is not empty
-					-->
-					<xsl:when test="normalize-space(.) != $empty or *">
-						<xsl:apply-templates select="." mode="opentag"/>
-							<xsl:apply-templates select="* | text()" mode="nodetostring"/>
-						<xsl:apply-templates select="." mode="closetag"/>
+					<!-- element has children -->
+					<xsl:when test="*">
+						<xsl:value-of select="concat($pfx, '&lt;', name(), '&gt;&#x0a;')"/> 
+
+						<xsl:apply-templates select="*" mode="nodetostring">
+							<xsl:with-param name="pfx"><xsl:value-of select="concat($pfx, '  ')"/></xsl:with-param>
+						</xsl:apply-templates>
+						<xsl:value-of select="concat($pfx, '&lt;/', name(), '&gt;&#x0a;')"/>
 					</xsl:when>
 					<!--
-						assuming emty tags are self closing, e.g. <img/>, <source/>, <input/>
+						Just a text element 
 					-->
 					<xsl:otherwise>
-						<xsl:apply-templates select="." mode="selfclosetag"/>
+						<xsl:value-of select="concat($pfx, '&lt;/', name(), '&gt;', normalize-space(.),'&lt;/', name(), '&gt;&#x0a;')"/> 
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:when>
@@ -495,4 +512,33 @@
 			<xsl:text> </xsl:text>
 		</xsl:if>
 	</xsl:template>	
+
+	<xsl:template match="*" mode="nodetojson">
+		<xsl:param name="pfx"/>
+		<xsl:choose>
+			<xsl:when test="boolean(name())">
+				<xsl:choose>
+					<!-- element has children -->
+					<xsl:when test="*">
+						<xsl:value-of select="concat($pfx, name(), ': { &#x0a;')"/>
+						<xsl:apply-templates select="*" mode="nodetojson">
+							<xsl:with-param name="pfx">
+								<xsl:value-of select="concat($pfx, '  ')"/>
+							</xsl:with-param>
+						</xsl:apply-templates>
+						<xsl:value-of select="concat($pfx, '}&#x0a;')"/>
+					</xsl:when>
+					<!--
+						assuming emty tags are self closing, e.g. <img/>, <source/>, <input/>
+					-->
+					<xsl:otherwise>
+						<xsl:value-of select="concat($pfx, name(), ': &quot;', normalize-space(.), '&quot;,&#x0a;')"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="concat('&quot;', ., '&quot;,')"/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
 </xsl:stylesheet>
