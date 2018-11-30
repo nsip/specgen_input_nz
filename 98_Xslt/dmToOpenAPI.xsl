@@ -3,7 +3,9 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:specgen="http://sifassociation.org/SpecGen"
 	xmlns:xfn="http://stuart.geek.nz/xslt-functions"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/">
 
 	<!-- Take a SIF_DataModel.input.xml file and produce a matching OpenAPI v3.0.0 spec -->
 	<xsl:output method="text" omit-xml-declaration="yes" indent="no"/>
@@ -16,8 +18,12 @@
                                       'info:&#x0a;',
                                       '  version: ', $sifVersion, '&#x0a;',
                                       '  title: &quot;SIF ', $sifLocale, ' derived API&quot;&#x0a;',
-									  '  description: ', normalize-space(specgen:TitlePage/specgen:h1), '&#x0a;')"/>
-		
+									  '  description: ', normalize-space(specgen:TitlePage/specgen:h1), '&#x0a;',
+									  '  host: &quot;api.terito.education.govt.nz&quot;&#x0a;',
+									  '  basePath: &quot;v3&quot;&#x0a;')"/>
+
+		<xsl:apply-templates select=".//specgen:Section[@name = 'Domain Map']" mode="DomainMap"/>
+
 		<xsl:text># /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
 		<xsl:apply-templates select=".//specgen:DataObjects" mode="paths"/>
 
@@ -29,21 +35,39 @@
 		<xsl:apply-templates select=".//specgen:DataObjects//specgen:DataObject" mode="schemasSingle"/>
 		
 		<xsl:apply-templates select=".//specgen:Appendix[@name = 'Common Types']//specgen:CommonElement"/>
-		<xsl:apply-templates select=".//specgen:Appendix[@name = 'Code Sets']//specgen:CodeSet"/>
+		<xsl:apply-templates select=".//specgen:Appendix[ends-with(@name,'Code Sets')]//specgen:CodeSet"/>
 	</xsl:template>
 
+	<xsl:template match="specgen:Section" mode="DomainMap">
+		<xsl:text>tags:&#x0a;</xsl:text>
+		<xsl:apply-templates select="specgen:Domain" mode="DomainMap"/>
+	</xsl:template>
+
+	<xsl:template match="specgen:Domain" mode="DomainMap">
+	    <xsl:value-of select="concat('- name: ', @name, '&#x0a;')"/>
+		<xsl:text>  description: &gt;-&#x0a;    </xsl:text>
+		<xsl:apply-templates select="specgen:Intro"/><xsl:text>&#x0a;</xsl:text>
+		<xsl:text>  externalDocs: &#x0a;</xsl:text>
+		<xsl:value-of select="concat('    description: &quot;', @name, ' Domain in SIF NZ Data Model&quot;&#x0a;')"/>
+		<xsl:value-of select="concat('    url: &quot;http://localhost:8080/DomainMap.html#Domain__', xfn:cleanUrl(@name), '&quot;&#x0a;')"/>
+	</xsl:template>
 
 	<xsl:template match="specgen:DataObjects" mode="paths">
-		<xsl:text>paths:&#x0a;</xsl:text>
-
+		<xsl:text>paths:&#x0a;</xsl:text>		
 		<xsl:apply-templates select=".//specgen:DataObject" mode="paths"/>
 	</xsl:template>              
 
 	<xsl:template match="specgen:DataObject" mode="paths">
+		<xsl:variable name="tags">
+			<xsl:for-each select="//specgen:Domain[specgen:DataObject = current()/@name]">
+				<xsl:value-of select="concat('      - ', @name, '&#x0a;')"/>
+			</xsl:for-each>
+		</xsl:variable>
 		<xsl:text>  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
 		<xsl:value-of select="concat('  /', @name, 's:&#x0a;')"/>
 		<xsl:text>    get:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('      tags:&#x0a;      - ', @name, 's&#x0a;')"/>
+		<xsl:text>      tags:&#x0a;</xsl:text>
+		<xsl:value-of select="$tags"/>
 		<xsl:value-of select="concat('      summary: Default operation to get a list of all available ', @name, 's&#x0a;')"/>
 		<xsl:apply-templates select="." mode="responsesList"/>
 			
@@ -51,7 +75,8 @@
 			<xsl:text>  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
 			<xsl:value-of select="concat('  /', @name, 's/{', lower-case(@name), translate(specgen:Key, '@', ''), '}:&#x0a;')"/>
 			<xsl:text>    get:&#x0a;</xsl:text>
-			<xsl:value-of select="concat('      tags:&#x0a;      - ', @name, 's&#x0a;')"/>
+			<xsl:text>      tags:&#x0a;</xsl:text>
+			<xsl:value-of select="$tags"/>
 			<xsl:value-of select="concat('      summary: Default operation to get a single ', @name, '&#x0a;')"/>
 			<xsl:value-of select="concat('      parameters:&#x0a;      - name: ', lower-case(@name), translate(specgen:Key, '@', ''), '&#x0a;')"/>
 			<xsl:text>        in: path&#x0a;        description: >-&#x0a;          </xsl:text>
@@ -79,6 +104,7 @@
 		<xsl:text>              schema:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('                $ref: ''#/components/schemas/', @name, '''&#x0a;')"/>
 	</xsl:template>
+
     <xsl:template match="specgen:DataObject" mode="responsesList">
 		<xsl:text>      responses:&#x0a;</xsl:text>
         <xsl:text>        '200':&#x0a;</xsl:text>
@@ -93,6 +119,7 @@
 		<xsl:text>            application/xml:&#x0a;</xsl:text>
 		<xsl:text>              schema:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('                $ref: ''#/components/schemas/', @name, 's''&#x0a;')"/>
+		<xsl:apply-templates select="xhtml:Example[1]" mode="xml"/>
 	</xsl:template>
 
 	<xsl:template match="specgen:DataObject" mode="schemasSingle">
@@ -106,6 +133,13 @@
 			<xsl:with-param name="indent" select="'        '"/>
 		</xsl:apply-templates>
 	</xsl:template>
+
+	<xsl:template match="xhtml:Example" mode="xml">
+	<xsl:text>          examples:&#x0a;</xsl:text>
+	<xsl:text>            application/xml: &gt;-&#x0a;</xsl:text>
+	<xsl:value-of select="concat('             ', xfn:xmlString(*), '&#x0a;')"/>
+	</xsl:template>
+
 	<xsl:template match="specgen:DataObject" mode="schemasList">
 		<xsl:text>    # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
 		<xsl:value-of select="concat('    ', @name, 's:&#x0a;',
@@ -352,13 +386,23 @@
 	<xsl:template match="specgen:p|specgen:br
 						 |specgen:code|specgen:strong|specgen:em|specgen:span
 						 |specgen:h1|specgen:h2|specgen:h3|specgen:h4
-						 |specgen:img
 						 |specgen:ul|specgen:ol|specgen:li
 						 |specgen:dl|specgen:dt|specgen:dd
 						 |specgen:table|specgen:thead|specgen:tbody|specgen:tr|specgen:th|specgen:td">
-		<xsl:value-of select="concat('&lt;', local-name(.), '&gt;')"/>
-		<xsl:apply-templates/>
-		<xsl:value-of select="concat('&lt;/', local-name(.), '&gt;')"/>
+		<xsl:value-of select="concat('&lt;', local-name(.))"/>
+		<xsl:for-each select="@*">
+			<xsl:value-of select="concat(' ', local-name(.), '=&quot;', . , '&quot;')"/>
+		</xsl:for-each>
+		<xsl:choose>
+			<xsl:when test="not(*) and not(normalize-space())">
+				<xsl:text>/&gt;</xsl:text>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>&gt;</xsl:text>
+				<xsl:apply-templates/>
+				<xsl:value-of select="concat('&lt;/', local-name(.), '&gt;')"/>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
 
@@ -374,4 +418,81 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>
+
+	<!-- Custom function to tidy up URL -->
+	<xsl:function name="xfn:cleanUrl" as="xs:string">
+		<xsl:param name="inUrl"/>
+		<xsl:value-of select="replace(replace($inUrl, ' ', ''), '&amp;', '')"/>
+	</xsl:function>
+
+	<!-- Custom function XML to string -->
+	<xsl:function name="xfn:xmlString" as="xs:string">
+		<xsl:param name="inXml"/>
+		<xsl:variable name="outStr">
+			<xsl:apply-templates select="$inXml" mode="nodetostring"/>
+		</xsl:variable>
+		<xsl:value-of select="replace(normalize-space($outStr), '&gt; &lt;', '&gt;&lt;')"/>
+	</xsl:function>
+
+	<xsl:variable name="q">
+		<xsl:text>"</xsl:text>
+	</xsl:variable>
+	<xsl:variable name="empty"/>
+
+
+	<xsl:template match="*" mode="selfclosetag">
+		<xsl:text>&lt;</xsl:text>
+		<xsl:value-of select="name()"/>
+		<xsl:apply-templates select="@*" mode="attribs"/>
+		<xsl:text>/&gt;</xsl:text>
+	</xsl:template>
+
+	<xsl:template match="*" mode="opentag">
+		<xsl:text>&lt;</xsl:text>
+		<xsl:value-of select="name()"/>
+		<xsl:apply-templates select="@*[not(namespace-uri() = 'http://json.org/')]" mode="attribs"/>
+		<xsl:text>&gt;</xsl:text>
+	</xsl:template>
+
+	<xsl:template match="*" mode="closetag">
+		<xsl:text>&lt;/</xsl:text>
+		<xsl:value-of select="name()"/>
+		<xsl:text>&gt;</xsl:text>
+	</xsl:template>
+
+	<xsl:template match="* | text()" mode="nodetostring">
+		<xsl:choose>
+			<xsl:when test="boolean(name())">
+				<xsl:choose>
+					<!--
+						if element is not empty
+					-->
+					<xsl:when test="normalize-space(.) != $empty or *">
+						<xsl:apply-templates select="." mode="opentag"/>
+							<xsl:apply-templates select="* | text()" mode="nodetostring"/>
+						<xsl:apply-templates select="." mode="closetag"/>
+					</xsl:when>
+					<!--
+						assuming emty tags are self closing, e.g. <img/>, <source/>, <input/>
+					-->
+					<xsl:otherwise>
+						<xsl:apply-templates select="." mode="selfclosetag"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="."/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+
+	<xsl:template match="@*" mode="attribs">
+		<xsl:if test="position() = 1">
+			<xsl:text> </xsl:text>
+		</xsl:if>
+		<xsl:value-of select="concat(name(), '=', $q, ., $q)"/>
+		<xsl:if test="position() != last()">
+			<xsl:text> </xsl:text>
+		</xsl:if>
+	</xsl:template>	
 </xsl:stylesheet>

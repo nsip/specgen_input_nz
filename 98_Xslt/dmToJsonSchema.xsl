@@ -24,7 +24,7 @@
 		<xsl:apply-templates select=".//specgen:DataObjects//specgen:DataObject" mode="schemasSingle"/>
 
 		<xsl:apply-templates select=".//specgen:Appendix[@name = 'Common Types']//specgen:CommonElement"/>
-		<xsl:apply-templates select=".//specgen:Appendix[@name = 'Code Sets']//specgen:CodeSet"/>
+		<xsl:apply-templates select=".//specgen:Appendix[ends-with(@name, 'Code Sets')]//specgen:CodeSet"/>
 	</xsl:template>
 
 
