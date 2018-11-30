@@ -12,7 +12,6 @@
 
 
 	<!-- This file has been chopped up into domain based component files -->
-	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Calendar.xml"/>
 	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Curriculum.xml"/>
 
 	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-SchoolStructure.xml"/>

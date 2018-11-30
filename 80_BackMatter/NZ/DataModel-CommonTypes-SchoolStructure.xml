@@ -367,6 +367,7 @@
 			</SchoolYearList>
 		</xhtml:Example>
 	</CommonElement>
+	
 	<CommonElement name="SchoolYearLevelType" type="true" dm="true">
 		<Item>
 			<Element>SchoolYearLevelType</Element>

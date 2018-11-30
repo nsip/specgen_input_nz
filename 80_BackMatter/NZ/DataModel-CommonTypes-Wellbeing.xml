@@ -140,10 +140,7 @@
 				<Element>WellbeingEventSubCategory</Element>
 				<Characteristics>MR</Characteristics>
 				<Description></Description>
-				<Union>
-					<Type ref="CodeSets" name="NZCodeSetsWellbeingEventSubCategoryType"/>
-					<Type name="xs:string"/>
-				</Union>	 
+				<Type ref="CodeSets" name="NZCodeSetsWellbeingEventSubCategoryType"/>
 			</Item>    <!-- WellbeingEventSubCategory -->
 		</CommonElement>
 		
