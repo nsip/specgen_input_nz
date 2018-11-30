@@ -230,7 +230,7 @@
         e.g.  "Junior Student Dean" could have responsibility for all students in
          year levels 9 &amp; 10.</p>
     </Description>
-    <Type ref="CommonTypes" name="YearLevelsType"></Type>
+    <Type ref="CommonTypes" name="YearLevelListType"></Type>
   </Item>      <!-- YearLevels -->
 
   <if intl="au">

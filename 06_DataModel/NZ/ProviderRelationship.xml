@@ -120,7 +120,7 @@
       <p>A list of YearLevels, denoting the year levels of the
 		  learners being hosted or sent from the client or contributing provider</p>
     </Description>
-    <Type ref="CommonTypes" name="YearLevelsType"/>
+    <Type ref="CommonTypes" name="YearLevelListType"/>
   </Item>  <!-- YearLevelList -->
   <Item>
     <Element>SubjectAreaList</Element>
