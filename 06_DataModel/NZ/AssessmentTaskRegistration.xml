@@ -3,7 +3,8 @@
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			xmlns:xi="http://www.w3.org/2001/XInclude"
 			xmlns:xhtml="http://www.w3.org/1999/xhtml"
-	
+      xmlns:json="http://json.org/"
+
       xmlns="http://sifassociation.org/SpecGen">
 	
   <Key>RefId</Key>
@@ -27,26 +28,14 @@
 
   
   <Item>
-    <Element>AssessmentProviderRefId</Element>    
+    <Element>ProviderInvolvedList</Element>    
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The Id (GUID) that uniquely identifies the Provider who is setting the 
-        contents and conditions of the assessment task, e.g. NZQA, TEC.</p>
+      <p>A list of the providers involved and their role, e.g. assessment provider, registering provider.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="ProviderInvolvedListType"></Type>
   </Item>    <!-- AssessmentProviderRefId -->
-  <Item>
-    <Element>RegisteringProviderRefId</Element>    
-    <Characteristics>M</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The Id (GUID) that uniquely identifies the Provider who is registering the student's
-         intent to participate in the assessment task, e.g. schools.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- RegisteringProviderRefId -->
-
 
   <Item>
     <Element>StudentPersonalRefId</Element>
@@ -188,8 +177,18 @@
   <xhtml:Example xmlns="" name="Assessment Task Registration">
     <AssessmentTaskRegistration>
       <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
-      <AssessmentProviderRefId>5556b4eb-850f-4102-800c-9a3fde8bfa9f</AssessmentProviderRefId>
-      <RegisteringProviderRefId>6661f830-13a6-44d7-bd96-be00cbad68f1</RegisteringProviderRefId>
+        <ProviderInvolvedList>
+          <!-- NZQA is Assessor -->
+          <ProviderInvolved>
+            <RefId>5556b4eb-850f-4102-800c-9a3fde8bfa9f</RefId>
+            <ProviderRole json:force-string="true">101</ProviderRole>
+          </ProviderInvolved>
+          <!-- School is Provider -->
+          <ProviderInvolved>
+            <RefId>6661f830-13a6-44d7-bd96-be00cbad68f1</RefId>
+            <ProviderRole json:force-string="true">103</ProviderRole>
+          </ProviderInvolved>
+        </ProviderInvolvedList>
       <StudentPersonalRefId>19059103-3c50-4970-bc48-341349c32858</StudentPersonalRefId>
       <StudentName>
         <FamilyName>Potter</FamilyName>
