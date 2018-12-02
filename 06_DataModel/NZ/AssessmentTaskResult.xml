@@ -3,7 +3,8 @@
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			xmlns:xi="http://www.w3.org/2001/XInclude"
 			xmlns:xhtml="http://www.w3.org/1999/xhtml"
-			
+      xmlns:json="http://json.org/"
+
 			xmlns="http://sifassociation.org/SpecGen">
 			
   <Key>RefId</Key>
@@ -36,6 +37,16 @@
       </Description>
       <Type ref="CommonTypes" name="IdRefType"></Type>
     </Item>    <!-- AssessmentTaskRefId -->
+
+    <Item>
+      <Element>AssessmentType</Element>
+      <Characteristics>M</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The type of assessment the result is for.</p>
+      </Description>
+      <Type ref="CodeSets" name="NZCodeSetsAssessmentTypeType"></Type>
+    </Item>    <!-- AssessmentType -->    
   </if>
 
   <Item>
@@ -114,43 +125,22 @@
 
     <!--  Providers & Markers involved in setting the Assessment Task (and result) -->
     <Item>
-      <Element>AssessingProviderRefId</Element>    
+      <Element>ProviderInvolvedList</Element>
       <Characteristics>O</Characteristics>
       <privacyRating>Low</privacyRating>
       <Description>
-        <p>The Id (GUID) that uniquely identifies the Provider who conducted the assessment task, e.g. schools.</p>
       </Description>
-      <Type ref="CommonTypes" name="IdRefType"></Type>
-    </Item>    <!-- AssessingProviderRefId -->
+      <Type ref="CommonTypes" name="ProviderInvolvedListType"></Type>
+    </Item>    <!-- ProviderInvolvedList -->
     <Item>
-      <Element>AssessmentProviderRefId</Element>    
+      <Element>StaffInvolvedList</Element>
       <Characteristics>O</Characteristics>
       <privacyRating>Low</privacyRating>
       <Description>
-        <p>The Id (GUID) that uniquely identifies the Provider who is setting the contents and
-          conditions of the assessment task, e.g. NZQA, TEC.</p>
+        <p>A list of the staff involved and their role in relation to the assessment task, e.g. the moderator, the marker.</p>
       </Description>
-      <Type ref="CommonTypes" name="IdRefType"></Type>
-    </Item>    <!-- AssessmentProviderRefId -->
-    <Item>
-      <Element>AssessmentLocationProviderRefId</Element>    
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The Id (GUID) that uniquely identifies the Provider who provides the location 
-          at which the assessment task was assessed e.g. exam centres, schools.</p>
-      </Description>
-      <Type ref="CommonTypes" name="IdRefType"></Type>
-    </Item>    <!-- AssessmentLocationProviderRefId -->
-    <Item>
-      <Element>MarkerList</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>A list of the staff members that marked the assessment task.</p>
-      </Description>
-      <Type ref="CommonTypes" name="StaffListType"></Type>
-    </Item>    <!-- ResultScoreList -->
+      <Type ref="CommonTypes" name="StaffInvolvedListType"></Type>
+    </Item>    <!-- StaffInvolvedList -->
 
     <!-- Classifiers for the Assessment Task (and result) -->
     <Item>
@@ -211,14 +201,24 @@
       <Type name="xs:date"></Type>
     </Item>    <!-- DateStudentNotified -->
     <Item>
-      <Element>AssessmentResultIteration</Element>
+      <Element>Iteration</Element>
       <Characteristics>O</Characteristics>
       <privacyRating>Low</privacyRating>
       <Description>
-        <p>If this is a draft submission, or re-submission, iteration of the attempt.</p>
+        <p>The iteration of this result for the assessment,
+           e.g. some tasks require multiple assessments before being achieved.</p>
       </Description>
-      <Type name="xs:token"/>
-    </Item>    <!-- AssessmentResultIteration -->
+      <Type name="xs:integer"/>
+    </Item>    <!-- Iteration -->
+    <Item>
+      <Element>CreditsAchieved</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The number of credits the student achieved.</p>
+      </Description>
+      <Type name="xs:integer"/>
+    </Item>    <!-- CreditsAchieved -->
     <Item>
       <Element>ResultScoreList</Element>
       <Characteristics>O</Characteristics>
@@ -347,7 +347,12 @@
       <AssessmentTaskResult>
         <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
         <StudentPersonalRefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</StudentPersonalRefId>
-        <AssessingProviderRefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</AssessingProviderRefId>
+        <ProviderInvolvedList>
+          <ProviderInvolved>
+            <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+            <ProviderRole json:force-string="true">101</ProviderRole>
+          </ProviderInvolved>
+        </ProviderInvolvedList>
         <SubjectArea>3</SubjectArea>
         <DateAssessed>2018-11-21</DateAssessed>
         <ResultScoreList>
@@ -373,13 +378,18 @@
           </ResultScore>				
         </ResultScoreList>
       </AssessmentTaskResult>
-    </xhtml:Example>
+  </xhtml:Example>
 		  
-		<xhtml:Example xmlns="" name="Assessment Task Result - asTTle Example" intl="nz">
+  <xhtml:Example xmlns="" name="Assessment Task Result - asTTle Example" intl="nz">
       <AssessmentTaskResult>
         <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
         <StudentPersonalRefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</StudentPersonalRefId>
-        <AssessingProviderRefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</AssessingProviderRefId>
+        <ProviderInvolvedList>
+          <ProviderInvolved>
+            <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+            <ProviderRole json:force-string="true">101</ProviderRole>
+          </ProviderInvolved>
+        </ProviderInvolvedList>
         <SubjectArea>2</SubjectArea>
         <DateAssessed>2018-11-01</DateAssessed>
         <ResultScoreList>
