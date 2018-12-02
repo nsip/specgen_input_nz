@@ -42,6 +42,7 @@
 		</Intro>
 		<ID>Assessment Provider Role</ID>
 		<Values>
+			<Value><Code>99</Code><Text>Other</Text></Value>
 			<Value><Code>101</Code><Text>Assessor</Text></Value>
 			<Value><Code>102</Code><Text>Location Provider</Text></Value>
 			<Value><Code>103</Code><Text>Provider</Text></Value>
@@ -53,6 +54,7 @@
 		</Intro>
 		<ID>Assessment Staff Role</ID>
 		<Values>
+			<Value><Code>99</Code><Text>Other</Text></Value>
 			<Value><Code>101</Code><Text>Creator</Text></Value>
 			<Value><Code>102</Code><Text>Moderator</Text></Value>
 			<Value><Code>103</Code><Text>Assessor</Text></Value>
