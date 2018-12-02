@@ -27,16 +27,6 @@
   </Item>    <!-- RefId -->
 
   <Item>
-    <Element>AssessmentProviderRefId</Element>    
-    <Characteristics>M</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The Id (GUID) that uniquely identifies the Provider who is setting the contents
-          and conditions of the assessment task, e.g. NZQA, TEC.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- AssessmentProviderRefId -->
-  <Item>
     <Element>AssessmentTaskRefId</Element>    
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -45,25 +35,17 @@
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>    <!-- AssessmentTaskRefId -->
+
   <Item>
-    <Element>AssessingProviderRefId</Element>    
-    <Characteristics>O</Characteristics>
+    <Element>ProviderInvolvedList</Element>    
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The Id (GUID) that uniquely identifies the Provider who conducted the assessment task, e.g. schools.</p>
+      <p>A list of the providers involved and their role, e.g.
+         assessing provider, assessment provider, assessment location provider.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- AssessingProviderRefId -->
-  <Item>
-    <Element>AssessmentLocationProviderRefId</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The Id (GUID) that uniquely identifies the Provider who provides the location
-          at which the assessment task is assessed e.g. exam centres, schools.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- AssessmentLocationProviderRefId -->
+    <Type ref="CommonTypes" name="ProviderInvolvedListType"></Type>
+  </Item>    <!-- ProviderInvovledList -->
 
   <Item>
     <Element>ProviderCourseRefId</Element>    
@@ -104,16 +86,17 @@
     </Description>
     <Type ref="CommonTypes" name="BaseNameType"></Type>
   </Item>    <!-- StudentName -->
+
   <Item>
-    <Element>InvigilatorStaffList</Element>    
+    <Element>StaffInvolvedList</Element>    
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>A list of the staff members that supervises the assessment of the
-          assessment task as it is undertaken by the student.</p>
+      <p>A list of the staff involved and their role in relation to the assessment task, 
+        e.g. the staff members that supervise the undertaking of the assessment task by the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="StaffListType"></Type>
-  </Item>    <!-- InvigilatorStaffList -->
+    <Type ref="CommonTypes" name="StaffInvolvedListType"></Type>
+  </Item>    <!-- StaffInvolvedList -->
 
   <Item>
     <Element>DateTimeAssessmentScheduled</Element>
@@ -179,19 +162,28 @@
   <xhtml:Example xmlns="" name="Student Assessment Task">
     <StudentAssessmentTask>
       <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
-      <AssessmentProviderRefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</AssessmentProviderRefId>
       <AssessmentTaskRefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</AssessmentTaskRefId>
-      <AssessingProviderRefId>ad30d3a6-e663-4d5b-8975-6c4ffc745bfb</AssessingProviderRefId>
+      <ProviderInvolvedList>
+        <ProviderInvolved>
+          <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+          <ProviderRole json:force-string="true">103</ProviderRole>           <!-- School is Provider -->
+        </ProviderInvolved>
+        <ProviderInvolved>
+          <RefId>ad30d3a6-e663-4d5b-8975-6c4ffc745bfb</RefId>
+          <ProviderRole json:force-string="true">101</ProviderRole>           <!-- NZQA is Assessor -->
+        </ProviderInvolved>
+      </ProviderInvolvedList>
       <ProviderCourseRefId>2c55ec5e-7def-4815-ae08-caad3b9f274d</ProviderCourseRefId>
       <StudentPersonalRefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</StudentPersonalRefId>
       <StudentPersonalLocalId>HP-850139</StudentPersonalLocalId>
       <StudentName><FullName>Harry Potter</FullName></StudentName>
-      <InvigilatorStaffList>
-        <StaffMember>
-          <StaffPersonalRefId>228a2cbe-93c4-46ba-91fa-b3ae689eb437</StaffPersonalRefId>
-          <Name><FullName>Prof. McGonnegal</FullName></Name>
-        </StaffMember>
-      </InvigilatorStaffList>
+      <StaffInvolvedList>
+        <StaffInvolved>
+          <RefId>228a2cbe-93c4-46ba-91fa-b3ae689eb437</RefId>
+          <Name>Prof. McGonnegal</Name>
+          <StaffRole json:force-string="true">104</StaffRole>         <!--  Invigilator -->
+        </StaffInvolved>
+      </StaffInvolvedList>
       <DateTimeAssessmentScheduled>2018-11-25T09:00:00+12:00</DateTimeAssessmentScheduled>
       <AssessmentType json:force-string="true">102</AssessmentType>   <!-- External Exam -->
       <SubjectArea json:force-string="true">4</SubjectArea>

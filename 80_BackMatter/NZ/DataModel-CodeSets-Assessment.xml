@@ -56,6 +56,7 @@
 			<Value><Code>101</Code><Text>Creator</Text></Value>
 			<Value><Code>102</Code><Text>Moderator</Text></Value>
 			<Value><Code>103</Code><Text>Assessor</Text></Value>
+			<Value><Code>104</Code><Text>Invigilator</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Assessment Staff Role -->
 
