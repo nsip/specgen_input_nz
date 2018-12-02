@@ -3,7 +3,8 @@
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			xmlns:xi="http://www.w3.org/2001/XInclude"
 			xmlns:xhtml="http://www.w3.org/1999/xhtml"
-	
+      xmlns:json="http://json.org/"
+
       xmlns="http://sifassociation.org/SpecGen">
 	
   <Key>RefId</Key>
@@ -17,6 +18,7 @@
       </p>
      </Description>
   </Item>
+
   <Item>
     <Element>RefId</Element>
     <Characteristics>M</Characteristics>
@@ -26,6 +28,15 @@
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>    <!-- RefId -->
+  <Item>
+    <Element>AssessmentName</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The name of the assessment task.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>    <!-- AssessmentName -->
 
   <if intl="au">
     <Item>
@@ -51,37 +62,15 @@
 
   <if intl="nz">
     <Item>
-      <Element>AssessmentProviderRefId</Element>    
+      <Element>ProviderInvolvedList</Element>    
       <Characteristics>M</Characteristics>
       <privacyRating>Low</privacyRating>
       <Description>
-        <p>The Id (GUID) that uniquely identifies the Provider who is managing this assessment task.
-          Not to be confused with the AssessingProvider; e.g. For NCEA exams
-            NZQA is the AssessingProvider, and the school is the AssessmentProvider.</p>
+        <p>A list of the providers involved and their role, e.g. assessing provider, assessment provider, 
+          assessment location provider, registering provider.</p>
       </Description>
-      <Type ref="CommonTypes" name="IdRefType"></Type>
-    </Item>    <!-- AssessmentProviderRefId -->
-    <Item>
-      <Element>AssessingProviderRefId</Element>    
-      <Characteristics>M</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The Id (GUID) that uniquely identifies the Provider who is conducting the actual assessment task.
-          Only rquired when the AssessmentProvider is not performing the assessment;  e.g. For NCEA exams
-            NZQA is the AssessingProvider, and the school is the AssessmentProvider.</p>
-      </Description>
-      <Type ref="CommonTypes" name="IdRefType"></Type>
-    </Item>    <!-- AssessingProviderRefId -->
-    <Item>
-      <Element>AssessmentLocationProviderRefId</Element>    
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The Id (GUID) that uniquely identifies the Provider who is providing the location for this
-           assessment task.  Only required when the AssessmentProvider is not providing the assessment location.</p>
-      </Description>
-      <Type ref="CommonTypes" name="IdRefType"></Type>
-    </Item>    <!-- AssessmentLocationProviderRefId -->
+      <Type ref="CommonTypes" name="ProviderInvolvedListType"></Type>
+    </Item>    <!-- ProviderInvolvedList -->
   </if>
 
   <Item>
@@ -115,14 +104,14 @@
       <Type ref="CommonTypes" name="StudentListType"></Type>
     </Item>    <!-- StudentPersonalRefIdList -->
     <Item>
-      <Element>StaffPersonalRefId</Element>    
-      <Characteristics>O</Characteristics>
+      <Element>StaffInvolvedList</Element>    
+      <Characteristics>M</Characteristics>
       <privacyRating>Low</privacyRating>
       <Description>
-        <p>The Id (GUID) that uniquely identifies a the staff member that is setting the assessment task.</p>
+        <p>A list of the staff involved and their role in relation to the assessment task, e.g. the moderator, the marker.</p>
       </Description>
-      <Type ref="CommonTypes" name="IdRefType"></Type>
-    </Item>    <!-- StaffPersonalRefId -->
+      <Type ref="CommonTypes" name="StaffInvolvedListType"></Type>
+    </Item>    <!-- StaffInvolvedList -->
   </if>
 
   <Item>
@@ -156,14 +145,14 @@
   </Item>    <!-- PointsPossible -->
 
   <Item>
-    <Element>CreateDate</Element>
+    <Element>CreatedDate</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Creation date of the assignment.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!-- CreateDate -->
+  </Item>    <!-- CreatedDate -->
 
   <Item>
     <Element>DueDate</Element>
@@ -356,13 +345,24 @@
   <xhtml:Example xmlns="" name="Assessment Task" intl="nz">
     <AssessmentTask>
       <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
-      <AssessmentProviderRefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</AssessmentProviderRefId>
+      <AssessmentName>NZ History Classroom Test</AssessmentName>
+      <ProviderInvolvedList>
+        <ProviderInvolved>
+          <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+          <ProviderRole json:force-string="true">101</ProviderRole>
+        </ProviderInvolved>
+      </ProviderInvolvedList>
       <TeachingGroupRefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</TeachingGroupRefId>
-      <StaffPersonalRefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</StaffPersonalRefId>
+      <StaffInvolvedList>
+        <StaffInvolved>
+          <RefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</RefId>
+          <StaffRole json:force-string="true">101</StaffRole>
+        </StaffInvolved>
+      </StaffInvolvedList>
       <GradingCategory>Classroom Test</GradingCategory>
       <Description>Pop Quiz</Description>
       <PointsPossible>100</PointsPossible>
-      <CreateDate>2018-11-21</CreateDate>
+      <CreatedDate>2018-11-21</CreatedDate>
       <DueDate>2018-11-25</DueDate>
       <Weight>1.0</Weight>
       <DetailedDescriptionURL>http://www.assignmentinfo.com/assignment1.pdf</DetailedDescriptionURL> 

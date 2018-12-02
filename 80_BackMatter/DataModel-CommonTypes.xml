@@ -97,4 +97,86 @@
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>
 	</CommonElement>
+
+	<CommonElement name="ProviderInvolvedListType" type="true" dm="true">
+		<Item>
+			<Element>ProviderInvolvedListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of the providers involved and their role,
+					 e.g. assessing provider, assessment provider, assessment location provider, registering provider.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>ProviderInvolved</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>The provider involved with the assessment task and the role they play,
+					 e.g. assessing provider, assessment location provider, assessment provider, registering provider.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ProviderInvolvedType"/>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="ProviderInvolvedType" type="true" dm="true">
+		<Item>
+			<Element>ProviderInvolvedType</Element>
+			<Description>
+				<p>The provider involved with the assessment task and the role they play,
+					 e.g. assessing provider, assessment location provider, assessment provider, registering provider.</p>
+			</Description>
+			<Type complex="extension" name="ObjectReferenceType"/>
+		</Item>
+		<Item>
+			<Element>ProviderRole</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The role of the provider in relation to the assessment task, e.g. assessing provider, assessment location provider, assessment provider, registering provider.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsAssessmentProviderRoleType"/>
+		</Item>    <!-- ProviderRole -->
+	</CommonElement>
+
+	<CommonElement name="StaffInvolvedListType" type="true" dm="true">
+		<Item>
+			<Element>StaffInvolvedListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of the staff involved and their role in relation to the assessment task,
+					 e.g. the staff member that created the assessment task, the moderator, the marker, the invigilator.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>StaffInvolved</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>The staff member involved with the assessment task and their role, 
+					e.g. created the assessment task, moderator, marker.</p>
+			</Description>
+			<Type ref="CommonTypes" name="StaffInvolvedType"/>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="StaffInvolvedType" type="true" dm="true">
+		<Item>
+			<Element>StaffInvolvedType</Element>
+			<Description>
+				<p>The staff member involved with the assessment task and their
+					 role, e.g. created the assessment task, moderator, marker.</p>
+			</Description>
+			<Type complex="extension" name="ObjectReferenceType"/>
+		</Item>
+		<Item>
+			<Element>StaffRole</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>NZCodeSetsAssessmentStaffRoleTYpe</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsAssessmentStaffRoleType"/>
+		</Item>    <!-- StaffRole -->
+	</CommonElement>
 </IncludeGroup>
