@@ -5,31 +5,6 @@
 	
 	<CodeSet>
 		<Intro>
-			<p>Code denoting how an assessment of student's learning is to be made.</p>
-		</Intro>
-		<ID>Assessment Mode</ID>
-		<Values>
-			<Value>
-				<Code>1</Code>
-				<Text>External</Text>
-				<Description>
-					<p>Student's learning is assessed by an external agency, commonly 
-						by setting one or more examinations.</p>
-				</Description>
-			</Value>    <!--  External -->
-			<Value>
-				<Code>2</Code>
-				<Text>Internal</Text>
-				<Description>
-					<p>Student's learning is assessed by the teacher who is actively 
-						engaged in teaching the student.</p>
-				</Description>
-			</Value>    <!-- Internal -->
-		</Values>
-	</CodeSet>   <!-- Assessment Mode -->
-
-	<CodeSet>
-		<Intro>
 			<p>Standard codes denoting the type of assessment the student is sitting for the assessment task.</p>
 		</Intro>
 		<ID>Assessment Type</ID>
@@ -60,6 +35,29 @@
 			</Value>    <!-- Other -->
 		</Values>
 	</CodeSet>    <!-- Assessment Type -->
+
+	<CodeSet>
+		<Intro>
+			<p></p>
+		</Intro>
+		<ID>Assessment Provider Role</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Assessor</Text></Value>
+			<Value><Code>102</Code><Text>Location Provider</Text></Value>
+			<Value><Code>103</Code><Text>Provider</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Asssessment Provider Role -->
+
+	<CodeSet>
+		<Intro>
+		</Intro>
+		<ID>Assessment Staff Role</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Creator</Text></Value>
+			<Value><Code>102</Code><Text>Moderator</Text></Value>
+			<Value><Code>103</Code><Text>Assessor</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Assessment Staff Role -->
 
 	<CodeSet>
 		<Intro>

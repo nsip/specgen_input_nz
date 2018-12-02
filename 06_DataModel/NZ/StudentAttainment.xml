@@ -146,7 +146,7 @@
 					<LocalId>91165-v2</LocalId>
 					<Name>Demonstrate understanding of the properties of selected organic compounds</Name>
 					<ObjectType>AssessmentTaskResult</ObjectType>
-					<AssessmentMode json:force-string="true">2</AssessmentMode>
+					<AssessmentType json:force-string="true">102</AssessmentType>
 					<Result>Achieved</Result>
 					<Date>2016-06-28</Date>
 					<CreditValue>4</CreditValue>					
@@ -156,7 +156,7 @@
 					<LocalId>91166-v2</LocalId>
 					<Name>Demonstrate understanding of chemical reactivity</Name>
 					<ObjectType>AssessmentTaskResult</ObjectType>
-					<AssessmentMode json:force-string="true">1</AssessmentMode>
+					<AssessmentType json:force-string="true">101</AssessmentType>
 					<Result>Achieved with merit</Result>
 					<Date>2016-06-01</Date>
 					<CreditValue>3</CreditValue>					
@@ -166,7 +166,7 @@
 					<LocalId>91167-v2</LocalId>
 					<Name>Demonstrate understanding of oxidation-reduction</Name>
 					<ObjectType>AssessmentTaskResult</ObjectType>
-					<AssessmentMode json:force-string="true">2</AssessmentMode>
+					<AssessmentType json:force-string="true">102</AssessmentType>
 					<Result>Achieved</Result>
 					<Date>2016-06-28</Date>
 					<CreditValue>3</CreditValue>										
