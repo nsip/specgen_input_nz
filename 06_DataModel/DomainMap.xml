@@ -71,6 +71,7 @@
 			<DataObject coords="291,111,429,158">ProviderCourse</DataObject>
 			<DataObject coords="455,257,575,322">TeachingGroup</DataObject>
 			<DataObject coords="660,271,773,301">StaffPersonal</DataObject>
+			<DataObject coords="146,464,348,503">SpecialAssessmentConditionApplication</DataObject>
 		</Domain>
 
 		<Domain name="Hauora / Wellbeing">
@@ -83,17 +84,19 @@
 				<img src="images/SIFNZ-LogicalModel-WellbeingDomain.png" usemap="#Hauora / WellbeingMap"/>
 			</Intro>
 
-			<DataObject coords="24,340,121,377">WellbeingCharacteristic</DataObject>
-			<DataObject coords="155,268,244,318">WellbeingAlert</DataObject>
-			<DataObject coords="286,340,384,380">WellbeingEvent</DataObject>
-			<DataObject coords="418,387,505,426">WellbeingResponse</DataObject>
-			<DataObject coords="538,441,627,477">WellbeingAppeal</DataObject>
-			<DataObject coords="618,343,761,380">StudentActivityParticipation</DataObject>
-			<DataObject coords="800,342,981,378">StudentLearningSupportParticipation</DataObject>
-			<DataObject coords="722,282,846,313">StudentDocument</DataObject>
-			<DataObject coords="399,50,498,79">StudentVoice</DataObject>
-			<DataObject coords="356,145,544,213">StudentPersonal</DataObject>
-			<DataObject coords="298,503,454,574">Provider</DataObject>
+			<DataObject coords="25,329,123,369">WellbeingCharacteristic</DataObject>
+			<DataObject coords="154,260,242,307">WellbeingAlert</DataObject>
+			<DataObject coords="284,328,384,369">WellbeingEvent</DataObject>
+			<DataObject coords="415,375,505,413">WellbeingResponse</DataObject>
+			<DataObject coords="538,431,624,466">WellbeingAppeal</DataObject>
+			<DataObject coords="620,332,758,367">StudentActivityParticipation</DataObject>
+			<DataObject coords="800,332,997,367">StudentLearningSupportParticipation</DataObject>
+			<DataObject coords="723,271,845,303">Document</DataObject>
+			<DataObject coords="402,40,498,79">StudentVoice</DataObject>
+			<DataObject coords="356,135,544,202">StudentPersonal</DataObject>
+			<DataObject coords="298,491,452,562">Provider</DataObject>
+			<DataObject coords="931,264,1070,302">StudentPhysicalRestraint</DataObject>
+			<DataObject coords="967,436,1067,476">StaffPersonal</DataObject>
 		</Domain>
 		
 		<Domain name="Attendance">
