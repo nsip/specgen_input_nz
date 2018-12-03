@@ -100,9 +100,11 @@
 		<xsl:text>                properties:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('                  ', @name, ':&#x0a;')"/>
 		<xsl:value-of select="concat('                    $ref: ''#/components/schemas/', @name, '''&#x0a;')"/>
+		<xsl:apply-templates select="xhtml:Example[1]" mode="json"/>
 		<xsl:text>            application/xml:&#x0a;</xsl:text>
 		<xsl:text>              schema:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('                $ref: ''#/components/schemas/', @name, '''&#x0a;')"/>
+		<xsl:apply-templates select="xhtml:Example[1]" mode="xml"/>
 	</xsl:template>
 
     <xsl:template match="specgen:DataObject" mode="responsesList">
@@ -116,10 +118,11 @@
 		<xsl:text>                properties:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('                  ', @name, 's:&#x0a;')"/>
 		<xsl:value-of select="concat('                    $ref: ''#/components/schemas/', @name, 's''&#x0a;')"/>
+		<xsl:apply-templates select="xhtml:Example[1]" mode="json"/>
 		<xsl:text>            application/xml:&#x0a;</xsl:text>
 		<xsl:text>              schema:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('                $ref: ''#/components/schemas/', @name, 's''&#x0a;')"/>
-		<xsl:call-template name="includeExamples"/>
+		<xsl:apply-templates select="xhtml:Example[1]" mode="xml"/>
 	</xsl:template>
 
 	<xsl:template match="specgen:DataObject" mode="schemasSingle">
@@ -134,22 +137,14 @@
 		</xsl:apply-templates>
 	</xsl:template>
 
-	<xsl:template name="includeExamples">
-		<xsl:if test="boolean(xhtml:Example)">
-			<xsl:text>          examples:&#x0a;</xsl:text>
-			<xsl:apply-templates select="xhtml:Example[1]" mode="json"/>
-			<xsl:apply-templates select="xhtml:Example[1]" mode="xml"/>
-		</xsl:if>
-	</xsl:template>
-
 	<xsl:template match="xhtml:Example" mode="json">
-		<xsl:text>            application/json: &gt;-&#x0a;</xsl:text>
-		<xsl:value-of select="xfn:jsonString(*, '             ')"/>
+		<xsl:text>                example: &gt;-&#x0a;</xsl:text>
+		<xsl:value-of select="xfn:jsonString(*, '                  ')"/>
 	</xsl:template>
 
 	<xsl:template match="xhtml:Example" mode="xml">
-		<xsl:text>            application/xml: &gt;-&#x0a;</xsl:text>
-		<xsl:value-of select="xfn:xmlString(*, '              ')"/>
+		<xsl:text>              example: &gt;-&#x0a;</xsl:text>
+		<xsl:value-of select="xfn:xmlString(*, '                ')"/>
 	</xsl:template>
 
 	<xsl:template match="specgen:DataObject" mode="schemasList">
