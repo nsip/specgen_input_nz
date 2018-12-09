@@ -118,11 +118,11 @@
 		<xsl:text>                properties:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('                  ', @name, 's:&#x0a;')"/>
 		<xsl:value-of select="concat('                    $ref: ''#/components/schemas/', @name, 's''&#x0a;')"/>
-		<xsl:apply-templates select="xhtml:Example[1]" mode="json"/>
+		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale)][1]" mode="json"/>
 		<xsl:text>            application/xml:&#x0a;</xsl:text>
 		<xsl:text>              schema:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('                $ref: ''#/components/schemas/', @name, 's''&#x0a;')"/>
-		<xsl:apply-templates select="xhtml:Example[1]" mode="xml"/>
+		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale)][1]" mode="xml"/>
 	</xsl:template>
 
 	<xsl:template match="specgen:DataObject" mode="schemasSingle">
