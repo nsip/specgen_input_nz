@@ -13,6 +13,7 @@
 		<resolveExtensions>true</resolveExtensions>
 		<isDraft>true</isDraft>
 		<documentEnumerationsCompletely>true</documentEnumerationsCompletely>
+		<defaultExample>JSON</defaultExample>
 	</globalSettings>
 	
 	<htmlDocuments>
