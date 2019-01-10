@@ -16,7 +16,7 @@
                                       '## Json Schema derived from SIF ', $sifLocale, 'v', $sifVersion, '&#x0a;',
 							          '# &#x0a;')"/> 
 
-		<xsl:text>$schema: 'http://json-schema.org/draft-06/schema#'&#x0a;</xsl:text>
+		<xsl:text>$schema: 'http://json-schema.org/draft-07/schema#'&#x0a;</xsl:text>
 
 		<xsl:apply-templates select=".//specgen:DataObjects" mode="rootObj"/>
 
@@ -161,6 +161,21 @@
 		<xsl:if test="normalize-space(specgen:Description) ne ''">
 			<xsl:value-of select="concat($indent, '    - description: &gt;-&#x0a;', $indent, '        ')"/>
 			<xsl:apply-templates select="specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+
+			<!-- If the Item is a codeset then include the values in the description -->
+			<xsl:if test="specgen:Type/@ref eq 'CodeSets'">
+				<xsl:variable name="codeSetId">
+					<xsl:value-of select="xfn:chopType(substring-after(specgen:Type/@name, 'CodeSets'))"/>
+				</xsl:variable>
+				<xsl:variable name="codeSetGroupId">
+					<xsl:value-of select="substring-before(specgen:Type/@name, $codeSetId)"/>
+				</xsl:variable>
+				<xsl:value-of select="concat($indent, '        &lt;ul&gt;&#x0a;')"/>
+				<xsl:apply-templates select="//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(specgen:ID, ' ','') = $codeSetId]/specgen:Values/specgen:Value" mode="descr">
+					<xsl:with-param name="indent" select="concat($indent, '      ')"/>
+				</xsl:apply-templates>
+				<xsl:value-of select="concat($indent, '        &lt;/ul&gt;&#x0a;')"/>
+			</xsl:if>
 		</xsl:if>
 
 		<xsl:apply-templates select="specgen:Values">
@@ -309,10 +324,12 @@
 							         '    title: ', specgen:ID, '&#x0a;',
 			                         '    description: &gt;-&#x0a;      ')"/>
 		<xsl:apply-templates select="specgen:Intro"/><xsl:text>&#x0a;</xsl:text>
+		<xsl:text>      &lt;ul&gt;&#x0a;</xsl:text>
 		<xsl:apply-templates select="specgen:Values/specgen:Value" mode="descr">
 			<xsl:with-param name="indent" select="'    '"/>
 		</xsl:apply-templates>
-		
+		<xsl:text>      &lt;/ul&gt;&#x0a;</xsl:text>
+
 		<xsl:apply-templates select="specgen:Values">
 			<xsl:with-param name="indent" select="'    '"/>
 		</xsl:apply-templates>
@@ -332,7 +349,7 @@
 			<xsl:apply-templates select="specgen:Text"/>
 		</xsl:variable>
 
-		<xsl:value-of select="concat($indent, '    * ''', specgen:Code, ''' - ', $valDesc, '&#x0a;')"/>
+		<xsl:value-of select="concat($indent, '    &lt;li&gt;''', specgen:Code, ''' - ', $valDesc, '&lt;/li&gt;&#x0a;')"/>
 	</xsl:template>
 
 	<xsl:template match="specgen:Value[position() gt 1]" mode="enum">
