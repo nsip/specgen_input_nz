@@ -13,7 +13,8 @@
     <Element>WellbeingAppeal</Element>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>A WellbeingAppeal is information about an “appeal” or a “request” in regard to a (negative/punitive) WellbeingResponse to a student event.</p>
+      <p>Records detail of any "appeal" or "request" made by involved parties in regard to
+					a negative/punitive Wellbeing Response that was the result of a student Wellbeing Event.</p>
     </Description>
   </Item>
 

@@ -56,10 +56,11 @@
 		<xi:include parse="xml" href="NZ/StudentContactPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StudentContactRelationship.xml"/>
 		
-		<!-- Curriculum, Courses & Learning Standards -->
+		<!-- Curriculum, Courses, Learning Standards & Credentials -->
+		<xi:include parse="xml" href="NZ/TeachingGroup.xml"/>
 		<xi:include parse="xml" href="NZ/ProviderCourse.xml"/>
 		<xi:include parse="xml" href="NZ/LearningStandard.xml"/>
-		<xi:include parse="xml" href="NZ/TeachingGroup.xml"/>
+		<xi:include parse="xml" href="NZ/Credential.xml"/>
 
 		<!-- Student Enrolment -->
 		<xi:include parse="xml" href="NZ/StudentProviderEnrolment.xml"/>
@@ -69,12 +70,18 @@
 		<xi:include parse="xml" href="NZ/StudentAttendanceTimeList.xml"/>
 
 		<!-- Student Hauora / Wellbeing -->
-		<xi:include parse="text" href="NZ/PersonalisedPlan.xml"/>
-		<xi:include parse="text" href="NZ/WellbeingAlert.xml"/>
-		<xi:include parse="text" href="NZ/WellbeingCharacteristic.xml"/>
+		<xi:include parse="xml" href="NZ/WellbeingAlert.xml"/>
+		<xi:include parse="xml" href="NZ/WellbeingCharacteristic.xml"/>
 
-		<xi:include parse="text" href="NZ/WellbeingEvent.xml"/>
-		<xi:include parse="text" href="NZ/WellbeingResponse.xml"/>
-		<xi:include parse="text" href="NZ/WellbeingAppeal.xml"/>
+		<xi:include parse="xml" href="NZ/WellbeingEvent.xml"/>
+		<xi:include parse="xml" href="NZ/WellbeingResponse.xml"/>
+		<xi:include parse="xml" href="NZ/WellbeingAppeal.xml"/>
+
+		<!-- Aromatawai / Assessment -->
+		<xi:include parse="xml" href="NZ/AssessmentTask.xml"/>
+		<xi:include parse="xml" href="NZ/AssessmentTaskResult.xml"/>
+		<xi:include parse="xml" href="NZ/AssessmentTaskRegistration.xml"/>
+		<xi:include parse="xml" href="NZ/StudentAssessmentTask.xml"/>
+		<xi:include parse="xml" href="NZ/StudentAttainment.xml"/>
 	</Group>
 </DataObjects>

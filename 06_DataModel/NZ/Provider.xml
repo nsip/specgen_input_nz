@@ -71,8 +71,8 @@
 		<Organisation>
 			<AddressList>
 				<Address json:force-array="true">
-					<Type>2</Type>
-					<Role>2</Role>
+					<Type json:force-string="true">2</Type>
+					<Role json:force-string="true">2</Role>
 					<Street>
 						<Line1>1175 Lake Ferry Rd</Line1>
 					</Street>
@@ -83,12 +83,12 @@
 			<CommunicationChannelList>
 				<Channel>
 					<Notes>Attendance System (Self Service)</Notes>
-					<Type>1</Type>
+					<Type json:force-string="true">1</Type>
 					<Value>http://att.hogwarts.school.nz</Value>
 				</Channel>
 				<Channel>
 					<Notes>School Website</Notes>
-					<Type>1</Type>
+					<Type json:force-string="true">1</Type>
 					<Value>http://www.hogwarts.school.nz</Value>
 				</Channel>
 			</CommunicationChannelList>
@@ -102,7 +102,7 @@
 					<PositionTitle>Headmaster</PositionTitle>
 					<Role json:force-string="true">1</Role>
 					<AddressList>
-						<Address>
+						<Address json:force-array="true">
 							<Type json:force-string="true">1</Type>
 							<Role json:force-string="true">1</Role>
 							<Street>
@@ -217,7 +217,7 @@
 				</RelatedOrganisation>
 			</RelatedOrganisationList>
 			<OperationalStatus>O</OperationalStatus>
-			<Type>2</Type>
+			<Type json:force-string="true">2</Type>
 		</Organisation>
 		<SchoolService>
 			<CoEdStatus>C1</CoEdStatus>
@@ -225,17 +225,17 @@
 			<NewEntrantPolicyList>
 				<EnactedPolicy>
 					<EffectiveTo>2018-12-31</EffectiveTo>
-					<Policy>1</Policy>
+					<Policy json:force-string="true">1</Policy>
 				</EnactedPolicy>
 				<EnactedPolicy>
 					<EffectiveFrom>2019-01-01</EffectiveFrom>
-					<Policy>2</Policy>
+					<Policy json:force-string="true">2</Policy>
 				</EnactedPolicy>
 			</NewEntrantPolicyList>
 			<DefinitionList>
 				<Definition json:force-string="true">101</Definition>
 				<Definition json:force-string="true">103</Definition>
-				<Definition json:force-string="true">108</Definition>
+				<Definition json:force-string="true">106</Definition>
 			</DefinitionList>			
 			<SchoolYearList>
 				<SchoolYear>

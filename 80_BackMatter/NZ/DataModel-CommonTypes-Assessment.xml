@@ -1,0 +1,522 @@
+﻿<IncludeGroup xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- Element types for the Assessment Domain includes:
+   		 AssessmentTaskList 
+		 etc.
+   -->
+
+	<if intl="au">
+		<CommonElement name="ValidLetterMarkListType" type="true" dm="true">
+			<Item>
+				<Element>ValidLetterMarkListType</Element>
+				<Description>
+					<p>A list of valid Letter Marks</p>
+				</Description>
+				<List mode="List"/>
+			</Item>
+			<Item>
+				<Element>ValidLetterMark</Element>
+				<Characteristics>MR</Characteristics>
+				<Description>
+					<p>Definition of a valid Letter Mark.</p>
+				</Description>
+				<Type ref="CommonTypes" name="ValidLetterMarkType"/>
+			</Item>
+		</CommonElement>
+		<CommonElement name="ValidLetterMarkType" type="true" dm="true">
+			<Item>
+				<Element>ValidLetterMarkType</Element>
+				<Description>
+					<p>Definition of a valid Letter Mark</p>
+				</Description>
+			</Item>
+			<Item>
+				<Element>Code</Element>
+				<Characteristics>M</Characteristics>
+				<Description>
+					<p>String representing the actual Mark that would appear on the report card (e.g., "A+", "I", "100").</p>
+				</Description>
+				<Type name="xs:token"/>
+			</Item>
+			<Item>
+				<Element>NumericEquivalent</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>Numeric equivalent for the Mark (e.g., 100, 4.0).</p>
+				</Description>
+				<Type name="xs:decimal"/>
+			</Item>
+			<Item>
+				<Element>Description</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>The description for this code. (e.g. "Excellent", "Participates in Class", "Incomplete", etc...).</p>
+				</Description>
+				<Type name="xs:string"/>
+			</Item>
+		</CommonElement>
+		<CommonElement name="StudentGradeMarkersListType" type="true" dm="true">
+			<Item>
+				<Element>StudentGradeMarkersListType</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>A list of staff members who were involved with the grading of the student, or who were responsible for any associated teacher judgement/s.</p>
+				</Description>
+				<List mode="List"/>
+			</Item>
+			<Item>
+				<Element>Marker</Element>
+				<Characteristics>OR</Characteristics>
+				<Description></Description>
+				<Type ref="CommonTypes" name="MarkerType"/>
+
+			</Item>
+		</CommonElement>
+		<CommonElement name="MarkerType" type="true" dm="true">
+			<Item>
+				<Element>MarkerType</Element>
+				<Characteristics>OR</Characteristics>
+				<Description>
+					<p>A staff member, (or members), who were involved with the grading of the student, or who was responsible for any associated teacher judgement and their associated role.  Must be a current member of staff.</p>
+				</Description>
+			</Item>
+			<Item>
+				<Element>StaffPersonalRefId</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>The RefId of the staff member involved in the marking.</p>
+				</Description>
+				<Type name="xs:string"></Type>
+			</Item>
+			<Item>
+				<Element>Role</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>The role the staff member played in grading the student.</p>
+				</Description>
+				<Type name="xs:string"></Type>
+			</Item>
+
+		</CommonElement>
+		<CommonElement name="GradingScoreListType" type="true" dm="true">
+			<Item>
+				<Element>GradingScoreListType</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>Assignments that the student went through to achieve this summative assessment.</p>
+				</Description>
+				<List mode="List"/>
+			</Item>
+			<Item>
+				<Element>GradingAssignmentScore</Element>
+				<Characteristics>OR</Characteristics>
+				<Description>
+					<p>AssignmentScore.</p>
+				</Description>
+				<Type ref="CommonTypes" name="AssignmentScoreType"/>
+			</Item>
+		</CommonElement>
+		<CommonElement name="AssignmentScoreType" type="true" dm="true">
+			<Item>
+				<Element>AssignmentScoreType</Element>
+				<Characteristics>OR</Characteristics>
+				<Description>
+					<p></p>
+				</Description>
+			</Item>
+			<Item>
+				<Element>GradingAssignmentScoreRefId</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>GUID of a Grading assignment score included in this grade.</p>
+				</Description>
+				<Type ref="CommonTypes" name="IdRefType"/>
+			</Item>
+			<Item>
+				<Element>Weight</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>Weight of the assignment to the overall assessment grade.</p>
+				</Description>
+				<Type name="xs:decimal"></Type>
+
+			</Item>
+		</CommonElement>
+		<CommonElement name="GradeType" type="true" dm="true">
+			<Item>
+				<Element>GradeType</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>Overall Student Grade. At least one numeric, percentage or letter must be provided as defined in the fields below.</p>
+				</Description>
+			</Item>
+			<Item>
+				<Element>Percentage</Element>
+				<Characteristics>C</Characteristics>
+				<Description>
+					<p>The grade percentage for this grade (0.00-100.00).</p>
+				</Description>
+				<Type name="xs:decimal"></Type>
+				<Facets>
+					<xs:minInclusive value="0.00"/>
+					<xs:maxInclusive value="100.00"/>
+				</Facets>
+			</Item>
+			<Item>
+				<Element>Numeric</Element>
+				<Characteristics>C</Characteristics>
+				<Description>
+					<p>The raw numeric value for this grade.</p>
+				</Description>
+				<Type name="xs:decimal"></Type>
+			</Item>
+			<Item>
+				<Element>Letter</Element>
+				<Characteristics>C</Characteristics>
+				<Description>
+					<p>The letter grade value for this grade. If this is provided, the numeric value or percentage value must also be entered in order to provide a numeric value for the grade to be utilized in any computations.</p>
+				</Description>
+				<Type name="xs:token"></Type>
+			</Item>
+			<Item>
+				<Element>Narrative</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>The free form text narrative for this grade.  Can incorporate teacher judgement.</p>
+				</Description>
+				<Type name="xs:string"></Type>
+			</Item>
+			<Item>
+				<Element>MarkInfoRefId</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>GUID of a the MarkInfo Object that provides information about this grading.</p>
+				</Description>
+				<Type ref="CommonTypes" name="IdRefType"/>
+			</Item>
+
+		</CommonElement>
+		<CommonElement name="GenericRubricType" type="true" dm="true">
+			<Item>
+				<Element>GenericRubricType</Element>
+				<Characteristics>MR</Characteristics>
+				<Description>
+					<p></p>
+				</Description>
+			</Item>
+
+			<Item>
+				<Element>RubricType</Element>
+				<Characteristics>M</Characteristics>
+				<Description>
+					<p>Category that rubric is scoring for.</p>
+				</Description>
+
+				<Type name="xs:normalizedString"></Type>
+			</Item>
+
+			<Item>
+				<Element>ScoreList</Element>
+				<Characteristics>M</Characteristics>
+				<Description>
+					<p>Category that rubric is scoring for.</p>
+				</Description>
+				<Type ref="CommonTypes" name="ScoreListType"/>
+			</Item>
+
+			<Item>
+				<Element>Descriptor</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>Descriptor of Score Point of the Rubric.</p>
+				</Description>
+				<Type name="xs:normalizedString"></Type>
+			</Item>
+
+		</CommonElement>
+	</if>
+
+
+	<!-- Added by NZ -->
+	<CommonElement name="AssessmentTaskListType" type="true" dm="true">
+		<Item>
+			<Element>AssessmentTaskListType</Element>
+			<Characteristics>O</Characteristics>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>AssessmentTaskRefId</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>GUID that identifies the sub-ordinate AssessmentTask.</p>
+			</Description>
+			<Type ref="CommonTypes" name="IdRefType"/>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="LearningStandardListType" type="true" dm="true">
+		<Item>
+			<Element>LearningStandardListType</Element>
+			<Characteristics>O</Characteristics>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>LearningStandard</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Generic object reference to the LearningStandard</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="SpecialAssessmentConditionListType" type="true" dm="true">
+		<Item>
+			<Element>SpecialAssessmentConditionListType</Element>
+			<Description>
+				<p>A list of Special Assessment Conditions (SACs) that may be applied, or excluded form	
+				a particular student's participation in an assessment task.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>SpecialAssessmentCondition</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>A single SAC that may be applied, or excluded from a student's participation in an assessment task.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsSpecialAssessmentConditionType"/>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="AssessmentResultScoreListType" type="true" dm="true">
+		<Item>
+			<Element>AssessmentResultScoreListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of scores for the assessment task result.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>ResultScore</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>An Assessment Result Score that is a member of the related AssessmentResultScoreList.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AssessmentScoreType"/>
+		</Item>     <!-- ResultScore -->
+
+		<xhtml:Example xmlns="" name="PAT Result Score List Example" intl="nz">
+			<ResultScoreList>
+				<ResultScore>
+					<ScoreMetric>101</ScoreMetric>  <!-- Raw Score -->
+					<ScoreValue>25</ScoreValue>
+				</ResultScore>
+				<ResultScore>
+					<ScoreMetric>102</ScoreMetric>  <!-- Scale Score -->
+					<ScoreValue>38.5</ScoreValue>
+				</ResultScore>
+				<ResultScore>
+					<ScoreMetric>103</ScoreMetric>  <!-- Margin of Error -->
+					<ScoreValue>5.0</ScoreValue>
+				</ResultScore>
+				<ResultScore>
+					<ScoreMetric>104</ScoreMetric>  <!-- Stanine -->
+					<ScoreValue>6</ScoreValue>
+				</ResultScore>
+				<ResultScore>
+					<ScoreMetric>105</ScoreMetric>  <!-- Year Level -->
+					<ScoreValue>4</ScoreValue>
+				</ResultScore>				
+			</ResultScoreList>
+  		</xhtml:Example>
+		  
+		<xhtml:Example xmlns="" name="asTTle Result Score List Example" intl="nz">
+			<ResultScoreList>
+				<ResultScore>
+					<Competency>Ideas</Competency>
+					<ScoreMetric>101</ScoreMetric>  <!-- Raw Score -->
+					<ScoreValue>1234</ScoreValue>
+				</ResultScore>
+				<ResultScore>
+					<Competency>Ideas</Competency>
+					<ScoreMetric>108</ScoreMetric>  <!-- Curriculum Level -->
+					<ScoreValue>5B</ScoreValue>
+				</ResultScore>
+				<ResultScore>
+					<Competency>Overall</Competency>
+					<ScoreMetric>101</ScoreMetric>  <!-- Raw Score -->
+					<ScoreValue>1591</ScoreValue>
+				</ResultScore>
+				<ResultScore>
+					<Competency>Overall</Competency>
+					<ScoreMetric>108</ScoreMetric>  <!-- Curriculum Level -->
+					<ScoreValue>5B</ScoreValue>
+				</ResultScore>
+			</ResultScoreList>
+  		</xhtml:Example>
+	</CommonElement>
+
+	<CommonElement name="AssessmentScoreType" type="true" dm="true">
+		<Item>
+			<Element>AssessmentScoreType</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>An individual result score for the assessment task.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Competency</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>String describing a particular competency that is being reported in the assessment.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- Competency -->
+		<Item>
+			<Element>ScoreMetric</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A code denoting the type of metric the ScoreValue represents.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsScoreMetricType"/>
+		</Item>    <!-- ScoreMetric -->		
+		<Item>
+			<Element>ScoreValue</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The actual score </p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>    <!-- ScoreValue -->
+	</CommonElement>
+
+	<CommonElement name="JustificationListType" type="true" dm="true">
+		<Item>
+			<Element>JustificationListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list identifying the assessment task results that justify the student
+					 achieving this attainment.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Justification</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>A generic reference to an assessment task result or other student attainment
+					 that justifies the student achieving this attainment.</p>
+			</Description>
+			<Type ref="CommonTypes" name="JustificationType"/>
+		</Item>     <!-- Justification -->
+
+		<xhtml:Example xmlns="" name="Multiple Unit Standards Justification List">
+			<JustificationList>
+				<Justification>
+					<RefId>2752a16b-b62a-4973-9d44-23e13e1c037b</RefId>
+					<LocalId>91165-v2</LocalId>
+					<Name>Demonstrate understanding of the properties of selected organic compounds</Name>
+					<ObjectType>AssessmentTaskResult</ObjectType>
+					<AssessmentType json:force-string="true">102</AssessmentType>
+					<Result>Achieved</Result>
+					<Date>2016-06-28</Date>
+					<CreditValue>4</CreditValue>					
+				</Justification>
+				<Justification>
+					<RefId>eca0da5d-94af-4223-aaa6-7c0083006efd</RefId>
+					<LocalId>91166-v2</LocalId>
+					<Name>Demonstrate understanding of chemical reactivity</Name>
+					<ObjectType>AssessmentTaskResult</ObjectType>
+					<AssessmentType json:force-string="true">101</AssessmentType>
+					<Result>Achieved with merit</Result>
+					<Date>2016-06-01</Date>
+					<CreditValue>3</CreditValue>					
+				</Justification>				
+				<Justification>
+					<RefId>12f4761d-5e97-4e12-804e-e16d882c86c7</RefId>
+					<LocalId>91167-v2</LocalId>
+					<Name>Demonstrate understanding of oxidation-reduction</Name>
+					<ObjectType>AssessmentTaskResult</ObjectType>
+					<AssessmentType json:force-string="true">102</AssessmentType>
+					<Result>Achieved</Result>
+					<Date>2016-06-01</Date>
+					<CreditValue>3</CreditValue>										
+				</Justification>				
+			</JustificationList>
+  		</xhtml:Example>	  
+	</CommonElement>
+
+	<CommonElement name="JustificationType" type="true" dm="true">
+		<Item>
+			<Element>JustificationType</Element>
+			<Description>
+				<p>Details of an assessment task result or other student attainment that 
+					justifies the student achieving this attainment.
+				</p>
+			</Description>
+			<Type complex="extension" name="ObjectReferenceType"/>
+		</Item>
+
+		<Item>
+			<Element>AssessmentType</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>A Code denoting how the Justification assessment task was assessed</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsAssessmentTypeType"/>
+		</Item>    <!-- AssessmentType -->
+
+		<Item>
+			<Element>Result</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The final result of the assessment task that justifies the attainment.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>   <!-- Result -->
+
+		<Item>
+			<Element>Date</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date the justifying assessment task was achieved.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>   <!-- Date -->
+
+		<Item>
+			<Element>CreditValue</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The number of credits the justifying assessment task contributes towards this attainment.</p>
+			</Description>
+			<Type name="xs:decimal"/>
+		</Item>   <!-- CreditValue -->
+
+		<xhtml:Example xmlns="" name="Justification Example">
+			<Justification>
+				<RefId>eca0da5d-94af-4223-aaa6-7c0083006efd</RefId>
+				<LocalId>91166-v2</LocalId>
+				<Name>Demonstrate understanding of chemical reactivity</Name>
+				<ObjectType>AssessmentTaskResult</ObjectType>
+				<AssessmentType json:force-string="true">101</AssessmentType>
+				<Result>Achieved with merit</Result>
+				<Date>2016-06-01</Date>
+				<CreditValue>3</CreditValue>
+			</Justification>						
+		</xhtml:Example>
+	</CommonElement>
+</IncludeGroup>

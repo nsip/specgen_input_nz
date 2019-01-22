@@ -129,7 +129,7 @@
 				<Description>
 					<p>MoE code denoting the chosen subject / learning area.</p>
 				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsLearningAreaType"/>
+				<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
 			</Item>         <!-- Code -->
 		</if>
 		<xhtml:Example xmlns="" name="Student Subject Choice Example" intl="au">
@@ -219,7 +219,7 @@
 				<p>The type of enrolment as it relates to this school, 
 					eg whether base school, co-enrolment. </p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsSchoolEnrollmentTypeType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsSchoolEnrolmentTypeType"></Type>
 		</Item>		<!-- MembershipType -->
 		<Item>
 			<Element>YearLevel</Element>
@@ -278,7 +278,7 @@
 			<Description>
 				<p>The student classification for MoE funding purposes</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsFundingTypeType"/>
+			<Type ref="CodeSets" name="NZCodeSetsStudentFundingTypeType"/>
 		</Item>		<!-- FundingType -->
 		<Item>
 			<Element>FundingYearLevel</Element>

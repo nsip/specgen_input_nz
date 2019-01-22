@@ -14,7 +14,11 @@
 		<Element>StudentContactRelationship</Element>
 		<privacyRating>High</privacyRating>
 		<Description>
-			Describes the relationship between a Student and a whānau member.
+			<p>A relationship between a person who is part of a Student's whānau and that Student.
+				Relationship properties include the relationship type and roles played by the student contact
+				in respect of the student.</p>
+			<p>Individual details about the student and student contact are provided in other data objects - 
+				StudentPersonal and StudentContactPersonal respectively.</p>
 		</Description>
 	</Item>
 	<Item>

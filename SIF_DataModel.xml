@@ -96,10 +96,6 @@
 				<a href="JSON/jsonSchema.yaml">(yaml)</a>
 			</dd>
 			<dd>
-				Swagger API definition <a href="JSON/swagger.json"> (json)</a>
-				<a href="JSON/swagger.yaml">(yaml)</a>
-			</dd>
-			<dd>
 				Open API definition <a href="JSON/OpenAPI.json"> (json)</a>
 				<a href="JSON/OpenAPI.yaml">(yaml)</a>
 			</dd>

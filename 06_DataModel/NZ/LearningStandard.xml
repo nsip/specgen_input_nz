@@ -221,14 +221,14 @@
       <Type name="xs:decimal"/>
     </Item>      <!-- NCEALevel -->
     <Item>
-      <Element>AssessmentMode</Element>
+      <Element>AssessmentType</Element>
       <Characteristics>O</Characteristics>
       <privacyRating>Low</privacyRating>
       <Description>
         <p>Code denoting how the LearningStandard is assessed.</p>
       </Description>
-      <Type ref="CodeSets" name="NZCodeSetsAssessmentModeType"/>
-    </Item>      <!-- AssessmentMode -->
+      <Type ref="CodeSets" name="NZCodeSetsAssessmentTypeType"/>
+    </Item>      <!-- AssessmentType -->
     <Item>
       <Element>RelatedLearningStandardList</Element>
       <Characteristics>O</Characteristics>
@@ -417,7 +417,7 @@
       <Status json:force-string="true">2</Status>
       <Credits>4</Credits>
       <NCEALevel json:force-string="true">2</NCEALevel>
-      <AssessmentMode json:force-string="true">1</AssessmentMode>
+      <AssessmentType json:force-string="true">101</AssessmentType>
     </LearningStandard>
   </xhtml:Example>
 
@@ -433,7 +433,7 @@
         <SubjectArea>3</SubjectArea>
       </SubjectAreas>
       <Status json:force-string="true">2</Status>
-      <AssessmentMode json:force-string="true">1</AssessmentMode>
+      <AssessmentType json:force-string="true">102</AssessmentType>
     </LearningStandard>
   </xhtml:Example>
 </DataObject>

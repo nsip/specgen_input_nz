@@ -185,7 +185,6 @@
 
 
 	<!-- Defined by SIF NZ 	-->
-	
 	<CommonElement name="SchoolServiceType" type="true" dm="true">
 		<Item>
 			<Element>SchoolServiceType</Element>
@@ -267,7 +266,7 @@
 				<DefinitionList>
 					<Definition json:force-string="true">101</Definition>
 					<Definition json:force-string="true">103</Definition>
-					<Definition json:force-string="true">108</Definition>
+					<Definition json:force-string="true">106</Definition>
 				</DefinitionList>			
 				<SchoolYearList>
 					<SchoolYear>
@@ -368,6 +367,7 @@
 			</SchoolYearList>
 		</xhtml:Example>
 	</CommonElement>
+	
 	<CommonElement name="SchoolYearLevelType" type="true" dm="true">
 		<Item>
 			<Element>SchoolYearLevelType</Element>
@@ -510,7 +510,7 @@
 		<xhtml:Example xmlns="" name="NZ School Definition List Example">
 			<SchoolDefinitionList>
 				<Definition json:force-string="true">103</Definition>
-				<Definition json:force-string="true">108</Definition>
+				<Definition json:force-string="true">106</Definition>
 			</SchoolDefinitionList>
 		</xhtml:Example>
 	</CommonElement>

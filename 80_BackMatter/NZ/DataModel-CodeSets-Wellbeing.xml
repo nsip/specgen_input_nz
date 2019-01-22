@@ -3,180 +3,238 @@
  	xmlns="http://sifassociation.org/SpecGen">
 
 
-		<!-- Borrowed from SIF AU -->
+	<!-- Laregely borrowed from SIF AU -->
+
     <CodeSet>
       <Intro>
-        <p>Personalised Plan categories - initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
+        <p>Standard codes denoting the severity of a Wellbeing Characteristic or Alert.</p>
       </Intro>
-      <ID>Personalised Plan</ID>
+      <ID>Wellbeing Severity</ID>
       <Values>
-		  <Value><Code>M</Code><Text>Medical</Text></Value>
-		  <Value><Code>At</Code><Text>Attendance</Text></Value>
-		  <Value><Code>Ac</Code><Text>Academic</Text></Value>
-		  <Value><Code>B</Code><Text>Behavioural</Text></Value>
-		  <Value><Code>S</Code><Text>Special Needs</Text></Value>
-		  <Value><Code>L</Code><Text>Legal</Text></Value>
-		  <Value><Code>O</Code><Text>Other</Text></Value>
+				<Value><Code>101</Code><Text>Very High</Text></Value>
+				<Value><Code>102</Code><Text>High</Text></Value>
+				<Value><Code>103</Code><Text>Medium</Text></Value>
+				<Value><Code>104</Code><Text>Low</Text></Value>
+				<Value><Code>105</Code><Text>Very Low</Text></Value>
       </Values>
-    </CodeSet>    <!-- Personalised Plan -->
+    </CodeSet>    <!-- Wellbeing Severity -->
 
     <CodeSet>
       <Intro>
-        <p>Wellbeing Characteristics - High Level.  Initially provided by WA.  This code set is in draft and changes are expected.  Future changes may re-specify code values.</p> 
+        <p>Standard codes denoting the status of the Wellbeing Response.</p>
       </Intro>
-      <ID>Wellbeing Characteristic Sub Category</ID>
+      <ID>Wellbeing Status</ID>
       <Values>
-	  	 	<Value><Code>MH-1</Code><Text>Adjustment Disorder</Text></Value>
-				<Value><Code>MH-2</Code><Text>Anorexia</Text></Value>
-				<Value><Code>MH-3</Code><Text>Anxiety Disorder</Text></Value>
-				<Value><Code>MH-4</Code><Text>Attachment Disorder</Text></Value>
-				<Value><Code>MH-5</Code><Text>Attention Deficit Hyperactivity Disorder (ADHD)</Text></Value>
-				<Value><Code>MH-6</Code><Text>Bipolar Affective Disorder</Text></Value>
-				<Value><Code>MH-7</Code><Text>Bulimia</Text></Value>
-				<Value><Code>MH-8</Code><Text>Depression</Text></Value>
-				<Value><Code>MH-9</Code><Text>Mixed Depression and Anxiety</Text></Value>
-				<Value><Code>MH-10</Code><Text>Obsessive Compulsive  Disorder</Text></Value>
-				<Value><Code>MH-11</Code><Text>Oppositional Defiance Disorder</Text></Value>
-				<Value><Code>MH-12</Code><Text>Paranoia</Text></Value>
-				<Value><Code>MH-13</Code><Text>Post-Traumatic Stress Disorder</Text></Value>
-				<Value><Code>MH-14</Code><Text>Reactive Attachment Disorder</Text></Value>
-				<Value><Code>MH-15</Code><Text>Social Anxiety Disorder</Text></Value>
-				<Value><Code>MH-16</Code><Text>Tic Disorder</Text></Value>
-				<Value><Code>MH-17</Code><Text>Tourette’s Syndrome</Text></Value>
-				<Value><Code>MH-18</Code><Text>Conduct Disorder</Text></Value>
-				<Value><Code>MS-1</Code><Text>Absence seizures epilepsy</Text></Value>
-				<Value><Code>MS-2</Code><Text>Tonic Clonic epilepsy</Text></Value>
-				<Value><Code>MS-3</Code><Text>Myotonic epilepsy</Text></Value>
-				<Value><Code>MS-4</Code><Text>Refractory epilepsy</Text></Value>
-				<Value><Code>MAA-1</Code><Text>Antibiotics -specify type(s)</Text></Value>
-				<Value><Code>MAA-2</Code><Text>Dairy</Text></Value>
-				<Value><Code>MAA-3</Code><Text>Egg</Text></Value>
-				<Value><Code>MAA-4</Code><Text>Fruit (specify)</Text></Value>
-				<Value><Code>MAA-5</Code><Text>Insect bites - nfd</Text></Value>
-				<Value><Code>MAA-6</Code><Text>Bees</Text></Value>
-				<Value><Code>MAA-7</Code><Text>Ants</Text></Value>
-				<Value><Code>MAA-8</Code><Text>Ticks</Text></Value>
-				<Value><Code>MAA-9</Code><Text>Latex</Text></Value>
-				<Value><Code>MAA-10</Code><Text>Peanuts</Text></Value>
-				<Value><Code>MAA-11</Code><Text>Shellfish</Text></Value>
-				<Value><Code>MAA-12</Code><Text>Tree nuts</Text></Value>
-				<Value><Code>MAA-13</Code><Text>Wheat</Text></Value>
-				<Value><Code>MAA-14</Code><Text>Other</Text></Value>
-				<Value><Code>MAIM-1</Code><Text>Coeliac Disease - Gluten</Text></Value>
-				<Value><Code>MAIM-2</Code><Text>Enterocolitis Syndrome</Text></Value>
-				<Value><Code>MAIM-3</Code><Text>Food Protein Induced Syndrome</Text></Value>
-				<Value><Code>MB-1</Code><Text>Anaemia</Text></Value>
-				<Value><Code>MB-2</Code><Text>Haemophilia</Text></Value>
-				<Value><Code>MB-3</Code><Text>Thalassemia</Text></Value>
-				<Value><Code>MB-4</Code><Text>Vasculitis</Text></Value>
-				<Value><Code>MB-5</Code><Text>Von Willebrand's Disease</Text></Value>
-				<Value><Code>MMS-1</Code><Text>Ehlers Danlos</Text></Value>
-				<Value><Code>MMS-2</Code><Text>Fibromyalgia  - discuss</Text></Value>
-				<Value><Code>MMS-3</Code><Text>Hip Dysplasia</Text></Value>
-				<Value><Code>MMS-4</Code><Text>Joint Hypermobility</Text></Value>
-				<Value><Code>MMS-5</Code><Text>Juvenile Arthritis</Text></Value>
-				<Value><Code>MMS-6</Code><Text>Kohlers Disease</Text></Value>
-				<Value><Code>MMS-7</Code><Text>Marfan Syndrome</Text></Value>
-				<Value><Code>MMS-8</Code><Text>Meyers Dysplasia</Text></Value>
-				<Value><Code>MMS-9</Code><Text>Neurofibromatosis type 1</Text></Value>
-				<Value><Code>MMS-10</Code><Text>Osgood Schlatter Condition</Text></Value>
-				<Value><Code>MMS-11</Code><Text>Osteo Imperfecta</Text></Value>
-				<Value><Code>MMS-12</Code><Text>Scoliosis</Text></Value>
-				<Value><Code>MMS-13</Code><Text>Severs Disease</Text></Value>
-				<Value><Code>MMS-14</Code><Text>Talipes</Text></Value>
-				<Value><Code>MMS-15</Code><Text>Von Eulenburg Disease</Text></Value>
-				<Value><Code>MCM-1</Code><Text>Angelman Syndrome</Text></Value>
-				<Value><Code>MCM-2</Code><Text>Charcot Marie Tooth</Text></Value>
-				<Value><Code>MCM-3</Code><Text>Coffin Lowry Syndrome</Text></Value>
-				<Value><Code>MCM-4</Code><Text>Coffin-Siris Syndrome</Text></Value>
-				<Value><Code>MCM-5</Code><Text>Down Syndrome</Text></Value>
-				<Value><Code>MCM-6</Code><Text>Foetal Alcohol Syndrome (FAS)</Text></Value>
-				<Value><Code>MCM-7</Code><Text>Fragile X Syndrome</Text></Value>
-				<Value><Code>MCM-8</Code><Text>G6 PD Deficiency</Text></Value>
-				<Value><Code>MCM-9</Code><Text>Hyperglycemia</Text></Value>
-				<Value><Code>MCM-10</Code><Text>Klinefelter Syndrome</Text></Value>
-				<Value><Code>MCM-11</Code><Text>Malignant Hyperthermia</Text></Value>
-				<Value><Code>MCM-12</Code><Text>MCADD - Metabolic disorder</Text></Value>
-				<Value><Code>MCM-13</Code><Text>Non Ketotic</Text></Value>
-				<Value><Code>MCM-14</Code><Text>Oculocutaneous Albinism</Text></Value>
-				<Value><Code>MCM-15</Code><Text>Phelan-McDermid Syndrome</Text></Value>
-				<Value><Code>MCM-16</Code><Text>Phenylketonuria</Text></Value>
-				<Value><Code>MCM-17</Code><Text>Pierr Robyn Syndrome</Text></Value>
-				<Value><Code>MCM-18</Code><Text>Potocki - Lupski Syndrome</Text></Value>
-				<Value><Code>MCM-19</Code><Text>Prader Willi Syndrome</Text></Value>
-				<Value><Code>MCM-20</Code><Text>Rubinstein-Taybi Syndrome</Text></Value>
-				<Value><Code>MCM-21</Code><Text>ScN2A (Sodium Channel) Gene Mutation</Text></Value>
-				<Value><Code>MCM-22</Code><Text>Trisomy - chromosome</Text></Value>
-				<Value><Code>MCM-23</Code><Text>Trisomy 21/Down Syndrome</Text></Value>
-				<Value><Code>MCM-24</Code><Text>Turners Syndrome</Text></Value>
-				<Value><Code>MCM-25</Code><Text>Velocardiofacial Syndrome</Text></Value>
-				<Value><Code>MCM-26</Code><Text>Wolf-Hirschhorn Syndrome</Text></Value>
-	  	</Values>
-		</CodeSet>    <!-- Wellbeing Characteristic Sub Category -->
+				<Value><Code>U</Code><Text>Unresolved</Text></Value>
+				<Value><Code>R</Code><Text>Resolved</Text></Value>
+				<Value><Code>O</Code><Text>Other</Text></Value>
+      </Values>
+    </CodeSet>    <!-- Wellbeing Status -->
 
-   	<CodeSet>
-      <Intro>
-        <p>Wellbeing Characteristics - High Level.  Initially provided by WA. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
-      </Intro>
-      <ID>Wellbeing Characteristic Category</ID>
-      <Values>
-	  		<Value><Code>MAO</Code><Text>Allergies - other</Text></Value>
-				<Value><Code>MAIM</Code><Text>Auto-immune/Immune Disorders</Text></Value>
-				<Value><Code>MRD</Code><Text>Respiratory Disorder</Text></Value>
-				<Value><Code>MB</Code><Text>Blood disorder</Text></Value>
-				<Value><Code>MMD</Code><Text>Heart Disease/ Disorder</Text></Value>
-				<Value><Code>MMS</Code><Text>Musculo – skeletal conditions</Text></Value>
-				<Value><Code>MEM</Code><Text>Endocrine and Metabolic Disorders</Text></Value>
-				<Value><Code>MC</Code><Text>Childhood cancer</Text></Value>
-				<Value><Code>MAA</Code><Text>Allergy – Anaphylaxis</Text></Value>
-				<Value><Code>MH</Code><Text>Mental and behavioural disorders</Text></Value>
-				<Value><Code>MN</Code><Text>Diseases/conditions of the nervous system</Text></Value>
-				<Value><Code>MS</Code><Text>Seizure disorders</Text></Value>
-				<Value><Code>MCM</Code><Text>Congenital malformations, deformations and chromosomal abnormalities</Text></Value>
-				<Value><Code>MI</Code><Text>Infectious Diseases</Text></Value>
-				<Value><Code>MGI</Code><Text>Gastro Intestinal/Urinary conditions</Text></Value>
-				<Value><Code>MND</Code><Text>Neuro/Developmental Disorders</Text></Value>
-				<Value><Code>MO</Code><Text>Oral/Phalangeal Disorders</Text></Value>
-				<Value><Code>MD</Code><Text>Deaf and Hard of Hearing</Text></Value>
-				<Value><Code>MOP</Code><Text>Optical/ Vision Disorder</Text></Value>
-				<Value><Code>M-Other</Code><Text>Medical Other</Text></Value>
-				<Value><Code>D-Other</Code><Text>Disability Other</Text></Value>
-				<Value><Code>S-Other</Code><Text>Special Needs Other</Text></Value>
-				<Value><Code>Other</Code><Text>Other</Text></Value>
-	  	</Values>
-		</CodeSet>	  <!-- Wellbeing Characteristic Category -->
 
-    <CodeSet>
+
+	<!-- Wellbeing Alert classification codes -->
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the category of the Wellbeing Alert.</p>
+		</Intro>
+		<ID>Wellbeing Alert Category</ID>
+		<Values>
+			<Value><Code>M</Code><Text>Medical</Text></Value>
+			<Value><Code>L</Code><Text>Legal</Text></Value>
+			<Value><Code>D</Code><Text>Discipline</Text></Value>
+			<Value><Code>E</Code><Text>Educational</Text></Value>
+			<Value><Code>S</Code><Text>SpecialNeeds/Disability</Text></Value>
+			<Value><Code>P</Code><Text>Plan Review</Text></Value>
+			<Value><Code>O</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Alert Category -->
+
+	<CodeSet>
+		<Intro>
+		</Intro>
+		<ID>Key Contact Role</ID>
+		<Values>
+		<Value><Code>101</Code><Text>Doctor</Text></Value>
+			<Value><Code>102</Code><Text>Parent/Caregiver</Text></Value>
+			<Value><Code>103</Code><Text>Principal</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Key Contact Role -->
+
+	<!-- Wellbeing Characteristic classification codes -->
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the Sub-Categories of a Wellbeing Characteristic.</p> 
+		</Intro>
+		<ID>Wellbeing Characteristic Sub Category</ID>
+		<Values>
+			<Value><Code>MH-1</Code><Text>Adjustment Disorder</Text></Value>
+			<Value><Code>MH-2</Code><Text>Anorexia</Text></Value>
+			<Value><Code>MH-3</Code><Text>Anxiety Disorder</Text></Value>
+			<Value><Code>MH-4</Code><Text>Attachment Disorder</Text></Value>
+			<Value><Code>MH-5</Code><Text>Attention Deficit Hyperactivity Disorder (ADHD)</Text></Value>
+			<Value><Code>MH-6</Code><Text>Bipolar Affective Disorder</Text></Value>
+			<Value><Code>MH-7</Code><Text>Bulimia</Text></Value>
+			<Value><Code>MH-8</Code><Text>Depression</Text></Value>
+			<Value><Code>MH-9</Code><Text>Mixed Depression and Anxiety</Text></Value>
+			<Value><Code>MH-10</Code><Text>Obsessive Compulsive  Disorder</Text></Value>
+			<Value><Code>MH-11</Code><Text>Oppositional Defiance Disorder</Text></Value>
+			<Value><Code>MH-12</Code><Text>Paranoia</Text></Value>
+			<Value><Code>MH-13</Code><Text>Post-Traumatic Stress Disorder</Text></Value>
+			<Value><Code>MH-14</Code><Text>Reactive Attachment Disorder</Text></Value>
+			<Value><Code>MH-15</Code><Text>Social Anxiety Disorder</Text></Value>
+			<Value><Code>MH-16</Code><Text>Tic Disorder</Text></Value>
+			<Value><Code>MH-17</Code><Text>Tourette’s Syndrome</Text></Value>
+			<Value><Code>MH-18</Code><Text>Conduct Disorder</Text></Value>
+			<Value><Code>MS-1</Code><Text>Absence seizures epilepsy</Text></Value>
+			<Value><Code>MS-2</Code><Text>Tonic Clonic epilepsy</Text></Value>
+			<Value><Code>MS-3</Code><Text>Myotonic epilepsy</Text></Value>
+			<Value><Code>MS-4</Code><Text>Refractory epilepsy</Text></Value>
+			<Value><Code>MAA-1</Code><Text>Antibiotics -specify type(s)</Text></Value>
+			<Value><Code>MAA-2</Code><Text>Dairy</Text></Value>
+			<Value><Code>MAA-3</Code><Text>Egg</Text></Value>
+			<Value><Code>MAA-4</Code><Text>Fruit (specify)</Text></Value>
+			<Value><Code>MAA-5</Code><Text>Insect bites - nfd</Text></Value>
+			<Value><Code>MAA-6</Code><Text>Bees</Text></Value>
+			<Value><Code>MAA-7</Code><Text>Ants</Text></Value>
+			<Value><Code>MAA-8</Code><Text>Ticks</Text></Value>
+			<Value><Code>MAA-9</Code><Text>Latex</Text></Value>
+			<Value><Code>MAA-10</Code><Text>Peanuts</Text></Value>
+			<Value><Code>MAA-11</Code><Text>Shellfish</Text></Value>
+			<Value><Code>MAA-12</Code><Text>Tree nuts</Text></Value>
+			<Value><Code>MAA-13</Code><Text>Wheat</Text></Value>
+			<Value><Code>MAA-14</Code><Text>Other</Text></Value>
+			<Value><Code>MAIM-1</Code><Text>Coeliac Disease - Gluten</Text></Value>
+			<Value><Code>MAIM-2</Code><Text>Enterocolitis Syndrome</Text></Value>
+			<Value><Code>MAIM-3</Code><Text>Food Protein Induced Syndrome</Text></Value>
+			<Value><Code>MB-1</Code><Text>Anaemia</Text></Value>
+			<Value><Code>MB-2</Code><Text>Haemophilia</Text></Value>
+			<Value><Code>MB-3</Code><Text>Thalassemia</Text></Value>
+			<Value><Code>MB-4</Code><Text>Vasculitis</Text></Value>
+			<Value><Code>MB-5</Code><Text>Von Willebrand's Disease</Text></Value>
+			<Value><Code>MMS-1</Code><Text>Ehlers Danlos</Text></Value>
+			<Value><Code>MMS-2</Code><Text>Fibromyalgia  - discuss</Text></Value>
+			<Value><Code>MMS-3</Code><Text>Hip Dysplasia</Text></Value>
+			<Value><Code>MMS-4</Code><Text>Joint Hypermobility</Text></Value>
+			<Value><Code>MMS-5</Code><Text>Juvenile Arthritis</Text></Value>
+			<Value><Code>MMS-6</Code><Text>Kohlers Disease</Text></Value>
+			<Value><Code>MMS-7</Code><Text>Marfan Syndrome</Text></Value>
+			<Value><Code>MMS-8</Code><Text>Meyers Dysplasia</Text></Value>
+			<Value><Code>MMS-9</Code><Text>Neurofibromatosis type 1</Text></Value>
+			<Value><Code>MMS-10</Code><Text>Osgood Schlatter Condition</Text></Value>
+			<Value><Code>MMS-11</Code><Text>Osteo Imperfecta</Text></Value>
+			<Value><Code>MMS-12</Code><Text>Scoliosis</Text></Value>
+			<Value><Code>MMS-13</Code><Text>Severs Disease</Text></Value>
+			<Value><Code>MMS-14</Code><Text>Talipes</Text></Value>
+			<Value><Code>MMS-15</Code><Text>Von Eulenburg Disease</Text></Value>
+			<Value><Code>MCM-1</Code><Text>Angelman Syndrome</Text></Value>
+			<Value><Code>MCM-2</Code><Text>Charcot Marie Tooth</Text></Value>
+			<Value><Code>MCM-3</Code><Text>Coffin Lowry Syndrome</Text></Value>
+			<Value><Code>MCM-4</Code><Text>Coffin-Siris Syndrome</Text></Value>
+			<Value><Code>MCM-5</Code><Text>Down Syndrome</Text></Value>
+			<Value><Code>MCM-6</Code><Text>Foetal Alcohol Syndrome (FAS)</Text></Value>
+			<Value><Code>MCM-7</Code><Text>Fragile X Syndrome</Text></Value>
+			<Value><Code>MCM-8</Code><Text>G6 PD Deficiency</Text></Value>
+			<Value><Code>MCM-9</Code><Text>Hyperglycemia</Text></Value>
+			<Value><Code>MCM-10</Code><Text>Klinefelter Syndrome</Text></Value>
+			<Value><Code>MCM-11</Code><Text>Malignant Hyperthermia</Text></Value>
+			<Value><Code>MCM-12</Code><Text>MCADD - Metabolic disorder</Text></Value>
+			<Value><Code>MCM-13</Code><Text>Non Ketotic</Text></Value>
+			<Value><Code>MCM-14</Code><Text>Oculocutaneous Albinism</Text></Value>
+			<Value><Code>MCM-15</Code><Text>Phelan-McDermid Syndrome</Text></Value>
+			<Value><Code>MCM-16</Code><Text>Phenylketonuria</Text></Value>
+			<Value><Code>MCM-17</Code><Text>Pierr Robyn Syndrome</Text></Value>
+			<Value><Code>MCM-18</Code><Text>Potocki - Lupski Syndrome</Text></Value>
+			<Value><Code>MCM-19</Code><Text>Prader Willi Syndrome</Text></Value>
+			<Value><Code>MCM-20</Code><Text>Rubinstein-Taybi Syndrome</Text></Value>
+			<Value><Code>MCM-21</Code><Text>ScN2A (Sodium Channel) Gene Mutation</Text></Value>
+			<Value><Code>MCM-22</Code><Text>Trisomy - chromosome</Text></Value>
+			<Value><Code>MCM-23</Code><Text>Trisomy 21/Down Syndrome</Text></Value>
+			<Value><Code>MCM-24</Code><Text>Turners Syndrome</Text></Value>
+			<Value><Code>MCM-25</Code><Text>Velocardiofacial Syndrome</Text></Value>
+			<Value><Code>MCM-26</Code><Text>Wolf-Hirschhorn Syndrome</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Characteristic Sub Category -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the Categories of a Wellbeing Characteristic.</p>
+		</Intro>
+		<ID>Wellbeing Characteristic Category</ID>
+		<Values>
+			<Value><Code>MAO</Code><Text>Allergies - other</Text></Value>
+		<Value><Code>MAIM</Code><Text>Auto-immune/Immune Disorders</Text></Value>
+		<Value><Code>MRD</Code><Text>Respiratory Disorder</Text></Value>
+		<Value><Code>MB</Code><Text>Blood disorder</Text></Value>
+		<Value><Code>MMD</Code><Text>Heart Disease/ Disorder</Text></Value>
+		<Value><Code>MMS</Code><Text>Musculo – skeletal conditions</Text></Value>
+		<Value><Code>MEM</Code><Text>Endocrine and Metabolic Disorders</Text></Value>
+		<Value><Code>MC</Code><Text>Childhood cancer</Text></Value>
+		<Value><Code>MAA</Code><Text>Allergy – Anaphylaxis</Text></Value>
+		<Value><Code>MH</Code><Text>Mental and behavioural disorders</Text></Value>
+		<Value><Code>MN</Code><Text>Diseases/conditions of the nervous system</Text></Value>
+		<Value><Code>MS</Code><Text>Seizure disorders</Text></Value>
+		<Value><Code>MCM</Code><Text>Congenital malformations, deformations and chromosomal abnormalities</Text></Value>
+		<Value><Code>MI</Code><Text>Infectious Diseases</Text></Value>
+		<Value><Code>MGI</Code><Text>Gastro Intestinal/Urinary conditions</Text></Value>
+		<Value><Code>MND</Code><Text>Neuro/Developmental Disorders</Text></Value>
+		<Value><Code>MO</Code><Text>Oral/Phalangeal Disorders</Text></Value>
+		<Value><Code>MD</Code><Text>Deaf and Hard of Hearing</Text></Value>
+		<Value><Code>MOP</Code><Text>Optical/ Vision Disorder</Text></Value>
+		<Value><Code>M-Other</Code><Text>Medical Other</Text></Value>
+		<Value><Code>D-Other</Code><Text>Disability Other</Text></Value>
+		<Value><Code>S-Other</Code><Text>Special Needs Other</Text></Value>
+		<Value><Code>Other</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>	  <!-- Wellbeing Characteristic Category -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the classification of the Wellbeing Characteristic.</p>
+		</Intro>
+		<ID>Wellbeing Characteristic Classification</ID>
+		<Values>
+			<Value><Code>M</Code><Text>Medical</Text></Value>
+			<Value><Code>D</Code><Text>Disability</Text></Value>
+			<Value><Code>S</Code><Text>SpecialNeeds</Text></Value>
+			<Value><Code>O</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Characteristic Classification -->
+
+
+
+	<!-- Wellbeing Event classification codes -->
+	<CodeSet>
       <Intro>
-        <p>Wellbeing Event Category - initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
+        <p>Standard codes denoting the category of the Wellbeing Event.</p>
       </Intro>
       <ID>Wellbeing Event Category</ID>
-			<Values>
-				<Value><Code>B1</Code><Text>Safe</Text></Value>
-				<Value><Code>B2</Code><Text>Caring</Text></Value>
-				<Value><Code>B3</Code><Text>Respectful</Text></Value>
-				<Value><Code>B4</Code><Text>Responsible</Text></Value>
-				<Value><Code>B5</Code><Text>Enterprising</Text></Value>
-				<Value><Code>B6</Code><Text>Effort</Text></Value>
-				<Value><Code>B7</Code><Text>Citizenship</Text></Value>
-				<Value><Code>B8</Code><Text>Cooperation</Text></Value>
-				<Value><Code>B9</Code><Text>Leadership</Text></Value>
-				<Value><Code>M1</Code><Text>Aggressive physical contact against staff</Text></Value>
-				<Value><Code>M2</Code><Text>Abuse, threats, harassment or intimidation of staff</Text></Value>
-				<Value><Code>M3</Code><Text>Aggressive physical contact against a student</Text></Value>
-				<Value><Code>M4</Code><Text>Abuse, threats, harassment or intimidation of a student</Text></Value>
-				<Value><Code>M5</Code><Text>Damage to or theft of property</Text></Value>
-				<Value><Code>M6</Code><Text>Other violation of Code of Conduct (classroom managed)</Text></Value>
-				<Value><Code>M7</Code><Text>Possession, use or supply of substances or objects with restricted sale</Text></Value>
-				<Value><Code>M8</Code><Text>Possession, use or supply of illegal substances or objects</Text></Value>
-				<Value><Code>M9</Code><Text>E-breaches</Text></Value>
-				<Value><Code>99</Code><Text>Other Behaviour</Text></Value>
-			</Values>
-		</CodeSet>    <!-- Wellbeing Event Category -->
+		<Values>
+			<Value><Code>B1</Code><Text>Safe</Text></Value>
+			<Value><Code>B2</Code><Text>Caring</Text></Value>
+			<Value><Code>B3</Code><Text>Respectful</Text></Value>
+			<Value><Code>B4</Code><Text>Responsible</Text></Value>
+			<Value><Code>B5</Code><Text>Enterprising</Text></Value>
+			<Value><Code>B6</Code><Text>Effort</Text></Value>
+			<Value><Code>B7</Code><Text>Citizenship</Text></Value>
+			<Value><Code>B8</Code><Text>Cooperation</Text></Value>
+			<Value><Code>B9</Code><Text>Leadership</Text></Value>
+			<Value><Code>M1</Code><Text>Aggressive physical contact against staff</Text></Value>
+			<Value><Code>M2</Code><Text>Abuse, threats, harassment or intimidation of staff</Text></Value>
+			<Value><Code>M3</Code><Text>Aggressive physical contact against a student</Text></Value>
+			<Value><Code>M4</Code><Text>Abuse, threats, harassment or intimidation of a student</Text></Value>
+			<Value><Code>M5</Code><Text>Damage to, or theft of property</Text></Value>
+			<Value><Code>M6</Code><Text>Other violation of Code of Conduct (classroom managed)</Text></Value>
+			<Value><Code>M7</Code><Text>Possession, use or supply of substances or objects with restricted sale</Text></Value>
+			<Value><Code>M8</Code><Text>Possession, use or supply of illegal substances or objects</Text></Value>
+			<Value><Code>M9</Code><Text>E-breaches</Text></Value>
+			<Value><Code>99</Code><Text>Other Behaviour</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Event Category -->
     
-		<CodeSet>
+	<CodeSet>
       <Intro>
-        <p>Wellbeing Event Sub Category - initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
+        <p>Standard codes denoting the sub-category of the Wellbeing Event.</p>
       </Intro>
       <ID>Wellbeing Event Sub Category</ID>
       <Values>
@@ -201,7 +259,7 @@
 				<Value><Code>B3e</Code><Text>Accepts difference</Text></Value>
 				<Value><Code>B3f</Code><Text>Acknowledges the rights of others</Text></Value>
 				<Value><Code>B3g</Code><Text>Uses appropriate language/tone</Text></Value>
-				<Value><Code>B3h</Code><Text>Gives value to others’ opinions</Text></Value>
+				<Value><Code>B3h</Code><Text>Gives value to others' opinions</Text></Value>
 				<Value><Code>B3i</Code><Text>Maintains appropriate personal space</Text></Value>
 				<Value><Code>B3j</Code><Text>Shows consideration of impact of actions on others</Text></Value>
 				<Value><Code>B4a</Code><Text>Is honest</Text></Value>
@@ -241,7 +299,7 @@
 				<Value><Code>B7a</Code><Text>Promotes justice</Text></Value>
 				<Value><Code>B7b</Code><Text>Follows rules and laws</Text></Value>
 				<Value><Code>B7c</Code><Text>Stands up for others appropriately</Text></Value>
-				<Value><Code>B7d</Code><Text>Puts others’ needs before own</Text></Value>
+				<Value><Code>B7d</Code><Text>Puts others' needs before own</Text></Value>
 				<Value><Code>B7e</Code><Text>Contributes to the school/class</Text></Value>
 				<Value><Code>B7f</Code><Text>Contributes to the community</Text></Value>
 				<Value><Code>B7g</Code><Text>Is involved</Text></Value>
@@ -254,9 +312,9 @@
 				<Value><Code>B7n</Code><Text>Helps others to reach their goals</Text></Value>
 				<Value><Code>B8a</Code><Text>Is fair</Text></Value>
 				<Value><Code>B8b</Code><Text>Shows mutuality (sharing a feeling, action or relationship)</Text></Value>
-				<Value><Code>B8c</Code><Text>Shows reciprocity (“I scratch your back, you scratch mine)</Text></Value>
+				<Value><Code>B8c</Code><Text>Shows reciprocity ("I scratch your back, you scratch mine")</Text></Value>
 				<Value><Code>B8d</Code><Text>Shows goodwill</Text></Value>
-				<Value><Code>B8e</Code><Text>Is attentive to others’ reactions</Text></Value>
+				<Value><Code>B8e</Code><Text>Is attentive to others' reactions</Text></Value>
 				<Value><Code>B8f</Code><Text>Is open to dialogue/discussion</Text></Value>
 				<Value><Code>B8g</Code><Text>Works to be a valued member of a team</Text></Value>
 				<Value><Code>B8h</Code><Text>Offers others choices</Text></Value>
@@ -334,7 +392,7 @@
 				<Value><Code>M6x</Code><Text>Failure to use manners</Text></Value>
 				<Value><Code>M6y</Code><Text>Littering</Text></Value>
 				<Value><Code>M6z</Code><Text>Disorderly</Text></Value>
-				<Value><Code>M7a</Code><Text>Cigarette</Text></Value>
+				<Value><Code>M7a</Code><Text>Cigarette / e-cigarette</Text></Value>
 				<Value><Code>M7b</Code><Text>Alcohol</Text></Value>
 				<Value><Code>M7c</Code><Text>Over-the-counter medication</Text></Value>
 				<Value><Code>M7d</Code><Text>ADHD medication</Text></Value>
@@ -359,88 +417,122 @@
 				<Value><Code>M9h</Code><Text>Public posting of messages that bring the school or Department into disrepute</Text></Value>
 				<Value><Code>M9i</Code><Text>Copyright infringement or plagiarism</Text></Value>
 			</Values>
-    </CodeSet>    <!-- Wellbeing Event Sub Category -->
+	</CodeSet>    <!-- Wellbeing Event Sub Category -->
 
-    <CodeSet>
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the time period of the Wellbeing Event.</p>
+		</Intro>
+		<ID>Wellbeing Event Time Period</ID>
+		<Values>
+			<Value><Code>AM</Code><Text>AM</Text></Value>
+			<Value><Code>PM</Code><Text>PM</Text></Value>
+			<Value><Code>R</Code><Text>Recess</Text></Value>
+			<Value><Code>B</Code><Text>Before School</Text></Value>
+			<Value><Code>A</Code><Text>After School</Text></Value>
+			<Value><Code>Ex</Code><Text>Excursion</Text></Value>
+			<Value><Code>W</Code><Text>Weekend</Text></Value>
+			<Value><Code>O</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Event Time Period -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the category class of the Wellbeing Event.</p>
+		</Intro>
+		<ID>Wellbeing Event Category Class</ID>
+		<Values>
+			<Value><Code>P</Code><Text>Positive</Text></Value>
+			<Value><Code>N</Code><Text>Negative</Text></Value>
+			<Value><Code>D</Code><Text>Data Record Only</Text></Value>
+			<Value><Code>O</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Event Category Class -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting type of object or person the student was directing
+			their behaviour at, e.g. Staff Member, Student, Desk, Chair.</p>
+		</Intro>
+		<ID>Behaviour Directed At Type</ID>
+		<Values>
+			<Value><Code>99</Code><Text>Other</Text></Value>
+			<Value><Code>101</Code><Text>Staff</Text></Value>
+			<Value><Code>102</Code><Text>Student</Text></Value>
+			<Value><Code>103</Code><Text>Property</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Behaviour Directed At Type -->
+
+
+
+	<!-- Wellbeing Response classification codes -->
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the suspension category a Wellbeing Response belongs to.</p>
+		</Intro>
+		<ID>Suspension Category</ID>
+		<Values>
+			<Value><Code>E</Code><Text>Expulsion</Text></Value>
+			<Value><Code>WE</Code><Text>Whole Exclusion</Text></Value>
+			<Value><Code>P</Code><Text>Partial Exclusion</Text></Value>
+			<Value><Code>I</Code><Text>InSchool</Text></Value>
+			<Value><Code>W</Code><Text>Withdrawal</Text></Value>
+			<Value><Code>S</Code><Text>Suspension</Text></Value>
+			<Value><Code>R</Code><Text>Removal</Text></Value>
+			<Value><Code>O</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Suspension Category -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the detention category a Wellbeing Response belongs to.</p>
+		</Intro>
+		<ID>Detention Category</ID>
+		<Values>
+			<Value><Code>B</Code><Text>Before School</Text></Value>
+			<Value><Code>R</Code><Text>Recess</Text></Value>
+			<Value><Code>MR</Code><Text>Morning Recess</Text></Value>
+			<Value><Code>AR</Code><Text>Afternoon Recess</Text></Value>
+			<Value><Code>A</Code><Text>After School</Text></Value>
+			<Value><Code>L</Code><Text>Lunch</Text></Value>
+			<Value><Code>O</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Detention Category -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the category a Wellbeing Response belongs to.</p>
+		</Intro>
+		<ID>Wellbeing Response Category</ID>
+		<Values>
+					<Value><Code>S</Code><Text>Suspension</Text></Value>
+					<Value><Code>D</Code><Text>Detention</Text></Value>
+					<Value><Code>A</Code><Text>Award</Text></Value>
+					<Value><Code>P</Code><Text>PlanRequired</Text></Value>
+					<Value><Code>M</Code><Text>MultipleResponse</Text></Value>
+					<Value><Code>O</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Response Category -->
+
+  	<CodeSet>
       <Intro>
-        <p>Wellbeing Characteristic Classification - initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
+        <p>Standard codes denoting the type of award that has been achieved as part of a Wellbeing Response.</p>
       </Intro>
-      <ID>Wellbeing Characteristic Classification</ID>
+      <ID>Wellbeing Award Type</ID>
       <Values>
-				<Value><Code>M</Code><Text>Medical</Text></Value>
-				<Value><Code>D</Code><Text>Disability</Text></Value>
-				<Value><Code>S</Code><Text>SpecialNeeds</Text></Value>
-				<Value><Code>O</Code><Text>Other</Text></Value>
+				<Value><Code>101</Code><Text>Certificate</Text></Value>
+				<Value><Code>102</Code><Text>Trophy</Text></Value>
+				<Value><Code>103</Code><Text>Letter of Recognition</Text></Value>
+				<Value><Code>104</Code><Text>Other</Text></Value>
       </Values>
-    </CodeSet>    <!-- Wellbeing Characteristic Classification -->
+	</CodeSet>    <!-- Wellbeing Award Type -->
 
-    <CodeSet>
-      <Intro>
-        <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
-      </Intro>
-      <ID>Wellbeing Event Time Period</ID>
-      <Values>
-				<Value><Code>AM</Code><Text>AM</Text></Value>
-				<Value><Code>PM</Code><Text>PM</Text></Value>
-				<Value><Code>R</Code><Text>Recess</Text></Value>
-				<Value><Code>B</Code><Text>Before School</Text></Value>
-				<Value><Code>A</Code><Text>After School</Text></Value>
-				<Value><Code>Ex</Code><Text>Excursion</Text></Value>
-				<Value><Code>W</Code><Text>Weekend</Text></Value>
-				<Value><Code>O</Code><Text>Other</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Wellbeing Event Time Period -->
 
-    <CodeSet>
-      <Intro>
-        <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
-      </Intro>
-      <ID>Wellbeing Event Category Class</ID>
-      <Values>
-				<Value><Code>P</Code><Text>Positive</Text></Value>
-				<Value><Code>N</Code><Text>Negative</Text></Value>
-				<Value><Code>D</Code><Text>Data Record Only</Text></Value>
-				<Value><Code>O</Code><Text>Other</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Wellbeing Event Category Class -->
 
-    <CodeSet>
+	<!-- Wellbeing Appeal classification codes -->
+	<CodeSet>
       <Intro>
-        <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
-      </Intro>
-      <ID>Wellbeing Event Location</ID>
-      <Values>
-				<Value><Code>Off</Code><Text>Off-site</Text></Value>
-				<Value><Code>On</Code><Text>On school site - not further defined</Text></Value>
-				<Value><Code>Ex</Code><Text>School Excursion</Text></Value>
-				<Value><Code>In</Code><Text>School Incursion</Text></Value>
-				<Value><Code>Ov</Code><Text>Oval</Text></Value>
-				<Value><Code>P</Code><Text>Playground</Text></Value>
-				<Value><Code>L</Code><Text>Library</Text></Value>
-				<Value><Code>C</Code><Text>Classroom</Text></Value>
-				<Value><Code>O</Code><Text>Other</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Wellbeing Event Location -->
-
-    <CodeSet>
-      <Intro>
-        <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
-      </Intro>
-      <ID>Wellbeing Alert Category</ID>
-      <Values>
-				<Value><Code>M</Code><Text>Medical</Text></Value>
-				<Value><Code>L</Code><Text>Legal</Text></Value>
-				<Value><Code>D</Code><Text>Discipline</Text></Value>
-				<Value><Code>E</Code><Text>Educational</Text></Value>
-				<Value><Code>S</Code><Text>SpecialNeeds/Disability</Text></Value>
-				<Value><Code>P</Code><Text>Plan Review</Text></Value>
-				<Value><Code>O</Code><Text>Other</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Wellbeing Alert Category -->
-
-    <CodeSet>
-      <Intro>
-        <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
+        <p>Standard codes denoting the status of the Wellbeing Appeal.</p>
       </Intro>
       <ID>Wellbeing Appeal Status</ID>
       <Values>
@@ -449,69 +541,27 @@
 				<Value><Code>RE</Code><Text>Rejected</Text></Value>
 				<Value><Code>SU</Code><Text>Successful</Text></Value>
 	  	</Values>
-    </CodeSet>    <!-- Wellbeing Appeal Status -->
-
-    <CodeSet>
+	</CodeSet>    <!-- Wellbeing Appeal Status -->
+	<CodeSet>
       <Intro>
-        <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
+        <p>Code set denoting the type of individual or group that determined the appeal outcome.</p>
       </Intro>
-      <ID>Wellbeing Status</ID>
+      <ID>Appeal Determination By</ID>
       <Values>
-				<Value><Code>U</Code><Text>Unresolved</Text></Value>
-				<Value><Code>R</Code><Text>Resolved</Text></Value>
-				<Value><Code>O</Code><Text>Other</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Wellbeing Status -->
+				<Value><Code>101</Code><Text>Board of Trustees</Text></Value>
+				<Value><Code>102</Code><Text>Principal</Text></Value>
+				<Value><Code>103</Code><Text>Deputy Principal</Text></Value>
+				<Value><Code>104</Code><Text>Year Level Dean</Text></Value>
+				<Value><Code>105</Code><Text>Home Room Teacher</Text></Value>
+				<Value><Code>106</Code><Text>Ministry of Education</Text></Value>
+	  	</Values>
+	</CodeSet>    <!-- Appeal Determination By -->
 
-    <CodeSet>
-      <Intro>
-        <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
-      </Intro>
-      <ID>Suspension Category</ID>
-      <Values>
-				<Value><Code>E</Code><Text>Expulsion</Text></Value>
-				<Value><Code>WE</Code><Text>Whole Exclusion</Text></Value>
-				<Value><Code>P</Code><Text>Partial Exclusion</Text></Value>
-				<Value><Code>I</Code><Text>InSchool</Text></Value>
-				<Value><Code>W</Code><Text>Withdrawal</Text></Value>
-				<Value><Code>S</Code><Text>Suspension</Text></Value>
-				<Value><Code>R</Code><Text>Removal</Text></Value>
-				<Value><Code>O</Code><Text>Other</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Suspension Category -->
 
-   	<CodeSet>
-      <Intro>
-        <p>Standard codes denoting the detention category a Wellbeing Response belongs to.</p>
-      </Intro>
-      <ID>Detention Category</ID>
-      <Values>
-				<Value><Code>B</Code><Text>Before School</Text></Value>
-				<Value><Code>R</Code><Text>Recess</Text></Value>
-				<Value><Code>MR</Code><Text>Morning Recess</Text></Value>
-				<Value><Code>AR</Code><Text>Afternoon Recess</Text></Value>
-				<Value><Code>A</Code><Text>After School</Text></Value>
-				<Value><Code>L</Code><Text>Lunch</Text></Value>
-				<Value><Code>O</Code><Text>Other</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Detention Category -->
 
-    <CodeSet>
-      <Intro>
-        <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
-      </Intro>
-      <ID>Wellbeing Response Category</ID>
-      <Values>
-				<Value><Code>S</Code><Text>Suspension</Text></Value>
-				<Value><Code>D</Code><Text>Detention</Text></Value>
-				<Value><Code>A</Code><Text>Award</Text></Value>
-				<Value><Code>P</Code><Text>PlanRequired</Text></Value>
-				<Value><Code>M</Code><Text>MultipleResponse</Text></Value>
-				<Value><Code>O</Code><Text>Other</Text></Value>
-      </Values>
-		</CodeSet>    <!-- Wellbeing Response Category -->
 
-    <CodeSet>
+	<!--  Document classification codes -->    
+	<CodeSet>
       <Intro>
         <p>Standard codes denoting the classification of the Wellbeing Document.</p>
       </Intro>
@@ -521,20 +571,250 @@
 				<Value><Code>102</Code><Text>Sensitive</Text></Value>
 				<Value><Code>103</Code><Text>Not Classified</Text></Value>
       </Values>
-    </CodeSet>    <!-- Document Classification -->
+	</CodeSet>    <!-- Document Classification -->
 
-    <CodeSet>
+	<CodeSet>
       <Intro>
-        <p>Standard codes denoting the follow-up action category of the Wellbeing Event.</p>
+        <p>Standard codes denoting the type of Document.</p>
       </Intro>
-      <ID>Follow Up Action Category</ID>
+      <ID>Document Type</ID>
       <Values>
-				<Value><Code>101</Code><Text>Award</Text></Value>
-				<Value><Code>102</Code><Text>Detention</Text></Value>
-				<Value><Code>103</Code><Text>Personalised Plan</Text></Value>
-				<Value><Code>104</Code><Text>Suspension</Text></Value>
-				<Value><Code>105</Code><Text>Other</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Follow Up Action Category -->
+			<Value><Code>101</Code><Text>Individualised Behavioural Plan</Text></Value>
+			<Value><Code>102</Code><Text>Individualised Education Plan</Text></Value>
+			<Value><Code>103</Code><Text>Medical</Text></Value>
+			<Value><Code>104</Code><Text>Attendance</Text></Value>
+			<Value><Code>105</Code><Text>Behavioural</Text></Value>
+			<Value><Code>106</Code><Text>Special Needs</Text></Value>
+			<Value><Code>107</Code><Text>Academic</Text></Value>
+			<Value><Code>108</Code><Text>Legal</Text></Value>
+			<Value><Code>109</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Document Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>A code set denoting the role a person performs in relation to a document and their 
+		role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+		</Intro>
+		<ID>Document Role</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Owner</Text></Value>
+			<Value><Code>102</Code><Text>Author</Text></Value>
+			<Value><Code>103</Code><Text>Reviewer</Text></Value>
+			<Value><Code>104</Code><Text>Subject of</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Document Role -->
+
+
+
+	<!-- Learning Support classification codes -->
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the learning support agency that is supporting the student, 
+				e.g. Resource Teacher Literacy (RTLit) and Resource Teacher Learning and Behaviour (RTLB).</p>
+		</Intro>
+		<ID>Learning Support Agency</ID>
+		<Values>
+			<Value><Code>101</Code><Text>RTLit</Text><Description>Resource Teacher Literacy</Description></Value>
+			<Value><Code>102</Code><Text>RTLB</Text><Description>Resource Teacher Learning and Behaviour</Description></Value>
+			<Value><Code>103</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Agency -->
+	
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the learning support group the student is receiving support in,
+					e.g. physical, and learning.</p>
+		</Intro>
+		<ID>Learning Support Group</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Physical</Text></Value>
+			<Value><Code>102</Code><Text>Learning</Text></Value>
+			<Value><Code>103</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Group -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the learning support intervention type,
+					e.g. ESOL, First STEPs, MST.</p>
+		</Intro>
+		<ID>Learning Support Intervention Type</ID>
+		<Values>
+			<Value><Code>101</Code><Text>First STEPs</Text></Value>
+			<Value><Code>102</Code><Text>ESOL</Text></Value>
+			<Value><Code>103</Code><Text>MST</Text></Value>
+			<Value><Code>104</Code><Text>Rainbow Reading</Text></Value>
+			<Value><Code>105</Code><Text>Read. Rec 2014</Text></Value>
+			<Value><Code>106</Code><Text>STEPS</Text></Value>
+			<Value><Code>107</Code><Text>TA - Reading</Text></Value>
+			<Value><Code>108</Code><Text>RTLB</Text></Value>
+			<Value><Code>109</Code><Text>RTLit</Text></Value>
+			<Value><Code>110</Code><Text>Early Words</Text></Value>
+			<Value><Code>111</Code><Text>Reading Recovery</Text></Value>
+			<Value><Code>112</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Intervention Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the learning support type the student is receiving, e.g. Vision, Speech, 
+				Hearing, Social Skills, Behaviour, Mental Health, Autism, Reading, Writing, Mathematics etc.</p>
+		</Intro>
+		<ID>Learning Support Type</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Vision</Text></Value>
+			<Value><Code>102</Code><Text>Speech</Text></Value>
+			<Value><Code>103</Code><Text>Hearing</Text></Value>
+			<Value><Code>104</Code><Text>Social Skills</Text></Value>
+			<Value><Code>105</Code><Text>Behaviour</Text></Value>
+			<Value><Code>106</Code><Text>Mental Health</Text></Value>
+			<Value><Code>107</Code><Text>Autism</Text></Value>
+			<Value><Code>108</Code><Text>Reading</Text></Value>
+			<Value><Code>109</Code><Text>Writing</Text></Value>
+			<Value><Code>110</Code><Text>Mathematics</Text></Value>
+			<Value><Code>111</Code><Text>Dyslexic</Text></Value>
+			<Value><Code>112</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the status of the learning support participation.</p>
+		</Intro>
+		<ID>Learning Support Participation Status</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Applied</Text></Value>
+			<Value><Code>102</Code><Text>Approved</Text></Value>
+			<Value><Code>103</Code><Text>Declined</Text></Value>
+			<Value><Code>104</Code><Text>Participating</Text></Value>
+			<Value><Code>105</Code><Text>Finished</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Participation Status -->
+
+
+
+	<!-- Student Activity & Student Voice classification codes -->
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the group of the activity the student is participating
+					in, e.g. sport, art, cultural, music.</p>
+		</Intro>
+		<ID>Student Activity Group</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Sport</Text></Value>
+			<Value><Code>102</Code><Text>Art</Text></Value>
+			<Value><Code>103</Code><Text>Cultural</Text></Value>
+			<Value><Code>104</Code><Text>Music</Text></Value>
+			<Value><Code>105</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Student Activity Group -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the type of activity the student is 
+				participating in, e.g. rugby, drama, Kapa Haka, Violin.</p>
+		</Intro>
+		<ID>Student Activity Type</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Rugby</Text></Value>
+			<Value><Code>102</Code><Text>Netball</Text></Value>
+			<Value><Code>103</Code><Text>Cricket</Text></Value>
+			<Value><Code>104</Code><Text>Drama</Text></Value>
+			<Value><Code>105</Code><Text>Debate</Text></Value>
+			<Value><Code>106</Code><Text>Te Reo</Text></Value>
+			<Value><Code>107</Code><Text>Kapa Haka</Text></Value>
+			<Value><Code>108</Code><Text>Guitar</Text></Value>
+			<Value><Code>109</Code><Text>Violin</Text></Value>
+			<Value><Code>110</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Student Activity Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the type of interest the student likes to do.</p>
+		</Intro>
+		<ID>Student Interest Type</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Sports</Text></Value>
+			<Value><Code>102</Code><Text>Arts</Text></Value>
+			<Value><Code>103</Code><Text>Cultural</Text></Value>
+			<Value><Code>104</Code><Text>Music</Text></Value>
+			<Value><Code>105</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Student Interest Type -->
+
+
+
+
+	<!-- Student Restraint Reporting codes -->
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the role of the person who administered the physical restraint to the student.</p>
+		</Intro>
+		<ID>Restraint Administered By Role</ID>
+		<Values>
+			<Value><Code>99</Code><Text>Other</Text></Value>
+			<Value><Code>101</Code><Text>Teacher</Text></Value>
+			<Value><Code>102</Code><Text>Principal</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Restraint Administered By -->
+
+	<CodeSet>
+		<Intro>
+	    	<p>Code set denoting the type of debriefing that occurred, e.g. staff, or student and parent/caregiver.</p>
+		</Intro>
+	    <ID>Restraint Debriefing Type</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Staff</Text></Value>
+			<Value><Code>102</Code><Text>Parent/Caregiver and Student</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Restraint Debriefing Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting a question that was asked about a student physical restraint incident.</p>
+		</Intro>
+		<ID>Restraint Question</ID>
+		<Values>
+			<Value><Code>101</Code><Text>First time the student has been physically restrained?</Text></Value>
+			<Value><Code>102</Code><Text>The student was physically restrained more than once during the day?</Text></Value>
+			<Value><Code>103</Code><Text>The student has an Individual Behaviour Plan?</Text></Value>
+			<Value><Code>104</Code><Text>Physical restraint was a part of the plan?</Text></Value>
+			<Value><Code>105</Code><Text>Were the parents notifed?</Text></Value>
+			<Value><Code>106</Code><Text>Was anyone injured?</Text></Value>
+			<Value><Code>107</Code><Text>Was the staff member who applied restraint a teacher or authorised staff member?</Text></Value>
+			<Value><Code>108</Code><Text>Role of staff member who applied the restraint?</Text></Value>
+			<Value><Code>109</Code><Text>Did the staff member who applied the restraint receive any training prior to the incident?</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Restraint Question -->
+
+	<CodeSet>
+		<Intro>
+			<p>A code set denoting the reason physical restraint was used on the student.</p>
+		</Intro>
+		<ID>Restraint Reason</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Serious and imminent risk to safety</Text></Value>
+			<Value><Code>102</Code><Text>Actual injury</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Restraint Reason -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the type of reflection that the staff member performed.</p>
+		</Intro>
+		<ID>Staff Restraint Reflection Type</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Events leading to the incident</Text></Value>
+			<Value><Code>102</Code><Text>Behaviour of the student</Text></Value>
+			<Value><Code>103</Code><Text>What did you try before the restraint?</Text></Value>
+			<Value><Code>104</Code><Text>The restraint method used</Text></Value>
+			<Value><Code>105</Code><Text>Monitoring</Text></Value>
+			<Value><Code>106</Code><Text>After the restraint ended</Text></Value>
+			<Value><Code>107</Code><Text>If there's a next time</Text></Value>
+			<Value><Code>108</Code><Text>How about you?</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Staff Restraint Reflection Type -->
 
 </IncludeGroup>
