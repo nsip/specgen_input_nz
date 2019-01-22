@@ -28,7 +28,7 @@
 		<xsl:apply-templates select=".//specgen:DataObjects//specgen:DataObject" mode="schemasSingle"/>
 		
 		<xsl:apply-templates select=".//specgen:Appendix[@name = 'Common Types']//specgen:CommonElement"/>
-		<xsl:apply-templates select=".//specgen:Appendix[@name = 'Code Sets']//specgen:CodeSet"/>
+		<xsl:apply-templates select=".//specgen:Appendix[ends-with(@name,'Code Sets')]//specgen:CodeSet"/>
 	</xsl:template>
 
 
@@ -304,8 +304,10 @@
 			
 			<xsl:when test="@name eq 'xs:unsignedInt'">
 				<xsl:value-of select="concat($indent, '  type: integer&#x0a;')"/>
+<!--				
 				<xsl:value-of select="concat($indent, '  minimum: 0&#x0a;')"/>
 				<xsl:value-of select="concat($indent, '  maximum: 4294967295&#x0a;')"/>
+-->
 			</xsl:when>
 
 			<xsl:when test="@name eq 'xs:date'">

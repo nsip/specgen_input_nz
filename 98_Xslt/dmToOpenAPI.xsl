@@ -3,7 +3,9 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:specgen="http://sifassociation.org/SpecGen"
 	xmlns:xfn="http://stuart.geek.nz/xslt-functions"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/">
 
 	<!-- Take a SIF_DataModel.input.xml file and produce a matching OpenAPI v3.0.0 spec -->
 	<xsl:output method="text" omit-xml-declaration="yes" indent="no"/>
@@ -12,56 +14,124 @@
 	<xsl:param name="sifLocale"/>
 	
 	<xsl:template match="/specgen:SIFSpecification">
-		<xsl:value-of select="concat( 'openapi: 3.0.0&#x0a;',
+		<xsl:value-of select="concat( 'openapi: 3.0.2&#x0a;',
                                       'info:&#x0a;',
                                       '  version: ', $sifVersion, '&#x0a;',
                                       '  title: &quot;SIF ', $sifLocale, ' derived API&quot;&#x0a;',
-									  '  description: ', normalize-space(specgen:TitlePage/specgen:h1), '&#x0a;')"/>
-		
+									  '  description: ', normalize-space(specgen:TitlePage/specgen:h1), '&#x0a;',
+									  '  host: &quot;api.terito.education.govt.nz&quot;&#x0a;',
+									  '  basePath: &quot;v3&quot;&#x0a;')"/>
+
+		<xsl:apply-templates select=".//specgen:Section[@name = 'Domain Map']" mode="DomainMap"/>
+
 		<xsl:text># /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
 		<xsl:apply-templates select=".//specgen:DataObjects" mode="paths"/>
-
-		<xsl:text>&#x0a;# /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
-		<xsl:text>components:&#x0a;</xsl:text>
-		<xsl:text>  schemas:&#x0a;</xsl:text>
-
-		<xsl:apply-templates select=".//specgen:DataObjects//specgen:DataObject" mode="schemasList"/>
-		<xsl:apply-templates select=".//specgen:DataObjects//specgen:DataObject" mode="schemasSingle"/>
-		
-		<xsl:apply-templates select=".//specgen:Appendix[@name = 'Common Types']//specgen:CommonElement"/>
-		<xsl:apply-templates select=".//specgen:Appendix[@name = 'Code Sets']//specgen:CodeSet"/>
 	</xsl:template>
 
+	<xsl:template match="specgen:Section" mode="DomainMap">
+		<xsl:text>tags:&#x0a;</xsl:text>
+		<xsl:apply-templates select="specgen:Domain" mode="DomainMap"/>
+	</xsl:template>
+
+	<xsl:template match="specgen:Domain" mode="DomainMap">
+	    <xsl:value-of select="concat('- name: ', @name, '&#x0a;')"/>
+		<xsl:text>  description: &gt;-&#x0a;    </xsl:text>
+		<xsl:apply-templates select="specgen:Intro"/><xsl:text>&#x0a;</xsl:text>
+		<xsl:text>  externalDocs: &#x0a;</xsl:text>
+		<xsl:value-of select="concat('    description: &quot;', @name, ' Domain in SIF NZ Data Model&quot;&#x0a;')"/>
+		<xsl:value-of select="concat('    url: &quot;http://localhost:8080/DomainMap.html#Domain__', xfn:cleanUrl(@name), '&quot;&#x0a;')"/>
+	</xsl:template>
 
 	<xsl:template match="specgen:DataObjects" mode="paths">
-		<xsl:text>paths:&#x0a;</xsl:text>
-
+		<xsl:text>paths:&#x0a;</xsl:text>		
 		<xsl:apply-templates select=".//specgen:DataObject" mode="paths"/>
 	</xsl:template>              
 
 	<xsl:template match="specgen:DataObject" mode="paths">
+		<xsl:variable name="tags">
+			<xsl:for-each select="//specgen:Domain[specgen:DataObject = current()/@name]">
+				<xsl:value-of select="concat('      - ', @name, '&#x0a;')"/>
+			</xsl:for-each>
+		</xsl:variable>
 		<xsl:text>  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
 		<xsl:value-of select="concat('  /', @name, 's:&#x0a;')"/>
 		<xsl:text>    get:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('      tags:&#x0a;      - ', @name, 's&#x0a;')"/>
+		<xsl:text>      tags:&#x0a;</xsl:text>
+		<xsl:value-of select="$tags"/>
 		<xsl:value-of select="concat('      summary: Default operation to get a list of all available ', @name, 's&#x0a;')"/>
 		<xsl:apply-templates select="." mode="responsesList"/>
 			
 		<xsl:if test="specgen:Key">
 			<xsl:text>  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
 			<xsl:value-of select="concat('  /', @name, 's/{', lower-case(@name), translate(specgen:Key, '@', ''), '}:&#x0a;')"/>
-			<xsl:text>    get:&#x0a;</xsl:text>
-			<xsl:value-of select="concat('      tags:&#x0a;      - ', @name, 's&#x0a;')"/>
-			<xsl:value-of select="concat('      summary: Default operation to get a single ', @name, '&#x0a;')"/>
+
+			<xsl:text>    post:&#x0a;</xsl:text>
+			<xsl:text>      tags:&#x0a;</xsl:text>
+			<xsl:value-of select="$tags"/>
+			<xsl:value-of select="concat('      summary: Default operation to create a single ', @name, '&#x0a;')"/>
 			<xsl:value-of select="concat('      parameters:&#x0a;      - name: ', lower-case(@name), translate(specgen:Key, '@', ''), '&#x0a;')"/>
 			<xsl:text>        in: path&#x0a;        description: >-&#x0a;          </xsl:text>
-			<xsl:apply-templates select="specgen:Item[concat('@', specgen:Attribute)
-										 eq current()/specgen:Key]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+			<xsl:apply-templates select="specgen:Item[specgen:Element eq current()/specgen:Key]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
 			<xsl:text>        required: true&#x0a;</xsl:text>
 			<xsl:text>        schema:&#x0a;</xsl:text>
 			<xsl:text>          type: string&#x0a;</xsl:text>
+			<xsl:apply-templates select="." mode="requestBody">			
+				<xsl:with-param name="operationId" select="concat('create', @name)"/>
+			</xsl:apply-templates>
+
+			<xsl:text>    put:&#x0a;</xsl:text>
+			<xsl:text>      tags:&#x0a;</xsl:text>
+			<xsl:value-of select="$tags"/>
+			<xsl:value-of select="concat('      summary: Default operation to update a single ', @name, '&#x0a;')"/>
+			<xsl:value-of select="concat('      parameters:&#x0a;      - name: ', lower-case(@name), translate(specgen:Key, '@', ''), '&#x0a;')"/>
+			<xsl:text>        in: path&#x0a;        description: >-&#x0a;          </xsl:text>
+			<xsl:apply-templates select="specgen:Item[specgen:Element eq current()/specgen:Key]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+			<xsl:text>        required: true&#x0a;</xsl:text>
+			<xsl:text>        schema:&#x0a;</xsl:text>
+			<xsl:text>          type: string&#x0a;</xsl:text>
+			<xsl:apply-templates select="." mode="requestBody">			
+				<xsl:with-param name="operationId" select="concat('update', @name)"/>
+			</xsl:apply-templates>
+
+			<xsl:text>    get:&#x0a;</xsl:text>
+			<xsl:text>      tags:&#x0a;</xsl:text>
+			<xsl:value-of select="$tags"/>
+			<xsl:value-of select="concat('      summary: Default operation to get a single ', @name, '&#x0a;')"/>
+			<xsl:value-of select="concat('      parameters:&#x0a;      - name: ', lower-case(@name), translate(specgen:Key, '@', ''), '&#x0a;')"/>
+			<xsl:text>        in: path&#x0a;        description: >-&#x0a;          </xsl:text>
+			<xsl:apply-templates select="specgen:Item[specgen:Element eq current()/specgen:Key]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+			<xsl:text>        required: true&#x0a;</xsl:text>
+			<xsl:text>        schema:&#x0a;</xsl:text>
+			<xsl:text>          type: string&#x0a;</xsl:text>
+			<xsl:apply-templates select="." mode="responsesSingle"/>
 		</xsl:if>
-		<xsl:apply-templates select="." mode="responsesSingle"/>
+	</xsl:template>
+
+    <xsl:template match="specgen:DataObject" mode="requestBody">
+		<xsl:param name="operationId"/>
+
+		<xsl:value-of select="concat('      operationId: ', $operationId, '&#x0a;')"/>		
+		<xsl:text>      requestBody:&#x0a;</xsl:text>
+        <xsl:value-of select="concat('        description: CRUD operation on ', @name, '&#x0a;')"/>
+		<xsl:text>        content:&#x0a;</xsl:text>
+		<xsl:text>          application/json:&#x0a;</xsl:text>
+		<xsl:text>            schema:&#x0a;</xsl:text>
+		<xsl:text>              type: object&#x0a;</xsl:text>
+		<xsl:text>              properties:&#x0a;</xsl:text>
+		<xsl:value-of select="concat('                ', @name, ':&#x0a;')"/>
+		<xsl:value-of select="concat('                  $ref: ''jsonSchema.yaml#/definitions/', @name, '''&#x0a;')"/>
+		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="json">
+			<xsl:with-param name="pfx"><xsl:text>            </xsl:text></xsl:with-param>
+		</xsl:apply-templates>
+		<xsl:text>          application/xml:&#x0a;</xsl:text>
+		<xsl:text>            schema:&#x0a;</xsl:text>
+		<xsl:text>              type: object&#x0a;</xsl:text>
+		<xsl:text>              properties:&#x0a;</xsl:text>		
+		<xsl:value-of select="concat('                ', @name, ':&#x0a;')"/>
+		<xsl:value-of select="concat('                  $ref: ''jsonSchema.yaml#/definitions/', @name, '''&#x0a;')"/>
+		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="xml">
+			<xsl:with-param name="pfx"><xsl:text>            </xsl:text></xsl:with-param>
+		</xsl:apply-templates>
 	</xsl:template>
 
     <xsl:template match="specgen:DataObject" mode="responsesSingle">
@@ -74,11 +144,21 @@
 		<xsl:text>                type: object&#x0a;</xsl:text>
 		<xsl:text>                properties:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('                  ', @name, ':&#x0a;')"/>
-		<xsl:value-of select="concat('                    $ref: ''#/components/schemas/', @name, '''&#x0a;')"/>
+		<xsl:value-of select="concat('                    $ref: ''jsonSchema.yaml#/definitions/', @name, '''&#x0a;')"/>
+		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="json">
+			<xsl:with-param name="pfx"><xsl:text>              </xsl:text></xsl:with-param>
+		</xsl:apply-templates>		
 		<xsl:text>            application/xml:&#x0a;</xsl:text>
 		<xsl:text>              schema:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('                $ref: ''#/components/schemas/', @name, '''&#x0a;')"/>
+		<xsl:text>                type: object&#x0a;</xsl:text>
+		<xsl:text>                properties:&#x0a;</xsl:text>
+		<xsl:value-of select="concat('                  ', @name, ':&#x0a;')"/>
+		<xsl:value-of select="concat('                    $ref: ''jsonSchema.yaml#/definitions/', @name, '''&#x0a;')"/>
+		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="xml">
+			<xsl:with-param name="pfx"><xsl:text>              </xsl:text></xsl:with-param>
+		</xsl:apply-templates>		
 	</xsl:template>
+
     <xsl:template match="specgen:DataObject" mode="responsesList">
 		<xsl:text>      responses:&#x0a;</xsl:text>
         <xsl:text>        '200':&#x0a;</xsl:text>
@@ -89,260 +169,63 @@
 		<xsl:text>                type: object&#x0a;</xsl:text>
 		<xsl:text>                properties:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('                  ', @name, 's:&#x0a;')"/>
-		<xsl:value-of select="concat('                    $ref: ''#/components/schemas/', @name, 's''&#x0a;')"/>
+        <xsl:text>                    type: object&#x0a;</xsl:text>
+        <xsl:text>                    description: >-&#x0a;</xsl:text>
+        <xsl:value-of select="concat('                      A List of ', @name, ' objects&#x0a;')"/>
+        <xsl:text>                    properties:&#x0a;</xsl:text>
+        <xsl:value-of select="concat('                      ', @name, ':&#x0a;')"/>
+        <xsl:text>                        type: array&#x0a;</xsl:text>
+        <xsl:text>                        items:&#x0a;</xsl:text>
+        <xsl:value-of select="concat('                          $ref: ''jsonSchema.yaml#/definitions/', @name, '''&#x0a;')"/>
+		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="jsonArray">
+			<xsl:with-param name="pfx"><xsl:text>              </xsl:text></xsl:with-param>
+		</xsl:apply-templates>		
+
 		<xsl:text>            application/xml:&#x0a;</xsl:text>
 		<xsl:text>              schema:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('                $ref: ''#/components/schemas/', @name, 's''&#x0a;')"/>
-	</xsl:template>
-
-	<xsl:template match="specgen:DataObject" mode="schemasSingle">
-		<xsl:text>    # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
-		<xsl:value-of select="concat('    ', @name, ':&#x0a;',
-			                         '      type: object&#x0a;',
-			                         '      description: &gt;-&#x0a;        ')"/>
-		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
-		<xsl:text>      properties:&#x0a;</xsl:text>
-		<xsl:apply-templates select="specgen:Item[position() gt 1]">
-			<xsl:with-param name="indent" select="'        '"/>
-		</xsl:apply-templates>
-	</xsl:template>
-	<xsl:template match="specgen:DataObject" mode="schemasList">
-		<xsl:text>    # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
-		<xsl:value-of select="concat('    ', @name, 's:&#x0a;',
-			                         '      type: object&#x0a;',
-			                         '      description: &gt;-&#x0a;        A List of ', @name, ' objects&#x0a;')"/>
-		<xsl:text>      properties:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('        ', @name, ':&#x0a;')"/>
-		<xsl:text>          type: array&#x0a;</xsl:text>
-		<xsl:text>          items:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('            $ref: ''#/components/schemas/', @name, '''&#x0a;&#x0a;')"/>
-	</xsl:template>		
-	
-	
-	<xsl:template match="specgen:CommonElement">
-		<xsl:text>&#x0a;  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
-		<xsl:value-of select="concat('    ', xfn:chopType(@name), ':&#x0a;')"/>
-
-		<xsl:text>      description: &gt;-&#x0a;        </xsl:text>
-		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
-
-		<!-- Simple and extended Types -->
-		<xsl:apply-templates select="specgen:Item[1]/specgen:Type">
-			<xsl:with-param name="indent" select="'    '"/>
-		</xsl:apply-templates>
+		<xsl:text>                type: object&#x0a;</xsl:text>
+		<xsl:text>                properties:&#x0a;</xsl:text>
+		<xsl:value-of select="concat('                  ', @name, 's:&#x0a;')"/>
+        <xsl:text>                    type: object&#x0a;</xsl:text>
+        <xsl:text>                    description: >-&#x0a;</xsl:text>
+        <xsl:value-of select="concat('                      A List of ', @name, ' objects&#x0a;')"/>
+        <xsl:text>                    properties:&#x0a;</xsl:text>
+        <xsl:value-of select="concat('                      ', @name, ':&#x0a;')"/>
+        <xsl:text>                        type: array&#x0a;</xsl:text>
+        <xsl:text>                        items:&#x0a;</xsl:text>
+        <xsl:value-of select="concat('                          $ref: ''jsonSchema.yaml#/definitions/', @name, '''&#x0a;')"/>
+		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="xmlList">
+			<xsl:with-param name="pfx"><xsl:text>              </xsl:text></xsl:with-param>
+		</xsl:apply-templates>		
 		
-		<!-- What kind of CommonElement is it ?
-			 - Object
-			 - List of objects
-		-->
-		<xsl:choose>
-			<!-- List of Object -->
-			<xsl:when test="count(specgen:Item[1]/specgen:List) gt 0">
-				<xsl:text>      type: object&#x0a;</xsl:text>
-				<xsl:text>      properties:&#x0a;</xsl:text>
-				<xsl:value-of select="concat('        ', specgen:Item[2]/specgen:Element, ':&#x0a;')"/>
-				<xsl:text>          type: array&#x0a;</xsl:text>
-				<xsl:text>          items:&#x0a;</xsl:text>
-				<xsl:value-of select="concat('            $ref: ''#/components/schemas/', xfn:chopType(specgen:Item[2]/specgen:Type/@name), '''&#x0a;')"/>
-			</xsl:when>
-			
-			<!-- Object -->
-			<xsl:when test="count(specgen:Item[1][specgen:Type]) eq 0">
-				<xsl:text>      type: object&#x0a;</xsl:text>
-				
-				<xsl:if test="count(specgen:Item) gt 1">
-					<xsl:text>      properties:&#x0a;</xsl:text>
-				</xsl:if>
-			</xsl:when>
-		</xsl:choose>
-
-		<!-- Add properties for non-List objects, indent is different depending on
-		     - properties are being added to an extension of a base type
-		     - properties are being added to an ordinary object
-		-->
-		<xsl:if test="count(specgen:Item[1]/specgen:List) eq 0">
-			<xsl:apply-templates select="specgen:Item[position() gt 1]">
-				<xsl:with-param name="indent">
-					<xsl:choose>
-						<xsl:when test="count(specgen:Item[1]/specgen:Type/[@complex]) gt 0">
-							<xsl:text>            </xsl:text>
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:text>        </xsl:text>
-						</xsl:otherwise>
-					</xsl:choose>
-				</xsl:with-param>
-			</xsl:apply-templates>
-		</xsl:if>
-	</xsl:template>
-	
-
-	<!-- Untyped elements, get special indentation -->
-	<xsl:template match="specgen:Item[count(specgen:Type) eq 0]">
-		<xsl:param name="indent"/>
-		
-		<xsl:value-of select="concat($indent, specgen:Element|specgen:Attribute, ':&#x0a;')"/>
-
-		<xsl:if test="normalize-space(specgen:Description) ne ''">
-			<xsl:value-of select="concat($indent, '  description: &gt;-&#x0a;', $indent, '    ')"/>
-			<xsl:apply-templates select="specgen:Description"/><xsl:text>&#x0a;</xsl:text>
-		</xsl:if>
-
-		<xsl:apply-templates select="specgen:Values">
-			<xsl:with-param name="indent" select="concat($indent, '  ')"/>
-		</xsl:apply-templates>
-
-		<xsl:if test="specgen:Attribute"> 
-			<xsl:value-of select="concat($indent, '  xml:&#x0a;', $indent, '    attribute: true&#x0a;')"/>
-		</xsl:if>
 	</xsl:template>
 
-	<!-- Elements with named Types get a refId and particular indentation -->
-	<xsl:template match="specgen:Item[count(specgen:Type) gt 0]">
-		<xsl:param name="indent"/>
-		
-		<xsl:value-of select="concat($indent, specgen:Element|specgen:Attribute, ':&#x0a;')"/>
+	<xsl:template match="xhtml:Example" mode="json">
+		<xsl:param name="pfx"/>
 
-		<xsl:choose>
-			<xsl:when test="specgen:Type/@name ne ''">
-				<xsl:apply-templates select="specgen:Type">
-					<xsl:with-param name="indent" select="$indent"/>
-				</xsl:apply-templates>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:apply-templates select="preceding-sibling::specgen:Item[1]/specgen:Type">
-					<xsl:with-param name="indent" select="$indent"/>
-				</xsl:apply-templates>
-			</xsl:otherwise>
-		</xsl:choose>
-		
-		<xsl:if test="normalize-space(specgen:Description) ne ''">
-			<xsl:value-of select="concat($indent, '  description: &gt;-&#x0a;', $indent, '    ')"/>
-			<xsl:apply-templates select="specgen:Description"/><xsl:text>&#x0a;</xsl:text>
-		</xsl:if>
+		<xsl:value-of select="concat($pfx, 'example: &gt;-&#x0a;')"/>
+		<xsl:value-of select="xfn:jsonString(*, concat($pfx, '  '), 0)"/>
+	</xsl:template>	
+	<xsl:template match="xhtml:Example" mode="jsonArray">
+		<xsl:param name="pfx"/>
 
-		<xsl:apply-templates select="specgen:Values">
-			<xsl:with-param name="indent" select="$indent"/>
-		</xsl:apply-templates>
-
-		<xsl:if test="specgen:Attribute"> 
-			<xsl:value-of select="concat($indent, '  xml:&#x0a;', $indent, '    attribute: true&#x0a;')"/>
-		</xsl:if>
+		<xsl:value-of select="concat($pfx, 'example: &gt;-&#x0a;')"/>
+		<xsl:value-of select="xfn:jsonString(*, concat($pfx, '  '), 1)"/>
 	</xsl:template>
 
-	<!--  Type is an extension of a base type -->
-	<xsl:template match="specgen:Type[@complex = 'extension']">
-		<xsl:text>      allOf:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('        - $ref: ''#/components/schemas/', xfn:chopType(@name), '''&#x0a;')"/>
-		<xsl:text>        - type: object&#x0a;</xsl:text>
-		<xsl:text>          properties:&#x0a;</xsl:text>
+	<xsl:template match="xhtml:Example" mode="xml">
+		<xsl:param name="pfx"/>
+
+		<xsl:value-of select="concat($pfx, 'example: &gt;-&#x0a;')"/>
+		<xsl:value-of select="xfn:xmlString(*, concat($pfx, '  '), 0)"/>
+	</xsl:template>
+	<xsl:template match="xhtml:Example" mode="xmlList">
+		<xsl:param name="pfx"/>
+
+		<xsl:value-of select="concat($pfx, 'example: &gt;-&#x0a;')"/>
+		<xsl:value-of select="xfn:xmlString(*, concat($pfx, '  '), 1)"/>
 	</xsl:template>
 
-	<!-- Type is of known xs:type -->
-	<xsl:template match="specgen:Type[not(@complex) and starts-with(@name, 'xs:')]">
-		<xsl:param name="indent"/>
-
-		<xsl:choose>
-			<xsl:when test="   @name eq 'xs:integer'
-							or @name eq 'xs:int'">
-				<xsl:value-of select="concat($indent, '  type: integer&#x0a;')"/>
-			</xsl:when>
-			
-			<xsl:when test="@name eq 'xs:unsignedInt'">
-				<xsl:value-of select="concat($indent, '  type: integer&#x0a;')"/>
-				<xsl:value-of select="concat($indent, '  minimum: 0&#x0a;')"/>
-				<xsl:value-of select="concat($indent, '  maximum: 4294967295&#x0a;')"/>
-			</xsl:when>
-
-			<xsl:when test="@name eq 'xs:date'">
-				<xsl:value-of select="concat($indent, '  type: string&#x0a;')"/>
-				<xsl:value-of select="concat($indent, '  format: date&#x0a;')"/>
-			</xsl:when>
-			
-			<xsl:when test="   @name eq 'xs:string'
-							or @name eq 'xs:normalizedString'
-                            or @name eq 'xs:token'
-					        or @name eq 'NCName'">
-				<xsl:value-of select="concat($indent, '  type: string&#x0a;')"/>
-			</xsl:when>
-			
-			<xsl:when test="   @name eq 'xs:boolean'">
-				<xsl:value-of select="concat($indent, '  type: boolean&#x0a;')"/>
-			</xsl:when>
-			
-			<xsl:when test="@name eq 'xs:anyURI'">
-				<xsl:value-of select="concat($indent, '  type: string&#x0a;')"/>
-				<xsl:value-of select="concat($indent, '  format: uri&#x0a;')"/>
-			</xsl:when>
-
-			<xsl:when test="@name eq 'base64Binary'">
-				<xsl:value-of select="concat($indent, '  type: string&#x0a;')"/>
-				<xsl:value-of select="concat($indent, '  contentEncoding: base64&#x0a;')"/>				
-			</xsl:when>
-		</xsl:choose>
-	</xsl:template>
-
-	<!-- Type is of named type -->
-	<xsl:template match="specgen:Type[not(@complex) and @name ne '' and not(starts-with(@name, 'xs:'))]">
-		<xsl:param name="indent"/>
-		<xsl:value-of select="concat($indent, '  $ref: ''#/components/schemas/',
-                                      xfn:chopType(@name), '''&#x0a;')"/>
-	</xsl:template>
-
-	<!-- Un-named type, so inline object -->
-	<xsl:template match="specgen:Type">
-		<xsl:param name="indent"/>
-		<xsl:value-of select="concat($indent, '  type: object&#x0a;')"/>
-	</xsl:template>
-
-	
-
-	
-    <xsl:template match="specgen:CodeSet">
-		<xsl:text>&#x0a;  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
-		<xsl:value-of select="concat('    ', ancestor::specgen:Grouping/@code, @name, translate(specgen:ID, '- /', ''), ':&#x0a;',
-			                         '      type: string&#x0a;',
-							         '      title: ', specgen:ID, '&#x0a;',
-			                         '      description: &gt;-&#x0a;       ')"/>
-		<xsl:apply-templates select="specgen:Intro"/><xsl:text>&#x0a;</xsl:text>
-
-		<xsl:apply-templates select="specgen:Values">
-			<xsl:with-param name="indent" select="'      '"/>
-		</xsl:apply-templates>
-	</xsl:template>
-
-	<xsl:template match="specgen:Values">
-		<xsl:param name="indent"/>
-		<xsl:value-of select="concat($indent, '  &lt;dl&gt;&#x0a;')"/>
-		<xsl:apply-templates select="specgen:Value" mode="defnList">
-			<xsl:with-param name="indent" select="concat($indent, '    ')"/>
-		</xsl:apply-templates>
-		<xsl:value-of select="concat($indent, '  &lt;/dl&gt;&#x0a;')"/>
-
-		<xsl:value-of select="concat($indent, 'enum: [')"/>
-		<xsl:apply-templates select="specgen:Value" mode="enum"/>
-		<xsl:text>]&#x0a;</xsl:text>
-	</xsl:template>
-	
-	<xsl:template match="specgen:Value" mode="defnList">
-		<xsl:param name="indent"/>
-
-		<xsl:variable name="valDesc">
-			<xsl:apply-templates select="specgen:Text"/>
-		</xsl:variable>
-		
-		<xsl:value-of select="concat($indent, '&lt;dt&gt;''', specgen:Code, '''&lt;/dt&gt;',
-                                              '&lt;dd&gt; - ', $valDesc, '&lt;/dd&gt;&lt;br/&gt;&#x0a;')"/>
-	</xsl:template>
-
-	<xsl:template match="specgen:Value[position() eq 1]" mode="enum">
-		<xsl:value-of select="concat('''', specgen:Code, '''')"/>
-	</xsl:template>
-	<xsl:template match="specgen:Value[position() gt 1]" mode="enum">
-		<xsl:value-of select="concat(', ''', specgen:Code, '''')"/>
-	</xsl:template>
-
-	
 	<!-- Bring Description, Intro or Text mixed content elements across with all its embedded html -->
 	<xsl:template match="specgen:Description|specgen:Intro|specgen:Text">
 		<xsl:variable name="descr"><xsl:apply-templates/></xsl:variable>
@@ -352,13 +235,23 @@
 	<xsl:template match="specgen:p|specgen:br
 						 |specgen:code|specgen:strong|specgen:em|specgen:span
 						 |specgen:h1|specgen:h2|specgen:h3|specgen:h4
-						 |specgen:img
 						 |specgen:ul|specgen:ol|specgen:li
 						 |specgen:dl|specgen:dt|specgen:dd
 						 |specgen:table|specgen:thead|specgen:tbody|specgen:tr|specgen:th|specgen:td">
-		<xsl:value-of select="concat('&lt;', local-name(.), '&gt;')"/>
-		<xsl:apply-templates/>
-		<xsl:value-of select="concat('&lt;/', local-name(.), '&gt;')"/>
+		<xsl:value-of select="concat('&lt;', local-name(.))"/>
+		<xsl:for-each select="@*">
+			<xsl:value-of select="concat(' ', local-name(.), '=&quot;', . , '&quot;')"/>
+		</xsl:for-each>
+		<xsl:choose>
+			<xsl:when test="not(*) and not(normalize-space())">
+				<xsl:text>/&gt;</xsl:text>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>&gt;</xsl:text>
+				<xsl:apply-templates/>
+				<xsl:value-of select="concat('&lt;/', local-name(.), '&gt;')"/>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
 
@@ -374,4 +267,224 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>
+
+	<!-- Custom function to tidy up URL -->
+	<xsl:function name="xfn:cleanUrl" as="xs:string">
+		<xsl:param name="inUrl"/>
+		<xsl:value-of select="replace(replace($inUrl, ' ', ''), '&amp;', '')"/>
+	</xsl:function>
+
+	<!-- Custom function XML to string -->
+	<xsl:function name="xfn:xmlString" as="xs:string">
+		<xsl:param name="inXml"/>
+		<xsl:param name="pfx"/>
+		<xsl:param name="isCollection"/>
+
+		<xsl:variable name="outStr">
+			<xsl:apply-templates select="$inXml" mode="nodetostring">
+				<xsl:with-param name="pfx" select="$pfx"/>
+				<xsl:with-param name="isCollection" select="$isCollection"/>
+			</xsl:apply-templates>
+		</xsl:variable>
+		<xsl:value-of select="$outStr"/>
+	</xsl:function>
+
+	<xsl:function name="xfn:jsonString" as="xs:string">
+		<xsl:param name="inXml"/>
+		<xsl:param name="pfx"/>
+		<xsl:param name="isCollection"/>
+
+		<xsl:variable name="outStr">
+			<xsl:apply-templates select="$inXml" mode="nodetojson">
+				<xsl:with-param name="pfx">
+					<xsl:choose>
+						<xsl:when test="$isCollection">
+							<xsl:value-of select="concat($pfx, '  ')"/>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="$pfx"/>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:with-param>
+
+				<xsl:with-param name="isCollection" select="$isCollection"/>
+			</xsl:apply-templates>
+		</xsl:variable>
+
+		<xsl:choose>
+			<xsl:when test="$isCollection">
+				<xsl:value-of select="concat($pfx, '&quot;', name($inXml), 's&quot;: { &#x0a;', $outStr, $pfx, '}&#x0a;')"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="$outStr"/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:function>
+
+	<xsl:variable name="q">
+		<xsl:text>"</xsl:text>
+	</xsl:variable>
+	<xsl:variable name="empty"/>
+
+
+	<xsl:template match="*" mode="selfclosetag">
+		<xsl:value-of select="concat('&lt;', name())"/>
+		<xsl:apply-templates select="@*[not(namespace-uri() = 'http://json.org/')]" mode="attribs"/>
+		<xsl:text>/&gt;&#x0a;</xsl:text>
+	</xsl:template>
+
+	<xsl:template match="* | text()" mode="nodetostring">
+		<xsl:param name="pfx"/>
+		<xsl:param name="isCollection" select="0"/>
+
+		<xsl:if test="$isCollection">
+			<xsl:value-of select="concat($pfx, '&lt;', name(), 's&gt;&#x0a;')"/>		
+		</xsl:if>
+
+		<xsl:variable name="pfx2">
+			<xsl:choose>
+				<xsl:when test="$isCollection"><xsl:value-of select="concat($pfx, '  ')"/></xsl:when>
+				<xsl:otherwise><xsl:value-of select="$pfx"/></xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+
+		<xsl:choose>
+			<xsl:when test="boolean(name())">
+				<xsl:choose>
+					<!-- element has children -->
+					<xsl:when test="*">
+						<xsl:value-of select="concat($pfx2, '&lt;', name(), '&gt;&#x0a;')"/> 
+
+						<xsl:apply-templates select="*" mode="nodetostring">
+							<xsl:with-param name="pfx" select="concat($pfx2, '  ')"/>
+						</xsl:apply-templates>
+						<xsl:value-of select="concat($pfx2, '&lt;/', name(), '&gt;&#x0a;')"/>
+					</xsl:when>
+					<!--
+						Just a text element 
+					-->
+					<xsl:otherwise>
+						<xsl:value-of select="concat($pfx2, '&lt;/', name(), '&gt;', normalize-space(.),'&lt;/', name(), '&gt;&#x0a;')"/> 
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="."/>
+			</xsl:otherwise>
+		</xsl:choose>
+		<xsl:if test="$isCollection">
+			<xsl:value-of select="concat($pfx, '&lt;/', name(), 's&gt;&#x0a;')"/>		
+		</xsl:if>		
+	</xsl:template>
+
+	<xsl:template match="@*" mode="attribs">
+		<xsl:if test="position() = 1">
+			<xsl:text> </xsl:text>
+		</xsl:if>
+		<xsl:value-of select="concat(name(), '=', $q, ., $q)"/>
+		<xsl:if test="position() != last()">
+			<xsl:text> </xsl:text>
+		</xsl:if>
+	</xsl:template>	
+
+	<xsl:template match="*" mode="nodetojson">
+		<xsl:param name="pfx"/>
+		<xsl:param name="isCollection" select="0"/>
+
+		<xsl:choose>
+			<xsl:when test="boolean(name())">
+
+				<xsl:variable name="isArray" select="    (count(../*[name() = name(current())]) > 1) 
+				                                     or  @json:force-array = 'true'"/>
+				<xsl:choose>
+					<!-- element has children -->
+					<xsl:when test="*">
+						<xsl:value-of select="$pfx"/>
+
+						<xsl:choose>
+							<xsl:when test="$isArray and position() > 1"><xsl:text> </xsl:text></xsl:when>
+							<xsl:when test="$isArray"><xsl:value-of select="concat('&quot;',name(), '&quot;: [')"/></xsl:when>
+							<xsl:otherwise><xsl:value-of select="concat('&quot;', name(), '&quot;:')"/></xsl:otherwise>
+						</xsl:choose>
+
+						<xsl:if test="$isCollection"><xsl:text>[</xsl:text></xsl:if>
+						<xsl:text>{ &#x0a;</xsl:text>
+						<xsl:apply-templates select="*" mode="nodetojson">
+							<xsl:with-param name="pfx" select="concat($pfx, '  ')"/>
+						</xsl:apply-templates>
+						<xsl:value-of select="concat($pfx, '}')"/>
+						<xsl:if test="position() != last()"><xsl:text>,</xsl:text></xsl:if>
+						<xsl:if test="$isArray and position() = last() or $isCollection"><xsl:text>]</xsl:text></xsl:if>
+						<xsl:text>&#x0a;</xsl:text>
+					</xsl:when>
+
+					<!--
+						Element has no children
+					-->
+					<xsl:otherwise>
+						<xsl:choose>
+							<!-- An empty element -->
+							<xsl:when test="normalize-space(.) = ''">
+								<xsl:value-of select="concat($pfx, '&quot;', name(), '&quot;: {}')"/>
+								<xsl:if test="position() != last()"><xsl:text>,</xsl:text></xsl:if>
+								<xsl:text>&#x0a;</xsl:text>
+							</xsl:when>
+
+							<!-- An ordinary atomic valued element (or an array thereof) -->
+							<xsl:otherwise>
+								<xsl:value-of select="$pfx"/>
+								<xsl:if test="not($isArray) or (position() = 1)">
+									<xsl:value-of select="concat('&quot;', name(), '&quot;: ')"/>
+								</xsl:if>
+
+								<xsl:if test="$isArray and position() = 1"><xsl:text>[</xsl:text></xsl:if>
+
+								<xsl:choose>
+									<!--
+										A value is considered a string if the following conditions are met:
+										* There is whitespace/formatting around the value of the node.
+										* The value is not a valid JSON number (i.e. '01', '+1', '1.', and '.5' are not valid JSON numbers.)
+										* The value does not equal the any of the following strings: 'false', 'true', 'null'.
+									-->
+									<xsl:when test="./@json:force-string eq 'true' or ((normalize-space(.) ne . or not((string(.) castable as xs:integer  and not(starts-with(string(.),'+')) and not(starts-with(string(.),'0') and not(. = '0'))) or (string(.) castable as xs:decimal  and not(starts-with(string(.),'+')) and not(starts-with(.,'-.')) and not(starts-with(.,'.')) and not(starts-with(.,'-0') and not(starts-with(.,'-0.'))) and not(ends-with(.,'.')) and not(starts-with(.,'0') and not(starts-with(.,'0.'))) )) and not(. = 'false') and not(. = 'true') and not(. = 'null')))">             
+										<xsl:text/>&quot;<xsl:value-of select="json:encode-string(.)"/>&quot;<xsl:text/>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:text/><xsl:value-of select="."/><xsl:text/>
+									</xsl:otherwise>
+								</xsl:choose>
+
+								<xsl:if test="$isArray and position() = last()"><xsl:text>]</xsl:text></xsl:if>
+								<xsl:if test="position() != last()"><xsl:text>,</xsl:text></xsl:if>
+								<xsl:text>&#x0a;</xsl:text>
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="concat('&quot;Uuuurrrrkkkkk', ., '&quot;,')"/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+
+	<xsl:function name="json:encode-string" as="xs:string">
+		<xsl:param name="string" as="xs:string"/>
+		<xsl:sequence select="replace(
+			replace(
+			replace(
+			replace(
+			replace(
+			replace(
+			replace(
+			replace($string,
+				'\\','\\\\'),
+				'&quot;', '\\&quot;'),
+				'&#xA;','\\n'),
+				'&#xD;','\\r'),
+				'&#x9;','\\t'),
+				'\n','\\n'),
+				'\r','\\r'),
+				'\t','\\t')"/>
+	</xsl:function>	
 </xsl:stylesheet>

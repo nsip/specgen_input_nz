@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created by Stuart McGrigor, New Zealand Ministry of Education, October 2017 -->
+<!-- Created by Stuart McGrigor, New Zealand Ministry of Education, October 2017 
+
+  Caution:  Generated from .RNC by TRANG - but had to be hand-edited to get global DataObject element
+            properly defined.
+-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://sifassociation.org/SpecGen" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:specgen="http://sifassociation.org/SpecGen">
   <xs:import namespace="http://www.w3.org/1999/xhtml" schemaLocation="xhtml.xsd"/>
   <xs:import namespace="http://www.w3.org/2001/XInclude" schemaLocation="xi.xsd"/>
@@ -247,7 +251,7 @@
           <xs:choice maxOccurs="unbounded">
             <xs:element ref="xi:include"/>
             <xs:element ref="specgen:CommonElement"/>
-            <xs:element ref="specgen:DataObject"/>
+            <xs:group ref="specgen:sif.DataObject"/>
             <xs:element ref="specgen:Grouping"/>
             <xs:element ref="specgen:CodeSet"/>
           </xs:choice>
@@ -408,29 +412,54 @@
       </xs:restriction>
     </xs:simpleType>
   </xs:element>
+
+  <!-- Caution:  Hand editing took place here:
+       group sif.DataObject had the DataObject element inline, we need a global element 
+       so it can also be a root element 
+    -->
   <xs:element name="DataObject">
-    <xs:complexType mixed="true">
-      <xs:sequence>
-        <xs:choice maxOccurs="unbounded">
-          <xs:element ref="specgen:Key"/>
-          <xs:element ref="specgen:EventsReported"/>
-        </xs:choice>
-        <xs:element minOccurs="0" ref="specgen:Intro"/>
-        <xs:choice minOccurs="0" maxOccurs="unbounded">
-          <xs:group ref="specgen:sif.If.Item"/>
-          <xs:element ref="specgen:Item"/>
-          <xs:element ref="specgen:Choice"/>
-        </xs:choice>
-        <xs:group minOccurs="0" maxOccurs="unbounded" ref="specgen:xhtml.Example"/>
-      </xs:sequence>
-      <xs:attribute name="name" use="required"/>
-    </xs:complexType>
-  </xs:element>
+  <xs:complexType mixed="true">
+    <xs:sequence>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="specgen:Key"/>
+        <xs:element ref="specgen:EventsReported"/>
+      </xs:choice>
+      <xs:element minOccurs="0" ref="specgen:Intro"/>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="specgen:sif.If.Item"/>
+        <xs:element ref="specgen:Item"/>
+        <xs:element ref="specgen:Choice"/>
+      </xs:choice>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="specgen:xhtml.Example"/>
+    </xs:sequence>
+    <xs:attribute name="name" use="required"/>
+  </xs:complexType>
+</xs:element>
+  <xs:group name="sif.DataObject">
+    <xs:sequence>
+      <xs:element ref="specgen:DataObject"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="sif.DomainDataObject">
+    <xs:sequence>
+      <xs:element name="DataObject">
+        <xs:complexType mixed="true">
+          <xs:attribute name="coords">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="\d+\s*(,\s*\d+)*"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
   <xs:element name="Domain">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="specgen:Intro"/>
-        <xs:element maxOccurs="unbounded" name="DataObject" type="xs:string"/>
+        <xs:group maxOccurs="unbounded" ref="specgen:sif.DomainDataObject"/>
       </xs:sequence>
       <xs:attribute name="name" use="required"/>
     </xs:complexType>
@@ -519,7 +548,7 @@
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="specgen:sif.narrative"/>
         <xs:element ref="specgen:Intro"/>
-        <xs:element ref="specgen:DataObject"/>
+        <xs:group ref="specgen:sif.DataObject"/>
       </xs:choice>
       <xs:attribute name="name" use="required"/>
     </xs:complexType>

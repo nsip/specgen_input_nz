@@ -10,57 +10,65 @@
 			differentiation of concurrent enrolments, eg base vs
 			other.</p>
 		</Intro>
-		<ID>School Enrollment Type</ID>
+		<ID>School Enrolment Type</ID>
 		<Values>
-		  <if intl="au">
-			<Value>
-				<Code>01</Code>
-             	<Text>Home School</Text>
-			</Value>
-		  </if>	
-		  <if intl="nz">
-			<Value>
-				<Code>01</Code>
-             	<Text>Base School</Text>
-				<Description><p>Home School (AU) or Base School (NZ).</p>
-				<p>The school that the student is considered to be
-				primarily enrolled with, especially for the purposes
-				of reporting and Ministry funding. Typically the
-				student will spend most of their school time at this
-				school.</p>
-				</Description>
-			</Value>
-		  </if>	
-			<Value>
-				<Code>02</Code>
-				<Text>Other School</Text>
-				<Description>
-					<p>Other School (AU only)</p>
-					<p>Indicates an enrolment with a school which is
-					not considered the student’s home
-					school. Typically the student will spend less of
-					their school time at this school.
-					</p>
-				</Description>
-			</Value>			
-			<Value>
-				<Code>03</Code>
-				<Text>Concurrent Enrolment</Text>
-				<Description><p>Concurrent Enrolment (AU &amp; NZ)</p>
-				<p>Indicates an enrolment that is concurrent with
-				other enrolments where no single enrolment is
-				considered the ‘base or home school’ enrolment.
-				</p>
-				</Description>
-			</Value>
+		    <if intl="au">
+			    <Value>
+				    <Code>01</Code>
+					<Text>Home School</Text>
+				</Value>
+				<Value>
+					<Code>02</Code>
+					<Text>Other School</Text>
+					<Description>
+						<p>Other School (AU only)</p>
+						<p>Indicates an enrolment with a school which is
+						not considered the student’s home school. 
+						Typically the student will spend less of
+						their school time at this school.
+						</p>
+					</Description>
+				</Value>
+		  	</if>	
+		  	<if intl="nz">
+				<Value>
+					<Code>01</Code>
+					<Text>Base School</Text>
+					<Description><p>Home School (AU) or Base School (NZ).</p>
+					<p>The school that the student is considered to be
+					primarily enrolled with, especially for the purposes
+					of reporting and Ministry funding. Typically the
+					student will spend most of their school time at this
+					school.</p>
+					</Description>
+				</Value>
+				<Value>
+					<Code>02</Code>
+					<Text>Concurrent Enrolment</Text>
+					<Description>
+					<p>Indicates an enrolment that is concurrent with the student's base enrolment 
+						at another school.</p>
+					</Description>
+				</Value>
+				<Value>
+					<Code>03</Code>
+					<Text>Remote/Distance Learning</Text>
+					<Description>
+					<p>Indicates an enrolment with a school (typically Te Kura - The Correspondence School) which 
+						provides remote/distance learning; this means that the student remains at their base school
+						(or at home) for all classes covered by this enrolment.</p>
+					</Description>
+				</Value>				
+			</if>
 		</Values>
-	</CodeSet>    <!-- School Enrollment Type -->
+	</CodeSet>    <!-- School Enrolment Type -->
 
 
 	<!-- Defind by SIF NZ - StudentProviderEnrolment -->
 	<CodeSet>
 		<Intro>
-			<p>The status of a Student Provider Enrolment.</p>
+		    <p>Records the status of a potentially multi-year Provider enrolment, which goes through
+				a different life-cycle to the single-year school enrolment.</p>
 		</Intro>
 		<ID>Provider Enrolment Status</ID>
 		<Values>
@@ -68,34 +76,33 @@
 				<Code>1</Code>
 				<Text>Application</Text>
 				<Description>
-					<p>The enrolment is a 'pre-enrolment' application, and has not yet
-					been accepted or declined by the provider.</p>
+					<p>Student has applied to become a Student at the Provider, this pre-enrolment has been received, 
+						and is being processed by the provider. It has not yet been accepted or declined by the provider.</p>
 				</Description>
 			</Value>
 			<Value>
 				<Code>2</Code>
 				<Text>Accepted</Text>
 				<Description>
-					<p>The 'pre-enrolment' application has been accepted by the Provider, and has not yet
-					been taken up, or become ACTIVE.</p>
+					<p>The Provider has processed the application, validated it against school zoning rules, and other 
+						acceptance criteria. The provider has accepted the enrolment and will have a place for the
+						Student if they choose to take it up. Student has accepted the enrolment and is expecting to
+						take up the enrolment at the agreed future date.</p>
 				</Description>
 			</Value>
 			<Value>
 				<Code>3</Code>
 				<Text>Cancelled</Text>
 				<Description>
-					<p>The 'pre-enrolment' application has been
-					declined by the Provider, or by the Student,
-					prior to becoming an ACTIVE enrolment.</p>
+					<p>The enrolment application has been declined by the Provider, or discontinued by the Student,
+					 prior to becoming an ACTIVE enrolment.</p>
 				</Description>
 			</Value>
 			<Value>
 				<Code>4</Code>
 				<Text>Active</Text>
 				<Description>
-					<p>The enrolment has been accepted by the
-					Provider, taken up by the Student, and the Student
-					has attended their first day.</p>
+					<p>The student has taken up the enrolment, and has attended classes for the first time.</p>
 				</Description>
 			</Value>
 			<Value>
@@ -107,18 +114,61 @@
 				<Code>6</Code>
 				<Text>Pending</Text>
 				<Description>
-					<p>The 'pre-enrolment' has been accepted by the
-					Provider, taken up by the Student, and the Student
-					has attended their first day; but the enrolment is unable
-					to be set to ACTIVE, because there is still an ACTIVE
-					enrolment for the Student at a (previous) provider.</p>
-					<p>Once the blocking Provider has put their
-					enrolment to WITHDRAWN, this enrolment can be
-					moved to 'ACTIVE'</p>
+					<p>The enrolment has been accepted by the Provider, taken up by the Student, and the student
+					 	has attended their first day; but the enrolment is unable to be set to ACTIVE, because 
+					 	there is still an ACTIVE enrolment for the student at a (previous) provider. Once the 
+						blocking Provider has put their enrolment to WITHDRAWN, this enrolment can be moved to 'ACTIVE'.</p>
 				</Description>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Provider Enrolment Status -->
+
+	<CodeSet>
+		<Intro>
+		    <p>Records the status of a per-year school enrolment, which goes
+				 through a different life-cycle to the multi-year provider enrolment.</p>
+		</Intro>
+		<ID>School Enrolment Status</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>Provisional</Text>
+				<Description>
+					<p>The learner is enrolled for the current year, and is expected to continue 
+						to be enrolled for the year denoted in the SchoolEnrolment.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Confirmed</Text>
+				<Description>
+					<p>The learner is enrolled for the current year, and has confirmed that they
+						will be returning for the year denoted in the SchoolEnrolment.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Active</Text>
+				<Description>
+					<p>The learner is currently enrolled for the year denoted in the SchoolEnrolment.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Completed</Text>
+				<Description>The learner has completed the school year denoted in the SchoolEnrolment.</Description>
+			</Value>			
+			<Value>
+				<Code>5</Code>
+				<Text>Withdrawn</Text>
+				<Description>
+					<p>The learner has withdrawn (or otherwise left) the school during the year denoted
+						in the SchoolEnrolment.</p>
+				</Description>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- School Enrolment Status -->
+
 	<CodeSet>
 		<Intro>
 			<p>Enrolment Exit code, derived from codeset used in School Roll Returns.</p>
@@ -174,6 +224,7 @@
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Enrolment Exit Type -->
+
 	<CodeSet>
 		<Intro>
 			<p>The criteria used to determine the eligibility status of a Student for enrolment and MoE funding purposes.</p>
@@ -219,6 +270,7 @@
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Eligibility Criteria -->
+
 	<CodeSet>
 		<Intro>
 			<p>Student classification for MoE funding purposes.</p>
@@ -229,18 +281,18 @@
 			list and work down. Use the first code that applies to
 			the student.</p>
 		</Intro>
-		<ID>Funding Type</ID>
+		<ID>Student Funding Type</ID>
 		<Values>
 			<Value>
 				<Code>FF</Code>
-				<Text>Foreign fee-paying student</Text>
+				<Text>Foreign Fee Paying</Text>
 				<Description>An International student who meets full
 				tuition costs on their own or from funds provided to
 				them by sponsors other than NZAID.</Description>
 			</Value>
 			<Value>
 				<Code>AE</Code>
-				<Text>Student in Alternative Education</Text>
+				<Text>Alternative Education</Text>
 				<Description>A student who is enrolled in an
 				Alternative Education programme, for Funding Year
 				Level they should be reported only between Year 9 and
@@ -248,7 +300,7 @@
 			</Value>
 			<Value>
 				<Code>EX</Code>
-				<Text>Foreign Exchange Student</Text>
+				<Text>Foreign Exchange</Text>
 				<Description>A student (and dependants) studying in
 				New Zealand under an exchange programme approved by
 				the New Zealand Government.</Description>
@@ -264,7 +316,7 @@
 			</Value>
 			<Value>
 				<Code>AD</Code>
-				<Text>Returning Adult Student</Text>
+				<Text>Returning Adult</Text>
 				<Description><p>A student who has returned to school
 				following a break of at least 1 year and is at least
 				19 years old on 1 January of the Roll count year.</p>
@@ -295,7 +347,7 @@
 			</Value>
 			<Value>
 				<Code>TPREOM</Code>
-				<Text>Teen Parent Regular Student, over max. roll</Text>
+				<Text>Teen Parent, Regular Student, over max roll</Text>
 				<Description>A regular student (i.e. a student aged
 				under 19 years at 1 January of the roll count year)
 				who meets the eligibility criteria, but whose
@@ -305,7 +357,7 @@
 			</Value>
 			<Value>
 				<Code>TPRAOM</Code>
-				<Text>Teen Parent Adult Student, over max. roll</Text>
+				<Text>Teen Parent, Adult Student over max. roll</Text>
 				<Description>An adult student who is enrolled in a
 				Teen Parent Unit (TPU) where the enrolment at the TPU
 				has continued beyond the end of the year in which the
@@ -315,7 +367,7 @@
 			</Value>
 			<Value>
 				<Code>TPAD</Code>
-				<Text>Returning Adult Student attending Teen Parent Unit</Text>
+				<Text>Teen Parent, Adult Student</Text>
 				<Description>A student enrolling at the TPU as an
 				adult student (i.e. was at least 19 on 1st January of
 				the year when they first enrolled at the TPU), and who
@@ -324,7 +376,7 @@
 			</Value>
 			<Value>
 				<Code>TPRE</Code>
-				<Text>Teen Parent Eligible and Enrolled Regular Student</Text>
+				<Text>Teen Parent, Regular Student</Text>
 				<Description>A student who is enrolled in a Teen
 				Parent Unit (TPU) and is at least 19 years old on 1
 				January of the current year. These students may
@@ -336,7 +388,7 @@
 			</Value>
 			<Value>
 				<Code>TPRAE</Code>
-				<Text>Teen Parent Eligibile and Enrolled Adult Student</Text>
+				<Text>Teen Parent, Eligible and Enrolled Adult Student</Text>
 				<Description>A student who is enrolled in a Teen
 				Parent Unit (TPU) where the enrolment at the TPU has
 				continued beyond the end of the year in which the
@@ -357,7 +409,7 @@
 				<Description>Student who is in a Satellite class of a Special School.</Description>
 			</Value>
 			<Value>
-				<Code>NZ</Code>
+				<Code>NA</Code>
 				<Text>Not Attending</Text>
 				<Description>A student who is not attending the school
 				on the day of the roll count and there is no
@@ -370,7 +422,8 @@
 				<Description>Student is enrolled in a separately funded unit.</Description>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Funding Type -->
+	</CodeSet>    <!-- Student Funding Type -->
+
 	<CodeSet>
 		<Intro>
 			<p>The type of exchange scheme for student enrolment where

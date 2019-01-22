@@ -13,8 +13,10 @@
     <Element>WellbeingCharacteristic</Element>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>Core Wellbeing Characteristic that is integral to the Student.  This may be a Medical condition, special needs or a characteristic such as a known disability or any other characteristic or condition that is student specific and impacts their learning. Some characteristics are already captured in the Demographics container of StudentPersonal however this object allows for more complex and targeted information.</p>
-    </Description>
+      <p>Core Wellbeing Characteristic that is integral to the Student. This may be a Medical
+					condition, special needs or a characteristic such as a known disability or any other 
+					characteristic or condition that is student specific and impacts their learning.</p>
+   </Description>
   </Item>
 
   <Item>

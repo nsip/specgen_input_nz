@@ -13,11 +13,10 @@
 		<Element>StudentProviderEnrolment</Element>
 		<privacyRating>High</privacyRating>
 		<Description>
-			<p>
-				Defines information related to a student's enrolment at a Provider.
-			</p>
-			<p>Note: It is yet to be determined if a StudentProviderEnrolment can
-			span more than one year.  It does not for SIF AU.</p>	
+			<p>A student's association with an education provider for the purpose of receiving
+				educational servics.</p>
+			<p>Provider enrolments span multiple years with the ProviderEnrolment containing one or
+				more ECE, School or Tertiary Enrolment sub-objects for each particular year.</p>	
 		</Description>
 	</Item>
 	<Item>

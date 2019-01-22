@@ -1,0 +1,193 @@
+<DataObject name="StudentAssessmentTask"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+			xmlns:json="http://json.org/"
+
+      xmlns="http://sifassociation.org/SpecGen">
+	
+  <Key>RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StudentAssessmentTask</Element>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Record of a student's attempt at a particular assessment task.</p>
+     </Description>
+  </Item>
+  <Item>
+    <Element>RefId</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A GUID that identifies an instance of this object. </p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>    <!-- RefId -->
+
+  <Item>
+    <Element>AssessmentTaskRefId</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The GUID for the AssessmentTask data object that the student assessment is for.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>    <!-- AssessmentTaskRefId -->
+
+  <Item>
+    <Element>ProviderInvolvedList</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the providers involved and their role, e.g.
+         assessing provider, assessment provider, assessment location provider.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ProviderInvolvedListType"></Type>
+  </Item>    <!-- ProviderInvovledList -->
+
+  <Item>
+    <Element>ProviderCourseRefId</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies a ProviderCourse all of whose students are
+        participating in the assessment task.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>    <!-- ProviderCourseRefId -->
+  <Item>
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The identifier (GUID) for the student held in the StudentPersonal 
+        data object who is being assessed against the assessment task.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>    <!-- StudentPersonalRefId -->
+  <Item>
+    <Element>StudentPersonalLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Local Id for the student whose is being assessed.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- StudentPersonalLocalId -->            
+  <Item>
+    <Element>StudentName</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The name the student is registered under for the assessment task. This
+          is the name that will appear on assessment papers and achievement certificates.</p>
+    </Description>
+    <Type ref="CommonTypes" name="BaseNameType"></Type>
+  </Item>    <!-- StudentName -->
+
+  <Item>
+    <Element>StaffInvolvedList</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the staff involved and their role in relation to the assessment task, 
+        e.g. the staff members that supervise the undertaking of the assessment task by the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StaffInvolvedListType"></Type>
+  </Item>    <!-- StaffInvolvedList -->
+
+  <Item>
+    <Element>DateTimeAssessmentScheduled</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date and time the student is scheduled to be assessed against the assessment task.</p>
+    </Description>
+    <Type name="xs:dateTime"></Type>
+  </Item>    <!-- DateTimeAssessmentScheduled -->
+
+  <Item>
+    <Element>DateTimeAssessmentOccurred</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date and time the student was assessed against the assessment task.</p>
+    </Description>
+    <Type name="xs:dateTime"></Type>
+  </Item>    <!-- DateTimeAssessmentOccurred -->
+
+  <Item>
+    <Element>AssessmentType</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting the type of assessment the student is undergoing for the assessment task.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+  </Item>    <!-- AssessmentType -->
+
+  <Item>
+    <Element>SubjectArea</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting the Learning or Subject Area the assessment task is for.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
+  </Item>    <!-- SubjectArea -->  
+
+  <Item>
+    <Element>YearLevel</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting the Year Level of the Assessment Task the student is being assessed against.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYearLevelCodeType"/>
+  </Item>    <!-- YearLevel -->
+
+  <Item>
+    <Element>SpecialAssessmentConditionList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The list of the special assessment conditions that the student is
+          entitled to have when sitting this assessment task.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SpecialAssessmentConditionListType"></Type>
+  </Item>    <!-- SpecialAssessmentConditionList -->
+
+  <xhtml:Example xmlns="" name="Student Assessment Task">
+    <StudentAssessmentTask>
+      <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
+      <AssessmentTaskRefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</AssessmentTaskRefId>
+      <ProviderInvolvedList>
+        <ProviderInvolved>
+          <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+          <ProviderRole json:force-string="true">103</ProviderRole>           <!-- School is Provider -->
+        </ProviderInvolved>
+        <ProviderInvolved>
+          <RefId>ad30d3a6-e663-4d5b-8975-6c4ffc745bfb</RefId>
+          <ProviderRole json:force-string="true">101</ProviderRole>           <!-- NZQA is Assessor -->
+        </ProviderInvolved>
+      </ProviderInvolvedList>
+      <ProviderCourseRefId>2c55ec5e-7def-4815-ae08-caad3b9f274d</ProviderCourseRefId>
+      <StudentPersonalRefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</StudentPersonalRefId>
+      <StudentPersonalLocalId>HP-850139</StudentPersonalLocalId>
+      <StudentName><FullName>Harry Potter</FullName></StudentName>
+      <StaffInvolvedList>
+        <StaffInvolved>
+          <RefId>228a2cbe-93c4-46ba-91fa-b3ae689eb437</RefId>
+          <Name>Prof. McGonnegal</Name>
+          <StaffRole json:force-string="true">104</StaffRole>         <!--  Invigilator -->
+        </StaffInvolved>
+      </StaffInvolvedList>
+      <DateTimeAssessmentScheduled>2018-11-25T09:00:00+12:00</DateTimeAssessmentScheduled>
+      <AssessmentType json:force-string="true">102</AssessmentType>   <!-- External Exam -->
+      <SubjectArea json:force-string="true">4</SubjectArea>
+      <YearLevel>11</YearLevel>
+    </StudentAssessmentTask>
+  </xhtml:Example>
+</DataObject>

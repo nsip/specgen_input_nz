@@ -1,0 +1,210 @@
+<DataObject name="AssessmentTaskRegistration"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:json="http://json.org/"
+
+      xmlns="http://sifassociation.org/SpecGen">
+	
+  <Key>RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>AssessmentTaskRegistration</Element>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The student's registration for an assessment task they are intending to participate in. </p>
+     </Description>
+  </Item>
+  <Item>
+    <Element>RefId</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A GUID that identifies an instance of this object. </p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>    <!-- RefId -->
+
+  
+  <Item>
+    <Element>ProviderInvolvedList</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the providers involved and their role, e.g. assessment provider, registering provider.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ProviderInvolvedListType"></Type>
+  </Item>    <!-- AssessmentProviderRefId -->
+
+  <Item>
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The identifier (GUID) for the student held in the StudentPersonal data object
+         whose intention to participate in an assessment task is being registered.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>    <!-- StudentPersonalRefId -->
+  <Item>
+    <Element>StudentPersonalLocalId</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Local Id for the student whose assessment task registration this is.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- StudentPersonalLocalId -->
+  <Item>
+    <Element>StudentName</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The name the student is registered under for the assessment task. This is
+        the name that will appear on assessment papers and achievement certificates.</p>
+    </Description>
+    <Type ref="CommonTypes" name="BaseNameType"></Type>
+  </Item>    <!-- StudentName -->
+
+
+  <Item>
+    <Element>StaffPersonalRefId</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The identifier (GUID) of the StaffPersonal data object representing the teacher who 
+        registered the student's intention to participate in the assessment task.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+
+  </Item>    <!-- StaffPersonalRefId -->
+  <Item>
+    <Element>StaffPersonalLocalId</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The identifier (GUID) of the StaffPersonal data object representing the teacher who 
+        registered the student's intention to participate in the assessment task.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- StaffPersonalLocalId -->
+  <Item>
+    <Element>StaffName</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The name of the staff member that registered the student's intent to
+        participate in the assessment task.</p>
+    </Description>
+    <Type ref="CommonTypes" name="BaseNameType"></Type>
+  </Item>    <!-- StaffName -->
+
+
+  <Item>
+    <Element>AssessmentTaskRefId</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Id (GUID) for the AssessmentTask data object that the registration is for.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>    <!-- AssessmentTaskRefId -->
+
+  <Item>
+    <Element>SpecialAssessmentConditionList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of references identifying any Special Assessment Conditions that the student
+         is entitled to for the assessment task they are registering for.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SpecialAssessmentConditionListType"></Type>
+  </Item>    <!-- SpecialAssessmentConditionList -->
+
+  <Item>
+    <Element>ProviderCourseRefId</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies a ProviderCourse all of whose students will be
+        participating in the assessment task.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>    <!-- ProviderCourseRefId -->
+
+  <Item>
+    <Element>SubjectArea</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting the Learning or Subject Area the assessment task registration is for.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
+  </Item>    <!-- SubjectArea -->  
+
+  <Item>
+    <Element>YearLevel</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting the Year Level of the assessment task the registration is for.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYearLevelCodeType"/>
+  </Item>    <!-- YearLevel -->
+
+  <Item>
+    <Element>DateRegistered</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date the student's intent to participate in the assessment task was registered.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- DateRegistered -->
+
+  <Item>
+    <Element>AssessmentYear</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The assessment year the student's intent to participate in the assessment task was registered for.</p>
+    </Description>
+    <Type name="xs:gYear"></Type>
+  </Item>    <!-- AssessmentYear -->
+  
+
+  <xhtml:Example xmlns="" name="Assessment Task Registration">
+    <AssessmentTaskRegistration>
+      <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
+        <ProviderInvolvedList>
+          <!-- NZQA is Assessor -->
+          <ProviderInvolved>
+            <RefId>5556b4eb-850f-4102-800c-9a3fde8bfa9f</RefId>
+            <ProviderRole json:force-string="true">101</ProviderRole>
+          </ProviderInvolved>
+          <!-- School is Provider -->
+          <ProviderInvolved>
+            <RefId>6661f830-13a6-44d7-bd96-be00cbad68f1</RefId>
+            <ProviderRole json:force-string="true">103</ProviderRole>
+          </ProviderInvolved>
+        </ProviderInvolvedList>
+      <StudentPersonalRefId>19059103-3c50-4970-bc48-341349c32858</StudentPersonalRefId>
+      <StudentName>
+        <FamilyName>Potter</FamilyName>
+        <GivenName>Harry</GivenName>
+      </StudentName>
+      <StaffPersonalRefId>c23c6fa1-4093-4c21-9ea8-4cdd3c7dd7fb</StaffPersonalRefId>
+      <AssessmentTaskRefId>cedd0ce7-f555-482b-887b-d130e5c40d02</AssessmentTaskRefId>
+      <SpecialAssessmentConditionList>
+        <SpecialAssessmentCondition>102</SpecialAssessmentCondition>
+        <SpecialAssessmentCondition>104</SpecialAssessmentCondition>
+        <SpecialAssessmentCondition>108</SpecialAssessmentCondition>
+      </SpecialAssessmentConditionList>
+      <SubjectArea>3</SubjectArea>
+      <YearLevel>12</YearLevel>
+      <DateRegistered>2018-03-30</DateRegistered>
+      <AssessmentYear>2018</AssessmentYear>
+    </AssessmentTaskRegistration>
+  </xhtml:Example>
+</DataObject>

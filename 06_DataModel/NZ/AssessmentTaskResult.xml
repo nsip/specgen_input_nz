@@ -1,0 +1,419 @@
+<DataObject name="AssessmentTaskResult"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:json="http://json.org/"
+
+			xmlns="http://sifassociation.org/SpecGen">
+			
+  <Key>RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>AssessmentTaskResult</Element>
+	  <privacyRating>High</privacyRating>
+    <Description>
+      <p>Records the result achieved by a single student at a particular assessment task.</p>
+     </Description>
+  </Item>
+
+  <Item>
+    <Element>RefId</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A GUID that identifies an instance of this object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>    <!-- RefId -->
+
+  <if intl="nz">  
+    <Item>
+      <Element>AssessmentTaskRefId</Element>
+      <Characteristics>M</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The Id (GUID) for the AssessmentTask data object that the assessment result belongs to.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"></Type>
+    </Item>    <!-- AssessmentTaskRefId -->
+
+    <Item>
+      <Element>AssessmentType</Element>
+      <Characteristics>M</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The type of assessment the result is for.</p>
+      </Description>
+      <Type ref="CodeSets" name="NZCodeSetsAssessmentTypeType"></Type>
+    </Item>    <!-- AssessmentType -->    
+  </if>
+
+  <Item>
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The identifier (GUID) for the student held in the StudentPersonal
+         data object whose assessment task result this is.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>    <!-- StudentPersonalRefId -->
+
+  <if intl="au">
+    <Item>
+      <Element>SchoolInfoRefId</Element>    
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The Id (GUID) that uniquely identifies the School in which this assignment has been set.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"></Type>
+    </Item>    <!-- SchoolInfoRefId -->
+    <Item>
+      <Element>GradingAssignmentRefId</Element>
+      <Characteristics>M</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The grading assignment for which this is a score.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"></Type>
+    </Item>    <!-- GradingAssignmentRefId -->
+    <Item>
+      <Element>StaffPersonalRefId</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The staff member who marked the assignment, and was responsible for any associated teacher judgement.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"></Type>
+    </Item>    <!-- StaffPersonalRefId -->
+    <Item>
+      <Element>TeachingGroupRefId</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The GUID for the TeachingGroup object in which this assignment has been set.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>    <!-- TeachingGroupRefId -->
+  </if>
+
+  <if intl="nz">
+
+    <!--  Student Identifiers -->
+    <Item>
+      <Element>StudentPersonalLocalId</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The Local Id for the student whose result this is.</p>
+      </Description>
+      <Type ref="CommonTypes" name="LocalIdType"></Type>
+    </Item>    <!-- StudentPersonalLocalId -->    
+    <Item>
+      <Element>StudentName</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The name the student is registered under for the assessment task. This is
+            the name that will appear on assessment papers and achievement certificates.</p>
+      </Description>
+      <Type ref="CommonTypes" name="BaseNameType"></Type>
+    </Item>    <!-- StudentName -->
+
+
+    <!--  Providers & Markers involved in setting the Assessment Task (and result) -->
+    <Item>
+      <Element>ProviderInvolvedList</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+      </Description>
+      <Type ref="CommonTypes" name="ProviderInvolvedListType"></Type>
+    </Item>    <!-- ProviderInvolvedList -->
+    <Item>
+      <Element>StaffInvolvedList</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>A list of the staff involved and their role in relation to the assessment task, e.g. the moderator, the marker.</p>
+      </Description>
+      <Type ref="CommonTypes" name="StaffInvolvedListType"></Type>
+    </Item>    <!-- StaffInvolvedList -->
+
+    <!-- Classifiers for the Assessment Task (and result) -->
+    <Item>
+      <Element>ProviderCourseRefId</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The Id (GUID) that uniquely identifies the ProviderCourse that this assessment task belongs to.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>    <!-- ProviderCourseRefId -->
+    <Item>
+      <Element>SubjectArea</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Code denoting the Learning or Subject Area the assessment result is for.</p>
+      </Description>
+      <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"></Type>
+    </Item>    <!-- SubjectArea -->
+    <Item>
+      <Element>YearLevel</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Code denoting the Year Level of the Assessment Task the result is for.</p>
+      </Description>
+      <Type ref="CodeSets" name="NZCodeSetsYearLevelCodeType"/>
+    </Item>    <!-- YearLevel -->
+
+
+    <!-- Score, Dates, etc... -->
+    <Item>
+      <Element>DateMarked</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Date the assessment task was marked.</p>
+      </Description>
+      <Type name="xs:date"></Type>
+    </Item>    <!-- DateMarked -->
+    <Item>
+      <Element>DateAssessed</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Date the student was asssessed against this assessment.</p>
+      </Description>
+      <Type name="xs:date"></Type>
+    </Item>    <!-- DateAssessed -->
+    <Item>
+      <Element>DateStudentNotified</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The date the student was notified of their final mark for the assessment task.</p>
+      </Description>
+      <Type name="xs:date"></Type>
+    </Item>    <!-- DateStudentNotified -->
+    <Item>
+      <Element>Iteration</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The iteration of this result for the assessment,
+           e.g. some tasks require multiple assessments before being achieved.</p>
+      </Description>
+      <Type name="xs:integer"/>
+    </Item>    <!-- Iteration -->
+    <Item>
+      <Element>CreditsAchieved</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The number of credits the student achieved.</p>
+      </Description>
+      <Type name="xs:integer"/>
+    </Item>    <!-- CreditsAchieved -->
+    <Item>
+      <Element>ResultScoreList</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>A list of the assessment result scores that the student received for this assessment task.</p>
+      </Description>
+      <Type ref="CommonTypes" name="AssessmentResultScoreListType"></Type>
+    </Item>    <!-- ResultScoreList -->
+    <Item>
+      <Element>FinalMarkValue</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The final mark that was given to the student for this assessment task.</p>
+      </Description>
+      <Type name="xs:normalizedString"></Type>
+    </Item>    <!-- FinalMarkValue -->
+  </if>
+
+  <if intl="au">
+    <Item>
+      <Element>DateGraded</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Date the assignment was graded.</p>
+      </Description>
+      <Type name="xs:date"></Type>
+    </Item>    <!-- Date Graded -->
+    <Item>
+      <Element>ExpectedScore</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>If true, this is the expected or calculated score for the assignment. If false, this is the score the student received through attempting the assignment. The expected score can be used to substitute for the received score, where the received score is unavailable; e.g. the student has not done the assessment, but will receive a default mark rather than be penalised with a zero grade.</p>
+      </Description>
+      <Type name="xs:boolean"></Type>
+    </Item>    <!-- ExpectedScore -->
+    <Item>
+      <Element>ScorePoints</Element>
+      <Characteristics>C</Characteristics>
+      <privacyRating>Medium</privacyRating>
+      <Description>
+        <p>The score represented as points. Conditionally required that one or more of ScorePoints, ScorePercent or ScoreLetter must be filled in. For online assignments, ScorePoints should be used to the exclusion of other scores.</p>
+      </Description>
+      <Type name="xs:unsignedInt"></Type>
+    </Item>    <!-- ScorePoints -->
+    <Item>
+      <Element>ScorePercent</Element>
+      <Characteristics>C</Characteristics>
+      <privacyRating>Medium</privacyRating>
+      <Description>
+        <p>The score represented as a percent. Conditionally required that one or more of ScorePoints, ScorePercent or ScoreLetter must be filled in.</p>
+      </Description>
+      <Type name="xs:decimal"></Type>
+    </Item>    <!-- ScorePercent -->
+    <Item>
+      <Element>ScoreLetter</Element>
+      <Characteristics>C</Characteristics>
+      <privacyRating>Medium</privacyRating>
+      <Description>
+        <p>The score represented as a letter grade. Conditionally required that one or more of ScorePoints, ScorePercent or ScoreLetter must be filled in.</p>
+      </Description>
+      <Type name="xs:token"></Type>
+    </Item>    <!-- ScoreLetter -->
+    <Item>
+      <Element>ScoreDescription</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Medium</privacyRating>
+      <Description>
+        <p>Text description of the score.</p>
+      </Description>
+      <Type name="xs:normalizedString"></Type>
+    </Item>    <!-- ScoreDescription -->
+    <Item>
+      <Element>SubscoreList</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Medium</privacyRating>
+      <Description>
+        <p>Subscores contributing to the total mark.</p>
+      </Description>
+      <Type ref="CommonTypes" name="NAPSubscoreListType"/> 
+    </Item>    <!-- SubscoreList -->
+    <Item>
+      <Element>TeacherJudgement</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>High</privacyRating>
+      <Description>
+        <p>Teacher judgement associated with the score.</p>
+      </Description>
+      <Type name="xs:string"></Type>
+    </Item>    <!-- TeacherJudgement -->
+    <Item>
+      <Element>MarkInfoRefId</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Interpretation of Grade.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"></Type>
+    </Item>    <!-- MarkInfoRef -->
+    <Item>
+      <Element>AssignmentScoreIteration</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>If this is a draft submission, or re-submission, iteration of the attempt.</p>
+      </Description>
+      <Type name="xs:token"></Type>
+    </Item>    <!-- AssignmentScoreIteration -->
+  </if>
+  
+  <xhtml:Example xmlns="" name="GradingAssignmentScore" intl="au">
+    <GradingAssignmentScore RefId="359D7510-1AD0-A9D7-A8C3-DAD0A85103A2">
+      <StudentPersonalRefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</StudentPersonalRefId>
+      <StudentPersonalLocalId>fred12</StudentPersonalLocalId>
+      <TeachingGroupRefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</TeachingGroupRefId>
+      <SchoolInfoRefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</SchoolInfoRefId>
+      <GradingAssignmentRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85105D2</GradingAssignmentRefId>
+      <ScorePoints>45</ScorePoints> 
+    </GradingAssignmentScore>
+  </xhtml:Example>
+
+  <xhtml:Example xmlns="" name="Assessment Task Result - PAT Example" intl="nz">
+      <AssessmentTaskResult>
+        <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
+        <StudentPersonalRefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</StudentPersonalRefId>
+        <ProviderInvolvedList>
+          <ProviderInvolved>
+            <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+            <ProviderRole json:force-string="true">101</ProviderRole>
+          </ProviderInvolved>
+        </ProviderInvolvedList>
+        <SubjectArea>3</SubjectArea>
+        <DateAssessed>2018-11-21</DateAssessed>
+        <ResultScoreList>
+          <ResultScore>
+            <ScoreMetric>101</ScoreMetric>  <!-- Raw Score -->
+            <ScoreValue>25</ScoreValue>
+          </ResultScore>
+          <ResultScore>
+            <ScoreMetric>102</ScoreMetric>  <!-- Scale Score -->
+            <ScoreValue>38.5</ScoreValue>
+          </ResultScore>
+          <ResultScore>
+            <ScoreMetric>103</ScoreMetric>  <!-- Margin of Error -->
+            <ScoreValue>5.0</ScoreValue>
+          </ResultScore>
+          <ResultScore>
+            <ScoreMetric>104</ScoreMetric>  <!-- Stanine -->
+            <ScoreValue>6</ScoreValue>
+          </ResultScore>
+          <ResultScore>
+            <ScoreMetric>105</ScoreMetric>  <!-- Year Level -->
+            <ScoreValue>4</ScoreValue>
+          </ResultScore>				
+        </ResultScoreList>
+      </AssessmentTaskResult>
+  </xhtml:Example>
+		  
+  <xhtml:Example xmlns="" name="Assessment Task Result - asTTle Example" intl="nz">
+      <AssessmentTaskResult>
+        <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
+        <StudentPersonalRefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</StudentPersonalRefId>
+        <ProviderInvolvedList>
+          <ProviderInvolved>
+            <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+            <ProviderRole json:force-string="true">101</ProviderRole>
+          </ProviderInvolved>
+        </ProviderInvolvedList>
+        <SubjectArea>2</SubjectArea>
+        <DateAssessed>2018-11-01</DateAssessed>
+        <ResultScoreList>
+          <ResultScore>
+            <Competency>Ideas</Competency>
+            <ScoreMetric>101</ScoreMetric>  <!-- Raw Score -->
+            <ScoreValue>1234</ScoreValue>
+          </ResultScore>
+          <ResultScore>
+            <Competency>Ideas</Competency>
+            <ScoreMetric>108</ScoreMetric>  <!-- Curriculum Level -->
+            <ScoreValue>5B</ScoreValue>
+          </ResultScore>
+          <ResultScore>
+            <Competency>Overall</Competency>
+            <ScoreMetric>101</ScoreMetric>  <!-- Raw Score -->
+            <ScoreValue>1591</ScoreValue>
+          </ResultScore>
+          <ResultScore>
+            <Competency>Overall</Competency>
+            <ScoreMetric>108</ScoreMetric>  <!-- Curriculum Level -->
+            <ScoreValue>5B</ScoreValue>
+          </ResultScore>
+        </ResultScoreList>
+      </AssessmentTaskResult>
+    </xhtml:Example>
+</DataObject>

@@ -208,13 +208,37 @@
 		</Item>     <!-- PostalCode -->
 		<if intl="nz">
 			<Item>
-				<Element>Location</Element>
+				<Element>GridLocation</Element>
 				<Characteristics>O</Characteristics>
 				<Description>
-					<p>Details of the location when the address describes a location in New Zealand</p>
+					<p>Where the address refers to an actual location, The latitude &amp; longitude of the location. Grid location values
+					are derived from New Zealand Map Grid x,y coordinates and converted
+					to Latitude and Longitude values per the World Geodetic System 1984 (G1762)
+					</p>
 				</Description>
-				<Type ref="CommonData" name="LocationType"/>
-			</Item>     <!-- Location -->
+				<Type ref="CommonTypes" name="GridLocationType"/>
+			</Item>     <!-- GridLocation -->
+			<Item>
+				<Element>StatisticalAreaList</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>Where the address refers to an actual location, A list of Statistical Areas containing the location.</p>
+					<p>The list may contain exactly one StatisticalArea
+					element for each of the following spatial unit types:</p>
+					<ul>
+						<li>Ward</li>
+						<li>Urban Area</li>
+						<li>Census Area Unit</li>
+						<li>Māori Electorate</li>
+						<li>Mesh Block</li>
+						<li>General Electorate</li>
+						<li>Territorial Authority</li>
+						<li>Local Board (Auckland Only)</li>
+						<li>Regional Council</li>
+					</ul>
+				</Description>
+				<Type ref="CommonTypes" name="StatisticalAreaListType"/>
+			</Item>     <!-- StatisticalAreaList -->
 		</if>
 		<if intl="au">
 			<Item>

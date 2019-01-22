@@ -13,7 +13,7 @@
     <Element>ProviderCourse</Element>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>Description of a Provider defined Course that Students enrol in, and may be assessed for, and achieve passes in.</p>
+      <p>A Provider defined Course that Students enrol in, and may be assessed for, and achieve passes in.</p>
     </Description>
   </Item>
   <Item>

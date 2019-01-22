@@ -22,7 +22,7 @@
 			<Element>SubjectArea</Element>
 			<Characteristics>OR</Characteristics>
 			<Description/>
-			<Type ref="CodeSets" name="NZCodeSetsLearningAreaType"/>
+			<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
 		</Item>      <!-- SubjectArea -->
 		<xhtml:Example xmlns="" name="NZ Subject Area List Example">
 			<SubjectAreaList>
@@ -74,7 +74,7 @@
 				<Description>
 					<p>NZ education standardised code denoting LearningArea / SubjectArea</p>
 				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsLearningAreaType"/>
+				<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
 			</Item>       <!-- Code -->
 			<Item>
 				<Element>YearLevels</Element>

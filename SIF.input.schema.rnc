@@ -232,10 +232,15 @@ sif.DataObject = element DataObject {
    xhtml.Example*
 }
 
+sif.DomainDataObject = element DataObject {
+   attribute coords { xs:string { pattern = "\d+\s*(,\s*\d+)*" } }?,
+   text
+}
+
 sif.Domain = element Domain {
    attribute name { text },
    sif.Intro,
-   element DataObject { text }+
+   sif.DomainDataObject+
 }
 
 sif.CommonElement = element CommonElement {
