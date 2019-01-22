@@ -72,9 +72,9 @@
 		<xi:include parse="text" href="NZ/PersonalisedPlan.xml"/>
 		<xi:include parse="text" href="NZ/WellbeingAlert.xml"/>
 		<xi:include parse="text" href="NZ/WellbeingCharacteristic.xml"/>
-
 		<xi:include parse="text" href="NZ/WellbeingEvent.xml"/>
 		<xi:include parse="text" href="NZ/WellbeingResponse.xml"/>
 		<xi:include parse="text" href="NZ/WellbeingAppeal.xml"/>
+		<xi:include parse="text" href="NZ/StudentActivityParticipation.xml"/>
 	</Group>
 </DataObjects>

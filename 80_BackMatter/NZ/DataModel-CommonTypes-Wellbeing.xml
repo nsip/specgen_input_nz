@@ -305,6 +305,25 @@
 				</Item>
 				
 		</CommonElement>
+
+		<CommonElement name="RecognitionListType" type="true" dm="true">
+			<Item>
+				<Element>RecognitionListType</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>List of awards and other types of recognition given to the student for this activity. </p>
+				</Description>
+				<List mode="List"/>
+			</Item>
+			<Item>
+				<Element>Recognition</Element>
+				<Characteristics>MR</Characteristics>
+				<Description>
+					<p>The nature of recognition given to the student for the successful completion of work in a co-curricular or extra-curricular activity.</p>
+				</Description>
+				<Type name="xs:normalizedString"/>
+			</Item> <!--Recognition-->
+		</CommonElement>
 		
 		<CommonElement name="WithdrawalTimeListType" type="true" dm="true">
 			<Item>
