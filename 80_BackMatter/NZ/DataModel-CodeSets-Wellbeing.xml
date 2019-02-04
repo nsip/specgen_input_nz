@@ -52,10 +52,11 @@
 
 	<CodeSet>
 		<Intro>
+			<p>The role of the key contact in relation to the Wellbeing Alert.</p>
 		</Intro>
 		<ID>Key Contact Role</ID>
 		<Values>
-		<Value><Code>101</Code><Text>Doctor</Text></Value>
+			<Value><Code>101</Code><Text>Doctor</Text></Value>
 			<Value><Code>102</Code><Text>Parent/Caregiver</Text></Value>
 			<Value><Code>103</Code><Text>Principal</Text></Value>
 		</Values>
@@ -745,8 +746,6 @@
 	</CodeSet>    <!-- Student Interest Type -->
 
 
-
-
 	<!-- Student Restraint Reporting codes -->
 	<CodeSet>
 		<Intro>
@@ -817,37 +816,56 @@
 		</Values>
 	</CodeSet>    <!-- Staff Restraint Reflection Type -->
 
-		 <CodeSet>
-      <Intro>
-        <p>Standard codes denoting the group of the activity the student is participating in, e.g. sport, art, cultural, music.</p>
-      </Intro>
-      <ID>Student Activity Group</ID>
-      <Values>
-				<Value><Code>101</Code><Text>Sport</Text></Value>
-				<Value><Code>102</Code><Text>Art</Text></Value>
-				<Value><Code>103</Code><Text>Cultural</Text></Value>
-				<Value><Code>104</Code><Text>Music</Text></Value>
-				<Value><Code>105</Code><Text>Other</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Student Activity Group -->
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the status of the Wellbeing Response.</p>
+		</Intro>
+		<ID>Wellbeing Response Status</ID>
+		<Values>
+			<Value>
+				<Code>99</Code>
+				<Text>Other</Text>
+			</Value>    <!-- Other -->
+		</Values>
+	</CodeSet>    <!-- Wellbeing Response Status -->
 
-		 <CodeSet>
-      <Intro>
-        <p>Standard codes denoting the type of activity the student is participating in, e.g. rugby, drama, Kapa Haka, Violin.</p>
-      </Intro>
-      <ID>Student Activity Type</ID>
-      <Values>
-				<Value><Code>101</Code><Text>Rugby</Text></Value>
-				<Value><Code>102</Code><Text>Netball</Text></Value>
-				<Value><Code>103</Code><Text>Cricket</Text></Value>
-				<Value><Code>104</Code><Text>Drama</Text></Value>
-				<Value><Code>105</Code><Text>Debate</Text></Value>
-				<Value><Code>106</Code><Text>Te Reo</Text></Value>
-				<Value><Code>107</Code><Text>Kapa Haka</Text></Value>
-				<Value><Code>108</Code><Text>Guitar</Text></Value>
-				<Value><Code>109</Code><Text>Violin</Text></Value>
-				<Value><Code>110</Code><Text>Other</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Student Activity Type -->
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the status of the Wellbeing Response.</p>
+		</Intro>
+		<ID>Wellbeing Appeal Outcome</ID>
+		<Values>
+			<Value>
+				<Code>99</Code>
+				<Text>Other</Text>
+			</Value>    <!-- Other -->
+		</Values>
+	</CodeSet>    <!-- Wellbeing Appeal Outcome -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the type of individual or group that determined the appeal outcome.</p>
+		</Intro>
+		<ID>Wellbeing Appeal Determination By</ID>
+		<Values>
+			<Value>
+				<Code>99</Code>
+				<Text>Other</Text>
+			</Value>    <!-- Other -->
+		</Values>
+	</CodeSet>    <!-- Wellbeing Appeal Determination By -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the severity of the Wellbeing Event. </p>
+		</Intro>
+		<ID>Wellbeing Event Severity</ID>
+		<Values>
+			<Value>
+				<Code>99</Code>
+				<Text>Other</Text>
+			</Value>    <!-- Other -->
+		</Values>
+	</CodeSet>    <!-- Wellbeing Event Severity -->
 
 </IncludeGroup>

@@ -164,4 +164,31 @@
 			</Value>    <!-- Special Paper -->
 		</Values>
 	</CodeSet>    <!-- Special Assessment Conditions -->
+
+	<CodeSet>
+		<Intro>
+			<p>The type of assessment tool used for the assessment task.</p>
+		</Intro>
+		<ID>Assessment Tool</ID>
+		<Values>
+			<Value>
+				<Code>99</Code>
+				<Text>Other</Text>
+			</Value>    <!-- Other -->
+		</Values>
+	</CodeSet>    <!-- Assessment Tool -->
+
+	<CodeSet>
+		<Intro>
+			<p>The timeframe of the assessment, e.g. Mid-Year, End of Year.</p>
+		</Intro>
+		<ID>Assessment Timeframe</ID>
+		<Values>
+			<Value>
+				<Code>99</Code>
+				<Text>Other</Text>
+			</Value>    <!-- Other -->
+		</Values>
+	</CodeSet>    <!-- Assessment Timeframe -->
+
 </IncludeGroup>

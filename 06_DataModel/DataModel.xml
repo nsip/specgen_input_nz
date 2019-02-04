@@ -70,7 +70,7 @@
 		<xi:include parse="xml" href="NZ/StudentAttendanceTimeList.xml"/>
 
 		<!-- Student Hauora / Wellbeing -->
-		<xi:include parse="xml" href="NZ/PersonalisedPlan.xml"/>
+<!--		<xi:include parse="xml" href="NZ/PersonalisedPlan.xml"/>  -->
 
 		<xi:include parse="xml" href="NZ/WellbeingAlert.xml"/>
 		<xi:include parse="xml" href="NZ/WellbeingCharacteristic.xml"/>

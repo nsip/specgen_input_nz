@@ -13,16 +13,17 @@
 			<!-- Element types for the Wellbeing Domain -->
 
 		<!-- Wellbeing Items-->   
+
 		<CommonElement name="MedicationListType" type="true" dm="true">
 			<Item>
 				<Element>MedicationListType</Element>
-						<Characteristics>O</Characteristics>
+				<Characteristics>O</Characteristics>
 				<Description>
-							<p>A list of Medications</p>
-						</Description>
+					<p>A list of the medications required for this Wellbeing Characteristic.</p>
+				</Description>
 					<List mode="List"/>
-				</Item>
-				<Item>
+			</Item>
+			<Item>
 					<Element>Medication</Element>
 					<Characteristics>OR</Characteristics>
 					<Description></Description>
@@ -32,51 +33,123 @@
 		<CommonElement name="MedicationType" type="true" dm="true">
 			<Item>
 				<Element>MedicationType</Element>
-						<Characteristics>OR</Characteristics>
+				<Characteristics>OR</Characteristics>
 				<Description>
-							<p></p>
-						</Description>
-				</Item> 
-				<Item>
-						<Element>MedicationName</Element>
+					<p>The medication, dosage and frequency, required by the student to manage the Wellbeing Characteristic.</p>
+				</Description>
+			</Item> 
+			<Item>
+				<Element>MedicationName</Element>
 				<Characteristics>O</Characteristics>
 				<Description>
 					<p>Name of medication required for the student.</p>
 				</Description>
 				<Type name="xs:string"></Type>  
-				</Item>
-				<Item>
-					<Element>Dosage</Element>
+			</Item>
+			<Item>
+				<Element>Dosage</Element>
 				<Characteristics>O</Characteristics>
 				<Description>
 					<p>Dosage and strength of medication required for the student.</p>
 				</Description>
 				<Type name="xs:string"></Type>  
-				</Item>
-				<Item>
-						<Element>Frequency</Element>
+			</Item>
+			<Item>
+				<Element>Frequency</Element>
 				<Characteristics>O</Characteristics>
 				<Description>
 					<p>Frequency of Administration.</p>
 				</Description>
 				<Type name="xs:string"></Type>  
-				</Item>
-				<Item>
-						<Element>AdministrationInformation</Element>
+			</Item>
+			<Item>
+				<Element>AdministrationInformation</Element>
 				<Characteristics>O</Characteristics>
 				<Description>
 					<p>Information about how the medication is to be administered.</p>
 				</Description>
 				<Type name="xs:string"></Type>  
-				</Item>
-				<Item>
-						<Element>Method</Element>
+			</Item>
+			<Item>
+				<Element>Method</Element>
 				<Characteristics>O</Characteristics>
 				<Description>
 					<p>Method of administration.</p>
 				</Description>
 				<Type name="xs:string"></Type>  
-				</Item>
+			</Item>
+			<Item>
+				<Element>MedicationConsentList</Element>
+				<Characteristics>OR</Characteristics>
+				<Description></Description>
+				<Type ref="CommonTypes" name="MedicationConsentListType"/>
+			</Item>
+		</CommonElement>
+
+		<CommonElement name="MedicationConsentListType" type="true" dm="true">
+			<Item>
+				<Element>MedicationConsentListType</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>A list consents that have been provided for administration of a medicine to a student.</p>
+				</Description>
+				<List mode="List"/>
+			</Item>
+			<Item>
+				<Element>MedicationConsent</Element>
+				<Characteristics>OR</Characteristics>
+				<Description></Description>
+				<Type ref="CommonTypes" name="MedicationConsentType"/>
+			</Item>
+		</CommonElement>
+		<CommonElement name="MedicationConsentType" type="true" dm="true">
+			<Item>
+				<Element>MedicationConsentType</Element>
+				<Characteristics>OR</Characteristics>
+				<Description>
+					<p>Contains information about when, by whom, and who consent was given to for the administration of a medicine to a student.</p>
+				</Description>
+			</Item> 
+			<Item>
+				<Element>StartDate</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>The date from which the student or student caretaker consented to the medicine being administered to the student by a particular individual.</p>
+				</Description>
+				<Type name="xs:date"></Type>  
+			</Item>
+			<Item>
+				<Element>EndDate</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>The date the consent for administration of the medicine ends or is revoked.</p>
+				</Description>
+				<Type name="xs:date"></Type>  
+			</Item>
+			<Item>
+				<Element>ConsentedBy</Element>
+				<Characteristics>MR</Characteristics>
+				<Description>
+					<p>The student or student caregiver that has consented to the medicine being administered to the student by the school.</p>
+				</Description>
+				<Type ref="CommonTypes" name="ObjectReferenceType"/>
+			</Item>
+			<Item>
+				<Element>ProviderApplicableTo</Element>
+				<Characteristics>MR</Characteristics>
+				<Description>
+					<p>The provider the medication administartion consent is applicable to.</p>
+				</Description>
+				<Type ref="CommonTypes" name="ObjectReferenceType"/>
+			</Item>
+			<Item>
+				<Element>AdministeredBy</Element>
+				<Characteristics>MR</Characteristics>
+				<Description>
+					<p>The staff member at the school that have been given permission by the student or the student's caregiver to administer the medicine to the student.</p>
+				</Description>
+				<Type ref="CommonTypes" name="ObjectReferenceType"/>
+			</Item>
 		</CommonElement>
 			
 		<CommonElement name="WellbeingEventCategoryListType" type="true" dm="true">
@@ -84,17 +157,14 @@
 				<Element>WellbeingEventCategoryListType</Element>
 				<Characteristics>O</Characteristics>
 				<Description>
-					<p>List of Categories of WellbeingEvent.</p>
+					<p>List of Categories of the WellbeingEvent.</p>
 				</Description>
-				<!-- Eventually to be a Code Set - needs to be further defined.
-				<Type ref="CodeSets" name="NZCodeSetsWellbeingEventCategoryType"/>
-				-->
 				<List mode="List"/>
 			</Item>
 			<Item>
-					<Element>WellbeingEventCategory</Element>
-					<Characteristics>MR</Characteristics>
-					<Description></Description>
+				<Element>EventCategory</Element>
+				<Characteristics>MR</Characteristics>
+				<Description></Description>
 				<Type ref="CommonTypes" name="WellbeingEventCategoryType"></Type>
 			</Item>
 		</CommonElement>
@@ -103,14 +173,14 @@
 				<Element>WellbeingEventCategoryType</Element>
 				<Characteristics>MR</Characteristics>
 				<Description>
-					<p>Category of event.</p>
+					<p>The category of the Wellbeing Event.</p>
 				</Description>        	 
 			</Item>
 			<Item> 
-				<Element>EventCategory</Element>
+				<Element>Category</Element>
 				<Characteristics>M</Characteristics>
 				<Description>
-					<p>Category of event.</p>
+					<p>The category of the Wellbeing Event.</p>
 				</Description>
 				<Union>
 					<Type ref="CodeSets" name="NZCodeSetsWellbeingEventCategoryType"/>
@@ -118,15 +188,14 @@
 				</Union>	 
 			</Item>	   <!-- EventCategory -->
 			<Item>
-				<Element>WellbeingEventSubCategoryList</Element>
+				<Element>EventSubCategoryList</Element>
 				<Characteristics>C</Characteristics>
 				<Description>
-					<p>List of sub-categories of the WellbeingEvent. Most likely to be locally defined.</p>
+					<p>List of Sub-Categories associated with the Wellbeing Event's Category.</p>
 				</Description>
 				<Type ref="CommonTypes" name="WellbeingEventSubCategoryListType"></Type>
-			</Item>    <!-- WellbeingEventSubCategoryList -->
+			</Item>    <!-- EventSubCategoryList -->
 		</CommonElement>
-		
 		<CommonElement name="WellbeingEventSubCategoryListType" type="true" dm="true">
 			<Item>
 				<Element>WellbeingEventSubCategoryListType</Element>
@@ -137,11 +206,31 @@
 				<List mode="List"/>
 			</Item>
 			<Item>
-				<Element>WellbeingEventSubCategory</Element>
+				<Element>EventSubCategory</Element>
 				<Characteristics>MR</Characteristics>
 				<Description></Description>
-				<Type ref="CodeSets" name="NZCodeSetsWellbeingEventSubCategoryType"/>
-			</Item>    <!-- WellbeingEventSubCategory -->
+				<Type ref="CommonTypes" name="WellbeingEventSubCategoryType"/>
+			</Item>    <!-- EventSubCategory -->
+		</CommonElement>
+		<CommonElement name="WellbeingEventSubCategoryType" type="true" dm="true">
+			<Item>
+				<Element>WellbeingEventSubCategoryType</Element>
+				<Characteristics>MR</Characteristics>
+				<Description>
+					<p>The sub-category of the Wellbeing Event.</p>
+				</Description>        	 
+			</Item>
+			<Item> 
+				<Element>SubCategory</Element>
+				<Characteristics>M</Characteristics>
+				<Description>
+					<p>The sub-category of the Wellbeing Event.</p>
+				</Description>
+				<Union>
+					<Type ref="CodeSets" name="NZCodeSetsWellbeingEventSubCategoryType"/>
+					<Type name="xs:string"/>
+				</Union>	 
+			</Item>	   <!-- EventSubCategory -->
 		</CommonElement>
 		
 		<CommonElement name="FollowUpActionListType" type="true" dm="true">
@@ -159,8 +248,7 @@
 				<Description>Container for the Follow Up details.</Description>
 				<Type ref="CommonTypes" name="FollowUpActionType"/>
 			</Item>    <!-- FollowUpAction -->
-		</CommonElement>
-		
+		</CommonElement>		
 		<CommonElement name="FollowUpActionType" type="true" dm="true">
 			<Item>
 				<Element>FollowUpActionType</Element>
@@ -221,53 +309,16 @@
 				<Description>
 					<p>A person (additional to the student) involved in a  Wellbeing event/response where required to be known.</p>
 				</Description>
+				<Type complex="extension" name="ObjectReferenceType"/>
 			</Item> 
 			<Item>
-				<Element>PersonRefId</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The RefId of the Person involved in the event, can be supplied if the Person is already a staff, student or student contact. </p>
-				</Description>
-				<Type ref="CommonTypes" name="IdRefType"></Type>
-			</Item>
-			<Item>
-				<Attribute>SIF_RefObject</Attribute>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>
-						The type of SIF object that the <code>PersonRefId</code> attribute identifies.
-					</p>
-				</Description>
-				<Values>
-					<Value>
-						<Code>StudentPersonal</Code>
-					</Value>
-					<Value>
-						<Code>StaffPersonal</Code>
-					</Value>
-					<Value>
-						<Code>StudentContactPersonal</Code>
-					</Value>
-				</Values>
-			</Item>
-			<Item>
-				<Element>ShortName</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Optional free text name for a person, usually only used where the person does not have a personal record with a RefId.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-				</Item>
-				
-				<Item>
-						<Element>HowInvolved</Element>
+				<Element>HowInvolved</Element>
 				<Characteristics>O</Characteristics>
 				<Description>
 					<p>Optional free text detailing involvement.</p>
 				</Description>
-				<Type name="xs:string"></Type>  
-				</Item>
-				
+				<Type name="xs:strnormalizedString"></Type>  
+			</Item>
 		</CommonElement>
 
 		<CommonElement name="RecognitionListType" type="true" dm="true">
@@ -305,20 +356,26 @@
 				<Type ref="CommonTypes" name="WithdrawalType"/>
 			</Item>
 		</CommonElement>
-		
 		<CommonElement name="WithdrawalType" type="true" dm="true">
 			<Item>
 				<Element>WithdrawalType</Element>
-				<Characteristics>MR</Characteristics>
 				<Description>
 					<p>Repeatable Withdrawal.</p>
 				</Description>
-			</Item> 
+			</Item>
 			<Item>
-				<Element>WithdrawalDate</Element>
+				<Element>WithdrawalStartDate</Element>
 				<Characteristics>M</Characteristics>
 				<Description>
-					<p/>
+					<p>The start date of the withdrawal.</p>
+				</Description>
+				<Type name="xs:date"></Type>  
+			</Item>
+			<Item>
+				<Element>WithdrawalEndDate</Element>
+				<Characteristics>M</Characteristics>
+				<Description>
+					<p>The end date of the withdrawal.</p>
 				</Description>
 				<Type name="xs:date"></Type>  
 			</Item>
@@ -339,28 +396,12 @@
 				<Type name="xs:time"></Type>  
 			</Item>
 			<Item>
-				<Element>TimeTableSubjectRefId</Element>
+				<Element>SchoolTerm</Element>
 				<Characteristics>O</Characteristics>
 				<Description>
-					<p>The GUID of an associated TimeTableSubject Object if there is one.</p>
+					<p>The school term the withdrawal took place in.</p>
 				</Description>
-				<Type ref="CommonTypes" name="IdRefType"></Type>
-			</Item>
-			<Item>
-				<Element>ScheduledActivityRefId</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The GUID of an associated ScheduledActivity Object if there is one.</p>
-				</Description>
-			<Type ref="CommonTypes" name="IdRefType"></Type>
-			</Item>
-			<Item>
-				<Element>TimeTableCellRefId</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The GUID of an associated TimeTableCell Object if there is one.</p>
-				</Description>
-			<Type ref="CommonTypes" name="IdRefType"></Type>
+				<Type name="xs:integer"></Type>  
 			</Item>
 		</CommonElement>
 		
@@ -428,15 +469,8 @@
 				</Description>
 				<Type name="xs:date"></Type>  
 			</Item>
-			<Item>
-				<Element>Status</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Current Status.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsWellbeingStatusType"/>
-			</Item>
 		</CommonElement>
+
 		<CommonElement name="DetentionContainerType" type="true" dm="true">
 			<Item>
 				<Element>DetentionContainerType</Element>
@@ -476,15 +510,8 @@
 				</Description>
 				<Type name="xs:string"></Type>  
 			</Item>
-			<Item>
-				<Element>Status</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Current Status.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsWellbeingStatusType"/>
-			</Item>
 		</CommonElement>
+
 		<CommonElement name="PlanRequiredContainerType" type="true" dm="true">
 			<Item>
 				<Element>PlanRequiredContainerType</Element>
@@ -500,16 +527,7 @@
 				</Description>
 				<Type ref="CommonTypes" name="PlanRequiredListType"></Type>
 			</Item>
-			<Item>
-				<Element>Status</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Current Status.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsWellbeingStatusType"/>
-			</Item>
 		</CommonElement>
-		
 		<CommonElement name="PlanRequiredListType" type="true" dm="true">
 			<Item>
 				<Element>PlanRequiredListType</Element>
@@ -525,8 +543,7 @@
 				<Description></Description>
 				<Type ref="CommonTypes" name="WellbeingPlanType"/>
 			</Item>
-		</CommonElement>
-		
+		</CommonElement>		
 		<CommonElement name="WellbeingPlanType" type="true" dm="true">
 			<Item>
 				<Element>WellbeingPlanType</Element>
@@ -592,15 +609,8 @@
 				</Description>
 				<Type name="xs:string"></Type>  
 			</Item>
-			<Item>
-				<Element>Status</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Current Status.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsWellbeingStatusType"/>
-			</Item>
 		</CommonElement>
+
 		<CommonElement name="OtherWellbeingResponseContainerType" type="true" dm="true">
 			<Item>
 				<Element>OtherWellbeingResponseContainerType</Element>
@@ -615,14 +625,6 @@
 						<p>Date of the other response</p>
 					</Description>
 					<Type name="xs:date"></Type>  
-			</Item>
-			<Item>
-				<Element>OtherResponseType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p></p>
-				</Description>
-				<Type name="xs:string"></Type>  
 			</Item>
 			<Item>
 				<Element>OtherResponseDescription</Element>
@@ -640,16 +642,159 @@
 				</Description>
 				<Type name="xs:string"></Type>  
 			</Item>
+		</CommonElement>
+
+		<CommonElement name="AcknowledgementListType" type="true" dm="true">
 			<Item>
-				<Element>Status</Element>
+				<Element>AcknowledgementListType</Element>
 				<Characteristics>O</Characteristics>
 				<Description>
-					<p>Current Status.</p>
+					<p>A list of the providers and staff who have been sent the alerts and have acknowledged they have been read.</p>
 				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsWellbeingStatusType"/>
+				<List mode="List"/>
+			</Item>
+			<Item>
+				<Element>Acknowledgement</Element>
+				<Characteristics>MR</Characteristics>
+				<Description></Description>
+				<Type ref="CommonTypes" name="AcknowledgementType"/>
+			</Item>
+		</CommonElement>		
+		<CommonElement name="AcknowledgementType" type="true" dm="true">
+			<Item>
+				<Element>AcknowledgementType</Element>
+				<Characteristics>MR</Characteristics>
+				<Description>
+					<p>A provider or staff member that has been sent the alerts and have acknowledged they have been read.</p>
+				</Description>
+			</Item>
+			<Item>
+				<Element>Acknowledged</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>Indicates whether or not a staff member has viewed the alerts.</p>
+				</Description>
+				<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+			</Item>    <!-- Acknowledged -->
+			<Item>
+				<Element>AcknowledgedDate</Element>
+				<Characteristics>M</Characteristics>
+				<Description>
+					<p>The date the provider acknowledged a staff member has viewed the alerts.</p>
+				</Description>
+				<Type name="xs:date"></Type>
+			</Item>    <!-- AcknowledgedDate -->
+			<Item>
+				<Element>Provider</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>A provider who has been sent the alerts and have acknowledged they have been read.</p>
+				</Description>
+				<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
+			</Item>    <!-- Provider -->
+			<Item>
+				<Element>StaffMember</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>A staff member who has been sent the alerts and have acknowledged they have been read.</p>
+				</Description>
+				<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
+			</Item>    <!-- StaffMember -->
+		</CommonElement>
+
+		<CommonElement name="KeyContactListType" type="true" dm="true">
+			<Item>
+				<Element>KeyContactListType</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>A list of key contacts for the alert.</p>
+				</Description>
+				<List mode="List"/>
+			</Item>
+			<Item>
+				<Element>KeyContact</Element>
+				<Characteristics>MR</Characteristics>
+				<Description></Description>
+				<Type ref="CommonTypes" name="KeyContactType"/>
+			</Item>
+		</CommonElement>		
+		<CommonElement name="KeyContactType" type="true" dm="true">
+			<Item>
+				<Element>KeyContactType</Element>
+				<Characteristics>MR</Characteristics>
+				<Description>
+					<p>A key contact for the Wellbeing Alert and their role, e.g. Parent, Doctor, Principal.</p>
+				</Description>
+			</Item>
+			<Item>
+				<Element>Role</Element>
+				<Characteristics>M</Characteristics>
+				<Description>
+					<p>The role of the key contact in relation to the Wellbeing Alert.</p>
+				</Description>
+				<Type ref="CodeSets" name="NZCodeSetsKeyContactRoleType"/>
+			</Item>    <!-- Role -->
+			<Item>
+				<Element>Contact</Element>
+				<Characteristics>M</Characteristics>
+				<Description>
+					<p>Details about the contact, e.g. Doctor, Parent, Principal.</p>
+				</Description>
+				<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
+			</Item>    <!-- Contact -->
+		</CommonElement>	
+
+		<CommonElement name="WellbeingResponseListType" type="true" dm="true">
+			<Item>
+				<Element>WellbeingResponseListType</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>A list of relevant Wellbeing Responses for the student.</p>
+				</Description>
+				<List mode="List"/>
+			</Item>
+			<Item>
+				<Element>WellbeingResponse</Element>
+				<Characteristics>MR</Characteristics>
+				<Description></Description>
+				<Type ref="CommonTypes" name="ObjectReferenceType"/>
+			</Item>
+		</CommonElement>		
+
+		<CommonElement name="WellbeingAppealListType" type="true" dm="true">
+			<Item>
+				<Element>WellbeingAppealListType</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>A list of relevant Wellbeing Appeals for the student.</p>
+				</Description>
+				<List mode="List"/>
+			</Item>
+			<Item>
+				<Element>WellbeingAppeal</Element>
+				<Characteristics>MR</Characteristics>
+				<Description></Description>
+				<Type ref="CommonTypes" name="ObjectReferenceType"/>
+			</Item>
+		</CommonElement>	
+
+		<CommonElement name="WellbeingCharacteristicListType" type="true" dm="true">
+			<Item>
+				<Element>WellbeingCharacteristicListType</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>A list of relevant Wellbeing Characteristics for the student.</p>
+				</Description>
+				<List mode="List"/>
+			</Item>
+			<Item>
+				<Element>WellbeingCharacteristic</Element>
+				<Characteristics>MR</Characteristics>
+				<Description></Description>
+				<Type ref="CommonTypes" name="ObjectReferenceType"/>
 			</Item>
 		</CommonElement>
-		
+				
 		<CommonElement name="WellbeingDocumentListType" type="true" dm="true">
 			<Item>
 				<Element>WellbeingDocumentListType</Element>
@@ -665,8 +810,7 @@
 					<Description></Description>
 				<Type ref="CommonTypes" name="WellbeingDocumentType"/>
 			</Item>
-		</CommonElement>
-		
+		</CommonElement>		
 		<CommonElement name="WellbeingDocumentType" type="true" dm="true">
 			<Item>
 				<Element>WellbeingDocumentType</Element>
@@ -724,4 +868,56 @@
 				<Type name="xs:normalizedString"></Type>  
 			</Item>
 		</CommonElement>	
+
+		<CommonElement name="WellbeingEventListType" type="true" dm="true">
+			<Item>
+				<Element>WellbeingEventListType</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>A list of relevant Wellbeing Events for the student.</p>
+				</Description>
+				<List mode="List"/>
+			</Item>
+			<Item>
+				<Element>WellbeingEvent</Element>
+				<Characteristics>MR</Characteristics>
+				<Description></Description>
+				<Type ref="CommonTypes" name="ObjectReferenceType"/>
+			</Item>
+		</CommonElement>	
+
+		<CommonElement name="WellbeingAlertListType" type="true" dm="true">
+			<Item>
+				<Element>WellbeingAlertListType</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>A list of relevant Wellbeing Alerts for the student.</p>
+				</Description>
+				<List mode="List"/>
+			</Item>
+			<Item>
+				<Element>WellbeingAlert</Element>
+				<Characteristics>MR</Characteristics>
+				<Description></Description>
+				<Type ref="CommonTypes" name="ObjectReferenceType"/>
+			</Item>
+		</CommonElement>	
+
+		<CommonElement name="RelatedWellbeingEventListType" type="true" dm="true">
+			<Item>
+				<Element>RelatedWellbeingEventListType</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>A Wellbeing Event gets created for every student involved in an event. This list links together all related Wellbeing Events.</p>
+				</Description>
+				<List mode="List"/>
+			</Item>
+			<Item>
+				<Element>RelatedWellbeingEvent</Element>
+				<Characteristics>MR</Characteristics>
+				<Description></Description>
+				<Type ref="CommonTypes" name="ObjectReferenceType"/>
+			</Item>
+		</CommonElement>	
+	
 </IncludeGroup>

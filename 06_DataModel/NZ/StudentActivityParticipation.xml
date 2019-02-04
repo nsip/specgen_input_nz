@@ -15,14 +15,14 @@
     <Description>
       This object provides information on a co-curricular or extra-curricular activity in which a student participates during a given school year.
     </Description>
-  </Item> <!-- StudentActivityParticipation -->
+  </Item>    <!-- StudentActivityParticipation -->
   <Item>
     <Element>RefId</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
 	  <Description>The ID (GUID) that uniquely identifies the instance of the object.</Description>
     <Type ref='CommonTypes' name='RefIdType'/>
-  </Item> <!-- RefId -->
+  </Item>    <!-- RefId -->
   <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>M</Characteristics>
@@ -31,7 +31,7 @@
       <p>GUID that identifies the student participating in the activity. </p>
     </Description>
     <Type ref='CommonTypes' name='IdRefType'/>
-  </Item> <!-- StudentPersonalRefId-->
+  </Item>    <!-- StudentPersonalRefId-->
 
   <if intl = 'nz'>
     <Item>
@@ -42,7 +42,16 @@
         <p>The local Id that identifies the student participating in the activity. </p>
       </Description>
       <Type ref='CommonTypes' name='LocalIdType'/>
-    </Item> <!-- StudentPersonalLocalId-->
+    </Item>    <!-- StudentPersonalLocalId-->
+    <Item>
+      <Element>ProviderRefId</Element>
+      <Characteristics>O</Characteristics>
+	    <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The Id (GUID) that uniquely identifies the Provider running the activity the student is participating in, e.g. schools.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"></Type>
+    </Item>    <!-- ProviderRefId -->  
     <Item>
       <Element>ActivityGroup</Element>
       <Characteristics>O</Characteristics>
@@ -52,7 +61,7 @@
         </p>
       </Description>
       <Type ref="CodeSets" name="NZCodeSetsStudentActivityGroupType"/>
-    </Item> <!-- ActivityGroup -->
+    </Item>    <!-- ActivityGroup -->
     <Item>
       <Element>ActivityType</Element>
       <Characteristics>O</Characteristics>
@@ -62,7 +71,25 @@
         </p>
       </Description>
       <Type ref="CodeSets" name="NZCodeSetsStudentActivityTypeType"/>
-    </Item> <!-- ActivityType -->
+    </Item>    <!-- ActivityType -->
+    <Item>
+      <Element>ActivityName</Element>
+      <Characteristics>M</Characteristics>
+	    <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The name of the activity the student participated in.</p>
+      </Description>
+      <Type name='xs:normalizedString'/>
+    </Item>    <!--ActivityName-->
+    <Item>
+      <Element>LearningArea</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The learning area the student activity the student is participating in relates to.</p>
+      </Description>
+      <Type ref="CodeSets" name="NZCodeSetsLearningArea"/>
+    </Item>    <!-- LearningArea -->    
   </if>
 
   <if intl = 'au'>
@@ -75,10 +102,8 @@
       </Description>
       <Type ref='CommonTypes' name='IdRefType'/>
     </Item> <!-- StudentActivityInfoRef-->
-
     <Item>
       <Element>SchoolYear</Element>
-
       <Characteristics>O</Characteristics>
       <privacyRating>Low</privacyRating>
       <Description>
@@ -89,7 +114,6 @@
       <Type ref="CommonTypes" name="SchoolYearType"></Type>
     </Item> <!--SchoolYear-->
   </if>
-
   <Item>
     <Element>ParticipationComment</Element>
     <Characteristics>O</Characteristics>
@@ -98,7 +122,7 @@
       <p>Comment related to the student's participation in the activity. </p>
     </Description>
     <Type name='xs:normalizedString'/>
-  </Item> <!--ParticipationComment-->
+  </Item>    <!--ParticipationComment-->
   <Item>
     <Element>StartDate</Element>
     <Characteristics>O</Characteristics>
@@ -107,7 +131,7 @@
       <p>This is the date from which the activity participation is valid (inclusive). </p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item> <!--StartDate-->
+  </Item>    <!--StartDate-->
   <Item>
     <Element>EndDate</Element>
     <Characteristics>O</Characteristics>
@@ -116,7 +140,7 @@
       <p>This is the date through which the activity participation is valid (inclusive). If element is supported by the publisher/responder, should contain a date if the student withdraws from the activity before the end of the school year. </p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item> <!--EndDate-->
+  </Item>    <!--EndDate-->
   <Item>
     <Element>Role</Element>
     <Characteristics>O</Characteristics>
@@ -125,7 +149,7 @@
       <p>Specific role the student plays in the activity (e.g., band leader, student body president). </p>
     </Description>
     <Type name='xs:normalizedString'/>
-  </Item> <!-- Role -->
+  </Item>    <!-- Role -->
   <Item>
     <Element>RecognitionList</Element>
     <Characteristics>O</Characteristics>
@@ -134,7 +158,7 @@
       <p>List of awards and other types of recognition given to the student for this activity. </p>
     </Description>
    <Type ref="CommonTypes" name="RecognitionListType"></Type>
-  </Item> <!--RecognitionList-->
+  </Item>    <!--RecognitionList-->
 
     <xhtml:Example xmlns='' name="StudentActivityParticipation">
     <StudentActivityParticipation>
@@ -142,6 +166,7 @@
       <StudentPersonalRefId>646C5D4A-C829-4886-A02B-971695C7BC06</StudentPersonalRefId>
       <ActivityGroup json:force-string="true">101</ActivityGroup>
       <ActivityType json:force-string="true">102</ActivityType>
+      <ActivityName json:force-string="true">First XI</ActivityName>
       <ParticipationComment>First year of participation</ParticipationComment>
       <StartDate>2008-09-01</StartDate>
       <Role>Team Member</Role>

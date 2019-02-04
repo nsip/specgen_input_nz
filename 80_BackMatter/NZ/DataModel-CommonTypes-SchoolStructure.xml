@@ -514,4 +514,26 @@
 			</SchoolDefinitionList>
 		</xhtml:Example>
 	</CommonElement>
+
+		<CommonElement name="StudentListType" type="true" dm="true">h
+			<Item>
+				<Element>StudentListType</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>List of Students in this Teaching Group</p>
+				</Description>
+				<List mode="List"/>
+			</Item>
+			<Item>
+				<Element>TeachingGroupStudent</Element>
+				<Characteristics>MR</Characteristics>
+				<Description>
+					<p>Students who belong to the TeachingGroup</p>
+				</Description>
+				<Type ref="CommonTypes" name="TeachingGroupStudentType"/>
+			</Item>
+		</CommonElement>
+
+
+
 </IncludeGroup>

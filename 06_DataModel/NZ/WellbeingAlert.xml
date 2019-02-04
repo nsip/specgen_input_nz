@@ -7,12 +7,13 @@
         
             xmlns="http://sifassociation.org/SpecGen">
 
-  <Key>@RefId</Key>
-  
+  <Key>RefId</Key>
+
   <EventsReported>true</EventsReported>
+  
   <Item>
     <Element>WellbeingAlert</Element>
-	<privacyRating>High</privacyRating>
+  	<privacyRating>High</privacyRating>
     <Description>
       <p>Alert indicating to teachers and systems that this student has a 'concern' that needs
         to be known for 'duty of care', which could be Medical, Legal or other.</p>
@@ -20,144 +21,177 @@
         contain more detail.</p>
     </Description>
   </Item>
-
+  
   <Item>
-    <Attribute>RefId</Attribute>
+    <Element>RefId</Element>
     <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
+  	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this WellbeingAlert.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>
+  </Item>    <!-- RefId -->
+
+  <Item>
+		<Element>WellbeingAlertLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The local Id for the Wellbeing Alert, assigned by the Provider.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>    <!-- LocalId -->
+
   <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>M</Characteristics>
-	<privacyRating>High</privacyRating>
+	  <privacyRating>High</privacyRating>
     <Description>
       <p>The ID (GUID) of the student to whom this WellbeingAlert belongs.</p>
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>
+  </Item>    <!-- StudentPersonalRefId -->
+
   <Item>
-    <Element>SchoolInfoRefId</Element>
+    <Element>ProviderRefId</Element>
     <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
+	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the school for which this WellbeingAlert is being reported.</p>
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>
-  
+  </Item>    <!-- ProviderRefId -->  
+
   <Item>
-    <Element>Date</Element>
+    <Element>StaffMemberRefId</Element>
     <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
+	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>The calendar date on which this wellbeing alert was published.</p>
+      <p>The staff member that is a key contact for this wellbeing alert.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>    <!-- StaffMemberRefId -->  
+
+  <Item>
+    <Element>PublishedDate</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+        <p>The calendar date on which this wellbeing alert was published.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>
-  
+  </Item>    <!-- PublishedDate --> 
+
   <Item>
-    <Element>WellbeingAlertStartDate</Element>
+    <Element>StartDate</Element>
     <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
+	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The date the wellbeing alert period commenced.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>
+  </Item>    <!-- StartDate -->
+
   <Item>
-    <Element>WellbeingAlertEndDate</Element>
+    <Element>EndDate</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>Low</privacyRating>
+	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The date the wellbeing alert is due to finish.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>
-  
+  </Item>    <!-- EndDate -->  
+
   <Item>
-    <Element>WellbeingAlertCategory</Element>
+    <Element>AlertCategory</Element>
     <Characteristics>C</Characteristics>
-	<privacyRating>High</privacyRating>
+  	<privacyRating>High</privacyRating>
     <Description>
       <p>Category of WellbeingAlert.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsWellbeingAlertCategoryType"></Type>
-  </Item>
-  
+  </Item>    <!-- AlertCategory -->
+
   <Item>
-    <Element>WellbeingAlertDescription</Element>
+    <Element>AlertDescription</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
+	  <privacyRating>High</privacyRating>
     <Description>
       <p>Description of this particular wellbeing alert.</p>
     </Description>
-    <Type name="xs:string"></Type>
-  </Item>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- AlertDescription -->
+
   <Item>
-    <Element>EnrolmentRestricted</Element>
+    <Element>AcknowledgementList</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>Medium</privacyRating>
-    <Description>
-      <p>Is this Alert Restricted to a particular enrolment at a school?</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>
-  <Item>
-    <Element>AlertAudience</Element>
-    <Characteristics>O</Characteristics>
-	<privacyRating>Medium</privacyRating>
-    <Description>
-      <p>Audience for this particular wellbeing alert.</p>
-    </Description>
-    <Type name="xs:string"></Type>
-  </Item>
-  <Item>
-    <Element>AlertSeverity</Element>
-    <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
-    <Description>
-      <p>Severity of this wellbeing alert.</p>
-    </Description>
-    <Type name="xs:string"></Type>
-  </Item>
-  <Item>
-    <Element>AlertKeyContact</Element>
-    <Characteristics>O</Characteristics>
-	<privacyRating>Medium</privacyRating>
+	  <privacyRating>Medium</privacyRating>
     <Description>
       <p>Key Contact to get information about this wellbeing alert from.</p>
     </Description>
-    <Type name="xs:string"></Type>
-</Item>
-	
- <if intl="au">
+    <Type ref="CommonTypes" name="AcknowledgementListType"/>
+  </Item>    <!-- AcknowledgementList -->
+
   <Item>
-    <Element>SIF_Metadata</Element>
+    <Element>AlertSeverity</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
-  </Item>    <!-- SIF_Metadata -->
+	  <privacyRating>High</privacyRating>
+    <Description>
+      <p>Severity of this wellbeing alert.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- AlertSeverity -->
+
   <Item>
-    <Element>SIF_ExtendedElements</Element>
+    <Element>KeyContactList</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
-  </Item>    <!-- SIF_ExtendedElement -->
- </if>
+	  <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>A list of key contacts for the alert.</p>
+    </Description>
+    <Type ref="CommonTypes" name="KeyContactListType"/>
+  </Item>    <!-- KeyContactList -->
+
+  <Item>
+    <Element>WellbeingResponseList</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>A list of the Wellbeing Responses that contributed to the creation of this Wellbeing Alert.</p>
+    </Description>
+    <Type ref="CommonTypes" name="WellbeingResponseListType"/>
+  </Item>    <!-- WellbeingResponseList -->
+
+  <Item>
+    <Element>WellbeingAppealList</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>A list of the Wellbeing Appeal outcomes that contributed to the creation of this Wellbeing Alert.</p>
+    </Description>
+    <Type ref="CommonTypes" name="WellbeingAppealListType"/>
+  </Item>    <!-- WellbeingAppealList -->
+
+  <Item>
+    <Element>WellbeingCharacteristicList</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>A list of the Wellbeing Characteristics that contributed to the creation of this Wellbeing Alert.</p>
+    </Description>
+    <Type ref="CommonTypes" name="WellbeingCharacteristicList"/>
+  </Item>    <!-- WellbeingCharacteristicList -->
  
   <xhtml:Example xmlns="" name="WellbeingAlert">
-    <WellbeingAlert RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
+    <WellbeingAlert>
+      <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
       <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
-      <SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>
-      <Date>2017-11-01</Date>
-      <WellbeingAlertStartDate>2017-11-01</WellbeingAlertStartDate>
-      <WellbeingAlertCategory>M</WellbeingAlertCategory>
-      <WellbeingAlertDescription>This Student is allergic to peanuts</WellbeingAlertDescription>
+      <ProviderRefId>CA285746-359D-7510-1A8C-36432A901A16</ProviderRefId>
+      <StaffMemberRefId>BA265776-359D-7510-1A8C-77432A901A16</StaffMemberRefId>
+      <PublishedDate>2017-11-01</PublishedDate>
+      <StartDate>2017-11-01</StartDate>
+      <AlertCategory>M</AlertCategory>
+      <AlertDescription>This Student is allergic to peanuts</AlertDescription>
     </WellbeingAlert>
-
   </xhtml:Example>
 </DataObject>
