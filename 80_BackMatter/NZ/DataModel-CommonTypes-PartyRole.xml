@@ -2379,7 +2379,6 @@
 			<Description>
 				<p>An ethnic group with which the person identifies, and if there is more than one, their order of preference.</p>
 			</Description>
-			<List mode="List"/>
 		</Item>
 		<Item>
 			<Element>PreferenceOrderNumber</Element>
@@ -2387,7 +2386,7 @@
 			<Description>
 				<p>The order of preference for the person's ethnicity.</p>
 			</Description>
-			<Type name="xs:int"/>
+			<Type name="xs:integer"/>
 		</Item>
 		<Item>
 			<Element>Ethnicity</Element>
