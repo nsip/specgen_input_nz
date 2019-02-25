@@ -261,16 +261,9 @@
 
 		<xsl:choose>
 			<xsl:when test="   @name eq 'xs:integer'
-							or @name eq 'xs:int'">
+							or @name eq 'xs:int'
+							or @name eq 'xs:unsignedInt'">
 				<xsl:value-of select="concat($indent, '  type: integer&#x0a;')"/>
-			</xsl:when>
-			
-			<xsl:when test="@name eq 'xs:unsignedInt'">
-				<xsl:value-of select="concat($indent, '  type: integer&#x0a;')"/>
-<!--
-				<xsl:value-of select="concat($indent, '  minimum: 0&#x0a;')"/>
-				<xsl:value-of select="concat($indent, '  maximum: 4294967295&#x0a;')"/>
--->				
 			</xsl:when>
 
 			<xsl:when test="@name eq 'xs:date'">
