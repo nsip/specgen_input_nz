@@ -13,11 +13,12 @@
 
 	<xsl:template match="/specgen:SIFSpecification">
 		<xsl:value-of select="concat( '# &#x0a;',
-                                      '## Json Schema derived from SIF ', $sifLocale, 'v', $sifVersion, '&#x0a;',
+                                      '## Json Schema derived from SIF ', $sifLocale, ' v', $sifVersion, '&#x0a;',
 							          '# &#x0a;')"/> 
 
 		<xsl:text>$schema: 'http://json-schema.org/draft-07/schema#'&#x0a;</xsl:text>
-
+		<xsl:value-of select="concat('title: SIF ', $sifLocale, ' v', $sifVersion, '&#x0a;')"/>
+		<xsl:value-of select="concat('description: JSON Schema derived from SIF ', $sifLocale, ' v', $sifVersion, '&#x0a;')"/>
 		<xsl:apply-templates select=".//specgen:DataObjects" mode="rootObj"/>
 
 		<xsl:text>definitions:&#x0a;</xsl:text>
@@ -102,7 +103,32 @@
 				<xsl:value-of select="concat('      ', specgen:Item[2]/specgen:Element, ':&#x0a;')"/>
 				<xsl:text>       type: array&#x0a;</xsl:text>
 				<xsl:text>       items:&#x0a;</xsl:text>
-				<xsl:value-of select="concat('        - $ref: ''#/definitions/', xfn:chopType(specgen:Item[2]/specgen:Type/@name), '''&#x0a;')"/>
+				<xsl:choose>
+					<!-- array of atomic type -->
+					<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:string' 
+							     or specgen:Item[2]/specgen:Type/@name eq 'xs:normalizedString'
+                            	 or specgen:Item[2]/specgen:Type/@name eq 'xs:token'
+					        	 or specgen:Item[2]/specgen:Type/@name eq 'NCName'">
+						<xsl:text>        - type: string&#x0a;</xsl:text>
+					</xsl:when>
+					<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:integer' 
+							     or specgen:Item[2]/specgen:Type/@name eq 'xs:int'
+                            	 or specgen:Item[2]/specgen:Type/@name eq 'xs:unsignedInt'">
+						<xsl:text>        - type: integer&#x0a;</xsl:text>
+					</xsl:when>
+					<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:date'"> 
+						<xsl:text>        - type: string&#x0a;</xsl:text>
+						<xsl:text>          format: date&#x0a;</xsl:text>
+					</xsl:when>
+					<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:boolean'"> 
+						<xsl:text>        - type: boolean&#x0a;</xsl:text>
+					</xsl:when>
+
+					<!-- array of some other defined type -->
+					<xsl:otherwise>
+						<xsl:value-of select="concat('        - $ref: ''#/definitions/', xfn:chopType(specgen:Item[2]/specgen:Type/@name), '''&#x0a;')"/>
+					</xsl:otherwise>
+				</xsl:choose>
 			</xsl:when>
 			
 			<!-- Object -->
