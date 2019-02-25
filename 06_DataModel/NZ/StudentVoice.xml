@@ -55,7 +55,7 @@
 	</Item>    <!-- StudentVoiceNote -->
     <Item>
 		<Element>StudentInterestList</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>A list of the diffent interests the student has expressed.</p>
@@ -64,7 +64,7 @@
 	</Item>    <!-- StudentInterestList -->
     <Item>
 		<Element>SocialGoalList</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>A list of the diffent social goals the student has expressed.</p>
@@ -73,7 +73,7 @@
 	</Item>    <!-- SocialGoalList -->
     <Item>
 		<Element>AcademicGoalList</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>A list of the diffent academic goals the student has expressed.</p>
@@ -82,7 +82,7 @@
 	</Item>    <!-- AcademicGoalList -->
     <Item>
 		<Element>CareerGoalList</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>A list of the diffent career goals the student has expressed.</p>
