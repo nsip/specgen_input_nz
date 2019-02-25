@@ -63,6 +63,13 @@
 		<Type ref="CommonTypes" name="RelationshipType"></Type>
 	</Item>   <!-- Relationship -->
 	<Item>
+			<Element>LanguageUsed</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>The language the student and their contact use to communicate.</Description>
+			<Type ref='CodeSets' name='NZCodeSetsLanguageType'/>
+	</Item>   <!-- LanguageUsed -->
+	<Item>
 		<Element>HouseholdList</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
@@ -93,66 +100,53 @@
 	</Item>   <!-- ContactSequence -->
 	
   <if intl="au">
-	<Item>
-		<Element>ParentRelationshipStatus</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>Confirms whether or not this contact defined in the
-			relationship is to be tracked for MCEECDYA Data
-			Implementation Manual Reporting.</p>
-		</Description>
-		<Values>
-			<Value>
-				<Code>Parent1</Code>
-			</Value>
-			<Value>
-				<Code>Parent2</Code>
-			</Value>
-			<Value>
-				<Code>NotForReporting</Code>
-			</Value>
-		</Values>
-	</Item>   <!-- ParentRelationshipStatus -->
-	<Item>
-		<Element>MainlySpeaksEnglishAtHome</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>Is English the main language spoken at home?</p>
-		</Description>
-		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-	</Item>   <!-- MainlySpeaksEnglishAtHome -->
-	<Item>
-		<Element>ContactSequenceSource</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>Indicates the source who provided the contact sequence order. </p>
-		</Description>
-		<Type ref="CodeSets" name="NZCodeSetsSourceCodeTypeType"></Type>
-	</Item>   <!-- ContactSequenceSource -->
-	<Item>
-		<Element>SchoolInfoRefId</Element>
-		<Characteristics>C</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>GUID that identifies a school associated with the relationship.</Description>
-		<Type ref='CommonTypes' name='IdRefType'/>
-	</Item>   <!-- SchoolInfoRefId -->
-	<Item>
-		<Element>SIF_Metadata</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Type ref="CommonTypes" name="SIF_MetadataType"></Type>
-	</Item>   <!-- SIF_MetaData -->
-	<Item>
-		<Element>SIF_ExtendedElements</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
-	</Item>   <!-- SIF_ExtendedElements -->
-  </if>
-
+		<Item>
+			<Element>ParentRelationshipStatus</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Medium</privacyRating>
+			<Description>
+				<p>Confirms whether or not this contact defined in the
+				relationship is to be tracked for MCEECDYA Data
+				Implementation Manual Reporting.</p>
+			</Description>
+			<Values>
+				<Value>
+					<Code>Parent1</Code>
+				</Value>
+				<Value>
+					<Code>Parent2</Code>
+				</Value>
+				<Value>
+					<Code>NotForReporting</Code>
+				</Value>
+			</Values>
+		</Item>   <!-- ParentRelationshipStatus -->
+		<Item>
+			<Element>MainlySpeaksEnglishAtHome</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Medium</privacyRating>
+			<Description>
+				<p>Is English the main language spoken at home?</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+		</Item>   <!-- MainlySpeaksEnglishAtHome -->
+		<Item>
+			<Element>ContactSequenceSource</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Indicates the source who provided the contact sequence order. </p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsSourceCodeTypeType"></Type>
+		</Item>   <!-- ContactSequenceSource -->
+		<Item>
+			<Element>SchoolInfoRefId</Element>
+			<Characteristics>C</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>GUID that identifies a school associated with the relationship.</Description>
+			<Type ref='CommonTypes' name='IdRefType'/>
+		</Item>   <!-- SchoolInfoRefId -->
+	</if>
   <xhtml:Example xmlns='' name="StudentContactRelationship" intl="au">
     <StudentContactRelationship StudentContactRelationshipRefId = "7572B261-0947-583A-463D-BB345291B332">
       <StudentPersonalRefId>DEE34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>

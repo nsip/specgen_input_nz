@@ -1,4 +1,4 @@
-<DataObject name="AssessmentTaskResult"
+<DataObject name="StudentAssessmentTaskResult"
 			xmlns:xs="http://www.w3.org/2001/XMLSchema"
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -10,7 +10,7 @@
   <Key>RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
-    <Element>AssessmentTaskResult</Element>
+    <Element>StudentAssessmentTaskResult</Element>
 	  <privacyRating>High</privacyRating>
     <Description>
       <p>Records the result achieved by a single student at a particular assessment task.</p>
@@ -413,8 +413,8 @@
     </GradingAssignmentScore>
   </xhtml:Example>
 
-  <xhtml:Example xmlns="" name="Assessment Task Result - PAT Example" intl="nz">
-      <AssessmentTaskResult>
+  <xhtml:Example xmlns="" name="Student Assessment Task Result - PAT Example" intl="nz">
+      <StudentAssessmentTaskResult>
         <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
         <StudentPersonalRefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</StudentPersonalRefId>
         <ProviderInvolvedList>
@@ -447,11 +447,11 @@
             <ScoreValue>4</ScoreValue>
           </ResultScore>				
         </ResultScoreList>
-      </AssessmentTaskResult>
+      </StudentAssessmentTaskResult>
   </xhtml:Example>
 		  
-  <xhtml:Example xmlns="" name="Assessment Task Result - asTTle Example" intl="nz">
-      <AssessmentTaskResult>
+  <xhtml:Example xmlns="" name="Student Assessment Task Result - asTTle Example" intl="nz">
+      <StudentAssessmentTaskResult>
         <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
         <StudentPersonalRefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</StudentPersonalRefId>
         <ProviderInvolvedList>
@@ -484,6 +484,6 @@
             <ScoreValue>5B</ScoreValue>
           </ResultScore>
         </ResultScoreList>
-      </AssessmentTaskResult>
+      </StudentAssessmentTaskResult>
     </xhtml:Example>
 </DataObject>

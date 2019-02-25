@@ -21,7 +21,7 @@
   </Item>
 
   <Item>
-    <Attribute>RefId</Attribute>
+    <Element>RefId</Element>
     <Characteristics>M</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
@@ -41,16 +41,6 @@
   </Item>    <!-- StudentPersonalRefId -->
 
   <Item>
-    <Element>ProviderRefId</Element>
-    <Characteristics>O</Characteristics>
-  	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>The ID (GUID) of the school for which this WellbeingCharacteristic is being reported.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- ProviderRefId -->
-
-    <Item>
     <Element>RecordingProviderRefId</Element>
     <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
@@ -251,9 +241,9 @@
     <Characteristics>O</Characteristics>
 	  <privacyRating>Medium</privacyRating>
     <Description>
-      <p>A list of any Wellbeing Alerts that have arisen as a result of this Characteristic.</p>
+      <p>A list of any Wellbeing Alerts that have arison as a result of this Chracteristic.</p>
     </Description>
-    <Type ref="CommonTypes" name="WellbeingAlertListType"/>
+    <Type ref="CommonTypes" name="WellbeingAlertListType"></Type>
   </Item>    <!-- WellbeingAlertList -->
 
   <Item>
@@ -267,9 +257,10 @@
   </Item>    <!-- SpecialAssessmentConditionList -->
 
   <xhtml:Example xmlns="" name="WellbeingCharacteristic">
-    <WellbeingCharacteristic RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
+    <WellbeingCharacteristic>
+      <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
       <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
-      <ProviderRefId>CA285746-359D-7510-1A8C-36432A901A16</ProviderRefId>
+      <RecordingProviderRefId>CA285746-359D-7510-1A8C-36432A901A16</RecordingProviderRefId>
       <StartDate>2017-11-01</StartDate>
       <EndDate>2017-11-10</EndDate>
       <CharacteristicNotes>This Student has a special need.</CharacteristicNotes>

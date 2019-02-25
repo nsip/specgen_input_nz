@@ -515,25 +515,64 @@
 		</xhtml:Example>
 	</CommonElement>
 
-		<CommonElement name="StudentListType" type="true" dm="true">h
-			<Item>
-				<Element>StudentListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>List of Students in this Teaching Group</p>
-				</Description>
-				<List mode="List"/>
+	<CommonElement name="TeachingGroupScheduleListType" type="true" dm="true">
+		<Item>
+			<Element>TeachingGroupScheduleListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>List of Teaching schedule entries for the TeachingGroup; recording when particular Courses / Subject / Learning Areas are being taught to the group.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Entry</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Single schedule entry recording what ProviderCourse, Learning Area or Subject Area is being taught to the TeachingGroup when.</p>
+			</Description>
+			<Type ref="CommonTypes" name="TeachingGroupScheduleType"/>
 			</Item>
-			<Item>
-				<Element>TeachingGroupStudent</Element>
-				<Characteristics>MR</Characteristics>
-				<Description>
-					<p>Students who belong to the TeachingGroup</p>
-				</Description>
-				<Type ref="CommonTypes" name="TeachingGroupStudentType"/>
-			</Item>
-		</CommonElement>
-
-
+	</CommonElement>		
+	<CommonElement name="TeachingGroupScheduleType" type="true" dm="true">
+		<Item>
+			<Element>TeachingGroupScheduleType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Teaching schedule for the TeachingGroup; recording when a particular Course / Subject / Learning Area is being taught to the group.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>TimeDescription</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Free-form text describing the teaching schedule for a particular TeachingGroup and ProviderCourse, e.g. Terms 1 and 2 - Thursdays 9am-12noon.</p>
+			</Description>
+    	    <Type name='xs:normalizedString'/>
+		</Item>
+		<Item>
+			<Element>ProviderCourseRefId</Element>
+			<Characteristics>O</Characteristics>
+  			<Description>
+				<p>RefId of the course being taught to the TeachingGroup. Either ProviderCourseRefId or ProviderCourseLocalId must be provided.</p>
+			</Description>
+			<Type ref="CommonTypes" name="RefIdType"/>
+		</Item>
+		<Item>
+			<Element>ProviderCourseLocalId</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>LocalId of the course being taught to the TeachingGroup. Either ProviderCourseRefId or ProviderCourseLocalId must be provided.</p>
+			</Description>
+			<Type ref="CommonTypes" name="LocalIdType"/>
+		</Item>
+		<Item>
+			<Element>SubjectAreaList</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The list of subject areas being taught as part of the teaching group schedule.</p>
+			</Description>
+			<Type ref="CommonTypes" name="SubjectAreaListType"/>
+		</Item>
+	</CommonElement>
 
 </IncludeGroup>

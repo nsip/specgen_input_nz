@@ -2882,4 +2882,50 @@
 			<Value><Code>4</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Healthcare Service -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting a type of language proficiency, e.g. speaking, writing reading.</p>
+		</Intro>
+		<ID>Language Proficiency Type</ID>
+		<Values>
+			<Value>
+				<Code>101</Code>
+				<Text>Speaking</Text>
+			</Value>    <!-- Speaking -->
+			<Value>
+				<Code>102</Code>
+				<Text>Reading</Text>
+			</Value>    <!-- Reading -->
+			<Value>
+				<Code>103</Code>
+				<Text>Writing</Text>
+			</Value>    <!-- Writing -->
+		</Values>
+	</CodeSet>    <!-- Language Proficiency Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>The language proficiency level.</p>
+		</Intro>
+		<ID>Language Proficiency Level</ID>
+		<Values>
+			<Value>
+				<Code>101</Code>
+				<Text>None</Text>
+			</Value>    <!-- None -->
+			<Value>
+				<Code>102</Code>
+				<Text>Beginner</Text>
+			</Value>    <!-- Beginner -->
+			<Value>
+				<Code>103</Code>
+				<Text>Intermediate</Text>
+			</Value>    <!-- Intermediate -->
+			<Value>
+				<Code>104</Code>
+				<Text>Advanced</Text>
+			</Value>    <!-- Advanced -->
+		</Values>
+	</CodeSet>    <!-- Language Proficiency Level -->
 </IncludeGroup>

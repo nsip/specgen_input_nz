@@ -87,21 +87,6 @@
 		</Description>
 		<Type ref="CommonTypes" name="PeriodAttendancesType"/>
 	</Item>    <!-- PeriodAttendances -->
-	
-	<if intl="au">
-		<Item>
-			<Element>SIF_Metadata</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Type ref="CommonTypes" name="SIF_MetadataType"/>
-		</Item>    <!-- SIF_Metadata -->
-		<Item>
-			<Element>SIF_ExtendedElements</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
-		</Item>    <!-- SIF_ExtendedElements -->
-	</if>
 
 	<xhtml:Example xmlns="" name="StudentAttendanceTimeList (List) Example" intl="au">
 		<StudentAttendanceTimeList RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
@@ -154,7 +139,7 @@
 			<SchoolYear>2003</SchoolYear>
 			<AttendanceTimes>
 				<AttendanceTime>
-					<AttendanceType>RC</AttendanceType>	 
+					<AttendanceType>RC</AttendanceType>
 					<AttendanceCode>
 						<Code>100</Code>
 					</AttendanceCode>
@@ -164,7 +149,7 @@
 					<DurationValue>1.000</DurationValue>
 				</AttendanceTime>
 				<AttendanceTime>
-					<AttendanceType>LA</AttendanceType> 
+					<AttendanceType>LA</AttendanceType>
 					<AttendanceCode>
 						<Code>102</Code>
 					</AttendanceCode>
@@ -174,7 +159,7 @@
 					<AttendanceNote>No acceptable excuse given</AttendanceNote>
 				</AttendanceTime>
 				<AttendanceTime>
-					<AttendanceType>OC</AttendanceType> 
+					<AttendanceType>OC</AttendanceType>
 					<AttendanceCode>
 						<Code>200</Code>
 					</AttendanceCode>
@@ -184,7 +169,7 @@
 					<AttendanceNote>Student had stomach ache</AttendanceNote>
 				</AttendanceTime>
 				<AttendanceTime>
-					<AttendanceType>ED</AttendanceType> 
+					<AttendanceType>ED</AttendanceType>
 					<AttendanceCode>
 						<Code>205</Code>
 					</AttendanceCode>
@@ -196,7 +181,7 @@
 			</AttendanceTimes>
 			<PeriodAttendances>
 				<PeriodAttendance>
-					<AttendanceType>CR</AttendanceType> 
+					<AttendanceType>CR</AttendanceType>
 					<AttendanceCode>
 						<Code>102</Code>
 					</AttendanceCode>
@@ -219,7 +204,7 @@
 					</RoomList>
 				</PeriodAttendance>
 				<PeriodAttendance>
-					<AttendanceType>CR</AttendanceType> 
+					<AttendanceType>CR</AttendanceType>
 					<AttendanceCode>
 						<Code>100</Code>
 					</AttendanceCode>
@@ -239,7 +224,7 @@
 					</RoomList>
 				</PeriodAttendance>
 				<PeriodAttendance>
-					<AttendanceType>CR</AttendanceType> 
+					<AttendanceType>CR</AttendanceType>
 					<AttendanceCode>
 						<Code>101</Code>
 					</AttendanceCode>
@@ -282,7 +267,7 @@
 					</RoomList>
 				</PeriodAttendance>
 				<PeriodAttendance>
-					<AttendanceType>CR</AttendanceType> 
+					<AttendanceType>CR</AttendanceType>
 					<AttendanceCode>
 						<Code>100</Code>
 					</AttendanceCode>
@@ -314,7 +299,6 @@
 			<SchoolYear>2018</SchoolYear>
 			<AttendanceTimes>
 				<AttendanceTime json:force-array="true">
-					<AttendanceType>Swipe Cards</AttendanceType>
 					<AttendanceCode>E</AttendanceCode>
 					<AttendanceStatus>01</AttendanceStatus>
 					<StartTime>09:00:00</StartTime>
@@ -334,13 +318,10 @@
 			<SchoolYear>2018</SchoolYear>
 			<PeriodAttendances>
 				<PeriodAttendance>
-					<AttendanceType>Swipe Cards</AttendanceType>
 					<AttendanceCode>E</AttendanceCode>
 					<AttendanceStatus>01</AttendanceStatus>
-					<TimetableId>TT018-04</TimetableId>
 					<TimetableDayId json:force-string="true">4</TimetableDayId>
 					<TimetablePeriodId>4A</TimetablePeriodId>
-					<DayId>118</DayId>
 					<StartTime>09:00:00</StartTime>
 					<EndTime>09:40:00</EndTime>
 					<SubjectAreaList json:force-array="true">
@@ -358,13 +339,10 @@
 					<AttendanceNote>Explained absence, but unjustified; period 4A</AttendanceNote>
 				</PeriodAttendance>
 				<PeriodAttendance>
-					<AttendanceType>Swipe Cards</AttendanceType>
 					<AttendanceCode>E</AttendanceCode>
 					<AttendanceStatus>01</AttendanceStatus>
-					<TimetableId>TT018-04</TimetableId>
 					<TimetableDayId json:force-string="true">4</TimetableDayId>
 					<TimetablePeriodId>4B</TimetablePeriodId>
-					<DayId>118</DayId>
 					<StartTime>09:45:00</StartTime>
 					<EndTime>10:30:00</EndTime>
 					<SubjectAreaList json:force-array="true">

@@ -47,11 +47,11 @@
 		<xi:include parse="xml" href="NZ/Provider.xml"/>		
 		<xi:include parse="xml" href="NZ/ProviderRelationship.xml"/>
 		<xi:include parse="xml" href="NZ/EducationOrganisation.xml"/>
+		<xi:include parse="xml" href="NZ/AcademicDepartment.xml"/>
 
 		<!-- Staff, Students & their whānau -->
 		<xi:include parse="xml" href="NZ/StaffPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StaffAssignment.xml"/>
-		
 		<xi:include parse="xml" href="NZ/StudentPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StudentContactPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StudentContactRelationship.xml"/>
@@ -70,20 +70,21 @@
 		<xi:include parse="xml" href="NZ/StudentAttendanceTimeList.xml"/>
 
 		<!-- Student Hauora / Wellbeing -->
-<!--		<xi:include parse="xml" href="NZ/PersonalisedPlan.xml"/>  -->
-
 		<xi:include parse="xml" href="NZ/WellbeingAlert.xml"/>
 		<xi:include parse="xml" href="NZ/WellbeingCharacteristic.xml"/>
-
 		<xi:include parse="xml" href="NZ/WellbeingEvent.xml"/>
 		<xi:include parse="xml" href="NZ/WellbeingResponse.xml"/>
 		<xi:include parse="xml" href="NZ/WellbeingAppeal.xml"/>
-		<xi:include parse="xml" href="NZ/StudentActivityParticipation.xml"/>
 
+		<xi:include parse="xml" href="NZ/StudentActivityParticipation.xml"/>
+        <xi:include parse="xml" href="NZ/StudentPhysicalRestraint.xml"/>
+		
+		<xi:include parse="xml" href="NZ/StudentVoice.xml"/>
+		
 		<!-- Aromatawai / Assessment -->
 		<xi:include parse="xml" href="NZ/AssessmentTask.xml"/>
-		<xi:include parse="xml" href="NZ/AssessmentTaskResult.xml"/>
-		<xi:include parse="xml" href="NZ/AssessmentTaskRegistration.xml"/>
+		<xi:include parse="xml" href="NZ/StudentAssessmentTaskResult.xml"/>
+		<xi:include parse="xml" href="NZ/StudentAssessmentTaskRegistration.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAssessmentTask.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAttainment.xml"/>
 	</Group>

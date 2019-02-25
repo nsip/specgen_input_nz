@@ -11,7 +11,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>WellbeingEvent</Element>
-	<privacyRating>High</privacyRating>
+	  <privacyRating>High</privacyRating>
     <Description>
       <p>Record of an event happening that impacts on a school's duty of care to its students.
 					The event records both 'positive' and 'negative' behaviours and is not just the recording
@@ -20,7 +20,7 @@
   </Item>
 
   <Item>
-    <Attribute>RefId</Attribute>
+    <Element>RefId</Element>
     <Characteristics>M</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
@@ -122,11 +122,11 @@
   <Item>
     <Element>ReportingStaffRefId</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>Low</privacyRating>
+	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the staff member who logged the Wellbeing Event record.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>    <!-- ReportingStaffRefId -->
   
   <Item>
@@ -222,7 +222,7 @@
   <Item>
     <Element>DocumentList</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
+	  <privacyRating>High</privacyRating>
     <Description>
       <p>Describes the Location of any associated documents kept in relation to this Response.</p>
     </Description>
@@ -240,9 +240,10 @@
   </Item>    <!-- RelatedWellbeingEventList -->
 
   <xhtml:Example xmlns="" name="WellbeingEvent">
-    <WellbeingEvent RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
+    <WellbeingEvent> 
+      <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
       <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
-      <ProviderRefId>CA285746-359D-7510-1A8C-36432A901A16</ProviderRefId>
+      <ReportingProviderRefId>CA285746-359D-7510-1A8C-36432A901A16</ReportingProviderRefId>
       <EventCategoryClass>P</EventCategoryClass>
       <EventDate>2017-11-01</EventDate>
       <EventTimePeriod>AM</EventTimePeriod>

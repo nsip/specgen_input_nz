@@ -1,0 +1,133 @@
+<DataObject name="StudentVoice"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+			xmlns:json="http://json.org/"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+	<Key>RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>StudentVoice</Element>
+	    <privacyRating>Medium</privacyRating>
+		<Description>A record of a student's interests as well as their social, academic and 
+		academic goals.</Description>
+	</Item>
+	
+	<Item>
+		<Element>RefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The GUID of the StudentVoice record.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>    <!-- RefId -->
+	
+	<Item>
+		<Element>StudentPersonalRefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The GUID for the student's StudentPersonal record.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>    <!-- StudentPersonalRefId -->
+	<Item>
+		<Element>StudentPersonalLocalId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The locally-assigned identifier for this student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>    <!-- StudentPersonalLocalId -->
+
+	<Item>
+		<Element>StudentVoiceNote</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>Extra notes about the student, and their voice</p>
+		</Description>
+		<Type name="xs:normalizedString"/> 
+	</Item>    <!-- StudentVoiceNote -->
+    <Item>
+		<Element>StudentInterestList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>A list of the diffent interests the student has expressed.</p>
+		</Description>
+		<Type ref="CommonTypes" name="StudentInterestListType"/>
+	</Item>    <!-- StudentInterestList -->
+    <Item>
+		<Element>SocialGoalList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>A list of the diffent social goals the student has expressed.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SocialGoalListType"/>
+	</Item>    <!-- SocialGoalList -->
+    <Item>
+		<Element>AcademicGoalList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>A list of the diffent academic goals the student has expressed.</p>
+		</Description>
+		<Type ref="CommonTypes" name="AcademicGoalListType"/>
+	</Item>    <!-- AcademicGoalList -->
+    <Item>
+		<Element>CareerGoalList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>A list of the diffent career goals the student has expressed.</p>
+		</Description>
+		<Type ref="CommonTypes" name="CareerGoalListType"/>
+	</Item>    <!-- CareerGoalList -->
+	
+
+	<xhtml:Example xmlns="" name ="StudentVoice">
+		<StudentVoice>
+			<RefId>7C834EA9-EDA1-2090-347F-83297E1C290C</RefId>
+			<StudentPersonalRefId>5c33548a-1141-40eb-94d3-9267a2258435</StudentPersonalRefId>
+			<StudentPersonalLocalId>2234523</StudentPersonalLocalId>
+			<StudentVoiceNote>Timothy doesn't like talking about setting goals. These goals have been gathered through observation.</StudentVoiceNote>
+			<StudentInterestList>
+				<StudentInterest>
+					<InterestRecordedDate>2018-11-30</InterestRecordedDate>
+					<InterestDescription>Timothy spends most lunchtimes playing with the piano, or watching others playing music</InterestDescription>
+					<InterestName>Music/Piano</InterestName>
+					<InterestType>104</InterestType>
+					<SubjectArea>7</SubjectArea>					
+				</StudentInterest>
+			</StudentInterestList>
+			<SocialGoalList>
+				<SocialGoal>
+					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
+					<GoalDescription>Timothy would like to have more friends to play with at lunchtime.</GoalDescription>
+					<GoalName>Have more friends</GoalName>
+				</SocialGoal>
+			</SocialGoalList>
+			<AcademicGoalList>
+				<AcademicGoal>
+					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
+					<GoalDescription>Timothy wants to excel at Te Reo Māori</GoalDescription>
+					<GoalName>Excel Te Reo</GoalName>
+					<SubjectArea>9</SubjectArea>
+				</AcademicGoal>
+			</AcademicGoalList>			
+			<CareerGoalList>
+				<CareerGoal>
+					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
+					<GoalDescription>Timothy would like to be a Marine Biologist, or Deep Sea Diver</GoalDescription>
+					<GoalName>Marine Biologist</GoalName>
+				</CareerGoal>
+			</CareerGoalList>			
+		</StudentVoice>
+	</xhtml:Example>
+</DataObject>

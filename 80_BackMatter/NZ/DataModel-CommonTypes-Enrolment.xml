@@ -157,6 +157,24 @@
 
 
 	<!-- Defined by SIF NZ -->
+	<CommonElement name="EarlyChildhoodEducationType" type="true" dm="true">
+		<Item>
+			<Element>EarlyChildhoodEducationType</Element>
+			<Description>
+				<p>The type of early childhood education the student received before enrolling in their first school.</p>
+			</Description>
+		</Item> 
+		<Item>
+			<Element>Type</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>  The type of early childhood education the student received. </p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsEarlyChildhoodEducationTypeType"/>
+		</Item>
+	</CommonElement>
+
 	<CommonElement name="EarlyChildhoodEnrolmentType" type="true" dm="true">
 		<Item>
 			<Element>EarlyChildhoodEnrolmentType</Element>
@@ -201,7 +219,7 @@
 			</Description>
 		</Item>
 		<Item>
-			<Element>SchoolYear</Element>
+			<Element>SchoolCalendarYear</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
@@ -210,7 +228,25 @@
 					ends (eg 2018).</p>
 			</Description>
 			<Type name="xs:gYear"/>
-		</Item>		<!-- SchoolYear -->
+		</Item>		<!-- SchoolCalendarYear -->
+		<Item>
+			<Element>EnrolmentStatus</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The status of the school enrolment.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsSchoolEnrolmentStatusType"></Type>
+		</Item>		<!-- EnrolmentStatus -->
+		<Item>
+			<Element>StartDate</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>  The date the student started at the school.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>		<!-- StartDate -->
 		<Item>
 			<Element>MembershipType</Element>
 			<Characteristics>M</Characteristics>
@@ -323,8 +359,6 @@
 			</Description>
 			<Type ref="CommonData" name="LanguageOfInstructionListType"/>
 		</Item>		<!-- LanguageOfInstructionList -->
-
-
 		<Item>
 			<Element>SubjectChoiceList</Element>
 			<Characteristics>O</Characteristics>
@@ -369,7 +403,24 @@
 			</Description>
 			<Type ref="CommonTypes" name="InternationalSchoolEnrolmentType"/>
 		</Item>		    <!-- InternationalEnrolment -->
-
+		<Item>
+			<Element>StudentConsentList</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>A list of student consent information.</p>
+			</Description>
+			<Type ref="CommonData" name="StudentConsentListType"/>
+		</Item>		<!-- StudentConsentList -->
+		<Item>
+			<Element>AcademicAttainmentGoalList</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>The academic attainment goals of the student when they enrol, e.g. they wish to achieve a certain qualification.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AcademicAttainmentGoalListType"/>
+		</Item>		<!-- AcademicAttainmentGoalList -->
 		<if intl="au">
 			<Item>
 				<Element>Homeroom</Element>
@@ -381,31 +432,12 @@
 				</Description>
 				<Type name="xs:normalizedString"/>
 			</Item>		<!-- Homeroom -->
-			<Item>
-				<Element>ExitType</Element>
-				<Characteristics>O</Characteristics>
-				<privacyRating>High</privacyRating>
-				<Description>
-					<p>Code describing why the Student exited from the enrolment.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsEnrolmentExitTypeType"/>
-			</Item>		<!-- ExitType -->
-		</if>
-		<if intl="nz">
-			<Item>
-				<Element>Exit</Element>
-				<Characteristics>O</Characteristics>
-				<privacyRating>High</privacyRating>
-				<Description>
-					<p>Details of the reasons, and interventions leading up to the student's enrolment being terminated.</p>
-				</Description>
-				<Type ref="CommonData" name="EnrolmentExitType"/>
-			</Item>		<!-- Exit -->
+
 		</if>
 
 		<xhtml:Example xmlns="" name="School Enrolment" intl="nz">
 			<StudentSchoolEnrolment>
-				<SchoolYear>2018</SchoolYear>
+				<SchoolCalendarYear>2018</SchoolCalendarYear>
 				<MembershipType>01</MembershipType>
 				<YearLevel>11</YearLevel>
 				<EligibilityCriteria json:force-string="true">1</EligibilityCriteria>
@@ -426,11 +458,11 @@
 				<LanguageOfInstructionList>
 					<Language>
 						<Code>16110</Code>
-						<HoursPerWeek>20.5</HoursPerWeek>
+						<Level>99</Level>
 					</Language>
 					<Language>
 						<Code>01112</Code>
-						<HoursPerWeek>9.5</HoursPerWeek>
+						<Level>99</Level>
 					</Language>
 				</LanguageOfInstructionList>
 				<SubjectChoiceList>
@@ -457,13 +489,26 @@
 					<NZArrivalDate>2018-05-02</NZArrivalDate>
 					<ExchangeScheme>9</ExchangeScheme>
 				</InternationalEnrolment>
-				<Exit>
-					<Reason>X</Reason>
-					<InterventionList/>
-				</Exit>
 			</StudentSchoolEnrolment>
 		</xhtml:Example>
 	</CommonElement>
+	<CommonElement name="AcademicAttainmentGoalListType" type="true" dm="true">
+		<Item>
+			<Element>AcademicAttainmentGoalListType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The academic attainment goals of the student when they enrolment, e.g. they wish to achieve a certain qualification.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>AttainmentGoal</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The student's academic attainment goal at the time of enrolment.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
+		</Item>    <!-- AttainmentGoal -->
+	</CommonElement>	
 	<CommonElement name="StudentSchoolCoEnrolmentType" type="true" dm="true">
 		<Item>
 			<Element>StudentSchoolCoEnrolmentType</Element>
@@ -474,23 +519,50 @@
 			</Description>
 		</Item>
 		<Item>
-			<Element>ProviderRefId</Element>
+			<Element>BaseProviderRefId</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
 				<p>Unique identifier (GUID) for the other school where the student is concurrently enrolled.</p>
 			</Description>
 			<Type ref="CommonTypes" name="IdRefType"/>
-		</Item>		<!-- ProviderRefId -->
+		</Item>		<!-- BaseProviderRefId -->
 		<Item>
-			<Element>ProviderLocalId</Element>
+			<Element>BaseProviderLocalId</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
-				<p>MoE identifier for the other school where the student is concurrently enrolled</p>
+				<p>MoE identifier for the other school where the student is concurrently enrolled.</p>
 			</Description>
 			<Type ref="CommonTypes" name="LocalIdType"/>
-		</Item>		<!-- ProviderLocalId -->
+		</Item>		<!-- BaseProviderLocalId -->
+		<Item>
+			<Element>CoEnrolmentType</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>  The type of CoEnrolment.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsCoEnrolmentTypeType"/>
+		</Item>		<!-- CoEnrolmentType -->
+		<Item>
+			<Element>ClientSchoolConfidentialNote</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Free text confidential note made by the client school in relation to the student.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>		<!-- ClientSchoolConfidentialNote -->
+		<Item>
+			<Element>ParentConfidentialNote</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Free text confidential note made by the parents/caregivers of the student.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>		<!-- ParentConfidentialNote -->
 	</CommonElement>
 	<CommonElement name="InternationalSchoolEnrolmentType" type="true" dm="true">
 		<Item>
@@ -608,6 +680,7 @@
 			</StudentCourseChoice>
 		</xhtml:Example>
 	</CommonElement>
+
 	<CommonElement name="EnrolmentExitType" type="true" dm="true">
 		<Item>
 			<Element>EnrolmentExitType</Element>
@@ -626,6 +699,22 @@
 			<Type ref="CodeSets" name="NZCodeSetsEnrolmentExitTypeType"/>
 		</Item>		<!-- Reason -->
 		<Item>
+			<Element>EnrolmentExitDate</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date the student exited the school.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>		<!-- EnrolmentExitDate -->
+		<Item>
+			<Element>PostSchoolActivity</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p> The post school activity the student is moving on to once they have exited the school.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsPostSchoolActivityType"/>
+		</Item>		<!-- Reason -->
+		<Item>
 			<Element>InterventionList</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
@@ -634,6 +723,14 @@
 			</Description>
 			<Type ref="CommonTypes" name="InterventionListType"/>
 		</Item>		<!-- InterventionList -->
+		<Item>
+			<Element>PotentialDestinationSchool</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The potential destination school of the student.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>    <!-- PotentialDestinationSchool -->
 	</CommonElement>
 	<CommonElement name="InterventionListType" type="true" dm="true">
 		<Item>
@@ -655,4 +752,5 @@
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>    <!-- Intervention -->
 	</CommonElement>
+	
 </IncludeGroup>

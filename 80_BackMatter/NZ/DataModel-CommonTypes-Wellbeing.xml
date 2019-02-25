@@ -12,912 +12,1511 @@
 
 			<!-- Element types for the Wellbeing Domain -->
 
-		<!-- Wellbeing Items-->   
+	<!-- Wellbeing Items-->   
 
-		<CommonElement name="MedicationListType" type="true" dm="true">
-			<Item>
-				<Element>MedicationListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>A list of the medications required for this Wellbeing Characteristic.</p>
-				</Description>
-					<List mode="List"/>
-			</Item>
-			<Item>
-					<Element>Medication</Element>
-					<Characteristics>OR</Characteristics>
-					<Description></Description>
-				<Type ref="CommonTypes" name="MedicationType"/>
-			</Item>
-		</CommonElement>
-		<CommonElement name="MedicationType" type="true" dm="true">
-			<Item>
-				<Element>MedicationType</Element>
-				<Characteristics>OR</Characteristics>
-				<Description>
-					<p>The medication, dosage and frequency, required by the student to manage the Wellbeing Characteristic.</p>
-				</Description>
-			</Item> 
-			<Item>
-				<Element>MedicationName</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Name of medication required for the student.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-			</Item>
-			<Item>
-				<Element>Dosage</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Dosage and strength of medication required for the student.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-			</Item>
-			<Item>
-				<Element>Frequency</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Frequency of Administration.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-			</Item>
-			<Item>
-				<Element>AdministrationInformation</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Information about how the medication is to be administered.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-			</Item>
-			<Item>
-				<Element>Method</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Method of administration.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-			</Item>
-			<Item>
-				<Element>MedicationConsentList</Element>
-				<Characteristics>OR</Characteristics>
-				<Description></Description>
-				<Type ref="CommonTypes" name="MedicationConsentListType"/>
-			</Item>
-		</CommonElement>
-
-		<CommonElement name="MedicationConsentListType" type="true" dm="true">
-			<Item>
-				<Element>MedicationConsentListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>A list consents that have been provided for administration of a medicine to a student.</p>
-				</Description>
+	<CommonElement name="MedicationListType" type="true" dm="true">
+		<Item>
+			<Element>MedicationListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of the medications required for this Wellbeing Characteristic.</p>
+			</Description>
 				<List mode="List"/>
-			</Item>
-			<Item>
-				<Element>MedicationConsent</Element>
+		</Item>
+		<Item>
+				<Element>Medication</Element>
 				<Characteristics>OR</Characteristics>
 				<Description></Description>
-				<Type ref="CommonTypes" name="MedicationConsentType"/>
-			</Item>
-		</CommonElement>
-		<CommonElement name="MedicationConsentType" type="true" dm="true">
+			<Type ref="CommonTypes" name="MedicationType"/>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="MedicationType" type="true" dm="true">
+		<Item>
+			<Element>MedicationType</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>The medication, dosage and frequency, required by the student to manage the Wellbeing Characteristic.</p>
+			</Description>
+		</Item> 
+		<Item>
+			<Element>MedicationName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Name of medication required for the student.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+		<Item>
+			<Element>Dosage</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Dosage and strength of medication required for the student.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+		<Item>
+			<Element>Frequency</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Frequency of Administration.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+		<Item>
+			<Element>AdministrationInformation</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Information about how the medication is to be administered.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+		<Item>
+			<Element>Method</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Method of administration.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+		<Item>
+			<Element>MedicationConsentList</Element>
+			<Characteristics>OR</Characteristics>
+			<Description></Description>
+			<Type ref="CommonTypes" name="MedicationConsentListType"/>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="MedicationConsentListType" type="true" dm="true">
+		<Item>
+			<Element>MedicationConsentListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list consents that have been provided for administration of a medicine to a student.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>MedicationConsent</Element>
+			<Characteristics>OR</Characteristics>
+			<Description></Description>
+			<Type ref="CommonTypes" name="MedicationConsentType"/>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="MedicationConsentType" type="true" dm="true">
+		<Item>
+			<Element>MedicationConsentType</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>Contains information about when, by whom, and who consent was given to for the administration of a medicine to a student.</p>
+			</Description>
+		</Item> 
+		<Item>
+			<Element>StartDate</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date from which the student or student caretaker consented to the medicine being administered to the student by a particular individual.</p>
+			</Description>
+			<Type name="xs:date"></Type>  
+		</Item>
+		<Item>
+			<Element>EndDate</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date the consent for administration of the medicine ends or is revoked.</p>
+			</Description>
+			<Type name="xs:date"></Type>  
+		</Item>
+		<Item>
+			<Element>ConsentedBy</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The student or student caregiver that has consented to the medicine being administered to the student by the school.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>
+		<Item>
+			<Element>ProviderApplicableTo</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The provider the medication administartion consent is applicable to.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>
+		<Item>
+			<Element>AdministeredBy</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The staff member at the school that have been given permission by the student or the student's caregiver to administer the medicine to the student.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>
+	</CommonElement>
+		
+	<CommonElement name="WellbeingEventCategoryListType" type="true" dm="true">
+		<Item>
+			<Element>WellbeingEventCategoryListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>List of Categories of the WellbeingEvent.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>EventCategory</Element>
+			<Characteristics>MR</Characteristics>
+			<Description></Description>
+			<Type ref="CommonTypes" name="WellbeingEventCategoryType"></Type>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="WellbeingEventCategoryType" type="true" dm="true">
+		<Item>
+			<Element>WellbeingEventCategoryType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p></p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Category</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p></p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsWellbeingEventCategory"></Type>
+		</Item>
+		<Item>
+			<Element>EventSubCategoryList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p></p>
+			</Description>
+			<Type ref="CommonTypes" name="WellbeingEventSubCategoryListType"></Type>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="WellbeingEventSubCategoryListType" type="true" dm="true">
+		<Item>
+			<Element>WellbeingEventSubCategoryListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>List of Categories of the WellbeingEvent.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>EventSubCategory</Element>
+			<Characteristics>MR</Characteristics>
+			<Description></Description>
+			<Type ref="CommonTypes" name="WellbeingEventSubCategoryType"></Type>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="WellbeingEventSubCategoryType" type="true" dm="true">
+		<Item>
+			<Element>WellbeingEventSubCategoryType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p></p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>SubCategory</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p></p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsWellbeingEventSubCategory"></Type>
+		</Item>
+	</CommonElement>	
+
+	<CommonElement name="FollowUpActionListType" type="true" dm="true">
+		<Item>
+			<Element>FollowUpActionListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>List of Actions where an action resulted and is known – maybe just a link to a WellbeingResponse Object</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>FollowUpAction</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>Container for the Follow Up details.</Description>
+			<Type ref="CommonTypes" name="FollowUpActionType"/>
+		</Item>    <!-- FollowUpAction -->
+	</CommonElement>	
+
+	<CommonElement name="FollowUpActionType" type="true" dm="true">
+		<Item>
+			<Element>FollowUpActionType</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>Repeatable Follow Up Action.</p>
+			</Description>
+		</Item> 	
+		<Item>
+			<Element>WellbeingResponseRefId</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The RefId of a WellbeingResponse Object if it exists.</p>
+			</Description>
+			<Type ref="CommonTypes" name="IdRefType"></Type>
+		</Item>    <!-- WellbeingResponseRefId -->
+		
 			<Item>
-				<Element>MedicationConsentType</Element>
-				<Characteristics>OR</Characteristics>
-				<Description>
-					<p>Contains information about when, by whom, and who consent was given to for the administration of a medicine to a student.</p>
-				</Description>
-			</Item> 
-			<Item>
-				<Element>StartDate</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The date from which the student or student caretaker consented to the medicine being administered to the student by a particular individual.</p>
-				</Description>
-				<Type name="xs:date"></Type>  
+					<Element>FollowUpDetails</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Optional free text to outline follow up.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
 			</Item>
-			<Item>
-				<Element>EndDate</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The date the consent for administration of the medicine ends or is revoked.</p>
-				</Description>
-				<Type name="xs:date"></Type>  
-			</Item>
-			<Item>
-				<Element>ConsentedBy</Element>
-				<Characteristics>MR</Characteristics>
-				<Description>
-					<p>The student or student caregiver that has consented to the medicine being administered to the student by the school.</p>
-				</Description>
-				<Type ref="CommonTypes" name="ObjectReferenceType"/>
-			</Item>
-			<Item>
-				<Element>ProviderApplicableTo</Element>
-				<Characteristics>MR</Characteristics>
-				<Description>
-					<p>The provider the medication administartion consent is applicable to.</p>
-				</Description>
-				<Type ref="CommonTypes" name="ObjectReferenceType"/>
-			</Item>
-			<Item>
-				<Element>AdministeredBy</Element>
-				<Characteristics>MR</Characteristics>
-				<Description>
-					<p>The staff member at the school that have been given permission by the student or the student's caregiver to administer the medicine to the student.</p>
-				</Description>
-				<Type ref="CommonTypes" name="ObjectReferenceType"/>
-			</Item>
-		</CommonElement>
 			
-		<CommonElement name="WellbeingEventCategoryListType" type="true" dm="true">
 			<Item>
-				<Element>WellbeingEventCategoryListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>List of Categories of the WellbeingEvent.</p>
-				</Description>
-				<List mode="List"/>
+					<Element>FollowUpActionCategory</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Category of Action - typing locally defined.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
 			</Item>
-			<Item>
-				<Element>EventCategory</Element>
-				<Characteristics>MR</Characteristics>
-				<Description></Description>
-				<Type ref="CommonTypes" name="WellbeingEventCategoryType"></Type>
-			</Item>
-		</CommonElement>
-		<CommonElement name="WellbeingEventCategoryType" type="true" dm="true">
-			<Item>
-				<Element>WellbeingEventCategoryType</Element>
-				<Characteristics>MR</Characteristics>
-				<Description>
-					<p>The category of the Wellbeing Event.</p>
-				</Description>        	 
-			</Item>
-			<Item> 
-				<Element>Category</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>The category of the Wellbeing Event.</p>
-				</Description>
-				<Union>
-					<Type ref="CodeSets" name="NZCodeSetsWellbeingEventCategoryType"/>
-					<Type name="xs:string"/>
-				</Union>	 
-			</Item>	   <!-- EventCategory -->
-			<Item>
-				<Element>EventSubCategoryList</Element>
-				<Characteristics>C</Characteristics>
-				<Description>
-					<p>List of Sub-Categories associated with the Wellbeing Event's Category.</p>
-				</Description>
-				<Type ref="CommonTypes" name="WellbeingEventSubCategoryListType"></Type>
-			</Item>    <!-- EventSubCategoryList -->
-		</CommonElement>
-		<CommonElement name="WellbeingEventSubCategoryListType" type="true" dm="true">
-			<Item>
-				<Element>WellbeingEventSubCategoryListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>List of SubTypes associated with a Category.</p>
-				</Description>
-				<List mode="List"/>
-			</Item>
-			<Item>
-				<Element>EventSubCategory</Element>
-				<Characteristics>MR</Characteristics>
-				<Description></Description>
-				<Type ref="CommonTypes" name="WellbeingEventSubCategoryType"/>
-			</Item>    <!-- EventSubCategory -->
-		</CommonElement>
-		<CommonElement name="WellbeingEventSubCategoryType" type="true" dm="true">
-			<Item>
-				<Element>WellbeingEventSubCategoryType</Element>
-				<Characteristics>MR</Characteristics>
-				<Description>
-					<p>The sub-category of the Wellbeing Event.</p>
-				</Description>        	 
-			</Item>
-			<Item> 
-				<Element>SubCategory</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>The sub-category of the Wellbeing Event.</p>
-				</Description>
-				<Union>
-					<Type ref="CodeSets" name="NZCodeSetsWellbeingEventSubCategoryType"/>
-					<Type name="xs:string"/>
-				</Union>	 
-			</Item>	   <!-- EventSubCategory -->
-		</CommonElement>
 		
-		<CommonElement name="FollowUpActionListType" type="true" dm="true">
-			<Item>
-				<Element>FollowUpActionListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>List of Actions where an action resulted and is known – maybe just a link to a WellbeingResponse Object</p>
-				</Description>
-				<List mode="List"/>
-			</Item>
-			<Item>
-				<Element>FollowUpAction</Element>
-				<Characteristics>OR</Characteristics>
-				<Description>Container for the Follow Up details.</Description>
-				<Type ref="CommonTypes" name="FollowUpActionType"/>
-			</Item>    <!-- FollowUpAction -->
-		</CommonElement>		
-		<CommonElement name="FollowUpActionType" type="true" dm="true">
-			<Item>
-				<Element>FollowUpActionType</Element>
-				<Characteristics>OR</Characteristics>
-				<Description>
-					<p>Repeatable Follow Up Action.</p>
-				</Description>
-			</Item> 	
-			<Item>
-				<Element>WellbeingResponseRefId</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The RefId of a WellbeingResponse Object if it exists.</p>
-				</Description>
-				<Type ref="CommonTypes" name="IdRefType"></Type>
-			</Item>    <!-- WellbeingResponseRefId -->
-			
-				<Item>
-						<Element>FollowUpDetails</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Optional free text to outline follow up.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-				</Item>
-				
-				<Item>
-						<Element>FollowUpActionCategory</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Category of Action - typing locally defined.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-				</Item>
-			
-		</CommonElement>
-		
-		<CommonElement name="PersonInvolvementListType" type="true" dm="true">
-			<Item>
-				<Element>PersonInvolvementListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>List of People involved in the Wellbeing event/response.  Mandatory if more people than the student to which this event/response occurs is involved.</p>
-				</Description>
-				<List mode="List"/>
-			</Item>
-			<Item>
-				<Element>PersonInvolvement</Element>
-				<Characteristics>OR</Characteristics>
-				<Description>A person (additional to the student) involved in a  Wellbeing event/response where required to be known.  </Description>
-				<Type ref="CommonTypes" name="PersonInvolvementType"/>
-			</Item>    <!-- PersonInvolvement -->
-		</CommonElement>
-		<CommonElement name="PersonInvolvementType" type="true" dm="true">
-			<Item>
-				<Element>PersonInvolvementType</Element>
-				<Characteristics>OR</Characteristics>
-				<Description>
-					<p>A person (additional to the student) involved in a  Wellbeing event/response where required to be known.</p>
-				</Description>
-				<Type complex="extension" name="ObjectReferenceType"/>
-			</Item> 
-			<Item>
-				<Element>HowInvolved</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Optional free text detailing involvement.</p>
-				</Description>
-				<Type name="xs:strnormalizedString"></Type>  
-			</Item>
-		</CommonElement>
-
-		<CommonElement name="RecognitionListType" type="true" dm="true">
-			<Item>
-				<Element>RecognitionListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>List of awards and other types of recognition given to the student for this activity. </p>
-				</Description>
-				<List mode="List"/>
-			</Item>
-			<Item>
-				<Element>Recognition</Element>
-				<Characteristics>MR</Characteristics>
-				<Description>
-					<p>The nature of recognition given to the student for the successful completion of work in a co-curricular or extra-curricular activity.</p>
-				</Description>
-				<Type name="xs:normalizedString"/>
-			</Item> <!--Recognition-->
-		</CommonElement>
-		
-		<CommonElement name="WithdrawalTimeListType" type="true" dm="true">
-			<Item>
-				<Element>WithdrawalTimeListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Where a student is to be removed or withdrawn partially for particular times in a week within the Start and End dates of the Response.</p>
-				</Description>
-				<List mode="List"/>
-			</Item>
-			<Item>
-				<Element>Withdrawal</Element>
-				<Characteristics>MR</Characteristics>
-				<Description></Description>
-				<Type ref="CommonTypes" name="WithdrawalType"/>
-			</Item>
-		</CommonElement>
-		<CommonElement name="WithdrawalType" type="true" dm="true">
-			<Item>
-				<Element>WithdrawalType</Element>
-				<Description>
-					<p>Repeatable Withdrawal.</p>
-				</Description>
-			</Item>
-			<Item>
-				<Element>WithdrawalStartDate</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>The start date of the withdrawal.</p>
-				</Description>
-				<Type name="xs:date"></Type>  
-			</Item>
-			<Item>
-				<Element>WithdrawalEndDate</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>The end date of the withdrawal.</p>
-				</Description>
-				<Type name="xs:date"></Type>  
-			</Item>
-			<Item>
-				<Element>WithdrawalStartTime</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Start time of the Withdrawal on that day.</p>
-				</Description>
-				<Type name="xs:time"></Type>  
-			</Item>
-			<Item>
-				<Element>WithdrawalEndTime</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>End time of the Withdrawal on that day.</p>
-				</Description>
-				<Type name="xs:time"></Type>  
-			</Item>
-			<Item>
-				<Element>SchoolTerm</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The school term the withdrawal took place in.</p>
-				</Description>
-				<Type name="xs:integer"></Type>  
-			</Item>
-		</CommonElement>
-		
-		<CommonElement name="SuspensionContainerType" type="true" dm="true">
-			<Item>
-				<Element>SuspensionContainerType</Element>
-				<Description>
-					<p>Container for details of a Removal/Suspension.</p>
-				</Description>
-			</Item> 
-			<Item>
-				<Element>SuspensionCategory</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>Categorisation of a Suspension record to fall into, In School, Withdrawal, Expulsion/Exclusion etc.  In School is usually NOT formally recognised by a jurisdiction but managed at a school level where the student is temporarily withdrawn from normal classes. Expulsion/Exclusion may mean the student’s attendance at a school is terminated.
-					</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsSuspensionCategoryType"/>
-			</Item>
-			<Item>
-				<Element>WithdrawalTimeList</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p></p>
-				</Description>
-				<Type ref="CommonTypes" name="WithdrawalTimeListType"></Type>
-			</Item>
-			<Item>
-				<Element>Duration</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The duration of a Suspension in days 0.00 – X.xx.  (Half Day = 0.5, Full Day = 1.0 or the percentage of any day.)  Must be provided for a Suspension when known.</p>
-				</Description>
-				<Type name="xs:decimal"></Type>
-			</Item>
-			<Item>
-				<Element>AdvisementDate</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The date parent/carers were officially notified.</p>
-				</Description>
-				<Type name="xs:date"></Type>  
-			</Item>
-			<Item>
-				<Element>ResolutionMeetingTime</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The date and time at which a meeting with the student’s parents/carers was held to resolve the Suspension.</p>
-				</Description>
-				<Type name="xs:dateTime"></Type>  
-			</Item>
-			<Item>
-				<Element>ResolutionNotes</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Comments about how the Suspension has been resolved, including any reparative actions the student needs to take.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-			</Item>
-			<Item>
-					<Element>EarlyReturnDate</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The date at which the student was permitted to return to school earlier than the agreed duration would have allowed.</p>
-				</Description>
-				<Type name="xs:date"></Type>  
-			</Item>
-		</CommonElement>
-
-		<CommonElement name="DetentionContainerType" type="true" dm="true">
-			<Item>
-				<Element>DetentionContainerType</Element>
-				<Description>
-							<p>Container for details of a Detention.</p>
-				</Description>
-			</Item> 
-			<Item>
-				<Element>DetentionCategory</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>Categorisation of a Detention.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsDetentionCategoryType"/>
-			</Item>
-			<Item>
-				<Element>DetentionDate</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p></p>
-				</Description>
-				<Type name="xs:date"></Type>  
-			</Item>
-			<Item>
-				<Element>DetentionLocation</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Eventually to be typed for initial draft will be string to try and determine a valid code set.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-			</Item>
-			<Item>
-				<Element>DetentionNotes</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Any notes that can be provided regarding the need/response that led to the detention.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-			</Item>
-		</CommonElement>
-
-		<CommonElement name="PlanRequiredContainerType" type="true" dm="true">
-			<Item>
-				<Element>PlanRequiredContainerType</Element>
-				<Description>
-							<p>Container for Information outlining details of a possible Plan.  A Personalised Plan will be referenced by a separate Object.</p>
-						</Description>
-			</Item> 
-			<Item>
-				<Element>PlanRequiredList</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p></p>
-				</Description>
-				<Type ref="CommonTypes" name="PlanRequiredListType"></Type>
-			</Item>
-		</CommonElement>
-		<CommonElement name="PlanRequiredListType" type="true" dm="true">
-			<Item>
-				<Element>PlanRequiredListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>List to contain information of any plans that may eventuate.</p>
-				</Description>
-				<List mode="List"/>
-			</Item>
-			<Item>
-				<Element>Plan</Element>
-				<Characteristics>OR</Characteristics>
-				<Description></Description>
-				<Type ref="CommonTypes" name="WellbeingPlanType"/>
-			</Item>
-		</CommonElement>		
-		<CommonElement name="WellbeingPlanType" type="true" dm="true">
-			<Item>
-				<Element>WellbeingPlanType</Element>
-				<Characteristics>OR</Characteristics>
-				<Description>
-					<p>Repeatable Plan information.</p>
-				</Description>
-			</Item> 
-			<Item>
-				<Element>PersonalisedPlanRefId</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The GUID of a PersonalisedPlan Object if it exists and it can be provided.</p>
-				</Description>
-				<Type ref="CommonTypes" name="IdRefType"></Type>  
-			</Item>
-			<Item>
-				<Element>PlanNotes</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Any notes that can be provided regarding the need that led to the plan.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-			</Item>
-		</CommonElement>
-		
-		<CommonElement name="AwardContainerType" type="true" dm="true">
-			<Item>
-				<Element>AwardContainerType</Element>
-				<Description>
-						<p>Container for details of an Award, where this response was in relation to a particular Award.</p>
-				</Description>
-			</Item> 
-			<Item>
-				<Element>AwardDate</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Date when to be awarded.</p>
-				</Description>
-				<Type name="xs:date"></Type>  
-			</Item>
-			<Item>
-				<Element>AwardType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Type of Award.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-			</Item>
-			<Item>
-				<Element>AwardDescription</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Description of the Award.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-			</Item>
-			<Item>
-				<Element>AwardNotes</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Any comments/notes associated with the Award.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-			</Item>
-		</CommonElement>
-
-		<CommonElement name="OtherWellbeingResponseContainerType" type="true" dm="true">
-			<Item>
-				<Element>OtherWellbeingResponseContainerType</Element>
-				<Description>
-					<p>Container for details of any other response that can not be classified by previous types.</p>
-				</Description>
-			</Item> 
-			<Item>
-					<Element>OtherResponseDate</Element>
-					<Characteristics>O</Characteristics>
-					<Description>
-						<p>Date of the other response</p>
-					</Description>
-					<Type name="xs:date"></Type>  
-			</Item>
-			<Item>
-				<Element>OtherResponseDescription</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Description of the other response.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-			</Item>
-			<Item>
-				<Element>OtherResponseNotes</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Any comments/notes associated with the other response.</p>
-				</Description>
-				<Type name="xs:string"></Type>  
-			</Item>
-		</CommonElement>
-
-		<CommonElement name="AcknowledgementListType" type="true" dm="true">
-			<Item>
-				<Element>AcknowledgementListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>A list of the providers and staff who have been sent the alerts and have acknowledged they have been read.</p>
-				</Description>
-				<List mode="List"/>
-			</Item>
-			<Item>
-				<Element>Acknowledgement</Element>
-				<Characteristics>MR</Characteristics>
-				<Description></Description>
-				<Type ref="CommonTypes" name="AcknowledgementType"/>
-			</Item>
-		</CommonElement>		
-		<CommonElement name="AcknowledgementType" type="true" dm="true">
-			<Item>
-				<Element>AcknowledgementType</Element>
-				<Characteristics>MR</Characteristics>
-				<Description>
-					<p>A provider or staff member that has been sent the alerts and have acknowledged they have been read.</p>
-				</Description>
-			</Item>
-			<Item>
-				<Element>Acknowledged</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Indicates whether or not a staff member has viewed the alerts.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-			</Item>    <!-- Acknowledged -->
-			<Item>
-				<Element>AcknowledgedDate</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>The date the provider acknowledged a staff member has viewed the alerts.</p>
-				</Description>
-				<Type name="xs:date"></Type>
-			</Item>    <!-- AcknowledgedDate -->
-			<Item>
-				<Element>Provider</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>A provider who has been sent the alerts and have acknowledged they have been read.</p>
-				</Description>
-				<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
-			</Item>    <!-- Provider -->
-			<Item>
-				<Element>StaffMember</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>A staff member who has been sent the alerts and have acknowledged they have been read.</p>
-				</Description>
-				<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
-			</Item>    <!-- StaffMember -->
-		</CommonElement>
-
-		<CommonElement name="KeyContactListType" type="true" dm="true">
-			<Item>
-				<Element>KeyContactListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>A list of key contacts for the alert.</p>
-				</Description>
-				<List mode="List"/>
-			</Item>
-			<Item>
-				<Element>KeyContact</Element>
-				<Characteristics>MR</Characteristics>
-				<Description></Description>
-				<Type ref="CommonTypes" name="KeyContactType"/>
-			</Item>
-		</CommonElement>		
-		<CommonElement name="KeyContactType" type="true" dm="true">
-			<Item>
-				<Element>KeyContactType</Element>
-				<Characteristics>MR</Characteristics>
-				<Description>
-					<p>A key contact for the Wellbeing Alert and their role, e.g. Parent, Doctor, Principal.</p>
-				</Description>
-			</Item>
-			<Item>
-				<Element>Role</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>The role of the key contact in relation to the Wellbeing Alert.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsKeyContactRoleType"/>
-			</Item>    <!-- Role -->
-			<Item>
-				<Element>Contact</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>Details about the contact, e.g. Doctor, Parent, Principal.</p>
-				</Description>
-				<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
-			</Item>    <!-- Contact -->
-		</CommonElement>	
-
-		<CommonElement name="WellbeingResponseListType" type="true" dm="true">
-			<Item>
-				<Element>WellbeingResponseListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>A list of relevant Wellbeing Responses for the student.</p>
-				</Description>
-				<List mode="List"/>
-			</Item>
-			<Item>
-				<Element>WellbeingResponse</Element>
-				<Characteristics>MR</Characteristics>
-				<Description></Description>
-				<Type ref="CommonTypes" name="ObjectReferenceType"/>
-			</Item>
-		</CommonElement>		
-
-		<CommonElement name="WellbeingAppealListType" type="true" dm="true">
-			<Item>
-				<Element>WellbeingAppealListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>A list of relevant Wellbeing Appeals for the student.</p>
-				</Description>
-				<List mode="List"/>
-			</Item>
-			<Item>
-				<Element>WellbeingAppeal</Element>
-				<Characteristics>MR</Characteristics>
-				<Description></Description>
-				<Type ref="CommonTypes" name="ObjectReferenceType"/>
-			</Item>
-		</CommonElement>	
-
-		<CommonElement name="WellbeingCharacteristicListType" type="true" dm="true">
-			<Item>
-				<Element>WellbeingCharacteristicListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>A list of relevant Wellbeing Characteristics for the student.</p>
-				</Description>
-				<List mode="List"/>
-			</Item>
-			<Item>
-				<Element>WellbeingCharacteristic</Element>
-				<Characteristics>MR</Characteristics>
-				<Description></Description>
-				<Type ref="CommonTypes" name="ObjectReferenceType"/>
-			</Item>
-		</CommonElement>
-				
-		<CommonElement name="WellbeingDocumentListType" type="true" dm="true">
-			<Item>
-				<Element>WellbeingDocumentListType</Element>
-						<Characteristics>O</Characteristics>
-				<Description>
-							<p>List which describes the Location of any associated documents kept in relation. These include evidentiary documents, and action plans.</p>
-						</Description>
-					<List mode="List"/>
-				</Item>
-				<Item>
-					<Element>Document</Element>
-					<Characteristics>MR</Characteristics>
-					<Description></Description>
-				<Type ref="CommonTypes" name="WellbeingDocumentType"/>
-			</Item>
-		</CommonElement>		
-		<CommonElement name="WellbeingDocumentType" type="true" dm="true">
-			<Item>
-				<Element>WellbeingDocumentType</Element>
-						<Characteristics>MR</Characteristics>
-				<Description>
-							<p>Repeatable information of the location of any associated documents kept in relation. These include evidentiary documents, and action plans.</p>
-						</Description>
-			</Item>
-			<Item>
-				<Element>Location</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>Location of Documentation.</p>
-				</Description>
-				<Type name="xs:string"></Type>
-			</Item> 
-			<Item>
-				<Element>Sensitivity</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Sensitivity of Document to give an indication of the audience who should have access.</p>
-				</Description>
-				<Type name="xs:string"></Type>
-			</Item> 
-			<Item>
-				<Element>URL</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>URL if known.</p>
-				</Description>
-				<Type name="xs:anyURI"></Type>  
-			</Item>
-			<Item>
-				<Element>DocumentType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Type of Document – could be a ‘Plan’.</p>
-				</Description>
-				<Type name="xs:normalizedString"></Type>  
-			</Item>
-			<Item>
-				<Element>DocumentReviewDate</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Document Review Date.</p>
-				</Description>
-				<Type name="xs:date"></Type>  
-			</Item>
-			<Item>
-				<Element>DocumentDescription</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>What the document is and how it is related to the Student's Wellbeing.</p>
-				</Description>
-				<Type name="xs:normalizedString"></Type>  
-			</Item>
-		</CommonElement>	
-
-		<CommonElement name="WellbeingEventListType" type="true" dm="true">
-			<Item>
-				<Element>WellbeingEventListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>A list of relevant Wellbeing Events for the student.</p>
-				</Description>
-				<List mode="List"/>
-			</Item>
-			<Item>
-				<Element>WellbeingEvent</Element>
-				<Characteristics>MR</Characteristics>
-				<Description></Description>
-				<Type ref="CommonTypes" name="ObjectReferenceType"/>
-			</Item>
-		</CommonElement>	
-
-		<CommonElement name="WellbeingAlertListType" type="true" dm="true">
-			<Item>
-				<Element>WellbeingAlertListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>A list of relevant Wellbeing Alerts for the student.</p>
-				</Description>
-				<List mode="List"/>
-			</Item>
-			<Item>
-				<Element>WellbeingAlert</Element>
-				<Characteristics>MR</Characteristics>
-				<Description></Description>
-				<Type ref="CommonTypes" name="ObjectReferenceType"/>
-			</Item>
-		</CommonElement>	
-
-		<CommonElement name="RelatedWellbeingEventListType" type="true" dm="true">
-			<Item>
-				<Element>RelatedWellbeingEventListType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>A Wellbeing Event gets created for every student involved in an event. This list links together all related Wellbeing Events.</p>
-				</Description>
-				<List mode="List"/>
-			</Item>
-			<Item>
-				<Element>RelatedWellbeingEvent</Element>
-				<Characteristics>MR</Characteristics>
-				<Description></Description>
-				<Type ref="CommonTypes" name="ObjectReferenceType"/>
-			</Item>
-		</CommonElement>	
+	</CommonElement>
 	
+	<CommonElement name="PersonInvolvementListType" type="true" dm="true">
+		<Item>
+			<Element>PersonInvolvementListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>List of People involved in the Wellbeing event/response.  Mandatory if more people than the student to which this event/response occurs is involved.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>PersonInvolvement</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>A person (additional to the student) involved in a  Wellbeing event/response where required to be known.  </Description>
+			<Type ref="CommonTypes" name="PersonInvolvementType"/>
+		</Item>    <!-- PersonInvolvement -->
+	</CommonElement>
+
+	<CommonElement name="PersonInvolvementType" type="true" dm="true">
+		<Item>
+			<Element>PersonInvolvementType</Element>
+			<Description>
+				<p>A repeatable element recording the identifier and details of another person that was involved in the Wellbeing Event/Response.</p>
+			</Description>
+			<Type complex="extension" name="ObjectReferenceType"/>
+		</Item>
+		<Item>
+			<Element>HowInvolved</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Optional free text detailing involvement.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- HowInvolved -->
+	</CommonElement>
+
+	<CommonElement name="RecognitionListType" type="true" dm="true">
+		<Item>
+			<Element>RecognitionListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>List of awards and other types of recognition given to the student for this activity. </p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Recognition</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The nature of recognition given to the student for the successful completion of work in a co-curricular or extra-curricular activity.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item> <!--Recognition-->
+	</CommonElement>
+	
+	<CommonElement name="WithdrawalTimeListType" type="true" dm="true">
+		<Item>
+			<Element>WithdrawalTimeListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Where a student is to be removed or withdrawn partially for particular times in a week within the Start and End dates of the Response.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Withdrawal</Element>
+			<Characteristics>MR</Characteristics>
+			<Description></Description>
+			<Type ref="CommonTypes" name="WithdrawalType"/>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="WithdrawalType" type="true" dm="true">
+		<Item>
+			<Element>WithdrawalType</Element>
+			<Description>
+				<p>Repeatable Withdrawal.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>WithdrawalStartDate</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The start date of the withdrawal.</p>
+			</Description>
+			<Type name="xs:date"></Type>  
+		</Item>
+		<Item>
+			<Element>WithdrawalEndDate</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The end date of the withdrawal.</p>
+			</Description>
+			<Type name="xs:date"></Type>  
+		</Item>
+		<Item>
+			<Element>WithdrawalStartTime</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Start time of the Withdrawal on that day.</p>
+			</Description>
+			<Type name="xs:time"></Type>  
+		</Item>
+		<Item>
+			<Element>WithdrawalEndTime</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>End time of the Withdrawal on that day.</p>
+			</Description>
+			<Type name="xs:time"></Type>  
+		</Item>
+		<Item>
+			<Element>SchoolTerm</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The school term the withdrawal took place in.</p>
+			</Description>
+			<Type name="xs:integer"></Type>  
+		</Item>
+		<Item>
+			<Element>ScheduledActivityRefId</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The school term the withdrawal took place in.</p>
+			</Description>
+			<Type ref="CommonTypes" name="RefIdType"></Type>
+		</Item>
+		<Item>
+			<Element>TimeTableSubjectRefId</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The school term the withdrawal took place in.</p>
+			</Description>
+			<Type ref="CommonTypes" name="RefIdType"></Type>
+		</Item>
+		<Item>
+			<Element>TimeTableCellRefId</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The school term the withdrawal took place in.</p>
+			</Description>
+			<Type ref="CommonTypes" name="RefIdType"></Type>
+		</Item>
+	</CommonElement>
+	
+	<CommonElement name="SuspensionContainerType" type="true" dm="true">
+		<Item>
+			<Element>SuspensionContainerType</Element>
+			<Description>
+				<p>Container for details of a Removal/Suspension.</p>
+			</Description>
+		</Item> 
+		<Item>
+			<Element>SuspensionCategory</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Categorisation of a Suspension record to fall into, In School, Withdrawal, Expulsion/Exclusion etc.  In School is usually NOT formally recognised by a jurisdiction but managed at a school level where the student is temporarily withdrawn from normal classes. Expulsion/Exclusion may mean the student’s attendance at a school is terminated.
+				</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsSuspensionCategoryType"/>
+		</Item>
+		<Item>
+			<Element>WithdrawalTimeList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p></p>
+			</Description>
+			<Type ref="CommonTypes" name="WithdrawalTimeListType"></Type>
+		</Item>
+		<Item>
+			<Element>Duration</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The duration of a Suspension in days 0.00 – X.xx.  (Half Day = 0.5, Full Day = 1.0 or the percentage of any day.)  Must be provided for a Suspension when known.</p>
+			</Description>
+			<Type name="xs:decimal"></Type>
+		</Item>
+		<Item>
+			<Element>AdvisementDate</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date parent/carers were officially notified.</p>
+			</Description>
+			<Type name="xs:date"></Type>  
+		</Item>
+		<Item>
+			<Element>ResolutionMeetingTime</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date and time at which a meeting with the student’s parents/carers was held to resolve the Suspension.</p>
+			</Description>
+			<Type name="xs:dateTime"></Type>  
+		</Item>
+		<Item>
+			<Element>ResolutionNotes</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Comments about how the Suspension has been resolved, including any reparative actions the student needs to take.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+		<Item>
+				<Element>EarlyReturnDate</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date at which the student was permitted to return to school earlier than the agreed duration would have allowed.</p>
+			</Description>
+			<Type name="xs:date"></Type>  
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="DetentionContainerType" type="true" dm="true">
+		<Item>
+			<Element>DetentionContainerType</Element>
+			<Description>
+						<p>Container for details of a Detention.</p>
+			</Description>
+		</Item> 
+		<Item>
+			<Element>DetentionCategory</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Categorisation of a Detention.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsDetentionCategoryType"/>
+		</Item>
+		<Item>
+			<Element>DetentionDate</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p></p>
+			</Description>
+			<Type name="xs:date"></Type>  
+		</Item>
+		<Item>
+			<Element>DetentionLocation</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Eventually to be typed for initial draft will be string to try and determine a valid code set.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+		<Item>
+			<Element>DetentionNotes</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Any notes that can be provided regarding the need/response that led to the detention.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="PlanRequiredContainerType" type="true" dm="true">
+		<Item>
+			<Element>PlanRequiredContainerType</Element>
+			<Description>
+						<p>Container for Information outlining details of a possible Plan.  A Personalised Plan will be referenced by a separate Object.</p>
+					</Description>
+		</Item> 
+		<Item>
+			<Element>PlanRequiredList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p></p>
+			</Description>
+			<Type ref="CommonTypes" name="PlanRequiredListType"></Type>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="PlanRequiredListType" type="true" dm="true">
+		<Item>
+			<Element>PlanRequiredListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>List to contain information of any plans that may eventuate.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Plan</Element>
+			<Characteristics>OR</Characteristics>
+			<Description></Description>
+			<Type ref="CommonTypes" name="WellbeingPlanType"/>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="WellbeingPlanType" type="true" dm="true">
+		<Item>
+			<Element>WellbeingPlanType</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>Repeatable Plan information.</p>
+			</Description>
+		</Item> 
+		<Item>
+			<Element>PersonalisedPlanRefId</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The GUID of a PersonalisedPlan Object if it exists and it can be provided.</p>
+			</Description>
+			<Type ref="CommonTypes" name="IdRefType"></Type>  
+		</Item>
+		<Item>
+			<Element>PlanNotes</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Any notes that can be provided regarding the need that led to the plan.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+	</CommonElement>
+	
+	<CommonElement name="AwardContainerType" type="true" dm="true">
+		<Item>
+			<Element>AwardContainerType</Element>
+			<Description>
+					<p>Container for details of an Award, where this response was in relation to a particular Award.</p>
+			</Description>
+		</Item> 
+		<Item>
+			<Element>AwardDate</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Date when to be awarded.</p>
+			</Description>
+			<Type name="xs:date"></Type>  
+		</Item>
+		<Item>
+			<Element>AwardType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Type of Award.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+		<Item>
+			<Element>AwardDescription</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Description of the Award.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+		<Item>
+			<Element>AwardNotes</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Any comments/notes associated with the Award.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="OtherWellbeingResponseContainerType" type="true" dm="true">
+		<Item>
+			<Element>OtherWellbeingResponseContainerType</Element>
+			<Description>
+				<p>Container for details of any other response that can not be classified by previous types.</p>
+			</Description>
+		</Item> 
+		<Item>
+				<Element>OtherResponseDate</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>Date of the other response</p>
+				</Description>
+				<Type name="xs:date"></Type>  
+		</Item>
+		<Item>
+			<Element>OtherResponseDescription</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Description of the other response.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+		<Item>
+			<Element>OtherResponseNotes</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Any comments/notes associated with the other response.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="AcknowledgementListType" type="true" dm="true">
+		<Item>
+			<Element>AcknowledgementListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of the providers and staff who have been sent the alerts and have acknowledged they have been read.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Acknowledgement</Element>
+			<Characteristics>MR</Characteristics>
+			<Description></Description>
+			<Type ref="CommonTypes" name="AcknowledgementType"/>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="AcknowledgementType" type="true" dm="true">
+		<Item>
+			<Element>AcknowledgementType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A provider or staff member that has been sent the alerts and have acknowledged they have been read.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Acknowledged</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Indicates whether or not a staff member has viewed the alerts.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+		</Item>    <!-- Acknowledged -->
+		<Item>
+			<Element>AcknowledgedDate</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The date the provider acknowledged a staff member has viewed the alerts.</p>
+			</Description>
+			<Type name="xs:date"></Type>
+		</Item>    <!-- AcknowledgedDate -->
+		<Item>
+			<Element>Provider</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A provider who has been sent the alerts and have acknowledged they have been read.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
+		</Item>    <!-- Provider -->
+		<Item>
+			<Element>StaffMember</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A staff member who has been sent the alerts and have acknowledged they have been read.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
+		</Item>    <!-- StaffMember -->
+	</CommonElement>
+
+	<CommonElement name="KeyContactListType" type="true" dm="true">
+		<Item>
+			<Element>KeyContactListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of key contacts for the alert.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>KeyContact</Element>
+			<Characteristics>MR</Characteristics>
+			<Description></Description>
+			<Type ref="CommonTypes" name="KeyContactType"/>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="KeyContactType" type="true" dm="true">
+		<Item>
+			<Element>KeyContactType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A key contact for the Wellbeing Alert and their role, e.g. Parent, Doctor, Principal.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Role</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The role of the key contact in relation to the Wellbeing Alert.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsKeyContactRoleType"/>
+		</Item>    <!-- Role -->
+		<Item>
+			<Element>Contact</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Details about the contact, e.g. Doctor, Parent, Principal.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
+		</Item>    <!-- Contact -->
+	</CommonElement>	
+
+	<CommonElement name="WellbeingResponseListType" type="true" dm="true">
+		<Item>
+			<Element>WellbeingResponseListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of relevant Wellbeing Responses for the student.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>WellbeingResponse</Element>
+			<Characteristics>MR</Characteristics>
+			<Description></Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>
+	</CommonElement>		
+
+	<CommonElement name="WellbeingAppealListType" type="true" dm="true">
+		<Item>
+			<Element>WellbeingAppealListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of relevant Wellbeing Appeals for the student.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>WellbeingAppeal</Element>
+			<Characteristics>MR</Characteristics>
+			<Description></Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>
+	</CommonElement>	
+
+	<CommonElement name="WellbeingCharacteristicListType" type="true" dm="true">
+		<Item>
+			<Element>WellbeingCharacteristicListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of relevant Wellbeing Characteristics for the student.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>WellbeingCharacteristic</Element>
+			<Characteristics>MR</Characteristics>
+			<Description></Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>
+	</CommonElement>
+			
+	<CommonElement name="WellbeingEventListType" type="true" dm="true">
+		<Item>
+			<Element>WellbeingEventListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of relevant Wellbeing Events for the student.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>WellbeingEvent</Element>
+			<Characteristics>MR</Characteristics>
+			<Description></Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>
+	</CommonElement>	
+
+	<CommonElement name="WellbeingAlertListType" type="true" dm="true">
+		<Item>
+			<Element>WellbeingAlertListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of relevant Wellbeing Alerts for the student.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>WellbeingAlert</Element>
+			<Characteristics>MR</Characteristics>
+			<Description></Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>
+	</CommonElement>	
+
+	<CommonElement name="RelatedWellbeingEventListType" type="true" dm="true">
+		<Item>
+			<Element>RelatedWellbeingEventListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A Wellbeing Event gets created for every student involved in an event. This list links together all related Wellbeing Events.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>RelatedWellbeingEvent</Element>
+			<Characteristics>MR</Characteristics>
+			<Description></Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>
+	</CommonElement>	
+
+	<CommonElement name="RestraintWitnessListType" type="true" dm="true">
+		<Item>
+			<Element>RestraintWitnessListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of the people that witnessed the physical constraint.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Witness</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A person that witnessed the physical restraint incident.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>
+	</CommonElement>	
+
+	<CommonElement name="RestraintAdministeredByListType" type="true" dm="true">
+		<Item>
+			<Element>RestraintAdministeredByListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of the people who administered the physical restraint to the student.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>RestraintAdministeredBy</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The person who administered the physical restraint to the student.</p>
+			</Description>
+			<Type ref="CommonTypes" name="RestraintAdministeredByType"/>
+		</Item>    <!-- RestraintAdministeredBy -->
+	</CommonElement>	
+
+	<CommonElement name="RestraintAdministeredByType" type="true" dm="true">
+		<Item>
+			<Element>RestraintAdministeredByType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The person who administered the physical restraint to the student.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>AdministeredBy</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The person who administered the physical restraint to the student.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>    <!-- AdministeredBy -->
+		<Item>
+			<Element>SafePhysicalRestraintTraining</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Indicates whether or not the person involved has received training of the safe use of physical restraint.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+		</Item>    <!-- SafePhysicalRestraintTraining -->
+		<Item>
+			<Element>TrainingDescription</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Free text providing additional information about any training the person has had on the safe use pf physical restraint.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- TrainingDescription -->
+		<Item>
+			<Element>Role</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The role of the person who administered the physical restraint to the student.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsRestraintAdministeredByRoleType"/>
+		</Item>    <!-- Role -->
+	</CommonElement>	
+
+	<CommonElement name="BehaviourDirectedAtListType" type="true" dm="true">
+		<Item>
+			<Element>BehaviourDirectedAtListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The list of the people and/or property that the student, who was restrained, was directing their behaviour at.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>BehaviourDirectedAt</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The person and/or piece of property that the student, who was restrained, was directing their behaviour at.</p>
+			</Description>
+			<Type ref="CommonTypes" name="BehaviourDirectedAtType"/>
+		</Item>    <!-- BehaviourDirectedAt -->
+	</CommonElement>
+		
+	<CommonElement name="BehaviourDirectedAtType" type="true" dm="true">
+		<Item>
+			<Element>BehaviourDirectedAtType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The person and/or piece of property that the student, who was restrained, was directing their behaviour at.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>DirectedAt</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The person the student's behaviour was directed at.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>    <!-- DirectedAt -->
+		<Item>
+			<Element>BehaviourDescription</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Free text describing the behaviour the student showed towards a person of piece of property.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- BehaviourDescription -->
+		<Item>
+			<Element>DirectedAtType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Code set denoting type of object or person the student was directing their behaviour at, e.g. Staff Member, Student, Desk, Chair.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsBehaviourDirectedAtTypeType"/>
+		</Item>    <!-- DirectedAtType -->
+	</CommonElement>	
+
+	<CommonElement name="StaffReflectionListType" type="true" dm="true">
+		<Item>
+			<Element>StaffReflectionListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of the reflections made by the staff members who applied the physical restraint.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>StaffReflection</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The reflections performed by the staff member who applied the physical restraint to the student.</p>
+			</Description>
+			<Type ref="CommonTypes" name="StaffReflectionType"/>
+		</Item>    <!-- StaffReflection -->
+	</CommonElement>
+
+	<CommonElement name="StaffReflectionType" type="true" dm="true">
+		<Item>
+			<Element>StaffReflectionType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The reflections performed by the staff member who applied the physical restraint to the student.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>ReflectionDate</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The date the staff member performed their reflection on the use of physical restraint on the student.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>    <!-- ReflectionDate -->
+		<Item>
+			<Element>WitnessedBy</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The staff member that witnessed the person who applied the restraint performing the staff reflections.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>    <!-- WitnessedBy -->
+		<Item>
+			<Element>Staff</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The staff member who performed the staff reflection.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>    <!-- Staff -->
+		<Item>
+			<Element>ReflectionList</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A list of the reflections the staff member performed.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ReflectionListType"/>
+		</Item>    <!-- ReflectionList -->
+	</CommonElement>
+
+	<CommonElement name="ReflectionListType" type="true" dm="true">
+		<Item>
+			<Element>ReflectionListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of the reflections the staff member performed.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Reflection</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A reflection that a staff member performed about the physical restraint incident.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ReflectionType"/>
+		</Item>    <!-- Reflection -->
+	</CommonElement>
+
+	<CommonElement name="ReflectionType" type="true" dm="true">
+		<Item>
+			<Element>ReflectionType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A reflection that a staff member performed about the physical restraint incident.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>ReflectionDescription</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Free text outlining the staff members thoughts on a type of reflection.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- ReflectionDescription -->
+		<Item>
+			<Element>Type</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The type of reflection that the staff member performed.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsStaffRestraintReflectionTypeType"/>
+		</Item>    <!-- Type -->
+	</CommonElement>
+
+	<CommonElement name="RestraintDebriefingListType" type="true" dm="true">
+		<Item>
+			<Element>RestraintDebriefingListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of the debriefings that took place after the physical restraint incident occurred.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>RestraintDebriefing</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A debriefing that took place after the physical restraint incident occurred. A debriefing can be with a staff member or with the student and their parent/caregiver.</p>
+			</Description>
+			<Type ref="CommonTypes" name="RestraintDebriefingType"/>
+		</Item>    <!-- RestraintDebriefing -->
+	</CommonElement>
+
+	<CommonElement name="RestraintDebriefingType" type="true" dm="true">
+		<Item>
+			<Element>RestraintDebriefingType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A debriefing that took place after the physical restraint incident occurred. A debriefing can be with a staff member or with the student and their parent/caregiver.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>DebriefingDate</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The date the debriefing about the use of physical restraint on the student occurred.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>    <!-- DebriefingDate -->
+		<Item>
+			<Element>DebriefingTime</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The time the debriefing about the use of physical restraint on the student occurred.</p>
+			</Description>
+			<Type name="xs:time"/>
+		</Item>    <!-- DebriefingTime -->
+		<Item>
+			<Element>Findings</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Free text outlining the findings of the debriefing in the use of physical restraint on the student.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- Findings -->
+		<Item>
+			<Element>NextStepsActions</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Free text about the next steps and/or actions that will be taken in as a result of the debriefing on the use of physical restraint  on the student.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- NextStepsActions -->
+		<Item>
+			<Element>ParentCaregiverComment</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Parent/caregiver comments made about the use physical restraint on the student.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- ParentCaregiverComment -->
+		<Item>
+			<Element>StudentComment</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Student comments made about the use physical restraint on the them.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- StudentComment -->
+		<Item>
+			<Element>DebriefingType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The type of debriefing that occurred, e.g. staff, or student and parent/caregiver.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsRestraintDebriefingTypeType"/>
+		</Item>    <!-- DebriefingType -->
+		<Item>
+			<Element>AttendeeList</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A list of the people that attended the debriefing.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AttendeeListType"/>
+		</Item>    <!-- AttendeeList -->
+	</CommonElement>
+
+	<CommonElement name="AttendeeListType" type="true" dm="true">
+		<Item>
+			<Element>AttendeeListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The type of debriefing that occurred, e.g. staff, or student and parent/caregiver.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Attendee</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A person that attended the debriefing.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>    <!-- Attendee -->
+	</CommonElement>
+
+	<CommonElement name="RestraintQuestionListType" type="true" dm="true">
+		<Item>
+			<Element>RestraintQuestionListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of questions and their answers about the physical restraint incident.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>RestraintQuestion</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A question and it's answer about the physical restraint incident that occurred. Additional free text information to support the answer may also be supplied.</p>
+			</Description>
+			<Type ref="CommonTypes" name="RestraintQuestionType"/>
+		</Item>    <!-- RestraintQuestion -->
+	</CommonElement>
+
+	<CommonElement name="RestraintQuestionType" type="true" dm="true">
+		<Item>
+			<Element>RestraintQuestionType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A question and it's answer about the physical restraint incident that occurred. Additional free text information to support the answer may also be supplied.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Question</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The question asked about the physical restraint incident.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsRestraintQuestionType"/>
+		</Item>    <!-- Question -->			
+		<Item>
+			<Element>Answer</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The answer to the question. Options are Yes or No.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+		</Item>    <!-- Answer -->
+		<Item>
+			<Element>AnswerSupportingDescription</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A free text description providing additional information about the question if required.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- AnswerSupportingDescription -->
+	</CommonElement>
+
+	<!-- StudentVoice complex types -->
+	<CommonElement name="SocialGoalListType" type="true" dm="true">
+		<Item>
+			<Element>SocialGoalListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of social goals the student has set.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>SocialGoal</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p/>
+			</Description>
+			<Type ref="CommonTypes" name="BaseStudentGoalType"/>
+		</Item>    <!-- SocialGoal -->
+
+		<xhtml:Example xmlns="" name ="SocialGoalList">
+			<SocialGoalList>
+				<SocialGoal>
+					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
+					<GoalDescription>Timothy would like to have more friends to play with at lunchtime.</GoalDescription>
+					<GoalName>Have more friends</GoalName>
+				</SocialGoal>
+			</SocialGoalList>
+		</xhtml:Example>
+	</CommonElement>
+
+	<CommonElement name="CareerGoalListType" type="true" dm="true">
+		<Item>
+			<Element>CareerGoalListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of career goals the student has set.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>CareerGoal</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p/>
+			</Description>
+			<Type ref="CommonTypes" name="BaseStudentGoalType"/>
+		</Item>    <!-- CareerGoal -->
+
+		<xhtml:Example xmlns="" name ="CareerGoalList">
+			<CareerGoalList>
+				<CareerGoal>
+					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
+					<GoalDescription>Jemima would like to be a Marine Biologist, or Deep Sea Diver</GoalDescription>
+					<GoalName>Marine Biologist</GoalName>
+				</CareerGoal>
+			</CareerGoalList>
+		</xhtml:Example>
+
+	</CommonElement>
+
+	<CommonElement name="AcademicGoalListType" type="true" dm="true">
+		<Item>
+			<Element>AcademicGoalListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of academic goals the student has set.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>AcademicGoal</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p/>
+			</Description>
+			<Type ref="CommonTypes" name="AcademicStudentGoalType"/>
+		</Item>    <!-- AcademicGoal -->
+
+		<xhtml:Example xmlns="" name ="AcademicGoalList">
+			<AcademicGoalList>
+				<AcademicGoal>
+					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
+					<GoalDescription>Te Huia wants to excel at Te Reo Māori</GoalDescription>
+					<GoalName>Excel Te Reo</GoalName>
+					<SubjectArea>9</SubjectArea>
+				</AcademicGoal>
+			</AcademicGoalList>
+		</xhtml:Example>		
+	</CommonElement>
+
+	<CommonElement name="BaseStudentGoalType" type="true" dm="true">
+		<Item>
+			<Element>BaseStudentGoalType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Base complex type defining elements common to all flavours of StudentGoal.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>GoalRecordedDate</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date the Student's goal was recorded.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>    <!-- GoalRecordedDate -->
+		<Item>
+			<Element>GoalAchievedDate</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date the Student achieved their goal.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>    <!-- GoalAchievedDate -->			
+		<Item>
+			<Element>GoalDescription</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A description of the goal the student wants to achieve</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- GoalDescription -->
+		<Item>
+			<Element>GoalName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The name of the goal the student wants to achieve</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- GoalName -->
+	</CommonElement>
+
+	<CommonElement name="AcademicStudentGoalType" type="true" dm="true">
+		<Item>
+			<Element>AcademicStudentGoalType</Element>
+			<Description>
+				<p>Defining elements of the Academic flavour of student goal.</p>
+			</Description>
+			<Type complex="extension" name="BaseStudentGoalType"/>
+		</Item>
+		<Item>
+			<Element>SubjectArea</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The subject are athe student's academic goal is for.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
+		</Item>    <!-- SubjectArea -->
+	</CommonElement>
+
+	<CommonElement name="StudentInterestListType" type="true" dm="true">
+		<Item>
+			<Element>StudentInterestListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of interestes the student has set.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>StudentInterest</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p/>
+			</Description>
+			<Type ref="CommonTypes" name="StudentInterestType"/>
+		</Item>    <!-- StudentInterest -->
+
+		<xhtml:Example xmlns="" name ="StudentInterestList">
+			<StudentInterestList>
+				<StudentInterest>
+					<InterestRecordedDate>2018-11-30</InterestRecordedDate>
+					<InterestDescription>Tobias spends most lunchtimes playing with the piano, or watching others playing music</InterestDescription>
+					<InterestName>Music/Piano</InterestName>
+					<InterestType>104</InterestType>
+				</StudentInterest>
+			</StudentInterestList>
+		</xhtml:Example>	
+	</CommonElement>
+
+	<CommonElement name="StudentInterestType" type="true" dm="true">
+		<Item>
+			<Element>StudentInterestType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Object recording an interest the student has expressed.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>InterestRecordedDate</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date the Student's interest was recorded.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>    <!-- InterestRecordedDate -->
+		<Item>
+			<Element>InterestDescription</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A description of the interest the student wants to achieve</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- InterestDescription -->
+		<Item>
+			<Element>InterestName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The name of the interest the student has expressed</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- InterestName -->
+		<Item>
+			<Element>InterestType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Code denoting the type of interest the student has expressed</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsStudentInterestTypeType"></Type>
+		</Item>    <!-- InterestType -->
+		<Item>
+			<Element>SubjectArea</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The subject area the student has expressed an interest in.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
+		</Item>    <!-- SubjectArea -->
+
+		<xhtml:Example xmlns="" name ="StudentInterest">
+			<StudentInterest>
+				<InterestRecordedDate>2018-11-30</InterestRecordedDate>
+				<InterestDescription>Tobias spends most lunchtimes playing with the piano, or watching others playing music</InterestDescription>
+				<InterestName>Music/Piano</InterestName>
+				<InterestType>104</InterestType>
+				<SubjectArea>7</SubjectArea>
+			</StudentInterest>
+		</xhtml:Example>
+	</CommonElement>
 </IncludeGroup>

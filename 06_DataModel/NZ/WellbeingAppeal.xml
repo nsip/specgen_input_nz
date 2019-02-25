@@ -18,9 +18,9 @@
   </Item>    <!-- WellbeingAppeal -->
 
   <Item>
-    <Attribute>RefId</Attribute>
+    <Element>RefId</Element>
     <Characteristics>M</Characteristics>
-	  <privacyRating>Low</privacyRating>
+	  <privacyRating>Medium</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this WellbeingAppeal.</p>
     </Description>
@@ -124,7 +124,7 @@
     <Description>
       <p>The type of individual or group that determined the appeal outcome.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsAppealDeterminationBy"></Type>
+    <Type ref="CodeSets" name="NZCodeSetsAppealDeterminationByType"></Type>
   </Item>    <!-- AppealDeterminationBy -->
  
   <Item>
@@ -138,7 +138,8 @@
   </Item>    <!-- DocumentList -->
 
   <xhtml:Example xmlns="" name="WellbeingAppeal">
-    <WellbeingAppeal RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
+    <WellbeingAppeal>
+      <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
       <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
       <ProviderRefId>CA285746-359D-7510-1A8C-36432A901A16</ProviderRefId>
       <WellbeingResponseRefId>BC385746-359D-7510-1A8C-36432A901A36</WellbeingResponseRefId>

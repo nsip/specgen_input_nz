@@ -279,7 +279,7 @@
 			<LanguageOfInstructionList>
 				<Language json:force-array="true">
 					<Code>01112</Code>
-					<HoursPerWeek>4.8</HoursPerWeek>
+					<Level>99</Level>
 				</Language>
 			</LanguageOfInstructionList>
       <LearningStandardList>

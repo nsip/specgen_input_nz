@@ -110,8 +110,7 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>RefId  of the Provider who defines the TeachingGroup. Either ProviderRefId 
-      or ProviderLocalId must be provided.</p>
+      <p>RefId  of the Provider who defines the TeachingGroup. Either ProviderRefId or ProviderLocalId must be provided.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>        <!-- ProviderRefId -->
@@ -121,8 +120,27 @@
     <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
-      <p>LocalId of the Provider who defines the TeachingGroup. Either ProviderRefId or
-       ProviderLocalId must be provided.</p>
+      <p>LocalId of the Provider who defines the TeachingGroup. Either ProviderRefId or ProviderLocalId must be provided.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>        <!-- ProviderLocalId -->
+
+  <Item>
+    <Element>TeachingProviderRefId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>RefId of the Provider who actually teaches the TeachingGroup. Only present when the teaching provider is not the defining provider.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>        <!-- ProviderRefId -->
+
+  <Item>
+    <Element>TeachingProviderLocalId</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>LocalId of the Provider who actually teaches the TeachingGroup. Only present when the teaching provider is not the defining provider.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>        <!-- ProviderLocalId -->
@@ -159,6 +177,17 @@
       </Description>
       <Type name="xs:date"></Type>
     </Item>       <!-- EndDate -->
+
+    <Item>
+      <Element>TeachingSchedule</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>List of schedule entries recording what ProviderCourses, Learning Areas or Subject Areas are being taught to the TeachingGroup when.</p>
+      </Description>
+      <Type ref="CommonTypes" name="TeachingGroupScheduleListType"></Type>
+    </Item>        <!-- TeachingGroupScheduleList -->
+
   </if>
 
   <if intl="au">

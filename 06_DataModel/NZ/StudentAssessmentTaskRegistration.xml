@@ -1,4 +1,4 @@
-<DataObject name="AssessmentTaskRegistration"
+<DataObject name="StudentAssessmentTaskRegistration"
 			xmlns:xs="http://www.w3.org/2001/XMLSchema"
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -10,7 +10,7 @@
   <Key>RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
-    <Element>AssessmentTaskRegistration</Element>
+    <Element>StudentAssessmentTaskRegistration</Element>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The student's registration for an assessment task they are intending to participate in. </p>
@@ -174,8 +174,8 @@
   </Item>    <!-- AssessmentYear -->
   
 
-  <xhtml:Example xmlns="" name="Assessment Task Registration">
-    <AssessmentTaskRegistration>
+  <xhtml:Example xmlns="" name="Student Assessment Task Registration">
+    <StudentAssessmentTaskRegistration>
       <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
         <ProviderInvolvedList>
           <!-- NZQA is Assessor -->
@@ -205,6 +205,6 @@
       <YearLevel>12</YearLevel>
       <DateRegistered>2018-03-30</DateRegistered>
       <AssessmentYear>2018</AssessmentYear>
-    </AssessmentTaskRegistration>
+    </StudentAssessmentTaskRegistration>
   </xhtml:Example>
 </DataObject>

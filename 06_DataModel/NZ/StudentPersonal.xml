@@ -271,18 +271,6 @@
 		</Description>
 		<Type name="xs:date"/>
 	</Item>    <!-- FirstAUSchoolEnrollment -->
-	<Item>
-		<Element>SIF_Metadata</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Extreme</privacyRating>
-		<Type ref="CommonTypes" name="SIF_MetadataType"/>
-	</Item>    <!-- SIF_MetaData -->
-	<Item>
-		<Element>SIF_ExtendedElements</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Extreme</privacyRating>
-		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
-	</Item>    <!-- SIF_ExtendedElements -->
   </if>
 
 	<xhtml:Example xmlns="" name ="StudentPersonal">
@@ -298,15 +286,6 @@
 					<FullName>Rubeus Hagrid</FullName>
 					<Type>LGL</Type>
 					<IsVerified>Y</IsVerified>
-					<Verification>
-						<Source json:force-string="true">2</Source>
-						<DocumentSerialNumber>L905673</DocumentSerialNumber>
-						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
-						<IsConfirmed>true</IsConfirmed>
-						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-						<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
-						<ProviderLocalId>245</ProviderLocalId>
-					</Verification>					
 				</Name>
 				<OtherNames>
 					<Name>
@@ -315,6 +294,15 @@
 						<FullName>Samuel Anderson</FullName>
 						<Type>AKA</Type>
 						<IsVerified>N</IsVerified>
+						<Verification>
+							<Source json:force-string="true">2</Source>
+							<DocumentSerialNumber>L905673</DocumentSerialNumber>
+							<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
+							<IsConfirmed>true</IsConfirmed>
+							<Timestamp>2003-11-30T12:34:56.7</Timestamp>
+							<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
+							<ProviderLocalId>245</ProviderLocalId>
+						</Verification>	
 					</Name>
 					<Name>
 						<FamilyName>Rowinski</FamilyName>
@@ -328,11 +316,10 @@
 					<BirthDate>1990-09-26</BirthDate>
 					<PlaceOfBirth>Dunedin</PlaceOfBirth>
 					<CountryOfBirth>ZAF</CountryOfBirth>
-					<CountriesOfCitizenship>
+					<CitizenshipList>
 						<Country>NZL</Country>
 						<Country>ZAF</Country>
-					</CountriesOfCitizenship>
-					<CountryArrivalDate>1996-05-02</CountryArrivalDate>
+					</CitizenshipList>
 					<CitizenshipStatus>1</CitizenshipStatus>
 					<CitizenshipVerification>
 						<Source json:force-string="true">2</Source>
@@ -348,15 +335,33 @@
 						<Language>
 							<Code>01110</Code>
 							<LanguageType>2</LanguageType>
+							<ProficiencyList>
+								<Proficiency>
+									<Level>101</Level>
+									<Type>104</Type>
+								</Proficiency>
+							</ProficiencyList>	
 						</Language>
 						<Language>
 							<Code>01112</Code>
 							<LanguageType>1</LanguageType>
+							<ProficiencyList>
+								<Proficiency>
+									<Level>102</Level>
+									<Type>103</Type>
+								</Proficiency>
+							</ProficiencyList>	
 						</Language>
 					</LanguageList>
 					<EthnicityList>
-						<Ethnicity json:force-string="true">111</Ethnicity>
-						<Ethnicity json:force-string="true">42111</Ethnicity>
+						<Ethnicity>
+							<PreferenceOrderNumber>1</PreferenceOrderNumber>
+							<Ethnicity>111</Ethnicity>
+						</Ethnicity>
+						<Ethnicity>
+							<PreferenceOrderNumber>1</PreferenceOrderNumber>
+							<Ethnicity>211</Ethnicity>
+						</Ethnicity>
 					</EthnicityList>
 					<IwiAffiliationList>
 						<IwiAffiliation>0702</IwiAffiliation>
@@ -430,8 +435,7 @@
 							</PhoneNumber>
 						</PhoneNumberList>
 					</HouseholdContactInfo>
-					
-				</HouseholdContactInfoList>
+					</HouseholdContactInfoList>
 			</PersonInfo>
 		</StudentPersonal>
 	</xhtml:Example>

@@ -3,8 +3,7 @@
  	xmlns="http://sifassociation.org/SpecGen">
 
 
-	<!-- Laregely borrowed from SIF AU -->
-
+	<!-- Largely borrowed from SIF AU -->
     <CodeSet>
       <Intro>
         <p>Standard codes denoting the severity of a Wellbeing Characteristic or Alert.</p>
@@ -543,6 +542,7 @@
 				<Value><Code>SU</Code><Text>Successful</Text></Value>
 	  	</Values>
 	</CodeSet>    <!-- Wellbeing Appeal Status -->
+
 	<CodeSet>
       <Intro>
         <p>Code set denoting the type of individual or group that determined the appeal outcome.</p>
@@ -557,8 +557,6 @@
 				<Value><Code>106</Code><Text>Ministry of Education</Text></Value>
 	  	</Values>
 	</CodeSet>    <!-- Appeal Determination By -->
-
-
 
 
 	<!--  Document classification codes -->    
@@ -757,7 +755,7 @@
 			<Value><Code>101</Code><Text>Teacher</Text></Value>
 			<Value><Code>102</Code><Text>Principal</Text></Value>
 		</Values>
-	</CodeSet>    <!-- Restraint Administered By -->
+	</CodeSet>    <!-- Restraint Administered By Role-->
 
 	<CodeSet>
 		<Intro>
@@ -844,20 +842,7 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Code set denoting the type of individual or group that determined the appeal outcome.</p>
-		</Intro>
-		<ID>Wellbeing Appeal Determination By</ID>
-		<Values>
-			<Value>
-				<Code>99</Code>
-				<Text>Other</Text>
-			</Value>    <!-- Other -->
-		</Values>
-	</CodeSet>    <!-- Wellbeing Appeal Determination By -->
-
-	<CodeSet>
-		<Intro>
-			<p>Code set denoting the severity of the Wellbeing Event. </p>
+			<p>Code set denoting the severity of the Wellbeing Event.</p>
 		</Intro>
 		<ID>Wellbeing Event Severity</ID>
 		<Values>
@@ -867,5 +852,18 @@
 			</Value>    <!-- Other -->
 		</Values>
 	</CodeSet>    <!-- Wellbeing Event Severity -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting type of object or person the student was directing their behaviour at, e.g. Staff Member, Student, Desk, Chair.</p>
+		</Intro>
+		<ID>Behaviour Directed At</ID>
+		<Values>
+			<Value>
+				<Code>101</Code>
+				<Text>Staff</Text>
+			</Value>    <!-- Staff -->
+		</Values>
+	</CodeSet>    <!-- Behaviour Directed At -->
 
 </IncludeGroup>
