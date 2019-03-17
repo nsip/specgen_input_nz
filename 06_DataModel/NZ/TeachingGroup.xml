@@ -8,7 +8,9 @@
       xmlns="http://sifassociation.org/SpecGen">
 
   <Key>RefId</Key>
+
   <EventsReported>true</EventsReported>
+
   <Item>
     <Element>TeachingGroup</Element>
 	  <privacyRating>Medium</privacyRating>
@@ -16,9 +18,10 @@
       <p>Identifies a particular class or other group of students.  Such groups 
         can have multiple staff assigned in a variety of roles, may be assigned students from multiple year levels
         and may be taught multiple courses.
-        </p>
+      </p>
     </Description>
   </Item>
+
   <Item>
     <Element>RefId</Element>
     <Characteristics>M</Characteristics>
@@ -28,6 +31,7 @@
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>       <!-- RefId -->
+
   <Item>
     <Element>LocalId</Element>
     <Characteristics>M</Characteristics>
@@ -37,6 +41,7 @@
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>       <!-- LocalId -->
+
   <Item>
     <Element>ShortName</Element>
     <Characteristics>M</Characteristics>
@@ -46,6 +51,7 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>       <!-- ShortName -->
+
   <Item>
     <Element>LongName</Element>
     <Characteristics>O</Characteristics>
@@ -55,6 +61,7 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>       <!-- LongName -->
+
   <Item>
     <Element>GroupType</Element>
     <Characteristics>O</Characteristics>
@@ -76,6 +83,7 @@
       </Description>
       <Type name="xs:normalizedString"></Type>
     </Item>       <!-- Set -->
+
     <Item>
       <Element>Block</Element>
       <Characteristics>O</Characteristics>
@@ -85,6 +93,7 @@
       </Description>
       <Type name="xs:normalizedString"></Type>
     </Item>       <!-- BLock -->
+
     <Item>
       <Element>CurriculumLevel</Element>
       <Characteristics>O</Characteristics>
@@ -94,48 +103,47 @@
       </Description>
       <Type name="xs:normalizedString"></Type>
     </Item>       <!-- CurriculumLevel -->
+
   </if>
   <Item>
     <Element>ProviderRefId</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>RefId  of the Provider who defines the TeachingGroup. Either ProviderRefId 
-      or ProviderLocalId must be provided.</p>
+      <p>RefId  of the Provider who defines the TeachingGroup. Either ProviderRefId or ProviderLocalId must be provided.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>        <!-- ProviderRefId -->
+
   <Item>
     <Element>ProviderLocalId</Element>
     <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
-      <p>LocalId of the Provider who defines the TeachingGroup. Either ProviderRefId or
-       ProviderLocalId must be provided.</p>
+      <p>LocalId of the Provider who defines the TeachingGroup. Either ProviderRefId or ProviderLocalId must be provided.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>        <!-- ProviderLocalId -->
 
   <Item>
-    <Element>ProviderCourseRefId</Element>
+    <Element>TeachingProviderRefId</Element>
     <Characteristics>O</Characteristics>
-	  <privacyRating>Low</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
-      <p>RefId of the course being taught to the TeachingGroup. Either ProviderCourseRefId or 
-        ProviderCourseLocalId must be provided.</p>
+      <p>RefId of the Provider who actually teaches the TeachingGroup. Only present when the teaching provider is not the defining provider.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>        <!-- ProvderCourseRefId -->
+  </Item>        <!-- ProviderRefId -->
+
   <Item>
-    <Element>ProviderCourseLocalId</Element>
+    <Element>TeachingProviderLocalId</Element>
     <Characteristics>O</Characteristics>
-	  <privacyRating>Low</privacyRating>
+  	<privacyRating>Low</privacyRating>
     <Description>
-      <p>LocalId of the course being taught to the TeachingGroup. Either ProviderCourseRefId or
-         ProviderCourseLocalId must be provided.</p>
+      <p>LocalId of the Provider who actually teaches the TeachingGroup. Only present when the teaching provider is not the defining provider.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>        <!-- ProviderCourseLocalId -->
+  </Item>        <!-- ProviderLocalId -->
 
   <Item>
     <Element>SchoolYear</Element>
@@ -158,6 +166,7 @@
       </Description>
       <Type name="xs:date"></Type>
     </Item>       <!-- BeginDate -->
+
     <Item>
       <Element>EndDate</Element>
       <Characteristics>O</Characteristics>
@@ -168,6 +177,17 @@
       </Description>
       <Type name="xs:date"></Type>
     </Item>       <!-- EndDate -->
+
+    <Item>
+      <Element>TeachingSchedule</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>List of schedule entries recording what ProviderCourses, Learning Areas or Subject Areas are being taught to the TeachingGroup when.</p>
+      </Description>
+      <Type ref="CommonTypes" name="TeachingGroupScheduleListType"></Type>
+    </Item>        <!-- TeachingGroupScheduleList -->
+
   </if>
 
   <if intl="au">
@@ -180,6 +200,7 @@
       </Description>
       <Type ref="CommonTypes" name="RefIdType"></Type>
     </Item>         <!-- TimeTableSubjectRefId -->
+
     <Item>
       <Element>TimeTableSubjectLocalId</Element>
       <Characteristics>O</Characteristics>
@@ -189,6 +210,7 @@
       </Description>
       <Type ref="CommonTypes" name="LocalIdType"></Type>
     </Item>         <!-- TimeTableSubjectLocalID -->
+
     <Item>
       <Element>Semester</Element>
       <Characteristics>O</Characteristics>
@@ -256,6 +278,7 @@
       </Description>
       <Type name='xs:integer'/>
     </Item>        <!-- MinClassSize -->
+
     <Item>
       <Element>MaxClassSize</Element>
       <Characteristics>O</Characteristics>
@@ -265,28 +288,7 @@
       </Description>
       <Type name='xs:integer'/>
     </Item>        <!-- MaxClassSize -->
-    <Item>
-      <Element>TeachingGroupPeriodList</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>A List of schedule information that can be published by an SIS which is a subset of information available in the TimeTableCell object.</p>
-        <p>PeriodId or StartTime must be provided.</p>
-      </Description>
-      <Type ref="CommonTypes" name="TeachingGroupPeriodListType"></Type>
-    </Item>        <!-- TeachingGroupPeriodList -->
-    <Item>
-      <Element>SIF_Metadata</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Medium</privacyRating>
-      <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
-    </Item>        <!-- SIF_Metadata -->
-    <Item>
-      <Element>SIF_ExtendedElements</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Medium</privacyRating>
-      <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
-    </Item>        <!-- SIF_ExtendedElements -->
+
   </if>
 
   <xhtml:Example xmlns="" name="TeachingGroup" intl="au">
@@ -345,16 +347,6 @@
           <Association>Integration Aide</Association>
         </TeachingGroupTeacher>
       </TeacherList>
-      <TeachingGroupPeriodList>
-         <TeachingGroupPeriod>
-			 <DayId>M</DayId>
-			 <PeriodId>2</PeriodId>
-         </TeachingGroupPeriod>
-         <TeachingGroupPeriod>
-			 <DayId>F</DayId>
-			 <PeriodId>6</PeriodId>
-         </TeachingGroupPeriod>
-      </TeachingGroupPeriodList>
     </TeachingGroup>
 
     
@@ -369,8 +361,6 @@
       <GroupType json:force-string="true">2</GroupType>
       <ProviderRefId>64A309DA-063A-2E35-B359-FACEA8C12312</ProviderRefId>
       <ProviderLocalId>234</ProviderLocalId>
-      <ProviderCourseRefId>64A309DA-063A-2E35-B359-DEFACEDA8C31</ProviderCourseRefId>
-      <ProviderCourseLocalId>7ASPN</ProviderCourseLocalId>
       <SchoolYear>2018</SchoolYear>
       <BeginDate>2018-02-04</BeginDate>
       <EndDate>2018-12-05</EndDate>

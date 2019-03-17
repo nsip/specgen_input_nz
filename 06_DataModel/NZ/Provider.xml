@@ -62,7 +62,16 @@
 	  </Description>
 	  <Type ref="CommonTypes" name="SchoolServiceType"/>
   </Item> <!-- SchoolService -->
-    
+  <Item>
+	  	<Element>SchoolProfileNumber</Element>
+		<Characteristics>O</Characteristics>
+	 	<privacyRating>Low</privacyRating>
+	 	<Description>
+			<p>A code assigned by the Ministry of Education to uniquely identify each school.</p>
+		</Description>
+    	<Type name="xs:int"></Type>
+  </Item> <!-- SchoolProfileNumber -->    
+
   <xhtml:Example xmlns="" name="School Provider Example">
     <Provider>
 		<RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>

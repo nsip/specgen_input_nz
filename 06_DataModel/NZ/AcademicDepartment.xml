@@ -1,0 +1,111 @@
+<DataObject name="AcademicDepartment"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:json="http://json.org/"
+
+      xmlns="http://sifassociation.org/SpecGen">
+	
+  <Key>RefId</Key>
+  <EventsReported>true</EventsReported>
+  
+  <Item>
+    <Element>AcademicDepartment</Element>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>
+        Information about an academic department within a provider, e.g. Maths Department.  
+      </p>
+     </Description>
+  </Item>
+
+  <Item>
+    <Element>RefId</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The ID (GUID) assigned to uniquely identify this AcademicDepartment.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>    <!-- RefId -->
+
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The name of the academic department.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- Name -->
+
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Free text description providing more detail about the academic department.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- Description -->
+
+  <Item>
+		<Element>AcademicDepartmentLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A Local Identifier for the Academic Department. It is expected to be unique to the reporting site.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"></Type> 
+	</Item>    <!-- AcademicDepartmentLocalId -->
+
+  <Item>
+    <Element>ProviderRefId</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The ID (GUID) of the provider for this acadmic department resides in.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>    <!-- ProviderRefId -->
+
+  <Item>
+    <Element>StaffList</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the staff members that belong to the academic department.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StaffListType"></Type>
+  </Item>    <!-- StaffList -->
+
+  <Item>
+    <Element>CourseList</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the courses the academic department manages.</p>
+    </Description>
+    <Type ref="CommonTypes" name="CourseListType"></Type>
+  </Item>    <!-- CourseList -->
+
+  <Item>
+    <Element>SubjectAreaList</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the subject areas the academic department manages.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SubjectAreaListType"></Type>
+  </Item>    <!-- SubjectAreaList -->
+
+  <xhtml:Example xmlns="" name="AcademicDepartment">
+    <AcademicDepartment>
+      <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+      <Name>Science Department</Name>
+      <ProviderRefId>CA285746-359D-7510-1A8C-36432A901A16</ProviderRefId>
+    </AcademicDepartment>
+  </xhtml:Example>
+
+</DataObject>

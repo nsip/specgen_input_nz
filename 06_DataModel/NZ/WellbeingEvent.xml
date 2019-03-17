@@ -6,12 +6,12 @@
         
             xmlns="http://sifassociation.org/SpecGen">
 
-  <Key>@RefId</Key>
+  <Key>RefId</Key>
   
   <EventsReported>true</EventsReported>
   <Item>
     <Element>WellbeingEvent</Element>
-	<privacyRating>High</privacyRating>
+	  <privacyRating>High</privacyRating>
     <Description>
       <p>Record of an event happening that impacts on a school's duty of care to its students.
 					The event records both 'positive' and 'negative' behaviours and is not just the recording
@@ -20,220 +20,233 @@
   </Item>
 
   <Item>
-    <Attribute>RefId</Attribute>
+    <Element>RefId</Element>
     <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
+  	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this WellbeingEvent.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>
+  </Item>    <!-- RefId -->
+
   <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>M</Characteristics>
-	<privacyRating>High</privacyRating>
+  	<privacyRating>High</privacyRating>
     <Description>
       <p>The ID (GUID) of the student to whom this WellbeingEvent belongs.</p>
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>
+  </Item>    <!-- StudentPersonalRefId -->
+
   <Item>
-    <Element>SchoolInfoRefId</Element>
+    <Element>ReportingProviderRefId</Element>
     <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
+	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>The ID (GUID) of the school for which this WellbeingEvent is being reported.</p>
+      <p>The ID (GUID) of the provider for which this WellbeingEvent is being reported.</p>
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>
+  </Item>    <!-- ReportingProviderRefId -->
   
   <Item>
-		<Element>EventId</Element>
+		<Element>WellbeingEventLocalId</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>A Local Identifier for the Event. It is expected to be unique to the reporting site.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-  </Item> 
+  </Item>    <!-- WellbeingEventLocalId -->
+
+  <Item>
+    <Element>PhysicalRestraintRefId</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>  The ID (GUID) of the StudentPhysicalRestraint if it was administered to the student as part of this WellbeingEvent.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>    <!-- PhysicalRestraintRefId -->
    
   <Item>
-    <Element>WellbeingEventNotes</Element>
+    <Element>EventNotes</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
+  	<privacyRating>High</privacyRating>
     <Description>
       <p>Text relating to the particular WellbeingEvent.</p>
     </Description>
-    <Type name="xs:string"></Type>
-  </Item>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- EventNotes -->
+
+  <Item>
+    <Element>PossibleMotivation</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>The possible motivation that triggered the event.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- PossibleMotivation -->
   
   <Item>
-    <Element>WellbeingEventCategoryClass</Element>
+    <Element>EventCategoryClass</Element>
     <Characteristics>M</Characteristics>
-	<privacyRating>High</privacyRating>
+  	<privacyRating>High</privacyRating>
     <Description>
       <p>Category of WellbeingEvent.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsWellbeingEventCategoryClassType"></Type>
-  </Item>
+  </Item>    <!-- EventCategoryClass -->
     
   <Item>
-    <Element>WellbeingEventCategoryList</Element>
+    <Element>EventCategoryList</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
+  	<privacyRating>High</privacyRating>
     <Description>
       <p>List of Categories of WellbeingEvent.</p>
     </Description>
-    <!-- Eventually to be a Code Set - needs to be further defined.
-    <Type ref="CodeSets" name="NZCodeSetsWellbeingEventCategoryType"></Type>
-    -->
     <Type ref="CommonTypes" name="WellbeingEventCategoryListType"></Type>
-  </Item>
-  
- 
+  </Item>    <!-- EventCategoryList -->
+      
+  <Item>
+    <Element>Severity</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>The severity of the Wellbeing Event.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsWellbeingEventSeverityType"></Type>
+  </Item>    <!-- Severity -->
   
   <Item>
     <Element>ReportingStaffRefId</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>Low</privacyRating>
+	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the staff member who logged the Wellbeing Event record.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>    <!-- ReportingStaffRefId -->
   
   <Item>
-    <Element>LocationDescription</Element>
+    <Element>EventLocationDescription</Element>
     <Characteristics>O</Characteristics>
 	  <privacyRating>Medium</privacyRating>
     <Description>
       <p>Details of Event Location.</p>
     </Description>
      <Type name="xs:normalizedString"></Type>
-  </Item>
+  </Item>    <!-- EventLocationDescription -->
 
   <Item>
-    <Element>WellbeingEventCreationTimeStamp</Element>
+    <Element>EventCreationTimeStamp</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>Low</privacyRating>
+  	<privacyRating>Low</privacyRating>
     <Description>
       <p>Date and time of the WellbeingEvent record creation.</p>
     </Description>
     <Type name="xs:dateTime"></Type>
-  </Item>  
+  </Item>    <!-- EventCreationTimeStamp -->  
   
   <Item>
-    <Element>WellbeingEventDate</Element>
+    <Element>EventDate</Element>
     <Characteristics>M</Characteristics>
-	<privacyRating>High</privacyRating>
+	  <privacyRating>High</privacyRating>
     <Description>
       <p>The calendar date on which this WellbeingEvent occured.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>
+  </Item>    <!-- EventDate -->
     
   <Item>
-    <Element>WellbeingEventTime</Element>
+    <Element>EventTime</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
+  	<privacyRating>High</privacyRating>
     <Description>
       <p>The time when WellbeingEvent occured.</p>
     </Description>
     <Type name="xs:time"></Type>
-  </Item>
+  </Item>    <!-- EventTime -->
   
   <Item>
-    <Element>WellbeingEventDescription</Element>
+    <Element>EventDescription</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
+  	<privacyRating>High</privacyRating>
     <Description>
       <p>A description of the WellbeingEvent.</p>
     </Description>
-    <Type name="xs:string"></Type>
-  </Item>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- EventDescription -->
 
   <Item>
-    <Element>WellbeingEventTimePeriod</Element>
+    <Element>EventTimePeriod</Element>
     <Characteristics>M</Characteristics>
-	<privacyRating>High</privacyRating>
+  	<privacyRating>High</privacyRating>
     <Description>
       <p>Time period of when the event occurred.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsWellbeingEventTimePeriodType"></Type>
-  </Item>  
+  </Item>    <!-- EventTimePeriod -->  
 
   <Item>
     <Element>ConfidentialFlag</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
+	  <privacyRating>High</privacyRating>
     <Description>
       <p>Flag indicating if the incident is confidential or not.  If ‘Y’ should not be shared with any other system/school.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>  
+  </Item>    <!-- ConfidentialFlag -->  
   
   <Item>
     <Element>PersonInvolvementList</Element>
     <Characteristics>C</Characteristics>
-	<privacyRating>High</privacyRating>
+  	<privacyRating>High</privacyRating>
     <Description>
       <p>List of People involved in the Wellbeing event.  Mandatory if more people than the student to which this event occurs is involved.</p>
     </Description>
      <Type ref="CommonTypes" name="PersonInvolvementListType"></Type>
-  </Item>
+  </Item>    <!-- PersonInvolvementList -->
   
   <Item>
-    <Element>FollowUpActionList</Element>
-    <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
-    <Description>
-      <p>List of Actions where an action resulted and is known – maybe just a link to a WellbeingResponse Object</p>
-    </Description>
-     <Type ref="CommonTypes" name="FollowUpActionListType"></Type>
-  </Item>
-  
-  <Item>
-  	   	<Element>Status</Element>
+   	<Element>Status</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
 		<Description>
 		  <p>Current Status.</p>
 		</Description>
 		<Type ref="CodeSets" name="NZCodeSetsWellbeingStatusType"/>
-  	</Item>
+  </Item>    <!-- Status -->
 
   <Item>
     <Element>DocumentList</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
+	  <privacyRating>High</privacyRating>
     <Description>
       <p>Describes the Location of any associated documents kept in relation to this Response.</p>
     </Description>
-     <Type ref="CommonTypes" name="WellbeingDocumentListType"></Type>
-  </Item>
+     <Type ref="CommonTypes" name="DocumentListType"></Type>
+  </Item>    <!-- DocumentList -->
 
-<if intl="au">  
   <Item>
-    <Element>SIF_Metadata</Element>
+    <Element>RelatedWellbeingEventList</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
-  </Item>    <!-- SIF_Metadata -->
-  <Item>
-    <Element>SIF_ExtendedElements</Element>
-    <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
-  </Item>    <!-- SIF_ExtendedElement -->
-</if>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A Wellbeing Event gets created for every student involved in an event. This list links together all related Wellbeing Events.</p>
+    </Description>
+     <Type ref="CommonTypes" name="RelatedWellbeingEventListType"></Type>
+  </Item>    <!-- RelatedWellbeingEventList -->
 
   <xhtml:Example xmlns="" name="WellbeingEvent">
-    <WellbeingEvent RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
+    <WellbeingEvent> 
+      <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
       <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
-      <SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>
-      <WellbeingEventCategoryClass>P</WellbeingEventCategoryClass>
-      <WellbeingEventDate>2017-11-01</WellbeingEventDate>
-      <WellbeingEventTimePeriod>AM</WellbeingEventTimePeriod>
+      <ReportingProviderRefId>CA285746-359D-7510-1A8C-36432A901A16</ReportingProviderRefId>
+      <EventCategoryClass>P</EventCategoryClass>
+      <EventDate>2017-11-01</EventDate>
+      <EventTimePeriod>AM</EventTimePeriod>
     </WellbeingEvent>
 
   </xhtml:Example>

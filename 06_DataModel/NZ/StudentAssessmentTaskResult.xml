@@ -1,4 +1,4 @@
-<DataObject name="AssessmentTaskResult"
+<DataObject name="StudentAssessmentTaskResult"
 			xmlns:xs="http://www.w3.org/2001/XMLSchema"
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -10,7 +10,7 @@
   <Key>RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
-    <Element>AssessmentTaskResult</Element>
+    <Element>StudentAssessmentTaskResult</Element>
 	  <privacyRating>High</privacyRating>
     <Description>
       <p>Records the result achieved by a single student at a particular assessment task.</p>
@@ -29,15 +29,14 @@
 
   <if intl="nz">  
     <Item>
-      <Element>AssessmentTaskRefId</Element>
+      <Element>AssessmentTask</Element>
       <Characteristics>M</Characteristics>
       <privacyRating>Low</privacyRating>
       <Description>
-        <p>The Id (GUID) for the AssessmentTask data object that the assessment result belongs to.</p>
+        <p>The AssessmentTask data object that the assessment result belongs to.</p>
       </Description>
-      <Type ref="CommonTypes" name="IdRefType"></Type>
-    </Item>    <!-- AssessmentTaskRefId -->
-
+      <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    </Item>    <!-- AssessmentTask -->
     <Item>
       <Element>AssessmentType</Element>
       <Characteristics>M</Characteristics>
@@ -144,13 +143,13 @@
 
     <!-- Classifiers for the Assessment Task (and result) -->
     <Item>
-      <Element>ProviderCourseRefId</Element>
+      <Element>ProviderCourse</Element>
       <Characteristics>O</Characteristics>
       <privacyRating>Low</privacyRating>
       <Description>
-        <p>The Id (GUID) that uniquely identifies the ProviderCourse that this assessment task belongs to.</p>
+        <p>The ProviderCourse that this assessment task belongs to.</p>
       </Description>
-      <Type ref="CommonTypes" name="IdRefType"/>
+      <Type ref="CommonTypes" name="ObjectReferenceType"/>
     </Item>    <!-- ProviderCourseRefId -->
     <Item>
       <Element>SubjectArea</Element>
@@ -162,15 +161,50 @@
       <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"></Type>
     </Item>    <!-- SubjectArea -->
     <Item>
-      <Element>YearLevel</Element>
+      <Element>StudentYearLevel</Element>
       <Characteristics>O</Characteristics>
       <privacyRating>Low</privacyRating>
       <Description>
         <p>Code denoting the Year Level of the Assessment Task the result is for.</p>
       </Description>
       <Type ref="CodeSets" name="NZCodeSetsYearLevelCodeType"/>
-    </Item>    <!-- YearLevel -->
-
+    </Item>    <!-- StudentYearLevel -->
+    <Item>
+      <Element>Curriculum</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Code denoting the Year Level of the Assessment Task the result is for.</p>
+      </Description>
+      <Type ref="CodeSets" name="NZCodeSetsCurriculum"/>
+    </Item>    <!-- Curriculum -->   
+    <Item>
+      <Element>AssessmentTool</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The type of assessment tool used for the assessment task.</p>
+      </Description>
+      <Type ref="CodeSets" name="NZCodeSetsAssessmentToolType"/>
+    </Item>    <!-- AssessmentTool -->
+    <Item>
+      <Element>Timeframe</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The timeframe of the assessment, e.g. Mid-Year, End of Year.</p>
+      </Description>
+      <Type ref="CodeSets" name="NZCodeSetsAssessmentTimeframeType"/>
+    </Item>    <!-- Timeframe -->
+    <Item>
+      <Element>AchievementAttempt</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The attempt number the student is making to pass this assessment, e.g. is it their first or second attempt.</p>
+      </Description>
+      <Type name="xs:integer"/>
+    </Item>    <!-- AchievementAttempt -->
 
     <!-- Score, Dates, etc... -->
     <Item>
@@ -200,6 +234,15 @@
       </Description>
       <Type name="xs:date"></Type>
     </Item>    <!-- DateStudentNotified -->
+    <Item>
+      <Element>PublishedDate</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The date the assessment task result was first published in a report.</p>
+      </Description>
+      <Type name="xs:date"></Type>
+    </Item>    <!-- PublishedDate -->
     <Item>
       <Element>Iteration</Element>
       <Characteristics>O</Characteristics>
@@ -237,6 +280,33 @@
       </Description>
       <Type name="xs:normalizedString"></Type>
     </Item>    <!-- FinalMarkValue -->
+    <Item>
+      <Element>EffortComment</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Free text comment about the effort the student made for the assessment.</p>
+      </Description>
+      <Type name="xs:normalizedString"></Type>
+    </Item>    <!-- EffortComment -->
+    <Item>
+      <Element>OtherComment</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Free text comments providing additional information for the students assessment result.</p>
+      </Description>
+      <Type name="xs:normalizedString"></Type>
+    </Item>    <!-- OtherComment -->
+    <Item>
+      <Element>DocumentList</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>List which describes the meta-data for, and the Location of any associated documents.</p>
+      </Description>
+      <Type ref="CommonTypes" name="DocumentListType"></Type>
+    </Item>    <!-- DocumentList -->
   </if>
 
   <if intl="au">
@@ -310,7 +380,7 @@
       <Description>
         <p>Teacher judgement associated with the score.</p>
       </Description>
-      <Type name="xs:string"></Type>
+      <Type name="xs:normalizedString"></Type>
     </Item>    <!-- TeacherJudgement -->
     <Item>
       <Element>MarkInfoRefId</Element>
@@ -343,8 +413,8 @@
     </GradingAssignmentScore>
   </xhtml:Example>
 
-  <xhtml:Example xmlns="" name="Assessment Task Result - PAT Example" intl="nz">
-      <AssessmentTaskResult>
+  <xhtml:Example xmlns="" name="Student Assessment Task Result - PAT Example" intl="nz">
+      <StudentAssessmentTaskResult>
         <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
         <StudentPersonalRefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</StudentPersonalRefId>
         <ProviderInvolvedList>
@@ -377,11 +447,11 @@
             <ScoreValue>4</ScoreValue>
           </ResultScore>				
         </ResultScoreList>
-      </AssessmentTaskResult>
+      </StudentAssessmentTaskResult>
   </xhtml:Example>
 		  
-  <xhtml:Example xmlns="" name="Assessment Task Result - asTTle Example" intl="nz">
-      <AssessmentTaskResult>
+  <xhtml:Example xmlns="" name="Student Assessment Task Result - asTTle Example" intl="nz">
+      <StudentAssessmentTaskResult>
         <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
         <StudentPersonalRefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</StudentPersonalRefId>
         <ProviderInvolvedList>
@@ -414,6 +484,6 @@
             <ScoreValue>5B</ScoreValue>
           </ResultScore>
         </ResultScoreList>
-      </AssessmentTaskResult>
+      </StudentAssessmentTaskResult>
     </xhtml:Example>
 </DataObject>

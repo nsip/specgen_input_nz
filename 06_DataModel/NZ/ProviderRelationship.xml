@@ -132,4 +132,13 @@
     </Description>
     <Type ref="CommonTypes" name="SubjectAreaListType"/>
   </Item>  <!-- YearLevelList -->
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Free text description providing more detail about the provider relationship.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>  <!-- Description -->
   </DataObject>

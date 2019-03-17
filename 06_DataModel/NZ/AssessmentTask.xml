@@ -194,17 +194,7 @@
     <Type name="xs:anyURI"></Type>
   </Item>    <!-- DetailedDescriptionURL -->
 
-  <Item>
-    <Element>DetailedDescriptionBinary</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The Base64 encoding of a document (e.g. PDF) describing the assignment.</p>
-    </Description>
-    <Type name="xs:base64Binary"></Type>
-  </Item>    <!-- DetailedDescriptionBinary -->
-
-  <Item>
+   <Item>
     <Element>AssessmentType</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -225,6 +215,35 @@
   </Item>    <!-- LevelAssessed -->
 
   <if intl="nz">
+    <Item>
+      <Element>FormativeIndicator</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Indicates whether or not this is a formative assessment task.</p>
+      </Description>
+      <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+    </Item>    <!-- FormativeIndicator -->  
+    <Item>
+      <Element>SummativeIndicator</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Indicates whether or not this is a summative assessment task.</p>
+      </Description>
+      <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+    </Item>    <!-- SummativeIndicator -->  
+
+    <Item>
+      <Element>AssessmentTool</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The type of assessment tool used for the assessment task.</p>
+      </Description>
+      <Type ref="CodeSets" name="NZCodeSetsAssessmentToolType"/>
+    </Item>    <!-- AssessmentTool -->
+
     <Item>
       <Element>AssessmentPurpose</Element>
       <Characteristics>O</Characteristics>
@@ -326,6 +345,17 @@
       </Description>
       <Type ref="CommonTypes" name="SpecialAssessmentConditionListType"></Type>
     </Item>    <!-- SpecialAssessmentConditionExclusionList -->
+
+    <Item>
+      <Element>Timeframe</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The timeframe of the assessment, e.g. Mid-Year, End of Year.</p>
+      </Description>
+      <Type ref="CodeSets" name="NZCodeSetsAssessmentTimeframeType"/>
+    </Item>    <!-- Timeframe -->
+
   </if>
 
   <xhtml:Example xmlns="" name="GradingAssignment" intl="au">

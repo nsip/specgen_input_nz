@@ -129,6 +129,16 @@
   </Item>    <!-- AssessmentType -->
 
   <Item>
+    <Element>AchievementAttempt</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The attempt number the student is making to pass this assessment, e.g. is it their first, second attempt.</p>
+    </Description>
+    <Type name="xs:int"></Type>
+  </Item>    <!-- AchievementAttempt -->
+
+  <Item>
     <Element>SubjectArea</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>

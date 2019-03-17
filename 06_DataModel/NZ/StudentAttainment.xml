@@ -127,6 +127,16 @@
     <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
   </Item>    <!-- SubjectArea -->
 
+  <Item>
+    <Element>NCEAEndorsementLevel</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The NCEA endorsement level that was attained by the student.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsNCEAEndorsementLevelType"/>
+  </Item>    <!-- NCEAEndorsementLevel -->
+
   <xhtml:Example xmlns="" name="Student Attainment - NCEA Course Endorsement">
     <StudentAttainment>
       <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>

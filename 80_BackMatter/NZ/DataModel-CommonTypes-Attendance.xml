@@ -203,25 +203,20 @@
 		<xhtml:Example xmlns="" name="Period Attendance List Example" intl="nz">
 			<PeriodAttendances>
 				<PeriodAttendance>
-					<AttendanceType>Swipe Cards</AttendanceType>
 					<AttendanceCode>E</AttendanceCode>
 					<AttendanceStatus>01</AttendanceStatus>
-					<TimetableId>TT018-04</TimetableId>
 					<TimetableDayId json:force-string="true">4</TimetableDayId>
 					<TimetablePeriodId>4D</TimetablePeriodId>
-					<DayId>118</DayId>
 					<StartTime>09:00:00</StartTime>
 					<EndTime>09:40:00</EndTime>
 					<AttendanceNote>Explained absence, but unjustified.</AttendanceNote>
 				</PeriodAttendance>
 				<PeriodAttendance>
-					<AttendanceType>Swipe Cards</AttendanceType>
 					<AttendanceCode>E</AttendanceCode>
 					<AttendanceStatus>01</AttendanceStatus>
-					<DayId>118</DayId>
 					<StartTime>09:45:00</StartTime>
 					<EndTime>10:30:00</EndTime>
-					<TimeIn>09:58:00</TimeIn>
+					<StudentTimeIn>09:58:00</StudentTimeIn>
 					<SubjectAreaList json:force-array="true">
 						<SubjectArea json:force-string="true">3</SubjectArea>
 					</SubjectAreaList>
@@ -247,14 +242,6 @@
 				<p>This container type allows recording of period level attendance for a student.</p>
 			</Description>
 		</Item>
-		<Item>
-			<Element>AttendanceType</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Nature of the attendance e.g. 'Taken at Roll Call'</p>
-			</Description>
-			<Type name="xs:string"/>
-		</Item>		<!-- AttendanceType -->
 		<Item>
 			<Element>AttendanceCode</Element>
 			<Characteristics>M</Characteristics>
@@ -286,22 +273,6 @@
 				<Type name="xs:date"></Type>
 			</Item>		<!-- Date -->
 		</if>
-		<Item>
-			<Element>SessionInfoRefId</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The GUID of the session that this attendance applies to.</p>
-			</Description>
-			<Type ref="CommonTypes" name="IdRefType"></Type>
-		</Item>		<!-- SessionInfoRefId -->
-		<Item>
-			<Element>ScheduledActivityRefId</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The GUID of the ScheduledActivity Object attendance applies to.</p>
-			</Description>
-			<Type ref="CommonTypes" name="IdRefType"></Type>
-		</Item>		<!-- ScheduledActivityRefId -->
 		<if intl="au">
 			<Item>
 				<Element>TimetablePeriod</Element>
@@ -313,14 +284,6 @@
 			</Item>		<!-- TimetablePeriod -->
 		</if>
 		<if intl="nz">
-			<Item>
-				<Element>TimetableId</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>LocalId for the timetable being used upon the day within which attendance is being reported, e.g. "TT2018-04".</p>
-				</Description>
-				<Type ref="CommonTypes" name="LocalIdType"/>
-			</Item>		<!-- TimetableId -->
 			<Item>
 				<Element>TimetableDayId</Element>
 				<Characteristics>O</Characteristics>
@@ -339,14 +302,6 @@
 			</Item>		<!-- TimetablePeriodId -->
 		</if>
 		<Item>
-			<Element>DayId</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Day Id.</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"></Type>
-		</Item>		<!-- DayId -->
-		<Item>
 			<Element>StartTime</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
@@ -363,21 +318,21 @@
 			<Type name="xs:time"></Type>
 		</Item>		<!-- EndTime -->
 		<Item>
-			<Element>TimeIn</Element>
+			<Element>StudentTimeIn</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The time the student entered or returned to this class.</p>
 			</Description>
 			<Type name="xs:time"></Type>
-		</Item>		<!-- TimeIn -->
+		</Item>		<!-- StudentTimeIn -->
 		<Item>
-			<Element>TimeOut</Element>
+			<Element>StudentTimeOut</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The time the student left this class.</p>
 			</Description>
 			<Type name="xs:time"></Type>
-		</Item>		<!-- TimeOut -->
+		</Item>		<!-- StudentTimeOut -->
 
 		<if intl="au">
 			<Item>
@@ -396,6 +351,46 @@
 				</Description>
 				<Type ref="CommonTypes" name="IdRefType"/>
 			</Item>		    <!-- TimeTableSubjectRefId -->
+			<Item>
+				<Element>SessionInfoRefId</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>The GUID of the session that this attendance applies to.</p>
+				</Description>
+				<Type ref="CommonTypes" name="IdRefType"/>
+			</Item>		    <!-- SessionInfoRefId -->
+			<Item>
+				<Element>ScheduledActivityRefId</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>The GUID of the ScheduledActivity Object the attendance applies to.</p>
+				</Description>
+				<Type ref="CommonTypes" name="IdRefType"/>
+			</Item>		    <!-- ScheduledActivityRefId -->
+			<Item>
+				<Element>DayId</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>Day Id.</p>
+				</Description>
+				<Type ref="CommonTypes" name="LocalIdType"/>
+			</Item>		    <!-- DayId -->
+			<Item>
+				<Element>TimetableId</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>LocalId for the timetable being used upon the day within which attendance is being reported, e.g. "TT2018-04".</p>
+				</Description>
+				<Type ref="CommonTypes" name="LocalIdType"/>
+			</Item>		    <!-- TimetableId -->
+			<Item>
+				<Element>AttendanceType</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>Nature of the attendance, e.g. "Taken at Roll Call".</p>
+				</Description>
+				<Type name="xs:string"/>
+			</Item>		    <!-- AttendanceType -->
 		</if>
 		<if intl="nz">
 			<Item>
@@ -436,6 +431,14 @@
 			</Description>
 			<Type name="xs:normalizedString"/>
 		</Item>		        <!-- AttendanceNote -->
+		<Item>
+			<Element>PeriodNumber</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The period number of this curriculum session.</p>
+			</Description>
+			<Type name="xs:int"/>
+		</Item>		        <!-- AttendanceNote -->
 
 		<xhtml:Example xmlns="" name="Period Attendance Example" intl="au">
 			<PeriodAttendance>
@@ -453,13 +456,10 @@
 		</xhtml:Example>
 		<xhtml:Example xmlns="" name="Period Attendance Example (Absence)" intl="nz">
 			<PeriodAttendance>
-				<AttendanceType>Swipe Cards</AttendanceType>
 				<AttendanceCode>E</AttendanceCode>
 				<AttendanceStatus>01</AttendanceStatus>
-				<TimetableId>TT018-04</TimetableId>
 				<TimetableDayId json:force-string="true">4</TimetableDayId>
 				<TimetablePeriodId>4D</TimetablePeriodId>
-				<DayId>118</DayId>
 				<StartTime>09:00:00</StartTime>
 				<EndTime>09:50:00</EndTime>
 				<SubjectAreaList json:force-array="true">
@@ -479,16 +479,13 @@
 		</xhtml:Example>
 		<xhtml:Example xmlns="" name="Period Attendance Example (Late)" intl="nz">
 			<PeriodAttendance>
-				<AttendanceType>Swipe Cards</AttendanceType>
 				<AttendanceCode>E</AttendanceCode>
 				<AttendanceStatus>01</AttendanceStatus>
-				<TimetableId>TT018-04</TimetableId>
 				<TimetableDayId json:force-string="true">4</TimetableDayId>
 				<TimetablePeriodId>4E</TimetablePeriodId>
-				<DayId>118</DayId>
 				<StartTime>09:00:00</StartTime>
 				<EndTime>09:50:00</EndTime>
-				<TimeIn>09:35:00</TimeIn>
+				<StudentTimeIn>09:35:00</StudentTimeIn>
 				<SubjectAreaList json:force-array="true">
 					<SubjectArea json:force-string="true">3</SubjectArea>
 				</SubjectAreaList>

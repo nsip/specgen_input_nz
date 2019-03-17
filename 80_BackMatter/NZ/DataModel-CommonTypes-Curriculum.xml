@@ -112,27 +112,27 @@
 		<Item>
 			<Element>LanguageOfInstructionListType</Element>
 			<Description>
-				<p>A list of tuples recording the number of hours per week that a Student, Course or TeachingGroup
-				is taught in one or more languages.
-				</p>
+				<p>Records the number of hours per week the Learner is taught in each language.</p>
 			</Description>
 			<List mode="List"/>
 		</Item>
 		<Item>
 			<Element>Language</Element>
 			<Characteristics>OR</Characteristics>
-			<Description/>
+			<Description>
+				<p>The number of hours per week the Learner is taught in a specific language during the enrolment.</p>
+			</Description>
 			<Type ref="CommonData" name="LanguageOfInstructionType"/>
 		</Item>
 		<xhtml:Example xmlns="" name="LanguageOfInstructionList Example">
 			<LanguageOfInstructionList>
 				<Language>
 					<Code>16110</Code>
-					<HoursPerWeek>20.5</HoursPerWeek>
+					<Level>99</Level>
 				</Language>
 				<Language>
 					<Code>01112</Code>
-					<HoursPerWeek>9.5</HoursPerWeek>
+					<Level>99</Level>
 				</Language>
 			</LanguageOfInstructionList>
 		</xhtml:Example>
@@ -144,29 +144,29 @@
 			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
-				<p>How many hours (per week) is a Student, Course or TeachingGroup taught in the given language?</p>
+				<p>The number of hours per week the Learner is taught in a specific language during the enrolment.</p>
 			</Description>
 		</Item>
 		<Item>
 			<Element>Code</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
-				<p>The code representing the specific language that an individual uses to communicate.�</p>
+				<p>Code denoting the actual language of instruction.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
 		</Item>    <!-- Code -->
 		<Item>
-			<Element>HoursPerWeek</Element>
+			<Element>Level</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
-				<p>The number of hours per week the Student, Course or TeachingGroup is taught in the nominated language.</p>
+				<p>The level of instruction that is made in the selected language.</p>
 			</Description>
 			<Type name="xs:decimal"/>
-		</Item>    <!-- HoursPerWeek -->
+		</Item>    <!-- Level -->
 		<xhtml:Example xmlns="" name="LanguageOfInstruction Example">
 			<LanguageOfInstruction>
 				<Code>01112</Code>
-				<HoursPerWeek>5.75</HoursPerWeek>
+				<Level>101</Level>
 			</LanguageOfInstruction>
 		</xhtml:Example>
 	</CommonElement>
@@ -230,4 +230,37 @@
 			<Type ref="NZCodeSets" name="NZCodeSetsLearningStandardRelationshipTypeType"/>
 		</Item>   <!-- Relationship -->
 	</CommonElement>	
+
+	<CommonElement name="CourseListType" type="true" dm="true">
+		<Item>
+			<Element>CourseListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of associated courses.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Course</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>An associated course.</Description>
+			<Type ref="CommonTypes" name="CourseType"/>
+		</Item>    <!-- Course -->
+	</CommonElement>	
+	<CommonElement name="CourseType" type="true" dm="true">
+		<Item>
+			<Element>CourseType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>An associated course.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>CourseDetail</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>Relevant detail about the associated course.</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>    <!-- CourseDetail -->
+	</CommonElement>	
+
 </IncludeGroup>

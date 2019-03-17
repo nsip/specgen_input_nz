@@ -164,4 +164,42 @@
 			</Value>    <!-- Special Paper -->
 		</Values>
 	</CodeSet>    <!-- Special Assessment Conditions -->
+
+	<CodeSet>
+		<Intro>
+			<p>The type of assessment tool used for the assessment task.</p>
+		</Intro>
+		<ID>Assessment Tool</ID>
+		<Values>
+			<Value>
+				<Code>99</Code>
+				<Text>Other</Text>
+			</Value>    <!-- Other -->
+		</Values>
+	</CodeSet>    <!-- Assessment Tool -->
+
+	<CodeSet>
+		<Intro>
+			<p>The timeframe of the assessment, e.g. Mid-Year, End of Year.</p>
+		</Intro>
+		<ID>Assessment Timeframe</ID>
+		<Values>
+			<Value>
+				<Code>99</Code>
+				<Text>Other</Text>
+			</Value>    <!-- Other -->
+		</Values>
+	</CodeSet>    <!-- Assessment Timeframe -->
+
+	<CodeSet>
+		<Intro>
+			<p>The NCEA Endorsement Levels that can be attained by a student.</p>
+		</Intro>
+		<ID>NCEA Endorsement Level</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Excellence</Text></Value>
+			<Value><Code>102</Code><Text>Merit</Text></Value>
+		</Values>
+	</CodeSet>    <!-- NCEA Endorsement Level -->
+
 </IncludeGroup>

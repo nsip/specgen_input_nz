@@ -487,4 +487,64 @@
 		</Values>
 	</CodeSet>    <!-- Exchange Scheme -->
 
+	<CodeSet>
+		<Intro>
+			<p>The post school activity the student is moving on to once they have exited the school.</p>
+		</Intro>
+		<ID>Post School Activity</ID>
+		<Values>
+			<Value>
+				<Code>99</Code>
+				<Text>Other</Text>
+			</Value>    <!-- Other -->
+		</Values>
+	</CodeSet>    <!-- Post School Activity -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting what the student is consenting or not consenting to.</p>
+		</Intro>
+		<ID>Student Consent To</ID>
+		<Values>
+			<Value>
+				<Code>101</Code>
+				<Text>Share Photos</Text>
+			</Value>    <!-- Share Photos -->
+			<Value>
+				<Code>102</Code>
+				<Text>Share Art</Text>
+			</Value>    <!-- Share Art -->
+			<Value>
+				<Code>102</Code>
+				<Text>Share Writing</Text>
+			</Value>    <!-- Share Writing -->
+		</Values>
+	</CodeSet>    <!-- Student Consent To -->
+
+	<CodeSet>
+		<Intro>
+			<p>The type of co-enrolment.</p>
+		</Intro>
+		<ID>CoEnrolment Type</ID>
+		<Values>
+			<Value>
+				<Code>99</Code>
+				<Text>Other</Text>
+			</Value>    <!-- Other -->
+		</Values>
+	</CodeSet>    <!-- CoEnrolment Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>The type of early childhood education the student received.</p>
+		</Intro>
+		<ID>Early Childhood Education Type</ID>
+		<Values>
+			<Value>
+				<Code>99</Code>
+				<Text>Other</Text>
+			</Value>    <!-- Other -->
+		</Values>
+	</CodeSet>    <!-- Early Childhood Education Type -->
+
 </IncludeGroup>

@@ -118,6 +118,14 @@
 			<Type ref="CommonTypes" name="EarlyChildhoodEnrolmentType"></Type>
 		</Item>    <!-- EarlyChildhoodEnrolment -->
 		<Item>
+			<Element>EarlyChildhoodEducation</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>The type of early childhood education the student received before enrolling in their first school.</p></Description>
+			<Type ref="CommonTypes" name="EarlyChildhoodEducationType"></Type>
+		</Item>    <!-- EarlyChildhoodEnrolment -->
+		<Item>
 			<Element>SchoolEnrolmentList</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
@@ -125,6 +133,16 @@
 				<p>Properties of an enrolment in a school</p></Description>
 			<Type ref="CommonTypes" name="StudentSchoolEnrolmentListType"></Type>
 		</Item>    <!-- SchoolEnrolmentList -->
+
+		<Item>
+			<Element>Exit</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Details of the reasons, and interventions leading up to the student's enrolment being terminated.</p>
+			</Description>
+			<Type ref="CommonData" name="EnrolmentExitType"/>
+		</Item>		<!-- Exit -->
 	</if>		
 	<if intl="au">
 		<Item>
@@ -482,7 +500,7 @@
 		</Item>    <!-- SIF_ExtendedElements -->
 	</if>
 
-	<xhtml:Example xmlns="" name="Completed International Student School Enrollment">
+	<xhtml:Example xmlns="" name="Completed International Student School Enrolment">
 		<StudentProviderEnrolment>
 			<RefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</RefId>
 			<LocalId>2004H102</LocalId>
@@ -492,7 +510,7 @@
 			<Status>5</Status>
 			<SchoolEnrolmentList>
 				<SchoolEnrolment>
-					<SchoolYear>2018</SchoolYear>
+					<SchoolCalendarYear>2018</SchoolCalendarYear>
 					<MembershipType>01</MembershipType>
 					<YearLevel>11</YearLevel>
 					<EligibilityCriteria json:force-string="true">4</EligibilityCriteria>
@@ -514,16 +532,12 @@
 						<NZArrivalDate>2018-05-02</NZArrivalDate>
 						<ExchangeScheme>9</ExchangeScheme>
 					</InternationalEnrolment>
-					<Exit>
-						<Reason>O</Reason>
-						<InterventionList/>
-					</Exit>
 				</SchoolEnrolment>
 			</SchoolEnrolmentList>
 		</StudentProviderEnrolment>
 	</xhtml:Example>
 	
-	<xhtml:Example xmlns="" name="Multiple Years, Regular Student School Enrollment">
+	<xhtml:Example xmlns="" name="Multiple Years, Regular Student School Enrolment">
 		<StudentProviderEnrolment>
 			<RefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</RefId>
 			<LocalId>2004H102</LocalId>
@@ -533,7 +547,7 @@
 			<Status>4</Status>
 			<SchoolEnrolmentList>
 				<SchoolEnrolment>
-					<SchoolYear>2017</SchoolYear>
+					<SchoolCalendarYear>2017</SchoolCalendarYear>
 					<MembershipType>01</MembershipType>
 					<YearLevel>10</YearLevel>
 					<EligibilityCriteria json:force-string="true">1</EligibilityCriteria>
@@ -554,7 +568,7 @@
 					<LanguageOfInstructionList>
 						<Language json:force-array="true">
 							<Code>01112</Code>
-							<HoursPerWeek>30</HoursPerWeek>
+							<Level>99</Level>
 						</Language>
 					</LanguageOfInstructionList>
 					<SubjectChoiceList>
@@ -573,7 +587,7 @@
 					</InternationalEnrolment>
 				</SchoolEnrolment>
 				<SchoolEnrolment>
-					<SchoolYear>2018</SchoolYear>
+					<SchoolCalendarYear>2018</SchoolCalendarYear>
 					<MembershipType>01</MembershipType>
 					<YearLevel>11</YearLevel>
 					<EligibilityCriteria json:force-string="true">1</EligibilityCriteria>
@@ -594,7 +608,7 @@
 					<LanguageOfInstructionList>
 						<Language json:force-array="true">
 							<Code>01112</Code>
-							<HoursPerWeek>30</HoursPerWeek>
+							<Level>99</Level>
 						</Language>
 					</LanguageOfInstructionList>
 					<SubjectChoiceList>
