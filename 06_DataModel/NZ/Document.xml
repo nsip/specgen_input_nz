@@ -1,0 +1,139 @@
+<DataObject name="Document"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:json="http://json.org/"
+
+      xmlns="http://sifassociation.org/SpecGen">
+	
+  <Key>RefId</Key>
+  <EventsReported>true</EventsReported>
+
+  <Item>
+    <Element>Document</Element>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p> Location and meta-data of a document, including evidentiary documents, personalised plans, and action plans.</p>
+     </Description>
+  </Item>
+
+  <Item>
+    <Element>RefId</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The ID (GUID) assigned to uniquely identify this Document.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>    <!-- RefId -->
+
+  <Item>
+    <Element>Location</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Location of Documentation.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- Location -->
+
+  <Item>
+    <Element>DocumentDescription</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>What the document is and how it is related to the Student.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- DocumentDescription -->
+
+  <Item>
+    <Element>ReviewDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Document Review Date.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- ReviewDate -->
+
+  <Item>
+    <Element>URL</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>URL if known.</p>
+    </Description>
+    <Type name="xs:anyURI"></Type>
+  </Item>    <!-- URL -->
+
+  <Item>
+		<Element>DocumentLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The Local Id for the Document.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"></Type> 
+	</Item>    <!-- DocumentLocalId -->
+
+  <Item>
+    <Element>ProviderRefId</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p></p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>    <!-- ProviderRefId -->
+
+  <Item>
+    <Element>RelatedToList</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of objects that this document relates to, e.g. a Wellbeing Response or Characteristic, Physical Restraint. </p>
+    </Description>
+    <Type ref="CommonTypes" name="RelatedToListType"></Type>
+  </Item>    <!-- RelatedToList -->
+
+  <Item>
+    <Element>DocumentClassification</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The classification of the document to give an indication of the audience who should have access.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsDocumentClassificationType"></Type>
+  </Item>    <!-- DocumentClassification -->
+
+  <Item>
+    <Element>DocumentType</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The type of document, e.g. Personalised Plan, Wellbeing Event or Response supporting documentation.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsDocumentTypeType"></Type>
+  </Item>    <!-- DocumentType -->
+
+  <Item>
+    <Element>PersonDocumentRoleList</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The list of people associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+    </Description>
+    <Type ref="CommonType" name="PersonDocumentRoleListType"></Type>
+  </Item>    <!-- PersonDocumentRoleList -->
+
+  <xhtml:Example xmlns="" name="Document">
+    <Document>
+      <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+      <DocumentDescription>Art Assignment for Assessment 4.1</DocumentDescription>
+      <ProviderRefId>CA285746-359D-7510-1A8C-36432A901A16</ProviderRefId>
+    </Document>
+  </xhtml:Example>
+
+</DataObject>

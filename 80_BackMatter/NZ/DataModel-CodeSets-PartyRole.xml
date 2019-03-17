@@ -2928,4 +2928,96 @@
 			</Value>    <!-- Advanced -->
 		</Values>
 	</CodeSet>    <!-- Language Proficiency Level -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the type of Document.</p>
+		</Intro>
+		<ID>Document Type</ID>
+		<Values>
+			<Value>
+				<Code>101</Code>
+				<Text>Individualised Behavioural Plan</Text>
+			</Value>    <!-- Individualised Behavioural Plan -->
+			<Value>
+				<Code>102</Code>
+				<Text>Individualised Education Plan</Text>
+			</Value>    <!-- Individualised Education Plan -->
+			<Value>
+				<Code>103</Code>
+				<Text>Medical</Text>
+			</Value>    <!-- Medical -->
+			<Value>
+				<Code>104</Code>
+				<Text>Attendance</Text>
+			</Value>    <!-- Attendance -->
+			<Value>
+				<Code>105</Code>
+				<Text>Behavioural</Text>
+			</Value>    <!-- Behavioural -->
+			<Value>
+				<Code>106</Code>
+				<Text>Special Needs</Text>
+			</Value>    <!-- Special Needs -->
+			<Value>
+				<Code>107</Code>
+				<Text>Academic</Text>
+			</Value>    <!-- Academic -->
+			<Value>
+				<Code>108</Code>
+				<Text>Legal</Text>
+			</Value>    <!-- Legal -->
+			<Value>
+				<Code>99</Code>
+				<Text>Other</Text>
+			</Value>    <!-- Other -->
+		</Values>
+	</CodeSet>    <!-- Document Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the classification of the Wellbeing Document.</p>
+		</Intro>
+		<ID>Document Classification</ID>
+		<Values>
+			<Value>
+				<Code>101</Code>
+				<Text>In-Confidence</Text>
+			</Value>    <!-- In-Confidence -->
+			<Value>
+				<Code>102</Code>
+				<Text>Sensitive</Text>
+			</Value>    <!-- Sensitive -->
+			<Value>
+				<Code>103</Code>
+				<Text>Not Classified</Text>
+			</Value>    <!-- Not Classified -->
+		</Values>
+	</CodeSet>    <!-- Document Classification -->
+
+	<CodeSet>
+		<Intro>
+			<p>A code set denoting the role a person performs in relation to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+		</Intro>
+		<ID>Document Role</ID>
+		<Values>
+			<Value>
+				<Code>101</Code>
+				<Text>Owner</Text>
+			</Value>    <!-- Owner -->
+			<Value>
+				<Code>102</Code>
+				<Text>Author</Text>
+			</Value>    <!-- Author -->
+			<Value>
+				<Code>103</Code>
+				<Text>Reviewer</Text>
+			</Value>    <!-- Reviewer -->
+			<Value>
+				<Code>104</Code>
+				<Text>Subject Of</Text>
+			</Value>    <!-- Subject Of -->
+		</Values>
+	</CodeSet>    <!-- Document Role -->
+
 </IncludeGroup>

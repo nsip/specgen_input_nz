@@ -614,9 +614,7 @@
 		</Values>
 	</CodeSet>    <!-- Document Role -->
 
-
-
-	<!-- Learning Support classification codes -->
+	<!-- Learning Support Participation codes -->
 	<CodeSet>
 		<Intro>
 			<p>Standard codes denoting the learning support agency that is supporting the student, 
