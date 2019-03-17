@@ -2344,6 +2344,7 @@
 		</xhtml:Example>
 		
 	</CommonElement>
+
 	<CommonElement name="EthnicityListType" type="true" dm="true">
 		<Item>
 			<Element>EthnicityListType</Element>
@@ -2489,5 +2490,69 @@
 		</xhtml:Example>
 		
 	</CommonElement>
+
+	<!-- Document -->
+	<CommonElement name="RelatedToListType" type="true" dm="true">
+		<Item>
+			<Element>RelatedToListType</Element>
+			<Description>
+				<p>List of objects that this document relates to, e.g. a Wellbeing Response or Characteristic, Physical Restraint.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>RelatedTo</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>An object that this document relates to, e.g. a Wellbeing Response or Characteristic, Physical Restraint.</p>
+			</Description>			
+			<Type ref="CommonTypes" name="RelatedToType"/>
+		</Item>
+	</CommonElement> 
+	<CommonElement name="RelatedToType" type="true" dm="true">
+		<Item>
+			<Element>RelatedToType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>An object that this document relates to, e.g. a Wellbeing Response or Characteristic, Physical Restraint.</p>
+			</Description>
+			<Type complex="extension" name="ObjectReferenceType"/>
+		</Item>
+	</CommonElement> 
+
+	<CommonElement name="PersonDocumentRoleListType" type="true" dm="true">
+		<Item>
+			<Element>PersonDocumentRoleListType</Element>
+			<Description>
+				<p>The list of people associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>PersonDocumentRole</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A person associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+			</Description>
+			<Type ref="CommonTypes" name="PersonDocumentRoleType"/>
+		</Item>
+	</CommonElement> 
+	<CommonElement name="PersonDocumentRoleType" type="true" dm="true">
+		<Item>
+			<Element>PersonDocumentRoleType</Element>
+			<Description>
+				<p>A person associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+			</Description>
+			<Type complex="extension" name="ObjectReferenceType"/>
+		</Item>
+		<Item>
+			<Element>Role</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A code set denoting the role a person performs in relation to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsDocumentRoleType"/>
+		</Item>
+	</CommonElement> 
 
 </IncludeGroup>

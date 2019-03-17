@@ -55,7 +55,8 @@
 		<xi:include parse="xml" href="NZ/StudentPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StudentContactPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StudentContactRelationship.xml"/>
-		
+		<xi:include parse="xml" href="NZ/Document.xml"/>
+
 		<!-- Curriculum, Courses, Learning Standards & Credentials -->
 		<xi:include parse="xml" href="NZ/TeachingGroup.xml"/>
 		<xi:include parse="xml" href="NZ/ProviderCourse.xml"/>
@@ -80,6 +81,8 @@
         <xi:include parse="xml" href="NZ/StudentPhysicalRestraint.xml"/>
 		
 		<xi:include parse="xml" href="NZ/StudentVoice.xml"/>
+
+		<xi:include parse="xml" href="NZ/StudentLearningSupportParticipation.xml"/>
 		
 		<!-- Aromatawai / Assessment -->
 		<xi:include parse="xml" href="NZ/AssessmentTask.xml"/>
