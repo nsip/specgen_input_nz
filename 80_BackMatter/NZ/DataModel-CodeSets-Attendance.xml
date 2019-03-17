@@ -38,24 +38,31 @@
 		<ID>Attendance Code</ID>
 		<Values>
 			<Value>
+				<Code>?</Code>
+				<Text>Absent</Text>
+				<Description>Unknown reason for absence</Description>
+			</Value>
+			<Value>
 				<Code>A</Code>
-				<Text>Absent - Not in class</Text>
+				<Text>Attending alternative education</Text>
 			</Value>
 			<Value>
 				<Code>P</Code>
-				<Text>Present - in class</Text>
+				<Text>Present</Text>
 			</Value>
 			<Value>
 				<Code>L</Code>
-				<Text>Late - in class</Text>
+				<Text>Late to class</Text>
 			</Value>
 			<Value>
 				<Code>S</Code>
-				<Text>Sickbay - in class</Text>
+				<Text>Sickbay</Text>
+				<Description>In Class</Description>
 			</Value>
 			<Value>
 				<Code>D</Code>
-				<Text>Doctor/Dentist appointment</Text>
+				<Text>Medical appointment</Text>
+				<Description>Doctor or Dentist</Description>
 			</Value>
 			<Value>
 				<Code>I</Code>
@@ -64,14 +71,17 @@
 			<Value>
 				<Code>E</Code>
 				<Text>Explained absence</Text>
+				<Description>Absent with an explained but unjustified reason</Description>
+			</Value>
+			<Value>
+				<Code>J</Code>
+				<Text>Justified absence</Text>
+				<Description>Reason for absence within school policy</Description>
 			</Value>
 			<Value>
 				<Code>M</Code>
 				<Text>Medical absence</Text>
-			</Value>
-			<Value>
-				<Code>J</Code>
-				<Text>Justified explained absence</Text>
+				<Description>Absent due to short-term illness/medical reasons</Description>
 			</Value>
 			<Value>
 				<Code>T</Code>
@@ -79,7 +89,8 @@
 			</Value>
 			<Value>
 				<Code>V</Code>
-				<Text>Non Supervised study</Text>
+				<Text>Examination or unsupervised study</Text>
+				<Description>Student is on the school site</Description>
 			</Value>
 			<Value>
 				<Code>N</Code>
@@ -88,6 +99,7 @@
 			<Value>
 				<Code>Q</Code>
 				<Text>School trip/camp</Text>
+				<Description>Attending an off-site school-organised activity such as a trip/camp</Description>
 			</Value>
 			<Value>
 				<Code>W</Code>
@@ -96,30 +108,29 @@
 			<Value>
 				<Code>R</Code>
 				<Text>Removed from class</Text>
+				<Description>Temporarily removed from regular class (internal school student isolation)</Description>
 			</Value>
 			<Value>
 				<Code>X</Code>
-				<Text>Examination leave</Text>
+				<Text>Exam leave</Text>
+				<Description>Unsupervised study, student is off-site</Description>
 			</Value>
 			<Value>
 				<Code>G</Code>
-				<Text>Overseas holiday</Text>
+				<Text>Holiday</Text>
+				<Description>During term time</Description>
 			</Value>
 			<Value>
 				<Code>O</Code>
-				<Text>Overseas during posting</Text>
+				<Text>Justified Overseas</Text>
 			</Value>
 			<Value>
 				<Code>K</Code>
-				<Text>Attending teen parent unit</Text>
-			</Value>
-			<Value>
-				<Code>AA</Code>
-				<Text>Attending alternative education</Text>
+				<Text>Attending Teen Parent Unit</Text>
 			</Value>
 			<Value>
 				<Code>Y</Code>
-				<Text>Attending activity centre</Text>
+				<Text>Attending Activity Centre</Text>
 			</Value>
 			<Value>
 				<Code>F</Code>
@@ -127,15 +138,20 @@
 			</Value>
 			<Value>
 				<Code>H</Code>
-				<Text>Attending health camp/regional health school</Text>
+				<Text>Attending Health Camp/Regional Health School</Text>
 			</Value>
 			<Value>
 				<Code>C</Code>
-				<Text>Attending justice court</Text>
+				<Text>Involved in Justice Court proceedings</Text>
 			</Value>
 			<Value>
 				<Code>U</Code>
 				<Text>Stood down or suspended</Text>
+			</Value>
+			<Value>
+				<Code>Z</Code>
+				<Text>Secondary Tertiary Program</Text>
+				<Description>including Trades Academies</Description>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Attendance Code -->
