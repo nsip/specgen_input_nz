@@ -31,47 +31,47 @@
 			<Value>
 				<Code>1</Code>
 				<Text>Health and Physical Education / Hauora</Text>
-				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
+				<Description>Applicable to both the NZ Curriculum and Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
 				<Code>2</Code>
 				<Text>Language and Languages / Ngā Reo</Text>
-				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
+				<Description>Applicable to both the NZ Curriculum and Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
 				<Code>3</Code>
 				<Text>Mathematics / Pangarau</Text>
-				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
+				<Description>Applicable to both the NZ Curriculum and Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
 				<Code>4</Code>
 				<Text>Science / Putaiao</Text>
-				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
+				<Description>Applicable to both the NZ Curriculum and Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
 				<Code>5</Code>
 				<Text>Social Sciences / Tikanga-a-iwi</Text>
-				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
+				<Description>Applicable to both the NZ Curriculum and Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
 				<Code>6</Code>
 				<Text>Technology / Hangarau</Text>
-				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
+				<Description>Applicable to both the NZ Curriculum and Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
 				<Code>7</Code>
 				<Text>The Arts / Ngā Toi</Text>
-				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
+				<Description>Applicable to both the NZ Curriculum and Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
 				<Code>8</Code>
 				<Text>Te Reo Pākehā / English Language</Text>
-				<Description>Applicable to Te Marautanga o Aotearoa</Description>
+				<Description>Applicable to Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
 				<Code>9</Code>
 				<Text>Te Reo Māori / Māori Language and Literature</Text>
-				<Description>Applicable to Te Marautanga o Aotearoa</Description>
+				<Description>Applicable to Te Marautanga o Aotearoa.</Description>
 			</Value>
 		</Values>
 	</CodeSet>   <!-- Learning Area Types-->
@@ -192,7 +192,7 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Codes denoting Subject Areas defined by the NZ Curriculum and Te Marautanga o Aotearoa.</p>
+			<p>Codes denoting Learning Areas defined by the NZ Curriculum and Te Marautanga o Aotearoa, as well as matching Subject Areas.</p>
 		</Intro>
 		<ID>Subject Area</ID>
 		<Values>

@@ -39,19 +39,22 @@
 		</Intro>
 		<ID>Wellbeing Alert Category</ID>
 		<Values>
+		  <Value><Code>A</Code><Text>Attendance</Text></Value>
 			<Value><Code>M</Code><Text>Medical</Text></Value>
 			<Value><Code>L</Code><Text>Legal</Text></Value>
 			<Value><Code>D</Code><Text>Discipline</Text></Value>
 			<Value><Code>E</Code><Text>Educational</Text></Value>
-			<Value><Code>S</Code><Text>SpecialNeeds/Disability</Text></Value>
+			<Value><Code>S</Code><Text>Special Needs / Disability</Text></Value>
 			<Value><Code>P</Code><Text>Plan Review</Text></Value>
+			<Value><Code>PO</Code><Text>Protection Order</Text></Value>
+			<Value><Code>T</Code><Text>Transient</Text></Value>
 			<Value><Code>O</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Wellbeing Alert Category -->
 
 	<CodeSet>
 		<Intro>
-			<p>The role of the key contact in relation to the Wellbeing Alert.</p>
+			<p>The role of the key contact in the Wellbeing Alert.</p>
 		</Intro>
 		<ID>Key Contact Role</ID>
 		<Values>
@@ -68,6 +71,12 @@
 		</Intro>
 		<ID>Wellbeing Characteristic Sub Category</ID>
 		<Values>
+			<Value><Code>DIET-01</Code><Text>Vegan</Text></Value>
+			<Value><Code>DIET-02</Code><Text>Vegetarian</Text></Value>
+			<Value><Code>DIET-03</Code><Text>Halal</Text></Value>
+			<Value><Code>DIET-04</Code><Text>Kosher</Text></Value>
+			<Value><Code>DIET-05</Code><Text>Pescetarian</Text></Value>
+			<Value><Code>DIET-06</Code><Text>Gluten-free</Text></Value>
 			<Value><Code>MH-1</Code><Text>Adjustment Disorder</Text></Value>
 			<Value><Code>MH-2</Code><Text>Anorexia</Text></Value>
 			<Value><Code>MH-3</Code><Text>Anxiety Disorder</Text></Value>
@@ -163,6 +172,7 @@
 		<ID>Wellbeing Characteristic Category</ID>
 		<Values>
 			<Value><Code>MAO</Code><Text>Allergies - other</Text></Value>
+		<Value><Code>DIET</Code><Text>Dietary Preferences</Text></Value>
 		<Value><Code>MAIM</Code><Text>Auto-immune/Immune Disorders</Text></Value>
 		<Value><Code>MRD</Code><Text>Respiratory Disorder</Text></Value>
 		<Value><Code>MB</Code><Text>Blood disorder</Text></Value>
@@ -514,7 +524,7 @@
 		</Values>
 	</CodeSet>    <!-- Wellbeing Response Category -->
 
-  	<CodeSet>
+  <CodeSet>
       <Intro>
         <p>Standard codes denoting the type of award that has been achieved as part of a Wellbeing Response.</p>
       </Intro>
@@ -559,6 +569,50 @@
 	</CodeSet>    <!-- Appeal Determination By -->
 
 
+	<!--  Document classification codes -->    
+	<CodeSet>
+      <Intro>
+        <p>Standard codes denoting the classification of the Wellbeing Document.</p>
+      </Intro>
+      <ID>Document Classification</ID>
+      <Values>
+				<Value><Code>101</Code><Text>In-Confidence</Text></Value>
+				<Value><Code>102</Code><Text>Sensitive</Text></Value>
+				<Value><Code>103</Code><Text>Not Classified</Text></Value>
+      </Values>
+	</CodeSet>    <!-- Document Classification -->
+
+	<CodeSet>
+      <Intro>
+        <p>Standard codes denoting the type of Document.</p>
+      </Intro>
+      <ID>Document Type</ID>
+      <Values>
+			<Value><Code>99</Code><Text>Other</Text></Value>
+			<Value><Code>101</Code><Text>Individualised Behavioural Plan</Text></Value>
+			<Value><Code>102</Code><Text>Individualised Education Plan</Text></Value>
+			<Value><Code>103</Code><Text>Medical</Text></Value>
+			<Value><Code>104</Code><Text>Attendance</Text></Value>
+			<Value><Code>105</Code><Text>Behavioural</Text></Value>
+			<Value><Code>106</Code><Text>Special Needs</Text></Value>
+			<Value><Code>107</Code><Text>Academic</Text></Value>
+			<Value><Code>108</Code><Text>Legal</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Document Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>A code set denoting the role a person performs in relation to a document and their 
+		role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+		</Intro>
+		<ID>Document Role</ID>
+		<Values>
+			<Value><Code>101</Code><Text>Owner</Text></Value>
+			<Value><Code>102</Code><Text>Author</Text></Value>
+			<Value><Code>103</Code><Text>Reviewer</Text></Value>
+			<Value><Code>104</Code><Text>Subject of</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Document Role -->
 
 	<!-- Learning Support Participation codes -->
 	<CodeSet>
@@ -770,20 +824,7 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Standard codes denoting the status of the Wellbeing Response.</p>
-		</Intro>
-		<ID>Wellbeing Response Status</ID>
-		<Values>
-			<Value>
-				<Code>99</Code>
-				<Text>Other</Text>
-			</Value>    <!-- Other -->
-		</Values>
-	</CodeSet>    <!-- Wellbeing Response Status -->
-
-	<CodeSet>
-		<Intro>
-			<p>Standard codes denoting the status of the Wellbeing Response.</p>
+			<p>Code set denoting the outcome of a wellbeing appeal.</p>
 		</Intro>
 		<ID>Wellbeing Appeal Outcome</ID>
 		<Values>
@@ -806,18 +847,4 @@
 			</Value>    <!-- Other -->
 		</Values>
 	</CodeSet>    <!-- Wellbeing Event Severity -->
-
-	<CodeSet>
-		<Intro>
-			<p>Code set denoting type of object or person the student was directing their behaviour at, e.g. Staff Member, Student, Desk, Chair.</p>
-		</Intro>
-		<ID>Behaviour Directed At</ID>
-		<Values>
-			<Value>
-				<Code>101</Code>
-				<Text>Staff</Text>
-			</Value>    <!-- Staff -->
-		</Values>
-	</CodeSet>    <!-- Behaviour Directed At -->
-
 </IncludeGroup>

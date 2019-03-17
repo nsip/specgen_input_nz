@@ -227,9 +227,10 @@
 			<Value>
 				<Code>Credential</Code>
 				<Text>Credential</Text>
-				<Description>A qualification or other award published by a national body, professional association
-					 or other interested party. The Credential recognises a set of learning that students have
-					 undertaken and successfully completed.
+				<Description>A qualification or other award granted by a national body,  professional association or
+					other interested party.  The Credential describes an award that is made to the learner at the 
+					successful completion of a particular learning programme. eg: NCEA Level 1;  University Entrance;
+					NCEA Level 2 Chemistry;
 				</Description>
 			</Value>			
 			<Value>

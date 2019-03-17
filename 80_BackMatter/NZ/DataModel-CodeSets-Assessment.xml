@@ -42,7 +42,6 @@
 		</Intro>
 		<ID>Assessment Provider Role</ID>
 		<Values>
-			<Value><Code>99</Code><Text>Other</Text></Value>
 			<Value><Code>101</Code><Text>Assessor</Text></Value>
 			<Value><Code>102</Code><Text>Location Provider</Text></Value>
 			<Value><Code>103</Code><Text>Provider</Text></Value>
@@ -193,7 +192,7 @@
 
 	<CodeSet>
 		<Intro>
-			<p>The NCEA Endorsement Levels that can be attained by a student.</p>
+			<p>The level of NCEA endorsement the student received for the attainment.</p>
 		</Intro>
 		<ID>NCEA Endorsement Level</ID>
 		<Values>

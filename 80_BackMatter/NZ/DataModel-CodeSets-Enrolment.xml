@@ -515,7 +515,7 @@
 				<Text>Share Art</Text>
 			</Value>    <!-- Share Art -->
 			<Value>
-				<Code>102</Code>
+				<Code>103</Code>
 				<Text>Share Writing</Text>
 			</Value>    <!-- Share Writing -->
 		</Values>
@@ -523,7 +523,7 @@
 
 	<CodeSet>
 		<Intro>
-			<p>The type of co-enrolment.</p>
+			<p/>
 		</Intro>
 		<ID>CoEnrolment Type</ID>
 		<Values>
@@ -547,4 +547,16 @@
 		</Values>
 	</CodeSet>    <!-- Early Childhood Education Type -->
 
+	<CodeSet>
+		<Intro>
+			<p>The level of instruction that is made in the selected language.</p>
+		</Intro>
+		<ID>Language Instruction Level</ID>
+		<Values>
+			<Value>
+				<Code>99</Code>
+				<Text>Other</Text>
+			</Value>    <!-- Other -->
+		</Values>
+	</CodeSet>    <!-- Early Childhood Education Type -->
 </IncludeGroup>
