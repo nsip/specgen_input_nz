@@ -2997,7 +2997,8 @@
 
 	<CodeSet>
 		<Intro>
-			<p>A code set denoting the role a person performs in relation to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+			<p>A code set denoting the role a person performs in relation to a document and 
+				their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
 		</Intro>
 		<ID>Document Role</ID>
 		<Values>
@@ -3019,5 +3020,4 @@
 			</Value>    <!-- Subject Of -->
 		</Values>
 	</CodeSet>    <!-- Document Role -->
-
 </IncludeGroup>
