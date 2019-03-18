@@ -10,7 +10,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>Provider</Element>
-	<privacyRating>Low</privacyRating>
+		<privacyRating>Low</privacyRating>
     <Description>A recognised provider of education services in the New Zealand
 	education system.  Providers may operate in the Early Childhood, Compulsory Schooling or Tertiary sectors.
     </Description>
@@ -18,7 +18,7 @@
   <Item>
     <Element>RefId</Element>
     <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
+		<privacyRating>Low</privacyRating>
     <Description>
       <p>The SIF GUID used by systems to identify the provider.</p>
     </Description>
@@ -27,7 +27,7 @@
   <Item>
     <Element>LocalId</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>Low</privacyRating>
+		<privacyRating>Low</privacyRating>
     <Description>
       <p>The Ministry of Education number used by the education sector to identify the provider.</p>
     </Description>
