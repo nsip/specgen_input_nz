@@ -61,9 +61,25 @@
 		</xsl:apply-templates>
 	</xsl:template>
 	
-
+	<!-- Common type is empty extension of another type -->
 	<xsl:template match="specgen:CommonElement[count(specgen:Item) eq 1 and
-						 not(starts-with(specgen:Item[1]/specgen:Type/@name, 'xs:'))]">
+						 specgen:Item[1]/specgen:Type/@complex eq 'extension']">
+		<xsl:text>&#x0a;  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
+		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;')"/>
+
+		<!-- Pickup Type ref -->
+		<xsl:apply-templates select="specgen:Item[1]/specgen:Type">
+			<xsl:with-param name="indent" select="'      - '"/>
+		</xsl:apply-templates>
+
+		<xsl:text>      - description: &gt;-&#x0a;          </xsl:text>
+		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+	</xsl:template>
+
+	<!-- Common type is instance of another type -->
+	<xsl:template match="specgen:CommonElement[count(specgen:Item) eq 1 and
+						 not(starts-with(specgen:Item[1]/specgen:Type/@name, 'xs:')) and
+						 not(specgen:Item[1]/specgen:Type/@complex eq 'extension')]">
 		<xsl:text>&#x0a;  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;')"/>
 		<xsl:text>    allOf:&#x0a;</xsl:text>
@@ -78,6 +94,7 @@
 	</xsl:template>
 	
 
+  <!-- Common type has at least one item -->
 	<xsl:template match="specgen:CommonElement[count(specgen:Item) gt 1 or
 						 starts-with(specgen:Item[1]/specgen:Type/@name, 'xs:')]">
 		<xsl:text>&#x0a;  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
