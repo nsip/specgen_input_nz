@@ -122,14 +122,6 @@
 				</Description>
 				<Type ref="CodeSets" name="NZCodeSetsAddressRoleType"/>
 			</Item>     <!-- Role -->
-			<Item>
-				<Element>Location</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>  Where the address describes a particular Location within New Zealand; the details of that location.</p>
-				</Description>
-				<Type ref="CommonTypes" name="LocationType"/>
-			</Item>     <!-- Role -->
 		</if>
 		<if intl="au">
 			<Item>
@@ -214,6 +206,40 @@
 			</Description>
 			<Type name="xs:normalizedString"/>
 		</Item>     <!-- PostalCode -->
+		<if intl="nz">
+			<Item>
+				<Element>GridLocation</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>The latitude &amp; longitude of the location. Grid location values
+					are derived from New Zealand Map Grid x,y coordinates and converted
+					to Latitude and Longitude values per the World Geodetic System 1984 (G1762)
+					</p>
+				</Description>
+				<Type ref="CommonTypes" name="GridLocationType"/>
+			</Item>     <!-- GridLocation -->
+			<Item>
+				<Element>StatisticalAreaList</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>A list of Statistical Areas containing the location.</p>
+					<p>The list may contain exactly one StatisticalArea
+					element for each of the following spatial unit types:</p>
+					<ul>
+						<li>Ward</li>
+						<li>Urban Area</li>
+						<li>Census Area Unit</li>
+						<li>Māori Electorate</li>
+						<li>Mesh Block</li>
+						<li>General Electorate</li>
+						<li>Territorial Authority</li>
+						<li>Local Board (Auckland Only)</li>
+						<li>Regional Council</li>
+					</ul>
+				</Description>
+				<Type ref="CommonTypes" name="StatisticalAreaListType"/>
+			</Item>     <!-- StatisticalAreaList -->		
+		</if>
 		<if intl="au">
 			<Item>
 				<Element>GridLocation</Element>
