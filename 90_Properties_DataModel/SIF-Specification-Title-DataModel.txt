@@ -1,1 +1,1 @@
-SIF Implementation Specification (New Zealand) 3.0 (Draft-6a)
+SIF Implementation Specification (New Zealand) 3.0 (Draft-7)
