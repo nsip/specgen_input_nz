@@ -46,7 +46,7 @@
 		<!-- Providers and other education oranisations -->
 		<xi:include parse="xml" href="NZ/Provider.xml"/>		
 		<xi:include parse="xml" href="NZ/ProviderRelationship.xml"/>
-		<xi:include parse="xml" href="NZ/EducationOrganisation.xml"/>
+		<xi:include parse="xml" href="NZ/Organisation.xml"/>
 		<xi:include parse="xml" href="NZ/AcademicDepartment.xml"/>
 
 		<!-- Staff, Students & their whānau -->

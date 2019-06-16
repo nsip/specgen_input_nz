@@ -1,0 +1,228 @@
+<DataObject name="Organisation"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+			xmlns:json="http://json.org/"
+			
+            xmlns="http://sifassociation.org/SpecGen">
+  	<Key>RefId</Key>
+  	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>Organisation</Element>
+		<privacyRating>Low</privacyRating>
+		<Description>A generic organisation that operates within the education sector; but doesn’t provide education 
+			services. e.g. Communities of Learning | Kāhui Ako, Ministry local offices, 
+			Industry training organisations, etc. 
+		</Description>
+	</Item>
+	<Item>
+		<Element>RefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The SIF GUID used by systems to identify the organisation.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>   <!-- RefId -->
+	<Item>
+		<Element>LocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The Ministry of Education number used by the education sector to identify the organisation.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>   <!-- LocalId -->
+	<Item>
+		<Element>MinistryOfEducationId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>	The unique Ministry of Education created global identifier for an Education Provider.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>   <!-- LocalId -->	
+	<Item>
+		<Element>AddressList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The set of postal and other addresses that the Organisation uses</p>
+		</Description>
+		<Type ref="CommonTypes" name="AddressListType"/>
+	</Item>   <!-- AddressList -->
+	<Item>
+		<Element>CommunicationChannelList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of one or more methods of communication with the organisation</p>
+		</Description>
+		<Type ref="CommonTypes" name="CommunicationChannelListType"/>
+	</Item>   <!-- CommunicationChannelList -->
+	<Item>
+		<Element>ContactList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of one or more cotact persons related to the organisation</p>
+		</Description>
+		<Type ref="CommonTypes" name="ContactListType"/>
+	</Item>   <!-- ContactList -->
+	<Item>
+		<Element>EducationRegion</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A region of New Zealand defined by the Ministry of Education for adminstrative purposes</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsEducationRegionType"/>
+	</Item>   <!-- EducationRegion -->
+	<Item>
+		<Element>EmailList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The set of contact email addresses that the Organisation uses</p>
+		</Description>
+		<Type ref="CommonTypes" name="EmailListType"/>
+	</Item>   <!-- EmailList -->
+	<Item>
+		<Element>EntityClose</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Closing date of entity. Only present for closed providers.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>   <!-- EntityClose -->
+	<Item>
+		<Element>EntityOpen</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Opening date of entity.  For proposed schools this will
+			be the projected opening date.  For open schools this may
+			not be present.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>   <!-- EntityOpen -->
+	<Item>
+		<Element>LocationList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of one or more locations, from which the
+			organisation operates or provides a service.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocationListType"/>
+	</Item>   <!-- LocationList -->
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The normal business name of the Organisation</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>   <!-- Name -->
+	<Item>
+		<Element>PhoneNumberList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The set of contact phone numbers that the Organisation uses</p>
+		</Description>
+		<Type ref="CommonTypes" name="PhoneNumberListType"/>
+	</Item>   <!-- PhoneNumberList -->
+	<Item>
+		<Element>RelatedOrganisationList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of other organisations that are related to the Provider</p>
+		</Description>
+		<Type ref="CommonTypes" name="RelatedOrganisationListType"/>
+	</Item>   <!-- RelatedOrganisationList -->
+	<Item>
+		<Element>OperationalStatus</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Current status of the Provider</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsOperationalStatusType"/>
+	</Item>   <!-- OperationalStatus-->
+	<Item>
+		<Element>Type</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Describes the nature of the Organisation;  for Schools this indicate
+			the schooling levels offered.
+			</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsOrganisationTypeType"/>
+	</Item>   <!-- Type -->
+	   
+	<xhtml:Example xmlns="" name="Kāhui Ako Organisation Example">
+		<Organisation>
+			<RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
+			<LocalId>99204</LocalId>
+			<AddressList>
+				<Address json:force-array="true">
+					<Type>2</Type>
+					<Role>2</Role>
+					<Street>
+						<Line1>1175 Lake Ferry Rd</Line1>
+					</Street>
+					<Suburb>RD 1</Suburb>
+					<City>Martinborough</City>
+				</Address>
+			</AddressList>
+			<CommunicationChannelList/>
+			<ContactList>
+				<Contact>
+					<Name>
+						<FamilyName>Dumbledore</FamilyName>
+						<GivenName>Albus</GivenName>
+						<FullName>Albus Dumbledore</FullName>
+					</Name>
+					<PositionTitle>Headmaster</PositionTitle>
+					<Role json:force-string="true">1</Role>
+					<AddressList>
+						<Address>
+							<Type json:force-string="true">1</Type>
+							<Role json:force-string="true">1</Role>
+							<Street>
+								<Line1>533 Hogwart's Way</Line1>
+							</Street>
+							<City>Hogsmead</City>
+							<PostalCode json:force-string="true">7733</PostalCode>
+						</Address>
+					</AddressList>
+					<EmailList/>
+					<PhoneNumberList/>
+				</Contact>
+				</ContactList>
+				<EmailList>
+					<Email json:force-array="true">
+						<Type>07</Type>
+						<Address>stuart@gmail.com</Address>
+					</Email>
+				</EmailList>
+			<LocationList/>
+			<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
+			<PhoneNumberList>
+				<PhoneNumber>
+					<Notes>Lead School Secretary DDI</Notes>
+					<Type>0096</Type>
+					<Number>(021) 300 999</Number>
+				</PhoneNumber>
+			</PhoneNumberList>
+			<Type>2</Type>
+		</Organisation>
+	</xhtml:Example>
+</DataObject>
+	

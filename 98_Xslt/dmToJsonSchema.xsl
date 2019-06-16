@@ -3,7 +3,8 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:specgen="http://sifassociation.org/SpecGen"
 	xmlns:xfn="http://stuart.geek.nz/xslt-functions"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace">
 
 	<!-- Take a SIF_DataModel.input.xml file and produce a matching Json Schema -->
 	<xsl:output method="text" omit-xml-declaration="yes" indent="no"/>
@@ -401,8 +402,7 @@
 
 		<xsl:value-of select="concat($indent, '- const: ', $q, specgen:Code, $q, '&#x0a;')"/>
 
-		<!-- We'll worry about Māori language titles later -->
-		<xsl:apply-templates select="specgen:Text[1]" mode="enum">
+		<xsl:apply-templates select="specgen:Text" mode="enum">
 			<xsl:with-param name="indent" select="$indent"/>
 		</xsl:apply-templates>
 
@@ -411,6 +411,8 @@
 		</xsl:apply-templates>
 	</xsl:template>
 
+
+	<!-- not doing multiple languages -->
 	<xsl:template match="specgen:Text" mode="enum">
 		<xsl:param name="indent"/>
 
@@ -423,6 +425,24 @@
 		<xsl:text>&#x0a;</xsl:text>
 	</xsl:template>
 
+	<!-- doing multiple languages -->
+	<xsl:template match="specgen:Text[@xml:lang]" mode="enum">
+		<xsl:param name="indent"/>
+
+		<xsl:if test="position() = 1">
+			<xsl:value-of select="concat($indent, '  title*: &#x0a;')"/>
+		</xsl:if>
+
+		<xsl:variable name="text"><xsl:apply-templates/></xsl:variable>
+		<xsl:value-of select="concat($indent, '    ', @xml:lang, ': ')"/>
+		<xsl:if test="contains($text, ':')"><xsl:text>"</xsl:text></xsl:if>
+		<xsl:value-of select="normalize-space($text)"/>
+		<xsl:if test="contains($text, ':')"><xsl:text>"</xsl:text></xsl:if>
+		<xsl:text>&#x0a;</xsl:text>
+
+	</xsl:template>
+
+	<!-- not doing multiple languages -->
 	<xsl:template match="specgen:Description" mode="enum">
 		<xsl:param name="indent"/>
 
@@ -435,6 +455,21 @@
 		<xsl:text>&#x0a;</xsl:text>
 	</xsl:template>
 
+	<!-- doing multiple languages -->
+	<xsl:template match="specgen:Description[@xml:lang]" mode="enum">
+		<xsl:param name="indent"/>
+
+		<xsl:if test="position() = 1">
+			<xsl:value-of select="concat($indent, '  description*:&#x0a;')"/>
+		</xsl:if>
+
+		<xsl:variable name="descr"><xsl:apply-templates/></xsl:variable>
+		<xsl:value-of select="concat($indent, '    ', @xml:lang, ': &gt;-&#x0a;', $indent, '      ')"/>
+		<xsl:if test="contains($descr, ':')"><xsl:text>"</xsl:text></xsl:if>
+		<xsl:value-of select="normalize-space($descr)"/>
+		<xsl:if test="contains($descr, ':')"><xsl:text>"</xsl:text></xsl:if>
+		<xsl:text>&#x0a;</xsl:text>
+	</xsl:template>
 
 	<!-- CodeSet value (for description text - <li> ... </li>) -->
 	<xsl:template match="specgen:Value" mode="descr">

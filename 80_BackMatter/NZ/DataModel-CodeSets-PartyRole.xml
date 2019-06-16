@@ -309,58 +309,30 @@
 			<!-- Level 1 Codes -->
 			<Value>
 				<Code>1</Code>
-				<Text>Male</Text>
+				<Text xml:lang="en">Male</Text>
 				<Text xml:lang="mi">Tāne</Text>
-				<Description>Level 1</Description>
 			</Value>
 			<Value>
 				<Code>2</Code>
-				<Text>Female</Text>
+				<Text xml:lang="en">Female</Text>
 				<Text xml:lang="mi">Wahine</Text>
-				<Description>Level 1</Description>
 			</Value>
 			<Value>
 				<Code>3</Code>
-				<Text>Gender Diverse</Text>
+				<Text xml:lang="en">Gender Diverse</Text>
 				<Text xml:lang="mi">Ira tāngata kōwhiri kore</Text>
-				<Description>Level 1</Description>
-			</Value>
-			<!-- Level 2 Codes -->
-			<Value>
-				<Code>11</Code>
-				<Text>Male</Text>
-				<Text xml:lang="mi">Tāne</Text>
-				<Description>Level 2</Description>
-			</Value>
-			<Value>
-				<Code>21</Code>
-				<Text>Female</Text>
-				<Text xml:lang="mi">Wahine</Text>
-				<Description>Level 2</Description>
-			</Value>
-			<Value>
-				<Code>30</Code>
-				<Text>Gender diverse not further defined</Text>
-				<Text xml:lang="mi">Ira tāngata kōwhiri kore</Text>
-				<Description>Level 2</Description>
 			</Value>
 			<Value>
 				<Code>31</Code>
-				<Text>Transgender Male to Female</Text>
+				<Text xml:lang="en">Transgender Male to Female</Text>
 				<Text xml:lang="mi">Whakawahine</Text>
-				<Description>Level 2</Description>
+				<Description>Can be rolled up to code value 3:Gender Diverse</Description>
 			</Value>
 			<Value>
 				<Code>32</Code>
-				<Text>Transgender Female to Male</Text>
+				<Text xml:lang="en">Transgender Female to Male</Text>
 				<Text xml:lang="mi">Tangata ira tāne</Text>
-				<Description>Level 2</Description>
-			</Value>
-			<Value>
-				<Code>39</Code>
-				<Text>Gender diverse not elsewhere classified</Text>
-				<Text xml:lang="mi">Ira tāngata kōwhiri kore</Text>
-				<Description>Level 2</Description>
+				<Description>Can be rolled up to code value 3:Gender Diverse</Description>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Gender -->

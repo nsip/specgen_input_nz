@@ -195,9 +195,9 @@
 		<ID>Referrable Data Objects</ID>
 		<Values>
 			<Value>
-				<Code>EducationOrganisation</Code>
-				<Text>EducationOrganisation</Text>
-				<Description>An organisation other than a Provider</Description>
+				<Code>Organisation</Code>
+				<Text>Organisation</Text>
+				<Description>A generic organisation other than a Provider</Description>
 			</Value>
 			<Value>
 				<Code>Provider</Code>

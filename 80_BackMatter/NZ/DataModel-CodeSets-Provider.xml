@@ -438,7 +438,32 @@
 		</Values>
 	</CodeSet>    <!-- Schooling Gender -->
 
-	<!-- ProviderRelationship -->
+	<CodeSet>
+		<Intro>
+			<p>A code describing the nature of the relationship between a pair of Organisations</p>
+		</Intro>
+		<ID>Organisation Relationship Type</ID>
+		<Values>
+			<Value>
+				<Code>TPU</Code>
+				<Text>Teen Parent Unit</Text>
+			</Value>
+			<Value>
+				<Code>ACR</Code>
+				<Text>Activity Centre</Text>
+			</Value>
+			<Value>
+				<Code>LOI</Code>
+				<Text/>
+			</Value>
+			<Value>
+				<Code>COL</Code>
+				<Text xml:lang="en">Community of Learning</Text>
+				<Text xml:lang="mi">Kāhui Ako</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Organisation Relationship Type -->
+	
 	<CodeSet>
 		<Intro>
 			<p>A code describing the nature of the relationship between the pair of Providers</p>

@@ -13,6 +13,16 @@
 		<resolveExtensions>true</resolveExtensions>
 		<isDraft>true</isDraft>
 		<documentEnumerationsCompletely>true</documentEnumerationsCompletely>
+		<enumLanguages>
+			<language>
+				<tag>en</tag>
+				<name>English</name>
+			</language>
+			<language>
+				<tag>mi</tag>
+				<name>Te Reo Māori</name>
+			</language>
+		</enumLanguages>		
 		<defaultExample>JSON</defaultExample>
 	</globalSettings>
 	
