@@ -1,10 +1,10 @@
-<DataObject name="WellbeingResponse"                        
-                        xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                        xmlns:xi="http://www.w3.org/2001/XInclude"
-                        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        
-            xmlns="http://sifassociation.org/SpecGen">
+<DataObject name="WellbeingResponse"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+    xmlns="http://sifassociation.org/SpecGen">
 
   <Key>RefId</Key>
   
@@ -28,35 +28,35 @@
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>    <!-- RefId -->
 
-    <Item>
-      <Element>WellbeingResponseLocalId</Element>
+  <Item>
+      <Element>LocalId</Element>
       <Characteristics>O</Characteristics>
       <privacyRating>Low</privacyRating>
       <Description>
         <p>Local Code if required for Clarity.</p>
       </Description>
       <Type ref='CommonTypes' name='LocalIdType'/>
-    </Item>    <!-- WellbeingResponseLocalId-->
+  </Item>    <!-- LocalId-->
 
   <Item>
-    <Element>StudentPersonalRefId</Element>
+    <Element>Student</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>High</privacyRating>
     <Description>
-      <p>The ID (GUID) of the student to whom this WellbeingResponse belongs.</p>
+      <p>Object reference to the student to whom this WellbeingResponse belongs.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- StudentPersonalRefId -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- Student -->
 
   <Item>
-    <Element>ProviderRefId</Element>
+    <Element>Provider</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>High</privacyRating>
     <Description>
-      <p>The ID (GUID) of the provider for which this WellbeingResponse is being reported.</p>
+      <p>Object reference to the provider for which this WellbeingResponse is being reported.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- ProviderRefId -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"/>
+  </Item>    <!-- Provider -->
   
   <Item>
     <Element>PublishedDate</Element>
@@ -135,7 +135,7 @@
     <Description>
       <p>Container for details of a Suspension or Expulsion.</p>
     </Description>
-     <Type ref="CommonTypes" name="SuspensionContainerType"></Type>
+    <Type ref="CommonTypes" name="SuspensionContainerType"></Type>
   </Item>    <!-- Suspension -->
 
   <Item>
@@ -149,14 +149,14 @@
   </Item>    <!-- Detention -->
 
   <Item>
-    <Element>PlanRequired</Element>
+    <Element>PlanRequiredList</Element>
     <Characteristics>O</Characteristics>
   	<privacyRating>High</privacyRating>
     <Description>
-      <p>Container for Information to define the need for a Plan.</p>
+      <p>List of plans that are required to be generated as part of the WellbeingResponse</p>
     </Description>
-     <Type ref="CommonTypes" name="PlanRequiredContainerType"></Type>
-  </Item>    <!-- PlanRequired -->
+    <Type ref="CommonTypes" name="PlanRequiredListType"/>
+  </Item>    <!-- PlanRequiredList -->
 
   <Item>
     <Element>Award</Element>
@@ -189,26 +189,26 @@
   </Item>    <!-- DocumentList -->
 
   <Item>
-    <Element>WellbeingAlertRefId</Element>
+    <Element>WellbeingAlert</Element>
     <Characteristics>O</Characteristics>
 	  <privacyRating>High</privacyRating>
     <Description>
       <p>The ID (GUID) of the Wellbeing Alert that was generated in response to this WellbeingResponse.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- WellbeingAlertRefId -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- WellbeingAlert -->
 
   <Item>
-    <Element>WellbeingEventRefId</Element>
+    <Element>WellbeingEvent</Element>
     <Characteristics>O</Characteristics>
 	  <privacyRating>High</privacyRating>
     <Description>
       <p>The ID (GUID) of the WellbeingEvent this WellbeingResponse is for.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- WellbeingEventRefId -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- WellbeingEvent -->
 
-   <Item>
+  <Item>
     <Element>WellbeingAppealList</Element>
     <Characteristics>O</Characteristics>
 	  <privacyRating>Medium</privacyRating>
@@ -221,8 +221,12 @@
   <xhtml:Example xmlns="" name="WellbeingResponse">
     <WellbeingResponse>
       <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
-      <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
-      <ProviderRefId>CA285746-359D-7510-1A8C-36432A901A16</ProviderRefId>
+      <Student>
+        <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
+      </Student>
+      <Provider>
+        <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
+      </Provider>
       <PublishedDate>2017-11-01</PublishedDate>
       <StartDate>2017-11-01</StartDate>
       <EndDate>2017-11-10</EndDate>

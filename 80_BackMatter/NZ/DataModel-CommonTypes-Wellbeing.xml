@@ -406,28 +406,13 @@
 			<Type name="xs:integer"></Type>  
 		</Item>
 		<Item>
-			<Element>ScheduledActivityRefId</Element>
+			<Element>WithdrawalFrom</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>The school term the withdrawal took place in.</p>
+				<p>Generic reference to the TeachingGroup, StudentActivity, or TimeTableSubject that
+				the learner is withdrawn from.</p>
 			</Description>
-			<Type ref="CommonTypes" name="RefIdType"></Type>
-		</Item>
-		<Item>
-			<Element>TimeTableSubjectRefId</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The school term the withdrawal took place in.</p>
-			</Description>
-			<Type ref="CommonTypes" name="RefIdType"></Type>
-		</Item>
-		<Item>
-			<Element>TimeTableCellRefId</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The school term the withdrawal took place in.</p>
-			</Description>
-			<Type ref="CommonTypes" name="RefIdType"></Type>
+			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>
 		</Item>
 	</CommonElement>
 	
@@ -488,7 +473,7 @@
 			<Type name="xs:string"></Type>  
 		</Item>
 		<Item>
-				<Element>EarlyReturnDate</Element>
+			<Element>EarlyReturnDate</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The date at which the student was permitted to return to school earlier than the agreed duration would have allowed.</p>
@@ -538,23 +523,6 @@
 		</Item>
 	</CommonElement>
 
-	<CommonElement name="PlanRequiredContainerType" type="true" dm="true">
-		<Item>
-			<Element>PlanRequiredContainerType</Element>
-			<Description>
-						<p>Container for Information outlining details of a possible Plan.  A Personalised Plan will be referenced by a separate Object.</p>
-					</Description>
-		</Item> 
-		<Item>
-			<Element>PlanRequiredList</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p></p>
-			</Description>
-			<Type ref="CommonTypes" name="PlanRequiredListType"></Type>
-		</Item>
-	</CommonElement>
-
 	<CommonElement name="PlanRequiredListType" type="true" dm="true">
 		<Item>
 			<Element>PlanRequiredListType</Element>
@@ -581,20 +549,20 @@
 			</Description>
 		</Item> 
 		<Item>
-			<Element>PersonalisedPlanRefId</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The GUID of a PersonalisedPlan Object if it exists and it can be provided.</p>
-			</Description>
-			<Type ref="CommonTypes" name="IdRefType"></Type>  
-		</Item>
-		<Item>
 			<Element>PlanNotes</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Any notes that can be provided regarding the need that led to the plan.</p>
 			</Description>
 			<Type name="xs:string"></Type>  
+		</Item>
+		<Item>
+			<Element>PlanDocument</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The GUID of a PersonalisedPlan Object if it exists and it can be provided.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>
 	</CommonElement>
 	

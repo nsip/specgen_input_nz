@@ -195,7 +195,7 @@
 			<Description>
 				<p>The Document and it's meta-data, e.g. evidentiary documents, personalised plans, action plans.</p>
 			</Description>
-			<Type ref="CommonTypes" name="IdRefType"/>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>    <!-- Document -->
 	</CommonElement>
 
