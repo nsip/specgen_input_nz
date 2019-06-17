@@ -473,7 +473,98 @@
 		</Values>
 	</CodeSet>    <!-- Behaviour Directed At Type -->
 
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the action taken by the reporting staff member to the
+			wellbeing event.</p>
+		</Intro>
+		<ID>Wellbeing Event Action Taken</ID>
+		<Values>
+			<Value>
+				<Code>ACPE</Code>
+				<Text>Action Pending</Text>
+				<Description>Consequence for referral is pending. Referral will be modified when “action taken” is determined.</Description>
+			</Value>
+			<Value>
+				<Code>AASS</Code>
+				<Text>Additional Attendance / Saturday School</Text>
+				<Description>Consequence for referral results in student attending classes on a Saturday.</Description>
+			</Value>
+			<Value>
+				<Code>ALPL</Code>
+				<Text>Alternative Placement</Text>
+				<Description>Consequence for referral results in student being placed in a different educational setting.</Description>
+			</Value>
+			<Value>
+				<Code>BUSU</Code>
+				<Text>Bus Suspension</Text>
+				<Description>Consequence for referral results in 1-3 day period when student not allowed on the bus</Description>
+			</Value>
+			<Value>
+				<Code>COSE</Code>
+				<Text>Community Service</Text>
+				<Description>Consequence for referral results in involvement in community service activities or projects.</Description>
+			</Value>
+			<Value>
+				<Code>COST</Code>
+				<Text>Conference with Student</Text>
+				<Description>Consequence for referral results in student meeting with administrator, 
+					teacher, and/or parent (in any combination).
+				</Description>
+			</Value>
+			<Value>
+				<Code>EXPU</Code>
+				<Text>Expulsion</Text>
+				<Description>Consequence for referral results in student being dismissed from school permanently</Description>
+			</Value>
+			<Value>
+				<Code>ISSU</Code>
+				<Text>In School Suspension</Text>
+				<Description>Consequence for referral results in a period of time spent away from scheduled activities/classes during the school day.</Description>
+			</Value>
+			<Value>
+				<Code>ININ</Code>
+				<Text>Individualised Instruction</Text>
+				<Description>Consequence for referral results in student receiving individualised instruction specifically related to the student’s problem behaviors.</Description>
+			</Value>
+			<Value>
+				<Code>LOPR</Code>
+				<Text>Loss of Privilege</Text>
+				<Description>Consequence for referral results in student being unable to participate in some type of privilege.</Description>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Event Action Taken -->
 
+	<CodeSet>
+		<Intro>
+			<p>Codes denoting the type of restraint used on a student during a Wellbeing Event.</p>
+		</Intro>
+		<ID>Wellbeing Event Restraint</ID>
+		<Values>
+			<Value>
+				<Code>NON</Code>
+				<Text>None</Text>
+				<Description>No restraint or seclusion was used.</Description>
+			</Value>
+			<Value>
+				<Code>RES</Code>
+				<Text>Restraint</Text>
+				<Description>Any measure or condition used to immobilize or reduce the ability of a 
+					student to move his or her torso, arms, legs, or head freely.</Description>
+			</Value>
+			<Value>
+				<Code>RAS</Code>
+				<Text>Restraint and Seclusion</Text>
+				<Description>The use of both restraint and seclusion.</Description>
+			</Value>
+			<Value>
+				<Code>SEC</Code>
+				<Text>Seclusion</Text>
+				<Description>The involuntary confinement of a student alone in a room or area from which the student is physically prevented
+					 from leaving or believes they cannot freely exit.</Description>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Event Restraint -->
 
 	<!-- Wellbeing Response classification codes -->
 	<CodeSet>

@@ -1,10 +1,10 @@
 <DataObject name="WellbeingEvent"
-                          xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                        xmlns:xi="http://www.w3.org/2001/XInclude"
-                        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        
-            xmlns="http://sifassociation.org/SpecGen">
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
 
   <Key>RefId</Key>
   
@@ -30,44 +30,44 @@
   </Item>    <!-- RefId -->
 
   <Item>
-    <Element>StudentPersonalRefId</Element>
-    <Characteristics>M</Characteristics>
-  	<privacyRating>High</privacyRating>
-    <Description>
-      <p>The ID (GUID) of the student to whom this WellbeingEvent belongs.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- StudentPersonalRefId -->
-
-  <Item>
-    <Element>ReportingProviderRefId</Element>
-    <Characteristics>M</Characteristics>
-	  <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The ID (GUID) of the provider for which this WellbeingEvent is being reported.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- ReportingProviderRefId -->
-  
-  <Item>
-		<Element>WellbeingEventLocalId</Element>
+		<Element>LocalId</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>A Local Identifier for the Event. It is expected to be unique to the reporting site.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-  </Item>    <!-- WellbeingEventLocalId -->
+  </Item>    <!-- LocalId -->
 
   <Item>
-    <Element>PhysicalRestraintRefId</Element>
+    <Element>Student</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Object reference to the student to whom this WellbeingEvent belongs.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- Student -->
+
+  <Item>
+    <Element>ReportingProvider</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>  The ID (GUID) of the StudentPhysicalRestraint if it was administered to the student as part of this WellbeingEvent.</p>
+      <p>Object reference to the provider for which this WellbeingEvent is being reported.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- PhysicalRestraintRefId -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- ReportingProvider -->
+  
+  <Item>
+    <Element>PhysicalRestraint</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Object reference tothe StudentPhysicalRestraint if it was administered to the student as part of this WellbeingEvent.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- PhysicalRestraint -->
    
   <Item>
     <Element>EventNotes</Element>
@@ -120,14 +120,14 @@
   </Item>    <!-- Severity -->
   
   <Item>
-    <Element>ReportingStaffRefId</Element>
+    <Element>ReportingStaffMember</Element>
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>The ID (GUID) of the staff member who logged the Wellbeing Event record.</p>
+      <p>Object refernece to the staff member who logged the Wellbeing Event record.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"/>
-  </Item>    <!-- ReportingStaffRefId -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"/>
+  </Item>    <!-- ReportingStaffMember -->
   
   <Item>
     <Element>EventLocationDescription</Element>
@@ -220,6 +220,26 @@
   </Item>    <!-- Status -->
 
   <Item>
+   	<Element>RestraintType</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>The StudentPhysicalRestraint if it was administered to the student as part of this WellbeingEvent.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsWellbeingEventRestraintType"/>
+  </Item>    <!-- RestraintType -->
+
+  <Item>
+   	<Element>ActionTaken</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>Code denoting the action taken by the reporting staff member to the wellbeing event.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsWellbeingEventActionTakenType"/>
+  </Item>    <!-- ActionTaken -->
+  
+  <Item>
     <Element>DocumentList</Element>
     <Characteristics>O</Characteristics>
 	  <privacyRating>High</privacyRating>
@@ -242,12 +262,17 @@
   <xhtml:Example xmlns="" name="WellbeingEvent">
     <WellbeingEvent> 
       <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
-      <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
-      <ReportingProviderRefId>CA285746-359D-7510-1A8C-36432A901A16</ReportingProviderRefId>
+      <Student>
+        <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
+      </Student>
+      <ReportingProvider>
+        <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
+      </ReportingProvider>
       <EventCategoryClass>P</EventCategoryClass>
       <EventDate>2017-11-01</EventDate>
       <EventTimePeriod>AM</EventTimePeriod>
+      <RestraintType>NON</RestraintType>
+      <ActionTaken>ININ</ActionTaken>
     </WellbeingEvent>
-
   </xhtml:Example>
 </DataObject>
