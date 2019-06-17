@@ -248,7 +248,15 @@
 			</Description>
 			<Type ref="CommonTypes" name="SchoolYearLevelListType"/>
 		</Item>    <!-- SchoolYearList-->
-		
+		<Item>
+			<Element>TechnologyCentreName</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				The name of the Technology Centre that is run as part of the School;  Eg:  Marlborough Technology Centre
+				is run as part of Bohally Intermediate School.
+			</Description>			
+		</Item>    <!-- TechnologyCentreName -->
 		<xhtml:Example xmlns="" name="NZ School Service Example">
 			<SchoolService>
 				<CoEdStatus>C2</CoEdStatus>
