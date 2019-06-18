@@ -615,7 +615,7 @@
 		</Values>
 	</CodeSet>    <!-- Wellbeing Response Category -->
 
-  <CodeSet>
+  	<CodeSet>
       <Intro>
         <p>Standard codes denoting the type of award that has been achieved as part of a Wellbeing Response.</p>
       </Intro>
@@ -659,54 +659,31 @@
 	  	</Values>
 	</CodeSet>    <!-- Appeal Determination By -->
 
+
 	<!-- Learning Support Participation codes -->
 	<CodeSet>
 		<Intro>
-			<p>Standard codes denoting the learning support agency that is supporting the student, 
-				e.g. Resource Teacher Literacy (RTLit) and Resource Teacher Learning and Behaviour (RTLB).</p>
+			<p>Standard codes denoting the kinds of learning support intervention</p>
 		</Intro>
-		<ID>Learning Support Agency</ID>
+		<ID>Learning Support Intervention</ID>
 		<Values>
-			<Value><Code>101</Code><Text>RTLit</Text><Description>Resource Teacher Literacy</Description></Value>
-			<Value><Code>102</Code><Text>RTLB</Text><Description>Resource Teacher Learning and Behaviour</Description></Value>
-			<Value><Code>103</Code><Text>Other</Text></Value>
+			<Value><Code>AEAC</Code><Text>Alternative Education - Activity Centre</Text></Value>
+			<Value><Code>AODC</Code><Text>Advisors on Deaf Children</Text></Value>
+			<Value><Code>AESA</Code><Text>Alternative Education - Service Academy</Text></Value>
+			<Value><Code>AESS</Code><Text>Alternative Education - Study Support Centre</Text></Value>
 		</Values>
-	</CodeSet>    <!-- Learning Support Agency -->
-	
-	<CodeSet>
-		<Intro>
-			<p>Standard codes denoting the learning support group the student is receiving support in,
-					e.g. physical, and learning.</p>
-		</Intro>
-		<ID>Learning Support Group</ID>
-		<Values>
-			<Value><Code>101</Code><Text>Physical</Text></Value>
-			<Value><Code>102</Code><Text>Learning</Text></Value>
-			<Value><Code>103</Code><Text>Other</Text></Value>
-		</Values>
-	</CodeSet>    <!-- Learning Support Group -->
+	</CodeSet>    <!-- Learning Support Intervention -->
 
 	<CodeSet>
 		<Intro>
-			<p>Standard codes denoting the learning support intervention type,
-					e.g. ESOL, First STEPs, MST.</p>
+			<p>Code set denoting the possible outcomes of a student's participation in a learning support intervention.</p>
 		</Intro>
-		<ID>Learning Support Intervention Type</ID>
+		<ID>Learning Support Intervention Outcome</ID>
 		<Values>
-			<Value><Code>101</Code><Text>First STEPs</Text></Value>
-			<Value><Code>102</Code><Text>ESOL</Text></Value>
-			<Value><Code>103</Code><Text>MST</Text></Value>
-			<Value><Code>104</Code><Text>Rainbow Reading</Text></Value>
-			<Value><Code>105</Code><Text>Read. Rec 2014</Text></Value>
-			<Value><Code>106</Code><Text>STEPS</Text></Value>
-			<Value><Code>107</Code><Text>TA - Reading</Text></Value>
-			<Value><Code>108</Code><Text>RTLB</Text></Value>
-			<Value><Code>109</Code><Text>RTLit</Text></Value>
-			<Value><Code>110</Code><Text>Early Words</Text></Value>
-			<Value><Code>111</Code><Text>Reading Recovery</Text></Value>
-			<Value><Code>112</Code><Text>Other</Text></Value>
+			<Value><Code>FIR</Code><Text>Further Intervention Required</Text></Value>
+			<Value><Code>OAC</Code><Text>Outcome Achieved</Text></Value>
 		</Values>
-	</CodeSet>    <!-- Learning Support Intervention Type -->
+	</CodeSet>    <!-- Learning Support Intervention Outcome -->
 
 	<CodeSet>
 		<Intro>
@@ -729,6 +706,28 @@
 			<Value><Code>112</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the types of organisation who can provide a learning support intervention.</p>
+		</Intro>
+		<ID>Learning Support Provided By</ID>
+		<Values>
+			<Value><Code>MOE</Code><Text>Ministry of Education</Text></Value>
+			<Value><Code>MOH</Code><Text>Ministry of Health</Text></Value>
+			<Value><Code>OTM</Code><Text>Oranga Tamariki (OT)</Text></Value>
+			<Value><Code>DHB</Code><Text>District Health Board</Text></Value>
+			<Value><Code>EDU</Code><Text>Educators</Text></Value>
+			<Value><Code>FRE</Code><Text>Free Service</Text></Value>
+			<Value><Code>ACA</Code><Text>The Association for Child and Adolescent Mental Health</Text></Value>
+			<Value><Code>PCA</Code><Text>Parents/Caregivers</Text></Value>
+			<Value><Code>ACC</Code><Text>Accident Compensation Corporation (ACC)</Text></Value>
+			<Value><Code>ASP</Code><Text>Aspire</Text></Value>
+			<Value><Code>WSI</Code><Text>Whole School/Institution</Text></Value>
+			<Value><Code>DWE</Code><Text>Family/Whānau/Educators/Health Professionals</Text></Value>
+			<Value><Code>MHD</Code><Text>Ministry of Health/District Health Board</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Type Provided By-->
 
 	<CodeSet>
 		<Intro>

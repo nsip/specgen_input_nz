@@ -6,14 +6,13 @@
 	
 	xmlns="http://sifassociation.org/SpecGen">
 
-			<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
-				be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
 
 
-			<!-- Element types for the Wellbeing Domain -->
+	<!-- Element types for the Wellbeing Domain -->
 
 	<!-- Wellbeing Items-->   
-
 	<CommonElement name="MedicationListType" type="true" dm="true">
 		<Item>
 			<Element>MedicationListType</Element>
@@ -1486,5 +1485,53 @@
 				<SubjectArea>7</SubjectArea>
 			</StudentInterest>
 		</xhtml:Example>
+	</CommonElement>
+
+	<!-- LearningSupportParticipation complex types -->
+	<CommonElement name="LearningSupportReviewListType" type="true" dm="true">
+		<Item>
+			<Element>LearningSupportReviewListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of reviews made in regards to the student's learning support participation.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Review</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>	 A review made in regards to the student's learning support participation.</p>
+			</Description>
+			<Type ref="CommonTypes" name="LearningSupportReviewType"/>
+		</Item>    <!-- Review -->
+	</CommonElement>
+
+	<CommonElement name="LearningSupportReviewType" type="true" dm="true">
+		<Item>
+			<Element>LearningSupportReviewType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A review made in regards to the student's learning support participation.</p>
+			</Description>
+		</Item>
+
+		<Item>
+			<Element>ReviewDate</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The date the review was made of the student's learning support participation.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>    <!-- ReviewDate -->
+
+		<Item>
+			<Element>ReviewComment</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Free text comment about a review that was made of the student's learning support participation.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- ReviewComment -->
 	</CommonElement>
 </IncludeGroup>
