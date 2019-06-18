@@ -81,7 +81,7 @@
       <p>RefId  of the Provider who defines the TeachingGroup. Either RefId or LocalId must be provided.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>        <!-- ProviderRefId -->
+  </Item>       <!-- Provider -->
 
   <Item>
     <Element>TeachingProvider</Element>
@@ -91,7 +91,7 @@
       <p>RefId of the Provider who actually teaches the TeachingGroup. Only present when the teaching provider is not the defining provider.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>        <!-- ProviderRefId -->
+  </Item>       <!-- TeachingProvider -->
 
   <Item>
     <Element>SchoolYear</Element>
@@ -133,7 +133,7 @@
       <p>List of schedule entries recording what ProviderCourses, Learning Areas or Subject Areas are being taught to the TeachingGroup when.</p>
     </Description>
     <Type ref="CommonTypes" name="TeachingGroupScheduleListType"></Type>
-  </Item>        <!-- TeachingGroupScheduleList -->
+  </Item>       <!-- TeachingGroupScheduleList -->
 
   <Item>
     <Element>StudentList</Element>

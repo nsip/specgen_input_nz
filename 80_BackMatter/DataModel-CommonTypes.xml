@@ -211,60 +211,11 @@
 			<Element>StudentConsent</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
-				<p>Information about a piece of consent given, or a piece of consent not given.</p>
+				<p>Generic object reference to a StudentConsent data object that records the student's consent to
+				 a particular action taking place.</p>
 			</Description>
-			<Type ref="CommonTypes" name="StudentConsentType"></Type>  
+			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
 		</Item>    <!-- StudentConsent -->
-	</CommonElement>
-	
-	<CommonElement name="StudentConsentType" type="true" dm="true">
-		<Item>
-			<Element>StudentConsentType</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>Information about a piece of consent given, or a piece of consent not given.</p>
-			</Description>
-		</Item>
-		<Item>
-			<Element>AdditionalInformation</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>  Additional free text information provided about the consent.</p>
-			</Description>
-			<Type name="xs:normalizedString"/>
-		</Item>    <!-- AdditionalInformation -->
-		<Item>
-			<Element>ConsentGiven</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>Indicates whether or not censent was given.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>  
-		</Item>    <!-- ConsentGiven -->
-		<Item>
-			<Element>EndDate</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>The date the consent ended, if it was given.</p>
-			</Description>
-			<Type name="xs:date"/>
-		</Item>    <!-- EndDate -->
-		<Item>
-			<Element>StartDate</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>The date the consent or no consent was given.</p>
-			</Description>
-			<Type name="xs:date"/>
-		</Item>    <!-- StartDate -->
-		<Item>
-			<Element>ConsentTo</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>What the student is consenting or not consenting to.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsStudentConsentToType"></Type>  
-		</Item>    <!-- ConsentTo -->
 	</CommonElement>	
 
 </IncludeGroup>

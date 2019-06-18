@@ -84,119 +84,14 @@
 			<Type ref="CommonTypes" name="HouseholdContactInfoListType"/>
 		</Item>    <!-- HouseholdContactInfoList -->
 		
-		<xhtml:Example xmlns="" name="PersonInfo Example" intl="au">
-			<PersonInfo>
-				<Name Type="LGL">
-					<FamilyName>Smith</FamilyName>
-					<GivenName>Fred</GivenName>
-					<FullName>Fred Smith</FullName>
-				</Name>
-				<OtherNames>
-					<Name Type="AKA">
-						<FamilyName>Anderson</FamilyName>
-						<GivenName>Samuel</GivenName>
-						<FullName>Samuel Anderson</FullName>
-					</Name>
-					<Name Type="PRF">
-						<FamilyName>Rowinski</FamilyName>
-						<GivenName>Sam</GivenName>
-						<FullName>Sam Rowinski </FullName>
-					</Name>
-				</OtherNames>
-				<Demographics>
-					<IndigenousStatus>3</IndigenousStatus>
-					<Sex>1</Sex>
-					<BirthDate>1990-09-26</BirthDate>
-					<BirthDateVerification>1004</BirthDateVerification>
-					<PlaceOfBirth>Clayton</PlaceOfBirth>
-					<StateOfBirth>VIC</StateOfBirth>
-					<CountryOfBirth>1101</CountryOfBirth>
-					<CountriesOfCitizenship>
-						<CountryOfCitizenship>8104</CountryOfCitizenship>
-						<CountryOfCitizenship>1101</CountryOfCitizenship>
-					</CountriesOfCitizenship>
-					<CountriesOfResidency>
-						<CountryOfResidency>8104</CountryOfResidency>
-						<CountryOfResidency>1101</CountryOfResidency>
-					</CountriesOfResidency>
-					<CountryArrivalDate>1990-09-26</CountryArrivalDate>
-					<AustralianCitizenshipStatus>1</AustralianCitizenshipStatus>
-					<EnglishProficiency>
-						<Code>1</Code>
-					</EnglishProficiency>
-					<LanguageList>
-						<Language>
-							<Code>0001</Code>
-							<LanguageType>1</LanguageType>
-						</Language>
-					</LanguageList>
-					<DwellingArrangement>
-						<Code>1671</Code>
-					</DwellingArrangement>
-					<Religion>
-						<Code>2013</Code>
-					</Religion>
-					<ReligiousEventList>
-						<ReligiousEvent>
-							<Type>Baptism</Type>
-							<Date>2000-09-01</Date>
-						</ReligiousEvent>
-						<ReligiousEvent>
-							<Type>Christmas</Type>
-							<Date>2009-12-24</Date>
-						</ReligiousEvent>
-					</ReligiousEventList>
-					<ReligiousRegion>The Religion Region</ReligiousRegion>
-					<PermanentResident>P</PermanentResident>
-					<VisaSubClass>101</VisaSubClass>
-					<VisaStatisticalCode>05</VisaStatisticalCode>
-				</Demographics>
-				<AddressList>
-					<Address Type="0123" Role="2382">
-						<Street>
-							<Line1>Unit1/10</Line1>
-							<Line2>Barkley Street</Line2>
-						</Street>
-						<City>Yarra Glenn</City>
-						<StateProvince>VIC</StateProvince>
-						<Country>1101</Country>
-						<PostalCode>9999</PostalCode>
-					</Address>
-					<Address Type="0123A" Role="013A">
-						<Street>
-							<Line1>34 Term Address Street</Line1>
-						</Street>
-						<City>Home Town</City>
-						<StateProvince>WA</StateProvince>
-						<Country>1101</Country>
-						<PostalCode>9999</PostalCode>
-					</Address>
-				</AddressList>
-				<PhoneNumberList>
-					<PhoneNumber Type="0096">
-						<Number>03 9637-2289</Number>
-						<Extension json:force-string="true">72289</Extension>
-						<ListedStatus>Y</ListedStatus>
-					</PhoneNumber>
-					<PhoneNumber Type="2364">
-						<Number>0437-765-234</Number>
-						<ListedStatus>N</ListedStatus>
-					</PhoneNumber>
-				</PhoneNumberList>
-				<EmailList>
-					<Email Type="01">fsmith@yahoo.com</Email>
-					<Email Type="02">freddy@gmail.com</Email>
-				</EmailList>
-			</PersonInfo>
-		</xhtml:Example>
-		<xhtml:Example xmlns="" name="PersonInfo Example" intl="nz">
+		<xhtml:Example xmlns="" name="PersonInfo Example">
 			<PersonInfo>
 				<Name>
 					<FamilyName>Rubeus</FamilyName>
 					<GivenName>Hagrid</GivenName>
 					<FullName>Rubeus Hagrid</FullName>
 					<Type>LGL</Type>
-					<IsVerified>Y</IsVerified>
+					<IsVerified>N</IsVerified>
 				</Name>
 				<OtherNames>
 					<Name>
@@ -210,8 +105,9 @@
 							<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 							<IsConfirmed>true</IsConfirmed>
 							<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-							<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
-							<ProviderLocalId>245</ProviderLocalId>
+							<Provider>
+								<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
+							</Provider>
 						</Verification>		
 					</Name>
 					<Name>
@@ -236,8 +132,9 @@
 						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 						<IsConfirmed>true</IsConfirmed>
 						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-						<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
-						<ProviderLocalId>245</ProviderLocalId>
+						<Provider>
+							<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
+						</Provider>
 					</CitizenshipVerification>
 					<Gender>2</Gender>
 					<LanguageList>
@@ -575,8 +472,9 @@
 					<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 					<IsConfirmed>true</IsConfirmed>
 					<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-					<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
-					<ProviderLocalId>245</ProviderLocalId>
+					<Provider>
+						<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
+					</Provider>
 				</Verification>
 			</VerifiedName>
 		</xhtml:Example>
@@ -638,8 +536,9 @@
 						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 						<IsConfirmed>true</IsConfirmed>
 						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-						<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
-						<ProviderLocalId>245</ProviderLocalId>
+						<Provider>
+							<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
+						</Provider>
 					</Verification>					
 				</Name>
 			</OtherNames>
@@ -684,322 +583,80 @@
 			</Description>
 			<Type ref="CommonTypes" name="CountryType"/>
 		</Item>    <!-- CountryOfBirth -->
-		<if intl="nz">	
-			<Item>
-				<Element>CitizenshipList</Element>
-				<Characteristics>O</Characteristics>
-				<Description/>
-				<Type ref="CommonTypes" name="CountryListType"/>
-			</Item>    <!-- CitizenshipList -->
-			<Item>
-				<Element>CitizenshipStatus</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The Citizenship or Residency status of the Person</p>
-				</Description>
-				<Type ref="CommonTypes" name="NZCodeSetsCitizenshipStatusType"/>
-			</Item>    <!-- CitizenshipStatus -->
-			<Item>
-				<Element>CitizenshipVerification</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>
-						The verification event that verified the residency
-						status of the person.  Absence of a verification event
-						indicates that the residency was not verified against
-						an identity document.
-					</p>
-				</Description>
-				<Type ref="CommonTypes" name="VerificationEventType"/>
-			</Item>    <!-- CitizenshipVerification -->
-			<Item>
-				<Element>Gender</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The gender with which the Person identifies, according to
-					<a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/LfWjOFK1NqtZCv5i">NZ Standard Gender Identity</a> codes.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsGenderType"/>
-			</Item>    <!-- Gender -->
-			<Item>
-				<Element>LanguageList</Element>
-				<Characteristics>O</Characteristics>
-				<Description>List of languages an individual uses to communicate.</Description>
-				<Type ref="CommonTypes" name="LanguageListType"/>
-			</Item>    <!-- LanguageList -->
-			<Item>
-				<Element>CountryArrivalDate</Element>
-				<Characteristics>O</Characteristics>
-				<Description>Date the person first arrived in the country.</Description>
-				<Type name="xs:date"/>
-			</Item>    <!-- CountryArrivalDate -->
-			<Item>
-				<Element>EthnicityList</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>One or more ethnic groups with which the person identifies.</p>
-				</Description>
-				<Type ref="CommonTypes" name="EthnicityListType"/>
-			</Item>    <!-- EthnicityList -->
-			<Item>
-				<Element>IwiAffiliationList</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>A list of one or more iwi with which the person has an affiliation.</p>
-				</Description>
-				<Type ref="CommonTypes" name="IwiAffiliationList"/>
-			</Item>    <!-- IwiAffiliationList -->
-			<Item>
-			<Element>ReligiousAffiliationList</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>A list of one or more religions with which the person has an affiliation.</p>
-				</Description>
-				<Type ref="CommonTypes" name="ReligiousAffiliationList"/>
-			</Item>    <!-- ReligiousAffiliationList -->
-		</if>	
+		<Item>
+			<Element>CitizenshipList</Element>
+			<Characteristics>O</Characteristics>
+			<Description/>
+			<Type ref="CommonTypes" name="CountryListType"/>
+		</Item>    <!-- CitizenshipList -->
+		<Item>
+			<Element>CitizenshipStatus</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The Citizenship or Residency status of the Person</p>
+			</Description>
+			<Type ref="CommonTypes" name="NZCodeSetsCitizenshipStatusType"/>
+		</Item>    <!-- CitizenshipStatus -->
+		<Item>
+			<Element>CitizenshipVerification</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>
+					The verification event that verified the residency
+					status of the person.  Absence of a verification event
+					indicates that the residency was not verified against
+					an identity document.
+				</p>
+			</Description>
+			<Type ref="CommonTypes" name="VerificationEventType"/>
+		</Item>    <!-- CitizenshipVerification -->
+		<Item>
+			<Element>Gender</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The gender with which the Person identifies, according to
+				<a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/LfWjOFK1NqtZCv5i">NZ Standard Gender Identity</a> codes.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsGenderType"/>
+		</Item>    <!-- Gender -->
+		<Item>
+			<Element>LanguageList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>List of languages an individual uses to communicate.</Description>
+			<Type ref="CommonTypes" name="LanguageListType"/>
+		</Item>    <!-- LanguageList -->
+		<Item>
+			<Element>CountryArrivalDate</Element>
+			<Characteristics>O</Characteristics>
+			<Description>Date the person first arrived in the country.</Description>
+			<Type name="xs:date"/>
+		</Item>    <!-- CountryArrivalDate -->
+		<Item>
+			<Element>EthnicityList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>One or more ethnic groups with which the person identifies.</p>
+			</Description>
+			<Type ref="CommonTypes" name="EthnicityListType"/>
+		</Item>    <!-- EthnicityList -->
+		<Item>
+			<Element>IwiAffiliationList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of one or more iwi with which the person has an affiliation.</p>
+			</Description>
+			<Type ref="CommonTypes" name="IwiAffiliationList"/>
+		</Item>    <!-- IwiAffiliationList -->
+		<Item>
+		<Element>ReligiousAffiliationList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of one or more religions with which the person has an affiliation.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ReligiousAffiliationList"/>
+		</Item>    <!-- ReligiousAffiliationList -->
 	
-		<if intl="au">
-			<Item>
-				<Element>CountriesOfCitizenship</Element>
-				<Characteristics>O</Characteristics>
-				<Description/>
-				<Type ref="CommonTypes" name="CountryListType"/>
-			</Item>    <!-- CountriesOfCitizenship -->
-			<Item>
-				<Element>CountryArrivalDate</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Date the person first arrived in the country.</p>
-				</Description>
-				<Type name="xs:date"/>
-			</Item>    <!-- CountryArrivalDate -->
-			<Item>
-				<Element>IndigenousStatus</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Whether or not the person identifies themselves as being of Aboriginal and/or Torres Strait Islander descent.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsIndigenousStatusType"/>
-			</Item>
-			<Item>
-				<Element>Sex</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>'Sex' is the distinction 'male'/'female'/'intersex', as reported by the person</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsSexCodeType"/>
-			</Item>   <!-- Sex -->
-			<Item>
-				<Element>BirthDateVerification</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Means by which the person's birth date was validated.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsBirthdateVerificationType"/>
-			</Item>   <!-- BirthdateVerification -->
-			<Item>
-				<Element>StateOfBirth</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The person's state of birth.</p>
-				</Description>
-				<Type ref="CommonTypes" name="StateProvinceType"/>
-			</Item>   <!-- StateOfBirth -->
-			<Item>
-				<Element>CountriesOfResidency</Element>
-				<Characteristics>O</Characteristics>
-				<Description/>
-				<Type ref="CommonTypes" name="CountryList2Type"/>
-			</Item>   <!-- CountriesOfResidency -->
-			<Item>
-				<Element>AustralianCitizenshipStatus</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The person's citizenship status.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsAustralianCitizenshipStatusType"/>
-			</Item>   <!-- AustralianCitizenshipStatus -->
-			<Item>
-				<Element>EnglishProficiency</Element>
-				<Characteristics>O</Characteristics>
-				<Description>Person's proficiency in English.</Description>
-				<Type ref="CommonTypes" name="EnglishProficiencyType"/>
-			</Item>   <!-- EnglishProficiency -->
-			<Item>
-				<Element>LanguageList</Element>
-				<Characteristics>O</Characteristics>
-				<Description>List of languages an individual uses to communicate.</Description>
-				<Type ref="CommonTypes" name="LanguageListType"/>
-			</Item>    <!-- LanguageList -->
-			<Item>
-				<Element>DwellingArrangement</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Setting/environment in which the person resides.</p>
-				</Description>
-				<Type ref="CommonTypes" name="DwellingArrangementType"/>
-			</Item>	   <!-- DwellingArrangement -->
-			<Item>
-				<Element>Religion</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Type of Religion if any</p>
-				</Description>
-				<Type ref="CommonTypes" name="ReligionType"/>
-			</Item>    <!-- Religion -->
-			<Item>
-				<Element>ReligiousEventList</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>List of Religious events</p>
-				</Description>
-				<Type ref="CommonTypes" name="ReligiousEventListType"/>
-			</Item>    <!-- ReligiousEventList -->
-			<Item>
-				<Element>ReligiousRegion</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Belong to Religious Region - Currently Free Text.</p>
-				</Description>
-				<Type name="xs:normalizedString"/>
-			</Item>    <!-- ReligiousRegion -->
-			<Item>
-				<Element>PermanentResident</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Australian Residency Status (Mandatory for Student)</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsPermanentResidentStatusType"/>
-			</Item>    <!-- PermanentResident -->
-
-			<!-- For NSW 3.4 - a list is being added.  Where there is more than one VISA applicable,
-				there will be a VisaSubClassList -->
-			<Item>
-				<Element>VisaSubClass</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Visa Sub-Class - Can be free text - not necessary to validate</p>
-				</Description>
-				<Type ref="CommonTypes" name="VisaSubClassCodeType"/>
-			</Item>    <!-- VisaSubClass -->
-			<Item>
-				<Element>VisaStatisticalCode</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Visa Statistical Code - Can be free text - not necessary to validate</p>
-				</Description>
-				<Type name="xs:normalizedString"/>
-			</Item>    <!-- VisaStatisticalCode -->
-			<Item>
-				<Element>VisaExpiryDate</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Expiry Date of Visa if one exists</p>
-				</Description>
-				<Type name="xs:date"/>
-			</Item>    <!-- VisaExpiryDate -->
-			<Item>
-				<Element>VisaSubClassList</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>List of Visa details if more than one exists.</p>
-				</Description>
-				<Type ref="CommonTypes" name="VisaSubClassListType"/>
-			</Item>    <!-- VisaSubClassList -->
-			<Item>
-				<Element>LBOTE</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Language Background is Other Than English. (http://www.acara.edu.au/verve/_resources/DSM_1.pdf), the LBOTE metric is under review. Currently it can be derived from Student and Parents Language Background.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-			</Item>    <!-- LBOTE -->
-			<Item>
-				<Element>ImmunisationCertificateStatus</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Status of Immunisation Certificate</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsImmunisationCertificateStatusType"/>
-			</Item>    <!-- ImmunisationCertificate -->
-			<Item>
-				<Element>CulturalBackground</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Used to indicate cultural background. </p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsAustralianStandardClassificationOfCulturalAndEthnicGroupsASCCEGType"/>
-			</Item>    <!-- CulturalBackground -->
-			<Item>
-				<Element>MaritalStatus</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The person's marital status.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsMaritalStatusAIHWType"/>
-			</Item>    <!-- MaritalStatus -->
-			<Item>
-				<Element>MedicareNumber</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Person's Medicare number. Exchange only with permission to do so.</p>
-				</Description>
-				<Type name="xs:normalizedString"/>
-			</Item>    <!-- MedicareNumber -->
-		</if>
-
-		<xhtml:Example name="Demographics Example" xmlns="" intl="au">
-			<Demographics>
-				<IndigenousStatus>3</IndigenousStatus>
-				<Sex>1</Sex>
-				<BirthDate>1990-09-26</BirthDate>
-				<BirthDateVerification>1004</BirthDateVerification>
-				<PlaceOfBirth>Clayton</PlaceOfBirth>
-				<StateOfBirth>VIC</StateOfBirth>
-				<CountryOfBirth>1101</CountryOfBirth>
-				<CountriesOfCitizenship>
-					<CountryOfCitizenship>8104</CountryOfCitizenship>
-					<CountryOfCitizenship>1101</CountryOfCitizenship>
-				</CountriesOfCitizenship>
-				<CountriesOfResidency>
-					<CountryOfResidency>8104</CountryOfResidency>
-					<CountryOfResidency>1101</CountryOfResidency>
-				</CountriesOfResidency>
-				<CountryArrivalDate>1990-09-26</CountryArrivalDate>
-				<AustralianCitizenshipStatus>1</AustralianCitizenshipStatus>
-				<EnglishProficiency>
-					<Code>1</Code>
-				</EnglishProficiency>
-				<LanguageList>
-					<Language>
-						<Code>0001</Code>
-						<LanguageType>1</LanguageType>
-					</Language>
-				</LanguageList>
-				<DwellingArrangement>
-					<Code>1671</Code>
-				</DwellingArrangement>
-				<Religion>
-					<Code>2013</Code>
-				</Religion>
-				<ReligiousEventList>
-					<ReligiousEvent>
-						<Type>Baptism</Type>
-						<Date>2000-09-01</Date>
-					</ReligiousEvent>
-					<ReligiousEvent>
-						<Type>Christmas</Type>
-						<Date>2009-12-24</Date>
-					</ReligiousEvent>
-				</ReligiousEventList>
-				<ReligiousRegion>The Religion Region</ReligiousRegion>
-				<PermanentResident>P</PermanentResident>
-				<VisaSubClass>101</VisaSubClass>
-				<VisaStatisticalCode>05</VisaStatisticalCode>
-			</Demographics>
-		</xhtml:Example>
-		<xhtml:Example name="Demographics Example" xmlns="" intl="nz">
+		<xhtml:Example name="Demographics Example" xmlns="">
 			<Demographics>
 				<BirthDate>1990-09-26</BirthDate>
 				<PlaceOfBirth>Dunedin</PlaceOfBirth>
@@ -1015,8 +672,9 @@
 					<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 					<IsConfirmed>true</IsConfirmed>
 					<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-					<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
-					<ProviderLocalId>245</ProviderLocalId>
+					<Provider>
+						<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
+					</Provider>
 				</CitizenshipVerification>
 				<Gender json:force-string="true">2</Gender>
 				<LanguageList>
@@ -2212,25 +1870,14 @@
 			<Type name="xs:dateTime"/>
 		</Item>    <!-- TimeStamp -->
 		<Item>
-			<Element>ProviderRefId</Element>
+			<Element>Provider</Element>
 			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
-				<p>The RefId of the provider (eg school) that
-				provided the verification.</p>
+				<p>Generic object reference to the provider (eg school) that provided the verification.</p>
 			</Description>
-			<Type ref="CommonTypes" name="IdRefType"/>
-		</Item>    <!-- ProviderRefId -->
-		<Item>
-			<Element>ProviderLocalId</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The local identifier of the provider (eg school) that
-				provided the verification.</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/>
-		</Item>    <!-- ProviderLocalId -->
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>    <!-- Provider -->
 		
 		<xhtml:Example xmlns="" name="Citizenship Verification Event Example">
 			<VerificationEvent>
@@ -2239,8 +1886,9 @@
 				<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 				<IsConfirmed>true</IsConfirmed>
 				<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-				<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
-				<ProviderLocalId>245</ProviderLocalId>
+				<Provider>
+					<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
+				</Provider>
 			</VerificationEvent>
 		</xhtml:Example>
 		

@@ -1,14 +1,15 @@
-<DataObject name="StudentProviderEnrolment"
-			xmlns:xs="http://www.w3.org/2001/XMLSchema"
-			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-			xmlns:xi="http://www.w3.org/2001/XInclude"
-			xmlns:xhtml="http://www.w3.org/1999/xhtml"
-			xmlns:json="http://json.org/"
+	<DataObject name="StudentProviderEnrolment"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
 
-            xmlns="http://sifassociation.org/SpecGen">
+	xmlns="http://sifassociation.org/SpecGen">
 
 	<Key>RefId</Key>
 	<EventsReported>true</EventsReported>
+
 	<Item>
 		<Element>StudentProviderEnrolment</Element>
 		<privacyRating>High</privacyRating>
@@ -19,15 +20,17 @@
 				more ECE, School or Tertiary Enrolment sub-objects for each particular year.</p>	
 		</Description>
 	</Item>
+
 	<Item>
 		<Element>RefId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The SIF GUID for the enrolment.</p>
+			<p>The SIF GUID for the student provider enrolment.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"></Type>
 	</Item>    <!-- RefId -->
+
     <Item>
 		<Element>LocalId</Element>
 		<Characteristics>O</Characteristics>
@@ -37,48 +40,27 @@
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
 	</Item>    <!-- LocalId -->
+
 	<Item>
-		<Element>StudentPersonalRefId</Element>
+		<Element>Student</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The SIF GUID for the Student.</p>
+			<p>Generic object reference to the Student enrolling at the Provider</p>
 		</Description>
-		<Type ref="CommonTypes" relationship="records enrollment of" count="*:1" name="IdRefType"></Type>
-	</Item>    <!-- StudentPersonalRefId -->
+		<Type ref="CommonTypes" relationship="records enrollment of" count="*:1" name="ObjectReferenceType"></Type>
+	</Item>    <!-- Student -->
 
-	<if intl="au">
-		<Item>
-			<Element>SchoolInfoRefId</Element>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The ID (GUID) of the school to which this enrollment applies.</p>
-			</Description>
-			<Type ref="CommonTypes" relationship="records enrollment of student in" count="1:1" name="IdRefType"></Type>
-		</Item>    <!-- SchoolInfoRefId -->
-	</if>
+	<Item>
+		<Element>Provider</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Generic object reference to the education Provider, eg school.</p>
+		</Description>
+		<Type ref="CommonTypes" relationship="records enrollment of student in" count="1:1" name="ObjectReferenceType"/>
+	</Item>    <!-- Provider -->
 
-	<if intl="nz">
-		<Item>
-			<Element>ProviderRefId</Element>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The SIF GUID for the education Provider, eg school.</p>
-			</Description>
-			<Type ref="CommonTypes" relationship="records enrollment of student in" count="1:1" name="IdRefType"></Type>
-		</Item>    <!-- ProviderRefId -->
-		<Item>
-			<Element>ProviderLocalId</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The MoE Organisation Id for the education Provider, eg school.</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/> 
-		</Item>    <!-- ProviderLocalId -->
-	</if>
 	<Item>
 		<Element>EntryDate</Element>
 		<Characteristics>M</Characteristics>
@@ -90,7 +72,8 @@
 			the enrolment.</p>
 		</Description>
 		<Type name="xs:date"></Type>
-	</Item>        <!-- EntryDate -->
+	</Item>    <!-- EntryDate -->
+
 	<Item>
 		<Element>ExitDate</Element>
 		<Characteristics>C</Characteristics>
@@ -99,7 +82,8 @@
 			<p>The date of a student’s last attendance at the provider.</p>
 		</Description>
 		<Type name="xs:date"></Type>
-	</Item>        <!-- ExitDate -->
+	</Item>    <!-- ExitDate -->
+
 	<Item>
 		<Element>Status</Element>
 		<Characteristics>O</Characteristics>
@@ -107,405 +91,45 @@
 		<Description>
 			<p>The status of the enrolment WiP</p></Description>
 		<Type ref="CodeSets" name="NZCodeSetsProviderEnrolmentStatusType"></Type>
-	</Item>        <!-- Status -->
-	<if intl="nz">
-		<Item>
-			<Element>EarlyChildhoodEnrolment</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Description>
-				<p>Properties of an enrolment in an early childhood service (WiP).</p></Description>
-			<Type ref="CommonTypes" name="EarlyChildhoodEnrolmentType"></Type>
-		</Item>    <!-- EarlyChildhoodEnrolment -->
-		<Item>
-			<Element>EarlyChildhoodEducation</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Description>
-				<p>The type of early childhood education the student received before enrolling in their first school.</p></Description>
-			<Type ref="CommonTypes" name="EarlyChildhoodEducationType"></Type>
-		</Item>    <!-- EarlyChildhoodEnrolment -->
-		<Item>
-			<Element>SchoolEnrolmentList</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Description>
-				<p>Properties of an enrolment in a school</p></Description>
-			<Type ref="CommonTypes" name="StudentSchoolEnrolmentListType"></Type>
-		</Item>    <!-- SchoolEnrolmentList -->
+	</Item>    <!-- Status -->
 
-		<Item>
-			<Element>Exit</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Description>
-				<p>Details of the reasons, and interventions leading up to the student's enrolment being terminated.</p>
-			</Description>
-			<Type ref="CommonData" name="EnrolmentExitType"/>
-		</Item>		<!-- Exit -->
-	</if>		
-	<if intl="au">
-		<Item>
-			<Element>MembershipType</Element>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The type of this enrollment as it relates to the school identified in SchoolInfoRefId.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsSchoolEnrollmentTypeType"></Type>
-		</Item>    <!-- MembershipType -->
-		<Item>
-			<Element>TimeFrame</Element>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>
-					The timeframe of the enrollment based on the
-					<code>SIF_Date</code> of last publication. For events,
-					it is determined as of the date the event is
-					generated. For requests and responses, it is
-					calculated based on the date of the request.
-				</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsEnrollmentTimeFrameType"></Type>
-		</Item>    <!-- TimeFrame -->
-		<Item>
-			<Element>SchoolYear</Element>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>School year for which this enrollment is applicable,
-				expressed as the four-digit year in which the school year
-				ends (e.g. <code>2007</code>). StudentSchoolEnrollment
-				instances must not span multiple school years.</p>
-			</Description>
-			<Type ref="CommonTypes" name="SchoolYearType"></Type>
-		</Item>    <!-- SchoolYear -->
-		<Item>
-			<Element>EntryType</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>Container elements for EntryType information</Description>
-			<Type ref="CommonTypes" name="StudentEntryContainerType"></Type>
-		</Item>    <!-- EntryType -->  
-		<Item>
-			<Element>YearLevel</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>Year or academic level of student.</p>
-			</Description>
-			<Type ref="CommonTypes" name="YearLevelType"></Type>
-		</Item>    <!-- YearLevel -->
-		<Item>
-			<Element>Homeroom</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>Homeroom for this enrollment.</p>
-			</Description>
-			<Type ref="CommonTypes" relationship="records student homeroom as" count="1:?" name="IdRefType"></Type>
-		</Item>    <!-- Homeroom -->
-		<Item>
-			<Attribute>SIF_RefObject</Attribute>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The name of the object referenced.</p>
-			</Description>
-			<Values>
-				<Value>
-					<Code>RoomInfo</Code>
-				</Value>
-			</Values>
-		</Item>    <!-- Homerooom/@SIF_RefObject -->
-		<Item>
-			<Element>Advisor</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>Staff member assigned as an advisor.</p>
-			</Description>
-			<Type ref="CommonTypes" relationship="records student advisor as" count="1:?" name="IdRefType"></Type>
-		</Item>    <!-- Advisor -->
-		<Item>
-			<Attribute>SIF_RefObject</Attribute>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The name of the object referenced.</p>
-			</Description>
-			<Values>
-				<Value>
-					<Code>StaffPersonal</Code>
-				</Value>
-			</Values>
-		</Item>    <!-- Advisor/@SIF_RefObject -->
-		<Item>
-			<Element>Counselor</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>Staff member assigned as an advisor.</p>
-			</Description>
-			<Type ref="CommonTypes" relationship="records student counselor as" count="1:?" name="IdRefType"></Type>
-		</Item>    <!-- Counselor -->
-		<Item>
-			<Attribute>SIF_RefObject</Attribute>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The name of the object referenced.</p>
-			</Description>
-			<Values>
-				<Value>
-					<Code>StaffPersonal</Code>
-				</Value>
-			</Values>
-		</Item>    <!-- Counsellor/@SIF_RefObject -->
-		<Item>
-			<Element>Homegroup</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The name of the homegroup the student enrollment belongs to.</p>
-			</Description>
-			<Type name='xs:normalizedString'/>
-		</Item>    <!-- Homegroup -->
-		<Item>
-			<Element>ACARASchoolId</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>ACARA School Id.</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/>
-		</Item>    <!-- ACARASchoolId -->
-		<Item>
-			<Element>ClassCode</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The name of the class code the student belongs to, for the purposes of NAPLAN registration.</p>
-			</Description>
-			<Type name='xs:normalizedString'/>
-		</Item>    <!-- ClassCode -->
-		<Item>
-			<Element>TestLevel</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>Values: 3,5,7,9. The test level that the student is registering for.</p>
-			</Description>
-			<Type ref="CommonTypes" name="YearLevelType"></Type>
-		</Item>    <!-- TestLevel -->
-		<Item>
-			<Element>ReportingSchool</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>Is this the school to which student's report is to be made available?</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>    <!-- ReportingSchool -->
-		<Item>
-			<Element>House</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The name of the house the student belongs to.</p>
-			</Description>
-			<Type name='xs:normalizedString'/>
-		</Item>    <!-- House -->
-		<Item>
-			<Element>IndividualLearningPlan</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Medium</privacyRating>
-			<Description>
-				<p>Does this student have an individual learning plan in place?</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>    <!-- IndividualLearningPlan -->
-		<Item>
-			<Element>Calendar</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The calendar assigned to this enrollment. </p>
-			</Description>
-			<Type ref='CommonTypes' name='IdRefType'/>
-		</Item>    <!-- Calendar -->
-		<Item>
-			<Attribute>SIF_RefObject</Attribute>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The name of the object referenced.</p>
-			</Description>
-			<Values>
-				<Value>
-					<Code>CalendarSummary</Code>
-				</Value>
-			</Values>
-		</Item>    <!-- Calendar/@SIF_RefObejct -->
-		<Item>
-			<Element>ExitStatus</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Description>Container element for exit status codes.</Description>
-			<Type ref="CommonTypes" name="StudentExitStatusContainerType"></Type>
-		</Item>    <!-- ExitStatus -->
-		<Item>
-			<Element>ExitType</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Description></Description>
-			<Type ref="CommonTypes" name="StudentExitContainerType"></Type>
-		</Item>    <!-- ExitType -->  
-		<Item>
-			<Element>FTE</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description> 
-				<p>Full-time equivalent numeric value of the student's
-				course load during this enrollment, expressed in decimal
-				form, where 1.00 represents a full-time enrollment.</p>
-			</Description>
-			<Type name="xs:decimal"></Type>
-			<Facets>
-				<xs:minInclusive value="0"/>
-				<xs:maxInclusive value="1"/>
-				<xs:fractionDigits value="2"/>
-			</Facets>
-		</Item>    <!-- FTE -->
-		<Item>
-			<Element>FTPTStatus</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>An indication of whether the student is enrolled full time or part time.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsFTPTStatusCodeType"></Type>
-		</Item>    <!-- FTPTStatus -->
-		<Item>
-			<Element>FFPOS</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>Enrolled Full-fee Paying Overseas Student (FFPOS)
-				Status.  Enrolment Frame Element 10 NSCC Collection.</p>
-				<p>The status of an enrolment in a CRICOS course and
-				whether the person is liable for a fee which reflects the
-				imputed full average cost of the person's education at the
-				school (including both recurrent and capital costs)
-				irrespective of the actual arrangements to meet the
-				fee.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsFFPOSStatusCodeType"></Type>
-		</Item>    <!-- FFPOS -->
-		<Item>
-			<Element>CatchmentStatus</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>Container element for location of an individual's legal
-				residence relative to (within or outside) the boundaries
-				of the school for this enrolment. Enrolment Catchment
-				Status.</p>
-			</Description>
-			<Type ref="CommonTypes" name="CatchmentStatusContainerType"></Type>
-		</Item>    <!-- CatchmentStatus -->
-		<Item>
-			<Element>RecordClosureReason</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Description>
-				<p>The reason why this enrollment was closed.  The
-				EndOfYear option must be used to convey status change due
-				to rollover activity.</p>
-			</Description>
-			<Values>
-				<Value>
-					<Code>SchoolExit</Code>
-				</Value>
-				<Value>
-					<Code>TimeDependentDataChange</Code>
-				</Value>
-				<Value>
-					<Code>EndOfYear</Code>
-				</Value>
-				<Value>
-					<Code>CampusExit</Code>
-				</Value>
-			</Values>
-		</Item>    <!-- RecordClosureReason -->
-		<Item>
-			<Element>PromotionInfo</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Medium</privacyRating>
-			<Description>
-				<p>Information on a student's promotion, retention, or demotion related to this enrollment instance.</p>
-			</Description>
-			<Type ref="CommonTypes" name="PromotionInfoType"></Type>
-		</Item>    <!-- PromotionInfo -->
-		<Item>
-			<Element>PreviousSchool</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>If the student has previously been enrolled at a
-				school, i.e. student is transferring, the previous school
-				number.</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"></Type>
-		</Item>    <!-- PreviousSchool -->
-		<Item>
-			<Element>DestinationSchool</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>If the student has exited the school, the local id of the school to which the student has transferred to.</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"></Type>
-		</Item>    <!-- DestinationSchool -->	
-		<Item>
-			<Element>StudentSubjectChoiceList</Element>	
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>List of Student Subject Choices where available.</p>
-			</Description>
-			<Type ref="CommonTypes" name="StudentSubjectChoiceListType"></Type>
-		</Item>    <!-- StudentSubjectChoiceList -->
-		<Item>
-			<Element>StartedAtSchoolDate</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>First date the student was enrolled at this school if known.</p>
-			</Description>
-			<Type name="xs:date"></Type>
-		</Item>    <!-- StartedAtSchoolDate -->
-		<Item>
-			<Element>SIF_Metadata</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Type ref="CommonTypes" name="SIF_MetadataType"></Type>
-		</Item>    <!-- SIF_Metadata -->
-		<Item>
-			<Element>SIF_ExtendedElements</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
-		</Item>    <!-- SIF_ExtendedElements -->
-	</if>
+	<Item>
+		<Element>EarlyChildhoodEnrolment</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Properties of an enrolment in an early childhood service (WiP).</p></Description>
+		<Type ref="CommonTypes" name="StudentECEEnrolmentType"></Type>
+	</Item>    <!-- EarlyChildhoodEnrolment -->
+
+	<Item>
+		<Element>EarlyChildhoodEducation</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The type of early childhood education the student received before enrolling in their first school.</p></Description>
+		<Type ref="CommonTypes" name="EarlyChildhoodEducationType"></Type>
+	</Item>    <!-- EarlyChildhoodEducation -->
+
+	<Item>
+		<Element>SchoolEnrolmentList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Properties of an enrolment in a school</p></Description>
+		<Type ref="CommonTypes" name="StudentSchoolEnrolmentListType"></Type>
+	</Item>    <!-- SchoolEnrolmentList -->
 
 	<xhtml:Example xmlns="" name="Completed International Student School Enrolment">
 		<StudentProviderEnrolment>
 			<RefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</RefId>
 			<LocalId>2004H102</LocalId>
-			<StudentPersonalRefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</StudentPersonalRefId>
-			<ProviderRefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</ProviderRefId>
+			<Student>
+				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
+			</Student>
+			<Provider>
+				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
+			</Provider>
 			<EntryDate>2018-01-29</EntryDate>
 			<Status>5</Status>
 			<SchoolEnrolmentList>
@@ -520,8 +144,9 @@
 						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 						<IsConfirmed>true</IsConfirmed>
 						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-						<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
-						<ProviderLocalId>245</ProviderLocalId>
+						<Provider>
+							<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
+						</Provider>
 					</EligibilityVerification>
 					<FTE>1.0</FTE>
 					<FundingType>EX</FundingType>
@@ -541,8 +166,12 @@
 		<StudentProviderEnrolment>
 			<RefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</RefId>
 			<LocalId>2004H102</LocalId>
-			<StudentPersonalRefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</StudentPersonalRefId>
-			<ProviderRefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</ProviderRefId>
+			<Student>
+				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
+			</Student>
+			<Provider>
+				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
+			</Provider>
 			<EntryDate>2017-01-29</EntryDate>
 			<Status>4</Status>
 			<SchoolEnrolmentList>
@@ -557,8 +186,9 @@
 						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 						<IsConfirmed>true</IsConfirmed>
 						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-						<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
-						<ProviderLocalId>245</ProviderLocalId>
+						<Provider>
+							<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
+						</Provider>
 					</EligibilityVerification>
 					<FTE>1.0</FTE>
 					<FundingType>RE</FundingType>
@@ -597,8 +227,9 @@
 						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 						<IsConfirmed>true</IsConfirmed>
 						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-						<ProviderRefId>822f6c83-2841-4a87-9ff9-49730951b3ba</ProviderRefId>
-						<ProviderLocalId>245</ProviderLocalId>
+						<Provider>
+							<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
+						</Provider>
 					</EligibilityVerification>
 					<FTE>1.0</FTE>
 					<FundingType>RE</FundingType>
@@ -624,11 +255,15 @@
 					<CourseChoiceList>
 						<StudentCourseChoice>
 							<PreferenceNumber>1</PreferenceNumber>
-							<CourseLocalId>Y11HIST</CourseLocalId>
+							<Course>
+								<LocalId>Y11HIST</LocalId>
+							</Course>
 						</StudentCourseChoice>
 						<StudentCourseChoice>
 							<PreferenceNumber>2</PreferenceNumber>
-							<CourseLocalId>Y11FREN</CourseLocalId>
+							<Course>
+								<LocalId>Y11FREN</LocalId>
+							</Course>
 						</StudentCourseChoice>
 					</CourseChoiceList>
 				</SchoolEnrolment>

@@ -426,6 +426,27 @@
 
 	<CodeSet>
 		<Intro>
+			<p>Codes denoting the level of ORS funding a student may receive.</p>
+		</Intro>
+		<ID>Ongoing Resource Scheme</ID>
+		<Values>
+			<Value>
+				<Code>HI</Code>
+				<Text>High</Text>
+			</Value>
+			<Value>
+				<Code>VH</Code>
+				<Text>Very High</Text>
+			</Value>
+			<Value>
+				<Code>EX</Code>
+				<Text>Extension</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Ongoing Resource Scheme -->
+
+	<CodeSet>
+		<Intro>
 			<p>The type of exchange scheme for student enrolment where
 			the Eligibility Criteria is "Student on Government
 			approved exchange scheme" (5).</p>
@@ -533,6 +554,48 @@
 			</Value>    <!-- Other -->
 		</Values>
 	</CodeSet>    <!-- CoEnrolment Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting how the student's pre-enrolment was cancelled.</p>
+		</Intro>
+		<ID>Pre Enrolment Exit Type</ID>
+		<Values>
+			<Value>
+				<Code>A</Code>
+				<Text>Automated</Text>
+			</Value>
+			<Value>
+				<Code>M</Code>
+				<Text>Manual</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Pre Enrolment Exit Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting why the student's pre-enrolment was cancelled.</p>
+		</Intro>
+		<ID>Pre Enrolment Cancellation Reason</ID>
+		<Values>
+			<Value>
+				<Code>SIE</Code>
+				<Text>Student Incorrectly Enrolled</Text>
+			</Value>
+			<Value>
+				<Code>SDE</Code>
+				<Text>Student Declined Enrolment</Text>
+			</Value>
+			<Value>
+				<Code>DEC</Code>
+				<Text>Deceased</Text>
+			</Value>
+			<Value>
+				<Code>OTH</Code>
+				<Text>Other - Please Specify</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Pre Enrolment Cancellation Reason -->
 
 	<CodeSet>
 		<Intro>
