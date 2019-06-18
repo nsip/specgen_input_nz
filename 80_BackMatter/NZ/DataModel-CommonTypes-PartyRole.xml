@@ -140,7 +140,7 @@
 					<LanguageList>
 						<Language>
 							<Code>01110</Code>
-							<LanguageType>2</LanguageType>
+							<Usage>2</Usage>
 							<ProficiencyList>
 								<Proficiency>
 									<Level>101</Level>
@@ -150,7 +150,7 @@
 						</Language>
 						<Language>
 							<Code>01112</Code>
-							<LanguageType>1</LanguageType>
+							<Usage>1</Usage>
 							<ProficiencyList>
 								<Proficiency>
 									<Level>101</Level>
@@ -162,11 +162,11 @@
 					<EthnicityList>
 						<Ethnicity>
 							<PreferenceOrderNumber>1</PreferenceOrderNumber>
-							<Ethnicity>111</Ethnicity>
+							<Code>111</Code>
 						</Ethnicity>
 						<Ethnicity>
 							<PreferenceOrderNumber>1</PreferenceOrderNumber>
-							<Ethnicity>211</Ethnicity>
+							<Code>211</Code>
 						</Ethnicity>
 					</EthnicityList>
 					<IwiAffiliationList>
@@ -388,26 +388,24 @@
 			</Description>
 			<Type name="xs:normalizedString"/>
 		</Item>    <!-- FullName -->
-		<if intl="nz">
-			<Item>
-				<Element>Type</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					Where a person has more than one name, the usage type
-					distinguishes the purposes or their preference for use of
-					the name.
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsNameUsageTypeType"/>
-			</Item>    <!-- Type -->
-			<Item>
-				<Element>IsVerified</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					Flag indicating that this name has been verified.
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-			</Item>    <!-- IsVerified -->
-		</if>
+		<Item>
+			<Element>Type</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				Where a person has more than one name, the usage type
+				distinguishes the purposes or their preference for use of
+				the name.
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsNameUsageTypeType"/>
+		</Item>    <!-- Type -->
+		<Item>
+			<Element>IsVerified</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				Flag indicating that this name has been verified.
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+		</Item>    <!-- IsVerified -->
 	
 		<xhtml:Example xmlns="" name="Base Name Example" intl="au">
 			<BaseName>
@@ -680,21 +678,21 @@
 				<LanguageList>
 					<Language>
 						<Code>01110</Code>
-						<LanguageType>2</LanguageType>
+						<Usage>2</Usage>
 					</Language>
 					<Language>
 						<Code>01112</Code>
-						<LanguageType>1</LanguageType>
+						<Usage>1</Usage>
 					</Language>
 				</LanguageList>
 				<EthnicityList>
 					<Ethnicity>
 						<PreferenceOrderNumber>1</PreferenceOrderNumber>
-						<Ethnicity>111</Ethnicity>
+						<Code>111</Code>
 					</Ethnicity>
 					<Ethnicity>
 						<PreferenceOrderNumber>1</PreferenceOrderNumber>
-						<Ethnicity>211</Ethnicity>
+						<Code>211</Code>
 					</Ethnicity>
 				</EthnicityList>
 				<IwiAffiliationList>
@@ -723,28 +721,16 @@
 			<Characteristics>MR</Characteristics>
 			<Type ref="CommonTypes" name="LanguageBaseType"/>
 		</Item>    <!-- Language -->
-		
-		<xhtml:Example xmlns="" name="Language List Example" intl="au">
-			<LanguageList>
-				<Language>
-					<Code>1201</Code>
-					<LanguageType>1</LanguageType>
-				</Language>
-				<Language>
-					<Code>1301</Code>
-					<LanguageType>9</LanguageType>
-				</Language>
-			</LanguageList>
-		</xhtml:Example>
-		<xhtml:Example xmlns="" name="Language List Example" intl="nz">
+			
+		<xhtml:Example xmlns="" name="Language List Example">
 			<LanguageList>
 				<Language>
 					<Code>01110</Code>
-					<LanguageType>1</LanguageType>
+					<Usage>1</Usage>
 				</Language>
 				<Language>
 					<Code>01112</Code>
-					<LanguageType>2</LanguageType>
+					<Usage>2</Usage>
 				</Language>
 			</LanguageList>
 		</xhtml:Example>
@@ -771,34 +757,15 @@
 				<Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
 			</if>
 		</Item>    <!-- Code -->
-		<if intl="au">
-			<Item>
-				<Element>OtherCodeList</Element>
-				<Characteristics>O</Characteristics>
-				<Type ref="CommonTypes" name="OtherCodeListType"/>
-			</Item>    <!-- OtherCodeList -->
-		</if>	
-		<if intl="nz">	
-			<Item>
-				<Element>LanguageType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The usage of the language by a person, potentially
-					indicating capability and preference for the language.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsLanguageUsageType"/>
-			</Item>  <!-- LanguageUsageType -->
-		</if>
-		<if intl="au">
-			<Item>
-				<Element>LanguageType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>An indication of the function and context in which an individual uses a language to communicate.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsLanguageTypeType"/>
-			</Item>    <!-- LanguageType -->
-		</if>
+		<Item>
+			<Element>Usage</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The usage of the language by a person, potentially
+				indicating capability and preference for the language.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsLanguageUsageType"/>
+		</Item>    <!-- Usage -->
 		<Item>
 			<Element>Dialect</Element>
 			<Characteristics>O</Characteristics>
@@ -814,7 +781,7 @@
 				<p>A list of the person's proficiency in the language in regards to speaking, reading and writing.</p>
 			</Description>
 			<Type ref="CommonTypes" name="LanguageProficiencyListType"/>
-		</Item>    <!-- PrficiencyList -->
+		</Item>    <!-- ProficiencyList -->
 	</CommonElement>
 		<CommonElement name="LanguageProficiencyListType" type="true" dm="true">
 		<Item>
@@ -1913,11 +1880,11 @@
 			<EthnicityList>
 				<Ethnicity>
 					<PreferenceOrderNumber>1</PreferenceOrderNumber>
-					<Ethnicity>111</Ethnicity>
+					<Code>111</Code>
 				</Ethnicity>
 				<Ethnicity>
 					<PreferenceOrderNumber>1</PreferenceOrderNumber>
-					<Ethnicity>211</Ethnicity>
+					<Code>211</Code>
 				</Ethnicity>
 			</EthnicityList>
 		</xhtml:Example>
@@ -1939,7 +1906,7 @@
 			<Type name="xs:integer"/>
 		</Item>
 		<Item>
-			<Element>Ethnicity</Element>
+			<Element>Code</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>An ethnic group with which the person identifies.</p>

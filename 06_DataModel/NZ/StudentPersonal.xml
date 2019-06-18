@@ -131,7 +131,7 @@
 					<LanguageList>
 						<Language>
 							<Code>01110</Code>
-							<LanguageType>2</LanguageType>
+							<Usage>2</Usage>
 							<ProficiencyList>
 								<Proficiency>
 									<Level>101</Level>
@@ -141,7 +141,7 @@
 						</Language>
 						<Language>
 							<Code>01112</Code>
-							<LanguageType>1</LanguageType>
+							<Usage>1</Usage>
 							<ProficiencyList>
 								<Proficiency>
 									<Level>102</Level>
@@ -153,11 +153,11 @@
 					<EthnicityList>
 						<Ethnicity>
 							<PreferenceOrderNumber>1</PreferenceOrderNumber>
-							<Ethnicity>111</Ethnicity>
+							<Code>111</Code>
 						</Ethnicity>
 						<Ethnicity>
 							<PreferenceOrderNumber>1</PreferenceOrderNumber>
-							<Ethnicity>211</Ethnicity>
+							<Code>211</Code>
 						</Ethnicity>
 					</EthnicityList>
 					<IwiAffiliationList>
