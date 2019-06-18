@@ -18,7 +18,7 @@
 			<Element>StaffListType</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>A List of staff members associated with the TeachingGroup or AssessmentTask.</p>
+				<p>A list of associated staff members.</p>
 			</Description>
 			<List mode="List"/>
 		</Item>
@@ -26,74 +26,46 @@
 			<Element>StaffMember</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>
-				<p>Teacher associated with the Teaching group –  may or may not be the teacher timetabled in the schedule</p>
+				<p>The individual staff member as a member of the StaffList and their role.</p>
 			</Description>
 			<Type ref="CommonTypes" name="StaffListStaffMemberType"/>
 		</Item>    <!-- StaffListStaffMember -->
 	</CommonElement>
+
 	<CommonElement name="StaffListStaffMemberType" type="true" dm="true">
 		<Item>
 			<Element>StaffListStaffMemberType</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>
-				<p>The individual staff member as a member of the StaffListStaffMember who marked the assessment.
-				 May or may not be the teacher scheduled in the timetable.</p>
+				<p>The individual staff member as a member of the StaffList and their role.</p>
 			</Description>
 		</Item>
-		<Item>
-			<Element>StaffPersonalRefId</Element>
-			<Characteristics>C</Characteristics>
-			<Description>
-				<p>RefId of the Staff member. Either StaffPersonalRefidId or StaffLocalId should be supplied.</p>
-			</Description>
-			<Type ref="CommonTypes" relationship="" count="?:1" name="IdRefType"/>
-		</Item>    <!-- StaffPersonalRefId -->
-		<Item>
-			<Element>StaffLocalId</Element>
-			<Characteristics>C</Characteristics>
-			<Description>
-				<p>LocalId of the Staff member. Either StaffPersonalRefidId or StaffLocalId should be supplied.</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/>
-		</Item>    <!-- StaffLocalId -->
 		<Item>
 			<Element>Name</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>Name of Staff Member.</p>
+				<p>Name of the Staff Member.</p>
 			</Description>
-			<if intl="au">
-				<Type ref="CommonTypes" name="NameOfRecordType"/>
-			</if>	
-			<if intl="nz">
-				<Type ref="CommonTypes" name="BaseNameType"/>
-			</if>
-		</Item>    <!-- Name -->
-
-		<if intl="au">
-			<Item>
-				<Element>Association</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>Association with the Teaching Group (free format for this release)</p>
-				</Description>
-				<Type name="xs:normalizedString"/>
-			</Item>    <!-- Association -->
-		</if>
-		<if intl="nz">
-			<Item>
-				<Element>Role</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>Code describing the staff member's role in the TeachingGroup.  e.g.  Teacher,
-					 Teacher's Aide, Lab Assistant, Co-Teacher.</p>
-					 <p>Note: This role may affect the Teacher's access to the students' data for 
-					 those students who are members of the TeachingGroup.</p>
-				</Description>
-				<Type  ref="CodeSets" name="NZCodeSetsTeachingGroupTeacherRole"/>
-			</Item>    <!-- Role -->
-		</if>
+			<Type ref= "CommonTypes" name = "BaseNameType"/>
+		</Item>     <!--Name -->
+		<Item>
+			<Element>StaffMemberRef</Element>
+			<Characteristics>C</Characteristics>
+			<Description>
+				<p>RefId of the Staff member. Either RefId or LocalId should be supplied.</p>
+			</Description>
+			<Type ref="CommonTypes" name= "ObjectReferenceType"/>
+		</Item>    <!-- StaffMemberRef -->
+		<Item>
+			<Element>Role</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Code describing the staff member's role. Note: This role may affect the Teacher's access to the students' data for those students who are members of the TeachingGroup.</p>
+			</Description>
+			<Type  ref="CodeSets" name="NZCodeSetsStaffRoleType"/>
+		</Item>    <!-- Role -->
 	</CommonElement>
+
 	<CommonElement name="StudentListType" type="true" dm="true">
 		<Item>
 			<Element>StudentListType</Element>
@@ -122,23 +94,13 @@
 			</Description>
 		</Item>
 		<Item>
-			<Element>StudentPersonalRefId</Element>
+			<Element>StudentRef</Element>
 			<Characteristics>C</Characteristics>
 			<Description>
-				<p>RefId of the Student who is a member of the StudentList. Either StudentPersonalRefidId 
-					or StudentLocalId should be supplied.</p>
+				<p>The Student who is a member of the StudentList.</p>
 			</Description>
-			<Type ref="CommonTypes" relationship="" count="?:1" name="IdRefType"/>
-		</Item>       <!-- StudentPersonalRefId -->
-		<Item>
-			<Element>StudentLocalId</Element>
-			<Characteristics>C</Characteristics>
-			<Description>
-				<p>Local Id of the Student who is a member of the StudentList. Either StudentPersonalRefidId or
-					 StudentLocalId should be supplied.</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/>
-		</Item>       <!-- StudentPersonalLocalId -->
+			<Type ref="CommonTypes" name="ObjectReference"/>
+		</Item>       <!-- StudentRef -->
 		<Item>
 			<Element>Name</Element>
 			<Characteristics>O</Characteristics>
@@ -550,20 +512,12 @@
     	    <Type name='xs:normalizedString'/>
 		</Item>
 		<Item>
-			<Element>ProviderCourseRefId</Element>
+			<Element>ProviderCourse</Element>
 			<Characteristics>O</Characteristics>
   			<Description>
 				<p>RefId of the course being taught to the TeachingGroup. Either ProviderCourseRefId or ProviderCourseLocalId must be provided.</p>
 			</Description>
-			<Type ref="CommonTypes" name="RefIdType"/>
-		</Item>
-		<Item>
-			<Element>ProviderCourseLocalId</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>LocalId of the course being taught to the TeachingGroup. Either ProviderCourseRefId or ProviderCourseLocalId must be provided.</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/>
+			<Type ref="CommonTypes" name="ObjectReference"/>
 		</Item>
 		<Item>
 			<Element>SubjectAreaList</Element>
