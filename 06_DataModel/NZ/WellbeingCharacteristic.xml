@@ -1,13 +1,12 @@
 <DataObject name="WellbeingCharacteristic"
-                          xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                        xmlns:xi="http://www.w3.org/2001/XInclude"
-                        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
         
-            xmlns="http://sifassociation.org/SpecGen">
+    xmlns="http://sifassociation.org/SpecGen">
 
-  <Key>RefId</Key>
-  
+  <Key>RefId</Key>  
   <EventsReported>true</EventsReported>
   
   <Item>
@@ -31,25 +30,75 @@
   </Item>    <!-- RefId -->
 
   <Item>
-    <Element>StudentPersonalRefId</Element>
+		<Element>LocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Local ID of the Wellbeing Characteristic if required for clarity.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+  </Item>    <!-- LocalId -->
+
+  <Item>
+    <Element>Student</Element>
     <Characteristics>M</Characteristics>
   	<privacyRating>High</privacyRating>
     <Description>
-      <p>The ID (GUID) of the student to whom this WellbeingCharacteristic belongs.</p>
+      <p>Generic object reference to the student to whom this WellbeingCharacteristic belongs.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- StudentPersonalRefId -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- Student -->
 
   <Item>
-    <Element>RecordingProviderRefId</Element>
+    <Element>RecordingProvider</Element>
     <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
-      <p>The ID (GUID) of the provider which recorded this Wellbeing Characteristic.</p>
+      <p>Generic object reference to the provider which recorded this Wellbeing Characteristic.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- RecordingProviderRefId -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- RecordingProvider -->
   
+  <Item>
+    <Element>CreatedBy</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the staff member who recorded this Wellbeing Characteristic.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- CreatedBy -->
+
+  <Item>
+    <Element>CreatedDate</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date the characteristic was first created for the student in the source system.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>    <!-- CreatedDate -->
+
+  <Item>
+    <Element>LastUpdatedBy</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the staff member who last updated this Wellbeing Characteristic.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- LastUpdatedBy -->
+
+  <Item>
+    <Element>LastUpdatedDate</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date the characteristic was last updated in the source system.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>    <!-- LastUpdatedDate -->
+
   <Item>
     <Element>CharacteristicClassification</Element>
     <Characteristics>C</Characteristics>
@@ -110,7 +159,7 @@
     <Union>
 			<Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicCategoryType"></Type>
 			<Type name="xs:normalizedString"/>
-	</Union>	 
+	  </Union>	 
   </Item>    <!-- CharacteristicCategory -->
   
   <Item>
@@ -123,29 +172,29 @@
     <Union>
 			<Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicSubCategoryType"></Type>
 			<Type name="xs:normalizedString"/>
-	</Union>	 
+	  </Union>	 
   </Item>    <!-- CharacteristicSubCategory -->
-  
-  <Item>
-		<Element>WellbeingCharacteristicLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>Local ID of the Wellbeing Characteristic if required for clarity.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"/> 
-  </Item>     <!-- WellbeingCharacteristicLocalId -->
-  
+    
   <Item>
     <Element>CharacteristicSeverity</Element>
     <Characteristics>O</Characteristics>
   	<privacyRating>High</privacyRating>
     <Description>
-      <p></p>
+      <p>The severity of the wellbeing characteristic</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>    <!-- CharacteristicSeverity -->
   
+  <Item>
+    <Element>CharacteristicPriority</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>The priority of the characteristic in relation to other characteristics within the same classification.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- CharacteristicPriority -->
+
   <Item>
     <Element>DailyManagement</Element>
     <Characteristics>O</Characteristics>
@@ -187,6 +236,16 @@
   </Item>    <!-- Trigger -->
   
   <Item>
+    <Element>Diagnosis</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Indicates whether or not the Wellbeing Characteristic is a diagnosis made by a medical professional.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+  </Item>    <!-- Diagnosis -->
+
+  <Item>
     <Element>ConfidentialFlag</Element>
     <Characteristics>O</Characteristics>
   	<privacyRating>High</privacyRating>
@@ -216,7 +275,7 @@
      <Type ref="CommonTypes" name="MedicationListType"></Type>
   </Item>    <!-- MedicationList -->
   
- <Item>
+  <Item>
     <Element>DocumentList</Element>
     <Characteristics>O</Characteristics>
   	<privacyRating>High</privacyRating>
@@ -224,7 +283,7 @@
       <p>Describes the Location of any associated documents kept in relation to this Characteristic.</p>
     </Description>
      <Type ref="CommonTypes" name="DocumentListType"></Type>
- </Item>    <!-- DocumentList -->
+  </Item>    <!-- DocumentList -->
 
   <Item>
     <Element>WellbeingEventList</Element>
@@ -259,13 +318,16 @@
   <xhtml:Example xmlns="" name="WellbeingCharacteristic">
     <WellbeingCharacteristic>
       <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
-      <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
-      <RecordingProviderRefId>CA285746-359D-7510-1A8C-36432A901A16</RecordingProviderRefId>
+      <Student>
+        <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
+      </Student>
+      <RecordingProvider>
+        <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
+      </RecordingProvider>
       <StartDate>2017-11-01</StartDate>
       <EndDate>2017-11-10</EndDate>
       <CharacteristicNotes>This Student has a special need.</CharacteristicNotes>
       <CharacteristicCategory>S</CharacteristicCategory>
     </WellbeingCharacteristic>
-
   </xhtml:Example>
 </DataObject>
