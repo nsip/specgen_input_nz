@@ -73,7 +73,7 @@
     <Type ref="CodeSets" name="NZCodeSetsTeachingGroupTypeType"/>
   </Item>       <!-- GroupType -->
   
-   <Item>
+  <Item>
     <Element>Provider</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
