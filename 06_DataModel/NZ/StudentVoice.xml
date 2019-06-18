@@ -1,12 +1,14 @@
 <DataObject name="StudentVoice"
-			xmlns:xs="http://www.w3.org/2001/XMLSchema"
-			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-			xmlns:xi="http://www.w3.org/2001/XInclude"
-			xmlns:xhtml="http://www.w3.org/1999/xhtml"
-			xmlns:json="http://json.org/"
-	
-            xmlns="http://sifassociation.org/SpecGen">
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
+	xmlns="http://sifassociation.org/SpecGen">
+
 	<Key>RefId</Key>
+
 	<EventsReported>true</EventsReported>
 	<Item>
 		<Element>StudentVoice</Element>
@@ -26,24 +28,35 @@
 	</Item>    <!-- RefId -->
 	
 	<Item>
-		<Element>StudentPersonalRefId</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>The GUID for the student's StudentPersonal record.</p>
-		</Description>
-		<Type ref="CommonTypes" name="IdRefType"/>
-	</Item>    <!-- StudentPersonalRefId -->
-	<Item>
-		<Element>StudentPersonalLocalId</Element>
+		<Element>LocalId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The locally-assigned identifier for this student.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- StudentPersonalLocalId -->
+	</Item>    <!-- LocalId -->
 
+	<Item>
+		<Element>Student</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>Generic object reference to The GUID for the student's StudentPersonal record.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/>
+	</Item>    <!-- Student -->
+
+	<Item>
+		<Element>Provider</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>Generic object reference to the school that collected this StudentVoice entry.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"></Type>
+	</Item>    <!-- Provider -->  
+  
 	<Item>
 		<Element>StudentVoiceNote</Element>
 		<Characteristics>O</Characteristics>
@@ -53,6 +66,7 @@
 		</Description>
 		<Type name="xs:normalizedString"/> 
 	</Item>    <!-- StudentVoiceNote -->
+
     <Item>
 		<Element>StudentInterestList</Element>
 		<Characteristics>O</Characteristics>
@@ -62,6 +76,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="StudentInterestListType"/>
 	</Item>    <!-- StudentInterestList -->
+
     <Item>
 		<Element>SocialGoalList</Element>
 		<Characteristics>O</Characteristics>
@@ -71,6 +86,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="SocialGoalListType"/>
 	</Item>    <!-- SocialGoalList -->
+
     <Item>
 		<Element>AcademicGoalList</Element>
 		<Characteristics>O</Characteristics>
@@ -80,6 +96,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="AcademicGoalListType"/>
 	</Item>    <!-- AcademicGoalList -->
+
     <Item>
 		<Element>CareerGoalList</Element>
 		<Characteristics>O</Characteristics>
@@ -94,8 +111,10 @@
 	<xhtml:Example xmlns="" name ="StudentVoice">
 		<StudentVoice>
 			<RefId>7C834EA9-EDA1-2090-347F-83297E1C290C</RefId>
-			<StudentPersonalRefId>5c33548a-1141-40eb-94d3-9267a2258435</StudentPersonalRefId>
-			<StudentPersonalLocalId>2234523</StudentPersonalLocalId>
+			<LocalId>2234523</LocalId>
+			<Student>
+				<RefId>5c33548a-1141-40eb-94d3-9267a2258435</RefId>
+			</Student>
 			<StudentVoiceNote>Timothy doesn't like talking about setting goals. These goals have been gathered through observation.</StudentVoiceNote>
 			<StudentInterestList>
 				<StudentInterest>
