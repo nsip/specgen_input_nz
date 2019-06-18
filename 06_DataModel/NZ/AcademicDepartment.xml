@@ -31,6 +31,16 @@
   </Item>    <!-- RefId -->
 
   <Item>
+		<Element>LocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A Local Identifier for the Academic Department. It is expected to be unique to the reporting site.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"></Type> 
+	</Item>    <!-- LocalId -->
+
+  <Item>
     <Element>Name</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -51,16 +61,6 @@
   </Item>    <!-- Description -->
 
   <Item>
-		<Element>LocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>A Local Identifier for the Academic Department. It is expected to be unique to the reporting site.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"></Type> 
-	</Item>    <!-- LocalId -->
-
-  <Item>
     <Element>Provider</Element>    
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -68,7 +68,7 @@
       <p>The ID (GUID) of the provider for this acadmic department resides in.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>    <!-- ProviderId -->
+  </Item>    <!-- Provider -->
 
   <Item>
     <Element>StaffList</Element>    
