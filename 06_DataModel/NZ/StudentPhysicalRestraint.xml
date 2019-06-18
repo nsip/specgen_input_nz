@@ -30,14 +30,54 @@
   </Item>    <!-- RefId -->
 
   <Item>
-		<Element>PhysicalRestraintLocalId</Element>
+		<Element>LocalId</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Local ID of the StudentPhysicalRestraint if required for clarity.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"></Type> 
-	</Item>    <!-- PhysicalRestraintLocalId -->
+	</Item>    <!-- LocalId -->
+
+  <Item>
+    <Element>Provider</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the provider under whose supervision the student was, at the time the physical restraint incient occured.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"/>
+  </Item>    <!-- Provider -->
+
+  <Item>
+    <Element>Student</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object refernece to the student to whom the physical restraint was applied.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- Student -->
+
+  <Item>
+    <Element>PrincipalOrDelegate</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the StaffPersonal object of the Principal or their delegate who oversaw the recording of the physical restraint incident.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- PrincipalOrDelegate -->
+
+  <Item>
+    <Element>WellbeingEvent</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the Wellbeing Event created for the student the physical reatrint was used on.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- WellbeingEvent -->
 
   <Item>
     <Element>ConsideredNecessaryReason</Element>
@@ -118,46 +158,6 @@
     </Description>
     <Type name="xs:time"></Type>
   </Item>    <!-- RestraintStartedTime -->  
-
-  <Item>
-    <Element>ProviderRefId</Element>    
-    <Characteristics>M</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The ID (GUID) of the provider under whose supervision the student was, at the time the physical restraint incient occured.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- ProviderRefId -->
-
-  <Item>
-    <Element>PrincipalOrDelegateRefId</Element>    
-    <Characteristics>M</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The GUID for the StaffPersonal object of the Principal or their delegate who oversaw the recording of the physical restraint incident.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- PrincipalOrDelegateRefId -->
-
-  <Item>
-    <Element>StudentPersonalRefId</Element>    
-    <Characteristics>M</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The ID (GUID) of the student to whom the physical restraint was applied.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- StudentPersonalRefId -->
-
-  <Item>
-    <Element>WellbeingEventRefId</Element>    
-    <Characteristics>M</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The ID (GUID) of the Wellbeing Event created for the student the physical reatrint was used on.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- WellbeingEventRefId -->
 
   <Item>
     <Element>RestraintReason</Element>    
