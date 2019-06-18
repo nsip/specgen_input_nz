@@ -28,54 +28,32 @@
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>    <!-- StudentAttendanceSummaryRefId -->
   <Item>
-    <Element>StudentPersonalRefId</Element>
+    <Element>Student</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the student for whom this attendance information is being reported.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- StudentPersonalRefId -->
-  <if intl="au">
-    <Item>
-      <Element>SchoolInfoRefId</Element>
-      <Characteristics>M</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The ID (GUID) of the school for which this attendance information is being reported.</p>
-      </Description>
-      <Type ref="CommonTypes" name="IdRefType"></Type>
-    </Item>    <!-- SchoolInfoRefId -->
-    <Item>
-      <Element>SchoolYear</Element>
-      <Characteristics>M</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>School year for which the information is applicable.</p>
-      </Description>
-      <Type ref="CommonTypes" name="SchoolYearType"></Type>
-    </Item>    <!-- SchoolYear -->
-  </if>
-  <if intl="nz">
-    <Item>
-      <Element>ProviderRefId</Element>
-      <Characteristics>M</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The SIF ID of the Provider who is recording this attendance information.</p>
-      </Description>
-      <Type ref="CommonTypes" name="IdRefType"></Type>
-    </Item>    <!-- ProviderRefId -->
-    <Item>
-      <Element>SchoolCalendarYear</Element>
-      <Characteristics>M</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>School year for which the information is applicable.</p>
-      </Description>
-      <Type name="xs:gYear"/>
-    </Item>    <!-- SchoolCalendarYear -->
-  </if>
+    <Type ref="CommonTypes" name="ObjectReference"></Type>
+  </Item>    <!-- Student -->
+ <Item>
+    <Element>Provider</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The SIF ID of the Provider who is recording this attendance information.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReference"></Type>
+  </Item>    <!-- Provider -->
+  <Item>
+    <Element>SchoolCalendarYear</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>School year for which the information is applicable.</p>
+    </Description>
+    <Type name="xs:gYear"/>
+  </Item>    <!-- SchoolCalendarYear -->
   <Item>
     <Element>StartDate</Element>
     <Characteristics>M</Characteristics>
@@ -126,161 +104,97 @@
       <xs:fractionDigits value="2"/>
     </Facets>
   </Item>    <!-- FTE -->
-  <if intl="nz">
-    <Item>
-      <Element>AttendancePercentageHalfDays</Element>
-      <Characteristics>O</Characteristics>
-	    <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The percentage of half days the student was present when school was in session between the StartDate and EndDate, inclusive. Number of Sessions Present / Total Number of possible sessions = Percentage, e.g. 294/319 = 92.2%.</p>
-      </Description>
-      <Type name="xs:decimal"></Type>
-    </Item>    <!-- AttendancePercentageHalfDays --> 
-    <Item>
-      <Element>AttendanceUnjustifiedHalfDays</Element>
-      <Characteristics>O</Characteristics>
-	    <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The percentage of half days the student had unjustified absences when school was in session between the StartDate and EndDate, inclusive.</p>
-      </Description>
-      <Type name="xs:decimal"></Type>
-    </Item>    <!-- AttendanceUnjustifiedHalfDays --> 
-    <Item>
-      <Element>HalfDaysYearPresent</Element>
-      <Characteristics>O</Characteristics>
-	    <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The number of half days the student was present when school was in session between the StartDate and EndDate, inclusive.</p>
-      </Description>
-      <Type name="xs:decimal"></Type>
-    </Item>    <!-- HalfDaysYearPresent --> 
-    <Item>
-      <Element>HalfDaysYearAbsent</Element>
-      <Characteristics>O</Characteristics>
-	    <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The number of half days the student was absent when school was in session between the StartDate and EndDate, inclusive.</p>
-      </Description>
-      <Type name="xs:decimal"></Type>
-    </Item>    <!-- HalfDaysYearAbsent --> 
-    <Item>
-      <Element>HalfDaysYearJustified</Element>
-      <Characteristics>O</Characteristics>
-	    <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The number of half days the student was absent that were justified when school was in session between the StartDate and EndDate, inclusive.</p>
-      </Description>
-      <Type name="xs:decimal"></Type>
-    </Item>    <!-- HalfDaysYearJustified --> 
-    <Item>
-      <Element>HalfDaysYearTotal</Element>
-      <Characteristics>O</Characteristics>
-	    <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The total number of half days.</p>
-      </Description>
-      <Type name="xs:decimal"></Type>
-    </Item>    <!-- HalfDaysYearTotal -->   
-    <Item>
-      <Element>HalfDaysYearIntermittantUnjustified</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The number of days the student was absent from school for an unjustifiable reason when school was in session between the StartDate and EndDate, inclusive, and weren't absence for the complete half-day.</p>
-      </Description>
-      <Type name="xs:decimal"></Type>
-    </Item>    <!-- HalfDaysYearIntermittantUnjustified --> 
-    <Item>
-      <Element>HalfDaysYearPercentagePresent</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The percentage of half days the student was present when school was in session between the StartDate and EndDate, inclusive.</p>
-      </Description>
-      <Type name="xs:decimal"></Type>
-    </Item>    <!-- HalfDaysYearPercentagePresent -->
-    <Item>
-      <Element>HalfDaysYearUnjustified</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The number of days the student was absent from school for an unjustifiable reason when school was in session between the StartDate and EndDate, inclusive.</p>
-      </Description>
-      <Type name="xs:decimal"></Type>
-    </Item>      <!-- HalfDaysYearUnjustified -->  
-  </if>
-  <if intl="au">
-    <Item>
-      <Element>DaysAttended</Element>
-      <Characteristics>M</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The number of days the student attended school when school was in session between the StartDate and EndDate, inclusive.</p>
-      </Description>
-      <Type name="xs:decimal"></Type>
-    </Item>    <!-- DaysAttended -->
-    <Item>
-      <Element>ExcusedAbsences</Element>
-      <Characteristics>M</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The number of days the student was absent from school with a valid excuse when school was in session between the StartDate and EndDate, inclusive.</p>
-      </Description>
-      <Type name="xs:decimal"></Type>
-    </Item>    <!-- ExcusedAbsences -->
-    <Item>
-      <Element>UnexcusedAbsences</Element>
-      <Characteristics>M</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The number of days the student was absent from school without a valid excuse when school was in session between the StartDate and EndDate, inclusive.</p>
-      </Description>
-      <Type name="xs:decimal"></Type>
-    </Item>    <!-- UnexcusedAbsences -->
-    <Item>
-      <Element>DaysTardy</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The number of days the student was tardy when school was in session between the StartDate and EndDate, inclusive.</p>
-      </Description>
-      <Type name="xs:decimal"></Type>
-    </Item>    <!-- DaysTardy -->
-    <Item>
-      <Element>DaysInMembership</Element>
-      <Characteristics>M</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The number of days the student was present plus the number of days the student was absent when school was in session during the period between the StartDate and EndDate, inclusive.</p>
-      </Description>
-      <Type name="xs:decimal"></Type>
-    </Item>    <!-- DaysInMembership -->
-  </if>
-
-  <xhtml:Example xmlns="" name="StudentAttendanceSummary" intl="au">
-    <StudentAttendanceSummary
-        StudentAttendanceSummaryRefId="d3476fae-8647-384b-da24-31eda3583211" >
-        <StudentPersonalRefId>7c834ea9-eda1-2090-347f-83297e1c290c</StudentPersonalRefId>
-        <SchoolInfoRefId>ca285746-359d-7510-1a8c-36432a901a16</SchoolInfoRefId>
-        <SchoolYear>2015</SchoolYear>
-        <StartDate>2014-08-30</StartDate>
-        <EndDate>2015-06-10</EndDate>		
-		<StartDay>1</StartDay>
-		<EndDay>180</EndDay>
-		<FTE>1.00</FTE>
-		<DaysAttended>178</DaysAttended>
-		<ExcusedAbsences>2</ExcusedAbsences>
-		<UnexcusedAbsences>0</UnexcusedAbsences>
-		<DaysTardy>3</DaysTardy>
-		<DaysInMembership>180</DaysInMembership>
-    </StudentAttendanceSummary>
-  </xhtml:Example>
+  <Item>
+    <Element>AttendancePercentageHalfDays</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The percentage of half days the student was present when school was in session between the StartDate and EndDate, inclusive. Number of Sessions Present / Total Number of possible sessions = Percentage, e.g. 294/319 = 92.2%.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>    <!-- AttendancePercentageHalfDays --> 
+  <Item>
+    <Element>AttendanceUnjustifiedHalfDays</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The percentage of half days the student had unjustified absences when school was in session between the StartDate and EndDate, inclusive.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>    <!-- AttendanceUnjustifiedHalfDays --> 
+  <Item>
+    <Element>HalfDaysYearPresent</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The number of half days the student was present when school was in session between the StartDate and EndDate, inclusive.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>    <!-- HalfDaysYearPresent --> 
+  <Item>
+    <Element>HalfDaysYearAbsent</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The number of half days the student was absent when school was in session between the StartDate and EndDate, inclusive.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>    <!-- HalfDaysYearAbsent --> 
+  <Item>
+    <Element>HalfDaysYearJustified</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The number of half days the student was absent that were justified when school was in session between the StartDate and EndDate, inclusive.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>    <!-- HalfDaysYearJustified --> 
+  <Item>
+    <Element>HalfDaysYearTotal</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The total number of half days.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>    <!-- HalfDaysYearTotal -->   
+  <Item>
+    <Element>HalfDaysYearIntermittantUnjustified</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The number of days the student was absent from school for an unjustifiable reason when school was in session between the StartDate and EndDate, inclusive, and weren't absence for the complete half-day.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>    <!-- HalfDaysYearIntermittantUnjustified --> 
+  <Item>
+    <Element>HalfDaysYearPercentagePresent</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The percentage of half days the student was present when school was in session between the StartDate and EndDate, inclusive.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>    <!-- HalfDaysYearPercentagePresent -->
+  <Item>
+    <Element>HalfDaysYearUnjustified</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The number of days the student was absent from school for an unjustifiable reason when school was in session between the StartDate and EndDate, inclusive.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>      <!-- HalfDaysYearUnjustified -->  
   
   <xhtml:Example xmlns="" name="StudentAttendanceSummary" intl="nz">
     <StudentAttendanceSummary>
       <RefId>d3476fae-8647-384b-da24-31eda3583211</RefId>
-      <StudentPersonalRefId>7c834ea9-eda1-2090-347f-83297e1c290c</StudentPersonalRefId>
-      <ProviderRefId>ca285746-359d-7510-1a8c-36432a901a16</ProviderRefId>
+      <Student>
+        <RefId>7c834ea9-eda1-2090-347f-83297e1c290c</RefId>
+      </Student>
+      <Provider>
+        <RefId>ca285746-359d-7510-1a8c-36432a901a16</RefId>
+      </Provider>
       <SchoolCalendarYear>2015</SchoolCalendarYear>
       <StartDate>2014-08-30</StartDate>
       <EndDate>2015-06-10</EndDate>		

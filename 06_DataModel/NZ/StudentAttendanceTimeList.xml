@@ -26,23 +26,39 @@
 		<Type ref="CommonTypes" name="RefIdType"/>
 	</Item>    <!-- RefId -->
 	<Item>
-		<Element>StudentPersonalRefId</Element>
+		<Element>LocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>	Local System Id for the Attendance Timelist record.</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>    <!-- LocalId -->
+	<Item>
+		<Element>Student</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The ID (GUID) of the student for whom this attendance information is being reported.</p>
 		</Description>
-		<Type ref="CommonTypes" name="IdRefType"/>
+		<Type ref="CommonTypes" name="ObjectReference"/>
 	</Item>    <!-- StudentPersonalRefId -->
 	<Item>
-		<Element>ProviderRefId</Element>
+		<Element>Provider</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The SIF GUID of the Provider who is making this attendance record.</p>
 		</Description>
-		<Type ref="CommonTypes" name="IdRefType"/>
+		<Type ref="CommonTypes" name="ObjectReference"/>
 	</Item>    <!-- ProviderRefId -->
+	<Item>
+		<Element>AttendanceTakenTime</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The time the student's attendance was taken.</p>
+		</Description>
+		<Type name="xs:time"/>
+	</Item>    <!-- AttendanceTakenTime -->
 	<Item>
 		<Element>Date</Element>
 		<Characteristics>M</Characteristics>
@@ -59,25 +75,20 @@
 		<Description>
 			<p>The year for which the attendance record is being made.</p>
 		</Description>
-		<if intl="au">
-				<Type ref="CommonTypes" name="SchoolYearType"/>
-		</if>
-		<if intl="nz">
-				<Type name="xs:gYear"/>
-		</if>
+		<Type name="xs:gYear"/>
 	</Item>    <!-- SchoolYear -->
 	<Item>
-		<Element>AttendanceTimes</Element>
+		<Element>AttendanceTimeList</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Breakdown of times that the student was recorded as being 
 				present or absent from school or class.</p>
 		</Description>
-		<Type ref="CommonTypes" name="AttendanceTimesType"/>
+		<Type ref="CommonTypes" name="AttendanceTimeListType"/>
 	</Item>    <!-- AttendanceTimes -->
 	<Item>
-		<Element>PeriodAttendances</Element>
+		<Element>PeriodAttendanceList</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
@@ -85,219 +96,21 @@
 			student attendance types.  Reserved for future use with TimeTableCell, Session or Scheduled Activity.
 			</p>
 		</Description>
-		<Type ref="CommonTypes" name="PeriodAttendancesType"/>
+		<Type ref="CommonTypes" name="PeriodAttendanceListType"/>
 	</Item>    <!-- PeriodAttendances -->
 
-	<xhtml:Example xmlns="" name="StudentAttendanceTimeList (List) Example" intl="au">
-		<StudentAttendanceTimeList RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
-			<StudentPersonalRefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</StudentPersonalRefId>
-			<SchoolInfoRefId>ca285746-359d-7510-1a8c-36432a901a16</SchoolInfoRefId>
-			<Date>2002-11-01</Date>
-			<SchoolYear>2003</SchoolYear>
-			<AttendanceTimes>
-				<AttendanceTime>
-					<AttendanceCode>
-						<Code>200</Code>
-						<OtherCodeList>
-							<OtherCode Codeset="Local">S</OtherCode>
-							<OtherCode Codeset="Text">C</OtherCode>
-						</OtherCodeList>
-					</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
-					<StartTime>11:00:00</StartTime>
-					<EndTime>12:05:00</EndTime>
-					<DurationValue>0.167</DurationValue>
-					<AttendanceNote>Left for Orthodontist appt. and returned to school
-						afterward</AttendanceNote>
-				</AttendanceTime>
-				<AttendanceTime>
-					<AttendanceCode>
-						<Code>100</Code>
-					</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
-					<StartTime>09:00:00</StartTime>
-					<EndTime>11:00:00</EndTime>
-					<AttendanceNote/>
-				</AttendanceTime>
-				<AttendanceTime>
-					<AttendanceCode>
-						<Code>100</Code>
-					</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
-					<StartTime>12:05:00</StartTime>
-					<EndTime>15:30:00</EndTime>
-					<AttendanceNote/>
-				</AttendanceTime>
-			</AttendanceTimes>
-		</StudentAttendanceTimeList>
-	</xhtml:Example>
-	<xhtml:Example xmlns="" name="StudentAttendanceTimeList (by Period) Example" intl="au">
-		<StudentAttendanceTimeList RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
-			<StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
-			<SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>
-			<Date>2002-11-01</Date>
-			<SchoolYear>2003</SchoolYear>
-			<AttendanceTimes>
-				<AttendanceTime>
-					<AttendanceType>RC</AttendanceType>
-					<AttendanceCode>
-						<Code>100</Code>
-					</AttendanceCode>
-					<AttendanceStatus>NA</AttendanceStatus>
-					<StartTime>09:00:00</StartTime>
-					<EndTime>15:00:00</EndTime>
-					<DurationValue>1.000</DurationValue>
-				</AttendanceTime>
-				<AttendanceTime>
-					<AttendanceType>LA</AttendanceType>
-					<AttendanceCode>
-						<Code>102</Code>
-					</AttendanceCode>
-					<AttendanceStatus>02</AttendanceStatus>
-					<StartTime>09:00:00</StartTime>
-					<EndTime>09:30:00</EndTime>
-					<AttendanceNote>No acceptable excuse given</AttendanceNote>
-				</AttendanceTime>
-				<AttendanceTime>
-					<AttendanceType>OC</AttendanceType>
-					<AttendanceCode>
-						<Code>200</Code>
-					</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
-					<StartTime>11:00:00</StartTime>
-					<EndTime>13:00:00</EndTime>
-					<AttendanceNote>Student had stomach ache</AttendanceNote>
-				</AttendanceTime>
-				<AttendanceTime>
-					<AttendanceType>ED</AttendanceType>
-					<AttendanceCode>
-						<Code>205</Code>
-					</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
-					<StartTime>14:30:00</StartTime>
-					<EndTime>15:00:00</EndTime>
-					<AttendanceNote>Seeing the doctor in regards to stomach ache</AttendanceNote>
-				</AttendanceTime>
-			</AttendanceTimes>
-			<PeriodAttendances>
-				<PeriodAttendance>
-					<AttendanceType>CR</AttendanceType>
-					<AttendanceCode>
-						<Code>102</Code>
-					</AttendanceCode>
-					<AttendanceStatus>02</AttendanceStatus>  
-					<TimetablePeriod>P1</TimetablePeriod>
-					<DayId>1</DayId>
-					<StartTime>09:00:00</StartTime>
-					<EndTime>10:00:00</EndTime>
-					<TimeTableSubjectRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</TimeTableSubjectRefId>
-					<TeacherList>
-						<TeacherCover>
-							<StaffPersonalRefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</StaffPersonalRefId>
-						</TeacherCover>
-						<TeacherCover>
-							<StaffPersonalRefId>BB5A0010-1A8C-301D-02E3-A05B359D0A00</StaffPersonalRefId>
-						</TeacherCover>
-					</TeacherList>
-					<RoomList>
-						<RoomInfoRefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RoomInfoRefId>
-					</RoomList>
-				</PeriodAttendance>
-				<PeriodAttendance>
-					<AttendanceType>CR</AttendanceType>
-					<AttendanceCode>
-						<Code>100</Code>
-					</AttendanceCode>
-					<AttendanceStatus>NA</AttendanceStatus>
-					<TimetablePeriod>P2</TimetablePeriod>
-					<DayId>1</DayId>
-					<StartTime>10:00:00</StartTime>
-					<EndTime>11:00:00</EndTime>
-					<TimeTableSubjectRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</TimeTableSubjectRefId>
-					<TeacherList>
-						<TeacherCover>
-							<StaffPersonalRefId>AB5A0010-1A8C-301D-02E3-A05B359D0A00</StaffPersonalRefId>
-						</TeacherCover>
-					</TeacherList>
-					<RoomList>
-						<RoomInfoRefId>11237EA4-301C-ADCA-75C8-7214A7C46BDB</RoomInfoRefId>
-					</RoomList>
-				</PeriodAttendance>
-				<PeriodAttendance>
-					<AttendanceType>CR</AttendanceType>
-					<AttendanceCode>
-						<Code>101</Code>
-					</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>				
-					<TimetablePeriod>P3</TimetablePeriod>
-					<DayId>1</DayId>
-					<StartTime>11:00:00</StartTime>
-					<EndTime>12:00:00</EndTime>
-					<TimeTableSubjectRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</TimeTableSubjectRefId>
-					<TeacherList>
-						<TeacherCover>
-							<StaffPersonalRefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</StaffPersonalRefId>
-						</TeacherCover>
-						<TeacherCover>
-							<StaffPersonalRefId>A7BB0010-1A8C-301D-02E3-A05B359D0A00</StaffPersonalRefId>
-						</TeacherCover>
-					</TeacherList>
-					<RoomList>
-						<RoomInfoRefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RoomInfoRefId>
-					</RoomList>
-				</PeriodAttendance>
-				<PeriodAttendance>
-					<AttendanceType>CR</AttendanceType>
-					<AttendanceCode>
-						<Code>100</Code>
-					</AttendanceCode>
-					<AttendanceStatus>NA</AttendanceStatus>
-					<TimetablePeriod>P4</TimetablePeriod>
-					<DayId>1</DayId>
-					<StartTime>13:00:00</StartTime>
-					<EndTime>14:00:00</EndTime>
-					<TimeTableSubjectRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</TimeTableSubjectRefId>
-					<TeacherList>
-						<TeacherCover>
-							<StaffPersonalRefId>A75F0010-1A8C-301D-02E3-A05B359D0A00</StaffPersonalRefId>
-						</TeacherCover>
-					</TeacherList>
-					<RoomList>
-						<RoomInfoRefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RoomInfoRefId>
-					</RoomList>
-				</PeriodAttendance>
-				<PeriodAttendance>
-					<AttendanceType>CR</AttendanceType>
-					<AttendanceCode>
-						<Code>100</Code>
-					</AttendanceCode>
-					<AttendanceStatus>NA</AttendanceStatus>
-					<TimetablePeriod>P5</TimetablePeriod>
-					<DayId>1</DayId>
-					<StartTime>14:00:00</StartTime>
-					<EndTime>15:00:00</EndTime>
-					<TimeTableSubjectRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</TimeTableSubjectRefId>
-					<TeacherList>
-						<TeacherCover>
-							<StaffPersonalRefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</StaffPersonalRefId>
-						</TeacherCover>
-					</TeacherList>
-					<RoomList>
-						<RoomInfoRefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RoomInfoRefId>
-					</RoomList>
-				</PeriodAttendance>
-			</PeriodAttendances>
-		</StudentAttendanceTimeList>
-	</xhtml:Example>
-
-	<xhtml:Example xmlns="" name="Student Attendance (By TimeList) Example" intl="nz">
+  <xhtml:Example xmlns="" name="Student Attendance (By TimeList) Example">
 		<StudentAttendanceTimeList>
 			<RefId>45e9c39e-0e77-40b4-8ce7-6a6fa156249e</RefId>
-			<StudentPersonalRefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd971811</StudentPersonalRefId>
-			<ProviderRefId>e7c15fb4-48a6-4c11-b66f-fe93520444b6</ProviderRefId>
+			<Student>
+				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd971811</RefId>
+			</Student>
+			<Provider>
+				<RefId>e7c15fb4-48a6-4c11-b66f-fe93520444b6</RefId>
+			</Provider>
 			<Date>2018-06-26</Date>
 			<SchoolYear>2018</SchoolYear>
-			<AttendanceTimes>
+			<AttendanceTimeList>
 				<AttendanceTime json:force-array="true">
 					<AttendanceCode>E</AttendanceCode>
 					<AttendanceStatus>01</AttendanceStatus>
@@ -306,17 +119,22 @@
 					<DurationValue>90</DurationValue>
 					<AttendanceNote>Explained absence, but unjustified, 9:00 to 10:30am</AttendanceNote>
 				</AttendanceTime>
-			</AttendanceTimes>
+			</AttendanceTimeList>
 		</StudentAttendanceTimeList>
 	</xhtml:Example>
-	<xhtml:Example xmlns="" name="Student Attendance (By Period) Example" intl="nz">
+
+	<xhtml:Example xmlns="" name="Student Attendance (By Period) Example">
 		<StudentAttendanceTimeList>
 			<RefId>2c4c01f3-1236-409b-b964-2526ce50769a</RefId>
-			<StudentPersonalRefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd971811</StudentPersonalRefId>
-			<ProviderRefId>e7c15fb4-48a6-4c11-b66f-fe93520444b6</ProviderRefId>
+			<Student>
+				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd971811</RefId>
+			</Student>
+			<Provider>
+				<RefId>e7c15fb4-48a6-4c11-b66f-fe93520444b6</RefId>
+			</Provider>
 			<Date>2018-06-26</Date>
 			<SchoolYear>2018</SchoolYear>
-			<PeriodAttendances>
+			<PeriodAttendanceList>
 				<PeriodAttendance>
 					<AttendanceCode>E</AttendanceCode>
 					<AttendanceStatus>01</AttendanceStatus>
@@ -329,8 +147,10 @@
 					</SubjectAreaList>
 					<TeacherList json:force-array="true">
 						<StaffMember>
-							<StaffLocalId>McGP</StaffLocalId>
 							<Name><FullName>Phineas McWhirter</FullName></Name>
+							<StaffMemberRef>
+								<LocalId>McGP</LocalId>
+							</StaffMemberRef>
 						</StaffMember>
 					</TeacherList>
 					<RoomList json:force-array="true">
@@ -350,8 +170,10 @@
 					</SubjectAreaList>
 					<TeacherList json:force-array="true">
 						<StaffMember>
-							<StaffLocalId>McGP</StaffLocalId>
 							<Name><FullName>Phineas McWhirter</FullName></Name>
+							<StaffMemberRef>
+								<LocalId>McGP</LocalId>
+							</StaffMemberRef>
 						</StaffMember>
 					</TeacherList>
 					<RoomList json:force-array="true">
@@ -359,7 +181,7 @@
 					</RoomList>
 					<AttendanceNote>Explained absence, but unjustified; period 4B</AttendanceNote>
 				</PeriodAttendance>
-			</PeriodAttendances>
+			</PeriodAttendanceList>
 		</StudentAttendanceTimeList>
 	</xhtml:Example>
 </DataObject>
