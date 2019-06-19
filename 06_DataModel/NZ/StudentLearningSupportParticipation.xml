@@ -39,16 +39,6 @@
   </Item>    <!-- LocalId -->
 
   <Item>
-    <Element>Provider</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Generic object reference to the provider that the learning support is taking place at.</p>
-    </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>    <!-- Provider -->
-
-  <Item>
     <Element>Student</Element>    
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
