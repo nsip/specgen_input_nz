@@ -143,7 +143,7 @@
 					<LocalId>91165-v2</LocalId>
 					<Name>Demonstrate understanding of the properties of selected organic compounds</Name>
 					<ObjectType>AssessmentTaskResult</ObjectType>
-					<AssessmentType json:force-string="true">102</AssessmentType>
+					<AssessmentType>EXT</AssessmentType>
 					<Result>Achieved</Result>
 					<Date>2016-06-28</Date>
 					<CreditValue>4</CreditValue>					
@@ -153,7 +153,7 @@
 					<LocalId>91166-v2</LocalId>
 					<Name>Demonstrate understanding of chemical reactivity</Name>
 					<ObjectType>AssessmentTaskResult</ObjectType>
-					<AssessmentType json:force-string="true">101</AssessmentType>
+					<AssessmentType>INT</AssessmentType>
 					<Result>Achieved with merit</Result>
 					<Date>2016-06-01</Date>
 					<CreditValue>3</CreditValue>					
@@ -163,7 +163,7 @@
 					<LocalId>91167-v2</LocalId>
 					<Name>Demonstrate understanding of oxidation-reduction</Name>
 					<ObjectType>AssessmentTaskResult</ObjectType>
-					<AssessmentType json:force-string="true">102</AssessmentType>
+					<AssessmentType>EXT</AssessmentType>
 					<Result>Achieved</Result>
 					<Date>2016-06-28</Date>
 					<CreditValue>3</CreditValue>										
@@ -178,7 +178,7 @@
       <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
       <GrantingProvider>
         <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
-        </GrantingProvider>
+      </GrantingProvider>
       <Attainment>
         <RefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</RefId>
         <Name>Introduction to Astrophysics</Name>

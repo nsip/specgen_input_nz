@@ -23,6 +23,41 @@
 
 	<CodeSet>
 		<Intro>
+			<p>Codes denoting the levels of the two Curricula used in New Zealand.
+			</p>
+		</Intro>
+		<ID>Curriculum Level</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>Level 1</Text>
+				<Description>Applies to year levels 1 &amp; 2</Description>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Level 2</Text>
+				<Description>Applies to year levels 3 &amp; 4</Description>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Level 3</Text>
+				<Description>Applies to year levels 5 &amp; 6</Description>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Level 4</Text>
+				<Description>Applies to year levels 7 &amp; 8</Description>
+			</Value>
+			<Value>
+				<Code>5</Code>
+				<Text>Level 5</Text>
+				<Description>Applies to year levels 9 &amp; 10</Description>
+			</Value>
+		</Values>
+	</CodeSet>   <!-- CurriculumLevel -->
+
+	<CodeSet>
+		<Intro>
 			<p>Codes denoting Learning Areas defined by the NZ Curriculum and Te Marautanga o Aotearoa.
 			</p>
 		</Intro>

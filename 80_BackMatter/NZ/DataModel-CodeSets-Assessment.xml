@@ -10,29 +10,29 @@
 		<ID>Assessment Type</ID>
 		<Values>
 			<Value>
-				<Code>101</Code>
+				<Code>INT</Code>
 				<Text>Internal Exam/Assessment</Text>
 			</Value>    <!-- Internal Exam/Assessment -->
 			<Value>
-				<Code>102</Code>
+				<Code>EXT</Code>
 				<Text>External Exam/Assessment</Text>
 			</Value>    <!-- External Exam/Assessment -->
 			<Value>
-				<Code>103</Code>
+				<Code>MOC</Code>
 				<Text>Mock</Text>
 			</Value>    <!-- Mock -->
 			<Value>
-				<Code>104</Code>
+				<Code>POR</Code>
 				<Text>Portfolio</Text>
 			</Value>    <!-- Portfolio -->
 			<Value>
-				<Code>105</Code>
+				<Code>PRA</Code>
 				<Text>Practical</Text>
 			</Value>    <!-- Practical -->
 			<Value>
-				<Code>106</Code>
+				<Code>OTH</Code>
 				<Text>Other</Text>
-			</Value>    <!-- Other -->
+			</Value>    <!-- Other -->			
 		</Values>
 	</CodeSet>    <!-- Assessment Type -->
 
