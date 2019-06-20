@@ -38,6 +38,33 @@
 
 	<CodeSet>
 		<Intro>
+			<p>Codes denoting the current status of the assessment task.</p>
+		</Intro>
+		<ID>Assessment Status</ID>
+		<Values>
+			<Value>
+				<Code>MOD</Code>
+				<Text>Moderated</Text>
+			</Value>
+			<Value>
+				<Code>NOT</Code>
+			</Value>
+			<Value>
+				<Code>PUB</Code>
+				<Text>Published</Text>
+			</Value>
+			<Value>
+				<Code>ENT</Code>
+			</Value>
+			<Value>
+				<Code>MAR</Code>
+				<Text>Marked</Text>
+			</Value>									
+		</Values>
+	</CodeSet>    <!-- Assessment Tool -->
+
+	<CodeSet>
+		<Intro>
 			<p></p>
 		</Intro>
 		<ID>Assessment Provider Role</ID>
