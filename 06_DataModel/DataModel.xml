@@ -86,11 +86,12 @@
 
 		<xi:include parse="xml" href="NZ/StudentLearningSupportParticipation.xml"/>
 		
-		<!-- Aromatawai / Assessment -->
+		<!-- Aromatawai / Assessment and progress -->
 		<xi:include parse="xml" href="NZ/AssessmentTask.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAssessmentTaskResult.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAssessmentTaskRegistration.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAssessmentTask.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAttainment.xml"/>
+		<xi:include parse="xml" href="NZ/StudentCurriculumProgressReport.xml"/>
 	</Group>
 </DataObjects>

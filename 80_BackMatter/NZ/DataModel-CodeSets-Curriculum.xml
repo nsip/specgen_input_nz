@@ -244,4 +244,165 @@
 		</Values>
 	</CodeSet>    <!-- Subject Area -->
 
+	<CodeSet>
+		<Intro>
+			<p>Codes denoting the period of time that a Curriculum Progress Report applies to.</p>
+		</Intro>
+		<ID>Curriculum Progress Report Time Frame</ID>
+		<Values>
+			<Value>
+				<Code>END</Code>
+				<Text>End of Year</Text>
+			</Value>
+			<Value>
+				<Code>MID</Code>
+				<Text>Mid-Year</Text>
+			</Value>
+			<Value>
+				<Code>SEM</Code>
+				<Text>Semester</Text>
+			</Value>
+			<Value>
+				<Code>TRM</Code>
+				<Text>Term</Text>
+			</Value>
+			<Value>
+				<Code>ONG</Code>
+				<Text>Ongoing, As Available, Ad-Hoc</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- CurriculumProgressReportTimeFrame -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting a class or subject area from the technology curriculum that the progress report covers.</p>
+		</Intro>
+		<ID>Technology Class</ID>
+		<Values>
+			<Value>
+				<Code>HM</Code>
+				<Text>Hard Materials</Text>
+			</Value>
+			<Value>
+				<Code>FD</Code>
+				<Text>Food</Text>
+			</Value>
+			<Value>
+				<Code>DE</Code>
+				<Text>3D Design</Text>
+			</Value>
+			<Value>
+				<Code>MM</Code>
+				<Text>Multimedia</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Technology Class -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code list denoting the learning strands from the Technology curriculum 
+				that can be covered as part of a technology class.</p>
+		</Intro>
+		<ID>Technology Learning Strand</ID>
+		<Values>
+			<Value>
+				<Code>TP</Code>
+				<Text>Technological Practice</Text>
+			</Value>
+			<Value>
+				<Code>TK</Code>
+				<Text>Technological Knowledge</Text>
+			</Value>
+			<Value>
+				<Code>NT</Code>
+				<Text>Nature of Technology</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Technology Learning Strand -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting achievement objectives against which a student
+				 can be assessed within a Learning Strand.</p>
+		</Intro>
+		<ID>Strand Achievement Objective</ID>
+		<Values>
+			<Value>
+				<Code>BD</Code>
+				<Text>Brief Development</Text>
+			</Value>
+			<Value>
+				<Code>PP</Code>
+				<Text>Planning for Practice</Text>
+			</Value>
+			<Value>
+				<Code>OD</Code>
+				<Text>Outcome Development and Evaluation</Text>
+			</Value>
+			<Value>
+				<Code>TM</Code>
+				<Text>Technological Modelling</Text>
+			</Value>
+			<Value>
+				<Code>TP</Code>
+				<Text>Technological Products</Text>
+			</Value>
+			<Value>
+				<Code>TS</Code>
+				<Text>Technological Systems</Text>
+			</Value>
+			<Value>
+				<Code>CT</Code>
+				<Text>Characteristics of Technology</Text>
+			</Value>
+			<Value>
+				<Code>CO</Code>
+				<Text>Characteristics of Technological Outcomes</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Strand Achievement Objective -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the level of progress the student has made against the learning 
+				strand achievement objective.  e.g. Beginner, Proficient, and Advanced.</p>
+		</Intro>
+		<ID>Strand Achievement Progress Level</ID>
+		<Values>
+			<Value>
+				<Code>B</Code>
+				<Text>Beginner</Text>
+			</Value>
+			<Value>
+				<Code>P</Code>
+				<Text>Proficient</Text>
+			</Value>
+			<Value>
+				<Code>A</Code>
+				<Text>Advanced</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Strand Achievement Progress Level -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the technology curriculum level that the student's
+				 progress report is being made against.  e.g. 2, 3, 4 or 5.</p>
+		</Intro>
+		<ID>Technology Curriculum Level</ID>
+		<Values>
+			<Value>
+				<Code>2</Code>
+				<Text>Level 2</Text>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Level 3</Text>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Level 4</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Technology Curriculum Level -->
 </IncludeGroup>
