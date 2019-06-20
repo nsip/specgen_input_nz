@@ -1978,6 +1978,15 @@
 			<Type name="xs:normalizedString"/>
 		</Item>    <!-- OrganisationName -->
 		<Item>
+			<Element>OrganisationPhoneNum</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The name phone number of the healthcare service</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- OrganisationPhoneNum -->		
+		<Item>
 			<Element>Notes</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
@@ -1999,6 +2008,7 @@
 		<xhtml:Example xmlns="" name="Healthcare Service Info Example">
 			<HealthcareServiceInfo>
 				<OrganisationName>Martinborough Medical Centre</OrganisationName>
+				<OrganisationPhoneNum>06 306 931</OrganisationPhoneNum>
 				<Notes>Dr Amy also knows about the epilepsy</Notes>
 				<Type json:force-string="true">1</Type>
 			</HealthcareServiceInfo>

@@ -181,6 +181,7 @@
 			</PersonInfo>
 			<HealthcareServiceInfo>
 				<OrganisationName>Martinborough Medical Centre</OrganisationName>
+				<OrganisationPhoneNum>06 306 9311</OrganisationPhoneNum>
 				<Notes>Dr Amy also knows about the epilepsy</Notes>
 				<Type json:force-string="true">1</Type>
 			</HealthcareServiceInfo>
