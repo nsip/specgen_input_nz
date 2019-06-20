@@ -1,0 +1,120 @@
+<DataObject name="StaffTeachingGroupAssignment"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StaffTeachingGroupAssignment</Element>
+    <Description>
+      <p>Records assignment of a Staff member to a particular role with a particular 
+        TeachingGroup at a Provider</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>RefId</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The GUID that uniquely identifies a particular staff teaching group assignment.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>      <!-- RefId -->
+
+  <Item>
+    <Element>LocalId</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>LocalId for the particular staff teaching group assignment, if provided by the source system</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>      <!-- LocalId -->
+
+  <Item>
+    <Element>StaffMember</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the staff member, as represented in the StaffPersonal object.&#160;</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>      <!-- StaffMember -->
+
+  <Item>
+    <Element>Provider</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A generic object reference to the Provider making the assignment.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>      <!-- Provider -->  
+
+  <Item>
+    <Element>TeachingGroup</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A generic object reference to the TeachingGroup that the staff member is assigned to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>      <!-- TeachingGroup -->  
+
+  <Item>
+    <Element>Role</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting the role the staff member plays within the TeachingGroup, eg. ClassroomTeacher, SubjectTeacher, 
+        ClassroomAide, etc.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsStaffTeachingGroupRoleType"></Type>
+  </Item>      <!-- Role -->
+
+  <Item>
+    <Element>StartDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>This is the date from which the staff assignment is valid (inclusive).</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>      <!-- StartDate -->
+  <Item>
+    <Element>EndDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>This is the date through which the staff assignment is valid (inclusive). This
+          can be NULL when the staff member's assignment to a particular role is open-ended.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>      <!-- EndDate -->
+
+
+  <xhtml:Example xmlns="" name="Staff TeachingGroup Assignment French Teacher Example">
+    <StaffTeachingGroupAssignment>
+      <RefId>92828e71-c702-4944-841e-761203142ccd</RefId>
+      <StaffMember>
+        <RefId>6c12f5ae-ca86-40e2-b252-593154c8b967</RefId>
+      </StaffMember>
+      <Provider>
+        <RefId>f91cd380-2e14-43ef-b181-aedccea399f9</RefId>
+      </Provider>
+      <TeachingGroup>
+        <RefId>edc3ac19-264f-4734-b75b-6d56fbf84a18</RefId>
+        <LocalId>11FrenA</LocalId>
+        <Name>Year 11 French, Stream A</Name>
+      </TeachingGroup>
+      <Role>1201</Role>
+      <StartDate>2000-09-05</StartDate>
+      <EndDate>2001-06-25</EndDate>
+    </StaffTeachingGroupAssignment>
+  </xhtml:Example>
+</DataObject>

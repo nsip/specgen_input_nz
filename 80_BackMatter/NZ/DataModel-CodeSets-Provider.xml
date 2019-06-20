@@ -733,4 +733,27 @@
 		</Values>
 	</CodeSet>    <!-- Teaching Group Type -->
 
+	<CodeSet>
+		<Intro>
+			<p>Describes the role a staff member has with a TeachingGroup</p>
+		</Intro>
+		<ID>Staff Teaching Group Role</ID>
+		<Values>
+		  <Value><Code>1201</Code><Text>Subject Teacher</Text></Value>
+		  <Value><Code>1401</Code><Text>Homeroom Teacher</Text></Value>
+		  <Value><Code>1402</Code><Text>Release Homeroom Teacher</Text></Value>
+		  <Value><Code>1403</Code><Text>Relief Homeroom Teacher</Text></Value>
+		  <Value><Code>1301</Code><Text>Teacher Aide</Text></Value>
+		  <Value><Code>1203</Code><Text>Subject Relief Teacher</Text></Value>
+		  <Value><Code>1202</Code><Text>Subject Release Teacher</Text></Value>
+		  <Value><Code>1204</Code><Text>Subject Tutor</Text></Value>
+		  <Value><Code>1205</Code><Text>Classroom Teacher</Text></Value>
+		  <Value><Code>1206</Code><Text>Classroom Release Teacher</Text></Value>
+		  <Value><Code>1207</Code><Text>Classroom Relief Teacher</Text></Value>
+		  <Value><Code>1209</Code><Text>Itinerant Subject Teacher</Text></Value>
+		  <Value><Code>1210</Code><Text>Itinerant Subject Tutor</Text></Value>
+		  <Value><Code>1211</Code><Text>Specialist Classroom Teacher</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Staff Teaching Group Role -->
+
 </IncludeGroup>

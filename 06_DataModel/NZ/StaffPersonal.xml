@@ -38,7 +38,27 @@
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>    <!-- LocalId -->
- 	
+
+  <Item>
+    <Element>ESLPairwiseId</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>The GUID used by Education Sector Logon (ESL) to identify the Staff Member</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- ESLPairwiseId -->
+
+  <Item>
+    <Element>SchoolSMSUserId</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>The identifier used by the school's SMS to identify the Staff Member</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- SchoolSMSUserId -->
+
   <Item>
     <Element>PersonInfo</Element>
     <Characteristics>M</Characteristics>
@@ -52,7 +72,6 @@
   <xhtml:Example xmlns="" name="StaffPersonal">
     <StaffPersonal>
       <RefId>D3E34F41-9D75-101A-8C3D-00AA001A1652</RefId>
-      <LocalId>946379881</LocalId>
       <PersonInfo>
         <Name>
           <FamilyName>Smith</FamilyName>

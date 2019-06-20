@@ -52,6 +52,7 @@
 		<!-- Staff, Students & their whānau -->
 		<xi:include parse="xml" href="NZ/StaffPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StaffAssignment.xml"/>
+		<xi:include parse="xml" href="NZ/StaffTeachingGroupAssignment.xml"/>
 		<xi:include parse="xml" href="NZ/StudentPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StudentContactPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StudentContactRelationship.xml"/>
