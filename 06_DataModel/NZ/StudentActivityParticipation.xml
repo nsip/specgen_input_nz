@@ -9,13 +9,13 @@
 
   <Key>RefId</Key>
   <EventsReported>true</EventsReported>
-   <Item>
+  <Item>
     <Element>StudentActivityParticipation</Element>
-	  <privacyRating>Low</privacyRating>
     <Description>
       This object provides information on a co-curricular or extra-curricular activity in which a student participates during a given school year.
     </Description>
-  </Item>    <!-- StudentActivityParticipation -->
+  </Item>
+
   <Item>
     <Element>RefId</Element>
     <Characteristics>M</Characteristics>
@@ -24,96 +24,71 @@
     <Type ref='CommonTypes' name='RefIdType'/>
   </Item>    <!-- RefId -->
   <Item>
-    <Element>StudentPersonalRefId</Element>
+    <Element>LocalId</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>LocalId for the participation record, if provided by the source system.</Description>
+    <Type ref='CommonTypes' name='LocalIdType'/>
+  </Item>    <!-- LocalId -->
+
+  <Item>
+    <Element>Student</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>GUID that identifies the student participating in the activity. </p>
+      <p>Generic object reference to the student participating in the activity. </p>
     </Description>
-    <Type ref='CommonTypes' name='IdRefType'/>
-  </Item>    <!-- StudentPersonalRefId-->
+    <Type ref='CommonTypes' name='ObjectReferenceType'/>
+  </Item>    <!-- Student -->
+  <Item>
+    <Element>Provider</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the Provider running the activity the student is participating in, e.g. schools.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- Provider -->
 
-  <if intl = 'nz'>
-    <Item>
-      <Element>StudentPersonalLocalId</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The local Id that identifies the student participating in the activity. </p>
-      </Description>
-      <Type ref='CommonTypes' name='LocalIdType'/>
-    </Item>    <!-- StudentPersonalLocalId-->
-    <Item>
-      <Element>ProviderRefId</Element>
-      <Characteristics>O</Characteristics>
-	    <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The Id (GUID) that uniquely identifies the Provider running the activity the student is participating in, e.g. schools.</p>
-      </Description>
-      <Type ref="CommonTypes" name="IdRefType"></Type>
-    </Item>    <!-- ProviderRefId -->  
-    <Item>
-      <Element>ActivityGroup</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>Standard codes denoting the group of the activity the student is participating in, e.g. sport, art, cultural, music.
-        </p>
-      </Description>
-      <Type ref="CodeSets" name="NZCodeSetsStudentActivityGroupType"/>
-    </Item>    <!-- ActivityGroup -->
-    <Item>
-      <Element>ActivityType</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>Standard codes denoting the type of activity the student is participating in, e.g. rugby, drama, Kapa Haka, Violin.
-        </p>
-      </Description>
-      <Type ref="CodeSets" name="NZCodeSetsStudentActivityTypeType"/>
-    </Item>    <!-- ActivityType -->
-    <Item>
-      <Element>ActivityName</Element>
-      <Characteristics>M</Characteristics>
-	    <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The name of the activity the student participated in.</p>
-      </Description>
-      <Type name='xs:normalizedString'/>
-    </Item>    <!--ActivityName-->
-    <Item>
-      <Element>LearningArea</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The learning area the student activity the student is participating in relates to.</p>
-      </Description>
-      <Type ref="CodeSets" name="NZCodeSetsLearningArea"/>
-    </Item>    <!-- LearningArea -->    
-  </if>
+  <Item>
+    <Element>ActivityGroup</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Standard codes denoting the group of the activity the student is participating in, e.g. sport, art, cultural, music.
+      </p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsStudentActivityGroupType"/>
+  </Item>    <!-- ActivityGroup -->
+  <Item>
+    <Element>ActivityType</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Standard codes denoting the type of activity the student is participating in, e.g. rugby, drama, Kapa Haka, Violin.
+      </p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsStudentActivityTypeType"/>
+  </Item>    <!-- ActivityType -->
+  <Item>
+    <Element>ActivityName</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The name of the activity the student participated in.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>    <!--ActivityName-->
+  <Item>
+    <Element>LearningArea</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The learning area the student activity the student is participating in relates to.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningArea"/>
+  </Item>    <!-- LearningArea -->    
 
-  <if intl = 'au'>
-    <Item>
-      <Element>StudentActivityInfoRefId</Element>
-      <Characteristics>M</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>GUID that identifies the activity in which the student participates.</p>
-      </Description>
-      <Type ref='CommonTypes' name='IdRefType'/>
-    </Item> <!-- StudentActivityInfoRef-->
-    <Item>
-      <Element>SchoolYear</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>
-          School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2009").
-        </p>
-      </Description>
-      <Type ref="CommonTypes" name="SchoolYearType"></Type>
-    </Item> <!--SchoolYear-->
-  </if>
   <Item>
     <Element>ParticipationComment</Element>
     <Characteristics>O</Characteristics>
@@ -160,13 +135,18 @@
    <Type ref="CommonTypes" name="RecognitionListType"></Type>
   </Item>    <!--RecognitionList-->
 
-    <xhtml:Example xmlns='' name="StudentActivityParticipation">
+  <xhtml:Example xmlns='' name="StudentActivityParticipation">
     <StudentActivityParticipation>
       <RefId>9ECC9683-0E02-406F-926C-1C4D3542D122</RefId>
-      <StudentPersonalRefId>646C5D4A-C829-4886-A02B-971695C7BC06</StudentPersonalRefId>
+      <Student>
+        <RefId>646C5D4A-C829-4886-A02B-971695C7BC06</RefId>
+      </Student>
+      <Provider>
+        <RefId>33d610cd-40d3-44db-b21b-3cffe695503a</RefId>
+      </Provider>
       <ActivityGroup json:force-string="true">101</ActivityGroup>
       <ActivityType json:force-string="true">102</ActivityType>
-      <ActivityName json:force-string="true">First XI</ActivityName>
+      <ActivityName>First XI</ActivityName>
       <ParticipationComment>First year of participation</ParticipationComment>
       <StartDate>2008-09-01</StartDate>
       <Role>Team Member</Role>
@@ -174,6 +154,5 @@
         <Recognition>Player of the Day</Recognition>
       </RecognitionList>
     </StudentActivityParticipation>
-
   </xhtml:Example>
 </DataObject>
