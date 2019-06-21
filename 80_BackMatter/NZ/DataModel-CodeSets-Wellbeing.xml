@@ -566,6 +566,7 @@
 		</Values>
 	</CodeSet>    <!-- Wellbeing Event Restraint -->
 
+
 	<!-- Wellbeing Response classification codes -->
 	<CodeSet>
 		<Intro>
@@ -663,30 +664,6 @@
 	<!-- Learning Support Participation codes -->
 	<CodeSet>
 		<Intro>
-			<p>Standard codes denoting the kinds of learning support intervention</p>
-		</Intro>
-		<ID>Learning Support Intervention</ID>
-		<Values>
-			<Value><Code>AEAC</Code><Text>Alternative Education - Activity Centre</Text></Value>
-			<Value><Code>AODC</Code><Text>Advisors on Deaf Children</Text></Value>
-			<Value><Code>AESA</Code><Text>Alternative Education - Service Academy</Text></Value>
-			<Value><Code>AESS</Code><Text>Alternative Education - Study Support Centre</Text></Value>
-		</Values>
-	</CodeSet>    <!-- Learning Support Intervention -->
-
-	<CodeSet>
-		<Intro>
-			<p>Code set denoting the possible outcomes of a student's participation in a learning support intervention.</p>
-		</Intro>
-		<ID>Learning Support Intervention Outcome</ID>
-		<Values>
-			<Value><Code>FIR</Code><Text>Further Intervention Required</Text></Value>
-			<Value><Code>OAC</Code><Text>Outcome Achieved</Text></Value>
-		</Values>
-	</CodeSet>    <!-- Learning Support Intervention Outcome -->
-
-	<CodeSet>
-		<Intro>
 			<p>Standard codes denoting the learning support type the student is receiving, e.g. Vision, Speech, 
 				Hearing, Social Skills, Behaviour, Mental Health, Autism, Reading, Writing, Mathematics etc.</p>
 		</Intro>
@@ -706,28 +683,290 @@
 			<Value><Code>112</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Type -->
+	
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the kinds of learning support intervention</p>
+		</Intro>
+		<ID>Learning Support Intervention</ID>
+		<Values>
+			<Value><Code>AEAC</Code><Text>Alternative Education - Activity Centre</Text></Value>
+			<Value><Code>AODC</Code><Text>Advisors on Deaf Children</Text></Value>
+			<Value><Code>AESA</Code><Text>Alternative Education - Service Academy</Text></Value>
+			<Value><Code>AESS</Code><Text>Alternative Education - Study Support Centre</Text></Value>
+			<Value><Code>AETP</Code><Text>Alternative Education - Teen Parent Unit (TPU)</Text></Value>
+			<Value><Code>ACBS</Code><Text>ASD Communication and Behaviour Support</Text></Value>
+			<Value><Code>ADCO</Code><Text>ASD Developmental Coordination</Text></Value>
+			<Value><Code>APED</Code><Text>ASD Parent Education (ASD Plus, TIPS for Autism, Growing Up With Autism)</Text></Value>
+			<Value><Code>ASDI</Code><Text>ASD Specific Disability Information and Advisory Services (DIAS)</Text></Value>
+			<Value><Code>ATEQ</Code><Text>Assistive Technology (AT) Equipment</Text></Value>
+			<Value><Code>ATTSC</Code><Text>Attendance Services</Text></Value>
+			<Value><Code>AUME</Code><Text>Autism and Me</Text></Value>
+			<Value><Code>BCRS</Code><Text>Behaviour Crisis Response</Text></Value>
+			<Value><Code>BSAS</Code><Text>Behaviour Services and Support</Text></Value>
+			<Value><Code>BKRS</Code><Text>Books and Resources</Text></Value>
+			<Value><Code>CAMH</Code><Text>Child and Adolescent Mental Heath Services</Text></Value>
+			<Value><Code>CNPA</Code><Text>Connecting Parents</Text></Value>
+			<Value><Code>DASS</Code><Text>Day Special Schools</Text></Value>
+			<Value><Code>DECT</Code><Text>Deaf Education Centres</Text></Value>
+			<Value><Code>DGDE</Code><Text>Diagnosis Guide</Text></Value>
+			<Value><Code>DSSC</Code><Text>Disability Support Service</Text></Value>
+			<Value><Code>EIDN</Code><Text>Early Intervention - Development Needs</Text></Value>
+			<Value><Code>EIDS</Code><Text>Early Intervention - Disabilities such as ASD, Learning or Phsyical Disabilities</Text></Value>
+			<Value><Code>EISS</Code><Text>Early Intervention - Social Skills</Text></Value>
+			<Value><Code>EIAS</Code><Text>Early Intervention - ASD</Text></Value>
+			<Value><Code>EIBH</Code><Text>Early Intervention - Behaviour</Text></Value>
+			<Value><Code>EICN</Code><Text>Early Intervention - Communication Needs</Text></Value>
+			<Value><Code>EIHR</Code><Text>Early Intervention - Hearing</Text></Value>
+			<Value><Code>EIVS</Code><Text>Early Intervention - Vision</Text></Value>
+			<Value><Code>ELBD</Code><Text>EarlyBird</Text></Value>
+			<Value><Code>ESOL</Code><Text>ESOL Funding</Text></Value>
+			<Value><Code>EXCC</Code><Text>Expanded Core Curriculum</Text></Value>
+			<Value><Code>EASD</Code><Text>Explore ASD Plus</Text></Value>
+			<Value><Code>FTSN</Code><Text>First Signs</Text></Value>
+			<Value><Code>FANZ</Code><Text>Framework for Autism in New Zealand (FANZ)</Text></Value>
+			<Value><Code>HCWH</Code><Text>How Can We Help?</Text></Value>
+			<Value><Code>IHCL</Code><Text>IHC Library</Text></Value>
+			<Value><Code>INSP</Code><Text>In-Class Support</Text></Value>
+			<Value><Code>IEED</Code><Text>Inclusive Education: A Guide to ASD and Learning</Text></Value>
+			<Value><Code>ITPR</Code><Text>Individualised Training Programmes</Text></Value>
+			<Value><Code>INAD</Code><Text>Information and Advice</Text></Value>
+			<Value><Code>ISVC</Code><Text>Information Service</Text></Value>
+			<Value><Code>IRFD</Code><Text>Interim Response Fund (IRF)</Text></Value>
+			<Value><Code>INRS</Code><Text>International Research</Text></Value>
+			<Value><Code>LRCS</Code><Text>Learning Resources</Text></Value>
+			<Value><Code>MICA</Code><Text>Maternal Infant Child and Adolescent Mental Health Services (MICAMHS)</Text></Value>
+			<Value><Code>NASC</Code><Text>Needs Assessment Service Co-Ordination</Text></Value>
+			<Value><Code>OCTH</Code><Text>Occupational Therapists</Text></Value>
+			<Value><Code>ORSM</Code><Text>Ongoing Resourcing Scheme (ORS)</Text></Value>
+			<Value><Code>PCAC</Code><Text>PB4L Check and Connect</Text></Value>
+			<Value><Code>PHKM</Code><Text>PB4L Huakina Mai</Text></Value>
+			<Value><Code>PIYP</Code><Text>PB4L Incredible Years Parent</Text></Value>
+			<Value><Code>PIYT</Code><Text>PB4L Incredible Years Teacher</Text></Value>
+			<Value><Code>PFYR</Code><Text>PB4L My FRIENDS Youth Resilience Programme</Text></Value>
+			<Value><Code>PRJS</Code><Text>PB4L Restorative Justice</Text></Value>
+			<Value><Code>PSCW</Code><Text>PB4L School-Wide</Text></Value>
+			<Value><Code>PTMT</Code><Text>PB4L Te Mana Tikitiki</Text></Value>
+			<Value><Code>PWAS</Code><Text>PB4L Wellbeing@School</Text></Value>
+			<Value><Code>PHYS</Code><Text>Physiotherapists</Text></Value>
+			<Value><Code>PATH</Code><Text>Planning Alternative Tomorrows with Hope (PATH)</Text></Value>
+			<Value><Code>PBSF</Code><Text>Positive Behaviour Support (PBS) Framework</Text></Value>
+			<Value><Code>PRSM</Code><Text>PRISM Professional Development Series</Text></Value>
+			<Value><Code>RTDF</Code><Text>Resource Teacher Deaf (RTD)</Text></Value>
+			<Value><Code>RLIT</Code><Text>Resource Teacher Lit (RTLit)</Text></Value>
+			<Value><Code>RLBS</Code><Text>Resource Teachers: Learning and Behaviour Service (RTLB)</Text></Value>
+			<Value><Code>SACA</Code><Text>SAC Assessment</Text></Value>
+			<Value><Code>SHHN</Code><Text>School High Health Needs Fund</Text></Value>
+			<Value><Code>SSNZ</Code><Text>SibSupportNZ</Text></Value>
+			<Value><Code>SWIS</Code><Text>Social Workers in Schools (SWiS) Programme</Text></Value>
+			<Value><Code>SSTA</Code><Text>Specialised School Transport Assistance (SESTA)</Text></Value>
+			<Value><Code>SLTH</Code><Text>Speech-Language Therapists</Text></Value>
+			<Value><Code>SIAE</Code><Text>Support, Information and Education</Text></Value>
+			<Value><Code>SBHV</Code><Text>Supporting Behaviour</Text></Value>
+			<Value><Code>TASP</Code><Text>Teacher Aide Support</Text></Value>
+			<Value><Code>TSAR</Code><Text>Teaching Strategies and Resources</Text></Value>
+			<Value><Code>TSFT</Code><Text>Tilting the Seesaw for Teams</Text></Value>
+			<Value><Code>TUTR</Code><Text>Tutor</Text></Value>
+			<Value><Code>UAUT</Code><Text>Understanding Autism</Text></Value>
+			<Value><Code>WTPL</Code><Text>Way to Play</Text></Value>
+			<Value><Code>YELF</Code><Text>Year 11+ Funding</Text></Value>
+			<Value><Code>YNNE</Code><Text>Year 9+</Text></Value>
+			<Value><Code>OTHR</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Intervention -->
 
 	<CodeSet>
 		<Intro>
-			<p>Standard codes denoting the types of organisation who can provide a learning support intervention.</p>
+			<p>Code set denoting the possible outcomes of a student's participation in a learning support intervention.</p>
+		</Intro>
+		<ID>Learning Support Intervention Outcome</ID>
+		<Values>
+			<Value><Code>FIR</Code><Text>Further Intervention Required</Text></Value>
+			<Value><Code>OAC</Code><Text>Outcome Achieved</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Intervention Outcome -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the outcome for the student that the intervention is 
+				seeking to achieve for an area of need. Only applies to Compulsive Schooling.</p>
+		</Intro>
+		<ID>Learning Support Outcome</ID>
+		<Values>
+			<Value><Code>WBG</Code><Text>Wellbeing</Text></Value>
+			<Value><Code>PNC</Code><Text>Presence</Text></Value>
+			<Value><Code>PTN</Code><Text>Participation</Text></Value>
+			<Value><Code>LAA</Code><Text>Learning and Achievement</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Outcome -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the target audience of the learning support intervention for the area of need.</p>
+		</Intro>
+		<ID>Learning Support Target Audience</ID>
+		<Values>
+			<Value><Code>EDU</Code><Text>Educators</Text></Value>
+			<Value><Code>EFW</Code><Text>Educators/FamilyWhānau</Text></Value>
+			<Value><Code>FWH</Code><Text>Family/Whānau</Text></Value>
+			<Value>
+				<Code>FFW</Code>
+				<Text>Family/Whānau/Workforce</Text>
+				<Description>For family/whānau, early childhood teachers, health professionals, or anyone else living
+				 or working with young children with autism
+				 </Description>
+			</Value>
+			<Value>
+				<Code>FOG</Code><Text>Organisations &amp; Other Groups</Text>
+				<Description>For organisations or other groups requiring a training or education event</Description>
+			</Value>
+
+			<Value>
+				<Code>FPW</Code><Text>Pre-school Whānau</Text>
+				<Description>For parents, whānau, and caregivers of pre-school children</Description>
+			</Value>
+
+			<Value>
+				<Code>FTF</Code><Text>School Whānau</Text>
+				<Description>For teams of family and professionals, working together to support tamariki with 
+					autism aged 5-12 years. Teams may include parents, caregivers, other family/whānau, primary school
+					teachers, teacher aids, learning assistants, SENCOs or RTLBs
+				</Description>
+			</Value>
+
+			<Value><Code>IST</Code><Text>Individual Students</Text></Value>
+			<Value><Code>PWH</Code><Text>Parents/Whānau</Text></Value>
+			<Value><Code>SWD</Code><Text>School Wide</Text></Value>
+			<Value><Code>SCH</Code><Text>Schools</Text></Value>
+			<Value><Code>TPR</Code><Text>Targeted Programmes</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Target Audience -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the resource that is required to support the learning 
+				support intervention in addressing the area of need.</p>
+		</Intro>
+		<ID>Learning Support Resource</ID>
+		<Values>
+			<Value><Code>ADC</Code><Text>Advisor on Deaf Children</Text></Value>
+			<Value><Code>BSW</Code><Text>Basic Sight Words Programme</Text></Value>
+			<Value><Code>BCN</Code><Text>Building Confidence</Text></Value>
+			<Value><Code>CCE</Code><Text>Change Classroom Environment</Text></Value>
+			<Value><Code>CCM</Code><Text>Change Classroom Management</Text></Value>
+			<Value><Code>CIC</Code><Text>Check In Check Out (CICO)</Text></Value>
+			<Value><Code>COF</Code><Text>Circle of Friends, Intervention</Text></Value>
+			<Value><Code>CTM</Code><Text>Circle TIme</Text></Value>
+			<Value><Code>CBT</Code><Text>Cognitive Behaviour Therapy</Text></Value>
+			<Value><Code>CED</Code><Text>Conductor in Conductive Education Programme</Text></Value>
+			<Value><Code>CSV</Code><Text>Continence Service</Text></Value>
+			<Value><Code>DRP</Code><Text>Daily Report</Text></Value>
+			<Value><Code>DPM</Code><Text>Differentiated Programme</Text></Value>
+			<Value><Code>DTS</Code><Text>District Truancy Service (DTS)</Text></Value>
+			<Value><Code>DSS</Code><Text>Dyslexia Screening</Text></Value>
+			<Value><Code>EDP</Code><Text>Educational Psychologist</Text></Value>
+			<Value><Code>GCG</Code><Text>Guidance Counselling</Text></Value>
+			<Value><Code>IST</Code><Text>Inclusion Strategy</Text></Value>
+			<Value><Code>LLI</Code><Text>Learning and Language Intervention (LLI)</Text></Value>
+			<Value><Code>MCA</Code><Text>Māori or Cultural Advisor</Text></Value>
+			<Value><Code>MTH</Code><Text>Music Therapist (Registered)</Text></Value>
+			<Value><Code>NET</Code><Text>Non-Enrolled Truancy Service (NETS)</Text></Value>
+			<Value><Code>OTS</Code><Text>Occupational Therapist (OT)</Text></Value>
+			<Value><Code>OMT</Code><Text>Orientation and Mobility Instructor</Text></Value>
+			<Value><Code>PFT</Code><Text>Parent Funded Tutor</Text></Value>
+			<Value><Code>PPP</Code><Text>Pause, Prompt, Praise (PPP)</Text></Value>
+			<Value><Code>PTR</Code><Text>Peer Tutor</Text></Value>
+			<Value><Code>PPR</Code><Text>Phonics Programme</Text></Value>
+			<Value><Code>PSY</Code><Text>Psychologist</Text></Value>
+			<Value><Code>PHY</Code><Text>Physiotherapist</Text></Value>
+			<Value><Code>PXP</Code><Text>Proximal Praise</Text></Value>
+			<Value><Code>QKI</Code><Text>Quick 60 Intervention</Text></Value>
+			<Value><Code>RRC</Code><Text>Reading Recovery</Text></Value>
+			<Value><Code>RHS</Code><Text>Regular Home/School Meetings</Text></Value>
+			<Value><Code>RTL</Code><Text>RTLB Resource Teacher</Text></Value>
+			<Value><Code>SSG</Code><Text>Safety Strategy</Text></Value>
+			<Value><Code>SLI</Code><Text>Sign Language Interpreter</Text></Value>
+			<Value><Code>SSI</Code><Text>Social Skills Intervention</Text></Value>
+			<Value><Code>SWS</Code><Text>Social Worker in School (SWIS)</Text></Value>
+			<Value><Code>SEA</Code><Text>Special Education Advisor</Text></Value>
+			<Value><Code>STO</Code><Text>Specialist Teacher Outreach</Text></Value>
+			<Value><Code>SLT</Code><Text>Speech Language Therapist</Text></Value>
+			<Value><Code>TAS</Code><Text>Teacher Aide Support</Text></Value>
+			<Value><Code>TWA</Code><Text>Teacher with additional tertiary qualifications in learning, vision or hearing</Text></Value>
+			<Value><Code>TSG</Code><Text>Transition Strategy</Text></Value>
+			<Value><Code>VPS</Code><Text>Visual Prompts/Strategies</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Resource -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting who can fund a learning support intervention.</p>
+		</Intro>
+		<ID>Learning Support Funded By</ID>
+		<Values>
+			<Value><Code>ACC</Code><Text>Accident Compensation Corporation (ACC)</Text></Value>
+			<Value><Code>ASP</Code><Text>ASPIRE</Text></Value>
+			<Value><Code>DHB</Code><Text>District Health Board (DHB)</Text></Value>
+			<Value><Code>EDU</Code><Text>Educators</Text></Value>
+			<Value><Code>FWH</Code><Text>Family/Whānau/Educators/Health Professionals</Text></Value>
+			<Value><Code>FRE</Code><Text>Free Service</Text></Value>
+			<Value><Code>MOE</Code><Text>Ministry of Education (MoE)</Text></Value>
+			<Value><Code>MOH</Code><Text>Ministry of Health (MoH)</Text></Value>
+			<Value><Code>MHD</Code><Text>Ministry of Health (MoH)/District Health Board (DHB)</Text></Value>
+			<Value><Code>OTM</Code><Text>Oranga Tamariki (OT)</Text></Value>
+			<Value><Code>PCA</Code><Text>Parents/Caregivers</Text></Value>
+			<Value><Code>ACA</Code><Text>The Association for Child and Adolescent Mental Health</Text></Value>
+			<Value><Code>WSI</Code><Text>Whole School/Institution</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Funded By -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting who can fund a learning support intervention.</p>
 		</Intro>
 		<ID>Learning Support Provided By</ID>
 		<Values>
-			<Value><Code>MOE</Code><Text>Ministry of Education</Text></Value>
-			<Value><Code>MOH</Code><Text>Ministry of Health</Text></Value>
+			<Value><Code>MOE</Code><Text>Ministry of Education (MoE)</Text></Value>
+			<Value><Code>MOH</Code><Text>Ministry of Health (MoH)</Text></Value>
 			<Value><Code>OTM</Code><Text>Oranga Tamariki (OT)</Text></Value>
-			<Value><Code>DHB</Code><Text>District Health Board</Text></Value>
+			<Value><Code>DHB</Code><Text>District Health Board (DHB)</Text></Value>
 			<Value><Code>EDU</Code><Text>Educators</Text></Value>
 			<Value><Code>FRE</Code><Text>Free Service</Text></Value>
 			<Value><Code>ACA</Code><Text>The Association for Child and Adolescent Mental Health</Text></Value>
 			<Value><Code>PCA</Code><Text>Parents/Caregivers</Text></Value>
 			<Value><Code>ACC</Code><Text>Accident Compensation Corporation (ACC)</Text></Value>
-			<Value><Code>ASP</Code><Text>Aspire</Text></Value>
+			<Value><Code>ASP</Code><Text>ASPIRE</Text></Value>
 			<Value><Code>WSI</Code><Text>Whole School/Institution</Text></Value>
-			<Value><Code>DWE</Code><Text>Family/Whānau/Educators/Health Professionals</Text></Value>
-			<Value><Code>MHD</Code><Text>Ministry of Health/District Health Board</Text></Value>
+			<Value><Code>FWE</Code><Text>Family/Whānau/Educators/Health Professionals</Text></Value>
+			<Value><Code>MHD</Code><Text>Ministry of Health (MoH)/District Health Board (DHB)</Text></Value>
 		</Values>
-	</CodeSet>    <!-- Learning Support Type Provided By-->
+	</CodeSet>    <!-- Learning Support Provided By-->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the Te Whariki Domain an Early Childhood Education
+				 related intervention is part of.</p>
+		</Intro>
+		<ID>Learning Support Te Whariki Domain</ID>
+		<Values>
+			<Value><Code>WMS</Code><Text>Wellbeing - Managing Self</Text></Value>
+			<Value><Code>BLP</Code><Text>Belonging - Participating</Text></Value>
+			<Value><Code>CRO</Code><Text>Contributing - Relating to Others</Text></Value>
+			<Value><Code>COM</Code><Text>Communication - Using Language, Symbols and Texts</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Intervention Status -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the status of the learning support participation.</p>
+		</Intro>
+		<ID>Learning Support Intervention Status</ID>
+		<Values>
+			<Value><Code>IDV</Code><Text>In Development</Text></Value>
+			<Value><Code>ACT</Code><Text>Active</Text></Value>
+			<Value><Code>DIS</Code><Text>Disabled</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Intervention Status -->
 
 	<CodeSet>
 		<Intro>
@@ -742,7 +981,6 @@
 			<Value><Code>105</Code><Text>Finished</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Participation Status -->
-
 
 
 	<!-- Student Activity & Student Voice classification codes -->

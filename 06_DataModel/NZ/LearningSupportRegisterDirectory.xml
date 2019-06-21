@@ -1,0 +1,180 @@
+<DataObject name="LearningSupportRegisterDirectory"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+			xmlns:json="http://json.org/"
+
+      xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>LearningSupportRegisterDirectory</Element>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Learning Support Needs are grouped by similarity. The Learning Support Directory maps
+         those groups to Learning Support Interventions so when a Learning Support Need is 
+         identified for the Student only applicable Interventions for the group it belongs 
+         to are presented to the user. It also holds additional information about the Learning
+          Support Interventions, e.g. Description, Funded By, Provided by.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>RefId</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Unique identifier (GUID) that uniquely identifies this Learning Support Register Directory record.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>    <!-- RefId -->
+  <Item>
+    <Element>LocalId</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>LocalId for the Learning Support Register Directory record, if made available by the source system.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- LocalId -->
+
+  <Item>
+    <Element>Need</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting the need the learning support intervention is addressing.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicSubCategoryType"/>
+  </Item>    <!-- Need -->
+  <Item>
+    <Element>Intervention</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The learning support intervention that addresses the area of need.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportInterventionType"/>
+  </Item>    <!-- Intervention -->
+
+  <Item>
+    <Element>Outcome</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting the outcome for the student that the intervention is seeking to achieve
+         for an area of need. Only applies to Compulsory Schooling.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportOutcomeType"/>
+  </Item>    <!-- Outcome -->
+  <Item>
+    <Element>TargetAudience</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting the target audience of the learning support intervention for the area of need.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportTargetAudienceType"/>
+  </Item>    <!-- TargetAudience -->
+
+  <Item>
+    <Element>Resource</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting the resource that is required to support the learning support intervention in addressing the area of need.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportResourceType"/>
+  </Item>    <!-- Resource -->
+  <Item>
+    <Element>ResourcesOtherDesc</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Free text description describing the resources required for the intervention. Only 
+        populated if a Resource of 'Other' is selected.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>    <!-- ResourcesOtherDesc -->
+
+  <Item>
+    <Element>FundedBy</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting who can fund a learning support intervention.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportFundedByType"/>
+  </Item>    <!-- FundedBy -->
+  <Item>
+    <Element>FundedByOtherDesc</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Free text description of who is funding the intervention. Only populated if a
+         Funded By of 'Other' is selected.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>    <!-- FundedByOtherDesc -->
+
+  <Item>
+    <Element>ProvidedBy</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting who can provide a learning support intervention.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportProvidedByType"/>
+  </Item>    <!-- ProvidedBy -->
+  <Item>
+    <Element>ProvidedByOtherDesc</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Free text description of who is providing the intervention. Only populated if a
+         Provided By of 'Other' is selected.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>    <!-- ProvidedByOtherDesc -->
+  <Item>
+    <Element>DeliveredByDesc</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Free text description of who is delivered the intervention on behalf of the Provider.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>    <!-- DeliveredByDesc -->
+
+  <Item>
+    <Element>PreRequisiteDesc</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Free text description of any pre-requisites required before the intervention can be implemented.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>    <!-- PreRequisiteDesc -->
+  
+  <Item>
+    <Element>InterventionStatus</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting the status of a learning support intervention, e.g. In Development, Active.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportInterventionStatusType"/>
+  </Item>    <!-- InterventionStatus -->
+  <Item>
+    <Element>TeWharikiDomain</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code set denoting the Te Whariki Domain an Early Childhood Education related intervention is part of.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportTeWharikiDomainType"/>
+  </Item>    <!-- TeWharikiDomain -->
+
+</DataObject>

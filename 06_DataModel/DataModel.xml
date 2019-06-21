@@ -85,6 +85,7 @@
 		
 		<xi:include parse="xml" href="NZ/StudentVoice.xml"/>
 
+		<xi:include parse="xml" href="NZ/LearningSupportRegisterDirectory.xml"/>
 		<xi:include parse="xml" href="NZ/StudentLearningSupportParticipation.xml"/>
 		
 		<!-- Aromatawai / Assessment and progress -->
