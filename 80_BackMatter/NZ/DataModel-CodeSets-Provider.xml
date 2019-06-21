@@ -440,6 +440,27 @@
 
 	<CodeSet>
 		<Intro>
+			<p>Codes denoting the nature of an Early Childhood Education service.</p>
+		</Intro>
+		<ID>ECEService Type</ID>
+		<Values>
+			<Value>
+				<Code>KG</Code>
+				<Text>Kindergarten</Text>
+			</Value>
+			<Value>
+				<Code>PC</Code>
+				<Text>Play Centre</Text>
+			</Value>
+			<Value>
+				<Code>KR</Code>
+				<Text>Te Kohanga Reo</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- ECEService Type -->
+
+	<CodeSet>
+		<Intro>
 			<p>A code describing the nature of the relationship between a pair of Organisations</p>
 		</Intro>
 		<ID>Organisation Relationship Type</ID>

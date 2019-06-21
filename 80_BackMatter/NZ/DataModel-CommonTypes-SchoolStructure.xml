@@ -588,4 +588,25 @@
 		</Item>
 	</CommonElement>
 
+	<!-- ECE stuff -->
+	<CommonElement name="ECEServiceType" type="true" dm="true">
+		<Item>
+			<Element>ECEServiceType</Element>
+			<Description>
+				<p>Contains Organisation properties that are specific to Organisations
+				that are Providers of early childhood education services.
+				</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Type</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Code denoting the kind of ECE service. eg: Kindergarten, PLayCentre, Te Kohanga Reo, etc.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsECEServiceTypeType"/>
+		</Item>    <!-- Type -->
+	</CommonElement>
+
 </IncludeGroup>

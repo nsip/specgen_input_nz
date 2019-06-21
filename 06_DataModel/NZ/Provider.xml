@@ -37,6 +37,16 @@
 	  </Description>
 	  <Type ref="CommonTypes" name="SchoolServiceType"/>
   </Item> <!-- SchoolService -->
+  <Item>
+	  <Element>ECEService</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>
+		  <p>Only present if the Provider is a provider of early childhood education services.
+		  Contains properties that are ECE specific.</p>
+	  </Description>
+	  <Type ref="CommonTypes" name="ECEServiceType"/>
+  </Item> <!-- ECEService -->
 
   <xhtml:Example xmlns="" name="School Provider Example">
     <Provider>
