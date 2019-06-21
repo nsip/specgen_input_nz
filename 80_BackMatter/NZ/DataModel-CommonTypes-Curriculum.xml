@@ -151,6 +151,8 @@
 		</xhtml:Example>
 	</CommonElement>
 
+
+	<!-- Credentials and Learning Standards -->
 	<CommonElement name="LearningStandardReferenceListType" type="true" dm="true">
 		<Item>
 			<Element>LearningStandardReferenceListType</Element>
@@ -192,13 +194,13 @@
 			</Description>
 		</Item>
 		<Item>
-			<Element>LearningStandardRefId</Element>
+			<Element>LearningStandard</Element>
 			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
-				<p>GUID Reference to a related LearningStandard</p>
+				<p>Generic object reference to a related LearningStandard</p>
 			</Description>
-			<Type ref="CommonTypes" name="IdRefType"/>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>    <!-- LearningStandardRefId -->
 		<Item>
 			<Element>Relationship</Element>

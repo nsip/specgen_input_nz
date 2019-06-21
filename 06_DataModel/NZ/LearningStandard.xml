@@ -29,6 +29,18 @@
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>    <!-- RefId -->
   <Item>
+    <Element>LocalId</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code assigned by the LearningStandard publisher to identify the LearningStandard.
+        This may not uniquely identify the LearningStandard, where there may be 
+        multiple editions or versions of a particular LearningStandard.</p>          
+      <p>The natural id may be formed by combining Publisher Id, Code &amp; VersionNo.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"/>
+  </Item>    <!-- LocalId -->  
+  <Item>
     <Element>Title</Element>
     <Characteristics>M</Characteristics>
   	<privacyRating>Low</privacyRating>
@@ -39,18 +51,6 @@
   </Item>    <!-- Title -->
 
   <Item>
-    <Element>Code</Element>
-    <Characteristics>M</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Code assigned by the LearningStandard publisher to identify the LearningStandard.
-        This may not uniquely identify the LearningStandard, where there may be 
-        multiple editions or versions of a particular LearningStandard.</p>          
-      <p>The natural id may be formed by combining Publisher Id, Code &amp; VersionNo.</p>
-    </Description>
-    <Type ref="CommonTypes" name="LocalIdType"/>
-  </Item>    <!-- Code -->
-  <Item>
     <Element>VersionNo</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -60,14 +60,24 @@
     <Type name="xs:decimal"/>
   </Item>    <!-- VersionNo -->
   <Item>
-    <Element>PublisherRefId</Element>
+    <Element>Publisher</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Unique identifier (GUID) for the EducationOrganisation that published the LearningStandard</p>
+      <p>Generic object reference to the EducationOrganisation that published the LearningStandard</p>
     </Description>
-    <Type ref="CommonTypes" name="LocalIdType"/>
-  </Item>    <!-- PublisherRefId -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"/>
+  </Item>    <!-- Publisher -->
+
+  <Item>
+    <Element>StandardType</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting the type of LearningStandard.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningStandardTypeType"/>
+  </Item>      <!-- StandardType -->
 
   <Item>
     <Element>Description</Element>
@@ -80,19 +90,14 @@
   </Item>    <!-- Description -->
 
   <Item>
-    <Element>SubjectAreas</Element>
+    <Element>SubjectAreaList</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>Which standard MoE Learning / Subject Areas is this LearningStandard part of?</p>
     </Description>
-    <if intl="au">
-      <Type ref="CommonTypes" name="ACStrandAreaListType"/>
-    </if>
-    <if intl="nz">
-      <Type ref="CommonTypes" name="SubjectAreaListType"/>
-    </if>
-  </Item>    <!-- SubjectAreas -->
+    <Type ref="CommonTypes" name="SubjectAreaListType"/>
+  </Item>    <!-- SubjectAreaList -->
   
   <Item>
     <Element>Status</Element>
@@ -108,7 +113,7 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>This is the date that the publishing organization published the standard.</p>
+      <p>The date the publishing organization published the standard.</p>
     </Description>
     <Type name="xs:date"/>
   </Item>      <!-- PublicationDate -->
@@ -143,14 +148,14 @@
     <Type name="xs:decimal"/>
   </Item>      <!-- Credits -->
   <Item>
-    <Element>NCEALevel</Element>
+    <Element>Level</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Where the publisher is NZQA, Which NCEA Level applies to the LearningStandard?</p>
     </Description>
     <Type name="xs:decimal"/>
-  </Item>      <!-- NCEALevel -->
+  </Item>      <!-- Level -->
   <Item>
     <Element>AssessmentType</Element>
     <Characteristics>O</Characteristics>
@@ -169,38 +174,51 @@
     </Description>
     <Type ref="CommonTypes" name="RelatedLearningStandardsListType"/>
   </Item>      <!-- RelatedLearningStandardList -->
+  <Item>
+    <Element>CredentialList</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of Credentials that the learning standard contributes to attaining.</p>
+    </Description>
+    <Type ref="CommonTypes" name="CredentialListType"/>
+  </Item>      <!-- CredentialList -->
 
   <xhtml:Example xmlns="" name="NZQA Learning Standard Example">
     <LearningStandard>
-      <RefId>A5A575C7-8917-5101-B8E7-F08ED123A823</RefId>
+      <RefId>cedf9eae-4358-408d-af57-ec0ea1b0d210</RefId>
+      <LocalId>91165</LocalId>
       <Title>Chemistry</Title>
-      <Code>91165</Code>
       <VersionNo>2</VersionNo>
-      <PublisherRefId>A5A575C7-8917-5101-B8E7-FACED123A823F</PublisherRefId>
+      <Publisher>
+        <RefId>cedf9eae-4358-408d-af57-ec0ea1b0d210</RefId>
+      </Publisher>
       <Description>Demonstrate understanding of the properties of selected organic compounds</Description>
-      <SubjectAreas>
+      <SubjectAreaList>
         <SubjectArea>4</SubjectArea>
-      </SubjectAreas>
+      </SubjectAreaList>
       <Status json:force-string="true">2</Status>
       <Credits>4</Credits>
-      <NCEALevel json:force-string="true">2</NCEALevel>
-      <AssessmentType json:force-string="true">INT</AssessmentType>
+      <Level json:force-string="true">2</Level>
+      <AssessmentType>INT</AssessmentType>
     </LearningStandard>
   </xhtml:Example>
 
   <xhtml:Example xmlns="" name="Cambridge Learning Standard Example">
     <LearningStandard>
-      <RefId>A5A575C7-8917-5101-B8E7-FACED123A823</RefId>
+      <RefId>cd071ee1-d5fd-4821-8406-9852ba916231</RefId>
+      <LocalId>9709</LocalId>
       <Title>Pure Mathematics</Title>
-      <Code>9709</Code>
       <VersionNo>2018</VersionNo>
-      <PublisherRefId>A5A575C7-8917-5101-B8E7-FACED000A823F</PublisherRefId>
+      <Publisher>
+        <RefId>a4c9f1dc-5e31-46b4-97aa-6d8534998707</RefId>
+      </Publisher>
       <Description>Cambridge International AS Mathematics (2018) - Pure Mathematics</Description>
-      <SubjectAreas>
+      <SubjectAreaList>
         <SubjectArea>3</SubjectArea>
-      </SubjectAreas>
+      </SubjectAreaList>
       <Status json:force-string="true">2</Status>
-      <AssessmentType json:force-string="true">EXT</AssessmentType>
+      <AssessmentType>EXT</AssessmentType>
     </LearningStandard>
   </xhtml:Example>
 </DataObject>

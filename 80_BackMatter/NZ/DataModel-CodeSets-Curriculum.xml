@@ -109,7 +109,31 @@
 				<Description>Applicable to Te Marautanga o Aotearoa.</Description>
 			</Value>
 		</Values>
-	</CodeSet>   <!-- Learning Area Types-->
+	</CodeSet>   <!-- Learning Area -->
+
+	<CodeSet>
+		<Intro>
+			<p>A code denoting the status of the LearningStandard throughout its life-cycle.</p>
+		</Intro>
+		<ID>Learning Standard Type</ID>
+		<Values>
+			<Value>
+				<Code>US</Code>
+				<Text>Unit Standard</Text>
+				<Description>
+					<p>Developed by Industry Training Organisations or NZQA</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>AS</Code>
+				<Text>Achievement Standard</Text>
+				<Description>
+					<p>Developed by the MoE, derived from the achievement objectives 
+						of the New Zealand	Curriculum and Te Marautanga o Aotearoa.</p>
+				</Description>
+			</Value>
+		</Values>
+	</CodeSet>   <!-- LearningStandardType -->
 
 	<CodeSet>
 		<Intro>
