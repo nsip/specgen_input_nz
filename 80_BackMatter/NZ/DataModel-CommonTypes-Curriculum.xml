@@ -211,6 +211,23 @@
 		</Item>   <!-- Relationship -->
 	</CommonElement>	
 
+	<CommonElement name="CredentialListType" type="true" dm="true">
+		<Item>
+			<Element>CredentialListType</Element>
+			<Description>
+				<p>A list of <code>ObjectReference</code>s providing a manner of referring
+				to a collection of <code>Credentials</code>.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Credential</Element>
+			<Characteristics>OR</Characteristics>
+			<Description/>
+			<Type ref="CommonData" name="ObjectReferenceType"/>
+		</Item>
+	</CommonElement>
+
 	<CommonElement name="CourseListType" type="true" dm="true">
 		<Item>
 			<Element>CourseListType</Element>
