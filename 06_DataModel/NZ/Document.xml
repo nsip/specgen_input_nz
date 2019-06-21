@@ -29,6 +29,26 @@
   </Item>    <!-- RefId -->
 
   <Item>
+    <Element>LocalId</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Local identifier for the Document, if provided by the source system.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- LocalId -->
+
+  <Item>
+    <Element>Provider</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the Provider that first uploaded this document.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- Provider -->
+
+  <Item>
     <Element>Location</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -39,6 +59,16 @@
   </Item>    <!-- Location -->
 
   <Item>
+    <Element>DocumentTitle</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Document's full title.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- DocumentTitle -->
+
+  <Item>
     <Element>DocumentDescription</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -47,6 +77,16 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>    <!-- DocumentDescription -->
+
+  <Item>
+    <Element>AddedDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date the document was added at the source system.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>    <!-- AddedDate -->
 
   <Item>
     <Element>ReviewDate</Element>
@@ -67,26 +107,6 @@
     </Description>
     <Type name="xs:anyURI"></Type>
   </Item>    <!-- URL -->
-
-  <Item>
-		<Element>DocumentLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The Local Id for the Document.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"></Type> 
-	</Item>    <!-- DocumentLocalId -->
-
-  <Item>
-    <Element>ProviderRefId</Element>    
-    <Characteristics>M</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p></p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- ProviderRefId -->
 
   <Item>
     <Element>RelatedToList</Element>    
@@ -131,8 +151,24 @@
   <xhtml:Example xmlns="" name="Document">
     <Document>
       <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
-      <DocumentDescription>Art Assignment for Assessment 4.1</DocumentDescription>
-      <ProviderRefId>CA285746-359D-7510-1A8C-36432A901A16</ProviderRefId>
+      <Provider>
+        <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
+      </Provider>
+      <DocumentDescription>Timmy McGannaway's IEP for 2019</DocumentDescription>
+      <URL>http://somehost.co.nz/docs/ghf12312</URL>
+      <DocumentType>IEP</DocumentType>
+      <PersonDocumentRoleList>
+        <PersonDocumentRole>
+          <RefId>17c9b7aa-bc34-435f-8bba-7e337891f53b</RefId>
+          <ObjectType>StudentPersonal</ObjectType>
+          <Role>SU</Role>
+        </PersonDocumentRole>
+        <PersonDocumentRole>
+          <RefId>2a288f40-c3fb-4d9c-857e-0e562f3f5dde</RefId>
+          <ObjectType>StaffPersonal</ObjectType>
+          <Role>AU</Role>
+        </PersonDocumentRole>
+      </PersonDocumentRoleList>
     </Document>
   </xhtml:Example>
 

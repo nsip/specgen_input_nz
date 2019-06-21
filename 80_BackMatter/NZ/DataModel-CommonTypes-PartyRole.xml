@@ -2049,15 +2049,17 @@
 		<Item>
 			<Element>PersonDocumentRoleListType</Element>
 			<Description>
-				<p>The list of people associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+				<p>The list of people associated to a document and their role in relation to it,
+					 e.g. author, owner, reviewer, subject of.</p>
 			</Description>
 			<List mode="List"/>
 		</Item>
 		<Item>
 			<Element>PersonDocumentRole</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
-				<p>A person associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+				<p>A person associated to a document and their role in relation to it,
+					 e.g. author, owner, reviewer, subject of.</p>
 			</Description>
 			<Type ref="CommonTypes" name="PersonDocumentRoleType"/>
 		</Item>

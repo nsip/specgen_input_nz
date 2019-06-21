@@ -2908,41 +2908,53 @@
 		<ID>Document Type</ID>
 		<Values>
 			<Value>
-				<Code>101</Code>
+				<Code>IBP</Code>
 				<Text>Individualised Behavioural Plan</Text>
 			</Value>    <!-- Individualised Behavioural Plan -->
 			<Value>
-				<Code>102</Code>
+				<Code>IEP</Code>
 				<Text>Individualised Education Plan</Text>
 			</Value>    <!-- Individualised Education Plan -->
 			<Value>
-				<Code>103</Code>
+				<Code>MED</Code>
 				<Text>Medical</Text>
 			</Value>    <!-- Medical -->
 			<Value>
-				<Code>104</Code>
+				<Code>ATT</Code>
 				<Text>Attendance</Text>
 			</Value>    <!-- Attendance -->
 			<Value>
-				<Code>105</Code>
+				<Code>BEH</Code>
 				<Text>Behavioural</Text>
 			</Value>    <!-- Behavioural -->
 			<Value>
-				<Code>106</Code>
+				<Code>SNE</Code>
 				<Text>Special Needs</Text>
 			</Value>    <!-- Special Needs -->
 			<Value>
-				<Code>107</Code>
+				<Code>ACA</Code>
 				<Text>Academic</Text>
 			</Value>    <!-- Academic -->
 			<Value>
-				<Code>108</Code>
+				<Code>LEG</Code>
 				<Text>Legal</Text>
 			</Value>    <!-- Legal -->
 			<Value>
-				<Code>99</Code>
+				<Code>OTH</Code>
 				<Text>Other</Text>
 			</Value>    <!-- Other -->
+			<Value>
+				<Code>PHO</Code>
+				<Text>Photo</Text>
+			</Value>
+			<Value>
+				<Code>MEA</Code>
+				<Text>Media</Text>
+			</Value>
+			<Value>
+				<Code>DOC</Code>
+				<Text>Document</Text>
+			</Value>
 		</Values>
 	</CodeSet>    <!-- Document Type -->
 
@@ -2953,15 +2965,15 @@
 		<ID>Document Classification</ID>
 		<Values>
 			<Value>
-				<Code>101</Code>
+				<Code>IC</Code>
 				<Text>In-Confidence</Text>
 			</Value>    <!-- In-Confidence -->
 			<Value>
-				<Code>102</Code>
+				<Code>SE</Code>
 				<Text>Sensitive</Text>
 			</Value>    <!-- Sensitive -->
 			<Value>
-				<Code>103</Code>
+				<Code>NC</Code>
 				<Text>Not Classified</Text>
 			</Value>    <!-- Not Classified -->
 		</Values>
@@ -2975,21 +2987,25 @@
 		<ID>Document Role</ID>
 		<Values>
 			<Value>
-				<Code>101</Code>
+				<Code>OW</Code>
 				<Text>Owner</Text>
 			</Value>    <!-- Owner -->
 			<Value>
-				<Code>102</Code>
+				<Code>AU</Code>
 				<Text>Author</Text>
 			</Value>    <!-- Author -->
 			<Value>
-				<Code>103</Code>
+				<Code>RE</Code>
 				<Text>Reviewer</Text>
 			</Value>    <!-- Reviewer -->
 			<Value>
-				<Code>104</Code>
+				<Code>SU</Code>
 				<Text>Subject Of</Text>
 			</Value>    <!-- Subject Of -->
+			<Value>
+				<Code>AD</Code>
+				<Text>Added By</Text>
+			</Value>    <!-- Added By -->			
 		</Values>
 	</CodeSet>    <!-- Document Role -->
 </IncludeGroup>
