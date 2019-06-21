@@ -13,7 +13,7 @@
 	<!-- Element types for the Assessment Domain includes:
    		 AssessmentTaskList 
 		 etc.
-   -->
+     -->
 
 
 	<CommonElement name="AssessmentTaskListType" type="true" dm="true">
@@ -23,12 +23,12 @@
 			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>AssessmentTaskRefId</Element>
+			<Element>SubAssessmentTask</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>GUID that identifies the sub-ordinate AssessmentTask.</p>
 			</Description>
-			<Type ref="CommonTypes" name="IdRefType"/>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>
 	</CommonElement>
 
