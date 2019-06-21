@@ -30,6 +30,16 @@
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>  <!-- RefId -->
   <Item>
+    <Element>LocalId</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>LocalId for the relationship between two providers, if provided by the source system.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>  <!-- LocalId -->
+
+  <Item>
     <Element>RelationshipType</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -37,25 +47,16 @@
       <p>The SIF GUID for the source provider in the relationship.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsProviderRelationshipTypeType"/>
-  </Item>  <!-- SourceProviderRefId -->
+  </Item>  <!-- RelationshipType -->
   <Item>
-    <Element>SourceProviderRefId</Element>
+    <Element>SourceProvider</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The SIF GUID for the source provider in the relationship.</p>
+      <p>Generic object reference to the source provider in the relationship.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>  <!-- SourceProviderRefId -->
-  <Item>
-    <Element>SourceProviderLocalId</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The MoE organisation Id for the source provider in the relationship.</p>
-    </Description>
-    <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>  <!-- SourceProviderLocalId -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>  <!-- SourceProvider -->
   <Item>
     <Element>SourceProviderAgreementDate</Element>
     <Characteristics>O</Characteristics>
@@ -66,33 +67,16 @@
     </Description>
     <Type name="xs:date"/>
   </Item>  <!-- SourceProviderAgreementDate -->
+
   <Item>
-    <Element>RelatedProviderRefId</Element>
+    <Element>RelatedProvider</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The SIF GUID for the related provider in the relationship.</p>
+      <p>Generic object reference to the related provider in the relationship.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>  <!-- RelatedProviderRefId -->
-  <Item>
-    <Element>RelatedProviderLocalId</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The MoE organisation Id for the related provider in the relationship.</p>
-    </Description>
-    <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>  <!-- RelatedProviderLocalId -->
-  <Item>
-    <Element>EffectiveDate</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The date from which the provider relationship is active.</p>
-    </Description>
-    <Type name="xs:date"/>
-  </Item>  <!-- EffectiveDate -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>  <!-- RelatedProvider -->
   <Item>
     <Element>RelatedProviderAgreementDate</Element>
     <Characteristics>O</Characteristics>
@@ -103,6 +87,16 @@
     </Description>
     <Type name="xs:date"/>
   </Item>  <!-- RelatedProviderAgreementDate -->
+
+  <Item>
+    <Element>EffectiveDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date from which the provider relationship is active.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>  <!-- EffectiveDate -->
   <Item>
     <Element>ExpirationDate</Element>
     <Characteristics>O</Characteristics>
@@ -131,7 +125,7 @@
       the learners being sent by the Source Provider are taught at the Related Provider.</p>
     </Description>
     <Type ref="CommonTypes" name="SubjectAreaListType"/>
-  </Item>  <!-- YearLevelList -->
+  </Item>  <!-- SubjectAreaList -->
   <Item>
     <Element>Description</Element>
     <Characteristics>O</Characteristics>

@@ -90,15 +90,14 @@
   </Item>    <!-- SpecialAssessmentConditionList -->
 
   <Item>
-    <Element>ProviderCourseRefId</Element>    
+    <Element>ProviderCourse</Element>    
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The Id (GUID) that uniquely identifies a ProviderCourse all of whose students will be
-        participating in the assessment task.</p>
+      <p>Generic object reference to the ProviderCourse that the assessment task is being set as part of.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- ProviderCourseRefId -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- ProviderCourse -->
 
   <Item>
     <Element>SubjectArea</Element>
