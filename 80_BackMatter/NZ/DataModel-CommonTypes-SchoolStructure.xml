@@ -11,8 +11,6 @@
 		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
 
 
-	<!-- Borrowed from SIF AU -->
-
 	<CommonElement name="StaffListType" type="true" dm="true">
 		<Item>
 			<Element>StaffListType</Element>
@@ -272,22 +270,22 @@
 		</Item>    <!-- TechnologyCentreName -->
 		<xhtml:Example xmlns="" name="NZ School Service Example">
 			<SchoolService>
-				<CoEdStatus>C2</CoEdStatus>
+				<CoEdStatus>JUBO</CoEdStatus>
 				<Decile>5</Decile>
 				<NewEntrantPolicyList>
 					<EnactedPolicy>
 						<EffectiveTo>2018-12-31</EffectiveTo>
-						<Policy>1</Policy>
+						<Policy>AE</Policy>
 					</EnactedPolicy>
 					<EnactedPolicy>
 						<EffectiveFrom>2019-01-01</EffectiveFrom>
-						<Policy>2</Policy>
+						<Policy>CE</Policy>
 					</EnactedPolicy>
 				</NewEntrantPolicyList>
 				<DefinitionList>
-					<Definition json:force-string="true">101</Definition>
-					<Definition json:force-string="true">103</Definition>
-					<Definition json:force-string="true">106</Definition>
+					<Definition>SMBS</Definition>
+					<Definition>KKMA</Definition>
+					<Definition>SWBF</Definition>
 				</DefinitionList>			
 				<SchoolYearList>
 					<SchoolYear>
@@ -465,11 +463,11 @@
 			<NewEntrantPolicyList>
 				<EnactedPolicy>
 					<EffectiveTo>2018-12-31</EffectiveTo>
-					<Policy>1</Policy>
+					<Policy>AE</Policy>
 				</EnactedPolicy>
 				<EnactedPolicy>
 					<EffectiveFrom>2019-01-01</EffectiveFrom>
-					<Policy>2</Policy>
+					<Policy>CE</Policy>
 				</EnactedPolicy>
 			</NewEntrantPolicyList>
 		</xhtml:Example>
@@ -530,8 +528,8 @@
 		</Item>
 		<xhtml:Example xmlns="" name="NZ School Definition List Example">
 			<SchoolDefinitionList>
-				<Definition json:force-string="true">103</Definition>
-				<Definition json:force-string="true">106</Definition>
+				<Definition json:force-string="true">KKMA</Definition>
+				<Definition json:force-string="true">SWBF</Definition>
 			</SchoolDefinitionList>
 		</xhtml:Example>
 	</CommonElement>

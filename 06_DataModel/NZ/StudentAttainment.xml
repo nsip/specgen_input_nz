@@ -169,7 +169,7 @@
 					<CreditValue>3</CreditValue>										
 				</Justification>				
 			</JustificationList>      
-      <SubjectArea json:force-string="true">4</SubjectArea>
+      <SubjectArea>CHEM</SubjectArea>
     </StudentAttainment>
   </xhtml:Example>
 
@@ -194,7 +194,7 @@
         <Name>Prof. McGonnegal</Name>
       </AuthorisingStaffMember>
       <DateAttained>2018-07-25</DateAttained>
-      <SubjectArea json:force-string="true">4</SubjectArea>
+      <SubjectArea>PHYS</SubjectArea>
     </StudentAttainment>
   </xhtml:Example>
 </DataObject>

@@ -190,7 +190,7 @@
       <StaffSubjectList>
         <StaffSubject>
           <PreferenceNumber>1</PreferenceNumber>
-          <Code json:force-string="true">2</Code>
+          <Code>ENGL</Code>
           <YearLevels>
             <YearLevel json:force-string="true">11</YearLevel>
             <YearLevel json:force-string="true">12</YearLevel>
@@ -199,7 +199,7 @@
         </StaffSubject>
         <StaffSubject>
           <PreferenceNumber>2</PreferenceNumber>
-          <Code json:force-string="true">7</Code>
+          <Code>HIST</Code>
         </StaffSubject>
       </StaffSubjectList>
     </StaffAssignment>

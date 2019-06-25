@@ -319,7 +319,7 @@
       <ProviderInvolvedList>
         <ProviderInvolved>
           <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
-          <ProviderRole json:force-string="true">101</ProviderRole>
+          <ProviderRole>PRO</ProviderRole>
         </ProviderInvolved>
       </ProviderInvolvedList>
       <TeachingGroup>
@@ -328,7 +328,7 @@
       <StaffInvolvedList>
         <StaffInvolved>
           <RefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</RefId>
-          <StaffRole json:force-string="true">101</StaffRole>
+          <StaffRole>ASS</StaffRole>
         </StaffInvolved>
       </StaffInvolvedList>
       <GradingCategory>Classroom Test</GradingCategory>

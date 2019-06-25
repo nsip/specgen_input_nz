@@ -2,7 +2,6 @@
 	xmlns:xi="http://www.w3.org/2001/XInclude"
  	xmlns="http://sifassociation.org/SpecGen">
 	
-	
 	<CodeSet>
 		<Intro>
 			<p>Standard codes denoting the type of assessment the student is sitting for the assessment task.</p>
@@ -69,9 +68,9 @@
 		</Intro>
 		<ID>Assessment Provider Role</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Assessor</Text></Value>
-			<Value><Code>102</Code><Text>Location Provider</Text></Value>
-			<Value><Code>103</Code><Text>Provider</Text></Value>
+			<Value><Code>ASR</Code><Text>Assessor</Text></Value>
+			<Value><Code>LOC</Code><Text>Location Provider</Text></Value>
+			<Value><Code>PRO</Code><Text>Provider</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Asssessment Provider Role -->
 
@@ -80,11 +79,11 @@
 		</Intro>
 		<ID>Assessment Staff Role</ID>
 		<Values>
-			<Value><Code>99</Code><Text>Other</Text></Value>
-			<Value><Code>101</Code><Text>Creator</Text></Value>
-			<Value><Code>102</Code><Text>Moderator</Text></Value>
-			<Value><Code>103</Code><Text>Assessor</Text></Value>
-			<Value><Code>104</Code><Text>Invigilator</Text></Value>
+		  <Value><Code>CRE</Code><Text>Creator</Text></Value>
+		  <Value><Code>MOD</Code><Text>Moderator</Text></Value>
+		  <Value><Code>ASS</Code><Text>Assessor</Text></Value>
+		  <Value><Code>INV</Code><Text>Invigilator</Text></Value>
+		  <Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Assessment Staff Role -->
 
@@ -96,41 +95,39 @@
 		<Values>
 			<!-- PAT test metrics -->
 			<Value>
-				<Code>101</Code>
+				<Code>RAW</Code>
 				<Text>Raw</Text>
 			</Value>    <!-- Raw -->
 			<Value>
-				<Code>102</Code>
+				<Code>SCA</Code>
 				<Text>Scale</Text>
 			</Value>    <!-- Scale -->
 			<Value>
-				<Code>103</Code>
+				<Code>MAR</Code>
 				<Text>Margin of Error</Text>
 			</Value>    <!-- Margin of Error -->
 			<Value>
-				<Code>104</Code>
+				<Code>STA</Code>
 				<Text>Stanine</Text>
 			</Value>    <!-- Stanine -->
 			<Value>
-				<Code>105</Code>
+				<Code>YEA</Code>
 				<Text>Year Level</Text>
 			</Value>    <!-- Year Level -->
-
-			<!-- NZQA metrics -->
 			<Value>
-				<Code>106</Code>
-				<Text>NA</Text>
-				<Description>NZQA Assessment Standards: Not Achieved, Achieved</Description>
-			</Value>    <!-- NA -->
+			  <Code>NA</Code>
+			  <Text>Name</Text>
+			  <Description>NZQA Unit Standards: Not Achieved, Achieved</Description>
+			</Value>
 			<Value>
-				<Code>107</Code>
+				<Code>NAM</Code>
 				<Text>NAME</Text>
 				<Description>NZQA Achievement Standards: Not Achieved, Achieved, Achieved with Merit, Achieved with Excellence</Description>
 			</Value>    <!-- NA -->
 
 			<!--asTTle metrics -->
 			<Value>
-				<Code>108</Code>
+				<Code>CUR</Code>
 				<Text>Curriculum Level</Text>
 				<Description>Student is assessed to be at one of the levels defined by The National Curriculum: 1A, 1B through 5A, 5B</Description>
 			</Value>
@@ -145,47 +142,47 @@
 		<ID>Special Assessment Condition</ID>
 		<Values>
 			<Value>
-				<Code>101</Code>
+				<Code>BRA</Code>
 				<Text>Braille Paper</Text>
 			</Value>    <!-- Braille Paper -->
 			<Value>
-				<Code>102</Code>
+				<Code>COM</Code>
 				<Text>Computer OR Writer</Text>
 			</Value>    <!-- Computer OR Writer -->
 			<Value>
-				<Code>103</Code>
+				<Code>ENL</Code>
 				<Text>Enlarged Paper</Text>
 			</Value>    <!-- Enlarged Paper -->
 			<Value>
-				<Code>104</Code>
+				<Code>EXT</Code>
 				<Text>Extra Time</Text>
 			</Value>    <!-- Extra Time -->
 			<Value>
-				<Code>105</Code>
+				<Code>OTH</Code>
 				<Text>Other</Text>
 			</Value>    <!-- Other -->
 			<Value>
-				<Code>106</Code>
+				<Code>REA</Code>
 				<Text>Reader</Text>
 			</Value>    <!-- Reader -->
 			<Value>
-				<Code>107</Code>
+				<Code>RES</Code>
 				<Text>Rest Breaks</Text>
 			</Value>    <!-- Rest Breaks -->
 			<Value>
-				<Code>108</Code>
+				<Code>SEP</Code>
 				<Text>Separate Accommodation</Text>
 			</Value>    <!-- Separate Accommodation -->
 			<Value>
-				<Code>109</Code>
+				<Code>SIR</Code>
 				<Text>Signing Reader</Text>
 			</Value>    <!-- Signing Reader -->
 			<Value>
-				<Code>110</Code>
+				<Code>SIS</Code>
 				<Text>Signing Supervisor</Text>
 			</Value>    <!-- Signing Supervisor -->
 			<Value>
-				<Code>111</Code>
+				<Code>SPE</Code>
 				<Text>Special Paper</Text>
 			</Value>    <!-- Special Paper -->
 		</Values>
@@ -197,10 +194,17 @@
 		</Intro>
 		<ID>Assessment Tool</ID>
 		<Values>
-			<Value>
-				<Code>99</Code>
-				<Text>Other</Text>
-			</Value>    <!-- Other -->
+		  <Value><Code>MAOR</Code><Text>Te Reo Māori</Text></Value>
+		  <Value><Code>ENGL</Code><Text>English</Text></Value>
+		  <Value><Code>MATH</Code><Text>Mathematics</Text></Value>
+		  <Value><Code>SCIE</Code><Text>Science</Text></Value>
+		  <Value><Code>SOST</Code><Text>Social Studies</Text></Value>
+		  <Value><Code>HEPH</Code><Text>Health and PE</Text></Value>
+		  <Value><Code>TECN</Code><Text>Technology</Text></Value>
+		  <Value><Code>ARTA</Code><Text>The Arts</Text></Value>
+		  <Value><Code>INFO</Code><Text>Information Skills</Text></Value>
+		  <Value><Code>STEN</Code><Text>Student Engagement</Text></Value>
+		  <Value><Code>INTS</Code><Text>Cross-curricular</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Assessment Tool -->
 
@@ -210,10 +214,10 @@
 		</Intro>
 		<ID>Assessment Timeframe</ID>
 		<Values>
-			<Value>
-				<Code>99</Code>
-				<Text>Other</Text>
-			</Value>    <!-- Other -->
+		  <Value><Code>OTH</Code><Text>Other</Text></Value>
+		  <Value><Code>OUT</Code><Text>Out of Cycle</Text></Value>
+		  <Value><Code>INT</Code><Text>Interim</Text></Value>
+		  <Value><Code>END</Code><Text>End of Year</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Assessment Timeframe -->
 
@@ -223,8 +227,8 @@
 		</Intro>
 		<ID>NCEA Endorsement Level</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Excellence</Text></Value>
-			<Value><Code>102</Code><Text>Merit</Text></Value>
+			<Value><Code>E</Code><Text>Excellence</Text></Value>
+			<Value><Code>M</Code><Text>Merit</Text></Value>
 		</Values>
 	</CodeSet>    <!-- NCEA Endorsement Level -->
 

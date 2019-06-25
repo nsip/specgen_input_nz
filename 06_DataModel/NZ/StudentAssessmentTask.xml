@@ -215,11 +215,11 @@
       <ProviderInvolvedList>
         <ProviderInvolved>
           <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
-          <ProviderRole json:force-string="true">103</ProviderRole>           <!-- School is Provider -->
+          <ProviderRole>LOC</ProviderRole>
         </ProviderInvolved>
         <ProviderInvolved>
           <RefId>ad30d3a6-e663-4d5b-8975-6c4ffc745bfb</RefId>
-          <ProviderRole json:force-string="true">101</ProviderRole>           <!-- NZQA is Assessor -->
+          <ProviderRole>PRO</ProviderRole>
         </ProviderInvolved>
       </ProviderInvolvedList>
       <ProviderCourse>
@@ -229,12 +229,12 @@
         <StaffInvolved>
           <RefId>228a2cbe-93c4-46ba-91fa-b3ae689eb437</RefId>
           <Name>Prof. McGonnegal</Name>
-          <StaffRole json:force-string="true">104</StaffRole>         <!--  Invigilator -->
+          <StaffRole>INV</StaffRole>
         </StaffInvolved>
       </StaffInvolvedList>
       <DateTimeAssessmentScheduled>2018-11-25T09:00:00+12:00</DateTimeAssessmentScheduled>
       <AssessmentType>EXT</AssessmentType>
-      <SubjectArea json:force-string="true">4</SubjectArea>
+      <SubjectArea>PHYS</SubjectArea>
       <YearLevel>11</YearLevel>
     </StudentAssessmentTask>
   </xhtml:Example>

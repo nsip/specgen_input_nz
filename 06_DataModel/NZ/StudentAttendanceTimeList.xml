@@ -113,7 +113,7 @@
 			<AttendanceTimeList>
 				<AttendanceTime json:force-array="true">
 					<AttendanceCode>E</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
+					<AttendanceStatus>UNE</AttendanceStatus>
 					<StartTime>09:00:00</StartTime>
 					<EndTime>10:30:00</EndTime>
 					<DurationValue>90</DurationValue>
@@ -137,13 +137,13 @@
 			<PeriodAttendanceList>
 				<PeriodAttendance>
 					<AttendanceCode>E</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
+					<AttendanceStatus>UNE</AttendanceStatus>
 					<TimetableDayId json:force-string="true">4</TimetableDayId>
 					<TimetablePeriodId>4A</TimetablePeriodId>
 					<StartTime>09:00:00</StartTime>
 					<EndTime>09:40:00</EndTime>
 					<SubjectAreaList json:force-array="true">
-						<SubjectArea json:force-string="true">3</SubjectArea>
+						<SubjectArea>MATH</SubjectArea>
 					</SubjectAreaList>
 					<TeacherList json:force-array="true">
 						<StaffMember>
@@ -160,13 +160,13 @@
 				</PeriodAttendance>
 				<PeriodAttendance>
 					<AttendanceCode>E</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
+					<AttendanceStatus>UNE</AttendanceStatus>
 					<TimetableDayId json:force-string="true">4</TimetableDayId>
 					<TimetablePeriodId>4B</TimetablePeriodId>
 					<StartTime>09:45:00</StartTime>
 					<EndTime>10:30:00</EndTime>
 					<SubjectAreaList json:force-array="true">
-						<SubjectArea json:force-string="true">3</SubjectArea>
+						<SubjectArea>MATH</SubjectArea>
 					</SubjectAreaList>
 					<TeacherList json:force-array="true">
 						<StaffMember>

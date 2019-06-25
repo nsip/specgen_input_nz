@@ -184,7 +184,7 @@
       <LocalId>20087ASPN</LocalId>
       <ShortName>7A SPN</ShortName>
       <LongName>Year 7A Maths - Space and Numbers</LongName>
-      <GroupType json:force-string="true">2</GroupType>
+      <GroupType>SC</GroupType>
       <Provider>
         <RefId>64A309DA-063A-2E35-B359-FACEA8C12312</RefId>
         <LocalId>234</LocalId> 

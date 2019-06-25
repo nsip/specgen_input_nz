@@ -4,7 +4,7 @@
  	xmlns="http://sifassociation.org/SpecGen">
 
 	<!-- Borrowed from SIF AU -->
-    <CodeSet>
+  <CodeSet>
 		<Intro>
 			<p>A type of student enrolment with a school. Allows
 			differentiation of concurrent enrolments, eg base vs
@@ -12,54 +12,34 @@
 		</Intro>
 		<ID>School Enrolment Type</ID>
 		<Values>
-		    <if intl="au">
-			    <Value>
-				    <Code>01</Code>
-					<Text>Home School</Text>
-				</Value>
-				<Value>
-					<Code>02</Code>
-					<Text>Other School</Text>
-					<Description>
-						<p>Other School (AU only)</p>
-						<p>Indicates an enrolment with a school which is
-						not considered the student’s home school. 
-						Typically the student will spend less of
-						their school time at this school.
-						</p>
-					</Description>
-				</Value>
-		  	</if>	
-		  	<if intl="nz">
-				<Value>
-					<Code>01</Code>
-					<Text>Base School</Text>
-					<Description><p>Home School (AU) or Base School (NZ).</p>
-					<p>The school that the student is considered to be
-					primarily enrolled with, especially for the purposes
-					of reporting and Ministry funding. Typically the
-					student will spend most of their school time at this
-					school.</p>
-					</Description>
-				</Value>
-				<Value>
-					<Code>02</Code>
-					<Text>Concurrent Enrolment</Text>
-					<Description>
+			<Value>
+				<Code>BASE</Code>
+				<Text>Base School</Text>
+				<Description>
+				<p>The school that the student is considered to be
+				primarily enrolled with, especially for the purposes
+				of reporting and Ministry funding. Typically the
+				student will spend most of their school time at this
+				school.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>HOST</Code>
+				<Text>Hosted Enrolment</Text>
+				<Description>
 					<p>Indicates an enrolment that is concurrent with the student's base enrolment 
-						at another school.</p>
-					</Description>
-				</Value>
-				<Value>
-					<Code>03</Code>
-					<Text>Remote/Distance Learning</Text>
-					<Description>
+					at another school.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>REMO</Code>
+				<Text>Remote/Distance Learning</Text>
+				<Description>
 					<p>Indicates an enrolment with a school (typically Te Kura - The Correspondence School) which 
-						provides remote/distance learning; this means that the student remains at their base school
-						(or at home) for all classes covered by this enrolment.</p>
-					</Description>
-				</Value>				
-			</if>
+					provides remote/distance learning; this means that the student remains at their base school
+					(or at home) for all classes covered by this enrolment.</p>
+				</Description>
+			</Value>
 		</Values>
 	</CodeSet>    <!-- School Enrolment Type -->
 
@@ -73,7 +53,7 @@
 		<ID>Provider Enrolment Status</ID>
 		<Values>
 			<Value>
-				<Code>1</Code>
+				<Code>APP</Code>
 				<Text>Application</Text>
 				<Description>
 					<p>Student has applied to become a Student at the Provider, this pre-enrolment has been received, 
@@ -81,7 +61,7 @@
 				</Description>
 			</Value>
 			<Value>
-				<Code>2</Code>
+				<Code>ACC</Code>
 				<Text>Accepted</Text>
 				<Description>
 					<p>The Provider has processed the application, validated it against school zoning rules, and other 
@@ -91,7 +71,7 @@
 				</Description>
 			</Value>
 			<Value>
-				<Code>3</Code>
+				<Code>CAN</Code>
 				<Text>Cancelled</Text>
 				<Description>
 					<p>The enrolment application has been declined by the Provider, or discontinued by the Student,
@@ -99,19 +79,19 @@
 				</Description>
 			</Value>
 			<Value>
-				<Code>4</Code>
+				<Code>ACT</Code>
 				<Text>Active</Text>
 				<Description>
 					<p>The student has taken up the enrolment, and has attended classes for the first time.</p>
 				</Description>
 			</Value>
 			<Value>
-				<Code>5</Code>
+				<Code>WIT</Code>
 				<Text>Withdrawn</Text>
 				<Description>The Student has left the Provider, after the enrolment was made ACTIVE</Description>
 			</Value>			
 			<Value>
-				<Code>6</Code>
+				<Code>PEN</Code>
 				<Text>Pending</Text>
 				<Description>
 					<p>The enrolment has been accepted by the Provider, taken up by the Student, and the student
@@ -131,7 +111,7 @@
 		<ID>School Enrolment Status</ID>
 		<Values>
 			<Value>
-				<Code>1</Code>
+				<Code>PRO</Code>
 				<Text>Provisional</Text>
 				<Description>
 					<p>The learner is enrolled for the current year, and is expected to continue 
@@ -139,7 +119,7 @@
 				</Description>
 			</Value>
 			<Value>
-				<Code>2</Code>
+				<Code>CON</Code>
 				<Text>Confirmed</Text>
 				<Description>
 					<p>The learner is enrolled for the current year, and has confirmed that they
@@ -147,19 +127,19 @@
 				</Description>
 			</Value>
 			<Value>
-				<Code>3</Code>
+				<Code>ACT</Code>
 				<Text>Active</Text>
 				<Description>
 					<p>The learner is currently enrolled for the year denoted in the SchoolEnrolment.</p>
 				</Description>
 			</Value>
 			<Value>
-				<Code>4</Code>
+				<Code>COM</Code>
 				<Text>Completed</Text>
 				<Description>The learner has completed the school year denoted in the SchoolEnrolment.</Description>
 			</Value>			
 			<Value>
-				<Code>5</Code>
+				<Code>WIT</Code>
 				<Text>Withdrawn</Text>
 				<Description>
 					<p>The learner has withdrawn (or otherwise left) the school during the year denoted
@@ -232,40 +212,40 @@
 		<ID>Eligibility Criteria</ID>
 		<Values>
 			<Value>
-				<Code>1</Code>
+				<Code>NZC</Code>
 				<Text>NZ Citizen (Incl. TKL, COK, NIU)</Text>
 			</Value>
 			<Value>
-				<Code>2</Code>
+				<Code>AUC</Code>
 				<Text>AU Citizen</Text>
 				<Description>Includes Australian permanent residents.</Description>
 			</Value>
 			<Value>
-				<Code>3</Code>
+				<Code>NZR</Code>
 				<Text>NZ Resident</Text>
 			</Value>
 			<Value>
-				<Code>4</Code>
+				<Code>IFP</Code>
 				<Text>International Fee Paying</Text>
 			</Value>
 			<Value>
-				<Code>5</Code>
+				<Code>GAE</Code>
 				<Text>Govt. Approved Exchange Scheme</Text>
 			</Value>
 			<Value>
-				<Code>6</Code>
+				<Code>DTB</Code>
 				<Text>Domestic Time-bound</Text>
 			</Value>
 			<Value>
-				<Code>7</Code>
+				<Code>MOE</Code>
 				<Text>MoE Approved</Text>
 			</Value>
 			<Value>
-				<Code>10</Code>
+				<Code>DAY</Code>
 				<Text>28 Day Waiver</Text>
 			</Value>
 			<Value>
-				<Code>11</Code>
+				<Code>EXT</Code>
 				<Text>Extended 28 Day Waiver</Text>
 			</Value>
 		</Values>
@@ -454,55 +434,55 @@
 		<ID>Exchange Scheme</ID>
 		<Values>
 			<Value>
-				<Code>1</Code>
+				<Code>AFS</Code>
 				<Text>AFS Intercultural Programmes NZ Inc.</Text>
 			</Value>
 			<Value>
-				<Code>7</Code>
+				<Code>GSE</Code>
 				<Text>NZ / German Student Exchange</Text>
 			</Value>
 			<Value>
-				<Code>8</Code>
+				<Code>IIU</Code>
 				<Text>NZ Institute of International Understanding</Text>
 			</Value>
 			<Value>
-				<Code>9</Code>
+				<Code>RIN</Code>
 				<Text>Rotary International NZ</Text>
 			</Value>
 			<Value>
-				<Code>10</Code>
+				<Code>STS</Code>
 				<Text>STS High School Foundation</Text>
 			</Value>
 			<Value>
-				<Code>11</Code>
+				<Code>YFU</Code>
 				<Text>YFU New Zealand Inc.</Text>
 			</Value>
 			<Value>
-				<Code>12</Code>
+				<Code>WYS</Code>
 				<Text>World Youth Service Society (WYSS)</Text>
 			</Value>
 			<Value>
-				<Code>14</Code>
+				<Code>STA</Code>
 				<Text>Student Exchange Australia New Zealand Ltd.</Text>
 			</Value>
 			<Value>
-				<Code>15</Code>
+				<Code>TAE</Code>
 				<Text>Tahiti Exchange</Text>
 			</Value>
 			<Value>
-				<Code>16</Code>
+				<Code>NGE</Code>
 				<Text>NZ - Germany Exchange - Düsseldorf</Text>
 			</Value>
 			<Value>
-				<Code>17</Code>
+				<Code>YED</Code>
 				<Text>Your Education</Text>
 			</Value>
 			<Value>
-				<Code>18</Code>
+				<Code>NSE</Code>
 				<Text>NZ Switzerland Exchange</Text>
 			</Value>
 			<Value>
-				<Code>99</Code>
+				<Code>EXA</Code>
 				<Text>Exchange Agreement</Text>
 			</Value>
 		</Values>
@@ -514,10 +494,16 @@
 		</Intro>
 		<ID>Post School Activity</ID>
 		<Values>
-			<Value>
-				<Code>99</Code>
-				<Text>Other</Text>
-			</Value>    <!-- Other -->
+			<Value><Code>ASC</Code><Text>Another School</Text></Value>
+			<Value><Code>EMP</Code><Text>Employment</Text></Value>
+			<Value><Code>IOT</Code><Text>Institutes of Technology</Text></Value>
+			<Value><Code>MAI</Code><Text>Modern Apprenticeships / Industry Training</Text></Value>
+			<Value><Code>PTR</Code><Text>Private Training</Text></Value>
+			<Value><Code>TAC</Code><Text>Trade Academies</Text></Value>
+			<Value><Code>UNI</Code><Text>University</Text></Value>
+			<Value><Code>UNK</Code><Text>Unknown</Text></Value>
+			<Value><Code>WAN</Code><Text>Wananga</Text></Value>
+			<Value><Code>YGE</Code><Text>Youth Guarantee</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Post School Activity -->
 
@@ -528,17 +514,33 @@
 		<ID>Student Consent To</ID>
 		<Values>
 			<Value>
-				<Code>101</Code>
+				<Code>PHT</Code>
 				<Text>Share Photos</Text>
+				<Description>To use and share photographs of the student</Description>
 			</Value>    <!-- Share Photos -->
 			<Value>
-				<Code>102</Code>
+				<Code>ART</Code>
 				<Text>Share Art</Text>
 			</Value>    <!-- Share Art -->
 			<Value>
-				<Code>103</Code>
+				<Code>WRI</Code>
 				<Text>Share Writing</Text>
 			</Value>    <!-- Share Writing -->
+			<Value>
+				<Code>MED</Code>
+				<Text>Medical Treatment</Text>
+				<Description>Seek medical treatment in an emergency when the caregiver cannot be contacted</Description>
+			</Value>    <!-- Medical Treatment -->
+			<Value>
+				<Code>ADM</Code>
+				<Text>Panadol</Text>
+				<Description>Administer Panadol</Description>
+			</Value>    <!-- Administer Panadol -->
+			<Value>
+				<Code>LSR</Code>
+				<Text>Learning Support</Text>
+				<Description>To be on the Learning Support Register</Description>
+			</Value>    <!-- Learning Support Register -->
 		</Values>
 	</CodeSet>    <!-- Student Consent To -->
 
@@ -549,7 +551,7 @@
 		<ID>CoEnrolment Type</ID>
 		<Values>
 			<Value>
-				<Code>99</Code>
+				<Code>OTH</Code>
 				<Text>Other</Text>
 			</Value>    <!-- Other -->
 		</Values>
@@ -603,10 +605,16 @@
 		</Intro>
 		<ID>Early Childhood Education Type</ID>
 		<Values>
-			<Value>
-				<Code>99</Code>
-				<Text>Other</Text>
-			</Value>    <!-- Other -->
+			<Value><Code>EKR</Code><Text>Kohanga Reo</Text></Value>
+			<Value><Code>EPC</Code><Text>Playcentre</Text></Value>
+			<Value><Code>KDC</Code><Text>Kindergarden or Education and Care</Text></Value>
+			<Value><Code>EHB</Code><Text>Home Based Service</Text></Value>
+			<Value><Code>EPG</Code><Text>Playgroup or Pacific Islands EC Group</Text></Value>
+			<Value><Code>ECO</Code><Text>The Correspondence School - Te Aho o Te Kura Pounamu</Text></Value>
+			<Value><Code>EOS</Code><Text>Attended, but only outside New Zealand</Text></Value>
+			<Value><Code>ETU</Code><Text>Attended, but don't know what type of service</Text></Value>
+			<Value><Code>ENA</Code><Text>Did not attend</Text></Value>
+			<Value><Code>EUN</Code><Text>Unable to establish if attended or not</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Early Childhood Education Type -->
 
@@ -617,9 +625,55 @@
 		<ID>Language Instruction Level</ID>
 		<Values>
 			<Value>
-				<Code>99</Code>
-				<Text>Other</Text>
-			</Value>    <!-- Other -->
+				<Code>0</Code>
+				<Text>None</Text>
+				<Description>Student not involved in Māori or Pacific Medium Education</Description>
+			</Value>
+			<Value>
+				<Code>1</Code>
+				<Text>20 - 25 hrs/wk</Text>
+				<Description>
+					Student is taught in the specified language for more than 20 and
+					up to 25 hrs per week (81-100% of total time)
+				</Description>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>12.5 - 20 hrs/wk</Text>
+				<Description>
+					Student is taught in the specified language for more than 12.5
+					and up to 20 hrs per week (51-80% of total time)
+				</Description>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>7.5 - 12.5 hrs/wk</Text>
+				<Description>
+					Student is taught in the specified language for more than 7.5
+					and up to 12.5 hrs per week (31-50% of total time)
+				</Description>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>3 - 7.5 hrs/wk</Text>
+				<Description>
+					Student is taught in the specified language for more than 3
+					and up to 7.5 hrs per week (12-30% of total time)
+				</Description>
+			</Value>
+			<Value>
+				<Code>5</Code>
+				<Text>1 - 3 hrs/wk</Text>
+				<Description>
+					Student is taught in the specified language for less than 3
+					hours per week or as a separate subject
+				</Description>
+			</Value>
+			<Value>
+				<Code>6</Code>
+				<Text>Taha Māori</Text>
+				<Description>Student is learning Taha Māori</Description>
+			</Value>
 		</Values>
-	</CodeSet>    <!-- Early Childhood Education Type -->
+	</CodeSet>    <!-- Language Instruction Level (Te Reo Māori) -->
 </IncludeGroup>

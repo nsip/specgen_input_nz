@@ -78,8 +78,8 @@
 				</Name>
 				<AddressList>
 					<Address>
-						<Type json:force-string="true">1</Type>
-						<Role json:force-string="true">1</Role>
+						<Type>TH</Type>
+						<Role>PHY</Role>
 						<Street>
 							<Line1>The Enchanted Wood</Line1>
 							<Line2>533 Hogwart's Way</Line2>
@@ -88,8 +88,8 @@
 						<PostalCode json:force-string="true">7733</PostalCode>
 					</Address>
 					<Address>
-						<Type>2</Type>
-						<Role>2</Role>
+						<Type>RU</Type>
+						<Role>PHY</Role>
 						<Street>
 							<Line1>1175 Lake Ferry Rd</Line1>
 						</Street>
@@ -99,14 +99,13 @@
 				</AddressList>
 				<EmailList>
 					<Email json:force-array="true">
-						<Type>07</Type>
+						<Type>PRIM</Type>
 						<Address>ridwulfa@gmail.com</Address>
 					</Email>
 				</EmailList>
 				<PhoneNumberList>
 					<PhoneNumber>
-						<Usage json:force-string="true">2</Usage>
-						<Type>0096</Type>
+						<Type>MOB</Type>
 						<Number>(021) 300 999</Number>
 					</PhoneNumber>
 				</PhoneNumberList>
@@ -116,8 +115,8 @@
 						<HouseholdContactId>7d5c3f5c-d89c-4551-9442-6b008207986e</HouseholdContactId>
 						<AddressList>
 							<Address json:force-array="true">
-								<Type json:force-string="true">1</Type>
-								<Role json:force-string="true">1</Role>
+								<Type>DE</Type>
+								<Role>POS</Role>
 								<Street>
 									<Line1>P O Box 81</Line1>
 								</Street>
@@ -127,14 +126,13 @@
 						</AddressList>
 						<EmailList json:force-array="true">
 							<Email>
-								<Type>07</Type>
+								<Type>WORK</Type>
 								<Address>ridwulfa@gmail.com</Address>
 							</Email>
 						</EmailList>
 						<PhoneNumberList>
 							<PhoneNumber>
-								<Usage json:force-string="true">2</Usage>
-								<Type>0096</Type>
+								<Type>MOB</Type>
 								<Number>(021) 300 999</Number>
 							</PhoneNumber>
 						</PhoneNumberList>
@@ -155,9 +153,9 @@
 					<FullName>Dr Phillips</FullName>
 				</Name>
 				<AddressList>
-					<Address>
-						<Type json:force-string="true">1</Type>
-						<Role json:force-string="true">1</Role>
+					<Address json:force-array="true">
+						<Type>TH</Type>
+						<Role>PHY</Role>
 						<Street>
 							<Line1>Regent St.</Line1>
 						</Street>
@@ -167,14 +165,13 @@
 				</AddressList>
 				<EmailList>
 					<Email json:force-array="true">
-						<Type>07</Type>
+						<Type>PRIM</Type>
 						<Address>Phillips@mboroHealth.com</Address>
 					</Email>
 				</EmailList>
 				<PhoneNumberList>
 					<PhoneNumber>
-						<Usage json:force-string="true">2</Usage>
-						<Type>0096</Type>
+						<Type>MOB</Type>
 						<Number>(021) 300 999</Number>
 					</PhoneNumber>
 				</PhoneNumberList>
@@ -183,7 +180,7 @@
 				<OrganisationName>Martinborough Medical Centre</OrganisationName>
 				<OrganisationPhoneNum>06 306 9311</OrganisationPhoneNum>
 				<Notes>Dr Amy also knows about the epilepsy</Notes>
-				<Type json:force-string="true">1</Type>
+				<Type>DOC</Type>
 			</HealthcareServiceInfo>
 		</StudentContactPersonal>
 	</xhtml:Example>

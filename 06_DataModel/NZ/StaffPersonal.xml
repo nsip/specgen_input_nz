@@ -82,8 +82,8 @@
         </Name>
         <AddressList>
 			    <Address json:force-array="true">
-            <Type json:force-string="true">1</Type>
-            <Role json:force-string="true">1</Role>
+            <Type>TH</Type>
+            <Role>PHY</Role>
             <Street>
               <Line1>The Enchanted Wood</Line1>
               <Line2>533 Hogwart's Way</Line2>
@@ -95,24 +95,22 @@
         </AddressList>
         <EmailList>
           <Email>
-            <Type json:force-string="true">07</Type>
+            <Type>ALT1</Type>
             <Address>fsmith@yahoo.com</Address>
           </Email>
           <Email>
-            <Type json:force-string="true">06</Type>
+            <Type>PRIM</Type>
             <Address>freddy@gmail.com</Address>
           </Email>
         </EmailList>
         <PhoneNumberList>
           <PhoneNumber>
-            <Usage json:force-string="true">2</Usage>
-            <Type json:force-string="true">0096</Type>
+            <Type>WTE</Type>
             <Number>03 9637-2289</Number>
             <Extension>72289</Extension>
           </PhoneNumber>
           <PhoneNumber>
-            <Usage json:force-string="true">2</Usage>
-            <Type json:force-string="true">0888</Type>
+            <Type>HTE</Type>
             <Number>0437-765-234</Number>
           </PhoneNumber>
         </PhoneNumberList>

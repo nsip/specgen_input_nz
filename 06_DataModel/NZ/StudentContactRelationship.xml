@@ -119,7 +119,7 @@
 		<RefId>4661c4c8-fd03-4fc6-8af7-5084338494db</RefId>
 	  </Provider>
       <Relationship>
-        <Code>01</Code>
+        <Code>LEG</Code>
       </Relationship>
       <HouseholdList>
         <HouseholdId>FamilyA</HouseholdId>
@@ -132,7 +132,7 @@
         <AccessToRecords>U</AccessToRecords>
         <ReceivesAssessmentReport>Y</ReceivesAssessmentReport>
         <EmergencyContact>Y</EmergencyContact>
-		<CivilDefenceEmergencyContact>N</CivilDefenceEmergencyContact>
+				<CivilDefenceEmergencyContact>N</CivilDefenceEmergencyContact>
         <DisciplinaryContact>N</DisciplinaryContact>
         <AttendanceContact>N</AttendanceContact>
         <PrimaryCareProvider>U</PrimaryCareProvider>

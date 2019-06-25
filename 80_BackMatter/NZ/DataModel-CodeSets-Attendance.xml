@@ -11,22 +11,21 @@
 		<ID>Attendance Status</ID>
 		<Values>
 			<Value>
-				<Code>01</Code>
+				<Code>EXC</Code>
 				<Text>Excused</Text>
 			</Value>
 			<Value>
-				<Code>02</Code>
+				<Code>UNE</Code>
 				<Text>Unexcused</Text>
 			</Value>
 			<Value>
-				<Code>99</Code>
+				<Code>UNK</Code>
 				<Text>Unknown</Text>
 			</Value>
 			<Value>
-				<Code>NA</Code>
+				<Code>NOT</Code>
 				<Text>Not Applicable</Text>
 			</Value>
-			 
 		</Values>
 	</CodeSet>    <!-- Attendance Status -->
 
@@ -47,12 +46,12 @@
 				<Text>Attending alternative education</Text>
 			</Value>
 			<Value>
-				<Code>P</Code>
-				<Text>Present</Text>
-			</Value>
-			<Value>
 				<Code>L</Code>
 				<Text>Late to class</Text>
+			</Value>
+			<Value>
+				<Code>P</Code>
+				<Text>Present</Text>
 			</Value>
 			<Value>
 				<Code>S</Code>
@@ -67,6 +66,7 @@
 			<Value>
 				<Code>I</Code>
 				<Text>Internal school appointment</Text>
+				<Description>Dean, DP, Sports administrator, Attendance officer, etc.</Description>
 			</Value>
 			<Value>
 				<Code>E</Code>
@@ -74,18 +74,19 @@
 				<Description>Absent with an explained but unjustified reason</Description>
 			</Value>
 			<Value>
-				<Code>J</Code>
-				<Text>Justified absence</Text>
-				<Description>Reason for absence within school policy</Description>
-			</Value>
-			<Value>
 				<Code>M</Code>
 				<Text>Medical absence</Text>
 				<Description>Absent due to short-term illness/medical reasons</Description>
 			</Value>
 			<Value>
+				<Code>J</Code>
+				<Text>Justified absence</Text>
+				<Description>Reason for absence within school policy</Description>
+			</Value>
+			<Value>
 				<Code>T</Code>
 				<Text>Truant</Text>
+				<Description>No information provided – or throw-away explanation</Description>
 			</Value>
 			<Value>
 				<Code>V</Code>

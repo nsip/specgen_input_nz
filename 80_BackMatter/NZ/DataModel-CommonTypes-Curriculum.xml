@@ -26,8 +26,8 @@
 		</Item>      <!-- SubjectArea -->
 		<xhtml:Example xmlns="" name="NZ Subject Area List Example">
 			<SubjectAreaList>
-				<SubjectArea json:force-string="true">3</SubjectArea>
-				<SubjectArea json:force-string="true">4</SubjectArea>
+				<SubjectArea>FREN</SubjectArea>
+				<SubjectArea>HIST</SubjectArea>
 			</SubjectAreaList>
 		</xhtml:Example>
 	</CommonElement>
@@ -107,12 +107,12 @@
 		<xhtml:Example xmlns="" name="LanguageOfInstructionList Example">
 			<LanguageOfInstructionList>
 				<Language>
-					<Code>16110</Code>
-					<Level>99</Level>
+					<Code>NZS16110</Code>
+					<Level>1</Level>
 				</Language>
 				<Language>
-					<Code>01112</Code>
-					<Level>99</Level>
+					<Code>NZS01112</Code>
+					<Level>5</Level>
 				</Language>
 			</LanguageOfInstructionList>
 		</xhtml:Example>
@@ -145,8 +145,8 @@
 		</Item>    <!-- Level -->
 		<xhtml:Example xmlns="" name="LanguageOfInstruction Example">
 			<LanguageOfInstruction>
-				<Code>01112</Code>
-				<Level>101</Level>
+				<Code>NZS01112</Code>
+				<Level>3</Level>
 			</LanguageOfInstruction>
 		</xhtml:Example>
 	</CommonElement>

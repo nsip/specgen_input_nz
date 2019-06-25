@@ -3,34 +3,30 @@
  	xmlns="http://sifassociation.org/SpecGen">
 
 
-	<!-- Largely borrowed from SIF AU -->
-    <CodeSet>
-      <Intro>
-        <p>Standard codes denoting the severity of a Wellbeing Characteristic or Alert.</p>
-      </Intro>
-      <ID>Wellbeing Severity</ID>
-      <Values>
-				<Value><Code>101</Code><Text>Very High</Text></Value>
-				<Value><Code>102</Code><Text>High</Text></Value>
-				<Value><Code>103</Code><Text>Medium</Text></Value>
-				<Value><Code>104</Code><Text>Low</Text></Value>
-				<Value><Code>105</Code><Text>Very Low</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Wellbeing Severity -->
+	<CodeSet>
+    <Intro>
+      <p>Standard codes denoting the severity of a Wellbeing Characteristic or Alert.</p>
+    </Intro>
+    <ID>Wellbeing Severity</ID>
+    <Values>
+			<Value><Code>HGH</Code><Text>High</Text></Value>
+			<Value><Code>MOD</Code><Text>Moderate</Text></Value>
+			<Value><Code>LOW</Code><Text>Low</Text></Value>
+    </Values>
+  </CodeSet>    <!-- Wellbeing Severity -->
 
-    <CodeSet>
-      <Intro>
-        <p>Standard codes denoting the status of the Wellbeing Response.</p>
-      </Intro>
-      <ID>Wellbeing Status</ID>
-      <Values>
-				<Value><Code>U</Code><Text>Unresolved</Text></Value>
-				<Value><Code>R</Code><Text>Resolved</Text></Value>
-				<Value><Code>O</Code><Text>Other</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Wellbeing Status -->
-
-
+  <CodeSet>
+    <Intro>
+      <p>Standard codes denoting the status of the Wellbeing Response.</p>
+    </Intro>
+    <ID>Wellbeing Status</ID>
+    <Values>
+			<Value><Code>U</Code><Text>Unresolved</Text></Value>
+			<Value><Code>R</Code><Text>Resolved</Text></Value>
+			<Value><Code>O</Code><Text>Other</Text></Value>
+    </Values>
+  </CodeSet>    <!-- Wellbeing Status -->
+	
 
 	<!-- Wellbeing Alert classification codes -->
 	<CodeSet>
@@ -39,16 +35,33 @@
 		</Intro>
 		<ID>Wellbeing Alert Category</ID>
 		<Values>
-		  <Value><Code>A</Code><Text>Attendance</Text></Value>
-			<Value><Code>M</Code><Text>Medical</Text></Value>
-			<Value><Code>L</Code><Text>Legal</Text></Value>
-			<Value><Code>D</Code><Text>Discipline</Text></Value>
-			<Value><Code>E</Code><Text>Educational</Text></Value>
-			<Value><Code>S</Code><Text>Special Needs / Disability</Text></Value>
-			<Value><Code>P</Code><Text>Plan Review</Text></Value>
-			<Value><Code>PO</Code><Text>Protection Order</Text></Value>
-			<Value><Code>T</Code><Text>Transient</Text></Value>
-			<Value><Code>O</Code><Text>Other</Text></Value>
+		  <Value>
+				<Code>ATT</Code>
+				<Text>Attendance</Text>
+			</Value>
+			<Value>
+				<Code>MED</Code>
+				<Text>Medical</Text>
+				<Description>includes Allergies</Description>
+			</Value>
+			<Value>
+				<Code>LEG</Code>
+				<Text>Legal</Text>
+				<Description>Comes with sub-Categories: ProtectionOrder,  CustodialOrder, etc.</Description>
+			</Value>
+			<Value>
+				<Code>DIS</Code>
+				<Text>Discipline</Text>
+			</Value>
+			<Value>
+				<Code>LEA</Code>
+				<Text>Learning Support</Text>
+				<Description>Sub-categories Gifted and Talented, Disability, etc..</Description>
+			</Value>
+			<Value><Code>PLA</Code><Text>Plan Review</Text></Value>
+			<Value><Code>CUS</Code><Text>Custodial</Text></Value>
+			<Value><Code>TRA</Code><Text>Transient</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Wellbeing Alert Category -->
 
@@ -58,9 +71,9 @@
 		</Intro>
 		<ID>Key Contact Role</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Doctor</Text></Value>
-			<Value><Code>102</Code><Text>Parent/Caregiver</Text></Value>
-			<Value><Code>103</Code><Text>Principal</Text></Value>
+			<Value><Code>DOC</Code><Text>Doctor</Text></Value>
+			<Value><Code>PAR</Code><Text>Parent/Caregiver</Text></Value>
+			<Value><Code>PRI</Code><Text>Principal</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Key Contact Role -->
 
@@ -466,10 +479,10 @@
 		</Intro>
 		<ID>Behaviour Directed At Type</ID>
 		<Values>
-			<Value><Code>99</Code><Text>Other</Text></Value>
-			<Value><Code>101</Code><Text>Staff</Text></Value>
-			<Value><Code>102</Code><Text>Student</Text></Value>
-			<Value><Code>103</Code><Text>Property</Text></Value>
+			<Value><Code>STA</Code><Text>Staff</Text></Value>
+			<Value><Code>STU</Code><Text>Student</Text></Value>
+			<Value><Code>PRO</Code><Text>Property</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Behaviour Directed At Type -->
 
@@ -616,17 +629,17 @@
 		</Values>
 	</CodeSet>    <!-- Wellbeing Response Category -->
 
-  	<CodeSet>
-      <Intro>
-        <p>Standard codes denoting the type of award that has been achieved as part of a Wellbeing Response.</p>
-      </Intro>
-      <ID>Wellbeing Award Type</ID>
-      <Values>
-				<Value><Code>101</Code><Text>Certificate</Text></Value>
-				<Value><Code>102</Code><Text>Trophy</Text></Value>
-				<Value><Code>103</Code><Text>Letter of Recognition</Text></Value>
-				<Value><Code>104</Code><Text>Other</Text></Value>
-      </Values>
+  <CodeSet>
+    <Intro>
+      <p>Standard codes denoting the type of award that has been achieved as part of a Wellbeing Response.</p>
+    </Intro>
+    <ID>Wellbeing Award Type</ID>
+    <Values>
+			<Value><Code>CER</Code><Text>Certificate</Text></Value>
+			<Value><Code>TRO</Code><Text>Trophy</Text></Value>
+			<Value><Code>LOR</Code><Text>Letter of Recognition</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
+    </Values>
 	</CodeSet>    <!-- Wellbeing Award Type -->
 
 
@@ -638,8 +651,8 @@
       </Intro>
       <ID>Wellbeing Appeal Status</ID>
       <Values>
-				<Value><Code>N</Code><Text>In Progress</Text></Value>
-				<Value><Code>N/S</Code><Text>Not Specified</Text></Value>
+				<Value><Code>IP</Code><Text>In Progress</Text></Value>
+				<Value><Code>NS</Code><Text>Not Specified</Text></Value>
 				<Value><Code>RE</Code><Text>Rejected</Text></Value>
 				<Value><Code>SU</Code><Text>Successful</Text></Value>
 	  	</Values>
@@ -651,12 +664,12 @@
       </Intro>
       <ID>Appeal Determination By</ID>
       <Values>
-				<Value><Code>101</Code><Text>Board of Trustees</Text></Value>
-				<Value><Code>102</Code><Text>Principal</Text></Value>
-				<Value><Code>103</Code><Text>Deputy Principal</Text></Value>
-				<Value><Code>104</Code><Text>Year Level Dean</Text></Value>
-				<Value><Code>105</Code><Text>Home Room Teacher</Text></Value>
-				<Value><Code>106</Code><Text>Ministry of Education</Text></Value>
+				<Value><Code>BOT</Code><Text>Board of Trustees</Text></Value>
+				<Value><Code>PRI</Code><Text>Principal</Text></Value>
+				<Value><Code>DEP</Code><Text>Deputy Principal</Text></Value>
+				<Value><Code>YEA</Code><Text>Year Level Dean</Text></Value>
+				<Value><Code>HOM</Code><Text>Home Room Teacher</Text></Value>
+				<Value><Code>MOE</Code><Text>Ministry of Education</Text></Value>
 	  	</Values>
 	</CodeSet>    <!-- Appeal Determination By -->
 
@@ -664,23 +677,16 @@
 	<!-- Learning Support Participation codes -->
 	<CodeSet>
 		<Intro>
-			<p>Standard codes denoting the learning support type the student is receiving, e.g. Vision, Speech, 
-				Hearing, Social Skills, Behaviour, Mental Health, Autism, Reading, Writing, Mathematics etc.</p>
+			<p>Standard codes denoting the type of learning support, e.g. Fund, Programme, Service, etc.</p>
 		</Intro>
 		<ID>Learning Support Type</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Vision</Text></Value>
-			<Value><Code>102</Code><Text>Speech</Text></Value>
-			<Value><Code>103</Code><Text>Hearing</Text></Value>
-			<Value><Code>104</Code><Text>Social Skills</Text></Value>
-			<Value><Code>105</Code><Text>Behaviour</Text></Value>
-			<Value><Code>106</Code><Text>Mental Health</Text></Value>
-			<Value><Code>107</Code><Text>Autism</Text></Value>
-			<Value><Code>108</Code><Text>Reading</Text></Value>
-			<Value><Code>109</Code><Text>Writing</Text></Value>
-			<Value><Code>110</Code><Text>Mathematics</Text></Value>
-			<Value><Code>111</Code><Text>Dyslexic</Text></Value>
-			<Value><Code>112</Code><Text>Other</Text></Value>
+			<Value><Code>FUN</Code><Text>Fund</Text></Value>
+			<Value><Code>PRO</Code><Text>Programme</Text></Value>
+			<Value><Code>SER</Code><Text>Service</Text></Value>
+			<Value><Code>APP</Code><Text>Approach</Text></Value>
+			<Value><Code>SUP</Code><Text>Support Group</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Type -->
 	
@@ -974,11 +980,12 @@
 		</Intro>
 		<ID>Learning Support Participation Status</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Applied</Text></Value>
-			<Value><Code>102</Code><Text>Approved</Text></Value>
-			<Value><Code>103</Code><Text>Declined</Text></Value>
-			<Value><Code>104</Code><Text>Participating</Text></Value>
-			<Value><Code>105</Code><Text>Finished</Text></Value>
+			<Value><Code>WAI</Code><Text>Waiting</Text></Value>
+			<Value><Code>ACT</Code><Text>Active</Text></Value>
+			<Value><Code>COM</Code><Text>Completed</Text></Value>
+			<Value><Code>DEC</Code><Text>Declined</Text></Value>
+			<Value><Code>ONH</Code><Text>On Hold</Text></Value>
+			<Value><Code>DNC</Code><Text>Did Not Complete</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Participation Status -->
 
@@ -991,11 +998,11 @@
 		</Intro>
 		<ID>Student Activity Group</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Sport</Text></Value>
-			<Value><Code>102</Code><Text>Art</Text></Value>
-			<Value><Code>103</Code><Text>Cultural</Text></Value>
-			<Value><Code>104</Code><Text>Music</Text></Value>
-			<Value><Code>105</Code><Text>Other</Text></Value>
+			<Value><Code>SPO</Code><Text>Sport</Text></Value>
+			<Value><Code>ART</Code><Text>Art</Text></Value>
+			<Value><Code>CUL</Code><Text>Cultural</Text></Value>
+			<Value><Code>MUS</Code><Text>Music</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Student Activity Group -->
 
@@ -1006,16 +1013,16 @@
 		</Intro>
 		<ID>Student Activity Type</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Rugby</Text></Value>
-			<Value><Code>102</Code><Text>Netball</Text></Value>
-			<Value><Code>103</Code><Text>Cricket</Text></Value>
-			<Value><Code>104</Code><Text>Drama</Text></Value>
-			<Value><Code>105</Code><Text>Debate</Text></Value>
-			<Value><Code>106</Code><Text>Te Reo</Text></Value>
-			<Value><Code>107</Code><Text>Kapa Haka</Text></Value>
-			<Value><Code>108</Code><Text>Guitar</Text></Value>
-			<Value><Code>109</Code><Text>Violin</Text></Value>
-			<Value><Code>110</Code><Text>Other</Text></Value>
+			<Value><Code>NET</Code><Text>Netball</Text></Value>
+			<Value><Code>RUG</Code><Text>Rugby</Text></Value>
+			<Value><Code>CRI</Code><Text>Cricket</Text></Value>
+			<Value><Code>DRA</Code><Text>Drama</Text></Value>
+			<Value><Code>DEB</Code><Text>Debate</Text></Value>
+			<Value><Code>TER</Code><Text>Te Reo</Text></Value>
+			<Value><Code>KAP</Code><Text>Kapa Haka</Text></Value>
+			<Value><Code>GUI</Code><Text>Guitar</Text></Value>
+			<Value><Code>VIO</Code><Text>Violin</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Student Activity Type -->
 
@@ -1025,11 +1032,11 @@
 		</Intro>
 		<ID>Student Interest Type</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Sports</Text></Value>
-			<Value><Code>102</Code><Text>Arts</Text></Value>
-			<Value><Code>103</Code><Text>Cultural</Text></Value>
-			<Value><Code>104</Code><Text>Music</Text></Value>
-			<Value><Code>105</Code><Text>Other</Text></Value>
+			<Value><Code>SPO</Code><Text>Sports</Text></Value>
+			<Value><Code>ART</Code><Text>Arts</Text></Value>
+			<Value><Code>CUL</Code><Text>Cultural</Text></Value>
+			<Value><Code>MUS</Code><Text>Music</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Student Interest Type -->
 
@@ -1041,9 +1048,9 @@
 		</Intro>
 		<ID>Restraint Administered By Role</ID>
 		<Values>
-			<Value><Code>99</Code><Text>Other</Text></Value>
-			<Value><Code>101</Code><Text>Teacher</Text></Value>
-			<Value><Code>102</Code><Text>Principal</Text></Value>
+			<Value><Code>T</Code><Text>Teacher</Text></Value>
+			<Value><Code>P</Code><Text>Principal</Text></Value>
+			<Value><Code>O</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Restraint Administered By Role-->
 
@@ -1053,8 +1060,8 @@
 		</Intro>
 	    <ID>Restraint Debriefing Type</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Staff</Text></Value>
-			<Value><Code>102</Code><Text>Parent/Caregiver and Student</Text></Value>
+			<Value><Code>S</Code><Text>Staff</Text></Value>
+			<Value><Code>P</Code><Text>Parent/Caregiver and Student</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Restraint Debriefing Type -->
 
@@ -1082,8 +1089,8 @@
 		</Intro>
 		<ID>Restraint Reason</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Serious and imminent risk to safety</Text></Value>
-			<Value><Code>102</Code><Text>Actual injury</Text></Value>
+			<Value><Code>SER</Code><Text>Serious and imminent risk to safety</Text></Value>
+			<Value><Code>ACT</Code><Text>Actual injury</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Restraint Reason -->
 
@@ -1093,14 +1100,14 @@
 		</Intro>
 		<ID>Staff Restraint Reflection Type</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Events leading to the incident</Text></Value>
-			<Value><Code>102</Code><Text>Behaviour of the student</Text></Value>
-			<Value><Code>103</Code><Text>What did you try before the restraint?</Text></Value>
-			<Value><Code>104</Code><Text>The restraint method used</Text></Value>
-			<Value><Code>105</Code><Text>Monitoring</Text></Value>
-			<Value><Code>106</Code><Text>After the restraint ended</Text></Value>
-			<Value><Code>107</Code><Text>If there's a next time</Text></Value>
-			<Value><Code>108</Code><Text>How about you?</Text></Value>
+			<Value><Code>EVE</Code><Text>Events leading to the incident</Text></Value>
+			<Value><Code>BEH</Code><Text>Behaviour of the student</Text></Value>
+			<Value><Code>WHA</Code><Text>What did you try before the restraint?</Text></Value>
+			<Value><Code>RES</Code><Text>The restraint method used</Text></Value>
+			<Value><Code>MON</Code><Text>Monitoring</Text></Value>
+			<Value><Code>AFT</Code><Text>After the restraint ended</Text></Value>
+			<Value><Code>NEX</Code><Text>If there's a next time</Text></Value>
+			<Value><Code>HOW</Code><Text>How about you?</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Staff Restraint Reflection Type -->
 
@@ -1111,7 +1118,7 @@
 		<ID>Wellbeing Appeal Outcome</ID>
 		<Values>
 			<Value>
-				<Code>99</Code>
+				<Code>OTH</Code>
 				<Text>Other</Text>
 			</Value>    <!-- Other -->
 		</Values>
@@ -1124,9 +1131,13 @@
 		<ID>Wellbeing Event Severity</ID>
 		<Values>
 			<Value>
-				<Code>99</Code>
-				<Text>Other</Text>
-			</Value>    <!-- Other -->
+				<Code>MIN</Code>
+				<Text>Minor</Text>
+			</Value>    <!-- Minor -->
+			<Value>
+				<Code>MAJ</Code>
+				<Text>Major</Text>
+			</Value>    <!-- Major -->
 		</Values>
 	</CodeSet>    <!-- Wellbeing Event Severity -->
 </IncludeGroup>

@@ -1,9 +1,7 @@
-
 <IncludeGroup 
 	xmlns:xi="http://www.w3.org/2001/XInclude" 
 	xmlns="http://sifassociation.org/SpecGen">
 
-<if intl="nz">
 	<CodeSet>
 		<Intro>
 			<p>
@@ -16,7 +14,7 @@
 		<ID>Address Type</ID>
 		<Values>
 			<Value>
-				<Code>1</Code>
+				<Code>TH</Code>
 				<Text>Thoroughfare</Text>
 				<Description>
 					<p>Also called 'Street' addresses, The most
@@ -36,9 +34,9 @@
 
 					<p>Example: 30 - 40 Lambton Quay, Wellington, 6165</p>
 				</Description>
-			</Value>
+			</Value>   <!-- Thoroughfare -->
 			<Value>
-				<Code>2</Code>
+				<Code>RU</Code>
 				<Text>Rural Post Delivery</Text>
 				<Description>
 					<p>Defined by New Zealand Post, these addresses
@@ -63,11 +61,11 @@
 					<p>
 						<em>Example:</em> 121 Waitaha Road, RD 1, Ross, 7885</p>
 				</Description>
-			</Value>
+			</Value>   <!-- Rural Post Delivery -->
 
 			<!-- Includes P O Box, Pvt Bag, CMB, etc. -->
 			<Value>
-				<Code>3</Code>
+				<Code>DE</Code>
 				<Text>Delivery Service</Text>
 				<Description>
 					<p>Defined by New Zealand Post, and used
@@ -79,10 +77,10 @@
 					<p>
 						<em>Example:</em> Private Bag 2345, Auckland, 1142</p>
 				</Description>
-			</Value>
+			</Value>   <!-- Delivery Service -->
 
 			<Value>
-				<Code>4</Code>
+				<Code>WA</Code>
 				<Text>Water</Text>
 				<Description>
 					<p>Where properties have no road access, but do
@@ -94,17 +92,17 @@
 					<p>
 						<em>Example:</em> 235 Lochmara Bay, Queen Charlotte Sound, Marlborough Sounds</p>
 				</Description>
-			</Value>
+			</Value>   <!-- Water Address -->
 
 			<Value>
-				<Code>5</Code>
+				<Code>FO</Code>
 				<Text>Foreign Address</Text>
 				<Description>
 					<p>A foreign address identifies a location outside of New Zealand.</p>
 					<p>
 						<em>Example:</em> Rudolf-Diesel-Strasse 14, 54595 Prüm, Germany</p>
 				</Description>
-			</Value>
+			</Value>   <!-- Foreign Address -->
 		</Values>
 	</CodeSet>	<!-- NZ Address Type -->
 	<CodeSet>
@@ -116,18 +114,17 @@
 		<ID>Address Role</ID>
 		<Values>
 			<Value>
-				<Code>1</Code>
-				<Text>Residential Address</Text>
+				<Code>PHY</Code>
+				<Text>Physical Address</Text>
 				<Description>Applies to addresses associated with persons</Description>
 			</Value>
 			<Value>
-				<Code>2</Code>
+				<Code>POS</Code>
 				<Text>Postal Address</Text>
 				<Description>Applies to addresses associated with persons or organisations</Description>
 			</Value>
 		</Values>
 	</CodeSet>	<!-- NZ Address Role -->
-</if>
 	<CodeSet>
 		<Intro>
 			<p>A classification of geographical boundaries or statistical 

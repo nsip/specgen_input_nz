@@ -23,17 +23,7 @@
 		<Organisation>
 			<RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
 			<LocalId>99204</LocalId>
-			<AddressList>
-				<Address json:force-array="true">
-					<Type>2</Type>
-					<Role>2</Role>
-					<Street>
-						<Line1>1175 Lake Ferry Rd</Line1>
-					</Street>
-					<Suburb>RD 1</Suburb>
-					<City>Martinborough</City>
-				</Address>
-			</AddressList>
+			<AddressList/>
 			<CommunicationChannelList/>
 			<ContactList>
 				<Contact>
@@ -42,12 +32,12 @@
 						<GivenName>Albus</GivenName>
 						<FullName>Albus Dumbledore</FullName>
 					</Name>
-					<PositionTitle>Headmaster</PositionTitle>
-					<Role json:force-string="true">1</Role>
+					<PositionTitle>Lead School Headmaster</PositionTitle>
+					<Role>PRI</Role>
 					<AddressList>
 						<Address>
-							<Type json:force-string="true">1</Type>
-							<Role json:force-string="true">1</Role>
+							<Type>TH</Type>
+							<Role>PHY</Role>
 							<Street>
 								<Line1>533 Hogwart's Way</Line1>
 							</Street>
@@ -61,7 +51,7 @@
 				</ContactList>
 				<EmailList>
 					<Email json:force-array="true">
-						<Type>07</Type>
+						<Type>PRIM</Type>
 						<Address>stuart@gmail.com</Address>
 					</Email>
 				</EmailList>
@@ -69,12 +59,12 @@
 			<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
 			<PhoneNumberList>
 				<PhoneNumber>
-					<Notes>Lead School Secretary DDI</Notes>
-					<Type>0096</Type>
+					<Notes>Lead School Secretary (Mobile)</Notes>
+					<Type>MOB</Type>
 					<Number>(021) 300 999</Number>
 				</PhoneNumber>
 			</PhoneNumberList>
-			<Type>2</Type>
+			<Type>COLKA</Type>
 		</Organisation>
 	</xhtml:Example>
 </DataObject>

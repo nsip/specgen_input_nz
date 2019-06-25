@@ -54,8 +54,8 @@
 		<LocalId>01011234</LocalId>
 		<AddressList>
 			<Address json:force-array="true">
-				<Type json:force-string="true">2</Type>
-				<Role json:force-string="true">2</Role>
+				<Type>RU</Type>
+				<Role>PHY</Role>
 				<Street>
 					<Line1>1175 Lake Ferry Rd</Line1>
 				</Street>
@@ -66,12 +66,12 @@
 		<CommunicationChannelList>
 			<Channel>
 				<Notes>Attendance System (Self Service)</Notes>
-				<Type json:force-string="true">1</Type>
+				<Type>WEB</Type>
 				<Value>http://att.hogwarts.school.nz</Value>
 			</Channel>
 			<Channel>
 				<Notes>School Website</Notes>
-				<Type json:force-string="true">1</Type>
+				<Type>WEB</Type>
 				<Value>http://www.hogwarts.school.nz</Value>
 			</Channel>
 		</CommunicationChannelList>
@@ -83,11 +83,11 @@
 					<FullName>Albus Dumbledore</FullName>
 				</Name>
 				<PositionTitle>Headmaster</PositionTitle>
-				<Role json:force-string="true">1</Role>
+				<Role>PRI</Role>
 				<AddressList>
 					<Address json:force-array="true">
-						<Type json:force-string="true">1</Type>
-						<Role json:force-string="true">1</Role>
+						<Type>TH</Type>
+						<Role>PHY</Role>
 						<Street>
 							<Line1>533 Hogwart's Way</Line1>
 						</Street>
@@ -105,11 +105,11 @@
 					<FullName>Rubeus Hagrid</FullName>
 				</Name>
 				<PositionTitle>Gamekeeper</PositionTitle>
-				<Role json:force-string="true">3</Role>
+				<Role>DIR</Role>
 				<AddressList>
 					<Address json:force-array="true">
-						<Type json:force-string="true">1</Type>
-						<Role json:force-string="true">1</Role>
+						<Type>TH</Type>
+						<Role>PHY</Role>
 						<Street>
 							<Line1>The Enchanted Wood</Line1>
 							<Line2>533 Hogwart's Way</Line2>
@@ -122,10 +122,10 @@
 				<PhoneNumberList/>
 			</Contact>
 		</ContactList>
-		<EducationRegion json:force-string="true">7</EducationRegion>
+		<EducationRegion>TAIT</EducationRegion>
 		<EmailList>
 			<Email json:force-array="true">
-				<Type>07</Type>
+				<Type>PRIM</Type>
 				<Address>stuart@gmail.com</Address>
 			</Email>
 		</EmailList>
@@ -134,8 +134,8 @@
 			<Location json:force-array="true">
 				<Description>Only Campus</Description>
 				<Address>
-					<Type json:force-string="true">2</Type>
-					<Role json:force-string="true">1</Role>
+					<Type>RU</Type>
+					<Role>PHY</Role>
 					<Street>
 						<Line1>1175 Lake Ferry Rd</Line1>
 					</Street>
@@ -167,20 +167,20 @@
 		<PhoneNumberList>
 			<PhoneNumber>
 				<Notes>Attendance Office (Automated)</Notes>
-				<Usage json:force-string="true">2</Usage>
-				<Type>0096</Type>
-				<Number>(021) 300 999</Number>
+				<Usage>SMS</Usage>
+				<Type>WTE</Type>
+				<Number>(0274) 300 9991</Number>
 			</PhoneNumber>
 			<PhoneNumber>
 				<Notes>Attendance Office</Notes>
-				<Usage json:force-string="true">3</Usage>
-				<Type>0096</Type>
-				<Number>(0274) 300 999</Number>
+				<Usage>INT</Usage>
+				<Type>WTE</Type>
+				<Number>(04) 300 9992</Number>
 			</PhoneNumber>
 			<PhoneNumber>
 				<Notes>School Secretary DDI</Notes>
-				<Type>0096</Type>
-				<Number>(021) 300 999</Number>
+				<Type>WTE</Type>
+				<Number>(04) 300 9993</Number>
 			</PhoneNumber>
 		</PhoneNumberList>
 		<RelatedOrganisationList>
@@ -202,25 +202,25 @@
 			</RelatedOrganisation>
 		</RelatedOrganisationList>
 		<OperationalStatus>O</OperationalStatus>
-		<Type json:force-string="true">2</Type>
-		<Authority json:force-string="true">1</Authority>
+		<Type>CONTR</Type>
+		<Authority>STATE</Authority>
 		<SchoolService>
-			<CoEdStatus>C1</CoEdStatus>
+			<CoEdStatus>COED</CoEdStatus>
 			<Decile>5</Decile>
 			<NewEntrantPolicyList>
 				<EnactedPolicy>
 					<EffectiveTo>2018-12-31</EffectiveTo>
-					<Policy json:force-string="true">1</Policy>
+					<Policy>AE</Policy>
 				</EnactedPolicy>
 				<EnactedPolicy>
 					<EffectiveFrom>2019-01-01</EffectiveFrom>
-					<Policy json:force-string="true">2</Policy>
+					<Policy>CE</Policy>
 				</EnactedPolicy>
 			</NewEntrantPolicyList>
 			<DefinitionList>
-				<Definition json:force-string="true">101</Definition>
-				<Definition json:force-string="true">103</Definition>
-				<Definition json:force-string="true">106</Definition>
+				<Definition>SMBS</Definition>
+				<Definition>KKMA</Definition>
+				<Definition>SWBF</Definition>
 			</DefinitionList>			
 			<SchoolYearList>
 				<SchoolYear>

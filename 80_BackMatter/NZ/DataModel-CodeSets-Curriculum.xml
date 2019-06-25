@@ -11,16 +11,20 @@
 		<ID>Curriculum</ID>
 		<Values>
 			<Value>
-				<Code>1</Code>
+				<Code>NZC</Code>
 				<Text>NZ Curriculum</Text>
 			</Value>
 			<Value>
-				<Code>2</Code>
+				<Code>TMA</Code>
 				<Text>Te Marautanga o Aotearoa</Text>
 			</Value>
+			<Value>
+				<Code>ECE</Code>
+				<Text>Te Whaariki</Text>
+			</Value>			
 		</Values>
 	</CodeSet>   <!-- Curriculum -->
-
+	
 	<CodeSet>
 		<Intro>
 			<p>Codes denoting the levels of the two Curricula used in New Zealand.
@@ -64,47 +68,47 @@
 		<ID>Learning Area</ID>
 		<Values>
 			<Value>
-				<Code>1</Code>
+				<Code>HPE</Code>
 				<Text>Health and Physical Education / Hauora</Text>
 				<Description>Applicable to both the NZ Curriculum and Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
-				<Code>2</Code>
+				<Code>LAL</Code>
 				<Text>Language and Languages / Ngā Reo</Text>
 				<Description>Applicable to both the NZ Curriculum and Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
-				<Code>3</Code>
+				<Code>MAT</Code>
 				<Text>Mathematics / Pangarau</Text>
 				<Description>Applicable to both the NZ Curriculum and Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
-				<Code>4</Code>
+				<Code>SCI</Code>
 				<Text>Science / Putaiao</Text>
 				<Description>Applicable to both the NZ Curriculum and Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
-				<Code>5</Code>
+				<Code>SSC</Code>
 				<Text>Social Sciences / Tikanga-a-iwi</Text>
 				<Description>Applicable to both the NZ Curriculum and Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
-				<Code>6</Code>
+				<Code>TEC</Code>
 				<Text>Technology / Hangarau</Text>
 				<Description>Applicable to both the NZ Curriculum and Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
-				<Code>7</Code>
+				<Code>ART</Code>
 				<Text>The Arts / Ngā Toi</Text>
 				<Description>Applicable to both the NZ Curriculum and Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
-				<Code>8</Code>
+				<Code>TRP</Code>
 				<Text>Te Reo Pākehā / English Language</Text>
 				<Description>Applicable to Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
-				<Code>9</Code>
+				<Code>TRM</Code>
 				<Text>Te Reo Māori / Māori Language and Literature</Text>
 				<Description>Applicable to Te Marautanga o Aotearoa.</Description>
 			</Value>
@@ -142,7 +146,7 @@
 		<ID>Learning Standard Status</ID>
 		<Values>
 			<Value>
-				<Code>1</Code>
+				<Code>CA</Code>
 				<Text>Candidate</Text>
 				<Description>
 					<p>The LearningStandard is being developed, and is not yet ready
@@ -150,14 +154,14 @@
 				</Description>
 			</Value>
 			<Value>
-				<Code>2</Code>
+				<Code>PU</Code>
 				<Text>Published</Text>
 				<Description>
 					<p>The LearningStandard is available for use in teaching and assessment.</p>
 				</Description>
 			</Value>
 			<Value>
-				<Code>3</Code>
+				<Code>SU</Code>
 				<Text>Superceded</Text>
 				<Description>
 					<p>The LearningStandard has been superceded (probably by a subsequent 
@@ -166,7 +170,7 @@
 				</Description>
 			</Value>
 			<Value>
-				<Code>4</Code>
+				<Code>DI</Code>
 				<Text>Discontinued</Text>
 				<Description>
 					<p>The LearningStandard is no longer available for use in teaching and assessment.</p>
@@ -182,7 +186,7 @@
 		<ID>Learning Standard Relationship Type</ID>
 		<Values>
 			<Value>
-				<Code>1</Code>
+				<Code>PREDEC</Code>
 				<Text>Predecessor</Text>
 				<Description>
 					<p>The related LearningStandard is a predecessor to this LearningStandard,
@@ -190,7 +194,7 @@
 				</Description>
 			</Value>
 			<Value>
-				<Code>2</Code>
+				<Code>SUCCESS</Code>
 				<Text>Successor</Text>
 				<Description>
 					<p>The related LearningStandard is a successor to this LearningStandard, 
@@ -198,7 +202,7 @@
 				</Description>
 			</Value>
 			<Value>
-				<Code>3</Code>
+				<Code>PREREQ</Code>
 				<Text>Prerequisite</Text>
 				<Description>
 					<p>The related LearningStandard is a prerequisite to this LearningStandard, 
@@ -216,7 +220,7 @@
 		<ID>Credential Status</ID>
 		<Values>
 			<Value>
-				<Code>1</Code>
+				<Code>CA</Code>
 				<Text>Candidate</Text>
 				<Description>
 					<p>The Credential is being developed, and is not yet available 
@@ -224,14 +228,14 @@
 				</Description>
 			</Value>
 			<Value>
-				<Code>2</Code>
+				<Code>PU</Code>
 				<Text>Published</Text>
 				<Description>
 					<p>The Credential is available for granting as an Attainment</p>
 				</Description>
 			</Value>
 			<Value>
-				<Code>3</Code>
+				<Code>SU</Code>
 				<Text>Superceded</Text>
 				<Description>
 					<p>The Credential has been superceded 
@@ -240,7 +244,7 @@
 				</Description>
 			</Value>
 			<Value>
-				<Code>4</Code>
+				<Code>DI</Code>
 				<Text>Discontinued</Text>
 				<Description>
 					<p>The Credential is no longer available granting as an Attainment</p>
@@ -251,55 +255,142 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Codes denoting Learning Areas defined by the NZ Curriculum and Te Marautanga o Aotearoa, as well as matching Subject Areas.</p>
+			<p>Codes denoting Subject Areas within the Learning Areas defined by the NZ Curriculum
+			and Te Marautanga o Aotearoa</p>
 		</Intro>
 		<ID>Subject Area</ID>
 		<Values>
 			<Value>
-				<Code>1</Code>
-				<Text>Health and Physical Education / Hauora</Text>
+				<Code>GERM</Code>
+				<Text>German</Text>
 				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
-				<Code>2</Code>
-				<Text>Language and Languages / Ngā Reo</Text>
+				<Code>INDO</Code>
+				<Text>Indonesian</Text>
 				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
-				<Code>3</Code>
-				<Text>Mathematics / Pangarau</Text>
+				<Code>JAPA</Code>
+				<Text>Japanese</Text>
 				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
-				<Code>4</Code>
-				<Text>Science / Putaiao</Text>
+				<Code>FREN</Code>
+				<Text>French</Text>
 				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
-				<Code>5</Code>
-				<Text>Social Sciences / Tikanga-a-iwi</Text>
+				<Code>REME</Code>
+				<Text>English (Remedial)</Text>
 				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
-				<Code>6</Code>
-				<Text>Technology / Hangarau</Text>
+				<Code>ENGL</Code>
+				<Text>English</Text>
 				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
-				<Code>7</Code>
-				<Text>The Arts / Ngā Toi</Text>
+				<Code>COOK</Code>
+				<Text>Cook Island Maori</Text>
 				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
-				<Code>8</Code>
-				<Text>Te Reo Pākehā / English Language</Text>
+				<Code>COMM</Code>
+				<Text>Communication Skills</Text>
 				<Description>Applicable to Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
-				<Code>9</Code>
-				<Text>Te Reo Māori / Māori Language and Literature</Text>
+				<Code>CHIN</Code>
+				<Text>Chinese</Text>
 				<Description>Applicable to Te Marautanga o Aotearoa</Description>
 			</Value>
+			<Value><Code>KORE</Code><Text>Korean</Text></Value>
+			<Value><Code>LATI</Code><Text>Latin</Text></Value>
+			<Value><Code>NIUE</Code><Text>Niuean</Text></Value>
+			<Value><Code>OLAN</Code><Text>Other Languages</Text></Value>
+			<Value><Code>PLAN</Code><Text>Pacific Language Studies</Text></Value>
+			<Value><Code>RUSS</Code><Text>Russian</Text></Value>
+			<Value><Code>SAMO</Code><Text>Samoan</Text></Value>
+			<Value><Code>SPAN</Code><Text>Spanish</Text></Value>
+			<Value><Code>MAOR</Code><Text>Te Reo Māori</Text></Value>
+			<Value><Code>RANG</Code><Text>Te Reo Rangatira</Text></Value>
+			<Value><Code>TOKE</Code><Text>Tokelauan</Text></Value>
+			<Value><Code>TONG</Code><Text>Tongan</Text></Value>
+			<Value><Code>ENSL</Code><Text>English as a Second Language</Text></Value>
+			<Value><Code>MATH</Code><Text>Mathematics</Text></Value>
+			<Value><Code>MATC</Code><Text>Mathematics with Calculus</Text></Value>
+			<Value><Code>MATS</Code><Text>Mathematics with Statistics</Text></Value>
+			<Value><Code>REMM</Code><Text>Mathematics (Remedial)</Text></Value>
+			<Value><Code>ACCO</Code><Text>Accounting</Text></Value>
+			<Value><Code>SCIE</Code><Text>Science</Text></Value>
+			<Value><Code>AGHO</Code><Text>Agriculture / Horticulture</Text></Value>
+			<Value><Code>BIOL</Code><Text>Biology / Biological Science</Text></Value>
+			<Value><Code>CHEM</Code><Text>Chemsitry</Text></Value>
+			<Value><Code>EAAS</Code><Text>Earth Science / Astronomy</Text></Value>
+			<Value><Code>HUMB</Code><Text>Human Biology</Text></Value>
+			<Value><Code>PHYS</Code><Text>Physics</Text></Value>
+			<Value><Code>TECN</Code><Text>Technology</Text></Value>
+			<Value><Code>BITE</Code><Text>Biotechnology</Text></Value>
+			<Value><Code>COSC</Code><Text>Computer Science / Programming</Text></Value>
+			<Value><Code>COMP</Code><Text>Computer Studies</Text></Value>
+			<Value><Code>DEST</Code><Text>Design, Drawing and Graphics</Text></Value>
+			<Value><Code>ELTE</Code><Text>Electronics and Control</Text></Value>
+			<Value><Code>FOTE</Code><Text>Food Technology</Text></Value>
+			<Value><Code>GRAP</Code><Text>Graphics</Text></Value>
+			<Value><Code>INTE</Code><Text>Information and Communication Technology</Text></Value>
+			<Value><Code>MTEC</Code><Text>Materials Technology</Text></Value>
+			<Value><Code>STME</Code><Text>Structures and Mechanisms</Text></Value>
+			<Value><Code>TIMA</Code><Text>Test and Information Management</Text></Value>
+			<Value><Code>CLTX</Code><Text>Textiles / Clothing</Text></Value>
+			<Value><Code>ARTA</Code><Text>The Arts</Text></Value>
+			<Value><Code>ARTD</Code><Text>Art Design</Text></Value>
+			<Value><Code>ARTH</Code><Text>Art History</Text></Value>
+			<Value><Code>DANC</Code><Text>Dancing</Text></Value>
+			<Value><Code>DRAM</Code><Text>Drama</Text></Value>
+			<Value><Code>MUSC</Code><Text>Music / Music Studies</Text></Value>
+			<Value><Code>MUSP</Code><Text>Music Practical / Performance</Text></Value>
+			<Value><Code>ARPA</Code><Text>Painting</Text></Value>
+			<Value><Code>APER</Code><Text>Performing Arts</Text></Value>
+			<Value><Code>ARTP</Code><Text>Photography</Text></Value>
+			<Value><Code>ARPR</Code><Text>Printmaking</Text></Value>
+			<Value><Code>ARTS</Code><Text>Sculpture</Text></Value>
+			<Value><Code>ARTC</Code><Text>Visial Arts</Text></Value>
+			<Value><Code>SOST</Code><Text>Social Studies</Text></Value>
+			<Value><Code>CLST</Code><Text>Classics / Classical Studies</Text></Value>
+			<Value><Code>CMTY</Code><Text>Community Studies</Text></Value>
+			<Value><Code>ECON</Code><Text>Economics</Text></Value>
+			<Value><Code>SENV</Code><Text>Environmental Sustainability</Text></Value>
+			<Value><Code>GEOG</Code><Text>Geography</Text></Value>
+			<Value><Code>HIST</Code><Text>History</Text></Value>
+			<Value><Code>LACU</Code><Text>Language and Cultural Studies</Text></Value>
+			<Value><Code>MAOS</Code><Text>Māori Studies</Text></Value>
+			<Value><Code>MEST</Code><Text>Media Studies</Text></Value>
+			<Value><Code>SOSC</Code><Text>Other Social Sciences</Text></Value>
+			<Value><Code>HEPH</Code><Text>Health and Physical Education</Text></Value>
+			<Value><Code>HEED</Code><Text>Health</Text></Value>
+			<Value><Code>HOME</Code><Text>Home Economics</Text></Value>
+			<Value><Code>OUED</Code><Text>Outdoor Education</Text></Value>
+			<Value><Code>PHED</Code><Text>Physical Education</Text></Value>
+			<Value><Code>SPOR</Code><Text>Sports Studies</Text></Value>
+			<Value><Code>BUSS</Code><Text>Commerce Related</Text></Value>
+			<Value><Code>DEFE</Code><Text>Defence</Text></Value>
+			<Value><Code>EQUE</Code><Text>Equestrian</Text></Value>
+			<Value><Code>FARM</Code><Text>Farming</Text></Value>
+			<Value><Code>FISH</Code><Text>Fishing</Text></Value>
+			<Value><Code>FOTY</Code><Text>Forestry</Text></Value>
+			<Value><Code>INTR</Code><Text>Industrial Trades</Text></Value>
+			<Value><Code>INTS</Code><Text>Integrated Studies</Text></Value>
+			<Value><Code>LAWS</Code><Text>Legal / Law Related Studies</Text></Value>
+			<Value><Code>LIFE</Code><Text>Life Skills / Personal Development</Text></Value>
+			<Value><Code>REST</Code><Text>Religious Education / Studies</Text></Value>
+			<Value><Code>REMS</Code><Text>Remedial Studies</Text></Value>
+			<Value><Code>STPR</Code><Text>Secondary Tertiary Programme</Text></Value>
+			<Value><Code>SETR</Code><Text>Service Trades</Text></Value>
+			<Value><Code>SPPR</Code><Text>Special Needs Programme</Text></Value>
+			<Value><Code>STDY</Code><Text>Study Skills</Text></Value>
+			<Value><Code>TRAN</Code><Text>Transition / Pre-Employment</Text></Value>
+			<Value><Code>THTR</Code><Text>Travel, Hospitality, Tourism</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Subject Area -->
 

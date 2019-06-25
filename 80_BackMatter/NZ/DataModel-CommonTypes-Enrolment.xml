@@ -33,11 +33,11 @@
 			<SubjectChoiceList>
 				<StudentSubjectChoice>
 					<PreferenceNumber>1</PreferenceNumber>
-					<Code json:force-string="true">2</Code>
+					<Code>FREN</Code>
 				</StudentSubjectChoice>
 				<StudentSubjectChoice>
 					<PreferenceNumber>2</PreferenceNumber>
-					<Code json:force-string="true">6</Code>
+					<Code>HIST</Code>
 				</StudentSubjectChoice>
 			</SubjectChoiceList>
 		</xhtml:Example>
@@ -72,7 +72,7 @@
 		<xhtml:Example xmlns="" name="Student Subject Choice Example">
 			<StudentSubjectChoice>
 				<PreferenceNumber>2</PreferenceNumber>
-				<Code>6</Code>
+				<Code>FREN</Code>
 			</StudentSubjectChoice>
 		</xhtml:Example>
 	</CommonElement>
@@ -403,11 +403,11 @@
 		<xhtml:Example xmlns="" name="International School Enrolment">
 			<StudentSchoolEnrolment>
 				<SchoolCalendarYear>2018</SchoolCalendarYear>
-				<MembershipType>01</MembershipType>
+				<MembershipType>BASE</MembershipType>
 				<YearLevel>11</YearLevel>
-				<EligibilityCriteria json:force-string="true">1</EligibilityCriteria>
+				<EligibilityCriteria>GAE</EligibilityCriteria>
 				<EligibilityVerification>
-					<Source json:force-string="true">2</Source>
+					<Source>AUSPA</Source>
 					<DocumentSerialNumber>L905673</DocumentSerialNumber>
 					<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 					<IsConfirmed>true</IsConfirmed>
@@ -419,26 +419,26 @@
 				<FTE>1.0</FTE>
 				<FundingType>EX</FundingType>
 				<FundingYearLevel>11</FundingYearLevel>
-				<Curriculum json:force-string="true">1</Curriculum>
+				<Curriculum>NZC</Curriculum>
 				<CurriculumLevel>5</CurriculumLevel>
 				<LanguageOfInstructionList>
 					<Language>
-						<Code>16110</Code>
+						<Code>NZS16110</Code>
 						<Level>99</Level>
 					</Language>
 					<Language>
-						<Code>01112</Code>
+						<Code>NZS01112</Code>
 						<Level>99</Level>
 					</Language>
 				</LanguageOfInstructionList>
 				<SubjectChoiceList>
 					<StudentSubjectChoice>
 						<PreferenceNumber>1</PreferenceNumber>
-						<Code json:force-string="true">6</Code>
+						<Code>FREN</Code>
 					</StudentSubjectChoice>
 					<StudentSubjectChoice>
 						<PreferenceNumber>2</PreferenceNumber>
-						<Code json:force-string="true">2</Code>
+						<Code>HIST</Code>
 					</StudentSubjectChoice>
 				</SubjectChoiceList>				
 				<CourseChoiceList>
@@ -457,7 +457,7 @@
 				</CourseChoiceList>
 				<InternationalEnrolment>
 					<NZArrivalDate>2018-05-02</NZArrivalDate>
-					<ExchangeScheme>9</ExchangeScheme>
+					<ExchangeScheme>STA</ExchangeScheme>
 				</InternationalEnrolment>
 			</StudentSchoolEnrolment>
 		</xhtml:Example>
@@ -576,7 +576,7 @@
 		<xhtml:Example xmlns="" name="International School Enrolment">
 			<InternationalEnrolment>
 				<NZArrivalDate>1996-05-02</NZArrivalDate>
-				<ExchangeScheme>9</ExchangeScheme>
+				<ExchangeScheme>STA</ExchangeScheme>
 			</InternationalEnrolment>
 		</xhtml:Example>
 	</CommonElement>

@@ -131,15 +131,15 @@
 				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
 			</Provider>
 			<EntryDate>2018-01-29</EntryDate>
-			<Status>5</Status>
+			<Status>WIT</Status>
 			<SchoolEnrolmentList>
 				<SchoolEnrolment>
 					<SchoolCalendarYear>2018</SchoolCalendarYear>
-					<MembershipType>01</MembershipType>
+					<MembershipType>BASE</MembershipType>
 					<YearLevel>11</YearLevel>
-					<EligibilityCriteria json:force-string="true">4</EligibilityCriteria>
+					<EligibilityCriteria json:force-string="true">GAE</EligibilityCriteria>
 					<EligibilityVerification>
-						<Source json:force-string="true">2</Source>
+						<Source>AUSPA</Source>
 						<DocumentSerialNumber>L905673</DocumentSerialNumber>
 						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 						<IsConfirmed>true</IsConfirmed>
@@ -151,11 +151,11 @@
 					<FTE>1.0</FTE>
 					<FundingType>EX</FundingType>
 					<FundingYearLevel>1</FundingYearLevel>
-					<Curriculum json:force-string="true">1</Curriculum>
+					<Curriculum>NZC</Curriculum>
 					<CurriculumLevel>5</CurriculumLevel>
 					<InternationalEnrolment>
 						<NZArrivalDate>2018-05-02</NZArrivalDate>
-						<ExchangeScheme>9</ExchangeScheme>
+						<ExchangeScheme>STA</ExchangeScheme>
 					</InternationalEnrolment>
 				</SchoolEnrolment>
 			</SchoolEnrolmentList>
@@ -173,15 +173,15 @@
 				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
 			</Provider>
 			<EntryDate>2017-01-29</EntryDate>
-			<Status>4</Status>
+			<Status>ACT</Status>
 			<SchoolEnrolmentList>
 				<SchoolEnrolment>
 					<SchoolCalendarYear>2017</SchoolCalendarYear>
-					<MembershipType>01</MembershipType>
+					<MembershipType>BASE</MembershipType>
 					<YearLevel>10</YearLevel>
-					<EligibilityCriteria json:force-string="true">1</EligibilityCriteria>
+					<EligibilityCriteria>NZC</EligibilityCriteria>
 					<EligibilityVerification>
-						<Source json:force-string="true">2</Source>
+						<Source>NZBIR</Source>
 						<DocumentSerialNumber>L905673</DocumentSerialNumber>
 						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 						<IsConfirmed>true</IsConfirmed>
@@ -193,36 +193,32 @@
 					<FTE>1.0</FTE>
 					<FundingType>RE</FundingType>
 					<FundingYearLevel>10</FundingYearLevel>
-					<Curriculum json:force-string="true">1</Curriculum>
+					<Curriculum>NZC</Curriculum>
 					<CurriculumLevel>4</CurriculumLevel>
 					<LanguageOfInstructionList>
 						<Language json:force-array="true">
-							<Code>01112</Code>
+							<Code>NZS01112</Code>
 							<Level>99</Level>
 						</Language>
 					</LanguageOfInstructionList>
 					<SubjectChoiceList>
 						<StudentSubjectChoice>
 							<PreferenceNumber>1</PreferenceNumber>
-							<Code json:force-string="true">6</Code>
+							<Code>FREN</Code>
 						</StudentSubjectChoice>
 						<StudentSubjectChoice>
 							<PreferenceNumber>2</PreferenceNumber>
-							<Code json:force-string="true">2</Code>
+							<Code>HIST</Code>
 						</StudentSubjectChoice>
 					</SubjectChoiceList>				
-					<InternationalEnrolment>
-						<NZArrivalDate>2018-05-02</NZArrivalDate>
-						<ExchangeScheme>9</ExchangeScheme>
-					</InternationalEnrolment>
 				</SchoolEnrolment>
 				<SchoolEnrolment>
 					<SchoolCalendarYear>2018</SchoolCalendarYear>
-					<MembershipType>01</MembershipType>
+					<MembershipType>BASE</MembershipType>
 					<YearLevel>11</YearLevel>
-					<EligibilityCriteria json:force-string="true">1</EligibilityCriteria>
+					<EligibilityCriteria>NZC</EligibilityCriteria>
 					<EligibilityVerification>
-						<Source json:force-string="true">2</Source>
+						<Source>NZPAS</Source>
 						<DocumentSerialNumber>L905673</DocumentSerialNumber>
 						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
 						<IsConfirmed>true</IsConfirmed>
@@ -234,22 +230,22 @@
 					<FTE>1.0</FTE>
 					<FundingType>RE</FundingType>
 					<FundingYearLevel>11</FundingYearLevel>
-					<Curriculum json:force-string="true">1</Curriculum>
+					<Curriculum>NZC</Curriculum>
 					<CurriculumLevel>5</CurriculumLevel>
 					<LanguageOfInstructionList>
 						<Language json:force-array="true">
-							<Code>01112</Code>
+							<Code>NZS01112</Code>
 							<Level>99</Level>
 						</Language>
 					</LanguageOfInstructionList>
 					<SubjectChoiceList>
 						<StudentSubjectChoice>
 							<PreferenceNumber>1</PreferenceNumber>
-							<Code json:force-string="true">6</Code>
+							<Code>HIST</Code>
 						</StudentSubjectChoice>
 						<StudentSubjectChoice>
 							<PreferenceNumber>2</PreferenceNumber>
-							<Code json:force-string="true">2</Code>
+							<Code>GEOG</Code>
 						</StudentSubjectChoice>
 					</SubjectChoiceList>
 					<CourseChoiceList>
@@ -262,7 +258,7 @@
 						<StudentCourseChoice>
 							<PreferenceNumber>2</PreferenceNumber>
 							<Course>
-								<LocalId>Y11FREN</LocalId>
+								<LocalId>Y11GEOG</LocalId>
 							</Course>
 						</StudentCourseChoice>
 					</CourseChoiceList>

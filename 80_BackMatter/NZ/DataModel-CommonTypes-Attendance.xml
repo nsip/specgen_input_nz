@@ -33,7 +33,7 @@
 				<AttendanceTime>
 					<AttendanceType>Swipe Cards</AttendanceType>
 					<AttendanceCode>E</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
+					<AttendanceStatus>UNE</AttendanceStatus>
 					<StartTime>09:00:00</StartTime>
 					<EndTime>09:40:00</EndTime>
 					<DurationValue>40</DurationValue>
@@ -42,7 +42,7 @@
 				<AttendanceTime>
 					<AttendanceType>Swipe Cards</AttendanceType>
 					<AttendanceCode>E</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
+					<AttendanceStatus>UNE</AttendanceStatus>
 					<StartTime>09:45:00</StartTime>
 					<EndTime>10:30:00</EndTime>
 					<DurationValue>45</DurationValue>
@@ -126,7 +126,7 @@
 			<AttendanceTime>
 				<AttendanceType>Swipe Cards</AttendanceType>
 				<AttendanceCode>E</AttendanceCode>
-				<AttendanceStatus>01</AttendanceStatus>
+				<AttendanceStatus>UNE</AttendanceStatus>
 				<StartTime>09:45:00</StartTime>
 				<EndTime>10:30:00</EndTime>
 				<DurationValue>45</DurationValue>
@@ -157,7 +157,7 @@
 			<PeriodAttendanceList>
 				<PeriodAttendance>
 					<AttendanceCode>E</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
+					<AttendanceStatus>UNE</AttendanceStatus>
 					<TimetableDayId json:force-string="true">4</TimetableDayId>
 					<TimetablePeriodId>4D</TimetablePeriodId>
 					<StartTime>09:00:00</StartTime>
@@ -166,12 +166,12 @@
 				</PeriodAttendance>
 				<PeriodAttendance>
 					<AttendanceCode>E</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
+					<AttendanceStatus>UNE</AttendanceStatus>
 					<StartTime>09:45:00</StartTime>
 					<EndTime>10:30:00</EndTime>
 					<StudentTimeIn>09:58:00</StudentTimeIn>
 					<SubjectAreaList json:force-array="true">
-						<SubjectArea json:force-string="true">3</SubjectArea>
+						<SubjectArea>MATH</SubjectArea>
 					</SubjectAreaList>
 					<TeacherList json:force-array="true">
 						<StaffMember>
@@ -308,13 +308,13 @@
 			<xhtml:Example xmlns="" name="Period Attendance Example (Absence)">
 			<PeriodAttendance>
 				<AttendanceCode>E</AttendanceCode>
-				<AttendanceStatus>01</AttendanceStatus>
+				<AttendanceStatus>UNE</AttendanceStatus>
 				<TimetableDayId json:force-string="true">4</TimetableDayId>
 				<TimetablePeriodId>4D</TimetablePeriodId>
 				<StartTime>09:00:00</StartTime>
 				<EndTime>09:50:00</EndTime>
 				<SubjectAreaList json:force-array="true">
-					<SubjectArea json:force-string="true">3</SubjectArea>
+					<SubjectArea>MATH</SubjectArea>
 				</SubjectAreaList>
 				<TeacherList json:force-array="true">
 					<StaffMember>
@@ -331,17 +331,17 @@
 			</PeriodAttendance>
 		</xhtml:Example>
 
-		<xhtml:Example xmlns="" name="Period Attendance Example (Late)" intl="nz">
+		<xhtml:Example xmlns="" name="Period Attendance Example (Late)">
 			<PeriodAttendance>
 				<AttendanceCode>E</AttendanceCode>
-				<AttendanceStatus>01</AttendanceStatus>
+				<AttendanceStatus>UNE</AttendanceStatus>
 				<TimetableDayId json:force-string="true">4</TimetableDayId>
 				<TimetablePeriodId>4E</TimetablePeriodId>
 				<StartTime>09:00:00</StartTime>
 				<EndTime>09:50:00</EndTime>
 				<StudentTimeIn>09:35:00</StudentTimeIn>
 				<SubjectAreaList json:force-array="true">
-					<SubjectArea json:force-string="true">3</SubjectArea>
+					<SubjectArea>MATH</SubjectArea>
 				</SubjectAreaList>
 				<TeacherList json:force-array="true">
 					<StaffMember>

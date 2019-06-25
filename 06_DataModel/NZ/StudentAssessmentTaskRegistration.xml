@@ -147,12 +147,12 @@
           <!-- NZQA is Assessor -->
           <ProviderInvolved>
             <RefId>5556b4eb-850f-4102-800c-9a3fde8bfa9f</RefId>
-            <ProviderRole json:force-string="true">101</ProviderRole>
+            <ProviderRole>ASR</ProviderRole>
           </ProviderInvolved>
           <!-- School is Provider -->
           <ProviderInvolved>
             <RefId>6661f830-13a6-44d7-bd96-be00cbad68f1</RefId>
-            <ProviderRole json:force-string="true">103</ProviderRole>
+            <ProviderRole>PRO</ProviderRole>
           </ProviderInvolved>
         </ProviderInvolvedList>
       <Student>
@@ -166,11 +166,11 @@
         <RefId>cedd0ce7-f555-482b-887b-d130e5c40d02</RefId>
       </AssessmentTask>
       <SpecialAssessmentConditionList>
-        <SpecialAssessmentCondition>102</SpecialAssessmentCondition>
-        <SpecialAssessmentCondition>104</SpecialAssessmentCondition>
-        <SpecialAssessmentCondition>108</SpecialAssessmentCondition>
+        <SpecialAssessmentCondition>COM</SpecialAssessmentCondition>
+        <SpecialAssessmentCondition>EXT</SpecialAssessmentCondition>
+        <SpecialAssessmentCondition>SEP</SpecialAssessmentCondition>
       </SpecialAssessmentConditionList>
-      <SubjectArea>3</SubjectArea>
+      <SubjectArea>PHYS</SubjectArea>
       <YearLevel>12</YearLevel>
       <DateRegistered>2018-03-30</DateRegistered>
       <AssessmentYear>2018</AssessmentYear>

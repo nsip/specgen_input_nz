@@ -144,8 +144,8 @@
       <Provider>
         <RefId>33d610cd-40d3-44db-b21b-3cffe695503a</RefId>
       </Provider>
-      <ActivityGroup json:force-string="true">101</ActivityGroup>
-      <ActivityType json:force-string="true">102</ActivityType>
+      <ActivityGroup>SPO</ActivityGroup>
+      <ActivityType>CRI</ActivityType>
       <ActivityName>First XI</ActivityName>
       <ParticipationComment>First year of participation</ParticipationComment>
       <StartDate>2008-09-01</StartDate>

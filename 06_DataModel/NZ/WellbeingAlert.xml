@@ -196,7 +196,7 @@
       </StaffMember>
       <PublishedDate>2017-11-01</PublishedDate>
       <StartDate>2017-11-01</StartDate>
-      <AlertCategory>M</AlertCategory>
+      <AlertCategory>MED</AlertCategory>
       <AlertDescription>This Student is allergic to peanuts</AlertDescription>
     </WellbeingAlert>
   </xhtml:Example>

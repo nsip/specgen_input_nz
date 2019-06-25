@@ -1331,7 +1331,7 @@
 					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
 					<GoalDescription>Te Huia wants to excel at Te Reo Māori</GoalDescription>
 					<GoalName>Excel Te Reo</GoalName>
-					<SubjectArea>9</SubjectArea>
+					<SubjectArea>MAOR</SubjectArea>
 				</AcademicGoal>
 			</AcademicGoalList>
 		</xhtml:Example>		
@@ -1421,7 +1421,8 @@
 					<InterestRecordedDate>2018-11-30</InterestRecordedDate>
 					<InterestDescription>Tobias spends most lunchtimes playing with the piano, or watching others playing music</InterestDescription>
 					<InterestName>Music/Piano</InterestName>
-					<InterestType>104</InterestType>
+					<InterestType>MUS</InterestType>
+					<SubjectArea>MUSP</SubjectArea>
 				</StudentInterest>
 			</StudentInterestList>
 		</xhtml:Example>	
@@ -1481,8 +1482,8 @@
 				<InterestRecordedDate>2018-11-30</InterestRecordedDate>
 				<InterestDescription>Tobias spends most lunchtimes playing with the piano, or watching others playing music</InterestDescription>
 				<InterestName>Music/Piano</InterestName>
-				<InterestType>104</InterestType>
-				<SubjectArea>7</SubjectArea>
+				<InterestType>MUS</InterestType>
+				<SubjectArea>MUSP</SubjectArea>
 			</StudentInterest>
 		</xhtml:Example>
 	</CommonElement>

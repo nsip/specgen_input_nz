@@ -142,9 +142,9 @@
         <RefId>101A8C3D-00AA-001A-0000-A2E35B359D75</RefId>
         <LocalId>208</LocalId>
       </Provider>
-      <Curriculum>1</Curriculum>
+      <Curriculum>NZC</Curriculum>
       <SubjectAreaList>
-        <SubjectArea json:force-string="true" json:force-array="true">4</SubjectArea>
+        <SubjectArea json:force-array="true">CHEM</SubjectArea>
       </SubjectAreaList>
       <YearLevelList>
         <YearLevel json:force-string="true" json:force-array="true">12</YearLevel>
@@ -155,8 +155,8 @@
       <Credits>11</Credits>
 			<LanguageOfInstructionList>
 				<Language json:force-array="true">
-					<Code>01112</Code>
-					<Level>99</Level>
+					<Code>NZS01112</Code>
+					<Level>1</Level>
 				</Language>
 			</LanguageOfInstructionList>
       <LearningStandardList>

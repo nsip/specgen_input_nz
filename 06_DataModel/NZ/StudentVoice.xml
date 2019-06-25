@@ -121,8 +121,8 @@
 					<InterestRecordedDate>2018-11-30</InterestRecordedDate>
 					<InterestDescription>Timothy spends most lunchtimes playing with the piano, or watching others playing music</InterestDescription>
 					<InterestName>Music/Piano</InterestName>
-					<InterestType>104</InterestType>
-					<SubjectArea>7</SubjectArea>					
+					<InterestType>MUS</InterestType>
+					<SubjectArea>MUSP</SubjectArea>					
 				</StudentInterest>
 			</StudentInterestList>
 			<SocialGoalList>
@@ -137,7 +137,7 @@
 					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
 					<GoalDescription>Timothy wants to excel at Te Reo Māori</GoalDescription>
 					<GoalName>Excel Te Reo</GoalName>
-					<SubjectArea>9</SubjectArea>
+					<SubjectArea>MAOR</SubjectArea>
 				</AcademicGoal>
 			</AcademicGoalList>			
 			<CareerGoalList>

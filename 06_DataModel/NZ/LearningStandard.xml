@@ -195,9 +195,9 @@
       </Publisher>
       <Description>Demonstrate understanding of the properties of selected organic compounds</Description>
       <SubjectAreaList>
-        <SubjectArea>4</SubjectArea>
+        <SubjectArea>CHEM</SubjectArea>
       </SubjectAreaList>
-      <Status json:force-string="true">2</Status>
+      <Status>PU</Status>
       <Credits>4</Credits>
       <Level json:force-string="true">2</Level>
       <AssessmentType>INT</AssessmentType>
@@ -215,9 +215,9 @@
       </Publisher>
       <Description>Cambridge International AS Mathematics (2018) - Pure Mathematics</Description>
       <SubjectAreaList>
-        <SubjectArea>3</SubjectArea>
+        <SubjectArea>MATH</SubjectArea>
       </SubjectAreaList>
-      <Status json:force-string="true">2</Status>
+      <Status>PU</Status>
       <AssessmentType>EXT</AssessmentType>
     </LearningStandard>
   </xhtml:Example>

@@ -88,23 +88,23 @@
 		<xhtml:Example xmlns="" name="PAT Result Score List Example" intl="nz">
 			<ResultScoreList>
 				<ResultScore>
-					<ScoreMetric>101</ScoreMetric>  <!-- Raw Score -->
+					<ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
 					<ScoreValue>25</ScoreValue>
 				</ResultScore>
 				<ResultScore>
-					<ScoreMetric>102</ScoreMetric>  <!-- Scale Score -->
+					<ScoreMetric>SCA</ScoreMetric>  <!-- Scale Score -->
 					<ScoreValue>38.5</ScoreValue>
 				</ResultScore>
 				<ResultScore>
-					<ScoreMetric>103</ScoreMetric>  <!-- Margin of Error -->
+					<ScoreMetric>MAR</ScoreMetric>  <!-- Margin of Error -->
 					<ScoreValue>5.0</ScoreValue>
 				</ResultScore>
 				<ResultScore>
-					<ScoreMetric>104</ScoreMetric>  <!-- Stanine -->
+					<ScoreMetric>STA</ScoreMetric>  <!-- Stanine -->
 					<ScoreValue>6</ScoreValue>
 				</ResultScore>
 				<ResultScore>
-					<ScoreMetric>105</ScoreMetric>  <!-- Year Level -->
+					<ScoreMetric>YEA</ScoreMetric>  <!-- Year Level -->
 					<ScoreValue>4</ScoreValue>
 				</ResultScore>				
 			</ResultScoreList>
@@ -114,22 +114,22 @@
 			<ResultScoreList>
 				<ResultScore>
 					<Competency>Ideas</Competency>
-					<ScoreMetric>101</ScoreMetric>  <!-- Raw Score -->
+					<ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
 					<ScoreValue>1234</ScoreValue>
 				</ResultScore>
 				<ResultScore>
 					<Competency>Ideas</Competency>
-					<ScoreMetric>108</ScoreMetric>  <!-- Curriculum Level -->
+					<ScoreMetric>CUR</ScoreMetric>  <!-- Curriculum Level -->
 					<ScoreValue>5B</ScoreValue>
 				</ResultScore>
 				<ResultScore>
 					<Competency>Overall</Competency>
-					<ScoreMetric>101</ScoreMetric>  <!-- Raw Score -->
+					<ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
 					<ScoreValue>1591</ScoreValue>
 				</ResultScore>
 				<ResultScore>
 					<Competency>Overall</Competency>
-					<ScoreMetric>108</ScoreMetric>  <!-- Curriculum Level -->
+					<ScoreMetric>CUR</ScoreMetric>  <!-- Curriculum Level -->
 					<ScoreValue>5B</ScoreValue>
 				</ResultScore>
 			</ResultScoreList>
