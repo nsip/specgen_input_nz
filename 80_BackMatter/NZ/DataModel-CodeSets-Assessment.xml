@@ -29,6 +29,10 @@
 				<Text>Practical</Text>
 			</Value>    <!-- Practical -->
 			<Value>
+				<Code>OTJ</Code>
+				<Text>Overall Teacher Judgement</Text>
+			</Value>    <!-- OTJ -->			
+			<Value>
 				<Code>OTH</Code>
 				<Text>Other</Text>
 			</Value>    <!-- Other -->			
@@ -47,6 +51,7 @@
 			</Value>
 			<Value>
 				<Code>NOT</Code>
+				<Text>Not Moderated</Text>
 			</Value>
 			<Value>
 				<Code>PUB</Code>
@@ -54,17 +59,18 @@
 			</Value>
 			<Value>
 				<Code>ENT</Code>
+				<Text>Entered</Text>
 			</Value>
 			<Value>
 				<Code>MAR</Code>
 				<Text>Marked</Text>
 			</Value>									
 		</Values>
-	</CodeSet>    <!-- Assessment Tool -->
+	</CodeSet>    <!-- Assessment Status -->
 
 	<CodeSet>
 		<Intro>
-			<p></p>
+			<p>Code set denoting the role of the provider in the assessment, e.g. Assessing Provider, Location Provider.</p>
 		</Intro>
 		<ID>Assessment Provider Role</ID>
 		<Values>
@@ -194,17 +200,10 @@
 		</Intro>
 		<ID>Assessment Tool</ID>
 		<Values>
-		  <Value><Code>MAOR</Code><Text>Te Reo Māori</Text></Value>
-		  <Value><Code>ENGL</Code><Text>English</Text></Value>
-		  <Value><Code>MATH</Code><Text>Mathematics</Text></Value>
-		  <Value><Code>SCIE</Code><Text>Science</Text></Value>
-		  <Value><Code>SOST</Code><Text>Social Studies</Text></Value>
-		  <Value><Code>HEPH</Code><Text>Health and PE</Text></Value>
-		  <Value><Code>TECN</Code><Text>Technology</Text></Value>
-		  <Value><Code>ARTA</Code><Text>The Arts</Text></Value>
-		  <Value><Code>INFO</Code><Text>Information Skills</Text></Value>
-		  <Value><Code>STEN</Code><Text>Student Engagement</Text></Value>
-		  <Value><Code>INTS</Code><Text>Cross-curricular</Text></Value>
+		  <Value><Code>PAT</Code><Text>PAT</Text></Value>
+		  <Value><Code>eASSTle</Code><Text>e-ASSTle</Text></Value>
+		  <Value><Code>PaCT</Code><Text>PaCT</Text></Value>
+		  <Value><Code>TWA</Code><Text>TWA</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Assessment Tool -->
 

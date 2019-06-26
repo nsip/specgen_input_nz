@@ -265,141 +265,154 @@
 		<Values>
 			<Value>
 				<Code>FF</Code>
-				<Text>Foreign Fee Paying</Text>
-				<Description>An International student who meets full
-				tuition costs on their own or from funds provided to
-				them by sponsors other than NZAID.</Description>
+				<Text>International Fee Paying Student</Text>
+				<Description>
+					An International student who meets full tuition costs on
+					their own or from funds provided to them by sponsors other
+					than NZAID.
+				</Description>
 			</Value>
 			<Value>
 				<Code>AE</Code>
-				<Text>Alternative Education</Text>
-				<Description>A student who is enrolled in an
-				Alternative Education programme, for Funding Year
-				Level they should be reported only between Year 9 and
-				Year 13 (inclusive).</Description>
+				<Text>Student in Alternative Education</Text>
+				<Description>
+					A student who is enrolled in an Alternative Education
+					programme, for Funding Year Level they should be reported
+					only between Year 9 and Year 13 (inclusive).
+				</Description>
 			</Value>
 			<Value>
 				<Code>EX</Code>
-				<Text>Foreign Exchange</Text>
-				<Description>A student (and dependants) studying in
-				New Zealand under an exchange programme approved by
-				the New Zealand Government.</Description>
+				<Text>International Exchange Student</Text>
+				<Description>
+					A student (and dependants) studying in New Zealand under an
+					exchange programme approved by the New Zealand Government.
+				</Description>
 			</Value>
 			<Value>
 				<Code>NF</Code>
 				<Text>Not Funded</Text>
-				<Description>Code to be used for students attending on
-				Roll Count Day, but not paying fee and not funded;
-				e.g. students with Eligibility Criteria “28 Day
-				Waiver” and “Extended 28 Day Waiver”.
+				<Description>
+					Code to be used for students attending on Roll Count Day,
+					but not paying fee and not funded; e.g. students with
+					Eligibility Criteria “28 Day Waiver” and “Extended 28 Day
+					Waiver”.
 				</Description>
 			</Value>
 			<Value>
 				<Code>AD</Code>
-				<Text>Returning Adult</Text>
-				<Description><p>A student who has returned to school
-				following a break of at least 1 year and is at least
-				19 years old on 1 January of the Roll count year.</p>
-				<p>EXAMPLE: Roll count year = 2017 if student is 19 years
-				old on 1 Jan 2017 their student type = AD if there has
-				been a break in their learning cycle.</p>
+				<Text>Adult Student</Text>
+				<Description>
+					A student who has continued at school and is at least 19 on
+					1 January of the Roll count year.  EXAMPLE: Roll count year
+					= 2017 if student is 19 years old on 1 January 2017 their
+					student type = RA as there has not been a break in the
+					students learning cycle.
 				</Description>
 			</Value>
 			<Value>
 				<Code>RA</Code>
-				<Text>Adult Student</Text>
-				<Description><p>A student who has continued at school and
-				is at least 19 on 1 January of the Roll count year.</p>
-				<p>EXAMPLE: Roll count year = 2017 if student is 19 years old on 1
-				January 2017 their student type = RA as there has not
-				been a break in the students learning cycle.</p>
+				<Text>Returning Adult Student</Text>
+				<Description>
+					A student who has returned to school following a break of at
+					least 1 year and is at least 19 years old on 1 January of
+					the Roll count year. EXAMPLE: Roll count year = 2017 if
+					student is 19 years old on 1 Jan 2017 their student type =
+					AD if there has been a break in their learning cycle.
 				</Description>
 			</Value>
 			<Value>
 				<Code>RE</Code>
 				<Text>Regular Student</Text>
-				<Description>A New Zealand student or a student
-				treated for funding and staffing purposes as a New
-				Zealand student who is also not yet 19 years at 1 Jan of the
-				roll count year. This includes students in general
-				classrooms and those in special needs units.
+				<Description>
+					A New Zealand student or a student treated for funding and
+					staffing purposes as a New Zealand student who is also not
+					yet 19 years at 1 Jan of the roll count year. This includes
+					students in general classrooms and those in special needs
+					units.
 				</Description>
 			</Value>
 			<Value>
 				<Code>TPREOM</Code>
-				<Text>Teen Parent, Regular Student, over max roll</Text>
-				<Description>A regular student (i.e. a student aged
-				under 19 years at 1 January of the roll count year)
-				who meets the eligibility criteria, but whose
-				enrolment would cause the roll of the TPU to exceed
-				the set maximum.
+				<Text>Teen Parent, Regular Student, Over Max Roll</Text>
+				<Description>
+					A regular student (i.e. a student aged under 19 years at 1
+					January of the roll count year) who meets the eligibility
+					criteria, but whose enrolment would cause the roll of the
+					TPU to exceed the set maximum.
 				</Description>
 			</Value>
 			<Value>
 				<Code>TPRAOM</Code>
-				<Text>Teen Parent, Adult Student over max. roll</Text>
-				<Description>An adult student who is enrolled in a
-				Teen Parent Unit (TPU) where the enrolment at the TPU
-				has continued beyond the end of the year in which the
-				student reached 19 years old. The enrolment of this
-				student causes the roll of the TPU to exceed the set
-				maximum.</Description>
+				<Text>Teen Parent, Adult Student Over Max Roll</Text>
+				<Description>
+					An adult student who is enrolled in a Teen Parent Unit (TPU)
+					where the enrolment at the TPU has continued beyond the end
+					of the year in which the student reached 19 years old. The
+					enrolment of this student causes the roll of the TPU to
+					exceed the set maximum.
+				</Description>
 			</Value>
 			<Value>
 				<Code>TPAD</Code>
-				<Text>Teen Parent, Adult Student</Text>
-				<Description>A student enrolling at the TPU as an
-				adult student (i.e. was at least 19 on 1st January of
-				the year when they first enrolled at the TPU), and who
-				fits within the TPU’s maximum roll.
+				<Text>Teen Parent, Other Adult Student</Text>
+				<Description>
+					A student enrolling at the TPU as an adult student (i.e. was
+					at least 19 on 1st January of the year when they first
+					enrolled at the TPU), and who fits within the TPU’s maximum
+					roll.
 				</Description>
 			</Value>
 			<Value>
 				<Code>TPRE</Code>
-				<Text>Teen Parent, Regular Student</Text>
-				<Description>A student who is enrolled in a Teen
-				Parent Unit (TPU) and is at least 19 years old on 1
-				January of the current year. These students may
-				continue to be enrolled in the TPU after the end of
-				the year in which they turn 19, their Student Type
-				however will then be changed to TPRAE – Teen Parent
-				Enrolled Continuing Adult Student.
+				<Text>Teen Parent, Eligible and Enrolled Regular Student</Text>
+				<Description>
+					A student who is enrolled in a Teen Parent Unit (TPU) and is
+					at least 19 years old on 1 January of the current
+					year. These students may continue to be enrolled in the TPU
+					after the end of the year in which they turn 19, their
+					Student Type however will then be changed to TPRAE – Teen
+					Parent Enrolled Continuing Adult Student.
 				</Description>
 			</Value>
 			<Value>
 				<Code>TPRAE</Code>
-				<Text>Teen Parent, Eligible and Enrolled Adult Student</Text>
-				<Description>A student who is enrolled in a Teen
-				Parent Unit (TPU) where the enrolment at the TPU has
-				continued beyond the end of the year in which the
-				student reached 19 years old.
+				<Text>Teen Parent, Enrolled Continuing Adult Student</Text>
+				<Description>
+					A student who is enrolled in a Teen Parent Unit (TPU) where
+					the enrolment at the TPU has continued beyond the end of the
+					year in which the student reached 19 years old.
 				</Description>
 			</Value>
 			<Value>
 				<Code>EM</Code>
 				<Text>External Student</Text>
-				<Description>A student who attends this school for
-				some courses but is enrolled at another school where a
-				majority of instruction occurs.
+				<Description>
+					A student who attends this school for some courses but is
+					enrolled at another school where a majority of instruction
+					occurs.
 				</Description>
 			</Value>
 			<Value>
 				<Code>SA</Code>
-				<Text>Satellite Student</Text>
+				<Text>Student in a Satellite Class of a Special School</Text>
 				<Description>Student who is in a Satellite class of a Special School.</Description>
 			</Value>
 			<Value>
 				<Code>NA</Code>
 				<Text>Not Attending</Text>
-				<Description>A student who is not attending the school
-				on the day of the roll count and there is no
-				documentation to support their absence from the
-				school.</Description>
+				<Description>
+					A student who is not attending the school on the day of the
+					roll count and there is no documentation to support their
+					absence from the school.
+				</Description>
 			</Value>
 			<Value>
 				<Code>SF</Code>
-				<Text>Separately Funded</Text>
-				<Description>Student is enrolled in a separately funded unit.</Description>
+				<Text>Student in a Separately Funded Unit</Text>
+				<Description>
+					Student is enrolled in a separately funded unit.
+				</Description>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Student Funding Type -->
