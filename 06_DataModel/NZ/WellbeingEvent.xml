@@ -226,7 +226,7 @@
 		<Description>
 		  <p>The StudentPhysicalRestraint if it was administered to the student as part of this WellbeingEvent.</p>
 		</Description>
-		<Type ref="CodeSets" name="NZCodeSetsWellbeingEventRestraintType"/>
+		<Type ref="CodeSets" name="NZCodeSetsWellbeingEventRestraintTypeType"/>
   </Item>    <!-- RestraintType -->
 
   <Item>
@@ -268,7 +268,7 @@
       <ReportingProvider>
         <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
       </ReportingProvider>
-      <EventCategoryClass>P</EventCategoryClass>
+      <EventCategoryClass>POS</EventCategoryClass>
       <EventDate>2017-11-01</EventDate>
       <EventTimePeriod>AM</EventTimePeriod>
       <RestraintType>NON</RestraintType>

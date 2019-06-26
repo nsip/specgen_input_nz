@@ -106,7 +106,7 @@
     <Description>
       <p>Category of WellbeingCharacteristic.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicClassificationType"></Type>
+    <Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicClassType"></Type>
   </Item>    <!-- CharacteristicClassification -->
   
   <Item>
@@ -192,7 +192,7 @@
     <Description>
       <p>The priority of the characteristic in relation to other characteristics within the same classification.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicPriorityType"/>
   </Item>    <!-- CharacteristicPriority -->
 
   <Item>

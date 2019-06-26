@@ -181,18 +181,19 @@
 				<Code>3</Code>
 				<Text xml:lang="en">Gender Diverse</Text>
 				<Text xml:lang="mi">Ira tāngata kōwhiri kore</Text>
+				<Description>But not further defined</Description>
 			</Value>  <!-- Gender Diverse -->
 			<Value>
 				<Code>31</Code>
 				<Text xml:lang="en">Transgender Male to Female</Text>
 				<Text xml:lang="mi">Whakawahine</Text>
-				<Description>Can be rolled up to code value 3:Gender Diverse</Description>
+				<Description>Can be rolled up to 3:Gender Diverse</Description>
 			</Value>  <!-- MTF -->
 			<Value>
 				<Code>32</Code>
 				<Text xml:lang="en">Transgender Female to Male</Text>
 				<Text xml:lang="mi">Tangata ira tāne</Text>
-				<Description>Can be rolled up to code value 3:Gender Diverse</Description>
+				<Description>Can be rolled up to 3:Gender Diverse</Description>
 			</Value>  <!-- FTM -->
 		</Values>
 	</CodeSet>    <!-- Gender -->

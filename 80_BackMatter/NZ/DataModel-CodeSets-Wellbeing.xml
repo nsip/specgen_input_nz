@@ -2,30 +2,29 @@
 	xmlns:xi="http://www.w3.org/2001/XInclude"
  	xmlns="http://sifassociation.org/SpecGen">
 
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the severity of a Wellbeing Characteristic or Alert.</p>
+		</Intro>
+		<ID>Wellbeing Severity</ID>
+		<Values>
+				<Value><Code>HGH</Code><Text>High</Text></Value>
+				<Value><Code>MOD</Code><Text>Moderate</Text></Value>
+				<Value><Code>LOW</Code><Text>Low</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Severity -->
 
 	<CodeSet>
-    <Intro>
-      <p>Standard codes denoting the severity of a Wellbeing Characteristic or Alert.</p>
-    </Intro>
-    <ID>Wellbeing Severity</ID>
-    <Values>
-			<Value><Code>HGH</Code><Text>High</Text></Value>
-			<Value><Code>MOD</Code><Text>Moderate</Text></Value>
-			<Value><Code>LOW</Code><Text>Low</Text></Value>
-    </Values>
-  </CodeSet>    <!-- Wellbeing Severity -->
-
-  <CodeSet>
-    <Intro>
-      <p>Standard codes denoting the status of the Wellbeing Response.</p>
-    </Intro>
-    <ID>Wellbeing Status</ID>
-    <Values>
-			<Value><Code>U</Code><Text>Unresolved</Text></Value>
-			<Value><Code>R</Code><Text>Resolved</Text></Value>
-			<Value><Code>O</Code><Text>Other</Text></Value>
-    </Values>
-  </CodeSet>    <!-- Wellbeing Status -->
+		<Intro>
+		<p>Standard codes denoting the status of the Wellbeing Response.</p>
+		</Intro>
+		<ID>Wellbeing Status</ID>
+		<Values>
+				<Value><Code>U</Code><Text>Unresolved</Text></Value>
+				<Value><Code>R</Code><Text>Resolved</Text></Value>
+				<Value><Code>O</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Status -->
 	
 
 	<!-- Wellbeing Alert classification codes -->
@@ -56,7 +55,7 @@
 			<Value>
 				<Code>LEA</Code>
 				<Text>Learning Support</Text>
-				<Description>Sub-categories Gifted and Talented, Disability, etc..</Description>
+				<Description>Sub-categories Gifted and Talented, Disability, etc.</Description>
 			</Value>
 			<Value><Code>PLA</Code><Text>Plan Review</Text></Value>
 			<Value><Code>CUS</Code><Text>Custodial</Text></Value>
@@ -80,7 +79,7 @@
 	<!-- Wellbeing Characteristic classification codes -->
 	<CodeSet>
 		<Intro>
-			<p>Standard codes denoting the Sub-Categories of a Wellbeing Characteristic.</p> 
+			<p>Standard codes denoting the third level category of the Wellbeing Characteristic.</p>
 		</Intro>
 		<ID>Wellbeing Characteristic Sub Category</ID>
 		<Values>
@@ -90,6 +89,48 @@
 			<Value><Code>DIET-04</Code><Text>Kosher</Text></Value>
 			<Value><Code>DIET-05</Code><Text>Pescetarian</Text></Value>
 			<Value><Code>DIET-06</Code><Text>Gluten-free</Text></Value>
+			<Value><Code>LSN-ABN</Code><Text>Absence</Text></Value>
+			<Value><Code>LSN-ACD</Code><Text>Academic</Text></Value>
+			<Value><Code>LSN-ANX</Code><Text>Anxiety</Text></Value>
+			<Value><Code>LSN-ASD</Code><Text>ASD</Text></Value>
+			<Value><Code>LSN-ATT</Code><Text>Attendance</Text></Value>
+			<Value><Code>LSN-AUD</Code><Text>Auditory Processing</Text></Value>
+			<Value><Code>LSN-BHV</Code><Text>Behaviour</Text></Value>
+			<Value><Code>LSN-COM</Code><Text>Communication</Text></Value>
+			<Value><Code>LSN-CPH</Code><Text>Comprehension</Text></Value>
+			<Value><Code>LSN-DCA</Code><Text>Dyscalculia</Text></Value>
+			<Value><Code>LSN-DEV</Code><Text>Developmental Delay</Text></Value>
+			<Value><Code>LSN-DGA</Code><Text>Dysgraphia</Text></Value>
+			<Value><Code>LSN-DPA</Code><Text>Dyspraxia</Text></Value>
+			<Value><Code>LSN-DSA</Code><Text>Dyslexia</Text></Value>
+			<Value><Code>LSN-ENG</Code><Text>Engagement</Text></Value>
+			<Value><Code>LSN-EPI</Code><Text>Epilepsy</Text></Value>
+			<Value><Code>LSN-ESL</Code><Text>ESOL</Text></Value>
+			<Value><Code>LSN-FCS</Code><Text>Focus</Text></Value>
+			<Value><Code>LSN-FMS</Code><Text>Fine Motor Skills</Text></Value>
+			<Value><Code>LSN-HRG</Code><Text>Hearing</Text></Value>
+			<Value><Code>LSN-HWG</Code><Text>Handwriting</Text></Value>
+			<Value><Code>LSN-IND</Code><Text>Independence</Text></Value>
+			<Value><Code>LSN-INT</Code><Text>Intellectual Disability</Text></Value>
+			<Value><Code>LSN-LIT</Code><Text>Literacy</Text></Value>
+			<Value><Code>LSN-LNG</Code><Text>Learning</Text></Value>
+			<Value><Code>LSN-MTH</Code><Text>Maths</Text></Value>
+			<Value><Code>LSN-NUM</Code><Text>Numeracy</Text></Value>
+			<Value><Code>LSN-ORL</Code><Text>Oral Language</Text></Value>
+			<Value><Code>LSN-ORS</Code><Text>ORS</Text></Value>
+			<Value><Code>LSN-OTH</Code><Text>Others</Text></Value>
+			<Value><Code>LSN-PHS</Code><Text>Physical Skills</Text></Value>
+			<Value><Code>LSN-PSL</Code><Text>Passive Learner</Text></Value>
+			<Value><Code>LSN-PST</Code><Text>Pastoral</Text></Value>
+			<Value><Code>LSN-RDG</Code><Text>Reading</Text></Value>
+			<Value><Code>LSN-ROL</Code><Text>Rate of Learning</Text></Value>
+			<Value><Code>LSN-ROP</Code><Text>Rate of Progress</Text></Value>
+			<Value><Code>LSN-SPH</Code><Text>Speech</Text></Value>
+			<Value><Code>LSN-SPL</Code><Text>Spelling</Text></Value>
+			<Value><Code>LSN-SRL</Code><Text>Social Relationships</Text></Value>
+			<Value><Code>LSN-VIS</Code><Text>Vision</Text></Value>
+			<Value><Code>LSN-WBG</Code><Text>Wellbeing</Text></Value>
+			<Value><Code>LSN-WRT</Code><Text>Writing </Text></Value>
 			<Value><Code>MH-1</Code><Text>Adjustment Disorder</Text></Value>
 			<Value><Code>MH-2</Code><Text>Anorexia</Text></Value>
 			<Value><Code>MH-3</Code><Text>Anxiety Disorder</Text></Value>
@@ -180,12 +221,13 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Standard codes denoting the Categories of a Wellbeing Characteristic.</p>
+			<p>Standard codes denoting the second level category of the Wellbeing Characteristic.</p>
 		</Intro>
 		<ID>Wellbeing Characteristic Category</ID>
 		<Values>
 			<Value><Code>MAO</Code><Text>Allergies - other</Text></Value>
 		<Value><Code>DIET</Code><Text>Dietary Preferences</Text></Value>
+		<Value><Code>LSN</Code><Text>Learning Support Need</Text></Value>
 		<Value><Code>MAIM</Code><Text>Auto-immune/Immune Disorders</Text></Value>
 		<Value><Code>MRD</Code><Text>Respiratory Disorder</Text></Value>
 		<Value><Code>MB</Code><Text>Blood disorder</Text></Value>
@@ -213,23 +255,38 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Standard codes denoting the classification of the Wellbeing Characteristic.</p>
+			<p>Standard codes denoting the first level category of the Wellbeing Characteristic. 
+				(Note: The second and third levels are Category and SubCategory)</p>
 		</Intro>
-		<ID>Wellbeing Characteristic Classification</ID>
+		<ID>Wellbeing Characteristic Class</ID>
 		<Values>
-			<Value><Code>M</Code><Text>Medical</Text></Value>
-			<Value><Code>D</Code><Text>Disability</Text></Value>
-			<Value><Code>S</Code><Text>SpecialNeeds</Text></Value>
-			<Value><Code>O</Code><Text>Other</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
+			<Value><Code>MDC</Code><Text>Medical</Text></Value>
+			<Value><Code>LSN</Code><Text>Learning Support Need</Text></Value>
+			<Value><Code>ALG</Code><Text>Allergy</Text></Value>
+			<Value><Code>DPR</Code><Text>Dietary Preference</Text></Value>
 		</Values>
-	</CodeSet>    <!-- Wellbeing Characteristic Classification -->
+	</CodeSet>    <!-- Wellbeing Characteristic Class -->
 
+	<CodeSet>
+		<Intro>
+			<p>Codes denoting the priority level of the characteristic in relation to 
+			other characteristics within the same classification.</p>
+		</Intro>
+		<ID>Wellbeing Characteristic Priority</ID>
+		<Values>
+			<Value><Code>HGH</Code><Text>High</Text></Value>
+			<Value><Code>MOD</Code><Text>Moderate</Text></Value>
+			<Value><Code>LOW</Code><Text>Low</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Characteristic Priority -->
 
 
 	<!-- Wellbeing Event classification codes -->
 	<CodeSet>
       <Intro>
-        <p>Standard codes denoting the category of the Wellbeing Event.</p>
+        <p>Standard codes denoting the second level category of the Wellbeing Event.
+				(Note: The first and third levels are CategoryClass and SubCategory)</p>
       </Intro>
       <ID>Wellbeing Event Category</ID>
 		<Values>
@@ -251,13 +308,14 @@
 			<Value><Code>M7</Code><Text>Possession, use or supply of substances or objects with restricted sale</Text></Value>
 			<Value><Code>M8</Code><Text>Possession, use or supply of illegal substances or objects</Text></Value>
 			<Value><Code>M9</Code><Text>E-breaches</Text></Value>
-			<Value><Code>99</Code><Text>Other Behaviour</Text></Value>
+			<Value><Code>OT</Code><Text>Other Behaviour</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Wellbeing Event Category -->
     
 	<CodeSet>
       <Intro>
-        <p>Standard codes denoting the sub-category of the Wellbeing Event.</p>
+        <p>Standard codes denoting the third level category of the Wellbeing Event.
+				(Note: The first and second levels are CategoryClass and Category)</p>
       </Intro>
       <ID>Wellbeing Event Sub Category</ID>
       <Values>
@@ -461,14 +519,15 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Standard codes denoting the category class of the Wellbeing Event.</p>
+			<p>Standard codes denoting the first level category of the Wellbeing Event.
+			(Note: The second and third levels are Category and SubCategory)</p>
 		</Intro>
 		<ID>Wellbeing Event Category Class</ID>
 		<Values>
-			<Value><Code>P</Code><Text>Positive</Text></Value>
-			<Value><Code>N</Code><Text>Negative</Text></Value>
-			<Value><Code>D</Code><Text>Data Record Only</Text></Value>
-			<Value><Code>O</Code><Text>Other</Text></Value>
+			<Value><Code>POS</Code><Text>Positive</Text></Value>
+			<Value><Code>NEG</Code><Text>Negative</Text></Value>
+			<Value><Code>DAT</Code><Text>Data Record Only</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Wellbeing Event Category Class -->
 
@@ -488,62 +547,132 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Code set denoting the action taken by the reporting staff member to the
-			wellbeing event.</p>
+			<p>Code set denoting the actions that can be taken as a result of the Wellbeing event.</p>
 		</Intro>
 		<ID>Wellbeing Event Action Taken</ID>
 		<Values>
 			<Value>
-				<Code>ACPE</Code>
-				<Text>Action Pending</Text>
-				<Description>Consequence for referral is pending. Referral will be modified when “action taken” is determined.</Description>
+        <Code>AASS</Code>
+				<Text>Additional Attendance / Saturday School</Text>
+				<Description>
+					Consequence for referral results in student attending classes on a Saturday.
+				</Description>
 			</Value>
 			<Value>
-				<Code>AASS</Code>
-				<Text>Additional Attendance / Saturday School</Text>
-				<Description>Consequence for referral results in student attending classes on a Saturday.</Description>
+				<Code>ACPE</Code>
+				<Text>Action Pending</Text>
+				<Description>
+					Consequence for referral is pending. Referral will be modified
+				  when “action taken” is determined.
+				</Description>
 			</Value>
 			<Value>
 				<Code>ALPL</Code>
 				<Text>Alternative Placement</Text>
-				<Description>Consequence for referral results in student being placed in a different educational setting.</Description>
+				<Description>
+					Consequence for referral results in student being placed in a
+					different educational setting.
+				</Description>
 			</Value>
 			<Value>
 				<Code>BUSU</Code>
 				<Text>Bus Suspension</Text>
-				<Description>Consequence for referral results in 1-3 day period when student not allowed on the bus</Description>
+				<Description>
+					Consequence for referral results in 1-3 day period when student not allowed on the bus.
+				</Description>
 			</Value>
 			<Value>
 				<Code>COSE</Code>
 				<Text>Community Service</Text>
-				<Description>Consequence for referral results in involvement in community service activities or projects.</Description>
+				<Description>
+					Consequence for referral results in involvement in community
+					service activities or projects.
+				</Description>
 			</Value>
 			<Value>
 				<Code>COST</Code>
 				<Text>Conference with Student</Text>
-				<Description>Consequence for referral results in student meeting with administrator, 
+				<Description>
+					Consequence for referral results in student meeting with administrator,
 					teacher, and/or parent (in any combination).
 				</Description>
 			</Value>
 			<Value>
 				<Code>EXPU</Code>
 				<Text>Expulsion</Text>
-				<Description>Consequence for referral results in student being dismissed from school permanently</Description>
-			</Value>
-			<Value>
-				<Code>ISSU</Code>
-				<Text>In School Suspension</Text>
-				<Description>Consequence for referral results in a period of time spent away from scheduled activities/classes during the school day.</Description>
+				<Description>
+					Consequence for referral results in student being dismissed from school permanently.
+				</Description>
 			</Value>
 			<Value>
 				<Code>ININ</Code>
 				<Text>Individualised Instruction</Text>
-				<Description>Consequence for referral results in student receiving individualised instruction specifically related to the student’s problem behaviors.</Description>
+				<Description>
+					Consequence for referral results in student receiving individualized instruction
+					specifically related to the student’s problem behaviors.
+				</Description>
+			</Value>
+			<Value>
+				<Code>ISSU</Code>
+				<Text>In-School Suspension</Text>
+				<Description>
+					Consequence for referral results in a period of time spent away from scheduled
+					activities/classes during the school day.
+				</Description>
 			</Value>
 			<Value>
 				<Code>LOPR</Code>
 				<Text>Loss of Privilege</Text>
-				<Description>Consequence for referral results in student being unable to participate in some type of privilege.</Description>
+				<Description>
+					Consequence for referral results in student being unable to participate in some type of privilege.
+				</Description>
+			</Value>
+			<Value>
+				<Code>OATA</Code>
+				<Text>Other Action Taken</Text>
+				<Description>
+					Consequence for referral results in administrative decision that is not listed. Staff using
+					this area will specify the administrative action taken.
+				</Description>
+			</Value>
+			<Value>
+				<Code>OOSS</Code>
+				<Text>Out-of-School Suspension</Text>
+				<Description>
+					Consequence for referral results in a 1-3 day period when student
+					is not allowed on campus.
+				</Description>
+			</Value>
+			<Value>
+				<Code>PACO</Code>
+				<Text>Parent Contact</Text>
+				<Description>
+					Consequence for referral results in parent communication by phone, email, or person-to-person
+					about the problem.
+				</Description>
+			</Value>
+			<Value>
+				<Code>RECS</Code>
+				<Text>Restitution / Community Service</Text>
+				<Description>
+					Consequence for referral results in apologizing or compensating for loss, damage,
+					or injury; community services.
+				</Description>
+			</Value>
+			<Value>
+				<Code>TIOF</Code>
+				<Text>Time in Office</Text>
+				<Description>
+					Consequence for referral results in student spending time in the office away
+					from scheduled activities/classes.
+				</Description>
+				</Value><Value>
+				<Code>TODE</Code>
+				<Text>Time Out / Detention</Text>
+				<Description>
+					Consequence for referral results in student spending time in a specified area
+					away from scheduled activities/classes.
+				</Description>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Wellbeing Event Action Taken -->
@@ -552,7 +681,7 @@
 		<Intro>
 			<p>Codes denoting the type of restraint used on a student during a Wellbeing Event.</p>
 		</Intro>
-		<ID>Wellbeing Event Restraint</ID>
+		<ID>Wellbeing Event Restraint Type</ID>
 		<Values>
 			<Value>
 				<Code>NON</Code>
@@ -640,7 +769,7 @@
 			<Value><Code>LOR</Code><Text>Letter of Recognition</Text></Value>
 			<Value><Code>OTH</Code><Text>Other</Text></Value>
     </Values>
-	</CodeSet>    <!-- Wellbeing Award Type -->
+  	</CodeSet>    <!-- Wellbeing Award Type -->
 
 
 
