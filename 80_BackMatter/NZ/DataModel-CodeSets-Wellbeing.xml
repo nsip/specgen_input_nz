@@ -806,7 +806,7 @@
 	<!-- Learning Support Participation codes -->
 	<CodeSet>
 		<Intro>
-			<p>Standard codes denoting the type of learning support, e.g. Fund, Programme, Service, etc.</p>
+			<p>Standard codes denoting the type of learning support, e.g. Fund, Programme, Service.</p>
 		</Intro>
 		<ID>Learning Support Type</ID>
 		<Values>
@@ -821,7 +821,7 @@
 	
 	<CodeSet>
 		<Intro>
-			<p>Standard codes denoting the kinds of learning support intervention</p>
+			<p>Standard codes denoting the learning support intervention type, e.g. ESOL, First STEPs, MST.</p>
 		</Intro>
 		<ID>Learning Support Intervention</ID>
 		<Values>
@@ -912,7 +912,8 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Code set denoting the possible outcomes of a student's participation in a learning support intervention.</p>
+			<p>Code set denoting the possible outcomes of a student's
+			participation on a learning support intervention.</p>
 		</Intro>
 		<ID>Learning Support Intervention Outcome</ID>
 		<Values>
@@ -942,7 +943,7 @@
 		<ID>Learning Support Target Audience</ID>
 		<Values>
 			<Value><Code>EDU</Code><Text>Educators</Text></Value>
-			<Value><Code>EFW</Code><Text>Educators/FamilyWhānau</Text></Value>
+			<Value><Code>EFW</Code><Text>Educators/Family/Whānau</Text></Value>
 			<Value><Code>FWH</Code><Text>Family/Whānau</Text></Value>
 			<Value>
 				<Code>FFW</Code>
@@ -952,23 +953,20 @@
 				 </Description>
 			</Value>
 			<Value>
-				<Code>FOG</Code><Text>Organisations &amp; Other Groups</Text>
+				<Code>FOG</Code><Text>Organisation</Text>
 				<Description>For organisations or other groups requiring a training or education event</Description>
 			</Value>
-
 			<Value>
-				<Code>FPW</Code><Text>Pre-school Whānau</Text>
+				<Code>PRE</Code><Text>Pre-School</Text>
 				<Description>For parents, whānau, and caregivers of pre-school children</Description>
 			</Value>
-
 			<Value>
-				<Code>FTF</Code><Text>School Whānau</Text>
+				<Code>TFP</Code><Text>Team</Text>
 				<Description>For teams of family and professionals, working together to support tamariki with 
 					autism aged 5-12 years. Teams may include parents, caregivers, other family/whānau, primary school
 					teachers, teacher aids, learning assistants, SENCOs or RTLBs
 				</Description>
 			</Value>
-
 			<Value><Code>IST</Code><Text>Individual Students</Text></Value>
 			<Value><Code>PWH</Code><Text>Parents/Whānau</Text></Value>
 			<Value><Code>SWD</Code><Text>School Wide</Text></Value>
@@ -1057,7 +1055,7 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Code set denoting who can fund a learning support intervention.</p>
+			<p>Code set denoting who can provide a learning support intervention.</p>
 		</Intro>
 		<ID>Learning Support Provided By</ID>
 		<Values>
@@ -1089,11 +1087,11 @@
 			<Value><Code>CRO</Code><Text>Contributing - Relating to Others</Text></Value>
 			<Value><Code>COM</Code><Text>Communication - Using Language, Symbols and Texts</Text></Value>
 		</Values>
-	</CodeSet>    <!-- Learning Support Intervention Status -->
+	</CodeSet>    <!-- Learning Support Te Whariki Domain -->
 
 	<CodeSet>
 		<Intro>
-			<p>Code set denoting the status of the learning support participation.</p>
+			<p>Code set denoting the status of a learning support intervention, e.g. In Development, Active.</p>
 		</Intro>
 		<ID>Learning Support Intervention Status</ID>
 		<Values>
@@ -1113,7 +1111,7 @@
 			<Value><Code>ACT</Code><Text>Active</Text></Value>
 			<Value><Code>COM</Code><Text>Completed</Text></Value>
 			<Value><Code>DEC</Code><Text>Declined</Text></Value>
-			<Value><Code>ONH</Code><Text>On Hold</Text></Value>
+			<Value><Code>ONH</Code><Text>On-Hold</Text></Value>
 			<Value><Code>DNC</Code><Text>Did Not Complete</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Participation Status -->

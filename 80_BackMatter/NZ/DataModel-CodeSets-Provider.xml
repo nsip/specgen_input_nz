@@ -473,26 +473,26 @@
 		<Values>
 			<Value>
 				<Code>CAR</Code>
-				<Text>Contributor &amp; Receiver</Text>
+				<Text>Contributor and Receiver</Text>
 				<Description>Source Provider contributes learners to the related Provider, once the learners have
 					completed education at the source Provider.</Description> 
 			</Value>
 			<Value>
 				<Code>CAH</Code>
-				<Text>Client &amp; Host</Text>
+				<Text>Client and Host</Text>
 				<Description>Source Provider sends learners to the related Provider for the provision of some classes.
 					Exact student and class details will be recorded in co-enrolment flavour of
 					StudentProviderEnrolment.</Description>
 			</Value>
 			<Value>
 				<Code>TPU</Code>
-				<Text>Teen Parent Unit &amp; Host</Text>
+				<Text>Teen Parent Unit</Text>
 				<Description>Source Provider is a Teen Parent Unit which is operated as part of the related Provider.
 					Learners who are also parents attend classes at both the Teen Parent Unit and the host school.</Description>
 			</Value>
 			<Value>
 				<Code>ACE</Code>
-				<Text>Activity Centre &amp; Host</Text>
+				<Text>Activity Centre</Text>
 				<Description>Source Provider is an Activity Centre which is operated as part of the related Provider.
 					Learners who have been identified as being at risk of disengaging from mainstream Schooling
 					attend classes at both the Activity Centre and the host school.</Description>
@@ -739,7 +739,8 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Describes the role a staff member has with a TeachingGroup</p>
+			<p>Code set denoting the role the staff member is performing within the
+			teaching group, e.g. Teacher, Teacher Aide, Student Teacher.</p>
 		</Intro>
 		<ID>Staff Teaching Group Role</ID>
 		<Values>

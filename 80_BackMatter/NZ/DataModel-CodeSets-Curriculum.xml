@@ -117,7 +117,7 @@
 
 	<CodeSet>
 		<Intro>
-			<p>A code denoting the status of the LearningStandard throughout its life-cycle.</p>
+			<p>Code set denoting the type of standard e.g., unit standard, achievement standard.</p>
 		</Intro>
 		<ID>Learning Standard Type</ID>
 		<Values>
@@ -125,15 +125,15 @@
 				<Code>US</Code>
 				<Text>Unit Standard</Text>
 				<Description>
-					<p>Developed by Industry Training Organisations or NZQA</p>
+					<p>Developed by Industry Training Organisations or NZQA.</p>
 				</Description>
 			</Value>
 			<Value>
 				<Code>AS</Code>
 				<Text>Achievement Standard</Text>
 				<Description>
-					<p>Developed by the MoE, derived from the achievement objectives 
-						of the New Zealand	Curriculum and Te Marautanga o Aotearoa.</p>
+					<p>Developed by MoE, derived from the achievement objectives 
+						of the NZ	Curriculum or Te Marautanga o Aotearoa</p>
 				</Description>
 			</Value>
 		</Values>
@@ -194,7 +194,7 @@
 				</Description>
 			</Value>
 			<Value>
-				<Code>SUCCESS</Code>
+				<Code>SUCCES</Code>
 				<Text>Successor</Text>
 				<Description>
 					<p>The related LearningStandard is a successor to this LearningStandard, 
@@ -255,8 +255,9 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Codes denoting Subject Areas within the Learning Areas defined by the NZ Curriculum
-			and Te Marautanga o Aotearoa</p>
+			<p>Codes denoting Learning Areas defined by the NZ Curriculum
+			and Te Marautanga o Aotearoa, as well as matching Subject
+			Areas.</p>
 		</Intro>
 		<ID>Subject Area</ID>
 		<Values>
@@ -514,8 +515,9 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Code set denoting the level of progress the student has made against the learning 
-				strand achievement objective.  e.g. Beginner, Proficient, and Advanced.</p>
+			<p>Code set denoting the level of progress the student has made
+			against the learning strand achievement objectiv. e.g. Beginner,
+			Proficient, and Advanced.</p>
 		</Intro>
 		<ID>Strand Achievement Progress Level</ID>
 		<Values>
