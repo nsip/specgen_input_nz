@@ -196,7 +196,7 @@
 					<RefId>2752a16b-b62a-4973-9d44-23e13e1c037b</RefId>
 					<LocalId>91165-v2</LocalId>
 					<Name>Demonstrate understanding of the properties of selected organic compounds</Name>
-					<ObjectType>AssessmentTaskResult</ObjectType>
+					<ObjectType>StudentAssessmentTaskResult</ObjectType>
 					<AssessmentType>EXT</AssessmentType>
 					<Result>Achieved</Result>
 					<Date>2016-06-28</Date>
@@ -206,7 +206,7 @@
 					<RefId>eca0da5d-94af-4223-aaa6-7c0083006efd</RefId>
 					<LocalId>91166-v2</LocalId>
 					<Name>Demonstrate understanding of chemical reactivity</Name>
-					<ObjectType>AssessmentTaskResult</ObjectType>
+					<ObjectType>StudentAssessmentTaskResult</ObjectType>
 					<AssessmentType>INT</AssessmentType>
 					<Result>Achieved with merit</Result>
 					<Date>2016-06-01</Date>
@@ -216,7 +216,7 @@
 					<RefId>12f4761d-5e97-4e12-804e-e16d882c86c7</RefId>
 					<LocalId>91167-v2</LocalId>
 					<Name>Demonstrate understanding of oxidation-reduction</Name>
-					<ObjectType>AssessmentTaskResult</ObjectType>
+					<ObjectType>StudentAssessmentTaskResult</ObjectType>
 					<AssessmentType>EXT</AssessmentType>
 					<Result>Achieved</Result>
 					<Date>2016-06-01</Date>
@@ -279,7 +279,7 @@
 				<RefId>eca0da5d-94af-4223-aaa6-7c0083006efd</RefId>
 				<LocalId>91166-v2</LocalId>
 				<Name>Demonstrate understanding of chemical reactivity</Name>
-				<ObjectType>AssessmentTaskResult</ObjectType>
+				<ObjectType>StudentAssessmentTaskResult</ObjectType>
 				<AssessmentType>INT</AssessmentType>
 				<Result>Achieved with merit</Result>
 				<Date>2016-06-01</Date>
