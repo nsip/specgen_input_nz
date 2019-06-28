@@ -122,21 +122,21 @@
 			</Value>    <!-- Year Level -->
 			<Value>
 			  <Code>NA</Code>
-			  <Text>Name</Text>
+			  <Text>NA</Text>
 			  <Description>NZQA Unit Standards: Not Achieved, Achieved</Description>
-			</Value>
+			</Value>    <!-- NA -->
 			<Value>
 				<Code>NAM</Code>
 				<Text>NAME</Text>
 				<Description>NZQA Achievement Standards: Not Achieved, Achieved, Achieved with Merit, Achieved with Excellence</Description>
-			</Value>    <!-- NA -->
+			</Value>    <!-- NAME -->
 
 			<!--asTTle metrics -->
 			<Value>
 				<Code>CUR</Code>
 				<Text>Curriculum Level</Text>
 				<Description>Student is assessed to be at one of the levels defined by The National Curriculum: 1A, 1B through 5A, 5B</Description>
-			</Value>
+			</Value>    <!-- Curriculum Level -->
 		</Values>
 	</CodeSet>    <!-- Score Metric -->
 

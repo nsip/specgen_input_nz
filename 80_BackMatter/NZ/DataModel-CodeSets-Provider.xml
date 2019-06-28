@@ -101,11 +101,11 @@
 		<Values>
 			<Value>
 				<Code>CMP10</Code>
-				<Text>Composite (Year 1-10)</Text>
+				<Text>Composite School (Year 1-10)</Text>
 			</Value>    <!-- Composite (Year 1-10) -->
 			<Value>
 				<Code>CMP15</Code>
-				<Text>Composite (Year 1-15)</Text>
+				<Text>Composite School (Year 1-15)</Text>
 			</Value>    <!-- Composite (Year 1-15) -->
 			<Value>
 				<Code>CONTR</Code>
@@ -113,7 +113,7 @@
 			</Value>    <!-- Contributing Primary (Year 1-6) -->
 			<Value>
 				<Code>CORRE</Code>
-				<Text>Correspondence School</Text>
+				<Text>The Correspondence School</Text>
 			</Value>    <!-- Correspondence School -->
 			<Value>
 				<Code>FULLP</Code>
@@ -125,7 +125,7 @@
 			</Value>    <!-- Intermediate (Year 7-8) -->
 			<Value>
 				<Code>RESTR</Code>
-				<Text>Restricted Composite (Year 7-10)</Text>
+				<Text>Restricted Composite School (Year 7-10)</Text>
 			</Value>    <!-- Restricted Composite (Year 7-10) -->
 			<Value>
 				<Code>JUNIO</Code>
@@ -137,11 +137,11 @@
 			</Value>    <!-- Senior Secondary (Year 11-15) -->
 			<Value>
 				<Code>SECSE</Code>
-				<Text>Secondary (Year 7-15)</Text>
+				<Text>Secondary School (Year 7-15)</Text>
 			</Value>    <!-- Secondary (Year 7-15) -->
 			<Value>
 				<Code>SECNI</Code>
-				<Text>Secondary (Year 9-15)</Text>
+				<Text>Secondary School (Year 9-15)</Text>
 			</Value>    <!-- Secondary (Year 9-15) -->
 			<Value>
 				<Code>SPECI</Code>
@@ -149,7 +149,7 @@
 			</Value>    <!-- Special School -->
 			<Value>
 				<Code>TEENPA</Code>
-				<Text>Teen Parent Unit</Text>
+				<Text>Teen Parent Unit (Year 9-15)</Text>
 			</Value>    <!-- Teen Parent Unit -->
 			<Value>
 				<Code>ACTIV</Code>
@@ -448,19 +448,23 @@
 			<Value>
 				<Code>TPU</Code>
 				<Text>Teen Parent Unit</Text>
+				<Description>Related organisation is a Teen Parent Unit co-located with the main Organisation.</Description>
 			</Value>
 			<Value>
 				<Code>ACR</Code>
 				<Text>Activity Centre</Text>
+				<Description>Related organisation is an Activity Centre co-located with the main Organisation.</Description>
 			</Value>
 			<Value>
-				<Code>LOI</Code>
-				<Text/>
+				<Code>MOE</Code>
+				<Text>MoE Local Office</Text>
+				<Description>Related organisation is Ministry of Education Local Office that deals with the Provider.</Description>
 			</Value>
 			<Value>
 				<Code>COL</Code>
 				<Text xml:lang="en">Community of Learning</Text>
 				<Text xml:lang="mi">Kāhui Ako</Text>
+				<Description>Related organisation is the Community of Learning / Kāhui Ako that the main Organisation is a member of</Description>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Organisation Relationship Type -->

@@ -225,6 +225,10 @@
 				<Text>NZ Resident</Text>
 				<Description>Includes Australian residents classified as NZ resident once arrived in NZ</Description>
 			</Value>
+			<Value>
+				<Code>NOPR</Code>
+				<Text>Not Provided</Text>
+			</Value>
 		</Values>
 	</CodeSet>    <!-- Citizenship Status -->
 	<CodeSet>
@@ -1689,15 +1693,15 @@
 				<Text>Ngāti Kahu</Text>
 			</Value>
 			<Value>
-				<Code>0103</Code>
+				<Code>NZS0103</Code>
 				<Text>Ngāti Kurī</Text>
 			</Value>
 			<Value>
-				<Code>0104</Code>
+				<Code>NZS0104</Code>
 				<Text>Ngāpuhi</Text>
 			</Value>
 			<Value>
-				<Code>0105</Code>
+				<Code>NZS0105</Code>
 				<Text>Ngāpuhi ki Whaingaroa-Ngāti Kahu ki Whaingaroa</Text>
 			</Value>
 			<Value>
@@ -2479,7 +2483,6 @@
 			<Value><Code>NZS20103</Code><Text>Worldwide Church of God</Text></Value>
 			<Value><Code>NZS20199</Code><Text>Adventist nec</Text></Value>
 			<Value><Code>NZS202</Code><Text>Anglican</Text></Value>
-			<Value><Code>NZS20201</Code><Text>Anglican</Text></Value>
 			<Value><Code>NZS203</Code><Text>Asian Christian</Text></Value>
 			<Value><Code>NZS20301</Code><Text>Chinese Christian</Text></Value>
 			<Value><Code>NZS20302</Code><Text>Korean Christian</Text></Value>
@@ -2507,9 +2510,7 @@
 			<Value><Code>NZS209</Code><Text>Jehovah's Witnesses</Text></Value>
 			<Value><Code>NZS20901</Code><Text>Jehovah's Witnesses</Text></Value>
 			<Value><Code>NZS210</Code><Text>Latter-day Saints</Text></Value>
-			<Value><Code>NZS21001</Code><Text>Latter-day Saints</Text></Value>
 			<Value><Code>NZS211</Code><Text>Lutheran</Text></Value>
-			<Value><Code>NZS21101</Code><Text>Lutheran</Text></Value>
 			<Value><Code>NZS212</Code><Text>Methodist</Text></Value>
 			<Value><Code>NZS21201</Code><Text>Tongan Methodist</Text></Value>
 			<Value><Code>NZS21299</Code><Text>Methodist nec</Text></Value>
@@ -2555,19 +2556,12 @@
 			<Value><Code>NZS29907</Code><Text>Nazarene</Text></Value>
 			<Value><Code>NZS29908</Code><Text>Religious Society of Friends (Quaker)</Text></Value>
 			<Value><Code>NZS29909</Code><Text>Unitarian</Text></Value>
-			<Value><Code>NZS29999</Code><Text>Christian nec</Text></Value>
 			<Value><Code>NZS3</Code><Text>Hindu</Text></Value>
-			<Value><Code>NZS301</Code><Text>Hindu</Text></Value>
 			<Value><Code>NZS30101</Code><Text>Hare Krishna</Text></Value>
 			<Value><Code>NZS30102</Code><Text>Yoga</Text></Value>
-			<Value><Code>NZS30199</Code><Text>Hindu nec</Text></Value>
 			<Value><Code>NZS4</Code><Text>Islam/Muslim</Text></Value>
-			<Value><Code>NZS401</Code><Text>Islam/Muslim</Text></Value>
 			<Value><Code>NZS40101</Code><Text>Sufi</Text></Value>
-			<Value><Code>NZS40199</Code><Text>Islam/Muslim nec</Text></Value>
 			<Value><Code>NZS5</Code><Text>Judaism/Jewish</Text></Value>
-			<Value><Code>NZS501</Code><Text>Judaism/Jewish</Text></Value>
-			<Value><Code>NZS50101</Code><Text>Judaism/Jewish</Text></Value>
 			<Value><Code>NZS6</Code><Text>Māori Christian</Text></Value>
 			<Value><Code>NZS601</Code><Text>Ratana</Text></Value>
 			<Value><Code>NZS602</Code><Text>Ringatū</Text></Value>
@@ -2579,27 +2573,22 @@
 			<Value><Code>NZS70202</Code><Text>Druid</Text></Value>
 			<Value><Code>NZS70203</Code><Text>Pantheist</Text></Value>
 			<Value><Code>NZS70204</Code><Text>Wiccan</Text></Value>
-			<Value><Code>NZS70299</Code><Text>Nature and Earth Based Religions nec</Text></Value>
 			<Value><Code>NZS703</Code><Text>Satanism</Text></Value>
 			<Value><Code>NZS704</Code><Text>Spiritualist</Text></Value>
 			<Value><Code>NZS709</Code><Text>Other New Age Religions</Text></Value>
 			<Value><Code>NZS70901</Code><Text>Rastafarianism</Text></Value>
-			<Value><Code>NZS70999</Code><Text>Other New Age Religions nec</Text></Value>
 			<Value><Code>NZS8</Code><Text>Other Religions</Text></Value>
 			<Value><Code>NZS801</Code><Text>Baha'i</Text></Value>
 			<Value><Code>NZS802</Code><Text>Chinese Religions</Text></Value>
 			<Value><Code>NZS80201</Code><Text>Confucianism</Text></Value>
 			<Value><Code>NZS80202</Code><Text>Taoism</Text></Value>
-			<Value><Code>NZS80299</Code><Text>Chinese Religions nec</Text></Value>
 			<Value><Code>NZS803</Code><Text>Jainism</Text></Value>
-			<Value><Code>NZS804</Code><Text>Japanese Religions</Text></Value>
+			<Value><Code>NZS804</Code><Text>Japanese Religion</Text></Value>
 			<Value><Code>NZS80401</Code><Text>Mahikari</Text></Value>
 			<Value><Code>NZS80402</Code><Text>Shinto</Text></Value>
 			<Value><Code>NZS80403</Code><Text>Tenrikyo</Text></Value>
-			<Value><Code>NZS80499</Code><Text>Japanese Religion nec</Text></Value>
 			<Value><Code>NZS805</Code><Text>Māori Religion</Text></Value>
 			<Value><Code>NZS80501</Code><Text>Hauhau</Text></Value>
-			<Value><Code>NZS80599</Code><Text>Māori Religion nec</Text></Value>
 			<Value><Code>NZS806</Code><Text>Sikh</Text></Value>
 			<Value><Code>NZS807</Code><Text>Theism</Text></Value>
 			<Value><Code>NZS808</Code><Text>Zoroastrian</Text></Value>

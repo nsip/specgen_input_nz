@@ -35,27 +35,22 @@
 			<Value>
 				<Code>1</Code>
 				<Text>Level 1</Text>
-				<Description>Applies to year levels 1 &amp; 2</Description>
 			</Value>
 			<Value>
 				<Code>2</Code>
 				<Text>Level 2</Text>
-				<Description>Applies to year levels 3 &amp; 4</Description>
 			</Value>
 			<Value>
 				<Code>3</Code>
 				<Text>Level 3</Text>
-				<Description>Applies to year levels 5 &amp; 6</Description>
 			</Value>
 			<Value>
 				<Code>4</Code>
 				<Text>Level 4</Text>
-				<Description>Applies to year levels 7 &amp; 8</Description>
 			</Value>
 			<Value>
 				<Code>5</Code>
 				<Text>Level 5</Text>
-				<Description>Applies to year levels 9 &amp; 10</Description>
 			</Value>
 		</Values>
 	</CodeSet>   <!-- CurriculumLevel -->
@@ -419,7 +414,7 @@
 			</Value>
 			<Value>
 				<Code>ONG</Code>
-				<Text>Ongoing, As Available, Ad-Hoc</Text>
+				<Text>Ongoing / As Available / Ad-Hoc</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- CurriculumProgressReportTimeFrame -->

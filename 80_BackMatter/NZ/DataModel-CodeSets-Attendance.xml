@@ -37,13 +37,9 @@
 		<ID>Attendance Code</ID>
 		<Values>
 			<Value>
-				<Code>?</Code>
-				<Text>Absent</Text>
-				<Description>Unknown reason for absence</Description>
-			</Value>
-			<Value>
 				<Code>A</Code>
-				<Text>Attending alternative education</Text>
+				<Text>Alternative Education</Text>
+				<Description>Attending Alternative Education</Description>
 			</Value>
 			<Value>
 				<Code>L</Code>
@@ -66,7 +62,7 @@
 			<Value>
 				<Code>I</Code>
 				<Text>Internal school appointment</Text>
-				<Description>Dean, DP, Sports administrator, Attendance officer, etc.</Description>
+				<Description>Internal school appointment with Dean, DP, sports administrator, coach, attendance officer etc.</Description>
 			</Value>
 			<Value>
 				<Code>E</Code>
@@ -90,12 +86,13 @@
 			</Value>
 			<Value>
 				<Code>V</Code>
-				<Text>Examination or unsupervised study</Text>
-				<Description>Student is on the school site</Description>
+				<Text>Exam onsite</Text>
+				<Description>Examination or unsupervised study. Student is on the school-site</Description>
 			</Value>
 			<Value>
 				<Code>N</Code>
-				<Text>School based activity</Text>
+				<Text>Activity</Text>
+				<Description>Attending an on-site school organised activity.</Description>
 			</Value>
 			<Value>
 				<Code>Q</Code>
@@ -119,7 +116,7 @@
 			<Value>
 				<Code>G</Code>
 				<Text>Holiday</Text>
-				<Description>During term time</Description>
+				<Description>during term time</Description>
 			</Value>
 			<Value>
 				<Code>O</Code>
@@ -127,33 +124,44 @@
 			</Value>
 			<Value>
 				<Code>K</Code>
-				<Text>Attending Teen Parent Unit</Text>
+				<Text>Teen Parent Unit</Text>
+				<Description>Attending Teen Parent Unit</Description>
+			</Value>
+			<Value>
+				<Code>?</Code>
+				<Text>Absent</Text>
+				<Description>Unknown reason for absence</Description>
 			</Value>
 			<Value>
 				<Code>Y</Code>
-				<Text>Attending Activity Centre</Text>
+				<Text>Activity Centre</Text>
+				<Description>Attending Activity Centre</Description>
 			</Value>
 			<Value>
 				<Code>F</Code>
-				<Text>Attending offsite course/class</Text>
+				<Text>Offsite</Text>
+				<Description>Attending offsite course/class</Description>
 			</Value>
 			<Value>
 				<Code>H</Code>
-				<Text>Attending Health Camp/Regional Health School</Text>
+				<Text>Health</Text>
+				<Description>Attending a Health Camp/Regional Health School/Residential School</Description>
 			</Value>
 			<Value>
 				<Code>C</Code>
-				<Text>Involved in Justice Court proceedings</Text>
+				<Text>Justice</Text>
+				<Description>Involved in Justice Court proceedings</Description>
 			</Value>
 			<Value>
 				<Code>U</Code>
-				<Text>Stood down or suspended</Text>
+				<Text>Suspended</Text>
+				<Description>Stood down or suspended</Description>
 			</Value>
 			<Value>
 				<Code>Z</Code>
-				<Text>Secondary Tertiary Program</Text>
-				<Description>including Trades Academies</Description>
+				<Text>STP</Text>
+				<Description>Secondary Tertiary Program (including Trades Academies)</Description>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Attendance Code -->
+	</CodeSet>
 </IncludeGroup>
