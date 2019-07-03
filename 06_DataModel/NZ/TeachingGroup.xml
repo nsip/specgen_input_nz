@@ -8,9 +8,7 @@
       xmlns="http://sifassociation.org/SpecGen">
 
   <Key>RefId</Key>
-
   <EventsReported>true</EventsReported>
-
   <Item>
     <Element>TeachingGroup</Element>
 	  <privacyRating>Medium</privacyRating>
@@ -31,7 +29,6 @@
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>       <!-- RefId -->
-
   <Item>
     <Element>LocalId</Element>
     <Characteristics>M</Characteristics>
@@ -41,7 +38,6 @@
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>       <!-- LocalId -->
-
   <Item>
     <Element>ShortName</Element>
     <Characteristics>M</Characteristics>
@@ -51,7 +47,6 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>       <!-- ShortName -->
-
   <Item>
     <Element>LongName</Element>
     <Characteristics>O</Characteristics>
@@ -61,7 +56,6 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>       <!-- LongName -->
-
   <Item>
     <Element>GroupType</Element>
     <Characteristics>O</Characteristics>
@@ -72,7 +66,6 @@
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsTeachingGroupTypeType"/>
   </Item>       <!-- GroupType -->
-  
   <Item>
     <Element>Provider</Element>
     <Characteristics>O</Characteristics>
@@ -82,7 +75,6 @@
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
   </Item>       <!-- Provider -->
-
   <Item>
     <Element>TeachingProvider</Element>
     <Characteristics>O</Characteristics>
@@ -92,7 +84,6 @@
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
   </Item>       <!-- TeachingProvider -->
-
   <Item>
     <Element>SchoolYear</Element>
     <Characteristics>M</Characteristics>
@@ -102,7 +93,6 @@
     </Description>
     <Type name="xs:gYear"></Type>
   </Item>       <!-- SchoolYear -->
-
   <Item>
     <Element>BeginDate</Element>
     <Characteristics>O</Characteristics>
@@ -113,7 +103,6 @@
     </Description>
     <Type name="xs:date"></Type>
   </Item>       <!-- BeginDate -->
-
   <Item>
     <Element>EndDate</Element>
     <Characteristics>O</Characteristics>
@@ -124,17 +113,6 @@
     </Description>
     <Type name="xs:date"></Type>
   </Item>       <!-- EndDate -->
-
-  <Item>
-    <Element>TeachingSchedule</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>List of schedule entries recording what ProviderCourses, Learning Areas or Subject Areas are being taught to the TeachingGroup when.</p>
-    </Description>
-    <Type ref="CommonTypes" name="TeachingGroupScheduleListType"></Type>
-  </Item>       <!-- TeachingGroupScheduleList -->
-
   <Item>
     <Element>StudentList</Element>
     <Characteristics>O</Characteristics>
@@ -144,7 +122,6 @@
     </Description>
     <Type ref="CommonTypes" name="StudentListType"></Type>
   </Item>       <!-- StudentList -->
-
   <Item>
     <Element>TeacherList</Element>
     <Characteristics>O</Characteristics>
@@ -154,7 +131,15 @@
     </Description>
     <Type ref="CommonTypes" name="StaffListType"></Type>
   </Item>       <!-- TeacherList -->
-
+  <Item>
+    <Element>CourseList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>List of generic references denoting the Courses the TeachingGroup is being taught.</p>
+    </Description>
+    <Type ref="CommonTypes" name="CourseListType"></Type>
+  </Item>       <!-- CourseList -->
   <Item>
     <Element>SubjectAreaList</Element>
     <Characteristics>O</Characteristics>
@@ -164,7 +149,6 @@
     </Description>
     <Type ref="CommonTypes" name="SubjectAreaListType"></Type>
   </Item>       <!-- SubjectAreaList -->
-
   <Item>
     <Element>YearLevelList</Element>
     <Characteristics>O</Characteristics>
@@ -194,57 +178,32 @@
       <EndDate>2018-12-05</EndDate>
       <StudentList>
         <Student>
-          <StudentRef>
-            <RefId>9897466F-200E-4BC1-B9AE-D1507DA15CEF</RefId>
-            <LocalId>SMI001</LocalId>
-          </StudentRef>
-          <Name>
-            <FamilyName>Smith</FamilyName>
-            <GivenName>Peter</GivenName>
-          </Name>
+          <RefId>9897466F-200E-4BC1-B9AE-D1507DA15CEF</RefId>
+          <LocalId>SMI001</LocalId>
+					<Name>Peter Smith</Name>
+				</Student>
+        <Student>
+          <RefId>7C834EA9-EDA1-2090-347F-83297E1C290D</RefId>
+          <LocalId>SMI002</LocalId>
+          <Name>Jennifer Smith</Name>
         </Student>
         <Student>
-          <StudentRef>
-            <RefId>7C834EA9-EDA1-2090-347F-83297E1C290D</RefId>
-           <LocalId>SMI002</LocalId>
-          </StudentRef>
-          <Name>
-            <FamilyName>Smith</FamilyName>
-            <GivenName>Jennifer</GivenName>
-          </Name>
-        </Student>
-        <Student>
-          <StudentRef>
-            <RefId>7C834EA9-EDA1-2090-347F-83297E1C290E</RefId>
-           <LocalId>SMI003</LocalId>
-          </StudentRef>
-          <Name>
-            <FamilyName>Smith</FamilyName>
-            <GivenName>Terence</GivenName>
-          </Name>
+          <RefId>7C834EA9-EDA1-2090-347F-83297E1C290E</RefId>
+          <LocalId>SMI003</LocalId>
+          <Name>Terence Smith</Name>
         </Student>
       </StudentList>
       <TeacherList>
         <StaffMember>
-          <Name>
-            <FamilyName>Smith</FamilyName>
-            <GivenName>Thomas</GivenName>
-          </Name>
-          <StaffMemberRef>
-            <RefId>A8C3A2E3-5B35-9D75-101D-00AA001A0000</RefId>
-            <LocalId>SMI1</LocalId>
-          </StaffMemberRef>
+          <RefId>A8C3A2E3-5B35-9D75-101D-00AA001A0000</RefId>
+          <LocalId>SMI1</LocalId>
+          <Name>Thomas Smith</Name>
           <Role json:force-string="true">1001</Role>
         </StaffMember>
         <StaffMember>
-          <Name>
-            <FamilyName>Long</FamilyName>
-            <GivenName>Tamara</GivenName>
-          </Name>
-          <StaffMemberRef>
-            <RefId>A8CCCCE3-5B35-9D75-101D-00AA001A0000</RefId>
-            <LocalId>LONG2</LocalId>
-          </StaffMemberRef>
+          <RefId>A8CCCCE3-5B35-9D75-101D-00AA001A0000</RefId>
+          <LocalId>LONG2</LocalId>
+          <Name>Tamara Long</Name>
           <Role  json:force-string="true">1002</Role>
         </StaffMember>
       </TeacherList>

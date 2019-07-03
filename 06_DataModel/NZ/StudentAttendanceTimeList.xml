@@ -147,10 +147,9 @@
 					</SubjectAreaList>
 					<TeacherList json:force-array="true">
 						<StaffMember>
-							<Name><FullName>Phineas McWhirter</FullName></Name>
-							<StaffMemberRef>
-								<LocalId>McGP</LocalId>
-							</StaffMemberRef>
+							<RefId>5e695355-3593-407c-b24e-03e75b8721a1</RefId>
+							<LocalId>McWP</LocalId>
+							<Name>Phineas McWhirter</Name>
 						</StaffMember>
 					</TeacherList>
 					<RoomList json:force-array="true">
@@ -170,10 +169,9 @@
 					</SubjectAreaList>
 					<TeacherList json:force-array="true">
 						<StaffMember>
-							<Name><FullName>Phineas McWhirter</FullName></Name>
-							<StaffMemberRef>
-								<LocalId>McGP</LocalId>
-							</StaffMemberRef>
+							<RefId>5e695355-3593-407c-b24e-03e75b8721a1</RefId>
+							<LocalId>McWP</LocalId>
+							<Name>Phineas McWhirter</Name>
 						</StaffMember>
 					</TeacherList>
 					<RoomList json:force-array="true">

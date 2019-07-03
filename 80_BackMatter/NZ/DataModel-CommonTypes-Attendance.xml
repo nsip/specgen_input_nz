@@ -173,12 +173,11 @@
 					<SubjectAreaList json:force-array="true">
 						<SubjectArea>MATH</SubjectArea>
 					</SubjectAreaList>
-					<TeacherList json:force-array="true">
-						<StaffMember>
-							<Name><FullName>Phineas McWhirter</FullName></Name>
-							<StaffMemberRef>
-								<LocalId>McGP</LocalId>
-							</StaffMemberRef>
+					<TeacherList>
+						<StaffMember json:force-array="true">
+							<RefId>5e695355-3593-407c-b24e-03e75b8721a1</RefId>
+							<LocalId>McWP</LocalId>
+							<Name>Phineas McWhirter</Name>
 						</StaffMember>
 					</TeacherList>
 					<RoomList json:force-array="true">
@@ -204,9 +203,7 @@
 			<Description>
 				<p>MoE defined code for attendance or  absence during the time period described.</p>
 			</Description>
-			<if intl="nz">
-				<Type ref="CodeSets" name="NZCodeSetsAttendanceCodeType"/>
-			</if>
+			<Type ref="CodeSets" name="NZCodeSetsAttendanceCodeType"/>
 		</Item>		<!-- AttendanceCode -->
 		<Item>
 			<Element>AttendanceStatus</Element>
@@ -316,16 +313,15 @@
 				<SubjectAreaList json:force-array="true">
 					<SubjectArea>MATH</SubjectArea>
 				</SubjectAreaList>
-				<TeacherList json:force-array="true">
-					<StaffMember>
-						<Name><FullName>Phineas McWhirter</FullName></Name>
-						<StaffMemberRef>
-							<LocalId>McGP</LocalId>
-						</StaffMemberRef>
+				<TeacherList>
+					<StaffMember json:force-array="true">
+						<RefId>5e695355-3593-407c-b24e-03e75b8721a1</RefId>
+						<LocalId>McWP</LocalId>
+						<Name>Phineas McWhirter</Name>
 					</StaffMember>
 				</TeacherList>
-				<RoomList json:force-array="true">
-					<RoomId>12P</RoomId>
+				<RoomList>
+					<RoomId json:force-array="true">12P</RoomId>
 				</RoomList>
 				<AttendanceNote>Explained absence, but unjustified.</AttendanceNote>
 			</PeriodAttendance>
@@ -343,16 +339,15 @@
 				<SubjectAreaList json:force-array="true">
 					<SubjectArea>MATH</SubjectArea>
 				</SubjectAreaList>
-				<TeacherList json:force-array="true">
-					<StaffMember>
-						<Name><FullName>Phineas McWhirter</FullName></Name>
-						<StaffMemberRef>
-							<LocalId>McGP</LocalId>
-						</StaffMemberRef>
+				<TeacherList>
+					<StaffMember json:force-array="true">
+						<RefId>5e695355-3593-407c-b24e-03e75b8721a1</RefId>
+						<LocalId>McWP</LocalId>
+						<Name>Phineas McWhirter</Name>
 					</StaffMember>
 				</TeacherList>
-				<RoomList json:force-array="true">
-					<RoomId>12P</RoomId>
+				<RoomList>
+					<RoomId json:force-array="true">12P</RoomId>
 				</RoomList>
 				<AttendanceNote>Explained absence, but unjustified.</AttendanceNote>
 			</PeriodAttendance>

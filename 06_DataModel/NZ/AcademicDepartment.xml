@@ -109,12 +109,8 @@
       </Provider>
       <StaffList json:force-array="true">
         <StaffMember>
-          <Name>
-            <FullName>Bobby Test</FullName>
-          </Name>
-          <StaffMemberRef>
-            <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
-          </StaffMemberRef>
+          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <Name>Bobby Test</Name>
         </StaffMember>
       </StaffList>
     </AcademicDepartment>

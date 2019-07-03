@@ -1,0 +1,99 @@
+	<DataObject name="ScheduleHoliday"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
+	xmlns="http://sifassociation.org/SpecGen">
+
+
+	<Key>RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>ScheduleHoliday</Element>
+	  <privacyRating>Low</privacyRating>
+		<Description>
+			<p>Provides information about a holiday that may or may not impact upon the schedule of a provider.</p>
+		</Description>
+	</Item>
+	
+	<Item>
+		<Element>RefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p> The ID (GUID) assigned to uniquely identify this Schedule Term.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>    <!-- RefId -->
+	<Item>
+		<Element>LocalId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The local Id of  this Schedule Term.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>    <!-- LocalId -->
+
+	<Item>
+		<Element>Provider</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The provider the ScheduleHoliday relates to. Not populated if it is a National
+			 Holiday that applies to all providers.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/>
+	</Item>    <!-- Provider -->
+
+	<Item>
+		<Element>HolidayDate</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The date of the holiday</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>    <!-- HolidayDate -->
+	<Item>
+		<Element>HolidayName</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The name of the holiday.</p>
+		</Description>
+		<Type  name="xs:normalizedString"/>
+	</Item>    <!-- HolidayName -->
+	<Item>
+		<Element>HolidayLongName</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The long description of the holiday, if there is one.</p>
+		</Description>
+		<Type  name="xs:normalizedString"/>
+	</Item>    <!-- HolidayLongName -->
+
+	<Item>
+		<Element>AlwaysDisplayFlag</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Display the holiday name even if an academic ScheduleDate record is defined for this date for a school.</p>
+		</Description>
+		<Type ref="CommonData" name="NZCodeSetsYesOrNoCategoryType"/>
+	</Item>    <!-- AlwaysDisplayFlag -->
+
+	<xhtml:Example xmlns="" name ="Schedule Holiday">
+		<ScheduleHoliday>
+			<RefId>4e8387f0-faed-4eb5-84ef-2139da62133d</RefId>
+			<LocalId>2019-ANZAC</LocalId>
+			<HolidayDate>2019-04-25</HolidayDate>
+			<HolidayName>ANZAC Day</HolidayName>
+			<HolidayLongName>ANZAC Day, 2019</HolidayLongName>
+			<AlwaysDisplayFlag>Y</AlwaysDisplayFlag>
+		</ScheduleHoliday>
+	</xhtml:Example>
+</DataObject>

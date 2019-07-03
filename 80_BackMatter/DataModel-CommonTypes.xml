@@ -19,6 +19,7 @@
 	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-PartyRole.xml"/>
 
 	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Enrolment.xml"/>
+	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Schedule.xml"/>	
 	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Attendance.xml"/>
 	<xi:include parse="xml" href="NZ/DataModel-CommonTypes-Wellbeing.xml"/>
 

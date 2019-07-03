@@ -243,25 +243,9 @@
 			<Element>Course</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>An associated course.</Description>
-			<Type ref="CommonTypes" name="CourseType"/>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>    <!-- Course -->
 	</CommonElement>
-
-	<CommonElement name="CourseType" type="true" dm="true">
-		<Item>
-			<Element>CourseType</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>An associated course.</p>
-			</Description>
-		</Item>
-		<Item>
-			<Element>CourseDetail</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>Relevant detail about the associated course.</Description>
-			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>    <!-- CourseDetail -->
-	</CommonElement>	
 
 
 	<!-- Curriculum Progress Reports -->
