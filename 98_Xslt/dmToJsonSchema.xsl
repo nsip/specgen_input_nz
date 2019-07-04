@@ -12,8 +12,16 @@
 	<xsl:param name="sifVersion"/>
 	<xsl:param name="sifLocale"/>
 
+	<!-- How many enumeration values to include in descriptions ? -->
+	<xsl:param name="enumCount">12</xsl:param>
+	
+	<!-- Where is the SIF HTML documentation available for links -->
+	<xsl:param name="extDocURLBase">https://sifnzmodel.azurewebsites.net/SIFNZ/</xsl:param>
+
+	<!-- Shorthand to get a quote character into the output -->
 	<xsl:variable name="q"><xsl:text>"</xsl:text></xsl:variable>
 
+	<!-- ....and off we go -->
 	<xsl:template match="/specgen:SIFSpecification">
 		<xsl:value-of select="concat( '# &#x0a;',
                                       '## Json Schema derived from SIF ', $sifLocale, ' v', $sifVersion, '&#x0a;',
@@ -36,10 +44,14 @@
 		<xsl:text>type: object&#x0a;</xsl:text>
 
 		<xsl:text>oneOf:&#x0a;</xsl:text>
-		<xsl:apply-templates select=".//specgen:DataObject" mode="reqRootObj"/>
+		<xsl:apply-templates select=".//specgen:DataObject" mode="reqRootObj">
+			<xsl:sort select="@name"/>
+		</xsl:apply-templates>
 
 		<xsl:text>properties:&#x0a;</xsl:text>
-		<xsl:apply-templates select=".//specgen:DataObject" mode="rootObj"/>
+		<xsl:apply-templates select=".//specgen:DataObject" mode="rootObj">
+			<xsl:sort select="@name"/>
+		</xsl:apply-templates>
 	</xsl:template>              
 
 	<xsl:template match="specgen:DataObject" mode="reqRootObj">
@@ -213,7 +225,7 @@
 			<xsl:value-of select="concat($indent, '    - description: &gt;-&#x0a;', $indent, '        ')"/>
 			<xsl:apply-templates select="specgen:Description"/><xsl:text>&#x0a;</xsl:text>
 
-			<!-- If the Item is a codeset then include the values in the description -->
+			<!-- If the Item is a codeset then include (at least some of) the values in the description -->
 			<xsl:if test="specgen:Type/@ref eq 'CodeSets'">
 				<xsl:variable name="codeSetId">
 					<xsl:value-of select="xfn:chopType(substring-after(specgen:Type/@name, 'CodeSets'))"/>
@@ -222,10 +234,17 @@
 					<xsl:value-of select="substring-before(specgen:Type/@name, $codeSetId)"/>
 				</xsl:variable>
 				<xsl:value-of select="concat($indent, '        &lt;ul&gt;&#x0a;')"/>
-				<xsl:apply-templates select="//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value" mode="descr">
+				<xsl:apply-templates select="//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value[position() &lt;= $enumCount]" mode="descr">
 					<xsl:with-param name="indent" select="concat($indent, '      ')"/>
 				</xsl:apply-templates>
 				<xsl:value-of select="concat($indent, '        &lt;/ul&gt;&#x0a;')"/>
+				<xsl:if test="count(//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value) &gt; $enumCount">
+					<xsl:value-of select="concat($indent, '        plus ', 
+												 count(//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value) - $enumCount, 
+												' more value(s) at &lt;a href=',$q,
+												$extDocURLBase, 'CodeSets.html#', specgen:Type/@name, $q, '&gt;',
+												specgen:Type/@name, '&lt;a&gt;&#x0a;')"/>
+				</xsl:if>
 			</xsl:if>
 		</xsl:if>
 
@@ -371,17 +390,26 @@
 	<!-- CodeSets become enums - with code definitions in the description field -->
 	<xsl:template match="specgen:CodeSet">
 		<xsl:text>&#x0a;  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
-		<xsl:value-of select="concat('  ', ancestor::specgen:Grouping/@code, @name, translate(specgen:ID, '- /', ''), ':&#x0a;',
+		<xsl:variable name="codeSetId">
+			<xsl:value-of select="concat(ancestor::specgen:Grouping/@code, translate(specgen:ID, '- /', ''))"/>
+		</xsl:variable>
+		<xsl:value-of select="concat('  ', $codeSetId, ':&#x0a;',
 			                         '    type: string&#x0a;',
 							         '    title: ', specgen:ID, '&#x0a;',
 			                         '    description: &gt;-&#x0a;      ')"/>
 		<xsl:apply-templates select="specgen:Intro"/><xsl:text>&#x0a;</xsl:text>
 		<xsl:text>      &lt;ul&gt;&#x0a;</xsl:text>
-		<xsl:apply-templates select="specgen:Values/specgen:Value" mode="descr">
+		<xsl:apply-templates select="specgen:Values/specgen:Value[position() &lt;= $enumCount]" mode="descr">
 			<xsl:with-param name="indent" select="'    '"/>
 		</xsl:apply-templates>
 		<xsl:text>      &lt;/ul&gt;&#x0a;</xsl:text>
-
+		<xsl:if test="count(specgen:Values/specgen:Value) &gt; $enumCount">
+			<xsl:value-of select="concat('      plus ', 
+									  	count(specgen:Values/specgen:Value) - $enumCount, 
+										' more value(s) at &lt;a href=',$q,
+										$extDocURLBase, 'CodeSets.html#', $codeSetId, 'Type', $q, '&gt;',
+										$codeSetId, 'Type&lt;a&gt;&#x0a;')"/>
+		</xsl:if>
 		<xsl:apply-templates select="specgen:Values">
 			<xsl:with-param name="indent" select="'    '"/>
 		</xsl:apply-templates>
@@ -476,18 +504,21 @@
 		<xsl:param name="indent"/>
 
 		<xsl:variable name="valDesc">
-			<xsl:apply-templates select="specgen:Text"/>
+			<xsl:apply-templates select="specgen:Text">
+				<xsl:with-param name="pfx" select="' - '"/>
+			</xsl:apply-templates>
 		</xsl:variable>
 
-		<xsl:value-of select="concat($indent, '    &lt;li&gt;''', specgen:Code, ''' - ', $valDesc, '&lt;/li&gt;&#x0a;')"/>
+		<xsl:value-of select="concat($indent, '    &lt;li&gt;''', specgen:Code, '''', $valDesc, '&lt;/li&gt;&#x0a;')"/>
 	</xsl:template>
 
 
 	<!-- Bring Description, Intro or Text mixed content elements across with all its embedded html -->
 	<xsl:template match="specgen:Description|specgen:Intro|specgen:Text">
+		<xsl:param name="pfx"/>
 		<xsl:variable name="descr"><xsl:apply-templates/></xsl:variable>
 
-		<xsl:value-of select="normalize-space($descr)"/>
+		<xsl:value-of select="concat($pfx, normalize-space($descr))"/>
 	</xsl:template>
 
 	<xsl:template match="specgen:p|specgen:br
