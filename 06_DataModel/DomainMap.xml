@@ -32,6 +32,9 @@
 					entities, the relationships between them, and the
 					Staff that work at them.				
 				</p>
+				<p>
+					Background documentation on the Provider domain is available here <a href="background/1.%20SIF%20NZ%20-%20Background%20-%20Organisation%20-%20v1.0.pdf"><img width="40px" src="images/pdf.png"/></a>
+				</p>
 				<img src="images/SIFNZ-LogicalModel-ProviderDomain.png" usemap="#ProviderMap"/>
 			</Intro>
 			
@@ -62,6 +65,9 @@
 					The Student domain describes Student entities, their
 					Whānau, and the relationships between them.
 				</p>
+				<p>
+					Background documentation on the Student &amp; Whānau domain is available here <a href="background/2.%20SIF%20NZ%20-%20Background%20-%20Student,%20Staff%20&amp;%20Wh%C4%81nau%20-%20v1.0.pdf"><img width="40px" src="images/pdf.png"/></a>
+				</p>
 				<img src="images/SIFNZ-LogicalModel-StudentDomain.png" usemap="#Student &amp; WhānauMap"/>
 			</Intro>
 
@@ -76,6 +82,9 @@
 					The Enrolment domain describes transactional entities
 					whereby Students enrol at Providers, in LearningProgrammes,
 					in Sections, or in Activities.
+				</p>
+				<p>
+					Background documentation on the Enrolment domain is available here <a href="background/3.%20SIF%20NZ%20-%20Background%20-%20Student%20Enrolment%20-%20v1.0.pdf"><img width="40px" src="images/pdf.png"/></a>
 				</p>
 				<img src="images/SIFNZ-LogicalModel-EnrolmentDomain.png" usemap="#EnrolmentMap"/>
 			</Intro>
@@ -97,6 +106,7 @@
 				through behavioural incidents (both good and bad) to Student's aspirations and goals
 				participation in extra-curricular activities and the provision of Learning Support programmes.
 				</p>
+					Background documentation on the Hauora / Wellbeing domain is available here <a href="background/6.%20SIF%20NZ%20-%20Background%20-%20Student%20Wellbeing%20-%20v1.0.pdf"><img width="40px" src="images/pdf.png"/></a>
 				<img src="images/SIFNZ-LogicalModel-WellbeingDomain.png" usemap="#Hauora / WellbeingMap"/>
 			</Intro>
 
@@ -123,6 +133,12 @@
 					along with transactional entities that record a Student's attendance at &amp; absence from Providers.
 					Attendance is recorded at either Day, Half-Day or individual Period granuality
 					at the choice of the Provider; and reported back in summary form.
+				</p>
+				<p>
+					Background documentation on the Schedule domain is available here <a href="background/7.%20SIF%20NZ%20-%20Background%20-%20Schedule%20-%20v1.0.pdf"><img width="40px" src="images/pdf.png"/></a>
+				</p>
+				<p>
+					Background documentation on the Attendance domain is available here <a href="background/4.%20SIF%20NZ%20-%20Background%20-%20Attendance%20-%20v1.0.pdf"><img width="40px" src="images/pdf.png"/></a>
 				</p>
 				<img src="images/SIFNZ-LogicalModel-TimetableAttendanceDomain.png" usemap="#Schedule &amp; AttendanceMap"/>
 			</Intro>
@@ -154,6 +170,9 @@
 					through to end of Course or year final marks, and curriculum progress reports as well as 
 					formal external assessments performed by external agencies (eg. NZQA, Cambridge International Education,
 					International Baccalaureate, etc). 
+				</p>
+				<p>
+					Background documentation on the Aromatawai / Assessment domain is available here <a href="background/5.%20SIF%20NZ%20-%20Background%20-%20Assessment%20&amp;%20Attainment%20-%20v1.0.pdf"><img width="40px" src="images/pdf.png"/></a>
 				</p>
 				<img src="images/SIFNZ-LogicalModel-AssessmentDomain.png" usemap="#Aromatawai / AssessmentMap"/>
 			</Intro>
