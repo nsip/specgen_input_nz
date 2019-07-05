@@ -115,6 +115,24 @@
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>		<!-- ScheduleTerm -->
 	</CommonElement>
+	<CommonElement name="TeachingGroupEventListType" type="true" dm="true">
+		<Item>
+			<Element>TeachingGroupEventListType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>A list generic references to a set of TeachingGroupEvents</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Event</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Generic object reference to a TeachingGroupEvent in the list</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>		<!-- Event -->
+	</CommonElement>
 
 
 	<!-- Lists of rich schedule items -->

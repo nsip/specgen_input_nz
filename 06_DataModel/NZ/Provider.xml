@@ -47,7 +47,18 @@
 	  </Description>
 	  <Type ref="CommonTypes" name="ECEServiceType"/>
   </Item> <!-- ECEService -->
-
+  <Item>
+	  <Element>TertiarySerice</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>
+		  <p>Only present if the Provider is a provider of tertiary education services.
+		  Contains properties that are Tertiary Education specific.</p>
+		  <p>A placeholder for future expansion</p>
+	  </Description>
+	  <Type name="xs:normalizedString"/>
+  </Item> <!-- TertiaryService -->
+  
   <xhtml:Example xmlns="" name="School Provider Example">
     <Provider>
 		<RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>

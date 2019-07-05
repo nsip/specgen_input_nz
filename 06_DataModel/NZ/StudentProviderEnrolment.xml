@@ -103,15 +103,6 @@
 	</Item>    <!-- EarlyChildhoodEnrolment -->
 
 	<Item>
-		<Element>EarlyChildhoodEducation</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>The type of early childhood education the student received before enrolling in their first school.</p></Description>
-		<Type ref="CommonTypes" name="EarlyChildhoodEducationType"></Type>
-	</Item>    <!-- EarlyChildhoodEducation -->
-
-	<Item>
 		<Element>SchoolEnrolmentList</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
@@ -119,6 +110,15 @@
 			<p>Properties of an enrolment in a school</p></Description>
 		<Type ref="CommonTypes" name="StudentSchoolEnrolmentListType"></Type>
 	</Item>    <!-- SchoolEnrolmentList -->
+
+	<Item>
+		<Element>TertiaryEducationEnrolment</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Properties of an enrolment in a Tertiary Education service (WiP).</p></Description>
+		<Type ref="CommonTypes" name="StudentTertiaryEnrolmentType"></Type>
+	</Item>    <!-- TertiaryEducationEnrolment -->
 
 	<xhtml:Example xmlns="" name="Completed International Student School Enrolment">
 		<StudentProviderEnrolment>

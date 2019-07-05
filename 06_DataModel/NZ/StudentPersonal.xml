@@ -59,6 +59,14 @@
 		<Type name="xs:date"/>
 	</Item>    <!-- FirstNZSchoolingDate -->
 	<Item>
+		<Element>EarlyChildhoodEducation</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The type of early childhood education the student received before enrolling in their first school.</p></Description>
+		<Type ref="CommonTypes" name="EarlyChildhoodEducationType"></Type>
+	</Item>    <!-- EarlyChildhoodEducation -->
+	<Item>
 		<Element>PersonInfo</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>High</privacyRating>

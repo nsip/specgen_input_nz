@@ -75,14 +75,14 @@
   </Item>       <!-- SchedulePeriod -->
 	
   <Item>
-    <Element>ScheduleDay</Element>
+    <Element>AcademicDay</Element>
     <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the ScheduleAcademicDay that the TeachingGroup meets.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"/>
-  </Item>       <!-- ScheduleDay -->
+  </Item>       <!-- AcademicDay -->
 
   <Item>
     <Element>RoomId</Element>
@@ -153,11 +153,11 @@
 				<LocalId>2019a-A1</LocalId>
 				<Name>Period 1 on Day A</Name>
 			</SchedulePeriod>
-			<ScheduleDay>
+			<AcademicDay>
 				<RefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</RefId>
 				<LocalId>2019a-A</LocalId>
 				<Name>Scheule 2019a, Day A</Name>
-			</ScheduleDay>
+			</AcademicDay>
 			<RoomId>TB202</RoomId>
 			<RoomName>Tower Block, Room 202</RoomName>
 			<TakeAttendanceFlag>Y</TakeAttendanceFlag>

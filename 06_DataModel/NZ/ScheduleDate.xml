@@ -96,6 +96,16 @@
 		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
 	</Item>    <!-- BellSchedule -->
 
+	<Item>
+		<Element>TeachingGroupEventList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>List of generic object references to the set of TeachingGroupEvents that take place on this calendar date.</p>
+		</Description>
+		<Type ref="CommonTypes" name="TeachingGroupEventListType"/> 
+	</Item>    <!-- TeachingGroupEventLIst -->
+
 	<xhtml:Example xmlns="" name ="Schedule Date">
 		<ScheduleDate>
 			<RefId>84c40f87-769d-46cc-8077-f5efb912e099</RefId>

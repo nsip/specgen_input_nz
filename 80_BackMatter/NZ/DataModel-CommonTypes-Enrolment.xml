@@ -83,7 +83,7 @@
 		<Item>
 			<Element>EarlyChildhoodEducationType</Element>
 			<Description>
-				<p>A summaru of the early childhood education the student received before enrolling in their first school.</p>
+				<p>A summary of the early childhood education the student received before enrolling in their first school.</p>
 			</Description>
 		</Item> 
 		<Item>
@@ -111,7 +111,7 @@
 			<Element>StudentECEEnrolmentType</Element>
 			<Description>
 				<p>Defines information related to a student's enrolment at
-					a an Early Childhood Education (ECE) Provider.</p>
+					an Early Childhood Education (ECE) Provider.</p>
 				<p>Placeholder for future expansion.</p>
 			</Description>
 		</Item>
@@ -123,6 +123,26 @@
 				<p>The type of early childhood education the student is enrolling in.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsEarlyChildhoodEducationTypeType"/>
+		</Item>    <!-- Type -->		
+	</CommonElement>
+
+	<CommonElement name="StudentTertiaryEnrolmentType" type="true" dm="true">
+		<Item>
+			<Element>StudentTertiaryEnrolmentType</Element>
+			<Description>
+				<p>Defines information related to a student's enrolment at
+					a Tertiary Education Provider.</p>
+				<p>Placeholder for future expansion.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Type</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>The type of tertiary education the student is enrolling in.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
 		</Item>    <!-- Type -->		
 	</CommonElement>
 
