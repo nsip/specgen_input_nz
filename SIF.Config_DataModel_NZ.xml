@@ -134,24 +134,23 @@
 	<!-- Other outputs built using XSLT -->
 	<xsltTransformations>
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchema.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
 
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>jsonSchema.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchemaCreate.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
-<!-- 
-	Not doing Swagger output; Swagger now supports OpenAPI well enough
 
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToSwagger.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
 
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>swagger.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchemaUpdate.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>		
--->
+		</xsltTransformation>
+
+
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
 

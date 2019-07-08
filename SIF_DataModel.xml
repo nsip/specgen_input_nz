@@ -94,8 +94,12 @@
 	        <dd><br/></dd>	
 			<dt>JSON Schemas</dt>
 			<dd>
-				JSON Schema definition <a href="JSON/jsonSchema.json"> (json)</a>
-				<a href="JSON/jsonSchema.yaml">(yaml)</a>
+				JSON Schema definition - for CREATE <a href="JSON/jsonSchemaCreate.json"> (json)</a>
+				<a href="JSON/jsonSchemaCreate.yaml">(yaml)</a>
+			</dd>
+			<dd>
+				JSON Schema definition - for UPDATE <a href="JSON/jsonSchemaUpdate.json"> (json)</a>
+				<a href="JSON/jsonSchemaUpdate.yaml">(yaml)</a>
 			</dd>
 			<dd>
 				Open API definition <a href="JSON/OpenAPI.json"> (json)</a>
