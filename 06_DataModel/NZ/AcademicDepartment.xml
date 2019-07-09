@@ -107,8 +107,8 @@
       <Provider>
         <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
       </Provider>
-      <StaffList json:force-array="true">
-        <StaffMember>
+      <StaffList>
+        <StaffMember json:force-array="true">
           <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
           <Name>Bobby Test</Name>
         </StaffMember>

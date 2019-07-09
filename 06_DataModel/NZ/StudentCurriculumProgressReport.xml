@@ -141,8 +141,8 @@
           <Class>HM</Class>
           <BehaviourComment>Excellent</BehaviourComment>
           <EffortComment>Not particularly interested, attention wanders</EffortComment>
-          <StrandList json:force-array="true">
-            <Strand>
+          <StrandList>
+            <Strand json:force-array="true">
               <LearningStrand>TP</LearningStrand>
               <AchievementObjectiveList>
                 <AchievementObjective json:force-array="true">

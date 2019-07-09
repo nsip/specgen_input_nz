@@ -45,8 +45,6 @@
 			<DataObject coords="598,51,704,134" role="member">StaffAssignment</DataObject>
 			<DataObject coords="368,423,476,465" role="member">ProviderCourse</DataObject>
 			<DataObject coords="74,286,182,324" role="member">TeachingGroup</DataObject>
-			<DataObject coords="117,159,223,189" role="member">StudentActivity</DataObject>
-			<DataObject coords="93,207,201,240" role="member">StudentGroup</DataObject>
 			<DataObject coords="43,364,187,411" role="member">AcademicDepartment</DataObject>
 			<DataObject coords="577,387,682,421" role="member">Schedule</DataObject>
 			<DataObject coords="812,385,957,418" role="member">ScheduleAcademicDay</DataObject>
@@ -57,6 +55,7 @@
 			<DataObject coords="813,598,921,633" role="member">BellSchedule</DataObject>
 			<DataObject coords="812,324,914,352" role="member">ScheduleHoliday</DataObject>
 			<DataObject coords="387,665,508,708" role="member">TeachingGroupEvent</DataObject>
+			<DataObject role="member">LearningSupportRegisterDirectory</DataObject>
 		</Domain>
 
 		<Domain name="Student &amp; Whānau">
@@ -74,6 +73,7 @@
 			<DataObject coords="43,51,159,300" role="member">StudentPersonal</DataObject>
 			<DataObject coords="643,100,823,150" role="member">StudentContactPersonal</DataObject>
 			<DataObject coords="312,100,511,152" role="member">StudentContactRelationship</DataObject>
+			<DataObject role="member">StudentConsent</DataObject>
 		</Domain>
 
 		<Domain name="Enrolment">
@@ -96,7 +96,6 @@
 			<DataObject coords="568,317,719,400">TeachingGroup</DataObject>
 			<DataObject coords="1105,282,1242,320">StaffPersonal</DataObject>
 			<DataObject coords="851,361,1057,401">StaffTeachingGroupAssignment</DataObject>
-			<DataObject coords="199,565,445,612" role="member">SpecialAssessmentConditionApplication</DataObject>
 		</Domain>
 
 		<Domain name="Hauora / Wellbeing">
@@ -111,12 +110,11 @@
 			</Intro>
 
 			<DataObject coords="71,422,219,470" role="member">WellbeingCharacteristic</DataObject>
-			<DataObject coords="226,337,335,395" role="member"> WellbeingAlert</DataObject>
+			<DataObject coords="226,337,335,395" role="member">WellbeingAlert</DataObject>
 			<DataObject coords="381,421,503,469" role="member">WellbeingEvent</DataObject>
 			<DataObject coords="537,480,645,528" role="member">WellbeingResponse</DataObject>
 			<DataObject coords="687,542,796,590" role="member">WellbeingAppeal</DataObject>
 			<DataObject coords="782,426,955,471" role="member">StudentActivityParticipation</DataObject>
-			<DataObject coords="915,487,1022,522" role="member">StudentGroup</DataObject>
 			<DataObject coords="1062,422,1300,470" role="member">StudentLearningSupportParticipation</DataObject>
 			<DataObject coords="981,348,1076,388" role="member">Document</DataObject>
 			<DataObject coords="519,75,639,111" role="member">StudentVoice</DataObject>
@@ -146,7 +144,6 @@
 			<DataObject coords="571,51,1079,96">Provider</DataObject>
 			<DataObject coords="217,226,408,224" role="member">StudentAttendanceTimeList</DataObject>
 			<DataObject coords="366,165,560,211" role="member">StudentAttendanceSummary</DataObject>
-			<DataObject coords="486,594,637,637" role="member">ScheduledActivity</DataObject>
 			<DataObject coords="773,606,893,650">TeachingGroup</DataObject>
 			<DataObject coords="775,731,894,788">ProviderCourse</DataObject>
 
