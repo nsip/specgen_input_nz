@@ -64,176 +64,7 @@
 		<Type ref="CommonTypes" name="HealthcareServiceInfoType"></Type>
 	</Item>    <!-- HealthcareServiceInfo -->
 
-	<if intl="au">
-		<Item>
-			<Element>OtherIdList</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Medium</privacyRating>
-			<Description>
-				<p>Lists all "other" identifiers associated with the contact.</p>
-			</Description>
-			<Type ref="CommonTypes" name="OtherIdListType"/>
-		</Item>    <!--  OtherIdList -->
-		<Item>
-			<Element>EmploymentType</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Medium</privacyRating>
-			<Description>
-				<p>Code that defines employment type. This is compulsory for Parents or Guardians of the Student.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsEmploymentTypeType"></Type>
-		</Item>    <!-- EmploymentType -->
-		<Item>
-			<Element>SchoolEducationalLevel</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Medium</privacyRating>
-			<Description>
-				<p>The highest level of education completed by the contact person.</p>
-			</Description>
-			<Type ref="CommonTypes" name="EducationalLevelType"></Type>
-		</Item>    <!-- SchoolEducationalLevel -->
-		<Item>
-			<Element>NonSchoolEducation</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Medium</privacyRating>
-			<Description>
-				<p>This reflects the level of the Contact's Non-School Education.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsNonSchoolEducationType"></Type>
-		</Item>    <!-- NonSchoolEducation -->
-		<Item>
-			<Element>SIF_Metadata</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Type ref="CommonTypes" name="SIF_MetadataType"></Type>
-		</Item>    <!-- SIF_MetaData -->
-		<Item>
-			<Element>SIF_ExtendedElements</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
-		</Item>    <!-- SIF_ExtendedElements -->
-	</if>
-
-	<xhtml:Example xmlns='' name="StudentContactPersonal Example" intl="au">
-		<StudentContactPersonal RefId='7C834EA9-EDA1-2090-347F-83297E1C290F'>
-			<LocalId>P1234567</LocalId>
-			<OtherIdList>
-				<OtherId Type="Health Care Card">098765</OtherId>
-				<OtherId Type="Seniors Card">123456789</OtherId>
-			</OtherIdList>
-			<PersonInfo>
-				<Name Type = "LGL" >
-					<FamilyName>Smith</FamilyName>
-					<GivenName>Fred</GivenName>
-					<FullName>Fred Smith</FullName>
-				</Name>
-				<OtherNames>
-					<Name Type="AKA">
-						<FamilyName>Anderson</FamilyName>
-						<GivenName>Samuel</GivenName>
-						<FullName>Samuel Anderson</FullName>
-					</Name>
-					<Name Type="PRF">
-						<FamilyName>Rowinski</FamilyName>
-						<GivenName>Sam</GivenName>
-						<FullName>Sam Rowinski </FullName>
-					</Name>
-				</OtherNames>
-
-				<Demographics>
-					<IndigenousStatus>3</IndigenousStatus>
-					<Sex>1</Sex>
-					<BirthDate>1990-09-26</BirthDate>
-					<BirthDateVerification>1004</BirthDateVerification>
-					<PlaceOfBirth>Clayton</PlaceOfBirth>
-					<StateOfBirth>VIC</StateOfBirth>
-					<CountryOfBirth>1101</CountryOfBirth>
-					<CountriesOfCitizenship>
-						<CountryOfCitizenship>8104</CountryOfCitizenship>
-						<CountryOfCitizenship>1101</CountryOfCitizenship>
-					</CountriesOfCitizenship>
-					<CountriesOfResidency>
-						<CountryOfResidency>8104</CountryOfResidency>
-						<CountryOfResidency>1101</CountryOfResidency>
-					</CountriesOfResidency>
-					<CountryArrivalDate>1990-09-26</CountryArrivalDate>
-					<AustralianCitizenshipStatus>1</AustralianCitizenshipStatus>
-					<EnglishProficiency>
-						<Code>1</Code>
-					</EnglishProficiency>
-					<LanguageList>
-						<Language>
-							<Code>0001</Code>
-							<LanguageType>1</LanguageType>
-						</Language>
-					</LanguageList>
-					<DwellingArrangement>
-						<Code>1671</Code>
-					</DwellingArrangement>
-					<Religion>
-						<Code>2013</Code>
-					</Religion>
-					<ReligiousEventList>
-						<ReligiousEvent>
-							<Type>Baptism</Type>
-							<Date>2000-09-01</Date>
-						</ReligiousEvent>
-						<ReligiousEvent>
-							<Type>Christmas</Type>
-							<Date>2009-12-24</Date>
-						</ReligiousEvent>
-					</ReligiousEventList>
-					<ReligiousRegion>The Religion Region</ReligiousRegion>
-					<PermanentResident>P</PermanentResident>
-					<VisaSubClass>101</VisaSubClass>
-					<VisaStatisticalCode>05</VisaStatisticalCode>
-				</Demographics>
-				<AddressList>
-					<Address Type ="0123" Role="012B">
-						<Street>
-							<Line1>Unit1/10</Line1>
-							<Line2>Barkley Street</Line2>
-						</Street>
-						<City>Yarra Glenn</City>
-						<StateProvince>VIC</StateProvince>
-						<Country>1101</Country>
-						<PostalCode>9999</PostalCode>
-					</Address>
-					<Address Type="0123A" Role="013A">
-						<Street>
-							<Line1>34 Term Address Street</Line1>
-						</Street>
-						<City>Home Town</City>
-						<StateProvince>WA</StateProvince>
-						<Country>1101</Country>
-						<PostalCode>9999</PostalCode>
-					</Address>
-				</AddressList>
-				<PhoneNumberList>
-					<PhoneNumber Type="0096">
-						<Number>03 9637-2289</Number>
-						<Extension>72289</Extension>
-						<ListedStatus>Y</ListedStatus>
-					</PhoneNumber>
-					<PhoneNumber Type="0888">
-						<Number>0437-765-234</Number>
-						<ListedStatus>N</ListedStatus>
-					</PhoneNumber>
-				</PhoneNumberList>
-				<EmailList>
-					<Email Type="01">fsmith@yahoo.com</Email>
-					<Email Type="02">freddy@gmail.com</Email>
-				</EmailList>
-			</PersonInfo>
-			
-			<EmploymentType>4</EmploymentType>
-			<SchoolEducationalLevel>3</SchoolEducationalLevel>
-			<NonSchoolEducation>6</NonSchoolEducation>
-		</StudentContactPersonal>
-	</xhtml:Example>
-
-	<xhtml:Example xmlns='' name="StudentContactPersonal Family Member Example" intl="nz">
+	<xhtml:Example xmlns='' name="StudentContactPersonal Family Member Example">
 		<StudentContactPersonal>
 			<RefId>7C834EA9-EDA1-2090-347F-83297E1C290F</RefId>
 			<LocalId>P1234567</LocalId>
@@ -247,8 +78,8 @@
 				</Name>
 				<AddressList>
 					<Address>
-						<Type json:force-string="true">1</Type>
-						<Role json:force-string="true">1</Role>
+						<Type>TH</Type>
+						<Role>PHY</Role>
 						<Street>
 							<Line1>The Enchanted Wood</Line1>
 							<Line2>533 Hogwart's Way</Line2>
@@ -257,8 +88,8 @@
 						<PostalCode json:force-string="true">7733</PostalCode>
 					</Address>
 					<Address>
-						<Type>2</Type>
-						<Role>2</Role>
+						<Type>RU</Type>
+						<Role>PHY</Role>
 						<Street>
 							<Line1>1175 Lake Ferry Rd</Line1>
 						</Street>
@@ -268,14 +99,13 @@
 				</AddressList>
 				<EmailList>
 					<Email json:force-array="true">
-						<Type>07</Type>
+						<Type>PRIM</Type>
 						<Address>ridwulfa@gmail.com</Address>
 					</Email>
 				</EmailList>
 				<PhoneNumberList>
 					<PhoneNumber>
-						<Usage json:force-string="true">2</Usage>
-						<Type>0096</Type>
+						<Type>MOB</Type>
 						<Number>(021) 300 999</Number>
 					</PhoneNumber>
 				</PhoneNumberList>
@@ -285,8 +115,8 @@
 						<HouseholdContactId>7d5c3f5c-d89c-4551-9442-6b008207986e</HouseholdContactId>
 						<AddressList>
 							<Address json:force-array="true">
-								<Type json:force-string="true">1</Type>
-								<Role json:force-string="true">1</Role>
+								<Type>DE</Type>
+								<Role>POS</Role>
 								<Street>
 									<Line1>P O Box 81</Line1>
 								</Street>
@@ -296,14 +126,13 @@
 						</AddressList>
 						<EmailList json:force-array="true">
 							<Email>
-								<Type>07</Type>
+								<Type>WORK</Type>
 								<Address>ridwulfa@gmail.com</Address>
 							</Email>
 						</EmailList>
 						<PhoneNumberList>
 							<PhoneNumber>
-								<Usage json:force-string="true">2</Usage>
-								<Type>0096</Type>
+								<Type>MOB</Type>
 								<Number>(021) 300 999</Number>
 							</PhoneNumber>
 						</PhoneNumberList>
@@ -311,15 +140,10 @@
 					
 				</HouseholdContactInfoList>
 			</PersonInfo>
-			<HealthcareServiceInfo>
-				<OrganisationName>Martinborough Medical Centre</OrganisationName>
-				<Notes>Dr Phillips</Notes>
-				<Type json:force-string="true">1</Type>
-			</HealthcareServiceInfo>
 		</StudentContactPersonal>
 	</xhtml:Example>
 
-	<xhtml:Example xmlns='' name="StudentContactPersonal Doctor Example" intl="nz">
+	<xhtml:Example xmlns='' name="StudentContactPersonal Doctor Example">
 		<StudentContactPersonal>
 		    <RefId>7C834EA9-EDA1-2090-347F-FACE7E1C290F</RefId>
 			<LocalId>P1234567</LocalId>
@@ -329,9 +153,9 @@
 					<FullName>Dr Phillips</FullName>
 				</Name>
 				<AddressList>
-					<Address>
-						<Type json:force-string="true">1</Type>
-						<Role json:force-string="true">1</Role>
+					<Address json:force-array="true">
+						<Type>TH</Type>
+						<Role>PHY</Role>
 						<Street>
 							<Line1>Regent St.</Line1>
 						</Street>
@@ -341,22 +165,22 @@
 				</AddressList>
 				<EmailList>
 					<Email json:force-array="true">
-						<Type>07</Type>
+						<Type>PRIM</Type>
 						<Address>Phillips@mboroHealth.com</Address>
 					</Email>
 				</EmailList>
 				<PhoneNumberList>
 					<PhoneNumber>
-						<Usage json:force-string="true">2</Usage>
-						<Type>0096</Type>
+						<Type>MOB</Type>
 						<Number>(021) 300 999</Number>
 					</PhoneNumber>
 				</PhoneNumberList>
 			</PersonInfo>
 			<HealthcareServiceInfo>
 				<OrganisationName>Martinborough Medical Centre</OrganisationName>
+				<OrganisationPhoneNum>06 306 9311</OrganisationPhoneNum>
 				<Notes>Dr Amy also knows about the epilepsy</Notes>
-				<Type json:force-string="true">1</Type>
+				<Type>DOC</Type>
 			</HealthcareServiceInfo>
 		</StudentContactPersonal>
 	</xhtml:Example>

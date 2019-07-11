@@ -1,0 +1,109 @@
+<DataObject name="StudentTeachingGroupEnrolment"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<Key>RefId</Key>
+	<EventsReported>true</EventsReported>
+
+	<Item>
+		<Element>StudentTeachingGroupEnrolment</Element>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Records a student's arrival to and departure from a TeachingGroup.</p>
+		</Description>
+	</Item>
+
+	<Item>
+		<Element>RefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The SIF GUID for the student teaching group enrolment.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"></Type>
+	</Item>    <!-- RefId -->
+
+    <Item>
+		<Element>LocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The local Id for the student teaching group enrolment, assigned by the Provider.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>    <!-- LocalId -->
+
+	<Item>
+		<Element>Student</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Generic object reference to the Student enrolling in the TeachingGroup</p>
+		</Description>
+		<Type ref="CommonTypes" relationship="records enrollment of" count="*:1" name="ObjectReferenceType"></Type>
+	</Item>    <!-- Student -->
+
+	<Item>
+		<Element>Provider</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Generic object reference to the education Provider, eg school, that has the TeachingGroup</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/>
+	</Item>    <!-- Provider -->
+
+	<Item>
+		<Element>TeachingGroup</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Generic object reference to the TeachingGroup the student is enroling in.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/>
+	</Item>    <!-- TeachingGroup -->
+
+	<Item>
+		<Element>StartDate</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The date the Student's enrolment in the teaching group starts.</p>
+		</Description>
+		<Type name="xs:date"></Type>
+	</Item>    <!-- StartDate -->
+
+	<Item>
+		<Element>EndDate</Element>
+		<Characteristics>C</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The date of a student’s enrolment in the teaching group ends.</p>
+		</Description>
+		<Type name="xs:date"></Type>
+	</Item>    <!-- EndDate -->
+
+
+	<xhtml:Example xmlns="" name="Student TeachingGroup Enrolment">
+		<StudentTeachingGroupEnrolment>
+			<RefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</RefId>
+			<LocalId>2004H102</LocalId>
+			<Student>
+				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
+			</Student>
+			<Provider>
+				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
+			</Provider>
+			<TeachingGroup>
+				<RefId>93b9b77e-a23f-4acd-a65e-e26f1034317f</RefId>
+			</TeachingGroup>
+			<StartDate>2018-01-29</StartDate>
+			<EndDate>2018-12-05</EndDate>
+		</StudentTeachingGroupEnrolment>
+	</xhtml:Example>
+</DataObject>

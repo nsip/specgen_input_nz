@@ -1,0 +1,91 @@
+<DataObject name="ScheduleTerm"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
+	xmlns="http://sifassociation.org/SpecGen">
+
+
+	<Key>RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>ScheduleTerm</Element>
+	  <privacyRating>Low</privacyRating>
+		<Description>
+			<p>Provides information about school terms, tertiary terms etc.,
+			either at a national, or provider level, within a school
+			year. If the term is being supplied at a national level, no
+			provider information will be linked.</p>
+		</Description>
+	</Item>
+	
+	<Item>
+		<Element>RefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p> The ID (GUID) assigned to uniquely identify this Schedule Term.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>    <!-- RefId -->
+	<Item>
+		<Element>LocalId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The local Id of  this Schedule Term.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>    <!-- LocalId -->
+
+	<Item>
+		<Element>TermName</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The name of the schedule term.</p>
+		</Description>
+		<Type  name="xs:normalizedString"/>
+	</Item>    <!-- TermName -->
+
+	<Item>
+		<Element>Provider</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The provider the schedule term applies to, ommitted if it applies to all providers.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- Provider -->
+
+	<Item>
+		<Element>StartDate</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The start date of the term</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>    <!-- StartDate -->
+	<Item>
+		<Element>EndDate</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The end date of the term</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>    <!-- EndDate -->
+
+	<xhtml:Example xmlns="" name ="Schedule Term">
+		<ScheduleTerm>
+			<RefId>eed03e3c-b088-4b69-bba7-b042f6f7a040</RefId>
+			<LocalId>2019-1</LocalId>
+			<TermName>Term I of 2019</TermName>
+			<StartDate>2019-01-28</StartDate>
+			<EndDate>2019-03-13</EndDate>
+		</ScheduleTerm>
+	</xhtml:Example>
+</DataObject>

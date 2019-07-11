@@ -1,0 +1,99 @@
+<DataObject name="SchedulePeriod"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
+	xmlns="http://sifassociation.org/SpecGen">
+
+
+	<Key>RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>SchedulePeriod</Element>
+	  <privacyRating>Low</privacyRating>
+		<Description>
+			Defines the periods that take place within an academic day
+		</Description>
+	</Item>
+	
+	<Item>
+		<Element>RefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p> The ID (GUID) assigned to uniquely identify this Schedule Period.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>    <!-- RefId -->
+	<Item>
+		<Element>LocalId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The local Id of  this Schedule Period.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>    <!-- LocalId -->
+
+	<Item>
+		<Element>PeriodName</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The name of the schedule period.</p>
+		</Description>
+		<Type  name="xs:normalizedString"/>
+	</Item>    <!-- PeriodName -->
+
+	<Item>
+		<Element>Provider</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The provider the schedule period belongs to.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- Provider -->
+	<Item>
+		<Element>Schedule</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The provider schedule the schedule period belongs to.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- Schedule -->
+	<Item>
+		<Element>AcademicDay</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The provider schedule academic day the schedule period belongs to.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- AcademicDay -->
+
+	<xhtml:Example xmlns="" name ="Schedule Period">
+		<SchedulePeriod>
+			<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
+			<LocalId>2019a-A1</LocalId>
+			<PeriodName>Period 1 on Day A</PeriodName>
+			<Provider>
+				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
+				<Name>Hogwarts High</Name>
+			</Provider>
+			<Schedule>
+				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
+				<LocalId>2019a</LocalId>
+				<Name>Scheule 2019a (Term 1)</Name>
+			</Schedule>				
+			<AcademicDay>
+				<RefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</RefId>
+				<LocalId>2019a-A</LocalId>
+				<Name>Schedule 2019a, Day A</Name>
+			</AcademicDay>
+		</SchedulePeriod>
+	</xhtml:Example>
+</DataObject>

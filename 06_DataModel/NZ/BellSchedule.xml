@@ -1,0 +1,120 @@
+<DataObject name="BellSchedule"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
+	xmlns="http://sifassociation.org/SpecGen">
+
+
+	<Key>RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>BellSchedule</Element>
+	  <privacyRating>Low</privacyRating>
+		<Description>
+			Defines bell schedules, each of which is a collection of periods
+			within an academic day with start and end times associated. These bell
+			schedules are assigned to calendar dates
+			on which the school is in session using ScheduleDate in order to
+			specify the school schedule on those dates. These bell schedules
+			should generally only be used to define standard day
+			types. Exception days (unless they repeat multiple times and
+			follow a common template) are defined using ScheduleEvent and
+			ScheduleCustomDayEvent.
+		</Description>
+	</Item>
+	
+	<Item>
+		<Element>RefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p> The ID (GUID) assigned to uniquely identify this Bell Schedule.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>    <!-- RefId -->
+	<Item>
+		<Element>LocalId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The local Id of the this Bell Schedule.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>    <!-- LocalId -->
+
+	<Item>
+		<Element>BellScheduleName</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The name of the Bell Schedule.</p>
+		</Description>
+		<Type  name="xs:normalizedString"/>
+	</Item>    <!-- BellScheduleName -->
+
+	<Item>
+		<Element>Provider</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The provider the bell schedule belongs to.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- Provider -->
+	<Item>
+		<Element>Schedule</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The provider schedule the bell schedule belongs to.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- Schedule -->
+	<Item>
+		<Element>SchedulePeriodList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of periods that make up this academic day, e.g. Period 1, Period 2 etc.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SchedulePeriodListType"/>
+	</Item>    <!-- SchedulePeriodList -->
+
+	<xhtml:Example xmlns="" name ="Bell Schedule">
+		<BellSchedule>
+			<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
+			<LocalId>2019a-Normal</LocalId>
+			<BellScheduleName>Schedule 2019a, Normal Bell Schedule</BellScheduleName>
+			<Provider>
+				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
+				<Name>Hogwarts High</Name>
+			</Provider>
+			<Schedule>
+				<Name>Scheule 2019a (Term 1)</Name>
+			</Schedule>
+			<SchedulePeriodList>
+				<SchedulePeriodTime>
+					<Period>
+						<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
+						<LocalId>2019a-A1</LocalId>
+						<Name>Period 1 on Day A</Name>
+					</Period>
+					<StartTime>08:45:00</StartTime>
+					<EndTime>09:35:00</EndTime>
+				</SchedulePeriodTime>
+				<SchedulePeriodTime>
+					<Period>
+						<RefId>1c48a0bb-a6cc-41ab-8aae-929ce5ec9c34</RefId>
+						<LocalId>2019a-A2</LocalId>
+						<Name>Period 2 on Day A</Name>
+					</Period>
+					<StartTime>09:45:00</StartTime>
+					<EndTime>10:35:00</EndTime>
+				</SchedulePeriodTime>
+			</SchedulePeriodList>
+		</BellSchedule>
+	</xhtml:Example>
+</DataObject>

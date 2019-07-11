@@ -33,7 +33,7 @@
   </Item>    <!-- RefId -->
 
   <Item>
-		<Element>WellbeingAlertLocalId</Element>
+		<Element>LocalId</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
@@ -43,34 +43,34 @@
 	</Item>    <!-- LocalId -->
 
   <Item>
-    <Element>StudentPersonalRefId</Element>
+    <Element>Student</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>High</privacyRating>
     <Description>
-      <p>The ID (GUID) of the student to whom this WellbeingAlert belongs.</p>
+      <p>Generic object reference to the student to whom this WellbeingAlert belongs.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- StudentPersonalRefId -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- Student -->
 
   <Item>
-    <Element>ProviderRefId</Element>
+    <Element>Provider</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>The ID (GUID) of the school for which this WellbeingAlert is being reported.</p>
+      <p>Generic object reference to the school for which this WellbeingAlert is being reported.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- ProviderRefId -->  
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- Provider -->  
 
   <Item>
-    <Element>StaffMemberRefId</Element>
+    <Element>StaffMember</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>The staff member that is a key contact for this wellbeing alert.</p>
+      <p>Generic object reference to the staff member that is a key contact for this wellbeing alert.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- StaffMemberRefId -->  
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- StaffMember -->  
 
   <Item>
     <Element>PublishedDate</Element>
@@ -182,15 +182,21 @@
     <Type ref="CommonTypes" name="WellbeingCharacteristicList"/>
   </Item>    <!-- WellbeingCharacteristicList -->
  
-  <xhtml:Example xmlns="" name="WellbeingAlert">
+  <xhtml:Example xmlns="" name="Wellbeing Alert">
     <WellbeingAlert>
       <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
-      <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
-      <ProviderRefId>CA285746-359D-7510-1A8C-36432A901A16</ProviderRefId>
-      <StaffMemberRefId>BA265776-359D-7510-1A8C-77432A901A16</StaffMemberRefId>
+      <Student>
+        <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
+      </Student>
+      <Provider>
+        <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
+      </Provider>
+      <StaffMember>
+        <RefId>BA265776-359D-7510-1A8C-77432A901A16</RefId>
+      </StaffMember>
       <PublishedDate>2017-11-01</PublishedDate>
       <StartDate>2017-11-01</StartDate>
-      <AlertCategory>M</AlertCategory>
+      <AlertCategory>MED</AlertCategory>
       <AlertDescription>This Student is allergic to peanuts</AlertDescription>
     </WellbeingAlert>
   </xhtml:Example>

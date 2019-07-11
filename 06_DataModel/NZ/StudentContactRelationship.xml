@@ -31,28 +31,35 @@
 		<Type ref="CommonTypes" name="RefIdType"></Type>
 	</Item>   <!-- RefId -->
 	<Item>
-		<Element>StudentPersonalRefId</Element>
+		<Element>LocalID</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
-		<Description>SIF GUID for the Student.</Description>
-		<Type ref='CommonTypes' name='IdRefType'/>
-	</Item>   <!-- StudentPersonalRefId -->
+		<Description>
+			<p>Local identifier for the student contact relationship, if provided by the source system</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"></Type>
+	</Item>   <!-- LocalId -->
 	<Item>
-		<Element>StudentContactPersonalRefId</Element>
+		<Element>Student</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
-		<Description>SIF GUID for the student contact.</Description>
-		<Type ref='CommonTypes' name='IdRefType'/>
-	</Item>   <!-- StudentContactPersonalRefId -->
-  <if intl="nz">
-		<Item>
-			<Element>ProviderRefId</Element>
-			<Characteristics>C</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>SIF GUID for the Provider associated with the relationship.</Description>
-			<Type ref='CommonTypes' name='IdRefType'/>
-		</Item>   <!-- ProviderRefId -->
-  </if>
+		<Description>Generic object referencet to the Student.</Description>
+		<Type ref='CommonTypes' name='ObjectReferenceType'/>
+	</Item>   <!-- Student -->
+	<Item>
+		<Element>StudentContact</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>Generic object reference to the student contact.</Description>
+		<Type ref='CommonTypes' name='ObjectReferenceType'/>
+	</Item>   <!-- StudentContact -->
+	<Item>
+		<Element>Provider</Element>
+		<Characteristics>C</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>Generic object reference to the Provider associated with the relationship.</Description>
+		<Type ref='CommonTypes' name='ObjectReferenceType'/>
+	</Item>   <!-- Provider -->
 	<Item>
 		<Element>Relationship</Element>
 		<Characteristics>M</Characteristics>
@@ -99,94 +106,20 @@
 		<Type name="xs:unsignedInt"></Type>
 	</Item>   <!-- ContactSequence -->
 	
-  <if intl="au">
-		<Item>
-			<Element>ParentRelationshipStatus</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Medium</privacyRating>
-			<Description>
-				<p>Confirms whether or not this contact defined in the
-				relationship is to be tracked for MCEECDYA Data
-				Implementation Manual Reporting.</p>
-			</Description>
-			<Values>
-				<Value>
-					<Code>Parent1</Code>
-				</Value>
-				<Value>
-					<Code>Parent2</Code>
-				</Value>
-				<Value>
-					<Code>NotForReporting</Code>
-				</Value>
-			</Values>
-		</Item>   <!-- ParentRelationshipStatus -->
-		<Item>
-			<Element>MainlySpeaksEnglishAtHome</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Medium</privacyRating>
-			<Description>
-				<p>Is English the main language spoken at home?</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>   <!-- MainlySpeaksEnglishAtHome -->
-		<Item>
-			<Element>ContactSequenceSource</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>Indicates the source who provided the contact sequence order. </p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsSourceCodeTypeType"></Type>
-		</Item>   <!-- ContactSequenceSource -->
-		<Item>
-			<Element>SchoolInfoRefId</Element>
-			<Characteristics>C</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>GUID that identifies a school associated with the relationship.</Description>
-			<Type ref='CommonTypes' name='IdRefType'/>
-		</Item>   <!-- SchoolInfoRefId -->
-	</if>
-  <xhtml:Example xmlns='' name="StudentContactRelationship" intl="au">
-    <StudentContactRelationship StudentContactRelationshipRefId = "7572B261-0947-583A-463D-BB345291B332">
-      <StudentPersonalRefId>DEE34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
-      <StudentContactPersonalRefId>6472B261-0947-583A-463D-BB345291B001</StudentContactPersonalRefId>
-      <Relationship>
-        <Code>01</Code>
-      </Relationship>
-      <HouseholdList>
-        <Household>FamilyA</Household>
-        <Household>FamilyB</Household>
-      </HouseholdList>
-      <ContactFlags>
-        <ParentLegalGuardian>Y</ParentLegalGuardian>
-        <PickupRights>Y</PickupRights>
-        <LivesWith>N</LivesWith>
-        <AccessToRecords>U</AccessToRecords>
-        <ReceivesAssessmentReport>Y</ReceivesAssessmentReport>
-        <EmergencyContact>Y</EmergencyContact>
-        <HasCustody>N</HasCustody>
-        <DisciplinaryContact>N</DisciplinaryContact>
-        <AttendanceContact>N</AttendanceContact>
-        <PrimaryCareProvider>U</PrimaryCareProvider>
-        <FeesBilling>Y</FeesBilling>
-        <FamilyMail>Y</FamilyMail>
-        <InterventionOrder>N</InterventionOrder>
-      </ContactFlags>
-      <MainlySpeaksEnglishAtHome>U</MainlySpeaksEnglishAtHome>
-        <ContactSequence>1</ContactSequence>
-        <ContactSequenceSource>P</ContactSequenceSource>
-      </StudentContactRelationship>
-  </xhtml:Example>
-
-  <xhtml:Example xmlns='' name="StudentContactRelationship" intl="nz">
+  <xhtml:Example xmlns='' name="StudentContactRelationship">
     <StudentContactRelationship>
-			<RefId>7572B261-0947-583A-463D-BB345291B332</RefId>
-      <StudentPersonalRefId>DEE34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
-      <StudentContactPersonalRefId>6472B261-0947-583A-463D-BB345291B001</StudentContactPersonalRefId>
-	  <ProviderRefId>4661c4c8-fd03-4fc6-8af7-5084338494db</ProviderRefId>
+	  <RefId>7572B261-0947-583A-463D-BB345291B332</RefId>
+      <Student>
+	    <RefId>DEE34B35-9D75-101A-8C3D-00AA001A1652</RefId>
+      </Student>
+      <StudentContact>
+		<RefId>6472B261-0947-583A-463D-BB345291B001</RefId>
+	  </StudentContact>
+	  <Provider>
+		<RefId>4661c4c8-fd03-4fc6-8af7-5084338494db</RefId>
+	  </Provider>
       <Relationship>
-        <Code>01</Code>
+        <Code>LEG</Code>
       </Relationship>
       <HouseholdList>
         <HouseholdId>FamilyA</HouseholdId>
@@ -199,7 +132,7 @@
         <AccessToRecords>U</AccessToRecords>
         <ReceivesAssessmentReport>Y</ReceivesAssessmentReport>
         <EmergencyContact>Y</EmergencyContact>
-		<CivilDefenceEmergencyContact>N</CivilDefenceEmergencyContact>
+				<CivilDefenceEmergencyContact>N</CivilDefenceEmergencyContact>
         <DisciplinaryContact>N</DisciplinaryContact>
         <AttendanceContact>N</AttendanceContact>
         <PrimaryCareProvider>U</PrimaryCareProvider>

@@ -3,8 +3,9 @@
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			xmlns:xi="http://www.w3.org/2001/XInclude"
 			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:json="http://json.org/"
 	
-            xmlns="http://sifassociation.org/SpecGen">
+      xmlns="http://sifassociation.org/SpecGen">
 
   <Key>RefId</Key>
   <EventsReported>true</EventsReported>
@@ -26,6 +27,7 @@
         the staff member is responsible for are made via the TeachingGroup data object.</p>
     </Description>
   </Item>
+
   <Item>
     <Element>RefId</Element>
     <Characteristics>M</Characteristics>
@@ -35,61 +37,36 @@
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>      <!-- RefId -->
-
-  <if intl="au">
-    <Item>
-      <Element>SchoolInfoRefId</Element>
-      <Characteristics>M</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The ID (GUID) that identifies the school where the staff member is assigned.</p>
-      </Description>
-      <Type ref="CommonTypes" relationship="records staff assignment to" count="1:1" name="IdRefType"></Type>
-    </Item>    <!-- SchoolInfoRefId -->
-    <Item>
-      <Element>SchoolYear</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>
-          School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., <code>2007</code>). Release 1.2 allows this to be optional as JobStart and EndDate allow for this Object to be used over more than one year.
-        </p>
-      </Description>
-      <Type ref="CommonTypes" name="SchoolYearType"></Type>
-    </Item>    <!-- SchoolYear -->
-  </if>
-
   <Item>
-    <Element>StaffPersonalRefId</Element>
+    <Element>LocalId</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>ID (GUID) of this staff member, as represented in the StaffPersonal object.&#160;</p>
+      <p>LocalId that identifies the staff assignment, from the source system, if provided.</p>
     </Description>
-    <Type ref="CommonTypes" relationship="records assignment for" count="*:1" name="IdRefType"></Type>
-  </Item>      <!-- StaffPersonalRefId -->
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>      <!-- LocalId -->
 
-  <if intl="nz">
-    <Item>
-      <Element>StaffPersonalLocalId</Element>
-      <Characteristics>M</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The identifier used by the Provider to identify the staff member.</p>
-      </Description>
-      <Type ref="CommonTypes" name="LocalIdType"></Type>
-    </Item>      <!-- StaffPersonalLocalId -->
-    <Item>
-      <Element>AssignedLocation</Element>
-      <Characteristics>M</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>A generic object reference to either <code>Provider</code> or <code>EducationOrganisation</code>
-          that the staff member is assigned to.</p>
-      </Description>
-      <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-    </Item>      <!-- AssignedLocation -->  
-  </if>
+  <Item>
+    <Element>StaffMember</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the staff member, as represented in the StaffPersonal object.&#160;</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>      <!-- StaffMember -->
+
+  <Item>
+    <Element>AssignedLocation</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A generic object reference to either <code>Provider</code> or <code>Organisation</code>
+        that the staff member is assigned to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>      <!-- AssignedLocation -->  
 
   <Item>
     <Element>Description</Element>
@@ -102,36 +79,34 @@
   </Item>      <!-- Description -->
 
   <Item>
-    <Element>StaffRole</Element>
+    <Element>StaffRoleList</Element>
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>The purpose of the Teacher's role as related to students. Equivalent to 'JobFunction' in US Object.</p>
+      <p>The list of roles the StaffMember has in relation to all students at the assigned location.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsStaffRoleType"></Type>
-  </Item>      <!-- StaffRole -->
+    <Type ref="CommonData" name="StaffRoleListType"></Type>
+  </Item>      <!-- StaffRoleList -->
 
-  <if intl="nz">
-    <Item>
-      <Element>StartDate</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>This is the date from which the staff assignment is valid (inclusive).</p>
-      </Description>
-      <Type name="xs:date"></Type>
-    </Item>    <!-- StartDate -->
-    <Item>
-      <Element>EndDate</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>This is the date through which the staff assignment is valid (inclusive). This
-           can be NULL when the staff member's assignment to a particular role is open-ended.</p>
-      </Description>
-      <Type name="xs:date"></Type>
-    </Item>    <!-- EndDate -->
-  </if>
+  <Item>
+    <Element>StartDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>This is the date from which the staff assignment is valid (inclusive).</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- StartDate -->
+  <Item>
+    <Element>EndDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>This is the date through which the staff assignment is valid (inclusive). This
+          can be NULL when the staff member's assignment to a particular role is open-ended.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- EndDate -->
 
   <Item>
     <Element>PrimaryAssignment</Element>
@@ -154,50 +129,6 @@
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
   </Item>      <!-- CasualReliefTeacher -->
-
-  <if intl="au">
-    <Item>
-      <Element>JobStartDate</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>This is the date from which the staff assignment is valid (inclusive).</p>
-      </Description>
-      <Type name="xs:date"></Type>
-    </Item>    <!-- JobStartDate -->
-    <Item>
-      <Element>JobEndDate</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>This is the date through which the staff assignment is valid (inclusive).</p>
-      </Description>
-      <Type name="xs:date"></Type>
-    </Item>    <!-- JobEndDate -->
-    <Item>
-      <Element>JobFTE</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>Full-time job equivalent ratio for this assignment. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
-      </Description>
-      <Type name="xs:decimal"></Type>
-      <Facets>
-        <xs:minInclusive value="0"/>
-        <xs:maxInclusive value="1"/>
-        <xs:fractionDigits value="2"/>
-      </Facets>
-    </Item>    <!-- JobFTE -->
-    <Item>
-      <Element>JobFunction</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The purpose of the activities as related to students.</p>
-      </Description>
-      <Type name="xs:string"></Type>
-    </Item>    <!-- JobFunction -->
-  </if>
 
   <Item>
     <Element>EmploymentStatus</Element>
@@ -233,112 +164,24 @@
     <Type ref="CommonTypes" name="YearLevelListType"></Type>
   </Item>      <!-- YearLevels -->
 
-  <if intl="au">
-    <Item>
-      <Element>StaffActivity</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The purpose of the Teacher's role as related to students. Equivalent to 'JobFunction' in US Object.</p>
-      </Description>
-      <Type ref="CommonTypes" name="StaffActivityExtensionType"></Type>
-    </Item>    <!-- StaffActivity -->
-  
-    <Item>
-      <Element>Homegroup</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The name of the homegroup the staff member is assigned to.</p>
-      </Description>
-      <Type name='xs:normalizedString'/>
-    </Item>     <!-- Homegroup -->
-
-    <Item>
-      <Element>House</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The name of the house the staff member is assigned to.</p>
-      </Description>
-      <Type name='xs:normalizedString'/>
-    </Item>    <!-- House -->
-    
-    <Item>
-      <Element>CalendarSummaryList</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The ID (GUID) of a calendar summary to which this Staff Member is associated with.</p>
-      </Description>
-      <Type ref="CommonTypes" name="CalendarSummaryListType"></Type>
-    </Item>    <!-- CalendarSummaryList -->
-    
-    <Item>
-      <Element>SIF_Metadata</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
-    </Item>    <!-- SIF_Metadata -->
-    <Item>
-      <Element>SIF_ExtendedElements</Element>
-      <Characteristics>O</Characteristics>
-      <privacyRating>Low</privacyRating>
-      <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
-    </Item>    <!-- SIF_ExtendedElements -->
-  </if>
-
-  <xhtml:Example xmlns="" name="AU StaffAssignment Example" intl="au">
-    <StaffAssignment RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
-      <SchoolInfoRefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</SchoolInfoRefId>
-      <SchoolYear>2008</SchoolYear>
-      <StaffPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1651</StaffPersonalRefId>
-      <Description>VCE English Teacher</Description>
-      <PrimaryAssignment>Y</PrimaryAssignment>
-      <JobStartDate>2000-09-05</JobStartDate>
-      <JobEndDate>2001-06-25</JobEndDate>
-      <JobFTE>1.00</JobFTE>
-      <JobFunction>Teacher</JobFunction>
-      <StaffSubjectList>
-        <StaffSubject>
-          <PreferenceNumber>1</PreferenceNumber>
-          <SubjectLocalId>English</SubjectLocalId>
-        </StaffSubject>
-        <StaffSubject>
-          <PreferenceNumber>2</PreferenceNumber>
-          <SubjectLocalId>Mathematics</SubjectLocalId>
-        </StaffSubject>
-        <StaffSubject>
-          <PreferenceNumber>3</PreferenceNumber>
-          <SubjectLocalId>Science</SubjectLocalId>
-        </StaffSubject>
-      </StaffSubjectList>
-      <YearLevels>
-        <YearLevel>
-          <Code>11</Code>
-        </YearLevel>
-        <YearLevel>
-          <Code>12</Code>
-        </YearLevel>
-      </YearLevels>
-      <CasualReliefTeacher>N</CasualReliefTeacher>
-    </StaffAssignment>
-
-  </xhtml:Example>
-
-  <xhtml:Example xmlns="" name="NZ StaffAssignment English Teacher Example" intl="nz">
+  <xhtml:Example xmlns="" name="StaffAssignment English Teacher Example">
     <StaffAssignment>
       <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
-      <StaffPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1651</StaffPersonalRefId>
-      <StaffPersonalLocalId>SMcG</StaffPersonalLocalId>
+      <StaffMember>
+        <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1651</RefId>
+      </StaffMember>
       <AssignedLocation>
         <RefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</RefId>
-        <LocalId>203</LocalId>
+        <LocalId json:force-string="true">203</LocalId>
         <Name>Wellington College</Name>
         <ObjectType>Provider</ObjectType>
       </AssignedLocation>
       <Description>Senior English Teacher</Description>
-      <StaffRole>1102</StaffRole>
+      <StaffRoleList>
+        <StaffRole>
+          <Role json:force-array="true" json:force-string="true">1102</Role>
+        </StaffRole>
+      </StaffRoleList>
       <StartDate>2000-09-05</StartDate>
       <EndDate>2001-06-25</EndDate>
       <PrimaryAssignment>Y</PrimaryAssignment>
@@ -347,44 +190,48 @@
       <StaffSubjectList>
         <StaffSubject>
           <PreferenceNumber>1</PreferenceNumber>
-          <Code>2</Code>
+          <Code>ENGL</Code>
           <YearLevels>
-            <YearLevel>11</YearLevel>
-            <YearLevel>12</YearLevel>
-            <YearLevel>13</YearLevel>
+            <YearLevel json:force-string="true">11</YearLevel>
+            <YearLevel json:force-string="true">12</YearLevel>
+            <YearLevel json:force-string="true">13</YearLevel>
           </YearLevels>
         </StaffSubject>
         <StaffSubject>
           <PreferenceNumber>2</PreferenceNumber>
-          <Code>7</Code>
+          <Code>HIST</Code>
         </StaffSubject>
       </StaffSubjectList>
     </StaffAssignment>
   </xhtml:Example>
   
-  <xhtml:Example xmlns="" name="NZ StaffAssignment Kāhui Ako Cross School Teacher Example" intl="nz">
+  <xhtml:Example xmlns="" name="StaffAssignment Kāhui Ako Cross School Teacher Example">
     <StaffAssignment>
       <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
-      <StaffPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1651</StaffPersonalRefId>
-      <StaffPersonalLocalId>SMcG</StaffPersonalLocalId>
+      <StaffMember>
+        <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1651</RefId>
+        <LocalId>SMcG</LocalId>
+        <Name>Steve McGannaway</Name>
+      </StaffMember>
       <AssignedLocation>
         <RefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</RefId>
-        <LocalId>9556</LocalId>
+        <LocalId json:force-string="true">9556</LocalId>
         <Name>Masterton (Whakaoriori) Kāhui Ako</Name>
-        <ObjectType>EducationOrganisation</ObjectType>
+        <ObjectType>Organisation</ObjectType>
       </AssignedLocation>
       <Description>Kāhui Ako Cross School Teacher</Description>
-      <StaffRole>1102</StaffRole>
+      <StaffRoleList>
+        <StaffRole>
+          <Role json:force-array="true" json:force-string="true">1102</Role>
+          <StartDate>2000-09-05</StartDate>
+          <EndDate>2001-03-31</EndDate>
+        </StaffRole>
+      </StaffRoleList>
       <StartDate>2000-09-05</StartDate>
       <EndDate>2001-06-25</EndDate>
-      <PrimaryAssignment>Y</PrimaryAssignment>
+      <PrimaryAssignment>N</PrimaryAssignment>
       <CasualReliefTeacher>N</CasualReliefTeacher>
       <EmploymentStatus>A</EmploymentStatus>
-      <YearLevels>
-        <YearLevel>11</YearLevel>
-        <YearLevel>12</YearLevel>
-        <YearLevel>13</YearLevel>
-      </YearLevels>
     </StaffAssignment>
   </xhtml:Example>
 </DataObject>

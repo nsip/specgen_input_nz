@@ -2,7 +2,6 @@
 	xmlns:xi="http://www.w3.org/2001/XInclude"
  	xmlns="http://sifassociation.org/SpecGen">
 	
-	
 	<CodeSet>
 		<Intro>
 			<p>Standard codes denoting the type of assessment the student is sitting for the assessment task.</p>
@@ -10,41 +9,74 @@
 		<ID>Assessment Type</ID>
 		<Values>
 			<Value>
-				<Code>101</Code>
+				<Code>INT</Code>
 				<Text>Internal Exam/Assessment</Text>
 			</Value>    <!-- Internal Exam/Assessment -->
 			<Value>
-				<Code>102</Code>
+				<Code>EXT</Code>
 				<Text>External Exam/Assessment</Text>
 			</Value>    <!-- External Exam/Assessment -->
 			<Value>
-				<Code>103</Code>
+				<Code>MOC</Code>
 				<Text>Mock</Text>
 			</Value>    <!-- Mock -->
 			<Value>
-				<Code>104</Code>
+				<Code>POR</Code>
 				<Text>Portfolio</Text>
 			</Value>    <!-- Portfolio -->
 			<Value>
-				<Code>105</Code>
+				<Code>PRA</Code>
 				<Text>Practical</Text>
 			</Value>    <!-- Practical -->
 			<Value>
-				<Code>106</Code>
+				<Code>OTJ</Code>
+				<Text>Overall Teacher Judgement</Text>
+			</Value>    <!-- OTJ -->			
+			<Value>
+				<Code>OTH</Code>
 				<Text>Other</Text>
-			</Value>    <!-- Other -->
+			</Value>    <!-- Other -->			
 		</Values>
 	</CodeSet>    <!-- Assessment Type -->
 
 	<CodeSet>
 		<Intro>
-			<p></p>
+			<p>Codes denoting the current status of the assessment task.</p>
+		</Intro>
+		<ID>Assessment Status</ID>
+		<Values>
+			<Value>
+				<Code>MOD</Code>
+				<Text>Moderated</Text>
+			</Value>
+			<Value>
+				<Code>NOT</Code>
+				<Text>Not Moderated</Text>
+			</Value>
+			<Value>
+				<Code>PUB</Code>
+				<Text>Published</Text>
+			</Value>
+			<Value>
+				<Code>ENT</Code>
+				<Text>Entered</Text>
+			</Value>
+			<Value>
+				<Code>MAR</Code>
+				<Text>Marked</Text>
+			</Value>									
+		</Values>
+	</CodeSet>    <!-- Assessment Status -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the role of the provider in the assessment, e.g. Assessing Provider, Location Provider.</p>
 		</Intro>
 		<ID>Assessment Provider Role</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Assessor</Text></Value>
-			<Value><Code>102</Code><Text>Location Provider</Text></Value>
-			<Value><Code>103</Code><Text>Provider</Text></Value>
+			<Value><Code>ASR</Code><Text>Assessor</Text></Value>
+			<Value><Code>LOC</Code><Text>Location Provider</Text></Value>
+			<Value><Code>PRO</Code><Text>Provider</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Asssessment Provider Role -->
 
@@ -53,11 +85,11 @@
 		</Intro>
 		<ID>Assessment Staff Role</ID>
 		<Values>
-			<Value><Code>99</Code><Text>Other</Text></Value>
-			<Value><Code>101</Code><Text>Creator</Text></Value>
-			<Value><Code>102</Code><Text>Moderator</Text></Value>
-			<Value><Code>103</Code><Text>Assessor</Text></Value>
-			<Value><Code>104</Code><Text>Invigilator</Text></Value>
+		  <Value><Code>CRE</Code><Text>Creator</Text></Value>
+		  <Value><Code>MOD</Code><Text>Moderator</Text></Value>
+		  <Value><Code>ASS</Code><Text>Assessor</Text></Value>
+		  <Value><Code>INV</Code><Text>Invigilator</Text></Value>
+		  <Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Assessment Staff Role -->
 
@@ -69,44 +101,42 @@
 		<Values>
 			<!-- PAT test metrics -->
 			<Value>
-				<Code>101</Code>
+				<Code>RAW</Code>
 				<Text>Raw</Text>
 			</Value>    <!-- Raw -->
 			<Value>
-				<Code>102</Code>
+				<Code>SCA</Code>
 				<Text>Scale</Text>
 			</Value>    <!-- Scale -->
 			<Value>
-				<Code>103</Code>
+				<Code>MAR</Code>
 				<Text>Margin of Error</Text>
 			</Value>    <!-- Margin of Error -->
 			<Value>
-				<Code>104</Code>
+				<Code>STA</Code>
 				<Text>Stanine</Text>
 			</Value>    <!-- Stanine -->
 			<Value>
-				<Code>105</Code>
+				<Code>YEA</Code>
 				<Text>Year Level</Text>
 			</Value>    <!-- Year Level -->
-
-			<!-- NZQA metrics -->
 			<Value>
-				<Code>106</Code>
-				<Text>NA</Text>
-				<Description>NZQA Assessment Standards: Not Achieved, Achieved</Description>
+			  <Code>NA</Code>
+			  <Text>NA</Text>
+			  <Description>NZQA Unit Standards: Not Achieved, Achieved</Description>
 			</Value>    <!-- NA -->
 			<Value>
-				<Code>107</Code>
+				<Code>NAM</Code>
 				<Text>NAME</Text>
 				<Description>NZQA Achievement Standards: Not Achieved, Achieved, Achieved with Merit, Achieved with Excellence</Description>
-			</Value>    <!-- NA -->
+			</Value>    <!-- NAME -->
 
 			<!--asTTle metrics -->
 			<Value>
-				<Code>108</Code>
+				<Code>CUR</Code>
 				<Text>Curriculum Level</Text>
 				<Description>Student is assessed to be at one of the levels defined by The National Curriculum: 1A, 1B through 5A, 5B</Description>
-			</Value>
+			</Value>    <!-- Curriculum Level -->
 		</Values>
 	</CodeSet>    <!-- Score Metric -->
 
@@ -118,47 +148,47 @@
 		<ID>Special Assessment Condition</ID>
 		<Values>
 			<Value>
-				<Code>101</Code>
+				<Code>BRA</Code>
 				<Text>Braille Paper</Text>
 			</Value>    <!-- Braille Paper -->
 			<Value>
-				<Code>102</Code>
+				<Code>COM</Code>
 				<Text>Computer OR Writer</Text>
 			</Value>    <!-- Computer OR Writer -->
 			<Value>
-				<Code>103</Code>
+				<Code>ENL</Code>
 				<Text>Enlarged Paper</Text>
 			</Value>    <!-- Enlarged Paper -->
 			<Value>
-				<Code>104</Code>
+				<Code>EXT</Code>
 				<Text>Extra Time</Text>
 			</Value>    <!-- Extra Time -->
 			<Value>
-				<Code>105</Code>
+				<Code>OTH</Code>
 				<Text>Other</Text>
 			</Value>    <!-- Other -->
 			<Value>
-				<Code>106</Code>
+				<Code>REA</Code>
 				<Text>Reader</Text>
 			</Value>    <!-- Reader -->
 			<Value>
-				<Code>107</Code>
+				<Code>RES</Code>
 				<Text>Rest Breaks</Text>
 			</Value>    <!-- Rest Breaks -->
 			<Value>
-				<Code>108</Code>
+				<Code>SEP</Code>
 				<Text>Separate Accommodation</Text>
 			</Value>    <!-- Separate Accommodation -->
 			<Value>
-				<Code>109</Code>
+				<Code>SIR</Code>
 				<Text>Signing Reader</Text>
 			</Value>    <!-- Signing Reader -->
 			<Value>
-				<Code>110</Code>
+				<Code>SIS</Code>
 				<Text>Signing Supervisor</Text>
 			</Value>    <!-- Signing Supervisor -->
 			<Value>
-				<Code>111</Code>
+				<Code>SPE</Code>
 				<Text>Special Paper</Text>
 			</Value>    <!-- Special Paper -->
 		</Values>
@@ -170,10 +200,10 @@
 		</Intro>
 		<ID>Assessment Tool</ID>
 		<Values>
-			<Value>
-				<Code>99</Code>
-				<Text>Other</Text>
-			</Value>    <!-- Other -->
+		  <Value><Code>PAT</Code><Text>PAT</Text></Value>
+		  <Value><Code>eASSTle</Code><Text>e-ASSTle</Text></Value>
+		  <Value><Code>PaCT</Code><Text>PaCT</Text></Value>
+		  <Value><Code>TWA</Code><Text>TWA</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Assessment Tool -->
 
@@ -183,10 +213,10 @@
 		</Intro>
 		<ID>Assessment Timeframe</ID>
 		<Values>
-			<Value>
-				<Code>99</Code>
-				<Text>Other</Text>
-			</Value>    <!-- Other -->
+		  <Value><Code>OTH</Code><Text>Other</Text></Value>
+		  <Value><Code>OUT</Code><Text>Out of Cycle</Text></Value>
+		  <Value><Code>INT</Code><Text>Interim</Text></Value>
+		  <Value><Code>END</Code><Text>End of Year</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Assessment Timeframe -->
 
@@ -196,8 +226,8 @@
 		</Intro>
 		<ID>NCEA Endorsement Level</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Excellence</Text></Value>
-			<Value><Code>102</Code><Text>Merit</Text></Value>
+			<Value><Code>E</Code><Text>Excellence</Text></Value>
+			<Value><Code>M</Code><Text>Merit</Text></Value>
 		</Values>
 	</CodeSet>    <!-- NCEA Endorsement Level -->
 

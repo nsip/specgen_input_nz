@@ -195,14 +195,21 @@
 		<ID>Referrable Data Objects</ID>
 		<Values>
 			<Value>
-				<Code>EducationOrganisation</Code>
-				<Text>EducationOrganisation</Text>
-				<Description>An organisation other than a Provider</Description>
+				<Code>Organisation</Code>
+				<Text>Organisation</Text>
+				<Description>
+				  A generic organisation that operates within the education sector; but doesn’t provide education services.
+				</Description>
 			</Value>
 			<Value>
 				<Code>Provider</Code>
 				<Text>Provider</Text>
 				<Description>A recognised provider of education services such as ECE Service, School or TEI</Description>
+			</Value>
+			<Value>
+				<Code>AcademicDepartment</Code>
+				<Text>AcademicDepartment</Text>
+				<Description/>
 			</Value>
 			<Value>
 				<Code>ProviderRelationship</Code>
@@ -248,6 +255,11 @@
 				</Description>
 			</Value>
 			<Value>
+				<Code>StaffTeachingGroupAssignment</Code>
+				<Text>StaffTeachingGroupAssignment</Text>
+				<Description/>
+			</Value>
+			<Value>
 				<Code>StudentPersonal</Code>
 				<Text>StudentPersonal</Text>
 				<Description>Contains all the personal information related to the student.</Description>
@@ -267,6 +279,11 @@
 				<Text>StudentProviderEnrolment</Text>
 				<Description>A student’s association with an education provider for the purpose of receiving
 					educational services.</Description>
+			</Value>
+			<Value>
+				<Code>StudentTeachingGroupEnrolment</Code>
+				<Text>StudentTeachingGroupEnrolment</Text>
+				<Description/>
 			</Value>
 			<Value>
 				<Code>TeachingGroup</Code>
@@ -293,8 +310,8 @@
 					each student's attempting the task.</Description>
 			</Value>
 			<Value>
-				<Code>AssessmentTaskRegistration</Code>
-				<Text>AssessmentTaskRegistration</Text>
+				<Code>StudentAssessmentTaskRegistration</Code>
+				<Text>StudentAssessmentTaskRegistration</Text>
 				<Description>The student's registration for an assessment task they are intending to participate in.</Description>
 			</Value>
 			<Value>
@@ -303,8 +320,8 @@
 				<Description>Record of a student's attempt at a particular assessment task.</Description>
 			</Value>
 			<Value>
-				<Code>AssessmentTaskResult</Code>
-				<Text>AssessmentTaskResult</Text>
+				<Code>StudentAssessmentTaskResult</Code>
+				<Text>StudentAssessmentTaskResult</Text>
 				<Description>Records the result achieved by a single student at a particular assessment task.</Description>
 			</Value>
 			<Value>
@@ -345,6 +362,11 @@
 					a negative/punitive Wellbeing Response that was the result of a student Wellbeing Event.</Description>
 			</Value>
 			<Value>
+				<Code>Document</Code>
+				<Text>Document</Text>
+				<Description/>
+			</Value>
+			<Value>
 				<Code>StudentVoice</Code>
 				<Text>StudentVoice</Text>
 				<Description>Information about a student's interests and academic, career and social goals.</Description>
@@ -361,12 +383,37 @@
 				<Description>Contains information pertaining to a student's participation in learning 
 					support.</Description>
 			</Value>
-		</Values>
+			<Value>
+				<Code>LearningSupportRegisterDirectory</Code>
+				<Text>LearningSupportRegisterDirectory</Text>
+				<Description/>
+			</Value>			
+			<Value>
+				<Code>StudentCurriculumProgressReport</Code>
+				<Text>StudentCurriculumProgressReport</Text>
+				<Description>
+					A curriculum progress and achievement reports provided for a
+					student.  Used in technology centres the host provider, to
+					report on student progress to their base school.
+				</Description>
+			</Value>
+			<Value>
+				<Code>StudentPhysicalRestraint</Code>
+				<Text>StudentPhysicalRestraint</Text>
+				<Description/>
+			</Value>
+			<Value>
+				<Code>StudentConsent</Code>
+				<Text>StudentConsent</Text>
+				<Description/>
+				</Value>
+			</Values>
 	  </CodeSet>      <!-- Referrable Data Object -->
 
 	  <xi:include parse="xml" href="NZ/DataModel-CodeSets-PartyRole.xml"/>
 	  <xi:include parse="xml" href="NZ/DataModel-CodeSets-Location.xml"/>
 	  <xi:include parse="xml" href="NZ/DataModel-CodeSets-Provider.xml"/>
+	  <xi:include parse="xml" href="NZ/DataModel-CodeSets-Schedule.xml"/>
 	  <xi:include parse="xml" href="NZ/DataModel-Codesets-Curriculum.xml"/>
 	  <xi:include parse="xml" href="NZ/DataModel-Codesets-Assessment.xml"/>
 	  <xi:include parse="xml" href="NZ/DataModel-CodeSets-Enrolment.xml"/>

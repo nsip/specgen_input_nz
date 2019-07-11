@@ -19,9 +19,10 @@
 				education).
 				</li>
 
-				<li>The <code>EducationOrganisation</code> is added in the NZ data model
-				and describes education organisations (such as Kahui Ako) that are known
-				to the NZ education system, but are not themselves Providers.</li>
+				<li>The <code>Organisation</code> is added in the NZ data
+				model and describes education organisations (such as Kahui
+				Ako) that are known to the NZ education system, not limited to
+				Schools and other Providers.</li>
 
 				<li><code>StudentPersonal</code> data object doesn't
 				include Alert or MedicalAlert messages; Demographics
@@ -46,17 +47,19 @@
 		<!-- Providers and other education oranisations -->
 		<xi:include parse="xml" href="NZ/Provider.xml"/>		
 		<xi:include parse="xml" href="NZ/ProviderRelationship.xml"/>
-		<xi:include parse="xml" href="NZ/EducationOrganisation.xml"/>
+		<xi:include parse="xml" href="NZ/Organisation.xml"/>
 		<xi:include parse="xml" href="NZ/AcademicDepartment.xml"/>
 
 		<!-- Staff, Students & their whānau -->
 		<xi:include parse="xml" href="NZ/StaffPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StaffAssignment.xml"/>
+		<xi:include parse="xml" href="NZ/StaffTeachingGroupAssignment.xml"/>
 		<xi:include parse="xml" href="NZ/StudentPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StudentContactPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StudentContactRelationship.xml"/>
 		<xi:include parse="xml" href="NZ/Document.xml"/>
-
+		<xi:include parse="xml" href="NZ/StudentConsent.xml"/>
+		
 		<!-- Curriculum, Courses, Learning Standards & Credentials -->
 		<xi:include parse="xml" href="NZ/TeachingGroup.xml"/>
 		<xi:include parse="xml" href="NZ/ProviderCourse.xml"/>
@@ -65,6 +68,18 @@
 
 		<!-- Student Enrolment -->
 		<xi:include parse="xml" href="NZ/StudentProviderEnrolment.xml"/>
+		<xi:include parse="xml" href="NZ/StudentTeachingGroupEnrolment.xml"/>
+
+		<!-- Schedule / Timetable -->
+		<xi:include parse="xml" href="NZ/Schedule.xml"/>
+		<xi:include parse="xml" href="NZ/ScheduleAcademicDay.xml"/>
+		<xi:include parse="xml" href="NZ/SchedulePeriod.xml"/>
+		<xi:include parse="xml" href="NZ/BellSchedule.xml"/>
+		<xi:include parse="xml" href="NZ/ScheduleTerm.xml"/>
+		<xi:include parse="xml" href="NZ/ScheduleHoliday.xml"/>
+		<xi:include parse="xml" href="NZ/ScheduleDate.xml"/>
+		<xi:include parse="xml" href="NZ/TeachingGroupEvent.xml"/>
+		<xi:include parse="xml" href="NZ/ScheduleEvent.xml"/>
 		
 		<!-- Student Attendance -->
 		<xi:include parse="xml" href="NZ/StudentAttendanceSummary.xml"/>
@@ -82,13 +97,15 @@
 		
 		<xi:include parse="xml" href="NZ/StudentVoice.xml"/>
 
+		<xi:include parse="xml" href="NZ/LearningSupportRegisterDirectory.xml"/>
 		<xi:include parse="xml" href="NZ/StudentLearningSupportParticipation.xml"/>
 		
-		<!-- Aromatawai / Assessment -->
+		<!-- Aromatawai / Assessment and progress -->
 		<xi:include parse="xml" href="NZ/AssessmentTask.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAssessmentTaskResult.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAssessmentTaskRegistration.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAssessmentTask.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAttainment.xml"/>
+		<xi:include parse="xml" href="NZ/StudentCurriculumProgressReport.xml"/>
 	</Group>
 </DataObjects>

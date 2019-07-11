@@ -1,0 +1,285 @@
+<DataObject name="ScheduleEvent"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
+	xmlns="http://sifassociation.org/SpecGen">
+
+
+	<Key>RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>ScheduleEvent</Element>
+	  <privacyRating>Low</privacyRating>
+		<Description>
+			<p>Defines events that may or may not impact the schedule. These
+			events may simply be for display, or may affect the schools
+			academic schedule.</p>
+		</Description>
+	</Item>
+	
+	<Item>
+		<Element>RefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p> The ID (GUID) assigned to uniquely identify this Schedule Event.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>    <!-- RefId -->
+	<Item>
+		<Element>LocalId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The local Id of the this Schedule Event.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>    <!-- LocalId -->
+
+	<Item>
+		<Element>Provider</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The provider at which this event will occur</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- Provider -->
+	<Item>
+		<Element>EventDate</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The start date of the event.</p>
+		</Description>
+		<Type  name="xs:date"/>
+	</Item>    <!-- EventDate -->
+
+
+	<Item>
+		<Element>Duration</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The duration of the event. If only the "EventDate" field is
+			populated, the duration is in days and if omitted defaults to 1
+			day; if the "EventDate" and "EventTime" fields are both
+			populated, the duration is in seconds and if omitted defaults to
+			3600 seconds (1 hour).</p>
+		</Description>
+		<Type  name="xs:integer"/>
+	</Item>    <!-- Duration -->
+	<Item>
+		<Element>EventTime</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The start time for the event, if required.</p>
+		</Description>
+		<Type  name="xs:time"/>
+	</Item>    <!-- EventTime -->
+	<Item>
+		<Element>EventName</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The name of the event.</p>
+		</Description>
+		<Type  name="xs:normalizedString"/>
+	</Item>    <!-- EventName -->
+	<Item>
+		<Element>Location</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The name of location where the event will occur.</p>
+		</Description>
+		<Type  name="xs:normalizedString"/>
+	</Item>    <!-- Location -->
+	<Item>
+		<Element>ScheduleEffect</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Code denoting the effect of this ScheduleEvent on the school schedule.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsScheduleEffectType"/>
+	</Item>    <!-- ScheduleEffect -->
+	
+	<Item>
+		<Element>ScheduleList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>List of the schedules within the provider which the event
+			will affect. If this event is to affect the school's academic
+			schedule this field is required, otherwise it is optional.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ScheduleListType"/> 
+	</Item>    <!-- ScheduleList -->
+
+	<Item>
+		<Element>ScheduleDayList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of one or more academic days to be applied to the
+			school calendar for the duration of this event. </p>
+		</Description>
+		<Type ref="CommonTypes" name="ScheduleDayListType"/> 
+	</Item>    <!-- ScheduleDayList -->
+	<Item>
+		<Element>RemoveScheduleDayList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of one or more academic days to be removed from the
+			school calendar for the duration of this event. Generally only
+			operates with a Schedule Effect of "add" or "custom".</p>
+		</Description>
+		<Type ref="CommonTypes" name="ScheduleDayListType"/> 
+	</Item>    <!-- RemoveScheduleDayList -->
+
+	<Item>
+		<Element>BellScheduleList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of one or more bell schedules to be applied to the school calendar for the duration of this event.</p>
+		</Description>
+		<Type ref="CommonTypes" name="BellScheduleListType"/> 
+	</Item>    <!-- BellScheduleList -->
+	<Item>
+		<Element>RemoveBellScheduleList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of one or more bell schedules to be removed from the
+			school calendar for the duration of this event. Generally only
+			operates with a Schedule Effect of "add" or "custom".</p>
+		</Description>
+		<Type ref="CommonTypes" name="BellScheduleListType"/> 
+	</Item>    <!-- RemoveBellScheduleList -->
+
+	<Item>
+		<Element>ScheduleTermList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of one or more terms to be affected by this
+			event. WARNING: Terms should only be specified for events that
+			affect the scheduling of terms. Setting Terms on other event can
+			have a disruptive effect on the school schedule.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ScheduleTermListType"/> 
+	</Item>    <!-- ScheduleTermList -->
+	<Item>
+		<Element>CustomPeriodList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of generic object references to a set of
+			SchedulePeriods, along with their custom start and end times,
+			which are part of a 'CUSTOM' ScheduleEvent.</p>
+			<p>Used in the creation of "one off" events defined in
+			ScheduleEvent to have a custom set of SchedulePeriods, each with
+			custom start and end times that don't match any particular bell
+			schedule.</p>
+			<p>Used for exception days in the school schedule, such as
+			assembly days or activity days.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ScheduleCustomDayPeriodListType"/> 
+	</Item>    <!-- CustomPeriodList -->
+	
+	<xhtml:Example xmlns="" name ="Schedule Event - Slip Schedule">
+		<ScheduleEvent>
+			<RefId>c79e65df-0b11-4a97-9062-9fbd1c1a38e3</RefId>
+			<LocalId>evMarSlip</LocalId>
+			<Provider>
+				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
+				<Name>Hogwarts High</Name>
+			</Provider>
+			<EventDate>2019-03-14</EventDate>
+
+			<Duration>1</Duration>
+			<EventName>March Floods - School Closed - Slip Schedule</EventName>
+			<ScheduleEffect>INSERT</ScheduleEffect>
+			<ScheduleList>
+				<Schedule>
+					<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
+					<Name>Schedule 2019a (Term 1)</Name>
+				</Schedule>
+			</ScheduleList>			
+		</ScheduleEvent>
+	</xhtml:Example>
+
+	<xhtml:Example xmlns="" name ="Schedule Event - Schedule day lost">
+		<ScheduleEvent>
+			<RefId>c315d397-6d8d-46bd-b183-ad3a3653a42b</RefId>
+			<LocalId>evMarCan</LocalId>
+			<Provider>
+				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
+				<Name>Hogwarts High</Name>
+			</Provider>
+			<EventDate>2019-03-14</EventDate>
+
+			<Duration>1</Duration>
+			<EventName>March Floods - School Closed - Schedule day lost</EventName>
+			<ScheduleEffect>DISPLACE</ScheduleEffect>
+			<ScheduleList>
+				<Schedule>
+					<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
+					<Name>Schedule 2019a (Term 1)</Name>
+				</Schedule>
+			</ScheduleList>			
+		</ScheduleEvent>
+	</xhtml:Example>
+
+	<xhtml:Example xmlns="" name ="Schedule Event - Custom Schedule">
+		<ScheduleEvent>
+			<RefId>f84d9681-03f6-4434-a867-967dba517cf5</RefId>
+			<LocalId>evWinSprt</LocalId>
+			<Provider>
+				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
+				<Name>Hogwarts High</Name>
+			</Provider>
+			<EventDate>2019-07-05</EventDate>
+
+			<Duration>1</Duration>
+			<EventName>Winter Sports - 3 Short Periods, Afternoon Off</EventName>
+			<ScheduleEffect>CUSTOM</ScheduleEffect>
+			<ScheduleList>
+				<Schedule>
+					<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
+					<Name>Schedule 2019a (Term 1)</Name>
+				</Schedule>
+			</ScheduleList>
+			<CustomPeriodList>
+				<Period>
+					<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
+					<LocalId>2019a-A1</LocalId>
+					<Name>Period 1 on Day A</Name>
+					<StartTime>09:00:00</StartTime>
+					<EndTime>09:45:00</EndTime>
+				</Period>
+				<Period>
+					<RefId>1c48a0bb-a6cc-41ab-8aae-929ce5ec9c34</RefId>
+					<LocalId>2019a-A2</LocalId>
+					<Name>Period 2 on Day A</Name>
+					<StartTime>09:50:00</StartTime>
+					<EndTime>10:35:00</EndTime>
+				</Period>
+				<Period>
+					<RefId>373caf8a-e55a-418a-a21d-6511f7a8dab3</RefId>
+					<LocalId>2019a-A4</LocalId>
+					<Name>Period 4 on Day A</Name>
+					<StartTime>10:45:00</StartTime>
+					<EndTime>11:30:00</EndTime>
+				</Period>				
+			</CustomPeriodList>
+		</ScheduleEvent>
+	</xhtml:Example>
+</DataObject>

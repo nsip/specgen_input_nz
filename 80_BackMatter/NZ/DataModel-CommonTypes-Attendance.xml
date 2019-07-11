@@ -10,9 +10,9 @@
 
 
 	<!-- Borrowed from SIF AU -->
-	<CommonElement name="AttendanceTimesType" type="true" dm="true">
+	<CommonElement name="AttendanceTimeListType" type="true" dm="true">
 		<Item>
-			<Element>AttendanceTimesType</Element>
+			<Element>AttendanceTimeListType</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Breakdown of times that the student entered or returned to school.</p>
@@ -28,36 +28,12 @@
 			<Type ref="CommonTypes" name="AttendanceTimeType"/>
 		</Item>		<!-- AttendanceTime -->
 
-		<xhtml:Example xmlns="" name="Attendance Time List Example" intl="au">
-			<AttendanceTimes>
+		<xhtml:Example xmlns="" name="Attendance Time List Example">
+			<AttendanceTimeList>
 				<AttendanceTime>
 					<AttendanceType>Swipe Cards</AttendanceType>
 					<AttendanceCode>E</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
-					<StartTime>09:00:00</StartTime>
-					<EndTime>09:40:00</EndTime>
-					<DurationValue>40</DurationValue>
-					<TimeTableSubjectRefId>5a207f7d-a24f-4588-be82-5c7bef4d4421</TimeTableSubjectRefId>
-					<AttendanceNote>Explained absence, but unjustified.</AttendanceNote>
-				</AttendanceTime>
-				<AttendanceTime>
-					<AttendanceType>Swipe Cards</AttendanceType>
-					<AttendanceCode>E</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
-					<StartTime>09:45:00</StartTime>
-					<EndTime>10:30:00</EndTime>
-					<DurationValue>45</DurationValue>
-					<TimeTableSubjectRefId>62480d2c-b57f-4b8d-83e3-4c7bf69cb173</TimeTableSubjectRefId>
-					<AttendanceNote>Explained absence, but unjustified.</AttendanceNote>
-				</AttendanceTime>
-			</AttendanceTimes>
-		</xhtml:Example>
-		<xhtml:Example xmlns="" name="Attendance Time List Example" intl="nz">
-			<AttendanceTimes>
-				<AttendanceTime>
-					<AttendanceType>Swipe Cards</AttendanceType>
-					<AttendanceCode>E</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
+					<AttendanceStatus>UNE</AttendanceStatus>
 					<StartTime>09:00:00</StartTime>
 					<EndTime>09:40:00</EndTime>
 					<DurationValue>40</DurationValue>
@@ -66,15 +42,16 @@
 				<AttendanceTime>
 					<AttendanceType>Swipe Cards</AttendanceType>
 					<AttendanceCode>E</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
+					<AttendanceStatus>UNE</AttendanceStatus>
 					<StartTime>09:45:00</StartTime>
 					<EndTime>10:30:00</EndTime>
 					<DurationValue>45</DurationValue>
 					<AttendanceNote>Explained absence, but unjustified.</AttendanceNote>
 				</AttendanceTime>
-			</AttendanceTimes>
+			</AttendanceTimeList>
 		</xhtml:Example>
 	</CommonElement>
+
 	<CommonElement name="AttendanceTimeType" type="true" dm="true">
 		<Item>
 			<Element>AttendanceTimeType</Element>
@@ -97,9 +74,6 @@
 			<Description>
 				<p>MoE defined code for attendance or absence during the time period described.</p>
 			</Description>
-			<if intl="au">
-				<Type ref="CommonTypes" name="AttendanceCodeType"/>
-			</if>
 			<if intl="nz">
 				<Type ref="CodeSets" name="NZCodeSetsAttendanceCodeType"/>
 			</if>
@@ -139,16 +113,6 @@
 				<xs:minInclusive value="0"/>
 			</Facets>
 		</Item>		<!-- DurationValue -->
-		<if intl="au">
-			<Item>
-				<Element>TimeTableSubjectRefId</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>RefId of TimeTableSubject</p>
-				</Description>
-				<Type ref="CommonTypes" name="RefIdType"/>
-			</Item>		<!-- TimeTableSubjectRefId -->
-		</if>
 		<Item>
 			<Element>AttendanceNote</Element>
 			<Characteristics>O</Characteristics>
@@ -158,23 +122,11 @@
 			<Type name="xs:normalizedString"/>
 		</Item>		<!-- AttendanceNote -->
 
-		<xhtml:Example xmlns="" name="Attendance Time Example" intl="au">
+		<xhtml:Example xmlns="" name="Attendance Time Example">
 			<AttendanceTime>
 				<AttendanceType>Swipe Cards</AttendanceType>
 				<AttendanceCode>E</AttendanceCode>
-				<AttendanceStatus>01</AttendanceStatus>
-				<StartTime>09:45:00</StartTime>
-				<EndTime>10:30:00</EndTime>
-				<DurationValue>45</DurationValue>
-				<TimeTableSubjectRefId>62480d2c-b57f-4b8d-83e3-4c7bf69cb173</TimeTableSubjectRefId>
-				<AttendanceNote>Explained absence, but unjustified.</AttendanceNote>
-			</AttendanceTime>
-		</xhtml:Example>
-		<xhtml:Example xmlns="" name="Attendance Time Example" intl="nz">
-			<AttendanceTime>
-				<AttendanceType>Swipe Cards</AttendanceType>
-				<AttendanceCode>E</AttendanceCode>
-				<AttendanceStatus>01</AttendanceStatus>
+				<AttendanceStatus>UNE</AttendanceStatus>
 				<StartTime>09:45:00</StartTime>
 				<EndTime>10:30:00</EndTime>
 				<DurationValue>45</DurationValue>
@@ -182,9 +134,10 @@
 			</AttendanceTime>
 		</xhtml:Example>
 	</CommonElement>
-	<CommonElement name="PeriodAttendancesType" type="true" dm="true">
+
+	<CommonElement name="PeriodAttendanceListType" type="true" dm="true">
 		<Item>
-			<Element>PeriodAttendancesType</Element>
+			<Element>PeriodAttendanceListType</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Breakdown of grouped period attendance.</p>
@@ -200,11 +153,11 @@
 			<Type ref="CommonTypes" name="PeriodAttendanceType"/>
 		</Item>		<!-- PeriodAttendance -->
 
-		<xhtml:Example xmlns="" name="Period Attendance List Example" intl="nz">
-			<PeriodAttendances>
+		<xhtml:Example xmlns="" name="Period Attendance List Example">
+			<PeriodAttendanceList>
 				<PeriodAttendance>
 					<AttendanceCode>E</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
+					<AttendanceStatus>UNE</AttendanceStatus>
 					<TimetableDayId json:force-string="true">4</TimetableDayId>
 					<TimetablePeriodId>4D</TimetablePeriodId>
 					<StartTime>09:00:00</StartTime>
@@ -213,17 +166,18 @@
 				</PeriodAttendance>
 				<PeriodAttendance>
 					<AttendanceCode>E</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
+					<AttendanceStatus>UNE</AttendanceStatus>
 					<StartTime>09:45:00</StartTime>
 					<EndTime>10:30:00</EndTime>
 					<StudentTimeIn>09:58:00</StudentTimeIn>
 					<SubjectAreaList json:force-array="true">
-						<SubjectArea json:force-string="true">3</SubjectArea>
+						<SubjectArea>MATH</SubjectArea>
 					</SubjectAreaList>
-					<TeacherList json:force-array="true">
-						<StaffMember>
-							<StaffLocalId>McGP</StaffLocalId>
-							<Name><FullName>Phineas McWhirter</FullName></Name>
+					<TeacherList>
+						<StaffMember json:force-array="true">
+							<RefId>5e695355-3593-407c-b24e-03e75b8721a1</RefId>
+							<LocalId>McWP</LocalId>
+							<Name>Phineas McWhirter</Name>
 						</StaffMember>
 					</TeacherList>
 					<RoomList json:force-array="true">
@@ -231,9 +185,10 @@
 					</RoomList>
 					<AttendanceNote>Late to Class, Explained absence, but unjustified.</AttendanceNote>
 				</PeriodAttendance>
-			</PeriodAttendances>
+			</PeriodAttendanceList>
 		</xhtml:Example>
 	</CommonElement>
+
 	<CommonElement name="PeriodAttendanceType" type="true" dm="true">
 		<Item>
 			<Element>PeriodAttendanceType</Element>
@@ -248,12 +203,7 @@
 			<Description>
 				<p>MoE defined code for attendance or  absence during the time period described.</p>
 			</Description>
-			<if intl="au">
-				<Type ref="CommonTypes" name="AttendanceCodeType"/>
-			</if>
-			<if intl="nz">
-				<Type ref="CodeSets" name="NZCodeSetsAttendanceCodeType"/>
-			</if>
+			<Type ref="CodeSets" name="NZCodeSetsAttendanceCodeType"/>
 		</Item>		<!-- AttendanceCode -->
 		<Item>
 			<Element>AttendanceStatus</Element>
@@ -263,44 +213,22 @@
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsAttendanceStatusType"/>
 		</Item>		<!-- AttendanceStatus -->
-		<if intl="au">
-			<Item>
-				<Element>Date</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>The date of the attendance event.</p>
-				</Description>
-				<Type name="xs:date"></Type>
-			</Item>		<!-- Date -->
-		</if>
-		<if intl="au">
-			<Item>
-				<Element>TimetablePeriod</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The period within which attendance is being reported, e.g. "4D".</p>
-				</Description>
-				<Type name="xs:normalizedString"></Type>
-			</Item>		<!-- TimetablePeriod -->
-		</if>
-		<if intl="nz">
-			<Item>
-				<Element>TimetableDayId</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>LocalId for the timetable day within which attendance is being reported, e.g. "4".</p>
-				</Description>
-				<Type ref="CommonTypes" name="LocalIdType"/>
-			</Item>		<!-- TimetableDayId -->
-			<Item>
-				<Element>TimetablePeriodId</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>LocalId for the timetable period within which attendance is being reported, e.g. "4D".</p>
-				</Description>
-				<Type ref="CommonTypes" name="LocalIdType"/>
-			</Item>		<!-- TimetablePeriodId -->
-		</if>
+		<Item>
+			<Element>TimetableDayId</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>LocalId for the timetable day within which attendance is being reported, e.g. "4".</p>
+			</Description>
+			<Type ref="CommonTypes" name="LocalIdType"/>
+		</Item>		<!-- TimetableDayId -->
+		<Item>
+			<Element>TimetablePeriodId</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>LocalId for the timetable period within which attendance is being reported, e.g. "4D".</p>
+			</Description>
+			<Type ref="CommonTypes" name="LocalIdType"/>
+		</Item>		<!-- TimetablePeriodId -->
 		<Item>
 			<Element>StartTime</Element>
 			<Characteristics>O</Characteristics>
@@ -333,87 +261,21 @@
 			</Description>
 			<Type name="xs:time"></Type>
 		</Item>		<!-- StudentTimeOut -->
-
-		<if intl="au">
-			<Item>
-				<Element>TimeTableCellRefId</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The (GUID) of the piece of Curriculum (TT Grid) scheduled</p>
-				</Description>
-				<Type ref="CommonTypes" name="IdRefType"></Type>
-			</Item>		    <!-- TimeTableCellRefId -->
-			<Item>
-				<Element>TimeTableSubjectRefId</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>RefId of TimeTableSubject</p>
-				</Description>
-				<Type ref="CommonTypes" name="IdRefType"/>
-			</Item>		    <!-- TimeTableSubjectRefId -->
-			<Item>
-				<Element>SessionInfoRefId</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The GUID of the session that this attendance applies to.</p>
-				</Description>
-				<Type ref="CommonTypes" name="IdRefType"/>
-			</Item>		    <!-- SessionInfoRefId -->
-			<Item>
-				<Element>ScheduledActivityRefId</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The GUID of the ScheduledActivity Object the attendance applies to.</p>
-				</Description>
-				<Type ref="CommonTypes" name="IdRefType"/>
-			</Item>		    <!-- ScheduledActivityRefId -->
-			<Item>
-				<Element>DayId</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Day Id.</p>
-				</Description>
-				<Type ref="CommonTypes" name="LocalIdType"/>
-			</Item>		    <!-- DayId -->
-			<Item>
-				<Element>TimetableId</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>LocalId for the timetable being used upon the day within which attendance is being reported, e.g. "TT2018-04".</p>
-				</Description>
-				<Type ref="CommonTypes" name="LocalIdType"/>
-			</Item>		    <!-- TimetableId -->
-			<Item>
-				<Element>AttendanceType</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Nature of the attendance, e.g. "Taken at Roll Call".</p>
-				</Description>
-				<Type name="xs:string"/>
-			</Item>		    <!-- AttendanceType -->
-		</if>
-		<if intl="nz">
-			<Item>
-				<Element>SubjectAreaList</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>List of learning / subject areas that apply to the period the attendance record was taken for.</p>
-				</Description>
-				<Type ref="CommonTypes" name="SubjectAreaListType"/>
-			</Item>		    <!-- SubjectAreaList -->
-		</if>
+		<Item>
+			<Element>SubjectAreaList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>List of learning / subject areas that apply to the period the attendance record was taken for.</p>
+			</Description>
+			<Type ref="CommonTypes" name="SubjectAreaListType"/>
+		</Item>		    <!-- SubjectAreaList -->
 		<Item>
 			<Element>TeacherList</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>List of teachers</p>
 			</Description>
-			<if intl="au">
-				<Type ref="CommonTypes" name="ScheduledTeacherListType"/>
-			</if>
-			<if intl="nz">
-				<Type ref="CommonTypes" name="StaffListType"/>
-			</if>
+			<Type ref="CommonTypes" name="StaffListType"/>
 		</Item>		        <!-- TeacherList -->
 		<Item>
 			<Element>RoomList</Element>
@@ -440,63 +302,52 @@
 			<Type name="xs:int"/>
 		</Item>		        <!-- AttendanceNote -->
 
-		<xhtml:Example xmlns="" name="Period Attendance Example" intl="au">
-			<PeriodAttendance>
-				<AttendanceType>Swipe Cards</AttendanceType>
-				<AttendanceCode>E</AttendanceCode>
-				<AttendanceStatus>01</AttendanceStatus>
-				<Date>2018-06-26</Date>
-				<DayId>118</DayId>
-				<StartTime>09:00:00</StartTime>
-				<EndTime>09:40:00</EndTime>
-				<TimeTableCellRefId>8dfe9e96-01dc-4d4d-8622-1676fd030355</TimeTableCellRefId>
-				<TimeTableSubjectRefId>5a207f7d-a24f-4588-be82-5c7bef4d4421</TimeTableSubjectRefId>
-				<AttendanceNote>Explained absence, but unjustified.</AttendanceNote>
-			</PeriodAttendance>
-		</xhtml:Example>
-		<xhtml:Example xmlns="" name="Period Attendance Example (Absence)" intl="nz">
+			<xhtml:Example xmlns="" name="Period Attendance Example (Absence)">
 			<PeriodAttendance>
 				<AttendanceCode>E</AttendanceCode>
-				<AttendanceStatus>01</AttendanceStatus>
+				<AttendanceStatus>UNE</AttendanceStatus>
 				<TimetableDayId json:force-string="true">4</TimetableDayId>
 				<TimetablePeriodId>4D</TimetablePeriodId>
 				<StartTime>09:00:00</StartTime>
 				<EndTime>09:50:00</EndTime>
 				<SubjectAreaList json:force-array="true">
-					<SubjectArea json:force-string="true">3</SubjectArea>
+					<SubjectArea>MATH</SubjectArea>
 				</SubjectAreaList>
-				<TeacherList json:force-array="true">
-					<StaffMember>
-						<StaffLocalId>McGP</StaffLocalId>
-						<Name><FullName>Phineas McWhirter</FullName></Name>
+				<TeacherList>
+					<StaffMember json:force-array="true">
+						<RefId>5e695355-3593-407c-b24e-03e75b8721a1</RefId>
+						<LocalId>McWP</LocalId>
+						<Name>Phineas McWhirter</Name>
 					</StaffMember>
 				</TeacherList>
-				<RoomList json:force-array="true">
-					<RoomId>12P</RoomId>
+				<RoomList>
+					<RoomId json:force-array="true">12P</RoomId>
 				</RoomList>
 				<AttendanceNote>Explained absence, but unjustified.</AttendanceNote>
 			</PeriodAttendance>
 		</xhtml:Example>
-		<xhtml:Example xmlns="" name="Period Attendance Example (Late)" intl="nz">
+
+		<xhtml:Example xmlns="" name="Period Attendance Example (Late)">
 			<PeriodAttendance>
 				<AttendanceCode>E</AttendanceCode>
-				<AttendanceStatus>01</AttendanceStatus>
+				<AttendanceStatus>UNE</AttendanceStatus>
 				<TimetableDayId json:force-string="true">4</TimetableDayId>
 				<TimetablePeriodId>4E</TimetablePeriodId>
 				<StartTime>09:00:00</StartTime>
 				<EndTime>09:50:00</EndTime>
 				<StudentTimeIn>09:35:00</StudentTimeIn>
 				<SubjectAreaList json:force-array="true">
-					<SubjectArea json:force-string="true">3</SubjectArea>
+					<SubjectArea>MATH</SubjectArea>
 				</SubjectAreaList>
-				<TeacherList json:force-array="true">
-					<StaffMember>
-						<StaffLocalId>McGP</StaffLocalId>
-						<Name><FullName>Phineas McWhirter</FullName></Name>
+				<TeacherList>
+					<StaffMember json:force-array="true">
+						<RefId>5e695355-3593-407c-b24e-03e75b8721a1</RefId>
+						<LocalId>McWP</LocalId>
+						<Name>Phineas McWhirter</Name>
 					</StaffMember>
 				</TeacherList>
-				<RoomList json:force-array="true">
-					<RoomId>12P</RoomId>
+				<RoomList>
+					<RoomId json:force-array="true">12P</RoomId>
 				</RoomList>
 				<AttendanceNote>Explained absence, but unjustified.</AttendanceNote>
 			</PeriodAttendance>

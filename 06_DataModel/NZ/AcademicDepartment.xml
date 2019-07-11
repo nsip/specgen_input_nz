@@ -31,6 +31,16 @@
   </Item>    <!-- RefId -->
 
   <Item>
+		<Element>LocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A Local Identifier for the Academic Department. It is expected to be unique to the reporting site.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"></Type> 
+	</Item>    <!-- LocalId -->
+
+  <Item>
     <Element>Name</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -51,24 +61,14 @@
   </Item>    <!-- Description -->
 
   <Item>
-		<Element>AcademicDepartmentLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>A Local Identifier for the Academic Department. It is expected to be unique to the reporting site.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"></Type> 
-	</Item>    <!-- AcademicDepartmentLocalId -->
-
-  <Item>
-    <Element>ProviderRefId</Element>    
+    <Element>Provider</Element>    
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the provider for this acadmic department resides in.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- ProviderRefId -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- Provider -->
 
   <Item>
     <Element>StaffList</Element>    
@@ -104,7 +104,15 @@
     <AcademicDepartment>
       <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
       <Name>Science Department</Name>
-      <ProviderRefId>CA285746-359D-7510-1A8C-36432A901A16</ProviderRefId>
+      <Provider>
+        <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
+      </Provider>
+      <StaffList>
+        <StaffMember json:force-array="true">
+          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <Name>Bobby Test</Name>
+        </StaffMember>
+      </StaffList>
     </AcademicDepartment>
   </xhtml:Example>
 

@@ -1,0 +1,394 @@
+﻿<IncludeGroup xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xmlns:xhtml="http://www.w3.org/1999/xhtml" 
+	xmlns:json="http://json.org/" 
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- Lists of schedule item references -->
+	<CommonElement name="ScheduleListType" type="true" dm="true">
+		<Item>
+			<Element>ScheduleListType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>A list of references to a set of Schedules</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Schedule</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Generic object reference to a Schedule in the list.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>		<!-- Schedule -->
+	</CommonElement>
+	<CommonElement name="ScheduleDayListType" type="true" dm="true">
+		<Item>
+			<Element>ScheduleDayListType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>A list of ScheduleDay object references.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>ScheduleDay</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Generic object reference to a ScheduleAcademicDay in the list</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>		<!-- ScheduleDay -->
+	</CommonElement>
+	<CommonElement name="BellScheduleListType" type="true" dm="true">
+		<Item>
+			<Element>BellScheduleListType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>A list of BellSchedule object references.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>BellSchedule</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Generic object reference to a BellSchedule in the list</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>		<!-- BellSchedule -->
+	</CommonElement>
+	<CommonElement name="PeriodListType" type="true" dm="true">
+		<Item>
+			<Element>PeriodListType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>A list of the object references to a set of SchedulePeriods</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Period</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p> A generic object references to a SchedulePeriod in the list</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>		<!-- Period -->
+
+		<xhtml:Example xmlns="" name="PeriodList List Example">
+			<PeriodList>
+				<Period>
+					<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
+					<LocalId>2019a-A1</LocalId>
+					<Name>Period 1 on Day A</Name>
+				</Period>
+				<Period>
+					<RefId>1c48a0bb-a6cc-41ab-8aae-929ce5ec9c34</RefId>
+					<LocalId>2019a-A2</LocalId>
+					<Name>Period 2 on Day A</Name>
+				</Period>
+			</PeriodList>
+		</xhtml:Example>
+	</CommonElement>
+	<CommonElement name="ScheduleTermListType" type="true" dm="true">
+		<Item>
+			<Element>ScheduleTermListType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>A list of ScheduleTerm object references.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>ScheduleTerm</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Generic object reference to a ScheduleTerm in the list</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>		<!-- ScheduleTerm -->
+	</CommonElement>
+	<CommonElement name="TeachingGroupEventListType" type="true" dm="true">
+		<Item>
+			<Element>TeachingGroupEventListType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>A list generic references to a set of TeachingGroupEvents</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Event</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Generic object reference to a TeachingGroupEvent in the list</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>		<!-- Event -->
+	</CommonElement>
+
+
+	<!-- Lists of rich schedule items -->
+	<CommonElement name="AcademicDayListType" type="true" dm="true">
+		<Item>
+			<Element>AcademicDayListType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>A list of the academic days within this schedule</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>AcademicDay</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>An academic day that is part of this schedule.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AcademicDayType"/>
+		</Item>		<!-- PeriodList -->
+
+		<xhtml:Example xmlns="" name="AcademicDayList Example">
+			<AcademicDayList>
+				<AcademicDay>
+					<RefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</RefId>
+					<LocalId>2019a-A</LocalId>
+					<Name>Schedule 2019a, Day A</Name>
+					<PeriodList>
+						<Period>
+							<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
+							<LocalId>2019a-A1</LocalId>
+							<Name>Period 1 on Day A</Name>
+						</Period>
+						<Period>
+							<RefId>1c48a0bb-a6cc-41ab-8aae-929ce5ec9c34</RefId>
+							<LocalId>2019a-A2</LocalId>
+							<Name>Period 2 on Day A</Name>
+						</Period>
+					</PeriodList>					
+				</AcademicDay>
+				<AcademicDay>
+					<RefId>337804c6-1247-4c0f-b288-e4aa28584aad</RefId>
+					<LocalId>2019a-B</LocalId>
+					<Name>Schedule 2019a, DayB</Name>
+					<PeriodList>
+						<Period>
+							<RefId>f6776718-4680-4cb7-b649-a84f9796905c</RefId>
+							<LocalId>2019a-B1</LocalId>
+							<Name>Period 1 on Day B</Name>
+						</Period>
+						<Period>
+							<RefId>0ddaa486-adf1-4cb3-bd06-71397f4bbdd9</RefId>
+							<LocalId>2019a-B2</LocalId>
+							<Name>Period 2 on Day B</Name>
+						</Period>
+					</PeriodList>					
+				</AcademicDay>
+			</AcademicDayList>
+		</xhtml:Example>
+	</CommonElement>
+	<CommonElement name="AcademicDayType" type="true" dm="true">
+		<Item>
+			<Element>AcademicDayType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>An academic day that is part of this schedule</p>
+			</Description>
+			<Type complex="extension" name="ObjectReferenceType"/>
+		</Item>
+		<Item>
+			<Element>BellSchedule</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The bell schedule this academic day is following.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>		<!-- BellSchedule -->
+		<Item>
+			<Element>PeriodList</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A list of the periods that make up this academic day, e.g. Period 1, Period 2 etc.</p>
+			</Description>
+			<Type ref="CommonTypes" name="PeriodListType"/>
+		</Item>		<!-- PeriodList -->
+		
+		<xhtml:Example xmlns="" name="AcademicDay Example">
+			<AcademicDay>
+				<RefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</RefId>
+				<LocalId>2019a-A</LocalId>
+				<Name>Schedule 2019a, Day A</Name>
+				<BellSchedule>
+					<RefId>8bda1e4a-ddd2-4d18-9a85-ffcd7a2528b8</RefId>
+					<Name>Schedule 2019a, Normal Bell Schedule</Name>
+				</BellSchedule>
+				<PeriodList>
+					<Period>
+						<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
+						<LocalId>2019a-A1</LocalId>
+						<Name>Period 1 on Day A</Name>
+					</Period>
+					<Period>
+						<RefId>1c48a0bb-a6cc-41ab-8aae-929ce5ec9c34</RefId>
+						<LocalId>2019a-A2</LocalId>
+						<Name>Period 2 on Day A</Name>
+					</Period>
+				</PeriodList>
+			</AcademicDay>
+		</xhtml:Example>
+	</CommonElement>	
+
+	<CommonElement name="SchedulePeriodListType" type="true" dm="true">
+		<Item>
+			<Element>SchedulePeriodListType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>A list of the periods that make up the bell schedule and their start and end times.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>SchedulePeriodTime</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A period that makes up or partially makes up the bell schedule and its start and end times.</p>
+			</Description>
+			<Type ref="CommonTypes" name="SchedulePeriodTimeType"/>
+		</Item>		<!-- SchedulePeriodTimeType -->
+		<xhtml:Example xmlns="" name="SchedulePeriodList Example">
+			<SchedulePeriodList>
+				<SchedulePeriodTime>
+					<Period>
+						<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
+						<LocalId>2019a-A1</LocalId>
+						<Name>Period 1 on Day A</Name>
+					</Period>
+					<StartTime>08:45:00</StartTime>
+					<EndTime>09:35:00</EndTime>
+				</SchedulePeriodTime>
+				<SchedulePeriodTime>
+					<Period>
+						<RefId>1c48a0bb-a6cc-41ab-8aae-929ce5ec9c34</RefId>
+						<LocalId>2019a-A2</LocalId>
+						<Name>Period 2 on Day A</Name>
+					</Period>
+					<StartTime>09:45:00</StartTime>
+					<EndTime>10:35:00</EndTime>
+				</SchedulePeriodTime>
+			</SchedulePeriodList>
+		</xhtml:Example>
+	</CommonElement>
+	<CommonElement name="SchedulePeriodTimeType" type="true" dm="true">
+		<Item>
+			<Element>SchedulePeriodTimeType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The definition of a SchedulePeriod start and end time, on a particular Bell Schedule.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Period</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Generic object reference to the schedule period whose start and end times are being defined.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>		<!-- Period -->		
+		<Item>
+			<Element>StartTime</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The time the period starts.</p>
+			</Description>
+			<Type name="xs:time"/>
+		</Item>		<!-- StartTime -->
+		<Item>
+			<Element>EndTime</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The time the period ends.</p>
+			</Description>
+			<Type name="xs:time"/>
+		</Item>		<!-- EndTime -->
+
+		<xhtml:Example xmlns="" name="SchedulePeriodTime Example">
+			<SchedulePeriodTime>
+				<Period>
+					<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
+					<LocalId>2019a-A1</LocalId>
+					<Name>Period 1 on Day A</Name>
+				</Period>
+				<StartTime>08:45:00</StartTime>
+				<EndTime>09:35:00</EndTime>
+			</SchedulePeriodTime>
+		</xhtml:Example>
+	</CommonElement>
+
+	<CommonElement name="ScheduleCustomDayPeriodListType" type="true" dm="true">
+		<Item>
+			<Element>ScheduleCustomDayPeriodListType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>A list of generic object references to a set of
+				SchedulePeriods, along with their custom start and end times,
+				which are part of a 'CUSTOM' ScheduleEvent.</p>
+				<p>Used in the creation of "one off" events defined in
+				ScheduleEvent to have a custom set of SchedulePeriods, each with
+				custom start and end times that don't match any particular bell
+				schedule.</p>
+				<p>Used for exception days in the school schedule, such as
+				assembly days or activity days.</p>				
+			</Description>
+		</Item>
+		<Item>
+			<Element>Period</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Generic object reference to a SchedulePeriod, along with
+				its custom start and end times, which are part of a 'CUSTOM'
+				ScheduleEvent.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ScheduleCustomDayPeriodType"/>
+		</Item>		<!-- Period -->
+	</CommonElement>
+	<CommonElement name="ScheduleCustomDayPeriodType" type="true" dm="true">
+		<Item>
+			<Element>ScheduleCustomDayPeriodType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Generic object reference to a single SchedulePeriod, along
+				with its custom start and end times, which are part of a
+				'CUSTOM' ScheduleEvent.</p>
+				<p>Used in the creation of "one off" events defined in
+				ScheduleEvent to have a custom set of SchedulePeriods, each with
+				custom start and end times that don't match any particular bell
+				schedule.</p>
+				<p>Used for exception days in the school schedule, such as
+				assembly days or activity days.</p>				
+			</Description>
+			<Type complex="extension" name="ObjectReferenceType"/>
+		</Item>
+		<Item>
+			<Element>StartTime</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The time the custom schedule period starts.</p>
+			</Description>
+			<Type name="xs:time"/>
+		</Item>		<!-- StartTime -->
+		<Item>
+			<Element>EndTime</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The time the custom schedule period ends.</p>
+			</Description>
+			<Type name="xs:time"/>
+		</Item>		<!-- EndTime -->
+	</CommonElement>
+</IncludeGroup>

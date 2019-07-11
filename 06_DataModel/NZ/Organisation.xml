@@ -1,0 +1,71 @@
+<DataObject name="Organisation"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+			xmlns:json="http://json.org/"
+			
+            xmlns="http://sifassociation.org/SpecGen">
+  	<Key>RefId</Key>
+  	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>Organisation</Element>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			A generic organisation that operates within the education sector; but doesn’t provide education 
+			services. e.g. Communities of Learning | Kāhui Ako, Ministry local offices, 
+			Industry training organisations, etc. 
+		</Description>
+		<Type complex="extension" name="EduOrganisationType"/>
+	</Item>
+
+	<xhtml:Example xmlns="" name="Kāhui Ako Organisation Example">
+		<Organisation>
+			<RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
+			<LocalId>99204</LocalId>
+			<AddressList/>
+			<CommunicationChannelList/>
+			<ContactList>
+				<Contact>
+					<Name>
+						<FamilyName>Dumbledore</FamilyName>
+						<GivenName>Albus</GivenName>
+						<FullName>Albus Dumbledore</FullName>
+					</Name>
+					<PositionTitle>Lead School Headmaster</PositionTitle>
+					<Role>PRI</Role>
+					<AddressList>
+						<Address>
+							<Type>TH</Type>
+							<Role>PHY</Role>
+							<Street>
+								<Line1>533 Hogwart's Way</Line1>
+							</Street>
+							<City>Hogsmead</City>
+							<PostalCode json:force-string="true">7733</PostalCode>
+						</Address>
+					</AddressList>
+					<EmailList/>
+					<PhoneNumberList/>
+				</Contact>
+				</ContactList>
+				<EmailList>
+					<Email json:force-array="true">
+						<Type>PRIM</Type>
+						<Address>stuart@gmail.com</Address>
+					</Email>
+				</EmailList>
+			<LocationList/>
+			<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
+			<PhoneNumberList>
+				<PhoneNumber>
+					<Notes>Lead School Secretary (Mobile)</Notes>
+					<Type>MOB</Type>
+					<Number>(021) 300 999</Number>
+				</PhoneNumber>
+			</PhoneNumberList>
+			<Type>COLKA</Type>
+		</Organisation>
+	</xhtml:Example>
+</DataObject>
+	

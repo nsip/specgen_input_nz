@@ -25,7 +25,15 @@
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>    <!-- RefId -->
-
+  <Item>
+    <Element>LocalId</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Local identifier that identifies an instance of this object, if provided by the source system.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- LocalId -->
   
   <Item>
     <Element>ProviderInvolvedList</Element>    
@@ -34,82 +42,41 @@
     <Description>
       <p>A list of the providers involved and their role, e.g. assessment provider, registering provider.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderInvolvedListType"></Type>
-  </Item>    <!-- AssessmentProviderRefId -->
+    <Type ref="CommonTypes" name="ProviderInvolvedListType"/>
+  </Item>    <!-- ProviderInvolvedList -->
 
   <Item>
-    <Element>StudentPersonalRefId</Element>
+    <Element>Student</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The identifier (GUID) for the student held in the StudentPersonal data object
+      <p>Generic object reference to the student held in the StudentPersonal data object
          whose intention to participate in an assessment task is being registered.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- StudentPersonalRefId -->
-  <Item>
-    <Element>StudentPersonalLocalId</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The Local Id for the student whose assessment task registration this is.</p>
-    </Description>
-    <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- StudentPersonalLocalId -->
-  <Item>
-    <Element>StudentName</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The name the student is registered under for the assessment task. This is
-        the name that will appear on assessment papers and achievement certificates.</p>
-    </Description>
-    <Type ref="CommonTypes" name="BaseNameType"></Type>
-  </Item>    <!-- StudentName -->
-
+    <Type ref="CommonTypes" name="ObjectReferenceType"/>
+  </Item>    <!-- Student -->
 
   <Item>
-    <Element>StaffPersonalRefId</Element>    
+    <Element>StaffMember</Element>    
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The identifier (GUID) of the StaffPersonal data object representing the teacher who 
+      <p>Generic object reference to the StaffPersonal data object representing the teacher who 
         registered the student's intention to participate in the assessment task.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
 
-  </Item>    <!-- StaffPersonalRefId -->
-  <Item>
-    <Element>StaffPersonalLocalId</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The identifier (GUID) of the StaffPersonal data object representing the teacher who 
-        registered the student's intention to participate in the assessment task.</p>
-    </Description>
-    <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- StaffPersonalLocalId -->
-  <Item>
-    <Element>StaffName</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The name of the staff member that registered the student's intent to
-        participate in the assessment task.</p>
-    </Description>
-    <Type ref="CommonTypes" name="BaseNameType"></Type>
-  </Item>    <!-- StaffName -->
-
+  </Item>    <!-- StaffMember -->
 
   <Item>
-    <Element>AssessmentTaskRefId</Element>    
+    <Element>AssessmentTask</Element>    
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The Id (GUID) for the AssessmentTask data object that the registration is for.</p>
+      <p>Generic object reference to the AssessmentTask data object that the registration is for.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- AssessmentTaskRefId -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- AssessmentTask -->
 
   <Item>
     <Element>SpecialAssessmentConditionList</Element>
@@ -123,15 +90,14 @@
   </Item>    <!-- SpecialAssessmentConditionList -->
 
   <Item>
-    <Element>ProviderCourseRefId</Element>    
+    <Element>ProviderCourse</Element>    
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The Id (GUID) that uniquely identifies a ProviderCourse all of whose students will be
-        participating in the assessment task.</p>
+      <p>Generic object reference to the ProviderCourse that the assessment task is being set as part of.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- ProviderCourseRefId -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- ProviderCourse -->
 
   <Item>
     <Element>SubjectArea</Element>
@@ -181,27 +147,30 @@
           <!-- NZQA is Assessor -->
           <ProviderInvolved>
             <RefId>5556b4eb-850f-4102-800c-9a3fde8bfa9f</RefId>
-            <ProviderRole json:force-string="true">101</ProviderRole>
+            <ProviderRole>ASR</ProviderRole>
           </ProviderInvolved>
           <!-- School is Provider -->
           <ProviderInvolved>
             <RefId>6661f830-13a6-44d7-bd96-be00cbad68f1</RefId>
-            <ProviderRole json:force-string="true">103</ProviderRole>
+            <ProviderRole>PRO</ProviderRole>
           </ProviderInvolved>
         </ProviderInvolvedList>
-      <StudentPersonalRefId>19059103-3c50-4970-bc48-341349c32858</StudentPersonalRefId>
-      <StudentName>
-        <FamilyName>Potter</FamilyName>
-        <GivenName>Harry</GivenName>
-      </StudentName>
-      <StaffPersonalRefId>c23c6fa1-4093-4c21-9ea8-4cdd3c7dd7fb</StaffPersonalRefId>
-      <AssessmentTaskRefId>cedd0ce7-f555-482b-887b-d130e5c40d02</AssessmentTaskRefId>
+      <Student>
+        <RefId>19059103-3c50-4970-bc48-341349c32858</RefId>
+        <Name>Harry Potter</Name>
+      </Student>
+      <StaffMember>
+        <RefId>c23c6fa1-4093-4c21-9ea8-4cdd3c7dd7fb</RefId>
+      </StaffMember>
+      <AssessmentTask>
+        <RefId>cedd0ce7-f555-482b-887b-d130e5c40d02</RefId>
+      </AssessmentTask>
       <SpecialAssessmentConditionList>
-        <SpecialAssessmentCondition>102</SpecialAssessmentCondition>
-        <SpecialAssessmentCondition>104</SpecialAssessmentCondition>
-        <SpecialAssessmentCondition>108</SpecialAssessmentCondition>
+        <SpecialAssessmentCondition>COM</SpecialAssessmentCondition>
+        <SpecialAssessmentCondition>EXT</SpecialAssessmentCondition>
+        <SpecialAssessmentCondition>SEP</SpecialAssessmentCondition>
       </SpecialAssessmentConditionList>
-      <SubjectArea>3</SubjectArea>
+      <SubjectArea>PHYS</SubjectArea>
       <YearLevel>12</YearLevel>
       <DateRegistered>2018-03-30</DateRegistered>
       <AssessmentYear>2018</AssessmentYear>

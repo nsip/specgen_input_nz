@@ -1,0 +1,129 @@
+<DataObject name="StudentConsent"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<Key>RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>StudentConsent</Element>
+	    <privacyRating>Extreme</privacyRating>
+		<Description>A record of Student's consent or non-consent to some action taking place.</Description>
+	</Item>
+	
+	<Item>
+		<Element>RefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The GUID of the student consent.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>    <!-- RefId -->
+	
+	<Item>
+		<Element>LocalId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The locally-assigned identifier for this student consent.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>    <!-- LocalId -->
+
+	<Item>
+		<Element>Student</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>Generic object reference to the student granting or revoking this student consent.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- Student -->
+
+	<Item>
+		<Element>Organisation</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>Generic object reference to the organisation being granted this student consent.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- Organisation -->
+
+	<Item>
+		<Element>StaffMember</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>Generic object reference to the staff member that is recording this consent.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- StaffMember -->
+
+	<Item>
+		<Element>ConsentTo</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>What the student is consenting or not consenting to.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsStudentConsentToType"></Type>  
+	</Item>    <!-- ConsentTo -->
+
+	<Item>
+		<Element>ConsentGiven</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Indicates whether or not censent was given, or specifically not given</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>  
+	</Item>    <!-- ConsentGiven -->
+
+	<Item>
+		<Element>ConsentDate</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The date the consent or no consent was given.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>    <!-- ConsentDate -->
+
+	<Item>
+		<Element>ConsentRevokedDate</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The date the consent ended, if it was given.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>    <!-- EndDate -->
+
+	<Item>
+		<Element>RelatedObject</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>Generic object reference to a data object that relates to this consent.  e.g. the student enrolment record this consent was captured as part of.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- RelatedObject -->
+
+	<Item>
+		<Element>AdditionalInformation</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p> Additional free text information provided about the consent.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>    <!-- AdditionalInformation -->
+
+	<xhtml:Example xmlns="" name ="Student Consent">
+		<StudentConsent>
+			<RefId>7C834EA9-EDA1-2090-347F-83297E1C290C</RefId>
+			<LocalId>S1234567</LocalId>
+		</StudentConsent>
+	</xhtml:Example>
+</DataObject>

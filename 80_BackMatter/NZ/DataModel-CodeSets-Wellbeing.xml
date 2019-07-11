@@ -2,35 +2,30 @@
 	xmlns:xi="http://www.w3.org/2001/XInclude"
  	xmlns="http://sifassociation.org/SpecGen">
 
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the severity of a Wellbeing Characteristic or Alert.</p>
+		</Intro>
+		<ID>Wellbeing Severity</ID>
+		<Values>
+				<Value><Code>HGH</Code><Text>High</Text></Value>
+				<Value><Code>MOD</Code><Text>Moderate</Text></Value>
+				<Value><Code>LOW</Code><Text>Low</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Severity -->
 
-	<!-- Largely borrowed from SIF AU -->
-    <CodeSet>
-      <Intro>
-        <p>Standard codes denoting the severity of a Wellbeing Characteristic or Alert.</p>
-      </Intro>
-      <ID>Wellbeing Severity</ID>
-      <Values>
-				<Value><Code>101</Code><Text>Very High</Text></Value>
-				<Value><Code>102</Code><Text>High</Text></Value>
-				<Value><Code>103</Code><Text>Medium</Text></Value>
-				<Value><Code>104</Code><Text>Low</Text></Value>
-				<Value><Code>105</Code><Text>Very Low</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Wellbeing Severity -->
-
-    <CodeSet>
-      <Intro>
-        <p>Standard codes denoting the status of the Wellbeing Response.</p>
-      </Intro>
-      <ID>Wellbeing Status</ID>
-      <Values>
+	<CodeSet>
+		<Intro>
+		<p>Standard codes denoting the status of the Wellbeing Response.</p>
+		</Intro>
+		<ID>Wellbeing Status</ID>
+		<Values>
 				<Value><Code>U</Code><Text>Unresolved</Text></Value>
 				<Value><Code>R</Code><Text>Resolved</Text></Value>
 				<Value><Code>O</Code><Text>Other</Text></Value>
-      </Values>
-    </CodeSet>    <!-- Wellbeing Status -->
-
-
+		</Values>
+	</CodeSet>    <!-- Wellbeing Status -->
+	
 
 	<!-- Wellbeing Alert classification codes -->
 	<CodeSet>
@@ -39,16 +34,33 @@
 		</Intro>
 		<ID>Wellbeing Alert Category</ID>
 		<Values>
-		  <Value><Code>A</Code><Text>Attendance</Text></Value>
-			<Value><Code>M</Code><Text>Medical</Text></Value>
-			<Value><Code>L</Code><Text>Legal</Text></Value>
-			<Value><Code>D</Code><Text>Discipline</Text></Value>
-			<Value><Code>E</Code><Text>Educational</Text></Value>
-			<Value><Code>S</Code><Text>Special Needs / Disability</Text></Value>
-			<Value><Code>P</Code><Text>Plan Review</Text></Value>
-			<Value><Code>PO</Code><Text>Protection Order</Text></Value>
-			<Value><Code>T</Code><Text>Transient</Text></Value>
-			<Value><Code>O</Code><Text>Other</Text></Value>
+		  <Value>
+				<Code>ATT</Code>
+				<Text>Attendance</Text>
+			</Value>
+			<Value>
+				<Code>MED</Code>
+				<Text>Medical</Text>
+				<Description>includes Allergies</Description>
+			</Value>
+			<Value>
+				<Code>LEG</Code>
+				<Text>Legal</Text>
+				<Description>Comes with sub-Categories: ProtectionOrder,  CustodialOrder, etc.</Description>
+			</Value>
+			<Value>
+				<Code>DIS</Code>
+				<Text>Discipline</Text>
+			</Value>
+			<Value>
+				<Code>LEA</Code>
+				<Text>Learning Support</Text>
+				<Description>Sub-categories Gifted and Talented, Disability, etc.</Description>
+			</Value>
+			<Value><Code>PLA</Code><Text>Plan Review</Text></Value>
+			<Value><Code>CUS</Code><Text>Custodial</Text></Value>
+			<Value><Code>TRA</Code><Text>Transient</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Wellbeing Alert Category -->
 
@@ -58,16 +70,16 @@
 		</Intro>
 		<ID>Key Contact Role</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Doctor</Text></Value>
-			<Value><Code>102</Code><Text>Parent/Caregiver</Text></Value>
-			<Value><Code>103</Code><Text>Principal</Text></Value>
+			<Value><Code>DOC</Code><Text>Doctor</Text></Value>
+			<Value><Code>PAR</Code><Text>Parent/Caregiver</Text></Value>
+			<Value><Code>PRI</Code><Text>Principal</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Key Contact Role -->
 
 	<!-- Wellbeing Characteristic classification codes -->
 	<CodeSet>
 		<Intro>
-			<p>Standard codes denoting the Sub-Categories of a Wellbeing Characteristic.</p> 
+			<p>Standard codes denoting the third level category of the Wellbeing Characteristic.</p>
 		</Intro>
 		<ID>Wellbeing Characteristic Sub Category</ID>
 		<Values>
@@ -77,6 +89,48 @@
 			<Value><Code>DIET-04</Code><Text>Kosher</Text></Value>
 			<Value><Code>DIET-05</Code><Text>Pescetarian</Text></Value>
 			<Value><Code>DIET-06</Code><Text>Gluten-free</Text></Value>
+			<Value><Code>LSN-ABN</Code><Text>Absence</Text></Value>
+			<Value><Code>LSN-ACD</Code><Text>Academic</Text></Value>
+			<Value><Code>LSN-ANX</Code><Text>Anxiety</Text></Value>
+			<Value><Code>LSN-ASD</Code><Text>ASD</Text></Value>
+			<Value><Code>LSN-ATT</Code><Text>Attendance</Text></Value>
+			<Value><Code>LSN-AUD</Code><Text>Auditory Processing</Text></Value>
+			<Value><Code>LSN-BHV</Code><Text>Behaviour</Text></Value>
+			<Value><Code>LSN-COM</Code><Text>Communication</Text></Value>
+			<Value><Code>LSN-CPH</Code><Text>Comprehension</Text></Value>
+			<Value><Code>LSN-DCA</Code><Text>Dyscalculia</Text></Value>
+			<Value><Code>LSN-DEV</Code><Text>Developmental Delay</Text></Value>
+			<Value><Code>LSN-DGA</Code><Text>Dysgraphia</Text></Value>
+			<Value><Code>LSN-DPA</Code><Text>Dyspraxia</Text></Value>
+			<Value><Code>LSN-DSA</Code><Text>Dyslexia</Text></Value>
+			<Value><Code>LSN-ENG</Code><Text>Engagement</Text></Value>
+			<Value><Code>LSN-EPI</Code><Text>Epilepsy</Text></Value>
+			<Value><Code>LSN-ESL</Code><Text>ESOL</Text></Value>
+			<Value><Code>LSN-FCS</Code><Text>Focus</Text></Value>
+			<Value><Code>LSN-FMS</Code><Text>Fine Motor Skills</Text></Value>
+			<Value><Code>LSN-HRG</Code><Text>Hearing</Text></Value>
+			<Value><Code>LSN-HWG</Code><Text>Handwriting</Text></Value>
+			<Value><Code>LSN-IND</Code><Text>Independence</Text></Value>
+			<Value><Code>LSN-INT</Code><Text>Intellectual Disability</Text></Value>
+			<Value><Code>LSN-LIT</Code><Text>Literacy</Text></Value>
+			<Value><Code>LSN-LNG</Code><Text>Learning</Text></Value>
+			<Value><Code>LSN-MTH</Code><Text>Maths</Text></Value>
+			<Value><Code>LSN-NUM</Code><Text>Numeracy</Text></Value>
+			<Value><Code>LSN-ORL</Code><Text>Oral Language</Text></Value>
+			<Value><Code>LSN-ORS</Code><Text>ORS</Text></Value>
+			<Value><Code>LSN-OTH</Code><Text>Others</Text></Value>
+			<Value><Code>LSN-PHS</Code><Text>Physical Skills</Text></Value>
+			<Value><Code>LSN-PSL</Code><Text>Passive Learner</Text></Value>
+			<Value><Code>LSN-PST</Code><Text>Pastoral</Text></Value>
+			<Value><Code>LSN-RDG</Code><Text>Reading</Text></Value>
+			<Value><Code>LSN-ROL</Code><Text>Rate of Learning</Text></Value>
+			<Value><Code>LSN-ROP</Code><Text>Rate of Progress</Text></Value>
+			<Value><Code>LSN-SPH</Code><Text>Speech</Text></Value>
+			<Value><Code>LSN-SPL</Code><Text>Spelling</Text></Value>
+			<Value><Code>LSN-SRL</Code><Text>Social Relationships</Text></Value>
+			<Value><Code>LSN-VIS</Code><Text>Vision</Text></Value>
+			<Value><Code>LSN-WBG</Code><Text>Wellbeing</Text></Value>
+			<Value><Code>LSN-WRT</Code><Text>Writing </Text></Value>
 			<Value><Code>MH-1</Code><Text>Adjustment Disorder</Text></Value>
 			<Value><Code>MH-2</Code><Text>Anorexia</Text></Value>
 			<Value><Code>MH-3</Code><Text>Anxiety Disorder</Text></Value>
@@ -167,12 +221,13 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Standard codes denoting the Categories of a Wellbeing Characteristic.</p>
+			<p>Standard codes denoting the second level category of the Wellbeing Characteristic.</p>
 		</Intro>
 		<ID>Wellbeing Characteristic Category</ID>
 		<Values>
 			<Value><Code>MAO</Code><Text>Allergies - other</Text></Value>
 		<Value><Code>DIET</Code><Text>Dietary Preferences</Text></Value>
+		<Value><Code>LSN</Code><Text>Learning Support Need</Text></Value>
 		<Value><Code>MAIM</Code><Text>Auto-immune/Immune Disorders</Text></Value>
 		<Value><Code>MRD</Code><Text>Respiratory Disorder</Text></Value>
 		<Value><Code>MB</Code><Text>Blood disorder</Text></Value>
@@ -200,23 +255,38 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Standard codes denoting the classification of the Wellbeing Characteristic.</p>
+			<p>Standard codes denoting the first level category of the Wellbeing Characteristic. 
+				(Note: The second and third levels are Category and SubCategory)</p>
 		</Intro>
-		<ID>Wellbeing Characteristic Classification</ID>
+		<ID>Wellbeing Characteristic Class</ID>
 		<Values>
-			<Value><Code>M</Code><Text>Medical</Text></Value>
-			<Value><Code>D</Code><Text>Disability</Text></Value>
-			<Value><Code>S</Code><Text>SpecialNeeds</Text></Value>
-			<Value><Code>O</Code><Text>Other</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
+			<Value><Code>MDC</Code><Text>Medical</Text></Value>
+			<Value><Code>LSN</Code><Text>Learning Support Need</Text></Value>
+			<Value><Code>ALG</Code><Text>Allergy</Text></Value>
+			<Value><Code>DPR</Code><Text>Dietary Preference</Text></Value>
 		</Values>
-	</CodeSet>    <!-- Wellbeing Characteristic Classification -->
+	</CodeSet>    <!-- Wellbeing Characteristic Class -->
 
+	<CodeSet>
+		<Intro>
+			<p>Codes denoting the priority level of the characteristic in relation to 
+			other characteristics within the same classification.</p>
+		</Intro>
+		<ID>Wellbeing Characteristic Priority</ID>
+		<Values>
+			<Value><Code>HGH</Code><Text>High</Text></Value>
+			<Value><Code>MOD</Code><Text>Moderate</Text></Value>
+			<Value><Code>LOW</Code><Text>Low</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Characteristic Priority -->
 
 
 	<!-- Wellbeing Event classification codes -->
 	<CodeSet>
       <Intro>
-        <p>Standard codes denoting the category of the Wellbeing Event.</p>
+        <p>Standard codes denoting the second level category of the Wellbeing Event.
+				(Note: The first and third levels are CategoryClass and SubCategory)</p>
       </Intro>
       <ID>Wellbeing Event Category</ID>
 		<Values>
@@ -238,13 +308,14 @@
 			<Value><Code>M7</Code><Text>Possession, use or supply of substances or objects with restricted sale</Text></Value>
 			<Value><Code>M8</Code><Text>Possession, use or supply of illegal substances or objects</Text></Value>
 			<Value><Code>M9</Code><Text>E-breaches</Text></Value>
-			<Value><Code>99</Code><Text>Other Behaviour</Text></Value>
+			<Value><Code>OT</Code><Text>Other Behaviour</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Wellbeing Event Category -->
     
 	<CodeSet>
       <Intro>
-        <p>Standard codes denoting the sub-category of the Wellbeing Event.</p>
+        <p>Standard codes denoting the third level category of the Wellbeing Event.
+				(Note: The first and second levels are CategoryClass and Category)</p>
       </Intro>
       <ID>Wellbeing Event Sub Category</ID>
       <Values>
@@ -448,14 +519,15 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Standard codes denoting the category class of the Wellbeing Event.</p>
+			<p>Standard codes denoting the first level category of the Wellbeing Event.
+			(Note: The second and third levels are Category and SubCategory)</p>
 		</Intro>
 		<ID>Wellbeing Event Category Class</ID>
 		<Values>
-			<Value><Code>P</Code><Text>Positive</Text></Value>
-			<Value><Code>N</Code><Text>Negative</Text></Value>
-			<Value><Code>D</Code><Text>Data Record Only</Text></Value>
-			<Value><Code>O</Code><Text>Other</Text></Value>
+			<Value><Code>POS</Code><Text>Positive</Text></Value>
+			<Value><Code>NEG</Code><Text>Negative</Text></Value>
+			<Value><Code>DAT</Code><Text>Data Record Only</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Wellbeing Event Category Class -->
 
@@ -466,13 +538,175 @@
 		</Intro>
 		<ID>Behaviour Directed At Type</ID>
 		<Values>
-			<Value><Code>99</Code><Text>Other</Text></Value>
-			<Value><Code>101</Code><Text>Staff</Text></Value>
-			<Value><Code>102</Code><Text>Student</Text></Value>
-			<Value><Code>103</Code><Text>Property</Text></Value>
+			<Value><Code>STA</Code><Text>Staff</Text></Value>
+			<Value><Code>STU</Code><Text>Student</Text></Value>
+			<Value><Code>PRO</Code><Text>Property</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Behaviour Directed At Type -->
 
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the actions that can be taken as a result of the Wellbeing event.</p>
+		</Intro>
+		<ID>Wellbeing Event Action Taken</ID>
+		<Values>
+			<Value>
+        <Code>AASS</Code>
+				<Text>Additional Attendance / Saturday School</Text>
+				<Description>
+					Consequence for referral results in student attending classes on a Saturday.
+				</Description>
+			</Value>
+			<Value>
+				<Code>ACPE</Code>
+				<Text>Action Pending</Text>
+				<Description>
+					Consequence for referral is pending. Referral will be modified
+				  when “action taken” is determined.
+				</Description>
+			</Value>
+			<Value>
+				<Code>ALPL</Code>
+				<Text>Alternative Placement</Text>
+				<Description>
+					Consequence for referral results in student being placed in a
+					different educational setting.
+				</Description>
+			</Value>
+			<Value>
+				<Code>BUSU</Code>
+				<Text>Bus Suspension</Text>
+				<Description>
+					Consequence for referral results in 1-3 day period when student not allowed on the bus.
+				</Description>
+			</Value>
+			<Value>
+				<Code>COSE</Code>
+				<Text>Community Service</Text>
+				<Description>
+					Consequence for referral results in involvement in community
+					service activities or projects.
+				</Description>
+			</Value>
+			<Value>
+				<Code>COST</Code>
+				<Text>Conference with Student</Text>
+				<Description>
+					Consequence for referral results in student meeting with administrator,
+					teacher, and/or parent (in any combination).
+				</Description>
+			</Value>
+			<Value>
+				<Code>EXPU</Code>
+				<Text>Expulsion</Text>
+				<Description>
+					Consequence for referral results in student being dismissed from school permanently.
+				</Description>
+			</Value>
+			<Value>
+				<Code>ININ</Code>
+				<Text>Individualised Instruction</Text>
+				<Description>
+					Consequence for referral results in student receiving individualized instruction
+					specifically related to the student’s problem behaviors.
+				</Description>
+			</Value>
+			<Value>
+				<Code>ISSU</Code>
+				<Text>In-School Suspension</Text>
+				<Description>
+					Consequence for referral results in a period of time spent away from scheduled
+					activities/classes during the school day.
+				</Description>
+			</Value>
+			<Value>
+				<Code>LOPR</Code>
+				<Text>Loss of Privilege</Text>
+				<Description>
+					Consequence for referral results in student being unable to participate in some type of privilege.
+				</Description>
+			</Value>
+			<Value>
+				<Code>OATA</Code>
+				<Text>Other Action Taken</Text>
+				<Description>
+					Consequence for referral results in administrative decision that is not listed. Staff using
+					this area will specify the administrative action taken.
+				</Description>
+			</Value>
+			<Value>
+				<Code>OOSS</Code>
+				<Text>Out-of-School Suspension</Text>
+				<Description>
+					Consequence for referral results in a 1-3 day period when student
+					is not allowed on campus.
+				</Description>
+			</Value>
+			<Value>
+				<Code>PACO</Code>
+				<Text>Parent Contact</Text>
+				<Description>
+					Consequence for referral results in parent communication by phone, email, or person-to-person
+					about the problem.
+				</Description>
+			</Value>
+			<Value>
+				<Code>RECS</Code>
+				<Text>Restitution / Community Service</Text>
+				<Description>
+					Consequence for referral results in apologizing or compensating for loss, damage,
+					or injury; community services.
+				</Description>
+			</Value>
+			<Value>
+				<Code>TIOF</Code>
+				<Text>Time in Office</Text>
+				<Description>
+					Consequence for referral results in student spending time in the office away
+					from scheduled activities/classes.
+				</Description>
+				</Value><Value>
+				<Code>TODE</Code>
+				<Text>Time Out / Detention</Text>
+				<Description>
+					Consequence for referral results in student spending time in a specified area
+					away from scheduled activities/classes.
+				</Description>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Event Action Taken -->
+
+	<CodeSet>
+		<Intro>
+			<p>Codes denoting the type of restraint used on a student during a Wellbeing Event.</p>
+		</Intro>
+		<ID>Wellbeing Event Restraint Type</ID>
+		<Values>
+			<Value>
+				<Code>NON</Code>
+				<Text>None</Text>
+				<Description>No restraint or seclusion was used.</Description>
+			</Value>
+			<Value>
+				<Code>RES</Code>
+				<Text>Restraint</Text>
+				<Description>Any measure or condition used to immobilize or reduce the ability of a 
+					student to move his or her torso, arms, legs, or head freely.</Description>
+			</Value>
+			<Value>
+				<Code>RAS</Code>
+				<Text>Restraint and Seclusion</Text>
+				<Description>The use of both restraint and seclusion.</Description>
+			</Value>
+			<Value>
+				<Code>SEC</Code>
+				<Text>Seclusion</Text>
+				<Description>The involuntary confinement of a student alone in a room or area from which the student is physically prevented
+					 from leaving or believes they cannot freely exit.</Description>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Event Restraint -->
 
 
 	<!-- Wellbeing Response classification codes -->
@@ -525,17 +759,17 @@
 	</CodeSet>    <!-- Wellbeing Response Category -->
 
   <CodeSet>
-      <Intro>
-        <p>Standard codes denoting the type of award that has been achieved as part of a Wellbeing Response.</p>
-      </Intro>
-      <ID>Wellbeing Award Type</ID>
-      <Values>
-				<Value><Code>101</Code><Text>Certificate</Text></Value>
-				<Value><Code>102</Code><Text>Trophy</Text></Value>
-				<Value><Code>103</Code><Text>Letter of Recognition</Text></Value>
-				<Value><Code>104</Code><Text>Other</Text></Value>
-      </Values>
-	</CodeSet>    <!-- Wellbeing Award Type -->
+    <Intro>
+      <p>Standard codes denoting the type of award that has been achieved as part of a Wellbeing Response.</p>
+    </Intro>
+    <ID>Wellbeing Award Type</ID>
+    <Values>
+			<Value><Code>CER</Code><Text>Certificate</Text></Value>
+			<Value><Code>TRO</Code><Text>Trophy</Text></Value>
+			<Value><Code>LOR</Code><Text>Letter of Recognition</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
+    </Values>
+  	</CodeSet>    <!-- Wellbeing Award Type -->
 
 
 
@@ -546,8 +780,8 @@
       </Intro>
       <ID>Wellbeing Appeal Status</ID>
       <Values>
-				<Value><Code>N</Code><Text>In Progress</Text></Value>
-				<Value><Code>N/S</Code><Text>Not Specified</Text></Value>
+				<Value><Code>IP</Code><Text>In Progress</Text></Value>
+				<Value><Code>NS</Code><Text>Not Specified</Text></Value>
 				<Value><Code>RE</Code><Text>Rejected</Text></Value>
 				<Value><Code>SU</Code><Text>Successful</Text></Value>
 	  	</Values>
@@ -559,85 +793,313 @@
       </Intro>
       <ID>Appeal Determination By</ID>
       <Values>
-				<Value><Code>101</Code><Text>Board of Trustees</Text></Value>
-				<Value><Code>102</Code><Text>Principal</Text></Value>
-				<Value><Code>103</Code><Text>Deputy Principal</Text></Value>
-				<Value><Code>104</Code><Text>Year Level Dean</Text></Value>
-				<Value><Code>105</Code><Text>Home Room Teacher</Text></Value>
-				<Value><Code>106</Code><Text>Ministry of Education</Text></Value>
+				<Value><Code>BOT</Code><Text>Board of Trustees</Text></Value>
+				<Value><Code>PRI</Code><Text>Principal</Text></Value>
+				<Value><Code>DEP</Code><Text>Deputy Principal</Text></Value>
+				<Value><Code>YEA</Code><Text>Year Level Dean</Text></Value>
+				<Value><Code>HOM</Code><Text>Home Room Teacher</Text></Value>
+				<Value><Code>MOE</Code><Text>Ministry of Education</Text></Value>
 	  	</Values>
 	</CodeSet>    <!-- Appeal Determination By -->
+
 
 	<!-- Learning Support Participation codes -->
 	<CodeSet>
 		<Intro>
-			<p>Standard codes denoting the learning support agency that is supporting the student, 
-				e.g. Resource Teacher Literacy (RTLit) and Resource Teacher Learning and Behaviour (RTLB).</p>
-		</Intro>
-		<ID>Learning Support Agency</ID>
-		<Values>
-			<Value><Code>101</Code><Text>RTLit</Text><Description>Resource Teacher Literacy</Description></Value>
-			<Value><Code>102</Code><Text>RTLB</Text><Description>Resource Teacher Learning and Behaviour</Description></Value>
-			<Value><Code>103</Code><Text>Other</Text></Value>
-		</Values>
-	</CodeSet>    <!-- Learning Support Agency -->
-	
-	<CodeSet>
-		<Intro>
-			<p>Standard codes denoting the learning support group the student is receiving support in,
-					e.g. physical, and learning.</p>
-		</Intro>
-		<ID>Learning Support Group</ID>
-		<Values>
-			<Value><Code>101</Code><Text>Physical</Text></Value>
-			<Value><Code>102</Code><Text>Learning</Text></Value>
-			<Value><Code>103</Code><Text>Other</Text></Value>
-		</Values>
-	</CodeSet>    <!-- Learning Support Group -->
-
-	<CodeSet>
-		<Intro>
-			<p>Standard codes denoting the learning support intervention type,
-					e.g. ESOL, First STEPs, MST.</p>
-		</Intro>
-		<ID>Learning Support Intervention Type</ID>
-		<Values>
-			<Value><Code>101</Code><Text>First STEPs</Text></Value>
-			<Value><Code>102</Code><Text>ESOL</Text></Value>
-			<Value><Code>103</Code><Text>MST</Text></Value>
-			<Value><Code>104</Code><Text>Rainbow Reading</Text></Value>
-			<Value><Code>105</Code><Text>Read. Rec 2014</Text></Value>
-			<Value><Code>106</Code><Text>STEPS</Text></Value>
-			<Value><Code>107</Code><Text>TA - Reading</Text></Value>
-			<Value><Code>108</Code><Text>RTLB</Text></Value>
-			<Value><Code>109</Code><Text>RTLit</Text></Value>
-			<Value><Code>110</Code><Text>Early Words</Text></Value>
-			<Value><Code>111</Code><Text>Reading Recovery</Text></Value>
-			<Value><Code>112</Code><Text>Other</Text></Value>
-		</Values>
-	</CodeSet>    <!-- Learning Support Intervention Type -->
-
-	<CodeSet>
-		<Intro>
-			<p>Standard codes denoting the learning support type the student is receiving, e.g. Vision, Speech, 
-				Hearing, Social Skills, Behaviour, Mental Health, Autism, Reading, Writing, Mathematics etc.</p>
+			<p>Standard codes denoting the type of learning support, e.g. Fund, Programme, Service.</p>
 		</Intro>
 		<ID>Learning Support Type</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Vision</Text></Value>
-			<Value><Code>102</Code><Text>Speech</Text></Value>
-			<Value><Code>103</Code><Text>Hearing</Text></Value>
-			<Value><Code>104</Code><Text>Social Skills</Text></Value>
-			<Value><Code>105</Code><Text>Behaviour</Text></Value>
-			<Value><Code>106</Code><Text>Mental Health</Text></Value>
-			<Value><Code>107</Code><Text>Autism</Text></Value>
-			<Value><Code>108</Code><Text>Reading</Text></Value>
-			<Value><Code>109</Code><Text>Writing</Text></Value>
-			<Value><Code>110</Code><Text>Mathematics</Text></Value>
-			<Value><Code>111</Code><Text>Dyslexic</Text></Value>
-			<Value><Code>112</Code><Text>Other</Text></Value>
+			<Value><Code>FUN</Code><Text>Fund</Text></Value>
+			<Value><Code>PRO</Code><Text>Programme</Text></Value>
+			<Value><Code>SER</Code><Text>Service</Text></Value>
+			<Value><Code>APP</Code><Text>Approach</Text></Value>
+			<Value><Code>SUP</Code><Text>Support Group</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Type -->
+	
+	<CodeSet>
+		<Intro>
+			<p>Standard codes denoting the learning support intervention type, e.g. ESOL, First STEPs, MST.</p>
+		</Intro>
+		<ID>Learning Support Intervention</ID>
+		<Values>
+			<Value><Code>AEAC</Code><Text>Alternative Education - Activity Centre</Text></Value>
+			<Value><Code>AODC</Code><Text>Advisors on Deaf Children</Text></Value>
+			<Value><Code>AESA</Code><Text>Alternative Education - Service Academy</Text></Value>
+			<Value><Code>AESS</Code><Text>Alternative Education - Study Support Centre</Text></Value>
+			<Value><Code>AETP</Code><Text>Alternative Education - Teen Parent Unit (TPU)</Text></Value>
+			<Value><Code>ACBS</Code><Text>ASD Communication and Behaviour Support</Text></Value>
+			<Value><Code>ADCO</Code><Text>ASD Developmental Coordination</Text></Value>
+			<Value><Code>APED</Code><Text>ASD Parent Education (ASD Plus, TIPS for Autism, Growing Up With Autism)</Text></Value>
+			<Value><Code>ASDI</Code><Text>ASD Specific Disability Information and Advisory Services (DIAS)</Text></Value>
+			<Value><Code>ATEQ</Code><Text>Assistive Technology (AT) Equipment</Text></Value>
+			<Value><Code>ATTSC</Code><Text>Attendance Services</Text></Value>
+			<Value><Code>AUME</Code><Text>Autism and Me</Text></Value>
+			<Value><Code>BCRS</Code><Text>Behaviour Crisis Response</Text></Value>
+			<Value><Code>BSAS</Code><Text>Behaviour Services and Support</Text></Value>
+			<Value><Code>BKRS</Code><Text>Books and Resources</Text></Value>
+			<Value><Code>CAMH</Code><Text>Child and Adolescent Mental Heath Services</Text></Value>
+			<Value><Code>CNPA</Code><Text>Connecting Parents</Text></Value>
+			<Value><Code>DASS</Code><Text>Day Special Schools</Text></Value>
+			<Value><Code>DECT</Code><Text>Deaf Education Centres</Text></Value>
+			<Value><Code>DGDE</Code><Text>Diagnosis Guide</Text></Value>
+			<Value><Code>DSSC</Code><Text>Disability Support Service</Text></Value>
+			<Value><Code>EIDN</Code><Text>Early Intervention - Development Needs</Text></Value>
+			<Value><Code>EIDS</Code><Text>Early Intervention - Disabilities such as ASD, Learning or Phsyical Disabilities</Text></Value>
+			<Value><Code>EISS</Code><Text>Early Intervention - Social Skills</Text></Value>
+			<Value><Code>EIAS</Code><Text>Early Intervention - ASD</Text></Value>
+			<Value><Code>EIBH</Code><Text>Early Intervention - Behaviour</Text></Value>
+			<Value><Code>EICN</Code><Text>Early Intervention - Communication Needs</Text></Value>
+			<Value><Code>EIHR</Code><Text>Early Intervention - Hearing</Text></Value>
+			<Value><Code>EIVS</Code><Text>Early Intervention - Vision</Text></Value>
+			<Value><Code>ELBD</Code><Text>EarlyBird</Text></Value>
+			<Value><Code>ESOL</Code><Text>ESOL Funding</Text></Value>
+			<Value><Code>EXCC</Code><Text>Expanded Core Curriculum</Text></Value>
+			<Value><Code>EASD</Code><Text>Explore ASD Plus</Text></Value>
+			<Value><Code>FTSN</Code><Text>First Signs</Text></Value>
+			<Value><Code>FANZ</Code><Text>Framework for Autism in New Zealand (FANZ)</Text></Value>
+			<Value><Code>HCWH</Code><Text>How Can We Help?</Text></Value>
+			<Value><Code>IHCL</Code><Text>IHC Library</Text></Value>
+			<Value><Code>INSP</Code><Text>In-Class Support</Text></Value>
+			<Value><Code>IEED</Code><Text>Inclusive Education: A Guide to ASD and Learning</Text></Value>
+			<Value><Code>ITPR</Code><Text>Individualised Training Programmes</Text></Value>
+			<Value><Code>INAD</Code><Text>Information and Advice</Text></Value>
+			<Value><Code>ISVC</Code><Text>Information Service</Text></Value>
+			<Value><Code>IRFD</Code><Text>Interim Response Fund (IRF)</Text></Value>
+			<Value><Code>INRS</Code><Text>International Research</Text></Value>
+			<Value><Code>LRCS</Code><Text>Learning Resources</Text></Value>
+			<Value><Code>MICA</Code><Text>Maternal Infant Child and Adolescent Mental Health Services (MICAMHS)</Text></Value>
+			<Value><Code>NASC</Code><Text>Needs Assessment Service Co-Ordination</Text></Value>
+			<Value><Code>OCTH</Code><Text>Occupational Therapists</Text></Value>
+			<Value><Code>ORSM</Code><Text>Ongoing Resourcing Scheme (ORS)</Text></Value>
+			<Value><Code>PCAC</Code><Text>PB4L Check and Connect</Text></Value>
+			<Value><Code>PHKM</Code><Text>PB4L Huakina Mai</Text></Value>
+			<Value><Code>PIYP</Code><Text>PB4L Incredible Years Parent</Text></Value>
+			<Value><Code>PIYT</Code><Text>PB4L Incredible Years Teacher</Text></Value>
+			<Value><Code>PFYR</Code><Text>PB4L My FRIENDS Youth Resilience Programme</Text></Value>
+			<Value><Code>PRJS</Code><Text>PB4L Restorative Justice</Text></Value>
+			<Value><Code>PSCW</Code><Text>PB4L School-Wide</Text></Value>
+			<Value><Code>PTMT</Code><Text>PB4L Te Mana Tikitiki</Text></Value>
+			<Value><Code>PWAS</Code><Text>PB4L Wellbeing@School</Text></Value>
+			<Value><Code>PHYS</Code><Text>Physiotherapists</Text></Value>
+			<Value><Code>PATH</Code><Text>Planning Alternative Tomorrows with Hope (PATH)</Text></Value>
+			<Value><Code>PBSF</Code><Text>Positive Behaviour Support (PBS) Framework</Text></Value>
+			<Value><Code>PRSM</Code><Text>PRISM Professional Development Series</Text></Value>
+			<Value><Code>RTDF</Code><Text>Resource Teacher Deaf (RTD)</Text></Value>
+			<Value><Code>RLIT</Code><Text>Resource Teacher Lit (RTLit)</Text></Value>
+			<Value><Code>RLBS</Code><Text>Resource Teachers: Learning and Behaviour Service (RTLB)</Text></Value>
+			<Value><Code>SACA</Code><Text>SAC Assessment</Text></Value>
+			<Value><Code>SHHN</Code><Text>School High Health Needs Fund</Text></Value>
+			<Value><Code>SSNZ</Code><Text>SibSupportNZ</Text></Value>
+			<Value><Code>SWIS</Code><Text>Social Workers in Schools (SWiS) Programme</Text></Value>
+			<Value><Code>SSTA</Code><Text>Specialised School Transport Assistance (SESTA)</Text></Value>
+			<Value><Code>SLTH</Code><Text>Speech-Language Therapists</Text></Value>
+			<Value><Code>SIAE</Code><Text>Support, Information and Education</Text></Value>
+			<Value><Code>SBHV</Code><Text>Supporting Behaviour</Text></Value>
+			<Value><Code>TASP</Code><Text>Teacher Aide Support</Text></Value>
+			<Value><Code>TSAR</Code><Text>Teaching Strategies and Resources</Text></Value>
+			<Value><Code>TSFT</Code><Text>Tilting the Seesaw for Teams</Text></Value>
+			<Value><Code>TUTR</Code><Text>Tutor</Text></Value>
+			<Value><Code>UAUT</Code><Text>Understanding Autism</Text></Value>
+			<Value><Code>WTPL</Code><Text>Way to Play</Text></Value>
+			<Value><Code>YELF</Code><Text>Year 11+ Funding</Text></Value>
+			<Value><Code>YNNE</Code><Text>Year 9+</Text></Value>
+			<Value><Code>OTHR</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Intervention -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the possible outcomes of a student's
+			participation on a learning support intervention.</p>
+		</Intro>
+		<ID>Learning Support Intervention Outcome</ID>
+		<Values>
+			<Value><Code>FIR</Code><Text>Further Intervention Required</Text></Value>
+			<Value><Code>OAC</Code><Text>Outcome Achieved</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Intervention Outcome -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the outcome for the student that the intervention is 
+				seeking to achieve for an area of need. Only applies to Compulsive Schooling.</p>
+		</Intro>
+		<ID>Learning Support Outcome</ID>
+		<Values>
+			<Value><Code>WBG</Code><Text>Wellbeing</Text></Value>
+			<Value><Code>PNC</Code><Text>Presence</Text></Value>
+			<Value><Code>PTN</Code><Text>Participation</Text></Value>
+			<Value><Code>LAA</Code><Text>Learning and Achievement</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Outcome -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the target audience of the learning support intervention for the area of need.</p>
+		</Intro>
+		<ID>Learning Support Target Audience</ID>
+		<Values>
+			<Value><Code>EDU</Code><Text>Educators</Text></Value>
+			<Value><Code>EFW</Code><Text>Educators/Family/Whānau</Text></Value>
+			<Value><Code>FWH</Code><Text>Family/Whānau</Text></Value>
+			<Value>
+				<Code>FFW</Code>
+				<Text>Family/Whānau/Workforce</Text>
+				<Description>For family/whānau, early childhood teachers, health professionals, or anyone else living
+				 or working with young children with autism
+				 </Description>
+			</Value>
+			<Value>
+				<Code>FOG</Code><Text>Organisation</Text>
+				<Description>For organisations or other groups requiring a training or education event</Description>
+			</Value>
+			<Value>
+				<Code>PRE</Code><Text>Pre-School</Text>
+				<Description>For parents, whānau, and caregivers of pre-school children</Description>
+			</Value>
+			<Value>
+				<Code>TFP</Code><Text>Team</Text>
+				<Description>For teams of family and professionals, working together to support tamariki with 
+					autism aged 5-12 years. Teams may include parents, caregivers, other family/whānau, primary school
+					teachers, teacher aids, learning assistants, SENCOs or RTLBs
+				</Description>
+			</Value>
+			<Value><Code>IST</Code><Text>Individual Students</Text></Value>
+			<Value><Code>PWH</Code><Text>Parents/Whānau</Text></Value>
+			<Value><Code>SWD</Code><Text>School Wide</Text></Value>
+			<Value><Code>SCH</Code><Text>Schools</Text></Value>
+			<Value><Code>TPR</Code><Text>Targeted Programmes</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Target Audience -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the resource that is required to support the learning 
+				support intervention in addressing the area of need.</p>
+		</Intro>
+		<ID>Learning Support Resource</ID>
+		<Values>
+			<Value><Code>ADC</Code><Text>Advisor on Deaf Children</Text></Value>
+			<Value><Code>BSW</Code><Text>Basic Sight Words Programme</Text></Value>
+			<Value><Code>BCN</Code><Text>Building Confidence</Text></Value>
+			<Value><Code>CCE</Code><Text>Change Classroom Environment</Text></Value>
+			<Value><Code>CCM</Code><Text>Change Classroom Management</Text></Value>
+			<Value><Code>CIC</Code><Text>Check In Check Out (CICO)</Text></Value>
+			<Value><Code>COF</Code><Text>Circle of Friends, Intervention</Text></Value>
+			<Value><Code>CTM</Code><Text>Circle TIme</Text></Value>
+			<Value><Code>CBT</Code><Text>Cognitive Behaviour Therapy</Text></Value>
+			<Value><Code>CED</Code><Text>Conductor in Conductive Education Programme</Text></Value>
+			<Value><Code>CSV</Code><Text>Continence Service</Text></Value>
+			<Value><Code>DRP</Code><Text>Daily Report</Text></Value>
+			<Value><Code>DPM</Code><Text>Differentiated Programme</Text></Value>
+			<Value><Code>DTS</Code><Text>District Truancy Service (DTS)</Text></Value>
+			<Value><Code>DSS</Code><Text>Dyslexia Screening</Text></Value>
+			<Value><Code>EDP</Code><Text>Educational Psychologist</Text></Value>
+			<Value><Code>GCG</Code><Text>Guidance Counselling</Text></Value>
+			<Value><Code>IST</Code><Text>Inclusion Strategy</Text></Value>
+			<Value><Code>LLI</Code><Text>Learning and Language Intervention (LLI)</Text></Value>
+			<Value><Code>MCA</Code><Text>Māori or Cultural Advisor</Text></Value>
+			<Value><Code>MTH</Code><Text>Music Therapist (Registered)</Text></Value>
+			<Value><Code>NET</Code><Text>Non-Enrolled Truancy Service (NETS)</Text></Value>
+			<Value><Code>OTS</Code><Text>Occupational Therapist (OT)</Text></Value>
+			<Value><Code>OMT</Code><Text>Orientation and Mobility Instructor</Text></Value>
+			<Value><Code>PFT</Code><Text>Parent Funded Tutor</Text></Value>
+			<Value><Code>PPP</Code><Text>Pause, Prompt, Praise (PPP)</Text></Value>
+			<Value><Code>PTR</Code><Text>Peer Tutor</Text></Value>
+			<Value><Code>PPR</Code><Text>Phonics Programme</Text></Value>
+			<Value><Code>PSY</Code><Text>Psychologist</Text></Value>
+			<Value><Code>PHY</Code><Text>Physiotherapist</Text></Value>
+			<Value><Code>PXP</Code><Text>Proximal Praise</Text></Value>
+			<Value><Code>QKI</Code><Text>Quick 60 Intervention</Text></Value>
+			<Value><Code>RRC</Code><Text>Reading Recovery</Text></Value>
+			<Value><Code>RHS</Code><Text>Regular Home/School Meetings</Text></Value>
+			<Value><Code>RTL</Code><Text>RTLB Resource Teacher</Text></Value>
+			<Value><Code>SSG</Code><Text>Safety Strategy</Text></Value>
+			<Value><Code>SLI</Code><Text>Sign Language Interpreter</Text></Value>
+			<Value><Code>SSI</Code><Text>Social Skills Intervention</Text></Value>
+			<Value><Code>SWS</Code><Text>Social Worker in School (SWIS)</Text></Value>
+			<Value><Code>SEA</Code><Text>Special Education Advisor</Text></Value>
+			<Value><Code>STO</Code><Text>Specialist Teacher Outreach</Text></Value>
+			<Value><Code>SLT</Code><Text>Speech Language Therapist</Text></Value>
+			<Value><Code>TAS</Code><Text>Teacher Aide Support</Text></Value>
+			<Value><Code>TWA</Code><Text>Teacher with additional tertiary qualifications in learning, vision or hearing</Text></Value>
+			<Value><Code>TSG</Code><Text>Transition Strategy</Text></Value>
+			<Value><Code>VPS</Code><Text>Visual Prompts/Strategies</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Resource -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting who can fund a learning support intervention.</p>
+		</Intro>
+		<ID>Learning Support Funded By</ID>
+		<Values>
+			<Value><Code>ACC</Code><Text>Accident Compensation Corporation (ACC)</Text></Value>
+			<Value><Code>ASP</Code><Text>ASPIRE</Text></Value>
+			<Value><Code>DHB</Code><Text>District Health Board (DHB)</Text></Value>
+			<Value><Code>EDU</Code><Text>Educators</Text></Value>
+			<Value><Code>FWH</Code><Text>Family/Whānau/Educators/Health Professionals</Text></Value>
+			<Value><Code>FRE</Code><Text>Free Service</Text></Value>
+			<Value><Code>MOE</Code><Text>Ministry of Education (MoE)</Text></Value>
+			<Value><Code>MOH</Code><Text>Ministry of Health (MoH)</Text></Value>
+			<Value><Code>MHD</Code><Text>Ministry of Health (MoH)/District Health Board (DHB)</Text></Value>
+			<Value><Code>OTM</Code><Text>Oranga Tamariki (OT)</Text></Value>
+			<Value><Code>PCA</Code><Text>Parents/Caregivers</Text></Value>
+			<Value><Code>ACA</Code><Text>The Association for Child and Adolescent Mental Health</Text></Value>
+			<Value><Code>WSI</Code><Text>Whole School/Institution</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Funded By -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting who can provide a learning support intervention.</p>
+		</Intro>
+		<ID>Learning Support Provided By</ID>
+		<Values>
+			<Value><Code>MOE</Code><Text>Ministry of Education (MoE)</Text></Value>
+			<Value><Code>MOH</Code><Text>Ministry of Health (MoH)</Text></Value>
+			<Value><Code>OTM</Code><Text>Oranga Tamariki (OT)</Text></Value>
+			<Value><Code>DHB</Code><Text>District Health Board (DHB)</Text></Value>
+			<Value><Code>EDU</Code><Text>Educators</Text></Value>
+			<Value><Code>FRE</Code><Text>Free Service</Text></Value>
+			<Value><Code>ACA</Code><Text>The Association for Child and Adolescent Mental Health</Text></Value>
+			<Value><Code>PCA</Code><Text>Parents/Caregivers</Text></Value>
+			<Value><Code>ACC</Code><Text>Accident Compensation Corporation (ACC)</Text></Value>
+			<Value><Code>ASP</Code><Text>ASPIRE</Text></Value>
+			<Value><Code>WSI</Code><Text>Whole School/Institution</Text></Value>
+			<Value><Code>FWE</Code><Text>Family/Whānau/Educators/Health Professionals</Text></Value>
+			<Value><Code>MHD</Code><Text>Ministry of Health (MoH)/District Health Board (DHB)</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Provided By-->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the Te Whariki Domain an Early Childhood Education
+				 related intervention is part of.</p>
+		</Intro>
+		<ID>Learning Support Te Whariki Domain</ID>
+		<Values>
+			<Value><Code>WMS</Code><Text>Wellbeing - Managing Self</Text></Value>
+			<Value><Code>BLP</Code><Text>Belonging - Participating</Text></Value>
+			<Value><Code>CRO</Code><Text>Contributing - Relating to Others</Text></Value>
+			<Value><Code>COM</Code><Text>Communication - Using Language, Symbols and Texts</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Te Whariki Domain -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the status of a learning support intervention, e.g. In Development, Active.</p>
+		</Intro>
+		<ID>Learning Support Intervention Status</ID>
+		<Values>
+			<Value><Code>IDV</Code><Text>In Development</Text></Value>
+			<Value><Code>ACT</Code><Text>Active</Text></Value>
+			<Value><Code>DIS</Code><Text>Disabled</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Learning Support Intervention Status -->
 
 	<CodeSet>
 		<Intro>
@@ -645,14 +1107,14 @@
 		</Intro>
 		<ID>Learning Support Participation Status</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Applied</Text></Value>
-			<Value><Code>102</Code><Text>Approved</Text></Value>
-			<Value><Code>103</Code><Text>Declined</Text></Value>
-			<Value><Code>104</Code><Text>Participating</Text></Value>
-			<Value><Code>105</Code><Text>Finished</Text></Value>
+			<Value><Code>WAI</Code><Text>Waiting</Text></Value>
+			<Value><Code>ACT</Code><Text>Active</Text></Value>
+			<Value><Code>COM</Code><Text>Completed</Text></Value>
+			<Value><Code>DEC</Code><Text>Declined</Text></Value>
+			<Value><Code>ONH</Code><Text>On-Hold</Text></Value>
+			<Value><Code>DNC</Code><Text>Did Not Complete</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Participation Status -->
-
 
 
 	<!-- Student Activity & Student Voice classification codes -->
@@ -663,11 +1125,11 @@
 		</Intro>
 		<ID>Student Activity Group</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Sport</Text></Value>
-			<Value><Code>102</Code><Text>Art</Text></Value>
-			<Value><Code>103</Code><Text>Cultural</Text></Value>
-			<Value><Code>104</Code><Text>Music</Text></Value>
-			<Value><Code>105</Code><Text>Other</Text></Value>
+			<Value><Code>SPO</Code><Text>Sport</Text></Value>
+			<Value><Code>ART</Code><Text>Art</Text></Value>
+			<Value><Code>CUL</Code><Text>Cultural</Text></Value>
+			<Value><Code>MUS</Code><Text>Music</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Student Activity Group -->
 
@@ -678,16 +1140,16 @@
 		</Intro>
 		<ID>Student Activity Type</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Rugby</Text></Value>
-			<Value><Code>102</Code><Text>Netball</Text></Value>
-			<Value><Code>103</Code><Text>Cricket</Text></Value>
-			<Value><Code>104</Code><Text>Drama</Text></Value>
-			<Value><Code>105</Code><Text>Debate</Text></Value>
-			<Value><Code>106</Code><Text>Te Reo</Text></Value>
-			<Value><Code>107</Code><Text>Kapa Haka</Text></Value>
-			<Value><Code>108</Code><Text>Guitar</Text></Value>
-			<Value><Code>109</Code><Text>Violin</Text></Value>
-			<Value><Code>110</Code><Text>Other</Text></Value>
+			<Value><Code>NET</Code><Text>Netball</Text></Value>
+			<Value><Code>RUG</Code><Text>Rugby</Text></Value>
+			<Value><Code>CRI</Code><Text>Cricket</Text></Value>
+			<Value><Code>DRA</Code><Text>Drama</Text></Value>
+			<Value><Code>DEB</Code><Text>Debate</Text></Value>
+			<Value><Code>TER</Code><Text>Te Reo</Text></Value>
+			<Value><Code>KAP</Code><Text>Kapa Haka</Text></Value>
+			<Value><Code>GUI</Code><Text>Guitar</Text></Value>
+			<Value><Code>VIO</Code><Text>Violin</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Student Activity Type -->
 
@@ -697,11 +1159,11 @@
 		</Intro>
 		<ID>Student Interest Type</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Sports</Text></Value>
-			<Value><Code>102</Code><Text>Arts</Text></Value>
-			<Value><Code>103</Code><Text>Cultural</Text></Value>
-			<Value><Code>104</Code><Text>Music</Text></Value>
-			<Value><Code>105</Code><Text>Other</Text></Value>
+			<Value><Code>SPO</Code><Text>Sports</Text></Value>
+			<Value><Code>ART</Code><Text>Arts</Text></Value>
+			<Value><Code>CUL</Code><Text>Cultural</Text></Value>
+			<Value><Code>MUS</Code><Text>Music</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Student Interest Type -->
 
@@ -713,9 +1175,9 @@
 		</Intro>
 		<ID>Restraint Administered By Role</ID>
 		<Values>
-			<Value><Code>99</Code><Text>Other</Text></Value>
-			<Value><Code>101</Code><Text>Teacher</Text></Value>
-			<Value><Code>102</Code><Text>Principal</Text></Value>
+			<Value><Code>T</Code><Text>Teacher</Text></Value>
+			<Value><Code>P</Code><Text>Principal</Text></Value>
+			<Value><Code>O</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Restraint Administered By Role-->
 
@@ -725,8 +1187,8 @@
 		</Intro>
 	    <ID>Restraint Debriefing Type</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Staff</Text></Value>
-			<Value><Code>102</Code><Text>Parent/Caregiver and Student</Text></Value>
+			<Value><Code>S</Code><Text>Staff</Text></Value>
+			<Value><Code>P</Code><Text>Parent/Caregiver and Student</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Restraint Debriefing Type -->
 
@@ -754,8 +1216,8 @@
 		</Intro>
 		<ID>Restraint Reason</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Serious and imminent risk to safety</Text></Value>
-			<Value><Code>102</Code><Text>Actual injury</Text></Value>
+			<Value><Code>SER</Code><Text>Serious and imminent risk to safety</Text></Value>
+			<Value><Code>ACT</Code><Text>Actual injury</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Restraint Reason -->
 
@@ -765,14 +1227,14 @@
 		</Intro>
 		<ID>Staff Restraint Reflection Type</ID>
 		<Values>
-			<Value><Code>101</Code><Text>Events leading to the incident</Text></Value>
-			<Value><Code>102</Code><Text>Behaviour of the student</Text></Value>
-			<Value><Code>103</Code><Text>What did you try before the restraint?</Text></Value>
-			<Value><Code>104</Code><Text>The restraint method used</Text></Value>
-			<Value><Code>105</Code><Text>Monitoring</Text></Value>
-			<Value><Code>106</Code><Text>After the restraint ended</Text></Value>
-			<Value><Code>107</Code><Text>If there's a next time</Text></Value>
-			<Value><Code>108</Code><Text>How about you?</Text></Value>
+			<Value><Code>EVE</Code><Text>Events leading to the incident</Text></Value>
+			<Value><Code>BEH</Code><Text>Behaviour of the student</Text></Value>
+			<Value><Code>WHA</Code><Text>What did you try before the restraint?</Text></Value>
+			<Value><Code>RES</Code><Text>The restraint method used</Text></Value>
+			<Value><Code>MON</Code><Text>Monitoring</Text></Value>
+			<Value><Code>AFT</Code><Text>After the restraint ended</Text></Value>
+			<Value><Code>NEX</Code><Text>If there's a next time</Text></Value>
+			<Value><Code>HOW</Code><Text>How about you?</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Staff Restraint Reflection Type -->
 
@@ -783,7 +1245,7 @@
 		<ID>Wellbeing Appeal Outcome</ID>
 		<Values>
 			<Value>
-				<Code>99</Code>
+				<Code>OTH</Code>
 				<Text>Other</Text>
 			</Value>    <!-- Other -->
 		</Values>
@@ -796,9 +1258,13 @@
 		<ID>Wellbeing Event Severity</ID>
 		<Values>
 			<Value>
-				<Code>99</Code>
-				<Text>Other</Text>
-			</Value>    <!-- Other -->
+				<Code>MIN</Code>
+				<Text>Minor</Text>
+			</Value>    <!-- Minor -->
+			<Value>
+				<Code>MAJ</Code>
+				<Text>Major</Text>
+			</Value>    <!-- Major -->
 		</Values>
 	</CodeSet>    <!-- Wellbeing Event Severity -->
 </IncludeGroup>

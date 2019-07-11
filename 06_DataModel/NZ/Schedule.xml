@@ -1,0 +1,135 @@
+<DataObject name="Schedule"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<Key>RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>Schedule</Element>
+	    <privacyRating>Low</privacyRating>
+		<Description>Provides information about a schedule for a provider.</Description>
+	</Item>
+	
+	<Item>
+		<Element>RefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p> The ID (GUID) assigned to uniquely identify this Schedule.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>    <!-- RefId -->
+	<Item>
+		<Element>LocalId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The local Id of the schedule.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>    <!-- LocalId -->
+
+	<Item>
+		<Element>ScheduleName</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The name of the schedule.</p>
+		</Description>
+		<Type  name="xs:normalizedString"/>
+	</Item>    <!-- ScheduleName -->
+
+	<Item>
+		<Element>StartDate</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The start date of the schedule.</p>
+		</Description>
+		<Type name="xs:date"/> 
+	</Item>    <!-- StartDate -->
+	<Item>
+		<Element>EndDate</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The end date of the schedule.</p>
+		</Description>
+		<Type name="xs:date"/> 
+	</Item>    <!-- EndDate -->
+
+	<Item>
+		<Element>Provider</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The provider the schedule is for.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- Provider -->
+
+	<Item>
+		<Element>AcademicDayList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of the academic days within this schedule.</p>
+		</Description>
+		<Type ref="CommonTypes" name="AcademicDayListType"/>
+	</Item>    <!-- AcademicDayList -->
+
+	<xhtml:Example xmlns="" name ="Schedule">
+		<Schedule>
+			<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
+			<LocalId>2019a</LocalId>
+			<ScheduleName>Scheule 2019a (Term 1)</ScheduleName>
+			<StartDate>2019-01-30</StartDate>
+			<EndDate>2019-04-07</EndDate>
+			<Provider>
+				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
+				<Name>Hogwarts High</Name>
+			</Provider>
+			<AcademicDayList>
+				<AcademicDay>
+					<RefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</RefId>
+					<LocalId>2019a-A</LocalId>
+					<Name>Schedule 2019a, Day A</Name>
+					<PeriodList>
+						<Period>
+							<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
+							<LocalId>2019a-A1</LocalId>
+							<Name>Period 1 on Day A</Name>
+						</Period>
+						<Period>
+							<RefId>1c48a0bb-a6cc-41ab-8aae-929ce5ec9c34</RefId>
+							<LocalId>2019a-A2</LocalId>
+							<Name>Period 2 on Day A</Name>
+						</Period>
+					</PeriodList>					
+				</AcademicDay>
+				<AcademicDay>
+					<RefId>337804c6-1247-4c0f-b288-e4aa28584aad</RefId>
+					<LocalId>2019a-B</LocalId>
+					<Name>Schedule 2019a, DayB</Name>
+					<PeriodList>
+						<Period>
+							<RefId>f6776718-4680-4cb7-b649-a84f9796905c</RefId>
+							<LocalId>2019a-B1</LocalId>
+							<Name>Period 1 on Day B</Name>
+						</Period>
+						<Period>
+							<RefId>0ddaa486-adf1-4cb3-bd06-71397f4bbdd9</RefId>
+							<LocalId>2019a-B2</LocalId>
+							<Name>Period 2 on Day B</Name>
+						</Period>
+					</PeriodList>					
+				</AcademicDay>
+			</AcademicDayList>			
+		</Schedule>
+	</xhtml:Example>
+</DataObject>

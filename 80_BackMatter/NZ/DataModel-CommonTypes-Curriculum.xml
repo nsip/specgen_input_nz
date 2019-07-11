@@ -26,8 +26,8 @@
 		</Item>      <!-- SubjectArea -->
 		<xhtml:Example xmlns="" name="NZ Subject Area List Example">
 			<SubjectAreaList>
-				<SubjectArea json:force-string="true">3</SubjectArea>
-				<SubjectArea json:force-string="true">4</SubjectArea>
+				<SubjectArea>FREN</SubjectArea>
+				<SubjectArea>HIST</SubjectArea>
 			</SubjectAreaList>
 		</xhtml:Example>
 	</CommonElement>
@@ -67,45 +67,25 @@
 			</Description>
 			<Type name="xs:unsignedInt"/>
 		</Item>      <!-- Preference -->
-		<if intl="nz">
-			<Item>
-				<Element>Code</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>NZ education standardised code denoting LearningArea / SubjectArea</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
-			</Item>       <!-- Code -->
-			<Item>
-				<Element>YearLevels</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>Staff assignment to this particular subject area / learning area applies
-					 only for students enrolled in a particular set of year levels.   
-					 e.g.  "Asst. Head of Dept (Maths, Jnr)" could ony be responsible for Students in 
-					 year levels 9 &amp; 10, who are learning Mathematics.</p>
-				</Description>
-				<Type ref="CommonTypes" name="YearLevelList"/>
-			</Item>       <!-- YearLevelList -->
-		</if>
-		<if intl="au">
-			<Item>
-				<Element>SubjectLocalId</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Local Subject Id</p>
-				</Description>
-				<Type ref="CommonTypes" name="LocalIdType"/>
-			</Item>       <!-- SubjectLocalId -->
-			<Item>
-				<Element>TimeTableSubjectRefId</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>RefId of TimeTableSubject</p>
-				</Description>
-				<Type ref="CommonTypes" name="RefIdType"/>
-			</Item>      <!-- TimeTableSubjectRefId -->
-		</if>
+		<Item>
+			<Element>Code</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>NZ education standardised code denoting LearningArea / SubjectArea</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
+		</Item>       <!-- Code -->
+		<Item>
+			<Element>YearLevels</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Staff assignment to this particular subject area / learning area applies
+					only for students enrolled in a particular set of year levels.   
+					e.g.  "Asst. Head of Dept (Maths, Jnr)" could ony be responsible for Students in 
+					year levels 9 &amp; 10, who are learning Mathematics.</p>
+			</Description>
+			<Type ref="CommonTypes" name="YearLevelList"/>
+		</Item>       <!-- YearLevelList -->
 	</CommonElement>
 
 	<CommonElement name="LanguageOfInstructionListType" type="true" dm="true">
@@ -127,12 +107,12 @@
 		<xhtml:Example xmlns="" name="LanguageOfInstructionList Example">
 			<LanguageOfInstructionList>
 				<Language>
-					<Code>16110</Code>
-					<Level>99</Level>
+					<Code>NZS16110</Code>
+					<Level>1</Level>
 				</Language>
 				<Language>
-					<Code>01112</Code>
-					<Level>99</Level>
+					<Code>NZS01112</Code>
+					<Level>5</Level>
 				</Language>
 			</LanguageOfInstructionList>
 		</xhtml:Example>
@@ -165,12 +145,14 @@
 		</Item>    <!-- Level -->
 		<xhtml:Example xmlns="" name="LanguageOfInstruction Example">
 			<LanguageOfInstruction>
-				<Code>01112</Code>
-				<Level>101</Level>
+				<Code>NZS01112</Code>
+				<Level>3</Level>
 			</LanguageOfInstruction>
 		</xhtml:Example>
 	</CommonElement>
 
+
+	<!-- Credentials and Learning Standards -->
 	<CommonElement name="LearningStandardReferenceListType" type="true" dm="true">
 		<Item>
 			<Element>LearningStandardReferenceListType</Element>
@@ -212,13 +194,13 @@
 			</Description>
 		</Item>
 		<Item>
-			<Element>LearningStandardRefId</Element>
+			<Element>LearningStandard</Element>
 			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
-				<p>GUID Reference to a related LearningStandard</p>
+				<p>Generic object reference to a related LearningStandard</p>
 			</Description>
-			<Type ref="CommonTypes" name="IdRefType"/>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>    <!-- LearningStandardRefId -->
 		<Item>
 			<Element>Relationship</Element>
@@ -230,6 +212,23 @@
 			<Type ref="NZCodeSets" name="NZCodeSetsLearningStandardRelationshipTypeType"/>
 		</Item>   <!-- Relationship -->
 	</CommonElement>	
+
+	<CommonElement name="CredentialListType" type="true" dm="true">
+		<Item>
+			<Element>CredentialListType</Element>
+			<Description>
+				<p>A list of <code>ObjectReference</code>s providing a manner of referring
+				to a collection of <code>Credentials</code>.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Credential</Element>
+			<Characteristics>OR</Characteristics>
+			<Description/>
+			<Type ref="CommonData" name="ObjectReferenceType"/>
+		</Item>
+	</CommonElement>
 
 	<CommonElement name="CourseListType" type="true" dm="true">
 		<Item>
@@ -244,23 +243,248 @@
 			<Element>Course</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>An associated course.</Description>
-			<Type ref="CommonTypes" name="CourseType"/>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>    <!-- Course -->
-	</CommonElement>	
-	<CommonElement name="CourseType" type="true" dm="true">
+	</CommonElement>
+
+
+	<!-- Curriculum Progress Reports -->
+	<CommonElement name="ProgressReportAuthorListType" type="true" dm="true">
 		<Item>
-			<Element>CourseType</Element>
-			<Characteristics>O</Characteristics>
+			<Element>ProgressReportAuthorListType</Element>
 			<Description>
-				<p>An associated course.</p>
+				<p>A list of the staff members that compiled the progress report. A report can be authored by
+				 a collective of individual class teachers, or may be compiled by a single author.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Author</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A generic object reference to a staff memberthat authored the progress report.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>    <!-- Author -->
+	</CommonElement>
+
+	<CommonElement name="TechnologyClassListType" type="true" dm="true">
+		<Item>
+			<Element>TechnologyClassListType</Element>
+			<Description>
+				<p>A list of  records of the Student's progress in particular classes from the Technology 
+					curriculum. e.g. Hard Materials, Food Technology, Digital Design etc.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>TechnologyClass</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p> A record of the Student's progress in a particular class from the Technology curriculum. </p>
+			</Description>
+			<Type ref="CommonTypes" name="TechnologyClass"/>
+		</Item>    <!-- Class -->
+	</CommonElement>
+
+	<CommonElement name="TechnologyClassType" type="true" dm="true">
+		<Item>
+			<Element>TechnologyClassType</Element>
+			<Description>
+				<p>A record of the Student's progress in a particular class from the Technology curriculum. </p>
 			</Description>
 		</Item>
 		<Item>
-			<Element>CourseDetail</Element>
+			<Element>Class</Element>
 			<Characteristics>MR</Characteristics>
-			<Description>Relevant detail about the associated course.</Description>
+			<Description>
+				<p>A code denoting the technology class the progress report covers.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsTechnologyClassType"/>
+		</Item>    <!-- Class -->
+		<Item>
+			<Element>Teacher</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Generic object reference to the staff member that taught the subject and assessed the student against the technology strand objectives.</p>
+			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>    <!-- CourseDetail -->
-	</CommonElement>	
+		</Item>    <!-- Teacher -->
+		<Item>
+			<Element>BehaviourComment</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Overall comment about the behaviour of the student over the course of the lessons in the Class.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- BehaviourComment -->
+		<Item>
+			<Element>EffortComment</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Overall comment about the effort the student has made in class</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- BehaviourComment -->
+		<Item>
+			<Element>StrandList</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A record of the Student's progress in a set of learning strands 
+					from the Technology curriculum, that were covered in the class</p>
+			</Description>
+			<Type ref="CommonTypes" name="ClassStrandListType"/>
+		</Item>    <!-- StrandList -->
+	</CommonElement>
 
+	<CommonElement name="ClassStrandListType" type="true" dm="true">
+		<Item>
+			<Element>ClassStrandListType</Element>
+			<Description>
+				<p>A record of the Student's progress in a set of learning strands 
+					from the Technology curriculum, that were covered in the class.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Strand</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A record of the Student's progress in a particular learning strand
+					 from the Technology curriculum, that was covered in the class.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ClassStrandType"/>
+		</Item>    <!-- Strand -->
+	</CommonElement>
+
+	<CommonElement name="ClassStrandType" type="true" dm="true">
+		<Item>
+			<Element>ClassStrandType</Element>
+			<Description>
+				<p>A record of the Student's progress in a particular learning strand 
+						from the Technology curriculum, that was covered in the class.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>LearningStrand</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Code denoting the particular learning strand from the Technology curriculum, that was covered in the class, 
+					and for which the student's progress is being reported.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsTechnologyLearningStrandType"/>
+		</Item>    <!-- LearningStrand -->
+		<Item>
+			<Element>AchievementObjectiveList</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A record of the Student's progress in a set of achievement objectives from the 
+					from the Technology curriculum strand, that was covered in the class.</p>
+			</Description>
+			<Type ref="CommonData" name="StrandAchievementObjectiveListType"/>
+		</Item>    <!-- AchievementObjectiveList -->
+	</CommonElement>
+
+	<CommonElement name="StrandAchievementObjectiveListType" type="true" dm="true">
+		<Item>
+			<Element>StrandAchievementObjectiveListType</Element>
+			<Description>
+				<p>A record of the Student's progress in a set of achievement objectives from the 
+					Technology curriculum strand, that was covered in the class.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>AchievementObjective</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A record of the Student's progress in a particular achievement objective
+						 from the Technology curriculum strand, that was covered in the class. </p>
+			</Description>
+			<Type ref="CommonTypes" name="StrandAchievementObjectiveType"/>
+		</Item>    <!-- AchivementObjective -->
+	</CommonElement>
+
+	<CommonElement name="StrandAchievementObjectiveType" type="true" dm="true">
+		<Item>
+			<Element>StrandAchievementObjectiveType</Element>
+			<Description>
+				<p>A record of the Student's progress in a particular achievement objective 
+						from the Technology curriculum strand, that was covered in the class. </p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>AchievementObjective</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Code denoting the particular achievement objective against which
+					 the student's progress is being reported. </p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsStrandAchievementObjectiveType"/>
+		</Item>    <!-- AchivementObjective -->
+		<Item>
+			<Element>CurriculumLevel</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Code denoting the technology curriculum level that the student's progress report
+				 is being made against for this learning strand achievement objective. e.g. 2, 3, 4 or 5. </p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsTechnologyCurriculumLevelType"/>
+		</Item>    <!-- CurriculumLevel -->
+		<Item>
+			<Element>ProgressLevel</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Code denoting the level of progress the student has made against the particular learning 
+					strand achievement objective. e.g. Beginner, Proficient, and Advanced. </p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsStrandAchievementProgressLevelType"/>
+		</Item>    <!-- ProgressLevel -->
+		<Item>
+			<Element>AchievementObjectiveDesc</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A description of what the achievement objective covers.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- AchievementObjectiveDesc -->
+
+		<Item>
+			<Element>OverallStudentEffortNote</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A note about the student's overall effort in relation to this 
+					achievement objective for this strand.</p>
+			</Description>
+			<Type  name="xs:normalizedString"/>
+		</Item>    <!-- OverallStudentEffortNote -->
+		<Item>
+			<Element>PracticalAbilityDesc</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A description of practical ability covered by the 
+					achievement objective for the strand.</p>
+			</Description>
+			<Type  name="xs:normalizedString"/>
+		</Item>    <!-- PracticalAbilityDesc -->
+		<Item>
+			<Element>PracticalAbilityProgressNote</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A note about the student's practical ability progress in relation to
+					 this achievement objective for this strand.</p>
+			</Description>
+			<Type  name="xs:normalizedString"/>
+		</Item>    <!-- PracticalAbilityProgressNote -->
+
+		<Item>
+			<Element>DocumentList</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Documents that relate to students progress in this strand achievement 
+					objective, e.g. report, photos, media, documents etc.</p>
+			</Description>
+			<Type ref="CommonData" name="DocumentListType"/>
+		</Item>    <!-- DocumentList -->
+	</CommonElement>
 </IncludeGroup>

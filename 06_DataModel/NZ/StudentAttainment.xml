@@ -27,14 +27,24 @@
   </Item>    <!-- RefId -->
 
   <Item>
-    <Element>GrantingProviderRefId</Element>    
+    <Element>LocalId</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A localId that identifies an instance of this object, if provided by the source system</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- LocalId -->
+
+  <Item>
+    <Element>GrantingProvider</Element>    
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The Id (GUID) that uniquely identifies the Provider who is granting the attainment to the student, e.g. NZQA, TEC.</p>
+      <p>Generic object reference to the Provider/Organisation who is granting the attainment to the student, e.g. NZQA, TEC.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- GrantingProviderRefId -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- GrantingProvider -->
 
   <Item>
     <Element>Attainment</Element>    
@@ -48,53 +58,26 @@
   </Item>    <!-- Attainment -->
 
   <Item>
-    <Element>StudentPersonalRefId</Element>
+    <Element>Student</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The identifier (GUID) for the student held in the StudentPersonal data
+      <p>Generic object reference to the student held in the StudentPersonal data
         object who the attainment is for.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- StudentPersonalRefId -->
-  <Item>
-    <Element>StudentPersonalLocalId</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The Local Id for the student whose attainment this is.</p>
-    </Description>
-    <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- StudentPersonalLocalId -->
-  <Item>
-    <Element>StudentName</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The name the student is achieved the attainment under.</p>
-    </Description>
-    <Type ref="CommonTypes" name="BaseNameType"></Type>
-  </Item>    <!-- StudentName -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- Student -->
 
   <Item>
-    <Element>StaffPersonalRefId</Element>
+    <Element>AuthorisingStaffMember</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The identifier (GUID) of the StaffPersonal data object representing the
+      <p>Generic object reference to the StaffPersonal data object representing the
           staff member who authorised the attainment.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- StaffPersonalRefId -->
-  <Item>
-    <Element>StaffName</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The name of the staff member that authorised the student attainment.</p>
-    </Description>
-    <Type ref="CommonTypes" name="BaseNameType"></Type>
-  </Item>    <!-- StaffName -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- AuthorisingStaffMember -->
 
   <Item>
     <Element>DateAttained</Element>
@@ -128,35 +111,39 @@
   </Item>    <!-- SubjectArea -->
 
   <Item>
-    <Element>NCEAEndorsementLevel</Element>
+    <Element>EndorsementLevel</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The NCEA endorsement level that was attained by the student.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsNCEAEndorsementLevelType"/>
-  </Item>    <!-- NCEAEndorsementLevel -->
+  </Item>    <!-- EndorsementLevel -->
 
   <xhtml:Example xmlns="" name="Student Attainment - NCEA Course Endorsement">
     <StudentAttainment>
       <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
-      <GrantingProviderRefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</GrantingProviderRefId>
+      <GrantingProvider>
+        <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+      </GrantingProvider>
       <Attainment>
         <RefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</RefId>
         <Name>NCEA Level 2 Chemistry - Endorsed with merit</Name>
         <ObjectType>Credential</ObjectType>
       </Attainment>
-      <StudentPersonalRefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</StudentPersonalRefId>
-      <StudentPersonalLocalId>HP-850139</StudentPersonalLocalId>
-      <StudentName><FullName>Harry Potter</FullName></StudentName>
+      <Student>
+        <RefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</RefId>
+        <LocalId>HP85-1039</LocalId>
+        <Name>Harry Potter</Name>
+      </Student>
       <DateAttained>2018-07-25</DateAttained>
 			<JustificationList>
 				<Justification>
 					<RefId>2752a16b-b62a-4973-9d44-23e13e1c037b</RefId>
 					<LocalId>91165-v2</LocalId>
 					<Name>Demonstrate understanding of the properties of selected organic compounds</Name>
-					<ObjectType>AssessmentTaskResult</ObjectType>
-					<AssessmentType json:force-string="true">102</AssessmentType>
+					<ObjectType>StudentAssessmentTaskResult</ObjectType>
+					<AssessmentType>EXT</AssessmentType>
 					<Result>Achieved</Result>
 					<Date>2016-06-28</Date>
 					<CreditValue>4</CreditValue>					
@@ -165,8 +152,8 @@
 					<RefId>eca0da5d-94af-4223-aaa6-7c0083006efd</RefId>
 					<LocalId>91166-v2</LocalId>
 					<Name>Demonstrate understanding of chemical reactivity</Name>
-					<ObjectType>AssessmentTaskResult</ObjectType>
-					<AssessmentType json:force-string="true">101</AssessmentType>
+					<ObjectType>StudentAssessmentTaskResult</ObjectType>
+					<AssessmentType>INT</AssessmentType>
 					<Result>Achieved with merit</Result>
 					<Date>2016-06-01</Date>
 					<CreditValue>3</CreditValue>					
@@ -175,33 +162,39 @@
 					<RefId>12f4761d-5e97-4e12-804e-e16d882c86c7</RefId>
 					<LocalId>91167-v2</LocalId>
 					<Name>Demonstrate understanding of oxidation-reduction</Name>
-					<ObjectType>AssessmentTaskResult</ObjectType>
-					<AssessmentType json:force-string="true">102</AssessmentType>
+					<ObjectType>StudentAssessmentTaskResult</ObjectType>
+					<AssessmentType>EXT</AssessmentType>
 					<Result>Achieved</Result>
 					<Date>2016-06-28</Date>
 					<CreditValue>3</CreditValue>										
 				</Justification>				
 			</JustificationList>      
-      <SubjectArea json:force-string="true">4</SubjectArea>
+      <SubjectArea>CHEM</SubjectArea>
     </StudentAttainment>
   </xhtml:Example>
 
   <xhtml:Example xmlns="" name="Student Attainment - School Course Completion">
     <StudentAttainment>
       <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
-      <GrantingProviderRefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</GrantingProviderRefId>
+      <GrantingProvider>
+        <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+      </GrantingProvider>
       <Attainment>
         <RefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</RefId>
         <Name>Introduction to Astrophysics</Name>
         <ObjectType>ProviderCourse</ObjectType>
       </Attainment>
-      <StudentPersonalRefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</StudentPersonalRefId>
-      <StudentPersonalLocalId>HP-850139</StudentPersonalLocalId>
-      <StudentName><FullName>Harry Potter</FullName></StudentName>
-      <StaffPersonalRefId>5f399b12-b81f-405a-aa55-648341ca2e3c</StaffPersonalRefId>
-      <StaffName><FullName>Prof. McGonnegal</FullName></StaffName>
+      <Student>
+        <RefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</RefId>
+        <LocalId>HP-850139</LocalId>
+        <Name>Harry Potter</Name>
+      </Student>
+      <AuthorisingStaffMember>
+        <RefId>5f399b12-b81f-405a-aa55-648341ca2e3c</RefId>
+        <Name>Prof. McGonnegal</Name>
+      </AuthorisingStaffMember>
       <DateAttained>2018-07-25</DateAttained>
-      <SubjectArea json:force-string="true">4</SubjectArea>
+      <SubjectArea>PHYS</SubjectArea>
     </StudentAttainment>
   </xhtml:Example>
 </DataObject>

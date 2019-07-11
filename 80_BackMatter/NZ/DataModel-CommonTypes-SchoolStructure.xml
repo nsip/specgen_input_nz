@@ -11,14 +11,12 @@
 		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
 
 
-	<!-- Borrowed from SIF AU -->
-
 	<CommonElement name="StaffListType" type="true" dm="true">
 		<Item>
 			<Element>StaffListType</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>A List of staff members associated with the TeachingGroup or AssessmentTask.</p>
+				<p>A list of associated staff members.</p>
 			</Description>
 			<List mode="List"/>
 		</Item>
@@ -26,74 +24,84 @@
 			<Element>StaffMember</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>
-				<p>Teacher associated with the Teaching group –  may or may not be the teacher timetabled in the schedule</p>
+				<p>The individual staff member as a member of the StaffList and their role.</p>
 			</Description>
 			<Type ref="CommonTypes" name="StaffListStaffMemberType"/>
 		</Item>    <!-- StaffListStaffMember -->
 	</CommonElement>
+
 	<CommonElement name="StaffListStaffMemberType" type="true" dm="true">
 		<Item>
 			<Element>StaffListStaffMemberType</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>
-				<p>The individual staff member as a member of the StaffListStaffMember who marked the assessment.
-				 May or may not be the teacher scheduled in the timetable.</p>
+				<p>The individual staff member as a member of the StaffList and their role.</p>
+			</Description>
+			<Type complex="extension" name="ObjectReferenceType"/>
+		</Item>
+		<Item>
+			<Element>Role</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Code describing the staff members role. Note: This role
+				may affect the Teacher's access to the students data for
+				those students who are members of the TeachingGroup.</p>
+			</Description>
+			<Type  ref="CodeSets" name="NZCodeSetsStaffRoleType"/>
+		</Item>    <!-- Role -->
+	</CommonElement>
+
+	<CommonElement name="StaffRoleListType" type="true" dm="true">
+		<Item>
+			<Element>StaffRoleListType</Element>
+			<Description>
+				<p>A list of roles that are assigned to the staff member.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>StaffRole</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The individual role that is assigned to the staff member.</p>
+			</Description>
+			<Type ref="CommonTypes" name="StaffRoleType"/>
+		</Item>    <!-- StaffRole -->
+	</CommonElement>
+
+	<CommonElement name="StaffRoleType" type="true" dm="true">
+		<Item>
+			<Element>StaffRoleType</Element>
+			<Description>
+				<p>A list of roles that are assigned to the staff member.</p>
 			</Description>
 		</Item>
 		<Item>
-			<Element>StaffPersonalRefId</Element>
-			<Characteristics>C</Characteristics>
-			<Description>
-				<p>RefId of the Staff member. Either StaffPersonalRefidId or StaffLocalId should be supplied.</p>
-			</Description>
-			<Type ref="CommonTypes" relationship="" count="?:1" name="IdRefType"/>
-		</Item>    <!-- StaffPersonalRefId -->
-		<Item>
-			<Element>StaffLocalId</Element>
-			<Characteristics>C</Characteristics>
-			<Description>
-				<p>LocalId of the Staff member. Either StaffPersonalRefidId or StaffLocalId should be supplied.</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/>
-		</Item>    <!-- StaffLocalId -->
-		<Item>
-			<Element>Name</Element>
+			<Element>Role</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>Name of Staff Member.</p>
+				<p>The individual role that is assigned to the staff member.</p>
 			</Description>
-			<if intl="au">
-				<Type ref="CommonTypes" name="NameOfRecordType"/>
-			</if>	
-			<if intl="nz">
-				<Type ref="CommonTypes" name="BaseNameType"/>
-			</if>
-		</Item>    <!-- Name -->
-
-		<if intl="au">
-			<Item>
-				<Element>Association</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>Association with the Teaching Group (free format for this release)</p>
-				</Description>
-				<Type name="xs:normalizedString"/>
-			</Item>    <!-- Association -->
-		</if>
-		<if intl="nz">
-			<Item>
-				<Element>Role</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>Code describing the staff member's role in the TeachingGroup.  e.g.  Teacher,
-					 Teacher's Aide, Lab Assistant, Co-Teacher.</p>
-					 <p>Note: This role may affect the Teacher's access to the students' data for 
-					 those students who are members of the TeachingGroup.</p>
-				</Description>
-				<Type  ref="CodeSets" name="NZCodeSetsTeachingGroupTeacherRole"/>
-			</Item>    <!-- Role -->
-		</if>
+			<Type ref="CodeSets" name="NZCodeSetsStaffRoleType"/>
+		</Item>    <!-- Role -->
+		<Item>
+			<Element>StartDate</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date from which (inclusive) the role was assigned to the staff member.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>    <!-- StartDate -->
+		<Item>
+			<Element>EndDate</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date after which the role is no longer assigned to the staff member.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>    <!-- EndDate -->
 	</CommonElement>
+
 	<CommonElement name="StudentListType" type="true" dm="true">
 		<Item>
 			<Element>StudentListType</Element>
@@ -110,44 +118,10 @@
 			<Description>
 				<p>Student reference in the StudentList.</p>
 			</Description>
-			<Type ref="CommonTypes" name="StudentListStudentType"/>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>       <!-- Student -->
 	</CommonElement>
-	<CommonElement name="StudentListStudentType" type="true" dm="true">
-		<Item>
-			<Element>StudentListStudentType</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>Repeatable element, being the reference Ids and/or name of a Student in the list of Students.</p>
-			</Description>
-		</Item>
-		<Item>
-			<Element>StudentPersonalRefId</Element>
-			<Characteristics>C</Characteristics>
-			<Description>
-				<p>RefId of the Student who is a member of the StudentList. Either StudentPersonalRefidId 
-					or StudentLocalId should be supplied.</p>
-			</Description>
-			<Type ref="CommonTypes" relationship="" count="?:1" name="IdRefType"/>
-		</Item>       <!-- StudentPersonalRefId -->
-		<Item>
-			<Element>StudentLocalId</Element>
-			<Characteristics>C</Characteristics>
-			<Description>
-				<p>Local Id of the Student who is a member of the StudentList. Either StudentPersonalRefidId or
-					 StudentLocalId should be supplied.</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/>
-		</Item>       <!-- StudentPersonalLocalId -->
-		<Item>
-			<Element>Name</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Name of the Student who is a member of the StudentList.</p>
-			</Description>
-			<Type ref="CommonTypes" name="BaseNameType"/>
-		</Item>       <!-- Name -->
-	</CommonElement>
+
 	<CommonElement name="RoomListType" type="true" dm="true">
 		<Item>
 			<Element>RoomListType</Element>
@@ -248,25 +222,33 @@
 			</Description>
 			<Type ref="CommonTypes" name="SchoolYearLevelListType"/>
 		</Item>    <!-- SchoolYearList-->
-		
+		<Item>
+			<Element>TechnologyCentreName</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				The name of the Technology Centre that is run as part of the School;  Eg:  Marlborough Technology Centre
+				is run as part of Bohally Intermediate School.
+			</Description>			
+		</Item>    <!-- TechnologyCentreName -->
 		<xhtml:Example xmlns="" name="NZ School Service Example">
 			<SchoolService>
-				<CoEdStatus>C2</CoEdStatus>
+				<CoEdStatus>JUBO</CoEdStatus>
 				<Decile>5</Decile>
 				<NewEntrantPolicyList>
 					<EnactedPolicy>
 						<EffectiveTo>2018-12-31</EffectiveTo>
-						<Policy>1</Policy>
+						<Policy>AE</Policy>
 					</EnactedPolicy>
 					<EnactedPolicy>
 						<EffectiveFrom>2019-01-01</EffectiveFrom>
-						<Policy>2</Policy>
+						<Policy>CE</Policy>
 					</EnactedPolicy>
 				</NewEntrantPolicyList>
 				<DefinitionList>
-					<Definition json:force-string="true">101</Definition>
-					<Definition json:force-string="true">103</Definition>
-					<Definition json:force-string="true">106</Definition>
+					<Definition>SMBS</Definition>
+					<Definition>KKMA</Definition>
+					<Definition>SWBF</Definition>
 				</DefinitionList>			
 				<SchoolYearList>
 					<SchoolYear>
@@ -444,11 +426,11 @@
 			<NewEntrantPolicyList>
 				<EnactedPolicy>
 					<EffectiveTo>2018-12-31</EffectiveTo>
-					<Policy>1</Policy>
+					<Policy>AE</Policy>
 				</EnactedPolicy>
 				<EnactedPolicy>
 					<EffectiveFrom>2019-01-01</EffectiveFrom>
-					<Policy>2</Policy>
+					<Policy>CE</Policy>
 				</EnactedPolicy>
 			</NewEntrantPolicyList>
 		</xhtml:Example>
@@ -509,70 +491,31 @@
 		</Item>
 		<xhtml:Example xmlns="" name="NZ School Definition List Example">
 			<SchoolDefinitionList>
-				<Definition json:force-string="true">103</Definition>
-				<Definition json:force-string="true">106</Definition>
+				<Definition json:force-string="true">KKMA</Definition>
+				<Definition json:force-string="true">SWBF</Definition>
 			</SchoolDefinitionList>
 		</xhtml:Example>
 	</CommonElement>
 
-	<CommonElement name="TeachingGroupScheduleListType" type="true" dm="true">
+	<!-- ECE stuff -->
+	<CommonElement name="ECEServiceType" type="true" dm="true">
 		<Item>
-			<Element>TeachingGroupScheduleListType</Element>
-			<Characteristics>O</Characteristics>
+			<Element>ECEServiceType</Element>
 			<Description>
-				<p>List of Teaching schedule entries for the TeachingGroup; recording when particular Courses / Subject / Learning Areas are being taught to the group.</p>
-			</Description>
-			<List mode="List"/>
-		</Item>
-		<Item>
-			<Element>Entry</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>Single schedule entry recording what ProviderCourse, Learning Area or Subject Area is being taught to the TeachingGroup when.</p>
-			</Description>
-			<Type ref="CommonTypes" name="TeachingGroupScheduleType"/>
-			</Item>
-	</CommonElement>		
-	<CommonElement name="TeachingGroupScheduleType" type="true" dm="true">
-		<Item>
-			<Element>TeachingGroupScheduleType</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>Teaching schedule for the TeachingGroup; recording when a particular Course / Subject / Learning Area is being taught to the group.</p>
+				<p>Contains Organisation properties that are specific to Organisations
+				that are Providers of early childhood education services.
+				</p>
 			</Description>
 		</Item>
 		<Item>
-			<Element>TimeDescription</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Free-form text describing the teaching schedule for a particular TeachingGroup and ProviderCourse, e.g. Terms 1 and 2 - Thursdays 9am-12noon.</p>
-			</Description>
-    	    <Type name='xs:normalizedString'/>
-		</Item>
-		<Item>
-			<Element>ProviderCourseRefId</Element>
-			<Characteristics>O</Characteristics>
-  			<Description>
-				<p>RefId of the course being taught to the TeachingGroup. Either ProviderCourseRefId or ProviderCourseLocalId must be provided.</p>
-			</Description>
-			<Type ref="CommonTypes" name="RefIdType"/>
-		</Item>
-		<Item>
-			<Element>ProviderCourseLocalId</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>LocalId of the course being taught to the TeachingGroup. Either ProviderCourseRefId or ProviderCourseLocalId must be provided.</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/>
-		</Item>
-		<Item>
-			<Element>SubjectAreaList</Element>
+			<Element>Type</Element>
 			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
 			<Description>
-				<p>The list of subject areas being taught as part of the teaching group schedule.</p>
+				<p>Code denoting the kind of ECE service. eg: Kindergarten, PLayCentre, Te Kohanga Reo, etc.</p>
 			</Description>
-			<Type ref="CommonTypes" name="SubjectAreaListType"/>
-		</Item>
+			<Type ref="CodeSets" name="NZCodeSetsECEServiceTypeType"/>
+		</Item>    <!-- Type -->
 	</CommonElement>
 
 </IncludeGroup>

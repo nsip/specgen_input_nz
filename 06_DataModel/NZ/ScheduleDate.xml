@@ -1,0 +1,137 @@
+<DataObject name="ScheduleDate"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
+	xmlns="http://sifassociation.org/SpecGen">
+
+
+	<Key>RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>ScheduleDate</Element>
+	  <privacyRating>Low</privacyRating>
+		<Description>
+			Provides information about the schedule that is being followed on a
+			specific calendar date at a particular Provider, e.g. Academic Day A from the Term 1
+			Schedule using the Periods and their start and end times defined
+			in Bell Schedule Day A.
+		</Description>
+	</Item>
+	
+	<Item>
+		<Element>RefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p> The ID (GUID) assigned to uniquely identify this Schedule Date.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>    <!-- RefId -->
+	<Item>
+		<Element>LocalId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The local Id of the this Schedule Date.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>    <!-- LocalId -->
+
+	<Item>
+		<Element>CalendarDate</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The actual date the school is in session.</p>
+		</Description>
+		<Type  name="xs:normalizedString"/>
+	</Item>    <!-- CalendarDate -->
+	<Item>
+		<Element>Provider</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The provider, e.g. school, tertiary institution etc, that this schedule date record belongs to.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- Provider -->
+	<Item>
+		<Element>Term</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The Term in session on this calendar date.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- Term -->
+	
+	<Item>
+		<Element>Schedule</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The schedule within the provider to which this ScheduleDate applies.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- Schedule -->
+	<Item>
+		<Element>AcademicDay</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The academic day from the schedule that is taking place on this calendar date.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- AcademicDay -->
+	<Item>
+		<Element>BellSchedule</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The bell schedule that the provider used on this calendar date.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- BellSchedule -->
+
+	<Item>
+		<Element>TeachingGroupEventList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>List of generic object references to the set of TeachingGroupEvents that take place on this calendar date.</p>
+		</Description>
+		<Type ref="CommonTypes" name="TeachingGroupEventListType"/> 
+	</Item>    <!-- TeachingGroupEventLIst -->
+
+	<xhtml:Example xmlns="" name ="Schedule Date">
+		<ScheduleDate>
+			<RefId>84c40f87-769d-46cc-8077-f5efb912e099</RefId>
+			<LocalId>2019a-A-06</LocalId>
+			<CalendarDate>2019-03-14</CalendarDate>
+			<Provider>
+				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
+				<Name>Hogwarts High</Name>
+			</Provider>
+			<Term>
+				<RefId>2f97ed99-7291-4b88-91c3-709be4308c63</RefId>
+				<Name>Hogwarts High, Term I, 2019</Name>
+			</Term>
+			<Schedule>
+				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
+				<Name>Scheule 2019a (Term 1)</Name>
+			</Schedule>
+			<AcademicDay>
+				<RefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</RefId>
+				<LocalId>2019a-A</LocalId>
+				<Name>Scheule 2019a, Day A</Name>
+			</AcademicDay>				
+			<BellSchedule>
+				<RefId>8bda1e4a-ddd2-4d18-9a85-ffcd7a2528b8</RefId>
+				<Name>Schedule 2019a, Normal Bell Schedule</Name>
+			</BellSchedule>
+		</ScheduleDate>
+	</xhtml:Example>
+</DataObject>

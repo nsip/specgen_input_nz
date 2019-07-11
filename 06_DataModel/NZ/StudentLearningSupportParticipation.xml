@@ -29,6 +29,76 @@
   </Item>    <!-- RefId -->
 
   <Item>
+    <Element>LocalId</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Locally assigned identifier for the learning support participation record, from the source system.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- LocalId -->
+
+  <Item>
+    <Element>Student</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the student who participated in the learning support.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- Student -->
+
+  <Item>
+    <Element>AssignedTo</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the staff member who has been assigned the student's learning support participation</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- AssignedTo -->
+
+  <Item>
+    <Element>CompletedDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date the student's participation in the learning support intervention is considered complete.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- CompletedDate -->
+
+  <Item>
+    <Element>FundApprovedDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date the learning support participation record for the student was created in the source system.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- FundApprovedDate -->
+
+  <Item>
+    <Element>RequestSentToAgencyDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date the learning support participation request was sent to the agency providing the intervention.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- RequestSentToAgencyDate -->
+
+  <Item>
+    <Element>ParticipationStartDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date the student started participating in the learning support.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- ParticipationStartDate -->
+
+  <Item>
     <Element>ParticipationEndDate</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -49,16 +119,6 @@
   </Item>    <!-- ParticipationNote -->
 
   <Item>
-    <Element>ParticipationStartDate</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The date the student started participating in the learning support.</p>
-    </Description>
-    <Type name="xs:date"></Type>
-  </Item>    <!-- ParticipationStartDate -->
-
-    <Item>
     <Element>PermissionEndDate</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -68,7 +128,7 @@
     <Type name="xs:date"></Type>
   </Item>    <!-- PermissionEndDate -->
 
-    <Item>
+  <Item>
     <Element>PermissionStartDate</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -78,7 +138,7 @@
     <Type name="xs:date"></Type>
   </Item>    <!-- PermissionStartDate -->
 
-    <Item>
+  <Item>
     <Element>PermissionToParticipate</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -87,56 +147,6 @@
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
   </Item>    <!-- PermissionToParticipate -->
-
-  <Item>
-		<Element>StudentPersonalLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>Local Id for the student if required for clarity.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"></Type> 
-	</Item>    <!-- StudentPersonalLocalId -->
-
-  <Item>
-		<Element>ProviderRoomLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>Local Id for the provider if required for clarity.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"></Type> 
-	</Item>    <!-- ProviderRoomLocalId -->
-
-  <Item>
-    <Element>ProviderRefId</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The ID (GUID) of the provider that the learning support is taking place at.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- ProviderRefId -->
-
-  <Item>
-    <Element>StudentPersonalRefId</Element>    
-    <Characteristics>M</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The ID (GUID) of the student who participated in the learning support.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- StudentPersonalRefId -->
-
-    <Item>
-    <Element>ParentCaregiverRefId</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The ID (GUID) of the parent/caregiver who has given permission for the student to participate in the learning support.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>    <!-- ParentCaregiverRefId -->
 
   <Item>
     <Element>WellbeingCharacteristicList</Element>    
@@ -149,36 +159,26 @@
   </Item>    <!-- WellbeingCharacteristicList -->
 
   <Item>
-    <Element>WellbeingEventList</Element>    
+    <Element>LearningSupportIntervention</Element>    
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>A list of wellbeing events that identified the need for learning support participation.</p>
+      <p>The learning support intervention the student is receiving.</p>
     </Description>
-    <Type ref="CommonTypes" name="WellbeingEventListType"></Type>
-  </Item>    <!-- WellbeingEventList -->
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportInterventionType"></Type>
+  </Item>    <!-- LearningSupportIntervention -->
 
   <Item>
-    <Element>LearningSupportAgency</Element>    
+    <Element>InterventionOutcome</Element>    
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The agency that is providing the learning support the student is participating in.</p>
+      <p>The outcome of the student's participation on the learning support intervention. </p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsLearningSupportAgencyType"></Type>
-  </Item>    <!-- LearningSupportAgency -->
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportInterventionOutcomeType"></Type>
+  </Item>    <!-- InterventionOutcomeType -->
 
   <Item>
-    <Element>LearningSupportInterventionType</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The learning support intervention type the student is receiving.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsLearningSupportInterventionTypeType"></Type>
-  </Item>    <!-- LearningSupportInterventionType -->
-
-    <Item>
     <Element>LearningSupportType</Element>    
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -188,47 +188,28 @@
     <Type ref="CodeSets" name="NZCodeSetsLearningSupportTypeType"></Type>
   </Item>    <!-- LearningSupportType -->
 
-    <Item>
-    <Element>LearningSupportGroup</Element>    
+  <Item>
+    <Element>LearningSupportTypeOtherDesc</Element>    
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The learning support group the student is participating in.</p>
+      <p>Free text description of the learning support type that is being provided to the 
+        student. Only populated if a Learning of Support Type of 'Other' is selected.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsLearningSupportGroupType"></Type>
-  </Item>    <!-- LearningSupportGroup -->
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- LearningSupportTypeOtherDesc -->
 
-    <Item>
-    <Element>SupportedYearLevel</Element>    
+  <Item>
+    <Element>ProvidedBy</Element>    
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The year level the student is receiving the learning support in.</p>
+      <p>Code identifying the organisation that is providing the learning support.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsYearLevelCodeType"></Type>
-  </Item>    <!-- SupportedYearLevel -->
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportProvidedByType"></Type>
+  </Item>    <!-- ProvidedBy -->
 
-    <Item>
-    <Element>SupportedSubjectArea</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The subject area the student is receiving the learning support in.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"></Type>
-  </Item>    <!-- SupportedSubjectArea -->
-
-    <Item>
-    <Element>GiftedEligibilityCriteria</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Indicates whether or not the learning support is for a Gifted/Talented program.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>    <!-- GiftedEligibilityCriteria -->
-
-    <Item>
+  <Item>
     <Element>ParticipationStatus</Element>    
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -238,10 +219,62 @@
     <Type ref="CodeSets" name="NZCodeSetsLearningSupportParticipationStatusType"></Type>
   </Item>    <!-- ParticipationStatus -->
 
+  <Item>
+    <Element>ReviewList</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of reviews made in regards to the student's learning support participation.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LearningSupportReviewListType"></Type>
+  </Item>    <!-- ReviewList -->
+
+  <Item>
+    <Element>CreatedBy</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the staff member who created the student learning support participation record in the source system.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- CreatedBy -->
+
+  <Item>
+    <Element>LastUpdatedBy</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the staff member who last updated the student's learning support participation record in the source system.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- LastUpdatedBy -->
+
+  <Item>
+    <Element>CreatedDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date the learning support participation record for the student was created in the source system.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- CreatedDate -->
+
+  <Item>
+    <Element>LastUpdatedDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date the learning support participation record for the student was last updated in the source system.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- LastUpdatedDate -->
+
   <xhtml:Example xmlns="" name="StudentLearningSupportParticipation">
     <StudentLearningSupportParticipation>
       <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
-      <StudentPersonalRefId>CA285746-359D-7510-1A8C-36432A901A16</StudentPersonalRefId>
+      <Student>
+        <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
+      </Student>
     </StudentLearningSupportParticipation>
   </xhtml:Example>
 
