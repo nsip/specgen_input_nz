@@ -6,16 +6,34 @@
 			xmlns:json="http://json.org/"
 			
             xmlns="http://sifassociation.org/SpecGen">
-  <Key>RefId</Key>
+  <Key>ProviderRefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
-    <Element>Provider</Element>
+    	<Element>Provider</Element>
 		<privacyRating>Low</privacyRating>
     	<Description>A recognised provider of education services in the New Zealand
 			education system.  Providers may operate in the Early Childhood, Compulsory Schooling or Tertiary sectors.
     	</Description>
 		<Type complex="extension" name="EduOrganisationType"/>
-  </Item> <!-- Provider -->
+  </Item>   <!-- Provider -->
+  <Item>
+	<Element>ProviderRefId</Element>
+	<Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+	<Description>
+		<p>The SIF GUID used by systems to identify the organisation.</p>
+	</Description>
+	<Type ref="CommonTypes" name="RefIdType"/>
+  </Item>   <!-- ProviderRefId -->
+  <Item>
+	<Element>ProviderLocalId</Element>
+	<Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+	<Description>
+		<p>Local identifier used by the sending to identify the organisation</p>
+	</Description>
+	<Type ref="CommonTypes" name="LocalIdType"/>
+  </Item>   <!-- ProviderLocalId -->	  
   <Item>
 	  <Element>Authority</Element>
 	  <Characteristics>M</Characteristics>
@@ -61,8 +79,6 @@
   
   <xhtml:Example xmlns="" name="School Provider Example">
     <Provider>
-		<RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
-		<LocalId>01011234</LocalId>
 		<AddressList>
 			<Address json:force-array="true">
 				<Type>RU</Type>
@@ -214,6 +230,8 @@
 		</RelatedOrganisationList>
 		<OperationalStatus>O</OperationalStatus>
 		<Type>CONTR</Type>
+		<ProviderRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</ProviderRefId>
+		<ProviderLocalId>01011234</ProviderLocalId>
 		<Authority>STATE</Authority>
 		<SchoolService>
 			<CoEdStatus>COED</CoEdStatus>

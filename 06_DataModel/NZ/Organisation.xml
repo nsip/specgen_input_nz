@@ -6,7 +6,7 @@
 			xmlns:json="http://json.org/"
 			
             xmlns="http://sifassociation.org/SpecGen">
-  	<Key>RefId</Key>
+  	<Key>OrganisationRefId</Key>
   	<EventsReported>true</EventsReported>
 	<Item>
 		<Element>Organisation</Element>
@@ -18,11 +18,27 @@
 		</Description>
 		<Type complex="extension" name="EduOrganisationType"/>
 	</Item>
+	<Item>
+		<Element>OrganisationRefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The SIF GUID used by systems to identify the organisation.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>   <!-- OrganisationRefId -->
+	<Item>
+		<Element>OrganisationLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Local identifier used by the sending to identify the organisation</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>   <!-- OrganisationLocalId -->		
 
 	<xhtml:Example xmlns="" name="Kāhui Ako Organisation Example">
 		<Organisation>
-			<RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
-			<LocalId>99204</LocalId>
 			<AddressList/>
 			<CommunicationChannelList/>
 			<ContactList>
@@ -65,6 +81,8 @@
 				</PhoneNumber>
 			</PhoneNumberList>
 			<Type>COLKA</Type>
+			<OrganisationRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</OrganisationRefId>
+			<OrganisationLocalId>99204</OrganisationLocalId>
 		</Organisation>
 	</xhtml:Example>
 </DataObject>

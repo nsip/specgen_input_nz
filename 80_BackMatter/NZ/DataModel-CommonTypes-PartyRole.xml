@@ -1294,24 +1294,6 @@
 			</Description>
 		</Item>
 		<Item>
-			<Element>RefId</Element>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The SIF GUID used by systems to identify the organisation.</p>
-			</Description>
-			<Type ref="CommonTypes" name="RefIdType"/>
-		</Item>   <!-- RefId -->
-		<Item>
-			<Element>LocalId</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>Local identifier used by the sending to identify the organisation</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/>
-		</Item>   <!-- LocalId -->
-		<Item>
 			<Element>MinistryOfEducationId</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
