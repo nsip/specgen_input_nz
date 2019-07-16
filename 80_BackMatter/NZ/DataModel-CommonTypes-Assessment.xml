@@ -19,12 +19,11 @@
 	<CommonElement name="AssessmentTaskListType" type="true" dm="true">
 		<Item>
 			<Element>AssessmentTaskListType</Element>
-			<Characteristics>O</Characteristics>
 			<List mode="List"/>
 		</Item>
 		<Item>
 			<Element>SubAssessmentTask</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>OR</Characteristics>
 			<Description>
 				<p>GUID that identifies the sub-ordinate AssessmentTask.</p>
 			</Description>
@@ -35,12 +34,11 @@
 	<CommonElement name="LearningStandardListType" type="true" dm="true">
 		<Item>
 			<Element>LearningStandardListType</Element>
-			<Characteristics>O</Characteristics>
 			<List mode="List"/>
 		</Item>
 		<Item>
 			<Element>LearningStandard</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>OR</Characteristics>
 			<Description>
 				<p>Generic object reference to the LearningStandard</p>
 			</Description>
@@ -70,7 +68,6 @@
 	<CommonElement name="AssessmentResultScoreListType" type="true" dm="true">
 		<Item>
 			<Element>AssessmentResultScoreListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of scores for the assessment task result.</p>
 			</Description>
@@ -139,7 +136,6 @@
 	<CommonElement name="AssessmentScoreType" type="true" dm="true">
 		<Item>
 			<Element>AssessmentScoreType</Element>
-			<Characteristics>OR</Characteristics>
 			<Description>
 				<p>An individual result score for the assessment task.</p>
 			</Description>
@@ -173,7 +169,6 @@
 	<CommonElement name="JustificationListType" type="true" dm="true">
 		<Item>
 			<Element>JustificationListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list identifying the assessment task results that justify the student
 					 achieving this attainment.</p>

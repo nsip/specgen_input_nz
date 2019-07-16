@@ -13,7 +13,6 @@
 	<CommonElement name="AttendanceTimeListType" type="true" dm="true">
 		<Item>
 			<Element>AttendanceTimeListType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Breakdown of times that the student entered or returned to school.</p>
 			</Description>
@@ -21,7 +20,7 @@
 		</Item>
 		<Item>
 			<Element>AttendanceTime</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>OR</Characteristics>
 			<Description>
 				<p/>
 			</Description>
@@ -138,15 +137,14 @@
 	<CommonElement name="PeriodAttendanceListType" type="true" dm="true">
 		<Item>
 			<Element>PeriodAttendanceListType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Breakdown of grouped period attendance.</p>
 			</Description>
-			<List mode="List"></List>
+			<List mode="List"/>
 		</Item>
 		<Item>
 			<Element>PeriodAttendance</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>OR</Characteristics>
 			<Description>
 				<p/>
 			</Description>

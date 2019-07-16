@@ -155,7 +155,7 @@
 				<xsl:if test="$mandatoryFields = 'required'">
 					<xsl:if test="specgen:Item[contains(specgen:Characteristics, 'M')]">
 						<xsl:text>    required:&#x0a;</xsl:text>
-						<xsl:apply-templates select="specgen:Item" mode="required"/>
+						<xsl:apply-templates select="specgen:Item[position() gt 1]" mode="required"/>
 					</xsl:if>
 				</xsl:if>				
 				<xsl:text>    properties:&#x0a;</xsl:text>
@@ -168,24 +168,24 @@
 							     or specgen:Item[2]/specgen:Type/@name eq 'xs:normalizedString'
                             	 or specgen:Item[2]/specgen:Type/@name eq 'xs:token'
 					        	 or specgen:Item[2]/specgen:Type/@name eq 'NCName'">
-						<xsl:text>        - type: string&#x0a;</xsl:text>
+						<xsl:text>          type: string&#x0a;</xsl:text>
 					</xsl:when>
 					<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:integer' 
 							     or specgen:Item[2]/specgen:Type/@name eq 'xs:int'
                             	 or specgen:Item[2]/specgen:Type/@name eq 'xs:unsignedInt'">
-						<xsl:text>        - type: integer&#x0a;</xsl:text>
+						<xsl:text>          type: integer&#x0a;</xsl:text>
 					</xsl:when>
 					<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:date'"> 
-						<xsl:text>        - type: string&#x0a;</xsl:text>
+						<xsl:text>          type: string&#x0a;</xsl:text>
 						<xsl:text>          format: date&#x0a;</xsl:text>
 					</xsl:when>
 					<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:boolean'"> 
-						<xsl:text>        - type: boolean&#x0a;</xsl:text>
+						<xsl:text>          type: boolean&#x0a;</xsl:text>
 					</xsl:when>
 
 					<!-- array of some other defined type -->
 					<xsl:otherwise>
-						<xsl:value-of select="concat('        - $ref: ''#/definitions/', xfn:chopType(specgen:Item[2]/specgen:Type/@name), '''&#x0a;')"/>
+						<xsl:value-of select="concat('          $ref: ''#/definitions/', xfn:chopType(specgen:Item[2]/specgen:Type/@name), '''&#x0a;')"/>
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:when>

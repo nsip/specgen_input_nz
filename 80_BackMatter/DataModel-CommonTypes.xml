@@ -79,7 +79,6 @@
 	<CommonElement name="PrerequisiteListType" type="true" dm="true">
 		<Item>
 			<Element>PrerequisiteListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>References to ProviderCourses, LearningStandards, Credentials, or AssessmentTasks that
 					 the student must have completed or passed to engage in futher courses, 
@@ -102,7 +101,6 @@
 	<CommonElement name="ProviderInvolvedListType" type="true" dm="true">
 		<Item>
 			<Element>ProviderInvolvedListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of the providers involved and their role,
 					 e.g. assessing provider, assessment provider, assessment location provider, registering provider.</p>
@@ -143,7 +141,6 @@
 	<CommonElement name="StaffInvolvedListType" type="true" dm="true">
 		<Item>
 			<Element>StaffInvolvedListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of the staff involved and their role in relation to the assessment task,
 					 e.g. the staff member that created the assessment task, the moderator, the marker, the invigilator.</p>
@@ -184,7 +181,6 @@
 	<CommonElement name="DocumentListType" type="true" dm="true">
 		<Item>
 			<Element>DocumentListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of documents relevent to the contents of the data object.</p>
 			</Description>
@@ -203,14 +199,13 @@
 	<CommonElement name="StudentConsentListType" type="true" dm="true">
 		<Item>
 			<Element>StudentConsentListType</Element>
-			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>A list of student consent information.</p>
 			</Description>
 		</Item>
 		<Item>
 			<Element>StudentConsent</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>OR</Characteristics>
 			<Description>
 				<p>Generic object reference to a StudentConsent data object that records the student's consent to
 				 a particular action taking place.</p>

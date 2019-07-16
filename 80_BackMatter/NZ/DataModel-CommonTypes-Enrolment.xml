@@ -1,5 +1,5 @@
-﻿<IncludeGroup
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+﻿<IncludeGroup    
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:xi="http://www.w3.org/2001/XInclude" 
 	xmlns:xhtml="http://www.w3.org/1999/xhtml" 
@@ -14,7 +14,6 @@
 	<CommonElement name="StudentSubjectChoiceListType" type="true" dm="true">
 		<Item>
 			<Element>StudentSubjectChoiceListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of subject areas choices that can be made, or have been made by a Student.</p>
 			</Description>
@@ -149,7 +148,6 @@
 	<CommonElement name="StudentSchoolEnrolmentListType" type="true" dm="true">
 		<Item>
 			<Element>StudentSchoolEnrolmentListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of school enrolments, one for each academic year (or part thereof) that the Student
 				was enroled at the particular Provider.</p>
@@ -477,14 +475,13 @@
 	<CommonElement name="AcademicAttainmentGoalListType" type="true" dm="true">
 		<Item>
 			<Element>AcademicAttainmentGoalListType</Element>
-			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>The academic attainment goals of the student when they enrolment, e.g. they wish to achieve a certain qualification.</p>
 			</Description>
 		</Item>
 		<Item>
 			<Element>AttainmentGoal</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>The student's academic attainment goal at the time of enrolment.</p>
 			</Description>
@@ -595,7 +592,6 @@
 	<CommonElement name="StudentCourseChoiceListType" type="true" dm="true">
 		<Item>
 			<Element>StudentCourseChoiceListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of course choices that can be made, or have been made by a Student.</p>
 			</Description>
@@ -756,7 +752,6 @@
 	<CommonElement name="InterventionListType" type="true" dm="true">
 		<Item>
 			<Element>InterventionListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of references to Wellbeing Event, Response &amp; Appeal data objects, 
 					that record the process of terminating a students enrolment.</p>
