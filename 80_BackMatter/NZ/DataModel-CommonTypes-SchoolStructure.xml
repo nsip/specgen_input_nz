@@ -14,7 +14,6 @@
 	<CommonElement name="StaffListType" type="true" dm="true">
 		<Item>
 			<Element>StaffListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of associated staff members.</p>
 			</Description>
@@ -105,7 +104,6 @@
 	<CommonElement name="StudentListType" type="true" dm="true">
 		<Item>
 			<Element>StudentListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of references to the set of Students who are assigned to 
 					the Teaching Group, SchoolCourse or AssessmentTask.</p>
@@ -125,7 +123,6 @@
 	<CommonElement name="RoomListType" type="true" dm="true">
 		<Item>
 			<Element>RoomListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>List of rooms in which the scheduled activity is held. Used for onsite venues which are
 					 represented in the source system as rooms. Can include large venues (ovals, library, etc), 
@@ -133,28 +130,16 @@
 			</Description>
 			<List mode="List"/>
 		</Item>
-		<if intl="au">
-			<Item>
-				<Element>RoomInfoRefId</Element>
-				<Characteristics>MR</Characteristics>
-				<Description>
-					<p>The Id (GUID) of the Room in which the scheduled activity is held.</p>
-				</Description>
-				<Type ref="CommonTypes" relationship="" count="?:1" name="IdRefType"/>
-			</Item>     <!-- RoomInfoRefId -->
-		</if>
-		<if intl="nz">
-			<Item>
-				<Element>RoomId</Element>
-				<Characteristics>MR</Characteristics>
-				<Description>
-					<p>The school's local identifier for the Room in which the teaching
-					 or scheduled activity is held.</p>
-					<p>Note:  Does not refer to a Room SIF data object.</p>
-				</Description>
-				<Type ref="CommonTypes" name="LocalIdType"/>
-			</Item>     <!-- RoomId -->
-		</if>		
+		<Item>
+			<Element>RoomId</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The school's local identifier for the Room in which the teaching
+					or scheduled activity is held.</p>
+				<p>Note:  Does not refer to a Room SIF data object.</p>
+			</Description>
+			<Type ref="CommonTypes" name="LocalIdType"/>
+		</Item>     <!-- RoomId -->
 	</CommonElement>
 
 
@@ -320,7 +305,7 @@
 		</Item>
 		<Item>
 			<Element>SchoolYear</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description/>
 			<Type ref="CommonTypes" name="SchoolYearLevelType"/>
 		</Item>
@@ -391,7 +376,7 @@
 		</Item>
 		<Item>
 			<Element>YearLevel</Element>			
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>Which year level are we describing?</p>
@@ -418,7 +403,7 @@
 		</Item>
 		<Item>
 			<Element>EnactedPolicy</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description/>
 			<Type ref="CommonTypes" name="EnactedPolicyType"/>
 		</Item>

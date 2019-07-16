@@ -35,7 +35,6 @@
 	<CommonElement name="StaffSubjectListType" type="true" dm="true">
 		<Item>
 			<Element>StaffSubjectListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Subject(s) Staff member is eligible to teach.</p>
 			</Description>
@@ -43,7 +42,7 @@
 		</Item>
 		<Item>
 			<Element>StaffSubject</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>OR</Characteristics>
 			<Description>
 				<p>This element contains Staff subjects they are eligible to teach together with the teaching preference.</p>
 			</Description>
@@ -233,7 +232,6 @@
 	<CommonElement name="CourseListType" type="true" dm="true">
 		<Item>
 			<Element>CourseListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of associated courses.</p>
 			</Description>
@@ -241,7 +239,7 @@
 		</Item>
 		<Item>
 			<Element>Course</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>OR</Characteristics>
 			<Description>An associated course.</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>    <!-- Course -->
@@ -260,7 +258,7 @@
 		</Item>
 		<Item>
 			<Element>Author</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>OR</Characteristics>
 			<Description>
 				<p>A generic object reference to a staff memberthat authored the progress report.</p>
 			</Description>
@@ -279,7 +277,7 @@
 		</Item>
 		<Item>
 			<Element>TechnologyClass</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>OR</Characteristics>
 			<Description>
 				<p> A record of the Student's progress in a particular class from the Technology curriculum. </p>
 			</Description>
@@ -348,7 +346,7 @@
 		</Item>
 		<Item>
 			<Element>Strand</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>OR</Characteristics>
 			<Description>
 				<p>A record of the Student's progress in a particular learning strand
 					 from the Technology curriculum, that was covered in the class.</p>
@@ -396,7 +394,7 @@
 		</Item>
 		<Item>
 			<Element>AchievementObjective</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>OR</Characteristics>
 			<Description>
 				<p>A record of the Student's progress in a particular achievement objective
 						 from the Technology curriculum strand, that was covered in the class. </p>

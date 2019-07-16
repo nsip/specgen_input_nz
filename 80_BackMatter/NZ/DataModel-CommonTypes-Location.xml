@@ -282,7 +282,6 @@
 	<CommonElement name="CountryListType" type="true" dm="true">
 		<Item>
 			<Element>CountryListType</Element>
-			<Characteristics>O</Characteristics>
 			<List mode="List"/>
 		</Item>
 		<Item>
@@ -465,7 +464,6 @@
 	<CommonElement name="StatisticalAreaListType" type="true" dm="true">
 		<Item>
 			<Element>StatisticalAreaListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of Statistical Areas. It may contain
 				a StatisticalArea element for each of the
@@ -486,7 +484,7 @@
 		</Item>
 		<Item>
 			<Element>StatisticalArea</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>A code denoting one of the following spacial unit types:</p>
 			</Description>

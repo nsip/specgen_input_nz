@@ -694,7 +694,6 @@
 	<CommonElement name="LanguageListType" type="true" dm="true">
 		<Item>
 			<Element>LanguageListType</Element>
-			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>A list of languages that an individual uses to communicate</p>
@@ -1161,7 +1160,6 @@
 	<CommonElement name="HouseholdContactInfoListType" type="true" dm="true">
 		<Item>
 			<Element>HouseholdContactInfoListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>List of Households this Person is associated with</Description>
 			<List mode="List"/>
 		</Item>
@@ -1263,7 +1261,6 @@
 	<CommonElement name="HouseholdListType" type="true" dm="true">
 		<Item>
 			<Element>HouseholdListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of HouseholdContactIds, from the Student's HouseholdContactInfoList
 				that the StudentContact is also a member of.</p>

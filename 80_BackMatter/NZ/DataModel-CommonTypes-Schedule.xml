@@ -13,7 +13,6 @@
 	<CommonElement name="ScheduleListType" type="true" dm="true">
 		<Item>
 			<Element>ScheduleListType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A list of references to a set of Schedules</p>
 			</Description>
@@ -31,7 +30,6 @@
 	<CommonElement name="ScheduleDayListType" type="true" dm="true">
 		<Item>
 			<Element>ScheduleDayListType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A list of ScheduleDay object references.</p>
 			</Description>
@@ -49,7 +47,6 @@
 	<CommonElement name="BellScheduleListType" type="true" dm="true">
 		<Item>
 			<Element>BellScheduleListType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A list of BellSchedule object references.</p>
 			</Description>
@@ -67,7 +64,6 @@
 	<CommonElement name="PeriodListType" type="true" dm="true">
 		<Item>
 			<Element>PeriodListType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A list of the object references to a set of SchedulePeriods</p>
 			</Description>
@@ -100,7 +96,6 @@
 	<CommonElement name="ScheduleTermListType" type="true" dm="true">
 		<Item>
 			<Element>ScheduleTermListType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A list of ScheduleTerm object references.</p>
 			</Description>
@@ -118,7 +113,6 @@
 	<CommonElement name="TeachingGroupEventListType" type="true" dm="true">
 		<Item>
 			<Element>TeachingGroupEventListType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A list generic references to a set of TeachingGroupEvents</p>
 			</Description>
@@ -139,7 +133,6 @@
 	<CommonElement name="AcademicDayListType" type="true" dm="true">
 		<Item>
 			<Element>AcademicDayListType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A list of the academic days within this schedule</p>
 			</Description>
@@ -247,7 +240,6 @@
 	<CommonElement name="SchedulePeriodListType" type="true" dm="true">
 		<Item>
 			<Element>SchedulePeriodListType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A list of the periods that make up the bell schedule and their start and end times.</p>
 			</Description>
@@ -333,7 +325,6 @@
 	<CommonElement name="ScheduleCustomDayPeriodListType" type="true" dm="true">
 		<Item>
 			<Element>ScheduleCustomDayPeriodListType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A list of generic object references to a set of
 				SchedulePeriods, along with their custom start and end times,
@@ -360,7 +351,6 @@
 	<CommonElement name="ScheduleCustomDayPeriodType" type="true" dm="true">
 		<Item>
 			<Element>ScheduleCustomDayPeriodType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Generic object reference to a single SchedulePeriod, along
 				with its custom start and end times, which are part of a
