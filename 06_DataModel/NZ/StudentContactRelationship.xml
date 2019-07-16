@@ -22,23 +22,23 @@
 		</Description>
 	</Item>
 	<Item>
-		<Element>RefId</Element>
+		<Element>StudentContactRelationshipRefId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The SIF GUID for the student contact relationship.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"></Type>
-	</Item>   <!-- RefId -->
+	</Item>   <!-- StudentContactRelationshipRefId -->
 	<Item>
-		<Element>LocalID</Element>
+		<Element>StudentContactRelationshipLocalID</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>Local identifier for the student contact relationship, if provided by the source system</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"></Type>
-	</Item>   <!-- LocalId -->
+	</Item>   <!-- StudentContactRelationshipLocalID -->
 	<Item>
 		<Element>Student</Element>
 		<Characteristics>M</Characteristics>
@@ -108,7 +108,7 @@
 	
   <xhtml:Example xmlns='' name="StudentContactRelationship">
     <StudentContactRelationship>
-	  <RefId>7572B261-0947-583A-463D-BB345291B332</RefId>
+	  <StudentContactRelationshipRefId>7572B261-0947-583A-463D-BB345291B332</StudentContactRelationshipRefId>
       <Student>
 	    <RefId>DEE34B35-9D75-101A-8C3D-00AA001A1652</RefId>
       </Student>

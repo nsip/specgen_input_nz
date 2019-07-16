@@ -8,7 +8,7 @@
 	xmlns="http://sifassociation.org/SpecGen">
 
 
-	<Key>RefId</Key>
+	<Key>BellScheduleRefId</Key>
 	<EventsReported>true</EventsReported>
 	<Item>
 		<Element>BellSchedule</Element>
@@ -27,23 +27,23 @@
 	</Item>
 	
 	<Item>
-		<Element>RefId</Element>
+		<Element>BellScheduleRefId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p> The ID (GUID) assigned to uniquely identify this Bell Schedule.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- RefId -->
+	</Item>    <!-- BellScheduleRefId -->
 	<Item>
-		<Element>LocalId</Element>
+		<Element>BellScheduleLocalId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The local Id of the this Bell Schedule.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- LocalId -->
+	</Item>    <!-- BellScheduleLocalId -->
 
 	<Item>
 		<Element>BellScheduleName</Element>
@@ -85,8 +85,8 @@
 
 	<xhtml:Example xmlns="" name ="Bell Schedule">
 		<BellSchedule>
-			<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
-			<LocalId>2019a-Normal</LocalId>
+			<BellScheduleRefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</BellScheduleRefId>
+			<BellScheduleLocalId>2019a-Normal</BellScheduleLocalId>
 			<BellScheduleName>Schedule 2019a, Normal Bell Schedule</BellScheduleName>
 			<Provider>
 				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>

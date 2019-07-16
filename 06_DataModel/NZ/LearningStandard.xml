@@ -7,7 +7,7 @@
 
       xmlns="http://sifassociation.org/SpecGen">
 
-  <Key>RefId</Key>
+  <Key>LearningStandardRefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
     <Element>LearningStandard</Element>
@@ -20,16 +20,16 @@
     </Description>
   </Item>
   <Item>
-    <Element>RefId</Element>
+    <Element>LearningStandardRefId</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>Unique identifier (GUID) that uniquely identifies the particular version or edition of the Learning Standard.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- RefId -->
+  </Item>    <!-- LearningStandardRefId -->
   <Item>
-    <Element>LocalId</Element>
+    <Element>LearningStandardLocalId</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
@@ -39,7 +39,7 @@
       <p>The natural id may be formed by combining Publisher Id, Code &amp; VersionNo.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"/>
-  </Item>    <!-- LocalId -->  
+  </Item>    <!-- LearningStandardLocalId -->  
   <Item>
     <Element>Title</Element>
     <Characteristics>M</Characteristics>
@@ -186,8 +186,8 @@
 
   <xhtml:Example xmlns="" name="NZQA Learning Standard Example">
     <LearningStandard>
-      <RefId>cedf9eae-4358-408d-af57-ec0ea1b0d210</RefId>
-      <LocalId>91165</LocalId>
+      <LearningStandardRefId>cedf9eae-4358-408d-af57-ec0ea1b0d210</LearningStandardRefId>
+      <LearningStandardLocalId>91165</LearningStandardLocalId>
       <Title>Chemistry</Title>
       <VersionNo>2</VersionNo>
       <Publisher>
@@ -206,8 +206,8 @@
 
   <xhtml:Example xmlns="" name="Cambridge Learning Standard Example">
     <LearningStandard>
-      <RefId>cd071ee1-d5fd-4821-8406-9852ba916231</RefId>
-      <LocalId>9709</LocalId>
+      <LearningStandardRefId>cd071ee1-d5fd-4821-8406-9852ba916231</LearningStandardRefId>
+      <LearningStandardLocalId>9709</LearningStandardLocalId>
       <Title>Pure Mathematics</Title>
       <VersionNo>2018</VersionNo>
       <Publisher>

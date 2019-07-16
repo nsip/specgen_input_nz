@@ -7,7 +7,7 @@
 
       xmlns="http://sifassociation.org/SpecGen">
 	
-  <Key>RefId</Key>
+  <Key>AssessmentTaskRefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
     <Element>AssessmentTask</Element>
@@ -21,23 +21,23 @@
   </Item>
 
   <Item>
-    <Element>RefId</Element>
+    <Element>AssessmentTaskRefId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A GUID that identifies an instance of this object. </p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- RefId -->
+  </Item>    <!-- AssessmentTaskRefId -->
   <Item>
-    <Element>LocalId</Element>
+    <Element>AssessmentTaskLocalId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>LocalId that identifies the assessment task, if provided by the source system.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- LocalId -->
+  </Item>    <!-- AssessmentTaskLocalId -->
 
   <Item>
     <Element>AssessmentName</Element>
@@ -222,14 +222,14 @@
   </Item>    <!-- SummativeIndicator -->  
 
   <Item>
-    <Element>AssessmentTool</Element>
+    <Element>AssessmentToolTypeName</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The type of assessment tool used for the assessment task.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsAssessmentToolType"/>
-  </Item>    <!-- AssessmentTool -->
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- AssessmentToolTypeName -->
 
   <Item>
     <Element>AssessmentPurpose</Element>
@@ -314,7 +314,7 @@
 
   <xhtml:Example xmlns="" name="Assessment Task">
     <AssessmentTask>
-      <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
+      <AssessmentTaskRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</AssessmentTaskRefId>
       <AssessmentName>NZ History Classroom Test</AssessmentName>
       <ProviderInvolvedList>
         <ProviderInvolved>

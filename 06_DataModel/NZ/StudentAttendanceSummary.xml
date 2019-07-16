@@ -7,7 +7,7 @@
 			
             xmlns="http://sifassociation.org/SpecGen">
 
-  <Key>RefId</Key>
+  <Key>StudentAttendanceSummaryRefId</Key>
   
   <EventsReported>true</EventsReported>
 
@@ -19,7 +19,7 @@
     </Description>
   </Item>
   <Item>
-    <Element>RefId</Element>
+    <Element>StudentAttendanceSummaryRefId</Element>
     <Characteristics>M</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
@@ -27,6 +27,15 @@
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>    <!-- StudentAttendanceSummaryRefId -->
+  <Item>
+    <Element>StudentAttendanceSummaryLocalId</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The local system identifier for the student attendance summary record.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- StudentAttendanceSummaryLocalId -->
   <Item>
     <Element>Student</Element>
     <Characteristics>M</Characteristics>
@@ -188,7 +197,7 @@
   
   <xhtml:Example xmlns="" name="StudentAttendanceSummary" intl="nz">
     <StudentAttendanceSummary>
-      <RefId>d3476fae-8647-384b-da24-31eda3583211</RefId>
+      <StudentAttendanceSummaryRefId>d3476fae-8647-384b-da24-31eda3583211</StudentAttendanceSummaryRefId>
       <Student>
         <RefId>7c834ea9-eda1-2090-347f-83297e1c290c</RefId>
       </Student>

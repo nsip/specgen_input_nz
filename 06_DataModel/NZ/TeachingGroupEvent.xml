@@ -7,7 +7,7 @@
 
       xmlns="http://sifassociation.org/SpecGen">
 
-  <Key>RefId</Key>
+  <Key>TeachingGroupEventRefId</Key>
   <EventsReported>true</EventsReported>
 
   <Item>
@@ -19,23 +19,23 @@
   </Item>
 
   <Item>
-    <Element>RefId</Element>
+    <Element>TeachingGroupEventRefId</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the TeachingGroupEvent</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>       <!-- RefId -->
+  </Item>       <!-- TeachingGroupEventRefId -->
   <Item>
-    <Element>LocalId</Element>
+    <Element>TeachingGroupEventLocalId</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>LocalId of the Teaching GroupEvent.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>       <!-- LocalId -->
+  </Item>       <!-- TeachingGroupEventLocalId -->
 
   <Item>
     <Element>Provider</Element>
@@ -133,8 +133,8 @@
 
   <xhtml:Example xmlns="" name="TeachingGroupEvent">
 		<TeachingGroupEvent>
-			<RefId>9356909d-e46a-456a-a177-6a914af861ae</RefId>
-			<LocalId>20197A-SPN-1</LocalId>
+			<TeachingGroupEventRefId>9356909d-e46a-456a-a177-6a914af861ae</TeachingGroupEventRefId>
+			<TeachingGroupEventLocalId>20197A-SPN-1</TeachingGroupEventLocalId>
 			<Provider>
 				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
 				<Name>Hogwarts High</Name>

@@ -8,7 +8,7 @@
 	xmlns="http://sifassociation.org/SpecGen">
 
 
-	<Key>RefId</Key>
+	<Key>ScheduleEventRefId</Key>
 	<EventsReported>true</EventsReported>
 	<Item>
 		<Element>ScheduleEvent</Element>
@@ -21,23 +21,23 @@
 	</Item>
 	
 	<Item>
-		<Element>RefId</Element>
+		<Element>ScheduleEventRefId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p> The ID (GUID) assigned to uniquely identify this Schedule Event.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- RefId -->
+	</Item>    <!-- ScheduleEventRefId -->
 	<Item>
-		<Element>LocalId</Element>
+		<Element>ScheduleEventLocalId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The local Id of the this Schedule Event.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- LocalId -->
+	</Item>    <!-- ScheduleEventLocalId -->
 
 	<Item>
 		<Element>Provider</Element>
@@ -196,8 +196,8 @@
 	
 	<xhtml:Example xmlns="" name ="Schedule Event - Slip Schedule">
 		<ScheduleEvent>
-			<RefId>c79e65df-0b11-4a97-9062-9fbd1c1a38e3</RefId>
-			<LocalId>evMarSlip</LocalId>
+			<ScheduleEventRefId>c79e65df-0b11-4a97-9062-9fbd1c1a38e3</ScheduleEventRefId>
+			<ScheduleEventLocalId>evMarSlip</ScheduleEventLocalId>
 			<Provider>
 				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
 				<Name>Hogwarts High</Name>
@@ -218,8 +218,8 @@
 
 	<xhtml:Example xmlns="" name ="Schedule Event - Schedule day lost">
 		<ScheduleEvent>
-			<RefId>c315d397-6d8d-46bd-b183-ad3a3653a42b</RefId>
-			<LocalId>evMarCan</LocalId>
+			<ScheduleEventRefId>c315d397-6d8d-46bd-b183-ad3a3653a42b</ScheduleEventRefId>
+			<ScheduleEventLocalId>evMarCan</ScheduleEventLocalId>
 			<Provider>
 				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
 				<Name>Hogwarts High</Name>
@@ -240,14 +240,13 @@
 
 	<xhtml:Example xmlns="" name ="Schedule Event - Custom Schedule">
 		<ScheduleEvent>
-			<RefId>f84d9681-03f6-4434-a867-967dba517cf5</RefId>
-			<LocalId>evWinSprt</LocalId>
+			<ScheduleEventRefId>f84d9681-03f6-4434-a867-967dba517cf5</ScheduleEventRefId>
+			<ScheduleEventLocalId>evWinSprt</ScheduleEventLocalId>
 			<Provider>
 				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
 				<Name>Hogwarts High</Name>
 			</Provider>
 			<EventDate>2019-07-05</EventDate>
-
 			<Duration>1</Duration>
 			<EventName>Winter Sports - 3 Short Periods, Afternoon Off</EventName>
 			<ScheduleEffect>CUSTOM</ScheduleEffect>

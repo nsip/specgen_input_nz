@@ -7,7 +7,7 @@
 
       xmlns="http://sifassociation.org/SpecGen">
 	
-  <Key>RefId</Key>
+  <Key>StudentAssessmentTaskRegistrationRefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
     <Element>StudentAssessmentTaskRegistration</Element>
@@ -17,23 +17,23 @@
      </Description>
   </Item>
   <Item>
-    <Element>RefId</Element>
+    <Element>StudentAssessmentTaskRegistrationRefId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A GUID that identifies an instance of this object. </p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- RefId -->
+  </Item>    <!-- StudentAssessmentTaskRegistrationRefId -->
   <Item>
-    <Element>LocalId</Element>
+    <Element>StudentAssessmentTaskRegistrationLocalId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Local identifier that identifies an instance of this object, if provided by the source system.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- LocalId -->
+  </Item>    <!-- StudentAssessmentTaskRegistrationLocalId -->
   
   <Item>
     <Element>ProviderInvolvedList</Element>    
@@ -142,7 +142,7 @@
 
   <xhtml:Example xmlns="" name="Student Assessment Task Registration">
     <StudentAssessmentTaskRegistration>
-      <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
+      <StudentAssessmentTaskRegistrationRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskRegistrationRefId>
         <ProviderInvolvedList>
           <!-- NZQA is Assessor -->
           <ProviderInvolved>

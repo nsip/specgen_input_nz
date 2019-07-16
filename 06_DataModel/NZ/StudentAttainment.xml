@@ -7,7 +7,7 @@
       
       xmlns="http://sifassociation.org/SpecGen">
 	
-  <Key>RefId</Key>
+  <Key>StudentAttainmentRefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
     <Element>StudentAttainment</Element>
@@ -17,24 +17,24 @@
      </Description>
   </Item>
   <Item>
-    <Element>RefId</Element>
+    <Element>StudentAttainmentRefId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A GUID that identifies an instance of this object. </p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- RefId -->
+  </Item>    <!-- StudentAttainmentRefId -->
 
   <Item>
-    <Element>LocalId</Element>
+    <Element>StudentAttainmentLocalId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A localId that identifies an instance of this object, if provided by the source system</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- LocalId -->
+  </Item>    <!-- StudentAttainmentLocalId -->
 
   <Item>
     <Element>GrantingProvider</Element>    
@@ -122,7 +122,7 @@
 
   <xhtml:Example xmlns="" name="Student Attainment - NCEA Course Endorsement">
     <StudentAttainment>
-      <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
+      <StudentAttainmentRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAttainmentRefId>
       <GrantingProvider>
         <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
       </GrantingProvider>
@@ -175,7 +175,7 @@
 
   <xhtml:Example xmlns="" name="Student Attainment - School Course Completion">
     <StudentAttainment>
-      <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
+      <StudentAttainmentRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAttainmentRefId>
       <GrantingProvider>
         <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
       </GrantingProvider>

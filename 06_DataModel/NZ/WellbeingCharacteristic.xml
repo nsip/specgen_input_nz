@@ -6,7 +6,7 @@
         
     xmlns="http://sifassociation.org/SpecGen">
 
-  <Key>RefId</Key>  
+  <Key>WellbeingCharacteristicRefId</Key>  
   <EventsReported>true</EventsReported>
   
   <Item>
@@ -20,24 +20,24 @@
   </Item>
 
   <Item>
-    <Element>RefId</Element>
+    <Element>WellbeingCharacteristicRefId</Element>
     <Characteristics>M</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this WellbeingCharacteristic.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- RefId -->
+  </Item>    <!-- WellbeingCharacteristicRefId -->
 
   <Item>
-		<Element>LocalId</Element>
+		<Element>WellbeingCharacteristicLocalId</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
 		<Description>
 			<p>Local ID of the Wellbeing Characteristic if required for clarity.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-  </Item>    <!-- LocalId -->
+  </Item>    <!-- WellbeingCharacteristicLocalId -->
 
   <Item>
     <Element>Student</Element>
@@ -315,9 +315,49 @@
     <Type ref="CommonTypes" name="SpecialAssessmentConditionListType"></Type>
   </Item>    <!-- SpecialAssessmentConditionList -->
 
+  <Item>
+    <Element>Status</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The staus of the Wellbeing Characteristic.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicStatusType"></Type>
+  </Item>    <!-- Status -->
+
+  <Item>
+    <Element>StudentConsentList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the consents given by the stiudent or their caregiver in relation to this Wellbeing Characteristic.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentConsentListType"></Type>
+  </Item>    <!-- StudentConsentList -->
+
+  <Item>
+    <Element>TeWharikiDomainList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the Te Whāriki Domains that are relevant to this Wellbeing Characteristic. Only used for Early Childhood Education.</p>
+    </Description>
+    <Type ref="CommonTypes" name="TeWharikiDomainListType"></Type>
+  </Item>    <!-- TeWharikiDomainList -->
+
+  <Item>
+    <Element>LearningSupportOutcomeList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the expected learning support outcome for the Wellbeing Characteristic. Only used for Schools. </p>
+    </Description>
+    <Type ref="CommonTypes" name="LearningSupportOutcomeListType"></Type>
+  </Item>    <!-- LearningSupportOutcomeList -->
+
   <xhtml:Example xmlns="" name="WellbeingCharacteristic">
     <WellbeingCharacteristic>
-      <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+      <WellbeingCharacteristicRefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</WellbeingCharacteristicRefId>
       <Student>
         <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
       </Student>

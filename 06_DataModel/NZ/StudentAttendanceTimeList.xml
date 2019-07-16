@@ -6,7 +6,7 @@
 			xmlns:json="http://json.org/"
 			
             xmlns="http://sifassociation.org/SpecGen">
-	<Key>RefId</Key>
+	<Key>StudentAttendanceTimeListRefId</Key>
 
 	<EventsReported>true</EventsReported>
 	<Item>
@@ -19,19 +19,19 @@
 		</Description>
 	</Item>
 	<Item>
-		<Element>RefId</Element>
+		<Element>StudentAttendanceTimeListRefId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>The ID (GUID) that uniquely identifies the attendance record.</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- RefId -->
+	</Item>    <!-- StudentAttendanceTimeListRefId -->
 	<Item>
-		<Element>LocalId</Element>
+		<Element>StudentAttendanceTimeListLocalId</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>	Local System Id for the Attendance Timelist record.</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/>
-	</Item>    <!-- LocalId -->
+	</Item>    <!-- StudentAttendanceTimeListLocalId -->
 	<Item>
 		<Element>Student</Element>
 		<Characteristics>M</Characteristics>
@@ -101,7 +101,7 @@
 
   <xhtml:Example xmlns="" name="Student Attendance (By TimeList) Example">
 		<StudentAttendanceTimeList>
-			<RefId>45e9c39e-0e77-40b4-8ce7-6a6fa156249e</RefId>
+			<StudentAttendanceTimeListRefId>45e9c39e-0e77-40b4-8ce7-6a6fa156249e</StudentAttendanceTimeListRefId>
 			<Student>
 				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd971811</RefId>
 			</Student>
@@ -125,7 +125,7 @@
 
 	<xhtml:Example xmlns="" name="Student Attendance (By Period) Example">
 		<StudentAttendanceTimeList>
-			<RefId>2c4c01f3-1236-409b-b964-2526ce50769a</RefId>
+			<StudentAttendanceTimeListRefId>2c4c01f3-1236-409b-b964-2526ce50769a</StudentAttendanceTimeListRefId>
 			<Student>
 				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd971811</RefId>
 			</Student>

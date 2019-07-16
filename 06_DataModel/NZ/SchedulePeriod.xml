@@ -8,7 +8,7 @@
 	xmlns="http://sifassociation.org/SpecGen">
 
 
-	<Key>RefId</Key>
+	<Key>SchedulePeriodRefId</Key>
 	<EventsReported>true</EventsReported>
 	<Item>
 		<Element>SchedulePeriod</Element>
@@ -19,23 +19,23 @@
 	</Item>
 	
 	<Item>
-		<Element>RefId</Element>
+		<Element>SchedulePeriodRefId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p> The ID (GUID) assigned to uniquely identify this Schedule Period.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- RefId -->
+	</Item>    <!-- SchedulePeriodRefId -->
 	<Item>
-		<Element>LocalId</Element>
+		<Element>SchedulePeriodLocalId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The local Id of  this Schedule Period.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- LocalId -->
+	</Item>    <!-- SchedulePeriodLocalId -->
 
 	<Item>
 		<Element>PeriodName</Element>
@@ -77,8 +77,8 @@
 
 	<xhtml:Example xmlns="" name ="Schedule Period">
 		<SchedulePeriod>
-			<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
-			<LocalId>2019a-A1</LocalId>
+			<SchedulePeriodRefId>215f796c-67f7-4855-83dc-28ad9d002830</SchedulePeriodRefId>
+			<SchedulePeriodLocalId>2019a-A1</SchedulePeriodLocalId>
 			<PeriodName>Period 1 on Day A</PeriodName>
 			<Provider>
 				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>

@@ -7,7 +7,7 @@
 
       xmlns="http://sifassociation.org/SpecGen">
 	
-  <Key>RefId</Key>
+  <Key>DocumentRefId</Key>
   <EventsReported>true</EventsReported>
 
   <Item>
@@ -19,24 +19,24 @@
   </Item>
 
   <Item>
-    <Element>RefId</Element>
+    <Element>DocumentRefId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this Document.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- RefId -->
+  </Item>    <!-- DocumentRefId -->
 
   <Item>
-    <Element>LocalId</Element>
+    <Element>DocumentLocalId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Local identifier for the Document, if provided by the source system.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- LocalId -->
+  </Item>    <!-- DocumentLocalId -->
 
   <Item>
     <Element>Provider</Element>    
@@ -79,14 +79,14 @@
   </Item>    <!-- DocumentDescription -->
 
   <Item>
-    <Element>AddedDate</Element>
+    <Element>AddedDateTime</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The date the document was added at the source system.</p>
     </Description>
     <Type name="xs:date"/>
-  </Item>    <!-- AddedDate -->
+  </Item>    <!-- AddedDateTime -->
 
   <Item>
     <Element>ReviewDate</Element>
@@ -107,6 +107,16 @@
     </Description>
     <Type name="xs:anyURI"></Type>
   </Item>    <!-- URL -->
+
+  <Item>
+    <Element>NoteText</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>If the type of document is 'Note' then this is populated with the free text that makes up the note.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- NoteText -->
 
   <Item>
     <Element>RelatedToList</Element>    
@@ -150,7 +160,7 @@
 
   <xhtml:Example xmlns="" name="Document">
     <Document>
-      <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+      <DocumentRefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</DocumentRefId>
       <Provider>
         <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
       </Provider>

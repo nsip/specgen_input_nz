@@ -7,7 +7,7 @@
 	
       xmlns="http://sifassociation.org/SpecGen">
 
-  <Key>RefId</Key>
+  <Key>StaffAssignmentRefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
     <Element>StaffAssignment</Element>
@@ -29,23 +29,23 @@
   </Item>
 
   <Item>
-    <Element>RefId</Element>
+    <Element>StaffAssignmentRefId</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID that uniquely identifies a particular staff assignment.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>      <!-- RefId -->
+  </Item>      <!-- StaffAssignmentRefId -->
   <Item>
-    <Element>LocalId</Element>
+    <Element>StaffAssignmentLocalId</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>LocalId that identifies the staff assignment, from the source system, if provided.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>      <!-- LocalId -->
+  </Item>      <!-- StaffAssignmentLocalId -->
 
   <Item>
     <Element>StaffMember</Element>
@@ -166,7 +166,7 @@
 
   <xhtml:Example xmlns="" name="StaffAssignment English Teacher Example">
     <StaffAssignment>
-      <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
+      <StaffAssignmentRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StaffAssignmentRefId>
       <StaffMember>
         <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1651</RefId>
       </StaffMember>
@@ -207,7 +207,7 @@
   
   <xhtml:Example xmlns="" name="StaffAssignment Kāhui Ako Cross School Teacher Example">
     <StaffAssignment>
-      <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
+      <StaffAssignmentRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StaffAssignmentRefId>
       <StaffMember>
         <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1651</RefId>
         <LocalId>SMcG</LocalId>

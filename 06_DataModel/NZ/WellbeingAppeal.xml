@@ -6,7 +6,7 @@
 
   xmlns="http://sifassociation.org/SpecGen">
 
-  <Key>RefId</Key>
+  <Key>WellbeingAppealRefId</Key>
   
   <EventsReported>true</EventsReported>
   <Item>
@@ -18,24 +18,24 @@
   </Item>    <!-- WellbeingAppeal -->
 
   <Item>
-    <Element>RefId</Element>
+    <Element>WellbeingAppealRefId</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Medium</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this WellbeingAppeal.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- RefId -->
+  </Item>    <!-- WellbeingAppealRefId -->
 
   <Item>
-    <Element>LocalId</Element>
+    <Element>WellbeingAppealLocalId</Element>
     <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>Local system Id of the Appeal.</p>
     </Description>
      <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- LocalId -->
+  </Item>    <!-- WellbeingAppealLocalId -->
 
   <Item>
     <Element>Student</Element>
@@ -139,7 +139,7 @@
 
   <xhtml:Example xmlns="" name="Wellbeing Appeal">
     <WellbeingAppeal>
-      <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+      <WellbeingAppealRefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</WellbeingAppealRefId>
       <Student>
         <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
       </Student>

@@ -8,7 +8,7 @@
 	xmlns="http://sifassociation.org/SpecGen">
 
 
-	<Key>RefId</Key>
+	<Key>ScheduleDateRefId</Key>
 	<EventsReported>true</EventsReported>
 	<Item>
 		<Element>ScheduleDate</Element>
@@ -22,23 +22,23 @@
 	</Item>
 	
 	<Item>
-		<Element>RefId</Element>
+		<Element>ScheduleDateRefId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p> The ID (GUID) assigned to uniquely identify this Schedule Date.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- RefId -->
+	</Item>    <!-- ScheduleDateRefId -->
 	<Item>
-		<Element>LocalId</Element>
+		<Element>ScheduleDateLocalId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The local Id of the this Schedule Date.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- LocalId -->
+	</Item>    <!-- ScheduleDateLocalId -->
 
 	<Item>
 		<Element>CalendarDate</Element>
@@ -108,8 +108,8 @@
 
 	<xhtml:Example xmlns="" name ="Schedule Date">
 		<ScheduleDate>
-			<RefId>84c40f87-769d-46cc-8077-f5efb912e099</RefId>
-			<LocalId>2019a-A-06</LocalId>
+			<ScheduleDateRefId>84c40f87-769d-46cc-8077-f5efb912e099</ScheduleDateRefId>
+			<ScheduleDateLocalId>2019a-A-06</ScheduleDateLocalId>
 			<CalendarDate>2019-03-14</CalendarDate>
 			<Provider>
 				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>

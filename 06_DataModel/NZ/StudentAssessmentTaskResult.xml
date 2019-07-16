@@ -7,7 +7,7 @@
 
 			xmlns="http://sifassociation.org/SpecGen">
 			
-  <Key>RefId</Key>
+  <Key>StudentAssessmentTaskResultRefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
     <Element>StudentAssessmentTaskResult</Element>
@@ -18,23 +18,23 @@
   </Item>
 
   <Item>
-    <Element>RefId</Element>
+    <Element>StudentAssessmentTaskResultRefId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A GUID that identifies an instance of this object.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- RefId -->
+  </Item>    <!-- StudentAssessmentTaskResultRefId -->
   <Item>
-    <Element>LocalId</Element>
+    <Element>StudentAssessmentTaskResultLocalId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>LocalId that identifies an instance of this object, if provided by the source system.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- LocalId -->
+  </Item>    <!-- StudentAssessmentTaskResultLocalId -->
 
   <Item>
     <Element>StudentAssessmentTask</Element>
@@ -143,14 +143,14 @@
     <Type ref="CodeSets" name="NZCodeSetsCurriculumLevelType"/>
   </Item>    <!-- CurriculumLevel -->   
   <Item>
-    <Element>AssessmentTool</Element>
+    <Element>AssessmentToolTypeName</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The type of assessment tool used for the assessment task.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsAssessmentToolType"/>
-  </Item>    <!-- AssessmentTool -->
+    <Type name="xs:normalizedString"/>
+  </Item>    <!-- AssessmentToolTypeName -->
   <Item>
     <Element>Timeframe</Element>
     <Characteristics>O</Characteristics>
@@ -288,7 +288,7 @@
   
   <xhtml:Example xmlns="" name="Student Assessment Task Result - PAT Example">
       <StudentAssessmentTaskResult>
-        <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
+        <StudentAssessmentTaskResultRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskResultRefId>
         <AssessmentType>INT</AssessmentType>
         <Student>
           <RefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</RefId>
@@ -330,7 +330,7 @@
 		  
   <xhtml:Example xmlns="" name="Student Assessment Task Result - asTTle Example">
       <StudentAssessmentTaskResult>
-        <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
+        <StudentAssessmentTaskResultRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskResultRefId>
         <AssessmentType>INT</AssessmentType>
         <Student>
           <RefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</RefId>

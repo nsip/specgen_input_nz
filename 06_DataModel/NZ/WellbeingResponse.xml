@@ -6,7 +6,7 @@
 
     xmlns="http://sifassociation.org/SpecGen">
 
-  <Key>RefId</Key>
+  <Key>WellbeingResponseRefId</Key>
   
   <EventsReported>true</EventsReported>
 
@@ -19,24 +19,24 @@
   </Item>    <!-- WellbeingResponse -->
 
   <Item>
-    <Element>RefId</Element>
+    <Element>WellbeingResponseRefId</Element>
     <Characteristics>M</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this WellbeingResponse.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- RefId -->
+  </Item>    <!-- WellbeingResponseRefId -->
 
   <Item>
-      <Element>LocalId</Element>
+      <Element>WellbeingResponseLocalId</Element>
       <Characteristics>O</Characteristics>
       <privacyRating>Low</privacyRating>
       <Description>
         <p>Local Code if required for Clarity.</p>
       </Description>
       <Type ref='CommonTypes' name='LocalIdType'/>
-  </Item>    <!-- LocalId-->
+  </Item>    <!-- WellbeingResponseLocalId-->
 
   <Item>
     <Element>Student</Element>
@@ -220,7 +220,7 @@
 
   <xhtml:Example xmlns="" name="WellbeingResponse">
     <WellbeingResponse>
-      <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+      <WellbeingResponseRefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</WellbeingResponseRefId>
       <Student>
         <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
       </Student>

@@ -8,7 +8,7 @@
 	xmlns="http://sifassociation.org/SpecGen">
 
 
-	<Key>RefId</Key>
+	<Key>ScheduleTermRefId</Key>
 	<EventsReported>true</EventsReported>
 	<Item>
 		<Element>ScheduleTerm</Element>
@@ -22,23 +22,23 @@
 	</Item>
 	
 	<Item>
-		<Element>RefId</Element>
+		<Element>ScheduleTermRefId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p> The ID (GUID) assigned to uniquely identify this Schedule Term.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- RefId -->
+	</Item>    <!-- ScheduleTermRefId -->
 	<Item>
-		<Element>LocalId</Element>
+		<Element>ScheduleTermLocalId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The local Id of  this Schedule Term.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- LocalId -->
+	</Item>    <!-- ScheduleTermLocalId -->
 
 	<Item>
 		<Element>TermName</Element>
@@ -81,8 +81,8 @@
 
 	<xhtml:Example xmlns="" name ="Schedule Term">
 		<ScheduleTerm>
-			<RefId>eed03e3c-b088-4b69-bba7-b042f6f7a040</RefId>
-			<LocalId>2019-1</LocalId>
+			<ScheduleTermRefId>eed03e3c-b088-4b69-bba7-b042f6f7a040</ScheduleTermRefId>
+			<ScheduleTermLocalId>2019-1</ScheduleTermLocalId>
 			<TermName>Term I of 2019</TermName>
 			<StartDate>2019-01-28</StartDate>
 			<EndDate>2019-03-13</EndDate>

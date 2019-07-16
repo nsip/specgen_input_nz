@@ -8,7 +8,7 @@
 	xmlns="http://sifassociation.org/SpecGen">
 
 
-	<Key>RefId</Key>
+	<Key>ScheduleAcademicDayRefId</Key>
 	<EventsReported>true</EventsReported>
 	<Item>
 		<Element>ScheduleAcademicDay</Element>
@@ -22,23 +22,23 @@
 	</Item>
 	
 	<Item>
-		<Element>RefId</Element>
+		<Element>ScheduleAcademicDayRefId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p> The ID (GUID) assigned to uniquely identify this Academic Day.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- RefId -->
+	</Item>    <!-- ScheduleAcademicDayRefId -->
 	<Item>
-		<Element>LocalId</Element>
+		<Element>ScheduleAcademicDayLocalId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The local Id of the this Academic Day.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- LocalId -->
+	</Item>    <!-- ScheduleAcademicDayLocalId -->
 
 	<Item>
 		<Element>AcademicDayName</Element>
@@ -89,8 +89,8 @@
 
 	<xhtml:Example xmlns="" name ="Schedule Academic Day">
 		<ScheduleAcademicDay>
-			<RefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</RefId>
-			<LocalId>2019a-A</LocalId>
+			<ScheduleAcademicDayRefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</ScheduleAcademicDayRefId>
+			<ScheduleAcademicDayLocalId>2019a-A</ScheduleAcademicDayLocalId>
 			<AcademicDayName>Scheule 2019a, Day A</AcademicDayName>
 			<Provider>
 				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>

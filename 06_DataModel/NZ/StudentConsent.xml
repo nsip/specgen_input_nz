@@ -7,7 +7,7 @@
 
 	xmlns="http://sifassociation.org/SpecGen">
 
-	<Key>RefId</Key>
+	<Key>StudentConsentRefId</Key>
 	<EventsReported>true</EventsReported>
 	<Item>
 		<Element>StudentConsent</Element>
@@ -16,24 +16,24 @@
 	</Item>
 	
 	<Item>
-		<Element>RefId</Element>
+		<Element>StudentConsentRefId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The GUID of the student consent.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- RefId -->
+	</Item>    <!-- StudentConsentRefId -->
 	
 	<Item>
-		<Element>LocalId</Element>
+		<Element>StudentConsentLocalId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The locally-assigned identifier for this student consent.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- LocalId -->
+	</Item>    <!-- StudentConsentLocalId -->
 
 	<Item>
 		<Element>Student</Element>
@@ -122,8 +122,8 @@
 
 	<xhtml:Example xmlns="" name ="Student Consent">
 		<StudentConsent>
-			<RefId>7C834EA9-EDA1-2090-347F-83297E1C290C</RefId>
-			<LocalId>S1234567</LocalId>
+			<StudentConsentRefId>7C834EA9-EDA1-2090-347F-83297E1C290C</StudentConsentRefId>
+			<StudentConsentLocalId>S1234567</StudentConsentLocalId>
 		</StudentConsent>
 	</xhtml:Example>
 </DataObject>

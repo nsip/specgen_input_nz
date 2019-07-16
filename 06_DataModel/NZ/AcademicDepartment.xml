@@ -7,7 +7,7 @@
 
       xmlns="http://sifassociation.org/SpecGen">
 	
-  <Key>RefId</Key>
+  <Key>AcademicDepartmentRefId</Key>
   <EventsReported>true</EventsReported>
   
   <Item>
@@ -21,24 +21,24 @@
   </Item>
 
   <Item>
-    <Element>RefId</Element>
+    <Element>AcademicDepartmentRefId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this AcademicDepartment.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- RefId -->
+  </Item>    <!-- AcademicDepartmentRefId -->
 
   <Item>
-		<Element>LocalId</Element>
+		<Element>AcademicDepartmentLocalId</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>A Local Identifier for the Academic Department. It is expected to be unique to the reporting site.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"></Type> 
-	</Item>    <!-- LocalId -->
+	</Item>    <!-- AcademicDepartmentLocalId -->
 
   <Item>
     <Element>Name</Element>
@@ -102,7 +102,7 @@
 
   <xhtml:Example xmlns="" name="AcademicDepartment">
     <AcademicDepartment>
-      <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+      <AcademicDepartmentRefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</AcademicDepartmentRefId>
       <Name>Science Department</Name>
       <Provider>
         <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>

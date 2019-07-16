@@ -8,7 +8,7 @@
 	xmlns="http://sifassociation.org/SpecGen">
 
 
-	<Key>RefId</Key>
+	<Key>ScheduleHolidayRefId</Key>
 	<EventsReported>true</EventsReported>
 	<Item>
 		<Element>ScheduleHoliday</Element>
@@ -19,23 +19,23 @@
 	</Item>
 	
 	<Item>
-		<Element>RefId</Element>
+		<Element>ScheduleHolidayRefId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p> The ID (GUID) assigned to uniquely identify this Schedule Term.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- RefId -->
+	</Item>    <!-- ScheduleHolidayRefId -->
 	<Item>
-		<Element>LocalId</Element>
+		<Element>ScheduleHolidayLocalId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The local Id of  this Schedule Term.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- LocalId -->
+	</Item>    <!-- ScheduleHolidayLocalId -->
 
 	<Item>
 		<Element>Provider</Element>
@@ -88,8 +88,8 @@
 
 	<xhtml:Example xmlns="" name ="Schedule Holiday">
 		<ScheduleHoliday>
-			<RefId>4e8387f0-faed-4eb5-84ef-2139da62133d</RefId>
-			<LocalId>2019-ANZAC</LocalId>
+			<ScheduleHolidayRefId>4e8387f0-faed-4eb5-84ef-2139da62133d</ScheduleHolidayRefId>
+			<ScheduleHolidayLocalId>2019-ANZAC</ScheduleHolidayLocalId>
 			<HolidayDate>2019-04-25</HolidayDate>
 			<HolidayName>ANZAC Day</HolidayName>
 			<HolidayLongName>ANZAC Day, 2019</HolidayLongName>

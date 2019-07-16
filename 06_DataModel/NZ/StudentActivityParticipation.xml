@@ -7,7 +7,7 @@
 
       xmlns="http://sifassociation.org/SpecGen">
 
-  <Key>RefId</Key>
+  <Key>StudentActivityParticipationRefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
     <Element>StudentActivityParticipation</Element>
@@ -17,19 +17,19 @@
   </Item>
 
   <Item>
-    <Element>RefId</Element>
+    <Element>StudentActivityParticipationRefId</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
 	  <Description>The ID (GUID) that uniquely identifies the instance of the object.</Description>
     <Type ref='CommonTypes' name='RefIdType'/>
-  </Item>    <!-- RefId -->
+  </Item>    <!-- StudentActivityParticipationRefId -->
   <Item>
-    <Element>LocalId</Element>
+    <Element>StudentActivityParticipationLocalId</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
 	  <Description>LocalId for the participation record, if provided by the source system.</Description>
     <Type ref='CommonTypes' name='LocalIdType'/>
-  </Item>    <!-- LocalId -->
+  </Item>    <!-- StudentActivityParticipationLocalId -->
 
   <Item>
     <Element>Student</Element>
@@ -137,7 +137,7 @@
 
   <xhtml:Example xmlns='' name="StudentActivityParticipation">
     <StudentActivityParticipation>
-      <RefId>9ECC9683-0E02-406F-926C-1C4D3542D122</RefId>
+      <StudentActivityParticipationRefId>9ECC9683-0E02-406F-926C-1C4D3542D122</StudentActivityParticipationRefId>
       <Student>
         <RefId>646C5D4A-C829-4886-A02B-971695C7BC06</RefId>
       </Student>

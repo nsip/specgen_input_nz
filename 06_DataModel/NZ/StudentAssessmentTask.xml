@@ -7,7 +7,7 @@
 
       xmlns="http://sifassociation.org/SpecGen">
 	
-  <Key>RefId</Key>
+  <Key>StudentAssessmentTaskRefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
     <Element>StudentAssessmentTask</Element>
@@ -17,23 +17,23 @@
      </Description>
   </Item>
   <Item>
-    <Element>RefId</Element>
+    <Element>StudentAssessmentTaskRefId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A GUID that identifies an instance of this object. </p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- RefId -->
+  </Item>    <!-- StudentAssessmentTaskRefId -->
   <Item>
-    <Element>LocalId</Element>
+    <Element>StudentAssessmentTaskLocalId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Local identifier for the assessment task, if provided by the source system.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- LocalId -->
+  </Item>    <!-- StudentAssessmentTaskLocalId -->
 
   <Item>
     <Element>Student</Element>
@@ -203,7 +203,7 @@
 
   <xhtml:Example xmlns="" name="Student Assessment Task">
     <StudentAssessmentTask>
-      <RefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</RefId>
+      <StudentAssessmentTaskRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskRefId>
       <Student>
         <RefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</RefId>
         <LocalId>HP-850139</LocalId>

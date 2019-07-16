@@ -7,7 +7,7 @@
 
 	xmlns="http://sifassociation.org/SpecGen">
 
-	<Key>RefId</Key>
+	<Key>StudentTeachingGroupEnrolmentRefId</Key>
 	<EventsReported>true</EventsReported>
 
 	<Item>
@@ -19,24 +19,24 @@
 	</Item>
 
 	<Item>
-		<Element>RefId</Element>
+		<Element>StudentTeachingGroupEnrolmentRefId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The SIF GUID for the student teaching group enrolment.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"></Type>
-	</Item>    <!-- RefId -->
+	</Item>    <!-- StudentTeachingGroupEnrolmentRefId -->
 
     <Item>
-		<Element>LocalId</Element>
+		<Element>StudentTeachingGroupEnrolmentLocalId</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The local Id for the student teaching group enrolment, assigned by the Provider.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- LocalId -->
+	</Item>    <!-- StudentTeachingGroupEnrolmentLocalId -->
 
 	<Item>
 		<Element>Student</Element>
@@ -91,8 +91,8 @@
 
 	<xhtml:Example xmlns="" name="Student TeachingGroup Enrolment">
 		<StudentTeachingGroupEnrolment>
-			<RefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</RefId>
-			<LocalId>2004H102</LocalId>
+			<StudentTeachingGroupEnrolmentRefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</StudentTeachingGroupEnrolmentRefId>
+			<StudentTeachingGroupEnrolmentLocalId>2004H102</StudentTeachingGroupEnrolmentLocalId>
 			<Student>
 				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
 			</Student>

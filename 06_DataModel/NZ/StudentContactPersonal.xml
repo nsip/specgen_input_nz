@@ -8,7 +8,7 @@
             xmlns="http://sifassociation.org/SpecGen">
 
 	<EventsReported>true</EventsReported>
-	<Key>@RefId</Key>
+	<Key>@StudentContactPersonalRefId</Key>
 	<Item>
 		<Element>StudentContactPersonal</Element>
 		<privacyRating>High</privacyRating>
@@ -17,15 +17,14 @@
 		</Description>
 	</Item>
 	<Item>
-		<Element>RefId</Element>
+		<Element>StudentContactPersonalRefId</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>The SIF GUID that uniquely identifies the Student Contact.</Description>
 		<Type ref='CommonTypes' name='RefIdType'/>
-	</Item>    <!-- RefId -->
+	</Item>    <!-- StudentContactPersonalRefId -->
 	<Item>
-		<Element>LocalId</Element>
-		
+		<Element>StudentContactPersonalLocalId</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
@@ -33,7 +32,7 @@
 			A provider can only inquire on or maintain their own local id.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"></Type>
-	</Item>    <!-- LocalId -->
+	</Item>    <!-- StudentContactPersonalLocalId -->
 	<Item>
 		<Element>HasBOTVote</Element>
 		<Characteristics>O</Characteristics>
@@ -66,8 +65,8 @@
 
 	<xhtml:Example xmlns='' name="StudentContactPersonal Family Member Example">
 		<StudentContactPersonal>
-			<RefId>7C834EA9-EDA1-2090-347F-83297E1C290F</RefId>
-			<LocalId>P1234567</LocalId>
+			<StudentContactPersonalRefId>7C834EA9-EDA1-2090-347F-83297E1C290F</StudentContactPersonalRefId>
+			<StudentContactPersonalLocalId>P1234567</StudentContactPersonalLocalId>
 			<HasBOTVote>N</HasBOTVote>
 			<PersonInfo>
 				<Name>
@@ -145,8 +144,8 @@
 
 	<xhtml:Example xmlns='' name="StudentContactPersonal Doctor Example">
 		<StudentContactPersonal>
-		    <RefId>7C834EA9-EDA1-2090-347F-FACE7E1C290F</RefId>
-			<LocalId>P1234567</LocalId>
+		    <StudentContactPersonalRefId>7C834EA9-EDA1-2090-347F-FACE7E1C290F</StudentContactPersonalRefId>
+			<StudentContactPersonalLocalId>P1234567</StudentContactPersonalLocalId>
 			<HasBOTVote>N</HasBOTVote>
 			<PersonInfo>
 				<Name>

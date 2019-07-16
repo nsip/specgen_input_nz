@@ -6,7 +6,7 @@
 	
             xmlns="http://sifassociation.org/SpecGen">
 
-  <Key>RefId</Key>
+  <Key>StaffTeachingGroupAssignmentRefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
     <Element>StaffTeachingGroupAssignment</Element>
@@ -17,24 +17,24 @@
   </Item>
 
   <Item>
-    <Element>RefId</Element>
+    <Element>StaffTeachingGroupAssignmentRefId</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID that uniquely identifies a particular staff teaching group assignment.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>      <!-- RefId -->
+  </Item>      <!-- StaffTeachingGroupAssignmentRefId -->
 
   <Item>
-    <Element>LocalId</Element>
+    <Element>StaffTeachingGroupAssignmentLocalId</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>LocalId for the particular staff teaching group assignment, if provided by the source system</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>      <!-- LocalId -->
+  </Item>      <!-- StaffTeachingGroupAssignmentLocalId -->
 
   <Item>
     <Element>StaffMember</Element>
@@ -100,7 +100,7 @@
 
   <xhtml:Example xmlns="" name="Staff TeachingGroup Assignment French Teacher Example">
     <StaffTeachingGroupAssignment>
-      <RefId>92828e71-c702-4944-841e-761203142ccd</RefId>
+      <StaffTeachingGroupAssignmentRefId>92828e71-c702-4944-841e-761203142ccd</StaffTeachingGroupAssignmentRefId>
       <StaffMember>
         <RefId>6c12f5ae-ca86-40e2-b252-593154c8b967</RefId>
       </StaffMember>

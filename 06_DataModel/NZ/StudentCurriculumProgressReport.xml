@@ -7,7 +7,7 @@
 
       xmlns="http://sifassociation.org/SpecGen">
 	
-  <Key>RefId</Key>
+  <Key>StudentCurriculumProgressReportRefId</Key>
   <EventsReported>true</EventsReported>
   
   <Item>
@@ -24,24 +24,24 @@
   </Item>
 
   <Item>
-    <Element>RefId</Element>
+    <Element>StudentCurriculumProgressReportRefId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this Student Curriculum Progress Report.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- RefId -->
+  </Item>    <!-- StudentCurriculumProgressReportRefId -->
 
   <Item>
-    <Element>LocalId</Element>
+    <Element>StudentCurriculumProgressReportLocalId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Locally assigned identifier for the student curriculum progress report, from the source system.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- LocalId -->
+  </Item>    <!-- StudentCurriculumProgressReportLocalId -->
 
   <Item>
     <Element>Student</Element>    
@@ -116,7 +116,7 @@
 
   <xhtml:Example xmlns="" name="Student Curriculum Progress Report">
     <StudentCurriculumProgressReport>
-      <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+      <StudentCurriculumProgressReportRefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</StudentCurriculumProgressReportRefId>
       <Student>
         <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
       </Student>

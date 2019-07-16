@@ -196,19 +196,6 @@
 
 	<CodeSet>
 		<Intro>
-			<p>The type of assessment tool used for the assessment task.</p>
-		</Intro>
-		<ID>Assessment Tool</ID>
-		<Values>
-		  <Value><Code>PAT</Code><Text>PAT</Text></Value>
-		  <Value><Code>eASSTle</Code><Text>e-ASSTle</Text></Value>
-		  <Value><Code>PaCT</Code><Text>PaCT</Text></Value>
-		  <Value><Code>TWA</Code><Text>TWA</Text></Value>
-		</Values>
-	</CodeSet>    <!-- Assessment Tool -->
-
-	<CodeSet>
-		<Intro>
 			<p>The timeframe of the assessment, e.g. Mid-Year, End of Year.</p>
 		</Intro>
 		<ID>Assessment Timeframe</ID>

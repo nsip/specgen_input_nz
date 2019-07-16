@@ -8,7 +8,7 @@
 	    xmlns="http://sifassociation.org/SpecGen">
 
 
-  <Key>RefId</Key>
+  <Key>StaffPersonalRefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
     <Element>StaffPersonal</Element>
@@ -21,7 +21,7 @@
     </Description>
   </Item>
   <Item>
-    <Element>RefId</Element>
+    <Element>StaffPersonalRefId</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
@@ -30,7 +30,7 @@
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>    <!-- RefId -->
   <Item>
-    <Element>LocalId</Element>
+    <Element>StaffPersonalLocalId</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Medium</privacyRating>
     <Description>
@@ -71,7 +71,7 @@
 
   <xhtml:Example xmlns="" name="StaffPersonal">
     <StaffPersonal>
-      <RefId>D3E34F41-9D75-101A-8C3D-00AA001A1652</RefId>
+      <StaffPersonalRefId>D3E34F41-9D75-101A-8C3D-00AA001A1652</StaffPersonalRefId>
       <PersonInfo>
         <Name>
           <FamilyName>Smith</FamilyName>

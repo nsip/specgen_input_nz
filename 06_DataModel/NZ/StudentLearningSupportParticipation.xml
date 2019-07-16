@@ -7,7 +7,7 @@
 
       xmlns="http://sifassociation.org/SpecGen">
 	
-  <Key>RefId</Key>
+  <Key>StudentLearningSupportParticipationRefId</Key>
   <EventsReported>true</EventsReported>
   
   <Item>
@@ -19,24 +19,24 @@
   </Item>
 
   <Item>
-    <Element>RefId</Element>
+    <Element>StudentLearningSupportParticipationRefId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this Student Learning Support Participation record.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- RefId -->
+  </Item>    <!-- StudentLearningSupportParticipationRefId -->
 
   <Item>
-    <Element>LocalId</Element>
+    <Element>StudentLearningSupportParticipationLocalId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Locally assigned identifier for the learning support participation record, from the source system.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- LocalId -->
+  </Item>    <!-- StudentLearningSupportParticipationLocalId -->
 
   <Item>
     <Element>Student</Element>    
@@ -230,6 +230,16 @@
   </Item>    <!-- ReviewList -->
 
   <Item>
+    <Element>DocumentList</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the documents associated the student's learning support participation.</p>
+    </Description>
+    <Type ref="CommonTypes" name="DocumentListType"></Type>
+  </Item>    <!-- DocumentList -->
+
+  <Item>
     <Element>CreatedBy</Element>    
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -271,7 +281,7 @@
 
   <xhtml:Example xmlns="" name="StudentLearningSupportParticipation">
     <StudentLearningSupportParticipation>
-      <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+      <StudentLearningSupportParticipationRefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</StudentLearningSupportParticipationRefId>
       <Student>
         <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
       </Student>

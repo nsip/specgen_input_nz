@@ -6,7 +6,7 @@
   xmlns:json="http://json.org/" 
   xmlns="http://sifassociation.org/SpecGen">
 
-  <Key>RefId</Key>
+  <Key>ProviderRelationshipRefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
     <Element>ProviderRelationship</Element>
@@ -21,23 +21,23 @@
     </Description>
   </Item>
   <Item>
-    <Element>RefId</Element>
+    <Element>ProviderRelationshipRefId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The SIF GUID for the relationship between two providers.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>  <!-- RefId -->
+  </Item>  <!-- ProviderRelationshipRefId -->
   <Item>
-    <Element>LocalId</Element>
+    <Element>ProviderRelationshipLocalId</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>LocalId for the relationship between two providers, if provided by the source system.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>  <!-- LocalId -->
+  </Item>  <!-- ProviderRelationshipLocalId -->
 
   <Item>
     <Element>RelationshipType</Element>

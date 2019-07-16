@@ -6,7 +6,7 @@
 
   xmlns="http://sifassociation.org/SpecGen">
 
-  <Key>RefId</Key>
+  <Key>WellbeingEventRefId</Key>
   
   <EventsReported>true</EventsReported>
   <Item>
@@ -20,24 +20,24 @@
   </Item>
 
   <Item>
-    <Element>RefId</Element>
+    <Element>WellbeingEventRefId</Element>
     <Characteristics>M</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this WellbeingEvent.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- RefId -->
+  </Item>    <!-- WellbeingEventRefId -->
 
   <Item>
-		<Element>LocalId</Element>
+		<Element>WellbeingEventLocalId</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>A Local Identifier for the Event. It is expected to be unique to the reporting site.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-  </Item>    <!-- LocalId -->
+  </Item>    <!-- WellbeingEventLocalId -->
 
   <Item>
     <Element>Student</Element>
@@ -80,14 +80,14 @@
   </Item>    <!-- EventNotes -->
 
   <Item>
-    <Element>PossibleMotivation</Element>
+    <Element>PossibleMotivationList</Element>
     <Characteristics>O</Characteristics>
   	<privacyRating>High</privacyRating>
     <Description>
-      <p>The possible motivation that triggered the event.</p>
+      <p>A list of the possible motivations that triggered the event.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- PossibleMotivation -->
+  </Item>    <!-- PossibleMotivationList -->
   
   <Item>
     <Element>EventCategoryClass</Element>
@@ -128,7 +128,17 @@
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"/>
   </Item>    <!-- ReportingStaffMember -->
-  
+
+  <Item>
+    <Element>EventLocationList</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the locations where the incident took place.</p>
+    </Description>
+    <Type ref="CommonTypes" name="EventLocationListType"/>
+  </Item>    <!-- EventLocationList -->
+
   <Item>
     <Element>EventLocationDescription</Element>
     <Characteristics>O</Characteristics>
@@ -220,6 +230,16 @@
   </Item>    <!-- Status -->
 
   <Item>
+   	<Element>BehaviourIdentifiedList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>A list of the problem behaviours identified for the student as a result of the Wellbeing Event. There are both minor and major behaviours.</p>
+		</Description>
+		<Type ref="CommonTypes" name="BehaviourIdentifiedListType"/>
+  </Item>    <!-- BehaviourIdentifiedList -->
+
+  <Item>
    	<Element>RestraintType</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
@@ -230,14 +250,14 @@
   </Item>    <!-- RestraintType -->
 
   <Item>
-   	<Element>ActionTaken</Element>
+   	<Element>ActionTakenList</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
 		<Description>
-		  <p>Code denoting the action taken by the reporting staff member to the wellbeing event.</p>
+		  <p>A list of the actions taken as a result of this WellbeingEvent.</p>
 		</Description>
-		<Type ref="CodeSets" name="NZCodeSetsWellbeingEventActionTakenType"/>
-  </Item>    <!-- ActionTaken -->
+		<Type ref="CommonTypes" name="ActionTakenListType"/>
+  </Item>    <!-- ActionTakenList -->
   
   <Item>
     <Element>DocumentList</Element>
@@ -261,7 +281,7 @@
 
   <xhtml:Example xmlns="" name="WellbeingEvent">
     <WellbeingEvent> 
-      <RefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+      <WellbeingEventRefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</WellbeingEventRefId>
       <Student>
         <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
       </Student>
@@ -272,7 +292,9 @@
       <EventDate>2017-11-01</EventDate>
       <EventTimePeriod>AM</EventTimePeriod>
       <RestraintType>NON</RestraintType>
-      <ActionTaken>ININ</ActionTaken>
+      <ActionTakenList>
+        <ActionTaken>ININ</ActionTaken>
+      </ActionTakenList>
     </WellbeingEvent>
   </xhtml:Example>
 </DataObject>

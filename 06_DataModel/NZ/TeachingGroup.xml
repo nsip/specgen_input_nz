@@ -7,7 +7,7 @@
 
       xmlns="http://sifassociation.org/SpecGen">
 
-  <Key>RefId</Key>
+  <Key>TeachingGroupRefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
     <Element>TeachingGroup</Element>
@@ -21,23 +21,23 @@
   </Item>
 
   <Item>
-    <Element>RefId</Element>
+    <Element>TeachingGroupRefId</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the TeachingGroup</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>       <!-- RefId -->
+  </Item>       <!-- TeachingGroupRefId -->
   <Item>
-    <Element>LocalId</Element>
+    <Element>TeachingGroupLocalId</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>LocalId of the Teaching Group (previously ClassIndicator).</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>       <!-- LocalId -->
+  </Item>       <!-- TeachingGroupLocalId -->
   <Item>
     <Element>ShortName</Element>
     <Characteristics>M</Characteristics>
@@ -164,8 +164,8 @@
 
   <xhtml:Example xmlns="" name="TeachingGroup">
     <TeachingGroup>
-      <RefId>64A309DA-063A-2E35-B359-D75101A8C3D1</RefId>
-      <LocalId>20087ASPN</LocalId>
+      <TeachingGroupRefId>64A309DA-063A-2E35-B359-D75101A8C3D1</TeachingGroupRefId>
+      <TeachingGroupLocalId>20087ASPN</TeachingGroupLocalId>
       <ShortName>7A SPN</ShortName>
       <LongName>Year 7A Maths - Space and Numbers</LongName>
       <GroupType>SC</GroupType>

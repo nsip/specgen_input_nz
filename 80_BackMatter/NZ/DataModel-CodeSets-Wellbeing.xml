@@ -228,6 +228,31 @@
 			<Value><Code>MAO</Code><Text>Allergies - other</Text></Value>
 		<Value><Code>DIET</Code><Text>Dietary Preferences</Text></Value>
 		<Value><Code>LSN</Code><Text>Learning Support Need</Text></Value>
+		<Value>
+				<Code>LSN-BEL</Code>
+				<Text xml:lang="en">Belonging (Participating and Contributing)</Text>
+				<Text xml:lang="mi">Manu whenua</Text>
+		</Value>
+				<Value>
+				<Code>LSN-COM</Code>
+				<Text xml:lang="en">Communication (Using Language and Text)</Text>
+				<Text xml:lang="mi">Manu reo</Text>
+		</Value>
+				<Value>
+				<Code>LSN-CON</Code>
+				<Text xml:lang="en">Contributing (Relating to Others)</Text>
+				<Text xml:lang="mi">Manu tangata</Text>
+		</Value>
+				<Value>
+				<Code>LSN-EXP</Code>
+				<Text xml:lang="en">Exploration (Thinking)</Text>
+				<Text xml:lang="mi">Manu aotūroa</Text>
+		</Value>
+				<Value>
+				<Code>LSN-WEL</Code>
+				<Text xml:lang="en">Wellbeing (Managing Self)</Text>
+				<Text xml:lang="mi">Manu atua</Text>
+		</Value>
 		<Value><Code>MAIM</Code><Text>Auto-immune/Immune Disorders</Text></Value>
 		<Value><Code>MRD</Code><Text>Respiratory Disorder</Text></Value>
 		<Value><Code>MB</Code><Text>Blood disorder</Text></Value>
@@ -281,6 +306,18 @@
 		</Values>
 	</CodeSet>    <!-- Wellbeing Characteristic Priority -->
 
+	<CodeSet>
+		<Intro>
+		<p>Standard codes denoting the status of the Wellbeing Characteristic.</p>
+		</Intro>
+		<ID>Wellbeing Characteristic Status</ID>
+		<Values>
+				<Value><Code>ACTI</Code><Text>Active</Text></Value>
+				<Value><Code>CLOS</Code><Text>Closed</Text></Value>
+				<Value><Code>CREA</Code><Text>Created in Error</Text></Value>
+				<Value><Code>PEND</Code><Text>Pending Approval</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Status -->
 
 	<!-- Wellbeing Event classification codes -->
 	<CodeSet>
@@ -758,20 +795,119 @@
 		</Values>
 	</CodeSet>    <!-- Wellbeing Response Category -->
 
-  <CodeSet>
-    <Intro>
-      <p>Standard codes denoting the type of award that has been achieved as part of a Wellbeing Response.</p>
-    </Intro>
-    <ID>Wellbeing Award Type</ID>
-    <Values>
-			<Value><Code>CER</Code><Text>Certificate</Text></Value>
-			<Value><Code>TRO</Code><Text>Trophy</Text></Value>
-			<Value><Code>LOR</Code><Text>Letter of Recognition</Text></Value>
-			<Value><Code>OTH</Code><Text>Other</Text></Value>
-    </Values>
-  	</CodeSet>    <!-- Wellbeing Award Type -->
+	<CodeSet>
+		<Intro>
+		<p>Standard codes denoting the type of award that has been achieved as part of a Wellbeing Response.</p>
+		</Intro>
+		<ID>Wellbeing Award Type</ID>
+		<Values>
+				<Value><Code>CER</Code><Text>Certificate</Text></Value>
+				<Value><Code>TRO</Code><Text>Trophy</Text></Value>
+				<Value><Code>LOR</Code><Text>Letter of Recognition</Text></Value>
+				<Value><Code>OTH</Code><Text>Other</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Wellbeing Award Type -->
 
+ 	<CodeSet>
+    	<Intro>
+      	<p>Code set denoting the type of person that was involved.</p>
+		</Intro>
+		<ID>Person Involved Type</ID>
+		<Values>
+				<Value><Code>NONE</Code><Text>None</Text></Value>
+				<Value><Code>OTHE</Code><Text>Other</Text></Value>
+				<Value><Code>PEER</Code><Text>Peer</Text></Value>
+				<Value><Code>STAF</Code><Text>Staff</Text></Value>
+				<Value><Code>SUBS</Code><Text>Substitute</Text></Value>
+				<Value><Code>TEAC</Code><Text>Teacher</Text></Value>
+				<Value><Code>UNKN</Code><Text>Unknown</Text></Value>
+		</Values>
+  	</CodeSet>    <!-- Person Involved Type -->
 
+ 	<CodeSet>
+    	<Intro>
+      	<p>Code set denoting locations where a Wellbeing Event incident may have took place.</p>
+		</Intro>
+		<ID>Wellbeing Event Location</ID>
+		<Values>
+				<Value><Code>ARTR</Code><Text>Art Room</Text></Value>
+				<Value><Code>BATH</Code><Text>Bathroom / Restroom</Text></Value>
+				<Value><Code>BUSL</Code><Text>Bus Loading Zone</Text></Value>
+				<Value><Code>BUSS</Code><Text>Bus</Text></Value>
+				<Value><Code>CAFE</Code><Text>Cafeteria</Text></Value>
+				<Value><Code>CLAS</Code><Text>Classroom</Text></Value>
+				<Value><Code>COMM</Code><Text>Commons / Common Area</Text></Value>
+				<Value><Code>COMP</Code><Text>Computer Lab</Text></Value>
+				<Value><Code>GYMM</Code><Text>Gym</Text></Value>
+				<Value><Code>HALL</Code><Text>Hallway / Breezeway</Text></Value>
+				<Value><Code>LIBR</Code><Text>Library</Text></Value>
+				<Value><Code>LOCK</Code><Text>Locker Room</Text></Value>
+				<Value><Code>MUSC</Code><Text>Music Room</Text></Value>
+				<Value><Code>OFFC</Code><Text>Off-Campus</Text></Value>
+				<Value><Code>OFFI</Code><Text>Office</Text></Value>
+				<Value><Code>OTHE</Code><Text>Other Location</Text></Value>
+				<Value><Code>PARK</Code><Text>Parking Lot</Text></Value>
+				<Value><Code>PLAY</Code><Text>Playground</Text></Value>
+				<Value><Code>SPEC</Code><Text>Special Event / Assembly / Field Trip</Text></Value>
+				<Value><Code>STAD</Code><Text>Stadium</Text></Value>
+				<Value><Code>UNKN</Code><Text>Unknown</Text></Value>
+				<Value><Code>VOCA</Code><Text>Vocational Room</Text></Value>
+		</Values>
+  	</CodeSet>    <!-- Wellbeing Event Location -->
+
+ 	<CodeSet>
+    	<Intro>
+      	<p>Code set denoting the type of minor behaviour problem identified as part of the Wellbeing Event.</p>
+		</Intro>
+		<ID>Wellbeing Event Minor Behaviour</ID>
+		<Values>
+				<Value><Code>DEFIA</Code><Text>Defiance</Text></Value>
+				<Value><Code>DISRE</Code><Text>Disrespect</Text></Value>
+				<Value><Code>DISRU</Code><Text>Disruption</Text></Value>
+				<Value><Code>DRESS</Code><Text>Dress Code Violation</Text></Value>
+				<Value><Code>INAPP</Code><Text>Inappropriate Language</Text></Value>
+				<Value><Code>OTHER</Code><Text>Other</Text></Value>
+				<Value><Code>PHYSI</Code><Text>Physical Contact / Physical Aggression</Text></Value>
+				<Value><Code>PROPE</Code><Text>Property Misuse</Text></Value>
+				<Value><Code>TARDY</Code><Text>Tardy</Text></Value>
+				<Value><Code>TECHN</Code><Text>Technology Violation</Text></Value>
+		</Values>
+  	</CodeSet>    <!-- Wellbeing Event Minor Behaviour -->
+
+ 	<CodeSet>
+    	<Intro>
+      	<p>Code set denoting the type of major behaviour problem identified as part of the Wellbeing Event.</p>
+		</Intro>
+		<ID>Wellbeing Event Major Behaviour</ID>
+		<Values>
+				<Value><Code>ABUSI</Code><Text>Abusive Language / Inappropriate Language / Profanity</Text></Value>
+				<Value><Code>ARSON</Code><Text>Arson</Text></Value>
+				<Value><Code>BOMBT</Code><Text>Bomb Threat / False Alarm</Text></Value>
+				<Value><Code>DEFIA</Code><Text>Defiance / Insubordination / Non-Compliance</Text></Value>
+				<Value><Code>DISRE</Code><Text>Disrespect</Text></Value>
+				<Value><Code>DISRU</Code><Text>Disruption</Text></Value>
+				<Value><Code>DRESS</Code><Text>Dress Code Violation</Text></Value>
+				<Value><Code>FIGHT</Code><Text>Fighting</Text></Value>
+				<Value><Code>FORGE</Code><Text>Forgery / Theft / Plagarism</Text></Value>
+				<Value><Code>GANGA</Code><Text>Gang Affiliation Display</Text></Value>
+				<Value><Code>HARAS</Code><Text>Harassment</Text></Value>
+				<Value><Code>INADI</Code><Text>Inappropriate Display of Affection</Text></Value>
+				<Value><Code>INALO</Code><Text>Inappropriate Location / Out of Bounds Area</Text></Value>
+				<Value><Code>LYING</Code><Text>Lying / Cheating</Text></Value>
+				<Value><Code>OTHER</Code><Text>Other Behaviour</Text></Value>
+				<Value><Code>PHYSI</Code><Text>Physical Aggression</Text></Value>
+				<Value><Code>PROPE</Code><Text>Property Damage / Vandilism</Text></Value>
+				<Value><Code>SKIPC</Code><Text>Skip Class</Text></Value>
+				<Value><Code>TARDY</Code><Text>Tardy</Text></Value>
+				<Value><Code>TECHN</Code><Text>Technology Violation</Text></Value>
+				<Value><Code>TRUAN</Code><Text>Truancy</Text></Value>
+				<Value><Code>UPOAL</Code><Text>Use / Possession of Alcohol</Text></Value>
+				<Value><Code>UPOCO</Code><Text>Use / Possession of Combustibles</Text></Value>
+				<Value><Code>UPODR</Code><Text>Use / Possession of Drugs</Text></Value>
+				<Value><Code>UPOTO</Code><Text>Use / Possession of Tobacco</Text></Value>
+				<Value><Code>UPOWE</Code><Text>Use / Possession of Weapons</Text></Value>
+		</Values>
+  	</CodeSet>    <!-- Wellbeing Event Major Behaviour -->
 
 	<!-- Wellbeing Appeal classification codes -->
 	<CodeSet>
@@ -1244,10 +1380,7 @@
 		</Intro>
 		<ID>Wellbeing Appeal Outcome</ID>
 		<Values>
-			<Value>
-				<Code>OTH</Code>
-				<Text>Other</Text>
-			</Value>    <!-- Other -->
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Wellbeing Appeal Outcome -->
 
@@ -1257,14 +1390,26 @@
 		</Intro>
 		<ID>Wellbeing Event Severity</ID>
 		<Values>
-			<Value>
-				<Code>MIN</Code>
-				<Text>Minor</Text>
-			</Value>    <!-- Minor -->
-			<Value>
-				<Code>MAJ</Code>
-				<Text>Major</Text>
-			</Value>    <!-- Major -->
+			<Value><Code>MIN</Code><Text>Minor</Text></Value>  
+			<Value><Code>MAJ</Code><Text>Major</Text></Value> 
 		</Values>
 	</CodeSet>    <!-- Wellbeing Event Severity -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the possible motivation that triggered the Wellbeing Event.</p>
+		</Intro>
+		<ID>Wellbeing Event Possible Motivation</ID>
+		<Values>
+			<Value><Code>AVAD</Code><Text>Avoid Adult</Text></Value> 
+			<Value><Code>AVPE</Code><Text>Avoid Peer(s)</Text></Value> 
+			<Value><Code>AVTA</Code><Text>Avoid Tasks / Activities</Text></Value> 
+			<Value><Code>OBAD</Code><Text>Obtain Adult Attention</Text></Value> 
+			<Value><Code>OBIT</Code><Text>Obtain Items / Activities</Text></Value> 
+			<Value><Code>OBPE</Code><Text>Obtain Peer Attention</Text></Value> 
+			<Value><Code>OTHE</Code><Text>Other</Text></Value> 
+			<Value><Code>UNKN</Code><Text>Unknown Motivation</Text></Value> 
+		</Values>
+	</CodeSet>    <!-- Wellbeing Event Possible Motivation -->
+	
 </IncludeGroup>

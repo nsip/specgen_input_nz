@@ -116,7 +116,7 @@
 			</Description>
 		</Item>
 		<Item>
-			<Element>Type</Element>
+			<Element>ECEType</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
@@ -410,15 +410,6 @@
 			</Description>
 			<Type ref="CommonTypes" name="PreEnrolmentCancellationType"/>
 		</Item>		<!-- PreEnrolmentCancellation -->
-		<Item>
-			<Element>Exit</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Description>
-				<p>Details of the reasons, and interventions leading up to the student's enrolment being terminated.</p>
-			</Description>
-			<Type ref="CommonData" name="EnrolmentExitType"/>
-		</Item>		<!-- Exit -->
 
 		<xhtml:Example xmlns="" name="International School Enrolment">
 			<StudentSchoolEnrolment>
@@ -718,9 +709,9 @@
 		</Item>		<!-- CancellationReasonOtherDesc -->
 	</CommonElement>
 
-	<CommonElement name="EnrolmentExitType" type="true" dm="true">
+	<CommonElement name="ProviderExitType" type="true" dm="true">
 		<Item>
-			<Element>EnrolmentExitType</Element>
+			<Element>ProviderExitType</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>Details of the reasons, and interventions leading up to the
@@ -735,14 +726,6 @@
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsEnrolmentExitTypeType"/>
 		</Item>		<!-- Reason -->
-		<Item>
-			<Element>EnrolmentExitDate</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The date the student exited the school.</p>
-			</Description>
-			<Type name="xs:date"/>
-		</Item>		<!-- EnrolmentExitDate -->
 		<Item>
 			<Element>PostSchoolActivity</Element>
 			<Characteristics>O</Characteristics>
