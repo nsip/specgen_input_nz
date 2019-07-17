@@ -21,6 +21,10 @@
 			<Value>
 				<Code>ECE</Code>
 				<Text>Te Whaariki</Text>
+			</Value>	
+			<Value>
+				<Code>OTH</Code>
+				<Text>Other Curriculum</Text>
 			</Value>			
 		</Values>
 	</CodeSet>   <!-- Curriculum -->
@@ -34,26 +38,38 @@
 		<Values>
 			<Value>
 				<Code>1</Code>
-				<Text>Level 1</Text>
+				<Text>Student is working at level 1 of the relevant curriculum</Text>
 			</Value>
 			<Value>
 				<Code>2</Code>
-				<Text>Level 2</Text>
+				<Text>Student is working at level 2 of the relevant curriculum</Text>
 			</Value>
 			<Value>
 				<Code>3</Code>
-				<Text>Level 3</Text>
+				<Text>Student is working at level 3 of the relevant curriculum</Text>
 			</Value>
 			<Value>
 				<Code>4</Code>
-				<Text>Level 4</Text>
+				<Text>Student is working at level 4 of the relevant curriculum</Text>
 			</Value>
 			<Value>
 				<Code>5</Code>
-				<Text>Level 5</Text>
+				<Text>Student is working at level 5 of the relevant curriculum</Text>
+			</Value>
+			<Value>
+				<Code>6</Code>
+				<Text>Student is working at level 6 of the relevant curriculum</Text>
+			</Value>
+			<Value>
+				<Code>7</Code>
+				<Text>Student is working at level 7 of the relevant curriculum</Text>
+			</Value>
+			<Value>
+				<Code>8</Code>
+				<Text>Student is working at level 8 of the relevant curriculum</Text>
 			</Value>
 		</Values>
-	</CodeSet>   <!-- CurriculumLevel -->
+	</CodeSet>   <!-- Curriculum -->
 
 	<CodeSet>
 		<Intro>

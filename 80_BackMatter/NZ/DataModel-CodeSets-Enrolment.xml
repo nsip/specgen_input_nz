@@ -166,12 +166,12 @@
 		<Values>
 			<Value>
 				<Code>S</Code>
-				<Text>Transfer</Text>
+				<Text>Transferred to Another School in NZ</Text>
 				<Description>Transferred to Another School in NZ</Description>
 			</Value>
 			<Value>
 				<Code>H</Code>
-				<Text>Home School</Text>
+				<Text>Transferring to Home Schooling</Text>
 				<Description>Transferred to Home Schooling</Description>
 			</Value>
 			<Value>
@@ -184,22 +184,22 @@
 			</Value>
 			<Value>
 				<Code>X</Code>
-				<Text>Expulsion</Text>
+				<Text>Expulsion (for Students Aged Less Than 16)</Text>
 				<Description>Only applies to students at least 16 years old</Description>
 			</Value>
 			<Value>
 				<Code>L</Code>
-				<Text>End of Schooling</Text>
+				<Text>End of Schooling (for Students Aged 16 and Over Only)</Text>
 				<Description>Only applies to students at least 16 years old</Description>
 			</Value>
 			<Value>
 				<Code>E</Code>
-				<Text>Early Exemption</Text>
+				<Text>Granted Early Exemption (Applies to Those Less Than 16yrs Old)</Text>
 				<Description>Only applies to students less than 16 years old</Description>
 			</Value>
 			<Value>
 				<Code>K</Code>
-				<Text>Exclusion</Text>
+				<Text>Exclusion (for Students Aged Less Than 16)</Text>
 				<Description>Only applies to students less than 16 years old</Description>
 			</Value>
 			<Value>
@@ -277,7 +277,7 @@
 		<Values>
 			<Value>
 				<Code>FF</Code>
-				<Text>International Fee Paying Student</Text>
+				<Text>International Fee-Paying Student</Text>
 				<Description>
 					An International student who meets full tuition costs on
 					their own or from funds provided to them by sponsors other
@@ -286,7 +286,7 @@
 			</Value>
 			<Value>
 				<Code>AE</Code>
-				<Text>Student in Alternative Education</Text>
+				<Text>Alternative Education Student</Text>
 				<Description>
 					A student who is enrolled in an Alternative Education
 					programme, for Funding Year Level they should be reported
@@ -295,7 +295,7 @@
 			</Value>
 			<Value>
 				<Code>EX</Code>
-				<Text>International Exchange Student</Text>
+				<Text>Exchange Student</Text>
 				<Description>
 					A student (and dependants) studying in New Zealand under an
 					exchange programme approved by the New Zealand Government.
@@ -312,7 +312,7 @@
 				</Description>
 			</Value>
 			<Value>
-				<Code>AD</Code>
+				<Code>RA</Code>
 				<Text>Adult Student</Text>
 				<Description>
 					A student who has continued at school and is at least 19 on
@@ -323,7 +323,7 @@
 				</Description>
 			</Value>
 			<Value>
-				<Code>RA</Code>
+				<Code>AD</Code>
 				<Text>Returning Adult Student</Text>
 				<Description>
 					A student who has returned to school following a break of at
@@ -346,7 +346,7 @@
 			</Value>
 			<Value>
 				<Code>TPREOM</Code>
-				<Text>Teen Parent, Regular Student, Over Max Roll</Text>
+				<Text>Teen Parent Regular Student Over Maximum Roll</Text>
 				<Description>
 					A regular student (i.e. a student aged under 19 years at 1
 					January of the roll count year) who meets the eligibility
@@ -356,7 +356,7 @@
 			</Value>
 			<Value>
 				<Code>TPRAOM</Code>
-				<Text>Teen Parent, Adult Student Over Max Roll</Text>
+				<Text>Teen Parent Adult Student Over Maximum Roll</Text>
 				<Description>
 					An adult student who is enrolled in a Teen Parent Unit (TPU)
 					where the enrolment at the TPU has continued beyond the end
@@ -367,7 +367,7 @@
 			</Value>
 			<Value>
 				<Code>TPAD</Code>
-				<Text>Teen Parent, Other Adult Student</Text>
+				<Text>Teen Parent Other Adult Student</Text>
 				<Description>
 					A student enrolling at the TPU as an adult student (i.e. was
 					at least 19 on 1st January of the year when they first
@@ -377,7 +377,7 @@
 			</Value>
 			<Value>
 				<Code>TPRE</Code>
-				<Text>Teen Parent, Eligible and Enrolled Regular Student</Text>
+				<Text>Teen Parent Eligible and Enrolled Regular Student</Text>
 				<Description>
 					A student who is enrolled in a Teen Parent Unit (TPU) and is
 					at least 19 years old on 1 January of the current
@@ -389,7 +389,7 @@
 			</Value>
 			<Value>
 				<Code>TPRAE</Code>
-				<Text>Teen Parent, Enrolled Continuing Adult Student</Text>
+				<Text>Teen Parent Enrolled Continuing Adult Student</Text>
 				<Description>
 					A student who is enrolled in a Teen Parent Unit (TPU) where
 					the enrolment at the TPU has continued beyond the end of the
@@ -407,7 +407,7 @@
 			</Value>
 			<Value>
 				<Code>SA</Code>
-				<Text>Student in a Satellite Class of a Special School</Text>
+				<Text>Satellite Class Student</Text>
 				<Description>Student who is in a Satellite class of a Special School.</Description>
 			</Value>
 			<Value>
@@ -421,7 +421,7 @@
 			</Value>
 			<Value>
 				<Code>SF</Code>
-				<Text>Student in a Separately Funded Unit</Text>
+				<Text>Separately Funded</Text>
 				<Description>
 					Student is enrolled in a separately funded unit.
 				</Description>
@@ -436,15 +436,15 @@
 		<ID>Ongoing Resource Scheme</ID>
 		<Values>
 			<Value>
-				<Code>HI</Code>
+				<Code>H</Code>
 				<Text>High</Text>
 			</Value>
 			<Value>
-				<Code>VH</Code>
+				<Code>V</Code>
 				<Text>Very High</Text>
 			</Value>
 			<Value>
-				<Code>EX</Code>
+				<Code>E</Code>
 				<Text>Extension</Text>
 			</Value>
 		</Values>
@@ -529,6 +529,9 @@
 			<Value><Code>UNK</Code><Text>Unknown</Text></Value>
 			<Value><Code>WAN</Code><Text>Wananga</Text></Value>
 			<Value><Code>YGE</Code><Text>Youth Guarantee</Text></Value>
+			<Value><Code>EFE</Code><Text>Employment and Further Education / Training</Text></Value>
+			<Value><Code>FED</Code><Text>Further Education or Training</Text></Value>
+			<Value><Code>OTH</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Post School Activity -->
 
@@ -562,10 +565,15 @@
 				<Description>Administer Panadol</Description>
 			</Value>    <!-- Administer Panadol -->
 			<Value>
-				<Code>LSR</Code>
-				<Text>Learning Support</Text>
-				<Description>To be on the Learning Support Register</Description>
-			</Value>    <!-- Learning Support Register -->
+				<Code>LSC</Code>
+				<Text>Learning Support Community Register</Text>
+				<Description>To be on the Learning Support Community Register</Description>
+			</Value>    <!-- Learning Support Community Register -->
+			<Value>
+				<Code>LSC</Code>
+				<Text>Learning Support Publish to Community Register</Text>
+				<Description>To have content on the Learning Support Community Register published to any school groups the school is part of for analysis e.g. a Kāhui Ako</Description>
+			</Value>    <!-- Learning Support Community Register -->
 		</Values>
 	</CodeSet>    <!-- Student Consent To -->
 
@@ -632,7 +640,7 @@
 		<Values>
 			<Value><Code>EKR</Code><Text>Kohanga Reo</Text></Value>
 			<Value><Code>EPC</Code><Text>Playcentre</Text></Value>
-			<Value><Code>KDC</Code><Text>Kindergarden or Education and Care</Text></Value>
+			<Value><Code>EKE</Code><Text>Kindergarden or Education and Care</Text></Value>
 			<Value><Code>EHB</Code><Text>Home Based Service</Text></Value>
 			<Value><Code>EPG</Code><Text>Playgroup or Pacific Islands EC Group</Text></Value>
 			<Value><Code>ECO</Code><Text>The Correspondence School - Te Aho o Te Kura Pounamu</Text></Value>

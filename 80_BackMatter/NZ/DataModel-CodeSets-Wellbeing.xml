@@ -225,9 +225,8 @@
 		</Intro>
 		<ID>Wellbeing Characteristic Category</ID>
 		<Values>
-			<Value><Code>MAO</Code><Text>Allergies - other</Text></Value>
+		<Value><Code>MAO</Code><Text>Allergies - other</Text></Value>
 		<Value><Code>DIET</Code><Text>Dietary Preferences</Text></Value>
-		<Value><Code>LSN</Code><Text>Learning Support Need</Text></Value>
 		<Value>
 				<Code>LSN-BEL</Code>
 				<Text xml:lang="en">Belonging (Participating and Contributing)</Text>
@@ -308,7 +307,7 @@
 
 	<CodeSet>
 		<Intro>
-		<p>Standard codes denoting the status of the Wellbeing Characteristic.</p>
+		<p>Code set denoting the status of the Wellbeing Characteristic.</p>
 		</Intro>
 		<ID>Wellbeing Characteristic Status</ID>
 		<Values>
@@ -816,7 +815,7 @@
 		<Values>
 				<Value><Code>NONE</Code><Text>None</Text></Value>
 				<Value><Code>OTHE</Code><Text>Other</Text></Value>
-				<Value><Code>PEER</Code><Text>Peer</Text></Value>
+				<Value><Code>PEER</Code><Text>Peer(s)</Text></Value>
 				<Value><Code>STAF</Code><Text>Staff</Text></Value>
 				<Value><Code>SUBS</Code><Text>Substitute</Text></Value>
 				<Value><Code>TEAC</Code><Text>Teacher</Text></Value>
@@ -830,28 +829,116 @@
 		</Intro>
 		<ID>Wellbeing Event Location</ID>
 		<Values>
-				<Value><Code>ARTR</Code><Text>Art Room</Text></Value>
-				<Value><Code>BATH</Code><Text>Bathroom / Restroom</Text></Value>
-				<Value><Code>BUSL</Code><Text>Bus Loading Zone</Text></Value>
-				<Value><Code>BUSS</Code><Text>Bus</Text></Value>
-				<Value><Code>CAFE</Code><Text>Cafeteria</Text></Value>
-				<Value><Code>CLAS</Code><Text>Classroom</Text></Value>
-				<Value><Code>COMM</Code><Text>Commons / Common Area</Text></Value>
-				<Value><Code>COMP</Code><Text>Computer Lab</Text></Value>
-				<Value><Code>GYMM</Code><Text>Gym</Text></Value>
-				<Value><Code>HALL</Code><Text>Hallway / Breezeway</Text></Value>
-				<Value><Code>LIBR</Code><Text>Library</Text></Value>
-				<Value><Code>LOCK</Code><Text>Locker Room</Text></Value>
-				<Value><Code>MUSC</Code><Text>Music Room</Text></Value>
-				<Value><Code>OFFC</Code><Text>Off-Campus</Text></Value>
-				<Value><Code>OFFI</Code><Text>Office</Text></Value>
-				<Value><Code>OTHE</Code><Text>Other Location</Text></Value>
-				<Value><Code>PARK</Code><Text>Parking Lot</Text></Value>
-				<Value><Code>PLAY</Code><Text>Playground</Text></Value>
-				<Value><Code>SPEC</Code><Text>Special Event / Assembly / Field Trip</Text></Value>
-				<Value><Code>STAD</Code><Text>Stadium</Text></Value>
-				<Value><Code>UNKN</Code><Text>Unknown</Text></Value>
-				<Value><Code>VOCA</Code><Text>Vocational Room</Text></Value>
+				<Value>
+					<Code>ARTR</Code>
+					<Text>Art Room</Text>
+					<Description>The area used for art classes and activities</Description>
+				</Value>
+				<Value>
+					<Code>BATH</Code>
+					<Text>Bathroom / Restroom</Text>
+					<Description>The area used for art classes and activities.</Description>
+				</Value>
+				<Value>
+					<Code>BUSL</Code>
+					<Text>Bus Loading Zone</Text>
+					<Description>The area used for bus loading and unloading.</Description>
+				</Value>
+				<Value>
+					<Code>BUSS</Code>
+					<Text>Bus</Text>
+					<Description>The area inside the bus.</Description>
+				</Value>
+				<Value>
+					<Code>CAFE</Code>
+					<Text>Cafeteria</Text>
+					<Description>The area used for breakfast and lunch. </Description>
+				</Value>
+				<Value>
+					<Code>CLAS</Code>
+					<Text>Classroom</Text>
+					<Description>Areas used for instructional purposes.</Description>
+				</Value>
+				<Value>
+					<Code>COMM</Code>
+					<Text>Commons / Common Area</Text>
+					<Description>Areas shared by students and staff for specific activities.</Description>
+				</Value>
+				<Value>
+					<Code>COMP</Code>
+					<Text>Computer Lab</Text>
+					<Description>Area used for group computer classes and activities.</Description>
+				</Value>
+				<Value>
+					<Code>GYMM</Code>
+					<Text>Gym</Text>
+					<Description>Areas used for physical education activities.</Description>
+				</Value>
+				<Value>
+					<Code>HALL</Code>
+					<Text>Hallway / Breezeway</Text>
+					<Description>Areas designated for passing from one activity/class to another.</Description>
+				</Value>
+				<Value>
+					<Code>LIBR</Code>
+					<Text>Library</Text>
+					<Description>The area designated for research and study.</Description>
+				</Value>
+				<Value>
+					<Code>LOCK</Code>
+					<Text>Locker Room</Text>
+					<Description>The area used by students to prepare for and completing physical education classes and/or sporting events.</Description>
+				</Value>
+				<Value>
+					<Code>MUSC</Code>
+					<Text>Music Room</Text>
+					<Description>The area used by students for music activities (e.g., music class, choir, band).</Description>
+				</Value>
+				<Value>
+					<Code>OFFC</Code>
+					<Text>Off-Campus</Text>
+					<Description>An area beyond the property boundary of the school and not affiliated with a school activity.</Description>
+				</Value>
+				<Value>
+					<Code>OFFI</Code>
+					<Text>Office</Text>
+					<Description>The area used by school staff for primary school business and management. </Description>
+				</Value>
+				<Value>
+					<Code>OTHE</Code>
+					<Text>Other Location</Text>
+					<Description>The location for problem behavior event occurs in a location that is not listed.</Description>
+				</Value>
+				<Value
+					><Code>PARK</Code>
+					<Text>Parking Lot</Text>
+					<Description>Areas used for parking vehicles during school hours.</Description>
+				</Value>
+				<Value>
+					<Code>PLAY</Code>
+					<Text>Playground</Text>
+					<Description>The outside area used for recess breaks</Description>
+				</Value>
+				<Value>
+					<Code>SPEC</Code>
+					<Text>Special Event / Assembly / Field Trip</Text>
+					<Description>Areas used for infrequent activities that occur in and/or out of school.</Description>
+				</Value>
+				<Value>
+					<Code>STAD</Code>
+					<Text>Stadium</Text>
+					<Description>Area used for athletic/special events. </Description>
+				</Value>
+				<Value>
+					<Code>UNKN</Code>
+					<Text>Unknown</Text>
+					<Description>The location of problem behavior event is not known or undetermined. </Description>
+				</Value>
+				<Value>
+					<Code>VOCA</Code>
+					<Text>Vocational Room</Text>
+					<Description>The area of a school used for vocational classes and activities.</Description>
+				</Value>
 		</Values>
   	</CodeSet>    <!-- Wellbeing Event Location -->
 
@@ -861,16 +948,16 @@
 		</Intro>
 		<ID>Wellbeing Event Minor Behaviour</ID>
 		<Values>
-				<Value><Code>DEFIA</Code><Text>Defiance</Text></Value>
-				<Value><Code>DISRE</Code><Text>Disrespect</Text></Value>
-				<Value><Code>DISRU</Code><Text>Disruption</Text></Value>
-				<Value><Code>DRESS</Code><Text>Dress Code Violation</Text></Value>
-				<Value><Code>INAPP</Code><Text>Inappropriate Language</Text></Value>
-				<Value><Code>OTHER</Code><Text>Other</Text></Value>
-				<Value><Code>PHYSI</Code><Text>Physical Contact / Physical Aggression</Text></Value>
-				<Value><Code>PROPE</Code><Text>Property Misuse</Text></Value>
-				<Value><Code>TARDY</Code><Text>Tardy</Text></Value>
-				<Value><Code>TECHN</Code><Text>Technology Violation</Text></Value>
+				<Value><Code>DEFIA</Code><Text>Defiance</Text><Description>Student engages in brief or low-intensity failure to follow directions or talks back.</Description></Value>
+				<Value><Code>DISRE</Code><Text>Disrespect</Text><Description>Student delivers low-intensity, socially rude or dismissive messages to adults or students.</Description></Value>
+				<Value><Code>DISRU</Code><Text>Disruption</Text><Description>Student engages in low-intensity, but inappropriate disruption.</Description></Value>
+				<Value><Code>DRESS</Code><Text>Dress Code Violation</Text><Description>Student wears clothing that is near, but not within, the dress code guidelines defined by the school/district.</Description></Value>
+				<Value><Code>INAPP</Code><Text>Inappropriate Language</Text><Description>Student engages in low-intensity instance of inappropriate language.</Description></Value>
+				<Value><Code>OTHER</Code><Text>Other</Text><Description>Student engages in any other minor problem behaviors that do not fall within the above categories.</Description></Value>
+				<Value><Code>PHYSI</Code><Text>Physical Contact / Physical Aggression</Text><Description>Student engages in non-serious, but inappropriate physical contact.</Description></Value>
+				<Value><Code>PROPE</Code><Text>Property Misuse</Text><Description>Student engages in low-intensity misuse of property.</Description></Value>
+				<Value><Code>TARDY</Code><Text>Tardy</Text><Description>Student arrives at class after the bell (or signal that class has started).</Description></Value>
+				<Value><Code>TECHN</Code><Text>Technology Violation</Text><Description>Student engages in non-serious, but inappropriate (as defined by school) use of cell phone, pager, music/video players, camera, and/or computer.</Description></Value>
 		</Values>
   	</CodeSet>    <!-- Wellbeing Event Minor Behaviour -->
 
@@ -880,32 +967,32 @@
 		</Intro>
 		<ID>Wellbeing Event Major Behaviour</ID>
 		<Values>
-				<Value><Code>ABUSI</Code><Text>Abusive Language / Inappropriate Language / Profanity</Text></Value>
-				<Value><Code>ARSON</Code><Text>Arson</Text></Value>
-				<Value><Code>BOMBT</Code><Text>Bomb Threat / False Alarm</Text></Value>
-				<Value><Code>DEFIA</Code><Text>Defiance / Insubordination / Non-Compliance</Text></Value>
-				<Value><Code>DISRE</Code><Text>Disrespect</Text></Value>
-				<Value><Code>DISRU</Code><Text>Disruption</Text></Value>
-				<Value><Code>DRESS</Code><Text>Dress Code Violation</Text></Value>
-				<Value><Code>FIGHT</Code><Text>Fighting</Text></Value>
-				<Value><Code>FORGE</Code><Text>Forgery / Theft / Plagarism</Text></Value>
-				<Value><Code>GANGA</Code><Text>Gang Affiliation Display</Text></Value>
-				<Value><Code>HARAS</Code><Text>Harassment</Text></Value>
-				<Value><Code>INADI</Code><Text>Inappropriate Display of Affection</Text></Value>
-				<Value><Code>INALO</Code><Text>Inappropriate Location / Out of Bounds Area</Text></Value>
-				<Value><Code>LYING</Code><Text>Lying / Cheating</Text></Value>
-				<Value><Code>OTHER</Code><Text>Other Behaviour</Text></Value>
-				<Value><Code>PHYSI</Code><Text>Physical Aggression</Text></Value>
-				<Value><Code>PROPE</Code><Text>Property Damage / Vandilism</Text></Value>
-				<Value><Code>SKIPC</Code><Text>Skip Class</Text></Value>
-				<Value><Code>TARDY</Code><Text>Tardy</Text></Value>
-				<Value><Code>TECHN</Code><Text>Technology Violation</Text></Value>
-				<Value><Code>TRUAN</Code><Text>Truancy</Text></Value>
-				<Value><Code>UPOAL</Code><Text>Use / Possession of Alcohol</Text></Value>
-				<Value><Code>UPOCO</Code><Text>Use / Possession of Combustibles</Text></Value>
-				<Value><Code>UPODR</Code><Text>Use / Possession of Drugs</Text></Value>
-				<Value><Code>UPOTO</Code><Text>Use / Possession of Tobacco</Text></Value>
-				<Value><Code>UPOWE</Code><Text>Use / Possession of Weapons</Text></Value>
+				<Value><Code>ABUSI</Code><Text>Abusive Language / Inappropriate Language / Profanity</Text><Description>Student delivers verbal messages that include swearing, name calling, or use of words in an inappropriate way.</Description></Value>
+				<Value><Code>ARSON</Code><Text>Arson</Text><Description>Student plans and/or participates in malicious burning of property.</Description></Value>
+				<Value><Code>BOMBT</Code><Text>Bomb Threat / False Alarm</Text><Description>Student delivers a message of possible explosive materials being on-campus, near campus, and/or pending explosion.</Description></Value>
+				<Value><Code>DEFIA</Code><Text>Defiance / Insubordination / Non-Compliance</Text><Description>Student engages in refusal to follow directions or talks back.</Description></Value>
+				<Value><Code>DISRE</Code><Text>Disrespect</Text><Description>Student delivers socially rude or dismissive messages to adults or students.</Description></Value>
+				<Value><Code>DISRU</Code><Text>Disruption</Text><Description>Student engages in behavior causing an interruption in a class or activity. Disruption includes sustained loud talk, yelling, or screaming; noise with materials; horseplay or roughhousing; and/or sustained out-of-seat behavior.</Description></Value>
+				<Value><Code>DRESS</Code><Text>Dress Code Violation</Text><Description>Student wears clothing that does not fit within the dress code guidelines practiced by the school/district.</Description></Value>
+				<Value><Code>FIGHT</Code><Text>Fighting</Text><Description>Student is involved in mutual participation in an incident involving physical violence.</Description></Value>
+				<Value><Code>FORGE</Code><Text>Forgery / Theft / Plagarism</Text><Description>Student is involved by being in possession of, having passed on, or being responsible for removing someone else's property; or the student has signed a person’s name without that person’s permission, or claims someone else’s work as their own.</Description></Value>
+				<Value><Code>GANGA</Code><Text>Gang Affiliation Display</Text><Description>Student uses gesture, dress, and/or speech to display affiliation with a gang.</Description></Value>
+				<Value><Code>HARAS</Code><Text>Harassment</Text><Description>The delivery of disrespectful messages in any format related to gender, ethnicity, sex, race, religion, disability, physical features, or other protected class. </Description></Value>
+				<Value><Code>INADI</Code><Text>Inappropriate Display of Affection</Text><Description>Student engages in inappropriate, consensual (as defined by school) verbal and/or physical gestures/contact, of a sexual nature to another student/adult.</Description></Value>
+				<Value><Code>INALO</Code><Text>Inappropriate Location / Out of Bounds Area</Text><Description>Student is in an area that is outside of school boundaries (as defined by school).</Description></Value>
+				<Value><Code>LYING</Code><Text>Lying / Cheating</Text><Description>Student delivers message that is untrue and/or deliberately violates rules.</Description></Value>
+				<Value><Code>OTHER</Code><Text>Other Behaviour</Text><Description></Description>Student engages in problem behavior not listed.</Value>
+				<Value><Code>PHYSI</Code><Text>Physical Aggression</Text><Description>Student engages in actions involving serious physical contact where injury may occur (e.g., hitting, punching, hitting with an object, kicking, hair pulling, scratching, etc.).</Description></Value>
+				<Value><Code>PROPE</Code><Text>Property Damage / Vandilism</Text><Description>Student participates in an activity that results in destruction or disfigurement of property.</Description></Value>
+				<Value><Code>SKIPC</Code><Text>Skip Class</Text><Description>Student leaves or misses class without permission.</Description></Value>
+				<Value><Code>TARDY</Code><Text>Tardy</Text><Description>Student is late (as defined by the school) to class or the start up of the school day (and Tardy is not considered a minor problem behavior in the school).</Description></Value>
+				<Value><Code>TECHN</Code><Text>Technology Violation</Text><Description>Student engages in inappropriate (as defined by school) use of cell phone, pager, music/video players, camera, and/or computer.</Description></Value>
+				<Value><Code>TRUAN</Code><Text>Truancy</Text><Description>Student receives an ‘unexcused absence’ for ½ day or more.</Description></Value>
+				<Value><Code>UPOAL</Code><Text>Use / Possession of Alcohol</Text><Description>Student is in possession of or is using alcohol.</Description></Value>
+				<Value><Code>UPOCO</Code><Text>Use / Possession of Combustibles</Text><Description>Student is/was in possession of substances/objects readily capable of causing bodily harm and/or property damage (matches, lighters, firecrackers, gasoline, lighter fluid).</Description></Value>
+				<Value><Code>UPODR</Code><Text>Use / Possession of Drugs</Text><Description>Student is in possession of or is using illegal drugs/substances or imitations.</Description></Value>
+				<Value><Code>UPOTO</Code><Text>Use / Possession of Tobacco</Text><Description>Student is in possession of or is using tobacco.</Description></Value>
+				<Value><Code>UPOWE</Code><Text>Use / Possession of Weapons</Text><Description>Student is in possession of knives (greater than 6 in., less than 6 in.) and guns (real or look alike), or other objects readily capable of causing bodily harm.</Description></Value>
 		</Values>
   	</CodeSet>    <!-- Wellbeing Event Major Behaviour -->
 
@@ -1169,7 +1256,7 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Code set denoting who can fund a learning support intervention.</p>
+			<p>Code set denoting who can provide a learning support intervention, e.g. who provides co-ordination, manages the contents etc. for the intervention.</p>
 		</Intro>
 		<ID>Learning Support Funded By</ID>
 		<Values>

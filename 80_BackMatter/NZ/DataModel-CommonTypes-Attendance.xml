@@ -292,13 +292,13 @@
 			<Type name="xs:normalizedString"/>
 		</Item>		        <!-- AttendanceNote -->
 		<Item>
-			<Element>PeriodNumber</Element>
+			<Element>PeriodName</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>The period number of this curriculum session.</p>
+				<p>The name of the period in  this curriculum session.</p>
 			</Description>
-			<Type name="xs:int"/>
-		</Item>		        <!-- AttendanceNote -->
+			<Type name="xs:normalizedString"/>
+		</Item>		        <!-- PeriodName -->
 
 			<xhtml:Example xmlns="" name="Period Attendance Example (Absence)">
 			<PeriodAttendance>

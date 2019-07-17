@@ -100,68 +100,56 @@
 		<ID>Organisation Type</ID>
 		<Values>
 			<Value>
-				<Code>CMP10</Code>
-				<Text>Composite School (Year 1-10)</Text>
-			</Value>    <!-- Composite (Year 1-10) -->
-			<Value>
-				<Code>CMP15</Code>
+				<Code>32</Code>
 				<Text>Composite School (Year 1-15)</Text>
 			</Value>    <!-- Composite (Year 1-15) -->
 			<Value>
-				<Code>CONTR</Code>
+				<Code>21</Code>
 				<Text>Contributing Primary (Year 1-6)</Text>
 			</Value>    <!-- Contributing Primary (Year 1-6) -->
 			<Value>
-				<Code>CORRE</Code>
+				<Code>34</Code>
 				<Text>The Correspondence School</Text>
 			</Value>    <!-- Correspondence School -->
 			<Value>
-				<Code>FULLP</Code>
+				<Code>20</Code>
 				<Text>Full Primary (Year 1-8)</Text>
 			</Value>    <!-- Full Primary (Year 1-8) -->
 			<Value>
-				<Code>INTER</Code>
+				<Code>22</Code>
 				<Text>Intermediate (Year 7-8)</Text>
 			</Value>    <!-- Intermediate (Year 7-8) -->
 			<Value>
-				<Code>RESTR</Code>
+				<Code>35</Code>
 				<Text>Restricted Composite School (Year 7-10)</Text>
 			</Value>    <!-- Restricted Composite (Year 7-10) -->
 			<Value>
-				<Code>JUNIO</Code>
-				<Text>Junior Secondary (Year 7-10)</Text>
-			</Value>    <!-- Junior Secondary (Year 7-10) -->
-			<Value>
-				<Code>SENIO</Code>
-				<Text>Senior Secondary (Year 11-15)</Text>
-			</Value>    <!-- Senior Secondary (Year 11-15) -->
-			<Value>
-				<Code>SECSE</Code>
+				<Code>30</Code>
 				<Text>Secondary School (Year 7-15)</Text>
 			</Value>    <!-- Secondary (Year 7-15) -->
 			<Value>
-				<Code>SECNI</Code>
+				<Code>40</Code>
 				<Text>Secondary School (Year 9-15)</Text>
 			</Value>    <!-- Secondary (Year 9-15) -->
 			<Value>
-				<Code>SPECI</Code>
+				<Code>23</Code>
 				<Text>Special School</Text>
 			</Value>    <!-- Special School -->
 			<Value>
-				<Code>TEENPA</Code>
+				<Code>41</Code>
 				<Text>Teen Parent Unit (Year 9-15)</Text>
 			</Value>    <!-- Teen Parent Unit -->
 			<Value>
-				<Code>ACTIV</Code>
+				<Code>997</Code>
 				<Text>Activity Centre</Text>
 			</Value>    <!-- Activity Centre -->
 
 			<Value>
-				<Code>COLKA</Code>
+				<Code>998</Code>
 				<Text>Community of Learning | Kāhui Ako</Text>
 			</Value>
 			<Value>
-				<Code>MOELO</Code>
+				<Code>999</Code>
 				<Text>Ministry of Education Local Office</Text>
 			</Value>
 		</Values>

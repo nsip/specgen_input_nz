@@ -86,7 +86,7 @@
     <Description>
       <p>The learning area the student activity the student is participating in relates to.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsLearningArea"/>
+    <Type ref="CodeSets" name="NZCodeSetsLearningAreaType"/>
   </Item>    <!-- LearningArea -->    
 
   <Item>
