@@ -65,7 +65,7 @@
 			<Value>
 				<Code>0</Code>
 				<Text>Year 0</Text>
-				<Description>Only applies to Funding Year level</Description>
+				<Description>Only applies to Funding Year Level</Description>
 			</Value>
 			<Value>
 				<Code>1</Code>
@@ -219,7 +219,7 @@
 			<Value>
 				<Code>ProviderCourse</Code>
 				<Text>ProviderCourse</Text>
-				<Description>A Provider defined Course that Students enrol in, and may be assessed for,
+				<Description>A Provider defined course that Students enrol in, and may be assessed for,
 					and achieve passes in.
 				</Description>
 			</Value>
@@ -293,7 +293,7 @@
 			<Value>
 				<Code>StudentAttendanceTimeList</Code>
 				<Text>StudentAttendanceTimeList</Text>
-				<Description>Records detail about the attendance spans for a single Student at a single Provider
+				<Description>Records detail about the attendance spans for a single student at a single provider
 					during a single day.</Description>
 			</Value>
 			<Value>

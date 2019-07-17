@@ -5,7 +5,7 @@
 	
 	<CodeSet>
 		<Intro>
-			<p>Codes denoting the two Curricula used in New Zealand.
+			<p>Codes denoting the two curricula used in New Zealand.
 			</p>
 		</Intro>
 		<ID>Curriculum</ID>
@@ -410,7 +410,7 @@
 		<Intro>
 			<p>Codes denoting the period of time that a Curriculum Progress Report applies to.</p>
 		</Intro>
-		<ID>Curriculum Progress Report Time Frame</ID>
+		<ID>Curriculum Progress Report Timeframe</ID>
 		<Values>
 			<Value>
 				<Code>END</Code>
@@ -433,7 +433,7 @@
 				<Text>Ongoing / As Available / Ad-Hoc</Text>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- CurriculumProgressReportTimeFrame -->
+	</CodeSet>    <!-- CurriculumProgressReportTimeframe -->
 
 	<CodeSet>
 		<Intro>

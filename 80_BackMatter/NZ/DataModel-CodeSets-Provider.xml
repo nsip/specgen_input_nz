@@ -176,7 +176,7 @@
 			<Value>
 				<Code>FBK</Code>
 				<Text>Facebook</Text>
-				<Description>Facebook Page</Description>
+				<Description>Facebook page</Description>
 			</Value>     <!-- Facebook -->
 		</Values>
 	</CodeSet>    <!-- Communication Channel Type -->
@@ -257,7 +257,7 @@
 			</Value>
 			<Value>
 				<Code>CE</Code>
-				<Text>CohortEntry</Text>
+				<Text>Cohort Entry</Text>
 				<Description>Indicates that new starters will start in a cohort group
 					 only on specific notified dates after their 5th birthday.</Description>
 			</Value>
@@ -265,7 +265,7 @@
 	</CodeSet>	  <!-- Enacted Policy -->
 	<CodeSet>
 		<Intro>
-			The authority by which the Provider is authorised to provide education services.
+			The authority by which the provider is authorised to provide education services.
 			Describes the ownership/operation or registration status of an Educational institution.
 		</Intro>
 		<ID>Provider Authority</ID>
@@ -273,7 +273,7 @@
 			<Value>
 				<Code>STATE</Code>
 				<Text>State</Text>
-				<Description>Also known as 'State:Non-integrated'</Description>
+				<Description>Also known as 'State: Non-Integrated'</Description>
 			</Value>
 			<Value>
 				<Code>STINT</Code>
@@ -418,7 +418,7 @@
 			</Value>
 			<Value>
 				<Code>PC</Code>
-				<Text>Play Centre</Text>
+				<Text>Playcentre</Text>
 			</Value>
 			<Value>
 				<Code>KR</Code>
@@ -723,7 +723,7 @@
 			</Value>    <!-- Subject Class -->
 			<Value>
 				<Code>HR</Code>
-				<Text>Homeroom</Text>
+				<Text>Home Room</Text>
 				<Description>The TeachingGroup is a class used for both teaching and roll taking.</Description>
 			</Value>    <!-- Homeroom -->
 		</Values>
