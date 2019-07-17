@@ -185,7 +185,7 @@
 			<Value>
 				<Code>X</Code>
 				<Text>Expulsion (for Students Aged Less Than 16)</Text>
-				<Description>Only applies to students at least 16 years old</Description>
+				<Description>Only applies to students at least 16 years old.</Description>
 			</Value>
 			<Value>
 				<Code>L</Code>

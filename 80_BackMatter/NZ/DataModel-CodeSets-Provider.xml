@@ -266,7 +266,7 @@
 	<CodeSet>
 		<Intro>
 			The authority by which the provider is authorised to provide education services.
-			Describes the ownership/operation or registration status of an Educational institution.
+			Describes the ownership/operation or registration status of an educational institution.
 		</Intro>
 		<ID>Provider Authority</ID>
 		<Values>

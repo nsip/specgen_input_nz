@@ -228,29 +228,29 @@
 		<Value><Code>MAO</Code><Text>Allergies - other</Text></Value>
 		<Value><Code>DIET</Code><Text>Dietary Preferences</Text></Value>
 		<Value>
-				<Code>LSN-BEL</Code>
-				<Text xml:lang="en">Belonging (Participating and Contributing)</Text>
-				<Text xml:lang="mi">Mana whenua</Text>
+			<Code>LSN-BEL</Code>
+			<Text xml:lang="en">Belonging (Participation and Contributing)</Text>
+			<Text xml:lang="mi">Mana whenua</Text>
 		</Value>
-				<Value>
-				<Code>LSN-COM</Code>
-				<Text xml:lang="en">Communication (Using Language and Text)</Text>
-				<Text xml:lang="mi">Mana reo</Text>
+		<Value>
+			<Code>LSN-COM</Code>
+			<Text xml:lang="en">Communication (Using Language and Text)</Text>
+			<Text xml:lang="mi">Mana reo</Text>
 		</Value>
-				<Value>
-				<Code>LSN-CON</Code>
-				<Text xml:lang="en">Contribution (Relating to Others)</Text>
-				<Text xml:lang="mi">Mana tangata</Text>
+		<Value>
+			<Code>LSN-CON</Code>
+			<Text xml:lang="en">Contribution (Relating to Others)</Text>
+			<Text xml:lang="mi">Mana tangata</Text>
 		</Value>
-				<Value>
-				<Code>LSN-EXP</Code>
-				<Text xml:lang="en">Exploration (Thinking)</Text>
-				<Text xml:lang="mi">Mana aotūroa</Text>
+		<Value>
+			<Code>LSN-EXP</Code>
+			<Text xml:lang="en">Exploration (Thinking)</Text>
+			<Text xml:lang="mi">Mana aotūroa</Text>
 		</Value>
-				<Value>
-				<Code>LSN-WEL</Code>
-				<Text xml:lang="en">Wellbeing (Managing Self)</Text>
-				<Text xml:lang="mi">Mana atua</Text>
+		<Value>
+			<Code>LSN-WEL</Code>
+			<Text xml:lang="en">Wellbeing (Managing Self)</Text>
+			<Text xml:lang="mi">Mana atua</Text>
 		</Value>
 		<Value><Code>MAIM</Code><Text>Auto-immune/Immune Disorders</Text></Value>
 		<Value><Code>MRD</Code><Text>Respiratory Disorder</Text></Value>
@@ -272,7 +272,7 @@
 		<Value><Code>MOP</Code><Text>Optical/ Vision Disorder</Text></Value>
 		<Value><Code>M-OTHER</Code><Text>Medical Other</Text></Value>
 		<Value><Code>D-OTHER</Code><Text>Disability Other</Text></Value>
-		<Value><Code>S-Other</Code><Text>Special Needs Other</Text></Value>
+		<Value><Code>S-OTHER</Code><Text>Special Needs Other</Text></Value>
 		<Value><Code>OTHER</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>	  <!-- Wellbeing Characteristic Category -->
@@ -287,31 +287,6 @@
 			<Value><Code>OTH</Code><Text>Other</Text></Value>
 			<Value><Code>MDC</Code><Text>Medical</Text></Value>
 			<Value><Code>LSN</Code><Text>Learning Support Need</Text></Value>
-			<Value>
-				<Code>LSN-BEL</Code>
-				<Text xml:lang="en">Belonging (Participating and Contributing)</Text>
-				<Text xml:lang="mi">Mana whenua</Text>
-			</Value>
-			<Value>
-				<Code>LSN-COM</Code>
-				<Text xml:lang="en">Communication (Using Language and Text)</Text>
-				<Text xml:lang="mi">Mana reo</Text>
-			</Value>
-			<Value>
-				<Code>LSN-CON</Code>
-				<Text xml:lang="en">Contribution (Relating to Others)</Text>
-				<Text xml:lang="mi">Mana tangata</Text>
-			</Value>
-			<Value>
-				<Code>LSN-EXP</Code>
-				<Text xml:lang="en">Exploration (Thinking)</Text>
-				<Text xml:lang="mi">Mana aotūroa</Text>
-			</Value>
-				<Value>
-				<Code>LSN-WEL</Code>
-				<Text xml:lang="en">Wellbeing (Managing Self)</Text>
-				<Text xml:lang="mi">Mana atua</Text>
-			</Value>			
 			<Value><Code>ALG</Code><Text>Allergy</Text></Value>
 			<Value><Code>DPR</Code><Text>Dietary Preference</Text></Value>
 		</Values>
@@ -552,7 +527,7 @@
 				<Value><Code>M9A</Code><Text>Cyberbullying</Text></Value>
 				<Value><Code>M9B</Code><Text>Hacking</Text></Value>
 				<Value><Code>M9C</Code><Text>Breach of Department acceptable use agreement</Text></Value>
-				<Value><Code>M9D</Code><Text>Breach of Students Online policy</Text></Value>
+				<Value><Code>M9D</Code><Text>Breach of Students Online Policy</Text></Value>
 				<Value><Code>M9E</Code><Text>Persistent personal use of a MED when not permitted</Text></Value>
 				<Value><Code>M9F</Code><Text>Inappropriate audio or video recording</Text></Value>
 				<Value><Code>M9G</Code><Text>Inappropriate uploading of text, images or audio</Text></Value>
@@ -1281,7 +1256,7 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Code set denoting who can fund a learning support intervention, e.g. who provides co-ordination, manages the contents etc. for the intervention.</p>
+			<p>Code set denoting who can fund a learning support intervention, i.e. who provides co-ordination, manages the contents etc. for the intervention.</p>
 		</Intro>
 		<ID>Learning Support Funded By</ID>
 		<Values>
