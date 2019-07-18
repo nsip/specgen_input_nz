@@ -21,7 +21,7 @@
 
   <Item>
     <Element>WellbeingEventRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this WellbeingEvent.</p>
@@ -61,7 +61,7 @@
   
   <Item>
     <Element>PhysicalRestraint</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>Object reference tothe StudentPhysicalRestraint if it was administered to the student as part of this WellbeingEvent.</p>
@@ -86,12 +86,12 @@
     <Description>
       <p>A list of the possible motivations that triggered the event.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type ref="CommonTypes" name="PossibleMotivationListType"></Type>
   </Item>    <!-- PossibleMotivationList -->
   
   <Item>
     <Element>EventCategoryClass</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>High</privacyRating>
     <Description>
       <p>Category of WellbeingEvent.</p>
@@ -161,7 +161,7 @@
   
   <Item>
     <Element>EventDate</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>High</privacyRating>
     <Description>
       <p>The calendar date on which this WellbeingEvent occured.</p>
@@ -191,7 +191,7 @@
 
   <Item>
     <Element>EventTimePeriod</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>High</privacyRating>
     <Description>
       <p>Time period of when the event occurred.</p>
@@ -211,7 +211,7 @@
   
   <Item>
     <Element>PersonInvolvementList</Element>
-    <Characteristics>C</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>High</privacyRating>
     <Description>
       <p>List of People involved in the Wellbeing event.  Mandatory if more people than the student to which this event occurs is involved.</p>

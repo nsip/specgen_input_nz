@@ -1760,7 +1760,7 @@
 		</Item>    <!-- TimeStamp -->
 		<Item>
 			<Element>Provider</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>Generic object reference to the provider (eg school) that provided the verification.</p>

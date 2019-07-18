@@ -21,7 +21,7 @@
 
   <Item>
     <Element>WellbeingCharacteristicRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this WellbeingCharacteristic.</p>
@@ -51,7 +51,7 @@
 
   <Item>
     <Element>RecordingProvider</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the provider which recorded this Wellbeing Characteristic.</p>

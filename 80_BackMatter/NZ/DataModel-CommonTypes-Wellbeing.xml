@@ -109,7 +109,7 @@
 		</Item> 
 		<Item>
 			<Element>StartDate</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>The date from which the student or student caretaker consented to the medicine being administered to the student by a particular individual.</p>
 			</Description>

@@ -23,7 +23,7 @@
 
 	<Item>
 		<Element>StudentProviderEnrolmentRefId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The SIF GUID for the student provider enrolment.</p>
@@ -76,7 +76,7 @@
 
 	<Item>
 		<Element>ExitDate</Element>
-		<Characteristics>C</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The date of a student’s last attendance at the provider.</p>
