@@ -722,7 +722,6 @@
 	<CommonElement name="LanguageBaseType" type="true" dm="true">
 		<Item>
 			<Element>LanguageBaseType</Element>
-			<Characteristics>MR</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>A language that an individual uses to communicate.</p>
@@ -762,7 +761,7 @@
 			<Type ref="CommonTypes" name="LanguageProficiencyListType"/>
 		</Item>    <!-- ProficiencyList -->
 	</CommonElement>
-		<CommonElement name="LanguageProficiencyListType" type="true" dm="true">
+	<CommonElement name="LanguageProficiencyListType" type="true" dm="true">
 		<Item>
 			<Element>LanguageProficiencyListType</Element>
 			<Description>
@@ -1003,7 +1002,6 @@
 	<CommonElement name="ContactFlagsType" type="true" dm="true">
 		<Item>
 			<Element>ContactFlagsType</Element>
-			<Characteristics>C</Characteristics>
 			<Description>
 				<p>Contains Yes/No characteristics of the contact person's role with the student.</p>
 			</Description>
@@ -1173,7 +1171,6 @@
 	<CommonElement name="HouseholdContactInfoType" type="true" dm="true">
 		<Item>
 			<Element>HouseholdContactInfoType</Element>
-			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>Common element used to supply information about a particular household a person is a member of.</p>
 			</Description>
@@ -1993,7 +1990,8 @@
 		<Item>
 			<Element>PersonDocumentRoleType</Element>
 			<Description>
-				<p>A person associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+				<p>A person associated to a document and their role in
+				relation to it, e.g. author, owner, reviewer, subject of.</p>
 			</Description>
 			<Type complex="extension" name="ObjectReferenceType"/>
 		</Item>
@@ -2001,7 +1999,9 @@
 			<Element>Role</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>A code set denoting the role a person performs in relation to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+				<p>A code set denoting the role a person performs in relation
+				to a document and their role in relation to it, e.g. author,
+				owner, reviewer, subject of.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsDocumentRoleType"/>
 		</Item>

@@ -52,13 +52,10 @@
 	</CommonElement>
 	<CommonElement name="AddressType" type="true" dm="true">
 		<Intro>
-			<p>
-		This element contains address data
-		</p>
+			<p>This element contains address data</p>
 		</Intro>
 		<Item>
 			<Element>AddressType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
 				<p>This element contains address data.</p>
 			</Description>
@@ -203,9 +200,9 @@
 	<CommonElement name="AddressStreetType" type="true" dm="true">
 		<Item>
 			<Element>AddressStreetType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
-				<p>The street element is a complex element and breaks the street down into several parts. (Allow for PO Box here)</p>
+				<p>The street element is a complex element and breaks the
+				street down into several parts. (Allow for PO Box here)</p>
 			</Description>
 		</Item>
 		<Item>
@@ -237,9 +234,8 @@
 		<Item>
 			<Element>GridLocationType</Element>
 			<Description>
-				<p>
-			This element contains a map location. The GridLocation element is utilized within the Address element.
-		</p>
+				<p>This element contains a map location. The GridLocation
+				element is utilized within the Address element.</p>
 			</Description>
 		</Item>
 		<Item>
@@ -296,7 +292,6 @@
 	<CommonElement name="CountryType" type="true" dm="true">
 		<Item>
 			<Element>CountryType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A country is a geopolitical entity recognised by the
 				New Zealand government. The term country may include:</p>
@@ -372,7 +367,6 @@
 		</Intro>
 		<Item>
 			<Element>LocationType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
 				<p>This element contains data about a geographical location.</p>
 			</Description>
@@ -510,7 +504,6 @@
 	<CommonElement name="StatisticalAreaType" type="true" dm="true">
 		<Item>
 			<Element>StatisticalAreaType</Element>
-			<Characteristics>OR</Characteristics>
 			<Description>
 				<p>A particular statistical area defined by Statistics New Zealand.</p>
 			</Description>

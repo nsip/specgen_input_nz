@@ -156,7 +156,7 @@
 		</Item>
 		<Item>
 			<Element>SchoolEnrolment</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Defines information related to a student's enrolment at a school education Provider 
 					for a particular academic year (or part thereof)</p>
@@ -476,12 +476,14 @@
 		<Item>
 			<Element>AcademicAttainmentGoalListType</Element>
 			<Description>
-				<p>The academic attainment goals of the student when they enrolment, e.g. they wish to achieve a certain qualification.</p>
+				<p>The academic attainment goals of the student when they
+				enrolment, e.g. they wish to achieve a certain
+				qualification.</p>
 			</Description>
 		</Item>
 		<Item>
 			<Element>AttainmentGoal</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>The student's academic attainment goal at the time of enrolment.</p>
 			</Description>
@@ -599,7 +601,7 @@
 		</Item>
 		<Item>
 			<Element>StudentCourseChoice</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>An individual Course choice that can be made, or has been made by a Student.</p>
 			</Description>
@@ -627,7 +629,6 @@
 	<CommonElement name="StudentCourseChoiceType" type="true" dm="true">
 		<Item>
 			<Element>StudentCourseChoiceType</Element>
-			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>An individual Course choice that can be made, or has been made by a Student.</p>
 			</Description>
@@ -760,7 +761,7 @@
 		</Item>
 		<Item>
 			<Element>Intervention</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A reference to a Wellbeing Event, Response &amp; Appeal data object,
 					 that records the process of terminating a students enrolment.</p>
