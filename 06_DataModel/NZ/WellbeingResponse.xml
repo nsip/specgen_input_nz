@@ -60,7 +60,7 @@
   
   <Item>
     <Element>PublishedDate</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>The calendar date on which this WellbeingResponse was published.</p>
@@ -70,7 +70,7 @@
   
   <Item>
     <Element>StartDate</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The date the WellbeingResponse period commenced.</p>
@@ -90,7 +90,7 @@
 
   <Item>
     <Element>ResponseStatus</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>High</privacyRating>
     <Description>
       <p>The current status of the response to the wellbeing event.</p>
@@ -100,7 +100,7 @@
 
   <Item>
     <Element>ResponseCategory</Element>
-    <Characteristics>C</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>High</privacyRating>
     <Description>
       <p>Category of WellbeingResponse.</p>

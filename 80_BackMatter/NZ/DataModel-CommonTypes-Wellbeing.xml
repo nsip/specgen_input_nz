@@ -362,7 +362,7 @@
 		</Item>
 		<Item>
 			<Element>WithdrawalStartDate</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The start date of the withdrawal.</p>
 			</Description>
@@ -370,7 +370,7 @@
 		</Item>
 		<Item>
 			<Element>WithdrawalEndDate</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The end date of the withdrawal.</p>
 			</Description>
@@ -420,7 +420,7 @@
 		</Item> 
 		<Item>
 			<Element>SuspensionCategory</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Categorisation of a Suspension record to fall into, In School, Withdrawal, Expulsion/Exclusion etc.  In School is usually NOT formally recognised by a jurisdiction but managed at a school level where the student is temporarily withdrawn from normal classes. Expulsion/Exclusion may mean the student’s attendance at a school is terminated.
 				</p>
@@ -486,7 +486,7 @@
 		</Item> 
 		<Item>
 			<Element>DetentionCategory</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Categorisation of a Detention.</p>
 			</Description>
@@ -496,7 +496,7 @@
 			<Element>DetentionDate</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p></p>
+				<p>The date of the detention.</p>
 			</Description>
 			<Type name="xs:date"></Type>  
 		</Item>
