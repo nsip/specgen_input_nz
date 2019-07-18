@@ -835,6 +835,47 @@
 			</EmailList>
 		</xhtml:Example>
 	</CommonElement>
+	<CommonElement name="EmailType" type="true" dm="true">
+		<Item>
+			<Element>EmailType</Element>
+			<Description>
+				<p>
+					This element represents an e-mail address of one of a
+					number of types and occurs in objects such as
+					StudentPersonal, StaffPersonal,
+					StudentContactPersonal, etc.
+				</p>
+			</Description>
+			<Type complex="extension" name="BaseCommunicationChannelType"/>
+		</Item>
+		<Item>
+			<Element>Type</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>A Code denoting how the owner of the e-mail address describes it.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsEmailTypeType"/>
+		</Item>    <!-- Type -->
+		<Item>
+			<Element>Address</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The actual email address.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>   <!-- Address -->
+		<xhtml:Example xmlns="" name="NZ Email Type Example">
+			<Email>
+				<Notes>Not on Thursdays</Notes>
+				<Preference>1</Preference>
+				<Usage>INT</Usage>
+				<Type>WORK</Type>
+				<Address>contact@sifinfo.org</Address>
+			</Email>
+		</xhtml:Example>
+	</CommonElement>
+	
 	<CommonElement name="PhoneNumberListType" type="true" dm="true">
 		<Item>
 			<Element>PhoneNumberListType</Element>
@@ -867,61 +908,23 @@
 			</PhoneNumberList>
 		</xhtml:Example>
 	</CommonElement>
-
-	<CommonElement name="EmailType" type="true" dm="true">
-		<Item>
-			<Element>EmailType</Element>
-			<Description>
-				<p>
-					This element represents an e-mail address of one of a
-					number of types and occurs in objects such as
-					StudentPersonal, StaffPersonal,
-					StudentContactPersonal, etc.
-				</p>
-			</Description>
-			<Type complex="extension" name="BaseCommunicationChannelType"/>
-		</Item>
-		<Item>
-			<Element>Type</Element>
-			<Characteristics>M</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Description>
-				<p>A Code denoting how the owner of the e-mail address describes it.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsEmailTypeType"/>
-		</Item>    <!-- Type -->
-		<Item>
-			<Element>Address</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>The actual email address.</p>
-			</Description>
-			<Type name="xs:normalizedString"/>
-		</Item>   <!-- Address -->
-		<xhtml:Example xmlns="" name="NZ Email Type Example">
-			<Email>
-				<Notes>Not on Thursdays</Notes>
-				<Preference>1</Preference>
-				<Usage>INT</Usage>
-				<Type>WORK</Type>
-				<Address>contact@sifinfo.org</Address>
-			</Email>
-		</xhtml:Example>
-	</CommonElement>
 	<CommonElement name="PhoneNumberType" type="true" dm="true">
 		<Item>
 			<Element>PhoneNumberType</Element>
 			<Description>
-				<p>This element represents a phone number and occurs within objects such as StudentPersonal, StaffPersonal, etc.</p>
+				<p>This element represents a phone number and occurs within
+				objects such as StudentPersonal, StaffPersonal, etc.</p>
 			</Description>
 			<Type complex="extension" name="BaseCommunicationChannelType"/>
 		</Item>
 		<Item>
 			<Element>Type</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
-				<p>Code that specifies what type of phone number this is.  Note: A subset of valid values may be specified in data objects.</p>
+				<p>Code that specifies what type of phone number this is.
+				Note: A subset of valid values may be specified in data
+				objects.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsTelephoneNumberTypeType"/>
 		</Item>     <!-- Type -->
@@ -967,6 +970,7 @@
 			</PhoneNumber>
 		</xhtml:Example>
 	</CommonElement>
+	
 	<CommonElement name="RelationshipType" type="true" dm="true">
 		<Item>
 			<Element>RelationshipType</Element>
@@ -1298,7 +1302,7 @@
 		</Item>   <!-- MinistryOfEducationId -->	
 		<Item>
 			<Element>AddressList</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
 				<p>The set of postal and other addresses that the Organisation uses</p>
@@ -1307,7 +1311,7 @@
 		</Item>   <!-- AddressList -->
 		<Item>
 			<Element>CommunicationChannelList</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>A list of one or more methods of communication with the organisation</p>
@@ -1316,7 +1320,7 @@
 		</Item>   <!-- CommunicationChannelList -->
 		<Item>
 			<Element>ContactList</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>A list of one or more cotact persons related to the organisation</p>
@@ -1334,7 +1338,7 @@
 		</Item>   <!-- EducationRegion -->
 		<Item>
 			<Element>EmailList</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
 				<p>The set of contact email addresses that the Organisation uses</p>
@@ -1363,7 +1367,7 @@
 		</Item>   <!-- EntityOpen -->
 		<Item>
 			<Element>LocationList</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>A list of one or more locations, from which the
@@ -1382,7 +1386,7 @@
 		</Item>   <!-- Name -->
 		<Item>
 			<Element>PhoneNumberList</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
 				<p>The set of contact phone numbers that the Organisation uses</p>
@@ -1391,7 +1395,7 @@
 		</Item>   <!-- PhoneNumberList -->
 		<Item>
 			<Element>RelatedOrganisationList</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>A list of other organisations that are related to the Provider</p>
@@ -1400,7 +1404,7 @@
 		</Item>   <!-- RelatedOrganisationList -->
 		<Item>
 			<Element>OperationalStatus</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>Current status of the Provider</p>
@@ -1662,7 +1666,7 @@
 		</Item>
 		<Item>
 			<Element>StartDate</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>The start date of the relationship between the two organisations</p>

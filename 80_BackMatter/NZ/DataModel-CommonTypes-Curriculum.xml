@@ -191,16 +191,8 @@
 			<Description>
 				<p>A member of a list of related LearningStandard references.</p>
 			</Description>
+			<Type complex="extension" name="ObjectReferenceType"/>
 		</Item>
-		<Item>
-			<Element>LearningStandard</Element>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>Generic object reference to a related LearningStandard</p>
-			</Description>
-			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>    <!-- LearningStandardRefId -->
 		<Item>
 			<Element>Relationship</Element>
 			<Characteristics>M</Characteristics>

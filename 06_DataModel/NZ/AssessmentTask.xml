@@ -22,7 +22,7 @@
 
   <Item>
     <Element>AssessmentTaskRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A GUID that identifies an instance of this object. </p>
@@ -31,7 +31,7 @@
   </Item>    <!-- AssessmentTaskRefId -->
   <Item>
     <Element>AssessmentTaskLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>LocalId that identifies the assessment task, if provided by the source system.</p>
@@ -39,7 +39,7 @@
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>    <!-- AssessmentTaskLocalId -->
 
-  <Item>
+  <Item>.
     <Element>AssessmentName</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -93,7 +93,7 @@
 
   <Item>
     <Element>StaffInvolvedList</Element>    
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A list of the staff involved and their role in relation to the assessment task, e.g. the moderator, the marker.</p>
@@ -113,7 +113,7 @@
 
   <Item>
     <Element>Description</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The text-based description of the assignment.</p>
@@ -123,7 +123,7 @@
 
   <Item>
     <Element>PointsPossible</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The points possible on the assignment.</p>

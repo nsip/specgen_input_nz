@@ -22,7 +22,7 @@
 
   <Item>
     <Element>AcademicDepartmentRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this AcademicDepartment.</p>

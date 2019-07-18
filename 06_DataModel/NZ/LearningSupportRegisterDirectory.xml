@@ -23,17 +23,16 @@
   </Item>
   <Item>
     <Element>LearningSupportRegisterDirectoryRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>Unique identifier (GUID) that uniquely identifies this Learning Support Register Directory record.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>    <!-- LearningSupportRegisterDirectoryRefId -->
-
   <Item>
     <Element>LearningSupportRegisterDirectoryLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>LocalId for the Learning Support Register Directory record, if made available by the source system.</p>
@@ -43,17 +42,16 @@
 
   <Item>
     <Element>AreaOfNeed</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>The area of need the learning support intervention is addressing.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicCategoryType"/>
-  </Item>    <!-- Need -->
-
+  </Item>    <!-- AreaOfNeed -->
   <Item>
     <Element>Need</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>Code denoting the need the learning support intervention is addressing.</p>
@@ -63,7 +61,7 @@
 
   <Item>
     <Element>Intervention</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>The learning support intervention that addresses the area of need.</p>
@@ -83,17 +81,19 @@
 
   <Item>
     <Element>Resource</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Code denoting the resource that is required to support the learning support intervention in addressing the area of need.</p>
+      <p>Code denoting the resource that is required to support the
+      learning support intervention in addressing the area of
+      need.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsLearningSupportResourceType"/>
   </Item>    <!-- Resource -->
 
   <Item>
     <Element>ResourcesOtherDesc</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>Free text description describing the resources required for the intervention. Only 
@@ -104,7 +104,7 @@
 
   <Item>
     <Element>FundedBy</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>Code denoting who can fund a learning support intervention.</p>
@@ -114,7 +114,7 @@
 
   <Item>
     <Element>FundedByOtherDesc</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>Free text description of who is funding the intervention. Only populated if a
@@ -125,7 +125,7 @@
 
   <Item>
     <Element>ProvidedBy</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>Code denoting who can provide a learning support intervention.</p>
@@ -135,7 +135,7 @@
 
   <Item>
     <Element>ProvidedByOtherDesc</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>Free text description of who is providing the intervention. Only populated if a
@@ -146,7 +146,7 @@
 
   <Item>
     <Element>DeliveredByDesc</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>Free text description of who is delivered the intervention on behalf of the Provider.</p>
@@ -156,7 +156,7 @@
 
   <Item>
     <Element>PreRequisiteDesc</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>Free text description of any pre-requisites required before the intervention can be implemented.</p>
@@ -164,9 +164,9 @@
     <Type name="xs:normalizedString"/>
   </Item>    <!-- PreRequisiteDesc -->
   
-  <Item>
+  <Item>.
     <Element>InterventionStatus</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>Code denoting the status of a learning support intervention, e.g. In Development, Active.</p>
