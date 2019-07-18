@@ -20,17 +20,16 @@
 
   <Item>
     <Element>DocumentRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this Document.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>    <!-- DocumentRefId -->
-
   <Item>
     <Element>DocumentLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Local identifier for the Document, if provided by the source system.</p>
@@ -60,7 +59,7 @@
 
   <Item>
     <Element>DocumentTitle</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Document's full title.</p>

@@ -5,7 +5,7 @@
 			xmlns:xhtml="http://www.w3.org/1999/xhtml"
 			xmlns:json="http://json.org/"
 			
-            xmlns="http://sifassociation.org/SpecGen">
+      xmlns="http://sifassociation.org/SpecGen">
   	<Key>OrganisationRefId</Key>
   	<EventsReported>true</EventsReported>
 	<Item>
@@ -20,7 +20,7 @@
 	</Item>
 	<Item>
 		<Element>OrganisationRefId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The SIF GUID used by systems to identify the organisation.</p>

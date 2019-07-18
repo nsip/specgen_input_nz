@@ -32,7 +32,6 @@
 	<CommonElement name="StaffListStaffMemberType" type="true" dm="true">
 		<Item>
 			<Element>StaffListStaffMemberType</Element>
-			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>The individual staff member as a member of the StaffList and their role.</p>
 			</Description>

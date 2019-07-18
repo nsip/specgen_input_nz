@@ -62,7 +62,7 @@
 		</Item>
 		<Item>
 			<Element>Type</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Code defining the class of the address: Urban, Rural, Delivery Service or Foreign.</p>
 			</Description>
@@ -94,7 +94,7 @@
 		</Item>     <!-- Suburb -->
 		<Item>
 			<Element>City</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The city part of the address.</p>
 			</Description>
@@ -118,7 +118,7 @@
 		</Item>     <!-- Country -->
 		<Item>
 			<Element>PostalCode</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The ZIP/postal code.</p>
 			</Description>
