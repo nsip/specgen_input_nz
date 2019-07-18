@@ -156,7 +156,7 @@
 		</Item>
 		<Item>
 			<Element>SchoolEnrolment</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>Defines information related to a student's enrolment at a school education Provider 
 					for a particular academic year (or part thereof)</p>
@@ -601,7 +601,7 @@
 		</Item>
 		<Item>
 			<Element>StudentCourseChoice</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>An individual Course choice that can be made, or has been made by a Student.</p>
 			</Description>
