@@ -20,7 +20,7 @@
 		</Item>
 		<Item>
 			<Element>SubjectArea</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description/>
 			<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
 		</Item>      <!-- SubjectArea -->
@@ -42,7 +42,7 @@
 		</Item>
 		<Item>
 			<Element>StaffSubject</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>This element contains Staff subjects they are eligible to teach together with the teaching preference.</p>
 			</Description>
@@ -53,7 +53,7 @@
 	<CommonElement name="StaffSubjectType" type="true" dm="true">
 		<Item>
 			<Element>StaffSubjectType</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>This element contains Staff subjects they are eligible to teach together with the teaching preference.</p>
 			</Description>
@@ -97,7 +97,7 @@
 		</Item>
 		<Item>
 			<Element>Language</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>The number of hours per week the Learner is taught in a specific language during the enrolment.</p>
 			</Description>
@@ -163,7 +163,7 @@
 		</Item>
 		<Item>
 			<Element>LearningStandard</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description/>
 			<Type ref="CommonData" name="ObjectReferenceType"/>
 		</Item>
@@ -179,7 +179,7 @@
 		</Item>
 		<Item>
 			<Element>RelatedLearningStandard</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>A member of the related LearningStandard list.</Description>
 			<Type ref="CommonData" name="RelatedLearningStandardType"/>
 		</Item>
@@ -223,7 +223,7 @@
 		</Item>
 		<Item>
 			<Element>Credential</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description/>
 			<Type ref="CommonData" name="ObjectReferenceType"/>
 		</Item>
@@ -239,7 +239,7 @@
 		</Item>
 		<Item>
 			<Element>Course</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>An associated course.</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>    <!-- Course -->
@@ -258,7 +258,7 @@
 		</Item>
 		<Item>
 			<Element>Author</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>A generic object reference to a staff memberthat authored the progress report.</p>
 			</Description>
@@ -277,7 +277,7 @@
 		</Item>
 		<Item>
 			<Element>TechnologyClass</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p> A record of the Student's progress in a particular class from the Technology curriculum. </p>
 			</Description>
@@ -294,7 +294,7 @@
 		</Item>
 		<Item>
 			<Element>Class</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A code denoting the technology class the progress report covers.</p>
 			</Description>
@@ -302,7 +302,7 @@
 		</Item>    <!-- Class -->
 		<Item>
 			<Element>Teacher</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Generic object reference to the staff member that taught the subject and assessed the student against the technology strand objectives.</p>
 			</Description>
@@ -326,7 +326,7 @@
 		</Item>    <!-- BehaviourComment -->
 		<Item>
 			<Element>StrandList</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A record of the Student's progress in a set of learning strands 
 					from the Technology curriculum, that were covered in the class</p>
@@ -346,7 +346,7 @@
 		</Item>
 		<Item>
 			<Element>Strand</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>A record of the Student's progress in a particular learning strand
 					 from the Technology curriculum, that was covered in the class.</p>
@@ -365,7 +365,7 @@
 		</Item>
 		<Item>
 			<Element>LearningStrand</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Code denoting the particular learning strand from the Technology curriculum, that was covered in the class, 
 					and for which the student's progress is being reported.</p>
@@ -374,7 +374,7 @@
 		</Item>    <!-- LearningStrand -->
 		<Item>
 			<Element>AchievementObjectiveList</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A record of the Student's progress in a set of achievement objectives from the 
 					from the Technology curriculum strand, that was covered in the class.</p>
@@ -394,7 +394,7 @@
 		</Item>
 		<Item>
 			<Element>AchievementObjective</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>A record of the Student's progress in a particular achievement objective
 						 from the Technology curriculum strand, that was covered in the class. </p>
@@ -413,7 +413,7 @@
 		</Item>
 		<Item>
 			<Element>AchievementObjective</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Code denoting the particular achievement objective against which
 					 the student's progress is being reported. </p>
@@ -422,7 +422,7 @@
 		</Item>    <!-- AchivementObjective -->
 		<Item>
 			<Element>CurriculumLevel</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Code denoting the technology curriculum level that the student's progress report
 				 is being made against for this learning strand achievement objective. e.g. 2, 3, 4 or 5. </p>
@@ -431,7 +431,7 @@
 		</Item>    <!-- CurriculumLevel -->
 		<Item>
 			<Element>ProgressLevel</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Code denoting the level of progress the student has made against the particular learning 
 					strand achievement objective. e.g. Beginner, Proficient, and Advanced. </p>
@@ -440,7 +440,7 @@
 		</Item>    <!-- ProgressLevel -->
 		<Item>
 			<Element>AchievementObjectiveDesc</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A description of what the achievement objective covers.</p>
 			</Description>
@@ -449,7 +449,7 @@
 
 		<Item>
 			<Element>OverallStudentEffortNote</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A note about the student's overall effort in relation to this 
 					achievement objective for this strand.</p>
@@ -458,7 +458,7 @@
 		</Item>    <!-- OverallStudentEffortNote -->
 		<Item>
 			<Element>PracticalAbilityDesc</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A description of practical ability covered by the 
 					achievement objective for the strand.</p>
@@ -467,7 +467,7 @@
 		</Item>    <!-- PracticalAbilityDesc -->
 		<Item>
 			<Element>PracticalAbilityProgressNote</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A note about the student's practical ability progress in relation to
 					 this achievement objective for this strand.</p>
@@ -477,7 +477,7 @@
 
 		<Item>
 			<Element>DocumentList</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Documents that relate to students progress in this strand achievement 
 					objective, e.g. report, photos, media, documents etc.</p>

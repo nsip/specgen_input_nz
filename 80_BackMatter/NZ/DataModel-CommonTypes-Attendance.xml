@@ -20,7 +20,7 @@
 		</Item>
 		<Item>
 			<Element>AttendanceTime</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p/>
 			</Description>
@@ -144,7 +144,7 @@
 		</Item>
 		<Item>
 			<Element>PeriodAttendance</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p/>
 			</Description>

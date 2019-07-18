@@ -201,7 +201,7 @@
 		</Item>
 		<Item>
 			<Element>BellSchedule</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>The bell schedule this academic day is following.</p>
 			</Description>
@@ -291,7 +291,7 @@
 		</Item>
 		<Item>
 			<Element>Period</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Generic object reference to the schedule period whose start and end times are being defined.</p>
 			</Description>
@@ -299,7 +299,7 @@
 		</Item>		<!-- Period -->		
 		<Item>
 			<Element>StartTime</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>The time the period starts.</p>
 			</Description>
@@ -307,7 +307,7 @@
 		</Item>		<!-- StartTime -->
 		<Item>
 			<Element>EndTime</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>The time the period ends.</p>
 			</Description>
@@ -371,7 +371,7 @@
 		</Item>
 		<Item>
 			<Element>StartTime</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>The time the custom schedule period starts.</p>
 			</Description>
@@ -379,7 +379,7 @@
 		</Item>		<!-- StartTime -->
 		<Item>
 			<Element>EndTime</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>The time the custom schedule period ends.</p>
 			</Description>

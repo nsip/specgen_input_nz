@@ -23,7 +23,7 @@
 		</Item>
 		<Item>
 			<Element>SubAssessmentTask</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>GUID that identifies the sub-ordinate AssessmentTask.</p>
 			</Description>
@@ -38,7 +38,7 @@
 		</Item>
 		<Item>
 			<Element>LearningStandard</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>Generic object reference to the LearningStandard</p>
 			</Description>
@@ -57,7 +57,7 @@
 		</Item>
 		<Item>
 			<Element>SpecialAssessmentCondition</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>A single SAC that may be applied, or excluded from a student's participation in an assessment task.</p>
 			</Description>
@@ -75,7 +75,7 @@
 		</Item>
 		<Item>
 			<Element>ResultScore</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>An Assessment Result Score that is a member of the related AssessmentResultScoreList.</p>
 			</Description>
@@ -177,7 +177,7 @@
 		</Item>
 		<Item>
 			<Element>Justification</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>A generic reference to an assessment task result or other student attainment
 					 that justifies the student achieving this attainment.</p>
