@@ -27,6 +27,7 @@
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>		<!-- Schedule -->
 	</CommonElement>
+
 	<CommonElement name="ScheduleDayListType" type="true" dm="true">
 		<Item>
 			<Element>ScheduleDayListType</Element>
@@ -44,6 +45,7 @@
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>		<!-- ScheduleDay -->
 	</CommonElement>
+
 	<CommonElement name="BellScheduleListType" type="true" dm="true">
 		<Item>
 			<Element>BellScheduleListType</Element>
@@ -61,6 +63,7 @@
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>		<!-- BellSchedule -->
 	</CommonElement>
+	
 	<CommonElement name="PeriodListType" type="true" dm="true">
 		<Item>
 			<Element>PeriodListType</Element>
@@ -145,7 +148,7 @@
 				<p>An academic day that is part of this schedule.</p>
 			</Description>
 			<Type ref="CommonTypes" name="AcademicDayType"/>
-		</Item>		<!-- PeriodList -->
+		</Item>		<!-- AcademicDay -->
 
 		<xhtml:Example xmlns="" name="AcademicDayList Example">
 			<AcademicDayList>
@@ -186,6 +189,7 @@
 			</AcademicDayList>
 		</xhtml:Example>
 	</CommonElement>
+
 	<CommonElement name="AcademicDayType" type="true" dm="true">
 		<Item>
 			<Element>AcademicDayType</Element>
@@ -197,7 +201,7 @@
 		</Item>
 		<Item>
 			<Element>BellSchedule</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The bell schedule this academic day is following.</p>
 			</Description>
@@ -205,7 +209,7 @@
 		</Item>		<!-- BellSchedule -->
 		<Item>
 			<Element>PeriodList</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A list of the periods that make up this academic day, e.g. Period 1, Period 2 etc.</p>
 			</Description>
@@ -253,6 +257,7 @@
 			</Description>
 			<Type ref="CommonTypes" name="SchedulePeriodTimeType"/>
 		</Item>		<!-- SchedulePeriodTimeType -->
+		
 		<xhtml:Example xmlns="" name="SchedulePeriodList Example">
 			<SchedulePeriodList>
 				<SchedulePeriodTime>

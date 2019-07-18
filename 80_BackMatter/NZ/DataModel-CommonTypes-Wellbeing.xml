@@ -23,7 +23,7 @@
 		</Item>
 		<Item>
 				<Element>Medication</Element>
-				<Characteristics>OR</Characteristics>
+				<Characteristics>MR</Characteristics>
 				<Description></Description>
 			<Type ref="CommonTypes" name="MedicationType"/>
 		</Item>
@@ -94,7 +94,7 @@
 		</Item>
 		<Item>
 			<Element>MedicationConsent</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description></Description>
 			<Type ref="CommonTypes" name="MedicationConsentType"/>
 		</Item>
@@ -133,7 +133,7 @@
 		</Item>
 		<Item>
 			<Element>ProviderApplicableTo</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The provider the medication administartion consent is applicable to.</p>
 			</Description>
@@ -141,7 +141,7 @@
 		</Item>
 		<Item>
 			<Element>AdministeredBy</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The staff member at the school that have been given permission by the student or the student's caregiver to administer the medicine to the student.</p>
 			</Description>
@@ -233,7 +233,7 @@
 		</Item>
 		<Item>
 			<Element>FollowUpAction</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>Container for the Follow Up details.</Description>
 			<Type ref="CommonTypes" name="FollowUpActionType"/>
 		</Item>    <!-- FollowUpAction -->
@@ -285,7 +285,7 @@
 		</Item>
 		<Item>
 			<Element>PersonInvolvement</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>A person (additional to the student) involved in a  Wellbeing event/response where required to be known.  </Description>
 			<Type ref="CommonTypes" name="PersonInvolvementType"/>
 		</Item>    <!-- PersonInvolvement -->
@@ -329,7 +329,7 @@
 		</Item>
 		<Item>
 			<Element>Recognition</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>The nature of recognition given to the student for the successful completion of work in a co-curricular or extra-curricular activity.</p>
 			</Description>
@@ -528,7 +528,7 @@
 		</Item>
 		<Item>
 			<Element>Plan</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description></Description>
 			<Type ref="CommonTypes" name="WellbeingPlanType"/>
 		</Item>
@@ -608,12 +608,12 @@
 			</Description>
 		</Item> 
 		<Item>
-				<Element>OtherResponseDate</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>Date of the other response</p>
-				</Description>
-				<Type name="xs:date"></Type>  
+			<Element>OtherResponseDate</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Date of the other response</p>
+			</Description>
+			<Type name="xs:date"></Type>  
 		</Item>
 		<Item>
 			<Element>OtherResponseDescription</Element>
@@ -658,7 +658,7 @@
 		</Item>
 		<Item>
 			<Element>Acknowledged</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Indicates whether or not a staff member has viewed the alerts.</p>
 			</Description>
@@ -715,7 +715,7 @@
 		</Item>
 		<Item>
 			<Element>Role</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The role of the key contact in relation to the Wellbeing Alert.</p>
 			</Description>
@@ -723,7 +723,7 @@
 		</Item>    <!-- Role -->
 		<Item>
 			<Element>Contact</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Details about the contact, e.g. Doctor, Parent, Principal.</p>
 			</Description>
@@ -872,7 +872,7 @@
 		</Item>
 		<Item>
 			<Element>AdministeredBy</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The person who administered the physical restraint to the student.</p>
 			</Description>
@@ -880,7 +880,7 @@
 		</Item>    <!-- AdministeredBy -->
 		<Item>
 			<Element>SafePhysicalRestraintTraining</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Indicates whether or not the person involved has received training of the safe use of physical restraint.</p>
 			</Description>
@@ -896,7 +896,7 @@
 		</Item>    <!-- TrainingDescription -->
 		<Item>
 			<Element>Role</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The role of the person who administered the physical restraint to the student.</p>
 			</Description>
@@ -931,7 +931,7 @@
 		</Item>
 		<Item>
 			<Element>DirectedAt</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The person the student's behaviour was directed at.</p>
 			</Description>
@@ -947,7 +947,7 @@
 		</Item>    <!-- BehaviourDescription -->
 		<Item>
 			<Element>DirectedAtType</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Code set denoting type of object or person the student was directing their behaviour at, e.g. Staff Member, Student, Desk, Chair.</p>
 			</Description>
@@ -982,7 +982,7 @@
 		</Item>
 		<Item>
 			<Element>ReflectionDate</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The date the staff member performed their reflection on the use of physical restraint on the student.</p>
 			</Description>
@@ -998,7 +998,7 @@
 		</Item>    <!-- WitnessedBy -->
 		<Item>
 			<Element>Staff</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The staff member who performed the staff reflection.</p>
 			</Description>
@@ -1006,7 +1006,7 @@
 		</Item>    <!-- Staff -->
 		<Item>
 			<Element>ReflectionList</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of the reflections the staff member performed.</p>
 			</Description>
@@ -1041,7 +1041,7 @@
 		</Item>
 		<Item>
 			<Element>ReflectionDescription</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Free text outlining the staff members thoughts on a type of reflection.</p>
 			</Description>
@@ -1049,7 +1049,7 @@
 		</Item>    <!-- ReflectionDescription -->
 		<Item>
 			<Element>Type</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The type of reflection that the staff member performed.</p>
 			</Description>
@@ -1084,7 +1084,7 @@
 		</Item>
 		<Item>
 			<Element>DebriefingDate</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The date the debriefing about the use of physical restraint on the student occurred.</p>
 			</Description>
@@ -1092,7 +1092,7 @@
 		</Item>    <!-- DebriefingDate -->
 		<Item>
 			<Element>DebriefingTime</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The time the debriefing about the use of physical restraint on the student occurred.</p>
 			</Description>
@@ -1100,7 +1100,7 @@
 		</Item>    <!-- DebriefingTime -->
 		<Item>
 			<Element>Findings</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Free text outlining the findings of the debriefing in the use of physical restraint on the student.</p>
 			</Description>
@@ -1108,7 +1108,7 @@
 		</Item>    <!-- Findings -->
 		<Item>
 			<Element>NextStepsActions</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Free text about the next steps and/or actions that will be taken in as a result of the debriefing on the use of physical restraint  on the student.</p>
 			</Description>
@@ -1116,7 +1116,7 @@
 		</Item>    <!-- NextStepsActions -->
 		<Item>
 			<Element>ParentCaregiverComment</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Parent/caregiver comments made about the use physical restraint on the student.</p>
 			</Description>
@@ -1124,7 +1124,7 @@
 		</Item>    <!-- ParentCaregiverComment -->
 		<Item>
 			<Element>StudentComment</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Student comments made about the use physical restraint on the them.</p>
 			</Description>
@@ -1132,7 +1132,7 @@
 		</Item>    <!-- StudentComment -->
 		<Item>
 			<Element>DebriefingType</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The type of debriefing that occurred, e.g. staff, or student and parent/caregiver.</p>
 			</Description>
@@ -1140,7 +1140,7 @@
 		</Item>    <!-- DebriefingType -->
 		<Item>
 			<Element>AttendeeList</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of the people that attended the debriefing.</p>
 			</Description>
@@ -1198,23 +1198,25 @@
 				<p>The question asked about the physical restraint incident.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsRestraintQuestionType"/>
-		</Item>    <!-- Question -->			
-		<Item>
-			<Element>Answer</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>The answer to the question. Options are Yes or No.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-		</Item>    <!-- Answer -->
-		<Item>
-			<Element>AnswerSupportingDescription</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>A free text description providing additional information about the question if required.</p>
-			</Description>
-			<Type name="xs:normalizedString"/>
-		</Item>    <!-- AnswerSupportingDescription -->
+		</Item>    <!-- Question -->
+		<Choice>			
+			<Item>
+				<Element>Answer</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>The answer to the question. Options are Yes or No.</p>
+				</Description>
+				<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+			</Item>    <!-- Answer -->
+			<Item>
+				<Element>AnswerSupportingDescription</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>A free text description providing additional information about the question if required.</p>
+				</Description>
+				<Type name="xs:normalizedString"/>
+			</Item>    <!-- AnswerSupportingDescription -->
+		</Choice>
 	</CommonElement>
 
 	<!-- StudentVoice complex types -->
@@ -1533,7 +1535,6 @@
 	<CommonElement name="EventLocationListType" type="true" dm="true">
 		<Item>
 			<Element>EventLocationListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of the locations where the incident took place.</p>
 			</Description>
