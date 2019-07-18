@@ -15,18 +15,21 @@
 			<Value>
 				<Code>NOEFFECT</Code>
 				<Text>No Effect</Text>
-				<Description>This event has no effect on the school calendar.</Description>
+				<Description>
+					<p>This event has no effect on the school calendar.</p>
+				</Description>
 			</Value>   <!-- No Effect -->
 
 			<Value>
 				<Code>RENUMBER</Code>
 				<Text>Renumber Days</Text>
 				<Description>
-					This event causes the day rotation on the school calendar to
+					<p>This event causes the day rotation on the school calendar to
 					be renumbered, starting with any academic days specified in
-					ScheduleDayList. If any terms are included in ScheduleTermList, those
+					ScheduleDayList.</p>
+					<p>If any terms are included in ScheduleTermList, those
 					terms are activated effective on the start date of this
-					event.
+					event.</p>
 				</Description>
 			</Value>  <!-- Renumber -->
 
@@ -34,14 +37,14 @@
 				<Code>INSERT</Code>
 				<Text>Insert Day</Text>
 				<Description>
-					This event causes an insertion into the normal academic day
-					rotation of the school calendar. Any academic days and bell schedules 
-					specified in ScheduleDayList and BellScheduleList are
-					scheduled for the duration of this event, or school is
-					cancelled if ScheduleDayList is omitted. After
-					the event ends the academic day rotation resumes from the
+					<p>This event causes an insertion into the normal academic day
+					rotation of the school calendar.</p>
+					<p>Any academic days and bell schedules specified in ScheduleDayList
+					and BellScheduleList are scheduled for the duration of this event, or school is
+					cancelled if ScheduleDayList is omitted.</p>
+					<p>After the event ends the academic day rotation resumes from the
 					point at which it was interrupted. E.g. if it was Day 1
-					before the event, then it will be Day 2 afterwards.
+					before the event, then it will be Day 2 afterwards.</p>
 				</Description>
 			</Value>   <!-- Insert -->
 
@@ -49,15 +52,16 @@
 				<Code>DISPLACE</Code>
 				<Text>Displace Day</Text>
 				<Description>
-					This event causes a displacement in the normal academic day
-					rotation of the school calendar. Any academic days or bell schedules
+					<p>This event causes a displacement in the normal academic day
+					rotation of the school calendar.</p>
+					<p>Any academic days or bell schedules
 				 	specified in ScheduleDayList and BellScheduleList are
 					scheduled for the duration of this event, or school is
-					cancelled if ScheduleDayList is omitted. After
-					the event ends the rotation resumes from the point it would
+					cancelled if ScheduleDayList is omitted.</p>
+					<p>After the event ends the rotation resumes from the point it would
 					be at had the event not occurred. E.g. if it was Day 1
 					before the event, and the event duration was 1 day, then it
-					will be Day 3 afterwards; Day 2 is overwritten by the event.
+					will be Day 3 afterwards; Day 2 is overwritten by the event.</p>
 				</Description>
 			</Value>
 
@@ -68,7 +72,7 @@
 					<p>This event terminates the academic schedule for any term(s)
 					specified in ScheduleTermList, which is required when
 					using this schedule effect.</p>
-					<p>Used to terminate the academic day rotation prior to the end of term; E.g. 
+					<p>Used to terminate the academic day rotation prior to the end of term; e.g. 
 					when the last week of term is used for impromptu non-academic activities.</p>
 					<p>Note that events take effect at
 					midnight on the start date, so the designated term(s) do not
@@ -82,8 +86,8 @@
 				<Code>PAUSESCHEDULE</Code>
 				<Text>Pause Schedule</Text>
 				<Description>
-					Temporarily suspend the academic day rotation
-					until a subsequent "resumeSchedule" event occurs.
+					<p>Temporarily suspend the academic day rotation
+					until a subsequent "resumeSchedule" event occurs.</p>
 				</Description>
 			</Value>
 
@@ -91,7 +95,7 @@
 				<Code>RESUMESCHEDULE</Code>
 				<Text>Resume Schedule</Text>
 				<Description>
-					Resume an academic day rotation previously suspended using "pauseSchedule".
+					<p>Resume an academic day rotation previously suspended using "pauseSchedule".</p>
 				</Description>
 			</Value>
 
@@ -99,11 +103,12 @@
 				<Code>CANCEL</Code>
 				<Text>Cancel Day</Text>
 				<Description>
-					Cancel one or more academic days, specificed in ScheduleDayList,
-					that would normally occur on this date. This is generally used to partially cancel the
+					<p>Cancel one or more academic days, specified in ScheduleDayList,
+					that would normally occur on this date.</p>
+					<p>This is generally used to partially cancel the
 					school schedule on a given calendar date. To fully cancel
 					school on date, use either the "insert" or "displace"
-					schedule effect.
+					schedule effect.</p>
 				</Description>
 			</Value>
 
@@ -111,9 +116,11 @@
 				<Code>STARTTERM</Code>
 				<Text>Start Term</Text>
 				<Description>
-					Start one or more terms, specified in ScheduleTermList, on this date
-					without changing the academic day rotation. A ScheduleTermList
+					<p>Start one or more terms, specified in ScheduleTermList, on this date
+					without changing the academic day rotation.</p>
+					<p>A ScheduleTermList
 					value is required when using this schedule effect.
+					</p>
 				</Description>
 			</Value>
 
@@ -121,12 +128,13 @@
 				<Code>ADD</Code>
 				<Text>Additional Day</Text>
 				<Description>
-					Set one or more additional academic days, specified in ScheduleDayList
+					<p>Set one or more additional academic days, specified in ScheduleDayList
 					to apply to this calendar date in addition to those normally applied to
-					the academic day rotation. This can also be used to schedule
-					school on a day on which it would not normally occur, such
-					as a weekend. As a convenience, RemoveScheduleDayList specifies a set of 
-					academic days to be removed from the calendar while this event is in effect.
+					the academic day rotation.</p>
+					<p>This can also be used to schedule school on a day on which it would not normally occur, such
+					as a weekend.</p>
+					<p>As a convenience, RemoveScheduleDayList specifies a set of 
+					academic days to be removed from the calendar while this event is in effect.</p>
 				</Description>
 			</Value>
 

@@ -100,7 +100,7 @@
     <Description>
       <p>The timeframe of the provided information e.g. Routine Update, Mid-Year, End of Year etc.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsCurriculumProgressReportTimeFrame"/>
+    <Type ref="CodeSets" name="NZCodeSetsCurriculumProgressReportTimeframeType"/>
   </Item>    <!-- TimeFrame -->
 
   <Item>

@@ -123,7 +123,7 @@
 				<Code>PRO</Code>
 				<Text>Provisional</Text>
 				<Description>
-					<p>The learner is enrolled for the current year, and is expected to continue 
+					<p>The Learner is enrolled for the current year, and is expected to continue 
 						to be enrolled for the year denoted in the SchoolEnrolment.</p>
 				</Description>
 			</Value>      <!-- Provisional -->
@@ -131,7 +131,7 @@
 				<Code>CON</Code>
 				<Text>Confirmed</Text>
 				<Description>
-					<p>The learner is enrolled for the current year, and has confirmed that they
+					<p>The Learner is enrolled for the current year, and has confirmed that they
 						will be returning for the year denoted in the SchoolEnrolment.</p>
 				</Description>
 			</Value>      <!-- Confirmed -->
@@ -139,19 +139,19 @@
 				<Code>ACT</Code>
 				<Text>Active</Text>
 				<Description>
-					<p>The learner is currently enrolled for the year denoted in the SchoolEnrolment.</p>
+					<p>The Learner is currently enrolled for the year denoted in the SchoolEnrolment.</p>
 				</Description>
 			</Value>      <!-- Active -->
 			<Value>
 				<Code>COM</Code>
 				<Text>Completed</Text>
-				<Description>The learner has completed the school year denoted in the SchoolEnrolment.</Description>
+				<Description>The Learner has completed the school year denoted in the SchoolEnrolment.</Description>
 			</Value>			<!-- Completed -->
 			<Value>
 				<Code>WIT</Code>
 				<Text>Withdrawn</Text>
 				<Description>
-					<p>The learner has withdrawn (or otherwise left) the school during the year denoted
+					<p>The Learner has withdrawn (or otherwise left) the school during the year denoted
 						in the SchoolEnrolment.</p>
 				</Description>
 			</Value>      <!-- Withdrawn -->
@@ -160,7 +160,7 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Enrolment Exit code, derived from codeset used in School Roll Returns.</p>
+			<p>Enrolment Exit code, derived from code set used in School Roll Returns.</p>
 		</Intro>
 		<ID>Enrolment Exit Type</ID>
 		<Values>
@@ -185,7 +185,7 @@
 			<Value>
 				<Code>X</Code>
 				<Text>Expulsion (for Students Aged Less Than 16)</Text>
-				<Description>Only applies to students at least 16 years old</Description>
+				<Description>Only applies to students at least 16 years old.</Description>
 			</Value>
 			<Value>
 				<Code>L</Code>
@@ -219,13 +219,13 @@
 
 	<CodeSet>
 		<Intro>
-			<p>The criteria used to determine the eligibility status of a Student for enrolment and MoE funding purposes.</p>
+			<p>The criteria used to determine the eligibility status of a student for enrolment and MoE funding purposes.</p>
 		</Intro>
 		<ID>Eligibility Criteria</ID>
 		<Values>
 			<Value>
 				<Code>NZC</Code>
-				<Text>NZ Citizen (Incl. TKL, COK, NIU)</Text>
+				<Text>NZ Citizen (incl. TKL, COK, NIU)</Text>
 			</Value>
 			<Value>
 				<Code>AUC</Code>
@@ -567,10 +567,10 @@
 			<Value>
 				<Code>LSC</Code>
 				<Text>Learning Support Community Register</Text>
-				<Description>To be on the Learning Support Community Register</Description>
+				<Description>To be on the Learning Support Register</Description>
 			</Value>    <!-- Learning Support Community Register -->
 			<Value>
-				<Code>LSC</Code>
+				<Code>LSP</Code>
 				<Text>Learning Support Publish to Community Register</Text>
 				<Description>To have content on the Learning Support Community Register published to any school groups the school is part of for analysis e.g. a Kāhui Ako</Description>
 			</Value>    <!-- Learning Support Community Register -->

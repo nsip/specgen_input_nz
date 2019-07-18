@@ -3,7 +3,7 @@
 	xmlns:xml="http://www.w3.org/XML/1998/namespace"
  	xmlns="http://sifassociation.org/SpecGen">
 	
-  <CodeSet>
+	<CodeSet>
 		<Intro>
 			<p>A standardised method of describing the personal relationship between two persons.
 			 Such a relationship arises from two persons belonging to the same family or closer 
@@ -29,7 +29,7 @@
 			<Value><Code>WHA</Code><Text>Whāngai Parent</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Relationship to Student -->
-  <CodeSet>
+	<CodeSet>
 		<Intro>
 			<p>A standardised method of describing the usage of a name by a person.
 				 Where a person has more than one current name, the usage type indicates
@@ -47,7 +47,7 @@
 					 are not supported by NSI).</p>
 				</Description>
 			</Value>    <!-- PRF -->
-      <Value>
+      		<Value>
 				<Code>FON</Code>
 				<Text>Foreign Official Name</Text>
 				<Description>
@@ -127,10 +127,10 @@
 		<ID>Telephone Number Type</ID>
 		<Values>
 		  <Value>
-				<Code>MAI</Code><Text>Main telephone number</Text>
+				<Code>MAI</Code><Text>Main Telephone Number</Text>
 		  </Value>    <!-- Main phone no -->
 		  <Value>
-				<Code>FAX</Code><Text>Facsimile number</Text>
+				<Code>FAX</Code><Text>Facsimile Number</Text>
 		  </Value>    <!-- Facsimilie number -->
 		  <Value>
 		  		<Code>HTE</Code>
@@ -209,11 +209,11 @@
 		<Values>
 			<Value>
 				<Code>AUCI</Code>
-				<Text>Australian Citizen</Text>
+				<Text>Australian citizen</Text>
 			</Value>
 			<Value>
 				<Code>NZCI</Code>
-				<Text>NZ Citizen</Text>
+				<Text>NZ citizen</Text>
 			</Value>
 			<Value>
 				<Code>OTOV</Code>
@@ -222,12 +222,12 @@
 			</Value>
 			<Value>
 				<Code>NZRE</Code>
-				<Text>NZ Resident</Text>
+				<Text>NZ resident</Text>
 				<Description>Includes Australian residents classified as NZ resident once arrived in NZ</Description>
 			</Value>
 			<Value>
 				<Code>NOPR</Code>
-				<Text>Not Provided</Text>
+				<Text>Not provided</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Citizenship Status -->
@@ -246,7 +246,7 @@
 			</Value>  <!-- NZ Birth Certificate -->
 			<Value>
 				<Code>NZBCO</Code>
-				<Text>NZ Birth Certificate (with confirmation of NZ Citizen by Birth)</Text>
+				<Text>NZ Birth Certificate (with confirmation of NZ Citizen by birth)</Text>
 				<Description>Applies if the child was born on or after 1 Jan 2006</Description>
 			</Value>
 			<Value>
@@ -265,7 +265,7 @@
 			</Value>
 			<Value>
 				<Code>BCCON</Code>
-				<Text>Birth Certificate (COK, TKL, NIU) (with confirmation of NZ Citizen by Birth)</Text>
+				<Text>Birth Certificate (COK, TKL, NIU) (with confirmation of NZ Citizen by birth)</Text>
 				<Description>Applies if the child was born on or after 1 Jan 2006.</Description>
 			</Value>
 			<Value>
@@ -308,7 +308,7 @@
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Verification Source -->
-  <CodeSet>
+	<CodeSet>
 		<Intro>
 			<p>A standardised method of describing the usage of a language by a person, 
 				potentially indicating capability and preference for the language.</p>
@@ -325,11 +325,11 @@
 			</Value>
 			<Value>
 				<Code>SH</Code>
-				<Text>Spoken at Home</Text>
+				<Text>Spoken At Home</Text>
 			</Value>			 
 		</Values>
 	</CodeSet>    <!-- Language Usage Type -->
-  <CodeSet>
+  	<CodeSet>
 		<Intro>
 			<p>Language refers to recognised human communication systems, typically oral and/or written.
 				Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/CARS3211">Statistics NZ - Language Standard Classification 1999 v2.0.0</a></p>
@@ -595,14 +595,14 @@
 			<Value><Code>NZS24114</Code><Text>British Sign Language</Text></Value>
 			<Value><Code>NZS24199</Code><Text>Sign Language not elsewhere classified</Text></Value>
 			<Value><Code>NZS44</Code><Text>Don't Know</Text></Value>
-			<Value><Code>NZS55</Code><Text>Refused To Answer</Text></Value>
+			<Value><Code>NZS55</Code><Text>Refused to Answer</Text></Value>
 			<Value><Code>NZS66</Code><Text>None (eg too young to talk)</Text></Value>
 			<Value><Code>NZS77</Code><Text>Response Unidentifiable</Text></Value>
 			<Value><Code>NZS88</Code><Text>Response Outside Scope</Text></Value>
 			<Value><Code>NZS99</Code><Text>Not Stated</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Language -->
-  <CodeSet>
+  	<CodeSet>
 		<Intro>
 			<p>Ethnicity is the ethnic group or groups that people
 			identify with or feel they belong to. Ethnicity is a
@@ -1104,15 +1104,15 @@
 			</Value>
 			<Value>
 				<Code>41</Code>
-				<Text>Southeast Asian</Text>
+				<Text>South East Asian</Text>
 			</Value>
 			<Value>
 				<Code>410</Code>
-				<Text>Southeast Asian nfd</Text>
+				<Text>South East Asian nfd</Text>
 			</Value>
 			<Value>
 				<Code>41000</Code>
-				<Text>Southeast Asian nfd</Text>
+				<Text>South East Asian nfd</Text>
 			</Value>
 			<Value>
 				<Code>411</Code>
@@ -2002,7 +2002,7 @@
 			</Value>
 			<Value>
 				<Code>NZS07</Code>
-				<Text>Te Matau-a-Māui/Wairarapa (Hawke's Bay/Wairarapa) Region iwi</Text>
+				<Text>Te Matau-a-Māui/Wairarapa (Hawke's Bay/Wairarapa) Region Iwi</Text>
 			</Value>
 			<Value>
 				<Code>NZS0701</Code>

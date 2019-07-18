@@ -41,7 +41,7 @@
 			<Value>
 				<Code>MED</Code>
 				<Text>Medical</Text>
-				<Description>includes Allergies</Description>
+				<Description>Includes Allergies</Description>
 			</Value>
 			<Value>
 				<Code>LEG</Code>
@@ -228,29 +228,29 @@
 		<Value><Code>MAO</Code><Text>Allergies - other</Text></Value>
 		<Value><Code>DIET</Code><Text>Dietary Preferences</Text></Value>
 		<Value>
-				<Code>LSN-BEL</Code>
-				<Text xml:lang="en">Belonging (Participating and Contributing)</Text>
-				<Text xml:lang="mi">Manu whenua</Text>
+			<Code>LSN-BEL</Code>
+			<Text xml:lang="en">Belonging (Participation and Contributing)</Text>
+			<Text xml:lang="mi">Mana whenua</Text>
 		</Value>
-				<Value>
-				<Code>LSN-COM</Code>
-				<Text xml:lang="en">Communication (Using Language and Text)</Text>
-				<Text xml:lang="mi">Manu reo</Text>
+		<Value>
+			<Code>LSN-COM</Code>
+			<Text xml:lang="en">Communication (Using Language and Text)</Text>
+			<Text xml:lang="mi">Mana reo</Text>
 		</Value>
-				<Value>
-				<Code>LSN-CON</Code>
-				<Text xml:lang="en">Contributing (Relating to Others)</Text>
-				<Text xml:lang="mi">Manu tangata</Text>
+		<Value>
+			<Code>LSN-CON</Code>
+			<Text xml:lang="en">Contribution (Relating to Others)</Text>
+			<Text xml:lang="mi">Mana tangata</Text>
 		</Value>
-				<Value>
-				<Code>LSN-EXP</Code>
-				<Text xml:lang="en">Exploration (Thinking)</Text>
-				<Text xml:lang="mi">Manu aotūroa</Text>
+		<Value>
+			<Code>LSN-EXP</Code>
+			<Text xml:lang="en">Exploration (Thinking)</Text>
+			<Text xml:lang="mi">Mana aotūroa</Text>
 		</Value>
-				<Value>
-				<Code>LSN-WEL</Code>
-				<Text xml:lang="en">Wellbeing (Managing Self)</Text>
-				<Text xml:lang="mi">Manu atua</Text>
+		<Value>
+			<Code>LSN-WEL</Code>
+			<Text xml:lang="en">Wellbeing (Managing Self)</Text>
+			<Text xml:lang="mi">Mana atua</Text>
 		</Value>
 		<Value><Code>MAIM</Code><Text>Auto-immune/Immune Disorders</Text></Value>
 		<Value><Code>MRD</Code><Text>Respiratory Disorder</Text></Value>
@@ -270,10 +270,10 @@
 		<Value><Code>MO</Code><Text>Oral/Phalangeal Disorders</Text></Value>
 		<Value><Code>MD</Code><Text>Deaf and Hard of Hearing</Text></Value>
 		<Value><Code>MOP</Code><Text>Optical/ Vision Disorder</Text></Value>
-		<Value><Code>M-Other</Code><Text>Medical Other</Text></Value>
-		<Value><Code>D-Other</Code><Text>Disability Other</Text></Value>
-		<Value><Code>S-Other</Code><Text>Special Needs Other</Text></Value>
-		<Value><Code>Other</Code><Text>Other</Text></Value>
+		<Value><Code>M-OTHER</Code><Text>Medical Other</Text></Value>
+		<Value><Code>D-OTHER</Code><Text>Disability Other</Text></Value>
+		<Value><Code>S-OTHER</Code><Text>Special Needs Other</Text></Value>
+		<Value><Code>OTHER</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>	  <!-- Wellbeing Characteristic Category -->
 
@@ -355,184 +355,184 @@
       </Intro>
       <ID>Wellbeing Event Sub Category</ID>
       <Values>
-				<Value><Code>B1a</Code><Text>Resolves issues peacefully</Text></Value>
-				<Value><Code>B1b</Code><Text>Plays in a friendly way</Text></Value>
-				<Value><Code>B1c</Code><Text>Uses equipment safely</Text></Value>
-				<Value><Code>B1d</Code><Text>Understands the purpose and need for rules</Text></Value>
-				<Value><Code>B1e</Code><Text>Seeks help from a responsible adult</Text></Value>
-				<Value><Code>B1f</Code><Text>Alerts others to risks and dangers</Text></Value>
-				<Value><Code>B1g</Code><Text>Moves away from danger</Text></Value>
-				<Value><Code>B1h</Code><Text>Uses protective interruption with peers</Text></Value>
-				<Value><Code>B1i</Code><Text>Observes and listens before acting</Text></Value>
-				<Value><Code>B2a</Code><Text>Helps someone or something in need</Text></Value>
-				<Value><Code>B2b</Code><Text>Shows empathy</Text></Value>
-				<Value><Code>B2c</Code><Text>Shows compassion</Text></Value>
-				<Value><Code>B2d</Code><Text>Is forgiving</Text></Value>
-				<Value><Code>B2e</Code><Text>Talks in a friendly way</Text></Value>
-				<Value><Code>B3a</Code><Text>Shows intercultural understanding</Text></Value>
-				<Value><Code>B3b</Code><Text>Acknowledges authority</Text></Value>
-				<Value><Code>B3c</Code><Text>Shows courtesy</Text></Value>
-				<Value><Code>B3d</Code><Text>Is polite</Text></Value>
-				<Value><Code>B3e</Code><Text>Accepts difference</Text></Value>
-				<Value><Code>B3f</Code><Text>Acknowledges the rights of others</Text></Value>
-				<Value><Code>B3g</Code><Text>Uses appropriate language/tone</Text></Value>
-				<Value><Code>B3h</Code><Text>Gives value to others' opinions</Text></Value>
-				<Value><Code>B3i</Code><Text>Maintains appropriate personal space</Text></Value>
-				<Value><Code>B3j</Code><Text>Shows consideration of impact of actions on others</Text></Value>
-				<Value><Code>B4a</Code><Text>Is honest</Text></Value>
-				<Value><Code>B4b</Code><Text>Acts with integrity</Text></Value>
-				<Value><Code>B4c</Code><Text>Self regulates</Text></Value>
-				<Value><Code>B4d</Code><Text>Co-regulates</Text></Value>
-				<Value><Code>B4e</Code><Text>Helps others to regulate</Text></Value>
-				<Value><Code>B4f</Code><Text>Is trustworthy</Text></Value>
-				<Value><Code>B4g</Code><Text>Copes with frustration</Text></Value>
-				<Value><Code>B4h</Code><Text>Accepts accountability</Text></Value>
-				<Value><Code>B4i</Code><Text>Owns consequences of actions</Text></Value>
-				<Value><Code>B4j</Code><Text>Is organised</Text></Value>
-				<Value><Code>B5a</Code><Text>Thinks critically</Text></Value>
-				<Value><Code>B5b</Code><Text>Is creative</Text></Value>
-				<Value><Code>B5c</Code><Text>Is timely</Text></Value>
-				<Value><Code>B5d</Code><Text>Takes considered risks</Text></Value>
-				<Value><Code>B5e</Code><Text>Takes a problem solving approach</Text></Value>
-				<Value><Code>B5f</Code><Text>Is adaptable</Text></Value>
-				<Value><Code>B5g</Code><Text>Shows independence</Text></Value>
-				<Value><Code>B5h</Code><Text>Takes initiative</Text></Value>
-				<Value><Code>B5i</Code><Text>Shows persistence</Text></Value>
-				<Value><Code>B5j</Code><Text>Shows courage</Text></Value>
-				<Value><Code>B5k</Code><Text>Negotiates</Text></Value>
-				<Value><Code>B5l</Code><Text>Is persuasive</Text></Value>
-				<Value><Code>B5m</Code><Text>Builds social support (networks)</Text></Value>
-				<Value><Code>B5n</Code><Text>Innovates</Text></Value>
-				<Value><Code>B5o</Code><Text>Shows determination</Text></Value>
-				<Value><Code>B6a</Code><Text>Pays attention</Text></Value>
-				<Value><Code>B6b</Code><Text>Tries hard</Text></Value>
-				<Value><Code>B6c</Code><Text>Completes work</Text></Value>
-				<Value><Code>B6d</Code><Text>Perseveres</Text></Value>
-				<Value><Code>B6e</Code><Text>Asks questions</Text></Value>
-				<Value><Code>B6f</Code><Text>Shows desire to learn</Text></Value>
-				<Value><Code>B6g</Code><Text>Stays on task</Text></Value>
-				<Value><Code>B6h</Code><Text>Participates constructively</Text></Value>
-				<Value><Code>B6i</Code><Text>Shows commitment to identified goals</Text></Value>
-				<Value><Code>B7a</Code><Text>Promotes justice</Text></Value>
-				<Value><Code>B7b</Code><Text>Follows rules and laws</Text></Value>
-				<Value><Code>B7c</Code><Text>Stands up for others appropriately</Text></Value>
-				<Value><Code>B7d</Code><Text>Puts others' needs before own</Text></Value>
-				<Value><Code>B7e</Code><Text>Contributes to the school/class</Text></Value>
-				<Value><Code>B7f</Code><Text>Contributes to the community</Text></Value>
-				<Value><Code>B7g</Code><Text>Is involved</Text></Value>
-				<Value><Code>B7h</Code><Text>Belongs</Text></Value>
-				<Value><Code>B7i</Code><Text>Promotes harmony</Text></Value>
-				<Value><Code>B7j</Code><Text>Gives back to the greater good</Text></Value>
-				<Value><Code>B7k</Code><Text>Becomes informed</Text></Value>
-				<Value><Code>B7l</Code><Text>Uses procedures and protocols</Text></Value>
-				<Value><Code>B7m</Code><Text>Participates in democratic decision making</Text></Value>
-				<Value><Code>B7n</Code><Text>Helps others to reach their goals</Text></Value>
-				<Value><Code>B8a</Code><Text>Is fair</Text></Value>
-				<Value><Code>B8b</Code><Text>Shows mutuality (sharing a feeling, action or relationship)</Text></Value>
-				<Value><Code>B8c</Code><Text>Shows reciprocity ("I scratch your back, you scratch mine")</Text></Value>
-				<Value><Code>B8d</Code><Text>Shows goodwill</Text></Value>
-				<Value><Code>B8e</Code><Text>Is attentive to others' reactions</Text></Value>
-				<Value><Code>B8f</Code><Text>Is open to dialogue/discussion</Text></Value>
-				<Value><Code>B8g</Code><Text>Works to be a valued member of a team</Text></Value>
-				<Value><Code>B8h</Code><Text>Offers others choices</Text></Value>
-				<Value><Code>B9a</Code><Text>Inspires others</Text></Value>
-				<Value><Code>B9b</Code><Text>Represents others</Text></Value>
-				<Value><Code>B9c</Code><Text>Delegates to others</Text></Value>
-				<Value><Code>B9d</Code><Text>Shows self confidence</Text></Value>
-				<Value><Code>B9e</Code><Text>Shows assertiveness</Text></Value>
-				<Value><Code>B9f</Code><Text>Stays positive</Text></Value>
-				<Value><Code>B9g</Code><Text>Shoulders blame</Text></Value>
-				<Value><Code>B9h</Code><Text>Sets an example</Text></Value>
-				<Value><Code>B9i</Code><Text>Communicates effectively</Text></Value>
-				<Value><Code>B9j</Code><Text>Shows wisdom</Text></Value>
-				<Value><Code>M1a</Code><Text>Striking - Staff</Text></Value>
-				<Value><Code>M1b</Code><Text>Pushing or barging - Staff</Text></Value>
-				<Value><Code>M1c</Code><Text>Use of a weapon or object - Staff</Text></Value>
-				<Value><Code>M1d</Code><Text>Projectile - Staff</Text></Value>
-				<Value><Code>M1e</Code><Text>Struggling to be free of a physical restraint - Staff</Text></Value>
-				<Value><Code>M1f</Code><Text>Unintentional but negligent contact - Staff</Text></Value>
-				<Value><Code>M2a</Code><Text>Verbal abuse - Staff</Text></Value>
-				<Value><Code>M2b</Code><Text>Non-Verbal abuse - Staff</Text></Value>
-				<Value><Code>M2c</Code><Text>Verbal threat - Staff</Text></Value>
-				<Value><Code>M2d</Code><Text>Threatening gesture - Staff</Text></Value>
-				<Value><Code>M2e</Code><Text>Disrespectful or challenging language - Staff</Text></Value>
-				<Value><Code>M2f</Code><Text>Malicious gossip - Staff</Text></Value>
-				<Value><Code>M2g</Code><Text>Sexual harassment - Staff</Text></Value>
-				<Value><Code>M3a</Code><Text>Striking - Student</Text></Value>
-				<Value><Code>M3b</Code><Text>Pushing or barging - Student</Text></Value>
-				<Value><Code>M3c</Code><Text>Use of a weapon or object - Student</Text></Value>
-				<Value><Code>M3d</Code><Text>Projectile - Student</Text></Value>
-				<Value><Code>M3e</Code><Text>Struggling to be free of violation of personal space or deprivation of liberty - Student</Text></Value>
-				<Value><Code>M3f</Code><Text>Unintentional but negligent contact - Student</Text></Value>
-				<Value><Code>M4a</Code><Text>Verbal abuse - Student</Text></Value>
-				<Value><Code>M4b</Code><Text>Non-Verbal abuse - Student</Text></Value>
-				<Value><Code>M4c</Code><Text>Verbal threat - Student</Text></Value>
-				<Value><Code>M4d</Code><Text>Threatening gesture - Student</Text></Value>
-				<Value><Code>M4e</Code><Text>Malicious gossip - Student</Text></Value>
-				<Value><Code>M4f</Code><Text>Exclusion of peer - Student</Text></Value>
-				<Value><Code>M4g</Code><Text>Teasing - Student</Text></Value>
-				<Value><Code>M4h</Code><Text>Unhelpful bystander actions - Student</Text></Value>
-				<Value><Code>M4i</Code><Text>Sexual harassment - Student</Text></Value>
-				<Value><Code>M5a</Code><Text>Theft of personal property</Text></Value>
-				<Value><Code>M5b</Code><Text>Theft of school property</Text></Value>
-				<Value><Code>M5c</Code><Text>Deliberate damage to personal property</Text></Value>
-				<Value><Code>M5d</Code><Text>Incidental damage through negligence</Text></Value>
-				<Value><Code>M5e</Code><Text>Graffiti</Text></Value>
-				<Value><Code>M5f</Code><Text>Buildings and glass</Text></Value>
-				<Value><Code>M5g</Code><Text>Fittings and fixtures</Text></Value>
-				<Value><Code>M5h</Code><Text>Furniture</Text></Value>
-				<Value><Code>M5i</Code><Text>Equipment</Text></Value>
-				<Value><Code>M5j</Code><Text>Vehicles</Text></Value>
-				<Value><Code>M5k</Code><Text>Garden and plants</Text></Value>
-				<Value><Code>M6a</Code><Text>Active refusal to follow reasonable instructions</Text></Value>
-				<Value><Code>M6b</Code><Text>Passive non-compliance</Text></Value>
-				<Value><Code>M6c</Code><Text>Disruptive</Text></Value>
-				<Value><Code>M6d</Code><Text>Defiant</Text></Value>
-				<Value><Code>M6e</Code><Text>Unclear boundaries</Text></Value>
-				<Value><Code>M6f</Code><Text>Erratic</Text></Value>
-				<Value><Code>M6g</Code><Text>Impulsive</Text></Value>
-				<Value><Code>M6h</Code><Text>Uninterested</Text></Value>
-				<Value><Code>M6i</Code><Text>Inattentive</Text></Value>
-				<Value><Code>M6j</Code><Text>Unresponsive</Text></Value>
-				<Value><Code>M6k</Code><Text>Unprepared</Text></Value>
-				<Value><Code>M6l</Code><Text>Out of bounds</Text></Value>
-				<Value><Code>M6n</Code><Text>Dress code breach without reasonable explanation</Text></Value>
-				<Value><Code>M6o</Code><Text>Lateness</Text></Value>
-				<Value><Code>M6p</Code><Text>Class-work avoidance</Text></Value>
-				<Value><Code>M6q</Code><Text>Unsafe</Text></Value>
-				<Value><Code>M6r</Code><Text>Out of class without permission</Text></Value>
-				<Value><Code>M6s</Code><Text>Annoying</Text></Value>
-				<Value><Code>M6t</Code><Text>Inappropriate language</Text></Value>
-				<Value><Code>M6u</Code><Text>Academic dishonesty</Text></Value>
-				<Value><Code>M6v</Code><Text>Loud</Text></Value>
-				<Value><Code>M6w</Code><Text>Out of seat</Text></Value>
-				<Value><Code>M6x</Code><Text>Failure to use manners</Text></Value>
-				<Value><Code>M6y</Code><Text>Littering</Text></Value>
-				<Value><Code>M6z</Code><Text>Disorderly</Text></Value>
-				<Value><Code>M7a</Code><Text>Cigarette / e-cigarette</Text></Value>
-				<Value><Code>M7b</Code><Text>Alcohol</Text></Value>
-				<Value><Code>M7c</Code><Text>Over-the-counter medication</Text></Value>
-				<Value><Code>M7d</Code><Text>ADHD medication</Text></Value>
-				<Value><Code>M7e</Code><Text>Other prescription medication</Text></Value>
-				<Value><Code>M7f</Code><Text>Aerosol</Text></Value>
-				<Value><Code>M7g</Code><Text>Solvents</Text></Value>
-				<Value><Code>M7h</Code><Text>Inappropriate sexual material</Text></Value>
-				<Value><Code>M8a</Code><Text>Knife or blade</Text></Value>
-				<Value><Code>M8b</Code><Text>Firearm</Text></Value>
-				<Value><Code>M8c</Code><Text>Amphetamines</Text></Value>
-				<Value><Code>M8d</Code><Text>Marijuana</Text></Value>
-				<Value><Code>M8e</Code><Text>Drug implement or paraphernalia</Text></Value>
-				<Value><Code>M8f</Code><Text>Other illegal drug</Text></Value>
-				<Value><Code>M8g</Code><Text>Other illegal weapon</Text></Value>
-				<Value><Code>M9a</Code><Text>Cyberbullying</Text></Value>
-				<Value><Code>M9b</Code><Text>Hacking</Text></Value>
-				<Value><Code>M9c</Code><Text>Breach of Department acceptable use agreement</Text></Value>
-				<Value><Code>M9d</Code><Text>Breach of Students Online policy</Text></Value>
-				<Value><Code>M9e</Code><Text>Persistent personal use of a MED when not permitted</Text></Value>
-				<Value><Code>M9f</Code><Text>Inappropriate audio or video recording</Text></Value>
-				<Value><Code>M9g</Code><Text>Inappropriate uploading of text, images or audio</Text></Value>
-				<Value><Code>M9h</Code><Text>Public posting of messages that bring the school or Department into disrepute</Text></Value>
-				<Value><Code>M9i</Code><Text>Copyright infringement or plagiarism</Text></Value>
+				<Value><Code>B1A</Code><Text>Resolves issues peacefully</Text></Value>
+				<Value><Code>B1B</Code><Text>Plays in a friendly way</Text></Value>
+				<Value><Code>B1C</Code><Text>Uses equipment safely</Text></Value>
+				<Value><Code>B1D</Code><Text>Understands the purpose and need for rules</Text></Value>
+				<Value><Code>B1E</Code><Text>Seeks help from a responsible adult</Text></Value>
+				<Value><Code>B1F</Code><Text>Alerts others to risks and dangers</Text></Value>
+				<Value><Code>B1G</Code><Text>Moves away from danger</Text></Value>
+				<Value><Code>B1H</Code><Text>Uses protective interruption with peers</Text></Value>
+				<Value><Code>B1I</Code><Text>Observes and listens before acting</Text></Value>
+				<Value><Code>B2A</Code><Text>Helps someone or something in need</Text></Value>
+				<Value><Code>B2B</Code><Text>Shows empathy</Text></Value>
+				<Value><Code>B2C</Code><Text>Shows compassion</Text></Value>
+				<Value><Code>B2D</Code><Text>Is forgiving</Text></Value>
+				<Value><Code>B2E</Code><Text>Talks in a friendly way</Text></Value>
+				<Value><Code>B3A</Code><Text>Shows intercultural understanding</Text></Value>
+				<Value><Code>B3B</Code><Text>Acknowledges authority</Text></Value>
+				<Value><Code>B3C</Code><Text>Shows courtesy</Text></Value>
+				<Value><Code>B3D</Code><Text>Is polite</Text></Value>
+				<Value><Code>B3E</Code><Text>Accepts difference</Text></Value>
+				<Value><Code>B3F</Code><Text>Acknowledges the rights of others</Text></Value>
+				<Value><Code>B3G</Code><Text>Uses appropriate language/tone</Text></Value>
+				<Value><Code>B3H</Code><Text>Gives value to others' opinions</Text></Value>
+				<Value><Code>B3I</Code><Text>Maintains appropriate personal space</Text></Value>
+				<Value><Code>B3J</Code><Text>Shows consideration of impact of actions on others</Text></Value>
+				<Value><Code>B4A</Code><Text>Is honest</Text></Value>
+				<Value><Code>B4B</Code><Text>Acts with integrity</Text></Value>
+				<Value><Code>B4C</Code><Text>Self regulates</Text></Value>
+				<Value><Code>B4D</Code><Text>Co-regulates</Text></Value>
+				<Value><Code>B4E</Code><Text>Helps others to regulate</Text></Value>
+				<Value><Code>B4F</Code><Text>Is trustworthy</Text></Value>
+				<Value><Code>B4G</Code><Text>Copes with frustration</Text></Value>
+				<Value><Code>B4H</Code><Text>Accepts accountability</Text></Value>
+				<Value><Code>B4I</Code><Text>Owns consequences of actions</Text></Value>
+				<Value><Code>B4J</Code><Text>Is organised</Text></Value>
+				<Value><Code>B5A</Code><Text>Thinks critically</Text></Value>
+				<Value><Code>B5B</Code><Text>Is creative</Text></Value>
+				<Value><Code>B5C</Code><Text>Is timely</Text></Value>
+				<Value><Code>B5D</Code><Text>Takes considered risks</Text></Value>
+				<Value><Code>B5E</Code><Text>Takes a problem solving approach</Text></Value>
+				<Value><Code>B5F</Code><Text>Is adaptable</Text></Value>
+				<Value><Code>B5G</Code><Text>Shows independence</Text></Value>
+				<Value><Code>B5H</Code><Text>Takes initiative</Text></Value>
+				<Value><Code>B5I</Code><Text>Shows persistence</Text></Value>
+				<Value><Code>B5J</Code><Text>Shows courage</Text></Value>
+				<Value><Code>B5K</Code><Text>Negotiates</Text></Value>
+				<Value><Code>B5L</Code><Text>Is persuasive</Text></Value>
+				<Value><Code>B5M</Code><Text>Builds social support (networks)</Text></Value>
+				<Value><Code>B5N</Code><Text>Innovates</Text></Value>
+				<Value><Code>B5O</Code><Text>Shows determination</Text></Value>
+				<Value><Code>B6A</Code><Text>Pays attention</Text></Value>
+				<Value><Code>B6B</Code><Text>Tries hard</Text></Value>
+				<Value><Code>B6C</Code><Text>Completes work</Text></Value>
+				<Value><Code>B6D</Code><Text>Perseveres</Text></Value>
+				<Value><Code>B6E</Code><Text>Asks questions</Text></Value>
+				<Value><Code>B6F</Code><Text>Shows desire to learn</Text></Value>
+				<Value><Code>B6G</Code><Text>Stays on task</Text></Value>
+				<Value><Code>B6H</Code><Text>Participates constructively</Text></Value>
+				<Value><Code>B6I</Code><Text>Shows commitment to identified goals</Text></Value>
+				<Value><Code>B7A</Code><Text>Promotes justice</Text></Value>
+				<Value><Code>B7B</Code><Text>Follows rules and laws</Text></Value>
+				<Value><Code>B7C</Code><Text>Stands up for others appropriately</Text></Value>
+				<Value><Code>B7D</Code><Text>Puts others' needs before own</Text></Value>
+				<Value><Code>B7E</Code><Text>Contributes to the school/class</Text></Value>
+				<Value><Code>B7F</Code><Text>Contributes to the community</Text></Value>
+				<Value><Code>B7G</Code><Text>Is involved</Text></Value>
+				<Value><Code>B7H</Code><Text>Belongs</Text></Value>
+				<Value><Code>B7I</Code><Text>Promotes harmony</Text></Value>
+				<Value><Code>B7J</Code><Text>Gives back to the greater good</Text></Value>
+				<Value><Code>B7K</Code><Text>Becomes informed</Text></Value>
+				<Value><Code>B7L</Code><Text>Uses procedures and protocols</Text></Value>
+				<Value><Code>B7M</Code><Text>Participates in democratic decision making</Text></Value>
+				<Value><Code>B7N</Code><Text>Helps others to reach their goals</Text></Value>
+				<Value><Code>B8A</Code><Text>Is fair</Text></Value>
+				<Value><Code>B8B</Code><Text>Shows mutuality (sharing a feeling, action or relationship)</Text></Value>
+				<Value><Code>B8C</Code><Text>Shows reciprocity ("I scratch your back, you scratch mine")</Text></Value>
+				<Value><Code>B8D</Code><Text>Shows goodwill</Text></Value>
+				<Value><Code>B8E</Code><Text>Is attentive to others' reactions</Text></Value>
+				<Value><Code>B8F</Code><Text>Is open to dialogue/discussion</Text></Value>
+				<Value><Code>B8G</Code><Text>Works to be a valued member of a team</Text></Value>
+				<Value><Code>B8H</Code><Text>Offers others choices</Text></Value>
+				<Value><Code>B9A</Code><Text>Inspires others</Text></Value>
+				<Value><Code>B9B</Code><Text>Represents others</Text></Value>
+				<Value><Code>B9C</Code><Text>Delegates to others</Text></Value>
+				<Value><Code>B9D</Code><Text>Shows self confidence</Text></Value>
+				<Value><Code>B9E</Code><Text>Shows assertiveness</Text></Value>
+				<Value><Code>B9F</Code><Text>Stays positive</Text></Value>
+				<Value><Code>B9G</Code><Text>Shoulders blame</Text></Value>
+				<Value><Code>B9H</Code><Text>Sets an example</Text></Value>
+				<Value><Code>B9I</Code><Text>Communicates effectively</Text></Value>
+				<Value><Code>B9J</Code><Text>Shows wisdom</Text></Value>
+				<Value><Code>M1A</Code><Text>Striking - Staff</Text></Value>
+				<Value><Code>M1B</Code><Text>Pushing or barging - Staff</Text></Value>
+				<Value><Code>M1C</Code><Text>Use of a weapon or object - Staff</Text></Value>
+				<Value><Code>M1D</Code><Text>Projectile - Staff</Text></Value>
+				<Value><Code>M1E</Code><Text>Struggling to be free of a physical restraint - Staff</Text></Value>
+				<Value><Code>M1F</Code><Text>Unintentional but negligent contact - Staff</Text></Value>
+				<Value><Code>M2A</Code><Text>Verbal abuse - Staff</Text></Value>
+				<Value><Code>M2B</Code><Text>Non-Verbal abuse - Staff</Text></Value>
+				<Value><Code>M2C</Code><Text>Verbal threat - Staff</Text></Value>
+				<Value><Code>M2D</Code><Text>Threatening gesture - Staff</Text></Value>
+				<Value><Code>M2E</Code><Text>Disrespectful or challenging language - Staff</Text></Value>
+				<Value><Code>M2F</Code><Text>Malicious gossip - Staff</Text></Value>
+				<Value><Code>M2G</Code><Text>Sexual harassment - Staff</Text></Value>
+				<Value><Code>M3A</Code><Text>Striking - Student</Text></Value>
+				<Value><Code>M3B</Code><Text>Pushing or barging - Student</Text></Value>
+				<Value><Code>M3C</Code><Text>Use of a weapon or object - Student</Text></Value>
+				<Value><Code>M3D</Code><Text>Projectile - Student</Text></Value>
+				<Value><Code>M3E</Code><Text>Struggling to be free of violation of personal space or deprivation of liberty - Student</Text></Value>
+				<Value><Code>M3F</Code><Text>Unintentional but negligent contact - Student</Text></Value>
+				<Value><Code>M4A</Code><Text>Verbal abuse - Student</Text></Value>
+				<Value><Code>M4B</Code><Text>Non-Verbal abuse - Student</Text></Value>
+				<Value><Code>M4C</Code><Text>Verbal threat - Student</Text></Value>
+				<Value><Code>M4D</Code><Text>Threatening gesture - Student</Text></Value>
+				<Value><Code>M4E</Code><Text>Malicious gossip - Student</Text></Value>
+				<Value><Code>M4F</Code><Text>Exclusion of peer - Student</Text></Value>
+				<Value><Code>M4G</Code><Text>Teasing - Student</Text></Value>
+				<Value><Code>M4H</Code><Text>Unhelpful bystander actions - Student</Text></Value>
+				<Value><Code>M4I</Code><Text>Sexual harassment - Student</Text></Value>
+				<Value><Code>M5A</Code><Text>Theft of personal property</Text></Value>
+				<Value><Code>M5B</Code><Text>Theft of school property</Text></Value>
+				<Value><Code>M5C</Code><Text>Deliberate damage to personal property</Text></Value>
+				<Value><Code>M5D</Code><Text>Incidental damage through negligence</Text></Value>
+				<Value><Code>M5E</Code><Text>Graffiti</Text></Value>
+				<Value><Code>M5F</Code><Text>Buildings and glass</Text></Value>
+				<Value><Code>M5G</Code><Text>Fittings and fixtures</Text></Value>
+				<Value><Code>M5H</Code><Text>Furniture</Text></Value>
+				<Value><Code>M5I</Code><Text>Equipment</Text></Value>
+				<Value><Code>M5J</Code><Text>Vehicles</Text></Value>
+				<Value><Code>M5K</Code><Text>Garden and plants</Text></Value>
+				<Value><Code>M6A</Code><Text>Active refusal to follow reasonable instructions</Text></Value>
+				<Value><Code>M6B</Code><Text>Passive non-compliance</Text></Value>
+				<Value><Code>M6C</Code><Text>Disruptive</Text></Value>
+				<Value><Code>M6D</Code><Text>Defiant</Text></Value>
+				<Value><Code>M6E</Code><Text>Unclear boundaries</Text></Value>
+				<Value><Code>M6F</Code><Text>Erratic</Text></Value>
+				<Value><Code>M6G</Code><Text>Impulsive</Text></Value>
+				<Value><Code>M6H</Code><Text>Uninterested</Text></Value>
+				<Value><Code>M6I</Code><Text>Inattentive</Text></Value>
+				<Value><Code>M6J</Code><Text>Unresponsive</Text></Value>
+				<Value><Code>M6K</Code><Text>Unprepared</Text></Value>
+				<Value><Code>M6L</Code><Text>Out of bounds</Text></Value>
+				<Value><Code>M6N</Code><Text>Dress code breach without reasonable explanation</Text></Value>
+				<Value><Code>M6O</Code><Text>Lateness</Text></Value>
+				<Value><Code>M6P</Code><Text>Class-work avoidance</Text></Value>
+				<Value><Code>M6Q</Code><Text>Unsafe</Text></Value>
+				<Value><Code>M6R</Code><Text>Out of class without permission</Text></Value>
+				<Value><Code>M6S</Code><Text>Annoying</Text></Value>
+				<Value><Code>M6T</Code><Text>Inappropriate language</Text></Value>
+				<Value><Code>M6U</Code><Text>Academic dishonesty</Text></Value>
+				<Value><Code>M6V</Code><Text>Loud</Text></Value>
+				<Value><Code>M6W</Code><Text>Out of seat</Text></Value>
+				<Value><Code>M6X</Code><Text>Failure to use manners</Text></Value>
+				<Value><Code>M6Y</Code><Text>Littering</Text></Value>
+				<Value><Code>M6Z</Code><Text>Disorderly</Text></Value>
+				<Value><Code>M7A</Code><Text>Cigarette / e-cigarette</Text></Value>
+				<Value><Code>M7B</Code><Text>Alcohol</Text></Value>
+				<Value><Code>M7C</Code><Text>Over-the-counter medication</Text></Value>
+				<Value><Code>M7D</Code><Text>ADHD medication</Text></Value>
+				<Value><Code>M7E</Code><Text>Other prescription medication</Text></Value>
+				<Value><Code>M7F</Code><Text>Aerosol</Text></Value>
+				<Value><Code>M7G</Code><Text>Solvents</Text></Value>
+				<Value><Code>M7H</Code><Text>Inappropriate sexual material</Text></Value>
+				<Value><Code>M8A</Code><Text>Knife or blade</Text></Value>
+				<Value><Code>M8B</Code><Text>Firearm</Text></Value>
+				<Value><Code>M8C</Code><Text>Amphetamines</Text></Value>
+				<Value><Code>M8D</Code><Text>Marijuana</Text></Value>
+				<Value><Code>M8E</Code><Text>Drug implement or paraphernalia</Text></Value>
+				<Value><Code>M8F</Code><Text>Other illegal drug</Text></Value>
+				<Value><Code>M8G</Code><Text>Other illegal weapon</Text></Value>
+				<Value><Code>M9A</Code><Text>Cyberbullying</Text></Value>
+				<Value><Code>M9B</Code><Text>Hacking</Text></Value>
+				<Value><Code>M9C</Code><Text>Breach of Department acceptable use agreement</Text></Value>
+				<Value><Code>M9D</Code><Text>Breach of Students Online Policy</Text></Value>
+				<Value><Code>M9E</Code><Text>Persistent personal use of a MED when not permitted</Text></Value>
+				<Value><Code>M9F</Code><Text>Inappropriate audio or video recording</Text></Value>
+				<Value><Code>M9G</Code><Text>Inappropriate uploading of text, images or audio</Text></Value>
+				<Value><Code>M9H</Code><Text>Public posting of messages that bring the school or Department into disrepute</Text></Value>
+				<Value><Code>M9I</Code><Text>Copyright infringement or plagiarism</Text></Value>
 			</Values>
 	</CodeSet>    <!-- Wellbeing Event Sub Category -->
 
@@ -755,7 +755,7 @@
 			<Value><Code>E</Code><Text>Expulsion</Text></Value>
 			<Value><Code>WE</Code><Text>Whole Exclusion</Text></Value>
 			<Value><Code>P</Code><Text>Partial Exclusion</Text></Value>
-			<Value><Code>I</Code><Text>InSchool</Text></Value>
+			<Value><Code>I</Code><Text>In School</Text></Value>
 			<Value><Code>W</Code><Text>Withdrawal</Text></Value>
 			<Value><Code>S</Code><Text>Suspension</Text></Value>
 			<Value><Code>R</Code><Text>Removal</Text></Value>
@@ -788,8 +788,8 @@
 					<Value><Code>S</Code><Text>Suspension</Text></Value>
 					<Value><Code>D</Code><Text>Detention</Text></Value>
 					<Value><Code>A</Code><Text>Award</Text></Value>
-					<Value><Code>P</Code><Text>PlanRequired</Text></Value>
-					<Value><Code>M</Code><Text>MultipleResponse</Text></Value>
+					<Value><Code>P</Code><Text>Plan Required</Text></Value>
+					<Value><Code>M</Code><Text>Multiple Response</Text></Value>
 					<Value><Code>O</Code><Text>Other</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Wellbeing Response Category -->
@@ -815,7 +815,7 @@
 		<Values>
 				<Value><Code>NONE</Code><Text>None</Text></Value>
 				<Value><Code>OTHE</Code><Text>Other</Text></Value>
-				<Value><Code>PEER</Code><Text>Peer(s)</Text></Value>
+				<Value><Code>PEER</Code><Text>Peers</Text></Value>
 				<Value><Code>STAF</Code><Text>Staff</Text></Value>
 				<Value><Code>SUBS</Code><Text>Substitute</Text></Value>
 				<Value><Code>TEAC</Code><Text>Teacher</Text></Value>
@@ -832,12 +832,12 @@
 				<Value>
 					<Code>ARTR</Code>
 					<Text>Art Room</Text>
-					<Description>The area used for art classes and activities</Description>
+					<Description>The area used for art classes and activities.</Description>
 				</Value>
 				<Value>
 					<Code>BATH</Code>
 					<Text>Bathroom / Restroom</Text>
-					<Description>The area used for art classes and activities.</Description>
+					<Description>Areas used by students for taking care of personal needs.</Description>
 				</Value>
 				<Value>
 					<Code>BUSL</Code>
@@ -975,15 +975,15 @@
 				<Value><Code>DISRU</Code><Text>Disruption</Text><Description>Student engages in behavior causing an interruption in a class or activity. Disruption includes sustained loud talk, yelling, or screaming; noise with materials; horseplay or roughhousing; and/or sustained out-of-seat behavior.</Description></Value>
 				<Value><Code>DRESS</Code><Text>Dress Code Violation</Text><Description>Student wears clothing that does not fit within the dress code guidelines practiced by the school/district.</Description></Value>
 				<Value><Code>FIGHT</Code><Text>Fighting</Text><Description>Student is involved in mutual participation in an incident involving physical violence.</Description></Value>
-				<Value><Code>FORGE</Code><Text>Forgery / Theft / Plagarism</Text><Description>Student is involved by being in possession of, having passed on, or being responsible for removing someone else's property; or the student has signed a person’s name without that person’s permission, or claims someone else’s work as their own.</Description></Value>
+				<Value><Code>FORGE</Code><Text>Forgery / Theft / Plagiarism</Text><Description>Student is involved by being in possession of, having passed on, or being responsible for removing someone else's property; or the student has signed a person’s name without that person’s permission, or claims someone else’s work as their own.</Description></Value>
 				<Value><Code>GANGA</Code><Text>Gang Affiliation Display</Text><Description>Student uses gesture, dress, and/or speech to display affiliation with a gang.</Description></Value>
 				<Value><Code>HARAS</Code><Text>Harassment</Text><Description>The delivery of disrespectful messages in any format related to gender, ethnicity, sex, race, religion, disability, physical features, or other protected class. </Description></Value>
 				<Value><Code>INADI</Code><Text>Inappropriate Display of Affection</Text><Description>Student engages in inappropriate, consensual (as defined by school) verbal and/or physical gestures/contact, of a sexual nature to another student/adult.</Description></Value>
 				<Value><Code>INALO</Code><Text>Inappropriate Location / Out of Bounds Area</Text><Description>Student is in an area that is outside of school boundaries (as defined by school).</Description></Value>
 				<Value><Code>LYING</Code><Text>Lying / Cheating</Text><Description>Student delivers message that is untrue and/or deliberately violates rules.</Description></Value>
-				<Value><Code>OTHER</Code><Text>Other Behaviour</Text><Description></Description>Student engages in problem behavior not listed.</Value>
+				<Value><Code>OTHER</Code><Text>Other Behaviour</Text><Description>Student engages in problem behavior not listed.</Description></Value>
 				<Value><Code>PHYSI</Code><Text>Physical Aggression</Text><Description>Student engages in actions involving serious physical contact where injury may occur (e.g., hitting, punching, hitting with an object, kicking, hair pulling, scratching, etc.).</Description></Value>
-				<Value><Code>PROPE</Code><Text>Property Damage / Vandilism</Text><Description>Student participates in an activity that results in destruction or disfigurement of property.</Description></Value>
+				<Value><Code>PROPE</Code><Text>Property Damage / Vandalism</Text><Description>Student participates in an activity that results in destruction or disfigurement of property.</Description></Value>
 				<Value><Code>SKIPC</Code><Text>Skip Class</Text><Description>Student leaves or misses class without permission.</Description></Value>
 				<Value><Code>TARDY</Code><Text>Tardy</Text><Description>Student is late (as defined by the school) to class or the start up of the school day (and Tardy is not considered a minor problem behavior in the school).</Description></Value>
 				<Value><Code>TECHN</Code><Text>Technology Violation</Text><Description>Student engages in inappropriate (as defined by school) use of cell phone, pager, music/video players, camera, and/or computer.</Description></Value>
@@ -1256,7 +1256,7 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Code set denoting who can provide a learning support intervention, e.g. who provides co-ordination, manages the contents etc. for the intervention.</p>
+			<p>Code set denoting who can fund a learning support intervention, i.e. who provides co-ordination, manages the contents etc. for the intervention.</p>
 		</Intro>
 		<ID>Learning Support Funded By</ID>
 		<Values>
@@ -1278,7 +1278,9 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Code set denoting who can provide a learning support intervention.</p>
+			<p>Code set denoting who can provide a learning support intervention,
+				e.g. who provides co-ordination, manages the contents etc. for 
+				the intervention.</p>
 		</Intro>
 		<ID>Learning Support Provided By</ID>
 		<Values>
