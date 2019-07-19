@@ -5,11 +5,11 @@
 			xmlns:xhtml="http://www.w3.org/1999/xhtml"
 			xmlns:json="http://json.org/"
 			
-            xmlns="http://sifassociation.org/SpecGen">
+      xmlns="http://sifassociation.org/SpecGen">
   <Key>ProviderRefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
-    	<Element>Provider</Element>
+    <Element>Provider</Element>
 		<privacyRating>Low</privacyRating>
     	<Description>A recognised provider of education services in the New Zealand
 			education system.  Providers may operate in the Early Childhood, Compulsory Schooling or Tertiary sectors.
@@ -17,26 +17,26 @@
 		<Type complex="extension" name="EduOrganisationType"/>
   </Item>   <!-- Provider -->
   <Item>
-	<Element>ProviderRefId</Element>
-	<Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
-	<Description>
-		<p>The SIF GUID used by systems to identify the organisation.</p>
-	</Description>
-	<Type ref="CommonTypes" name="RefIdType"/>
+		<Element>ProviderRefId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The SIF GUID used by systems to identify the organisation.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
   </Item>   <!-- ProviderRefId -->
   <Item>
-	<Element>ProviderLocalId</Element>
-	<Characteristics>O</Characteristics>
-	<privacyRating>Low</privacyRating>
-	<Description>
-		<p>Local identifier used by the sending to identify the organisation</p>
-	</Description>
-	<Type ref="CommonTypes" name="LocalIdType"/>
+		<Element>ProviderLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Local identifier used by the sending to identify the organisation</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
   </Item>   <!-- ProviderLocalId -->	  
   <Item>
 	  <Element>Authority</Element>
-	  <Characteristics>M</Characteristics>
+	  <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
 	  <Description>
 		  <p>A code denoting the authority by which the Provider is authorised to
@@ -44,7 +44,7 @@
 		  </p>
 	  </Description>
 	  <Type ref="CodeSets" name="NZCodeSetsProviderAuthorityType"/>
-  </Item> <!-- Authority -->
+  </Item>   <!-- Authority -->
   <Item>
 	  <Element>SchoolService</Element>
 	  <Characteristics>O</Characteristics>
@@ -54,7 +54,7 @@
 		  Contains properties that are school-specific. </p>
 	  </Description>
 	  <Type ref="CommonTypes" name="SchoolServiceType"/>
-  </Item> <!-- SchoolService -->
+  </Item>   <!-- SchoolService -->
   <Item>
 	  <Element>ECEService</Element>
 	  <Characteristics>O</Characteristics>
@@ -64,7 +64,7 @@
 		  Contains properties that are ECE specific.</p>
 	  </Description>
 	  <Type ref="CommonTypes" name="ECEServiceType"/>
-  </Item> <!-- ECEService -->
+  </Item>   <!-- ECEService -->
   <Item>
 	  <Element>TertiarySerice</Element>
 	  <Characteristics>O</Characteristics>
@@ -75,7 +75,7 @@
 		  <p>A placeholder for future expansion</p>
 	  </Description>
 	  <Type name="xs:normalizedString"/>
-  </Item> <!-- TertiaryService -->
+  </Item>   <!-- TertiaryService -->
   
   <xhtml:Example xmlns="" name="School Provider Example">
     <Provider>

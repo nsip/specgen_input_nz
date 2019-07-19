@@ -22,7 +22,7 @@
   </Item>
   <Item>
     <Element>ProviderRelationshipRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The SIF GUID for the relationship between two providers.</p>
@@ -31,7 +31,7 @@
   </Item>  <!-- ProviderRelationshipRefId -->
   <Item>
     <Element>ProviderRelationshipLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>LocalId for the relationship between two providers, if provided by the source system.</p>
@@ -90,7 +90,7 @@
 
   <Item>
     <Element>EffectiveDate</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The date from which the provider relationship is active.</p>
@@ -108,7 +108,7 @@
   </Item>  <!-- ExpirationDate -->
   <Item>
     <Element>YearLevelList</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A list of YearLevels, denoting the year levels of the
@@ -118,7 +118,7 @@
   </Item>  <!-- YearLevelList -->
   <Item>
     <Element>SubjectAreaList</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A list of Subject or Learning Areas, denoting the curriculum subjects or learning areas that 

@@ -331,7 +331,9 @@
 			<Element>Recognition</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>
-				<p>The nature of recognition given to the student for the successful completion of work in a co-curricular or extra-curricular activity.</p>
+				<p>The nature of recognition given to the student for the
+				successful completion of work in a co-curricular or
+				extra-curricular activity.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
 		</Item> <!--Recognition-->

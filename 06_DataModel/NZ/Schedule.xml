@@ -17,7 +17,7 @@
 	
 	<Item>
 		<Element>ScheduleRefId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p> The ID (GUID) assigned to uniquely identify this Schedule.</p>
@@ -26,7 +26,7 @@
 	</Item>    <!-- ScheduleRefId -->
 	<Item>
 		<Element>ScheduleLocalId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The local Id of the schedule.</p>
@@ -55,7 +55,7 @@
 	</Item>    <!-- StartDate -->
 	<Item>
 		<Element>EndDate</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The end date of the schedule.</p>

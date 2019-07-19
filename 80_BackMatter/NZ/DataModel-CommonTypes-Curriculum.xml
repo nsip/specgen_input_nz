@@ -53,19 +53,18 @@
 	<CommonElement name="StaffSubjectType" type="true" dm="true">
 		<Item>
 			<Element>StaffSubjectType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
 				<p>This element contains Staff subjects they are eligible to teach together with the teaching preference.</p>
 			</Description>
 		</Item>
 		<Item>
 			<Element>PreferenceNumber</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Priority of Subject to Teach.</p>
 			</Description>
 			<Type name="xs:unsignedInt"/>
-		</Item>      <!-- Preference -->
+		</Item>       <!-- Preference -->
 		<Item>
 			<Element>Code</Element>
 			<Characteristics>M</Characteristics>
@@ -76,7 +75,7 @@
 		</Item>       <!-- Code -->
 		<Item>
 			<Element>YearLevels</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Staff assignment to this particular subject area / learning area applies
 					only for students enrolled in a particular set of year levels.   
