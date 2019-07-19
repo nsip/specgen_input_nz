@@ -438,7 +438,6 @@
 
   <Item>
     <Element>StudentSubjectChoiceList</Element>
-
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>

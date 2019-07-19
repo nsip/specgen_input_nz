@@ -18,7 +18,7 @@
   </Item>
   <Item>
     <Element>StudentAssessmentTaskRegistrationRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A GUID that identifies an instance of this object. </p>
@@ -27,7 +27,7 @@
   </Item>    <!-- StudentAssessmentTaskRegistrationRefId -->
   <Item>
     <Element>StudentAssessmentTaskRegistrationLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Local identifier that identifies an instance of this object, if provided by the source system.</p>
@@ -47,7 +47,7 @@
 
   <Item>
     <Element>Student</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the student held in the StudentPersonal data object
@@ -121,7 +121,7 @@
 
   <Item>
     <Element>DateRegistered</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The date the student's intent to participate in the assessment task was registered.</p>
@@ -131,7 +131,7 @@
 
   <Item>
     <Element>AssessmentYear</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The assessment year the student's intent to participate in the assessment task was registered for.</p>

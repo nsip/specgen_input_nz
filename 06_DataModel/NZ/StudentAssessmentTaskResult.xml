@@ -19,7 +19,7 @@
 
   <Item>
     <Element>StudentAssessmentTaskResultRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A GUID that identifies an instance of this object.</p>
@@ -28,7 +28,7 @@
   </Item>    <!-- StudentAssessmentTaskResultRefId -->
   <Item>
     <Element>StudentAssessmentTaskResultLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>LocalId that identifies an instance of this object, if provided by the source system.</p>
@@ -49,7 +49,7 @@
   </Item>    <!-- AssessmentTask -->
   <Item>
     <Element>AssessmentType</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The type of assessment the result is for.</p>
@@ -59,7 +59,7 @@
  
   <Item>
     <Element>Student</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the student held in the StudentPersonal
@@ -71,7 +71,7 @@
   <!--  Providers & Markers involved in setting the Assessment Task (and result) -->
   <Item>
     <Element>ProviderInvolvedList</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
     </Description>

@@ -244,7 +244,7 @@
 
 		<Item>
 			<Element>Result</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>The final result of the assessment task that justifies the attainment.</p>
 			</Description>
@@ -253,7 +253,7 @@
 
 		<Item>
 			<Element>Date</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>The date the justifying assessment task was achieved.</p>
 			</Description>

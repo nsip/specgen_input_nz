@@ -25,7 +25,7 @@
 
   <Item>
     <Element>StudentCurriculumProgressReportRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this Student Curriculum Progress Report.</p>
@@ -35,7 +35,7 @@
 
   <Item>
     <Element>StudentCurriculumProgressReportLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Locally assigned identifier for the student curriculum progress report, from the source system.</p>
@@ -65,7 +65,7 @@
 
   <Item>
     <Element>TeachingGroup</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the TeachingGroup the student is enrolled in for which 
@@ -86,7 +86,7 @@
 
   <Item>
     <Element>RepositoryReceivedDate</Element>    
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The date the repository received the students technology centre progress and achievement report.</p>
@@ -96,7 +96,7 @@
 
   <Item>
     <Element>TimeFrame</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <Description>
       <p>The timeframe of the provided information e.g. Routine Update, Mid-Year, End of Year etc.</p>
     </Description>

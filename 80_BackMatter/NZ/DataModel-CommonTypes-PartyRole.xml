@@ -10,8 +10,6 @@
 	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
 		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
 
-
-	<!-- Borrowed from SIF AU -->
 	<CommonElement name="PersonInfoType" type="true" dm="true">
 		<Item>
 			<Element>PersonInfoType</Element>
@@ -28,14 +26,14 @@
 			<Type ref="CommonTypes" name="BaseNameType"/>
 		</Item>    <!-- Name -->
 		<Item>
-			<Element>OtherNames</Element>
+			<Element>OtherNameList</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Previous, alternate or other names or aliases
 				associated with the person.</p>
 			</Description>
-			<Type ref="CommonTypes" name="OtherNamesType"/>
-		</Item>    <!-- OtherNames -->
+			<Type ref="CommonTypes" name="OtherNameListType"/>
+		</Item>    <!-- OtherNameList -->
 		<Item>
 			<Element>VerifiedName</Element>
 			<Characteristics>O</Characteristics>
@@ -93,7 +91,7 @@
 					<Type>LGL</Type>
 					<IsVerified>N</IsVerified>
 				</Name>
-				<OtherNames>
+				<OtherNameList>
 					<Name>
 						<FamilyName>Anderson</FamilyName>
 						<GivenName>Samuel</GivenName>
@@ -116,7 +114,7 @@
 						<FullName>Sam Rowinski </FullName>
 						<Type>PRF</Type>
 					</Name>
-				</OtherNames>
+				</OtherNameList>
 				<Demographics>
 					<BirthDate>1990-09-26</BirthDate>
 					<PlaceOfBirth>Dunedin</PlaceOfBirth>
@@ -476,9 +474,9 @@
 			</VerifiedName>
 		</xhtml:Example>
 	</CommonElement>
-	<CommonElement name="OtherNamesType" type="true" dm="true">
+	<CommonElement name="OtherNameListType" type="true" dm="true">
 		<Item>
-			<Element>OtherNamesType</Element>
+			<Element>OtherNameListType</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Previous, alternate or other names or aliases associated with a person.</p>
@@ -491,15 +489,10 @@
 			<Description>
 				<p>Name of the person. Note: Type value of <code>LGL</code> may not occur here.</p>
 			</Description>
-			<if intl="au">
-				<Type ref="CommonTypes" name="OtherNameType"/>
-			</if>	
-			<if intl="nz">
-				<Type ref="CommonTypes" name="VerifiedNameType"/>
-			</if>	
+			<Type ref="CommonTypes" name="VerifiedNameType"/>
 		</Item>    <!-- Name -->
 		<xhtml:Example xmlns="" name="Other Names Example">
-			<OtherNames>
+			<OtherNameList>
 				<Name>
 					<FamilyName>Anderson</FamilyName>
 					<GivenName>Samuel</GivenName>
@@ -524,7 +517,7 @@
 						</Provider>
 					</Verification>					
 				</Name>
-			</OtherNames>
+			</OtherNameList>
 		</xhtml:Example>
 	</CommonElement>
 	<CommonElement name="DemographicsType" type="true" dm="true">
@@ -778,6 +771,7 @@
 			<Type ref="CommonTypes" name="LanguageProficiencyType"/>
 		</Item>    <!-- Proficiency -->
 	</CommonElement>
+
 	<CommonElement name="LanguageProficiencyType" type="true" dm="true">
 		<Item>
 			<Element>LanguageProficiencyType</Element>
@@ -787,7 +781,7 @@
 		</Item>
 		<Item>
 			<Element>Level</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>The person's proficency level in the language in regards to reading, writing or speaking.</p>
 			</Description>
@@ -795,7 +789,7 @@
 		</Item>    <!-- Level -->
 		<Item>
 			<Element>Type</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>The type of language proficency, e.g. speaking, writing or reading.</p>
 			</Description>
@@ -850,7 +844,7 @@
 		</Item>
 		<Item>
 			<Element>Type</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
 				<p>A Code denoting how the owner of the e-mail address describes it.</p>
@@ -859,7 +853,7 @@
 		</Item>    <!-- Type -->
 		<Item>
 			<Element>Address</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>The actual email address.</p>
 			</Description>
@@ -987,15 +981,15 @@
 			<Type ref="CodeSets" name="NZCodeSetsRelationshipToStudentType"/>
 		</Item>    <!-- Code -->
 		<Item>
-				<Element>OtherTypeDescription</Element>
-				<Characteristics>M</Characteristics>
-				<Description>
-					<p>A free text description of relationship type, where
-					Relationship To Student Type is set to ‘Other’, eg
-					‘Au-pair’, ‘Neighbour’</p>
-				</Description>
-				<Type name="xs:normalizedString"/>
-			</Item>    <!-- OtherTypeDescription -->
+			<Element>OtherTypeDescription</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A free text description of relationship type, where
+				Relationship To Student Type is set to ‘Other’, eg
+				‘Au-pair’, ‘Neighbour’</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- OtherTypeDescription -->
 			
 		<xhtml:Example xmlns="" name="Relationship Example">
 			<Relationship>
@@ -1181,7 +1175,7 @@
 		</Item>
 		<Item>
 			<Element>PreferenceNumber</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Priority of Household Contact in relation to this Person.</p>
 			</Description>
@@ -1833,7 +1827,7 @@
 		</Item>
 		<Item>
 			<Element>Code</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>An ethnic group with which the person identifies.</p>
 			</Description>
@@ -1923,7 +1917,7 @@
 		</Item>    <!-- Notes -->
 		<Item>
 			<Element>Type</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>What kind of healthcare service is provided to the Student by the contact?</p>

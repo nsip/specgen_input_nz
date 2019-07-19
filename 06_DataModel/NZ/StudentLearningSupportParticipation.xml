@@ -20,7 +20,7 @@
 
   <Item>
     <Element>StudentLearningSupportParticipationRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this Student Learning Support Participation record.</p>
@@ -30,7 +30,7 @@
 
   <Item>
     <Element>StudentLearningSupportParticipationLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Locally assigned identifier for the learning support participation record, from the source system.</p>
@@ -50,7 +50,7 @@
 
   <Item>
     <Element>AssignedTo</Element>    
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the staff member who has been assigned the student's learning support participation</p>
@@ -241,7 +241,7 @@
 
   <Item>
     <Element>CreatedBy</Element>    
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the staff member who created the student learning support participation record in the source system.</p>
@@ -251,7 +251,7 @@
 
   <Item>
     <Element>LastUpdatedBy</Element>    
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the staff member who last updated the student's learning support participation record in the source system.</p>

@@ -79,7 +79,7 @@
 		</Item>		<!-- AttendanceCode -->
 		<Item>
 			<Element>AttendanceStatus</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Mo defined code recording the status of the attendance record</p>
 			</Description>
@@ -95,7 +95,7 @@
 		</Item>		<!-- StartTime -->
 		<Item>
 			<Element>EndTime</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The end of this particular time span.</p>
 			</Description>
@@ -205,7 +205,7 @@
 		</Item>		<!-- AttendanceCode -->
 		<Item>
 			<Element>AttendanceStatus</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>MoE defined code recoding the status of the attendance record.</p>
 			</Description>
@@ -229,7 +229,7 @@
 		</Item>		<!-- TimetablePeriodId -->
 		<Item>
 			<Element>StartTime</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Optional Start Time of Curriculum Session</p>
 			</Description>
@@ -237,7 +237,7 @@
 		</Item>		<!-- StartTime -->
 		<Item>
 			<Element>EndTime</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Optional End Time of Curriculum Session</p>
 			</Description>

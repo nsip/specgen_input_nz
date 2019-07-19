@@ -132,7 +132,7 @@
           <GivenName>Fred</GivenName>
           <FullName>Fred Smith</FullName>
         </Name>
-        <OtherNames>
+        <OtherNameList>
           <Name Type="AKA">
             <FamilyName>Anderson</FamilyName>
             <GivenName>Samuel</GivenName>
@@ -143,7 +143,7 @@
             <GivenName>Sam</GivenName>
             <FullName>Sam Rowinski </FullName>
           </Name>
-        </OtherNames>
+        </OtherNameList>
 
         <Demographics>
           <IndigenousStatus>3</IndigenousStatus>

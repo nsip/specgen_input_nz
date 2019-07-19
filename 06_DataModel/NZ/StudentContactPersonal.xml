@@ -18,7 +18,7 @@
 	</Item>
 	<Item>
 		<Element>StudentContactPersonalRefId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>The SIF GUID that uniquely identifies the Student Contact.</Description>
 		<Type ref='CommonTypes' name='RefIdType'/>
@@ -54,7 +54,7 @@
 	</Item>    <!-- PersonInfo -->
     <Item>
 		<Element>HealthcareServiceInfo</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
 		<Description>
 			<p>Information about the StudentContact, when that contact is a healthcare service.

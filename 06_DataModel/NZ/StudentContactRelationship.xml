@@ -23,7 +23,7 @@
 	</Item>
 	<Item>
 		<Element>StudentContactRelationshipRefId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The SIF GUID for the student contact relationship.</p>
@@ -32,7 +32,7 @@
 	</Item>   <!-- StudentContactRelationshipRefId -->
 	<Item>
 		<Element>StudentContactRelationshipLocalID</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>Local identifier for the student contact relationship, if provided by the source system</p>
@@ -55,7 +55,7 @@
 	</Item>   <!-- StudentContact -->
 	<Item>
 		<Element>Provider</Element>
-		<Characteristics>C</Characteristics>
+		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>Generic object reference to the Provider associated with the relationship.</Description>
 		<Type ref='CommonTypes' name='ObjectReferenceType'/>

@@ -16,7 +16,7 @@
 	
 	<Item>
 		<Element>StudentPersonalRefId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The GUID of the student.</p>
@@ -26,7 +26,7 @@
 	
 	<Item>
 		<Element>StudentPersonalLocalId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The locally-assigned identifier for this student.</p>
@@ -90,7 +90,7 @@
 					<Type>LGL</Type>
 					<IsVerified>N</IsVerified>
 				</Name>
-				<OtherNames>
+				<OtherNameList>
 					<Name>
 						<FamilyName>Anderson</FamilyName>
 						<GivenName>Samuel</GivenName>
@@ -115,7 +115,7 @@
 						<Type>PRF</Type>
 						<IsVerified>N</IsVerified>
 					</Name>
-				</OtherNames>
+				</OtherNameList>
 				<Demographics>
 					<BirthDate>1990-09-26</BirthDate>
 					<PlaceOfBirth>Dunedin</PlaceOfBirth>

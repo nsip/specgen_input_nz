@@ -20,7 +20,7 @@
 	</Item>
 	<Item>
 		<Element>StudentAttendanceTimeListRefId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>The ID (GUID) that uniquely identifies the attendance record.</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>

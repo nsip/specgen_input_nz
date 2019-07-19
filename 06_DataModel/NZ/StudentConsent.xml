@@ -17,7 +17,7 @@
 	
 	<Item>
 		<Element>StudentConsentRefId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The GUID of the student consent.</p>
@@ -27,7 +27,7 @@
 	
 	<Item>
 		<Element>StudentConsentLocalId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The locally-assigned identifier for this student consent.</p>
@@ -57,7 +57,7 @@
 
 	<Item>
 		<Element>StaffMember</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>Generic object reference to the staff member that is recording this consent.</p>
@@ -94,7 +94,7 @@
 
 	<Item>
 		<Element>ConsentRevokedDate</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<Description>
 			<p>The date the consent ended, if it was given.</p>
 		</Description>
@@ -103,7 +103,7 @@
 
 	<Item>
 		<Element>RelatedObject</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>Generic object reference to a data object that relates to this consent.  e.g. the student enrolment record this consent was captured as part of.</p>
@@ -113,7 +113,7 @@
 
 	<Item>
 		<Element>AdditionalInformation</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<Description>
 			<p> Additional free text information provided about the consent.</p>
 		</Description>

@@ -103,6 +103,7 @@
 			</Description>
 			<Type ref="CommonData" name="LanguageOfInstructionType"/>
 		</Item>
+		
 		<xhtml:Example xmlns="" name="LanguageOfInstructionList Example">
 			<LanguageOfInstructionList>
 				<Language>
@@ -115,6 +116,7 @@
 				</Language>
 			</LanguageOfInstructionList>
 		</xhtml:Example>
+
 	</CommonElement>
 
 	<CommonElement name="LanguageOfInstructionType" type="true" dm="true">
@@ -142,12 +144,14 @@
 			</Description>
 			<Type name="xs:decimal"/>
 		</Item>    <!-- Level -->
+
 		<xhtml:Example xmlns="" name="LanguageOfInstruction Example">
 			<LanguageOfInstruction>
 				<Code>NZS01112</Code>
 				<Level>3</Level>
 			</LanguageOfInstruction>
 		</xhtml:Example>
+
 	</CommonElement>
 
 
@@ -294,7 +298,7 @@
 		</Item>    <!-- Class -->
 		<Item>
 			<Element>Teacher</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Generic object reference to the staff member that taught the subject and assessed the student against the technology strand objectives.</p>
 			</Description>
@@ -302,7 +306,7 @@
 		</Item>    <!-- Teacher -->
 		<Item>
 			<Element>BehaviourComment</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Overall comment about the behaviour of the student over the course of the lessons in the Class.</p>
 			</Description>
@@ -310,7 +314,7 @@
 		</Item>    <!-- BehaviourComment -->
 		<Item>
 			<Element>EffortComment</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Overall comment about the effort the student has made in class</p>
 			</Description>
@@ -318,7 +322,7 @@
 		</Item>    <!-- BehaviourComment -->
 		<Item>
 			<Element>StrandList</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A record of the Student's progress in a set of learning strands 
 					from the Technology curriculum, that were covered in the class</p>
@@ -366,7 +370,7 @@
 		</Item>    <!-- LearningStrand -->
 		<Item>
 			<Element>AchievementObjectiveList</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A record of the Student's progress in a set of achievement objectives from the 
 					from the Technology curriculum strand, that was covered in the class.</p>
@@ -414,7 +418,7 @@
 		</Item>    <!-- AchivementObjective -->
 		<Item>
 			<Element>CurriculumLevel</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Code denoting the technology curriculum level that the student's progress report
 				 is being made against for this learning strand achievement objective. e.g. 2, 3, 4 or 5. </p>
@@ -423,7 +427,7 @@
 		</Item>    <!-- CurriculumLevel -->
 		<Item>
 			<Element>ProgressLevel</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Code denoting the level of progress the student has made against the particular learning 
 					strand achievement objective. e.g. Beginner, Proficient, and Advanced. </p>
@@ -432,7 +436,7 @@
 		</Item>    <!-- ProgressLevel -->
 		<Item>
 			<Element>AchievementObjectiveDesc</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A description of what the achievement objective covers.</p>
 			</Description>
@@ -441,7 +445,7 @@
 
 		<Item>
 			<Element>OverallStudentEffortNote</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A note about the student's overall effort in relation to this 
 					achievement objective for this strand.</p>
@@ -450,7 +454,7 @@
 		</Item>    <!-- OverallStudentEffortNote -->
 		<Item>
 			<Element>PracticalAbilityDesc</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A description of practical ability covered by the 
 					achievement objective for the strand.</p>
@@ -459,7 +463,7 @@
 		</Item>    <!-- PracticalAbilityDesc -->
 		<Item>
 			<Element>PracticalAbilityProgressNote</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A note about the student's practical ability progress in relation to
 					 this achievement objective for this strand.</p>
@@ -469,7 +473,7 @@
 
 		<Item>
 			<Element>DocumentList</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Documents that relate to students progress in this strand achievement 
 					objective, e.g. report, photos, media, documents etc.</p>

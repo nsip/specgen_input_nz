@@ -18,7 +18,7 @@
   </Item>
   <Item>
     <Element>StudentAssessmentTaskRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A GUID that identifies an instance of this object. </p>
@@ -27,7 +27,7 @@
   </Item>    <!-- StudentAssessmentTaskRefId -->
   <Item>
     <Element>StudentAssessmentTaskLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Local identifier for the assessment task, if provided by the source system.</p>
@@ -37,7 +37,7 @@
 
   <Item>
     <Element>Student</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the student held in the StudentPersonal 

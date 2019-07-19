@@ -22,7 +22,7 @@
   </Item>
   <Item>
     <Element>StaffPersonalRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the staff member.</p>
@@ -31,7 +31,7 @@
   </Item>    <!-- RefId -->
   <Item>
     <Element>StaffPersonalLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Medium</privacyRating>
     <Description>
       <p>The locally-assigned identifier for this staff member.</p>
@@ -41,7 +41,7 @@
 
   <Item>
     <Element>ESLPairwiseId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Medium</privacyRating>
     <Description>
       <p>The GUID used by Education Sector Logon (ESL) to identify the Staff Member</p>
@@ -51,7 +51,7 @@
 
   <Item>
     <Element>SchoolSMSUserId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Medium</privacyRating>
     <Description>
       <p>The identifier used by the school's SMS to identify the Staff Member</p>

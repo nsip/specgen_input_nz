@@ -44,7 +44,6 @@
 	<CommonElement name="StudentSubjectChoiceType" type="true" dm="true">
 		<Item>
 			<Element>StudentSubjectChoiceType</Element>
-			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>An individual Subject choice that can be made, or has been made by a Student.</p>
 			</Description>
@@ -136,7 +135,7 @@
 		</Item>
 		<Item>
 			<Element>Type</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
 				<p>The type of tertiary education the student is enrolling in.</p>
@@ -307,7 +306,7 @@
 		</Item>		<!-- CurriculumLevel -->
 		<Item>
 			<Element>LanguageOfInstructionList</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>How much instruction has the student received in which languages?</p>
@@ -316,7 +315,7 @@
 		</Item>		<!-- LanguageOfInstructionList -->
 		<Item>
 			<Element>TimeInImmersion</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>The number of years the student has been in Te Reo Māori immersion education.</p>
@@ -325,7 +324,7 @@
 		</Item>		<!-- TimeInImmersion -->
 		<Item>
 			<Element>Section9Agreement</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
 				<p>Indicates whether or not the student is enrolled under a Section 8 agreement</p>
@@ -334,7 +333,7 @@
 		</Item>		<!-- Section9Agreement -->
 		<Item>
 			<Element>OngoingResourceScheme</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
 				<p>Indicates the level of ORS funding the student receives.</p>
@@ -383,7 +382,7 @@
 		</Item>		<!-- InternationalEnrolment -->
 		<Item>
 			<Element>StudentConsentList</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>A list of student consent information.</p>

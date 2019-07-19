@@ -18,7 +18,7 @@
   </Item>
   <Item>
     <Element>StudentAttainmentRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A GUID that identifies an instance of this object. </p>
@@ -28,7 +28,7 @@
 
   <Item>
     <Element>StudentAttainmentLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A localId that identifies an instance of this object, if provided by the source system</p>
@@ -38,7 +38,7 @@
 
   <Item>
     <Element>GrantingProvider</Element>    
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the Provider/Organisation who is granting the attainment to the student, e.g. NZQA, TEC.</p>
@@ -48,7 +48,7 @@
 
   <Item>
     <Element>Attainment</Element>    
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A generic object reference to the type of attainment the student has achieved
@@ -59,7 +59,7 @@
 
   <Item>
     <Element>Student</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the student held in the StudentPersonal data
@@ -81,7 +81,7 @@
 
   <Item>
     <Element>DateAttained</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The date the student achieved the attainment.</p>
