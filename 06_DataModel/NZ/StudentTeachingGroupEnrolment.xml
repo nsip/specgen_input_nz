@@ -20,7 +20,7 @@
 
 	<Item>
 		<Element>StudentTeachingGroupEnrolmentRefId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The SIF GUID for the student teaching group enrolment.</p>
@@ -80,7 +80,7 @@
 
 	<Item>
 		<Element>EndDate</Element>
-		<Characteristics>C</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The date of a student’s enrolment in the teaching group ends.</p>

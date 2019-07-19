@@ -21,7 +21,7 @@
 
   <Item>
     <Element>StudentPhysicalRestraintRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A GUID that identifies an instance of this object.</p>
@@ -61,7 +61,7 @@
 
   <Item>
     <Element>PrincipalOrDelegate</Element>    
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the StaffPersonal object of the Principal or their delegate who oversaw the recording of the physical restraint incident.</p>
@@ -71,7 +71,7 @@
 
   <Item>
     <Element>WellbeingEvent</Element>    
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the Wellbeing Event created for the student the physical reatrint was used on.</p>
@@ -161,7 +161,7 @@
 
   <Item>
     <Element>RestraintReason</Element>    
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The reason the physical restraint was applied to the child.</p>
@@ -171,7 +171,7 @@
 
   <Item>
     <Element>StudentYearLevel</Element>    
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The year level of the student that the physical restraint was applied to.</p>

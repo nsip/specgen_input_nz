@@ -20,7 +20,7 @@
 
   <Item>
     <Element>TeachingGroupEventRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the TeachingGroupEvent</p>
@@ -29,7 +29,7 @@
   </Item>       <!-- TeachingGroupEventRefId -->
   <Item>
     <Element>TeachingGroupEventLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>LocalId of the Teaching GroupEvent.</p>

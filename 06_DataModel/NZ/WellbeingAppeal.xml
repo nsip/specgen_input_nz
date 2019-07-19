@@ -19,7 +19,7 @@
 
   <Item>
     <Element>WellbeingAppealRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Medium</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this WellbeingAppeal.</p>

@@ -22,7 +22,7 @@
 
   <Item>
     <Element>TeachingGroupRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the TeachingGroup</p>
@@ -31,7 +31,7 @@
   </Item>       <!-- TeachingGroupRefId -->
   <Item>
     <Element>TeachingGroupLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>LocalId of the Teaching Group (previously ClassIndicator).</p>
@@ -68,7 +68,7 @@
   </Item>       <!-- GroupType -->
   <Item>
     <Element>Provider</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>RefId  of the Provider who defines the TeachingGroup. Either RefId or LocalId must be provided.</p>

@@ -483,7 +483,7 @@
 		</Item>
 		<Item>
 			<Element>AttainmentGoal</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>The student's academic attainment goal at the time of enrolment.</p>
 			</Description>
@@ -502,7 +502,7 @@
 		</Item>
 		<Item>
 			<Element>OtherProvider</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
 				<p>Generic object reference to the other school where the student is concurrently enrolled.</p>
@@ -717,7 +717,7 @@
 		</Item>
 		<Item>
 			<Element>Reason</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>A code describing how or why the student's enrolment was terminated.</p>
 			</Description>
@@ -733,7 +733,7 @@
 		</Item>		<!-- PostSchoolActivity -->
 		<Item>
 			<Element>InterventionList</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of references to Wellbeing Event, Response &amp; Appeal data objects, 
 					that record the process of terminating a students enrolment.</p>
@@ -761,7 +761,7 @@
 		</Item>
 		<Item>
 			<Element>Intervention</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>A reference to a Wellbeing Event, Response &amp; Appeal data object,
 					 that records the process of terminating a students enrolment.</p>
