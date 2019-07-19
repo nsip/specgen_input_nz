@@ -23,7 +23,7 @@
 	
 	<Item>
 		<Element>ScheduleDateRefId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p> The ID (GUID) assigned to uniquely identify this Schedule Date.</p>
@@ -32,7 +32,7 @@
 	</Item>    <!-- ScheduleDateRefId -->
 	<Item>
 		<Element>ScheduleDateLocalId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The local Id of the this Schedule Date.</p>
@@ -60,7 +60,7 @@
 	</Item>    <!-- Provider -->
 	<Item>
 		<Element>Term</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The Term in session on this calendar date.</p>
@@ -88,7 +88,7 @@
 	</Item>    <!-- AcademicDay -->
 	<Item>
 		<Element>BellSchedule</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The bell schedule that the provider used on this calendar date.</p>

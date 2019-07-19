@@ -189,7 +189,6 @@
 			</AcademicDayList>
 		</xhtml:Example>
 	</CommonElement>
-
 	<CommonElement name="AcademicDayType" type="true" dm="true">
 		<Item>
 			<Element>AcademicDayType</Element>
@@ -201,7 +200,7 @@
 		</Item>
 		<Item>
 			<Element>BellSchedule</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The bell schedule this academic day is following.</p>
 			</Description>

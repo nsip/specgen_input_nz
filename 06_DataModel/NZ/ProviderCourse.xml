@@ -18,7 +18,7 @@
   </Item>
   <Item>
     <Element>ProviderCourseRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) that uniquely identifies the Provider defined Course.</p>
@@ -46,10 +46,10 @@
   
   <Item>
       <Element>Curriculum</Element>
-      <Characteristics>O</Characteristics>
+      <Characteristics>M</Characteristics>
       <privacyRating>Low</privacyRating>
       <Description>
-        <p>Which of New Zealand's two Curricula is covered by the Course.</p>
+        <p>Which of New Zealand's three Curricula is covered by the Course.</p>
       </Description>
       <Type ref="CodeSets" name="NZCodeSetsCurriculumType"></Type>
   </Item>    <!-- Curriculum -->

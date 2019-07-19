@@ -20,7 +20,7 @@
 	
 	<Item>
 		<Element>SchedulePeriodRefId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p> The ID (GUID) assigned to uniquely identify this Schedule Period.</p>
@@ -29,7 +29,7 @@
 	</Item>    <!-- SchedulePeriodRefId -->
 	<Item>
 		<Element>SchedulePeriodLocalId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The local Id of  this Schedule Period.</p>

@@ -23,7 +23,7 @@
 	
 	<Item>
 		<Element>ScheduleAcademicDayRefId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p> The ID (GUID) assigned to uniquely identify this Academic Day.</p>
@@ -32,7 +32,7 @@
 	</Item>    <!-- ScheduleAcademicDayRefId -->
 	<Item>
 		<Element>ScheduleAcademicDayLocalId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The local Id of the this Academic Day.</p>
@@ -70,7 +70,7 @@
 	</Item>    <!-- Schedule -->
 	<Item>
 		<Element>BellSchedule</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The bell schedule the academic day is following.</p>

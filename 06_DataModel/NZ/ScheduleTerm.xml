@@ -23,7 +23,7 @@
 	
 	<Item>
 		<Element>ScheduleTermRefId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p> The ID (GUID) assigned to uniquely identify this Schedule Term.</p>
@@ -32,7 +32,7 @@
 	</Item>    <!-- ScheduleTermRefId -->
 	<Item>
 		<Element>ScheduleTermLocalId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The local Id of  this Schedule Term.</p>
@@ -52,7 +52,7 @@
 
 	<Item>
 		<Element>Provider</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The provider the schedule term applies to, ommitted if it applies to all providers.</p>
@@ -60,6 +60,15 @@
 		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
 	</Item>    <!-- Provider -->
 
+	<Item>
+		<Element>SchoolYear</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The school year the Term is part of.</p>
+		</Description>
+		<Type name="xs:gYear"/>
+	</Item>    <!-- SchoolYear -->
 	<Item>
 		<Element>StartDate</Element>
 		<Characteristics>M</Characteristics>

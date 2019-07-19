@@ -22,7 +22,7 @@
 	
 	<Item>
 		<Element>ScheduleEventRefId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p> The ID (GUID) assigned to uniquely identify this Schedule Event.</p>
@@ -31,7 +31,7 @@
 	</Item>    <!-- ScheduleEventRefId -->
 	<Item>
 		<Element>ScheduleEventLocalId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The local Id of the this Schedule Event.</p>
@@ -61,7 +61,7 @@
 
 	<Item>
 		<Element>Duration</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The duration of the event. If only the "EventDate" field is
@@ -74,7 +74,7 @@
 	</Item>    <!-- Duration -->
 	<Item>
 		<Element>EventTime</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The start time for the event, if required.</p>
@@ -92,7 +92,7 @@
 	</Item>    <!-- EventName -->
 	<Item>
 		<Element>Location</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The name of location where the event will occur.</p>

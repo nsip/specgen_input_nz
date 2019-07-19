@@ -18,14 +18,14 @@
 
   <Item>
     <Element>StudentActivityParticipationRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
 	  <Description>The ID (GUID) that uniquely identifies the instance of the object.</Description>
     <Type ref='CommonTypes' name='RefIdType'/>
   </Item>    <!-- StudentActivityParticipationRefId -->
   <Item>
     <Element>StudentActivityParticipationLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
 	  <Description>LocalId for the participation record, if provided by the source system.</Description>
     <Type ref='CommonTypes' name='LocalIdType'/>
@@ -42,7 +42,7 @@
   </Item>    <!-- Student -->
   <Item>
     <Element>Provider</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the Provider running the activity the student is participating in, e.g. schools.</p>
@@ -78,7 +78,7 @@
       <p>The name of the activity the student participated in.</p>
     </Description>
     <Type name='xs:normalizedString'/>
-  </Item>    <!--ActivityName-->
+  </Item>    <!-- ActivityName-->
   <Item>
     <Element>LearningArea</Element>
     <Characteristics>O</Characteristics>
@@ -97,25 +97,29 @@
       <p>Comment related to the student's participation in the activity. </p>
     </Description>
     <Type name='xs:normalizedString'/>
-  </Item>    <!--ParticipationComment-->
+  </Item>    <!-- ParticipationComment-->
   <Item>
     <Element>StartDate</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>This is the date from which the activity participation is valid (inclusive). </p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!--StartDate-->
+  </Item>    <!-- StartDate -->
   <Item>
     <Element>EndDate</Element>
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>This is the date through which the activity participation is valid (inclusive). If element is supported by the publisher/responder, should contain a date if the student withdraws from the activity before the end of the school year. </p>
+      <p>This is the date through which the activity participation is
+      valid (inclusive). If element is supported by the
+      publisher/responder, should contain a date if the student
+      withdraws from the activity before the end of the school
+      year. </p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!--EndDate-->
+  </Item>    <!-- EndDate -->
   <Item>
     <Element>Role</Element>
     <Characteristics>O</Characteristics>
@@ -133,7 +137,7 @@
       <p>List of awards and other types of recognition given to the student for this activity. </p>
     </Description>
    <Type ref="CommonTypes" name="RecognitionListType"></Type>
-  </Item>    <!--RecognitionList-->
+  </Item>    <!-- RecognitionList-->
 
   <xhtml:Example xmlns='' name="StudentActivityParticipation">
     <StudentActivityParticipation>

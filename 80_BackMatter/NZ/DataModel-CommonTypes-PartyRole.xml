@@ -850,7 +850,7 @@
 		</Item>
 		<Item>
 			<Element>Type</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
 				<p>A Code denoting how the owner of the e-mail address describes it.</p>
@@ -859,7 +859,7 @@
 		</Item>    <!-- Type -->
 		<Item>
 			<Element>Address</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>The actual email address.</p>
 			</Description>

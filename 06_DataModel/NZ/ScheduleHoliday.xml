@@ -20,7 +20,7 @@
 	
 	<Item>
 		<Element>ScheduleHolidayRefId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p> The ID (GUID) assigned to uniquely identify this Schedule Term.</p>
@@ -29,7 +29,7 @@
 	</Item>    <!-- ScheduleHolidayRefId -->
 	<Item>
 		<Element>ScheduleHolidayLocalId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The local Id of  this Schedule Term.</p>
@@ -39,7 +39,7 @@
 
 	<Item>
 		<Element>Provider</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The provider the ScheduleHoliday relates to. Not populated if it is a National

@@ -30,7 +30,7 @@
 
   <Item>
     <Element>StaffAssignmentRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID that uniquely identifies a particular staff assignment.</p>
@@ -39,7 +39,7 @@
   </Item>      <!-- StaffAssignmentRefId -->
   <Item>
     <Element>StaffAssignmentLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>LocalId that identifies the staff assignment, from the source system, if provided.</p>
@@ -90,13 +90,13 @@
 
   <Item>
     <Element>StartDate</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>This is the date from which the staff assignment is valid (inclusive).</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!-- StartDate -->
+  </Item>      <!-- StartDate -->
   <Item>
     <Element>EndDate</Element>
     <Characteristics>O</Characteristics>
@@ -106,23 +106,11 @@
           can be NULL when the staff member's assignment to a particular role is open-ended.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!-- EndDate -->
-
-  <Item>
-    <Element>PrimaryAssignment</Element>
-    <Characteristics>M</Characteristics>
-	  <privacyRating>Low</privacyRating>
-    <Description>
-      <p>
-        Is this the staff member's primary assignment?  
-      </p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>      <!-- PrimaryAssignment -->
+  </Item>      <!-- EndDate -->
 
   <Item>
     <Element>CasualReliefTeacher</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>Is this teacher a casual relief teacher CRT?</p>
@@ -132,8 +120,8 @@
 
   <Item>
     <Element>EmploymentStatus</Element>
-    <Characteristics>O</Characteristics>
-  	<privacyRating>Low</privacyRating>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>High</privacyRating>
     <Description>
       <p>Status of staff member within this school.  Where a Staff member is employed by an organisation that
        covers more than one school, employment status may be different at each school.</p>
@@ -184,7 +172,6 @@
       </StaffRoleList>
       <StartDate>2000-09-05</StartDate>
       <EndDate>2001-06-25</EndDate>
-      <PrimaryAssignment>Y</PrimaryAssignment>
       <CasualReliefTeacher>N</CasualReliefTeacher>
       <EmploymentStatus>A</EmploymentStatus>
       <StaffSubjectList>
@@ -229,7 +216,6 @@
       </StaffRoleList>
       <StartDate>2000-09-05</StartDate>
       <EndDate>2001-06-25</EndDate>
-      <PrimaryAssignment>N</PrimaryAssignment>
       <CasualReliefTeacher>N</CasualReliefTeacher>
       <EmploymentStatus>A</EmploymentStatus>
     </StaffAssignment>

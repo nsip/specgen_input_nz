@@ -4,7 +4,7 @@
 			xmlns:xi="http://www.w3.org/2001/XInclude"
 			xmlns:xhtml="http://www.w3.org/1999/xhtml"
 	
-            xmlns="http://sifassociation.org/SpecGen">
+  xmlns="http://sifassociation.org/SpecGen">
 
   <Key>StaffTeachingGroupAssignmentRefId</Key>
   <EventsReported>true</EventsReported>
@@ -18,17 +18,16 @@
 
   <Item>
     <Element>StaffTeachingGroupAssignmentRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID that uniquely identifies a particular staff teaching group assignment.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>      <!-- StaffTeachingGroupAssignmentRefId -->
-
   <Item>
     <Element>StaffTeachingGroupAssignmentLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>LocalId for the particular staff teaching group assignment, if provided by the source system</p>
@@ -68,7 +67,7 @@
 
   <Item>
     <Element>Role</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
       <p>Code denoting the role the staff member plays within the TeachingGroup, eg. ClassroomTeacher, SubjectTeacher, 
@@ -79,7 +78,7 @@
 
   <Item>
     <Element>StartDate</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>This is the date from which the staff assignment is valid (inclusive).</p>
