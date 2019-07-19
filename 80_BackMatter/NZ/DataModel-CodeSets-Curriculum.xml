@@ -221,6 +221,14 @@
 						before embarking on the learning in this one.</p>
 				</Description>
 			</Value>
+			<Value>
+				<Code>UNKNWN</Code>
+				<Text>Unknown</Text>
+				<Description>
+					<p>The precise nature of the relationship between the two LearningStandards not known, 
+					but the fact that they are related is known.</p>
+				</Description>
+			</Value>
 		</Values>
 	</CodeSet>   <!-- LearningStandardRelationshipType -->
 
