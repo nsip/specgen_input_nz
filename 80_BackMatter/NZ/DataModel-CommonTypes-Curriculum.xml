@@ -18,22 +18,24 @@
 			</Description>
 			<List mode="List"/>
 		</Item>
-		<Item>
-			<Element>SubjectArea</Element>
-			<Characteristics>MR</Characteristics>
-			<Description/>
-			<Type>
-				<xs:complexType>
-					<xs:choice>
-						<xs:element name="SubjectArea" type="NZCodeSetsSubjectAreaType"/>
-						<xs:element name="NCEASubjectArea" type="NZCodeSetsNCEASubjectAreaType"/>
-					</xs:choice>
-				</xs:complexType>
-			</Type>
-		</Item>      <!-- SubjectArea -->
-		<xhtml:Example xmlns="" name="NZ Subject Area List Example">
+		<Choice repeatable="true">
+			<Item>
+				<Element>SubjectArea</Element>
+				<Characteristics>M</Characteristics>
+				<Description/>
+				<Type ref="CodeTypes" name="NZCodeSetsSubjectAreaType"/>
+			</Item>
+			<Item>
+				<Element>NCEASubjectArea</Element>
+				<Characteristics>M</Characteristics>
+				<Description/>
+				<Type ref="CodeTypes" name="NZCodeSetsNCEASubjectAreaType"/>
+			</Item>
+		</Choice>    <!-- Choice: SubjectArea or NCEASubjectArea-->
+		<xhtml:Example xmlns="" name="Subject Area List Example">
 			<SubjectAreaList>
 				<SubjectArea>FREN</SubjectArea>
+				<NCEASubjectArea>TIKA</NCEASubjectArea>
 				<SubjectArea>HIST</SubjectArea>
 			</SubjectAreaList>
 		</xhtml:Example>
