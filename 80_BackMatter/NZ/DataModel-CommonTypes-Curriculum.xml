@@ -22,7 +22,14 @@
 			<Element>SubjectArea</Element>
 			<Characteristics>MR</Characteristics>
 			<Description/>
-			<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
+			<Type>
+				<xs:complexType>
+					<xs:choice>
+						<xs:element name="SubjectArea" type="NZCodeSetsSubjectAreaType"/>
+						<xs:element name="NCEASubjectArea" type="NZCodeSetsNCEASubjectAreaType"/>
+					</xs:choice>
+				</xs:complexType>
+			</Type>
 		</Item>      <!-- SubjectArea -->
 		<xhtml:Example xmlns="" name="NZ Subject Area List Example">
 			<SubjectAreaList>
