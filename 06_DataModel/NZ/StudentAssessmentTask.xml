@@ -121,6 +121,16 @@
   </Item>    <!-- DateTimeAssessmentOccurred -->
 
   <Item>
+    <Element>YearAssessmentOccurred</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The year the student was assessed against the assessment task.</p>
+    </Description>
+    <Type name="xs:gYear"></Type>
+  </Item>    <!-- YearAssessmentOccurred -->
+
+  <Item>
     <Element>AssessmentType</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>

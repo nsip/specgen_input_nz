@@ -81,13 +81,23 @@
 
   <Item>
     <Element>DateAttained</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The date the student achieved the attainment.</p>
     </Description>
     <Type name="xs:date"></Type>
   </Item>    <!-- DateAttained -->
+
+  <Item>
+    <Element>YearAttained</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The year the student achieved the attainment.</p>
+    </Description>
+    <Type name="xs:gYear"></Type>
+  </Item>    <!-- YearAttained -->
 
   <Item>
     <Element>JustificationList</Element>

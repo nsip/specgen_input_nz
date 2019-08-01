@@ -19,18 +19,46 @@
 			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>SubjectArea</Element>
+			<Element>Subject</Element>
 			<Characteristics>MR</Characteristics>
-			<Description/>
-			<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
-		</Item>      <!-- SubjectArea -->
+			<Description>Subject matter of a student's study. Used for Primary Assessments (Year 1-10).</Description>
+			<Type ref="CommonTypes" name="SubjectAreaType"/>
+		</Item>      <!-- Subject -->
 		<xhtml:Example xmlns="" name="NZ Subject Area List Example">
 			<SubjectAreaList>
-				<SubjectArea>FREN</SubjectArea>
-				<SubjectArea>HIST</SubjectArea>
+				<Subject>
+					<SubjectArea>FREN</SubjectArea>
+				</Subject>
+				<Subject>				
+					<NCEASubjectArea>HIST</NCEASubjectArea>
+				</Subject>					
 			</SubjectAreaList>
 		</xhtml:Example>
 	</CommonElement>
+
+	<CommonElement name="SubjectAreaType" type="true" dm="true">
+		<Item>
+			<Element>SubjectAreaType</Element>
+			<Description>
+				<p>A subject area associated to an area student study. There are two subject area lists; the MoE list and the NZQA NCEA list. The NZQA NCEA list is only used for Secondary (Year 11-13). The MoE list is primarily used for Primary (Year 1-10) but can also be used for Secondary. Due to the mismatch in the lists a single subject area list made contain values from both the MoE and NZQA NCEA list.</p>
+			</Description>
+		</Item>
+		<Choice>
+			<Item>
+				<Element>SubjectArea</Element>
+				<Characteristics>O</Characteristics>
+				<Description>Subject matter of a student's study. Used for Primary Assessments (Year 1-10).</Description>
+				<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
+			</Item>      <!-- SubjectArea -->
+			<Item>
+				<Element>NCEASubjectArea</Element>
+				<Characteristics>O</Characteristics>
+				<Description>NCEA subject matter of a student's study. Used for Secondary Assessments (Year 11-12).</Description>
+				<Type ref="CodeSets" name="NZCodeSetsNCEASubjectAreaType"/>
+			</Item>      <!-- NCEASubjectArea -->
+		</Choice>
+	</CommonElement>
+
 
 	<CommonElement name="StaffSubjectListType" type="true" dm="true">
 		<Item>

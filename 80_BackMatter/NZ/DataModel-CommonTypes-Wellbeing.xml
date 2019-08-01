@@ -1595,7 +1595,7 @@
 		<Choice>
 			<Item>
 				<Element>MinorBehaviour</Element>
-				<Characteristics>O</Characteristics>
+				<Characteristics>OR</Characteristics>
 				<Description>
 					<p>The type of minor problem behaviour identified as a result of the Wellbeing Event.</p>
 				</Description>
@@ -1603,7 +1603,7 @@
 			</Item>    <!-- MinorBehaviour -->
 			<Item>
 				<Element>MajorBehaviour</Element>
-				<Characteristics>O</Characteristics>
+				<Characteristics>OR</Characteristics>
 				<Description>
 					<p>The type of major problem behaviour identified as a result of the Wellbeing Event.</p>
 				</Description>

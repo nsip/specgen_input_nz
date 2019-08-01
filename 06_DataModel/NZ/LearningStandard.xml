@@ -196,7 +196,9 @@
       </Publisher>
       <Description>Demonstrate understanding of the properties of selected organic compounds</Description>
       <SubjectAreaList>
-        <SubjectArea>CHEM</SubjectArea>
+        <Subject>
+          <SubjectArea>CHEM</SubjectArea>
+        </Subject>
       </SubjectAreaList>
       <Status>PU</Status>
       <Credits>4</Credits>
@@ -216,7 +218,9 @@
       </Publisher>
       <Description>Cambridge International AS Mathematics (2018) - Pure Mathematics</Description>
       <SubjectAreaList>
-        <SubjectArea>MATH</SubjectArea>
+        <Subject>
+          <SubjectArea>MATH</SubjectArea>
+        </Subject>
       </SubjectAreaList>
       <Status>PU</Status>
       <AssessmentType>EXT</AssessmentType>

@@ -156,8 +156,6 @@
 				<PeriodAttendance>
 					<AttendanceCode>E</AttendanceCode>
 					<AttendanceStatus>UNE</AttendanceStatus>
-					<TimetableDayId json:force-string="true">4</TimetableDayId>
-					<TimetablePeriodId>4D</TimetablePeriodId>
 					<StartTime>09:00:00</StartTime>
 					<EndTime>09:40:00</EndTime>
 					<AttendanceNote>Explained absence, but unjustified.</AttendanceNote>
@@ -169,7 +167,9 @@
 					<EndTime>10:30:00</EndTime>
 					<StudentTimeIn>09:58:00</StudentTimeIn>
 					<SubjectAreaList json:force-array="true">
-						<SubjectArea>MATH</SubjectArea>
+						<Subject>
+							<SubjectArea>MATH</SubjectArea>
+						</Subject>
 					</SubjectAreaList>
 					<TeacherList>
 						<StaffMember json:force-array="true">
@@ -178,9 +178,9 @@
 							<Name>Phineas McWhirter</Name>
 						</StaffMember>
 					</TeacherList>
-					<RoomList json:force-array="true">
-						<RoomId>12P</RoomId>
-					</RoomList>
+						<RoomId>
+							<LocalId>12P</LocalId>
+						</RoomId>
 					<AttendanceNote>Late to Class, Explained absence, but unjustified.</AttendanceNote>
 				</PeriodAttendance>
 			</PeriodAttendanceList>
@@ -212,21 +212,13 @@
 			<Type ref="CodeSets" name="NZCodeSetsAttendanceStatusType"/>
 		</Item>		<!-- AttendanceStatus -->
 		<Item>
-			<Element>TimetableDayId</Element>
+			<Element>TeachingGroupEvent</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>LocalId for the timetable day within which attendance is being reported, e.g. "4".</p>
+				<p>Generic object reference to the Teaching Group Event the attendance is being taken for.</p>
 			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/>
-		</Item>		<!-- TimetableDayId -->
-		<Item>
-			<Element>TimetablePeriodId</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>LocalId for the timetable period within which attendance is being reported, e.g. "4D".</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/>
-		</Item>		<!-- TimetablePeriodId -->
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>		<!-- TeachingGroupEvent -->
 		<Item>
 			<Element>StartTime</Element>
 			<Characteristics>M</Characteristics>
@@ -304,12 +296,12 @@
 			<PeriodAttendance>
 				<AttendanceCode>E</AttendanceCode>
 				<AttendanceStatus>UNE</AttendanceStatus>
-				<TimetableDayId json:force-string="true">4</TimetableDayId>
-				<TimetablePeriodId>4D</TimetablePeriodId>
 				<StartTime>09:00:00</StartTime>
 				<EndTime>09:50:00</EndTime>
 				<SubjectAreaList json:force-array="true">
-					<SubjectArea>MATH</SubjectArea>
+					<Subject>
+						<SubjectArea>MATH</SubjectArea>
+					</Subject>
 				</SubjectAreaList>
 				<TeacherList>
 					<StaffMember json:force-array="true">
@@ -329,13 +321,13 @@
 			<PeriodAttendance>
 				<AttendanceCode>E</AttendanceCode>
 				<AttendanceStatus>UNE</AttendanceStatus>
-				<TimetableDayId json:force-string="true">4</TimetableDayId>
-				<TimetablePeriodId>4E</TimetablePeriodId>
 				<StartTime>09:00:00</StartTime>
 				<EndTime>09:50:00</EndTime>
 				<StudentTimeIn>09:35:00</StudentTimeIn>
 				<SubjectAreaList json:force-array="true">
-					<SubjectArea>MATH</SubjectArea>
+					<Subject>
+						<SubjectArea>MATH</SubjectArea>
+					</Subject>
 				</SubjectAreaList>
 				<TeacherList>
 					<StaffMember json:force-array="true">
@@ -345,7 +337,9 @@
 					</StaffMember>
 				</TeacherList>
 				<RoomList>
-					<RoomId json:force-array="true">12P</RoomId>
+					<RoomId>
+						<LocalId>12P</LocalId>
+					</RoomId>
 				</RoomList>
 				<AttendanceNote>Explained absence, but unjustified.</AttendanceNote>
 			</PeriodAttendance>

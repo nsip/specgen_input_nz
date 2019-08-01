@@ -138,12 +138,12 @@
 				<PeriodAttendance>
 					<AttendanceCode>E</AttendanceCode>
 					<AttendanceStatus>UNE</AttendanceStatus>
-					<TimetableDayId json:force-string="true">4</TimetableDayId>
-					<TimetablePeriodId>4A</TimetablePeriodId>
 					<StartTime>09:00:00</StartTime>
 					<EndTime>09:40:00</EndTime>
 					<SubjectAreaList json:force-array="true">
-						<SubjectArea>MATH</SubjectArea>
+						<Subject>
+							<SubjectArea>MATH</SubjectArea>
+						</Subject>
 					</SubjectAreaList>
 					<TeacherList json:force-array="true">
 						<StaffMember>
@@ -153,19 +153,21 @@
 						</StaffMember>
 					</TeacherList>
 					<RoomList json:force-array="true">
-						<RoomId>12P</RoomId>
+						<RoomId>
+							<LocalId>12P</LocalId>
+						</RoomId>
 					</RoomList>
 					<AttendanceNote>Explained absence, but unjustified; period 4A</AttendanceNote>
 				</PeriodAttendance>
 				<PeriodAttendance>
 					<AttendanceCode>E</AttendanceCode>
 					<AttendanceStatus>UNE</AttendanceStatus>
-					<TimetableDayId json:force-string="true">4</TimetableDayId>
-					<TimetablePeriodId>4B</TimetablePeriodId>
 					<StartTime>09:45:00</StartTime>
 					<EndTime>10:30:00</EndTime>
 					<SubjectAreaList json:force-array="true">
-						<SubjectArea>MATH</SubjectArea>
+						<Subject>
+							<SubjectArea>MATH</SubjectArea>
+						</Subject>
 					</SubjectAreaList>
 					<TeacherList json:force-array="true">
 						<StaffMember>
@@ -175,7 +177,9 @@
 						</StaffMember>
 					</TeacherList>
 					<RoomList json:force-array="true">
-						<RoomId>12P</RoomId>
+						<RoomId>
+							<LocalId>12P</LocalId>
+						</RoomId>
 					</RoomList>
 					<AttendanceNote>Explained absence, but unjustified; period 4B</AttendanceNote>
 				</PeriodAttendance>

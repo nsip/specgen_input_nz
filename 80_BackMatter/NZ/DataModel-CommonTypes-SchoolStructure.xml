@@ -135,7 +135,7 @@
 					or scheduled activity is held.</p>
 				<p>Note:  Does not refer to a Room SIF data object.</p>
 			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>     <!-- RoomId -->
 	</CommonElement>
 

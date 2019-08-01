@@ -195,6 +195,10 @@
 				<Text xml:lang="mi">Tangata ira tāne</Text>
 				<Description>Can be rolled up to 3:Gender Diverse</Description>
 			</Value>  <!-- FTM -->
+			<Value>
+				<Code>9</Code>
+				<Text xml:lang="en">Not Willing to Disclose</Text>
+			</Value>  <!-- Not Willing to Disclose -->
 		</Values>
 	</CodeSet>    <!-- Gender -->
 	<CodeSet>
