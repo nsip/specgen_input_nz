@@ -19,7 +19,9 @@
 	<xsl:param name="enumCount">12</xsl:param>
 	
 	<!-- Where is the SIF HTML documentation available for links -->
-	<xsl:param name="extDocURLBase">https://sifnzmodel.azurewebsites.net/SIFNZ/</xsl:param>
+	<xsl:variable name="extDocURLBase">
+		<xsl:value-of select="concat('https://sifnzmodel.azurewebsites.net/SIFNZ-v', translate(replace($sifVersion, ' \(', '-'), ') ', ''), '/')"/>
+	</xsl:variable>
 
     <!-- Now that we've configured all the options -->
     <xsl:include href="dmToJsonSchema.xsl"/>
