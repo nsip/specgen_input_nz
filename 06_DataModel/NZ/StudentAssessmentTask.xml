@@ -181,14 +181,14 @@
   </Item>    <!-- AchievementAttempt -->
 
   <Item>
-    <Element>SubjectArea</Element>
+    <Element>SubjectAreaList</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Code denoting the Learning or Subject Area the assessment task is for.</p>
+      <p>The list of Subject Area the assessment task pertains to.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
-  </Item>    <!-- SubjectArea -->  
+    <Type ref="CommonTypes" name="SubjectAreaListType"/>
+  </Item>    <!-- SubjectAreaList -->  
 
   <Item>
     <Element>YearLevel</Element>
@@ -244,7 +244,11 @@
       </StaffInvolvedList>
       <DateTimeAssessmentScheduled>2018-11-25T09:00:00+12:00</DateTimeAssessmentScheduled>
       <AssessmentType>EXT</AssessmentType>
-      <SubjectArea>PHYS</SubjectArea>
+      <SubjectAreaList>
+        <Subject>
+          <SubjectArea>PHYS</SubjectArea>
+        </Subject>
+      </SubjectAreaList>
       <YearLevel>11</YearLevel>
     </StudentAssessmentTask>
   </xhtml:Example>

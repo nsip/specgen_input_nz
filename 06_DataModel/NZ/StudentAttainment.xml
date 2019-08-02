@@ -111,14 +111,14 @@
   </Item>    <!-- JustificationList -->
 
   <Item>
-    <Element>SubjectArea</Element>
+    <Element>SubjectAreaList</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Code denoting the Learning or Subject Area the assessment task is for.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
-  </Item>    <!-- SubjectArea -->
+    <Type ref="CommonTypes" name="SubjectAreaListType"/>
+  </Item>    <!-- SubjectAreaList -->
 
   <Item>
     <Element>EndorsementLevel</Element>
@@ -178,8 +178,12 @@
 					<Date>2016-06-28</Date>
 					<CreditValue>3</CreditValue>										
 				</Justification>				
-			</JustificationList>      
-      <SubjectArea>CHEM</SubjectArea>
+			</JustificationList>  
+      <SubjectAreaList>
+        <Subject>    
+          <SubjectArea>CHEM</SubjectArea>
+        </Subject>
+      </SubjectAreaList>
     </StudentAttainment>
   </xhtml:Example>
 
@@ -204,7 +208,11 @@
         <Name>Prof. McGonnegal</Name>
       </AuthorisingStaffMember>
       <DateAttained>2018-07-25</DateAttained>
-      <SubjectArea>PHYS</SubjectArea>
+      <SubjectAreaList>
+        <Subject>
+          <SubjectArea>PHYS</SubjectArea>
+        </Subject>
+      </SubjectAreaList>
     </StudentAttainment>
   </xhtml:Example>
 </DataObject>

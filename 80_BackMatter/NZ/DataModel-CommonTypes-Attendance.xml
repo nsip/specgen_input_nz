@@ -178,9 +178,11 @@
 							<Name>Phineas McWhirter</Name>
 						</StaffMember>
 					</TeacherList>
+					<RoomList>
 						<RoomId>
 							<LocalId>12P</LocalId>
 						</RoomId>
+					</RoomList>
 					<AttendanceNote>Late to Class, Explained absence, but unjustified.</AttendanceNote>
 				</PeriodAttendance>
 			</PeriodAttendanceList>
@@ -311,7 +313,9 @@
 					</StaffMember>
 				</TeacherList>
 				<RoomList>
-					<RoomId json:force-array="true">12P</RoomId>
+					<RoomId json:force-array="true">
+						<LocalId>12P</LocalId>
+					</RoomId>
 				</RoomList>
 				<AttendanceNote>Explained absence, but unjustified.</AttendanceNote>
 			</PeriodAttendance>
