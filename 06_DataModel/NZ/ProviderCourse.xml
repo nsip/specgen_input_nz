@@ -145,9 +145,7 @@
       </Provider>
       <Curriculum>NZC</Curriculum>
       <SubjectAreaList>
-        <Subject>      
-          <SubjectArea json:force-array="true">CHEM</SubjectArea>
-        </Subject>  
+        <SubjectArea json:force-array="true">CHEM</SubjectArea>
       </SubjectAreaList>
       <YearLevelList>
         <YearLevel json:force-string="true" json:force-array="true">12</YearLevel>

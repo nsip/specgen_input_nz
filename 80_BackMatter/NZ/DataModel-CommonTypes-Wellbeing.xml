@@ -1506,6 +1506,7 @@
 			<Description>
 				<p>A list of the expected learning support outcome for the Wellbeing Characteristic. Only used for Schools.</p>
 			</Description>
+			<List mode="List"/>	
 		</Item>
 		<Item>
 			<Element>LearningSupportOutcome</Element>
@@ -1523,6 +1524,7 @@
 			<Description>
 				<p>A list of the Te Whāriki Domains that are relevant to this Wellbeing Characteristic. Only used for Early Childhood Education.</p>
 			</Description>
+			<List mode="List"/>	
 		</Item>
 		<Item>
 			<Element>TeWharikiDomain</Element>
@@ -1540,6 +1542,7 @@
 			<Description>
 				<p>A list of the locations where the incident took place.</p>
 			</Description>
+			<List mode="List"/>	
 		</Item>
 		<Item>
 			<Element>Location</Element>
@@ -1557,6 +1560,7 @@
 			<Description>
 				<p>A list of the actions taken as a result of this Wellbeing event.</p>
 			</Description>
+			<List mode="List"/>	
 		</Item>
 		<Item>
 			<Element>ActionTaken</Element>
@@ -1574,6 +1578,7 @@
 			<Description>
 				<p>A list of the possible motivations that triggered the event.</p>
 			</Description>
+			<List mode="List"/>	
 		</Item>
 		<Item>
 			<Element>PossibleMotivation</Element>
@@ -1591,6 +1596,7 @@
 			<Description>
 				<p>A list of the problem behaviours identified for the student as a result of the Wellbeing Event. There are both minor and major behaviours.</p>
 			</Description>
+			<List mode="List"/>	
 		</Item>
 		<Choice>
 			<Item>

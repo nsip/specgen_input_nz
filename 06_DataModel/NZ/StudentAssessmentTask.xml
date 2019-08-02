@@ -245,9 +245,7 @@
       <DateTimeAssessmentScheduled>2018-11-25T09:00:00+12:00</DateTimeAssessmentScheduled>
       <AssessmentType>EXT</AssessmentType>
       <SubjectAreaList>
-        <Subject>
           <SubjectArea>PHYS</SubjectArea>
-        </Subject>
       </SubjectAreaList>
       <YearLevel>11</YearLevel>
     </StudentAssessmentTask>

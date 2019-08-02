@@ -300,9 +300,7 @@
           </ProviderInvolved>
         </ProviderInvolvedList>
         <SubjectAreaList>
-          <Subject>
             <SubjectArea>MATH</SubjectArea>
-          </Subject>
         </SubjectAreaList>
         <SummativeIndicator>N</SummativeIndicator>
         <FormativeIndicator>Y</FormativeIndicator>
@@ -346,9 +344,7 @@
           </ProviderInvolved>
         </ProviderInvolvedList>
         <SubjectAreaList>
-        <Subject>
             <SubjectArea>ENGL</SubjectArea>
-          </Subject>
         </SubjectAreaList>
         <SummativeIndicator>N</SummativeIndicator>
         <FormativeIndicator>Y</FormativeIndicator>

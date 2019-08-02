@@ -167,9 +167,7 @@
 					<EndTime>10:30:00</EndTime>
 					<StudentTimeIn>09:58:00</StudentTimeIn>
 					<SubjectAreaList json:force-array="true">
-						<Subject>
-							<SubjectArea>MATH</SubjectArea>
-						</Subject>
+						<SubjectArea>MATH</SubjectArea>
 					</SubjectAreaList>
 					<TeacherList>
 						<StaffMember json:force-array="true">
@@ -301,9 +299,7 @@
 				<StartTime>09:00:00</StartTime>
 				<EndTime>09:50:00</EndTime>
 				<SubjectAreaList json:force-array="true">
-					<Subject>
-						<SubjectArea>MATH</SubjectArea>
-					</Subject>
+					<SubjectArea>MATH</SubjectArea>
 				</SubjectAreaList>
 				<TeacherList>
 					<StaffMember json:force-array="true">
@@ -329,9 +325,7 @@
 				<EndTime>09:50:00</EndTime>
 				<StudentTimeIn>09:35:00</StudentTimeIn>
 				<SubjectAreaList json:force-array="true">
-					<Subject>
-						<SubjectArea>MATH</SubjectArea>
-					</Subject>
+					<SubjectArea>MATH</SubjectArea>
 				</SubjectAreaList>
 				<TeacherList>
 					<StaffMember json:force-array="true">

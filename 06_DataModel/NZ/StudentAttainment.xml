@@ -180,9 +180,7 @@
 				</Justification>				
 			</JustificationList>  
       <SubjectAreaList>
-        <Subject>    
           <SubjectArea>CHEM</SubjectArea>
-        </Subject>
       </SubjectAreaList>
     </StudentAttainment>
   </xhtml:Example>
@@ -209,9 +207,7 @@
       </AuthorisingStaffMember>
       <DateAttained>2018-07-25</DateAttained>
       <SubjectAreaList>
-        <Subject>
           <SubjectArea>PHYS</SubjectArea>
-        </Subject>
       </SubjectAreaList>
     </StudentAttainment>
   </xhtml:Example>
