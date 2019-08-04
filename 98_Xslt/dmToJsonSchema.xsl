@@ -13,6 +13,7 @@
 	<!-- Shorthand to get a quote character into the output -->
 	<xsl:variable name="q"><xsl:text>"</xsl:text></xsl:variable>
 
+
 	<!-- ....and off we go -->
 	<xsl:template match="/specgen:SIFSpecification">
 		<xsl:value-of select="concat( '# &#x0a;',
@@ -22,20 +23,22 @@
 		<xsl:text>$schema: 'http://json-schema.org/draft-07/schema#'&#x0a;</xsl:text>
 		<xsl:value-of select="concat('title: SIF ', $sifLocale, ' v', $sifVersion, '&#x0a;')"/>
 		<xsl:value-of select="concat('description: JSON Schema derived from SIF ', $sifLocale, ' v', $sifVersion, '&#x0a;')"/>
+		
 		<xsl:apply-templates select=".//specgen:DataObjects" mode="rootObj"/>
 
 		<xsl:text>definitions:&#x0a;</xsl:text>
-		<xsl:apply-templates select=".//specgen:DataObjects//specgen:DataObject" mode="schemasSingle"/>
+		<xsl:apply-templates select=".//specgen:DataObjects//specgen:DataObject" mode="definitions"/>
 
 		<xsl:apply-templates select=".//specgen:Appendix[@name = 'Common Types']//specgen:CommonElement"/>
 		<xsl:apply-templates select=".//specgen:Appendix[ends-with(@name, 'Code Sets')]//specgen:CodeSet"/>
 	</xsl:template>
 
 
+	<!-- Special rootObject, schema will validate an hetrogonous array of dataObjects... -->
 	<xsl:template match="specgen:DataObjects" mode="rootObj">
-		<xsl:text>type: object&#x0a;</xsl:text>
+		<xsl:text>type: array&#x0a;items:&#x0a;</xsl:text>
 
-		<xsl:text>oneOf:&#x0a;</xsl:text>
+		<xsl:text>  oneOf:&#x0a;</xsl:text>
 		<xsl:apply-templates select=".//specgen:DataObject" mode="reqRootObj">
 			<xsl:sort select="@name"/>
 		</xsl:apply-templates>
@@ -47,7 +50,7 @@
 	</xsl:template>
 
 	<xsl:template match="specgen:DataObject" mode="reqRootObj">
-		<xsl:value-of select="concat('- required: [ ', @name, ']&#x0a;')"/>
+		<xsl:value-of select="concat('  - required: [ ', @name, ' ]&#x0a;')"/>
 	</xsl:template>
 	
 	<xsl:template match="specgen:DataObject" mode="rootObj">
@@ -56,14 +59,31 @@
 		<xsl:text>&#x0a;</xsl:text>
 	</xsl:template>
 
-	<xsl:template match="specgen:DataObject" mode="schemasSingle">
+	<xsl:template match="specgen:DataObject" mode="definitions">
 		<xsl:text>  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
+		<!-- First up the collection edition -->
+		<xsl:value-of select="concat('  ', @name, 'Collection:&#x0a;',
+									 '    type: object&#x0a;',
+									 '    properties:&#x0a;',
+									 '      ', @name , ':&#x0a;',
+									 '        type: array&#x0a;',
+									 '        items:&#x0a;',
+									 '          $ref: ''#/definitions/', @name, '''&#x0a;')"/>
+
+
+		<!-- Now do the actual dataObject definition --> 
 		<xsl:value-of select="concat('  ', @name, ':&#x0a;')"/>
+
+		<!-- Maybe some fields are required -->
 		<xsl:if test="$mandatoryFields = 'required'">
-			<xsl:text>    required:&#x0a;</xsl:text>
-			<xsl:apply-templates select="specgen:Item|//specgen:CommonElement[@name = current()/specgen:Item[1]/specgen:Type/@name]/specgen:Item" mode="required">
-				<xsl:sort select="specgen:Element|specgen:Attribute"/>
-			</xsl:apply-templates>
+			<xsl:variable name="req">
+				<xsl:apply-templates select="specgen:Item|//specgen:CommonElement[@name = current()/specgen:Item[1]/specgen:Type/@name]/specgen:Item" mode="required">
+					<xsl:sort select="specgen:Element|specgen:Attribute"/>
+				</xsl:apply-templates>
+			</xsl:variable>
+			<xsl:if test="string-length($req) gt 0">
+				<xsl:value-of select="concat('    required:&#x0a;', $req)"/>
+			</xsl:if>
 		</xsl:if>
 
 		<!-- DataObject maybe extension of a base type -->
@@ -94,8 +114,12 @@
 			<xsl:with-param name="indent" select="$objIndent"/>
 		</xsl:apply-templates>
 
-		<xsl:text>    description: &gt;-&#x0a;      </xsl:text>
-		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+		<xsl:variable name="desc">
+			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+		</xsl:variable>
+		<xsl:if test="string-length($desc) gt 0">
+			<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
+		</xsl:if>
 	</xsl:template>
 	
 
@@ -104,23 +128,124 @@
 	<!-- Common type is empty extension of another type -->
 	<xsl:template match="specgen:CommonElement[count(specgen:Item) eq 1 and
 						 specgen:Item[1]/specgen:Type/@complex eq 'extension']">
-		<xsl:text>&#x0a;  # /////////////////////////////// one ///////////////////////////&#x0a;</xsl:text>
+		<xsl:text>&#x0a;  # /////////////////////////////// empty extn ///////////////////////////&#x0a;</xsl:text>
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;',
 									 '		  allOf:&#x0a;',
 							         '      - $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;',
-									 '      - type: object&#x0a;',
-									 '      - description: &gt;-&#x0a;          ')"/>
-		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+									 '      - type: object&#x0a;')"/>
+
+
+		<xsl:variable name="desc">
+			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+		</xsl:variable>
+		<xsl:if test="string-length($desc) gt 0">
+			<xsl:value-of select="concat('      - description: &gt;-&#x0a;          ', $desc, '&#x0a;')"/>
+		</xsl:if>
 	</xsl:template>
 
-	<!-- Common type is instance of xs:* type -->
+	<!-- Common type is EMPTY with a collection of attributes -->
+	<xsl:template priority="2" match="specgen:CommonElement[count(specgen:Item) gt 1 and
+	                     specgen:Item[1]/specgen:Type/@name eq 'EMPTY' and
+						 count(specgen:Item[position() gt 1]) eq count(specgen:Item[specgen:Attribute]) ]">
+		<xsl:text>&#x0a;  # ////////////////////////// EMPTY with attrs ///////////////////////////////////&#x0a;</xsl:text>
+		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;',
+									 '    type: object&#x0a;',
+									 '    properties:&#x0a;')"/>
+
+		<xsl:apply-templates select="specgen:Item[position() gt 1]">
+			<xsl:with-param name="indent" select="'      '"/>
+		</xsl:apply-templates>
+
+		<xsl:variable name="desc">
+			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+		</xsl:variable>
+		<xsl:if test="string-length($desc) gt 0">
+			<xsl:value-of select="concat('      - description: &gt;-&#x0a;          ', $desc, '&#x0a;')"/>
+		</xsl:if>
+	</xsl:template>
+
+	<!-- Common type is an attribute only extension of another type -->
+	<xsl:template match="specgen:CommonElement[count(specgen:Item) gt 1 and
+	                     specgen:Item[1]/specgen:Type/@complex eq 'extension' and
+						 count(specgen:Item[position() gt 1]) eq count(specgen:Item[specgen:Attribute]) ]" priority="2">
+		<xsl:text>&#x0a;  # //////////////////////// attr extn /////////////////////////////////////&#x0a;</xsl:text>
+		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;',
+									 '    type: object&#x0a;',
+									 '    properties:&#x0a;',
+									 '      value:&#x0a;',
+									 '        allOf:&#x0a;',
+									 '          - $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;')"/>
+
+		<xsl:apply-templates select="specgen:Item[position() gt 1]">
+			<xsl:with-param name="indent" select="'      '"/>
+		</xsl:apply-templates>
+
+		<xsl:variable name="desc">
+			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+		</xsl:variable>
+		<xsl:if test="string-length($desc) gt 0">
+			<xsl:value-of select="concat('      - description: &gt;-&#x0a;          ', $desc, '&#x0a;')"/>
+		</xsl:if>
+	</xsl:template>
+
+	<!-- Common type is a known xs:* simpleType with attributes (no extension) -->
+	<xsl:template match="specgen:CommonElement[count(specgen:Item) gt 1 and
+	                     not(specgen:Item[1]/specgen:Type/@complex) and
+						 starts-with(specgen:Item[1]/specgen:Type/@name, 'xs:') and
+						 count(specgen:Item[position() gt 1]) eq count(specgen:Item[specgen:Attribute]) ]" priority="2">
+		<xsl:text>&#x0a;  # //////////////////////// xs:* with attrs /////////////////////////////////////&#x0a;</xsl:text>
+		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;',
+									 '    type: object&#x0a;',
+									 '    properties:&#x0a;',
+									 '      value:&#x0a;')"/>
+
+		<!-- There might be a description -->
+		<xsl:variable name="desc">
+			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+		</xsl:variable>
+		<xsl:if test="string-length($desc) gt 0">
+			<xsl:value-of select="concat('      - description: &gt;-&#x0a;          ', $desc, '&#x0a;')"/>
+		</xsl:if>
+
+		<!-- Translate xs:* type into json schema type -->
+		<xsl:apply-templates select="specgen:Item[1]/specgen:Type">
+			<xsl:with-param name="indent" select="'      '"/>
+		</xsl:apply-templates>
+
+		<!-- Add the attributes -->
+		<xsl:apply-templates select="specgen:Item[position() gt 1]">
+			<xsl:with-param name="indent" select="'      '"/>
+		</xsl:apply-templates>
+	</xsl:template>
+
+	<!-- Common type is single item, with inline values -->
 	<xsl:template match="specgen:CommonElement[count(specgen:Item) eq 1 and
-						 starts-with(specgen:Item[1]/specgen:Type/@name, 'xs:')]">
-		<xsl:text>&#x0a;  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
+	                                           count(specgen:Item[1]/specgen:Values) eq 1]" priority="2">
+		<xsl:text>&#x0a;  # ///////////////////////////// single Item with Values ////////////////////////////////&#x0a;</xsl:text>
+		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;',
+		                             '    type: string&#x0a;')"/>
+
+		<!-- Pickup inline Values -->
+		<xsl:apply-templates select="specgen:Item[1]/specgen:Values">
+			<xsl:with-param name="indent" select="'    '"/>
+		</xsl:apply-templates>
+	</xsl:template>
+
+	<!-- Common type is instance of xs:* type with no attributes (not an extension) -->
+	<xsl:template match="specgen:CommonElement[count(specgen:Item) eq 1 and
+						 starts-with(specgen:Item[1]/specgen:Type/@name, 'xs:') and
+					     not(specgen:Item[1]/specgen:Type/@complex eq 'extension')]">
+						 
+		<xsl:text>&#x0a;  # ////////////////////////////// xs:* no attrs ///////////////////////////////&#x0a;</xsl:text>
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;')"/>
 
-		<xsl:text>    description: &gt;-&#x0a;      </xsl:text>
-		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+		<xsl:variable name="desc">
+			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+		</xsl:variable>
+
+		<xsl:if test="string-length($desc) gt 0">
+			<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
+		</xsl:if>
 
 		<!-- Simple and extended Types -->
 		<xsl:apply-templates select="specgen:Item[1]/specgen:Type">
@@ -137,7 +262,7 @@
 	<xsl:template match="specgen:CommonElement[count(specgen:Item) eq 1 and
 						 not(starts-with(specgen:Item[1]/specgen:Type/@name, 'xs:')) and
 						 not(specgen:Item[1]/specgen:Type/@complex eq 'extension')]">
-		<xsl:text>&#x0a;  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
+		<xsl:text>&#x0a;  # ////////////////////////////// another type ///////////////////////////////&#x0a;</xsl:text>
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;')"/>
 		<xsl:text>    allOf:&#x0a;</xsl:text>
 
@@ -150,10 +275,9 @@
 		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
 	</xsl:template>
 	
-
 	<!-- Common type is a list (implicit or explict), with repeatable choice (hetrogynous list) -->
 	<xsl:template priority="2" match="specgen:CommonElement[count(specgen:Item|specgen:Choice) eq 2 and specgen:Choice/@repeatable='true'] ">
-		<xsl:text>&#x0a;  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
+		<xsl:text>&#x0a;  # ////////////////////////////////////// hetrogynous list ///////////////////////&#x0a;</xsl:text>
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;')"/>
 
 		<xsl:text>    description: &gt;-&#x0a;      </xsl:text>
@@ -166,14 +290,19 @@
 		</xsl:apply-templates>
 	</xsl:template>
 
-	<!-- Common type is a list (implicit or explict), with choice items all the same (homogonyous list) -->
+	<!-- Common type is a list (implicit or explict), with choice items all the same (homogonous list) -->
 	<xsl:template priority="2" match="specgen:CommonElement[count(specgen:Item|specgen:Choice) eq 2 and
 																	contains(specgen:Choice/specgen:Item[1]/specgen:Characteristics, 'R')] ">
-		<xsl:text>&#x0a;  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
+		<xsl:text>&#x0a;  # ///////////////////////////// homogonous list ////////////////////////////////&#x0a;</xsl:text>
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;')"/>
 
-		<xsl:text>    description: &gt;-&#x0a;      </xsl:text>
-		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+		<xsl:variable name="desc">
+			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+		</xsl:variable>
+		<xsl:if test="string-length($desc) gt 0">
+			<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
+		</xsl:if>
+
 		<xsl:text>    type: object&#x0a;    properties: &#x0a;</xsl:text>
 		<xsl:value-of select="concat('      ', xfn:chopType(specgen:Item[1]/specgen:Element), ':&#x0a;        type: object&#x0a;        properties:&#x0a;')"/>
 
@@ -185,12 +314,16 @@
 	<!-- Common type is a list (implicit or explicit), without choices -->
 	<xsl:template priority="2" match="specgen:CommonElement[count(specgen:Item) eq 2 and
 	                                           (specgen:Item[1]/specgen:List or contains(specgen:Item[2]/specgen:Characteristics, 'R'))]">
-		<xsl:text>&#x0a;  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
+		<xsl:text>&#x0a;  # ///////////////////////////////// list ////////////////////////////&#x0a;</xsl:text>
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;')"/>
 
-		<xsl:text>    description: &gt;-&#x0a;      </xsl:text>
-		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
-
+		<xsl:variable name="desc">
+			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+		</xsl:variable>
+		<xsl:if test="string-length($desc) gt 0">
+			<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
+		</xsl:if>
+		
 		<xsl:text>    type: object&#x0a;</xsl:text>
 		<xsl:if test="$mandatoryFields = 'required'">
 			<xsl:if test="specgen:Item[contains(specgen:Characteristics, 'M')]">
@@ -234,11 +367,15 @@
 
 	<!-- Common type is a non-empty extension of a base type -->
 	<xsl:template priority="1" match="specgen:CommonElement[count(specgen:Item) gt 1 and specgen:Item[1]/specgen:Type/@complex = 'extension']">
-		<xsl:text>&#x0a;  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
+		<xsl:text>&#x0a;  # ////////////////////////////// extension ///////////////////////////////&#x0a;</xsl:text>
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;')"/>
 
-		<xsl:text>    description: &gt;-&#x0a;      </xsl:text>
-		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+		<xsl:variable name="desc">
+			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+		</xsl:variable>
+		<xsl:if test="string-length($desc) gt 0">
+			<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
+		</xsl:if>
 
 		<xsl:text>    allOf:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('    - $ref: ''#/definitions/', xfn:chopType(@name), '''&#x0a;')"/>
@@ -263,14 +400,17 @@
 		</xsl:apply-templates>
 	</xsl:template>
 
-
     <!-- Common type is a straightforward sequence of 1 or more items -->
 	<xsl:template priority="1" match="specgen:CommonElement[count(specgen:Item) gt 1 and not(specgen:Item[1]/specgen:Type/@complex = 'extension')]">
-		<xsl:text>&#x0a;  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
+		<xsl:text>&#x0a;  # ////////////////////////////// default sequence ///////////////////////////////&#x0a;</xsl:text>
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;')"/>
 
-		<xsl:text>    description: &gt;-&#x0a;      </xsl:text>
-		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+		<xsl:variable name="desc">
+			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+		</xsl:variable>
+		<xsl:if test="string-length($desc) gt 0">
+			<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
+		</xsl:if>
 
 		<!-- Simple and extended Types -->
 		<xsl:apply-templates select="specgen:Item[1]/specgen:Type">
