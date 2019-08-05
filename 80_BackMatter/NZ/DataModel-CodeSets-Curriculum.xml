@@ -582,13 +582,13 @@
 		<ID>NCEA Subject Area</ID>
 		<Values>
 			<Value><Code>ACCO</Code><Text>Accounting</Text></Value>
-			<Value><Code>AGHO</Code><Text>Agriculture and Horticultural Science</Text></Value>
+			<Value><Code>AGHO</Code><Text>Agricultural and Horticultural Science</Text></Value>
 			<Value><Code>AGRI</Code><Text>Agribusiness (Business Studies)</Text></Value>
-			<Value><Code>ARTC</Code><Text>Visial Arts</Text></Value>			
+			<Value><Code>ARTC</Code><Text>Visual Arts</Text></Value>			
 			<Value><Code>ARTH</Code><Text>Art History</Text></Value>
 			<Value><Code>BIOL</Code><Text>Biology</Text></Value>
 			<Value><Code>BUST</Code><Text>Business Studies</Text></Value>
-			<Value><Code>CHEM</Code><Text>Chemsitry</Text></Value>
+			<Value><Code>CHEM</Code><Text>Chemistry</Text></Value>
 			<Value><Code>CHIN</Code><Text>Chinese</Text></Value>
 			<Value><Code>CLST</Code><Text>Classical Studies</Text></Value>
 			<Value><Code>COMP</Code><Text>Computing</Text></Value>

@@ -406,8 +406,53 @@
 				<Code>StudentConsent</Code>
 				<Text>StudentConsent</Text>
 				<Description/>
-				</Value>
-			</Values>
+			</Value>
+			<Value>
+				<Code>Schedule</Code>
+				<Text>Schedule</Text>
+				<Description/>
+			</Value>
+			<Value>
+				<Code>BellSchedule</Code>
+				<Text>BellSchedule</Text>
+				<Description/>
+			</Value>
+			<Value>
+				<Code>ScheduleDate</Code>
+				<Text>ScheduleDate</Text>
+				<Description/>
+			</Value>
+			<Value>
+				<Code>SchedulePeriod</Code>
+				<Text>SchedulePeriod</Text>
+				<Description/>
+			</Value>
+			<Value>
+				<Code>ScheduleEvent</Code>
+				<Text>ScheduleEvent</Text>
+				<Description/>
+			</Value>
+			<Value>
+				<Code>ScheduleHoliday</Code>
+				<Text>ScheduleHoliday</Text>
+				<Description/>
+			</Value>
+			<Value>
+				<Code>ScheduleAcademicDay</Code>
+				<Text>ScheduleAcademicDay</Text>
+				<Description/>
+			</Value>
+			<Value>
+				<Code>ScheduleTerm</Code>
+				<Text>ScheduleTerm</Text>
+				<Description/>
+			</Value>
+			<Value>
+				<Code>TeachingGroupEvent</Code>
+				<Text>TeachingGroupEvent</Text>
+				<Description/>
+			</Value>
+		</Values>
 	  </CodeSet>      <!-- Referrable Data Object -->
 
 	  <xi:include parse="xml" href="NZ/DataModel-CodeSets-PartyRole.xml"/>

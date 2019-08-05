@@ -186,15 +186,6 @@
 			<Type name="xs:gYear"/>
 		</Item>		<!-- SchoolCalendarYear -->
 		<Item>
-			<Element>EnrolmentStatus</Element>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The status of the school enrolment.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsSchoolEnrolmentStatusType"></Type>
-		</Item>		<!-- EnrolmentStatus -->
-		<Item>
 			<Element>StartDate</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>

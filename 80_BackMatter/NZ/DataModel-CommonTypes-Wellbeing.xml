@@ -1201,24 +1201,22 @@
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsRestraintQuestionType"/>
 		</Item>    <!-- Question -->
-		<Choice>			
-			<Item>
-				<Element>Answer</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>The answer to the question. Options are Yes or No.</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-			</Item>    <!-- Answer -->
-			<Item>
-				<Element>AnswerSupportingDescription</Element>
-				<Characteristics>O</Characteristics>
-				<Description>
-					<p>A free text description providing additional information about the question if required.</p>
-				</Description>
-				<Type name="xs:normalizedString"/>
-			</Item>    <!-- AnswerSupportingDescription -->
-		</Choice>
+		<Item>
+			<Element>Answer</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The answer to the question. Options are Yes or No.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+		</Item>    <!-- Answer -->
+		<Item>
+			<Element>AnswerSupportingDescription</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A free text description providing additional information about the question if required.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- AnswerSupportingDescription -->
 	</CommonElement>
 
 	<!-- StudentVoice complex types -->

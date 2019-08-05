@@ -104,62 +104,6 @@
 
 	<CodeSet>
 		<Intro>
-		    <p>Records the status of a per-year school enrolment, which goes
-				 through a different life-cycle to the multi-year provider enrolment.</p>
-		</Intro>
-		<ID>School Enrolment Status</ID>
-		<Values>
-			<Value>
-				<Code>PRE</Code>
-				<Text>Pre-Enrolment</Text>
-				<Description/>
-			</Value>      <!-- PreEnrolment -->
-			<Value>
-				<Code>PCA</Code>
-				<Text>Pre-Enrolment Cancelled</Text>
-				<Description/>
-			</Value>      <!-- PreEnrolment -->
-			<Value>
-				<Code>PRO</Code>
-				<Text>Provisional</Text>
-				<Description>
-					<p>The Learner is enrolled for the current year, and is expected to continue 
-						to be enrolled for the year denoted in the SchoolEnrolment.</p>
-				</Description>
-			</Value>      <!-- Provisional -->
-			<Value>
-				<Code>CON</Code>
-				<Text>Confirmed</Text>
-				<Description>
-					<p>The Learner is enrolled for the current year, and has confirmed that they
-						will be returning for the year denoted in the SchoolEnrolment.</p>
-				</Description>
-			</Value>      <!-- Confirmed -->
-			<Value>
-				<Code>ACT</Code>
-				<Text>Active</Text>
-				<Description>
-					<p>The Learner is currently enrolled for the year denoted in the SchoolEnrolment.</p>
-				</Description>
-			</Value>      <!-- Active -->
-			<Value>
-				<Code>COM</Code>
-				<Text>Completed</Text>
-				<Description>The Learner has completed the school year denoted in the SchoolEnrolment.</Description>
-			</Value>			<!-- Completed -->
-			<Value>
-				<Code>WIT</Code>
-				<Text>Withdrawn</Text>
-				<Description>
-					<p>The Learner has withdrawn (or otherwise left) the school during the year denoted
-						in the SchoolEnrolment.</p>
-				</Description>
-			</Value>      <!-- Withdrawn -->
-		</Values>
-	</CodeSet>    <!-- School Enrolment Status -->
-
-	<CodeSet>
-		<Intro>
 			<p>Enrolment Exit code, derived from code set used in School Roll Returns.</p>
 		</Intro>
 		<ID>Enrolment Exit Type</ID>
