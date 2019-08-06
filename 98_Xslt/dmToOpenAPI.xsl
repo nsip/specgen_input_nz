@@ -172,7 +172,7 @@
 		<xsl:text>              type: object&#x0a;</xsl:text>
 		<xsl:text>              properties:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('                ', @name, ':&#x0a;')"/>
-		<xsl:value-of select="concat('                  $ref: ''jsonSchema', $schemaId, '.yaml#/definitions/', @name, '''&#x0a;')"/>
+		<xsl:value-of select="concat('                  $ref: ''jsonSchema', $schemaId, '.yaml#/properties/', @name, '''&#x0a;')"/>
 		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="json">
 			<xsl:with-param name="pfx"><xsl:text>            </xsl:text></xsl:with-param>
 		</xsl:apply-templates>
@@ -181,7 +181,7 @@
 		<xsl:text>              type: object&#x0a;</xsl:text>
 		<xsl:text>              properties:&#x0a;</xsl:text>		
 		<xsl:value-of select="concat('                ', @name, ':&#x0a;')"/>
-		<xsl:value-of select="concat('                  $ref: ''jsonSchema', $schemaId, '.yaml#/definitions/', @name, '''&#x0a;')"/>
+		<xsl:value-of select="concat('                  $ref: ''jsonSchema', $schemaId, '.yaml#/properties/', @name, '''&#x0a;')"/>
 		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="xml">
 			<xsl:with-param name="pfx"><xsl:text>            </xsl:text></xsl:with-param>
 		</xsl:apply-templates>
@@ -199,7 +199,7 @@
 		<xsl:text>                type: object&#x0a;</xsl:text>
 		<xsl:text>                properties:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('                  ', @name, ':&#x0a;')"/>
-		<xsl:value-of select="concat('                    $ref: ''jsonSchema', $schemaId, '.yaml#/definitions/', @name, '''&#x0a;')"/>
+		<xsl:value-of select="concat('                    $ref: ''jsonSchema', $schemaId, '.yaml#/properties/', @name, '''&#x0a;')"/>
 		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="json">
 			<xsl:with-param name="pfx"><xsl:text>              </xsl:text></xsl:with-param>
 		</xsl:apply-templates>		
@@ -208,7 +208,7 @@
 		<xsl:text>                type: object&#x0a;</xsl:text>
 		<xsl:text>                properties:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('                  ', @name, ':&#x0a;')"/>
-		<xsl:value-of select="concat('                    $ref: ''jsonSchema', $schemaId, '.yaml#/definitions/', @name, '''&#x0a;')"/>
+		<xsl:value-of select="concat('                    $ref: ''jsonSchema', $schemaId, '.yaml#/properties/', @name, '''&#x0a;')"/>
 		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="xml">
 			<xsl:with-param name="pfx"><xsl:text>              </xsl:text></xsl:with-param>
 		</xsl:apply-templates>		
@@ -233,7 +233,7 @@
         <xsl:value-of select="concat('                      ', @name, ':&#x0a;')"/>
         <xsl:text>                        type: array&#x0a;</xsl:text>
         <xsl:text>                        items:&#x0a;</xsl:text>
-        <xsl:value-of select="concat('                          $ref: ''jsonSchema', $schemaId, '.yaml#/definitions/', @name, '''&#x0a;')"/>
+        <xsl:value-of select="concat('                          $ref: ''jsonSchema', $schemaId, '.yaml#/properties/', @name, '''&#x0a;')"/>
 		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="jsonArray">
 			<xsl:with-param name="pfx"><xsl:text>              </xsl:text></xsl:with-param>
 		</xsl:apply-templates>		
@@ -250,7 +250,7 @@
         <xsl:value-of select="concat('                      ', @name, ':&#x0a;')"/>
         <xsl:text>                        type: array&#x0a;</xsl:text>
         <xsl:text>                        items:&#x0a;</xsl:text>
-        <xsl:value-of select="concat('                          $ref: ''jsonSchema', $schemaId, '.yaml#/definitions/', @name, '''&#x0a;')"/>
+        <xsl:value-of select="concat('                          $ref: ''jsonSchema', $schemaId, '.yaml#/properties/', @name, '''&#x0a;')"/>
 		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="xmlList">
 			<xsl:with-param name="pfx"><xsl:text>              </xsl:text></xsl:with-param>
 		</xsl:apply-templates>		
