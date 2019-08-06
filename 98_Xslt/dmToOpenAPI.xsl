@@ -13,6 +13,10 @@
 	<xsl:param name="sifVersion"/>
 	<xsl:param name="sifLocale"/>
 	
+	<xsl:variable name="extDocUrlRoot">
+		<xsl:value-of select="concat('https://sifnzmodel.azurewebsites.net/SIFNZ-v', translate(replace($sifVersion, ' \(', '-'), ') ', ''))"/>
+	</xsl:variable>
+	
 	<xsl:template match="/specgen:SIFSpecification">
 		<xsl:value-of select="concat( 'openapi: 3.0.2&#x0a;',
                                       'info:&#x0a;',
@@ -22,16 +26,21 @@
 									  '  host: &quot;api.terito.education.govt.nz&quot;&#x0a;',
 									  '  basePath: &quot;v3&quot;&#x0a;')"/>
 
-		<xsl:text># /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
-		<xsl:apply-templates select=".//specgen:Section[@name = 'Domain Map']" mode="DomainMap"/>
-
-		<xsl:text># /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
-		<xsl:apply-templates select=".//specgen:Section[@name = 'Domain Map']" mode="Tags"/>
+		<!-- Only some Locales have DomainMaps -->
+		<xsl:if test=".//specgen:Section[@name = 'Domain Map']">
+			<xsl:text># /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
+			<xsl:apply-templates select=".//specgen:Section[@name = 'Domain Map']" mode="DomainMap"/>
+		
+			<xsl:text># /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
+			<xsl:apply-templates select=".//specgen:Section[@name = 'Domain Map']" mode="Tags"/>
+		</xsl:if>
 
 		<xsl:text># /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
 		<xsl:apply-templates select=".//specgen:DataObjects" mode="paths"/>
 	</xsl:template>
 
+
+	<!-- Data models might have DomainMaps to help drive ToC -->
 	<xsl:template match="specgen:Section" mode="DomainMap">
 		<xsl:text>x-tagGroups:&#x0a;</xsl:text>
 		<xsl:apply-templates select="specgen:Domain" mode="DomainMap"/>
@@ -63,7 +72,7 @@
 		<xsl:apply-templates select="specgen:Intro"/><xsl:text>&#x0a;</xsl:text>
 		<xsl:value-of select="concat('    externalDocs: &#x0a;',
 		                             '      description: &quot;', @name, ' Domain in SIF NZ Data Model&quot;&#x0a;',
-									 '      url: &quot;https://sifnzmodel.azurewebsites.net/SIFNZ-v3.0-rc1/DomainMap.html#Domain__', xfn:cleanUrl(@name), '&quot;&#x0a;')"/>
+									 '      url: &quot;', $extDocUrlRoot, '/DomainMap.html#Domain__', xfn:cleanUrl(@name), '&quot;&#x0a;')"/>
 
 	</xsl:template>
 
@@ -86,8 +95,10 @@
 		<xsl:text>    get:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('      tags:&#x0a;      - ', $q, @name, $q, '&#x0a;')"/>
 		<xsl:value-of select="concat('      summary: Default operation to get a list of all available ', @name, 's&#x0a;')"/>
-		<xsl:apply-templates select="." mode="responsesList"/>
-			
+		<xsl:apply-templates select="." mode="responsesList">
+			<xsl:with-param name="schemaId">Create</xsl:with-param>
+		</xsl:apply-templates>
+
 		<xsl:if test="specgen:Key">
 			<xsl:text>  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
 			<xsl:value-of select="concat('  /', @name, 's/{', translate(specgen:Key, '@', ''), '}:&#x0a;')"/>
@@ -101,8 +112,9 @@
 			<xsl:text>        required: true&#x0a;</xsl:text>
 			<xsl:text>        schema:&#x0a;</xsl:text>
 			<xsl:text>          type: string&#x0a;</xsl:text>
-			<xsl:apply-templates select="." mode="requestBody">			
+			<xsl:apply-templates select="." mode="requestBody">
 				<xsl:with-param name="operationId" select="concat('create', @name)"/>
+				<xsl:with-param name="schemaId">Create</xsl:with-param>
 			</xsl:apply-templates>
 
 			<xsl:text>    put:&#x0a;</xsl:text>
@@ -114,8 +126,9 @@
 			<xsl:text>        required: true&#x0a;</xsl:text>
 			<xsl:text>        schema:&#x0a;</xsl:text>
 			<xsl:text>          type: string&#x0a;</xsl:text>
-			<xsl:apply-templates select="." mode="requestBody">			
+			<xsl:apply-templates select="." mode="requestBody">
 				<xsl:with-param name="operationId" select="concat('update', @name)"/>
+				<xsl:with-param name="schemaId">Update</xsl:with-param>
 			</xsl:apply-templates>
 
 			<xsl:text>    get:&#x0a;</xsl:text>
@@ -127,7 +140,9 @@
 			<xsl:text>        required: true&#x0a;</xsl:text>
 			<xsl:text>        schema:&#x0a;</xsl:text>
 			<xsl:text>          type: string&#x0a;</xsl:text>
-			<xsl:apply-templates select="." mode="responsesSingle"/>
+			<xsl:apply-templates select="." mode="responsesSingle">
+				<xsl:with-param name="schemaId">Create</xsl:with-param>
+			</xsl:apply-templates>
 
 			<xsl:text>    delete:&#x0a;</xsl:text>
 			<xsl:value-of select="concat('      tags:&#x0a;      - ', $q, @name, $q, '&#x0a;')"/>
@@ -146,6 +161,7 @@
 
     <xsl:template match="specgen:DataObject" mode="requestBody">
 		<xsl:param name="operationId"/>
+		<xsl:param name="schemaId"/>
 
 		<xsl:value-of select="concat('      operationId: ', $operationId, '&#x0a;')"/>		
 		<xsl:text>      requestBody:&#x0a;</xsl:text>
@@ -156,7 +172,7 @@
 		<xsl:text>              type: object&#x0a;</xsl:text>
 		<xsl:text>              properties:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('                ', @name, ':&#x0a;')"/>
-		<xsl:value-of select="concat('                  $ref: ''jsonSchema.yaml#/definitions/', @name, '''&#x0a;')"/>
+		<xsl:value-of select="concat('                  $ref: ''jsonSchema', $schemaId, '.yaml#/properties/', @name, '''&#x0a;')"/>
 		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="json">
 			<xsl:with-param name="pfx"><xsl:text>            </xsl:text></xsl:with-param>
 		</xsl:apply-templates>
@@ -165,13 +181,15 @@
 		<xsl:text>              type: object&#x0a;</xsl:text>
 		<xsl:text>              properties:&#x0a;</xsl:text>		
 		<xsl:value-of select="concat('                ', @name, ':&#x0a;')"/>
-		<xsl:value-of select="concat('                  $ref: ''jsonSchema.yaml#/definitions/', @name, '''&#x0a;')"/>
+		<xsl:value-of select="concat('                  $ref: ''jsonSchema', $schemaId, '.yaml#/properties/', @name, '''&#x0a;')"/>
 		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="xml">
 			<xsl:with-param name="pfx"><xsl:text>            </xsl:text></xsl:with-param>
 		</xsl:apply-templates>
 	</xsl:template>
 
     <xsl:template match="specgen:DataObject" mode="responsesSingle">
+		<xsl:param name="schemaId"/>
+
 		<xsl:text>      responses:&#x0a;</xsl:text>
         <xsl:text>        '200':&#x0a;</xsl:text>
         <xsl:text>          description: successful operation&#x0a;</xsl:text>
@@ -181,7 +199,7 @@
 		<xsl:text>                type: object&#x0a;</xsl:text>
 		<xsl:text>                properties:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('                  ', @name, ':&#x0a;')"/>
-		<xsl:value-of select="concat('                    $ref: ''jsonSchema.yaml#/definitions/', @name, '''&#x0a;')"/>
+		<xsl:value-of select="concat('                    $ref: ''jsonSchema', $schemaId, '.yaml#/properties/', @name, '''&#x0a;')"/>
 		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="json">
 			<xsl:with-param name="pfx"><xsl:text>              </xsl:text></xsl:with-param>
 		</xsl:apply-templates>		
@@ -190,13 +208,15 @@
 		<xsl:text>                type: object&#x0a;</xsl:text>
 		<xsl:text>                properties:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('                  ', @name, ':&#x0a;')"/>
-		<xsl:value-of select="concat('                    $ref: ''jsonSchema.yaml#/definitions/', @name, '''&#x0a;')"/>
+		<xsl:value-of select="concat('                    $ref: ''jsonSchema', $schemaId, '.yaml#/properties/', @name, '''&#x0a;')"/>
 		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="xml">
 			<xsl:with-param name="pfx"><xsl:text>              </xsl:text></xsl:with-param>
 		</xsl:apply-templates>		
 	</xsl:template>
 
     <xsl:template match="specgen:DataObject" mode="responsesList">
+		<xsl:param name="schemaId"/>
+
 		<xsl:text>      responses:&#x0a;</xsl:text>
         <xsl:text>        '200':&#x0a;</xsl:text>
         <xsl:text>          description: successful operation&#x0a;</xsl:text>
@@ -213,7 +233,7 @@
         <xsl:value-of select="concat('                      ', @name, ':&#x0a;')"/>
         <xsl:text>                        type: array&#x0a;</xsl:text>
         <xsl:text>                        items:&#x0a;</xsl:text>
-        <xsl:value-of select="concat('                          $ref: ''jsonSchema.yaml#/definitions/', @name, '''&#x0a;')"/>
+        <xsl:value-of select="concat('                          $ref: ''jsonSchema', $schemaId, '.yaml#/properties/', @name, '''&#x0a;')"/>
 		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="jsonArray">
 			<xsl:with-param name="pfx"><xsl:text>              </xsl:text></xsl:with-param>
 		</xsl:apply-templates>		
@@ -230,7 +250,7 @@
         <xsl:value-of select="concat('                      ', @name, ':&#x0a;')"/>
         <xsl:text>                        type: array&#x0a;</xsl:text>
         <xsl:text>                        items:&#x0a;</xsl:text>
-        <xsl:value-of select="concat('                          $ref: ''jsonSchema.yaml#/definitions/', @name, '''&#x0a;')"/>
+        <xsl:value-of select="concat('                          $ref: ''jsonSchema', $schemaId, '.yaml#/properties/', @name, '''&#x0a;')"/>
 		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]" mode="xmlList">
 			<xsl:with-param name="pfx"><xsl:text>              </xsl:text></xsl:with-param>
 		</xsl:apply-templates>		

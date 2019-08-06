@@ -81,13 +81,23 @@
 
   <Item>
     <Element>DateAttained</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The date the student achieved the attainment.</p>
     </Description>
     <Type name="xs:date"></Type>
   </Item>    <!-- DateAttained -->
+
+  <Item>
+    <Element>YearAttained</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The year the student achieved the attainment.</p>
+    </Description>
+    <Type name="xs:gYear"></Type>
+  </Item>    <!-- YearAttained -->
 
   <Item>
     <Element>JustificationList</Element>
@@ -101,14 +111,14 @@
   </Item>    <!-- JustificationList -->
 
   <Item>
-    <Element>SubjectArea</Element>
+    <Element>SubjectAreaList</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Code denoting the Learning or Subject Area the assessment task is for.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
-  </Item>    <!-- SubjectArea -->
+    <Type ref="CommonTypes" name="SubjectAreaListType"/>
+  </Item>    <!-- SubjectAreaList -->
 
   <Item>
     <Element>EndorsementLevel</Element>
@@ -168,8 +178,10 @@
 					<Date>2016-06-28</Date>
 					<CreditValue>3</CreditValue>										
 				</Justification>				
-			</JustificationList>      
-      <SubjectArea>CHEM</SubjectArea>
+			</JustificationList>  
+      <SubjectAreaList>
+          <SubjectArea>CHEM</SubjectArea>
+      </SubjectAreaList>
     </StudentAttainment>
   </xhtml:Example>
 
@@ -194,7 +206,9 @@
         <Name>Prof. McGonnegal</Name>
       </AuthorisingStaffMember>
       <DateAttained>2018-07-25</DateAttained>
-      <SubjectArea>PHYS</SubjectArea>
+      <SubjectAreaList>
+          <SubjectArea>PHYS</SubjectArea>
+      </SubjectAreaList>
     </StudentAttainment>
   </xhtml:Example>
 </DataObject>

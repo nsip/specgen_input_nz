@@ -107,14 +107,14 @@
     <Type ref="CommonTypes" name="ObjectReferenceType"/>
   </Item>    <!-- LearningStandard -->  
   <Item>
-    <Element>SubjectArea</Element>
+    <Element>SubjectAreaList</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Code denoting the Learning or Subject Area the assessment result is for.</p>
+      <p>A list of the subject areas that the assessment pertains to.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"></Type>
-  </Item>    <!-- SubjectArea -->
+    <Type ref="CommonTypes" name="SubjectAreaListType"></Type>
+  </Item>    <!-- SubjectAreaList -->
   <Item>
     <Element>StudentYearLevel</Element>
     <Characteristics>O</Characteristics>
@@ -250,14 +250,14 @@
     <Type ref="CommonTypes" name="AssessmentResultScoreListType"></Type>
   </Item>    <!-- ResultScoreList -->
   <Item>
-    <Element>FinalMarkValue</Element>
+    <Element>FinalResultValue</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The final mark that was given to the student for this assessment task.</p>
+      <p>The final result that was given to the student for this assessment task.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- FinalMarkValue -->
+  </Item>    <!-- FinalResultValue -->
   <Item>
     <Element>EffortComment</Element>
     <Characteristics>O</Characteristics>
@@ -299,7 +299,9 @@
             <ProviderRole>PRO</ProviderRole>
           </ProviderInvolved>
         </ProviderInvolvedList>
-        <SubjectArea>MATH</SubjectArea>
+        <SubjectAreaList>
+            <SubjectArea>MATH</SubjectArea>
+        </SubjectAreaList>
         <SummativeIndicator>N</SummativeIndicator>
         <FormativeIndicator>Y</FormativeIndicator>
         <DateAssessed>2018-11-21</DateAssessed>
@@ -341,7 +343,9 @@
             <ProviderRole>PRO</ProviderRole>
           </ProviderInvolved>
         </ProviderInvolvedList>
-        <SubjectArea>ENGL</SubjectArea>
+        <SubjectAreaList>
+            <SubjectArea>ENGL</SubjectArea>
+        </SubjectAreaList>
         <SummativeIndicator>N</SummativeIndicator>
         <FormativeIndicator>Y</FormativeIndicator>
         <DateAssessed>2018-11-01</DateAssessed>
