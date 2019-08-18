@@ -100,7 +100,7 @@
 		<Description>
 			<p>Details of the reasons, and interventions leading up to the student's enrolment being terminated.</p>
 		</Description>
-		<Type ref="CommonData" name="ProviderExitType"/>
+		<Type ref="CommonTypes" name="ProviderExitType"/>
 	</Item>		<!-- Exit -->
 
 	<Item>

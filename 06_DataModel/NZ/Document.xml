@@ -154,7 +154,7 @@
     <Description>
       <p>The list of people associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
     </Description>
-    <Type ref="CommonType" name="PersonDocumentRoleListType"></Type>
+    <Type ref="CommonTypes" name="PersonDocumentRoleListType"></Type>
   </Item>    <!-- PersonDocumentRoleList -->
 
   <xhtml:Example xmlns="" name="Document">

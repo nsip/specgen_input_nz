@@ -235,7 +235,7 @@
 				<p>Records how the Student's eligibility to enrol / for funding was verified by the
 					school staff during the enrolment process.</p>
 			</Description>
-			<Type ref="CommonData" name="VerificationEventType"/>
+			<Type ref="CommonTypes" name="VerificationEventType"/>
 		</Item>		<!-- EligibilityVerification -->
 		<Item>
 			<Element>FTE</Element>
@@ -302,7 +302,7 @@
 			<Description>
 				<p>How much instruction has the student received in which languages?</p>
 			</Description>
-			<Type ref="CommonData" name="LanguageOfInstructionListType"/>
+			<Type ref="CommonTypes" name="LanguageOfInstructionListType"/>
 		</Item>		<!-- LanguageOfInstructionList -->
 		<Item>
 			<Element>TimeInImmersion</Element>
@@ -378,7 +378,7 @@
 			<Description>
 				<p>A list of student consent information.</p>
 			</Description>
-			<Type ref="CommonData" name="StudentConsentListType"/>
+			<Type ref="CommonTypes" name="StudentConsentListType"/>
 		</Item>		<!-- StudentConsentList -->
 		<Item>
 			<Element>AcademicAttainmentGoalList</Element>

@@ -85,7 +85,7 @@
     <Description>
       <p>The list of roles the StaffMember has in relation to all students at the assigned location.</p>
     </Description>
-    <Type ref="CommonData" name="StaffRoleListType"></Type>
+    <Type ref="CommonTypes" name="StaffRoleListType"></Type>
   </Item>      <!-- StaffRoleList -->
 
   <Item>

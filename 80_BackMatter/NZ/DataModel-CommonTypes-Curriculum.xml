@@ -23,13 +23,13 @@
 				<Element>SubjectArea</Element>
 				<Characteristics>M</Characteristics>
 				<Description/>
-				<Type ref="CodeTypes" name="NZCodeSetsSubjectAreaType"/>
+				<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
 			</Item>
 			<Item>
 				<Element>NCEASubjectArea</Element>
 				<Characteristics>M</Characteristics>
 				<Description/>
-				<Type ref="CodeTypes" name="NZCodeSetsNCEASubjectAreaType"/>
+				<Type ref="CodeSets" name="NZCodeSetsNCEASubjectAreaType"/>
 			</Item>
 		</Choice>    <!-- Choice: SubjectArea or NCEASubjectArea-->
 		<xhtml:Example xmlns="" name="Subject Area List Example">
@@ -109,7 +109,7 @@
 			<Description>
 				<p>The number of hours per week the Learner is taught in a specific language during the enrolment.</p>
 			</Description>
-			<Type ref="CommonData" name="LanguageOfInstructionType"/>
+			<Type ref="CommonTypes" name="LanguageOfInstructionType"/>
 		</Item>
 		
 		<xhtml:Example xmlns="" name="LanguageOfInstructionList Example">
@@ -177,7 +177,7 @@
 			<Element>LearningStandard</Element>
 			<Characteristics>MR</Characteristics>
 			<Description/>
-			<Type ref="CommonData" name="ObjectReferenceType"/>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>
 	</CommonElement>
 
@@ -193,7 +193,7 @@
 			<Element>RelatedLearningStandard</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>A member of the related LearningStandard list.</Description>
-			<Type ref="CommonData" name="RelatedLearningStandardType"/>
+			<Type ref="CommonTypes" name="RelatedLearningStandardType"/>
 		</Item>
 	</CommonElement>
 	
@@ -212,7 +212,7 @@
 			<Description>
 				<p>Code describing the relationship from a LearningStandard to a related LearningStandard.</p>
 			</Description>
-			<Type ref="NZCodeSets" name="NZCodeSetsLearningStandardRelationshipTypeType"/>
+			<Type ref="CodeSets" name="NZCodeSetsLearningStandardRelationshipTypeType"/>
 		</Item>   <!-- Relationship -->
 	</CommonElement>	
 
@@ -229,7 +229,7 @@
 			<Element>Credential</Element>
 			<Characteristics>MR</Characteristics>
 			<Description/>
-			<Type ref="CommonData" name="ObjectReferenceType"/>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>
 	</CommonElement>
 
@@ -383,7 +383,7 @@
 				<p>A record of the Student's progress in a set of achievement objectives from the 
 					from the Technology curriculum strand, that was covered in the class.</p>
 			</Description>
-			<Type ref="CommonData" name="StrandAchievementObjectiveListType"/>
+			<Type ref="CommonTypes" name="StrandAchievementObjectiveListType"/>
 		</Item>    <!-- AchievementObjectiveList -->
 	</CommonElement>
 
@@ -486,7 +486,7 @@
 				<p>Documents that relate to students progress in this strand achievement 
 					objective, e.g. report, photos, media, documents etc.</p>
 			</Description>
-			<Type ref="CommonData" name="DocumentListType"/>
+			<Type ref="CommonTypes" name="DocumentListType"/>
 		</Item>    <!-- DocumentList -->
 	</CommonElement>
 </IncludeGroup>

@@ -114,7 +114,7 @@
     <Description>
       <p>The language of instruction for the Course.</p>
     </Description>
-    <Type ref="CommonData" name='LanguageOfInstructionListType'/>
+    <Type ref="CommonTypes" name='LanguageOfInstructionListType'/>
   </Item>    <!-- LanguageOfInstructionList -->
   <Item>
     <Element>LearningStandardList</Element>
@@ -123,7 +123,7 @@
     <Description>
       <p>A list of <code>ObjectReference</code>s to the LearningStandards covered by the Course.</p>
     </Description>
-    <Type ref="CommonData" name='LearningStandardReferenceListType'/>
+    <Type ref="CommonTypes" name='LearningStandardReferenceListType'/>
   </Item>    <!-- LearningStandardList -->
   <Item>
     <Element>CredentialList</Element>
@@ -132,7 +132,7 @@
     <Description>
       <p>A list of <code>ObjectReference</code>s to the Credentials that may be gained by students completing the course.</p>
     </Description>
-    <Type ref="CommonData" name='CredentialListType'/>
+    <Type ref="CommonTypes" name='CredentialListType'/>
   </Item>    <!-- CredentialList -->
 
   <xhtml:Example xmlns="" name="ProviderCourse Example">
