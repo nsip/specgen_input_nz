@@ -36,9 +36,9 @@
 
 	<!-- Special rootObject, schema will validate an hetrogonous array of dataObjects... -->
 	<xsl:template match="specgen:DataObjects" mode="rootObj">
-		<xsl:text>type: array&#x0a;items:&#x0a;</xsl:text>
+		<xsl:text>type: object&#x0a;additionalProperties: false&#x0a;</xsl:text>
 
-		<xsl:text>  oneOf:&#x0a;</xsl:text>
+		<xsl:text>oneOf:&#x0a;</xsl:text>
 		<xsl:apply-templates select=".//specgen:DataObject" mode="reqRootObj">
 			<xsl:sort select="@name"/>
 		</xsl:apply-templates>
@@ -378,7 +378,7 @@
 		</xsl:if>
 
 		<xsl:text>    allOf:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('    - $ref: ''#/definitions/', xfn:chopType(@name), '''&#x0a;')"/>
+		<xsl:value-of select="concat('    - $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;')"/>
 		<xsl:text>    - type: object&#x0a;</xsl:text>
 		<xsl:if test="$mandatoryFields = 'required'">
 			<xsl:if test="specgen:Item[contains(specgen:Characteristics, 'M')]|//specgen:CommonElement[@name = current()/specgen:Item[1]/specgen:Type/@name]/specgen:Item[contains(specgen:Characteristics, 'M')]">
