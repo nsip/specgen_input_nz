@@ -289,10 +289,9 @@
 		<xsl:text>    description: &gt;-&#x0a;      </xsl:text>
 		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
 		<xsl:text>    type: object&#x0a;    additionalproperties: false&#x0a;    properties:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('      ', xfn:chopType(specgen:Item[1]/specgen:Element), ':&#x0a;        type: array&#x0a;        items:&#x0a;')"/>
 
 		<xsl:apply-templates select="specgen:Choice">
-			<xsl:with-param name="indent" select="'          '"/>
+			<xsl:with-param name="indent" select="'      '"/>
 		</xsl:apply-templates>
 	</xsl:template>
 
@@ -312,12 +311,18 @@
 		<xsl:text>    type: object&#x0a;    additionalProperties: false&#x0a;    properties:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('      ', xfn:chopType(specgen:Item[1]/specgen:Element), ':&#x0a;',
 		                             '        type: object&#x0a;',
-									 '        additionalProperties: false&#x0a;',									 
+									 '        additionalProperties: false&#x0a;',
 									 '        properties:&#x0a;')"/>
 
 		<xsl:apply-templates select="specgen:Choice">
 			<xsl:with-param name="indent" select="'          '"/>
 		</xsl:apply-templates>
+
+		<xsl:text>        oneOf:&#x0a;</xsl:text>
+		<xsl:for-each select="specgen:Choice/specgen:Item">
+			<xsl:value-of select="concat('        - required:&#x0a;          - ', $q, specgen:Element|specgen:Attribute, $q, '&#x0a;')"/>
+		</xsl:for-each>
+
 	</xsl:template>
 
 	<!-- Common type is a list (implicit or explicit), without choices -->
@@ -463,6 +468,7 @@
 		</xsl:apply-templates>
 	</xsl:template>
 
+
 	<!-- Item is required;  if Characteristcs == 'M' -->
 	<xsl:template match="specgen:Item" mode="required"/>
 	<xsl:template match="specgen:Item[contains(specgen:Characteristics, 'M')]" mode="required">
@@ -484,8 +490,8 @@
 		<xsl:value-of select="concat($indent, specgen:Element|specgen:Attribute, ':&#x0a;')"/>
 
 		<xsl:choose>
-			<!-- Item is repeatable -->
-			<xsl:when test="contains(specgen:Characteristics,  'R')">
+			<!-- Item is repeatable (or in a repeatable choice) -->
+			<xsl:when test="contains(specgen:Characteristics,  'R') or parent::specgen:Choice/@repeatable">
 				<xsl:value-of select="concat($indent, '  type: array&#x0a;', $indent, '  items:&#x0a;')"/>
 				<xsl:value-of select="concat($indent, '  - allOf:&#x0a;')"/>
 
