@@ -423,11 +423,11 @@
 				<LanguageOfInstructionList>
 					<Language>
 						<Code>NZS16110</Code>
-						<Level>99</Level>
+						<Level json:force-string="true">6</Level>
 					</Language>
 					<Language>
 						<Code>NZS01112</Code>
-						<Level>99</Level>
+						<Level json:force-string="true">1</Level>
 					</Language>
 				</LanguageOfInstructionList>
 				<SubjectChoiceList>
@@ -699,7 +699,6 @@
 	<CommonElement name="ProviderExitType" type="true" dm="true">
 		<Item>
 			<Element>ProviderExitType</Element>
-			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>Details of the reasons, and interventions leading up to the
 					student's enrolment being terminated.</p>

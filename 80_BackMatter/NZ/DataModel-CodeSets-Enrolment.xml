@@ -1,14 +1,13 @@
-<IncludeGroup
-	xmlns:xi="http://www.w3.org/2001/XInclude"
-	xmlns:xml="http://www.w3.org/XML/1998/namespace"
- 	xmlns="http://sifassociation.org/SpecGen">
+<IncludeGroup xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xmlns:xml="http://www.w3.org/XML/1998/namespace" 
+	xmlns="http://sifassociation.org/SpecGen">
 
 	<!-- Borrowed from SIF AU -->
-  <CodeSet>
+	<CodeSet>
 		<Intro>
 			<p>A type of student enrolment with a school. Allows
-			differentiation of concurrent enrolments, eg base vs
-			other.</p>
+		differentiation of concurrent enrolments, eg base vs
+		other.</p>
 		</Intro>
 		<ID>School Enrolment Type</ID>
 		<Values>
@@ -16,10 +15,10 @@
 				<Code>BASE</Code>
 				<Text>Base Enrolment</Text>
 				<Description>
-				<p>The school that the student is considered to be primarily
-				enrolled with, especially for the purposes of reporting and
-				Ministry funding. Typically the student will spend most of
-				their school time at this school.</p>
+					<p>The school that the student is considered to be primarily
+						enrolled with, especially for the purposes of reporting and
+						Ministry funding. Typically the student will spend most of
+						their school time at this school.</p>
 				</Description>
 			</Value>
 			<Value>
@@ -27,7 +26,7 @@
 				<Text>Hosted Enrolment</Text>
 				<Description>
 					<p>Indicates an enrolment that is concurrent with the student's base enrolment 
-					at another school.</p>
+				at another school.</p>
 				</Description>
 			</Value>
 			<Value>
@@ -35,18 +34,18 @@
 				<Text>Remote/Distance Learning</Text>
 				<Description>
 					<p>Indicates an enrolment with a school (typically Te Kura - The Correspondence School) which 
-					provides remote/distance learning; this means that the student remains at their base school
-					(or at home) for all classes covered by this enrolment.</p>
+				provides remote/distance learning; this means that the student remains at their base school
+				(or at home) for all classes covered by this enrolment.</p>
 				</Description>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- School Enrolment Type -->
+	</CodeSet>	<!-- School Enrolment Type -->
 
 
 	<!-- Defind by SIF NZ - StudentProviderEnrolment -->
 	<CodeSet>
 		<Intro>
-		    <p>Records the status of a potentially multi-year Provider enrolment, which goes through
+			<p>Records the status of a potentially multi-year Provider enrolment, which goes through
 				a different life-cycle to the single-year school enrolment.</p>
 		</Intro>
 		<ID>Provider Enrolment Status</ID>
@@ -58,7 +57,7 @@
 					<p>Student has applied to become a Student at the Provider, this pre-enrolment has been received, 
 						and is being processed by the provider. It has not yet been accepted or declined by the provider.</p>
 				</Description>
-			</Value>    <!-- Applied -->
+			</Value>			<!-- Applied -->
 			<Value>
 				<Code>ACC</Code>
 				<Text>Accepted</Text>
@@ -68,7 +67,7 @@
 						Student if they choose to take it up. Student has accepted the enrolment and is expecting to
 						take up the enrolment at the agreed future date.</p>
 				</Description>
-			</Value>    <!-- Accepted -->
+			</Value>			<!-- Accepted -->
 			<Value>
 				<Code>CAN</Code>
 				<Text>Cancelled</Text>
@@ -76,19 +75,19 @@
 					<p>The enrolment application has been declined by the Provider, or discontinued by the Student,
 					 prior to becoming an ACTIVE enrolment.</p>
 				</Description>
-			</Value>    <!-- Cancelled -->
+			</Value>			<!-- Cancelled -->
 			<Value>
 				<Code>ACT</Code>
 				<Text>Active</Text>
 				<Description>
 					<p>The student has taken up the enrolment, and has attended classes for the first time.</p>
 				</Description>
-			</Value>    <!-- Active -->
+			</Value>			<!-- Active -->
 			<Value>
 				<Code>WIT</Code>
 				<Text>Withdrawn</Text>
 				<Description>The Student has left the Provider, after the enrolment was made ACTIVE</Description>
-			</Value>	  <!-- Withdrawn -->
+			</Value>			<!-- Withdrawn -->
 			<Value>
 				<Code>PEN</Code>
 				<Text>Pending</Text>
@@ -98,9 +97,9 @@
 					 	there is still an ACTIVE enrolment for the student at a (previous) provider. Once the 
 						blocking Provider has put their enrolment to WITHDRAWN, this enrolment can be moved to 'ACTIVE'.</p>
 				</Description>
-			</Value>    <!-- Pending -->
+			</Value>			<!-- Pending -->
 		</Values>
-	</CodeSet>    <!-- Provider Enrolment Status -->
+	</CodeSet>	<!-- Provider Enrolment Status -->
 
 	<CodeSet>
 		<Intro>
@@ -159,7 +158,7 @@
 				<Text>Caregiver Decision</Text>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Enrolment Exit Type -->
+	</CodeSet>	<!-- Enrolment Exit Type -->
 
 	<CodeSet>
 		<Intro>
@@ -205,7 +204,7 @@
 				<Text>Extended 28 Day Waiver</Text>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Eligibility Criteria -->
+	</CodeSet>	<!-- Eligibility Criteria -->
 
 	<CodeSet>
 		<Intro>
@@ -260,8 +259,7 @@
 				<Text>Adult Student</Text>
 				<Description>
 					A student who has continued at school and is at least 19 on
-					1 January of the Roll count year.  EXAMPLE: Roll count year
-					= 2017 if student is 19 years old on 1 January 2017 their
+					1 January of the Roll count year.  EXAMPLE: Roll count year = 2017 if student is 19 years old on 1 January 2017 their
 					student type = RA as there has not been a break in the
 					students learning cycle.
 				</Description>
@@ -371,7 +369,7 @@
 				</Description>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Student Funding Type -->
+	</CodeSet>	<!-- Student Funding Type -->
 
 	<CodeSet>
 		<Intro>
@@ -392,7 +390,7 @@
 				<Text>Extension</Text>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Ongoing Resource Scheme -->
+	</CodeSet>	<!-- Ongoing Resource Scheme -->
 
 	<CodeSet>
 		<Intro>
@@ -455,7 +453,7 @@
 				<Text>Exchange Agreement</Text>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Exchange Scheme -->
+	</CodeSet>	<!-- Exchange Scheme -->
 
 	<CodeSet>
 		<Intro>
@@ -463,21 +461,60 @@
 		</Intro>
 		<ID>Post School Activity</ID>
 		<Values>
-			<Value><Code>ASC</Code><Text>Another School</Text></Value>
-			<Value><Code>EMP</Code><Text>Employment</Text></Value>
-			<Value><Code>IOT</Code><Text>Institutes of Technology</Text></Value>
-			<Value><Code>MAI</Code><Text>Modern Apprenticeships / Industry Training</Text></Value>
-			<Value><Code>PTR</Code><Text>Private Training</Text></Value>
-			<Value><Code>TAC</Code><Text>Trade Academies</Text></Value>
-			<Value><Code>UNI</Code><Text>University</Text></Value>
-			<Value><Code>UNK</Code><Text>Unknown</Text></Value>
-			<Value><Code>WAN</Code><Text>Wananga</Text></Value>
-			<Value><Code>YGE</Code><Text>Youth Guarantee</Text></Value>
-			<Value><Code>EFE</Code><Text>Employment and Further Education / Training</Text></Value>
-			<Value><Code>FED</Code><Text>Further Education or Training</Text></Value>
-			<Value><Code>OTH</Code><Text>Other</Text></Value>
+			<Value>
+				<Code>ASC</Code>
+				<Text>Another School</Text>
+			</Value>
+			<Value>
+				<Code>EMP</Code>
+				<Text>Employment</Text>
+			</Value>
+			<Value>
+				<Code>IOT</Code>
+				<Text>Institutes of Technology</Text>
+			</Value>
+			<Value>
+				<Code>MAI</Code>
+				<Text>Modern Apprenticeships / Industry Training</Text>
+			</Value>
+			<Value>
+				<Code>PTR</Code>
+				<Text>Private Training</Text>
+			</Value>
+			<Value>
+				<Code>TAC</Code>
+				<Text>Trade Academies</Text>
+			</Value>
+			<Value>
+				<Code>UNI</Code>
+				<Text>University</Text>
+			</Value>
+			<Value>
+				<Code>UNK</Code>
+				<Text>Unknown</Text>
+			</Value>
+			<Value>
+				<Code>WAN</Code>
+				<Text>Wananga</Text>
+			</Value>
+			<Value>
+				<Code>YGE</Code>
+				<Text>Youth Guarantee</Text>
+			</Value>
+			<Value>
+				<Code>EFE</Code>
+				<Text>Employment and Further Education / Training</Text>
+			</Value>
+			<Value>
+				<Code>FED</Code>
+				<Text>Further Education or Training</Text>
+			</Value>
+			<Value>
+				<Code>OTH</Code>
+				<Text>Other</Text>
+			</Value>
 		</Values>
-	</CodeSet>    <!-- Post School Activity -->
+	</CodeSet>	<!-- Post School Activity -->
 
 	<CodeSet>
 		<Intro>
@@ -489,37 +526,37 @@
 				<Code>PHT</Code>
 				<Text>Share Photos</Text>
 				<Description>To use and share photographs of the student</Description>
-			</Value>    <!-- Share Photos -->
+			</Value>			<!-- Share Photos -->
 			<Value>
 				<Code>ART</Code>
 				<Text>Share Art</Text>
-			</Value>    <!-- Share Art -->
+			</Value>			<!-- Share Art -->
 			<Value>
 				<Code>WRI</Code>
 				<Text>Share Writing</Text>
-			</Value>    <!-- Share Writing -->
+			</Value>			<!-- Share Writing -->
 			<Value>
 				<Code>MED</Code>
 				<Text>Medical Treatment</Text>
 				<Description>Seek medical treatment in an emergency when the caregiver cannot be contacted</Description>
-			</Value>    <!-- Medical Treatment -->
+			</Value>			<!-- Medical Treatment -->
 			<Value>
 				<Code>ADM</Code>
 				<Text>Panadol</Text>
 				<Description>Administer Panadol</Description>
-			</Value>    <!-- Administer Panadol -->
+			</Value>			<!-- Administer Panadol -->
 			<Value>
 				<Code>LSC</Code>
 				<Text>Learning Support Community Register</Text>
 				<Description>To be on the Learning Support Register</Description>
-			</Value>    <!-- Learning Support Community Register -->
+			</Value>			<!-- Learning Support Community Register -->
 			<Value>
 				<Code>LSP</Code>
 				<Text>Learning Support Publish to Community Register</Text>
 				<Description>To have content on the Learning Support Community Register published to any school groups the school is part of for analysis e.g. a Kāhui Ako</Description>
-			</Value>    <!-- Learning Support Community Register -->
+			</Value>			<!-- Learning Support Community Register -->
 		</Values>
-	</CodeSet>    <!-- Student Consent To -->
+	</CodeSet>	<!-- Student Consent To -->
 
 	<CodeSet>
 		<Intro>
@@ -530,9 +567,9 @@
 			<Value>
 				<Code>OTH</Code>
 				<Text>Other</Text>
-			</Value>    <!-- Other -->
+			</Value>			<!-- Other -->
 		</Values>
-	</CodeSet>    <!-- CoEnrolment Type -->
+	</CodeSet>	<!-- CoEnrolment Type -->
 
 	<CodeSet>
 		<Intro>
@@ -549,7 +586,7 @@
 				<Text>Manual</Text>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Pre Enrolment Exit Type -->
+	</CodeSet>	<!-- Pre Enrolment Exit Type -->
 
 	<CodeSet>
 		<Intro>
@@ -574,7 +611,7 @@
 				<Text>Other - Please Specify</Text>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Pre Enrolment Cancellation Reason -->
+	</CodeSet>	<!-- Pre Enrolment Cancellation Reason -->
 
 	<CodeSet>
 		<Intro>
@@ -582,18 +619,48 @@
 		</Intro>
 		<ID>Early Childhood Education Type</ID>
 		<Values>
-			<Value><Code>EKR</Code><Text>Kohanga Reo</Text></Value>
-			<Value><Code>EPC</Code><Text>Playcentre</Text></Value>
-			<Value><Code>EKE</Code><Text>Kindergarden or Education and Care</Text></Value>
-			<Value><Code>EHB</Code><Text>Home Based Service</Text></Value>
-			<Value><Code>EPG</Code><Text>Playgroup or Pacific Islands EC Group</Text></Value>
-			<Value><Code>ECO</Code><Text>The Correspondence School - Te Aho o Te Kura Pounamu</Text></Value>
-			<Value><Code>EOS</Code><Text>Attended, but only outside New Zealand</Text></Value>
-			<Value><Code>ETU</Code><Text>Attended, but don't know what type of service</Text></Value>
-			<Value><Code>ENA</Code><Text>Did not attend</Text></Value>
-			<Value><Code>EUN</Code><Text>Unable to establish if attended or not</Text></Value>
+			<Value>
+				<Code>EKR</Code>
+				<Text>Kohanga Reo</Text>
+			</Value>
+			<Value>
+				<Code>EPC</Code>
+				<Text>Playcentre</Text>
+			</Value>
+			<Value>
+				<Code>EKE</Code>
+				<Text>Kindergarden or Education and Care</Text>
+			</Value>
+			<Value>
+				<Code>EHB</Code>
+				<Text>Home Based Service</Text>
+			</Value>
+			<Value>
+				<Code>EPG</Code>
+				<Text>Playgroup or Pacific Islands EC Group</Text>
+			</Value>
+			<Value>
+				<Code>ECO</Code>
+				<Text>The Correspondence School - Te Aho o Te Kura Pounamu</Text>
+			</Value>
+			<Value>
+				<Code>EOS</Code>
+				<Text>Attended, but only outside New Zealand</Text>
+			</Value>
+			<Value>
+				<Code>ETU</Code>
+				<Text>Attended, but don't know what type of service</Text>
+			</Value>
+			<Value>
+				<Code>ENA</Code>
+				<Text>Did not attend</Text>
+			</Value>
+			<Value>
+				<Code>EUN</Code>
+				<Text>Unable to establish if attended or not</Text>
+			</Value>
 		</Values>
-	</CodeSet>    <!-- Early Childhood Education Type -->
+	</CodeSet>	<!-- Early Childhood Education Type -->
 
 	<CodeSet>
 		<Intro>
@@ -652,5 +719,5 @@
 				<Description>Student is learning Taha Māori</Description>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Language Instruction Level (Te Reo Māori) -->
+	</CodeSet>	<!-- Language Instruction Level (Te Reo Māori) -->
 </IncludeGroup>
