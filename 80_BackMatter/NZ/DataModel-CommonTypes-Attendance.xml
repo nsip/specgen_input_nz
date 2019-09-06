@@ -83,6 +83,15 @@
 		</Item>		<!-- AttendanceType -->
 
 		<Item>
+			<Element>AttendanceCodeGroup</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The attendance code group the students attendance code belongs to.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsAttendanceCodeGroupType"/>
+		</Item>		<!-- AttendanceCodeGroup -->
+
+		<Item>
 			<Element>AttendanceCode</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
@@ -153,8 +162,6 @@
 			</Description>
 			<Type name="xs:normalizedString"/>
 		</Item>		<!-- AttendanceNote -->
-	
-
 	</CommonElement>
 
 </IncludeGroup>

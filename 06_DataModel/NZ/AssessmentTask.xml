@@ -203,24 +203,14 @@
   </Item>    <!-- LevelAssessed -->
 
   <Item>
-    <Element>FormativeIndicator</Element>
+    <Element>EvaluationType</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Indicates whether or not this is a formative assessment task.</p>
+      <p>The type of assessment evaluation, e.g. formative or summative.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-  </Item>    <!-- FormativeIndicator --> 
-
-  <Item>
-    <Element>SummativeIndicator</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Indicates whether or not this is a summative assessment task.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-  </Item>    <!-- SummativeIndicator -->  
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentEvaluationTypeType"/>
+  </Item>    <!-- EvaluationType --> 
 
   <Item>
     <Element>AssessmentToolTypeName</Element>

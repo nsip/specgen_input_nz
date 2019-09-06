@@ -173,19 +173,13 @@
     <Type name="xs:integer"/>
   </Item>    <!-- AchievementAttempt -->
   <Item>
-    <Element>SummativeIndicator</Element>
+    <Element>EvaluationType</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
-    <Description>Flag indicating that this assessment result is Summative, rather than Formative</Description>
-    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-  </Item>    <!-- SummativeIndicator -->
-  <Item>
-    <Element>FormativeIndicator</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>Flag indicating that this assessment result is Formative, rather than Summative</Description>
-    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-  </Item>    <!-- FormativeIndicator -->
+    <Description>The type of assessment evaluation, e.g. formative or summative.</Description>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentEvaluationTypeType"/>
+  </Item>    <!-- EvaluationType -->
+
 
   <!-- Score, Dates, etc... -->
   <Item>
@@ -253,11 +247,18 @@
     <Type ref="CommonTypes" name="AssessmentResultScoreListType"></Type>
   </Item>    <!-- ResultScoreList -->
   <Item>
+    <Element>FinalResultCode</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>The final result that was given to the student for this assessment task. If the result is for an NZQA or International Baccalaureate then the FinalResultCode using the enumeration NZCodeSetsAssessmentResultType must be used.</Description>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentResultType"/>
+  </Item>    <!-- FinalResultCode -->
+  <Item>
     <Element>FinalResultValue</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The final result that was given to the student for this assessment task.</p>
+      <p>The final result that was given to the student for this assessment task. If the result is for an NZQA or International Baccalaureate then the FinalResultCode using the enumeration NZCodeSetsAssessmentResultType must be used instead.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>    <!-- FinalResultValue -->
@@ -305,8 +306,7 @@
         <SubjectAreaList>
             <SubjectArea>MATH</SubjectArea>
         </SubjectAreaList>
-        <SummativeIndicator>N</SummativeIndicator>
-        <FormativeIndicator>Y</FormativeIndicator>
+        <EvaluationType>F</EvaluationType>
         <DateAssessed>2018-11-21</DateAssessed>
         <ResultScoreList>
           <ResultScore>
@@ -349,8 +349,7 @@
         <SubjectAreaList>
             <SubjectArea>ENGL</SubjectArea>
         </SubjectAreaList>
-        <SummativeIndicator>N</SummativeIndicator>
-        <FormativeIndicator>Y</FormativeIndicator>
+        <EvaluationType>F</EvaluationType>
         <DateAssessed>2018-11-01</DateAssessed>
         <ResultScoreList>
           <ResultScore>

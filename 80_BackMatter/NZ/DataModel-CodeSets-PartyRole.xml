@@ -2674,67 +2674,67 @@
 		<Values>
 			<Value>
 				<Code>IBP</Code>
-				<Text>Individualised Behavioural Plan</Text>
+				<Text xml:lang="en">Individualised Behavioural Plan</Text>
 				<Text xml:lang="mi">Mahere Whanonga mā te Ākonga</Text>
 			</Value>    <!-- Individualised Behavioural Plan -->
 			<Value>
 				<Code>IEP</Code>
-				<Text>Individualised Education Plan</Text>
+				<Text xml:lang="en">Individualised Education Plan</Text>
 				<Text xml:lang="mi">Mahere Mātauranga mā te Ākonga</Text>
 			</Value>    <!-- Individualised Education Plan -->
 			<Value>
 				<Code>MED</Code>
-				<Text>Medical</Text>
+				<Text xml:lang="en">Medical</Text>
 				<Text xml:lang="mi">Toha rongoā</Text>
 			</Value>    <!-- Medical -->
 			<Value>
 				<Code>ATT</Code>
-				<Text>Attendance</Text>
+				<Text xml:lang="en">Attendance</Text>
 				<Text xml:lang="mi">Te Tae ki te Kura</Text>
 			</Value>    <!-- Attendance -->
 			<Value>
 				<Code>BEH</Code>
-				<Text>Behavioural</Text>
+				<Text xml:lang="en">Behavioural</Text>
 				<Text xml:lang="mi">Whanonga</Text>
 			</Value>    <!-- Behavioural -->
 			<Value>
 				<Code>ACA</Code>
-				<Text>Academic</Text>
+				<Text xml:lang="en">Academic</Text>
 				<Text xml:lang="mi">Mātauranga</Text>
 			</Value>    <!-- Academic -->
 			<Value>
 				<Code>LEG</Code>
-				<Text>Legal</Text>
+				<Text xml:lang="en">Legal</Text>
 				<Text xml:lang="mi">Ture</Text>
 			</Value>    <!-- Legal -->
 			<Value>
 				<Code>OTH</Code>
-				<Text>Other</Text>
+				<Text xml:lang="en">Other</Text>
 				<Text xml:lang="mi">Mea kē</Text>
 			</Value>    <!-- Other -->
 			<Value>
 				<Code>PHO</Code>
-				<Text>Photo</Text>
+				<Text xml:lang="en">Photo</Text>
 				<Text xml:lang="mi">Whakaahua</Text>
 			</Value>
 			<Value>
 				<Code>MEA</Code>
-				<Text>Media (e.g. video)</Text>
+				<Text xml:lang="en">Media (e.g. video)</Text>
 				<Text xml:lang="mi">Pāpāho (h.t. whitiata)</Text>
 			</Value>
 			<Value>
 				<Code>DOC</Code>
-				<Text>Document</Text>
+				<Text xml:lang="en">Document</Text>
 				<Text xml:lang="mi">Tuhinga</Text>
 			</Value>
 			<Value>
 				<Code>NOT</Code>
-				<Text>Note</Text>
+				<Text xml:lang="en">Note</Text>
 				<Text xml:lang="mi">Pito kōrero</Text>
 			</Value>
 			<Value>
 				<Code>LSN</Code>
-				<Text>Learning Support Need</Text>
+				<Text xml:lang="en">Learning Support Need</Text>
 				<Text xml:lang="mi">Me whai tautoko akoranga</Text>
 			</Value>
 		</Values>
@@ -2748,17 +2748,17 @@
 		<Values>
 			<Value>
 				<Code>IC</Code>
-				<Text>In-Confidence</Text>
+				<Text xml:lang="en">In-Confidence</Text>
 				<Text xml:lang="mi">Noho muna</Text>
 			</Value>    <!-- In-Confidence -->
 			<Value>
 				<Code>SE</Code>
-				<Text>Sensitive</Text>
+				<Text xml:lang="en">Sensitive</Text>
 				<Text xml:lang="mi">Āritarita</Text>
 			</Value>    <!-- Sensitive -->
 			<Value>
-				<Code>NC</Code>
-				<Text>Unclassified</Text>
+				<Code>UC</Code>
+				<Text xml:lang="en">Unclassified</Text>
 				<Text xml:lang="mi">Kāre anō kia kōmakatia</Text>
 			</Value>    <!-- Not Classified -->
 		</Values>

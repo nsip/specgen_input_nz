@@ -121,6 +121,15 @@
 				<p>The type of early childhood education the student is enrolling in.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsEarlyChildhoodEducationTypeType"/>
+		</Item>    <!-- Type -->
+		<Item>
+			<Element>ECEYearLevel</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Code set denoting the year level of students attending early childhood education.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsECEYearLevelType"/>
 		</Item>    <!-- Type -->		
 	</CommonElement>
 

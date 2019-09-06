@@ -81,7 +81,7 @@
 			</Description>
 			<Type ref="CommonTypes" name="AssessmentScoreType"/>
 		</Item>     <!-- ResultScore -->
-
+	
 		<xhtml:Example xmlns="" name="PAT Result Score List Example">
 			<ResultScoreList>
 				<ResultScore>
@@ -160,10 +160,17 @@
 			<Element>ScoreValue</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>The actual score </p>
+				<p>The score the student received for assessment task against that metric. If the result score is for an NZQA or International Baccalaureate then the ScoreResultCode using the enumeration NZCodeSetsAssessmentResultType must be used instead.</p>
 			</Description>
 			<Type name="xs:normalizedString"></Type>
 		</Item>    <!-- ScoreValue -->
+		<Item>
+			<Element>ScoreCode</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>The score the student received for assessment task against that metric. If the result score is for an NZQA or International Baccalaureate then the ScoreResultCode using the enumeration NZCodeSetsAssessmentResultType must be used.</Description>
+			<Type ref="CodeSets" name="NZCodeSetsAssessmentResultType"/>
+		</Item>    <!-- ScoreCode -->
 	</CommonElement>
 
 	<CommonElement name="JustificationListType" type="true" dm="true">

@@ -8,9 +8,21 @@
 		</Intro>
 		<ID>Wellbeing Severity</ID>
 		<Values>
-				<Value><Code>HGH</Code><Text>High</Text></Value>
-				<Value><Code>MOD</Code><Text>Moderate</Text></Value>
-				<Value><Code>LOW</Code><Text>Low</Text></Value>
+				<Value>
+				<Code>HGH</Code>
+				<Text xml:lang="en">High</Text>
+				<Text xml:lang="mi">Haurunga</Text>
+				</Value>
+				<Value>
+				<Code>MOD</Code>
+				<Text xml:lang="en">Moderate</Text>
+				<Text xml:lang="mi">Hauwaenga</Text>
+				</Value>
+				<Value>
+				<Code>LOW</Code>
+				<Text xml:lang="en">Low</Text>
+				<Text xml:lang="mi">Hauraro</Text>
+				</Value>
 		</Values>
 	</CodeSet>    <!-- Wellbeing Severity -->
 
@@ -91,212 +103,212 @@
 			<Value><Code>DIET-06</Code><Text>Gluten-free</Text></Value>
 			<Value>
 			<Code>LSN-ABN</Code>
-			<Text>Absence</Text>
+			<Text xml:lang="en">Absence</Text>
 			<Text xml:lang="mi">Ngaronga</Text>
 			</Value>
 			<Value>
 			<Code>LSN-ACD</Code>
-			<Text>Academic</Text>
+			<Text xml:lang="en">Academic</Text>
 			<Text xml:lang="mi">Mātauranga</Text>
 			</Value>
 			<Value>
 			<Code>LSN-ANX</Code>
-			<Text>Anxiety</Text>
+			<Text xml:lang="en">Anxiety</Text>
 			<Text xml:lang="mi">Mānukanuka</Text>
 			</Value>
 			<Value>
 			<Code>LSN-ASD</Code>
-			<Text>Autism Spectrum Disorder (ASD)</Text>
+			<Text xml:lang="en">Autism Spectrum Disorder (ASD)</Text>
 			<Text xml:lang="mi">Takiwāwatanga</Text>
 			</Value>
 			<Value>
 			<Code>LSN-ATT</Code>
-			<Text>Attendance</Text>
+			<Text xml:lang="en">Attendance</Text>
 			<Text xml:lang="mi">Taetanga</Text>
 			</Value>
 			<Value>
 			<Code>LSN-AUD</Code>
-			<Text>Auditory Processing</Text>
+			<Text xml:lang="en">Auditory Processing</Text>
 			<Text xml:lang="mi">Tātari Iorongo</Text>
 			</Value>
 			<Value>
 			<Code>LSN-BHV</Code>
-			<Text>Behaviour</Text>
+			<Text xml:lang="en">Behaviour</Text>
 			<Text xml:lang="mi">Whanonga</Text>
 			</Value>
 			<Value>
 			<Code>LSN-COM</Code>
-			<Text>Communication</Text>
+			<Text xml:lang="en">Communication</Text>
 			<Text xml:lang="mi">Whakawhiti Kōrero</Text>
 			</Value>
 			<Value>
 			<Code>LSN-CPH</Code>
-			<Text>Comprehension</Text>
+			<Text xml:lang="en">Comprehension</Text>
 			<Text xml:lang="mi">Aroā</Text>
 			</Value>
 			<Value>
 			<Code>LSN-DCA</Code>
-			<Text>Dyscalculia</Text>
+			<Text xml:lang="en">Dyscalculia</Text>
 			<Text xml:lang="mi">Dyscalculia</Text>
 			</Value>
 			<Value>
 			<Code>LSN-DEV</Code>
-			<Text>Developmental Delay</Text>
+			<Text xml:lang="en">Developmental Delay</Text>
 			<Text xml:lang="mi">Whanaketanga pōturi</Text>
 			</Value>
 			<Value>
 			<Code>LSN-DGA</Code>
-			<Text>Dysgraphia</Text>
+			<Text xml:lang="en">Dysgraphia</Text>
 			<Text xml:lang="mi">Dysgraphia</Text>
 			</Value>
 			<Value>
 			<Code>LSN-DPA</Code>
-			<Text>Dyspraxia</Text>
+			<Text xml:lang="en">Dyspraxia</Text>
 			<Text xml:lang="mi">Dyspraxia</Text>
 			</Value>
 			<Value>
 			<Code>LSN-DSA</Code>
-			<Text>Dyslexia</Text>
+			<Text xml:lang="en">Dyslexia</Text>
 			<Text xml:lang="mi">Dyslexia</Text>
 			</Value>
 			<Value>
 			<Code>LSN-ENG</Code>
-			<Text>Engagement</Text>
+			<Text xml:lang="en">Engagement</Text>
 			<Text xml:lang="mi">Whakatari</Text>
 			</Value>
 			<Value>
 			<Code>LSN-EPI</Code>
-			<Text>Epilepsy</Text>
+			<Text xml:lang="en">Epilepsy</Text>
 			<Text xml:lang="mi">Mate Hūhuki</Text>
 			</Value>
 			<Value>
 			<Code>LSN-ESL</Code>
-			<Text>ESOL</Text>
+			<Text xml:lang="en">ESOL</Text>
 			<Text xml:lang="mi">ESOL</Text>
 			</Value>
 			<Value>
 			<Code>LSN-FCS</Code>
-			<Text>Focus</Text>
+			<Text xml:lang="en">Focus</Text>
 			<Text xml:lang="mi">Aronga</Text>
 			</Value>
 			<Value>
 			<Code>LSN-FMS</Code>
-			<Text>Fine Motor Skills</Text>
+			<Text xml:lang="en">Fine Motor Skills</Text>
 			<Text xml:lang="mi">Pūkenga Āta Nekeneke</Text>
 			</Value>
 			<Value>
 			<Code>LSN-HRG</Code>
-			<Text>Hearing</Text>
+			<Text xml:lang="en">Hearing</Text>
 			<Text xml:lang="mi">Whakarongo</Text>
 			</Value>
 			<Value>
 			<Code>LSN-HWG</Code>
-			<Text>Handwriting</Text>
+			<Text xml:lang="en">Handwriting</Text>
 			<Text xml:lang="mi">Tuhituhi</Text>
 			</Value>
 			<Value>
 			<Code>LSN-IND</Code>
-			<Text>Independence</Text>
+			<Text xml:lang="en">Independence</Text>
 			<Text xml:lang="mi">Mahi Takitahi</Text>
 			</Value>
 			<Value>
 			<Code>LSN-INT</Code>
-			<Text>Intellectual Disability</Text>
+			<Text xml:lang="en">Intellectual Disability</Text>
 			<Text xml:lang="mi">Hauā ā-hinengaro</Text>
 			</Value>
 			<Value>
 			<Code>LSN-LIT</Code>
-			<Text>Literacy</Text>
+			<Text xml:lang="en">Literacy</Text>
 			<Text xml:lang="mi">Reo Matatini</Text>
 			</Value>
 			<Value>
 			<Code>LSN-LNG</Code>
-			<Text>Learning</Text>
+			<Text xml:lang="en">Learning</Text>
 			<Text xml:lang="mi">Te Akoako</Text>
 			</Value>
 			<Value>
 			<Code>LSN-MTH</Code>
-			<Text>Maths</Text>
+			<Text xml:lang="en">Maths</Text>
 			<Text xml:lang="mi">Pāngarau</Text>
 			</Value>
 			<Value>
 			<Code>LSN-NUM</Code>
-			<Text>Numeracy</Text>
+			<Text xml:lang="en">Numeracy</Text>
 			<Text xml:lang="mi">Reo Pāngarau</Text>
 			</Value>
 			<Value>
 			<Code>LSN-ORL</Code>
-			<Text>Oral Language</Text>
+			<Text xml:lang="en">Oral Language</Text>
 			<Text xml:lang="mi">Reo ā-Waha</Text>
 			</Value>
 			<Value>
 			<Code>LSN-ORS</Code>
-			<Text>ORS</Text>
+			<Text xml:lang="en">ORS</Text>
 			<Text xml:lang="mi">ORS</Text>
 			</Value>
 			<Value>
 			<Code>LSN-OTH</Code>
-			<Text>Others</Text>
+			<Text xml:lang="en">Others</Text>
 			<Text xml:lang="mi">Ētahi atu</Text>
 			</Value>
 			<Value>
 			<Code>LSN-PHS</Code>
-			<Text>Physical Skills</Text>
+			<Text xml:lang="en">Physical Skills</Text>
 			<Text xml:lang="mi">Mahi ā-ringa</Text>
 			</Value>
 			<Value>
 			<Code>LSN-PSL</Code>
-			<Text>Passive Learner</Text>
+			<Text xml:lang="en">Passive Learner</Text>
 			<Text xml:lang="mi">Ākonga </Text>
 			</Value>
 			<Value>
 			<Code>LSN-PST</Code>
-			<Text>Pastoral</Text>
+			<Text xml:lang="en">Pastoral</Text>
 			<Text xml:lang="mi">Te manaaki</Text>
 			</Value>
 			<Value>
 			<Code>LSN-RDG</Code>
-			<Text>Reading</Text>
+			<Text xml:lang="en">Reading</Text>
 			<Text xml:lang="mi">Pānui</Text>
 			</Value>
 			<Value>
 			<Code>LSN-ROL</Code>
-			<Text>Rate of Learning</Text>
+			<Text xml:lang="en">Rate of Learning</Text>
 			<Text xml:lang="mi">Te haere o ngā akoranga</Text>
 			</Value>
 			<Value>
 			<Code>LSN-ROP</Code>
-			<Text>Rate of Progress</Text>
+			<Text xml:lang="en">Rate of Progress</Text>
 			<Text xml:lang="mi">Te haere o te mahi</Text>
 			</Value>
 			<Value>
 			<Code>LSN-SPH</Code>
-			<Text>Speech</Text>
+			<Text xml:lang="en">Speech</Text>
 			<Text xml:lang="mi">Kōrero</Text>
 			</Value>
 			<Value>
 			<Code>LSN-SPL</Code>
-			<Text>Spelling</Text>
+			<Text xml:lang="en">Spelling</Text>
 			<Text xml:lang="mi">Tuhi kupu</Text>
 			</Value>
 			<Value>
 			<Code>LSN-SRL</Code>
-			<Text>Social Relationships</Text>
+			<Text xml:lang="en">Social Relationships</Text>
 			<Text xml:lang="mi">Whakahoahoa</Text>
 			</Value>
 			<Value>
 			<Code>LSN-VIS</Code>
-			<Text>Vision</Text>
+			<Text xml:lang="en">Vision</Text>
 			<Text xml:lang="mi">Kitenga</Text>
 			</Value>
 			<Value>
 			<Code>LSN-WBG</Code>
-			<Text>Wellbeing</Text>
+			<Text xml:lang="en">Wellbeing</Text>
 			<Text xml:lang="mi">Hauora</Text>
 			</Value>
 			<Value>
 			<Code>LSN-WRT</Code>
-			<Text>Writing </Text>
+			<Text xml:lang="en">Writing </Text>
 			<Text xml:lang="mi">Tuhi kōrero</Text>
 			</Value>
 			<Value><Code>MH-1</Code><Text>Adjustment Disorder</Text></Value>
@@ -461,7 +473,7 @@
 			<Value><Code>MDC</Code><Text>Medical</Text></Value>
 			<Value>
 				<Code>LSN</Code>
-				<Text>Learning Support Need</Text>
+				<Text xml:lang="en">Learning Support Need</Text>
 				<Text xml:lang="mi">Hiahia Tautoko Akoranga</Text>
 			</Value>
 			<Value><Code>ALG</Code><Text>Allergy</Text></Value>
@@ -478,17 +490,17 @@
 		<Values>
 			<Value>
 				<Code>HGH</Code>
-				<Text>High</Text>
+				<Text xml:lang="en">High</Text>
 				<Text xml:lang="mi">Haurunga</Text>
 			</Value>
 			<Value>
 				<Code>MOD</Code>
-				<Text>Moderate</Text>
+				<Text xml:lang="en">Moderate</Text>
 				<Text xml:lang="mi">Hauwaenga</Text>
 			</Value>
 			<Value>
 				<Code>LOW</Code>
-				<Text>Low</Text>
+				<Text xml:lang="en">Low</Text>
 				<Text xml:lang="mi">Hauraro</Text>
 			</Value>
 		</Values>
@@ -502,22 +514,22 @@
 		<Values>
 				<Value>
 					<Code>ACTI</Code>
-					<Text>Active</Text>
+					<Text xml:lang="en">Active</Text>
 					<Text xml:lang="mi">Whakaae</Text>
 				</Value>
 				<Value>
 					<Code>CLOS</Code>
-					<Text>Closed</Text>
+					<Text xml:lang="en">Closed</Text>
 					<Text xml:lang="mi">Kua kati</Text>
 				</Value>
 				<Value>
 					<Code>CREA</Code>
-					<Text>Created in Error</Text>
+					<Text xml:lang="en">Created in Error</Text>
 					<Text xml:lang="mi">I hangaia i runga i te raru</Text>
 				</Value>
 				<Value>
 					<Code>PEND</Code>
-					<Text>Pending Approval</Text>
+					<Text xml:lang="en">Pending Approval</Text>
 					<Text xml:lang="mi">E tārewa ana</Text>
 				</Value>
 		</Values>
@@ -749,42 +761,42 @@
 		<Values>
 			<Value>
 				<Code>AM</Code>
-				<Text>AM</Text>
+				<Text xml:lang="en">AM</Text>
 				<Text xml:lang="mi">AM</Text>
 			</Value>
 			<Value>
 				<Code>PM</Code>
-				<Text>PM</Text>
+				<Text xml:lang="en">PM</Text>
 				<Text xml:lang="mi">PM</Text>
 			</Value>
 			<Value>
 				<Code>R</Code>
-				<Text>Recess</Text>
+				<Text xml:lang="en">Recess</Text>
 				<Text xml:lang="mi">Wā moko</Text>
 			</Value>
 			<Value>
 				<Code>B</Code>
-				<Text>Before School</Text>
+				<Text xml:lang="en">Before School</Text>
 				<Text xml:lang="mi">I mua i te Kura</Text>
 			</Value>
 			<Value>
 				<Code>A</Code>
-				<Text>After School</Text>
+				<Text xml:lang="en">After School</Text>
 				<Text xml:lang="mi">Muri i te Kura</Text>
 			</Value>
 			<Value>
 				<Code>Ex</Code>
-				<Text>Excursion</Text>
+				<Text xml:lang="en">Excursion</Text>
 				<Text xml:lang="mi">Haerenga</Text>
 			</Value>
 			<Value>
 				<Code>W</Code>
-				<Text>Weekend</Text>
+				<Text xml:lang="en">Weekend</Text>
 				<Text xml:lang="mi">Rā whakatā</Text>
 			</Value>
 			<Value>
 				<Code>O</Code>
-				<Text>Other</Text>
+				<Text xml:lang="en">Other</Text>
 				<Text xml:lang="mi">Ētahi kē</Text>
 			</Value>
 		</Values>
@@ -826,7 +838,7 @@
 		<Values>
 			<Value>
         <Code>AASS</Code>
-				<Text>Additional Attendance / Saturday School</Text>
+				<Text xml:lang="en">Additional Attendance / Saturday School</Text>
 				<Text xml:lang="mi">Rā kura anō/Kura Rāhoroi</Text>
 				<Description>
 					Consequence for referral results in student attending classes on a Saturday.
@@ -834,7 +846,7 @@
 			</Value>
 			<Value>
 				<Code>ACPE</Code>
-				<Text>Action Pending</Text>
+				<Text xml:lang="en">Action Pending</Text>
 				<Text xml:lang="mi">Te mahi e tārewa ana</Text>
 				<Description>
 					Consequence for referral is pending. Referral will be modified
@@ -843,7 +855,7 @@
 			</Value>
 			<Value>
 				<Code>ALPL</Code>
-				<Text>Alternative Placement</Text>
+				<Text xml:lang="en">Alternative Placement</Text>
 				<Text xml:lang="mi">Whakataunga noa atu</Text>
 				<Description>
 					Consequence for referral results in student being placed in a
@@ -852,7 +864,7 @@
 			</Value>
 			<Value>
 				<Code>BUSU</Code>
-				<Text>Bus Suspension</Text>
+				<Text xml:lang="en">Bus Suspension</Text>
 				<Text xml:lang="mi">Kua rāhuitia i te pahi</Text>
 				<Description>
 					Consequence for referral results in 1-3 day period when student not allowed on the bus.
@@ -860,7 +872,7 @@
 			</Value>
 			<Value>
 				<Code>COSE</Code>
-				<Text>Community Service</Text>
+				<Text xml:lang="en">Community Service</Text>
 				<Text xml:lang="mi">Ratonga hapori</Text>
 				<Description>
 					Consequence for referral results in involvement in community
@@ -869,7 +881,7 @@
 			</Value>
 			<Value>
 				<Code>COST</Code>
-				<Text>Conference with Student</Text>
+				<Text xml:lang="en">Conference with Student</Text>
 				<Text xml:lang="mi">Huihuinga matua, kaiako me te ākonga</Text>
 				<Description>
 					Consequence for referral results in student meeting with administrator,
@@ -878,7 +890,7 @@
 			</Value>
 			<Value>
 				<Code>EXPU</Code>
-				<Text>Expulsion</Text>
+				<Text xml:lang="en">Expulsion</Text>
 				<Text xml:lang="mi">Kua panaia</Text>
 				<Description>
 					Consequence for referral results in student being dismissed from school permanently.
@@ -886,7 +898,7 @@
 			</Value>
 			<Value>
 				<Code>ININ</Code>
-				<Text>Individualised Instruction</Text>
+				<Text xml:lang="en">Individualised Instruction</Text>
 				<Text xml:lang="mi">Tohutohu Takitahitia</Text>
 				<Description>
 					Consequence for referral results in student receiving individualized instruction
@@ -895,7 +907,7 @@
 			</Value>
 			<Value>
 				<Code>ISSU</Code>
-				<Text>In-School Suspension</Text>
+				<Text xml:lang="en">In-School Suspension</Text>
 				<Text xml:lang="mi">Rāhuitia ki roto o te kura</Text>
 				<Description>
 					Consequence for referral results in a period of time spent away from scheduled
@@ -904,7 +916,7 @@
 			</Value>
 			<Value>
 				<Code>LOPR</Code>
-				<Text>Loss of Privilege</Text>
+				<Text xml:lang="en">Loss of Privilege</Text>
 				<Text xml:lang="mi">Kua ngaro te mana</Text>
 				<Description>
 					Consequence for referral results in student being unable to participate in some type of privilege.
@@ -912,7 +924,7 @@
 			</Value>
 			<Value>
 				<Code>OATA</Code>
-				<Text>Other Action Taken</Text>
+				<Text xml:lang="en">Other Action Taken</Text>
 				<Text xml:lang="mi">He mahi kē i mahia</Text>
 				<Description>
 					Consequence for referral results in administrative decision that is not listed. Staff using
@@ -921,7 +933,7 @@
 			</Value>
 			<Value>
 				<Code>OOSS</Code>
-				<Text>Out-of-School Suspension</Text>
+				<Text xml:lang="en">Out-of-School Suspension</Text>
 				<Text xml:lang="mi">Rāhuitia ki waho o te Kura</Text>
 				<Description>
 					Consequence for referral results in a 1-3 day period when student
@@ -930,7 +942,7 @@
 			</Value>
 			<Value>
 				<Code>PACO</Code>
-				<Text>Parent Contact</Text>
+				<Text xml:lang="en">Parent Contact</Text>
 				<Text xml:lang="mi">Te whakapā ki ngā Mātua</Text>
 				<Description>
 					Consequence for referral results in parent communication by phone, email, or person-to-person
@@ -939,7 +951,7 @@
 			</Value>
 			<Value>
 				<Code>RECS</Code>
-				<Text>Restitution / Community Service</Text>
+				<Text xml:lang="en">Restitution / Community Service</Text>
 				<Text xml:lang="mi">Te Utu/Ratonga Hapori</Text>
 				<Description>
 					Consequence for referral results in apologizing or compensating for loss, damage,
@@ -948,7 +960,7 @@
 			</Value>
 			<Value>
 				<Code>TIOF</Code>
-				<Text>Time in Office</Text>
+				<Text xml:lang="en">Time in Office</Text>
 				<Text xml:lang="mi">Te noho ki te Tari</Text>
 				<Description>
 					Consequence for referral results in student spending time in the office away
@@ -957,7 +969,7 @@
 			</Value>
 			<Value>
 				<Code>TODE</Code>
-				<Text>Time Out / Detention</Text>
+				<Text xml:lang="en">Time Out / Detention</Text>
 				<Text xml:lang="mi">Te whakawehe/Tautāwhi</Text>
 				<Description>
 					Consequence for referral results in student spending time in a specified area
@@ -975,26 +987,26 @@
 		<Values>
 			<Value>
 				<Code>NON</Code>
-				<Text>None</Text>
+				<Text xml:lang="en">None</Text>
 				<Text xml:lang="mi">Karekau</Text>
 				<Description>No restraint or seclusion was used.</Description>
 			</Value>
 			<Value>
 				<Code>RES</Code>
-				<Text>Restraint</Text>
+				<Text xml:lang="en">Restraint</Text>
 				<Text xml:lang="mi">Te pupuri</Text>
 				<Description>Any measure or condition used to immobilize or reduce the ability of a 
 					student to move his or her torso, arms, legs, or head freely.</Description>
 			</Value>
 			<Value>
 				<Code>RAS</Code>
-				<Text>Restraint and Seclusion</Text>
+				<Text xml:lang="en">Restraint and Seclusion</Text>
 				<Text xml:lang="mi">Te pupuri me te whakawehe</Text>
 				<Description>The use of both restraint and seclusion.</Description>
 			</Value>
 			<Value>
 				<Code>SEC</Code>
-				<Text>Seclusion</Text>
+				<Text xml:lang="en">Seclusion</Text>
 				<Text xml:lang="mi">Te whakawehe</Text>
 				<Description>The involuntary confinement of a student alone in a room or area from which the student is physically prevented
 					 from leaving or believes they cannot freely exit.</Description>
@@ -1073,37 +1085,37 @@
 		<Values>
 				<Value>
 					<Code>NONE</Code>
-					<Text>None</Text>
+					<Text xml:lang="en">None</Text>
 					<Text xml:lang="mi">Ko ia anake</Text>
 				</Value>
 				<Value>
 					<Code>OTHE</Code>
-					<Text>Other</Text>
+					<Text xml:lang="en">Other</Text>
 					<Text xml:lang="mi">Me t/ētahi noa atu</Text>
 				</Value>
 				<Value>
 					<Code>PEER</Code>
-					<Text>Peers</Text>
+					<Text xml:lang="en">Peers</Text>
 					<Text xml:lang="mi">He hoa aropā</Text>
 				</Value>
 				<Value>
 					<Code>STAF</Code>
-					<Text>Staff</Text>
+					<Text xml:lang="en">Staff</Text>
 					<Text xml:lang="mi">Me te/ngā kaimahi kura</Text>
 				</Value>
 				<Value>
 					<Code>SUBS</Code>
-					<Text>Substitute</Text>
+					<Text xml:lang="en">Substitute</Text>
 					<Text xml:lang="mi">Me te kairīwhi</Text>
 				</Value>
 				<Value>
 					<Code>TEAC</Code>
-					<Text>Teacher</Text>
+					<Text xml:lang="en">Teacher</Text>
 					<Text xml:lang="mi">Me te/ngā Kaiako</Text>
 				</Value>
 				<Value>
 					<Code>UNKN</Code>
-					<Text>Unknown</Text>
+					<Text xml:lang="en">Unknown</Text>
 					<Text xml:lang="mi">Kāre i mōhiotia</Text>
 				</Value>
 		</Values>
@@ -1117,133 +1129,133 @@
 		<Values>
 				<Value>
 					<Code>ARTR</Code>
-					<Text>Art Room</Text>
+					<Text xml:lang="en">Art Room</Text>
 					<Text xml:lang="mi">Te Akomanga Toi</Text>
 					<Description>The area used for art classes and activities.</Description>
 				</Value>
 				<Value>
 					<Code>BATH</Code>
-					<Text>Bathroom / Restroom</Text>
+					<Text xml:lang="en">Bathroom / Restroom</Text>
 					<Text xml:lang="mi">Nga Wharepaku</Text>
 					<Description>Areas used by students for taking care of personal needs.</Description>
 				</Value>
 				<Value>
 					<Code>BUSL</Code>
-					<Text>Bus Loading Zone</Text>
+					<Text xml:lang="en">Bus Loading Zone</Text>
 					<Text xml:lang="mi">Te tūnga pahi</Text>
 					<Description>The area used for bus loading and unloading.</Description>
 				</Value>
 				<Value>
 					<Code>BUSS</Code>
-					<Text>Bus</Text>
+					<Text xml:lang="en">Bus</Text>
 					<Text xml:lang="mi">Te Pahi</Text>
 					<Description>The area inside the bus.</Description>
 				</Value>
 				<Value>
 					<Code>CAFE</Code>
-					<Text>Cafeteria</Text>
+					<Text xml:lang="en">Cafeteria</Text>
 					<Text xml:lang="mi">Te wharekai</Text>
 					<Description>The area used for breakfast and lunch. </Description>
 				</Value>
 				<Value>
 					<Code>CLAS</Code>
-					<Text>Classroom</Text>
+					<Text xml:lang="en">Classroom</Text>
 					<Text xml:lang="mi">Akomanga</Text>
 					<Description>Areas used for instructional purposes.</Description>
 				</Value>
 				<Value>
 					<Code>COMM</Code>
-					<Text>Commons / Common Area</Text>
+					<Text xml:lang="en">Commons / Common Area</Text>
 					<Text xml:lang="mi">Ngā wāhi o te kura</Text>
 					<Description>Areas shared by students and staff for specific activities.</Description>
 				</Value>
 				<Value>
 					<Code>COMP</Code>
-					<Text>Computer Lab</Text>
+					<Text xml:lang="en">Computer Lab</Text>
 					<Text xml:lang="mi">Taiwhanga Rorohiko</Text>
 					<Description>Area used for group computer classes and activities.</Description>
 				</Value>
 				<Value>
 					<Code>GYMM</Code>
-					<Text>Gym</Text>
+					<Text xml:lang="en">Gym</Text>
 					<Text xml:lang="mi">Te Whare Hākinakina</Text>
 					<Description>Areas used for physical education activities.</Description>
 				</Value>
 				<Value>
 					<Code>HALL</Code>
-					<Text>Hallway / Breezeway</Text>
+					<Text xml:lang="en">Hallway / Breezeway</Text>
 					<Text xml:lang="mi">Ngā huarahi haere ki ngā akomanga</Text>
 					<Description>Areas designated for passing from one activity/class to another.</Description>
 				</Value>
 				<Value>
 					<Code>LIBR</Code>
-					<Text>Library</Text>
+					<Text xml:lang="en">Library</Text>
 					<Text xml:lang="mi">Te whare pukapuka</Text>
 					<Description>The area designated for research and study.</Description>
 				</Value>
 				<Value>
 					<Code>LOCK</Code>
-					<Text>Locker Room</Text>
+					<Text xml:lang="en">Locker Room</Text>
 					<Text xml:lang="mi">Te Rūma Rakanga </Text>
 					<Description>The area used by students to prepare for and completing physical education classes and/or sporting events.</Description>
 				</Value>
 				<Value>
 					<Code>MUSC</Code>
-					<Text>Music Room</Text>
+					<Text xml:lang="en">Music Room</Text>
 					<Text xml:lang="mi">Te Rūma Whakatangitangi</Text>
 					<Description>The area used by students for music activities (e.g., music class, choir, band).</Description>
 				</Value>
 				<Value>
 					<Code>OFFC</Code>
-					<Text>Off-Campus</Text>
+					<Text xml:lang="en">Off-Campus</Text>
 					<Text xml:lang="mi">A waho atu i te Kura</Text>
 					<Description>An area beyond the property boundary of the school and not affiliated with a school activity.</Description>
 				</Value>
 				<Value>
 					<Code>OFFI</Code>
-					<Text>Office</Text>
+					<Text xml:lang="en">Office</Text>
 					<Text xml:lang="mi">Te Tari</Text>
 					<Description>The area used by school staff for primary school business and management. </Description>
 				</Value>
 				<Value>
 					<Code>OTHE</Code>
-					<Text>Other Location</Text>
+					<Text xml:lang="en">Other Location</Text>
 					<Text xml:lang="mi">He wāhi kē</Text>
 					<Description>The location for problem behavior event occurs in a location that is not listed.</Description>
 				</Value>
 				<Value
 					><Code>PARK</Code>
-					<Text>Parking Lot</Text>
+					<Text xml:lang="en">Parking Lot</Text>
 					<Text xml:lang="mi">Te tūnga waka</Text>
 					<Description>Areas used for parking vehicles during school hours.</Description>
 				</Value>
 				<Value>
 					<Code>PLAY</Code>
-					<Text>Playground</Text>
+					<Text xml:lang="en">Playground</Text>
 					<Text xml:lang="mi">Te papatākaro</Text>
 					<Description>The outside area used for recess breaks</Description>
 				</Value>
 				<Value>
 					<Code>SPEC</Code>
-					<Text>Special Event / Assembly / Field Trip</Text>
+					<Text xml:lang="en">Special Event / Assembly / Field Trip</Text>
 					<Text xml:lang="mi">He kaupapa motuhake, he huihuinga, he haerenga</Text>
 					<Description>Areas used for infrequent activities that occur in and/or out of school.</Description>
 				</Value>
 				<Value>
 					<Code>STAD</Code>
-					<Text>Stadium</Text>
+					<Text xml:lang="en">Stadium</Text>
 					<Text xml:lang="mi">Taiwhanga Hākinakina</Text>
 					<Description>Area used for athletic/special events. </Description>
 				</Value>
 				<Value>
 					<Code>UNKN</Code>
-					<Text>Unknown Location</Text>
+					<Text xml:lang="en">Unknown Location</Text>
 					<Text xml:lang="mi">Kāre e mōhiotia te wāhi</Text>
 					<Description>The location of problem behavior event is not known or undetermined. </Description>
 				</Value>
 				<Value>
 					<Code>VOCA</Code>
-					<Text>Vocational Room</Text>
+					<Text xml:lang="en">Vocational Room</Text>
 					<Text xml:lang="mi">Te rūma ahumahinga</Text>
 					<Description>The area of a school used for vocational classes and activities.</Description>
 				</Value>
@@ -1258,60 +1270,60 @@
 		<Values>
 			<Value>
 				<Code>DEFIA</Code
-				><Text>Defiance</Text>
+				><Text xml:lang="en">Defiance</Text>
 				<Text xml:lang="mi">Ātete – Iti noa</Text>
 				<Description>Student engages in brief or low-intensity failure to follow directions or talks back.</Description>
 			</Value>
 			<Value>
 				<Code>DISRE</Code>
-				<Text>Disrespect</Text>
+				<Text xml:lang="en">Disrespect</Text>
 				<Text xml:lang="mi">Tōtōā – Iti noa</Text>
 				<Description>Student delivers low-intensity, socially rude or dismissive messages to adults or students.</Description>
 			</Value>
 			<Value>
 				<Code>DISRU</Code>
-				<Text>Disruption</Text>
+				<Text xml:lang="en">Disruption</Text>
 				<Text xml:lang="mi">Tauwhati – Iti noa</Text>
 				<Description>Student engages in low-intensity, but inappropriate disruption.</Description>
 			</Value>
 			<Value>
 				<Code>DRESS</Code>
-				<Text>Dress Code Violation</Text>
+				<Text xml:lang="en">Dress Code Violation</Text>
 				<Text xml:lang="mi">Ngā kākahu ā-Kura – Iti noa</Text>
 				<Description>Student wears clothing that is near, but not within, the dress code guidelines defined by the school/district.</Description>
 			</Value>
 			<Value
 				><Code>INAPP</Code>
-				<Text>Inappropriate Language</Text>
+				<Text xml:lang="en">Inappropriate Language</Text>
 				<Text xml:lang="mi">He reo pakirara – Iti noa</Text>
 				<Description>Student engages in low-intensity instance of inappropriate language.</Description>
 			</Value>
 			<Value>
 				<Code>OTHER</Code>
-				<Text>Other</Text>
+				<Text xml:lang="en">Other</Text>
 				<Text xml:lang="mi">He mea kē -  Iti noa</Text>
 				<Description>Student engages in any other minor problem behaviors that do not fall within the above categories.</Description>
 			</Value>
 			<Value>
 				<Code>PHYSI</Code>
-				<Text>Physical Contact / Physical Aggression</Text>
+				<Text xml:lang="en">Physical Contact / Physical Aggression</Text>
 				<Text xml:lang="mi">Te pa ā-ringa/Te tukituki – Iti noa</Text>
 				<Description>Student engages in non-serious, but inappropriate physical contact.</Description>
 			</Value>
 			<Value>
 				<Code>PROPE</Code>
-				<Text>Property Misuse</Text>
+				<Text xml:lang="en">Property Misuse</Text>
 				<Text xml:lang="mi">Te whakamahi hē i ngā taputapu ā-kura – Iti noa</Text>
 				<Description>Student engages in low-intensity misuse of property.</Description>
 			</Value>
 			<Value>
 				<Code>TARDY</Code>
-				<Text>Tardy</Text>
+				<Text xml:lang="en">Tardy</Text>
 				<Text xml:lang="mi">Tōmuritanga – Iti noa</Text>
 				<Description>Student arrives at class after the bell (or signal that class has started).</Description></Value>
 			<Value>
 				<Code>TECHN</Code>
-				<Text>Technology Violation</Text>
+				<Text xml:lang="en">Technology Violation</Text>
 				<Text xml:lang="mi">Te whakamahi hē i te hangarau – Iti noa</Text>
 				<Description>Student engages in non-serious, but inappropriate (as defined by school) use of cell phone, pager, music/video players, camera, and/or computer.</Description>
 			</Value>
@@ -1326,163 +1338,163 @@
 		<Values>
 				<Value>
 					<Code>ABUSI</Code>
-					<Text>Abusive Language / Inappropriate Language / Profanity</Text>
+					<Text xml:lang="en">Abusive Language / Inappropriate Language / Profanity</Text>
 					<Text xml:lang="mi">Reo whakataki/Reo Pakirara/ Reo kohukohu – Nui rawa</Text>
 					<Description>Student delivers verbal messages that include swearing, name calling, or use of words in an inappropriate way.</Description>
 				</Value>
 				<Value>
 					<Code>ARSON</Code>
-					<Text>Arson</Text>
+					<Text xml:lang="en">Arson</Text>
 					<Text xml:lang="mi">Te tahu ahi – Nui rawa</Text>
 					<Description>Student plans and/or participates in malicious burning of property.</Description>
 				</Value>
 				<Value>
 					<Code>BOMBT</Code>
-					<Text>Bomb Threat / False Alarm</Text>
+					<Text xml:lang="en">Bomb Threat / False Alarm</Text>
 					<Text xml:lang="mi">Tuma Pāhu/Whakaaraara parau – Nui rawa</Text>
 					<Description>Student delivers a message of possible explosive materials being on-campus, near campus, and/or pending explosion.</Description>
 				</Value>
 				<Value>
 					<Code>BULLY</Code>
-					<Text>Bullying</Text>
+					<Text xml:lang="en">Bullying</Text>
 					<Text xml:lang="mi">Te mahi poke – Nui rawa</Text>
 					<Description>The delivery of direct or technology-based messages that involve intimidation, teasing, taunting, threats, or name calling.</Description>
 				</Value>
 				<Value>
 					<Code>DEFIA</Code>
-					<Text>Defiance / Insubordination / Non-Compliance</Text>
+					<Text xml:lang="en">Defiance / Insubordination / Non-Compliance</Text>
 					<Text xml:lang="mi">Ātete/Kāre e whakarongo/Kāre e aro mai – Nui rawa</Text>
 					<Description>Student engages in refusal to follow directions or talks back.</Description>
 				</Value>
 				<Value>
 					<Code>DISRE</Code>
-					<Text>Disrespect</Text>
+					<Text xml:lang="en">Disrespect</Text>
 					<Text xml:lang="mi">Tōtōā – Nui rawa</Text>
 					<Description>Student delivers socially rude or dismissive messages to adults or students.</Description>
 				</Value>
 				<Value>
 					<Code>DISRU</Code>
-					<Text>Disruption</Text>
+					<Text xml:lang="en">Disruption</Text>
 					<Text xml:lang="mi">Tauwhati – Nui rawa</Text>
 					<Description>Student engages in behavior causing an interruption in a class or activity. Disruption includes sustained loud talk, yelling, or screaming; noise with materials; horseplay or roughhousing; and/or sustained out-of-seat behavior.</Description>
 				</Value>
 				<Value>
 					<Code>DRESS</Code>
-					<Text>Dress Code Violation</Text>
+					<Text xml:lang="en">Dress Code Violation</Text>
 					<Text xml:lang="mi">Ngā kākahu ā-Kura – Nui rawa</Text>
 					<Description>Student wears clothing that does not fit within the dress code guidelines practiced by the school/district.</Description>
 				</Value>
 				<Value>
 					<Code>FIGHT</Code>
-					<Text>Fighting</Text>
+					<Text xml:lang="en">Fighting</Text>
 					<Text xml:lang="mi">Te whawhai – Nui rawa</Text>
 					<Description>Student is involved in mutual participation in an incident involving physical violence.</Description>
 				</Value>
 				<Value>
 					<Code>FORGE</Code>
-					<Text>Forgery / Theft / Plagiarism</Text>
+					<Text xml:lang="en">Forgery / Theft / Plagiarism</Text>
 					<Text xml:lang="mi">Te Tāwhai/Te whānako/Te Tuhi whānako – Nui rawa</Text>
 					<Description>Student is involved by being in possession of, having passed on, or being responsible for removing someone else's property; or the student has signed a person’s name without that person’s permission, or claims someone else’s work as their own.</Description>
 				</Value>
 				<Value>
 					<Code>GANGA</Code>
-					<Text>Gang Affiliation Display</Text>
+					<Text xml:lang="en">Gang Affiliation Display</Text>
 					<Text xml:lang="mi">Te mau kākahu Kēne – Nui rawa</Text>
 					<Description>Student uses gesture, dress, and/or speech to display affiliation with a gang.</Description>
 				</Value>
 				<Value>
 					<Code>HARAS</Code>
-					<Text>Harassment</Text>
+					<Text xml:lang="en">Harassment</Text>
 					<Text xml:lang="mi">Inonotitanga – Nui rawa</Text>
 					<Description>The delivery of disrespectful messages in any format related to gender, ethnicity, sex, race, religion, disability, physical features, or other protected class. </Description>
 				</Value>
 				<Value>
 					<Code>INADI</Code>
-					<Text>Inappropriate Display of Affection</Text>
+					<Text xml:lang="en">Inappropriate Display of Affection</Text>
 					<Text xml:lang="mi">Te whai aroha pakirara – Nui rawa</Text>
 					<Description>Student engages in inappropriate, consensual (as defined by school) verbal and/or physical gestures/contact, of a sexual nature to another student/adult.</Description>
 				</Value>
 				<Value>
 					<Code>INALO</Code>
-					<Text>Inappropriate Location / Out of Bounds Area</Text>
+					<Text xml:lang="en">Inappropriate Location / Out of Bounds Area</Text>
 					<Text xml:lang="mi">Tētahi wāhi pakirara/Wāhi rāhui – Nui rawa </Text>
 					<Description>Student is in an area that is outside of school boundaries (as defined by school).</Description>
 				</Value>
 				<Value>
 					<Code>LYING</Code>
-					<Text>Lying / Cheating</Text>
+					<Text xml:lang="en">Lying / Cheating</Text>
 					<Text xml:lang="mi">Te rūkahu/Te tāhae – Nui rawa</Text>
 					<Description>Student delivers message that is untrue and/or deliberately violates rules.</Description>
 				</Value>
 				<Value>
 					<Code>OTHER</Code>
-					<Text>Other Behaviour</Text>
+					<Text xml:lang="en">Other Behaviour</Text>
 					<Text xml:lang="mi">Whanonga kē – Nui rawa</Text>
 					<Description>Student engages in problem behavior not listed.</Description>
 				</Value>
 				<Value>
 					<Code>PHYSI</Code>
-					<Text>Physical Aggression</Text>
+					<Text xml:lang="en">Physical Aggression</Text>
 					<Text xml:lang="mi">Te tukituki –Nui rawa</Text>
 					<Description>Student engages in actions involving serious physical contact where injury may occur (e.g., hitting, punching, hitting with an object, kicking, hair pulling, scratching, etc.).</Description>
 				</Value>
 				<Value>
 					<Code>PROPE</Code>
-					<Text>Property Damage / Vandalism</Text>
+					<Text xml:lang="en">Property Damage / Vandalism</Text>
 					<Text xml:lang="mi">Wāwahi whare/Mahi Kaiauru – Nui rawa</Text>
 					<Description>Student participates in an activity that results in destruction or disfigurement of property.</Description>
 				</Value>
 				<Value>
 					<Code>SKIPC</Code>
-					<Text>Skip Class</Text>
+					<Text xml:lang="en">Skip Class</Text>
 					<Text xml:lang="mi">Tōhipa akomanga – Nui rawa</Text>
 					<Description>Student leaves or misses class without permission.</Description>
 				</Value>
 				<Value>
 					<Code>TARDY</Code>
-					<Text>Tardy</Text>
+					<Text xml:lang="en">Tardy</Text>
 					<Text xml:lang="mi">Tōmuritanga – Nui rawa</Text>
 					<Description>Student is late (as defined by the school) to class or the start up of the school day (and Tardy is not considered a minor problem behavior in the school).</Description>
 				</Value>
 				<Value>
 					<Code>TECHN</Code>
-					<Text>Technology Violation</Text>
+					<Text xml:lang="en">Technology Violation</Text>
 					<Text xml:lang="mi">Te whakamahi hē i te hangarau – Nui rawa</Text>
 					<Description>Student engages in inappropriate (as defined by school) use of cell phone, pager, music/video players, camera, and/or computer.</Description>
 				</Value>
 				<Value>
 					<Code>TRUAN</Code>
-					<Text>Truancy</Text>
+					<Text xml:lang="en">Truancy</Text>
 					<Text xml:lang="mi">Whakatau – Nui rawa</Text>
 					<Description>Student receives an ‘unexcused absence’ for ½ day or more.</Description>
 				</Value>
 				<Value>
 					<Code>UPOAL</Code>
-					<Text>Use / Possession of Alcohol</Text>
+					<Text xml:lang="en">Use / Possession of Alcohol</Text>
 					<Text xml:lang="mi">Te kai/mau waipiro – Nui rawa</Text>
 					<Description>Student is in possession of or is using alcohol.</Description>
 				</Value>
 				<Value>
 					<Code>UPOCO</Code>
-					<Text>Use / Possession of Combustibles</Text>
+					<Text xml:lang="en">Use / Possession of Combustibles</Text>
 					<Text xml:lang="mi">Te kai/mau ngingiha – Nui rawa</Text>
 					<Description>Student is/was in possession of substances/objects readily capable of causing bodily harm and/or property damage (matches, lighters, firecrackers, gasoline, lighter fluid).</Description>
 				</Value>
 				<Value>
 					<Code>UPODR</Code>
-					<Text>Use / Possession of Drugs</Text>
+					<Text xml:lang="en">Use / Possession of Drugs</Text>
 					<Text xml:lang="mi">Te kai/mau pōauau – Nui rawa</Text>
 					<Description>Student is in possession of or is using illegal drugs/substances or imitations.</Description>
 				</Value>
 				<Value>
 					<Code>UPOTO</Code>
-					<Text>Use / Possession of Tobacco</Text>
+					<Text xml:lang="en">Use / Possession of Tobacco</Text>
 					<Text xml:lang="mi">Te kai/mau tupeka – Nui rawa</Text>'
 					<Description>Student is in possession of or is using tobacco.</Description>
 				</Value>
 				<Value>
 					<Code>UPOWE</Code>
-					<Text>Use / Possession of Weapons</Text>
+					<Text xml:lang="en">Use / Possession of Weapons</Text>
 					<Text xml:lang="mi">Te kai/mau rākau riri – Nui rawa</Text>
 					<Description>Student is in possession of knives (greater than 6 in., less than 6 in.) and guns (real or look alike), or other objects readily capable of causing bodily harm.</Description>
 				</Value>
@@ -1528,32 +1540,32 @@
 		<Values>
 			<Value>
 				<Code>FUN</Code>
-				<Text>Fund</Text>
+				<Text xml:lang="en">Fund</Text>
 				<Text xml:lang="mi">Tahua</Text>
 			</Value>
 			<Value>
 				<Code>PRO</Code>
-				<Text>Programme</Text>
+				<Text xml:lang="en">Programme</Text>
 				<Text xml:lang="mi">Hōtaka</Text>
 			</Value>
 			<Value>
 				<Code>SER</Code>
-				<Text>Service</Text>
+				<Text xml:lang="en">Service</Text>
 				<Text xml:lang="mi">Rautaki</Text>
 			</Value>
 			<Value>
 				<Code>APP</Code>
-				<Text>Approach</Text>
+				<Text xml:lang="en">Approach</Text>
 				<Text xml:lang="mi">Te Aruaru</Text>
 			</Value>
 			<Value>
 				<Code>SUP</Code>
-				<Text>Support Group</Text>
+				<Text xml:lang="en">Support Group</Text>
 				<Text xml:lang="mi">Rōpū Tautoko</Text>
 			</Value>
 			<Value>
 				<Code>OTH</Code>
-				<Text>Other</Text>
+				<Text xml:lang="en">Other</Text>
 				<Text xml:lang="mi">He mea kē</Text>
 			</Value>
 		</Values>
@@ -1659,12 +1671,12 @@
 		<Values>
 			<Value>
 				<Code>FIR</Code>
-				<Text>Further Intervention Required</Text>
+				<Text xml:lang="en">Further Intervention Required</Text>
 				<Text xml:lang="mi">Me whai akoranga anō</Text>
 			</Value>
 			<Value>
 				<Code>OAC</Code>
-				<Text>Outcome Achieved</Text>
+				<Text xml:lang="en">Outcome Achieved</Text>
 				<Text xml:lang="mi">I tutuki te whāinga</Text>
 			</Value>
 		</Values>
@@ -1679,22 +1691,22 @@
 		<Values>
 			<Value>
 				<Code>WBG</Code>
-				<Text>Wellbeing</Text>
+				<Text xml:lang="en">Wellbeing</Text>
 				<Text xml:lang="mi">Hauoratanga</Text>
 			</Value>
 			<Value>
 				<Code>PNC</Code>
-				<Text>Presence</Text>
+				<Text xml:lang="en">Presence</Text>
 				<Text xml:lang="mi">Tō āhua</Text>
 			</Value>
 			<Value>
 				<Code>PTN</Code>
-				<Text>Participation</Text>
+				<Text xml:lang="en">Participation</Text>
 				<Text xml:lang="mi">Te mahi i ngā mahi</Text>
 			</Value>
 			<Value>
 				<Code>LAA</Code>
-				<Text>Learning and Achievement</Text>
+				<Text xml:lang="en">Learning and Achievement</Text>
 				<Text xml:lang="mi">Te ako me te tutukitanga</Text>
 			</Value>
 		</Values>
@@ -1708,40 +1720,39 @@
 		<Values>
 			<Value>
 				<Code>EDU</Code>
-				<Text>Educators</Text>
+				<Text xml:lang="en">Educators</Text>
 				<Text xml:lang="mi">Kaiako </Text>
 			</Value>
 			<Value>
 				<Code>EFW</Code>
-				<Text>Educators/Family</Text>
+				<Text xml:lang="en">Educators/Family</Text>
 				<Text xml:lang="mi">Kaiako/Whānau</Text>
 			</Value>
 			<Value>
 				<Code>FWH</Code>
-				<Text>Family</Text>
+				<Text xml:lang="en">Family</Text>
 				<Text xml:lang="mi">Whānau</Text>
 			</Value>
 			<Value>
 				<Code>FFW</Code>
-				<Text>For family/whānau, early childhood teachers, health professionals, or anyone else living
+				<Text xml:lang="en">For family/whānau, early childhood teachers, health professionals, or anyone else living
 				 or working with young children with autism</Text>
-				 <Text xml:lang="mi">Mō ngā whānau, kaiako kōhungahunga, matai hauora, me te hunga e mahi ana, 
-				 noho ana me te hunga tamariki whaitakiwātanga</Text>
+				 <Text xml:lang="mi">Mō ngā whānau, kaiako kōhungahunga, matai hauora, me te hunga e mahi ana, e noho ana me te hunga tamariki whaitakiwātanga</Text>
 			</Value>
 			<Value>
 				<Code>FOG</Code>
-				<Text>For organisations or other groups requiring a training or education event</Text>
+				<Text xml:lang="en">For organisations or other groups requiring a training or education event</Text>
 				<Text xml:lang="mi">Mō ngā rōpū mahi me ētahi atu rōpū e whai whakangungu ana, 
 				e whai ana i tētahi kaupapa mātauranga</Text>
 			</Value>
 			<Value>
 				<Code>PRE</Code>
-				<Text>For parents, whānau, and caregivers of pre-school children</Text>
+				<Text xml:lang="en">For parents, whānau, and caregivers of pre-school children</Text>
 				<Text xml:lang="mi">Mō ngā mātua, ngā whānau me te hunga kaitiaki i te hunga kōhungahunga</Text>
 			</Value>
 			<Value>
 				<Code>TFP</Code>
-				<Text>For teams of family and professionals, working together to support tamariki with 
+				<Text xml:lang="en">For teams of family and professionals, working together to support tamariki with 
 					autism aged 5-12 years. Teams may include parents, caregivers, other family/whānau, primary school
 					teachers, teacher aids, learning assistants, SENCOs or RTLBs</Text>
 				<Text xml:lang="mi">Mō ngā rōpū whānau, hunga ngaio e mahitahi ana ki te tautoko i ngā tamariki 
@@ -1750,27 +1761,27 @@
 			</Value>
 			<Value>
 				<Code>IST</Code>
-				<Text>Individual Students</Text>
+				<Text xml:lang="en">Individual Students</Text>
 				<Text xml:lang="mi">Te Ākonga</Text>
 			</Value>
 			<Value>
 				<Code>PWH</Code>
-				<Text>Parents/Whānau</Text>
+				<Text xml:lang="en">Parents/Whānau</Text>
 				<Text xml:lang="mi">Mātua/Whānau</Text>
 			</Value>
 			<Value>
 				<Code>SWD</Code>
-				<Text>School Wide</Text>
+				<Text xml:lang="en">School Wide</Text>
 				<Text xml:lang="mi">Kura whānui</Text>
 			</Value>
 			<Value>
 				<Code>SCH</Code>
-				<Text>Schools</Text>
+				<Text xml:lang="en">Schools</Text>
 				<Text xml:lang="mi">Ngā kura</Text>
 			</Value>
 			<Value>
 				<Code>TPR</Code>
-				<Text>Targeted Programmes</Text>
+				<Text xml:lang="en">Targeted Programmes</Text>
 				<Text xml:lang="mi">Ngā hōtaka hāngai</Text>
 			</Value>
 		</Values>
@@ -1785,232 +1796,232 @@
 		<Values>
 			<Value
 				><Code>ADC</Code>
-				<Text>Advisor on Deaf Children</Text>
+				<Text xml:lang="en">Advisor on Deaf Children</Text>
 				<Text xml:lang="mi">Kaitautoko i te hunga turi </Text>
 			</Value>
 			<Value>
 				<Code>BSW</Code>
-				<Text>Basic Sight Words Programme</Text>
+				<Text xml:lang="en">Basic Sight Words Programme</Text>
 				<Text xml:lang="mi">Hōtaka Kupu Kite Noa </Text>
 			</Value>
 			<Value>
 				<Code>BCN</Code>
-				<Text>Building Confidence</Text>
+				<Text xml:lang="en">Building Confidence</Text>
 				<Text xml:lang="mi">Te whakapakari ākonga</Text>
 			</Value>
 			<Value>
 				<Code>CCE</Code>
-				<Text>Change Classroom Environment</Text>
+				<Text xml:lang="en">Change Classroom Environment</Text>
 				<Text xml:lang="mi">Panoni taiao o te akomanga</Text>
 			</Value>
 			<Value>
 				<Code>CCM</Code>
-				<Text>Change Classroom Management</Text>
+				<Text xml:lang="en">Change Classroom Management</Text>
 				<Text xml:lang="mi">Panoni whakahaere i te akomanga</Text>
 			</Value>
 			<Value>
 				<Code>CIC</Code>
-				<Text>Check In Check Out (CICO)</Text>
+				<Text xml:lang="en">Check In Check Out (CICO)</Text>
 				<Text xml:lang="mi">Check in Check out (CICO)</Text>
 			</Value>
 			<Value>
 				<Code>COF</Code>
-				<Text>Circle of Friends, Intervention</Text>
-				<Text xml:lang="mi"><Rōpū hoa, Whakataunga/Text>
+				<Text xml:lang="en">Circle of Friends, Intervention</Text>
+				<Text xml:lang="mi">Rōpū hoa, Whakataunga</Text>
 			</Value>
 			<Value>
 				<Code>CTM</Code>
-				<Text>Circle TIme</Text>
+				<Text xml:lang="en">Circle TIme</Text>
 				<Text xml:lang="mi">Te wā</Text>
 			</Value>
 			<Value>
 				<Code>CBT</Code>
-				<Text>Cognitive Behaviour Therapy</Text>
+				<Text xml:lang="en">Cognitive Behaviour Therapy</Text>
 				<Text xml:lang="mi">Haumanu Whanonga Hinengaro</Text>
 			</Value>
 			<Value>
 				<Code>CED</Code>
-				<Text>Conductor in Conductive Education Programme</Text>
+				<Text xml:lang="en">Conductor in Conductive Education Programme</Text>
 				<Text xml:lang="mi">Kaitaki mō te hōtaka Mātauranga Conductive</Text>
 			</Value>
 			<Value>
 				<Code>CSV</Code>
-				<Text>Continence Service</Text>
+				<Text xml:lang="en">Continence Service</Text>
 				<Text xml:lang="mi">Rautaki Matemimi</Text>
 			</Value>
 			<Value>
 				<Code>DRP</Code>
-				<Text>Daily Report</Text>
+				<Text xml:lang="en">Daily Report</Text>
 				<Text xml:lang="mi">Pūrongo o te Rā</Text>
 			</Value>
 			<Value>
 				<Code>DPM</Code>
-				<Text>Differentiated Programme</Text>
+				<Text xml:lang="en">Differentiated Programme</Text>
 				<Text xml:lang="mi">Hōtaka Rerekē</Text>
 			</Value>
 			<Value>
 				<Code>DTS</Code>
-				<Text>District Truancy Service (DTS)</Text>
+				<Text xml:lang="en">District Truancy Service (DTS)</Text>
 				<Text xml:lang="mi">District Truancy Service (DTS)</Text>
 			</Value>
 			<Value>
 				<Code>DSS</Code>
-				<Text>Dyslexia Screening</Text>
+				<Text xml:lang="en">Dyslexia Screening</Text>
 				<Text xml:lang="mi">Tātari Tīpaopao Kupu</Text>
 			</Value>
 			<Value>
 				<Code>EDP</Code>
-				<Text>Educational Psychologist</Text>
+				<Text xml:lang="en">Educational Psychologist</Text>
 				<Text xml:lang="mi">Kaimātai hinengaro</Text>
 			</Value>
 			<Value>
 				<Code>GCG</Code>
-				<Text>Guidance Counselling</Text>
+				<Text xml:lang="en">Guidance Counselling</Text>
 				<Text xml:lang="mi">Mahi Tautāwhi</Text>
 			</Value>
 			<Value>
 				<Code>IST</Code>
-				<Text>Inclusion Strategy</Text>
+				<Text xml:lang="en">Inclusion Strategy</Text>
 				<Text xml:lang="mi">Rautaki Whakauru</Text>
 			</Value>
 			<Value>
 				<Code>LLI</Code>
-				<Text>Learning and Language Intervention (LLI)</Text>
+				<Text xml:lang="en">Learning and Language Intervention (LLI)</Text>
 				<Text xml:lang="mi">Learning and Language Intervention (LLI)</Text>
 			</Value>
 			<Value>
 				<Code>MCA</Code>
-				<Text>Māori or Cultural Advisor</Text>
+				<Text xml:lang="en">Māori or Cultural Advisor</Text>
 				<Text xml:lang="mi">Kaiako Māori, Kaimātai ahurea</Text>
 			</Value>
 			<Value>
 				<Code>MTH</Code>
-				<Text>Music Therapist (Registered)</Text>
+				<Text xml:lang="en">Music Therapist (Registered)</Text>
 				<Text xml:lang="mi">Kaituku Haumanu Pūoro (rēhita)</Text>
 			</Value>
 			<Value>
 				<Code>NET</Code>
-				<Text>Non-Enrolled Truancy Service (NETS)</Text>
+				<Text xml:lang="en">Non-Enrolled Truancy Service (NETS)</Text>
 				<Text xml:lang="mi">Non-Enrolled Truancy Service (NETS)</Text>
 			</Value>
 			<Value>
 				<Code>OTS</Code>
-				<Text>Occupational Therapist (OT)</Text>
+				<Text xml:lang="en">Occupational Therapist (OT)</Text>
 				<Text xml:lang="mi">Kaituku Haumanu Ngangahau</Text>
 			</Value>
 			<Value>
 				<Code>OMT</Code>
-				<Text>Orientation and Mobility Instructor</Text>
+				<Text xml:lang="en">Orientation and Mobility Instructor</Text>
 				<Text xml:lang="mi">Kaituku Nekehanga Tinana</Text>
 			</Value>
 			<Value>
 				<Code>PFT</Code>
-				<Text>Parent Funded Tutor</Text>
+				<Text xml:lang="en">Parent Funded Tutor</Text>
 				<Text xml:lang="mi">Kaiako ka utua e ngā mātua</Text>
 			</Value>
 			<Value>
 				<Code>PPP</Code>
-				<Text>Pause, Prompt, Praise (PPP)</Text>
+				<Text xml:lang="en">Pause, Prompt, Praise (PPP)</Text>
 				<Text xml:lang="mi">Pause, Prompt, Praise (PPP)</Text>
 			</Value>
 			<Value>
 				<Code>PTR</Code>
-				<Text>Peer Tutor</Text>
+				<Text xml:lang="en">Peer Tutor</Text>
 				<Text xml:lang="mi">Kaiako aropā</Text>
 			</Value>
 			<Value>
 				<Code>PPR</Code>
-				<Text>Phonics Programme</Text>
+				<Text xml:lang="en">Phonics Programme</Text>
 				<Text xml:lang="mi">Hōtaka Ara Whakaako Wetereo</Text>
 			</Value>
 			<Value>
 				<Code>PSY</Code>
-				<Text>Psychologist</Text>
+				<Text xml:lang="en">Psychologist</Text>
 				<Text xml:lang="mi">Kaimātai Hinengaro</Text>
 			</Value>
 			<Value>
 				<Code>PHY</Code>
-				<Text>Physiotherapist</Text>
+				<Text xml:lang="en">Physiotherapist</Text>
 				<Text xml:lang="mi">Kaimātai Tinana</Text>
 			</Value>
 			<Value>
 				<Code>PXP</Code>
-				<Text>Proximal Praise</Text>
+				<Text xml:lang="en">Proximal Praise</Text>
 				<Text xml:lang="mi">Kupu tauawhi</Text>
 			</Value>
 			<Value>
 				<Code>QKI</Code>
-				<Text>Quick 60 Intervention</Text>
+				<Text xml:lang="en">Quick 60 Intervention</Text>
 				<Text xml:lang="mi">Quick 60 Intervention</Text>
 			</Value>
 			<Value>
 				<Code>RRC</Code>
-				<Text>Reading Recovery</Text>
+				<Text xml:lang="en">Reading Recovery</Text>
 				<Text xml:lang="mi">Whakaara ake i ngā tikanga pānui</Text>
 			</Value>
 			<Value>
 				<Code>RHS</Code>
-				<Text>Regular Home/School Meetings</Text>
+				<Text xml:lang="en">Regular Home/School Meetings</Text>
 				<Text xml:lang="mi">Hui ā-kura, hui ā-kāinga</Text>
 			</Value>
 			<Value>
 				<Code>RTL</Code>
-				<Text>RTLB Resource Teacher</Text>
+				<Text xml:lang="en">RTLB Resource Teacher</Text>
 				<Text xml:lang="mi">RTLB Kaiako Rauemi</Text>
 			</Value>
 			<Value>
 				<Code>SSG</Code>
-				<Text>Safety Strategy</Text>
+				<Text xml:lang="en">Safety Strategy</Text>
 				<Text xml:lang="mi">Rautaki Haumaru</Text>
 			</Value>
 			<Value>
 				<Code>SLI</Code>
-				<Text>Sign Language Interpreter</Text>
+				<Text xml:lang="en">Sign Language Interpreter</Text>
 				<Text xml:lang="mi">Kaikōrero ā-ringa</Text>
 			</Value>
 			<Value>
 				<Code>SSI</Code>
-				<Text>Social Skills Intervention</Text>
+				<Text xml:lang="en">Social Skills Intervention</Text>
 				<Text xml:lang="mi">Whakataunga Pūkenga Pāpori</Text>
 			</Value>
 			<Value>
 				<Code>SWS</Code>
-				<Text>Social Worker in School (SWIS)</Text>
+				<Text xml:lang="en">Social Worker in School (SWIS)</Text>
 				<Text xml:lang="mi">Social Worker In School (SWIS)</Text>
 			</Value>
 			<Value>
 				<Code>SEA</Code>
-				<Text>Special Education Advisor</Text>
+				<Text xml:lang="en">Special Education Advisor</Text>
 				<Text xml:lang="mi">Kaiako Mātauranga Motuhake</Text>
 			</Value>
 			<Value>
 				<Code>STO</Code>
-				<Text>Specialist Teacher Outreach</Text>
+				<Text xml:lang="en">Specialist Teacher Outreach</Text>
 				<Text xml:lang="mi">Kaiako Torotoro</Text>
 			</Value>
 			<Value>
 				<Code>SLT</Code>
-				<Text>Speech Language Therapist</Text>
+				<Text xml:lang="en">Speech Language Therapist</Text>
 				<Text xml:lang="mi">Kaiako Reo Kōrero</Text>
 			</Value>
 			<Value>
 				<Code>TAS</Code>
-				<Text>Teacher Aide Support</Text>
+				<Text xml:lang="en">Teacher Aide Support</Text>
 				<Text xml:lang="mi">Kaiako Tautoko</Text>
 			</Value>
 			<Value>
 				<Code>TWA</Code>
-				<Text>Teacher with additional tertiary qualifications in learning, vision or hearing</Text>
+				<Text xml:lang="en">Teacher with additional tertiary qualifications in learning, vision or hearing</Text>
 				<Text xml:lang="mi">Kaiako kua whai tohu mō ngā mahi akoako, tirotiro me te whakarongo</Text>
 			</Value>
 			<Value>
 				<Code>TSG</Code>
-				<Text>Transition Strategy</Text>
+				<Text xml:lang="en">Transition Strategy</Text>
 				<Text xml:lang="mi">Rautaki Whakawhiti</Text>
 			</Value>
 			<Value>
 				<Code>VPS</Code>
-				<Text>Visual Prompts/Strategies</Text>
+				<Text xml:lang="en">Visual Prompts/Strategies</Text>
 				<Text xml:lang="mi">Rautaki</Text>
 			</Value>
 		</Values>
@@ -2084,17 +2095,17 @@
 		<Values>
 			<Value>
 				<Code>IDV</Code>
-				<Text>In Development</Text>
+				<Text xml:lang="en">In Development</Text>
 				<Text xml:lang="mi">E haere tonu nei</Text>
 			</Value>
 			<Value>
 				<Code>ACT</Code>
-				<Text>Active</Text>
+				<Text xml:lang="en">Active</Text>
 				<Text xml:lang="mi">Whakaae</Text>
 			</Value>
 			<Value>
 				<Code>DIS</Code>
-				<Text>Disabled</Text>
+				<Text xml:lang="en">Disabled</Text>
 				<Text xml:lang="mi">Whakakaurapa</Text>
 			</Value>
 		</Values>
@@ -2108,37 +2119,37 @@
 		<Values>
 			<Value>
 				<Code>WAI</Code>
-				<Text>Waiting</Text>
+				<Text xml:lang="en">Waiting</Text>
 				<Text xml:lang="mi">E tatari ana</Text>
 			</Value>
 			<Value>
 				<Code>ACT</Code>
-				<Text>Active</Text>
+				<Text xml:lang="en">Active</Text>
 				<Text xml:lang="mi">Whakaae</Text>
 			</Value>
 			<Value>
 				<Code>COM</Code>
-				<Text>Completed</Text>
+				<Text xml:lang="en">Completed</Text>
 				<Text xml:lang="mi">Kua oti</Text>
 			</Value>
 			<Value>
 				<Code>DEC</Code>
-				<Text>Declined</Text>
+				<Text xml:lang="en">Declined</Text>
 				<Text xml:lang="mi">Kāhoretia</Text>
 			</Value>
 			<Value>
 				<Code>ONH</Code>
-				<Text>On-Hold</Text>
+				<Text xml:lang="en">On-Hold</Text>
 				<Text xml:lang="mi">Noho tārewa</Text>
 			</Value>
 			<Value>
 				<Code>DNC</Code>
-				<Text>Did Not Complete</Text>
+				<Text xml:lang="en">Did Not Complete</Text>
 				<Text xml:lang="mi">Kāre i oti</Text>
 			</Value>
 			<Value>
 				<Code>APP</Code>
-				<Text>Approved</Text>
+				<Text xml:lang="en">Approved</Text>
 				<Text xml:lang="mi">Whakaaetia</Text>
 			</Value>
 		</Values>
@@ -2284,12 +2295,12 @@
 		<Values>
 			<Value>
 				<Code>MIN</Code>
-				<Text>Minor</Text>
+				<Text xml:lang="en">Minor</Text>
 				<Text xml:lang="mi">Iti te kaha</Text>
 			</Value>  
 			<Value>
 				<Code>MAJ</Code>
-				<Text>Major</Text>
+				<Text xml:lang="en">Major</Text>
 				<Text xml:lang="mi">Nui te kaha</Text>
 			</Value> 
 		</Values>
@@ -2303,42 +2314,42 @@
 		<Values>
 			<Value>
 			<Code>AVAD</Code>
-			<Text>Avoid Adult</Text>
+			<Text xml:lang="en">Avoid Adult</Text>
 			<Text xml:lang="mi">Karo Mātua</Text>
 			</Value> 
 			<Value
 			><Code>AVPE</Code>
-			<Text>Avoid Peer(s)</Text>
+			<Text xml:lang="en">Avoid Peer(s)</Text>
 			<Text xml:lang="mi">Karo Aropā</Text>
 			</Value> 
 			<Value>
 			<Code>AVTA</Code>
-			<Text>Avoid Tasks / Activities</Text>
+			<Text xml:lang="en">Avoid Tasks / Activities</Text>
 			<Text xml:lang="mi">Karo Tūmahi/Ngohe</Text>
 			</Value> 
 			<Value>
 			<Code>OBAD</Code>
-			<Text>Obtain Adult Attention</Text>
+			<Text xml:lang="en">Obtain Adult Attention</Text>
 			<Text xml:lang="mi">Whai Aronga Mātua</Text>
 			</Value> 
 			<Value>
 			<Code>OBIT</Code>
-			<Text>Obtain Items / Activities</Text>
+			<Text xml:lang="en">Obtain Items / Activities</Text>
 			<Text xml:lang="mi">Whai mea/tūmahi</Text>
 			</Value> 
 			<Value>
 			<Code>OBPE</Code>
-			<Text>Obtain Peer Attention</Text>
+			<Text xml:lang="en">Obtain Peer Attention</Text>
 			<Text xml:lang="mi">Whai aronga hunga aropā</Text>
 			</Value> 
 			<Value>
 			<Code>OTHE</Code>
-			<Text>Other</Text>
+			<Text xml:lang="en">Other</Text>
 			<Text xml:lang="mi">He āhua kē</Text>
 			</Value> 
 			<Value>
 			<Code>UNKN</Code>
-			<Text>Unknown Motivation</Text>
+			<Text xml:lang="en">Unknown Motivation</Text>
 			<Text xml:lang="mi">Kāore i mārama te take o ngā whanonga whakararu a te ākonga</Text>
 			</Value> 
 		</Values>

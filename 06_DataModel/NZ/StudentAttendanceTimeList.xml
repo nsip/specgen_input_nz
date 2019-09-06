@@ -63,4 +63,44 @@
 		<Type ref="CommonTypes" name="AttendanceTimeListType"/>
 	</Item>    <!-- AttendanceTimeList -->
 
+
+	<xhtml:Example xmlns="" name="Student Attendance Time List">
+		<StudentAttendanceTimeList>
+			<Student>
+				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd991234</RefId>
+			</Student>
+			<Provider>
+				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd996698</RefId>
+			</Provider>
+			<TeachingGroup>
+				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd993378</RefId>
+			</TeachingGroup>
+			<AttendanceTimeList>
+				<AttendanceTime>
+					<AttendanceTimeLocalId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934554</AttendanceTimeLocalId>
+					<AttendanceType>SCH</AttendanceType>
+					<AttendanceCode>P</AttendanceCode>
+					<AttendanceDate>2018-06-26</AttendanceDate>	
+					<SchedulePeriod>
+						<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd999999</RefId>
+					</SchedulePeriod>
+					<SubmissionDate>2018-06-30</SubmissionDate>		
+					<LastUpdatedDate>2018-06-28</LastUpdatedDate>
+					<AttendanceNote>Student was present.</AttendanceNote>
+				</AttendanceTime>	
+				<AttendanceTime>
+					<AttendanceTimeLocalId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934667</AttendanceTimeLocalId>
+					<AttendanceType>ADH</AttendanceType>
+					<AttendanceCode>E</AttendanceCode>
+					<AttendanceDate>2018-06-27</AttendanceDate>	
+					<StartTime>09:45:00</StartTime>
+					<EndTime>10:30:00</EndTime>
+					<SubmissionDate>2018-06-30</SubmissionDate>		
+					<LastUpdatedDate>2018-06-28</LastUpdatedDate>
+					<AttendanceNote>Explained absence, but unjustified.</AttendanceNote>
+				</AttendanceTime>
+			</AttendanceTimeList>
+		</StudentAttendanceTimeList>	
+	</xhtml:Example>
+
 </DataObject>

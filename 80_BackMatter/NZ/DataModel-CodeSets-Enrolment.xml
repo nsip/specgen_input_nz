@@ -109,56 +109,57 @@
 		<Values>
 			<Value>
 				<Code>S</Code>
-				<Text>Transferred to Another School in NZ</Text>
+				<Text xml:lang="en">Transferred to Another School in NZ</Text>
 				<Text xml:lang="mi">Whakawhiti ki kura kē o Aotearoa</Text>
 			</Value>
 			<Value>
 				<Code>H</Code>
-				<Text>Transferring to Home Schooling</Text>
+				<Text xml:lang="en">Transferring to Home Schooling</Text>
 				<Text xml:lang="mi">Whakawhiti ki te kura-kāinga</Text>
 			</Value>
 			<Value>
 				<Code>O</Code>
-				<Text>Gone Overseas</Text>
+				<Text xml:lang="en">Gone Overseas</Text>
 				<Text xml:lang="mi">Haere ki tāwāhi</Text>
 			</Value>
 			<Value>
 				<Code>D</Code>
-				<Text>Deceased</Text>
+				<Text xml:lang="en">Deceased</Text>
 				<Text xml:lang="mi">Kua mate</Text>
 			</Value>
 			<Value>
 				<Code>X</Code>
-				<Text>Expulsion (for students aged 16 and over only)</Text>
+				<Text xml:lang="en">Expulsion (for students aged 16 and over only)</Text>
 				<Text xml:lang="mi">I panaia (mō te hunga ākonga 16 te pakeke neke atu anake)</Text>
 			</Value>
 			<Value>
 				<Code>L</Code>
-				<Text>End of Schooling (for Students Aged 16 and Over Only)</Text>
+				<Text xml:lang="en">End of Schooling (for Students Aged 16 and Over Only)</Text>
 				<Text xml:lang="mi">Kua mutu te kura (mō te hunga ākonga 16 te pakeke neke atu anake)</Text>
 			</Value>
 			<Value>
 				<Code>E</Code>
-				<Text>Granted Early Exemption (Applies to Those Less Than 16yrs Old)</Text>
+				<Text xml:lang="en">Granted Early Exemption (Applies to Those Younger Than 16yrs Old)</Text>
+				<Text xml:lang="mi">Whakaaetia kia wāteatia mai (e pā ana ki ērā ākonga tau heke 16 te pakeke)</Text>
 			</Value>
 			<Value>
 				<Code>K</Code>
-				<Text>Exclusion (for Students Aged Less Than 16)</Text>
-				<Text xml:lang="mi"></Text>
+				<Text xml:lang="en">Exclusion (for Students Aged Younger Than 16)</Text>
+				<Text xml:lang="mi">Whakarerenga (mō te hunga ākonga tau heke 16 te pakeke)</Text>
 			</Value>
 			<Value>
 				<Code>C</Code>
-				<Text>Continuous Absence</Text>
+				<Text xml:lang="en">Continuous Absence</Text>
 				<Text xml:lang="mi">Ka ngaro i ia te wā</Text>
 			</Value>
 			<Value>
 				<Code>J</Code>
-				<Text>Eligibility Expired</Text>
+				<Text xml:lang="en">Eligibility Expired</Text>
 				<Text xml:lang="mi">Kua kati te māraurau</Text>
 			</Value>
 			<Value>
 				<Code>P</Code>
-				<Text>Caregiver Decision</Text>
+				<Text xml:lang="en">Caregiver Decision</Text>
 				<Text xml:lang="mi">Whakarite a te Kaitiaki</Text>
 			</Value>
 		</Values>
@@ -224,7 +225,7 @@
 		<Values>
 			<Value>
 				<Code>FF</Code>
-				<Text>International Fee-Paying Student</Text>
+				<Text xml:lang="en">International Fee-Paying Student</Text>
 				<Text xml:lang="mi">Ākonga ā-Ao Utu Urutomo</Text>
 				<Description>
 					An International student who meets full tuition costs on
@@ -234,7 +235,7 @@
 			</Value>
 			<Value>
 				<Code>AE</Code>
-				<Text>Student in Alternative Education</Text>
+				<Text xml:lang="en">Student in Alternative Education</Text>
 				<Text xml:lang="mi">Ākonga Mātauranga Kē</Text>
 				<Description>
 					A student who is enrolled in an Alternative Education
@@ -244,7 +245,7 @@
 			</Value>
 			<Value>
 				<Code>EX</Code>
-				<Text>International Exchange Student</Text>
+				<Text xml:lang="en">International Exchange Student</Text>
 				<Text xml:lang="mi">Ākonga Whakawhiti ā-Ao</Text>
 				<Description>
 					A student (and dependants) studying in New Zealand under an
@@ -253,7 +254,7 @@
 			</Value>
 			<Value>
 				<Code>NF</Code>
-				<Text>Not Funded</Text>
+				<Text xml:lang="en">Not Funded</Text>
 				<Text xml:lang="mi">Kāore he pūtea āwhina</Text>
 				<Description>
 					Code to be used for students attending on Roll Count Day,
@@ -264,7 +265,7 @@
 			</Value>
 			<Value>
 				<Code>RA</Code>
-				<Text>Adult Student</Text>
+				<Text xml:lang="en">Adult Student</Text>
 				<Text xml:lang="mi">Ākonga Pakeke</Text>
 				<Description>
 					A student who has continued at school and is at least 19 on
@@ -275,7 +276,7 @@
 			</Value>
 			<Value>
 				<Code>AD</Code>
-				<Text>Returning Adult Student</Text>
+				<Text xml:lang="en">Returning Adult Student</Text>
 				<Text xml:lang="mi">Ākonga Pakeke Hokingarua</Text>
 				<Description>
 					A student who has returned to school following a break of at
@@ -287,7 +288,7 @@
 			</Value>
 			<Value>
 				<Code>RE</Code>
-				<Text>Regular Student</Text>
+				<Text xml:lang="en">Regular Student</Text>
 				<Text xml:lang="mi">Ākonga</Text>
 				<Description>
 					A New Zealand student or a student treated for funding and
@@ -299,7 +300,7 @@
 			</Value>
 			<Value>
 				<Code>TPREOM</Code>
-				<Text>Teen Parent Regular Student Over Maximum Roll</Text>
+				<Text xml:lang="en">Teen Parent Regular Student Over Maximum Roll</Text>
 				<Text xml:lang="mi">Ranga Mātātahi, Ākonga kua aua atu i te taumata rārangi</Text>
 				<Description>
 					A regular student (i.e. a student aged under 19 years at 1
@@ -310,7 +311,7 @@
 			</Value>
 			<Value>
 				<Code>TPRAOM</Code>
-				<Text>Teen Parent Adult Student Over Maximum Roll</Text>
+				<Text xml:lang="en">Teen Parent Adult Student Over Maximum Roll</Text>
 				<Text xml:lang="mi">Ranga Mātātahi, Ākonga Pakeke kua aua atu i te taumata rārangi</Text>
 				<Description>
 					An adult student who is enrolled in a Teen Parent Unit (TPU)
@@ -322,7 +323,7 @@
 			</Value>
 			<Value>
 				<Code>TPAD</Code>
-				<Text>Teen Parent Other Adult Student</Text>
+				<Text xml:lang="en">Teen Parent Other Adult Student</Text>
 				<Text xml:lang="mi">Ranga Mātātahi, Ākonga Pakeke kē</Text>
 				<Description>
 					A student enrolling at the TPU as an adult student (i.e. was
@@ -333,7 +334,7 @@
 			</Value>
 			<Value>
 				<Code>TPRE</Code>
-				<Text>Teen Parent Eligible and Enrolled Regular Student</Text>
+				<Text xml:lang="en">Teen Parent Eligible and Enrolled Regular Student</Text>
 				<Text xml:lang="mi">Ranga Mātātahi me ngā Ākonga kua uru</Text>
 				<Description>
 					A student who is enrolled in a Teen Parent Unit (TPU) and is
@@ -346,7 +347,7 @@
 			</Value>
 			<Value>
 				<Code>TPRAE</Code>
-				<Text>Teen Parent Enrolled Continuing Adult Student</Text>
+				<Text xml:lang="en">Teen Parent Enrolled Continuing Adult Student</Text>
 				<Text xml:lang="mi">Ranga Mātātahi kua uru hei Ākonga Pakeke e haere tonu ana</Text>
 				<Description>
 					A student who is enrolled in a Teen Parent Unit (TPU) where
@@ -356,7 +357,7 @@
 			</Value>
 			<Value>
 				<Code>EM</Code>
-				<Text>External Student</Text>
+				<Text xml:lang="en">External Student</Text>
 				<Text xml:lang="mi">Ākonga ā-waho</Text>
 				<Description>
 					A student who attends this school for some courses but is
@@ -366,13 +367,13 @@
 			</Value>
 			<Value>
 				<Code>SA</Code>
-				<Text>Student in a Satellite Class of a Special School</Text>
+				<Text xml:lang="en">Student in a Satellite Class of a Special School</Text>
 				<Text xml:lang="mi">Ākonga o te akomanga kē o te Kura Motuhake</Text>
 				<Description>Student who is in a Satellite class of a Special School.</Description>
 			</Value>
 			<Value>
 				<Code>NA</Code>
-				<Text>Not Attending</Text>
+				<Text xml:lang="en">Not Attending</Text>
 				<Text xml:lang="mi">Kāore i tae</Text>
 				<Description>
 					A student who is not attending the school on the day of the
@@ -382,7 +383,7 @@
 			</Value>
 			<Value>
 				<Code>SF</Code>
-				<Text>Student in a Separately Funded Unit</Text>
+				<Text xml:lang="en">Student in a Separately Funded Unit</Text>
 				<Text xml:lang="mi">Ākonga kei ranga whai pūtea motuhake</Text>
 				<Description>
 					Student is enrolled in a separately funded unit.
@@ -399,17 +400,17 @@
 		<Values>
 			<Value>
 				<Code>H</Code>
-				<Text>High ORS</Text>
+				<Text xml:lang="en">High ORS</Text>
 				<Text xml:lang="mi">Teitei te ORS</Text>
 			</Value>
 			<Value>
 				<Code>V</Code>
-				<Text>Very High ORS</Text>
+				<Text xml:lang="en">Very High ORS</Text>
 				<Text xml:lang="mi">Tino Teitei te ORS</Text>
 			</Value>
 			<Value>
 				<Code>E</Code>
-				<Text>Extension (moderate to high)</Text>
+				<Text xml:lang="en">Extension (moderate to high)</Text>
 				<Text xml:lang="mi">Whakaroanga (Rewatanga ki Teitei)</Text>
 			</Value>
 		</Values>
@@ -486,52 +487,52 @@
 		<Values>
 			<Value>
 				<Code>ASC</Code>
-				<Text>Another School</Text>
+				<Text xml:lang="en">Another School</Text>
 				<Text xml:lang="mi">He kura kē</Text>
 			</Value>
 			<Value>
 				<Code>EMP</Code>
-				<Text>Employment</Text>
+				<Text xml:lang="en">Employment</Text>
 				<Text xml:lang="mi">Te mahi</Text>
 			</Value>
 			<Value>
 				<Code>IOT</Code>
-				<Text>Institutes of Technology</Text>
+				<Text xml:lang="en">Institutes of Technology</Text>
 				<Text xml:lang="mi">Kura Takiura</Text>
 			</Value>
 			<Value>
-				<Code>MAI</Code>
-				<Text>Modern Apprenticeships / Industry Training</Text>
+				<Code xml:lang="en">MAI</Code>
+				<Text xml:lang="en">Modern Apprenticeships / Industry Training</Text>
 				<Text xml:lang="mi">Ngā Akoranga Pia/Whakangungu ahumahi</Text>
 			</Value>
 			<Value>
 				<Code>PTR</Code>
-				<Text>Private Training</Text>
+				<Text xml:lang="en">Private Training</Text>
 				<Text xml:lang="mi">Whakangungu tūmataiti</Text>
 			</Value>
 			<Value>
 				<Code>TAC</Code>
-				<Text>Trade Academies</Text>
+				<Text xml:lang="en">Trade Academies</Text>
 				<Text xml:lang="mi">Kura Ringarehe</Text>
 			</Value>
 			<Value>
 				<Code>UNI</Code>
-				<Text>University</Text>
+				<Text xml:lang="en">University</Text>
 				<Text xml:lang="mi">Whare Wānanga</Text>
 			</Value>
 			<Value>
 				<Code>UNK</Code>
-				<Text>Unknown</Text>
+				<Text xml:lang="en">Unknown</Text>
 				<Text xml:lang="mi">Kāore i te mōhiotia</Text>
 			</Value>
 			<Value>
 				<Code>WAN</Code>
-				<Text>Wananga</Text>
+				<Text xml:lang="en">Wānanga</Text>
 				<Text xml:lang="mi">Wānanga</Text>
 			</Value>
 			<Value>
 				<Code>YGE</Code>
-				<Text>Youth Guarantee</Text>
+				<Text xml:lang="en">Youth Guarantee</Text>
 				<Text xml:lang="mi">Pūtāhui Rangatahi</Text>
 			</Value>
 		</Values>
@@ -642,52 +643,52 @@
 		<Values>
 			<Value>
 				<Code>EKR</Code>
-				<Text>Attended Kohanga Reo</Text>
+				<Text xml:lang="en">Attended Kohanga Reo</Text>
 				<Text xml:lang="mi">I haere ki Te Kōhanga Reo</Text>
 			</Value>
 			<Value>
 				<Code>EPC</Code>
-				<Text>Attended Playcentre</Text>
+				<Text xml:lang="en">Attended Playcentre</Text>
 				<Text xml:lang="mi">I tae ki te Playcentre</Text>
 			</Value>
 			<Value>
 				<Code>EKE</Code>
-				<Text>Attended Kindergarden or Education and Care</Text>
+				<Text xml:lang="en">Attended Kindergarden or Education and Care</Text>
 				<Text xml:lang="mi">I tae ki te Kura Kōhungahunga, ki Education and Care rānei</Text>
 			</Value>
 			<Value>
 				<Code>EHB</Code>
-				<Text>Attended Home Based Service</Text>
+				<Text xml:lang="en">Attended Home Based Service</Text>
 				<Text xml:lang="mi">I tae ki tētahi Ratonga ā-Kāinga</Text>
 			</Value>
 			<Value>
 				<Code>EPG</Code>
-				<Text>Attended Playgroup or Pacific Islands EC Group</Text>
+				<Text xml:lang="en">Attended Playgroup or Pacific Islands EC Group</Text>
 				<Text xml:lang="mi">I tae ki ngā kāhui kōhungahunga Pasifika, Playgroup rānei</Text>
 			</Value>
 			<Value>
 				<Code>ECO</Code>
-				<Text>Attended The Correspondence School - Te Aho o Te Kura Pounamu</Text>
+				<Text xml:lang="en">Attended The Correspondence School - Te Aho o Te Kura Pounamu</Text>
 				<Text xml:lang="mi">I tae ki Te Aho o te Kura Pounamu</Text>
 			</Value>
 			<Value>
 				<Code>EOS</Code>
-				<Text>Attended, but only outside New Zealand</Text>
+				<Text xml:lang="en">Attended, but only outside New Zealand</Text>
 				<Text xml:lang="mi">I tae ake, engari i waho kē atu o Aotearoa</Text>
 			</Value>
 			<Value>
 				<Code>ETU</Code>
-				<Text>Attended, but don't know what type of service</Text>
+				<Text xml:lang="en">Attended, but don't know what type of service</Text>
 				<Text xml:lang="mi">I tae ake engari kāre i mōhiotia te momo ratonga</Text>
 			</Value>
 			<Value>
 				<Code>ENA</Code>
-				<Text>Did not attend</Text>
+				<Text xml:lang="en">Did not attend</Text>
 				<Text xml:lang="mi">Kāre i tae ake</Text>
 			</Value>
 			<Value>
 				<Code>EUN</Code>
-				<Text>Unable to establish if attended or not</Text>
+				<Text xml:lang="en">Unable to establish if attended or not</Text>
 				<Text xml:lang="mi">Kāre e mōhio mēnā i tae atu kāore rānei</Text>
 			</Value>
 		</Values>
@@ -701,12 +702,12 @@
 		<Values>
 			<Value>
 				<Code>0</Code>
-				<Text>Student not involved in Māori or Pacific Medium Education</Text>
+				<Text xml:lang="en">Student not involved in Māori or Pacific Medium Education</Text>
 				<Text xml:lang="mi">Ākonga kei ngā Mātauranga Māori, Pasifica hoki</Text>
 			</Value>
 			<Value>
 				<Code>1</Code>
-				<Text>81-100%</Text>
+				<Text xml:lang="en">81-100%</Text>
 				<Text xml:lang="mi">81-100%</Text>
 				<Description>
 					Student is taught in the specified language for more than 20  and up to 25 hrs per week (81-100% of total time). Ākonga i ākona ki tētahi reo mō te 20 tae atu ki te 25 hāora i te wiki (81-100% o te wā katoa).
@@ -714,7 +715,7 @@
 			</Value>
 			<Value>
 				<Code>2</Code>
-				<Text>51-80%</Text>
+				<Text xml:lang="en">51-80%</Text>
 				<Text xml:lang="mi">51-80%</Text>
 				<Description>
 					Student is taught in the specified language for more than 12.5  and up to 20 hrs per week (51-80% of total time). Ākonga i ākona ki tētahi reo mō te 12.5  tae atu ki te 20 hāora i te wiki (51-80% o te wā katoa).
@@ -722,7 +723,7 @@
 			</Value>
 			<Value>
 				<Code>3</Code>
-				<Text>31-50%</Text>
+				<Text xml:lang="en">31-50%</Text>
 				<Text xml:lang="mi">31-50%</Text>
 				<Description>
 					Student is taught in the specified language for more than 7.5  and up to 12.5 hrs per week (31-50% of total time). Ākonga i ākona ki tētahi reo mō te 7.5  tae atu ki te 12.5 hāora i te wiki (31-50% o te wā katoa).
@@ -730,7 +731,7 @@
 			</Value>
 			<Value>
 				<Code>4</Code>
-				<Text>12-30%</Text>
+				<Text xml:lang="en">12-30%</Text>
 				<Text xml:lang="mi">12-30%</Text>
 				<Description>
 					Student is taught in the specified language for more than 3  and up to 7.5 hrs per week (12-30% of total time). Ākonga i ākona ki tētahi reo mō te 3 tae atu ki te 7.5 hrs i te wiki (12-30% o te wā katoa) 
@@ -738,7 +739,7 @@
 			</Value>
 			<Value>
 				<Code>5</Code>
-				<Text>0-11%</Text>
+				<Text xml:lang="en">0-11%</Text>
 				<Text xml:lang="mi">0-11%</Text>
 				<Description>
 					Student is taught in the specified language for less than 3 hours per week or as a separate subject (0-11% of total time). Ākonga i ākona ki tētahi reo mō te 3 iti iho rānei i te wiki, hei akoranga kē (0-11% o te wā katoa).
@@ -746,10 +747,59 @@
 			</Value>
 			<Value>
 				<Code>6</Code>
-				<Text>Taha Māori</Text>
+				<Text xml:lang="en">Taha Māori</Text>
 				<Text xml:lang="mi">Taha Māori</Text>
 				<Description>Student is learning Taha Māori. E ako ana te Akonga i te Taha Māori.</Description>
 			</Value>
 		</Values>
 	</CodeSet>	<!-- Language Instruction Level (Te Reo Māori) -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the year level of students attending early childhood education.</p>
+		</Intro>
+		<ID>ECE Year Level</ID>
+		<Values>
+			<Value>
+				<Code>ABF</Code>
+				<Text xml:lang="en">5 years and above</Text>
+				<Text xml:lang="mi">5 te pakeke neke atu</Text>
+			</Value>
+			<Value>
+				<Code>FIV</Code>
+				<Text xml:lang="en">5 year old</Text>
+				<Text xml:lang="mi">5 te pakeke</Text>
+			</Value>
+			<Value>
+				<Code>FOU</Code>
+				<Text xml:lang="en">4 year old</Text>
+				<Text xml:lang="mi">4 te pakeke</Text>
+			</Value>
+			<Value>
+				<Code>ONE</Code>
+				<Text xml:lang="en">1 year old</Text>
+				<Text xml:lang="mi">1 te pakeke</Text>
+			</Value>
+			<Value>
+				<Code>THR</Code>
+				<Text xml:lang="en">3 year old</Text>
+				<Text xml:lang="mi">3 te pakeke</Text>
+			</Value>
+			<Value>
+				<Code>TWO</Code>
+				<Text xml:lang="en">2 year old</Text>
+				<Text xml:lang="mi">2 te pakeke</Text>
+			</Value>
+			<Value>
+				<Code>UNK</Code>
+				<Text xml:lang="en">Unknown</Text>
+				<Text xml:lang="mi">Kāre i mōhiotia</Text>
+			</Value>
+			<Value>
+				<Code>ZER</Code>
+				<Text xml:lang="en">Younger than 1 year old</Text>
+				<Text xml:lang="mi">Tau heke 1 te pakeke</Text>
+			</Value>
+		</Values>
+	</CodeSet>	<!-- ECE Year Level -->
 </IncludeGroup>
