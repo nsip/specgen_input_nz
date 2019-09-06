@@ -692,7 +692,7 @@
 	<xsl:template match="specgen:Facets/xs:pattern">
 		<xsl:param name="indent"/>
 
-		<xsl:value-of select="concat($indent, 'pattern: ''', @value, '''&#x0a;')"/>
+		<xsl:value-of select="concat($indent, 'pattern: ''^', @value, '$''&#x0a;')"/>
 	</xsl:template>
 
 	<!-- CodeSets become enums - with code definitions in the description field -->
