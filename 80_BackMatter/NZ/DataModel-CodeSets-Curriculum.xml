@@ -12,19 +12,31 @@
 		<Values>
 			<Value>
 				<Code>NZC</Code>
-				<Text>NZ Curriculum</Text>
+				<Text>New Zealand Curriculum</Text>
+				<Text xml:lang="mi">New Zealand Curriculum</Text>
+				<Description>Student is taught using the New Zealand Curriculum.
+				E whakaakohia ana te ākonga mā te New Zealand Curriculum.</Description>
 			</Value>
 			<Value>
 				<Code>TMA</Code>
 				<Text>Te Marautanga o Aotearoa</Text>
+				<Text xml:lang="mi">Te Marautanga o Aotearoa</Text>
+				<Description>Student is taught using Te Marautanga o Aotearoa. 
+				E whakaakohia ana te ākonga mā Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
 				<Code>ECE</Code>
 				<Text>Te Whaariki</Text>
+				<Text xml:lang="mi">Te Whaariki</Text>
+				<Description>Student is taught using Te Whāriki curriculum. 
+				E whakaakohia ana te ākonga mā te marau o Te Whāriki.</Description>
 			</Value>	
 			<Value>
 				<Code>OTH</Code>
 				<Text>Other Curriculum</Text>
+				<Text xml:lang="mi">Marau Kē</Text>
+				<Description>Other (for schools using another curriculum). 
+				Ētahi kē (Ngā kura e whakamahi ana i te marautanga kē).</Description>
 			</Value>			
 		</Values>
 	</CodeSet>   <!-- Curriculum -->
@@ -38,35 +50,51 @@
 		<Values>
 			<Value>
 				<Code>1</Code>
-				<Text>Student is working at level 1 of the relevant curriculum</Text>
+				<Text>Curriculum Level 1</Text>
+				<Text xml:lang="mi">Taumata Marau 1</Text>
+				<Description>Student is working at level 1 of the relevant curriculum</Description>
 			</Value>
 			<Value>
 				<Code>2</Code>
-				<Text>Student is working at level 2 of the relevant curriculum</Text>
+				<Text>Curriculum Level 2</Text>
+				<Text xml:lang="mi">Taumata Marau 2</Text>
+				<Description>Student is working at level 2 of the relevant curriculum</Description>
 			</Value>
 			<Value>
 				<Code>3</Code>
-				<Text>Student is working at level 3 of the relevant curriculum</Text>
+				<Text>Curriculum Level 3</Text>
+				<Text xml:lang="mi">Taumata Marau 3</Text>
+				<Description>Student is working at level 3 of the relevant curriculum</Description>
 			</Value>
 			<Value>
 				<Code>4</Code>
-				<Text>Student is working at level 4 of the relevant curriculum</Text>
+				<Text>Curriculum Level 4</Text>
+				<Text xml:lang="mi">Taumata Marau 4</Text>
+				<Description>Student is working at level 4 of the relevant curriculum</Description>
 			</Value>
 			<Value>
 				<Code>5</Code>
-				<Text>Student is working at level 5 of the relevant curriculum</Text>
+				<Text>Curriculum Level 5</Text>
+				<Text xml:lang="mi">Taumata Marau 5</Text>
+				<Description>Student is working at level 5 of the relevant curriculum</Description>
 			</Value>
 			<Value>
 				<Code>6</Code>
-				<Text>Student is working at level 6 of the relevant curriculum</Text>
+				<Text>Curriculum Level 6</Text>
+				<Text xml:lang="mi">Taumata Marau 6</Text>
+				<Description>Student is working at level 6 of the relevant curriculum</Description>
 			</Value>
 			<Value>
 				<Code>7</Code>
-				<Text>Student is working at level 7 of the relevant curriculum</Text>
+				<Text>Curriculum Level 7</Text>
+				<Text xml:lang="mi">Taumata Marau 7</Text>
+				<Description>Student is working at level 7 of the relevant curriculum</Description>
 			</Value>
 			<Value>
 				<Code>8</Code>
-				<Text>Student is working at level 8 of the relevant curriculum</Text>
+				<Text>Curriculum Level 8</Text>
+				<Text xml:lang="mi">Taumata Marau 8</Text>
+				<Description>Student is working at level 8 of the relevant curriculum</Description>
 			</Value>
 		</Values>
 	</CodeSet>   <!-- Curriculum -->
@@ -306,6 +334,7 @@
 			<Value>
 				<Code>ENGL</Code>
 				<Text>English</Text>
+				<Text xml:lang="mi">Te Reo Pākeha</Text>
 				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
@@ -331,24 +360,40 @@
 			<Value><Code>RUSS</Code><Text>Russian</Text></Value>
 			<Value><Code>SAMO</Code><Text>Samoan</Text></Value>
 			<Value><Code>SPAN</Code><Text>Spanish</Text></Value>
-			<Value><Code>MAOR</Code><Text>Te Reo Māori</Text></Value>
+			<Value>
+				<Code>MAOR</Code>
+				<Text>Te Reo Māori</Text>
+				<Text xml:lang="mi">Te Reo Māori</Text>
+			</Value>
 			<Value><Code>RANG</Code><Text>Te Reo Rangatira</Text></Value>
 			<Value><Code>TOKE</Code><Text>Tokelauan</Text></Value>
 			<Value><Code>TONG</Code><Text>Tongan</Text></Value>
 			<Value><Code>ENSL</Code><Text>English as a Second Language</Text></Value>
-			<Value><Code>MATH</Code><Text>Mathematics</Text></Value>
+			<Value>
+				<Code>MATH</Code>
+				<Text>Mathematics</Text>
+				<Text xml:lang="mi">Pāngarau</Text>
+			</Value>
 			<Value><Code>MATC</Code><Text>Mathematics with Calculus</Text></Value>
 			<Value><Code>MATS</Code><Text>Mathematics with Statistics</Text></Value>
 			<Value><Code>REMM</Code><Text>Mathematics (Remedial)</Text></Value>
 			<Value><Code>ACCO</Code><Text>Accounting</Text></Value>
-			<Value><Code>SCIE</Code><Text>Science</Text></Value>
+			<Value>
+				<Code>SCIE</Code>
+				<Text>Science</Text>
+				<Text xml:lang="mi">Pūtaiao</Text>
+			</Value>
 			<Value><Code>AGHO</Code><Text>Agriculture / Horticulture</Text></Value>
 			<Value><Code>BIOL</Code><Text>Biology / Biological Science</Text></Value>
 			<Value><Code>CHEM</Code><Text>Chemsitry</Text></Value>
 			<Value><Code>EAAS</Code><Text>Earth Science / Astronomy</Text></Value>
 			<Value><Code>HUMB</Code><Text>Human Biology</Text></Value>
 			<Value><Code>PHYS</Code><Text>Physics</Text></Value>
-			<Value><Code>TECN</Code><Text>Technology</Text></Value>
+			<Value>
+				<Code>TECN</Code>
+				<Text>Technology</Text>
+				<Text xml:lang="mi">Hangarau</Text>
+			</Value>
 			<Value><Code>BITE</Code><Text>Biotechnology</Text></Value>
 			<Value><Code>COSC</Code><Text>Computer Science / Programming</Text></Value>
 			<Value><Code>COMP</Code><Text>Computer Studies</Text></Value>
@@ -361,7 +406,11 @@
 			<Value><Code>STME</Code><Text>Structures and Mechanisms</Text></Value>
 			<Value><Code>TIMA</Code><Text>Test and Information Management</Text></Value>
 			<Value><Code>CLTX</Code><Text>Textiles / Clothing</Text></Value>
-			<Value><Code>ARTA</Code><Text>The Arts</Text></Value>
+			<Value>
+				<Code>ARTA</Code>
+				<Text>The Arts</Text>
+				<Text xml:lang="mi">Ngā Toi</Text>
+			</Value>
 			<Value><Code>ARTD</Code><Text>Art Design</Text></Value>
 			<Value><Code>ARTH</Code><Text>Art History</Text></Value>
 			<Value><Code>DANC</Code><Text>Dancing</Text></Value>
@@ -374,7 +423,11 @@
 			<Value><Code>ARPR</Code><Text>Printmaking</Text></Value>
 			<Value><Code>ARTS</Code><Text>Sculpture</Text></Value>
 			<Value><Code>ARTC</Code><Text>Visial Arts</Text></Value>
-			<Value><Code>SOST</Code><Text>Social Studies</Text></Value>
+			<Value>
+				<Code>SOST</Code>
+				<Text>Social Studies</Text>
+				<Text xml:lang="mi">Tikanga ā-iwi</Text>
+			</Value>
 			<Value><Code>CLST</Code><Text>Classics / Classical Studies</Text></Value>
 			<Value><Code>CMTY</Code><Text>Community Studies</Text></Value>
 			<Value><Code>ECON</Code><Text>Economics</Text></Value>
@@ -385,7 +438,11 @@
 			<Value><Code>MAOS</Code><Text>Māori Studies</Text></Value>
 			<Value><Code>MEST</Code><Text>Media Studies</Text></Value>
 			<Value><Code>SOSC</Code><Text>Other Social Sciences</Text></Value>
-			<Value><Code>HEPH</Code><Text>Health and Physical Education</Text></Value>
+			<Value>
+				<Code>HEPH</Code>
+				<Text>Health and Physical Education</Text>
+				<Text xml:lang="mi">Hauora</Text>
+			</Value>
 			<Value><Code>HEED</Code><Text>Health</Text></Value>
 			<Value><Code>HOME</Code><Text>Home Economics</Text></Value>
 			<Value><Code>OUED</Code><Text>Outdoor Education</Text></Value>
@@ -409,6 +466,21 @@
 			<Value><Code>STDY</Code><Text>Study Skills</Text></Value>
 			<Value><Code>TRAN</Code><Text>Transition / Pre-Employment</Text></Value>
 			<Value><Code>THTR</Code><Text>Travel, Hospitality, Tourism</Text></Value>
+			<Value>
+				<Code>CROS</Code>
+				<Text>Cross-Curricular</Text>
+				<Text xml:lang="mi">Marautanga Whakawhiti</Text>
+			</Value>
+			<Value>
+				<Code>INSK</Code>
+				<Text>Information Skills</Text>
+				<Text xml:lang="mi">Pūkenga pārongo</Text>
+			</Value>
+			<Value>
+				<Code>STUD</Code>
+				<Text>Student Engagement</Text>
+				<Text xml:lang="mi">Te Taute Ākonga</Text>
+			</Value>
 		</Values>
 	</CodeSet>    <!-- Subject Area -->
 

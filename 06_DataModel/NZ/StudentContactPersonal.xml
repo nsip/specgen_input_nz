@@ -20,7 +20,9 @@
 		<Element>StudentContactPersonalRefId</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
-		<Description>The SIF GUID that uniquely identifies the Student Contact.</Description>
+		<Description>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>		
+		</Description>
 		<Type ref='CommonTypes' name='RefIdType'/>
 	</Item>    <!-- StudentContactPersonalRefId -->
 	<Item>
@@ -28,8 +30,8 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
-			<p>An alternative identifier as may be allocated by a provider.
-			A provider can only inquire on or maintain their own local id.</p>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"></Type>
 	</Item>    <!-- StudentContactPersonalLocalId -->

@@ -24,7 +24,7 @@
     <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
-      <p>The ID (GUID) assigned to uniquely identify this WellbeingCharacteristic.</p>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>    <!-- WellbeingCharacteristicRefId -->
@@ -34,7 +34,8 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
 		<Description>
-			<p>Local ID of the Wellbeing Characteristic if required for clarity.</p>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
   </Item>    <!-- WellbeingCharacteristicLocalId -->

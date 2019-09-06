@@ -25,7 +25,7 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>A GUID that identifies an instance of this object. </p>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>    <!-- AssessmentTaskRefId -->
@@ -34,7 +34,8 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>LocalId that identifies the assessment task, if provided by the source system.</p>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>    <!-- AssessmentTaskLocalId -->

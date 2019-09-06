@@ -198,6 +198,7 @@
 			<Value>
 				<Code>9</Code>
 				<Text xml:lang="en">Not Willing to Disclose</Text>
+				<Text xml:lang="mi">Kāre e taea te Whakaatu</Text>
 			</Value>  <!-- Not Willing to Disclose -->
 		</Values>
 	</CodeSet>    <!-- Gender -->
@@ -2674,54 +2675,67 @@
 			<Value>
 				<Code>IBP</Code>
 				<Text>Individualised Behavioural Plan</Text>
+				<Text xml:lang="mi">Mahere Whanonga mā te Ākonga</Text>
 			</Value>    <!-- Individualised Behavioural Plan -->
 			<Value>
 				<Code>IEP</Code>
 				<Text>Individualised Education Plan</Text>
+				<Text xml:lang="mi">Mahere Mātauranga mā te Ākonga</Text>
 			</Value>    <!-- Individualised Education Plan -->
 			<Value>
 				<Code>MED</Code>
 				<Text>Medical</Text>
+				<Text xml:lang="mi">Toha rongoā</Text>
 			</Value>    <!-- Medical -->
 			<Value>
 				<Code>ATT</Code>
 				<Text>Attendance</Text>
+				<Text xml:lang="mi">Te Tae ki te Kura</Text>
 			</Value>    <!-- Attendance -->
 			<Value>
 				<Code>BEH</Code>
 				<Text>Behavioural</Text>
+				<Text xml:lang="mi">Whanonga</Text>
 			</Value>    <!-- Behavioural -->
-			<Value>
-				<Code>SNE</Code>
-				<Text>Special Needs</Text>
-			</Value>    <!-- Special Needs -->
 			<Value>
 				<Code>ACA</Code>
 				<Text>Academic</Text>
+				<Text xml:lang="mi">Mātauranga</Text>
 			</Value>    <!-- Academic -->
 			<Value>
 				<Code>LEG</Code>
 				<Text>Legal</Text>
+				<Text xml:lang="mi">Ture</Text>
 			</Value>    <!-- Legal -->
 			<Value>
 				<Code>OTH</Code>
 				<Text>Other</Text>
+				<Text xml:lang="mi">Mea kē</Text>
 			</Value>    <!-- Other -->
 			<Value>
 				<Code>PHO</Code>
 				<Text>Photo</Text>
+				<Text xml:lang="mi">Whakaahua</Text>
 			</Value>
 			<Value>
 				<Code>MEA</Code>
-				<Text>Media</Text>
+				<Text>Media (e.g. video)</Text>
+				<Text xml:lang="mi">Pāpāho (h.t. whitiata)</Text>
 			</Value>
 			<Value>
 				<Code>DOC</Code>
 				<Text>Document</Text>
+				<Text xml:lang="mi">Tuhinga</Text>
 			</Value>
 			<Value>
 				<Code>NOT</Code>
 				<Text>Note</Text>
+				<Text xml:lang="mi">Pito kōrero</Text>
+			</Value>
+			<Value>
+				<Code>LSN</Code>
+				<Text>Learning Support Need</Text>
+				<Text xml:lang="mi">Me whai tautoko akoranga</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Document Type -->
@@ -2735,14 +2749,17 @@
 			<Value>
 				<Code>IC</Code>
 				<Text>In-Confidence</Text>
+				<Text xml:lang="mi">Noho muna</Text>
 			</Value>    <!-- In-Confidence -->
 			<Value>
 				<Code>SE</Code>
 				<Text>Sensitive</Text>
+				<Text xml:lang="mi">Āritarita</Text>
 			</Value>    <!-- Sensitive -->
 			<Value>
 				<Code>NC</Code>
-				<Text>Not Classified</Text>
+				<Text>Unclassified</Text>
+				<Text xml:lang="mi">Kāre anō kia kōmakatia</Text>
 			</Value>    <!-- Not Classified -->
 		</Values>
 	</CodeSet>    <!-- Document Classification -->
@@ -2776,4 +2793,22 @@
 			</Value>    <!-- Added By -->			
 		</Values>
 	</CodeSet>    <!-- Document Role -->
+
+	<CodeSet>
+		<Intro>
+			<p>Default role of the staff member, outside of any particular organisation.</p>
+		</Intro>
+		<ID>Staff Type</ID>
+		<Values>
+			<Value>
+				<Code>ADM</Code>
+				<Text>Administrator</Text>
+			</Value>    <!-- Administrator -->
+			<Value>
+				<Code>EDU</Code>
+				<Text>Educator</Text>
+			</Value>    <!-- Educator -->
+		</Values>
+	</CodeSet>    <!-- Staff Type -->
+
 </IncludeGroup>

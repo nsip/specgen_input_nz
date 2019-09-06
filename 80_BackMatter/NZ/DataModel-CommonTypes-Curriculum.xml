@@ -150,7 +150,7 @@
 			<Description>
 				<p>The level of instruction that is made in the selected language.</p>
 			</Description>
-			<Type name="xs:decimal"/>
+			<Type ref="CodeSets" name="NZCodeSetsLanguageInstructionLevelType"/>
 		</Item>    <!-- Level -->
 
 		<xhtml:Example xmlns="" name="LanguageOfInstruction Example">

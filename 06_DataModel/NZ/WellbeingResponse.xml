@@ -23,7 +23,7 @@
     <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
-      <p>The ID (GUID) assigned to uniquely identify this WellbeingResponse.</p>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>    <!-- WellbeingResponseRefId -->
@@ -33,7 +33,8 @@
       <Characteristics>O</Characteristics>
       <privacyRating>Low</privacyRating>
       <Description>
-        <p>Local Code if required for Clarity.</p>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
       </Description>
       <Type ref='CommonTypes' name='LocalIdType'/>
   </Item>    <!-- WellbeingResponseLocalId-->

@@ -33,7 +33,7 @@
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>The GUID that uniquely identifies a particular staff assignment.</p>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>      <!-- StaffAssignmentRefId -->
@@ -42,7 +42,8 @@
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>LocalId that identifies the staff assignment, from the source system, if provided.</p>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>      <!-- StaffAssignmentLocalId -->

@@ -10,12 +10,14 @@
 		<Values>
 			<Value>
 				<Code>INT</Code>
-				<Text>Internal Exam/Assessment</Text>
-			</Value>    <!-- Internal Exam/Assessment -->
+				<Text>Internal</Text>
+				<Text xml:lang="mi">Aromatawai ā-roto</Text>
+			</Value>    <!-- Internal -->
 			<Value>
 				<Code>EXT</Code>
-				<Text>External Exam/Assessment</Text>
-			</Value>    <!-- External Exam/Assessment -->
+				<Text>External</Text>
+				<Text xml:lang="mi">Aromatawai ā-waho</Text>
+			</Value>    <!-- External -->
 			<Value>
 				<Code>MOC</Code>
 				<Text>Mock</Text>
@@ -31,6 +33,7 @@
 			<Value>
 				<Code>OTJ</Code>
 				<Text>Overall Teacher Judgement</Text>
+				<Text xml:lang="mi">Tā te Pouako i whakarite ai</Text>
 			</Value>    <!-- OTJ -->			
 			<Value>
 				<Code>OTH</Code>
@@ -48,22 +51,27 @@
 			<Value>
 				<Code>MOD</Code>
 				<Text>Moderated</Text>
+				<Text xml:lang="mi">Kua whakaōritehia</Text>
 			</Value>
 			<Value>
 				<Code>NOT</Code>
 				<Text>Unmoderated</Text>
+				<Text xml:lang="mi">Kāre anō kia whakaōritehia</Text>
 			</Value>
 			<Value>
 				<Code>PUB</Code>
 				<Text>Published</Text>
+				<Text xml:lang="mi">Kua tāia</Text>
 			</Value>
 			<Value>
 				<Code>ENT</Code>
 				<Text>Entered</Text>
+				<Text xml:lang="mi">I whakaurungia</Text>
 			</Value>
 			<Value>
 				<Code>MAR</Code>
 				<Text>Marked</Text>
+				<Text xml:lang="mi">Kua mākahia</Text>
 			</Value>									
 		</Values>
 	</CodeSet>    <!-- Assessment Status -->
@@ -103,31 +111,38 @@
 			<Value>
 				<Code>RAW</Code>
 				<Text>Raw</Text>
+				<Text xml:lang="mi">Taketake</Text>
 			</Value>    <!-- Raw -->
 			<Value>
 				<Code>SCA</Code>
 				<Text>Scale</Text>
+				<Text xml:lang="mi">Āwhata</Text>
 			</Value>    <!-- Scale -->
 			<Value>
 				<Code>MAR</Code>
 				<Text>Margin of Error</Text>
+				<Text xml:lang="mi">Pae Hapa</Text>
 			</Value>    <!-- Margin of Error -->
 			<Value>
 				<Code>STA</Code>
 				<Text>Stanine</Text>
+				<Text xml:lang="mi">Pouiwa</Text>
 			</Value>    <!-- Stanine -->
 			<Value>
 				<Code>YEA</Code>
 				<Text>Year Level</Text>
+				<Text xml:lang="mi">Taumata ā-Tau</Text>
 			</Value>    <!-- Year Level -->
 			<Value>
 			  <Code>NA</Code>
 			  <Text>NA</Text>
+			  <Text xml:lang="mi">NA</Text>
 			  <Description>NZQA Unit Standards: Not Achieved, Achieved</Description>
 			</Value>    <!-- NA -->
 			<Value>
 				<Code>NAM</Code>
 				<Text>NAME</Text>
+				<Text xml:lang="mi">NAME</Text>
 				<Description>NZQA Achievement Standards: Not Achieved, Achieved, Achieved with Merit, Achieved with Excellence</Description>
 			</Value>    <!-- NAME -->
 
@@ -135,6 +150,7 @@
 			<Value>
 				<Code>CUR</Code>
 				<Text>Curriculum Level</Text>
+				<Text xml:lang="mi">Taumata Marau</Text>
 				<Description>Student is assessed to be at one of the levels defined by The National Curriculum: 1A, 1B through 5A, 5B</Description>
 			</Value>    <!-- Curriculum Level -->
 		</Values>
@@ -213,8 +229,16 @@
 		</Intro>
 		<ID>NCEA Endorsement Level</ID>
 		<Values>
-			<Value><Code>E</Code><Text>Excellence</Text></Value>
-			<Value><Code>M</Code><Text>Merit</Text></Value>
+			<Value>
+				<Code>E</Code>
+				<Text>Excellence</Text>
+				<Text xml:lang="mi">Kairangi</Text>
+			</Value>
+			<Value>
+				<Code>M</Code>
+				<Text>Merit</Text>
+				<Text xml:lang="mi">Kaiaka</Text>
+			</Value>
 		</Values>
 	</CodeSet>    <!-- NCEA Endorsement Level -->
 

@@ -23,7 +23,7 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The SIF GUID for the student teaching group enrolment.</p>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"></Type>
 	</Item>    <!-- StudentTeachingGroupEnrolmentRefId -->
@@ -33,7 +33,8 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The local Id for the student teaching group enrolment, assigned by the Provider.</p>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
 	</Item>    <!-- StudentTeachingGroupEnrolmentLocalId -->

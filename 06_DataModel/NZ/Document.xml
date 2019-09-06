@@ -14,7 +14,7 @@
     <Element>Document</Element>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p> Location and meta-data of a document, including evidentiary documents, personalised plans, and action plans.</p>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
      </Description>
   </Item>
 
@@ -32,7 +32,8 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Local identifier for the Document, if provided by the source system.</p>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>    <!-- DocumentLocalId -->

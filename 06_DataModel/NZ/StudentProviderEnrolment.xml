@@ -26,7 +26,7 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The SIF GUID for the student provider enrolment.</p>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"></Type>
 	</Item>    <!-- StudentProviderEnrolmentRefId -->
@@ -36,7 +36,8 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The local Id for the enrolment, assigned by the Provider.</p>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
 	</Item>    <!-- StudentProviderEnrolmentLocalId -->
@@ -60,6 +61,16 @@
 		</Description>
 		<Type ref="CommonTypes" relationship="records enrollment of student in" count="1:1" name="ObjectReferenceType"/>
 	</Item>    <!-- Provider -->
+
+	<Item>
+		<Element>StudentId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>A unique identifier assigned to a Student for a period of enrolment by a provider.</p>
+		</Description>
+		<Type name="xs:normalizedString"></Type>
+	</Item>    <!-- StudentId -->
 
 	<Item>
 		<Element>EntryDate</Element>
@@ -140,6 +151,7 @@
 			<Provider>
 				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
 			</Provider>
+			<StudentId>123ABC</StudentId>
 			<EntryDate>2018-01-29</EntryDate>
 			<Status>WIT</Status>
 			<SchoolEnrolmentList>
@@ -182,6 +194,7 @@
 			<Provider>
 				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
 			</Provider>
+			<StudentId>123ABC</StudentId>
 			<EntryDate>2017-01-29</EntryDate>
 			<Status>ACT</Status>
 			<SchoolEnrolmentList>

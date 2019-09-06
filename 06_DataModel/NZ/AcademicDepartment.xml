@@ -25,7 +25,7 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The ID (GUID) assigned to uniquely identify this AcademicDepartment.</p>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>    <!-- AcademicDepartmentRefId -->
@@ -35,7 +35,8 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>A Local Identifier for the Academic Department. It is expected to be unique to the reporting site.</p>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"></Type> 
 	</Item>    <!-- AcademicDepartmentLocalId -->
