@@ -230,7 +230,7 @@
 			</RelatedOrganisation>
 		</RelatedOrganisationList>
 		<OperationalStatus>O</OperationalStatus>
-		<Type>21</Type>
+		<Type json:force-string="true">21</Type>
 		<ProviderRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</ProviderRefId>
 		<ProviderLocalId>01011234</ProviderLocalId>
 		<Authority>STATE</Authority>

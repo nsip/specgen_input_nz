@@ -155,11 +155,11 @@
 			<EntryDate>2018-01-29</EntryDate>
 			<Status>WIT</Status>
 			<SchoolEnrolmentList>
-				<SchoolEnrolment>
+				<SchoolEnrolment json:force-array="true">
 					<SchoolCalendarYear>2018</SchoolCalendarYear>
 					<MembershipType>BASE</MembershipType>
-					<YearLevel>11</YearLevel>
-					<EligibilityCriteria json:force-string="true">GAE</EligibilityCriteria>
+					<YearLevel json:force-string="true">11</YearLevel>
+					<EligibilityCriteria>GAE</EligibilityCriteria>
 					<EligibilityVerification>
 						<Source>AUSPA</Source>
 						<DocumentSerialNumber>L905673</DocumentSerialNumber>
@@ -172,7 +172,7 @@
 					</EligibilityVerification>
 					<FTE>1.0</FTE>
 					<FundingType>EX</FundingType>
-					<FundingYearLevel>1</FundingYearLevel>
+					<FundingYearLevel json:force-string="true">1</FundingYearLevel>
 					<Curriculum>NZC</Curriculum>
 					<CurriculumLevel>5</CurriculumLevel>
 					<InternationalEnrolment>
@@ -198,10 +198,10 @@
 			<EntryDate>2017-01-29</EntryDate>
 			<Status>ACT</Status>
 			<SchoolEnrolmentList>
-				<SchoolEnrolment>
+				<SchoolEnrolment json:force-array="true">
 					<SchoolCalendarYear>2017</SchoolCalendarYear>
 					<MembershipType>BASE</MembershipType>
-					<YearLevel>10</YearLevel>
+					<YearLevel json:force-string="true">10</YearLevel>
 					<EligibilityCriteria>NZC</EligibilityCriteria>
 					<EligibilityVerification>
 						<Source>NZBIR</Source>
@@ -215,13 +215,13 @@
 					</EligibilityVerification>
 					<FTE>1.0</FTE>
 					<FundingType>RE</FundingType>
-					<FundingYearLevel>10</FundingYearLevel>
+					<FundingYearLevel json:force-string="true">10</FundingYearLevel>
 					<Curriculum>NZC</Curriculum>
 					<CurriculumLevel>4</CurriculumLevel>
 					<LanguageOfInstructionList>
 						<Language json:force-array="true">
 							<Code>NZS01112</Code>
-							<Level>99</Level>
+							<Level json:force-string="true">1</Level>
 						</Language>
 					</LanguageOfInstructionList>
 					<SubjectChoiceList>
@@ -258,7 +258,7 @@
 					<LanguageOfInstructionList>
 						<Language json:force-array="true">
 							<Code>NZS01112</Code>
-							<Level>99</Level>
+							<Level json:force-string="true">0</Level>
 						</Language>
 					</LanguageOfInstructionList>
 					<SubjectChoiceList>
