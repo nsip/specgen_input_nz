@@ -141,7 +141,7 @@
 			</Intro>
 			<DataObject coords="41,162,184,207">StudentPersonal</DataObject>
 			<DataObject coords="571,51,1079,96">Provider</DataObject>
-			<DataObject coords="217,226,408,224" role="member">StudentAttendanceTimeList</DataObject>
+			<DataObject coords="217,226,410,268" role="member">StudentAttendanceTimeList</DataObject>
 			<DataObject coords="366,165,560,211" role="member">StudentAttendanceSummary</DataObject>
 			<DataObject coords="773,606,893,650">TeachingGroup</DataObject>
 			<DataObject coords="775,731,894,788">ProviderCourse</DataObject>
