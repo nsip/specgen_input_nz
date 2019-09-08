@@ -81,53 +81,53 @@
 			</Description>
 			<Type ref="CommonTypes" name="AssessmentScoreType"/>
 		</Item>     <!-- ResultScore -->
-
-		<xhtml:Example xmlns="" name="PAT Result Score List Example" intl="nz">
+	
+		<xhtml:Example xmlns="" name="PAT Result Score List Example">
 			<ResultScoreList>
 				<ResultScore>
 					<ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
-					<ScoreValue>25</ScoreValue>
+					<ScoreValue json:force-string="true">25</ScoreValue>
 				</ResultScore>
 				<ResultScore>
 					<ScoreMetric>SCA</ScoreMetric>  <!-- Scale Score -->
-					<ScoreValue>38.5</ScoreValue>
+					<ScoreValue json:force-string="true">38.5</ScoreValue>
 				</ResultScore>
 				<ResultScore>
 					<ScoreMetric>MAR</ScoreMetric>  <!-- Margin of Error -->
-					<ScoreValue>5.0</ScoreValue>
+					<ScoreValue json:force-string="true">5.0</ScoreValue>
 				</ResultScore>
 				<ResultScore>
 					<ScoreMetric>STA</ScoreMetric>  <!-- Stanine -->
-					<ScoreValue>6</ScoreValue>
+					<ScoreValue json:force-string="true">6</ScoreValue>
 				</ResultScore>
 				<ResultScore>
 					<ScoreMetric>YEA</ScoreMetric>  <!-- Year Level -->
-					<ScoreValue>4</ScoreValue>
+					<ScoreValue json:force-string="true">4</ScoreValue>
 				</ResultScore>				
 			</ResultScoreList>
   		</xhtml:Example>
 		  
-		<xhtml:Example xmlns="" name="asTTle Result Score List Example" intl="nz">
+		<xhtml:Example xmlns="" name="asTTle Result Score List Example">
 			<ResultScoreList>
 				<ResultScore>
 					<Competency>Ideas</Competency>
 					<ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
-					<ScoreValue>1234</ScoreValue>
+					<ScoreValue json:force-string="true">1234</ScoreValue>
 				</ResultScore>
 				<ResultScore>
 					<Competency>Ideas</Competency>
 					<ScoreMetric>CUR</ScoreMetric>  <!-- Curriculum Level -->
-					<ScoreValue>5B</ScoreValue>
+					<ScoreValue json:force-string="true">5B</ScoreValue>
 				</ResultScore>
 				<ResultScore>
 					<Competency>Overall</Competency>
 					<ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
-					<ScoreValue>1591</ScoreValue>
+					<ScoreValue json:force-string="true">1591</ScoreValue>
 				</ResultScore>
 				<ResultScore>
 					<Competency>Overall</Competency>
 					<ScoreMetric>CUR</ScoreMetric>  <!-- Curriculum Level -->
-					<ScoreValue>5B</ScoreValue>
+					<ScoreValue json:force-string="true">5B</ScoreValue>
 				</ResultScore>
 			</ResultScoreList>
   		</xhtml:Example>
@@ -160,10 +160,17 @@
 			<Element>ScoreValue</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>The actual score </p>
+				<p>The score the student received for assessment task against that metric. If the result score is for an NZQA or International Baccalaureate then the ScoreResultCode using the enumeration NZCodeSetsAssessmentResultType must be used instead.</p>
 			</Description>
 			<Type name="xs:normalizedString"></Type>
 		</Item>    <!-- ScoreValue -->
+		<Item>
+			<Element>ScoreCode</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>The score the student received for assessment task against that metric. If the result score is for an NZQA or International Baccalaureate then the ScoreResultCode using the enumeration NZCodeSetsAssessmentResultType must be used.</Description>
+			<Type ref="CodeSets" name="NZCodeSetsAssessmentResultType"/>
+		</Item>    <!-- ScoreCode -->
 	</CommonElement>
 
 	<CommonElement name="JustificationListType" type="true" dm="true">

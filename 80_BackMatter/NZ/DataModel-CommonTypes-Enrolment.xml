@@ -121,6 +121,15 @@
 				<p>The type of early childhood education the student is enrolling in.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsEarlyChildhoodEducationTypeType"/>
+		</Item>    <!-- Type -->
+		<Item>
+			<Element>ECEYearLevel</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Code set denoting the year level of students attending early childhood education.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsECEYearLevelType"/>
 		</Item>    <!-- Type -->		
 	</CommonElement>
 
@@ -235,7 +244,7 @@
 				<p>Records how the Student's eligibility to enrol / for funding was verified by the
 					school staff during the enrolment process.</p>
 			</Description>
-			<Type ref="CommonData" name="VerificationEventType"/>
+			<Type ref="CommonTypes" name="VerificationEventType"/>
 		</Item>		<!-- EligibilityVerification -->
 		<Item>
 			<Element>FTE</Element>
@@ -302,7 +311,7 @@
 			<Description>
 				<p>How much instruction has the student received in which languages?</p>
 			</Description>
-			<Type ref="CommonData" name="LanguageOfInstructionListType"/>
+			<Type ref="CommonTypes" name="LanguageOfInstructionListType"/>
 		</Item>		<!-- LanguageOfInstructionList -->
 		<Item>
 			<Element>TimeInImmersion</Element>
@@ -378,7 +387,7 @@
 			<Description>
 				<p>A list of student consent information.</p>
 			</Description>
-			<Type ref="CommonData" name="StudentConsentListType"/>
+			<Type ref="CommonTypes" name="StudentConsentListType"/>
 		</Item>		<!-- StudentConsentList -->
 		<Item>
 			<Element>AcademicAttainmentGoalList</Element>
@@ -423,11 +432,11 @@
 				<LanguageOfInstructionList>
 					<Language>
 						<Code>NZS16110</Code>
-						<Level>99</Level>
+						<Level json:force-string="true">6</Level>
 					</Language>
 					<Language>
 						<Code>NZS01112</Code>
-						<Level>99</Level>
+						<Level json:force-string="true">1</Level>
 					</Language>
 				</LanguageOfInstructionList>
 				<SubjectChoiceList>
@@ -699,7 +708,6 @@
 	<CommonElement name="ProviderExitType" type="true" dm="true">
 		<Item>
 			<Element>ProviderExitType</Element>
-			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>Details of the reasons, and interventions leading up to the
 					student's enrolment being terminated.</p>

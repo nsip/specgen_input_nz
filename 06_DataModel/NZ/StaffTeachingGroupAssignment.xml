@@ -21,7 +21,7 @@
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>The GUID that uniquely identifies a particular staff teaching group assignment.</p>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>      <!-- StaffTeachingGroupAssignmentRefId -->
@@ -30,7 +30,8 @@
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>LocalId for the particular staff teaching group assignment, if provided by the source system</p>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>      <!-- StaffTeachingGroupAssignmentLocalId -->

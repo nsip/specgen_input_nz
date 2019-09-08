@@ -12,7 +12,9 @@
 	<Item>
 		<Element>Schedule</Element>
 	    <privacyRating>Low</privacyRating>
-		<Description>Provides information about a schedule for a provider.</Description>
+		<Description>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
+		</Description>
 	</Item>
 	
 	<Item>
@@ -29,7 +31,8 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
-			<p>The local Id of the schedule.</p>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
 	</Item>    <!-- ScheduleLocalId -->

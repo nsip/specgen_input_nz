@@ -23,7 +23,7 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p> The ID (GUID) assigned to uniquely identify this Schedule Term.</p>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
 	</Item>    <!-- ScheduleHolidayRefId -->
@@ -32,7 +32,8 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
-			<p>The local Id of  this Schedule Term.</p>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
 	</Item>    <!-- ScheduleHolidayLocalId -->
@@ -83,7 +84,7 @@
 		<Description>
 			<p>Display the holiday name even if an academic ScheduleDate record is defined for this date for a school.</p>
 		</Description>
-		<Type ref="CommonData" name="NZCodeSetsYesOrNoCategoryType"/>
+		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
 	</Item>    <!-- AlwaysDisplayFlag -->
 
 	<xhtml:Example xmlns="" name ="Schedule Holiday">

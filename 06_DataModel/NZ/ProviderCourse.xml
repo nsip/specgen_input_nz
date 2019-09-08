@@ -21,7 +21,7 @@
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>The ID (GUID) that uniquely identifies the Provider defined Course.</p>
+ 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>    <!-- ProviderCourseRefId -->
@@ -30,7 +30,8 @@
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>The human readable locally defined identifier for the Course, set by the Provider that defines and offers the Course.</p>
+ 			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>    <!-- ProviderCourseLocalId -->
@@ -114,7 +115,7 @@
     <Description>
       <p>The language of instruction for the Course.</p>
     </Description>
-    <Type ref="CommonData" name='LanguageOfInstructionListType'/>
+    <Type ref="CommonTypes" name='LanguageOfInstructionListType'/>
   </Item>    <!-- LanguageOfInstructionList -->
   <Item>
     <Element>LearningStandardList</Element>
@@ -123,7 +124,7 @@
     <Description>
       <p>A list of <code>ObjectReference</code>s to the LearningStandards covered by the Course.</p>
     </Description>
-    <Type ref="CommonData" name='LearningStandardReferenceListType'/>
+    <Type ref="CommonTypes" name='LearningStandardReferenceListType'/>
   </Item>    <!-- LearningStandardList -->
   <Item>
     <Element>CredentialList</Element>
@@ -132,7 +133,7 @@
     <Description>
       <p>A list of <code>ObjectReference</code>s to the Credentials that may be gained by students completing the course.</p>
     </Description>
-    <Type ref="CommonData" name='CredentialListType'/>
+    <Type ref="CommonTypes" name='CredentialListType'/>
   </Item>    <!-- CredentialList -->
 
   <xhtml:Example xmlns="" name="ProviderCourse Example">

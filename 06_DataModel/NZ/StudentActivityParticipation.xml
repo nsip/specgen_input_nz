@@ -20,14 +20,19 @@
     <Element>StudentActivityParticipationRefId</Element>
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
-	  <Description>The ID (GUID) that uniquely identifies the instance of the object.</Description>
+	  <Description>
+ 			<p>The universally unique identifier for the data object record that is used across systems.</p>   
+    </Description>
     <Type ref='CommonTypes' name='RefIdType'/>
   </Item>    <!-- StudentActivityParticipationRefId -->
   <Item>
     <Element>StudentActivityParticipationLocalId</Element>
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
-	  <Description>LocalId for the participation record, if provided by the source system.</Description>
+	  <Description>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>    
+    </Description>
     <Type ref='CommonTypes' name='LocalIdType'/>
   </Item>    <!-- StudentActivityParticipationLocalId -->
 

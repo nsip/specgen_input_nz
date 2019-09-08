@@ -25,7 +25,7 @@
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>The GUID of the staff member.</p>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>    <!-- RefId -->
@@ -34,7 +34,8 @@
     <Characteristics>O</Characteristics>
 	  <privacyRating>Medium</privacyRating>
     <Description>
-      <p>The locally-assigned identifier for this staff member.</p>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>    <!-- LocalId -->
@@ -67,6 +68,16 @@
 		<p>Personal Information </p>
     </Description>
     <Type ref="CommonTypes" name="PersonInfoType"></Type>
+  </Item>    <!-- PersonInfo -->
+
+  <Item>
+    <Element>StaffType</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Medium</privacyRating>
+    <Description>
+		<p>Default role of the staff member, outside of any particular organisation.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsStaffTypeType"></Type>
   </Item>    <!-- PersonInfo -->
 
   <xhtml:Example xmlns="" name="StaffPersonal">

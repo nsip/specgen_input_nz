@@ -16,9 +16,26 @@
 	  
 	  <CodeSet>
 		  <Intro>
-			  <p>A reusable code set for yes, no, unknown and not provided values.</p>
+			  <p>A reusable code set for yes, and no.</p>
 		  </Intro>
 		  <ID>Yes Or No Category</ID>
+		  <Values>
+			  <Value>
+				  <Code>N</Code>
+				  <Text>No</Text>
+			  </Value>
+			  <Value>
+				  <Code>Y</Code>
+				  <Text>Yes</Text>
+			  </Value>			  
+		  </Values>
+	  </CodeSet>      <!-- Yes or No -->
+
+	  <CodeSet>
+		  <Intro>
+			  <p>A reusable code set for yes, no, and unknown values.</p>
+		  </Intro>
+		  <ID>Yes No Unknown</ID>
 		  <Values>
 			  <Value>
 				  <Code>N</Code>
@@ -29,16 +46,11 @@
 				  <Text>Unknown</Text>
 			  </Value>
 			  <Value>
-				  <Code>X</Code>
-				  <Text>Not Provided</Text>
-			  </Value>
-			  <Value>
 				  <Code>Y</Code>
 				  <Text>Yes</Text>
-			  </Value>
-			  
+			  </Value>			  
 		  </Values>
-	  </CodeSet>      <!-- Yes or No -->
+	  </CodeSet>      <!-- Yes No Unknown -->
 
 	  <CodeSet>
 		<Intro>
@@ -64,128 +76,88 @@
 		<Values>
 			<Value>
 				<Code>0</Code>
-				<Text>Year 0</Text>
+				<Text xml:lang="en">Year 0</Text>
+				<Text xml:lang="mi">Tau 0</Text>
 				<Description>Only applies to Funding Year Level</Description>
 			</Value>
 			<Value>
 				<Code>1</Code>
-				<Text>Year 1</Text>
+				<Text xml:lang="en">Year 1</Text>
+				<Text xml:lang="mi">Tau 1</Text>
 			</Value>
 			<Value>
 				<Code>2</Code>
-				<Text>Year 2</Text>
+				<Text xml:lang="en">Year 2</Text>
+				<Text xml:lang="mi">Tau 2</Text>
 			</Value>
 			<Value>
 				<Code>3</Code>
-				<Text>Year 3</Text>
+				<Text xml:lang="en">Year 3</Text>
+				<Text xml:lang="mi">Tau 3</Text>
 			</Value>
 			<Value>
 				<Code>4</Code>
-				<Text>Year 4</Text>
+				<Text xml:lang="en">Year 4</Text>
+				<Text xml:lang="mi">Tau 4</Text>
 			</Value>
 			<Value>
 				<Code>5</Code>
-				<Text>Year 5</Text>
+				<Text xml:lang="en">Year 5</Text>
+				<Text xml:lang="mi">Tau 5</Text>
 			</Value>
 			<Value>
 				<Code>6</Code>
-				<Text>Year 6</Text>
+				<Text xml:lang="en">Year 6</Text>
+				<Text xml:lang="mi">Tau 6</Text>
 			</Value>
 			<Value>
 				<Code>7</Code>
-				<Text>Year 7</Text>
+				<Text xml:lang="en">Year 7</Text>
+				<Text xml:lang="mi">Tau 7</Text>
 			</Value>
 			<Value>
 				<Code>8</Code>
-				<Text>Year 8</Text>
+				<Text xml:lang="en">Year 8</Text>
+				<Text xml:lang="mi">Tau 8</Text>
 			</Value>
 			<Value>
 				<Code>9</Code>
-				<Text>Year 9</Text>
+				<Text xml:lang="en">Year 9</Text>
+				<Text xml:lang="mi">Tau 9</Text>
 			</Value>
 			<Value>
 				<Code>10</Code>
-				<Text>Year 10</Text>
+				<Text xml:lang="en">Year 10</Text>
+				<Text xml:lang="mi">Tau 10</Text>
 			</Value>
 			<Value>
 				<Code>11</Code>
-				<Text>Year 11</Text>
+				<Text xml:lang="en">Year 11</Text>
+				<Text xml:lang="mi">Tau 11</Text>
 			</Value>
 			<Value>
 				<Code>12</Code>
-				<Text>Year 12</Text>
+				<Text xml:lang="en">Year 12</Text>
+				<Text xml:lang="mi">Tau 12</Text>
 			</Value>
 			<Value>
 				<Code>13</Code>
-				<Text>Year 13</Text>
+				<Text xml:lang="en">Year 13</Text>
+				<Text xml:lang="mi">Tau 13</Text>
 			</Value>
-			<if intl="nz">
-				<Value>
-					<Code>14</Code>
-					<Text>Year 14</Text>
-					<Description>For Current Year Level this code indicates Year 14 and above</Description>
-				</Value>
-				<Value>
-					<Code>15</Code>
-					<Text>Year 15</Text>
-					<Description>Only applies to Funding Year Level</Description>
-				</Value>
-			</if>
-			<if intl="au">
-				<Value>
-					<Code>K</Code>
-					<Text>Kindergarten</Text>
-				</Value>
-				<Value>
-					<Code>P</Code>
-					<Text>Prep</Text>
-				</Value>
-				<Value>
-					<Code>K3</Code>
-					<Text>3yo Kindergarten</Text>
-				</Value>
-				<Value>
-					<Code>K4</Code>
-					<Text>4yo Kindergarten</Text>
-				</Value>
-				<Value>
-					<Code>CC</Code>
-					<Text>Childcare</Text>
-				</Value>
-				<Value>
-					<Code>PS</Code>
-					<Text>Pre-School</Text>
-				</Value>
-				<Value>
-					<Code>UG</Code>
-					<Text>Ungraded</Text>
-				</Value>
-				<Value>
-					<Code>11MINUS</Code>
-					<Text>11 Years and Younger</Text>
-				</Value>
-				<Value>
-					<Code>12PLUS</Code>
-					<Text>12 years and Older</Text>
-				</Value>
-				<Value>
-					<Code>UGJunSec</Code>
-					<Text>Ungraded Junior Secondary</Text>
-				</Value>
-				<Value>
-					<Code>UGPri</Code>
-					<Text>Ungraded Primary</Text>
-				</Value>
-				<Value>
-					<Code>UGSec</Code>
-					<Text>Ungraded Secondary</Text>
-				</Value>
-				<Value>
-					<Code>UGSnrSec</Code>
-					<Text>Ungraded Senior Secondary</Text>
-				</Value>
-			</if>		 
-		  </Values>
+			<Value>
+				<Code>14</Code>
+				<Text xml:lang="en">Year 14</Text>
+				<Text xml:lang="mi">Tau 14</Text>
+				<Description>For Current Year Level this code indicates Year 14 and above</Description>
+			</Value>
+			<Value>
+				<Code>15</Code>
+				<Text xml:lang="en">Year 15</Text>
+				<Text xml:lang="mi">Tau 15</Text>
+				<Description>Only applies to Funding Year Level</Description>
+			</Value>
+		</Values>
 	  </CodeSet>      <!-- Year Level Code -->
 
 	  <CodeSet>

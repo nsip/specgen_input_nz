@@ -21,7 +21,7 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The SIF GUID used by systems to identify the organisation.</p>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
   </Item>   <!-- ProviderRefId -->
@@ -30,7 +30,8 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>Local identifier used by the sending to identify the organisation</p>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/>
   </Item>   <!-- ProviderLocalId -->	  
@@ -229,7 +230,7 @@
 			</RelatedOrganisation>
 		</RelatedOrganisationList>
 		<OperationalStatus>O</OperationalStatus>
-		<Type>21</Type>
+		<Type json:force-string="true">21</Type>
 		<ProviderRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</ProviderRefId>
 		<ProviderLocalId>01011234</ProviderLocalId>
 		<Authority>STATE</Authority>

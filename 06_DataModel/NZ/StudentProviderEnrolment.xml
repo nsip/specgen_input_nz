@@ -26,7 +26,7 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The SIF GUID for the student provider enrolment.</p>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"></Type>
 	</Item>    <!-- StudentProviderEnrolmentRefId -->
@@ -36,7 +36,8 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The local Id for the enrolment, assigned by the Provider.</p>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
 	</Item>    <!-- StudentProviderEnrolmentLocalId -->
@@ -60,6 +61,16 @@
 		</Description>
 		<Type ref="CommonTypes" relationship="records enrollment of student in" count="1:1" name="ObjectReferenceType"/>
 	</Item>    <!-- Provider -->
+
+	<Item>
+		<Element>StudentId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>A unique identifier assigned to a Student for a period of enrolment by a provider.</p>
+		</Description>
+		<Type name="xs:normalizedString"></Type>
+	</Item>    <!-- StudentId -->
 
 	<Item>
 		<Element>EntryDate</Element>
@@ -100,7 +111,7 @@
 		<Description>
 			<p>Details of the reasons, and interventions leading up to the student's enrolment being terminated.</p>
 		</Description>
-		<Type ref="CommonData" name="ProviderExitType"/>
+		<Type ref="CommonTypes" name="ProviderExitType"/>
 	</Item>		<!-- Exit -->
 
 	<Item>
@@ -140,14 +151,15 @@
 			<Provider>
 				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
 			</Provider>
+			<StudentId>123ABC</StudentId>
 			<EntryDate>2018-01-29</EntryDate>
 			<Status>WIT</Status>
 			<SchoolEnrolmentList>
-				<SchoolEnrolment>
+				<SchoolEnrolment json:force-array="true">
 					<SchoolCalendarYear>2018</SchoolCalendarYear>
 					<MembershipType>BASE</MembershipType>
-					<YearLevel>11</YearLevel>
-					<EligibilityCriteria json:force-string="true">GAE</EligibilityCriteria>
+					<YearLevel json:force-string="true">11</YearLevel>
+					<EligibilityCriteria>GAE</EligibilityCriteria>
 					<EligibilityVerification>
 						<Source>AUSPA</Source>
 						<DocumentSerialNumber>L905673</DocumentSerialNumber>
@@ -160,7 +172,7 @@
 					</EligibilityVerification>
 					<FTE>1.0</FTE>
 					<FundingType>EX</FundingType>
-					<FundingYearLevel>1</FundingYearLevel>
+					<FundingYearLevel json:force-string="true">1</FundingYearLevel>
 					<Curriculum>NZC</Curriculum>
 					<CurriculumLevel>5</CurriculumLevel>
 					<InternationalEnrolment>
@@ -182,13 +194,14 @@
 			<Provider>
 				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
 			</Provider>
+			<StudentId>123ABC</StudentId>
 			<EntryDate>2017-01-29</EntryDate>
 			<Status>ACT</Status>
 			<SchoolEnrolmentList>
-				<SchoolEnrolment>
+				<SchoolEnrolment json:force-array="true">
 					<SchoolCalendarYear>2017</SchoolCalendarYear>
 					<MembershipType>BASE</MembershipType>
-					<YearLevel>10</YearLevel>
+					<YearLevel json:force-string="true">10</YearLevel>
 					<EligibilityCriteria>NZC</EligibilityCriteria>
 					<EligibilityVerification>
 						<Source>NZBIR</Source>
@@ -202,13 +215,13 @@
 					</EligibilityVerification>
 					<FTE>1.0</FTE>
 					<FundingType>RE</FundingType>
-					<FundingYearLevel>10</FundingYearLevel>
+					<FundingYearLevel json:force-string="true">10</FundingYearLevel>
 					<Curriculum>NZC</Curriculum>
 					<CurriculumLevel>4</CurriculumLevel>
 					<LanguageOfInstructionList>
 						<Language json:force-array="true">
 							<Code>NZS01112</Code>
-							<Level>99</Level>
+							<Level json:force-string="true">1</Level>
 						</Language>
 					</LanguageOfInstructionList>
 					<SubjectChoiceList>
@@ -245,7 +258,7 @@
 					<LanguageOfInstructionList>
 						<Language json:force-array="true">
 							<Code>NZS01112</Code>
-							<Level>99</Level>
+							<Level json:force-string="true">0</Level>
 						</Language>
 					</LanguageOfInstructionList>
 					<SubjectChoiceList>

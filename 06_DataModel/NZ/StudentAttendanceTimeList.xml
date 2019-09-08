@@ -22,22 +22,15 @@
 		<Element>StudentAttendanceTimeListRefId</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
-		<Description>The ID (GUID) that uniquely identifies the attendance record.</Description>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
 		<Type ref="CommonTypes" name="RefIdType"/>
 	</Item>    <!-- StudentAttendanceTimeListRefId -->
-	<Item>
-		<Element>StudentAttendanceTimeListLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>	Local System Id for the Attendance Timelist record.</Description>
-		<Type ref="CommonTypes" name="LocalIdType"/>
-	</Item>    <!-- StudentAttendanceTimeListLocalId -->
 	<Item>
 		<Element>Student</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The ID (GUID) of the student for whom this attendance information is being reported.</p>
+			<p>The student for whom this attendance time list is being reported.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ObjectReference"/>
 	</Item>    <!-- StudentPersonalRefId -->
@@ -46,140 +39,68 @@
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The SIF GUID of the Provider who is making this attendance record.</p>
+			<p>The provider who is providing this attendance time list record.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ObjectReference"/>
 	</Item>    <!-- ProviderRefId -->
 	<Item>
-		<Element>AttendanceTakenTime</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The time the student's attendance was taken.</p>
-		</Description>
-		<Type name="xs:time"/>
-	</Item>    <!-- AttendanceTakenTime -->
-	<Item>
-		<Element>Date</Element>
+		<Element>TeachingGroup</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The calendar date to which this attendance reporting period relates.</p>
+			<p>The teaching group that is reporting this student's attenandce time list.</p>
 		</Description>
-		<Type name="xs:date"/>
-	</Item>    <!-- Date -->
-	<Item>
-		<Element>SchoolYear</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The year for which the attendance record is being made.</p>
-		</Description>
-		<Type name="xs:gYear"/>
-	</Item>    <!-- SchoolYear -->
+		<Type ref="CommonTypes" name="ObjectReference"/>
+	</Item>    <!-- TeachingGroup -->
 	<Item>
 		<Element>AttendanceTimeList</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Breakdown of times that the student was recorded as being 
 				present or absent from school or class.</p>
 		</Description>
 		<Type ref="CommonTypes" name="AttendanceTimeListType"/>
-	</Item>    <!-- AttendanceTimes -->
-	<Item>
-		<Element>PeriodAttendanceList</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>List of any period attendances that need to be captured as part of a full list of 
-			student attendance types.  Reserved for future use with TimeTableCell, Session or Scheduled Activity.
-			</p>
-		</Description>
-		<Type ref="CommonTypes" name="PeriodAttendanceListType"/>
-	</Item>    <!-- PeriodAttendances -->
+	</Item>    <!-- AttendanceTimeList -->
 
-  <xhtml:Example xmlns="" name="Student Attendance (By TimeList) Example">
+
+	<xhtml:Example xmlns="" name="Student Attendance Time List">
 		<StudentAttendanceTimeList>
-			<StudentAttendanceTimeListRefId>45e9c39e-0e77-40b4-8ce7-6a6fa156249e</StudentAttendanceTimeListRefId>
 			<Student>
-				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd971811</RefId>
+				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd991234</RefId>
 			</Student>
 			<Provider>
-				<RefId>e7c15fb4-48a6-4c11-b66f-fe93520444b6</RefId>
+				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd996698</RefId>
 			</Provider>
-			<Date>2018-06-26</Date>
-			<SchoolYear>2018</SchoolYear>
+			<TeachingGroup>
+				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd993378</RefId>
+			</TeachingGroup>
 			<AttendanceTimeList>
-				<AttendanceTime json:force-array="true">
+				<AttendanceTime>
+					<AttendanceTimeLocalId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934554</AttendanceTimeLocalId>
+					<AttendanceType>SCH</AttendanceType>
+					<AttendanceCode>P</AttendanceCode>
+					<AttendanceDate>2018-06-26</AttendanceDate>	
+					<SchedulePeriod>
+						<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd999999</RefId>
+					</SchedulePeriod>
+					<SubmissionDate>2018-06-30</SubmissionDate>		
+					<LastUpdatedDate>2018-06-28</LastUpdatedDate>
+					<AttendanceNote>Student was present.</AttendanceNote>
+				</AttendanceTime>	
+				<AttendanceTime>
+					<AttendanceTimeLocalId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934667</AttendanceTimeLocalId>
+					<AttendanceType>ADH</AttendanceType>
 					<AttendanceCode>E</AttendanceCode>
-					<AttendanceStatus>UNE</AttendanceStatus>
-					<StartTime>09:00:00</StartTime>
-					<EndTime>10:30:00</EndTime>
-					<DurationValue>90</DurationValue>
-					<AttendanceNote>Explained absence, but unjustified, 9:00 to 10:30am</AttendanceNote>
-				</AttendanceTime>
-			</AttendanceTimeList>
-		</StudentAttendanceTimeList>
-	</xhtml:Example>
-
-	<xhtml:Example xmlns="" name="Student Attendance (By Period) Example">
-		<StudentAttendanceTimeList>
-			<StudentAttendanceTimeListRefId>2c4c01f3-1236-409b-b964-2526ce50769a</StudentAttendanceTimeListRefId>
-			<Student>
-				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd971811</RefId>
-			</Student>
-			<Provider>
-				<RefId>e7c15fb4-48a6-4c11-b66f-fe93520444b6</RefId>
-			</Provider>
-			<Date>2018-06-26</Date>
-			<SchoolYear>2018</SchoolYear>
-			<PeriodAttendanceList>
-				<PeriodAttendance>
-					<AttendanceCode>E</AttendanceCode>
-					<AttendanceStatus>UNE</AttendanceStatus>
-					<StartTime>09:00:00</StartTime>
-					<EndTime>09:40:00</EndTime>
-					<SubjectAreaList json:force-array="true">
-						<SubjectArea>MATH</SubjectArea>
-					</SubjectAreaList>
-					<TeacherList json:force-array="true">
-						<StaffMember>
-							<RefId>5e695355-3593-407c-b24e-03e75b8721a1</RefId>
-							<LocalId>McWP</LocalId>
-							<Name>Phineas McWhirter</Name>
-						</StaffMember>
-					</TeacherList>
-					<RoomList json:force-array="true">
-						<RoomId>
-							<LocalId>12P</LocalId>
-						</RoomId>
-					</RoomList>
-					<AttendanceNote>Explained absence, but unjustified; period 4A</AttendanceNote>
-				</PeriodAttendance>
-				<PeriodAttendance>
-					<AttendanceCode>E</AttendanceCode>
-					<AttendanceStatus>UNE</AttendanceStatus>
+					<AttendanceDate>2018-06-27</AttendanceDate>	
 					<StartTime>09:45:00</StartTime>
 					<EndTime>10:30:00</EndTime>
-					<SubjectAreaList json:force-array="true">
-						<SubjectArea>MATH</SubjectArea>
-					</SubjectAreaList>
-					<TeacherList json:force-array="true">
-						<StaffMember>
-							<RefId>5e695355-3593-407c-b24e-03e75b8721a1</RefId>
-							<LocalId>McWP</LocalId>
-							<Name>Phineas McWhirter</Name>
-						</StaffMember>
-					</TeacherList>
-					<RoomList json:force-array="true">
-						<RoomId>
-							<LocalId>12P</LocalId>
-						</RoomId>
-					</RoomList>
-					<AttendanceNote>Explained absence, but unjustified; period 4B</AttendanceNote>
-				</PeriodAttendance>
-			</PeriodAttendanceList>
-		</StudentAttendanceTimeList>
+					<SubmissionDate>2018-06-30</SubmissionDate>		
+					<LastUpdatedDate>2018-06-28</LastUpdatedDate>
+					<AttendanceNote>Explained absence, but unjustified.</AttendanceNote>
+				</AttendanceTime>
+			</AttendanceTimeList>
+		</StudentAttendanceTimeList>	
 	</xhtml:Example>
+
 </DataObject>

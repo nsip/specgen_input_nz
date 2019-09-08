@@ -3,31 +3,22 @@
  	xmlns="http://sifassociation.org/SpecGen">
 
 
-	<!--  Borrowed from SIF AU -->
 	<CodeSet>
 		<Intro>
-			<p>Code denoting the status of the attendance record: Excused, Unexcused, Unknown, etc.</p>
+			<p>Code set denoting the type of attendance being recorded for the student.</p>
 		</Intro>
-		<ID>Attendance Status</ID>
+		<ID>Attendance Type</ID>
 		<Values>
 			<Value>
-				<Code>EXC</Code>
-				<Text>Excused</Text>
+				<Code>ADH</Code>
+				<Text>AD Hoc</Text>
 			</Value>
 			<Value>
-				<Code>UNE</Code>
-				<Text>Unexcused</Text>
-			</Value>
-			<Value>
-				<Code>UNK</Code>
-				<Text>Unknown</Text>
-			</Value>
-			<Value>
-				<Code>NOT</Code>
-				<Text>Not Applicable</Text>
+				<Code>SCH</Code>
+				<Text>Scheduled</Text>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Attendance Status -->
+	</CodeSet>    <!-- Attendance Type -->
 
 	<!--- Defined by SIF NZ -->
 	<CodeSet>
@@ -38,129 +29,158 @@
 		<Values>
 			<Value>
 				<Code>A</Code>
-				<Text>Alternative Education</Text>
-				<Description>Attending Alternative Education</Description>
+				<Text xml:lang="en">Attending Alternative Education</Text>
+				<Text xml:lang="mi">Te haere ki te Mātauranga Kē</Text>
 			</Value>
 			<Value>
 				<Code>L</Code>
-				<Text>Late to class</Text>
+				<Text xml:lang="en">Late to class</Text>
+				<Text xml:lang="mi">Tae tōmuri ki te akomanga</Text>
 			</Value>
 			<Value>
 				<Code>P</Code>
-				<Text>Present</Text>
+				<Text xml:lang="en">Present</Text>
+				<Text xml:lang="mi">I tae</Text>
 			</Value>
 			<Value>
 				<Code>S</Code>
-				<Text>Sickbay</Text>
-				<Description>In Class</Description>
+				<Text xml:lang="en">Sickbay</Text>
+				<Text xml:lang="mi">Taiwhanga tūroro</Text>
 			</Value>
 			<Value>
 				<Code>D</Code>
-				<Text>Medical appointment</Text>
-				<Description>Doctor or Dentist</Description>
+				<Text xml:lang="en">Medical appointment – doctor or dentist</Text>
+				<Text xml:lang="mi">Te tiro tākuta, tākuta niho</Text>
 			</Value>
 			<Value>
 				<Code>I</Code>
-				<Text>Internal school appointment</Text>
-				<Description>Internal school appointment with Dean, DP, sports administrator, coach, attendance officer etc.</Description>
+				<Text xml:lang="en">Internal school appointment or activity – Dean, DP, sports administrator, coach, attendance officer etc.</Text>
+				<Text xml:lang="mi">Te hui ki te Kura – Tumuaki Tuarua, Kaiako Hākinakina, Āpiha Kura etc.</Text>
 			</Value>
 			<Value>
 				<Code>E</Code>
-				<Text>Explained absence</Text>
-				<Description>Absent with an explained but unjustified reason</Description>
+				<Text xml:lang="en">Absent with an explained but unjustified reason</Text>
+				<Text xml:lang="mi">I ngaro engari he kōrero i puta, kāre he take whakamana</Text>
 			</Value>
 			<Value>
 				<Code>M</Code>
-				<Text>Medical absence</Text>
-				<Description>Absent due to short-term illness/medical reasons</Description>
+				<Text xml:lang="en">Absent due to short-term illness/medical reasons</Text>
+				<Text xml:lang="mi">He ngaronga nā runga i te māuiui</Text>
 			</Value>
 			<Value>
 				<Code>J</Code>
-				<Text>Justified absence</Text>
-				<Description>Reason for absence within school policy</Description>
+				<Text xml:lang="en">Justified absence – reason for absence within the school policy</Text>
+				<Text xml:lang="mi">He ngaronga whakamana – ka taka mai i raro i te ritenga ā-kura</Text>
 			</Value>
 			<Value>
 				<Code>T</Code>
-				<Text>Truant</Text>
-				<Description>No information provided – or throw-away explanation</Description>
+				<Text xml:lang="en">No information provided – truant (or throw-away explanation)</Text>
+				<Text xml:lang="mi">Kāre he kōrero – he whakatau (whakamārama rānei)</Text>
 			</Value>
 			<Value>
 				<Code>V</Code>
-				<Text>Exam onsite</Text>
-				<Description>Examination or unsupervised study. Student is on the school-site</Description>
+				<Text xml:lang="en">Examination or unsupervised study. Student is on the school-site</Text>
+				<Text xml:lang="mi">Whakamātautau, te ako noa rānei – ki te kura</Text>
 			</Value>
 			<Value>
 				<Code>N</Code>
-				<Text>Activity</Text>
-				<Description>Attending an on-site school organised activity.</Description>
+				<Text xml:lang="en">On a school based activity</Text>
+				<Text xml:lang="mi">He mahi ā-kura</Text>
 			</Value>
 			<Value>
 				<Code>Q</Code>
-				<Text>School trip/camp</Text>
-				<Description>Attending an off-site school-organised activity such as a trip/camp</Description>
+				<Text xml:lang="en">Attending an off-site school-organised activity such as a trip/camp</Text>
+				<Text xml:lang="mi">He haerenga nā te kura i whakarite pērā i te haerenga, i te noho puni</Text>
 			</Value>
 			<Value>
 				<Code>W</Code>
-				<Text>Work experience</Text>
+				<Text xml:lang="en">Work experience</Text>
+				<Text xml:lang="mi">Mahi wheako</Text>
 			</Value>
 			<Value>
 				<Code>R</Code>
-				<Text>Removed from class</Text>
-				<Description>Temporarily removed from regular class (internal school student isolation)</Description>
+				<Text xml:lang="en">Removed (temporarily) from regular class (internal school student isolation)</Text>
+				<Text xml:lang="mi">I tangohia (taupua nei) mai i te akomanga (he mahi ā-kura ki te whakawehe i te ākonga)</Text>
 			</Value>
 			<Value>
 				<Code>X</Code>
-				<Text>Exam leave</Text>
-				<Description>Unsupervised study, student is off-site</Description>
+				<Text xml:lang="en">Exam leave – unsupervised study – student is off-site</Text>
+				<Text xml:lang="mi">Haerenga whakamātautau – kei waho atu i te kura</Text>
 			</Value>
 			<Value>
 				<Code>G</Code>
-				<Text>Holiday</Text>
-				<Description>during term time</Description>
+				<Text xml:lang="en">Holiday during term time</Text>
+				<Text xml:lang="mi">Te hararei i te wā o te kura</Text>
 			</Value>
 			<Value>
 				<Code>O</Code>
-				<Text>Justified Overseas</Text>
+				<Text xml:lang="en">Justified Overseas</Text>
+				<Text xml:lang="mi">Whakamanatia i tāwāhi</Text>
 			</Value>
 			<Value>
 				<Code>K</Code>
-				<Text>Teen Parent Unit</Text>
-				<Description>Attending Teen Parent Unit</Description>
+				<Text xml:lang="en">Attending a Teen Parent Unit</Text>
+				<Text xml:lang="mi">Te haere ki tētahi Rāngai Mātātahi</Text>
 			</Value>
 			<Value>
 				<Code>?</Code>
-				<Text>Absent</Text>
+				<Text xml:lang="en">Unknown reason</Text>
+				<Text xml:lang="mi">Kāre he kōrero</Text>
 				<Description>Unknown reason for absence</Description>
 			</Value>
 			<Value>
 				<Code>Y</Code>
-				<Text>Activity Centre</Text>
-				<Description>Attending Activity Centre</Description>
+				<Text xml:lang="en">Attending an Activity Centre</Text>
+				<Text xml:lang="mi">Te haere ki te Pokapū Tūmahi</Text>
 			</Value>
 			<Value>
 				<Code>F</Code>
-				<Text>Offsite</Text>
-				<Description>Attending offsite course/class</Description>
+				<Text xml:lang="en">Attending an off-site course/class</Text>
+				<Text xml:lang="mi">He akomanga/whakangungu kei wāhi kē</Text>
 			</Value>
 			<Value>
 				<Code>H</Code>
-				<Text>Health</Text>
-				<Description>Attending a Health Camp/Regional Health School/Residential School</Description>
+				<Text xml:lang="en">Attending a Health Camp/Regional Health School/Residential School</Text>
+				<Text xml:lang="mi">Te Haere ki te Puni Hauora/Kura Hauora ā-Rohe/Kura Tūtahi</Text>
 			</Value>
 			<Value>
 				<Code>C</Code>
-				<Text>Justice</Text>
-				<Description>Involved in Justice Court proceedings</Description>
+				<Text xml:lang="en">Involved in Justice Court proceedings</Text>
+				<Text xml:lang="mi">Kua uru ki ngā tono ā-Kōti</Text>
 			</Value>
 			<Value>
 				<Code>U</Code>
-				<Text>Suspended</Text>
-				<Description>Stood down or suspended</Description>
+				<Text xml:lang="en">Stood down or suspended</Text>
+				<Text xml:lang="mi">Tāiritia</Text>
 			</Value>
 			<Value>
 				<Code>Z</Code>
-				<Text>STP</Text>
-				<Description>Secondary Tertiary Program (including Trades Academies)</Description>
+				<Text xml:lang="en">Secondary Tertiary Program (including Trades Academies)</Text>
+				<Text xml:lang="mi">Hōtaka Kura Tuarua, Kura Wānanga (me ngā Kura Ahumahi)</Text>
+			</Value>
+		</Values>
+	</CodeSet>
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the possible attendance code groups, e.g. Present, Justified and Unjustified.</p>
+		</Intro>
+		<ID>Attendance Code Group</ID>
+		<Values>
+			<Value>
+				<Code>J</Code>
+				<Text xml:lang="en">Justified</Text>
+				<Text xml:lang="mi">Parahau</Text>
+			</Value>
+			<Value>
+				<Code>P</Code>
+				<Text xml:lang="en">Present</Text>
+				<Text xml:lang="mi">I tae</Text>
+			</Value>
+			<Value>
+				<Code>U</Code>
+				<Text xml:lang="en">Unjustified</Text>
+				<Text xml:lang="mi">Parahau Kore</Text>
 			</Value>
 		</Values>
 	</CodeSet>

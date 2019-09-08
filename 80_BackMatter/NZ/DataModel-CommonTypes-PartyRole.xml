@@ -1010,7 +1010,7 @@
 			<Description>
 				<p>Does the individual have parental or legal guardianship responsibility for the student?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
 		</Item>     <!-- ParentLegalGuardian -->
 		<Item>
 			<Element>PickupRights</Element>
@@ -1018,7 +1018,7 @@
 			<Description>
 				<p>Does the Contact have the right to pick the Student up from school?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
 		</Item>     <!-- PickupRights -->
 		<Item>
 			<Element>LivesWith</Element>
@@ -1026,7 +1026,7 @@
 			<Description>
 				<p>Does the student live with this contact?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
 		</Item>     <!-- LivesWith -->
 		<Item>
 			<Element>AccessToRecords</Element>
@@ -1034,7 +1034,7 @@
 			<Description>
 				<p>Does this contact have access to the student's records?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
 		</Item>     <!-- AccessToRecords -->
 		<Item>
 			<Element>ReceivesAssessmentReport</Element>
@@ -1042,7 +1042,7 @@
 			<Description>
 				<p>In particular, should this contact receive a copy of the student report? </p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
 		</Item>     <!-- ReceivesAssessmentReport -->
 		<Item>
 			<Element>EmergencyContact</Element>
@@ -1050,7 +1050,7 @@
 			<Description>
 				<p>Should this contact be notified in case of emergency?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
 		</Item>     <!-- EmergencyContact -->
 		<if intl="nz">
 			<Item>
@@ -1060,7 +1060,7 @@
 					<p>Should this contact be notified in case of civil defense emergency
 					where the normal emergency contact is not close to a hosting school?</p>
 				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+				<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
 			</Item>     <!-- CivilDefenseEmergencyContact -->
 		</if>
 		<if intl="au">
@@ -1070,7 +1070,7 @@
 				<Description>
 					<p>Does this contact have or share custody of the student?</p>
 				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+				<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
 			</Item>     <!-- HasCustody -->
 		</if>
 		<Item>
@@ -1079,7 +1079,7 @@
 			<Description>
 				<p>Is this person to be contacted in case of disciplinary action?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
 		</Item>     <!-- DisciplinaryContact -->
 		<Item>
 			<Element>AttendanceContact</Element>
@@ -1087,7 +1087,7 @@
 			<Description>
 				<p>Should this contact be notified in case of an attendance issue?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
 		</Item>     <!-- AttendanceContact -->
 		<Item>
 			<Element>PrimaryCareProvider</Element>
@@ -1095,7 +1095,7 @@
 			<Description>
 				<p>Does this person provide daily living or personal assistance to the student?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
 		</Item>     <!-- PrimaryCareGiver -->
 
 		<Item>
@@ -1104,7 +1104,7 @@
 			<Description>
 				<p>Is this the contact responsible for Payment of Fees?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
 		</Item>     <!-- FeesBilling -->
 		<Item>
 			<Element>FeesAccess</Element>
@@ -1112,7 +1112,7 @@
 			<Description>
 				<p>Does this contact have access to fees information?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
 		</Item>     <!-- FeesAccess -->
 		<Item>
 			<Element>FamilyMail</Element>
@@ -1120,7 +1120,7 @@
 			<Description>
 				<p>Does this person receive family mail?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
 		</Item>     <!-- FamilyMail -->
 		<if intl="au">
 			<Item>
@@ -1129,7 +1129,7 @@
 				<Description>
 					<p>Is there an Intervention Order against this Contact?</p>
 				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+				<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
 			</Item>     <!-- InterventionOrder -->
 		</if>
 		<if intl="nz">
@@ -1140,7 +1140,7 @@
 					<p>Is there a Protection Order, Restraining Order or some other court order
 					preventing the Person from having contact with the Student?</p>
 				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+				<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
 			</Item>     <!-- CourtOrder -->
 			<Item>
 				<Element>HealthContact</Element>
@@ -1148,7 +1148,7 @@
 				<Description>
 					<p>Is this student contact a healthcare provider for the student?</p>
 				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+				<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
 			</Item>     <!-- HealthContact -->
 		</if>
 	

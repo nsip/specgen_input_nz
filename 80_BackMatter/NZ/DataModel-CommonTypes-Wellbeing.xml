@@ -1512,7 +1512,7 @@
 			<Description>
 				<p>The expected learning support outcome for the Wellbeing Characteristic. Only used for Schools.</p>
 			</Description>
-			<Type ref="CodeTypes" name="NZCodeSetsLearningSupportOutcomeType"/>
+			<Type ref="CodeSets" name="NZCodeSetsLearningSupportOutcomeType"/>
 		</Item>    <!-- LearningSupportOutcome -->
 	</CommonElement>
 
@@ -1530,7 +1530,7 @@
 			<Description>
 				<p>A list of the locations where the incident took place.</p>
 			</Description>
-			<Type ref="CodeTypes" name="NZCodeSetsLearningSupportTeWharikiDomainType"/>
+			<Type ref="CodeSets" name="NZCodeSetsLearningSupportTeWharikiDomainType"/>
 		</Item>    <!-- ReviewDate -->
 	</CommonElement>
 
@@ -1548,7 +1548,7 @@
 			<Description>
 				<p>The location where the incident took place.</p>
 			</Description>
-			<Type ref="CodeTypes" name="NZCodeSetsWellbeingEventLocationType"/>
+			<Type ref="CodeSets" name="NZCodeSetsWellbeingEventLocationType"/>
 		</Item>    <!-- Location -->
 	</CommonElement>
 
@@ -1566,7 +1566,7 @@
 			<Description>
 				<p>The action taken as a result of this Wellbeing event.</p>
 			</Description>
-			<Type ref="CodeTypes" name="NZCodeSetsWellbeingEventActionTakenType"/>
+			<Type ref="CodeSets" name="NZCodeSetsWellbeingEventActionTakenType"/>
 		</Item>    <!-- ActionTaken -->
 	</CommonElement>
 
@@ -1584,7 +1584,7 @@
 			<Description>
 				<p>The possible motivation that triggered the event.</p>
 			</Description>
-			<Type ref="CodeTypes" name="NZCodeSetsWellbeingEventPossibleMotivationType"/>
+			<Type ref="CodeSets" name="NZCodeSetsWellbeingEventPossibleMotivationType"/>
 		</Item>    <!-- PossibleMotivation -->
 	</CommonElement>
 
@@ -1603,7 +1603,7 @@
 				<Description>
 					<p>The type of minor problem behaviour identified as a result of the Wellbeing Event.</p>
 				</Description>
-				<Type ref="CodeTypes" name="NZCodeSetsWellbeingEventMinorBehaviourType"/>
+				<Type ref="CodeSets" name="NZCodeSetsWellbeingEventMinorBehaviourType"/>
 			</Item>    <!-- MinorBehaviour -->
 			<Item>
 				<Element>MajorBehaviour</Element>
@@ -1611,7 +1611,7 @@
 				<Description>
 					<p>The type of major problem behaviour identified as a result of the Wellbeing Event.</p>
 				</Description>
-				<Type ref="CodeTypes" name="NZCodeSetsWellbeingEventMajorBehaviourType"/>
+				<Type ref="CodeSets" name="NZCodeSetsWellbeingEventMajorBehaviourType"/>
 			</Item>    <!-- MajorBehaviour -->
 		</Choice>
 	</CommonElement>

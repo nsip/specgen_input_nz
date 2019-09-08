@@ -19,7 +19,7 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
-			<p>The GUID of the student.</p>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
 	</Item>    <!-- StudentPersonalRefId -->
@@ -29,12 +29,7 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
-			<p>The locally-assigned identifier for this student.</p>
-			<p>An alternative identifier as may be allocated by a
-			provider.</p>
-			<p>This identifier may be set for each student independently
-			for each provider. Each identifier is only available to be
-			retrieved or maintained by the provider that created it.</p>
+			<p>The Id of the data object record that was provided by the system that the information was originally sourced from. This identifier may be set for each student independently for each provider. Each identifier is only available to be retrieved or maintained by the provider that created it.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
 	</Item>    <!-- StudentPersonalLocalId -->

@@ -101,56 +101,83 @@
 		<Values>
 			<Value>
 				<Code>32</Code>
-				<Text>Composite School (Year 1-15)</Text>
+				<Text xml:lang="en">Composite School (Year 1-15)</Text>
+				<Text xml:lang="mi">Kura Hiato (Tau 1 – 15)</Text>
 			</Value>    <!-- Composite (Year 1-15) -->
 			<Value>
 				<Code>21</Code>
-				<Text>Contributing Primary (Year 1-6)</Text>
+				<Text xml:lang="en">Contributing Primary (Year 1-6)</Text>
+				<Text xml:lang="mi">Kura Tuatahi (Tau 1 – 6)</Text>
 			</Value>    <!-- Contributing Primary (Year 1-6) -->
 			<Value>
 				<Code>34</Code>
-				<Text>The Correspondence School</Text>
+				<Text xml:lang="en">The Correspondence School</Text>
+				<Text xml:lang="mi">Te Kura</Text>
 			</Value>    <!-- Correspondence School -->
 			<Value>
 				<Code>20</Code>
-				<Text>Full Primary (Year 1-8)</Text>
+				<Text xml:lang="en">Full Primary (Year 1-8)</Text>
+				<Text xml:lang="mi">Kura Tuatahi (Tau 1 – 8)</Text>
 			</Value>    <!-- Full Primary (Year 1-8) -->
 			<Value>
 				<Code>22</Code>
-				<Text>Intermediate (Year 7-8)</Text>
+				<Text xml:lang="en">Intermediate School (Year 7-8)</Text>
+				<Text xml:lang="mi">Kura Takawaenga (Tau 7 me te 8)</Text>
 			</Value>    <!-- Intermediate (Year 7-8) -->
 			<Value>
 				<Code>35</Code>
-				<Text>Restricted Composite School (Year 7-10)</Text>
+				<Text xml:lang="en">Restricted Composite School (Year 7-10)</Text>
+				<Text xml:lang="mi">Kura Hiato (Tau 7 – 10)</Text>
 			</Value>    <!-- Restricted Composite (Year 7-10) -->
 			<Value>
 				<Code>30</Code>
-				<Text>Secondary School (Year 7-15)</Text>
+				<Text xml:lang="en">Secondary School (Year 7-15)</Text>
+				<Text xml:lang="mi">Kura Tuarua (Tau 7 – 15)</Text>
 			</Value>    <!-- Secondary (Year 7-15) -->
 			<Value>
 				<Code>40</Code>
-				<Text>Secondary School (Year 9-15)</Text>
+				<Text xml:lang="en">Secondary School (Year 9-15)</Text>
+				<Text xml:lang="mi">Kura Tuarua (Tau 9 – 15)</Text>
 			</Value>    <!-- Secondary (Year 9-15) -->
 			<Value>
 				<Code>23</Code>
-				<Text>Special School</Text>
+				<Text xml:lang="en">Special School</Text>
+				<Text xml:lang="mi">Kura Motuhake</Text>
 			</Value>    <!-- Special School -->
 			<Value>
 				<Code>41</Code>
-				<Text>Teen Parent Unit (Year 9-15)</Text>
+				<Text xml:lang="en">Teen Parent Unit (Year 9-15)</Text>
+				<Text xml:lang="mi">Ranga Mātātahi (Tau 9 – 15)</Text>
 			</Value>    <!-- Teen Parent Unit -->
 			<Value>
 				<Code>997</Code>
-				<Text>Activity Centre</Text>
+				<Text xml:lang="en">Activity Centre</Text>
+				<Text xml:lang="mi">Pokapū Mahi</Text>
 			</Value>    <!-- Activity Centre -->
 
 			<Value>
 				<Code>998</Code>
-				<Text>Community of Learning | Kāhui Ako</Text>
+				<Text xml:lang="en">Community of Learning | Kāhui Ako</Text>
+				<Text xml:lang="mi">Kāhui Ako</Text>
 			</Value>
 			<Value>
 				<Code>999</Code>
 				<Text>Ministry of Education Local Office</Text>
+			</Value>
+			<Value>
+				<Code>1</Code>
+				<Text xml:lang="en">Early Childhood Education (ECE)</Text>
+				<Text xml:lang="mi">Kura Kōhungahunga</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text xml:lang="en">School</Text>
+				<Text xml:lang="mi">Kura</Text>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text xml:lang="en">Tertiary</Text>
+				<Text xml:lang="mi">Kura Wānanga</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Organisation Type -->

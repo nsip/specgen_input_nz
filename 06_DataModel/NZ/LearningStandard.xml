@@ -25,7 +25,7 @@
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>Unique identifier (GUID) that uniquely identifies the particular version or edition of the Learning Standard.</p>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>    <!-- LearningStandardRefId -->
@@ -34,10 +34,7 @@
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>Code assigned by the LearningStandard publisher to identify the LearningStandard.
-        This may not uniquely identify the LearningStandard, where there may be 
-        multiple editions or versions of a particular LearningStandard.</p>          
-      <p>The natural id may be formed by combining Publisher Id, Code &amp; VersionNo.</p>
+      <p>Code assigned by the LearningStandard publisher to identify the LearningStandard.  This may not uniquely identify the LearningStandard, where there may be multiple editions or versions of a particular LearningStandard. The Id of the data object record that was provided by the system that the information was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"/>
   </Item>    <!-- LearningStandardLocalId -->  
