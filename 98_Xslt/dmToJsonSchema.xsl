@@ -493,7 +493,7 @@
 			<!-- Item is repeatable (or in a repeatable choice) -->
 			<xsl:when test="contains(specgen:Characteristics,  'R') or parent::specgen:Choice/@repeatable">
 				<xsl:value-of select="concat($indent, '  type: array&#x0a;', $indent, '  items:&#x0a;')"/>
-				<xsl:value-of select="concat($indent, '  - allOf:&#x0a;')"/>
+				<xsl:value-of select="concat($indent, '    allOf:&#x0a;')"/>
 
 				<!-- $ref -->
 				<xsl:apply-templates select="specgen:Type">
