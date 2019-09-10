@@ -8,21 +8,21 @@
 		</Intro>
 		<ID>Wellbeing Severity</ID>
 		<Values>
-				<Value>
+			<Value>
 				<Code>HGH</Code>
 				<Text xml:lang="en">High</Text>
 				<Text xml:lang="mi">Haurunga</Text>
-				</Value>
-				<Value>
+			</Value>
+			<Value>
 				<Code>MOD</Code>
 				<Text xml:lang="en">Moderate</Text>
 				<Text xml:lang="mi">Hauwaenga</Text>
-				</Value>
-				<Value>
+			</Value>
+			<Value>
 				<Code>LOW</Code>
 				<Text xml:lang="en">Low</Text>
 				<Text xml:lang="mi">Hauraro</Text>
-				</Value>
+			</Value>
 		</Values>
 	</CodeSet>    <!-- Wellbeing Severity -->
 
@@ -95,308 +95,582 @@
 		</Intro>
 		<ID>Wellbeing Characteristic Sub Category</ID>
 		<Values>
-			<Value><Code>DIET-01</Code><Text>Vegan</Text></Value>
-			<Value><Code>DIET-02</Code><Text>Vegetarian</Text></Value>
-			<Value><Code>DIET-03</Code><Text>Halal</Text></Value>
-			<Value><Code>DIET-04</Code><Text>Kosher</Text></Value>
-			<Value><Code>DIET-05</Code><Text>Pescetarian</Text></Value>
-			<Value><Code>DIET-06</Code><Text>Gluten-free</Text></Value>
 			<Value>
-			<Code>LSN-ABN</Code>
-			<Text xml:lang="en">Absence</Text>
-			<Text xml:lang="mi">Ngaronga</Text>
+			  <Code>DIET-01</Code>
+			  <Text xml:lang="en">Vegan</Text>
 			</Value>
 			<Value>
-			<Code>LSN-ACD</Code>
-			<Text xml:lang="en">Academic</Text>
-			<Text xml:lang="mi">Mātauranga</Text>
+			  <Code>DIET-02</Code>
+			  <Text xml:lang="en">Vegetarian</Text>
 			</Value>
 			<Value>
-			<Code>LSN-ANX</Code>
-			<Text xml:lang="en">Anxiety</Text>
-			<Text xml:lang="mi">Mānukanuka</Text>
+			  <Code>DIET-03</Code>
+			  <Text xml:lang="en">Halal</Text>
 			</Value>
 			<Value>
-			<Code>LSN-ASD</Code>
-			<Text xml:lang="en">Autism Spectrum Disorder (ASD)</Text>
-			<Text xml:lang="mi">Takiwāwatanga</Text>
+			  <Code>DIET-04</Code>
+			  <Text xml:lang="en">Kosher</Text>
 			</Value>
 			<Value>
-			<Code>LSN-ATT</Code>
-			<Text xml:lang="en">Attendance</Text>
-			<Text xml:lang="mi">Taetanga</Text>
+			  <Code>DIET-05</Code>
+			  <Text xml:lang="en">Pescetarian</Text>
 			</Value>
 			<Value>
-			<Code>LSN-AUD</Code>
-			<Text xml:lang="en">Auditory Processing</Text>
-			<Text xml:lang="mi">Tātari Iorongo</Text>
+			  <Code>DIET-06</Code>
+			  <Text xml:lang="en">Gluten-free</Text>
 			</Value>
 			<Value>
-			<Code>LSN-BHV</Code>
-			<Text xml:lang="en">Behaviour</Text>
-			<Text xml:lang="mi">Whanonga</Text>
+				<Code>LSN-ABN</Code>
+				<Text xml:lang="en">Absence</Text>
+				<Text xml:lang="mi">Ngaronga</Text>
 			</Value>
 			<Value>
-			<Code>LSN-COM</Code>
-			<Text xml:lang="en">Communication</Text>
-			<Text xml:lang="mi">Whakawhiti Kōrero</Text>
+				<Code>LSN-ACD</Code>
+				<Text xml:lang="en">Academic</Text>
+				<Text xml:lang="mi">Mātauranga</Text>
 			</Value>
 			<Value>
-			<Code>LSN-CPH</Code>
-			<Text xml:lang="en">Comprehension</Text>
-			<Text xml:lang="mi">Aroā</Text>
+				<Code>LSN-ANX</Code>
+				<Text xml:lang="en">Anxiety</Text>
+				<Text xml:lang="mi">Mānukanuka</Text>
 			</Value>
 			<Value>
-			<Code>LSN-DCA</Code>
-			<Text xml:lang="en">Dyscalculia</Text>
-			<Text xml:lang="mi">Dyscalculia</Text>
+				<Code>LSN-ASD</Code>
+				<Text xml:lang="en">Autism Spectrum Disorder (ASD)</Text>
+				<Text xml:lang="mi">Takiwāwatanga</Text>
 			</Value>
 			<Value>
-			<Code>LSN-DEV</Code>
-			<Text xml:lang="en">Developmental Delay</Text>
-			<Text xml:lang="mi">Whanaketanga pōturi</Text>
+				<Code>LSN-ATT</Code>
+				<Text xml:lang="en">Attendance</Text>
+				<Text xml:lang="mi">Taetanga</Text>
 			</Value>
 			<Value>
-			<Code>LSN-DGA</Code>
-			<Text xml:lang="en">Dysgraphia</Text>
-			<Text xml:lang="mi">Dysgraphia</Text>
+				<Code>LSN-AUD</Code>
+				<Text xml:lang="en">Auditory Processing</Text>
+				<Text xml:lang="mi">Tātari Iorongo</Text>
 			</Value>
 			<Value>
-			<Code>LSN-DPA</Code>
-			<Text xml:lang="en">Dyspraxia</Text>
-			<Text xml:lang="mi">Dyspraxia</Text>
+				<Code>LSN-BHV</Code>
+				<Text xml:lang="en">Behaviour</Text>
+				<Text xml:lang="mi">Whanonga</Text>
 			</Value>
 			<Value>
-			<Code>LSN-DSA</Code>
-			<Text xml:lang="en">Dyslexia</Text>
-			<Text xml:lang="mi">Dyslexia</Text>
+				<Code>LSN-COM</Code>
+				<Text xml:lang="en">Communication</Text>
+				<Text xml:lang="mi">Whakawhiti Kōrero</Text>
 			</Value>
 			<Value>
-			<Code>LSN-ENG</Code>
-			<Text xml:lang="en">Engagement</Text>
-			<Text xml:lang="mi">Whakatari</Text>
+				<Code>LSN-CPH</Code>
+				<Text xml:lang="en">Comprehension</Text>
+				<Text xml:lang="mi">Aroā</Text>
 			</Value>
 			<Value>
-			<Code>LSN-EPI</Code>
-			<Text xml:lang="en">Epilepsy</Text>
-			<Text xml:lang="mi">Mate Hūhuki</Text>
+				<Code>LSN-DCA</Code>
+				<Text xml:lang="en">Dyscalculia</Text>
+				<Text xml:lang="mi">Dyscalculia</Text>
 			</Value>
 			<Value>
-			<Code>LSN-ESL</Code>
-			<Text xml:lang="en">ESOL</Text>
-			<Text xml:lang="mi">ESOL</Text>
+				<Code>LSN-DEV</Code>
+				<Text xml:lang="en">Developmental Delay</Text>
+				<Text xml:lang="mi">Whanaketanga pōturi</Text>
 			</Value>
 			<Value>
-			<Code>LSN-FCS</Code>
-			<Text xml:lang="en">Focus</Text>
-			<Text xml:lang="mi">Aronga</Text>
+				<Code>LSN-DGA</Code>
+				<Text xml:lang="en">Dysgraphia</Text>
+				<Text xml:lang="mi">Dysgraphia</Text>
 			</Value>
 			<Value>
-			<Code>LSN-FMS</Code>
-			<Text xml:lang="en">Fine Motor Skills</Text>
-			<Text xml:lang="mi">Pūkenga Āta Nekeneke</Text>
+				<Code>LSN-DPA</Code>
+				<Text xml:lang="en">Dyspraxia</Text>
+				<Text xml:lang="mi">Dyspraxia</Text>
 			</Value>
 			<Value>
-			<Code>LSN-HRG</Code>
-			<Text xml:lang="en">Hearing</Text>
-			<Text xml:lang="mi">Whakarongo</Text>
+				<Code>LSN-DSA</Code>
+				<Text xml:lang="en">Dyslexia</Text>
+				<Text xml:lang="mi">Dyslexia</Text>
 			</Value>
 			<Value>
-			<Code>LSN-HWG</Code>
-			<Text xml:lang="en">Handwriting</Text>
-			<Text xml:lang="mi">Tuhituhi</Text>
+				<Code>LSN-ENG</Code>
+				<Text xml:lang="en">Engagement</Text>
+				<Text xml:lang="mi">Whakatari</Text>
 			</Value>
 			<Value>
-			<Code>LSN-IND</Code>
-			<Text xml:lang="en">Independence</Text>
-			<Text xml:lang="mi">Mahi Takitahi</Text>
+				<Code>LSN-EPI</Code>
+				<Text xml:lang="en">Epilepsy</Text>
+				<Text xml:lang="mi">Mate Hūhuki</Text>
 			</Value>
 			<Value>
-			<Code>LSN-INT</Code>
-			<Text xml:lang="en">Intellectual Disability</Text>
-			<Text xml:lang="mi">Hauā ā-hinengaro</Text>
+				<Code>LSN-ESL</Code>
+				<Text xml:lang="en">ESOL</Text>
+				<Text xml:lang="mi">ESOL</Text>
 			</Value>
 			<Value>
-			<Code>LSN-LIT</Code>
-			<Text xml:lang="en">Literacy</Text>
-			<Text xml:lang="mi">Reo Matatini</Text>
+				<Code>LSN-FCS</Code>
+				<Text xml:lang="en">Focus</Text>
+				<Text xml:lang="mi">Aronga</Text>
 			</Value>
 			<Value>
-			<Code>LSN-LNG</Code>
-			<Text xml:lang="en">Learning</Text>
-			<Text xml:lang="mi">Te Akoako</Text>
+				<Code>LSN-FMS</Code>
+				<Text xml:lang="en">Fine Motor Skills</Text>
+				<Text xml:lang="mi">Pūkenga Āta Nekeneke</Text>
 			</Value>
 			<Value>
-			<Code>LSN-MTH</Code>
-			<Text xml:lang="en">Maths</Text>
-			<Text xml:lang="mi">Pāngarau</Text>
+				<Code>LSN-HRG</Code>
+				<Text xml:lang="en">Hearing</Text>
+				<Text xml:lang="mi">Whakarongo</Text>
 			</Value>
 			<Value>
-			<Code>LSN-NUM</Code>
-			<Text xml:lang="en">Numeracy</Text>
-			<Text xml:lang="mi">Reo Pāngarau</Text>
+				<Code>LSN-HWG</Code>
+				<Text xml:lang="en">Handwriting</Text>
+				<Text xml:lang="mi">Tuhituhi</Text>
 			</Value>
 			<Value>
-			<Code>LSN-ORL</Code>
-			<Text xml:lang="en">Oral Language</Text>
-			<Text xml:lang="mi">Reo ā-Waha</Text>
+				<Code>LSN-IND</Code>
+				<Text xml:lang="en">Independence</Text>
+				<Text xml:lang="mi">Mahi Takitahi</Text>
 			</Value>
 			<Value>
-			<Code>LSN-ORS</Code>
-			<Text xml:lang="en">ORS</Text>
-			<Text xml:lang="mi">ORS</Text>
+				<Code>LSN-INT</Code>
+				<Text xml:lang="en">Intellectual Disability</Text>
+				<Text xml:lang="mi">Hauā ā-hinengaro</Text>
 			</Value>
 			<Value>
-			<Code>LSN-OTH</Code>
-			<Text xml:lang="en">Others</Text>
-			<Text xml:lang="mi">Ētahi atu</Text>
+				<Code>LSN-LIT</Code>
+				<Text xml:lang="en">Literacy</Text>
+				<Text xml:lang="mi">Reo Matatini</Text>
 			</Value>
 			<Value>
-			<Code>LSN-PHS</Code>
-			<Text xml:lang="en">Physical Skills</Text>
-			<Text xml:lang="mi">Mahi ā-ringa</Text>
+				<Code>LSN-LNG</Code>
+				<Text xml:lang="en">Learning</Text>
+				<Text xml:lang="mi">Te Akoako</Text>
 			</Value>
 			<Value>
-			<Code>LSN-PSL</Code>
-			<Text xml:lang="en">Passive Learner</Text>
-			<Text xml:lang="mi">Ākonga </Text>
+				<Code>LSN-MTH</Code>
+				<Text xml:lang="en">Maths</Text>
+				<Text xml:lang="mi">Pāngarau</Text>
 			</Value>
 			<Value>
-			<Code>LSN-PST</Code>
-			<Text xml:lang="en">Pastoral</Text>
-			<Text xml:lang="mi">Te manaaki</Text>
+				<Code>LSN-NUM</Code>
+				<Text xml:lang="en">Numeracy</Text>
+				<Text xml:lang="mi">Reo Pāngarau</Text>
 			</Value>
 			<Value>
-			<Code>LSN-RDG</Code>
-			<Text xml:lang="en">Reading</Text>
-			<Text xml:lang="mi">Pānui</Text>
+				<Code>LSN-ORL</Code>
+				<Text xml:lang="en">Oral Language</Text>
+				<Text xml:lang="mi">Reo ā-Waha</Text>
 			</Value>
 			<Value>
-			<Code>LSN-ROL</Code>
-			<Text xml:lang="en">Rate of Learning</Text>
-			<Text xml:lang="mi">Te haere o ngā akoranga</Text>
+				<Code>LSN-ORS</Code>
+				<Text xml:lang="en">ORS</Text>
+				<Text xml:lang="mi">ORS</Text>
 			</Value>
 			<Value>
-			<Code>LSN-ROP</Code>
-			<Text xml:lang="en">Rate of Progress</Text>
-			<Text xml:lang="mi">Te haere o te mahi</Text>
+				<Code>LSN-OTH</Code>
+				<Text xml:lang="en">Others</Text>
+				<Text xml:lang="mi">Ētahi atu</Text>
 			</Value>
 			<Value>
-			<Code>LSN-SPH</Code>
-			<Text xml:lang="en">Speech</Text>
-			<Text xml:lang="mi">Kōrero</Text>
+				<Code>LSN-PHS</Code>
+				<Text xml:lang="en">Physical Skills</Text>
+				<Text xml:lang="mi">Mahi ā-ringa</Text>
 			</Value>
 			<Value>
-			<Code>LSN-SPL</Code>
-			<Text xml:lang="en">Spelling</Text>
-			<Text xml:lang="mi">Tuhi kupu</Text>
+				<Code>LSN-PSL</Code>
+				<Text xml:lang="en">Passive Learner</Text>
+				<Text xml:lang="mi">Ākonga </Text>
 			</Value>
 			<Value>
-			<Code>LSN-SRL</Code>
-			<Text xml:lang="en">Social Relationships</Text>
-			<Text xml:lang="mi">Whakahoahoa</Text>
+				<Code>LSN-PST</Code>
+				<Text xml:lang="en">Pastoral</Text>
+				<Text xml:lang="mi">Te manaaki</Text>
 			</Value>
 			<Value>
-			<Code>LSN-VIS</Code>
-			<Text xml:lang="en">Vision</Text>
-			<Text xml:lang="mi">Kitenga</Text>
+				<Code>LSN-RDG</Code>
+				<Text xml:lang="en">Reading</Text>
+				<Text xml:lang="mi">Pānui</Text>
 			</Value>
 			<Value>
-			<Code>LSN-WBG</Code>
-			<Text xml:lang="en">Wellbeing</Text>
-			<Text xml:lang="mi">Hauora</Text>
+				<Code>LSN-ROL</Code>
+				<Text xml:lang="en">Rate of Learning</Text>
+				<Text xml:lang="mi">Te haere o ngā akoranga</Text>
 			</Value>
 			<Value>
-			<Code>LSN-WRT</Code>
-			<Text xml:lang="en">Writing </Text>
-			<Text xml:lang="mi">Tuhi kōrero</Text>
+				<Code>LSN-ROP</Code>
+				<Text xml:lang="en">Rate of Progress</Text>
+				<Text xml:lang="mi">Te haere o te mahi</Text>
 			</Value>
-			<Value><Code>MH-1</Code><Text>Adjustment Disorder</Text></Value>
-			<Value><Code>MH-2</Code><Text>Anorexia</Text></Value>
-			<Value><Code>MH-3</Code><Text>Anxiety Disorder</Text></Value>
-			<Value><Code>MH-4</Code><Text>Attachment Disorder</Text></Value>
-			<Value><Code>MH-5</Code><Text>Attention Deficit Hyperactivity Disorder (ADHD)</Text></Value>
-			<Value><Code>MH-6</Code><Text>Bipolar Affective Disorder</Text></Value>
-			<Value><Code>MH-7</Code><Text>Bulimia</Text></Value>
-			<Value><Code>MH-8</Code><Text>Depression</Text></Value>
-			<Value><Code>MH-9</Code><Text>Mixed Depression and Anxiety</Text></Value>
-			<Value><Code>MH-10</Code><Text>Obsessive Compulsive  Disorder</Text></Value>
-			<Value><Code>MH-11</Code><Text>Oppositional Defiance Disorder</Text></Value>
-			<Value><Code>MH-12</Code><Text>Paranoia</Text></Value>
-			<Value><Code>MH-13</Code><Text>Post-Traumatic Stress Disorder</Text></Value>
-			<Value><Code>MH-14</Code><Text>Reactive Attachment Disorder</Text></Value>
-			<Value><Code>MH-15</Code><Text>Social Anxiety Disorder</Text></Value>
-			<Value><Code>MH-16</Code><Text>Tic Disorder</Text></Value>
-			<Value><Code>MH-17</Code><Text>Tourette’s Syndrome</Text></Value>
-			<Value><Code>MH-18</Code><Text>Conduct Disorder</Text></Value>
-			<Value><Code>MS-1</Code><Text>Absence seizures epilepsy</Text></Value>
-			<Value><Code>MS-2</Code><Text>Tonic Clonic epilepsy</Text></Value>
-			<Value><Code>MS-3</Code><Text>Myotonic epilepsy</Text></Value>
-			<Value><Code>MS-4</Code><Text>Refractory epilepsy</Text></Value>
-			<Value><Code>MAA-1</Code><Text>Antibiotics -specify type(s)</Text></Value>
-			<Value><Code>MAA-2</Code><Text>Dairy</Text></Value>
-			<Value><Code>MAA-3</Code><Text>Egg</Text></Value>
-			<Value><Code>MAA-4</Code><Text>Fruit (specify)</Text></Value>
-			<Value><Code>MAA-5</Code><Text>Insect bites - nfd</Text></Value>
-			<Value><Code>MAA-6</Code><Text>Bees</Text></Value>
-			<Value><Code>MAA-7</Code><Text>Ants</Text></Value>
-			<Value><Code>MAA-8</Code><Text>Ticks</Text></Value>
-			<Value><Code>MAA-9</Code><Text>Latex</Text></Value>
-			<Value><Code>MAA-10</Code><Text>Peanuts</Text></Value>
-			<Value><Code>MAA-11</Code><Text>Shellfish</Text></Value>
-			<Value><Code>MAA-12</Code><Text>Tree nuts</Text></Value>
-			<Value><Code>MAA-13</Code><Text>Wheat</Text></Value>
-			<Value><Code>MAA-14</Code><Text>Other</Text></Value>
-			<Value><Code>MAIM-1</Code><Text>Coeliac Disease - Gluten</Text></Value>
-			<Value><Code>MAIM-2</Code><Text>Enterocolitis Syndrome</Text></Value>
-			<Value><Code>MAIM-3</Code><Text>Food Protein Induced Syndrome</Text></Value>
-			<Value><Code>MB-1</Code><Text>Anaemia</Text></Value>
-			<Value><Code>MB-2</Code><Text>Haemophilia</Text></Value>
-			<Value><Code>MB-3</Code><Text>Thalassemia</Text></Value>
-			<Value><Code>MB-4</Code><Text>Vasculitis</Text></Value>
-			<Value><Code>MB-5</Code><Text>Von Willebrand's Disease</Text></Value>
-			<Value><Code>MMS-1</Code><Text>Ehlers Danlos</Text></Value>
-			<Value><Code>MMS-2</Code><Text>Fibromyalgia  - discuss</Text></Value>
-			<Value><Code>MMS-3</Code><Text>Hip Dysplasia</Text></Value>
-			<Value><Code>MMS-4</Code><Text>Joint Hypermobility</Text></Value>
-			<Value><Code>MMS-5</Code><Text>Juvenile Arthritis</Text></Value>
-			<Value><Code>MMS-6</Code><Text>Kohlers Disease</Text></Value>
-			<Value><Code>MMS-7</Code><Text>Marfan Syndrome</Text></Value>
-			<Value><Code>MMS-8</Code><Text>Meyers Dysplasia</Text></Value>
-			<Value><Code>MMS-9</Code><Text>Neurofibromatosis type 1</Text></Value>
-			<Value><Code>MMS-10</Code><Text>Osgood Schlatter Condition</Text></Value>
-			<Value><Code>MMS-11</Code><Text>Osteo Imperfecta</Text></Value>
-			<Value><Code>MMS-12</Code><Text>Scoliosis</Text></Value>
-			<Value><Code>MMS-13</Code><Text>Severs Disease</Text></Value>
-			<Value><Code>MMS-14</Code><Text>Talipes</Text></Value>
-			<Value><Code>MMS-15</Code><Text>Von Eulenburg Disease</Text></Value>
-			<Value><Code>MCM-1</Code><Text>Angelman Syndrome</Text></Value>
-			<Value><Code>MCM-2</Code><Text>Charcot Marie Tooth</Text></Value>
-			<Value><Code>MCM-3</Code><Text>Coffin Lowry Syndrome</Text></Value>
-			<Value><Code>MCM-4</Code><Text>Coffin-Siris Syndrome</Text></Value>
-			<Value><Code>MCM-5</Code><Text>Down Syndrome</Text></Value>
-			<Value><Code>MCM-6</Code><Text>Foetal Alcohol Syndrome (FAS)</Text></Value>
-			<Value><Code>MCM-7</Code><Text>Fragile X Syndrome</Text></Value>
-			<Value><Code>MCM-8</Code><Text>G6 PD Deficiency</Text></Value>
-			<Value><Code>MCM-9</Code><Text>Hyperglycemia</Text></Value>
-			<Value><Code>MCM-10</Code><Text>Klinefelter Syndrome</Text></Value>
-			<Value><Code>MCM-11</Code><Text>Malignant Hyperthermia</Text></Value>
-			<Value><Code>MCM-12</Code><Text>MCADD - Metabolic disorder</Text></Value>
-			<Value><Code>MCM-13</Code><Text>Non Ketotic</Text></Value>
-			<Value><Code>MCM-14</Code><Text>Oculocutaneous Albinism</Text></Value>
-			<Value><Code>MCM-15</Code><Text>Phelan-McDermid Syndrome</Text></Value>
-			<Value><Code>MCM-16</Code><Text>Phenylketonuria</Text></Value>
-			<Value><Code>MCM-17</Code><Text>Pierr Robyn Syndrome</Text></Value>
-			<Value><Code>MCM-18</Code><Text>Potocki - Lupski Syndrome</Text></Value>
-			<Value><Code>MCM-19</Code><Text>Prader Willi Syndrome</Text></Value>
-			<Value><Code>MCM-20</Code><Text>Rubinstein-Taybi Syndrome</Text></Value>
-			<Value><Code>MCM-21</Code><Text>ScN2A (Sodium Channel) Gene Mutation</Text></Value>
-			<Value><Code>MCM-22</Code><Text>Trisomy - chromosome</Text></Value>
-			<Value><Code>MCM-23</Code><Text>Trisomy 21/Down Syndrome</Text></Value>
-			<Value><Code>MCM-24</Code><Text>Turners Syndrome</Text></Value>
-			<Value><Code>MCM-25</Code><Text>Velocardiofacial Syndrome</Text></Value>
-			<Value><Code>MCM-26</Code><Text>Wolf-Hirschhorn Syndrome</Text></Value>
+			<Value>
+				<Code>LSN-SPH</Code>
+				<Text xml:lang="en">Speech</Text>
+				<Text xml:lang="mi">Kōrero</Text>
+			</Value>
+			<Value>
+				<Code>LSN-SPL</Code>
+				<Text xml:lang="en">Spelling</Text>
+				<Text xml:lang="mi">Tuhi kupu</Text>
+			</Value>
+			<Value>
+				<Code>LSN-SRL</Code>
+				<Text xml:lang="en">Social Relationships</Text>
+				<Text xml:lang="mi">Whakahoahoa</Text>
+			</Value>
+			<Value>
+				<Code>LSN-VIS</Code>
+				<Text xml:lang="en">Vision</Text>
+				<Text xml:lang="mi">Kitenga</Text>
+			</Value>
+			<Value>
+				<Code>LSN-WBG</Code>
+				<Text xml:lang="en">Wellbeing</Text>
+				<Text xml:lang="mi">Hauora</Text>
+			</Value>
+			<Value>
+				<Code>LSN-WRT</Code>
+				<Text xml:lang="en">Writing </Text>
+				<Text xml:lang="mi">Tuhi kōrero</Text>
+			</Value>
+			<Value>
+			  <Code>MH-1</Code>
+			  <Text xml:lang="en">Adjustment Disorder</Text>
+			</Value>
+			<Value>
+			  <Code>MH-2</Code>
+			  <Text xml:lang="en">Anorexia</Text>
+			</Value>
+			<Value>
+			  <Code>MH-3</Code>
+			  <Text xml:lang="en">Anxiety Disorder</Text>
+			</Value>
+			<Value>
+			  <Code>MH-4</Code>
+			  <Text xml:lang="en">Attachment Disorder</Text>
+			</Value>
+			<Value>
+			  <Code>MH-5</Code>
+			  <Text xml:lang="en">Attention Deficit Hyperactivity Disorder (ADHD)</Text>
+			</Value>
+			<Value>
+			  <Code>MH-6</Code>
+			  <Text xml:lang="en">Bipolar Affective Disorder</Text>
+			</Value>
+			<Value>
+			  <Code>MH-7</Code>
+			  <Text xml:lang="en">Bulimia</Text>
+			</Value>
+			<Value>
+			  <Code>MH-8</Code>
+			  <Text xml:lang="en">Depression</Text>
+			</Value>
+			<Value>
+			  <Code>MH-9</Code>
+			  <Text xml:lang="en">Mixed Depression and Anxiety</Text>
+			</Value>
+			<Value>
+			  <Code>MH-10</Code>
+			  <Text xml:lang="en">Obsessive Compulsive  Disorder</Text>
+			</Value>
+			<Value>
+			  <Code>MH-11</Code>
+			  <Text xml:lang="en">Oppositional Defiance Disorder</Text>
+			</Value>
+			<Value>
+			  <Code>MH-12</Code>
+			  <Text xml:lang="en">Paranoia</Text>
+			</Value>
+			<Value>
+			  <Code>MH-13</Code>
+			  <Text xml:lang="en">Post-Traumatic Stress Disorder</Text>
+			</Value>
+			<Value>
+			  <Code>MH-14</Code>
+			  <Text xml:lang="en">Reactive Attachment Disorder</Text>
+			</Value>
+			<Value>
+			  <Code>MH-15</Code>
+			  <Text xml:lang="en">Social Anxiety Disorder</Text>
+			</Value>
+			<Value>
+			  <Code>MH-16</Code>
+			  <Text xml:lang="en">Tic Disorder</Text>
+			</Value>
+			<Value>
+			  <Code>MH-17</Code>
+			  <Text xml:lang="en">Tourette’s Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MH-18</Code>
+			  <Text xml:lang="en">Conduct Disorder</Text>
+			</Value>
+			<Value>
+			  <Code>MS-1</Code>
+			  <Text xml:lang="en">Absence seizures epilepsy</Text>
+			</Value>
+			<Value>
+			  <Code>MS-2</Code>
+			  <Text xml:lang="en">Tonic Clonic epilepsy</Text>
+			</Value>
+			<Value>
+			  <Code>MS-3</Code>
+			  <Text xml:lang="en">Myotonic epilepsy</Text>
+			</Value>
+			<Value>
+			  <Code>MS-4</Code>
+			  <Text xml:lang="en">Refractory epilepsy</Text>
+			</Value>
+			<Value>
+			  <Code>MAA-1</Code>
+			  <Text xml:lang="en">Antibiotics -specify type(s)</Text>
+			</Value>
+			<Value>
+			  <Code>MAA-2</Code>
+			  <Text xml:lang="en">Dairy</Text>
+			</Value>
+			<Value>
+			  <Code>MAA-3</Code>
+			  <Text xml:lang="en">Egg</Text>
+			</Value>
+			<Value>
+			  <Code>MAA-4</Code>
+			  <Text xml:lang="en">Fruit (specify)</Text>
+			</Value>
+			<Value>
+			  <Code>MAA-5</Code>
+			  <Text xml:lang="en">Insect bites - nfd</Text>
+			</Value>
+			<Value>
+			  <Code>MAA-6</Code>
+			  <Text xml:lang="en">Bees</Text>
+			</Value>
+			<Value>
+			  <Code>MAA-7</Code>
+			  <Text xml:lang="en">Ants</Text>
+			</Value>
+			<Value>
+			  <Code>MAA-8</Code>
+			  <Text xml:lang="en">Ticks</Text>
+			</Value>
+			<Value>
+			  <Code>MAA-9</Code>
+			  <Text xml:lang="en">Latex</Text>
+			</Value>
+			<Value>
+			  <Code>MAA-10</Code>
+			  <Text xml:lang="en">Peanuts</Text>
+			</Value>
+			<Value>
+			  <Code>MAA-11</Code>
+			  <Text xml:lang="en">Shellfish</Text>
+			</Value>
+			<Value>
+			  <Code>MAA-12</Code>
+			  <Text xml:lang="en">Tree nuts</Text>
+			</Value>
+			<Value>
+			  <Code>MAA-13</Code>
+			  <Text xml:lang="en">Wheat</Text>
+			</Value>
+			<Value>
+			  <Code>MAA-14</Code>
+			  <Text xml:lang="en">Other</Text>
+			</Value>
+			<Value>
+			  <Code>MAIM-1</Code>
+			  <Text xml:lang="en">Coeliac Disease - Gluten</Text>
+			</Value>
+			<Value>
+			  <Code>MAIM-2</Code>
+			  <Text xml:lang="en">Enterocolitis Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MAIM-3</Code>
+			  <Text xml:lang="en">Food Protein Induced Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MB-1</Code>
+			  <Text xml:lang="en">Anaemia</Text>
+			</Value>
+			<Value>
+			  <Code>MB-2</Code>
+			  <Text xml:lang="en">Haemophilia</Text>
+			</Value>
+			<Value>
+			  <Code>MB-3</Code>
+			  <Text xml:lang="en">Thalassemia</Text>
+			</Value>
+			<Value>
+			  <Code>MB-4</Code>
+			  <Text xml:lang="en">Vasculitis</Text>
+			</Value>
+			<Value>
+			  <Code>MB-5</Code>
+			  <Text xml:lang="en">Von Willebrand's Disease</Text>
+			</Value>
+			<Value>
+			  <Code>MMS-1</Code>
+			  <Text xml:lang="en">Ehlers Danlos</Text>
+			</Value>
+			<Value>
+			  <Code>MMS-2</Code>
+			  <Text xml:lang="en">Fibromyalgia  - discuss</Text>
+			</Value>
+			<Value>
+			  <Code>MMS-3</Code>
+			  <Text xml:lang="en">Hip Dysplasia</Text>
+			</Value>
+			<Value>
+			  <Code>MMS-4</Code>
+			  <Text xml:lang="en">Joint Hypermobility</Text>
+			</Value>
+			<Value>
+			  <Code>MMS-5</Code>
+			  <Text xml:lang="en">Juvenile Arthritis</Text>
+			</Value>
+			<Value>
+			  <Code>MMS-6</Code>
+			  <Text xml:lang="en">Kohlers Disease</Text>
+			</Value>
+			<Value>
+			  <Code>MMS-7</Code>
+			  <Text xml:lang="en">Marfan Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MMS-8</Code>
+			  <Text xml:lang="en">Meyers Dysplasia</Text>
+			</Value>
+			<Value>
+			  <Code>MMS-9</Code>
+			  <Text xml:lang="en">Neurofibromatosis type 1</Text>
+			</Value>
+			<Value>
+			  <Code>MMS-10</Code>
+			  <Text xml:lang="en">Osgood Schlatter Condition</Text>
+			</Value>
+			<Value>
+			  <Code>MMS-11</Code>
+			  <Text xml:lang="en">Osteo Imperfecta</Text>
+			</Value>
+			<Value>
+			  <Code>MMS-12</Code>
+			  <Text xml:lang="en">Scoliosis</Text>
+			</Value>
+			<Value>
+			  <Code>MMS-13</Code>
+			  <Text xml:lang="en">Severs Disease</Text>
+			</Value>
+			<Value>
+			  <Code>MMS-14</Code>
+			  <Text xml:lang="en">Talipes</Text>
+			</Value>
+			<Value>
+			  <Code>MMS-15</Code>
+			  <Text xml:lang="en">Von Eulenburg Disease</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-1</Code>
+			  <Text xml:lang="en">Angelman Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-2</Code>
+			  <Text xml:lang="en">Charcot Marie Tooth</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-3</Code>
+			  <Text xml:lang="en">Coffin Lowry Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-4</Code>
+			  <Text xml:lang="en">Coffin-Siris Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-5</Code>
+			  <Text xml:lang="en">Down Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-6</Code>
+			  <Text xml:lang="en">Foetal Alcohol Syndrome (FAS)</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-7</Code>
+			  <Text xml:lang="en">Fragile X Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-8</Code>
+			  <Text xml:lang="en">G6 PD Deficiency</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-9</Code>
+			  <Text xml:lang="en">Hyperglycemia</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-10</Code>
+			  <Text xml:lang="en">Klinefelter Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-11</Code>
+			  <Text xml:lang="en">Malignant Hyperthermia</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-12</Code>
+			  <Text xml:lang="en">MCADD - Metabolic disorder</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-13</Code>
+			  <Text xml:lang="en">Non Ketotic</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-14</Code>
+			  <Text xml:lang="en">Oculocutaneous Albinism</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-15</Code>
+			  <Text xml:lang="en">Phelan-McDermid Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-16</Code>
+			  <Text xml:lang="en">Phenylketonuria</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-17</Code>
+			  <Text xml:lang="en">Pierr Robyn Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-18</Code>
+			  <Text xml:lang="en">Potocki - Lupski Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-19</Code>
+			  <Text xml:lang="en">Prader Willi Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-20</Code>
+			  <Text xml:lang="en">Rubinstein-Taybi Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-21</Code>
+			  <Text xml:lang="en">ScN2A (Sodium Channel) Gene Mutation</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-22</Code>
+			  <Text xml:lang="en">Trisomy - chromosome</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-23</Code>
+			  <Text xml:lang="en">Trisomy 21/Down Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-24</Code>
+			  <Text xml:lang="en">Turners Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-25</Code>
+			  <Text xml:lang="en">Velocardiofacial Syndrome</Text>
+			</Value>
+			<Value>
+			  <Code>MCM-26</Code>
+			  <Text xml:lang="en">Wolf-Hirschhorn Syndrome</Text>
+			</Value>
 		</Values>
+		  
 	</CodeSet>    <!-- Wellbeing Characteristic Sub Category -->
 
 	<CodeSet>
@@ -405,8 +679,13 @@
 		</Intro>
 		<ID>Wellbeing Characteristic Category</ID>
 		<Values>
-		<Value><Code>MAO</Code><Text>Allergies - other</Text></Value>
-		<Value><Code>DIET</Code><Text>Dietary Preferences</Text></Value>
+			<Value><Code>MAO</Code>
+			<Text xml:lang="en">Allergies - other</Text>
+		</Value>
+		<Value>
+		  <Code>DIET</Code>
+		  <Text xml:lang="en">Dietary Preferences</Text>
+		</Value>
 		<Value>
 			<Code>LSN-MAT</Code>
 			<Text xml:lang="en">Material</Text>
@@ -437,28 +716,94 @@
 			<Text xml:lang="en">Cognition and learning</Text>
 			<Text xml:lang="mi">Te me te Akoako</Text>
 		</Value>
-		<Value><Code>MAIM</Code><Text>Auto-immune/Immune Disorders</Text></Value>
-		<Value><Code>MRD</Code><Text>Respiratory Disorder</Text></Value>
-		<Value><Code>MB</Code><Text>Blood disorder</Text></Value>
-		<Value><Code>MMD</Code><Text>Heart Disease/ Disorder</Text></Value>
-		<Value><Code>MMS</Code><Text>Musculo – skeletal conditions</Text></Value>
-		<Value><Code>MEM</Code><Text>Endocrine and Metabolic Disorders</Text></Value>
-		<Value><Code>MC</Code><Text>Childhood cancer</Text></Value>
-		<Value><Code>MAA</Code><Text>Allergy – Anaphylaxis</Text></Value>
-		<Value><Code>MH</Code><Text>Mental and behavioural disorders</Text></Value>
-		<Value><Code>MN</Code><Text>Diseases/conditions of the nervous system</Text></Value>
-		<Value><Code>MS</Code><Text>Seizure disorders</Text></Value>
-		<Value><Code>MCM</Code><Text>Congenital malformations, deformations and chromosomal abnormalities</Text></Value>
-		<Value><Code>MI</Code><Text>Infectious Diseases</Text></Value>
-		<Value><Code>MGI</Code><Text>Gastro Intestinal/Urinary conditions</Text></Value>
-		<Value><Code>MND</Code><Text>Neuro/Developmental Disorders</Text></Value>
-		<Value><Code>MO</Code><Text>Oral/Phalangeal Disorders</Text></Value>
-		<Value><Code>MD</Code><Text>Deaf and Hard of Hearing</Text></Value>
-		<Value><Code>MOP</Code><Text>Optical/ Vision Disorder</Text></Value>
-		<Value><Code>M-OTHER</Code><Text>Medical Other</Text></Value>
-		<Value><Code>D-OTHER</Code><Text>Disability Other</Text></Value>
-		<Value><Code>S-OTHER</Code><Text>Special Needs Other</Text></Value>
-		<Value><Code>OTHER</Code><Text>Other</Text></Value>
+		<Value>
+		  <Code>MAIM</Code>
+		  <Text xml:lang="en">Auto-immune/Immune Disorders</Text>
+		</Value>
+		<Value>
+		  <Code>MRD</Code>
+		  <Text xml:lang="en">Respiratory Disorder</Text>
+		</Value>
+		<Value>
+		  <Code>MB</Code>
+		  <Text xml:lang="en">Blood disorder</Text>
+		</Value>
+		<Value>
+		  <Code>MMD</Code>
+		  <Text xml:lang="en">Heart Disease/ Disorder</Text>
+		</Value>
+		<Value>
+		  <Code>MMS</Code>
+		  <Text xml:lang="en">Musculo – skeletal conditions</Text>
+		</Value>
+		<Value>
+		  <Code>MEM</Code>
+		  <Text xml:lang="en">Endocrine and Metabolic Disorders</Text>
+		</Value>
+		<Value>
+		  <Code>MC</Code>
+		  <Text xml:lang="en">Childhood cancer</Text>
+		</Value>
+		<Value>
+		  <Code>MAA</Code>
+		  <Text xml:lang="en">Allergy – Anaphylaxis</Text>
+		</Value>
+		<Value>
+		  <Code>MH</Code>
+		  <Text xml:lang="en">Mental and behavioural disorders</Text>
+		</Value>
+		<Value>
+		  <Code>MN</Code>
+		  <Text xml:lang="en">Diseases/conditions of the nervous system</Text>
+		</Value>
+		<Value>
+		  <Code>MS</Code>
+		  <Text xml:lang="en">Seizure disorders</Text>
+		</Value>
+		<Value>
+		  <Code>MCM</Code>
+		  <Text xml:lang="en">Congenital malformations, deformations and chromosomal abnormalities</Text>
+		</Value>
+		<Value>
+		  <Code>MI</Code>
+		  <Text xml:lang="en">Infectious Diseases</Text>
+		</Value>
+		<Value>
+		  <Code>MGI</Code>
+		  <Text xml:lang="en">Gastro Intestinal/Urinary conditions</Text>
+		</Value>
+		<Value>
+		  <Code>MND</Code>
+		  <Text xml:lang="en">Neuro/Developmental Disorders</Text>
+		</Value>
+		<Value>
+		  <Code>MO</Code>
+		  <Text xml:lang="en">Oral/Phalangeal Disorders</Text>
+		</Value>
+		<Value>
+		  <Code>MD</Code>
+		  <Text xml:lang="en">Deaf and Hard of Hearing</Text>
+		</Value>
+		<Value>
+		  <Code>MOP</Code>
+		  <Text xml:lang="en">Optical/ Vision Disorder</Text>
+		</Value>
+		<Value>
+		  <Code>M-OTHER</Code>
+		  <Text xml:lang="en">Medical Other</Text>
+		</Value>
+		<Value>
+		  <Code>D-OTHER</Code>
+		  <Text xml:lang="en">Disability Other</Text>
+		</Value>
+		<Value>
+		  <Code>S-OTHER</Code>
+		  <Text xml:lang="en">Special Needs Other</Text>
+		</Value>
+		<Value>
+		  <Code>OTHER</Code>
+		  <Text xml:lang="en">Other</Text>
+		</Value>
 		</Values>
 	</CodeSet>	  <!-- Wellbeing Characteristic Category -->
 
@@ -469,15 +814,27 @@
 		</Intro>
 		<ID>Wellbeing Characteristic Class</ID>
 		<Values>
-			<Value><Code>OTH</Code><Text>Other</Text></Value>
-			<Value><Code>MDC</Code><Text>Medical</Text></Value>
+			<Value>
+			  <Code>OTH</Code>
+			  <Text xml:lang="en">Other</Text>
+			</Value>
+			<Value>
+			  <Code>MDC</Code>
+			  <Text xml:lang="en">Medical</Text>
+			</Value>
 			<Value>
 				<Code>LSN</Code>
 				<Text xml:lang="en">Learning Support Need</Text>
 				<Text xml:lang="mi">Hiahia Tautoko Akoranga</Text>
 			</Value>
-			<Value><Code>ALG</Code><Text>Allergy</Text></Value>
-			<Value><Code>DPR</Code><Text>Dietary Preference</Text></Value>
+			<Value>
+			  <Code>ALG</Code>
+			  <Text xml:lang="en">Allergy</Text>
+			</Value>
+			<Value>
+			  <Code>DPR</Code>
+			  <Text xml:lang="en">Dietary Preference</Text>
+			</Value>
 		</Values>
 	</CodeSet>    <!-- Wellbeing Characteristic Class -->
 
@@ -2313,44 +2670,44 @@
 		<ID>Wellbeing Event Possible Motivation</ID>
 		<Values>
 			<Value>
-			<Code>AVAD</Code>
-			<Text xml:lang="en">Avoid Adult</Text>
-			<Text xml:lang="mi">Karo Mātua</Text>
-			</Value> 
-			<Value
-			><Code>AVPE</Code>
-			<Text xml:lang="en">Avoid Peer(s)</Text>
-			<Text xml:lang="mi">Karo Aropā</Text>
+				<Code>AVAD</Code>
+				<Text xml:lang="en">Avoid Adult</Text>
+				<Text xml:lang="mi">Karo Mātua</Text>
 			</Value> 
 			<Value>
-			<Code>AVTA</Code>
-			<Text xml:lang="en">Avoid Tasks / Activities</Text>
-			<Text xml:lang="mi">Karo Tūmahi/Ngohe</Text>
+				<Code>AVPE</Code>
+				<Text xml:lang="en">Avoid Peer(s)</Text>
+				<Text xml:lang="mi">Karo Aropā</Text>
 			</Value> 
 			<Value>
-			<Code>OBAD</Code>
-			<Text xml:lang="en">Obtain Adult Attention</Text>
-			<Text xml:lang="mi">Whai Aronga Mātua</Text>
+				<Code>AVTA</Code>
+				<Text xml:lang="en">Avoid Tasks / Activities</Text>
+				<Text xml:lang="mi">Karo Tūmahi/Ngohe</Text>
 			</Value> 
 			<Value>
-			<Code>OBIT</Code>
-			<Text xml:lang="en">Obtain Items / Activities</Text>
-			<Text xml:lang="mi">Whai mea/tūmahi</Text>
+				<Code>OBAD</Code>
+				<Text xml:lang="en">Obtain Adult Attention</Text>
+				<Text xml:lang="mi">Whai Aronga Mātua</Text>
 			</Value> 
 			<Value>
-			<Code>OBPE</Code>
-			<Text xml:lang="en">Obtain Peer Attention</Text>
-			<Text xml:lang="mi">Whai aronga hunga aropā</Text>
+				<Code>OBIT</Code>
+				<Text xml:lang="en">Obtain Items / Activities</Text>
+				<Text xml:lang="mi">Whai mea/tūmahi</Text>
 			</Value> 
 			<Value>
-			<Code>OTHE</Code>
-			<Text xml:lang="en">Other</Text>
-			<Text xml:lang="mi">He āhua kē</Text>
+				<Code>OBPE</Code>
+				<Text xml:lang="en">Obtain Peer Attention</Text>
+				<Text xml:lang="mi">Whai aronga hunga aropā</Text>
 			</Value> 
 			<Value>
-			<Code>UNKN</Code>
-			<Text xml:lang="en">Unknown Motivation</Text>
-			<Text xml:lang="mi">Kāore i mārama te take o ngā whanonga whakararu a te ākonga</Text>
+				<Code>OTHE</Code>
+				<Text xml:lang="en">Other</Text>
+				<Text xml:lang="mi">He āhua kē</Text>
+			</Value> 
+			<Value>
+				<Code>UNKN</Code>
+				<Text xml:lang="en">Unknown Motivation</Text>
+				<Text xml:lang="mi">Kāore i mārama te take o ngā whanonga whakararu a te ākonga</Text>
 			</Value> 
 		</Values>
 	</CodeSet>    <!-- Wellbeing Event Possible Motivation -->

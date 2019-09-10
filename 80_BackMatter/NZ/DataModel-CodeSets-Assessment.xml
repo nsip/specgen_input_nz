@@ -20,15 +20,15 @@
 			</Value>    <!-- External -->
 			<Value>
 				<Code>MOC</Code>
-				<Text>Mock</Text>
+				<Text xml:lang="en">Mock</Text>
 			</Value>    <!-- Mock -->
 			<Value>
 				<Code>POR</Code>
-				<Text>Portfolio</Text>
+				<Text xml:lang="en">Portfolio</Text>
 			</Value>    <!-- Portfolio -->
 			<Value>
 				<Code>PRA</Code>
-				<Text>Practical</Text>
+				<Text xml:lang="en">Practical</Text>
 			</Value>    <!-- Practical -->
 			<Value>
 				<Code>OTJ</Code>
@@ -37,7 +37,7 @@
 			</Value>    <!-- OTJ -->			
 			<Value>
 				<Code>OTH</Code>
-				<Text>Other</Text>
+				<Text xml:lang="en">Other</Text>
 			</Value>    <!-- Other -->			
 		</Values>
 	</CodeSet>    <!-- Assessment Type -->
