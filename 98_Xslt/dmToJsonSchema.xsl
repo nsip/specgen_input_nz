@@ -288,7 +288,7 @@
 
 		<xsl:text>    description: &gt;-&#x0a;      </xsl:text>
 		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
-		<xsl:text>    type: object&#x0a;    additionalproperties: false&#x0a;    properties:&#x0a;</xsl:text>
+		<xsl:text>    type: object&#x0a;    additionalProperties: false&#x0a;    properties:&#x0a;</xsl:text>
 
 		<xsl:apply-templates select="specgen:Choice">
 			<xsl:with-param name="indent" select="'      '"/>
