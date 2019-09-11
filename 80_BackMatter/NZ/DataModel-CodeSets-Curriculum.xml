@@ -505,12 +505,12 @@
 				<Text  xml:lang="en">Graphics</Text>
 			</Value>
 			<Value>
-				<Code xml:lang="en">INTE</Code>
-				<Text>Information and Communication Technology</Text>
+				<Code>INTE</Code>
+				<Text xml:lang="en">Information and Communication Technology</Text>
 			</Value>
 			<Value>
-				<Code xml:lang="en">MTEC</Code>
-				<Text>Materials Technology</Text>
+				<Code>MTEC</Code>
+				<Text xml:lang="en">Materials Technology</Text>
 			</Value>
 			<Value>
 				<Code>STME</Code>
