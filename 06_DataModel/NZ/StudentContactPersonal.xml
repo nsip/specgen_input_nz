@@ -105,7 +105,7 @@
 					</Email>
 				</EmailList>
 				<PhoneNumberList>
-					<PhoneNumber>
+					<PhoneNumber json:force-array="true">
 						<Type>MOB</Type>
 						<Number>(021) 300 999</Number>
 					</PhoneNumber>
@@ -125,20 +125,20 @@
 								<PostalCode json:force-string="true">5781</PostalCode>
 							</Address>
 						</AddressList>
-						<EmailList json:force-array="true">
-							<Email>
+						<EmailList>
+							<Email json:force-array="true">
 								<Type>WORK</Type>
 								<Address>ridwulfa@gmail.com</Address>
 							</Email>
 						</EmailList>
 						<PhoneNumberList>
-							<PhoneNumber>
+							<PhoneNumber json:force-array="true">
 								<Type>MOB</Type>
 								<Number>(021) 300 999</Number>
 							</PhoneNumber>
 						</PhoneNumberList>
 					</HouseholdContactInfo>
-					
+
 				</HouseholdContactInfoList>
 			</PersonInfo>
 		</StudentContactPersonal>
