@@ -175,9 +175,9 @@
 			<DataObject coords="41,53,159,533">StudentPersonal</DataObject>
 			<DataObject coords="326,82,554,136" role="member">StudentAssessmentTaskRegistration</DataObject>
 			<DataObject coords="635,172,754,257" role="member">AssessmentTask</DataObject>
-			<DataObject coords="372,215,526,257" role="member">StudentAssessmentTask</DataObject>
+			<DataObject coords="349,216,504,268" role="member">StudentAssessmentTask</DataObject>
 			<DataObject coords="230,289,419,339" role="member">StudentAssessmentTaskResult</DataObject>
-			<DataObject coords="336,445,488,489" role="member">StudentAttainment</DataObject>
+			<DataObject coords="278,422,471,471" role="member">StudentAttainment</DataObject>
 			<DataObject coords="49,633,156,673" role="member">Credential</DataObject>
 			<DataObject coords="720,506,855,546" role="member">LearningStandard</DataObject>
 			<DataObject coords="848,329,988,397">ProviderCourse</DataObject>

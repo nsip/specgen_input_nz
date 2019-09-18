@@ -106,7 +106,7 @@
     <Description>
       <p>The number of credits awarded upon Course completion.</p>
     </Description>
-    <Type name='xs:normalizedString'/>
+    <Type name="xs:decimal"/>
   </Item>    <!-- Credits -->
   <Item>
     <Element>LanguageOfInstructionList</Element>
@@ -142,7 +142,7 @@
       <ProviderCourseLocalId>12CHEM</ProviderCourseLocalId>
       <Provider>
         <RefId>101A8C3D-00AA-001A-0000-A2E35B359D75</RefId>
-        <LocalId>208</LocalId>
+        <LocalId json:force-string="true">208</LocalId>
       </Provider>
       <Curriculum>NZC</Curriculum>
       <SubjectAreaList>
@@ -158,7 +158,7 @@
 			<LanguageOfInstructionList>
 				<Language json:force-array="true">
 					<Code>NZS01112</Code>
-					<Level>1</Level>
+					<Level json:force-string="true">1</Level>
 				</Language>
 			</LanguageOfInstructionList>
       <LearningStandardList>

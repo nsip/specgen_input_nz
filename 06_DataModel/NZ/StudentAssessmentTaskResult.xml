@@ -235,7 +235,7 @@
     <Description>
       <p>The number of credits the student achieved.</p>
     </Description>
-    <Type name="xs:integer"/>
+    <Type name="xs:decimal"/>
   </Item>    <!-- CreditsAchieved -->
   <Item>
     <Element>ResultScoreList</Element>

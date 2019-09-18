@@ -181,7 +181,7 @@
 				</Justification>				
 			</JustificationList>  
       <SubjectAreaList>
-          <SubjectArea>CHEM</SubjectArea>
+          <SubjectArea json:force-array="true">CHEM</SubjectArea>
       </SubjectAreaList>
     </StudentAttainment>
   </xhtml:Example>
@@ -208,7 +208,7 @@
       </AuthorisingStaffMember>
       <DateAttained>2018-07-25</DateAttained>
       <SubjectAreaList>
-          <SubjectArea>PHYS</SubjectArea>
+          <SubjectArea json:force-array="true">PHYS</SubjectArea>
       </SubjectAreaList>
     </StudentAttainment>
   </xhtml:Example>

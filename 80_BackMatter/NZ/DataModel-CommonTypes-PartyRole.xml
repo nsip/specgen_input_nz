@@ -1222,7 +1222,7 @@
 			<Type ref="CommonTypes" name="PhoneNumberListType"/>
 		</Item>     <!-- PhoneNumberList -->
 
-		<xhtml:Example xmlns="" name="Household Contact Info Example" intl="nz">
+		<xhtml:Example xmlns="" name="Household Contact Info Example">
 			<HouseholdContactInfo>
 				<PreferenceNumber>1</PreferenceNumber>
 				<HouseholdContactId>7d5c3f5c-d89c-4551-9442-6b008207986e</HouseholdContactId>
@@ -1237,14 +1237,14 @@
 						<PostalCode json:force-string="true">5781</PostalCode>
 					</Address>
 				</AddressList>
-				<EmailList json:force-array="true">
-					<Email>
+				<EmailList>
+					<Email json:force-array="true">
 						<Type>WORK</Type>
 						<Address>hagrid@gmail.com</Address>
 					</Email>
 				</EmailList>
 				<PhoneNumberList>
-					<PhoneNumber>
+					<PhoneNumber json:force-array="true">
 						<Usage>INT</Usage>
 						<Type>MAI</Type>
 						<Number>(021) 300 999</Number>

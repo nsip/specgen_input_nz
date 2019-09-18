@@ -288,7 +288,7 @@
 
 		<xsl:text>    description: &gt;-&#x0a;      </xsl:text>
 		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
-		<xsl:text>    type: object&#x0a;    additionalproperties: false&#x0a;    properties:&#x0a;</xsl:text>
+		<xsl:text>    type: object&#x0a;    additionalProperties: false&#x0a;    properties:&#x0a;</xsl:text>
 
 		<xsl:apply-templates select="specgen:Choice">
 			<xsl:with-param name="indent" select="'      '"/>
@@ -493,7 +493,7 @@
 			<!-- Item is repeatable (or in a repeatable choice) -->
 			<xsl:when test="contains(specgen:Characteristics,  'R') or parent::specgen:Choice/@repeatable">
 				<xsl:value-of select="concat($indent, '  type: array&#x0a;', $indent, '  items:&#x0a;')"/>
-				<xsl:value-of select="concat($indent, '  - allOf:&#x0a;')"/>
+				<xsl:value-of select="concat($indent, '    allOf:&#x0a;')"/>
 
 				<!-- $ref -->
 				<xsl:apply-templates select="specgen:Type">
@@ -651,7 +651,17 @@
 				<xsl:value-of select="concat($indent, '  type: string&#x0a;')"/>
 				<xsl:value-of select="concat($indent, '  format: date&#x0a;')"/>
 			</xsl:when>
-			
+
+			<xsl:when test="@name eq 'xs:time'">
+				<xsl:value-of select="concat($indent, '  type: string&#x0a;')"/>
+				<xsl:value-of select="concat($indent, '  format: time&#x0a;')"/>
+			</xsl:when>
+
+			<xsl:when test="@name eq 'xs:dateTime'">
+				<xsl:value-of select="concat($indent, '  type: string&#x0a;')"/>
+				<xsl:value-of select="concat($indent, '  format: date-time&#x0a;')"/>
+			</xsl:when>
+
 			<xsl:when test="   @name eq 'xs:string'
 							or @name eq 'xs:normalizedString'
                      		or @name eq 'xs:token'

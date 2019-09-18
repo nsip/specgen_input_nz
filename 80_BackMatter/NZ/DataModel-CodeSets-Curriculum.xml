@@ -3,7 +3,7 @@
  	xmlns="http://sifassociation.org/SpecGen">
 	
 	
-	<CodeSet>
+	<CodeSet>h
 		<Intro>
 			<p>Codes denoting the two curricula used in New Zealand.
 			</p>
@@ -14,29 +14,29 @@
 				<Code>NZC</Code>
 				<Text xml:lang="en">New Zealand Curriculum</Text>
 				<Text xml:lang="mi">New Zealand Curriculum</Text>
-				<Description>Student is taught using the New Zealand Curriculum.
-				E whakaakohia ana te ākonga mā te New Zealand Curriculum.</Description>
+				<Description xml:lang="en">Student is taught using the New Zealand Curriculum.</Description>
+				<Description xml:lang="mi">E whakaakohia ana te ākonga mā te New Zealand Curriculum.</Description>
 			</Value>
 			<Value>
 				<Code>TMA</Code>
 				<Text xml:lang="en">Te Marautanga o Aotearoa</Text>
 				<Text xml:lang="mi">Te Marautanga o Aotearoa</Text>
-				<Description>Student is taught using Te Marautanga o Aotearoa. 
-				E whakaakohia ana te ākonga mā Te Marautanga o Aotearoa.</Description>
+				<Description xml:lang="en">Student is taught using Te Marautanga o Aotearoa.</Description>
+				<Description xml:lang="mi">E whakaakohia ana te ākonga mā Te Marautanga o Aotearoa.</Description>
 			</Value>
 			<Value>
 				<Code>ECE</Code>
 				<Text xml:lang="en">Te Whāriki</Text>
 				<Text xml:lang="mi">Te Whāriki</Text>
-				<Description>Student is taught using Te Whāriki curriculum. 
-				E whakaakohia ana te ākonga mā te marau o Te Whāriki.</Description>
+				<Description xml:lang="en">Student is taught using Te Whāriki curriculum.</Description>
+				<Description xml:lang="mi">E whakaakohia ana te ākonga mā te marau o Te Whāriki.</Description>
 			</Value>	
 			<Value>
 				<Code>OTH</Code>
 				<Text xml:lang="en">Other Curriculum</Text>
 				<Text xml:lang="mi">Marau Kē</Text>
-				<Description>Other (for schools using another curriculum). 
-				Ētahi kē (Ngā kura e whakamahi ana i te marautanga kē).</Description>
+				<Description xml:lang="en">Other (for schools using another curriculum).</Description>
+				<Description xml:lang="mi">Ētahi kē (Ngā kura e whakamahi ana i te marautanga kē).</Description>
 			</Value>			
 		</Values>
 	</CodeSet>   <!-- Curriculum -->
@@ -52,49 +52,57 @@
 				<Code>1</Code>
 				<Text xml:lang="en">Curriculum Level 1</Text>
 				<Text xml:lang="mi">Taumata Marau 1</Text>
-				<Description>Student is working at level 1 of the relevant curriculum. E mahi ana i te Taumata 1 o te marau e hāngai ana.</Description>
+				<Description xml:lang="en">Student is working at level 1 of the relevant curriculum.</Description>
+				<Description xml:lang="mi">E mahi ana i te Taumata 1 o te marau e hāngai ana.</Description>
 			</Value>
 			<Value>
 				<Code>2</Code>
 				<Text xml:lang="en">Curriculum Level 2</Text>
 				<Text xml:lang="mi">Taumata Marau 2</Text>
-				<Description>Student is working at level 2 of the relevant curriculum. E mahi ana i te Taumata 2 o te marau e hāngai ana.</Description>
+				<Description xml:lang="en">Student is working at level 2 of the relevant curriculum.</Description>
+				<Description xml:lang="mi">E mahi ana i te Taumata 2 o te marau e hāngai ana.</Description>
 			</Value>
 			<Value>
 				<Code>3</Code>
 				<Text xml:lang="en">Curriculum Level 3</Text>
 				<Text xml:lang="mi">Taumata Marau 3</Text>
-				<Description>Student is working at level 3 of the relevant curriculum. E mahi ana i te Taumata 3 o te marau e hāngai ana.</Description>
+				<Description xml:lang="en">Student is working at level 3 of the relevant curriculum.</Description>
+				<Description xml:lang="mi">E mahi ana i te Taumata 3 o te marau e hāngai ana.</Description>
 			</Value>
 			<Value>
 				<Code>4</Code>
 				<Text xml:lang="en">Curriculum Level 4</Text>
 				<Text xml:lang="mi">Taumata Marau 4</Text>
-				<Description>Student is working at level 4 of the relevant curriculum. E mahi ana i te Taumata 4 o te marau e hāngai ana.</Description>
+				<Description xml:lang="en">Student is working at level 4 of the relevant curriculum.</Description>
+				<Description xml:lang="mi">E mahi ana i te Taumata 4 o te marau e hāngai ana.</Description>
 			</Value>
 			<Value>
 				<Code>5</Code>
 				<Text xml:lang="en">Curriculum Level 5</Text>
 				<Text xml:lang="mi">Taumata Marau 5</Text>
-				<Description>Student is working at level 5 of the relevant curriculum. E mahi ana i te Taumata 5 o te marau e hāngai ana</Description>
+				<Description xml:lang="en">Student is working at level 5 of the relevant curriculum.</Description>
+				<Description xml:lang="mi">E mahi ana i te Taumata 5 o te marau e hāngai ana</Description>
 			</Value>
 			<Value>
 				<Code>6</Code>
 				<Text xml:lang="en">Curriculum Level 6</Text>
 				<Text xml:lang="mi">Taumata Marau 6</Text>
-				<Description>Student is working at level 6 of the relevant curriculum. E mahi ana i te Taumata 6 o te marau e hāngai ana.</Description>
+				<Description xml:lang="en">Student is working at level 6 of the relevant curriculum.</Description>
+				<Description xml:lang="mi">E mahi ana i te Taumata 6 o te marau e hāngai ana.</Description>
 			</Value>
 			<Value>
 				<Code>7</Code>
 				<Text xml:lang="en">Curriculum Level 7</Text>
 				<Text xml:lang="mi">Taumata Marau 7</Text>
-				<Description>Student is working at level 7 of the relevant curriculum. E mahi ana i te Taumata 7 o te marau e hāngai ana.</Description>
+				<Description xml:lang="en">Student is working at level 7 of the relevant curriculum.</Description>
+				<Description xml:lang="mi">E mahi ana i te Taumata 7 o te marau e hāngai ana.</Description>
 			</Value>
 			<Value>
 				<Code>8</Code>
 				<Text xml:lang="en">Curriculum Level 8</Text>
 				<Text xml:lang="mi">Taumata Marau 8</Text>
-				<Description>Student is working at level 8 of the relevant curriculum. E mahi ana i te Taumata 8 o te marau e hāngai ana.</Description>
+				<Description xml:lang="en">Student is working at level 8 of the relevant curriculum.</Description>
+				<Description xml:lang="mi">E mahi ana i te Taumata 8 o te marau e hāngai ana.</Description>
 			</Value>
 		</Values>
 	</CodeSet>   <!-- Curriculum -->
@@ -315,27 +323,27 @@
 		<Values>
 			<Value>
 				<Code>GERM</Code>
-				<Text>German</Text>
+				<Text xml:lang="en">German</Text>
 				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
 				<Code>INDO</Code>
-				<Text>Indonesian</Text>
+				<Text xml:lang="en">Indonesian</Text>
 				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
 				<Code>JAPA</Code>
-				<Text>Japanese</Text>
+				<Text xml:lang="en">Japanese</Text>
 				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
 				<Code>FREN</Code>
-				<Text>French</Text>
+				<Text xml:lang="en">French</Text>
 				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
 				<Code>REME</Code>
-				<Text>English (Remedial)</Text>
+				<Text xml:lang="en">English (Remedial)</Text>
 				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
@@ -346,133 +354,371 @@
 			</Value>
 			<Value>
 				<Code>COOK</Code>
-				<Text>Cook Island Maori</Text>
+				<Text xml:lang="en">Cook Island Maori</Text>
 				<Description>Applicable to both NZ Curriculum and Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
 				<Code>COMM</Code>
-				<Text>Communication Skills</Text>
+				<Text xml:lang="en">Communication Skills</Text>
 				<Description>Applicable to Te Marautanga o Aotearoa</Description>
 			</Value>
 			<Value>
 				<Code>CHIN</Code>
-				<Text>Chinese</Text>
+				<Text xml:lang="en">Chinese</Text>
 				<Description>Applicable to Te Marautanga o Aotearoa</Description>
 			</Value>
-			<Value><Code>KORE</Code><Text>Korean</Text></Value>
-			<Value><Code>LATI</Code><Text>Latin</Text></Value>
-			<Value><Code>NIUE</Code><Text>Niuean</Text></Value>
-			<Value><Code>OLAN</Code><Text>Other Languages</Text></Value>
-			<Value><Code>PLAN</Code><Text>Pacific Language Studies</Text></Value>
-			<Value><Code>RUSS</Code><Text>Russian</Text></Value>
-			<Value><Code>SAMO</Code><Text>Samoan</Text></Value>
-			<Value><Code>SPAN</Code><Text>Spanish</Text></Value>
+			<Value>
+				<Code>KORE</Code>
+				<Text xml:lang="en">Korean</Text>
+			</Value>
+			<Value>
+				<Code>LATI</Code>
+				<Text xml:lang="en">Latin</Text>
+			</Value>
+			<Value>
+				<Code>NIUE</Code>
+				<Text xml:lang="en">Niuean</Text>
+				</Value>
+			<Value>
+				<Code>OLAN</Code>
+				<Text xml:lang="en">Other Languages</Text>
+			</Value>
+			<Value>
+				<Code>PLAN</Code>
+				<Text xml:lang="en">Pacific Language Studies</Text>
+			</Value>
+			<Value>
+				<Code>RUSS</Code>
+				<Text xml:lang="en">Russian</Text>
+			</Value>
+			<Value>
+				<Code>SAMO</Code>
+				<Text xml:lang="en">Samoan</Text>
+			</Value>
+			<Value>
+				<Code>SPAN</Code>
+				<Text xml:lang="en">Spanish</Text>
+			</Value>
 			<Value>
 				<Code>MAOR</Code>
 				<Text xml:lang="en">Te Reo Māori</Text>
 				<Text xml:lang="mi">Te Reo Māori</Text>
 			</Value>
-			<Value><Code>RANG</Code><Text>Te Reo Rangatira</Text></Value>
-			<Value><Code>TOKE</Code><Text>Tokelauan</Text></Value>
-			<Value><Code>TONG</Code><Text>Tongan</Text></Value>
-			<Value><Code>ENSL</Code><Text>English as a Second Language</Text></Value>
+			<Value>
+				<Code>RANG</Code>
+				<Text xml:lang="en">Te Reo Rangatira</Text>
+				<Text xml:lang="mi">Te Reo Rangatira</Text>
+			</Value>
+			<Value>
+				<Code>TOKE</Code>
+				<Text xml:lang="en">Tokelauan</Text>
+			</Value>
+			<Value>
+				<Code>TONG</Code>
+				<Text>Tongan</Text>
+			</Value>
+			<Value>
+				<Code>ENSL</Code>
+				<Text xml:lang="en">English as a Second Language</Text>
+			</Value>
 			<Value>
 				<Code>MATH</Code>
 				<Text xml:lang="en">Mathematics</Text>
 				<Text xml:lang="mi">Pāngarau</Text>
 			</Value>
-			<Value><Code>MATC</Code><Text>Mathematics with Calculus</Text></Value>
-			<Value><Code>MATS</Code><Text>Mathematics with Statistics</Text></Value>
-			<Value><Code>REMM</Code><Text>Mathematics (Remedial)</Text></Value>
-			<Value><Code>ACCO</Code><Text>Accounting</Text></Value>
+			<Value>
+				<Code>MATC</Code>
+				<Text xml:lang="en">Mathematics with Calculus</Text>
+			</Value>
+			<Value>
+				<Code>MATS</Code>
+				<Text xml:lang="en">Mathematics with Statistics</Text>
+			</Value>
+			<Value>
+				<Code>REMM</Code>
+				<Text xml:lang="en">Mathematics (Remedial)</Text>
+			</Value>
+			<Value>
+				<Code>ACCO</Code>
+				<Text xml:lang="en">Accounting</Text>
+			</Value>
 			<Value>
 				<Code>SCIE</Code>
 				<Text xml:lang="en">Science</Text>
 				<Text xml:lang="mi">Pūtaiao</Text>
 			</Value>
-			<Value><Code>AGHO</Code><Text>Agriculture / Horticulture</Text></Value>
-			<Value><Code>BIOL</Code><Text>Biology / Biological Science</Text></Value>
-			<Value><Code>CHEM</Code><Text>Chemsitry</Text></Value>
-			<Value><Code>EAAS</Code><Text>Earth Science / Astronomy</Text></Value>
-			<Value><Code>HUMB</Code><Text>Human Biology</Text></Value>
-			<Value><Code>PHYS</Code><Text>Physics</Text></Value>
+			<Value>
+				<Code>AGHO</Code>
+				<Text xml:lang="en">Agriculture / Horticulture</Text>
+			</Value>
+			<Value>
+				<Code>BIOL</Code>
+				<Text xml:lang="en">Biology / Biological Science</Text>
+			</Value>
+			<Value>
+				<Code>CHEM</Code>
+				<Text xml:lang="en">Chemsitry</Text>
+			</Value>
+			<Value>
+				<Code>EAAS</Code>
+				<Text xml:lang="en">Earth Science / Astronomy</Text>
+			</Value>
+			<Value>
+				<Code>HUMB</Code>
+				<Text xml:lang="en">Human Biology</Text>
+			</Value>
+			<Value>
+				<Code>PHYS</Code>
+				<Text xml:lang="en">Physics</Text>
+			</Value>
 			<Value>
 				<Code>TECN</Code>
 				<Text xml:lang="en">Technology</Text>
 				<Text xml:lang="mi">Hangarau</Text>
 			</Value>
-			<Value><Code>BITE</Code><Text>Biotechnology</Text></Value>
-			<Value><Code>COSC</Code><Text>Computer Science / Programming</Text></Value>
-			<Value><Code>COMP</Code><Text>Computer Studies</Text></Value>
-			<Value><Code>DEST</Code><Text>Design, Drawing and Graphics</Text></Value>
-			<Value><Code>ELTE</Code><Text>Electronics and Control</Text></Value>
-			<Value><Code>FOTE</Code><Text>Food Technology</Text></Value>
-			<Value><Code>GRAP</Code><Text>Graphics</Text></Value>
-			<Value><Code>INTE</Code><Text>Information and Communication Technology</Text></Value>
-			<Value><Code>MTEC</Code><Text>Materials Technology</Text></Value>
-			<Value><Code>STME</Code><Text>Structures and Mechanisms</Text></Value>
-			<Value><Code>TIMA</Code><Text>Test and Information Management</Text></Value>
-			<Value><Code>CLTX</Code><Text>Textiles / Clothing</Text></Value>
+			<Value>
+				<Code>BITE</Code>
+				<Text xml:lang="en">Biotechnology</Text>
+			</Value>
+			<Value>
+				<Code>COSC</Code>
+				<Text xml:lang="en">Computer Science / Programming</Text>
+			</Value>
+			<Value>
+				<Code>COMP</Code>
+				<Text xml:lang="en">Computer Studies</Text>
+			</Value>
+			<Value>
+				<Code>DEST</Code>
+				<Text xml:lang="en">Design, Drawing and Graphics</Text>
+			</Value>
+			<Value>
+				<Code>ELTE</Code>
+				<Text xml:lang="en">Electronics and Control</Text>
+			</Value>
+			<Value>
+				<Code>FOTE</Code>
+				<Text xml:lang="en">Food Technology</Text>
+			</Value>
+			<Value>
+				<Code>GRAP</Code>
+				<Text  xml:lang="en">Graphics</Text>
+			</Value>
+			<Value>
+				<Code>INTE</Code>
+				<Text xml:lang="en">Information and Communication Technology</Text>
+			</Value>
+			<Value>
+				<Code>MTEC</Code>
+				<Text xml:lang="en">Materials Technology</Text>
+			</Value>
+			<Value>
+				<Code>STME</Code>
+				<Text xml:lang="en">Structures and Mechanisms</Text>
+			</Value>
+			<Value>
+				<Code>TIMA</Code>
+				<Text xml:lang="en">Test and Information Management</Text>
+			</Value>
+			<Value>
+				<Code>CLTX</Code>
+				<Text xml:lang="en">Textiles / Clothing</Text>
+			</Value>
 			<Value>
 				<Code>ARTA</Code>
 				<Text xml:lang="en">The Arts</Text>
 				<Text xml:lang="mi">Ngā Toi</Text>
 			</Value>
-			<Value><Code>ARTD</Code><Text>Art Design</Text></Value>
-			<Value><Code>ARTH</Code><Text>Art History</Text></Value>
-			<Value><Code>DANC</Code><Text>Dancing</Text></Value>
-			<Value><Code>DRAM</Code><Text>Drama</Text></Value>
-			<Value><Code>MUSC</Code><Text>Music / Music Studies</Text></Value>
-			<Value><Code>MUSP</Code><Text>Music Practical / Performance</Text></Value>
-			<Value><Code>ARPA</Code><Text>Painting</Text></Value>
-			<Value><Code>APER</Code><Text>Performing Arts</Text></Value>
-			<Value><Code>ARTP</Code><Text>Photography</Text></Value>
-			<Value><Code>ARPR</Code><Text>Printmaking</Text></Value>
-			<Value><Code>ARTS</Code><Text>Sculpture</Text></Value>
-			<Value><Code>ARTC</Code><Text>Visial Arts</Text></Value>
+			<Value>
+				<Code>ARTD</Code>
+				<Text xml:lang="en">Art Design</Text>
+			</Value>
+			<Value>
+				<Code>ARTH</Code>
+				<Text xml:lang="en">Art History</Text>
+			</Value>
+			<Value>
+				<Code>DANC</Code>
+				<Text xml:lang="en">Dancing</Text>
+			</Value>
+			<Value>
+				<Code xml:lang="en">DRAM</Code>
+			  <Text>Drama</Text>
+			</Value>
+			<Value>
+			  <Code>MUSC</Code>
+			  <Text xml:lang="en">Music / Music Studies</Text>
+			</Value>
+			<Value>
+			  <Code>MUSP</Code>
+			  <Text xml:lang="en">Music Practical / Performance</Text>
+			</Value>
+			<Value>
+			  <Code>ARPA</Code>
+			  <Text xml:lang="en">Painting</Text>
+			</Value>
+			<Value>
+			  <Code>APER</Code>
+			  <Text xml:lang="en">Performing Arts</Text>
+			</Value>
+			<Value>
+			  <Code>ARTP</Code>
+			  <Text xml:lang="en">Photography</Text>
+			</Value>
+			<Value>
+			  <Code>ARPR</Code>
+			  <Text xml:lang="en">Printmaking</Text>
+			</Value>
+			<Value>
+			  <Code>ARTS</Code>
+			  <Text xml:lang="en">Sculpture</Text>
+			</Value>
+			<Value>
+			  <Code>ARTC</Code>
+			  <Text xml:lang="en">Visial Arts</Text>
+			</Value>
 			<Value>
 				<Code>SOST</Code>
 				<Text xml:lang="en">Social Studies</Text>
 				<Text xml:lang="mi">Tikanga ā-iwi</Text>
 			</Value>
-			<Value><Code>CLST</Code><Text>Classics / Classical Studies</Text></Value>
-			<Value><Code>CMTY</Code><Text>Community Studies</Text></Value>
-			<Value><Code>ECON</Code><Text>Economics</Text></Value>
-			<Value><Code>SENV</Code><Text>Environmental Sustainability</Text></Value>
-			<Value><Code>GEOG</Code><Text>Geography</Text></Value>
-			<Value><Code>HIST</Code><Text>History</Text></Value>
-			<Value><Code>LACU</Code><Text>Language and Cultural Studies</Text></Value>
-			<Value><Code>MAOS</Code><Text>Māori Studies</Text></Value>
-			<Value><Code>MEST</Code><Text>Media Studies</Text></Value>
-			<Value><Code>SOSC</Code><Text>Other Social Sciences</Text></Value>
+			<Value>
+			  <Code>CLST</Code>
+			  <Text xml:lang="en">Classics / Classical Studies</Text>
+			</Value>
+			<Value>
+			  <Code>CMTY</Code>
+			  <Text xml:lang="en">Community Studies</Text>
+			</Value>
+			<Value>
+			  <Code>ECON</Code>
+			  <Text xml:lang="en">Economics</Text>
+			</Value>
+			<Value>
+			  <Code>SENV</Code>
+			  <Text xml:lang="en">Environmental Sustainability</Text>
+			</Value>
+			<Value>
+			  <Code>GEOG</Code>
+			  <Text xml:lang="en">Geography</Text>
+			</Value>
+			<Value>
+			  <Code>HIST</Code>
+			  <Text xml:lang="en">History</Text>
+			</Value>
+			<Value>
+			  <Code>LACU</Code>
+			  <Text xml:lang="en">Language and Cultural Studies</Text>
+			</Value>
+			<Value>
+			  <Code>MAOS</Code>
+			  <Text xml:lang="en">Māori Studies</Text>
+			</Value>
+			<Value>
+			  <Code>MEST</Code>
+			  <Text xml:lang="en">Media Studies</Text>
+			</Value>
+			<Value>
+			  <Code>SOSC</Code>
+			  <Text xml:lang="en">Other Social Sciences</Text>
+			</Value>
 			<Value>
 				<Code>HEPH</Code>
 				<Text xml:lang="en">Health and Physical Education</Text>
 				<Text xml:lang="mi">Hauora</Text>
 			</Value>
-			<Value><Code>HEED</Code><Text>Health</Text></Value>
-			<Value><Code>HOME</Code><Text>Home Economics</Text></Value>
-			<Value><Code>OUED</Code><Text>Outdoor Education</Text></Value>
-			<Value><Code>PHED</Code><Text>Physical Education</Text></Value>
-			<Value><Code>SPOR</Code><Text>Sports Studies</Text></Value>
-			<Value><Code>BUSS</Code><Text>Commerce Related</Text></Value>
-			<Value><Code>DEFE</Code><Text>Defence</Text></Value>
-			<Value><Code>EQUE</Code><Text>Equestrian</Text></Value>
-			<Value><Code>FARM</Code><Text>Farming</Text></Value>
-			<Value><Code>FISH</Code><Text>Fishing</Text></Value>
-			<Value><Code>FOTY</Code><Text>Forestry</Text></Value>
-			<Value><Code>INTR</Code><Text>Industrial Trades</Text></Value>
-			<Value><Code>INTS</Code><Text>Integrated Studies</Text></Value>
-			<Value><Code>LAWS</Code><Text>Legal / Law Related Studies</Text></Value>
-			<Value><Code>LIFE</Code><Text>Life Skills / Personal Development</Text></Value>
-			<Value><Code>REST</Code><Text>Religious Education / Studies</Text></Value>
-			<Value><Code>REMS</Code><Text>Remedial Studies</Text></Value>
-			<Value><Code>STPR</Code><Text>Secondary Tertiary Programme</Text></Value>
-			<Value><Code>SETR</Code><Text>Service Trades</Text></Value>
-			<Value><Code>SPPR</Code><Text>Special Needs Programme</Text></Value>
-			<Value><Code>STDY</Code><Text>Study Skills</Text></Value>
-			<Value><Code>TRAN</Code><Text>Transition / Pre-Employment</Text></Value>
-			<Value><Code>THTR</Code><Text>Travel, Hospitality, Tourism</Text></Value>
+			<Value>
+			  <Code>HEED</Code>
+			  <Text xml:lang="en">Health</Text>
+			</Value>
+			<Value>
+			  <Code>HOME</Code>
+			  <Text xml:lang="en">Home Economics</Text>
+			</Value>
+			<Value>
+			  <Code>OUED</Code>
+			  <Text xml:lang="en">Outdoor Education</Text>
+			</Value>
+			<Value>
+			  <Code>PHED</Code>
+			  <Text xml:lang="en">Physical Education</Text>
+			</Value>
+			<Value>
+			  <Code>SPOR</Code>
+			  <Text xml:lang="en">Sports Studies</Text>
+			</Value>
+			<Value>
+			  <Code>BUSS</Code>
+			  <Text xml:lang="en">Commerce Related</Text>
+			</Value>
+			<Value>
+			  <Code>DEFE</Code>
+			  <Text xml:lang="en">Defence</Text>
+			</Value>
+			<Value>
+			  <Code>EQUE</Code>
+			  <Text xml:lang="en">Equestrian</Text>
+			</Value>
+			<Value>
+			  <Code>FARM</Code>
+			  <Text xml:lang="en">Farming</Text>
+			</Value>
+			<Value>
+			  <Code>FISH</Code>
+			  <Text xml:lang="en">Fishing</Text>
+			</Value>
+			<Value>
+			  <Code>FOTY</Code>
+			  <Text xml:lang="en">Forestry</Text>
+			</Value>
+			<Value>
+			  <Code>INTR</Code>
+			  <Text xml:lang="en">Industrial Trades</Text>
+			</Value>
+			<Value>
+			  <Code>INTS</Code>
+			  <Text xml:lang="en">Integrated Studies</Text>
+			</Value>
+			<Value>
+			  <Code>LAWS</Code>
+			  <Text xml:lang="en">Legal / Law Related Studies</Text>
+			</Value>
+			<Value>
+			  <Code>LIFE</Code>
+			  <Text xml:lang="en">Life Skills / Personal Development</Text>
+			</Value>
+			<Value>
+			  <Code>REST</Code>
+			  <Text xml:lang="en">Religious Education / Studies</Text>
+			</Value>
+			<Value>
+			  <Code>REMS</Code>
+			  <Text xml:lang="en">Remedial Studies</Text>
+			</Value>
+			<Value>
+			  <Code>STPR</Code>
+			  <Text xml:lang="en">Secondary Tertiary Programme</Text>
+			</Value>
+			<Value>
+			  <Code>SETR</Code>
+			  <Text xml:lang="en">Service Trades</Text>
+			</Value>
+			<Value>
+			  <Code>SPPR</Code>
+			  <Text xml:lang="en">Special Needs Programme</Text>
+			</Value>
+			<Value>
+			  <Code>STDY</Code>
+			  <Text xml:lang="en">Study Skills</Text>
+			</Value>
+			<Value>
+			  <Code>TRAN</Code>
+			  <Text xml:lang="en">Transition / Pre-Employment</Text>
+			</Value>
+			<Value>
+			  <Code>THTR</Code>
+			  <Text xml:lang="en">Travel, Hospitality, Tourism</Text>
+			</Value>
 			<Value>
 				<Code>CROS</Code>
 				<Text xml:lang="en">Cross-Curricular</Text>
