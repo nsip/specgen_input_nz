@@ -12,15 +12,15 @@
 	<xsl:param name="sifVersion"/>
 	<xsl:param name="sifLocale"/>
 
-	<!-- This Schema is for CREATE so mandatory fields are REQUIRED -->
-	<xsl:param name="mandatoryFields">required</xsl:param>
+	<!-- This schema is for UPDATES so mandatory fields are OPTIONAL -->
+	<xsl:param name="mandatoryFields">optional</xsl:param>
 
 	<!-- How many enumeration values to include in descriptions ? -->
 	<xsl:param name="enumCount">12</xsl:param>
-
-	<!-- Include all the vendor extensions ?? -->
-	<xsl:param name="strictJSON">false</xsl:param>
 	
+	<!-- Include all the vendor extensions ?? -->
+	<xsl:param name="strictJSON">true</xsl:param>
+
 	<!-- Where is the SIF HTML documentation available for links -->
 	<xsl:variable name="extDocURLBase">
 		<xsl:value-of select="concat('https://sifnzmodel.azurewebsites.net/SIFNZ-v', translate(replace($sifVersion, ' \(', '-'), ') ', ''), '/')"/>

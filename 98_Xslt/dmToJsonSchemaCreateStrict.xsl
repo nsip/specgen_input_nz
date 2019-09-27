@@ -19,7 +19,7 @@
 	<xsl:param name="enumCount">12</xsl:param>
 
 	<!-- Include all the vendor extensions ?? -->
-	<xsl:param name="strictJSON">false</xsl:param>
+	<xsl:param name="strictJSON">true</xsl:param>
 	
 	<!-- Where is the SIF HTML documentation available for links -->
 	<xsl:variable name="extDocURLBase">

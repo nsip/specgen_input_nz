@@ -746,7 +746,15 @@
 	<xsl:template match="specgen:Value" mode="enum">
 		<xsl:param name="indent"/>
 
-		<xsl:value-of select="concat($indent, '- const: ', $q, specgen:Code, $q, '&#x0a;')"/>
+		<!-- JSON Schema for OpenAPI doesn't (currently) support 'const' as synonym for singleton 'enum' array -->
+		<xsl:choose>
+			<xsl:when test="$strictJSON eq 'true'">
+				<xsl:value-of select="concat($indent, '- enum: [ ', $q, specgen:Code, $q, ' ]&#x0a;')"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="concat($indent, '- const: ', $q, specgen:Code, $q, '&#x0a;')"/>
+			</xsl:otherwise>
+		</xsl:choose>
 
 		<xsl:apply-templates select="specgen:Text" mode="enum">
 			<xsl:with-param name="indent" select="$indent"/>
@@ -758,7 +766,7 @@
 	</xsl:template>
 
 
-	<!-- not doing multiple languages -->
+	<!-- Enumaeration doesn't have multiple languages -->
 	<xsl:template match="specgen:Text" mode="enum">
 		<xsl:param name="indent"/>
 
@@ -771,24 +779,42 @@
 		<xsl:text>&#x0a;</xsl:text>
 	</xsl:template>
 
-	<!-- doing multiple languages -->
+	<!-- Enumeration has multiple languages -->
 	<xsl:template match="specgen:Text[@xml:lang]" mode="enum">
 		<xsl:param name="indent"/>
 
-		<xsl:if test="position() = 1">
-			<xsl:value-of select="concat($indent, '  title*: &#x0a;')"/>
-		</xsl:if>
-
 		<xsl:variable name="text"><xsl:apply-templates/></xsl:variable>
-		<xsl:value-of select="concat($indent, '    ', @xml:lang, ': ')"/>
-		<xsl:if test="contains($text, ':')"><xsl:text>"</xsl:text></xsl:if>
-		<xsl:value-of select="normalize-space($text)"/>
-		<xsl:if test="contains($text, ':')"><xsl:text>"</xsl:text></xsl:if>
-		<xsl:text>&#x0a;</xsl:text>
 
+		<!-- JSON Schema for OpenAPI doesn't (yet) support per-language titles -->
+		<xsl:choose>
+			<xsl:when test="$strictJSON eq 'true'">
+				<!-- Only use the english translation -->
+				<xsl:if test="@xml:lang eq 'en'">
+					<xsl:value-of select="concat($indent, '  title: ')"/>
+
+					<xsl:if test="contains($text, ':')"><xsl:text>"</xsl:text></xsl:if>
+					<xsl:value-of select="normalize-space($text)"/>
+					<xsl:if test="contains($text, ':')"><xsl:text>"</xsl:text></xsl:if>
+					<xsl:text>&#x0a;</xsl:text>
+				</xsl:if>
+			</xsl:when>
+
+			<!-- Otherwise we're doing all trasnslations -->
+			<xsl:otherwise>
+				<xsl:if test="position() = 1">
+					<xsl:value-of select="concat($indent, '  title*: &#x0a;')"/>
+				</xsl:if>
+				<xsl:value-of select="concat($indent, '    ', @xml:lang, ': ')"/>
+
+				<xsl:if test="contains($text, ':')"><xsl:text>"</xsl:text></xsl:if>
+				<xsl:value-of select="normalize-space($text)"/>
+				<xsl:if test="contains($text, ':')"><xsl:text>"</xsl:text></xsl:if>
+				<xsl:text>&#x0a;</xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
-	<!-- not doing multiple languages -->
+	<!-- Enumeration description doesn't have multiple languages -->
 	<xsl:template match="specgen:Description" mode="enum">
 		<xsl:param name="indent"/>
 
@@ -801,20 +827,39 @@
 		<xsl:text>&#x0a;</xsl:text>
 	</xsl:template>
 
-	<!-- doing multiple languages -->
+	<!-- Enumeration description has multiple languages -->
 	<xsl:template match="specgen:Description[@xml:lang]" mode="enum">
 		<xsl:param name="indent"/>
 
-		<xsl:if test="position() = 1">
-			<xsl:value-of select="concat($indent, '  description*:&#x0a;')"/>
-		</xsl:if>
-
 		<xsl:variable name="descr"><xsl:apply-templates/></xsl:variable>
-		<xsl:value-of select="concat($indent, '    ', @xml:lang, ': &gt;-&#x0a;', $indent, '      ')"/>
-		<xsl:if test="contains($descr, ':')"><xsl:text>"</xsl:text></xsl:if>
-		<xsl:value-of select="normalize-space($descr)"/>
-		<xsl:if test="contains($descr, ':')"><xsl:text>"</xsl:text></xsl:if>
-		<xsl:text>&#x0a;</xsl:text>
+
+		<!-- JSON Schema for OpenAPI doesn't (yet) support per-language titles -->
+		<xsl:choose>
+			<xsl:when test="$strictJSON eq 'true'">
+				<!-- Only use the english translation -->
+				<xsl:if test="@xml:lang eq 'en'">
+					<xsl:value-of select="concat($indent, '  description: &gt;-&#x0a;    ', $indent)"/>
+
+					<xsl:if test="contains($descr, ':')"><xsl:text>"</xsl:text></xsl:if>
+					<xsl:value-of select="normalize-space($descr)"/>
+					<xsl:if test="contains($descr, ':')"><xsl:text>"</xsl:text></xsl:if>
+					<xsl:text>&#x0a;</xsl:text>
+				</xsl:if>
+			</xsl:when>
+
+			<!-- Otherwise do the translations -->
+			<xsl:otherwise>
+				<xsl:if test="position() = 1">
+					<xsl:value-of select="concat($indent, '  description*:&#x0a;')"/>
+				</xsl:if>
+
+				<xsl:value-of select="concat($indent, '    ', @xml:lang, ': &gt;-&#x0a;', $indent, '      ')"/>
+				<xsl:if test="contains($descr, ':')"><xsl:text>"</xsl:text></xsl:if>
+				<xsl:value-of select="normalize-space($descr)"/>
+				<xsl:if test="contains($descr, ':')"><xsl:text>"</xsl:text></xsl:if>
+				<xsl:text>&#x0a;</xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
 	<!-- CodeSet value (for description text - <li> ... </li>) -->

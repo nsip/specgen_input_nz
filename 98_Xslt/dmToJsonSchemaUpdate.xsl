@@ -18,6 +18,9 @@
 	<!-- How many enumeration values to include in descriptions ? -->
 	<xsl:param name="enumCount">12</xsl:param>
 	
+	<!-- Include all the vendor extensions ?? -->
+	<xsl:param name="strictJSON">false</xsl:param>
+
 	<!-- Where is the SIF HTML documentation available for links -->
 	<xsl:variable name="extDocURLBase">
 		<xsl:value-of select="concat('https://sifnzmodel.azurewebsites.net/SIFNZ-v', translate(replace($sifVersion, ' \(', '-'), ') ', ''), '/')"/>

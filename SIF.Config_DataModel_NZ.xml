@@ -150,6 +150,22 @@
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate-strict.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate-strict.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
 
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
