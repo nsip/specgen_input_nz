@@ -20,14 +20,14 @@
 	</Item>
 	<Item>
 		<Element>StudentAttendanceTimeListRefId</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
 		<Type ref="CommonTypes" name="RefIdType"/>
 	</Item>    <!-- StudentAttendanceTimeListRefId -->
 	<Item>
 		<Element>Student</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The student for whom this attendance time list is being reported.</p>
@@ -45,7 +45,7 @@
 	</Item>    <!-- ProviderRefId -->
 	<Item>
 		<Element>TeachingGroup</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The teaching group that is reporting this student's attenandce time list.</p>
