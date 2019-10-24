@@ -142,6 +142,17 @@
   </Item>    <!-- AssessmentType -->
 
   <Item>
+    <Element>AssessmentMethodology</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting the nature of the assessment process;  Primary assessment against NZ Curriculum or Te Marautanga
+      o Aotearoa; Secondary assessment against NCEA, Cambridge, International Baccalaureate, or similar.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentMethodologyType"/>
+  </Item>    <!-- AssessmentMethodology -->
+
+  <Item>
     <Element>Status</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -245,6 +256,7 @@
       </StaffInvolvedList>
       <DateTimeAssessmentScheduled>2018-11-25T09:00:00+12:00</DateTimeAssessmentScheduled>
       <AssessmentType>EXT</AssessmentType>
+      <AssessmentMethodology>S</AssessmentMethodology>
       <SubjectAreaList json:force-array="true">
           <SubjectArea>PHYS</SubjectArea>
       </SubjectAreaList>

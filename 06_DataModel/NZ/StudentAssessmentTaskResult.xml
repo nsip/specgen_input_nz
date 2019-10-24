@@ -59,7 +59,17 @@
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentTypeType"></Type>
   </Item>    <!-- AssessmentType -->    
- 
+  <Item>
+    <Element>AssessmentMethodology</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting the nature of the assessment process;  Primary assessment against NZ Curriculum or Te Marautanga
+      o Aotearoa; Secondary assessment against NCEA, Cambridge, International Baccalaureate, or similar.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentMethodologyType"/>
+  </Item>    <!-- AssessmentMethodologyType -->
+
   <Item>
     <Element>Student</Element>
     <Characteristics>M</Characteristics>
@@ -294,6 +304,7 @@
       <StudentAssessmentTaskResult>
         <StudentAssessmentTaskResultRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskResultRefId>
         <AssessmentType>INT</AssessmentType>
+        <AssessmentMethodology>P</AssessmentMethodology>
         <Student>
           <RefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</RefId>
         </Student>
@@ -337,6 +348,7 @@
       <StudentAssessmentTaskResult>
         <StudentAssessmentTaskResultRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskResultRefId>
         <AssessmentType>INT</AssessmentType>
+        <AssessmentMethodology>P</AssessmentMethodology>
         <Student>
           <RefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</RefId>
         </Student>

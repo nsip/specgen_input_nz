@@ -2,6 +2,36 @@
 	xmlns:xi="http://www.w3.org/2001/XInclude"
  	xmlns="http://sifassociation.org/SpecGen">
 	
+	
+	<CodeSet>
+		<Intro>
+			<p>Code denoting the nature of the assessment process;  Primary assessment against NZ Curriculum or Te Marautanga
+      o Aotearoa; Secondary assessment against NCEA, Cambridge, International Baccalaureate, or similar.</p>
+		</Intro>
+		<ID>Assessment Methodology</ID>
+		<Values>
+			<Value>
+				<Code>P</Code>
+				<Text xml:lang="en">Primary</Text>
+				<Text xml:lang="mi"></Text>
+				<Description>
+					Learner is being assessed against assessment against NZ Curriculum or Te Marautanga o Aotearoa; includes
+					teacher's overall judgement, specific competency tests conducted manually or with the help of 
+					recognised assessment tools.
+				</Description>
+			</Value>
+			<Value>
+				<Code>S</Code>
+				<Text xml:lang="en">Secondary</Text>
+				<Text xml:lang="mi"></Text>
+				<Description>
+					Learner is being assessed in an externally provided qualification system such as NCEA, Cambridge Education,
+					International Baccalaureate, or similar.
+				</Description>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Assessment Methodology Type -->
+	
 	<CodeSet>
 		<Intro>
 			<p>Standard codes denoting the type of assessment the student is sitting for the assessment task.</p>
@@ -41,6 +71,25 @@
 			</Value>    <!-- Other -->			
 		</Values>
 	</CodeSet>    <!-- Assessment Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the type of assessment evaluation taking place, e.g. formative or summative.</p>
+		</Intro>
+		<ID>Assessment Evaluation Type</ID>
+		<Values>
+			<Value>
+				<Code>F</Code>
+				<Text xml:lang="en">Formative</Text>
+				<Text xml:lang="mi">Arataki</Text>
+			</Value>
+			<Value>
+				<Code>S</Code>
+				<Text xml:lang="en">Summative</Text>
+				<Text xml:lang="mi">Whakakapi</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Assessment Evaluation Type -->
 
 	<CodeSet>
 		<Intro>
@@ -280,24 +329,5 @@
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Assessment Result -->
-
-	<CodeSet>
-		<Intro>
-			<p>Code set denoting the type of assessment evaluation taking place, e.g. formative or summative.</p>
-		</Intro>
-		<ID>Assessment Evaluation Type</ID>
-		<Values>
-			<Value>
-				<Code>F</Code>
-				<Text xml:lang="en">Formative</Text>
-				<Text xml:lang="mi">Arataki</Text>
-			</Value>
-			<Value>
-				<Code>S</Code>
-				<Text xml:lang="en">Summative</Text>
-				<Text xml:lang="mi">Whakakapi</Text>
-			</Value>
-		</Values>
-	</CodeSet>    <!-- Assessment Evaluation Type -->
 
 </IncludeGroup>

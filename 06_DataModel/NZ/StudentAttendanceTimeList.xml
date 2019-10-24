@@ -27,13 +27,13 @@
 	</Item>    <!-- StudentAttendanceTimeListRefId -->
 	<Item>
 		<Element>Student</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The student for whom this attendance time list is being reported.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ObjectReference"/>
-	</Item>    <!-- StudentPersonalRefId -->
+	</Item>    <!-- Student -->
 	<Item>
 		<Element>Provider</Element>
 		<Characteristics>M</Characteristics>
@@ -42,7 +42,7 @@
 			<p>The provider who is providing this attendance time list record.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ObjectReference"/>
-	</Item>    <!-- ProviderRefId -->
+	</Item>    <!-- Provider -->
 	<Item>
 		<Element>TeachingGroup</Element>
 		<Characteristics>O</Characteristics>
