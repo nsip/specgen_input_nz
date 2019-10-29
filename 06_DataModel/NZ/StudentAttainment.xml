@@ -92,7 +92,7 @@
 
   <Item>
     <Element>YearAttained</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The year the student achieved the attainment.</p>
