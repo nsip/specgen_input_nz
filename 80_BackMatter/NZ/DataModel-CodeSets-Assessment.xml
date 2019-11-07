@@ -156,7 +156,7 @@
 		</Intro>
 		<ID>Score Metric</ID>
 		<Values>
-			<!-- PAT test metrics -->
+			<!-- PAT & STAR test metrics -->
 			<Value>
 				<Code>RAW</Code>
 				<Text xml:lang="en">Raw</Text>
@@ -182,6 +182,23 @@
 				<Text xml:lang="en">Year Level</Text>
 				<Text xml:lang="mi">Taumata ā-Tau</Text>
 			</Value>    <!-- Year Level -->
+
+			<!--asTTle metrics -->
+			<Value>
+				<Code>CUR</Code>
+				<Text xml:lang="en">Curriculum Level</Text>
+				<Text xml:lang="mi">Taumata Marau</Text>
+				<Description>Student is assessed to be at one of the levels defined by The National Curriculum: 1A, 1B through 5A, 5B</Description>
+			</Value>    <!-- Curriculum Level -->
+
+			<!-- Number Knowledge Stages (IKAN uses 4 through 8) -->
+			<Value>
+				<Code>NKS</Code>
+				<Text xml:lang="en">Number Knowledge Stage</Text>
+				<Description>Recorded as either stage numbers 1-8 or 7 codes: E, CA, AC, EA, AA, AM, AP</Description>
+			</Value> <!-- Number Knowledge Stage -->
+
+			<!-- NCEA metrics -->
 			<Value>
 			  <Code>NA</Code>
 			  <Text xml:lang="en">NA</Text>
@@ -193,15 +210,7 @@
 				<Text xml:lang="en">NAME</Text>
 				<Text xml:lang="mi">NAME</Text>
 				<Description>NZQA Achievement Standards: Not Achieved, Achieved, Achieved with Merit, Achieved with Excellence</Description>
-			</Value>    <!-- NAME -->
-
-			<!--asTTle metrics -->
-			<Value>
-				<Code>CUR</Code>
-				<Text xml:lang="en">Curriculum Level</Text>
-				<Text xml:lang="mi">Taumata Marau</Text>
-				<Description>Student is assessed to be at one of the levels defined by The National Curriculum: 1A, 1B through 5A, 5B</Description>
-			</Value>    <!-- Curriculum Level -->
+			</Value>    <!-- NAME -->			
 		</Values>
 	</CodeSet>    <!-- Score Metric -->
 
@@ -328,6 +337,43 @@
 				<Text xml:lang="mi">Paetae</Text>
 			</Value>
 		</Values>
+
+		<!-- Number Knowledge Stages -->
+		<Value>
+			<Code>NKS-E</Code>
+			<Text xml:lang="en">Emergent</Text>
+			<Description>Number knowledge Stage 1</Description>
+		</Value>
+		<Value>
+			<Code>NKS-CA</Code>
+			<Text xml:lang="en">Counting All</Text>
+			<Description>Number knowledge Stage 2-3</Description>
+		</Value>
+		<Value>
+			<Code>NKS-AC</Code>
+			<Text xml:lang="en">Advanced Counting</Text>
+			<Description>Number knowledge Stage 4</Description>
+		</Value>    <!-- Advanced Counting -->
+		<Value>
+			<Code>NKS-EA</Code>
+			<Text xml:lang="en">Early Additive</Text>
+			<Description>Number knowledge Stage 5</Description>
+		</Value>    <!-- Early Additive -->
+		<Value>
+			<Code>NKS-AA</Code>
+			<Text xml:lang="en">Advanced Additive</Text>
+			<Description>Number knowledge Stage 6</Description>
+		</Value>    <!-- Advanced Additive -->
+		<Value>
+			<Code>NKS-AM</Code>
+			<Text xml:lang="en">Advanced Multiplicative</Text>
+			<Description>Number knowledge Stage 6</Description>
+		</Value>    <!-- Advanced Multiplicative -->
+		<Value>
+			<Code>NKS-AP</Code>
+			<Text xml:lang="en">Advanced Proportional</Text>
+			<Description>Number knowledge Stage 7</Description>
+		</Value>    <!-- Advanced Proportional -->		
 	</CodeSet>    <!-- Assessment Result -->
 
 </IncludeGroup>
