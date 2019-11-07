@@ -317,6 +317,9 @@
         <SubjectAreaList>
             <SubjectArea>MATH</SubjectArea>
         </SubjectAreaList>
+        <Curriculum>NZC</Curriculum>
+        <CurriculumLevel>2</CurriculumLevel>
+        <AssessmentToolTypeName>PAT</AssessmentToolTypeName>
         <EvaluationType>F</EvaluationType>
         <DateAssessed>2018-11-21</DateAssessed>
         <ResultScoreList>
@@ -333,58 +336,175 @@
             <ScoreValue  json:force-string="true">5.0</ScoreValue>
           </ResultScore>
           <ResultScore>
-            <ScoreMetric>STA</ScoreMetric>  <!-- Stanine -->
-            <ScoreValue  json:force-string="true">6</ScoreValue>
-          </ResultScore>
-          <ResultScore>
             <ScoreMetric>YEA</ScoreMetric>  <!-- Year Level -->
             <ScoreValue  json:force-string="true">4</ScoreValue>
           </ResultScore>				
+          <ResultScore>
+            <ScoreMetric>STA</ScoreMetric>  <!-- Stanine -->
+            <ScoreValue  json:force-string="true">6</ScoreValue>
+          </ResultScore>
         </ResultScoreList>
       </StudentAssessmentTaskResult>
   </xhtml:Example>
 		  
+  <xhtml:Example xmlns="" name="Student Assessment Task Result - STAR Example">
+    <StudentAssessmentTaskResult>
+      <StudentAssessmentTaskResultRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskResultRefId>
+      <AssessmentType>INT</AssessmentType>
+      <AssessmentMethodology>P</AssessmentMethodology>
+      <Student>
+        <RefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</RefId>
+      </Student>
+      <ProviderInvolvedList>
+        <ProviderInvolved>
+          <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+          <ProviderRole>PRO</ProviderRole>
+        </ProviderInvolved>
+      </ProviderInvolvedList>
+      <SubjectAreaList>
+          <SubjectArea>ENGL</SubjectArea>
+      </SubjectAreaList>
+      <Curriculum>NZC</Curriculum>
+      <CurriculumLevel>3</CurriculumLevel>
+      <AssessmentToolTypeName>STAR</AssessmentToolTypeName>
+      <EvaluationType>F</EvaluationType>
+      <DateAssessed>2018-11-01</DateAssessed>
+      <ResultScoreList>
+        <ResultScore>
+          <Competency>SubTest1</Competency>
+          <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
+          <ScoreValue json:force-string="true">8</ScoreValue>
+        </ResultScore>
+        <ResultScore>
+          <Competency>SubTest2</Competency>
+          <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
+          <ScoreValue json:force-string="true">7</ScoreValue>
+        </ResultScore>
+        <ResultScore>
+          <Competency>SubTest3</Competency>
+          <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
+          <ScoreValue json:force-string="true">10</ScoreValue>
+        </ResultScore>
+        <ResultScore>
+          <Competency>SubTest9</Competency>
+          <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
+          <ScoreValue json:force-string="true">9</ScoreValue>
+        </ResultScore>
+        <ResultScore>
+          <Competency>Summary</Competency>
+          <ScoreMetric>SCA</ScoreMetric>  <!-- Scale Score -->
+          <ScoreValue json:force-string="true">22</ScoreValue>
+        </ResultScore>
+        <ResultScore>
+          <Competency>Summary</Competency>
+          <ScoreMetric>YEA</ScoreMetric>  <!-- Year Level -->
+          <ScoreValue  json:force-string="true">5</ScoreValue>
+        </ResultScore>				
+        <ResultScore>
+          <Competency>Summary</Competency>
+          <ScoreMetric>STA</ScoreMetric>  <!-- Stanine Score -->
+          <ScoreValue json:force-string="true">4</ScoreValue>
+        </ResultScore>
+      </ResultScoreList>
+      <EffortComment>Good progress this year...</EffortComment>
+      <OtherComment>Read more at home</OtherComment>
+    </StudentAssessmentTaskResult>
+  </xhtml:Example>
+    
   <xhtml:Example xmlns="" name="Student Assessment Task Result - asTTle Example">
-      <StudentAssessmentTaskResult>
-        <StudentAssessmentTaskResultRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskResultRefId>
-        <AssessmentType>INT</AssessmentType>
-        <AssessmentMethodology>P</AssessmentMethodology>
-        <Student>
-          <RefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</RefId>
-        </Student>
-        <ProviderInvolvedList>
-          <ProviderInvolved>
-            <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
-            <ProviderRole>PRO</ProviderRole>
-          </ProviderInvolved>
-        </ProviderInvolvedList>
-        <SubjectAreaList>
-            <SubjectArea>ENGL</SubjectArea>
-        </SubjectAreaList>
-        <EvaluationType>F</EvaluationType>
-        <DateAssessed>2018-11-01</DateAssessed>
-        <ResultScoreList>
-          <ResultScore>
-            <Competency>Ideas</Competency>
-            <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
-            <ScoreValue json:force-string="true">1234</ScoreValue>
-          </ResultScore>
-          <ResultScore>
-            <Competency>Ideas</Competency>
-            <ScoreMetric>CUR</ScoreMetric>  <!-- Curriculum Level -->
-            <ScoreValue json:force-string="true">5B</ScoreValue>
-          </ResultScore>
-          <ResultScore>
-            <Competency>Overall</Competency>
-            <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
-            <ScoreValue json:force-string="true">1591</ScoreValue>
-          </ResultScore>
-          <ResultScore>
-            <Competency>Overall</Competency>
-            <ScoreMetric>CUR</ScoreMetric>  <!-- Curriculum Level -->
-            <ScoreValue json:force-string="true">5B</ScoreValue>
-          </ResultScore>
-        </ResultScoreList>
-      </StudentAssessmentTaskResult>
-    </xhtml:Example>
+    <StudentAssessmentTaskResult>
+      <StudentAssessmentTaskResultRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskResultRefId>
+      <AssessmentType>INT</AssessmentType>
+      <AssessmentMethodology>P</AssessmentMethodology>
+      <Student>
+        <RefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</RefId>
+      </Student>
+      <ProviderInvolvedList>
+        <ProviderInvolved>
+          <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+          <ProviderRole>PRO</ProviderRole>
+        </ProviderInvolved>
+      </ProviderInvolvedList>
+      <SubjectAreaList>
+          <SubjectArea>ENGL</SubjectArea>
+      </SubjectAreaList>
+      <Curriculum>NZC</Curriculum>
+      <CurriculumLevel>5</CurriculumLevel>
+      <AssessmentToolTypeName>e-asTTle</AssessmentToolTypeName>
+      <EvaluationType>F</EvaluationType>
+      <DateAssessed>2018-11-01</DateAssessed>
+      <ResultScoreList>
+        <ResultScore>
+          <Competency>Overall</Competency>
+          <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
+          <ScoreValue json:force-string="true">1591</ScoreValue>
+        </ResultScore>
+        <ResultScore>
+          <Competency>Overall</Competency>
+          <ScoreMetric>CUR</ScoreMetric>  <!-- Curriculum Level -->
+          <ScoreValue json:force-string="true">5B</ScoreValue>
+        </ResultScore>
+        <ResultScore>
+          <Competency>Ideas</Competency>
+          <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
+          <ScoreValue json:force-string="true">1234</ScoreValue>
+        </ResultScore>
+        <ResultScore>
+          <Competency>Ideas</Competency>
+          <ScoreMetric>CUR</ScoreMetric>  <!-- Curriculum Level -->
+          <ScoreValue json:force-string="true">5B</ScoreValue>
+        </ResultScore>
+      </ResultScoreList>
+    </StudentAssessmentTaskResult>
+  </xhtml:Example>
+
+  <xhtml:Example xmlns="" name="Student Assessment Task Result - IKAN Example">
+    <StudentAssessmentTaskResult>
+      <StudentAssessmentTaskResultRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskResultRefId>
+      <AssessmentType>INT</AssessmentType>
+      <AssessmentMethodology>P</AssessmentMethodology>
+      <Student>
+        <RefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</RefId>
+      </Student>
+      <ProviderInvolvedList>
+        <ProviderInvolved>
+          <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+          <ProviderRole>PRO</ProviderRole>
+        </ProviderInvolved>
+      </ProviderInvolvedList>
+      <SubjectAreaList>
+          <SubjectArea>MATH</SubjectArea>
+      </SubjectAreaList>
+      <Curriculum>NZC</Curriculum>
+      <AssessmentToolTypeName>IKAN</AssessmentToolTypeName>
+      <EvaluationType>F</EvaluationType>
+      <DateAssessed>2018-11-01</DateAssessed>
+      <ResultScoreList>
+        <ResultScore>
+          <Competency>Number Sequence and Order</Competency>
+          <ScoreMetric>NKS</ScoreMetric>  <!-- Number Knowledge Stage -->
+          <ScoreValue json:force-string="true">7</ScoreValue>
+          <ScoreCode>NKS-AP</ScoreCode>   <!-- Advanced Proportional -->
+        </ResultScore>
+        <ResultScore>
+          <Competency>Fractions</Competency>
+          <ScoreMetric>NKS</ScoreMetric>  <!-- Number Knowledge Stage -->
+          <ScoreValue json:force-string="true">6</ScoreValue>
+          <ScoreCode>NKS-AM</ScoreCode>   <!-- Advanced Multiplicative -->
+        </ResultScore>
+        <ResultScore>
+          <Competency>Place Value</Competency>
+          <ScoreMetric>NKS</ScoreMetric>  <!-- Number Knowledge Stage -->
+          <ScoreValue json:force-string="true">7</ScoreValue>
+          <ScoreCode>NKS-AP</ScoreCode>   <!-- Advanced Proportional -->
+        </ResultScore>
+        <ResultScore>
+          <Competency>Basic Facts</Competency>
+          <ScoreMetric>NKS</ScoreMetric>  <!-- Number Knowledge Stage -->
+          <ScoreValue json:force-string="true">6</ScoreValue>
+          <ScoreCode>NKS-AM</ScoreCode>   <!-- Advanced Multiplicative -->
+        </ResultScore>
+      </ResultScoreList>
+    </StudentAssessmentTaskResult>
+  </xhtml:Example>
 </DataObject>
