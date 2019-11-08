@@ -342,37 +342,37 @@
 		<Value>
 			<Code>NKS-E</Code>
 			<Text xml:lang="en">Emergent</Text>
-			<Description>Number knowledge Stage 1</Description>
+			<Description>Number knowledge Stage 1 - Emergent</Description>
 		</Value>
 		<Value>
 			<Code>NKS-CA</Code>
 			<Text xml:lang="en">Counting All</Text>
-			<Description>Number knowledge Stage 2-3</Description>
+			<Description>Number knowledge Stage 2-3 - Counting All</Description>
 		</Value>
 		<Value>
 			<Code>NKS-AC</Code>
 			<Text xml:lang="en">Advanced Counting</Text>
-			<Description>Number knowledge Stage 4</Description>
+			<Description>Number knowledge Stage 4 - Advanced Counting</Description>
 		</Value>    <!-- Advanced Counting -->
 		<Value>
 			<Code>NKS-EA</Code>
 			<Text xml:lang="en">Early Additive</Text>
-			<Description>Number knowledge Stage 5</Description>
+			<Description>Number knowledge Stage 5 - Early Additive</Description>
 		</Value>    <!-- Early Additive -->
 		<Value>
 			<Code>NKS-AA</Code>
 			<Text xml:lang="en">Advanced Additive</Text>
-			<Description>Number knowledge Stage 6</Description>
+			<Description>Number knowledge Stage 6 - Advanced Additive</Description>
 		</Value>    <!-- Advanced Additive -->
 		<Value>
 			<Code>NKS-AM</Code>
 			<Text xml:lang="en">Advanced Multiplicative</Text>
-			<Description>Number knowledge Stage 6</Description>
+			<Description>Number knowledge Stage 7 - Advanced Multiplicative</Description>
 		</Value>    <!-- Advanced Multiplicative -->
 		<Value>
 			<Code>NKS-AP</Code>
 			<Text xml:lang="en">Advanced Proportional</Text>
-			<Description>Number knowledge Stage 7</Description>
+			<Description>Number knowledge Stage 8 - Advanced Proportional</Description>
 		</Value>    <!-- Advanced Proportional -->		
 	</CodeSet>    <!-- Assessment Result -->
 
