@@ -2,6 +2,36 @@
 	xmlns:xi="http://www.w3.org/2001/XInclude"
  	xmlns="http://sifassociation.org/SpecGen">
 	
+	
+	<CodeSet>
+		<Intro>
+			<p>Code denoting the nature of the assessment process;  Primary assessment against NZ Curriculum or Te Marautanga
+      o Aotearoa; Secondary assessment against NCEA, Cambridge, International Baccalaureate, or similar.</p>
+		</Intro>
+		<ID>Assessment Methodology</ID>
+		<Values>
+			<Value>
+				<Code>P</Code>
+				<Text xml:lang="en">Primary</Text>
+				<Text xml:lang="mi"></Text>
+				<Description>
+					Learner is being assessed against assessment against NZ Curriculum or Te Marautanga o Aotearoa; includes
+					teacher's overall judgement, specific competency tests conducted manually or with the help of 
+					recognised assessment tools.
+				</Description>
+			</Value>
+			<Value>
+				<Code>S</Code>
+				<Text xml:lang="en">Secondary</Text>
+				<Text xml:lang="mi"></Text>
+				<Description>
+					Learner is being assessed in an externally provided qualification system such as NCEA, Cambridge Education,
+					International Baccalaureate, or similar.
+				</Description>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Assessment Methodology Type -->
+	
 	<CodeSet>
 		<Intro>
 			<p>Standard codes denoting the type of assessment the student is sitting for the assessment task.</p>
@@ -41,6 +71,25 @@
 			</Value>    <!-- Other -->			
 		</Values>
 	</CodeSet>    <!-- Assessment Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the type of assessment evaluation taking place, e.g. formative or summative.</p>
+		</Intro>
+		<ID>Assessment Evaluation Type</ID>
+		<Values>
+			<Value>
+				<Code>F</Code>
+				<Text xml:lang="en">Formative</Text>
+				<Text xml:lang="mi">Arataki</Text>
+			</Value>
+			<Value>
+				<Code>S</Code>
+				<Text xml:lang="en">Summative</Text>
+				<Text xml:lang="mi">Whakakapi</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Assessment Evaluation Type -->
 
 	<CodeSet>
 		<Intro>
@@ -107,7 +156,7 @@
 		</Intro>
 		<ID>Score Metric</ID>
 		<Values>
-			<!-- PAT test metrics -->
+			<!-- PAT & STAR test metrics -->
 			<Value>
 				<Code>RAW</Code>
 				<Text xml:lang="en">Raw</Text>
@@ -133,6 +182,23 @@
 				<Text xml:lang="en">Year Level</Text>
 				<Text xml:lang="mi">Taumata ā-Tau</Text>
 			</Value>    <!-- Year Level -->
+
+			<!--asTTle metrics -->
+			<Value>
+				<Code>CUR</Code>
+				<Text xml:lang="en">Curriculum Level</Text>
+				<Text xml:lang="mi">Taumata Marau</Text>
+				<Description>Student is assessed to be at one of the levels defined by The National Curriculum: 1A, 1B through 5A, 5B</Description>
+			</Value>    <!-- Curriculum Level -->
+
+			<!-- Number Knowledge Stages (IKAN uses 4 through 8) -->
+			<Value>
+				<Code>NKS</Code>
+				<Text xml:lang="en">Number Knowledge Stage</Text>
+				<Description>Recorded as either stage numbers 1-8 or 7 codes: E, CA, AC, EA, AA, AM, AP</Description>
+			</Value> <!-- Number Knowledge Stage -->
+
+			<!-- NCEA metrics -->
 			<Value>
 			  <Code>NA</Code>
 			  <Text xml:lang="en">NA</Text>
@@ -144,15 +210,7 @@
 				<Text xml:lang="en">NAME</Text>
 				<Text xml:lang="mi">NAME</Text>
 				<Description>NZQA Achievement Standards: Not Achieved, Achieved, Achieved with Merit, Achieved with Excellence</Description>
-			</Value>    <!-- NAME -->
-
-			<!--asTTle metrics -->
-			<Value>
-				<Code>CUR</Code>
-				<Text xml:lang="en">Curriculum Level</Text>
-				<Text xml:lang="mi">Taumata Marau</Text>
-				<Description>Student is assessed to be at one of the levels defined by The National Curriculum: 1A, 1B through 5A, 5B</Description>
-			</Value>    <!-- Curriculum Level -->
+			</Value>    <!-- NAME -->			
 		</Values>
 	</CodeSet>    <!-- Score Metric -->
 
@@ -279,25 +337,43 @@
 				<Text xml:lang="mi">Paetae</Text>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Assessment Result -->
 
-	<CodeSet>
-		<Intro>
-			<p>Code set denoting the type of assessment evaluation taking place, e.g. formative or summative.</p>
-		</Intro>
-		<ID>Assessment Evaluation Type</ID>
-		<Values>
-			<Value>
-				<Code>F</Code>
-				<Text xml:lang="en">Formative</Text>
-				<Text xml:lang="mi">Arataki</Text>
-			</Value>
-			<Value>
-				<Code>S</Code>
-				<Text xml:lang="en">Summative</Text>
-				<Text xml:lang="mi">Whakakapi</Text>
-			</Value>
-		</Values>
-	</CodeSet>    <!-- Assessment Evaluation Type -->
+		<!-- Number Knowledge Stages -->
+		<Value>
+			<Code>NKS-E</Code>
+			<Text xml:lang="en">Emergent</Text>
+			<Description>Number knowledge Stage 1 - Emergent</Description>
+		</Value>
+		<Value>
+			<Code>NKS-CA</Code>
+			<Text xml:lang="en">Counting All</Text>
+			<Description>Number knowledge Stage 2-3 - Counting All</Description>
+		</Value>
+		<Value>
+			<Code>NKS-AC</Code>
+			<Text xml:lang="en">Advanced Counting</Text>
+			<Description>Number knowledge Stage 4 - Advanced Counting</Description>
+		</Value>    <!-- Advanced Counting -->
+		<Value>
+			<Code>NKS-EA</Code>
+			<Text xml:lang="en">Early Additive</Text>
+			<Description>Number knowledge Stage 5 - Early Additive</Description>
+		</Value>    <!-- Early Additive -->
+		<Value>
+			<Code>NKS-AA</Code>
+			<Text xml:lang="en">Advanced Additive</Text>
+			<Description>Number knowledge Stage 6 - Advanced Additive</Description>
+		</Value>    <!-- Advanced Additive -->
+		<Value>
+			<Code>NKS-AM</Code>
+			<Text xml:lang="en">Advanced Multiplicative</Text>
+			<Description>Number knowledge Stage 7 - Advanced Multiplicative</Description>
+		</Value>    <!-- Advanced Multiplicative -->
+		<Value>
+			<Code>NKS-AP</Code>
+			<Text xml:lang="en">Advanced Proportional</Text>
+			<Description>Number knowledge Stage 8 - Advanced Proportional</Description>
+		</Value>    <!-- Advanced Proportional -->		
+	</CodeSet>    <!-- Assessment Result -->
 
 </IncludeGroup>

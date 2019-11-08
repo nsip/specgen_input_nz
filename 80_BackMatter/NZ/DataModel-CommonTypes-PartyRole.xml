@@ -1287,7 +1287,7 @@
 		</Item>
 		<Item>
 			<Element>MinistryOfEducationId</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>	The unique Ministry of Education created global identifier for an Education Provider.</p>
@@ -1371,7 +1371,7 @@
 		</Item>   <!-- LocationList -->
 		<Item>
 			<Element>Name</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>The normal business name of the Organisation</p>

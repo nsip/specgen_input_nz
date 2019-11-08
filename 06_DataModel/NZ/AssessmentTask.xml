@@ -187,20 +187,21 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Type of assessment (e.g. diagnostic vs paedagogical).</p>
+      <p>Type of assessment (e.g. diagnostic vs paedagogical - Summative or Formative).</p>
     </Description>
-    <Type name="xs:token"></Type>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentTypeType"/>
   </Item>    <!-- AssessmentType -->
 
   <Item>
-    <Element>LevelAssessed</Element>
+    <Element>AssessmentMethodology</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Level at which assessment is aimed; may be year level.</p>
+      <p>Code denoting the nature of the assessment process;  Primary assessment against NZ Curriculum or Te Marautanga
+      o Aotearoa; Secondary assessment against NCEA, Cambridge, International Baccalaureate, or similar.</p>
     </Description>
-    <Type name="xs:token"></Type>
-  </Item>    <!-- LevelAssessed -->
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentMethodologyType"/>
+  </Item>    <!-- AssessmentMethodology -->
 
   <Item>
     <Element>EvaluationType</Element>
@@ -222,6 +223,16 @@
     <Type name="xs:normalizedString"></Type>
   </Item>    <!-- AssessmentToolTypeName -->
 
+  <Item>
+    <Element>LevelAssessed</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Level at which assessment is aimed; may be year level.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+  </Item>    <!-- LevelAssessed -->
+  
   <Item>
     <Element>AssessmentPurpose</Element>
     <Characteristics>O</Characteristics>
@@ -329,6 +340,9 @@
       <DueDate>2018-11-25</DueDate>
       <Weight>1.0</Weight>
       <DetailedDescriptionURL>http://www.assignmentinfo.com/assignment1.pdf</DetailedDescriptionURL> 
+      <AssessmentType>INT</AssessmentType>
+      <AssessmentMethodology>P</AssessmentMethodology>
+      <EvaluationType>F</EvaluationType>
     </AssessmentTask>
   </xhtml:Example>
 </DataObject>
