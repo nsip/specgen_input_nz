@@ -147,15 +147,6 @@
     <Type ref="CodeSets" name="NZCodeSetsCurriculumType"/>
   </Item>    <!-- Curriculum -->   
   <Item>
-    <Element>CurriculumLevel</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Code denoting the Curriculum Level of the Assessment Task the result is for.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsCurriculumLevelType"/>
-  </Item>    <!-- CurriculumLevel -->   
-  <Item>
     <Element>AssessmentToolTypeName</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -318,7 +309,6 @@
             <SubjectArea>MATH</SubjectArea>
         </SubjectAreaList>
         <Curriculum>NZC</Curriculum>
-        <CurriculumLevel>2</CurriculumLevel>
         <AssessmentToolTypeName>PAT</AssessmentToolTypeName>
         <EvaluationType>F</EvaluationType>
         <DateAssessed>2018-11-21</DateAssessed>
@@ -365,7 +355,6 @@
           <SubjectArea>ENGL</SubjectArea>
       </SubjectAreaList>
       <Curriculum>NZC</Curriculum>
-      <CurriculumLevel>3</CurriculumLevel>
       <AssessmentToolTypeName>STAR</AssessmentToolTypeName>
       <EvaluationType>F</EvaluationType>
       <DateAssessed>2018-11-01</DateAssessed>
@@ -429,7 +418,6 @@
           <SubjectArea>ENGL</SubjectArea>
       </SubjectAreaList>
       <Curriculum>NZC</Curriculum>
-      <CurriculumLevel>5</CurriculumLevel>
       <AssessmentToolTypeName>e-asTTle</AssessmentToolTypeName>
       <EvaluationType>F</EvaluationType>
       <DateAssessed>2018-11-01</DateAssessed>
@@ -442,7 +430,7 @@
         <ResultScore>
           <Competency>Overall</Competency>
           <ScoreMetric>CUR</ScoreMetric>  <!-- Curriculum Level -->
-          <ScoreValue json:force-string="true">5B</ScoreValue>
+          <ScoreValue json:force-string="true">5</ScoreValue>
         </ResultScore>
         <ResultScore>
           <Competency>Ideas</Competency>
@@ -452,7 +440,7 @@
         <ResultScore>
           <Competency>Ideas</Competency>
           <ScoreMetric>CUR</ScoreMetric>  <!-- Curriculum Level -->
-          <ScoreValue json:force-string="true">5B</ScoreValue>
+          <ScoreValue json:force-string="true">5</ScoreValue>
         </ResultScore>
       </ResultScoreList>
     </StudentAssessmentTaskResult>
