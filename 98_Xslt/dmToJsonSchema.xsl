@@ -34,7 +34,7 @@
 	</xsl:template>
 
 
-	<!-- Special rootObject, schema will validate an hetrogonous array of dataObjects... -->
+	<!-- Special rootObject, schema will validate an hetrogonous array of dataObjects / collections -->
 	<xsl:template match="specgen:DataObjects" mode="rootObj">
 		<xsl:text>type: object&#x0a;additionalProperties: false&#x0a;</xsl:text>
 
@@ -51,12 +51,14 @@
 
 	<xsl:template match="specgen:DataObject" mode="reqRootObj">
 		<xsl:value-of select="concat('  - required: [ ', @name, ' ]&#x0a;')"/>
+		<xsl:value-of select="concat('  - required: [ ', @name, 'Collection ]&#x0a;')"/>
 	</xsl:template>
 	
 	<xsl:template match="specgen:DataObject" mode="rootObj">
 		<xsl:value-of select="concat('  ', @name, ':&#x0a;')"/>
 		<xsl:value-of select="concat('    $ref: ''#/definitions/', @name, '''&#x0a;')"/>
-		<xsl:text>&#x0a;</xsl:text>
+		<xsl:value-of select="concat('  ', @name, 's:&#x0a;')"/>
+		<xsl:value-of select="concat('    $ref: ''#/definitions/', @name, 'Collection''&#x0a;')"/>
 	</xsl:template>
 
 	<xsl:template match="specgen:DataObject" mode="definitions">
