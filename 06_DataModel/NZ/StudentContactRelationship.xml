@@ -106,7 +106,16 @@
 		</Description>
 		<Type name="xs:unsignedInt"></Type>
 	</Item>   <!-- ContactSequence -->
-	
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+		
   <xhtml:Example xmlns='' name="StudentContactRelationship">
     <StudentContactRelationship>
 	  <StudentContactRelationshipRefId>7572B261-0947-583A-463D-BB345291B332</StudentContactRelationshipRefId>
@@ -128,20 +137,26 @@
       </HouseholdList>
       <ContactFlags>
         <ParentLegalGuardian>Y</ParentLegalGuardian>
-        <PickupRights>Y</PickupRights>
         <LivesWith>N</LivesWith>
-        <AccessToRecords>U</AccessToRecords>
+        <AccessToRecords>N</AccessToRecords>
         <ReceivesAssessmentReport>Y</ReceivesAssessmentReport>
         <EmergencyContact>Y</EmergencyContact>
-				<CivilDefenceEmergencyContact>N</CivilDefenceEmergencyContact>
+		<CivilDefenceEmergencyContact>N</CivilDefenceEmergencyContact>
         <DisciplinaryContact>N</DisciplinaryContact>
         <AttendanceContact>N</AttendanceContact>
-        <PrimaryCareProvider>U</PrimaryCareProvider>
+        <PrimaryCareProvider>N</PrimaryCareProvider>
         <FeesBilling>Y</FeesBilling>
         <FamilyMail>Y</FamilyMail>
         <CourtOrder>N</CourtOrder>
       </ContactFlags>
 	  <ContactSequence>1</ContactSequence>
-      </StudentContactRelationship>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
+	</StudentContactRelationship>
   </xhtml:Example>
 </DataObject>

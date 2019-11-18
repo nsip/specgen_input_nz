@@ -140,7 +140,7 @@
 
   <Item>
     <Element>DocumentType</Element>    
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The type of document, e.g. Personalised Plan, Wellbeing Event or Response supporting documentation.</p>
@@ -158,6 +158,26 @@
     <Type ref="CommonTypes" name="PersonDocumentRoleListType"></Type>
   </Item>    <!-- PersonDocumentRoleList -->
 
+  <Item>
+    <Element>DocumentDate</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date of the document, e.g. the date the document was produced.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- DocumentType -->
+
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+  
   <xhtml:Example xmlns="" name="Document">
     <Document>
       <DocumentRefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</DocumentRefId>
@@ -179,6 +199,13 @@
           <Role>AU</Role>
         </PersonDocumentRole>
       </PersonDocumentRoleList>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
     </Document>
   </xhtml:Example>
 

@@ -240,9 +240,9 @@
 		</xhtml:Example>
 	</CommonElement>	
 
-	<CommonElement name="SchedulePeriodListType" type="true" dm="true">
+	<CommonElement name="SchedulePeriodTimeListType" type="true" dm="true">
 		<Item>
-			<Element>SchedulePeriodListType</Element>
+			<Element>SchedulePeriodTimeListType</Element>
 			<Description>
 				<p>A list of the periods that make up the bell schedule and their start and end times.</p>
 			</Description>
@@ -280,6 +280,7 @@
 			</SchedulePeriodList>
 		</xhtml:Example>
 	</CommonElement>
+
 	<CommonElement name="SchedulePeriodTimeType" type="true" dm="true">
 		<Item>
 			<Element>SchedulePeriodTimeType</Element>
@@ -352,6 +353,7 @@
 			<Type ref="CommonTypes" name="ScheduleCustomDayPeriodType"/>
 		</Item>		<!-- Period -->
 	</CommonElement>
+
 	<CommonElement name="ScheduleCustomDayPeriodType" type="true" dm="true">
 		<Item>
 			<Element>ScheduleCustomDayPeriodType</Element>
@@ -385,4 +387,5 @@
 			<Type name="xs:time"/>
 		</Item>		<!-- EndTime -->
 	</CommonElement>
+
 </IncludeGroup>

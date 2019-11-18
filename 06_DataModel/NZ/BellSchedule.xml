@@ -81,9 +81,19 @@
 		<Description>
 			<p>A list of periods that make up this academic day, e.g. Period 1, Period 2 etc.</p>
 		</Description>
-		<Type ref="CommonTypes" name="SchedulePeriodListType"/>
+		<Type ref="CommonTypes" name="SchedulePeriodTimeListType"/>
 	</Item>    <!-- SchedulePeriodList -->
 
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+	
 	<xhtml:Example xmlns="" name ="Bell Schedule">
 		<BellSchedule>
 			<BellScheduleRefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</BellScheduleRefId>
@@ -116,6 +126,13 @@
 					<EndTime>10:35:00</EndTime>
 				</SchedulePeriodTime>
 			</SchedulePeriodList>
+			<RecordAudit>
+				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+				<CreatedBy>
+				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<Name>Bobby Test</Name>
+				</CreatedBy>
+			</RecordAudit>
 		</BellSchedule>
 	</xhtml:Example>
 </DataObject>

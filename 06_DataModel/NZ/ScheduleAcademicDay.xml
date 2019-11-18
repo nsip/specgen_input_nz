@@ -87,7 +87,16 @@
 		</Description>
 		<Type ref="CommonTypes" name="PeriodListType"/>
 	</Item>    <!-- PeriodList -->
-
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+	
 	<xhtml:Example xmlns="" name ="Schedule Academic Day">
 		<ScheduleAcademicDay>
 			<ScheduleAcademicDayRefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</ScheduleAcademicDayRefId>
@@ -117,6 +126,13 @@
 					<Name>Period 2 on Day A</Name>
 				</Period>
 			</PeriodList>
+			<RecordAudit>
+				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+				<CreatedBy>
+				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<Name>Bobby Test</Name>
+				</CreatedBy>
+			</RecordAudit>
 		</ScheduleAcademicDay>
 	</xhtml:Example>
 </DataObject>

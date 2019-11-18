@@ -141,6 +141,16 @@
 		<Type ref="CommonTypes" name="StudentTertiaryEnrolmentType"></Type>
 	</Item>    <!-- TertiaryEducationEnrolment -->
 
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+	
 	<xhtml:Example xmlns="" name="Completed International Student School Enrolment">
 		<StudentProviderEnrolment>
 			<StudentProviderEnrolmentRefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</StudentProviderEnrolmentRefId>
@@ -181,6 +191,13 @@
 					</InternationalEnrolment>
 				</SchoolEnrolment>
 			</SchoolEnrolmentList>
+			<RecordAudit>
+				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+				<CreatedBy>
+				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<Name>Bobby Test</Name>
+				</CreatedBy>
+			</RecordAudit>
 		</StudentProviderEnrolment>
 	</xhtml:Example>
 	
@@ -287,6 +304,13 @@
 					</CourseChoiceList>
 				</SchoolEnrolment>
 			</SchoolEnrolmentList>
+			<RecordAudit>
+				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+				<CreatedBy>
+					<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+					<Name>Bobby Test</Name>
+				</CreatedBy>
+			</RecordAudit>
 		</StudentProviderEnrolment>
 	</xhtml:Example>
 </DataObject>

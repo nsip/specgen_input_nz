@@ -57,7 +57,17 @@
 		</Description>
 		<Type ref="CommonTypes" name="ObjectReferenceType"></Type>
 	</Item>    <!-- Provider -->  
-  
+
+    <Item>
+		<Element>VoiceType</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>Code set denoting the type of student voice being heard, e.g. their interests, goals, voice (comments, opinions).</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsStudentVoiceTypeType"/>
+	</Item>    <!-- VoiceType -->
+	
 	<Item>
 		<Element>StudentVoiceNote</Element>
 		<Characteristics>O</Characteristics>
@@ -108,7 +118,16 @@
 		<Type ref="CommonTypes" name="CareerGoalListType"/>
 	</Item>    <!-- CareerGoalList -->
 	
-
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+	
 	<xhtml:Example xmlns="" name ="StudentVoice">
 		<StudentVoice>
 			<StudentVoiceRefId>7C834EA9-EDA1-2090-347F-83297E1C290C</StudentVoiceRefId>
@@ -147,7 +166,14 @@
 					<GoalDescription>Timothy would like to be a Marine Biologist, or Deep Sea Diver</GoalDescription>
 					<GoalName>Marine Biologist</GoalName>
 				</CareerGoal>
-			</CareerGoalList>			
+			</CareerGoalList>	
+			<RecordAudit>
+				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+				<CreatedBy>
+				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<Name>Bobby Test</Name>
+				</CreatedBy>
+			</RecordAudit>		
 		</StudentVoice>
 	</xhtml:Example>
 </DataObject>

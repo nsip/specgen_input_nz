@@ -211,7 +211,8 @@
 			<Description>
 				The name of the Technology Centre that is run as part of the School;  Eg:  Marlborough Technology Centre
 				is run as part of Bohally Intermediate School.
-			</Description>			
+			</Description>
+			<Type name="xs:normalizedString"/>			
 		</Item>    <!-- TechnologyCentreName -->
 
 		<xhtml:Example xmlns="" name="NZ School Service Example">
@@ -350,7 +351,7 @@
 			<Description>
 				<p>Which year level are we describing?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYearLevelCodeType"/>
+			<Type name="xs:int"/>
 		</Item>
 		<Item>
 			<Element>Gender</Element>			
@@ -378,15 +379,42 @@
 			<Characteristics>MR</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
-				<p>Which year level are we describing?</p>
+				<p>The student Year Level that the staff member is responsible for. e.g.  "Junior Student Dean" could have responsibility for all students in year levels 9 and 10. May only contain the values 1 through to 13 inclusive.</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYearLevelCodeType"/>
+			<Type ref="CommonTypes" name="YearLevelType"/>
 		</Item>
 
 		<xhtml:Example xmlns="" name="NZ Year Level List Example">
 			<YearLevelList>
-				<YearLevel json:force-string="true">9</YearLevel>
+				<YearLevel>
+					<YearLevel json:force-string="true">9</YearLevel>
+				</YearLevel>
 			</YearLevelList>
+		</xhtml:Example>
+
+	</CommonElement>
+
+	<CommonElement name="YearLevelType" type="true" dm="true">
+		<Item>
+			<Element>YearLevelType</Element>
+			<Description>
+				<p>The student Year Level that the staff member is responsible for. e.g.  "Junior Student Dean" could have responsibility for all students in year levels 9 and 10. May only contain the values 1 through to 13 inclusive.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>YearLevel</Element>			
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The student Year Level that the staff member is responsible for. e.g.  "Junior Student Dean" could have responsibility for all students in year levels 9 and 10.May only contain the values 1 through to 13 inclusive.</p>
+			</Description>
+			<Type name="xs:int"/>
+		</Item>
+
+		<xhtml:Example xmlns="" name="NZ Year Level List Example">
+			<YearLevel>
+				<YearLevel json:force-string="true">9</YearLevel>
+			</YearLevel>
 		</xhtml:Example>
 
 	</CommonElement>

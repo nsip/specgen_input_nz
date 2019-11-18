@@ -71,8 +71,9 @@
 			populated, the duration is in seconds and if omitted defaults to
 			3600 seconds (1 hour).</p>
 		</Description>
-		<Type  name="xs:integer"/>
+		<Type  name="xs:int"/>
 	</Item>    <!-- Duration -->
+
 	<Item>
 		<Element>EventTime</Element>
 		<Characteristics>O</Characteristics>
@@ -82,6 +83,7 @@
 		</Description>
 		<Type  name="xs:time"/>
 	</Item>    <!-- EventTime -->
+
 	<Item>
 		<Element>EventName</Element>
 		<Characteristics>M</Characteristics>
@@ -91,6 +93,7 @@
 		</Description>
 		<Type  name="xs:normalizedString"/>
 	</Item>    <!-- EventName -->
+
 	<Item>
 		<Element>Location</Element>
 		<Characteristics>O</Characteristics>
@@ -100,6 +103,7 @@
 		</Description>
 		<Type  name="xs:normalizedString"/>
 	</Item>    <!-- Location -->
+
 	<Item>
 		<Element>ScheduleEffect</Element>
 		<Characteristics>M</Characteristics>
@@ -132,6 +136,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="ScheduleDayListType"/> 
 	</Item>    <!-- ScheduleDayList -->
+
 	<Item>
 		<Element>RemoveScheduleDayList</Element>
 		<Characteristics>O</Characteristics>
@@ -153,6 +158,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="BellScheduleListType"/> 
 	</Item>    <!-- BellScheduleList -->
+
 	<Item>
 		<Element>RemoveBellScheduleList</Element>
 		<Characteristics>O</Characteristics>
@@ -177,6 +183,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="ScheduleTermListType"/> 
 	</Item>    <!-- ScheduleTermList -->
+
 	<Item>
 		<Element>CustomPeriodList</Element>
 		<Characteristics>O</Characteristics>
@@ -195,6 +202,16 @@
 		<Type ref="CommonTypes" name="ScheduleCustomDayPeriodListType"/> 
 	</Item>    <!-- CustomPeriodList -->
 	
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+
 	<xhtml:Example xmlns="" name ="Schedule Event - Slip Schedule">
 		<ScheduleEvent>
 			<ScheduleEventRefId>c79e65df-0b11-4a97-9062-9fbd1c1a38e3</ScheduleEventRefId>
@@ -235,7 +252,14 @@
 					<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
 					<Name>Schedule 2019a (Term 1)</Name>
 				</Schedule>
-			</ScheduleList>			
+			</ScheduleList>	
+			<RecordAudit>
+				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+				<CreatedBy>
+				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<Name>Bobby Test</Name>
+				</CreatedBy>
+			</RecordAudit>		
 		</ScheduleEvent>
 	</xhtml:Example>
 
@@ -280,6 +304,13 @@
 					<EndTime>11:30:00</EndTime>
 				</Period>				
 			</CustomPeriodList>
+			<RecordAudit>
+				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+				<CreatedBy>
+				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<Name>Bobby Test</Name>
+				</CreatedBy>
+			</RecordAudit>
 		</ScheduleEvent>
 	</xhtml:Example>
 </DataObject>

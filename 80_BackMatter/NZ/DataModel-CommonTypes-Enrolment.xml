@@ -100,7 +100,7 @@
 			<Description>
 				<p>The total number of hours of early childhood education attended, prior to enrolling in their first school.</p>
 			</Description>
-			<Type name="xs:integer"/>
+			<Type name="xs:int"/>
 		</Item>    <!-- HoursAttended -->		
 	</CommonElement>
 
@@ -218,14 +218,9 @@
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
-				<p>Year or academic level of student (current or last?). </p>
-				<p>The year level of the student’s class cohort and the level at which the student
-					 spends most of their time at school.</p>
-				<p>While a student may be enrolled in subjects at varying instructional year levels, 
-					in relation to the student enrolment this value represents the year level at 
-					which the student is considered to be predominantly taught. For example – Year 10, Year 11.</p>
+				<p>Represents the year level at which the student is considered to be predominantly taught. For example – Year 10, Year 11. Can only contain the values 1 through to 13 inclusive.</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYearLevelCodeType"/>
+			<Type name="xs:int"/>
 		</Item>		<!-- YearLevel -->
 		<Item>
 			<Element>EligibilityCriteria</Element>
@@ -276,10 +271,9 @@
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
-				<p>Indicates the actual number of years that the student has attended school since first starting 
-					school in New Zealand. Indicates the number of years for which funding has been provided by MoE.</p>
+				<p>Indicates the number of years for which funding has been provided by MoE. Must only contain values from 0 through to 15 inclusive.</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYearLevelCodeType"/>
+			<Type name="xs:int"/>
 		</Item>		<!-- FundingYearLevel -->
 		<Item>
 			<Element>Curriculum</Element>
@@ -701,7 +695,7 @@
 			<Description>
 				<p>Free text reason the pre-enrolment was cancelled if the cancellation reason of other was selected.</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsPreEnrolmentCancellationReasonType"/>
+			<Type name="xs:normalizedString"/>
 		</Item>		<!-- CancellationReasonOtherDesc -->
 	</CommonElement>
 

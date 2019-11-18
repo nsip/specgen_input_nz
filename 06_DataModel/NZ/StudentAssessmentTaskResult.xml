@@ -61,7 +61,7 @@
   </Item>    <!-- AssessmentType -->    
   <Item>
     <Element>AssessmentMethodology</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Code denoting the nature of the assessment process;  Primary assessment against NZ Curriculum or Te Marautanga
@@ -133,9 +133,9 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Code denoting the Year Level of the Assessment Task the result is for.</p>
+      <p>The Year Level of the student when they were assessed by this Assessment Task. May only contain the values 1 through to 13 inclusive.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsYearLevelCodeType"/>
+    <Type name="xs:int"/>
   </Item>    <!-- StudentYearLevel -->
   <Item>
     <Element>Curriculum</Element>
@@ -171,7 +171,7 @@
     <Description>
       <p>The attempt number the student is making to pass this assessment, e.g. is it their first or second attempt.</p>
     </Description>
-    <Type name="xs:integer"/>
+    <Type name="xs:int"/>
   </Item>    <!-- AchievementAttempt -->
   <Item>
     <Element>EvaluationType</Element>
@@ -180,7 +180,13 @@
     <Description>The type of assessment evaluation, e.g. formative or summative.</Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentEvaluationTypeType"/>
   </Item>    <!-- EvaluationType -->
-
+  <Item>
+    <Element>StandardType</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>The type of standard the result is for. Applies to secondary level assessments, e.g. unit and achievement standards, scholarships and International Baccalaureate.</Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningStandardTypeType"/>
+  </Item>    <!-- StandardType -->
 
   <!-- Score, Dates, etc... -->
   <Item>
@@ -227,7 +233,7 @@
       <p>The iteration of this result for the assessment,
           e.g. some tasks require multiple assessments before being achieved.</p>
     </Description>
-    <Type name="xs:integer"/>
+    <Type name="xs:int"/> 
   </Item>    <!-- Iteration -->
   <Item>
     <Element>CreditsAchieved</Element>
@@ -290,7 +296,17 @@
     </Description>
     <Type ref="CommonTypes" name="DocumentListType"></Type>
   </Item>    <!-- DocumentList -->
-  
+
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+    
   <xhtml:Example xmlns="" name="Student Assessment Task Result - PAT Example">
       <StudentAssessmentTaskResult>
         <StudentAssessmentTaskResultRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskResultRefId>
@@ -334,6 +350,13 @@
             <ScoreValue  json:force-string="true">6</ScoreValue>
           </ResultScore>
         </ResultScoreList>
+        <RecordAudit>
+          <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+          <CreatedBy>
+            <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+            <Name>Bobby Test</Name>
+          </CreatedBy>
+        </RecordAudit>
       </StudentAssessmentTaskResult>
   </xhtml:Example>
 		  
@@ -397,6 +420,13 @@
       </ResultScoreList>
       <EffortComment>Good progress this year...</EffortComment>
       <OtherComment>Read more at home</OtherComment>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
     </StudentAssessmentTaskResult>
   </xhtml:Example>
     
@@ -443,6 +473,13 @@
           <ScoreValue json:force-string="true">5</ScoreValue>
         </ResultScore>
       </ResultScoreList>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
     </StudentAssessmentTaskResult>
   </xhtml:Example>
 
@@ -493,6 +530,13 @@
           <ScoreCode>NKS-AM</ScoreCode>   <!-- Advanced Multiplicative -->
         </ResultScore>
       </ResultScoreList>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
     </StudentAssessmentTaskResult>
   </xhtml:Example>
 </DataObject>

@@ -25,7 +25,7 @@
     <Description>
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>    <!-- StudentAttendanceSummaryRefId -->
   <Item>
     <Element>StudentAttendanceSummaryLocalId</Element>
@@ -195,7 +195,16 @@
     </Description>
     <Type name="xs:decimal"></Type>
   </Item>      <!-- HalfDaysYearUnjustified -->  
-  
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+    
   <xhtml:Example xmlns="" name="StudentAttendanceSummary" intl="nz">
     <StudentAttendanceSummary>
       <StudentAttendanceSummaryRefId>d3476fae-8647-384b-da24-31eda3583211</StudentAttendanceSummaryRefId>
@@ -214,6 +223,13 @@
       <HalfDaysYearPresent>178</HalfDaysYearPresent>
       <HalfDaysYearJustified>2</HalfDaysYearJustified>
       <HalfDaysYearTotal>2</HalfDaysYearTotal>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
     </StudentAttendanceSummary>
   </xhtml:Example>
 </DataObject>

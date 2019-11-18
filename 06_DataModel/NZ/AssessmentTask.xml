@@ -194,7 +194,7 @@
 
   <Item>
     <Element>AssessmentMethodology</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Code denoting the nature of the assessment process;  Primary assessment against NZ Curriculum or Te Marautanga
@@ -230,7 +230,7 @@
     <Description>
       <p>Level at which assessment is aimed; may be year level.</p>
     </Description>
-    <Type name="xs:token"></Type>
+    <Type ref="CodeSets" name="NZCodeSetsScoreMetricType"/>
   </Item>    <!-- LevelAssessed -->
   
   <Item>
@@ -281,7 +281,7 @@
     <Description>
       <p>The Year Level of the students being assessed.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsYearLevelCodeType"/>
+    <Type name="xs:int"/>
   </Item>    <!-- YearLevel -->
 
   <Item>
@@ -314,6 +314,16 @@
     <Type ref="CodeSets" name="NZCodeSetsAssessmentTimeframeType"/>
   </Item>    <!-- Timeframe -->
 
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+  
   <xhtml:Example xmlns="" name="Assessment Task">
     <AssessmentTask>
       <AssessmentTaskRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</AssessmentTaskRefId>
@@ -343,6 +353,13 @@
       <AssessmentType>INT</AssessmentType>
       <AssessmentMethodology>P</AssessmentMethodology>
       <EvaluationType>F</EvaluationType>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
     </AssessmentTask>
   </xhtml:Example>
 </DataObject>

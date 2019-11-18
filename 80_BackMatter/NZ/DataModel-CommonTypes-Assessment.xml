@@ -79,7 +79,7 @@
 			<Description>
 				<p>An Assessment Result Score that is a member of the related AssessmentResultScoreList.</p>
 			</Description>
-			<Type ref="CommonTypes" name="AssessmentScoreType"/>
+			<Type ref="CommonTypes" name="AssessmentResultScoreType"/>
 		</Item>     <!-- ResultScore -->
 	
 		<xhtml:Example xmlns="" name="PAT Result Score List Example">
@@ -133,9 +133,9 @@
   		</xhtml:Example>
 	</CommonElement>
 
-	<CommonElement name="AssessmentScoreType" type="true" dm="true">
+	<CommonElement name="AssessmentResultScoreType" type="true" dm="true">
 		<Item>
-			<Element>AssessmentScoreType</Element>
+			<Element>AssessmentResultScoreType</Element>
 			<Description>
 				<p>An individual result score for the assessment task.</p>
 			</Description>
@@ -171,6 +171,14 @@
 			<Description>The score the student received for assessment task against that metric. If the result score is for an NZQA or International Baccalaureate then the ScoreResultCode using the enumeration NZCodeSetsAssessmentResultType must be used.</Description>
 			<Type ref="CodeSets" name="NZCodeSetsAssessmentResultType"/>
 		</Item>    <!-- ScoreCode -->
+		<Item>
+			<Element>NZQAItemNumber</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The Item within an NZQA Assessment Task that the score is for. When a marker marks an external assessment (a paper for a standard in an examination, for example) they provide a score of 0-8 for each item (question) in the paper. Typically a paper will have 3 items for a total score of 24. However there can be more items than this. The individual item scores, and the total are then sent back to NZQA’s eQA system from the marking application.</p>
+			</Description>
+			<Type name="xs:int"></Type>
+		</Item>    <!-- NZQAItemNumber -->
 	</CommonElement>
 
 	<CommonElement name="JustificationListType" type="true" dm="true">

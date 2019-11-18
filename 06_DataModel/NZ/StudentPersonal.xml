@@ -70,7 +70,44 @@
 		</Description>
 		<Type ref="CommonTypes" name="PersonInfoType"/>
 	</Item>    <!-- PersonInfo -->
+	<Item>
+		<Element>BiographicChangeReason</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The reason that the persons biographic data was changed.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsBiographicChangeReasonType"/>
+	</Item>    <!-- BiographicChangeReason -->
+	<Item>
+		<Element>CareStatus</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The student's Oranga Tamariki care status.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsCareStatusType"/>
+	</Item>    <!-- CareStatus -->
+	<Item>
+		<Element>CustodyNote</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Notes about a students care and custody status.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>    <!-- CustodyNote -->
 
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+	
 	<xhtml:Example xmlns="" name ="StudentPersonal">
 		<StudentPersonal>
 			<StudentPersonalRefId>7C834EA9-EDA1-2090-347F-83297E1C290C</StudentPersonalRefId>
@@ -164,8 +201,16 @@
 						</Ethnicity>
 					</EthnicityList>
 					<IwiAffiliationList>
-						<IwiAffiliation>NZS0702</IwiAffiliation>
-						<IwiAffiliation>NZS0601</IwiAffiliation>
+						<Iwi>
+							<Code>NZS1001</Code>
+							<PreferenceOrderNumber>1</PreferenceOrderNumber>
+							<HapuAffiliationList>
+								<Hapu>
+									<HapuName>Manukorihi</HapuName>
+									<PreferenceOrderNumber>1</PreferenceOrderNumber>
+								</Hapu>
+							</HapuAffiliationList>
+						</Iwi>
 					</IwiAffiliationList>
 					<ReligiousAffiliationList>
 						<ReligiousAffiliation>NZS212</ReligiousAffiliation>
@@ -235,6 +280,13 @@
 					</HouseholdContactInfo>
 				</HouseholdContactInfoList>
 			</PersonInfo>
+			<RecordAudit>
+				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+				<CreatedBy>
+				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<Name>Bobby Test</Name>
+				</CreatedBy>
+			</RecordAudit>
 		</StudentPersonal>
 	</xhtml:Example>
 </DataObject>
