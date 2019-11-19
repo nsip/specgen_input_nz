@@ -114,7 +114,8 @@
 			<DataObject coords="381,421,503,469" role="member">WellbeingEvent</DataObject>
 			<DataObject coords="537,480,645,528" role="member">WellbeingResponse</DataObject>
 			<DataObject coords="687,542,796,590" role="member">WellbeingAppeal</DataObject>
-			<DataObject coords="1062,422,1300,470" role="member">StudentLearningSupportParticipation</DataObject>
+			<DataObject coords="1062,422,1300,470" role="member">StudentLearningSupport</DataObject>
+			<DataObject coords="1062,422,1300,470" role="member">StudentLearningSupportResponse</DataObject>
 			<DataObject coords="981,348,1076,388" role="member">Document</DataObject>
 			<DataObject coords="519,75,639,111" role="member">StudentVoice</DataObject>
 			<DataObject coords="466,189,693,270">StudentPersonal</DataObject>
