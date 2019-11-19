@@ -883,23 +883,23 @@
 		<Values>
 			<Value>
 				<Code>MED</Code>
-				<Text xml:lang="en">Medical conditions</Text>
+				<Text xml:lang="en">Medical</Text>
 			</Value>
 			<Value>
 				<Code>MEN</Code>
-				<Text xml:lang="en">Mental health and behavioural disorders</Text>
+				<Text xml:lang="en">Mental health and behavioural</Text>
 			</Value>
 			<Value>
 				<Code>NEU</Code>
-				<Text xml:lang="en">Neurodevelopmental disorders/developmental anomalies</Text>
+				<Text xml:lang="en">Neurodevelopmental</Text>
 			</Value>
 			<Value>
 				<Code>PHY</Code>
-				<Text xml:lang="en">Physical impairments</Text>
+				<Text xml:lang="en">Physical</Text>
 			</Value>
 			<Value>
 				<Code>SEN</Code>
-				<Text xml:lang="en">Sensory impairments</Text>
+				<Text xml:lang="en">Sensory</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Official Diagnosis Type -->
