@@ -8,6 +8,8 @@
 	<p>This release contains the following significant updates and extensions to the SIF specification.</p>
 	<h3>Additions/Changes since 3.4.2 (November, 2017)</h3>
 	<ul>
+		<li>StudentLearningSupport and StudentLearningSupportResponse added to support the businesses learning support requirements.</li>
+		<li>StudentLearningSupportParticipation and LearningSupportRegisterDirectory have been removed as they are no longer required.</li>
 		<li>WellbeingCharacteristic - MedicationType - MedicationName added</li>
 		<li>ResourceUsage and SystemRole marked for deprecation in 3.5</li>
 		<li>GradingAssignment and GradingAssignmentScore updated after Assessment workshops</li>

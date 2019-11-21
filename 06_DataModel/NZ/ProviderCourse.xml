@@ -27,7 +27,7 @@
   </Item>    <!-- ProviderCourseRefId -->
   <Item>
     <Element>ProviderCourseLocalId</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
  			<p>The Id of the data object record that was provided by the system that the information 
@@ -135,7 +135,16 @@
     </Description>
     <Type ref="CommonTypes" name='CredentialListType'/>
   </Item>    <!-- CredentialList -->
-
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+  
   <xhtml:Example xmlns="" name="ProviderCourse Example">
     <ProviderCourse>
       <ProviderCourseRefId>9D75101A-8C3D-00AA-001A-0000A2E35B35</ProviderCourseRefId>
@@ -148,9 +157,11 @@
       <SubjectAreaList>
         <SubjectArea json:force-array="true">CHEM</SubjectArea>
       </SubjectAreaList>
-      <YearLevelList>
-        <YearLevel json:force-string="true" json:force-array="true">12</YearLevel>
-      </YearLevelList>
+			<YearLevelList>
+				<YearLevel>
+					<YearLevel json:force-string="true" json:force-array="true">12</YearLevel>
+				</YearLevel>
+			</YearLevelList>
       <Title>Year 12 Chemistry</Title>
       <Description>Organic &amp; Inorganic Chemistry for NCEA Level 2</Description>
       <Duration>35</Duration>
@@ -178,6 +189,13 @@
           <Name>Demonstrate understanding of oxidation-reduction</Name>
         </LearningStandard>
       </LearningStandardList>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
     </ProviderCourse>
   </xhtml:Example>
 </DataObject>

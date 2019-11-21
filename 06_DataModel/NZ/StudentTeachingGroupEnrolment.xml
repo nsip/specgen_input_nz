@@ -89,7 +89,16 @@
 		<Type name="xs:date"></Type>
 	</Item>    <!-- EndDate -->
 
-
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+	
 	<xhtml:Example xmlns="" name="Student TeachingGroup Enrolment">
 		<StudentTeachingGroupEnrolment>
 			<StudentTeachingGroupEnrolmentRefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</StudentTeachingGroupEnrolmentRefId>
@@ -105,6 +114,13 @@
 			</TeachingGroup>
 			<StartDate>2018-01-29</StartDate>
 			<EndDate>2018-12-05</EndDate>
+			<RecordAudit>
+				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+				<CreatedBy>
+				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<Name>Bobby Test</Name>
+				</CreatedBy>
+			</RecordAudit>
 		</StudentTeachingGroupEnrolment>
 	</xhtml:Example>
 </DataObject>

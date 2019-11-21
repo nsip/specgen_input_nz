@@ -486,99 +486,27 @@
 		<ID>Post School Activity</ID>
 		<Values>
 			<Value>
-				<Code>ASC</Code>
-				<Text xml:lang="en">Another School</Text>
-				<Text xml:lang="mi">He kura kē</Text>
+				<Code>10</Code>
+				<Text xml:lang="en">Further education or training</Text>
 			</Value>
 			<Value>
-				<Code>EMP</Code>
+				<Code>11</Code>
+				<Text xml:lang="en">Employment and further education/training</Text>
+			</Value>
+			<Value>
+				<Code>12</Code>
 				<Text xml:lang="en">Employment</Text>
-				<Text xml:lang="mi">Te mahi</Text>
 			</Value>
 			<Value>
-				<Code>IOT</Code>
-				<Text xml:lang="en">Institutes of Technology</Text>
-				<Text xml:lang="mi">Kura Takiura</Text>
+				<Code>13</Code>
+				<Text xml:lang="en">Other</Text>
 			</Value>
 			<Value>
-				<Code xml:lang="en">MAI</Code>
-				<Text xml:lang="en">Modern Apprenticeships / Industry Training</Text>
-				<Text xml:lang="mi">Ngā Akoranga Pia/Whakangungu ahumahi</Text>
-			</Value>
-			<Value>
-				<Code>PTR</Code>
-				<Text xml:lang="en">Private Training</Text>
-				<Text xml:lang="mi">Whakangungu tūmataiti</Text>
-			</Value>
-			<Value>
-				<Code>TAC</Code>
-				<Text xml:lang="en">Trade Academies</Text>
-				<Text xml:lang="mi">Kura Ringarehe</Text>
-			</Value>
-			<Value>
-				<Code>UNI</Code>
-				<Text xml:lang="en">University</Text>
-				<Text xml:lang="mi">Whare Wānanga</Text>
-			</Value>
-			<Value>
-				<Code>UNK</Code>
+				<Code>88</Code>
 				<Text xml:lang="en">Unknown</Text>
-				<Text xml:lang="mi">Kāore i te mōhiotia</Text>
-			</Value>
-			<Value>
-				<Code>WAN</Code>
-				<Text xml:lang="en">Wānanga</Text>
-				<Text xml:lang="mi">Wānanga</Text>
-			</Value>
-			<Value>
-				<Code>YGE</Code>
-				<Text xml:lang="en">Youth Guarantee</Text>
-				<Text xml:lang="mi">Pūtāhui Rangatahi</Text>
 			</Value>
 		</Values>
 	</CodeSet>	<!-- Post School Activity -->
-
-	<CodeSet>
-		<Intro>
-			<p>Code set denoting what the student is consenting or not consenting to.</p>
-		</Intro>
-		<ID>Student Consent To</ID>
-		<Values>
-			<Value>
-				<Code>PHT</Code>
-				<Text>Share Photos</Text>
-				<Description>To use and share photographs of the student</Description>
-			</Value>			<!-- Share Photos -->
-			<Value>
-				<Code>ART</Code>
-				<Text>Share Art</Text>
-			</Value>			<!-- Share Art -->
-			<Value>
-				<Code>WRI</Code>
-				<Text>Share Writing</Text>
-			</Value>			<!-- Share Writing -->
-			<Value>
-				<Code>MED</Code>
-				<Text>Medical Treatment</Text>
-				<Description>Seek medical treatment in an emergency when the caregiver cannot be contacted</Description>
-			</Value>			<!-- Medical Treatment -->
-			<Value>
-				<Code>ADM</Code>
-				<Text>Panadol</Text>
-				<Description>Administer Panadol</Description>
-			</Value>			<!-- Administer Panadol -->
-			<Value>
-				<Code>LSC</Code>
-				<Text>Learning Support Community Register</Text>
-				<Description>To be on the Learning Support Register</Description>
-			</Value>			<!-- Learning Support Community Register -->
-			<Value>
-				<Code>LSP</Code>
-				<Text>Learning Support Publish to Community Register</Text>
-				<Description>To have content on the Learning Support Community Register published to any school groups the school is part of for analysis e.g. a Kāhui Ako</Description>
-			</Value>			<!-- Learning Support Community Register -->
-		</Values>
-	</CodeSet>	<!-- Student Consent To -->
 
 	<CodeSet>
 		<Intro>

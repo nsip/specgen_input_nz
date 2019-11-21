@@ -59,49 +59,9 @@
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
   </Item>    <!-- RecordingProvider -->
-  
-  <Item>
-    <Element>CreatedBy</Element>
-    <Characteristics>O</Characteristics>
-  	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>Generic object reference to the staff member who recorded this Wellbeing Characteristic.</p>
-    </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>    <!-- CreatedBy -->
 
   <Item>
-    <Element>CreatedDate</Element>
-    <Characteristics>O</Characteristics>
-  	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>The date the characteristic was first created for the student in the source system.</p>
-    </Description>
-    <Type name="xs:date"/>
-  </Item>    <!-- CreatedDate -->
-
-  <Item>
-    <Element>LastUpdatedBy</Element>
-    <Characteristics>O</Characteristics>
-  	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>Generic object reference to the staff member who last updated this Wellbeing Characteristic.</p>
-    </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>    <!-- LastUpdatedBy -->
-
-  <Item>
-    <Element>LastUpdatedDate</Element>
-    <Characteristics>O</Characteristics>
-  	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>The date the characteristic was last updated in the source system.</p>
-    </Description>
-    <Type name="xs:date"/>
-  </Item>    <!-- LastUpdatedDate -->
-
-  <Item>
-    <Element>CharacteristicClassification</Element>
+    <Element>Classification</Element>
     <Characteristics>C</Characteristics>
   	<privacyRating>High</privacyRating>
     <Description>
@@ -151,41 +111,35 @@
   </Item>    <!-- CharacteristicNotes -->
   
   <Item>
-    <Element>CharacteristicCategory</Element>
+    <Element>Category</Element>
     <Characteristics>O</Characteristics>
   	<privacyRating>High</privacyRating>
     <Description>
       <p>Category of WellbeingCharacteristic.</p>
     </Description>
-    <Union>
-			<Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicCategoryType"></Type>
-			<Type name="xs:normalizedString"/>
-	  </Union>	 
+		<Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicCategoryType"/>
   </Item>    <!-- CharacteristicCategory -->
   
   <Item>
-    <Element>CharacteristicSubCategory</Element>
+    <Element>SubCategory</Element>
     <Characteristics>O</Characteristics>
 	  <privacyRating>High</privacyRating>
     <Description>
       <p>Sub category of the WellbeingCharacteristic.</p>
     </Description>
-    <Union>
-			<Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicSubCategoryType"></Type>
-			<Type name="xs:normalizedString"/>
-	  </Union>	 
+		<Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicSubCategoryType"/>
   </Item>    <!-- CharacteristicSubCategory -->
-    
-  <Item>
-    <Element>CharacteristicSeverity</Element>
+ 
+   <Item>
+    <Element>SubCategoryDetail</Element>
     <Characteristics>O</Characteristics>
-  	<privacyRating>High</privacyRating>
+	  <privacyRating>High</privacyRating>
     <Description>
-      <p>The severity of the wellbeing characteristic</p>
+      <p>Additional detail about a sub category.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- CharacteristicSeverity -->
-  
+		<Type name="xs:normalizedString"/>
+  </Item>    <!-- SubCategoryDetail -->
+
   <Item>
     <Element>CharacteristicPriority</Element>
     <Characteristics>O</Characteristics>
@@ -235,16 +189,6 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>    <!-- Trigger -->
-  
-  <Item>
-    <Element>Diagnosis</Element>
-    <Characteristics>O</Characteristics>
-  	<privacyRating>High</privacyRating>
-    <Description>
-      <p>Indicates whether or not the Wellbeing Characteristic is a diagnosis made by a medical professional.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>    <!-- Diagnosis -->
 
   <Item>
     <Element>ConfidentialFlag</Element>
@@ -327,35 +271,55 @@
   </Item>    <!-- Status -->
 
   <Item>
-    <Element>StudentConsentList</Element>
+    <Element>MedicalCharacteristicDesc</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>A list of the consents given by the stiudent or their caregiver in relation to this Wellbeing Characteristic.</p>
+      <p>Free text providing additional information about a medical need of a student. Especially when a medical need of 'Other' is selected.</p>
     </Description>
-    <Type ref="CommonTypes" name="StudentConsentListType"></Type>
-  </Item>    <!-- StudentConsentList -->
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- MedicalCharacteristicDesc -->
 
   <Item>
-    <Element>TeWharikiDomainList</Element>
+    <Element>OfficialDiagnosis</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>A list of the Te Whāriki Domains that are relevant to this Wellbeing Characteristic. Only used for Early Childhood Education.</p>
+      <p>Indicates whether or not the student has an official diagnosis that pertains to this Wellbeing Characteristic.</p>
     </Description>
-    <Type ref="CommonTypes" name="TeWharikiDomainListType"></Type>
-  </Item>    <!-- TeWharikiDomainList -->
+    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+  </Item>    <!-- OfficialDiagnosis -->
 
   <Item>
-    <Element>LearningSupportOutcomeList</Element>
+    <Element>OfficialDiagnosisList</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>A list of the expected learning support outcome for the Wellbeing Characteristic. Only used for Schools. </p>
+      <p>A list of official diagnoses that pertains to this wellbeing characteristic. At least one diagnosis is required if OfficialDiagnosis = 'Y'.</p>
     </Description>
-    <Type ref="CommonTypes" name="LearningSupportOutcomeListType"></Type>
-  </Item>    <!-- LearningSupportOutcomeList -->
+    <Type ref="CommonTypes" name="OfficialDiagnosisListType"></Type>
+  </Item>    <!-- OfficialDiagnosisList -->
 
+  <Item>
+    <Element>StudentVoiceList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the student's or their whānau's voice about their wellbeing characteristic in regards to the student 's interests, goals, and voice (comments, opinions).</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentVoiceListType"></Type>
+  </Item>    <!-- StudentVoiceList -->
+
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+  
   <xhtml:Example xmlns="" name="WellbeingCharacteristic">
     <WellbeingCharacteristic>
       <WellbeingCharacteristicRefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</WellbeingCharacteristicRefId>
@@ -368,7 +332,14 @@
       <StartDate>2017-11-01</StartDate>
       <EndDate>2017-11-10</EndDate>
       <CharacteristicNotes>This Student has a special need.</CharacteristicNotes>
-      <CharacteristicCategory>S</CharacteristicCategory>
+      <Category>LSN-LIT</Category>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
     </WellbeingCharacteristic>
   </xhtml:Example>
 </DataObject>

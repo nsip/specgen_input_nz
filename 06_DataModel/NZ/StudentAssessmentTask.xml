@@ -143,7 +143,7 @@
 
   <Item>
     <Element>AssessmentMethodology</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Code denoting the nature of the assessment process;  Primary assessment against NZ Curriculum or Te Marautanga
@@ -207,9 +207,9 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Code denoting the Year Level of the Assessment Task the student is being assessed against.</p>
+      <p>Year Level of the Assessment Task the student is being assessed against. May only contain the values 1 through to 13 inclusive.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsYearLevelCodeType"/>
+    <Type name="xs:int"/>
   </Item>    <!-- YearLevel -->
 
   <Item>
@@ -223,6 +223,16 @@
     <Type ref="CommonTypes" name="SpecialAssessmentConditionListType"></Type>
   </Item>    <!-- SpecialAssessmentConditionList -->
 
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+  
   <xhtml:Example xmlns="" name="Student Assessment Task">
     <StudentAssessmentTask>
       <StudentAssessmentTaskRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskRefId>
@@ -261,6 +271,13 @@
           <SubjectArea>PHYS</SubjectArea>
       </SubjectAreaList>
       <YearLevel json:force-string="true">11</YearLevel>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
     </StudentAssessmentTask>
   </xhtml:Example>
 </DataObject>

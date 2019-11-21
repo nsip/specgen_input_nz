@@ -680,6 +680,10 @@
 				<Text>English</Text>
 			</Value>
 			<Value>
+				<Code>12115</Code>
+				<Text>Gaelic</Text>
+			</Value>
+			<Value>
 				<Code>12116</Code>
 				<Text>Irish</Text>
 			</Value>
@@ -688,8 +692,16 @@
 				<Text>Manx</Text>
 			</Value>
 			<Value>
+				<Code>12118</Code>
+				<Text>Orkney Islander</Text>
+			</Value>
+			<Value>
 				<Code>12119</Code>
 				<Text>Scottish</Text>
+			</Value>
+			<Value>
+				<Code>12120</Code>
+				<Text>Shetland Islander</Text>
 			</Value>
 			<Value>
 				<Code>12121</Code>
@@ -812,6 +824,10 @@
 				<Text>Belorussian</Text>
 			</Value>
 			<Value>
+				<Code>12917</Code>
+				<Text>Corsican</Text>
+			</Value>
+			<Value>
 				<Code>12918</Code>
 				<Text>Cypriot nfd</Text>
 			</Value>
@@ -838,6 +854,10 @@
 			<Value>
 				<Code>12924</Code>
 				<Text>French</Text>
+			</Value>
+			<Value>
+				<Code>12925</Code>
+				<Text>Greenlander</Text>
 			</Value>
 			<Value>
 				<Code>12926</Code>
@@ -880,6 +900,10 @@
 				<Text>Russian</Text>
 			</Value>
 			<Value>
+				<Code>12936</Code>
+				<Text>Sardinian</Text>
+			</Value>
+			<Value>
 				<Code>12937</Code>
 				<Text>Slavic</Text>
 			</Value>
@@ -908,8 +932,16 @@
 				<Text>American</Text>
 			</Value>
 			<Value>
+				<Code>12944</Code>
+				<Text>Burgher</Text>
+			</Value>
+			<Value>
 				<Code>12945</Code>
 				<Text>Canadian</Text>
+			</Value>
+			<Value>
+				<Code>12946</Code>
+				<Text>Falkland Islander</Text>
 			</Value>
 			<Value>
 				<Code>12947</Code>
@@ -917,7 +949,7 @@
 			</Value>
 			<Value>
 				<Code>12948</Code>
-				<Text>South African European</Text>
+				<Text>South African nec</Text>
 			</Value>
 			<Value>
 				<Code>12949</Code>
@@ -925,7 +957,7 @@
 			</Value>
 			<Value>
 				<Code>12950</Code>
-				<Text>Zimbabwean European</Text>
+				<Text>Zimbabwean</Text>
 			</Value>
 			<Value>
 				<Code>12999</Code>
@@ -985,7 +1017,51 @@
 			</Value>
 			<Value>
 				<Code>32100</Code>
-				<Text>Cook Islands Maori</Text>
+				<Text>Cook Islands Maori nfd</Text>
+			</Value>
+			<Value>
+				<Code>32111</Code>
+				<Text>Aitutaki Islander</Text>
+			</Value>
+			<Value>
+				<Code>32112</Code>
+				<Text>Atiu Islander</Text>
+			</Value>
+			<Value>
+				<Code>32113</Code>
+				<Text>Mangaia Islander</Text>
+			</Value>
+			<Value>
+				<Code>32114</Code>
+				<Text>Manihiki Islander</Text>
+			</Value>
+			<Value>
+				<Code>32115</Code>
+				<Text>Mauke Islander</Text>
+			</Value>
+			<Value>
+				<Code>32116</Code>
+				<Text>Mitiaro Islander</Text>
+			</Value>
+			<Value>
+				<Code>32117</Code>
+				<Text>Palmerston Islander</Text>
+			</Value>
+			<Value>
+				<Code>32118</Code>
+				<Text>Penrhyn Islander</Text>
+			</Value>
+			<Value>
+				<Code>32119</Code>
+				<Text>Pukapuka Islander</Text>
+			</Value>
+			<Value>
+				<Code>32120</Code>
+				<Text>Rakahanga Islander</Text>
+			</Value>
+			<Value>
+				<Code>32121</Code>
+				<Text>Rarotongan</Text>
 			</Value>
 			<Value>
 				<Code>33</Code>
@@ -1044,24 +1120,108 @@
 				<Text>Other Pacific Peoples</Text>
 			</Value>
 			<Value>
+				<Code>37111</Code>
+				<Text>Admiralty Islander</Text>
+			</Value>
+			<Value>
 				<Code>37112</Code>
-				<Text>Indigenous Australian</Text>
+				<Text>Australian Aboriginal</Text>
+			</Value>
+			<Value>
+				<Code>37113</Code>
+				<Text>Austral Islander</Text>
+			</Value>
+			<Value>
+				<Code>37114</Code>
+				<Text>Palau Islander</Text>
+			</Value>
+			<Value>
+				<Code>37115</Code>
+				<Text>Bismark Archipelagoan</Text>
+			</Value>
+			<Value>
+				<Code>37116</Code>
+				<Text>Bougainvillean</Text>
+			</Value>
+			<Value>
+				<Code>37117</Code>
+				<Text>Caroline Islander</Text>
+			</Value>
+			<Value>
+				<Code>37118</Code>
+				<Text>Easter Islander</Text>
+			</Value>
+			<Value>
+				<Code>37119</Code>
+				<Text>Gambier Islander</Text>
+			</Value>
+			<Value>
+				<Code>37120</Code>
+				<Text>Guadalcanalian</Text>
+			</Value>
+			<Value>
+				<Code>37121</Code>
+				<Text>Chamorro</Text>
 			</Value>
 			<Value>
 				<Code>37122</Code>
 				<Text>Hawaiian</Text>
 			</Value>
 			<Value>
+				<Code>37123</Code>
+				<Text>Kanak</Text>
+			</Value>
+			<Value>
 				<Code>37124</Code>
 				<Text>Kiribati</Text>
+			</Value>
+			<Value>
+				<Code>37125</Code>
+				<Text>Malatian</Text>
+			</Value>
+			<Value>
+				<Code>37126</Code>
+				<Text>Manus Islander</Text>
+			</Value>
+			<Value>
+				<Code>37127</Code>
+				<Text>Marianas Islander</Text>
+			</Value>
+			<Value>
+				<Code>37128</Code>
+				<Text>Marquesas Islander</Text>
+			</Value>
+			<Value>
+				<Code>37129</Code>
+				<Text>Marshall Islander</Text>
 			</Value>
 			<Value>
 				<Code>37130</Code>
 				<Text>Nauruan</Text>
 			</Value>
 			<Value>
+				<Code>37131</Code>
+				<Text>New Britain Islander</Text>
+			</Value>
+			<Value>
+				<Code>37132</Code>
+				<Text>New Georgian</Text>
+			</Value>
+			<Value>
+				<Code>37133</Code>
+				<Text>New Irelander</Text>
+			</Value>
+			<Value>
+				<Code>37134</Code>
+				<Text>Banaban</Text>
+			</Value>
+			<Value>
 				<Code>37135</Code>
 				<Text>Papua New Guinean</Text>
+			</Value>
+			<Value>
+				<Code>37136</Code>
+				<Text>Phoenix Islander</Text>
 			</Value>
 			<Value>
 				<Code>37137</Code>
@@ -1072,6 +1232,10 @@
 				<Text>Rotuman</Text>
 			</Value>
 			<Value>
+				<Code>37139</Code>
+				<Text>Santa Cruz Islander</Text>
+			</Value>
+			<Value>
 				<Code>37140</Code>
 				<Text>Tahitian</Text>
 			</Value>
@@ -1080,12 +1244,32 @@
 				<Text>Solomon Islander</Text>
 			</Value>
 			<Value>
+				<Code>37142</Code>
+				<Text>Torres Strait Islander</Text>
+			</Value>
+			<Value>
+				<Code>37143</Code>
+				<Text>Tuamotu Islander</Text>
+			</Value>
+			<Value>
 				<Code>37144</Code>
 				<Text>Tuvaluan</Text>
 			</Value>
 			<Value>
 				<Code>37145</Code>
 				<Text>Ni Vanuatu</Text>
+			</Value>
+			<Value>
+				<Code>37146</Code>
+				<Text>Wake Islander</Text>
+			</Value>
+			<Value>
+				<Code>37147</Code>
+				<Text>Wallis Islander</Text>
+			</Value>
+			<Value>
+				<Code>37148</Code>
+				<Text>Yap Islander</Text>
 			</Value>
 			<Value>
 				<Code>37199</Code>
@@ -1157,7 +1341,7 @@
 			</Value>
 			<Value>
 				<Code>41413</Code>
-				<Text>Lao</Text>
+				<Text>Laotian</Text>
 			</Value>
 			<Value>
 				<Code>41414</Code>
@@ -1166,14 +1350,6 @@
 			<Value>
 				<Code>41415</Code>
 				<Text>Thai</Text>
-			</Value>
-			<Value>
-				<Code>41416</Code>
-				<Text>Karen</Text>
-			</Value>
-			<Value>
-				<Code>41417</Code>
-				<Text>Chin</Text>
 			</Value>
 			<Value>
 				<Code>41499</Code>
@@ -1240,6 +1416,10 @@
 				<Text>Fijian Indian</Text>
 			</Value>
 			<Value>
+				<Code>43113</Code>
+				<Text>Gujarati</Text>
+			</Value>
+			<Value>
 				<Code>43114</Code>
 				<Text>Indian Tamil</Text>
 			</Value>
@@ -1254,14 +1434,6 @@
 			<Value>
 				<Code>43117</Code>
 				<Text>Anglo Indian</Text>
-			</Value>
-			<Value>
-				<Code>43118</Code>
-				<Text>Malaysian Indian</Text>
-			</Value>
-			<Value>
-				<Code>43119</Code>
-				<Text>South African Indian</Text>
 			</Value>
 			<Value>
 				<Code>43199</Code>
@@ -1336,18 +1508,6 @@
 				<Text>Eurasian</Text>
 			</Value>
 			<Value>
-				<Code>44417</Code>
-				<Text>Bhutanese</Text>
-			</Value>
-			<Value>
-				<Code>44418</Code>
-				<Text>Maldivian</Text>
-			</Value>
-			<Value>
-				<Code>44419</Code>
-				<Text>Mongolian</Text>
-			</Value>
-			<Value>
 				<Code>44499</Code>
 				<Text>Asian nec</Text>
 			</Value>
@@ -1408,8 +1568,16 @@
 				<Text>Lebanese</Text>
 			</Value>
 			<Value>
+				<Code>51121</Code>
+				<Text>Libyan</Text>
+			</Value>
+			<Value>
 				<Code>51122</Code>
 				<Text>Moroccan</Text>
+			</Value>
+			<Value>
+				<Code>51123</Code>
+				<Text>Omani</Text>
 			</Value>
 			<Value>
 				<Code>51124</Code>
@@ -1420,8 +1588,16 @@
 				<Text>Syrian</Text>
 			</Value>
 			<Value>
+				<Code>51126</Code>
+				<Text>Tunisian</Text>
+			</Value>
+			<Value>
 				<Code>51127</Code>
 				<Text>Turkish</Text>
+			</Value>
+			<Value>
+				<Code>51128</Code>
+				<Text>Yemeni</Text>
 			</Value>
 			<Value>
 				<Code>51199</Code>
@@ -1460,12 +1636,48 @@
 				<Text>Colombian</Text>
 			</Value>
 			<Value>
+				<Code>52116</Code>
+				<Text>Costa Rican</Text>
+			</Value>
+			<Value>
+				<Code>52117</Code>
+				<Text>Latin American Creole</Text>
+			</Value>
+			<Value>
 				<Code>52118</Code>
 				<Text>Ecuadorian</Text>
 			</Value>
 			<Value>
+				<Code>52119</Code>
+				<Text>Guatemalan</Text>
+			</Value>
+			<Value>
+				<Code>52120</Code>
+				<Text>Guyanese</Text>
+			</Value>
+			<Value>
+				<Code>52121</Code>
+				<Text>Honduran</Text>
+			</Value>
+			<Value>
+				<Code>52122</Code>
+				<Text>Malvinian</Text>
+			</Value>
+			<Value>
 				<Code>52123</Code>
 				<Text>Mexican</Text>
+			</Value>
+			<Value>
+				<Code>52124</Code>
+				<Text>Nicaraguan</Text>
+			</Value>
+			<Value>
+				<Code>52125</Code>
+				<Text>Panamanian</Text>
+			</Value>
+			<Value>
+				<Code>52126</Code>
+				<Text>Paraguayan</Text>
 			</Value>
 			<Value>
 				<Code>52127</Code>
@@ -1500,6 +1712,10 @@
 				<Text>African nfd</Text>
 			</Value>
 			<Value>
+				<Code>53112</Code>
+				<Text>United States Creole</Text>
+			</Value>
+			<Value>
 				<Code>53113</Code>
 				<Text>Jamaican</Text>
 			</Value>
@@ -1516,8 +1732,12 @@
 				<Text>African American</Text>
 			</Value>
 			<Value>
+				<Code>53117</Code>
+				<Text>Ugangan</Text>
+			</Value>
+			<Value>
 				<Code>53118</Code>
-				<Text>Caribbean</Text>
+				<Text>West Indian</Text>
 			</Value>
 			<Value>
 				<Code>53119</Code>
@@ -1536,26 +1756,6 @@
 				<Text>Ghanaian</Text>
 			</Value>
 			<Value>
-				<Code>53123</Code>
-				<Text>Burundian</Text>
-			</Value>
-			<Value>
-				<Code>53124</Code>
-				<Text>Congolese</Text>
-			</Value>
-			<Value>
-				<Code>53125</Code>
-				<Text>Sudanese</Text>
-			</Value>
-			<Value>
-				<Code>53126</Code>
-				<Text>Zambian</Text>
-			</Value>
-			<Value>
-				<Code>53127</Code>
-				<Text>Other Zimbabwean</Text>
-			</Value>
-			<Value>
 				<Code>53199</Code>
 				<Text>African nec</Text>
 			</Value>
@@ -1572,8 +1772,20 @@
 				<Text>Other Ethnicity</Text>
 			</Value>
 			<Value>
+				<Code>61111</Code>
+				<Text>Central American Indian</Text>
+			</Value>
+			<Value>
+				<Code>61112</Code>
+				<Text>Inuit</Text>
+			</Value>
+			<Value>
 				<Code>61113</Code>
-				<Text>Indigenous American</Text>
+				<Text>North American Indian</Text>
+			</Value>
+			<Value>
+				<Code>61114</Code>
+				<Text>South American Indian</Text>
 			</Value>
 			<Value>
 				<Code>61115</Code>
@@ -1585,7 +1797,7 @@
 			</Value>
 			<Value>
 				<Code>61117</Code>
-				<Text>Other South African</Text>
+				<Text>South African Coloured</Text>
 			</Value>
 			<Value>
 				<Code>61118</Code>
@@ -1687,786 +1899,1007 @@
 		<Values>
 			<Value>
 				<Code>NZS01</Code>
-				<Text>Te Tai Tokerau/Tāmaki-makaurau (Northland/Auckland) Region Iwi</Text>
+				<Text xml:lang="en">Te Tai Tokerau/Tāmaki-makaurau (Northland/Auckland) Region Iwi</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS0101</Code>
-				<Text>Te Aupōuri</Text>
+				<Text xml:lang="en">Te Aupōuri</Text>
+				<Text xml:lang="mi">Te Aupōuri</Text>
 			</Value>
 			<Value>
 				<Code>NZS0102</Code>
-				<Text>Ngāti Kahu</Text>
+				<Text xml:lang="en">Ngāti Kahu</Text>
+				<Text xml:lang="mi">Ngāti Kahu</Text>
 			</Value>
 			<Value>
 				<Code>NZS0103</Code>
-				<Text>Ngāti Kurī</Text>
+				<Text xml:lang="en">Ngāti Kurī</Text>
+				<Text xml:lang="mi">Ngāti Kurī</Text>
 			</Value>
 			<Value>
 				<Code>NZS0104</Code>
-				<Text>Ngāpuhi</Text>
+				<Text xml:lang="en">Ngāpuhi</Text>
+				<Text xml:lang="mi">Ngāpuhi</Text>
 			</Value>
 			<Value>
 				<Code>NZS0105</Code>
-				<Text>Ngāpuhi ki Whaingaroa-Ngāti Kahu ki Whaingaroa</Text>
+				<Text xml:lang="en">Ngāpuhi ki Whaingaroa-Ngāti Kahu ki Whaingaroa</Text>
+				<Text xml:lang="mi">Ngāpuhi ki Whaingaroa-Ngāti Kahu ki Whaingaroa</Text>
 			</Value>
 			<Value>
 				<Code>NZS0106</Code>
-				<Text>Te Rarawa</Text>
+				<Text xml:lang="en">Te Rarawa</Text>
+				<Text xml:lang="mi">Te Rarawa</Text>
 			</Value>
 			<Value>
 				<Code>NZS0107</Code>
-				<Text>Ngāi Takoto</Text>
+				<Text xml:lang="en">Ngāi Takoto</Text>
+				<Text xml:lang="mi">Ngāi Takoto</Text>
 			</Value>
 			<Value>
 				<Code>NZS0108</Code>
-				<Text>Ngāti Wai</Text>
+				<Text xml:lang="en">Ngāti Wai</Text>
+				<Text xml:lang="mi">Ngāti Wai</Text>
 			</Value>
 			<Value>
 				<Code>NZS0109</Code>
-				<Text>Ngāti Whātua (not Ōrākei or Kaipara)</Text>
+				<Text xml:lang="en">Ngāti Whātua (not Ōrākei or Kaipara)</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS0110</Code>
-				<Text>Te Kawerau ā Maki</Text>
+				<Text xml:lang="en">Te Kawerau ā Maki</Text>
+				<Text xml:lang="mi">Te Kawerau ā Maki</Text>
 			</Value>
 			<Value>
 				<Code>NZS0111</Code>
-				<Text>Te Uri-o-Hau</Text>
+				<Text xml:lang="en">Te Uri-o-Hau</Text>
+				<Text xml:lang="mi">Te Uri-o-Hau</Text>
 			</Value>
 			<Value>
 				<Code>NZS0112</Code>
-				<Text>Te Roroa</Text>
+				<Text xml:lang="en">Te Roroa</Text>
+				<Text xml:lang="mi">Te Roroa</Text>
 			</Value>
 			<Value>
 				<Code>NZS0113</Code>
-				<Text>Ngāti Whātua o Kaipara</Text>
+				<Text xml:lang="en">Ngāti Whātua o Kaipara</Text>
+				<Text xml:lang="mi">Ngāti Whātua o Kaipara</Text>
 			</Value>
 			<Value>
 				<Code>NZS0114</Code>
-				<Text>Ngāti Whātua o Ōrākei</Text>
+				<Text xml:lang="en">Ngāti Whātua o Ōrākei</Text>
+				<Text xml:lang="mi">Ngāti Whātua o Ōrākei</Text>
 			</Value>
 			<Value>
 				<Code>NZS0115</Code>
-				<Text>Ngāi Tai ki Tāmaki  </Text>
+				<Text xml:lang="en">Ngāi Tai ki Tāmaki</Text>
+				<Text xml:lang="mi">Ngāi Tai ki Tāmaki</Text>
 			</Value>
 			<Value>
 				<Code>NZS0116</Code>
-				<Text>Ngāti Hine (Te Tai Tokerau)</Text>
+				<Text xml:lang="en">Ngāti Hine (Te Tai Tokerau)</Text>
+				<Text xml:lang="mi">Ngāti Hine (Te Tai Tokerau)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0117</Code>
-				<Text>Te Paatu</Text>
+				<Text xml:lang="en">Te Paatu</Text>
+				<Text xml:lang="mi">Te Paatu</Text>
 			</Value>
 			<Value>
 				<Code>NZS0118</Code>
-				<Text>Ngāti Manuhiri</Text>
+				<Text xml:lang="en">Ngāti Manuhiri</Text>
+				<Text xml:lang="mi">Ngāti Manuhiri</Text>
 			</Value>
 			<Value>
 				<Code>NZS0119</Code>
-				<Text>Ngāti Rēhua</Text>
+				<Text xml:lang="en">Ngāti Rēhua</Text>
+				<Text xml:lang="mi">Ngāti Rēhua</Text>
 			</Value>
 			<Value>
 				<Code>NZS02</Code>
-				<Text>Hauraki (Coromandel) Region Iwi</Text>
+				<Text xml:lang="en">Hauraki (Coromandel) Region Iwi</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS0201</Code>
-				<Text>Ngāti Hako</Text>
+				<Text xml:lang="en">Ngāti Hako</Text>
+				<Text xml:lang="mi">Ngāti Hako</Text>
 			</Value>
 			<Value>
 				<Code>NZS0202</Code>
-				<Text>Ngāti Hei</Text>
+				<Text xml:lang="en">Ngāti Hei</Text>
+				<Text xml:lang="mi">Ngāti Hei</Text>
 			</Value>
 			<Value>
 				<Code>NZS0203</Code>
-				<Text>Ngāti Maru (Hauraki)</Text>
+				<Text xml:lang="en">Ngāti Maru (Hauraki)</Text>
+				<Text xml:lang="mi">Ngāti Maru (Hauraki)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0204</Code>
-				<Text>Ngāti Paoa</Text>
+				<Text xml:lang="en">Ngāti Paoa</Text>
+				<Text xml:lang="mi">Ngāti Paoa</Text>
 			</Value>
 			<Value>
 				<Code>NZS0205</Code>
-				<Text>Patukirikiri</Text>
+				<Text xml:lang="en">Patukirikiri</Text>
+				<Text xml:lang="mi">Patukirikiri</Text>
 			</Value>
 			<Value>
 				<Code>NZS0206</Code>
-				<Text>Ngāti Porou ki Harataunga ki Mataora</Text>
+				<Text xml:lang="en">Ngāti Porou ki Harataunga ki Mataora</Text>
+				<Text xml:lang="mi">Ngāti Porou ki Harataunga ki Mataora</Text>
 			</Value>
 			<Value>
 				<Code>NZS0207</Code>
-				<Text>Ngāti Pūkenga ki Waiau</Text>
+				<Text xml:lang="en">Ngāti Pūkenga ki Waiau</Text>
+				<Text xml:lang="mi">Ngāti Pūkenga ki Waiau</Text>
 			</Value>
 			<Value>
 				<Code>NZS0208</Code>
-				<Text>Ngāti Rāhiri Tumutumu</Text>
+				<Text xml:lang="en">Ngāti Rāhiri Tumutumu</Text>
+				<Text xml:lang="mi">Ngāti Rāhiri Tumutumu</Text>
 			</Value>
 			<Value>
 				<Code>NZS0210</Code>
-				<Text>Ngāti Tamaterā</Text>
+				<Text xml:lang="en">Ngāti Tamaterā</Text>
+				<Text xml:lang="mi">Ngāti Tamaterā</Text>
 			</Value>
 			<Value>
 				<Code>NZS0211</Code>
-				<Text>Ngāti Tara Tokanui</Text>
+				<Text xml:lang="en">Ngāti Tara Tokanui</Text>
+				<Text xml:lang="mi">Ngāti Tara Tokanui</Text>
 			</Value>
 			<Value>
 				<Code>NZS0212</Code>
-				<Text>Ngāti Whanaunga</Text>
+				<Text xml:lang="en">Ngāti Whanaunga</Text>
+				<Text xml:lang="mi">Ngāti Whanaunga</Text>
 			</Value>
 			<Value>
 				<Code>NZS03</Code>
-				<Text>Waikato/Te Rohe Pōtae (Waikato/King Country) Region Iwi</Text>
+				<Text xml:lang="en">Waikato/Te Rohe Pōtae (Waikato/King Country) Region Iwi</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS0301</Code>
-				<Text>Ngāti Haua (Waikato)</Text>
+				<Text xml:lang="en">Ngāti Haua (Waikato)</Text>
+				<Text xml:lang="mi">Ngāti Haua (Waikato)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0302</Code>
-				<Text>Ngāti Maniapoto</Text>
+				<Text xml:lang="en">Ngāti Maniapoto</Text>
+				<Text xml:lang="mi">Ngāti Maniapoto</Text>
 			</Value>
 			<Value>
 				<Code>NZS0303</Code>
-				<Text>Raukawa (Waikato)</Text>
+				<Text xml:lang="en">Raukawa (Waikato)</Text>
+				<Text xml:lang="mi">Raukawa (Waikato)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0304</Code>
-				<Text>Waikato</Text>
+				<Text xml:lang="en">Waikato</Text>
+				<Text xml:lang="mi">Waikato</Text>
 			</Value>
 			<Value>
 				<Code>NZS0305</Code>
-				<Text>Ngāti Te Ata</Text>
+				<Text xml:lang="en">Ngāti Te Ata</Text>
+				<Text xml:lang="mi">Ngāti Te Ata</Text>
 			</Value>
 			<Value>
 				<Code>NZS0306</Code>
-				<Text>Ngāti Hīkairo</Text>
+				<Text xml:lang="en">Ngāti Hīkairo</Text>
+				<Text xml:lang="mi">Ngāti Hīkairo</Text>
 			</Value>
 			<Value>
 				<Code>NZS0307</Code>
-				<Text>Rereahu</Text>
+				<Text xml:lang="en">Rereahu</Text>
+				<Text xml:lang="mi">Rereahu</Text>
 			</Value>
 			<Value>
 				<Code>NZS0308</Code>
-				<Text>Ngāti Tiipa</Text>
+				<Text xml:lang="en">Ngāti Tiipa</Text>
+				<Text xml:lang="mi">Ngāti Tiipa</Text>
 			</Value>
 			<Value>
 				<Code>NZS0309</Code>
-				<Text>Ngāti Korokī Kahukura</Text>
+				<Text xml:lang="en">Ngāti Korokī Kahukura</Text>
+				<Text xml:lang="mi">Ngāti Korokī Kahukura</Text>
 			</Value>
 			<Value>
 				<Code>NZS0310</Code>
-				<Text>Ngāti Tamaoho</Text>
+				<Text xml:lang="en">Ngāti Tamaoho</Text>
+				<Text xml:lang="mi">Ngāti Tamaoho</Text>
 			</Value>
 			<Value>
 				<Code>NZS0311</Code>
-				<Text>Te Ākitai-Waiohua</Text>
+				<Text xml:lang="en">Te Ākitai-Waiohua</Text>
+				<Text xml:lang="mi">Te Ākitai-Waiohua</Text>
 			</Value>
 			<Value>
 				<Code>NZS04</Code>
-				<Text>Te Arawa/Taupō (Rotorua/Taupō) Region Iwi</Text>
+				<Text xml:lang="en">Te Arawa/Taupō (Rotorua/Taupō) Region Iwi</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS0401</Code>
-				<Text>Ngāti Pikiao (Te Arawa)</Text>
+				<Text xml:lang="en">Ngāti Pikiao (Te Arawa)</Text>
+				<Text xml:lang="mi">Ngāti Pikiao (Te Arawa)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0402</Code>
-				<Text>Ngāti Rangiteaorere (Te Arawa)</Text>
+				<Text xml:lang="en">Ngāti Rangiteaorere (Te Arawa)</Text>
+				<Text xml:lang="mi">Ngāti Rangiteaorere (Te Arawa)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0403</Code>
-				<Text>Ngāti Rangitihi (Te Arawa)</Text>
+				<Text xml:lang="en">Ngāti Rangitihi (Te Arawa)</Text>
+				<Text xml:lang="mi">Ngāti Rangitihi (Te Arawa)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0404</Code>
-				<Text>Ngāti Rangiwewehi (Te Arawa)</Text>
+				<Text xml:lang="en">Ngāti Rangiwewehi (Te Arawa)</Text>
+				<Text xml:lang="mi">Ngāti Rangiwewehi (Te Arawa)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0405</Code>
-				<Text>Tapuika (Te Arawa)</Text>
+				<Text xml:lang="en">Tapuika (Te Arawa)</Text>
+				<Text xml:lang="mi">Tapuika (Te Arawa)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0406</Code>
-				<Text>Ngāti Tarāwhai (Te Arawa)</Text>
+				<Text xml:lang="en">Ngāti Tarāwhai (Te Arawa)</Text>
+				<Text xml:lang="mi">Ngāti Tarāwhai (Te Arawa)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0407</Code>
-				<Text>Tūhourangi (Te Arawa)</Text>
+				<Text xml:lang="en">Tūhourangi (Te Arawa)</Text>
+				<Text xml:lang="mi">Tūhourangi (Te Arawa)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0408</Code>
-				<Text>Uenuku-Kōpako (Te Arawa)</Text>
+				<Text xml:lang="en">Uenuku-Kōpako (Te Arawa)</Text>
+				<Text xml:lang="mi">Uenuku-Kōpako (Te Arawa)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0409</Code>
-				<Text>Waitaha (Te Arawa)</Text>
+				<Text xml:lang="en">Waitaha (Te Arawa)</Text>
+				<Text xml:lang="mi">Waitaha (Te Arawa)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0410</Code>
-				<Text>Ngāti Whakaue (Te Arawa)</Text>
+				<Text xml:lang="en">Ngāti Whakaue (Te Arawa)</Text>
+				<Text xml:lang="mi">Ngāti Whakaue (Te Arawa)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0411</Code>
-				<Text>Ngāti Tūwharetoa (ki Taupō)</Text>
+				<Text xml:lang="en">Ngāti Tūwharetoa (ki Taupō)</Text>
+				<Text xml:lang="mi">Ngāti Tūwharetoa (ki Taupō)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0412</Code>
-				<Text>Ngāti Tahu-Ngāti Whaoa (Te Arawa)</Text>
+				<Text xml:lang="en">Ngāti Tahu-Ngāti Whaoa (Te Arawa)</Text>
+				<Text xml:lang="mi">Ngāti Tahu-Ngāti Whaoa (Te Arawa)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0413</Code>
-				<Text>Ngāti Mākino</Text>
+				<Text xml:lang="en">Ngāti Mākino</Text>
+				<Text xml:lang="mi">Ngāti Mākino</Text>
 			</Value>
 			<Value>
 				<Code>NZS0414</Code>
-				<Text>Ngāti Kearoa / Ngāti Tuarā</Text>
+				<Text xml:lang="en">Ngāti Kearoa / Ngāti Tuarā</Text>
+				<Text xml:lang="mi">Ngāti Kearoa / Ngāti Tuarā</Text>
 			</Value>
 			<Value>
 				<Code>NZS0415</Code>
-				<Text>Ngāti Rongomai (Te Arawa)</Text>
+				<Text xml:lang="en">Ngāti Rongomai (Te Arawa)</Text>
+				<Text xml:lang="mi">Ngāti Rongomai (Te Arawa)</Text>
 			</Value>
 			<Value>
 				<Code>NZS05</Code>
-				<Text>Tauranga Moana/Mātaatua (Bay of Plenty) Region Iwi</Text>
+				<Text xml:lang="en">Tauranga Moana/Mātaatua (Bay of Plenty) Region Iwi</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS0501</Code>
-				<Text>Ngāti Pūkenga</Text>
+				<Text xml:lang="en">Ngāti Pūkenga</Text>
+				<Text xml:lang="mi">Ngāti Pūkenga</Text>
 			</Value>
 			<Value>
 				<Code>NZS0502</Code>
-				<Text>Ngāi Te Rangi </Text>
+				<Text xml:lang="en">Ngāi Te Rangi </Text>
+				<Text xml:lang="mi">Ngāi Te Rangi </Text>
 			</Value>
 			<Value>
 				<Code>NZS0503</Code>
-				<Text>Ngāti Ranginui</Text>
+				<Text xml:lang="en">Ngāti Ranginui</Text>
+				<Text xml:lang="mi">Ngāti Ranginui</Text>
 			</Value>
 			<Value>
 				<Code>NZS0504</Code>
-				<Text>Ngāti Awa</Text>
+				<Text xml:lang="en">Ngāti Awa</Text>
+				<Text xml:lang="mi">Ngāti Awa</Text>
 			</Value>
 			<Value>
 				<Code>NZS0505</Code>
-				<Text>Ngāti Manawa</Text>
+				<Text xml:lang="en">Ngāti Manawa</Text>
+				<Text xml:lang="mi">Ngāti Manawa</Text>
 			</Value>
 			<Value>
 				<Code>NZS0506</Code>
-				<Text>Ngāi Tai (Tauranga Moana/Mātaatua)</Text>
+				<Text xml:lang="en">Ngāi Tai (Tauranga Moana/Mātaatua)</Text>
+				<Text xml:lang="mi">Ngāi Tai (Tauranga Moana/Mātaatua)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0507</Code>
-				<Text>Tūhoe</Text>
+				<Text xml:lang="en">Tūhoe</Text>
+				<Text xml:lang="mi">Tūhoe</Text>
 			</Value>
 			<Value>
 				<Code>NZS0508</Code>
-				<Text>Whakatōhea</Text>
+				<Text xml:lang="en">Whakatōhea</Text>
+				<Text xml:lang="mi">Whakatōhea</Text>
 			</Value>
 			<Value>
 				<Code>NZS0509</Code>
-				<Text>Te Whānau-ā-Apanui</Text>
+				<Text xml:lang="en">Te Whānau-ā-Apanui</Text>
+				<Text xml:lang="mi">Te Whānau-ā-Apanui</Text>
 			</Value>
 			<Value>
 				<Code>NZS0510</Code>
-				<Text>Ngāti Whare</Text>
+				<Text xml:lang="en">Ngāti Whare</Text>
+				<Text xml:lang="mi">Ngāti Whare</Text>
 			</Value>
 			<Value>
 				<Code>NZS0511</Code>
-				<Text>Ngā Pōtiki ā Tamapahore</Text>
+				<Text xml:lang="en">Ngā Pōtiki ā Tamapahore</Text>
+				<Text xml:lang="mi">Ngā Pōtiki ā Tamapahore</Text>
 			</Value>
 			<Value>
 				<Code>NZS0512</Code>
-				<Text>Te Upokorehe</Text>
+				<Text xml:lang="en">Te Upokorehe</Text>
+				<Text xml:lang="mi">Te Upokorehe</Text>
 			</Value>
 			<Value>
 				<Code>NZS0513</Code>
-				<Text>Ngāti Tūwharetoa ki Kawerau </Text>
+				<Text xml:lang="en">Ngāti Tūwharetoa ki Kawerau </Text>
+				<Text xml:lang="mi">Ngāti Tūwharetoa ki Kawerau </Text>
 			</Value>
 			<Value>
 				<Code>NZS06</Code>
-				<Text>Te Tai Rāwhiti (East Coast) Region Iwi</Text>
+				<Text xml:lang="en">Te Tai Rāwhiti (East Coast) Region Iwi</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS0601</Code>
-				<Text>Ngāti Porou</Text>
+				<Text xml:lang="en">Ngāti Porou</Text>
+				<Text xml:lang="mi">Ngāti Porou</Text>
 			</Value>
 			<Value>
 				<Code>NZS0602</Code>
-				<Text>Te Aitanga-a-Māhaki</Text>
+				<Text xml:lang="en">Te Aitanga-a-Māhaki</Text>
+				<Text xml:lang="mi">Te Aitanga-a-Māhaki</Text>
 			</Value>
 			<Value>
 				<Code>NZS0603</Code>
-				<Text>Rongowhakaata</Text>
+				<Text xml:lang="en">Rongowhakaata</Text>
+				<Text xml:lang="mi">Rongowhakaata</Text>
 			</Value>
 			<Value>
 				<Code>NZS0604</Code>
-				<Text>Ngāi Tāmanuhiri</Text>
+				<Text xml:lang="en">Ngāi Tāmanuhiri</Text>
+				<Text xml:lang="mi">Ngāi Tāmanuhiri</Text>
 			</Value>
 			<Value>
 				<Code>NZS0605</Code>
-				<Text>Te Aitanga ā Hauiti</Text>
+				<Text xml:lang="en">Te Aitanga ā Hauiti</Text>
+				<Text xml:lang="mi">Te Aitanga ā Hauiti</Text>
 			</Value>
 			<Value>
 				<Code>NZS07</Code>
-				<Text>Te Matau-a-Māui/Wairarapa (Hawke's Bay/Wairarapa) Region Iwi</Text>
+				<Text xml:lang="en">Te Matau-a-Māui/Wairarapa (Hawke's Bay/Wairarapa) Region Iwi</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS0701</Code>
-				<Text>Rongomaiwahine (Te Māhia)</Text>
+				<Text xml:lang="en">Rongomaiwahine (Te Māhia)</Text>
+				<Text xml:lang="mi">Rongomaiwahine (Te Māhia)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0702</Code>
-				<Text>Ngāti Kahungunu ki Te Wairoa</Text>
+				<Text xml:lang="en">Ngāti Kahungunu ki Te Wairoa</Text>
+				<Text xml:lang="mi">Ngāti Kahungunu ki Te Wairoa</Text>
 			</Value>
 			<Value>
 				<Code>NZS0703</Code>
-				<Text>Ngāti Kahungunu ki Heretaunga</Text>
+				<Text xml:lang="en">Ngāti Kahungunu ki Heretaunga</Text>
+				<Text xml:lang="mi">Ngāti Kahungunu ki Heretaunga</Text>
 			</Value>
 			<Value>
 				<Code>NZS0704</Code>
-				<Text>Ngāti Kahungunu ki Wairarapa</Text>
+				<Text xml:lang="en">Ngāti Kahungunu ki Wairarapa</Text>
+				<Text xml:lang="mi">Ngāti Kahungunu ki Wairarapa</Text>
 			</Value>
 			<Value>
 				<Code>NZS0706</Code>
-				<Text>Rangitāne (Te Matau-a-Māui/Hawke's Bay/Wairarapa)</Text>
+				<Text xml:lang="en">Rangitāne (Te Matau-a-Māui/Hawke's Bay/Wairarapa)</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS0707</Code>
-				<Text>Ngāti Kahungunu ki Te Whanganui-a-Orotu</Text>
+				<Text xml:lang="en">Ngāti Kahungunu ki Te Whanganui-a-Orotu</Text>
+				<Text xml:lang="mi">Ngāti Kahungunu ki Te Whanganui-a-Orotu</Text>
 			</Value>
 			<Value>
 				<Code>NZS0708</Code>
-				<Text>Ngāti Kahungunu ki Tamatea</Text>
+				<Text xml:lang="en">Ngāti Kahungunu ki Tamatea</Text>
+				<Text xml:lang="mi">Ngāti Kahungunu ki Tamatea</Text>
 			</Value>
 			<Value>
 				<Code>NZS0709</Code>
-				<Text>Ngāti Kahungunu ki Tamakinui a Rua</Text>
+				<Text xml:lang="en">Ngāti Kahungunu ki Tamakinui a Rua</Text>
+				<Text xml:lang="mi">Ngāti Kahungunu ki Tamakinui a Rua</Text>
 			</Value>
 			<Value>
 				<Code>NZS0710</Code>
-				<Text>Ngāti Pāhauwera</Text>
+				<Text xml:lang="en">Ngāti Pāhauwera</Text>
+				<Text xml:lang="mi">Ngāti Pāhauwera</Text>
 			</Value>
 			<Value>
 				<Code>NZS0711</Code>
-				<Text>Ngāti Rākaipaaka</Text>
+				<Text xml:lang="en">Ngāti Rākaipaaka</Text>
+				<Text xml:lang="mi">Ngāti Rākaipaaka</Text>
 			</Value>
 			<Value>
 				<Code>NZS0712</Code>
-				<Text>Ngāti Hineuru</Text>
+				<Text xml:lang="en">Ngāti Hineuru</Text>
+				<Text xml:lang="mi">Ngāti Hineuru</Text>
 			</Value>
 			<Value>
 				<Code>NZS0713</Code>
-				<Text>Maungaharuru Tangitū</Text>
+				<Text xml:lang="en">Maungaharuru Tangitū</Text>
+				<Text xml:lang="mi">Maungaharuru Tangitū</Text>
 			</Value>
 			<Value>
 				<Code>NZS0714</Code>
-				<Text>Rangitāne o Tamaki nui ā Rua</Text>
+				<Text xml:lang="en">Rangitāne o Tamaki nui ā Rua</Text>
+				<Text xml:lang="mi">Rangitāne o Tamaki nui ā Rua</Text>
 			</Value>
 			<Value>
 				<Code>NZS0715</Code>
-				<Text>Ngāti Ruapani ki Waikaremoana</Text>
+				<Text xml:lang="en">Ngāti Ruapani ki Waikaremoana</Text>
+				<Text xml:lang="mi">Ngāti Ruapani ki Waikaremoana</Text>
 			</Value>
 			<Value>
 				<Code>NZS0716</Code>
-				<Text>Te Hika o Pāpāuma</Text>
+				<Text xml:lang="en">Te Hika o Pāpāuma</Text>
+				<Text xml:lang="mi">Te Hika o Pāpāuma</Text>
 			</Value>
 			<Value>
 				<Code>NZS08</Code>
-				<Text>Taranaki Region Iwi</Text>
+				<Text xml:lang="en">Taranaki Region Iwi</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS0801</Code>
-				<Text>Te Atiawa (Taranaki)</Text>
+				<Text xml:lang="en">Te Atiawa (Taranaki)</Text>
+				<Text xml:lang="mi">Te Atiawa (Taranaki)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0802</Code>
-				<Text>Ngāti Maru (Taranaki)</Text>
+				<Text xml:lang="en">Ngāti Maru (Taranaki)</Text>
+				<Text xml:lang="mi">Ngāti Maru (Taranaki)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0803</Code>
-				<Text>Ngāti Mutunga (Taranaki)</Text>
+				<Text xml:lang="en">Ngāti Mutunga (Taranaki)</Text>
+				<Text xml:lang="mi">Ngāti Mutunga (Taranaki)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0804</Code>
-				<Text>Ngā Rauru</Text>
+				<Text xml:lang="en">Ngā Rauru</Text>
+				<Text xml:lang="mi">Ngā Rauru</Text>
 			</Value>
 			<Value>
 				<Code>NZS0805</Code>
-				<Text>Ngā Ruahine</Text>
+				<Text xml:lang="en">Ngā Ruahine</Text>
+				<Text xml:lang="mi">Ngā Ruahine</Text>
 			</Value>
 			<Value>
 				<Code>NZS0806</Code>
-				<Text>Ngāti Ruanui</Text>
+				<Text xml:lang="en">Ngāti Ruanui</Text>
+				<Text xml:lang="mi">Ngāti Ruanui</Text>
 			</Value>
 			<Value>
 				<Code>NZS0807</Code>
-				<Text>Ngāti Tama (Taranaki)</Text>
+				<Text xml:lang="en">Ngāti Tama (Taranaki)</Text>
+				<Text xml:lang="mi">Ngāti Tama (Taranaki)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0808</Code>
-				<Text>Taranaki</Text>
+				<Text xml:lang="en">Taranaki</Text>
+				<Text xml:lang="mi">Taranaki</Text>
 			</Value>
 			<Value>
 				<Code>NZS0809</Code>
-				<Text>Tangāhoe</Text>
+				<Text xml:lang="en">Tangāhoe</Text>
+				<Text xml:lang="mi">Tangāhoe</Text>
 			</Value>
 			<Value>
 				<Code>NZS0810</Code>
-				<Text>Pakakohi</Text>
+				<Text xml:lang="en">Pakakohi</Text>
+				<Text xml:lang="mi">Pakakohi</Text>
 			</Value>
 			<Value>
 				<Code>NZS09</Code>
-				<Text>Whanganui/Rangitīkei (Wanganui/Rangitīkei) Region Iwi</Text>
+				<Text xml:lang="en">Whanganui/Rangitīkei (Wanganui/Rangitīkei) Region Iwi</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS0901</Code>
-				<Text>Ngāti Apa (Rangitīkei)</Text>
+				<Text xml:lang="en">Ngāti Apa (Rangitīkei)</Text>
+				<Text xml:lang="mi">Ngāti Apa (Rangitīkei)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0902</Code>
-				<Text>Te Ati Haunui-a-Pāpārangi</Text>
+				<Text xml:lang="en">Te Ati Haunui-a-Pāpārangi</Text>
+				<Text xml:lang="mi">Te Ati Haunui-a-Pāpārangi</Text>
 			</Value>
 			<Value>
 				<Code>NZS0903</Code>
-				<Text>Ngāti Haua (Taumarunui)</Text>
+				<Text xml:lang="en">Ngāti Haua (Taumarunui)</Text>
+				<Text xml:lang="mi">Ngāti Haua (Taumarunui)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0904</Code>
-				<Text>Ngāti Hauiti (Rangitīkei)</Text>
+				<Text xml:lang="en">Ngāti Hauiti (Rangitīkei)</Text>
+				<Text xml:lang="mi">Ngāti Hauiti (Rangitīkei)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0905</Code>
-				<Text>Ngāti Whitikaupeka (Rangitīkei)</Text>
+				<Text xml:lang="en">Ngāti Whitikaupeka (Rangitīkei)</Text>
+				<Text xml:lang="mi">Ngāti Whitikaupeka (Rangitīkei)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0906</Code>
-				<Text>Ngāi Te Ohuake (Rangitīkei)</Text>
+				<Text xml:lang="en">Ngāi Te Ohuake (Rangitīkei)</Text>
+				<Text xml:lang="mi">Ngāi Te Ohuake (Rangitīkei)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0907</Code>
-				<Text>Ngāti Tamakōpiri (Rangitīkei)</Text>
+				<Text xml:lang="en">Ngāti Tamakōpiri (Rangitīkei)</Text>
+				<Text xml:lang="mi">Ngāti Tamakōpiri (Rangitīkei)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0908</Code>
-				<Text>Ngāti Rangi (Ruapehu, Whanganui)</Text>
+				<Text xml:lang="en">Ngāti Rangi (Ruapehu, Whanganui)</Text>
+				<Text xml:lang="mi">Ngāti Rangi (Ruapehu, Whanganui)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0909</Code>
-				<Text>Uenuku (Ruapehu, Waimarino)</Text>
+				<Text xml:lang="en">Uenuku (Ruapehu, Waimarino)</Text>
+				<Text xml:lang="mi">Uenuku (Ruapehu, Waimarino)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0910</Code>
-				<Text>Tamahaki (Ruapehu, Waimarino)</Text>
+				<Text xml:lang="en">Tamahaki (Ruapehu, Waimarino)</Text>
+				<Text xml:lang="mi">Tamahaki (Ruapehu, Waimarino)</Text>
 			</Value>
 			<Value>
 				<Code>NZS0911</Code>
-				<Text>Tamakana (Ruapehu, Waimarino)</Text>
+				<Text xml:lang="en">Tamakana (Ruapehu, Waimarino)</Text>
+				<Text xml:lang="mi">Tamakana (Ruapehu, Waimarino)</Text>
 			</Value>
 			<Value>
 				<Code>NZS10</Code>
-				<Text>Manawatū/Horowhenua/Te Whanganui-a-Tara (Manawatū/Horowhenua/Wellington) Region Iwi</Text>
+				<Text xml:lang="en">Manawatū/Horowhenua/Te Whanganui-a-Tara (Manawatū/Horowhenua/Wellington) Region Iwi</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS1001</Code>
-				<Text>Te Atiawa (Te Whanganui-a-Tara/Wellington)</Text>
+				<Text xml:lang="en">Te Atiawa (Te Whanganui-a-Tara/Wellington)</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS1002</Code>
-				<Text>Muaūpoko</Text>
+				<Text xml:lang="en">Muaūpoko</Text>
+				<Text xml:lang="mi">Muaūpoko</Text>
 			</Value>
 			<Value>
 				<Code>NZS1003</Code>
-				<Text>Rangitāne (Manawatū)</Text>
+				<Text xml:lang="en">Rangitāne (Manawatū)</Text>
+				<Text xml:lang="mi">Rangitāne (Manawatū)</Text>
 			</Value>
 			<Value>
 				<Code>NZS1004</Code>
-				<Text>Ngāti Raukawa (Horowhenua/Manawatū)</Text>
+				<Text xml:lang="en">Ngāti Raukawa (Horowhenua/Manawatū)</Text>
+				<Text xml:lang="mi">Ngāti Raukawa (Horowhenua/Manawatū)</Text>
 			</Value>
 			<Value>
 				<Code>NZS1005</Code>
-				<Text>Ngāti Toarangatira (Te Whanganui-a-Tara/Wellington)</Text>
+				<Text xml:lang="en">Ngāti Toarangatira (Te Whanganui-a-Tara/Wellington)</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS1006</Code>
-				<Text>Te Atiawa ki Whakarongotai</Text>
+				<Text xml:lang="en">Te Atiawa ki Whakarongotai</Text>
+				<Text xml:lang="mi">Te Atiawa ki Whakarongotai</Text>
 			</Value>
 			<Value>
 				<Code>NZS1007</Code>
-				<Text>Ngāti Tama ki Te Upoko o Te Ika (Te Whanganui-a-Tara/Wellington)</Text>
+				<Text xml:lang="en">Ngāti Tama ki Te Upoko o Te Ika (Te Whanganui-a-Tara/Wellington)</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS1008</Code>
-				<Text>Ngāti Kauwhata</Text>
+				<Text xml:lang="en">Ngāti Kauwhata</Text>
+				<Text xml:lang="mi">Ngāti Kauwhata</Text>
 			</Value>
 			<Value>
 				<Code>NZS1009</Code>
-				<Text>Ngāti Tukorehe </Text>
+				<Text xml:lang="en">Ngāti Tukorehe</Text>
+				<Text xml:lang="mi">Ngāti Tukorehe</Text>
 			</Value>
 			<Value>
 				<Code>NZS11</Code>
-				<Text>Te Waipounamu/Wharekauri (South Island/Chatham Islands) Region Iwi</Text>
+				<Text xml:lang="en">Te Waipounamu/Wharekauri (South Island/Chatham Islands) Region Iwi</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS1101</Code>
-				<Text>Te Atiawa (Te Waipounamu/South Island)</Text>
+				<Text xml:lang="en">Te Atiawa (Te Waipounamu/South Island)</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS1102</Code>
-				<Text>Ngāti Koata</Text>
+				<Text xml:lang="en">Ngāti Koata</Text>
+				<Text xml:lang="mi">Ngāti Koata</Text>
 			</Value>
 			<Value>
 				<Code>NZS1103</Code>
-				<Text>Ngāti Kuia</Text>
+				<Text xml:lang="en">Ngāti Kuia</Text>
+				<Text xml:lang="mi">Ngāti Kuia</Text>
 			</Value>
 			<Value>
 				<Code>NZS1104</Code>
-				<Text>Kāti Māmoe</Text>
+				<Text xml:lang="en">Kāti Māmoe</Text>
+				<Text xml:lang="mi">Kāti Māmoe</Text>
 			</Value>
 			<Value>
 				<Code>NZS1105</Code>
-				<Text>Moriori</Text>
+				<Text xml:lang="en">Moriori</Text>
+				<Text xml:lang="mi">Moriori</Text>
 			</Value>
 			<Value>
 				<Code>NZS1106</Code>
-				<Text>Ngāti Mutunga (Wharekauri/Chatham Islands)</Text>
+				<Text xml:lang="en">Ngāti Mutunga (Wharekauri/Chatham Islands)</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS1107</Code>
-				<Text>Rangitāne (Te Waipounamu/South Island)</Text>
+				<Text xml:lang="en">Rangitāne (Te Waipounamu/South Island)</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS1108</Code>
-				<Text>Ngāti Rārua</Text>
+				<Text xml:lang="en">Ngāti Rārua</Text>
+				<Text xml:lang="mi">Ngāti Rārua</Text>
 			</Value>
 			<Value>
 				<Code>NZS1109</Code>
-				<Text>Ngāi Tahu / Kāi Tahu</Text>
+				<Text xml:lang="en">Ngāi Tahu / Kāi Tahu</Text>
+				<Text xml:lang="mi">Ngāi Tahu / Kāi Tahu</Text>
 			</Value>
 			<Value>
 				<Code>NZS1110</Code>
-				<Text>Ngāti Tama (Te Waipounamu/South Island)</Text>
+				<Text xml:lang="en">Ngāti Tama (Te Waipounamu/South Island)</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS1111</Code>
-				<Text>Ngāti Toarangatira (Te Waipounamu/South Island)</Text>
+				<Text xml:lang="en">Ngāti Toarangatira (Te Waipounamu/South Island)</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS1112</Code>
-				<Text>Waitaha (Te Waipounamu/South Island)</Text>
+				<Text xml:lang="en">Waitaha (Te Waipounamu/South Island)</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS1113</Code>
-				<Text>Ngāti Apa ki Te Rā Tō</Text>
+				<Text xml:lang="en">Ngāti Apa ki Te Rā Tō</Text>
+				<Text xml:lang="mi">Ngāti Apa ki Te Rā Tō</Text>
 			</Value>
 			<Value>
 				<Code>NZS20</Code>
-				<Text>Confederations and Waka, iwi not named</Text>
+				<Text xml:lang="en">Confederations and Waka, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2001</Code>
-				<Text>Tainui, iwi not named</Text>
+				<Text xml:lang="en">Tainui, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2002</Code>
-				<Text>Te Arawa, iwi not named</Text>
+				<Text xml:lang="en">Te Arawa, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2003</Code>
-				<Text>Tākitimu, iwi not named</Text>
+				<Text xml:lang="en">Tākitimu, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2004</Code>
-				<Text>Aotea, iwi not named</Text>
+				<Text xml:lang="en">Aotea, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2005</Code>
-				<Text>Mātaatua, iwi not named</Text>
+				<Text xml:lang="en">Mātaatua, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2006</Code>
-				<Text>Mahuru, iwi not named</Text>
+				<Text xml:lang="en">Mahuru, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2007</Code>
-				<Text>Māmari, iwi not named</Text>
+				<Text xml:lang="en">Māmari, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2008</Code>
-				<Text>Ngātokimatawhaorua, iwi not named</Text>
+				<Text xml:lang="en">Ngātokimatawhaorua, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2009</Code>
-				<Text>Nukutere, iwi not named</Text>
+				<Text xml:lang="en">Nukutere, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2010</Code>
-				<Text>Tokomaru, iwi not named</Text>
+				<Text xml:lang="en">Tokomaru, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2011</Code>
-				<Text>Kurahaupō, iwi not named</Text>
+				<Text xml:lang="en">Kurahaupō, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2012</Code>
-				<Text>Muriwhenua, iwi not named</Text>
+				<Text xml:lang="en">Muriwhenua, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2013</Code>
-				<Text>Hauraki / Pare Hauraki, iwi not named</Text>
+				<Text xml:lang="en">Hauraki / Pare Hauraki, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2014</Code>
-				<Text>Tūranganui a Kiwa, iwi not named</Text>
+				<Text xml:lang="en">Tūranganui a Kiwa, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2015</Code>
-				<Text>Te Tauihu o Te Waka a Māui, iwi not named</Text>
+				<Text xml:lang="en">Te Tauihu o Te Waka a Māui, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2016</Code>
-				<Text>Tauranga Moana, iwi not named</Text>
+				<Text xml:lang="en">Tauranga Moana, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2017</Code>
-				<Text>Horouta, iwi not named</Text>
+				<Text xml:lang="en">Horouta, iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2018</Code>
-				<Text>Mōkai Pātea, iwi not named </Text>
+				<Text xml:lang="en">Mōkai Pātea, iwi not named </Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS21</Code>
-				<Text>Iwi named, region not known</Text>
+				<Text xml:lang="en">Iwi named, region not known</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2101</Code>
-				<Text>Te Atiawa, region not known</Text>
+				<Text xml:lang="en">Te Atiawa, region not known</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2102</Code>
-				<Text>Ngāti Haua, region not known</Text>
+				<Text xml:lang="en">Ngāti Haua, region not known</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2103</Code>
-				<Text>Ngāti Maru, region not known</Text>
+				<Text xml:lang="en">Ngāti Maru, region not known</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2104</Code>
-				<Text>Ngāti Mutunga, region not known</Text>
+				<Text xml:lang="en">Ngāti Mutunga, region not known</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2105</Code>
-				<Text>Rangitāne, region not known</Text>
+				<Text xml:lang="en">Rangitāne, region not known</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2106</Code>
-				<Text>Ngāti Raukawa, region not known</Text>
+				<Text xml:lang="en">Ngāti Raukawa, region not known</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2107</Code>
-				<Text>Ngāti Tama, region not known</Text>
+				<Text xml:lang="en">Ngāti Tama, region not known</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2108</Code>
-				<Text>Ngāti Toa, region not known</Text>
+				<Text xml:lang="en">Ngāti Toa, region not known</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2109</Code>
-				<Text>Waitaha, region not known</Text>
+				<Text xml:lang="en">Waitaha, region not known</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2110</Code>
-				<Text>Ngāti Apa, region not known</Text>
+				<Text xml:lang="en">Ngāti Apa, region not known</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2111</Code>
-				<Text>Ngāi Tai, region not known</Text>
+				<Text xml:lang="en">Ngāi Tai, region not known</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2112</Code>
-				<Text>Ngāti Kahungunu, region not known</Text>
+				<Text xml:lang="en">Ngāti Kahungunu, region not known</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2113</Code>
-				<Text>Ngāti Tūwharetoa, region not known</Text>
+				<Text xml:lang="en">Ngāti Tūwharetoa, region not known</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS22</Code>
-				<Text>Hapū affiliated to more than one iwi</Text>
+				<Text xml:lang="en">Hapū affiliated to more than one iwi</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2201</Code>
-				<Text>Hapū affiliated to more than one iwi</Text>
+				<Text xml:lang="en">Hapū affiliated to more than one iwi</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS23</Code>
-				<Text>Region known, Iwi not named</Text>
+				<Text xml:lang="en">Region known, Iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2301</Code>
-				<Text>Te Tai Tokerau/Tāmaki-makaurau Region, Iwi not named</Text>
+				<Text xml:lang="en">Te Tai Tokerau/Tāmaki-makaurau Region, Iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2302</Code>
-				<Text>Hauraki Region, Iwi not named</Text>
+				<Text xml:lang="en">Hauraki Region, Iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2303</Code>
-				<Text>Waikato/Te Rohe Pōtae Region, Iwi not named</Text>
+				<Text xml:lang="en">Waikato/Te Rohe Pōtae Region, Iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2304</Code>
-				<Text>Te Arawa/Taupō Region, Iwi not named</Text>
+				<Text xml:lang="en">Te Arawa/Taupō Region, Iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2305</Code>
-				<Text>Tauranga Moana/Mātaatua Region, Iwi not named</Text>
+				<Text xml:lang="en">Tauranga Moana/Mātaatua Region, Iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2306</Code>
-				<Text>Te Tai Rāwhiti Region, Iwi not named</Text>
+				<Text xml:lang="en">Te Tai Rāwhiti Region, Iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2307</Code>
-				<Text>Te Matau-a-Māui/Wairarapa Region, Iwi not named</Text>
+				<Text xml:lang="en">Te Matau-a-Māui/Wairarapa Region, Iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2308</Code>
-				<Text>Taranaki Region, Iwi not named</Text>
+				<Text xml:lang="en">Taranaki Region, Iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2309</Code>
-				<Text>Whanganui/Rangitīkei Region, Iwi not named</Text>
+				<Text xml:lang="en">Whanganui/Rangitīkei Region, Iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2310</Code>
-				<Text>Manawatū/Horowhenua/Te Whanganui-a-Tara Region, Iwi not named</Text>
+				<Text xml:lang="en">Manawatū/Horowhenua/Te Whanganui-a-Tara Region, Iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS2311</Code>
-				<Text>Te Waipounamu/Wharekauri Region, Iwi not named</Text>
+				<Text xml:lang="en">Te Waipounamu/Wharekauri Region, Iwi not named</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 			<Value>
 				<Code>NZS44</Code>
-				<Text>Don't Know</Text>
+				<Text xml:lang="en">Don't Know</Text>
+				<Text xml:lang="mi">Kāre i te mōhio</Text>
+			</Value>
+			<Value>
+				<Code>NZS4444</Code>
+				<Text xml:lang="en">Don't Know</Text>
+				<Text xml:lang="mi">Kāre i te mōhio</Text>
 			</Value>
 			<Value>
 				<Code>NZS55</Code>
-				<Text>Refused To Answer</Text>
+				<Text xml:lang="en">Refused To Answer</Text>
+				<Text xml:lang="mi">Kāre i whakautu</Text>
+			</Value>
+			<Value>
+				<Code>NZS5555</Code>
+				<Text xml:lang="en">Refused To Answer</Text>
+				<Text xml:lang="mi">Kāre i whakautu</Text>
 			</Value>
 			<Value>
 				<Code>NZS77</Code>
-				<Text>Response Unidentifiable</Text>
+				<Text xml:lang="en">Response Unidentifiable</Text>
+				<Text xml:lang="mi">Kāre i arohia te whakautu</Text>
+			</Value>
+			<Value>
+				<Code>NZS7777</Code>
+				<Text xml:lang="en">Response Unidentifiable</Text>
+				<Text xml:lang="mi">Kāre i arohia te whakautu</Text>
 			</Value>
 			<Value>
 				<Code>NZS88</Code>
-				<Text>Response Outside Scope</Text>
+				<Text xml:lang="en">Response Outside Scope</Text>
+				<Text xml:lang="mi">Kāre te whakautu e hāngai</Text>
+			</Value>
+			<Value>
+				<Code>NZS8888</Code>
+				<Text xml:lang="en">Response Outside Scope</Text>
+				<Text xml:lang="mi">Kāre te whakautu e hāngai</Text>
 			</Value>
 			<Value>
 				<Code>NZS99</Code>
-				<Text>Not Stated</Text>
+				<Text xml:lang="en">Not Stated</Text>
+				<Text xml:lang="mi">Kāre i kīia</Text>
+			</Value>
+			<Value>
+				<Code>NZS9999</Code>
+				<Text xml:lang="en">Not Stated</Text>
+				<Text xml:lang="mi">Kāre i kīia</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Iwi -->
+
 	<CodeSet>
 		<Intro>
 			<p>Religious affiliation is the self-identified association of a person with a religion,
@@ -2734,8 +3167,33 @@
 			</Value>
 			<Value>
 				<Code>LSN</Code>
-				<Text xml:lang="en">Learning Support Need</Text>
+				<Text xml:lang="en">Learning Support Need - Supporting Document</Text>
 				<Text xml:lang="mi">Me whai tautoko akoranga</Text>
+			</Value>
+			<Value>
+				<Code>PPH</Code>
+				<Text xml:lang="en">Person Photo</Text>
+				<Text xml:lang="mi"></Text>
+			</Value>
+			<Value>
+				<Code>NRA</Code>
+				<Text xml:lang="en">Learning Support Need Response Attachment</Text>
+				<Text xml:lang="mi"></Text>
+			</Value>
+			<Value>
+				<Code>NRC</Code>
+				<Text xml:lang="en">Learning Support Need Response Closure Attachment</Text>
+				<Text xml:lang="mi"></Text>
+			</Value>
+			<Value>
+				<Code>NRR</Code>
+				<Text xml:lang="en">Learning Support Need Response Review Attachment</Text>
+				<Text xml:lang="mi"></Text>
+			</Value>
+			<Value>
+				<Code>ODA</Code>
+				<Text xml:lang="en">Official Diagnosis Attachment</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Document Type -->
@@ -2810,5 +3268,92 @@
 			</Value>    <!-- Educator -->
 		</Values>
 	</CodeSet>    <!-- Staff Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>A code list denoting the School Management Systems (SMS) that are in use by Providers.</p>
+		</Intro>
+		<ID>School Management System</ID>
+		<Values>
+			<Value>
+				<Code>ASS</Code>
+				<Text>Assembly</Text>
+			</Value>    <!-- Assembly -->
+			<Value>
+				<Code>ETA</Code>
+				<Text>eTAP</Text>
+			</Value>    <!-- eTAP -->
+			<Value>
+				<Code>INT</Code>
+				<Text>INTEGRATOR</Text>
+			</Value>    <!-- INTEGRATOR -->
+			<Value>
+				<Code>KAM</Code>
+				<Text>KAMAR</Text>
+			</Value>    <!-- KAMAR -->
+			<Value>
+				<Code>LIN</Code>
+				<Text>LINC-ED</Text>
+			</Value>    <!-- LINC-ED -->
+			<Value>
+				<Code>MUS</Code>
+				<Text>MUSAC edge</Text>
+			</Value>    <!-- MUSAC edge -->
+			<Value>
+				<Code>PCS</Code>
+				<Text>PCSchool</Text>
+			</Value>    <!-- PCSchool -->
+			<Value>
+				<Code>SYN</Code>
+				<Text>Synergetic</Text>
+			</Value>    <!-- Synergetic -->
+		</Values>
+	</CodeSet>    <!-- Staff Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the student's Oranga Tamariki care status.</p>
+		</Intro>
+		<ID>Care Status</ID>
+		<Values>
+			<Value>
+				<Code>BWF</Code>
+				<Text>Back with family</Text>
+			</Value>    <!-- Back with family -->
+			<Value>
+				<Code>NAP</Code>
+				<Text>Not applicable</Text>
+			</Value>    <!-- Not applicable -->
+			<Value>
+				<Code>SCA</Code>
+				<Text>State care</Text>
+			</Value>    <!-- State care -->
+			<Value>
+				<Code>SCO</Code>
+				<Text>State care (other family)</Text>
+			</Value>    <!-- State care (other family) -->
+		</Values>
+	</CodeSet>    <!-- Care Status -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the reasons for which a persons biographical data may have changed.</p>
+		</Intro>
+		<ID>Biographic Change Reason</ID>
+		<Values>
+			<Value>
+				<Code>CF</Code>
+				<Text>Changed by family (PA request)</Text>
+			</Value>    <!-- Changed by family (PA request) -->
+			<Value>
+				<Code>EI</Code>
+				<Text>Entered incorrectly</Text>
+			</Value>    <!-- Entered incorrectly -->
+			<Value>
+				<Code>ON</Code>
+				<Text>Official name change</Text>
+			</Value>    <!-- Official name change -->
+		</Values>
+	</CodeSet>    <!-- Biographic Change Reason -->
 
 </IncludeGroup>

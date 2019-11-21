@@ -33,132 +33,24 @@
 
 	  <CodeSet>
 		  <Intro>
-			  <p>A reusable code set for yes, no, and unknown values.</p>
+			  <p>A reusable code set for yes, no, and not required values.</p>
 		  </Intro>
-		  <ID>Yes No Unknown</ID>
+		  <ID>Yes No Not Required</ID>
 		  <Values>
 			  <Value>
 				  <Code>N</Code>
 				  <Text>No</Text>
 			  </Value>
 			  <Value>
-				  <Code>U</Code>
-				  <Text>Unknown</Text>
+				  <Code>R</Code>
+				  <Text>Not Required</Text>
 			  </Value>
 			  <Value>
 				  <Code>Y</Code>
 				  <Text>Yes</Text>
 			  </Value>			  
 		  </Values>
-	  </CodeSet>      <!-- Yes No Unknown -->
-
-	  <CodeSet>
-		<Intro>
-		  	<p>Year Level defines the values that are valid for describing Funding Year Level and 
-			  	Current Year Level for a student enrolment.</p>
-
-			<p>Current Year Level indicates the year level of the student’s class cohort and the level
-				at which the student spends most of their time at school. While a student may be enrolled
-				in subjects at varying instructional year levels, in relation to the student enrolment 
-				this value represents the year level at which the student is considered to be 
-				predominantly taught.</p>
-
-			<p>Funding Year Level measures the actual number of years that the student has attended a school. 
-				It provides the Ministry with a method of counting students for funding purposes which 
-				is independent of the way schools are organised or the particular programme of study that 
-				a student may undertake. Funding Year Level for most students is based on the date they 
-				first started school.</p>
-
-			<p>School Year Level is used to indicate the instructional year levels offered by a school, i.e. 
-				those years for which student enrolments may be accepted.</p>
-		</Intro>
-		<ID>Year Level Code</ID>
-		<Values>
-			<Value>
-				<Code>0</Code>
-				<Text xml:lang="en">Year 0</Text>
-				<Text xml:lang="mi">Tau 0</Text>
-				<Description>Only applies to Funding Year Level</Description>
-			</Value>
-			<Value>
-				<Code>1</Code>
-				<Text xml:lang="en">Year 1</Text>
-				<Text xml:lang="mi">Tau 1</Text>
-			</Value>
-			<Value>
-				<Code>2</Code>
-				<Text xml:lang="en">Year 2</Text>
-				<Text xml:lang="mi">Tau 2</Text>
-			</Value>
-			<Value>
-				<Code>3</Code>
-				<Text xml:lang="en">Year 3</Text>
-				<Text xml:lang="mi">Tau 3</Text>
-			</Value>
-			<Value>
-				<Code>4</Code>
-				<Text xml:lang="en">Year 4</Text>
-				<Text xml:lang="mi">Tau 4</Text>
-			</Value>
-			<Value>
-				<Code>5</Code>
-				<Text xml:lang="en">Year 5</Text>
-				<Text xml:lang="mi">Tau 5</Text>
-			</Value>
-			<Value>
-				<Code>6</Code>
-				<Text xml:lang="en">Year 6</Text>
-				<Text xml:lang="mi">Tau 6</Text>
-			</Value>
-			<Value>
-				<Code>7</Code>
-				<Text xml:lang="en">Year 7</Text>
-				<Text xml:lang="mi">Tau 7</Text>
-			</Value>
-			<Value>
-				<Code>8</Code>
-				<Text xml:lang="en">Year 8</Text>
-				<Text xml:lang="mi">Tau 8</Text>
-			</Value>
-			<Value>
-				<Code>9</Code>
-				<Text xml:lang="en">Year 9</Text>
-				<Text xml:lang="mi">Tau 9</Text>
-			</Value>
-			<Value>
-				<Code>10</Code>
-				<Text xml:lang="en">Year 10</Text>
-				<Text xml:lang="mi">Tau 10</Text>
-			</Value>
-			<Value>
-				<Code>11</Code>
-				<Text xml:lang="en">Year 11</Text>
-				<Text xml:lang="mi">Tau 11</Text>
-			</Value>
-			<Value>
-				<Code>12</Code>
-				<Text xml:lang="en">Year 12</Text>
-				<Text xml:lang="mi">Tau 12</Text>
-			</Value>
-			<Value>
-				<Code>13</Code>
-				<Text xml:lang="en">Year 13</Text>
-				<Text xml:lang="mi">Tau 13</Text>
-			</Value>
-			<Value>
-				<Code>14</Code>
-				<Text xml:lang="en">Year 14</Text>
-				<Text xml:lang="mi">Tau 14</Text>
-				<Description>For Current Year Level this code indicates Year 14 and above</Description>
-			</Value>
-			<Value>
-				<Code>15</Code>
-				<Text xml:lang="en">Year 15</Text>
-				<Text xml:lang="mi">Tau 15</Text>
-				<Description>Only applies to Funding Year Level</Description>
-			</Value>
-		</Values>
-	  </CodeSet>      <!-- Year Level Code -->
+	  </CodeSet>      <!-- Yes No Not Required -->
 
 	  <CodeSet>
 		<Intro>
@@ -350,16 +242,15 @@
 					a student participates during a given school year.</Description>
 			</Value>
 			<Value>
-				<Code>StudentLearningSupportParticipation</Code>
-				<Text>StudentLearningSupportParticipation</Text>
-				<Description>Contains information pertaining to a student's participation in learning 
-					support.</Description>
+				<Code>StudentLearningSupport</Code>
+				<Text>StudentLearningSupport</Text>
+				<Description>Contains information pertaining to a student's learning support.</Description>
 			</Value>
 			<Value>
-				<Code>LearningSupportRegisterDirectory</Code>
-				<Text>LearningSupportRegisterDirectory</Text>
-				<Description/>
-			</Value>			
+				<Code>StudentLearningSupportResponse</Code>
+				<Text>StudentLearningSupportResponse</Text>
+				<Description>Contains information pertaining to a response to a student's learning support need(s).</Description>
+			</Value>
 			<Value>
 				<Code>StudentCurriculumProgressReport</Code>
 				<Text>StudentCurriculumProgressReport</Text>
@@ -426,6 +317,68 @@
 			</Value>
 		</Values>
 	  </CodeSet>      <!-- Referrable Data Object -->
+
+
+	  <CodeSet>
+		<Intro>
+		  	<p>Code set denoting the role of the person who gave consent on behalf of the student, e.g. Whānau, Student.</p>
+		</Intro>
+		<ID>Consent Given By</ID>
+		<Values>
+			<Value>
+				<Code>NOT</Code>
+				<Text xml:lang="en">Not provided</Text>
+			</Value>
+			<Value>
+				<Code>STU</Code>
+				<Text xml:lang="en">Student</Text>
+			</Value>
+			<Value>
+				<Code>WHA</Code>
+				<Text xml:lang="en">Whānau</Text>
+			</Value>
+		</Values>
+	  </CodeSet>      <!-- Consent Given By -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting what the student is consenting or not consenting to.</p>
+		</Intro>
+		<ID>Student Consent To</ID>
+		<Values>
+			<Value>
+				<Code>PHT</Code>
+				<Text>Share Photos</Text>
+				<Description>To use and share photographs of the student</Description>
+			</Value>			<!-- Share Photos -->
+			<Value>
+				<Code>ART</Code>
+				<Text>Share Art</Text>
+			</Value>			<!-- Share Art -->
+			<Value>
+				<Code>WRI</Code>
+				<Text>Share Writing</Text>
+			</Value>			<!-- Share Writing -->
+			<Value>
+				<Code>MED</Code>
+				<Text>Medical Treatment</Text>
+				<Description>Seek medical treatment in an emergency when the caregiver cannot be contacted</Description>
+			</Value>			<!-- Medical Treatment -->
+			<Value>
+				<Code>ADM</Code>
+				<Text>Panadol</Text>
+				<Description>Administer Panadol</Description>
+			</Value>			<!-- Administer Panadol -->
+			<Value>
+				<Code>LSC</Code>
+				<Text>Learning Support Cluster Sharing</Text>Sharing
+			</Value>			<!-- Learning Support Cluster Register -->
+			<Value>
+				<Code>LSR</Code>
+				<Text>Learning Support Receive Service</Text>
+			</Value>			<!-- Learning Support Receive Service -->
+		</Values>
+	</CodeSet>	<!-- Student Consent To -->
 
 	  <xi:include parse="xml" href="NZ/DataModel-CodeSets-PartyRole.xml"/>
 	  <xi:include parse="xml" href="NZ/DataModel-CodeSets-Location.xml"/>

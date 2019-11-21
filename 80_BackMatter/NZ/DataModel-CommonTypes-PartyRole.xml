@@ -81,7 +81,23 @@
 			</Description>
 			<Type ref="CommonTypes" name="HouseholdContactInfoListType"/>
 		</Item>    <!-- HouseholdContactInfoList -->
-		
+		<Item>
+			<Element>PersonPhoto</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A photo of the person. A person photo is stored in Document against the student with a document type of Person Photo.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>    <!-- PersonPhoto -->
+		<Item>
+			<Element>MedicalNeedList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of a persons known medical needs.</p>
+			</Description>
+			<Type ref="CommonTypes" name="MedicalNeedListType"/>
+		</Item>    <!-- MedicalNeedList -->
+
 		<xhtml:Example xmlns="" name="PersonInfo Example">
 			<PersonInfo>
 				<Name>
@@ -168,8 +184,16 @@
 						</Ethnicity>
 					</EthnicityList>
 					<IwiAffiliationList>
-						<IwiAffiliation>NZS0702</IwiAffiliation>
-						<IwiAffiliation>NZS0601</IwiAffiliation>
+						<Iwi>
+							<Code>NZS1001</Code>
+							<PreferenceOrderNumber>1</PreferenceOrderNumber>
+							<HapuAffiliationList>
+								<Hapu>
+									<HapuName>Manukorihi</HapuName>
+									<PreferenceOrderNumber>1</PreferenceOrderNumber>
+								</Hapu>
+							</HapuAffiliationList>
+						</Iwi>
 					</IwiAffiliationList>
 					<ReligiousAffiliationList>
 						<ReligiousAffiliation>NZS212</ReligiousAffiliation>
@@ -557,7 +581,7 @@
 			<Description>
 				<p>The person's country of birth.</p>
 			</Description>
-			<Type ref="CommonTypes" name="CountryType"/>
+			<Type ref="ExternalCodeSets" name="ISO3166CountryType"/>
 		</Item>    <!-- CountryOfBirth -->
 		<Item>
 			<Element>CitizenshipList</Element>
@@ -674,8 +698,16 @@
 					</Ethnicity>
 				</EthnicityList>
 				<IwiAffiliationList>
-					<IwiAffiliation>NZS0702</IwiAffiliation>
-					<IwiAffiliation>NZS0601</IwiAffiliation>
+					<Iwi>
+						<Code>NZS1001</Code>
+						<PreferenceOrderNumber>1</PreferenceOrderNumber>
+						<HapuAffiliationList>
+							<Hapu>
+								<HapuName>Manukorihi</HapuName>
+								<PreferenceOrderNumber>1</PreferenceOrderNumber>
+							</Hapu>
+						</HapuAffiliationList>
+					</Iwi>
 				</IwiAffiliationList>
 				<ReligiousAffiliationList>
 					<ReligiousAffiliation>NZS212</ReligiousAffiliation>
@@ -1010,23 +1042,15 @@
 			<Description>
 				<p>Does the individual have parental or legal guardianship responsibility for the student?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
 		</Item>     <!-- ParentLegalGuardian -->
-		<Item>
-			<Element>PickupRights</Element>
-			<Characteristics>C</Characteristics>
-			<Description>
-				<p>Does the Contact have the right to pick the Student up from school?</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
-		</Item>     <!-- PickupRights -->
 		<Item>
 			<Element>LivesWith</Element>
 			<Characteristics>C</Characteristics>
 			<Description>
 				<p>Does the student live with this contact?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
 		</Item>     <!-- LivesWith -->
 		<Item>
 			<Element>AccessToRecords</Element>
@@ -1034,7 +1058,7 @@
 			<Description>
 				<p>Does this contact have access to the student's records?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
 		</Item>     <!-- AccessToRecords -->
 		<Item>
 			<Element>ReceivesAssessmentReport</Element>
@@ -1042,7 +1066,7 @@
 			<Description>
 				<p>In particular, should this contact receive a copy of the student report? </p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
 		</Item>     <!-- ReceivesAssessmentReport -->
 		<Item>
 			<Element>EmergencyContact</Element>
@@ -1050,36 +1074,32 @@
 			<Description>
 				<p>Should this contact be notified in case of emergency?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
 		</Item>     <!-- EmergencyContact -->
-		<if intl="nz">
-			<Item>
-				<Element>CivilDefenceEmergencyContact</Element>
-				<Characteristics>C</Characteristics>
-				<Description>
-					<p>Should this contact be notified in case of civil defense emergency
-					where the normal emergency contact is not close to a hosting school?</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
-			</Item>     <!-- CivilDefenseEmergencyContact -->
-		</if>
-		<if intl="au">
-			<Item>
-				<Element>HasCustody</Element>
-				<Characteristics>C</Characteristics>
-				<Description>
-					<p>Does this contact have or share custody of the student?</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
-			</Item>     <!-- HasCustody -->
-		</if>
+		<Item>
+			<Element>CivilEmergencyContact</Element>
+			<Characteristics>C</Characteristics>
+			<Description>
+				<p>Does the contact have pickup rights?</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+		</Item>     <!-- CivilEmergencyContact -->
+		<Item>
+			<Element>CivilDefenceEmergencyContact</Element>
+			<Characteristics>C</Characteristics>
+			<Description>
+				<p>Should this contact be notified in case of civil defense emergency
+				where the normal emergency contact is not close to a hosting school?</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+		</Item>     <!-- CivilDefenseEmergencyContact -->
 		<Item>
 			<Element>DisciplinaryContact</Element>
 			<Characteristics>C</Characteristics>
 			<Description>
 				<p>Is this person to be contacted in case of disciplinary action?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
 		</Item>     <!-- DisciplinaryContact -->
 		<Item>
 			<Element>AttendanceContact</Element>
@@ -1087,7 +1107,7 @@
 			<Description>
 				<p>Should this contact be notified in case of an attendance issue?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
 		</Item>     <!-- AttendanceContact -->
 		<Item>
 			<Element>PrimaryCareProvider</Element>
@@ -1095,16 +1115,15 @@
 			<Description>
 				<p>Does this person provide daily living or personal assistance to the student?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
 		</Item>     <!-- PrimaryCareGiver -->
-
 		<Item>
 			<Element>FeesBilling</Element>
 			<Characteristics>C</Characteristics>
 			<Description>
 				<p>Is this the contact responsible for Payment of Fees?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
 		</Item>     <!-- FeesBilling -->
 		<Item>
 			<Element>FeesAccess</Element>
@@ -1112,7 +1131,7 @@
 			<Description>
 				<p>Does this contact have access to fees information?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
 		</Item>     <!-- FeesAccess -->
 		<Item>
 			<Element>FamilyMail</Element>
@@ -1120,38 +1139,25 @@
 			<Description>
 				<p>Does this person receive family mail?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
 		</Item>     <!-- FamilyMail -->
-		<if intl="au">
-			<Item>
-				<Element>InterventionOrder</Element>
-				<Characteristics>C</Characteristics>
-				<Description>
-					<p>Is there an Intervention Order against this Contact?</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
-			</Item>     <!-- InterventionOrder -->
-		</if>
-		<if intl="nz">
-			<Item>
-				<Element>CourtOrder</Element>
-				<Characteristics>C</Characteristics>
-				<Description>
-					<p>Is there a Protection Order, Restraining Order or some other court order
-					preventing the Person from having contact with the Student?</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
-			</Item>     <!-- CourtOrder -->
-			<Item>
-				<Element>HealthContact</Element>
-				<Characteristics>C</Characteristics>
-				<Description>
-					<p>Is this student contact a healthcare provider for the student?</p>
-				</Description>
-				<Type ref="CodeSets" name="NZCodeSetsYesNoUnknownType"></Type>
-			</Item>     <!-- HealthContact -->
-		</if>
-	
+		<Item>
+			<Element>CourtOrder</Element>
+			<Characteristics>C</Characteristics>
+			<Description>
+				<p>Is there a Protection Order, Restraining Order or some other court order
+				preventing the Person from having contact with the Student?</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+		</Item>     <!-- CourtOrder -->
+		<Item>
+			<Element>HealthContact</Element>
+			<Characteristics>C</Characteristics>
+			<Description>
+				<p>Is this student contact a healthcare provider for the student?</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+		</Item>     <!-- HealthContact -->
 	</CommonElement>
 	<CommonElement name="HouseholdContactInfoListType" type="true" dm="true">
 		<Item>
@@ -1376,7 +1382,7 @@
 			<Description>
 				<p>The normal business name of the Organisation</p>
 			</Description>
-			<Type name="xs:string"/>
+			<Type name="xs:normalizedString"/>
 		</Item>   <!-- Name -->
 		<Item>
 			<Element>PhoneNumberList</Element>
@@ -1416,6 +1422,15 @@
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsOrganisationTypeType"/>
 		</Item>   <!-- Type -->
+		<Item>
+			<Element>ProviderSMS</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The name of the School Management System (SMS) that the provider is currently using. Note: not all education providers use an SMS.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsSchoolManagementSystemType"/>
+		</Item>   <!-- ProviderSMS -->
 	</CommonElement>
 
 	<CommonElement name="ContactListType" type="true" dm="true">
@@ -1823,7 +1838,7 @@
 			<Description>
 				<p>The order of preference for the person's ethnicity.</p>
 			</Description>
-			<Type name="xs:integer"/>
+			<Type name="xs:int"/>
 		</Item>
 		<Item>
 			<Element>Code</Element>
@@ -1844,19 +1859,135 @@
 			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>IwiAffiliation</Element>
+			<Element>Iwi</Element>
 			<Characteristics>MR</Characteristics>
-			<Description/>
-			<Type ref="CodeSets" name="NZCodeSetsIwiType"/>
+			<Description>
+				<p>An iwi the person is associated to.</p>
+			</Description>
+			<Type ref="CommonTypes" name="IwiType"/>
 		</Item>
 		
 		<xhtml:Example xmlns="" name="Iwi List Example">
 			<IwiAffiliationList>
-				<IwiAffiliation>NZS0702</IwiAffiliation>
-				<IwiAffiliation>NZS0601</IwiAffiliation>
+				<Iwi>
+					<Code>NZS1001</Code>
+					<PreferenceOrderNumber>1</PreferenceOrderNumber>
+					<HapuAffiliationList>
+						<Hapu>
+							<HapuName>Manukorihi</HapuName>
+							<PreferenceOrderNumber>1</PreferenceOrderNumber>
+						</Hapu>
+					</HapuAffiliationList>
+				</Iwi>
 			</IwiAffiliationList>
 		</xhtml:Example>
 	</CommonElement>
+
+	<CommonElement name="IwiType" type="true" dm="true">
+		<Item>
+			<Element>IwiType</Element>
+			<Description>
+				<p>An iwi the person is affiliated to.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Code</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The code of the iwi the person is affiliated to.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsIwiType"/>
+		</Item>
+		<Item>
+			<Element>PreferenceOrderNumber</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Indicates the persons preferred Iwi. The order of preference for the person's Iwi. '1' is their first preference. If left NULL means no preference is set and defers to any Iwi with a preference of '1'.</p>
+			</Description>
+			<Type name="xs:int"/>
+		</Item>
+		<Item>
+			<Element>HapuAffiliationList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of one or more affiliations of a person with a Hapū within an Iwi.</p>
+			</Description>
+			<Type ref="CommonTypes" name="HapuAffiliationListType"/>
+		</Item>
+		
+		<xhtml:Example xmlns="" name="Iwi Example">
+			<Iwi>
+				<Code>NZS1001</Code>
+				<PreferenceOrderNumber>1</PreferenceOrderNumber>
+				<HapuAffiliationList>
+					<Hapu>
+						<HapuName>Manukorihi</HapuName>
+						<PreferenceOrderNumber>1</PreferenceOrderNumber>
+					</Hapu>
+				</HapuAffiliationList>
+			</Iwi>
+		</xhtml:Example>
+	</CommonElement>
+
+	<CommonElement name="HapuAffiliationListType" type="true" dm="true">
+		<Item>
+			<Element>HapuAffiliationListType</Element>
+			<Description>
+				<p>A list of one or more affiliations of a person with a Hapū within an Iwi.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Hapu</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A Hapū a person is affiliated with.</p>
+			</Description>
+			<Type ref="CommonTypes" name="HapuType"/>
+		</Item>
+		
+		<xhtml:Example xmlns="" name="Hapu List Example">
+			<HapuAffiliationList>
+				<Hapu>
+					<HapuName>Manukorihi</HapuName>
+					<PreferenceOrderNumber>1</PreferenceOrderNumber>
+				</Hapu>
+			</HapuAffiliationList>
+		</xhtml:Example>
+	</CommonElement>
+
+	<CommonElement name="HapuType" type="true" dm="true">
+		<Item>
+			<Element>HapuType</Element>
+			<Description>
+				<p>An hapu the person is affiliated to.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>HapuName</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The name of a Hapū that the person is affiliated with.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>
+		<Item>
+			<Element>PreferenceOrderNumber</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Indicates the persons preferred Hapu. The order of preference for the person's Hapu. '1' is their first preference. If left NULL means no preference is set and defers to any Hapu with a preference of '1'.</p>
+			</Description>
+			<Type name="xs:int"/>
+		</Item>
+		
+		<xhtml:Example xmlns="" name="Hapu Example">
+			<Hapu>
+				<HapuName>Manukorihi</HapuName>
+				<PreferenceOrderNumber>1</PreferenceOrderNumber>
+			</Hapu>
+		</xhtml:Example>
+	</CommonElement>
+
 	<CommonElement name="ReligiousAffiliationListType" type="true" dm="true">
 		<Item>
 			<Element>ReligiousAffiliationListType</Element>
@@ -2002,6 +2133,24 @@
 				owner, reviewer, subject of.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsDocumentRoleType"/>
+		</Item>
+	</CommonElement> 
+
+	<CommonElement name="MedicalNeedListType" type="true" dm="true">
+		<Item>
+			<Element>MedicalNeedListType</Element>
+			<Description>
+				<p>A list of a persons known medical needs.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>MedicalNeed</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A persons known medical need.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>
 	</CommonElement> 
 

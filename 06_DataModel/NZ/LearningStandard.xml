@@ -182,6 +182,16 @@
     <Type ref="CommonTypes" name="CredentialListType"/>
   </Item>      <!-- CredentialList -->
 
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+  
   <xhtml:Example xmlns="" name="NZQA Learning Standard Example">
     <LearningStandard>
       <LearningStandardRefId>cedf9eae-4358-408d-af57-ec0ea1b0d210</LearningStandardRefId>
@@ -199,6 +209,13 @@
       <Credits>4</Credits>
       <Level json:force-string="true">2</Level>
       <AssessmentType>INT</AssessmentType>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
     </LearningStandard>
   </xhtml:Example>
 
@@ -217,6 +234,13 @@
       </SubjectAreaList>
       <Status>PU</Status>
       <AssessmentType>EXT</AssessmentType>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
     </LearningStandard>
   </xhtml:Example>
 </DataObject>

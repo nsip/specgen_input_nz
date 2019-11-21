@@ -582,7 +582,7 @@
 			<Description>
 				<p>Type of Award.</p>
 			</Description>
-			<Type name="xs:string"></Type>  
+			<Type ref="CodeSets" name="NZCodeSetsWellbeingAwardTypeType"/>
 		</Item>
 		<Item>
 			<Element>AwardDescription</Element>
@@ -1291,7 +1291,7 @@
 			<Description>
 				<p/>
 			</Description>
-			<Type ref="CommonTypes" name="AcademicStudentGoalType"/>
+			<Type ref="CommonTypes" name="AcademicGoalType"/>
 		</Item>    <!-- AcademicGoal -->
 
 		<xhtml:Example xmlns="" name ="AcademicGoalList">
@@ -1347,9 +1347,9 @@
 		</Item>    <!-- GoalName -->
 	</CommonElement>
 
-	<CommonElement name="AcademicStudentGoalType" type="true" dm="true">
+	<CommonElement name="AcademicGoalType" type="true" dm="true">
 		<Item>
-			<Element>AcademicStudentGoalType</Element>
+			<Element>AcademicGoalType</Element>
 			<Description>
 				<p>Defining elements of the Academic flavour of student goal.</p>
 			</Description>
@@ -1454,86 +1454,6 @@
 		</xhtml:Example>
 	</CommonElement>
 
-	<!-- LearningSupportParticipation complex types -->
-	<CommonElement name="LearningSupportReviewListType" type="true" dm="true">
-		<Item>
-			<Element>LearningSupportReviewListType</Element>
-			<Description>
-				<p>A list of reviews made in regards to the student's learning support participation.</p>
-			</Description>
-			<List mode="List"/>
-		</Item>
-		<Item>
-			<Element>Review</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>	 A review made in regards to the student's learning support participation.</p>
-			</Description>
-			<Type ref="CommonTypes" name="LearningSupportReviewType"/>
-		</Item>    <!-- Review -->
-	</CommonElement>
-
-	<CommonElement name="LearningSupportReviewType" type="true" dm="true">
-		<Item>
-			<Element>LearningSupportReviewType</Element>
-			<Description>
-				<p>A review made in regards to the student's learning support participation.</p>
-			</Description>
-		</Item>
-		<Item>
-			<Element>ReviewDate</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>The date the review was made of the student's learning support participation.</p>
-			</Description>
-			<Type name="xs:date"/>
-		</Item>    <!-- ReviewDate -->
-		<Item>
-			<Element>ReviewNote</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>Free text comment about a review that was made of the student's learning support participation.</p>
-			</Description>
-			<Type name="xs:normalizedString"/>
-		</Item>    <!-- ReviewNote -->
-	</CommonElement>
-
-	<CommonElement name="LearningSupportOutcomeListType" type="true" dm="true">
-		<Item>
-			<Element>LearningSupportOutcomeListType</Element>
-			<Description>
-				<p>A list of the expected learning support outcome for the Wellbeing Characteristic. Only used for Schools.</p>
-			</Description>
-			<List mode="List"/>	
-		</Item>
-		<Item>
-			<Element>LearningSupportOutcome</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>The expected learning support outcome for the Wellbeing Characteristic. Only used for Schools.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsLearningSupportOutcomeType"/>
-		</Item>    <!-- LearningSupportOutcome -->
-	</CommonElement>
-
-	<CommonElement name="TeWharikiDomainListType" type="true" dm="true">
-		<Item>
-			<Element>TeWharikiDomainListType</Element>
-			<Description>
-				<p>A list of the Te Whāriki Domains that are relevant to this Wellbeing Characteristic. Only used for Early Childhood Education.</p>
-			</Description>
-			<List mode="List"/>	
-		</Item>
-		<Item>
-			<Element>TeWharikiDomain</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>A list of the locations where the incident took place.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsLearningSupportTeWharikiDomainType"/>
-		</Item>    <!-- ReviewDate -->
-	</CommonElement>
-
 	<CommonElement name="EventLocationListType" type="true" dm="true">
 		<Item>
 			<Element>EventLocationListType</Element>
@@ -1614,6 +1534,365 @@
 				<Type ref="CodeSets" name="NZCodeSetsWellbeingEventMajorBehaviourType"/>
 			</Item>    <!-- MajorBehaviour -->
 		</Choice>
+	</CommonElement>
+
+	<CommonElement name="StudentVoiceListType" type="true" dm="true">
+		<Item>
+			<Element>StudentVoiceListType</Element>
+			<Description>
+				<p>A list of the student's or their whānau's voice about their learning support in regards to the student 's interests, goals, and voice (comments, opinions).</p>
+			</Description>
+			<List mode="List"/>	
+		</Item>
+		<Item>
+			<Element>StudentVoice</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The student's or their whānau's voice about their wellbeing characteristic in regards to the student 's interests, goals, and voice (comments, opinions).</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>    <!-- StudentVoice -->
+	</CommonElement>
+
+	<CommonElement name="SupportNeedListType" type="true" dm="true">
+		<Item>
+			<Element>SupportNeedListType</Element>
+			<Description>
+				<p>A list of learning support needs that have been identified for the student.</p>
+			</Description>
+			<List mode="List"/>	
+		</Item>
+		<Item>
+			<Element>SupportNeed</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A learning support need that has been identified for the student.</p>
+			</Description>
+			<Type ref="CommonTypes" name="SupportNeedType"/>
+		</Item>    <!-- SupportNeed -->
+	</CommonElement>
+
+	<CommonElement name="SupportNeedType" type="true" dm="true">
+		<Item>
+			<Element>SupportNeedType</Element>
+			<Description>
+				<p>A learning support need that has been identified for the student.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Need</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>A learning support need that has been identified for the student.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>    <!-- Need -->
+		<Item>
+			<Element>CaseLead</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The Agency taking the lead on the learning support need case, e.g. MOE, Police, Corrections etc.)</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsLearningSupportCaseLeadType"/>
+		</Item>    <!-- CaseLead -->
+		<Item>
+			<Element>CaseLeadOtherDesc</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Free text describing the Case Lead Agency when a Case Lead of 'Other' is selected.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- CaseLeadOtherDesc -->
+		<Item>
+			<Element>CaseLeadContactPerson</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The name of the contact person for the Case Lead Agency.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- CaseLeadContactPerson -->
+		<Item>
+			<Element>SupportingDocumentList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of supporting documents for a learning support need.</p>
+			</Description>
+			<Type ref="CommonTypes" name="DocumentList"/>
+		</Item>    <!-- SupportingDocumentList -->
+		<Item>
+			<Element>ResponseList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of responses made about a learning support need.</p>
+			</Description>
+			<Type ref="CommonTypes" name="SupportNeedResponseListType"/>
+		</Item>    <!-- ResponseList -->
+	</CommonElement>
+
+	<CommonElement name="SupportNeedResponseListType" type="true" dm="true">
+		<Item>
+			<Element>SupportNeedResponseListType</Element>
+			<Description>
+				<p>A list of responses made about a learning support need.</p>
+			</Description>
+			<List mode="List"/>	
+		</Item>
+		<Item>
+			<Element>Response</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A responses made for a learning support need.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>    <!-- Response -->
+	</CommonElement>
+
+	<CommonElement name="SupportNeedResponseReviewListType" type="true" dm="true">
+		<Item>
+			<Element>SupportNeedResponseReviewListType</Element>
+			<Description>
+				<p>A list of the reviews made about the response.</p>
+			</Description>
+			<List mode="List"/>	
+		</Item>
+		<Item>
+			<Element>Review</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A review of the response.</p>
+			</Description>
+			<Type ref="CommonTypes" name="SupportNeedResponseReviewType"/>
+		</Item>    <!-- Review -->
+	</CommonElement>
+
+	<CommonElement name="SupportNeedResponseReviewType" type="true" dm="true">
+		<Item>
+			<Element>SupportNeedResponseReviewType</Element>
+			<Description>
+				<p>A review of a support need response.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Reviewer</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The staff member reviewed the response.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>    <!-- Reviewer -->
+		<Item>
+			<Element>ReviewDate</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The date of the review.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>    <!-- ReviewDate -->
+		<Item>
+			<Element>ReviewComments</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Free text comment about the review.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- ReviewComments -->
+		<Item>
+			<Element>NextReviewDate</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date of the next review.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>    <!-- NextReviewDate -->
+		<Item>
+			<Element>AttachmentList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of attachments related to a learning support need response review.</p>
+			</Description>
+			<Type ref="CommonTypes" name="DocumentListType"/>
+		</Item>    <!-- AttachmentList -->
+	</CommonElement>
+
+	<CommonElement name="SupportNeedExternalResponseType" type="true" dm="true">
+		<Item>
+			<Element>SupportNeedExternalResponseType</Element>
+			<Description>
+				<p>Additional information for an external response.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Provider</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The response provider.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsLearningSupportExternalProviderType"/>
+		</Item>    <!-- Provider -->
+		<Item>
+			<Element>ProviderDetail</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Additional information about a provider.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- ProviderDetail -->
+		<Item>
+			<Element>Status</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The status of the external response.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsLearningSupportExtResponseStatusType"/>
+		</Item>    <!-- Status -->
+		<Item>
+			<Element>MOESpecialistService</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The MoE specialist service that has been selected as a response to a student's support need. Required if Response Detail = 'MOE' (MOE Specialists).</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsMOESpecialistServiceType"/>
+		</Item>    <!-- MOESpecialistService -->
+		<Item>
+			<Element>FundedBy</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Who the response was funded by.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsLearningSupportExternalFunderType"/>
+		</Item>    <!-- FundedBy -->
+		<Item>
+			<Element>FundedByDetail</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Additional detail about a funder.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- FundedByDeatil -->
+		<Item>
+			<Element>RequestMadeDate</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date the request about funding was made.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>    <!-- RequestMadeDate -->
+		<Item>
+			<Element>FundingStatus</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The status of the funding being provided for the response.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsLearningSupportFundingStatusType"/>
+		</Item>    <!-- FundingStatus -->
+		<Item>
+			<Element>FundingDeclinedReason</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The reason funding was declined.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- FundingDeclinedReason -->
+	</CommonElement>
+
+	<CommonElement name="SupportNeedInternalResponseType" type="true" dm="true">
+		<Item>
+			<Element>SupportNeedInternalResponseType</Element>
+			<Description>
+				<p>Additional information for an internal response.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>ProvidedBy</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The response provider.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsLearningSupportInternalProviderType"/>
+		</Item>    <!-- ProvidedBy -->
+		<Item>
+			<Element>ProvidedByName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The name of the person providing the response. Mandatory to be provided when the ProvidedBy = 'Teacher'.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- ProvidedByName -->
+		<Item>
+			<Element>Status</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The status of the internal response.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsLearningSupportIntResponseStatusType"/>
+		</Item>    <!-- Status -->
+		<Item>
+			<Element>FundedBy</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Who is funding the reponse.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsLearningSupportInternalFunderType"/>
+		</Item>    <!-- FundedBy -->
+	</CommonElement>     <!-- SupportNeedInternalResponseType -->
+
+	<CommonElement name="OfficialDiagnosisListType" type="true" dm="true">
+		<Item>
+			<Element>OfficialDiagnosisListType</Element>
+			<Description>
+				<p>A list of official diagnoses that pertains to this wellbeing characteristic.</p>
+			</Description>
+			<List mode="List"/>	
+		</Item>
+		<Item>
+			<Element>OfficialDiagnosis</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>An official diagnosis that pertains to this Wellbeing Characteristic.</p>
+			</Description>
+			<Type ref="CommonTypes" name="OfficialDiagnosisType"/>
+		</Item>    <!-- OfficialDiagnosis -->
+	</CommonElement>
+
+	<CommonElement name="OfficialDiagnosisType" type="true" dm="true">
+		<Item>
+			<Element>OfficialDiagnosisType</Element>
+			<Description>
+				<p>An official diagnosis that pertains to this Wellbeing Characteristic.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>DiagnosisType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The official diagnosis type the student was given.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsOfficialDiagnosisTypeType"/>
+		</Item>    <!-- DiagnosisType -->
+		<Item>
+			<Element>DiagnosisSubType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The official diagnosis sub-type the student was given.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsOfficialDiagnosisSubTypeType"/>
+		</Item>    <!-- DiagnosisSubType -->
+		<Item>
+			<Element>OfficialDiagnosisDetail</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Providers additional free text information about an official diagnosis. Mandatory when the Official Diagnosis Type selected is ‘Physical Impairments’, or ‘Medical Conditions’. Mandatory when the Official Diagnosis Sub-Type selected is ‘Other neurodevelopmental disorders/developmental anomalies’, Other mental health disorders’, or ‘Other sensory impairment’.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- OfficialDiagnosisDetail -->
+		<Item>
+			<Element>DocumentList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of documents that conatin information that pertain to this official diagnosis.</p>
+			</Description>
+			<Type ref="CommonTypes" name="DocumentListType"/>
+		</Item>    <!-- DocumentList -->
 	</CommonElement>
 
 </IncludeGroup>

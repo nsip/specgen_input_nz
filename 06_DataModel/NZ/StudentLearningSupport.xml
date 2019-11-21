@@ -1,0 +1,262 @@
+<DataObject name="StudentLearningSupport"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:json="http://json.org/"
+
+      xmlns="http://sifassociation.org/SpecGen">
+	
+  <Key>StudentLearningSupportRefId</Key>
+  <EventsReported>true</EventsReported>
+  
+  <Item>
+    <Element>StudentLearningSupport</Element>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Provides information about a student's learning support.</p>
+     </Description>
+  </Item>
+
+  <Item>
+    <Element>StudentLearningSupportRefId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>    <!-- StudentLearningSupportRefId -->
+
+  <Item>
+    <Element>StudentLearningSupportLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+			<p>The Id of the data object record that was provided by the system that the information was originally sourced from.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- StudentLearningSupportLocalId -->
+
+  <Item>
+    <Element>Student</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The student the learning support record is for.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- Student -->
+
+  <Item>
+    <Element>LearnerStatus</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The learners learning support status, e.g. are they currently being managed or not.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportLearnerStatus"></Type>
+  </Item>    <!-- LearnerStatus -->
+
+  <Item>
+    <Element>LearnerArchivedDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date the learner's learning support status was changed from Active to Archived.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- LearnerArchivedDate -->
+
+  <Item>
+    <Element>StudentConsentList</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the consents the student has provided / not provided in regards to learning support, e.g. Cluster Sharing COnsent, Recieve Service Consent.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentConsentListType"></Type>
+  </Item>    <!-- StudentConsentList -->
+
+  <Item>
+    <Element>DyslexiaScreeningTool</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Indicates whether or the student has been assessed using dyslexia screening tools.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+  </Item>    <!-- DyslexiaScreeningTool -->
+
+  <Item>
+    <Element>OtherScreening</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Indicates whether or not the student has under gone any other type of screening.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+  </Item>    <!-- OtherScreening -->
+
+    <Item>
+    <Element>OtherScreeningDetail</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Free text describing any other type of screening the student has undergone. Mandatory if 'OtherScreening' = 'Y'.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- OtherScreeningDetail -->
+
+    <Item>
+    <Element>AdolescentHealthScreening</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Indicates whether or not the student has undergone an adolescent health screening, e.g. NZ Aotearoa Adolescent Health and development (NZAAHD) assessment, HEEADDSS (Home, Education/employment, Eating, Activities, Drugs and Alcohol, Sexuality, Suicide/depression, Safety).</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+  </Item>    <!-- NZAAHDAssessment -->
+
+    <Item>
+    <Element>NonAttendance</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Indicates whether or not the student has not been attending the education provider they are enrolled at.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+  </Item>    <!-- NonAttendance -->
+
+    <Item>
+    <Element>NewToNewZealand</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Indicates whether or not the student is new to New Zealand.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+  </Item>    <!-- NewToNewZealand -->
+
+    <Item>
+    <Element>NumberOfSchoolChanges</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Indicates whether or not the student has changed education providers reasonably frequently.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+  </Item>    <!-- NumberOfSchoolChanges -->
+
+  <Item>
+    <Element>B4SchoolCheck</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Indicates whether or not the student has undergone a B4 School Check.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+  </Item>    <!-- B4SchoolCheck -->
+
+  <Item>
+    <Element>OtherFamilyContext</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Indicates whether or not there is other family context that pertains to the student and their needs.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+  </Item>    <!-- OtherFamilyContext -->
+
+  <Item>
+    <Element>OtherFamilyContextDetail</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Additional free text detail about any family context that pertains to the student and their needs. Mandatory if OtherStudentContext = 'Y'.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- OtherFamilyContextDetail -->
+
+  <Item>
+    <Element>StudentVoiceList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the student's or their whānau's voice about their learning support in regards to the student 's interests, goals, and voice (comments, opinions).</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentVoiceList"></Type>
+  </Item>    <!-- StudentVoiceList -->
+
+  <Item>
+    <Element>SupportNeedList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of learning support needs that have been identified for the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SupportNeedListType"></Type>
+  </Item>    <!-- SupportNeedList -->
+
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+
+  <xhtml:Example xmlns="" name="StudentLearningSupport">
+    <StudentLearningSupport>
+		  <StudentLearningSupportRefId>461B63B4-CFEF-4820-8501-E7D1E54555CB</StudentLearningSupportRefId>
+		  <Student>
+			  <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
+		  </Student>
+		  <LearnerStatus>ACT</LearnerStatus>
+		  <StudentConsentList>
+		    <StudentConsent>
+			    <RefId>461423B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+		    </StudentConsent>
+      </StudentConsentList>
+		  <DyslexiaScreeningTool>Y</DyslexiaScreeningTool>
+		  <OtherScreening>N</OtherScreening>
+		  <AdolescentHealthScreening>N</AdolescentHealthScreening>
+	  	<NonAttendance>Y</NonAttendance>
+	  	<NewToNewZealand>N</NewToNewZealand>
+		  <NumberOfSchoolChanges>Y</NumberOfSchoolChanges>
+		  <B4SchoolCheck>Y</B4SchoolCheck>
+		  <OtherFamilyContext>N</OtherFamilyContext>
+		  <StudentVoiceList>
+		  	<StudentVoice>
+			  	<RefId>461423B4-CFEF-4820-8345-E7D1E54555CB</RefId>
+			  </StudentVoice>
+			  <StudentVoice>
+			  	<RefId>461423B4-BBEF-4820-8345-E7D1E54555CB</RefId>
+			  </StudentVoice>
+	  	</StudentVoiceList>
+      <SupportNeedList>
+        <SupportNeed>
+          <Need>
+            <RefId>461423B4-BBEF-4820-8345-E724E54555CB</RefId>
+            <Name>Literacy</Name>
+          </Need>
+          <CaseLead>MO</CaseLead>
+          <CaseLeadContactPerson>John Doe</CaseLeadContactPerson>
+          <SupportingDocumentList>
+            <Document>
+              <RefId>461423B4-BBEF-4820-8345-E724854555CB</RefId>
+            </Document>
+          </SupportingDocumentList>
+          <ResponseList>
+            <Response>
+              <RefId>461423B4-BBEF-4820-8345-E724E5455BBB</RefId>
+            </Response>
+          </ResponseList>
+        </SupportNeed>
+      </SupportNeedList>
+    </StudentLearningSupport>
+  </xhtml:Example>
+
+</DataObject>

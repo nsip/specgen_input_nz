@@ -286,9 +286,11 @@
 			<Description>
 				<p>A person's country of citizenship.</p>
 			</Description>
-			<Type ref="CommonTypes" name="CountryType"/>
+			<Type ref="ExternalCodeSets" name="ISO3166CountryType"/>
 		</Item>  
 	</CommonElement>
+	
+<!--Not current used:
 	<CommonElement name="CountryType" type="true" dm="true">
 		<Item>
 			<Element>CountryType</Element>
@@ -311,7 +313,7 @@
 			<Type ref="ExternalCodeSets" name="ISO3166CountryType"/>
 		</Item>  
 	</CommonElement>
-
+-->
 	<CommonElement name="LocationListType" type="true" dm="true">
 		<Item>
 			<Element>LocationListType</Element>

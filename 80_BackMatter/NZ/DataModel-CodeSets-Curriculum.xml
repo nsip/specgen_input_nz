@@ -170,7 +170,7 @@
 		<Values>
 			<Value>
 				<Code>US</Code>
-				<Text xml:lang="en">Unit</Text>
+				<Text xml:lang="en">Unit Standard</Text>
 				<Text xml:lang="mi">Paerewa</Text>
 				<Description>
 					<p>Developed by Industry Training Organisations or NZQA.</p>
@@ -178,7 +178,7 @@
 			</Value>
 			<Value>
 				<Code>AS</Code>
-				<Text xml:lang="en">Achievement</Text>
+				<Text xml:lang="en">Achievement Standard</Text>
 				<Text xml:lang="mi">Tutukitanga</Text>
 				<Description>
 					<p>Developed by MoE, derived from the achievement objectives 
@@ -189,6 +189,16 @@
 				<Code>SC</Code>
 				<Text xml:lang="en">Scholarship</Text>
 				<Text xml:lang="mi">Karahipi</Text>
+			</Value>
+			<Value>
+				<Code>IB</Code>
+				<Text xml:lang="en">International Baccalaureate</Text>
+				<Text xml:lang="mi"></Text>
+			</Value>
+			<Value>
+				<Code>OT</Code>
+				<Text xml:lang="en">Other</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>
 		</Values>
 	</CodeSet>   <!-- LearningStandardType -->
@@ -457,7 +467,7 @@
 			</Value>
 			<Value>
 				<Code>CHEM</Code>
-				<Text xml:lang="en">Chemsitry</Text>
+				<Text xml:lang="en">Chemistry</Text>
 			</Value>
 			<Value>
 				<Code>EAAS</Code>

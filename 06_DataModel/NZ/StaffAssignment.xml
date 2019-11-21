@@ -153,6 +153,16 @@
     <Type ref="CommonTypes" name="YearLevelListType"></Type>
   </Item>      <!-- YearLevels -->
 
+  <Item>
+    <Element>RecordAudit</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RecordAuditType"></Type>
+  </Item>    <!-- RecordAudit -->
+  
   <xhtml:Example xmlns="" name="StaffAssignment English Teacher Example">
     <StaffAssignment>
       <StaffAssignmentRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StaffAssignmentRefId>
@@ -180,9 +190,15 @@
           <PreferenceNumber>1</PreferenceNumber>
           <Code>ENGL</Code>
           <YearLevels>
-            <YearLevel json:force-string="true">11</YearLevel>
-            <YearLevel json:force-string="true">12</YearLevel>
-            <YearLevel json:force-string="true">13</YearLevel>
+            <YearLevel>
+              <YearLevel json:force-string="true">11</YearLevel>
+            </YearLevel>
+            <YearLevel>
+              <YearLevel json:force-string="true">12</YearLevel>
+            </YearLevel>
+            <YearLevel>
+              <YearLevel json:force-string="true">13</YearLevel>
+            </YearLevel>
           </YearLevels>
         </StaffSubject>
         <StaffSubject>
@@ -190,6 +206,13 @@
           <Code>HIST</Code>
         </StaffSubject>
       </StaffSubjectList>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
     </StaffAssignment>
   </xhtml:Example>
   
@@ -219,6 +242,13 @@
       <EndDate>2001-06-25</EndDate>
       <CasualReliefTeacher>N</CasualReliefTeacher>
       <EmploymentStatus>A</EmploymentStatus>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
     </StaffAssignment>
   </xhtml:Example>
 </DataObject>

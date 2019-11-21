@@ -38,7 +38,7 @@
 			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description><p>The GUUID of the referenced object</p></Description>
-			<Type ref="CommonTypes" name="RefIdType"/>
+			<Type ref="CommonTypes" name="IdRefType"/>
 		</Item>   <!-- RefId -->
 		<Item>
 			<Element>LocalId</Element>
@@ -212,6 +212,47 @@
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
 		</Item>    <!-- StudentConsent -->
+	</CommonElement>	
+
+	<CommonElement name="RecordAuditType" type="true" dm="true">
+		<Item>
+			<Element>RecordAuditType</Element>
+			<Description>
+				<p>Holds the audit for a records, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>CreatedDateTime</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date and time the record being sent through was created in the source system.</p>
+			</Description>
+			<Type name="xs:dateTime"></Type>
+		</Item>    <!-- CreatedDateTime -->
+		<Item>
+			<Element>LastUpdatedDateTime</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date and time the record was last updated.</p>
+			</Description>
+			<Type name="xs:dateTime"></Type>
+		</Item>    <!-- LastUpdatedDateTime -->
+		<Item>
+			<Element>CreatedBy</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The user that created the record in the source system.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
+		</Item>    <!-- CreatedBy -->
+		<Item>
+			<Element>LastUpdatedBy</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The user that last updated the record.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
+		</Item>    <!-- CreatedBy -->
 	</CommonElement>	
 
 </IncludeGroup>

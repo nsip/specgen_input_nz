@@ -31,25 +31,29 @@
 				<AttendanceTime>
 					<AttendanceTimeLocalId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934554</AttendanceTimeLocalId>
 					<AttendanceType>SCH</AttendanceType>
-					<AttendanceCode>P</AttendanceCode>
+					<Code>P</Code>
 					<AttendanceDate>2018-06-26</AttendanceDate>	
 					<SchedulePeriod>
 						<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd999999</RefId>
 					</SchedulePeriod>
-					<SubmissionDate>2018-06-30</SubmissionDate>		
-					<LastUpdatedDate>2018-06-28</LastUpdatedDate>
-					<AttendanceNote>Student was present.</AttendanceNote>
+					<SubmissionDateTime>2018-06-30T06:30:57</SubmissionDateTime>	
+					<Note>Student was present.</Note>	
+					<RecordAudit>	
+						<LastUpdatedDateTime>2018-06-28T06:30:57</LastUpdatedDateTime>
+					</RecordAudit>
 				</AttendanceTime>	
 				<AttendanceTime>
 					<AttendanceTimeLocalId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934667</AttendanceTimeLocalId>
 					<AttendanceType>ADH</AttendanceType>
-					<AttendanceCode>E</AttendanceCode>
+					<Code>E</Code>
 					<AttendanceDate>2018-06-27</AttendanceDate>	
 					<StartTime>09:45:00</StartTime>
 					<EndTime>10:30:00</EndTime>
-					<SubmissionDate>2018-06-30</SubmissionDate>		
-					<LastUpdatedDate>2018-06-28</LastUpdatedDate>
-					<AttendanceNote>Explained absence, but unjustified.</AttendanceNote>
+					<SubmissionDateTime>2018-06-30T06:30:57</SubmissionDateTime>
+					<Note>Explained absence, but unjustified.</Note>		
+					<RecordAudit>	
+						<LastUpdatedDateTime>2018-06-28T06:30:57</LastUpdatedDateTime>
+					</RecordAudit>
 				</AttendanceTime>
 			</AttendanceTimeList>	
 		</xhtml:Example>
@@ -92,13 +96,13 @@
 		</Item>		<!-- AttendanceCodeGroup -->
 
 		<Item>
-			<Element>AttendanceCode</Element>
+			<Element>Code</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
 				<p>MoE defined code for attendance or  absence during the time period described.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsAttendanceCodeType"/>
-		</Item>		<!-- AttendanceCode -->
+		</Item>		<!-- Code -->
 
 		<Item>
 			<Element>AttendanceDate</Element>
@@ -137,31 +141,33 @@
 		</Item>		<!-- EndTime -->
 
 		<Item>
-			<Element>SubmissionDate</Element>
+			<Element>SubmissionDateTime</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The date the students attendance for this date and time/period was submitted.</p>
 			</Description>
-			<Type name="xs:date"/>
-		</Item>		<!-- SubmissionDate -->
+			<Type name="xs:dateTime"/>
+		</Item>		<!-- SubmissionDateTime -->
 
 		<Item>
-			<Element>LastUpdatedDate</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The date the students attendance for this date and time/period was last updated.</p>
-			</Description>
-			<Type name="xs:date"/>
-		</Item>		<!-- LastUpdatedDate -->
-
-		<Item>
-			<Element>AttendanceNote</Element>
+			<Element>Note</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Free text note about the students attendance for the provided date and time/period.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>		<!-- AttendanceNote -->
+		</Item>		<!-- Note -->
+
+		<Item>
+			<Element>RecordAudit</Element>    
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+			<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+			</Description>
+			<Type ref="CommonTypes" name="RecordAuditType"></Type>
+		</Item>    <!-- RecordAudit -->
+
 	</CommonElement>
 
 </IncludeGroup>

@@ -63,7 +63,6 @@
 		<Type ref="CommonTypes" name="AttendanceTimeListType"/>
 	</Item>    <!-- AttendanceTimeList -->
 
-
 	<xhtml:Example xmlns="" name="Student Attendance Time List">
 		<StudentAttendanceTimeList>
 			<Student>
@@ -79,25 +78,29 @@
 				<AttendanceTime>
 					<AttendanceTimeLocalId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934554</AttendanceTimeLocalId>
 					<AttendanceType>SCH</AttendanceType>
-					<AttendanceCode>P</AttendanceCode>
+					<Code>P</Code>
 					<AttendanceDate>2018-06-26</AttendanceDate>	
 					<SchedulePeriod>
 						<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd999999</RefId>
 					</SchedulePeriod>
-					<SubmissionDate>2018-06-30</SubmissionDate>		
-					<LastUpdatedDate>2018-06-28</LastUpdatedDate>
-					<AttendanceNote>Student was present.</AttendanceNote>
+					<SubmissionDateTime>2018-06-30T06:30:57</SubmissionDateTime>	
+					<Note>Student was present.</Note>	
+					<RecordAudit>	
+						<LastUpdatedDateTime>2018-06-28T06:30:57</LastUpdatedDateTime>
+					</RecordAudit>
 				</AttendanceTime>	
 				<AttendanceTime>
 					<AttendanceTimeLocalId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934667</AttendanceTimeLocalId>
 					<AttendanceType>ADH</AttendanceType>
-					<AttendanceCode>E</AttendanceCode>
+					<Code>E</Code>
 					<AttendanceDate>2018-06-27</AttendanceDate>	
 					<StartTime>09:45:00</StartTime>
 					<EndTime>10:30:00</EndTime>
-					<SubmissionDate>2018-06-30</SubmissionDate>		
-					<LastUpdatedDate>2018-06-28</LastUpdatedDate>
-					<AttendanceNote>Explained absence, but unjustified.</AttendanceNote>
+					<SubmissionDateTime>2018-06-30T06:30:57</SubmissionDateTime>	
+					<Note>Explained absence, but unjustified.</Note>
+					<RecordAudit>	
+						<LastUpdatedDateTime>2018-06-28T06:30:57</LastUpdatedDateTime>
+					</RecordAudit>
 				</AttendanceTime>
 			</AttendanceTimeList>
 		</StudentAttendanceTimeList>	

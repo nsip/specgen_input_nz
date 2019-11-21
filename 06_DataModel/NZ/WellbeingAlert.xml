@@ -134,16 +134,6 @@
   </Item>    <!-- AcknowledgementList -->
 
   <Item>
-    <Element>AlertSeverity</Element>
-    <Characteristics>O</Characteristics>
-	  <privacyRating>High</privacyRating>
-    <Description>
-      <p>Severity of this wellbeing alert.</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- AlertSeverity -->
-
-  <Item>
     <Element>KeyContactList</Element>
     <Characteristics>O</Characteristics>
 	  <privacyRating>Medium</privacyRating>
@@ -182,7 +172,17 @@
     </Description>
     <Type ref="CommonTypes" name="WellbeingCharacteristicList"/>
   </Item>    <!-- WellbeingCharacteristicList -->
- 
+
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+   
   <xhtml:Example xmlns="" name="Wellbeing Alert">
     <WellbeingAlert>
       <WellbeingAlertRefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</WellbeingAlertRefId>
@@ -199,6 +199,13 @@
       <StartDate>2017-11-01</StartDate>
       <AlertCategory>MED</AlertCategory>
       <AlertDescription>This Student is allergic to peanuts</AlertDescription>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
     </WellbeingAlert>
   </xhtml:Example>
 </DataObject>

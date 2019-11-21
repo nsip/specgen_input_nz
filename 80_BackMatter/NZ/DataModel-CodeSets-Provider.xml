@@ -149,6 +149,7 @@
 				<Text xml:lang="en">Teen Parent Unit (Year 9-15)</Text>
 				<Text xml:lang="mi">Ranga Mātātahi (Tau 9 – 15)</Text>
 			</Value>    <!-- Teen Parent Unit -->
+
 			<Value>
 				<Code>997</Code>
 				<Text xml:lang="en">Activity Centre</Text>
@@ -156,29 +157,40 @@
 			</Value>    <!-- Activity Centre -->
 
 			<Value>
+				<Code>996</Code>
+				<Text xml:lang="en">Learning Support Cluster</Text>
+				<Text xml:lang="mi"></Text>
+			</Value>    <!-- Learning Support Cluste -->
+
+			<Value>
 				<Code>998</Code>
 				<Text xml:lang="en">Community of Learning | Kāhui Ako</Text>
 				<Text xml:lang="mi">Kāhui Ako</Text>
-			</Value>
+			</Value>    <!-- Community of Learning | Kāhui Ako -->
+
 			<Value>
 				<Code>999</Code>
-				<Text>Ministry of Education Local Office</Text>
-			</Value>
+				<Text xml:lang="en">Ministry of Education Local Office</Text>
+				<Text xml:lang="mi"></Text>
+			</Value>    <!-- Ministry of Education Local Office -->
+
 			<Value>
 				<Code>1</Code>
 				<Text xml:lang="en">Early Childhood Education (ECE)</Text>
 				<Text xml:lang="mi">Kura Kōhungahunga</Text>
-			</Value>
+			</Value>    <!-- Early Childhood Education (ECE) -->
+
 			<Value>
 				<Code>2</Code>
 				<Text xml:lang="en">School</Text>
 				<Text xml:lang="mi">Kura</Text>
-			</Value>
+			</Value>    <!-- School -->
+
 			<Value>
 				<Code>3</Code>
 				<Text xml:lang="en">Tertiary</Text>
 				<Text xml:lang="mi">Kura Wānanga</Text>
-			</Value>
+			</Value>    <!-- Tertiary -->
 		</Values>
 	</CodeSet>    <!-- Organisation Type -->
 	<CodeSet>
@@ -613,107 +625,110 @@
 			<Value>
 				<Code>1309</Code><Text>Resource Teacher Learning and Behaviour (RTLB)</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1310</Code><Text>Parent Help</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1401</Code><Text>Homeroom Teacher</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1402</Code><Text>Release Homeroom Teacher</Text>
 			</Value>
-		  <Value>
-				<Code>1403</Code><Text>Relief Homerrom Teacher</Text>
+		  	<Value>
+				<Code>1403</Code><Text>Relief Homeroom Teacher</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1404</Code><Text>Pastoral Carer</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1405</Code><Text>Guidance Counsellor</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1406</Code><Text>Careers Advisor</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1407</Code><Text>Truancy Officer</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1408</Code><Text>Sickbay Nurse</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1409</Code><Text>Dental Nurse</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1410</Code><Text>Hostel Manager / Matron</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1411</Code><Text>Social Worker (In School)</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1501</Code><Text>Teacher in Charge</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1502</Code><Text>Coach</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>2001</Code><Text>Kāhui Ako Led Principal</Text>
 			</Value>
-		 <Value>
+		 	<Value>
 				<Code> 2002</Code><Text>Across School Teacher</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>2101</Code><Text>Kāhui Ako Support Facilitator</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>2102</Code><Text>Kāhui Ako Expert Partner</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>2103</Code><Text>Ministry - Learning Support Facilitator</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>2104</Code><Text>Ministry - Strategic Advisor - Māori</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>2105</Code><Text>Ministry - SAF</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>2106</Code><Text>DHB Staff</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1301</Code><Text>Teacher Aide</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1203</Code><Text>Subject Relief Teacher</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1202</Code><Text>Subject Release Teacher</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1204</Code><Text>Subject Tutor</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1205</Code><Text>Classroom Teacher</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1206</Code><Text>Classroom Release teacher</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1207</Code><Text>Classroom Relief Teacher</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1208</Code><Text>Kāhui Ako within School Teacher</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1209</Code><Text>Itinerant Subject Teacher</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1210</Code><Text>Itinerant Subject Tutor</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1211</Code><Text>Specialist Classroom Teacher</Text>
 			</Value>
-		  <Value>
+		  	<Value>
 				<Code>1011</Code><Text>Finance Manager</Text>
+		 	</Value>
+		  	<Value>
+				<Code>2107</Code><Text>Dean</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Staff Role -->
