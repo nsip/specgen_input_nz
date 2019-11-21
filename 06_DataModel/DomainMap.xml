@@ -109,19 +109,19 @@
 				<img src="images/SIFNZ-LogicalModel-WellbeingDomain.png" usemap="#Hauora / WellbeingMap"/>
 			</Intro>
 
-			<DataObject coords="71,422,219,470" role="member">WellbeingCharacteristic</DataObject>
-			<DataObject coords="226,337,335,395" role="member">WellbeingAlert</DataObject>
-			<DataObject coords="381,421,503,469" role="member">WellbeingEvent</DataObject>
-			<DataObject coords="537,480,645,528" role="member">WellbeingResponse</DataObject>
-			<DataObject coords="687,542,796,590" role="member">WellbeingAppeal</DataObject>
-			<DataObject coords="1062,422,1300,470" role="member">StudentLearningSupport</DataObject>
-			<DataObject coords="1062,422,1300,470" role="member">StudentLearningSupportResponse</DataObject>
-			<DataObject coords="981,348,1076,388" role="member">Document</DataObject>
-			<DataObject coords="519,75,639,111" role="member">StudentVoice</DataObject>
-			<DataObject coords="466,189,693,270">StudentPersonal</DataObject>
-			<DataObject coords="398,618,587,702">Provider</DataObject>
-			<DataObject coords="1220,341,1382,387" role="member">StudentPhysicalRestraint</DataObject>
-			<DataObject coords="1263,550,1382,594">StaffPersonal</DataObject>
+			<DataObject coords="282,282,430,333" role="member">WellbeingCharacteristic</DataObject>
+			<DataObject coords="437,198,543,261" role="member">WellbeingAlert</DataObject>
+			<DataObject coords="593,284,712,331" role="member">WellbeingEvent</DataObject>
+			<DataObject coords="750,340,855,387" role="member">WellbeingResponse</DataObject>
+			<DataObject coords="895,405,1007,450" role="member">WellbeingAppeal</DataObject>
+			<DataObject coords="42,285,209,331" role="member">StudentLearningSupport</DataObject>
+			<DataObject coords="102,443,313,489" role="member">StudentLearningSupportResponse</DataObject>
+			<DataObject coords="1051,274,1148,317" role="member">Document</DataObject>
+			<DataObject coords="976,202,1086,248" role="member">StudentVoice</DataObject>
+			<DataObject coords="679,53,906,135">StudentPersonal</DataObject>
+			<DataObject coords="610,481,800,569">Provider</DataObject>
+			<DataObject coords="1168,130,1334,176" role="member">StudentPhysicalRestraint</DataObject>
+			<DataObject coords="1214,273,1334,317">StaffPersonal</DataObject>
 		</Domain>
 		
 		<Domain name="Schedule &amp; Attendance">
