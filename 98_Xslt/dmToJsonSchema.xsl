@@ -51,7 +51,7 @@
 
 	<xsl:template match="specgen:DataObject" mode="reqRootObj">
 		<xsl:value-of select="concat('  - required: [ ', @name, ' ]&#x0a;')"/>
-		<xsl:value-of select="concat('  - required: [ ', @name, 'Collection ]&#x0a;')"/>
+		<xsl:value-of select="concat('  - required: [ ', @name, 's ]&#x0a;')"/>
 	</xsl:template>
 	
 	<xsl:template match="specgen:DataObject" mode="rootObj">
