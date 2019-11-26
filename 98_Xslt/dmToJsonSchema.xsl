@@ -57,24 +57,19 @@
 	<xsl:template match="specgen:DataObject" mode="rootObj">
 		<xsl:value-of select="concat('  ', @name, ':&#x0a;')"/>
 		<xsl:value-of select="concat('    $ref: ''#/definitions/', @name, '''&#x0a;')"/>
-		<xsl:value-of select="concat('  ', @name, 's:&#x0a;')"/>
-		<xsl:value-of select="concat('    $ref: ''#/definitions/', @name, 'Collection''&#x0a;')"/>
-	</xsl:template>
-
-	<xsl:template match="specgen:DataObject" mode="definitions">
-		<xsl:text>  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
-		<!-- First up the collection edition -->
-		<xsl:value-of select="concat('  ', @name, 'Collection:&#x0a;',
+		<xsl:value-of select="concat('  ', @name, 's:&#x0a;',
 									 '    type: object&#x0a;',
 									 '    additionalProperties: false&#x0a;',
 									 '    properties:&#x0a;',
 									 '      ', @name , ':&#x0a;',
 									 '        type: array&#x0a;',
 									 '        items:&#x0a;',
-									 '          $ref: ''#/definitions/', @name, '''&#x0a;')"/>
+									 '          $ref: ''#/properties/', @name, '''&#x0a;')"/>
 
+	</xsl:template>
 
-		<!-- Now do the actual dataObject definition --> 
+	<xsl:template match="specgen:DataObject" mode="definitions">
+		<xsl:text>  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
 		<xsl:value-of select="concat('  ', @name, ':&#x0a;')"/>
 
 		<!-- Maybe some fields are required -->
