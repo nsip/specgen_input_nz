@@ -49,7 +49,7 @@
 		<Description>
 			<p>Generic object reference to the Student enrolling at the Provider</p>
 		</Description>
-		<Type ref="CommonTypes" relationship="records enrollment of" count="*:1" name="ObjectReferenceType"></Type>
+		<Type ref="CommonTypes" relationship="records enrollment of" count="*:1" name="StudentObjectReferenceType"/>
 	</Item>    <!-- Student -->
 
 	<Item>

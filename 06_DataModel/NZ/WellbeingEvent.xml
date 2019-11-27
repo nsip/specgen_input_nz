@@ -47,7 +47,7 @@
     <Description>
       <p>Object reference to the student to whom this WellbeingEvent belongs.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
   </Item>    <!-- Student -->
 
   <Item>

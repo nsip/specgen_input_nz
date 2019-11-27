@@ -44,8 +44,8 @@
 		<Element>Student</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
-		<Description>Generic object referencet to the Student.</Description>
-		<Type ref='CommonTypes' name='ObjectReferenceType'/>
+		<Description>Generic object reference to the Student.</Description>
+		<Type ref='CommonTypes' name='StudentObjectReferenceType'/>
 	</Item>   <!-- Student -->
 	<Item>
 		<Element>StudentContact</Element>

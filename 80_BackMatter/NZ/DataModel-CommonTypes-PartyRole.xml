@@ -2122,7 +2122,7 @@
 				<p>A person associated to a document and their role in
 				relation to it, e.g. author, owner, reviewer, subject of.</p>
 			</Description>
-			<Type complex="extension" name="ObjectReferenceType"/>
+			<Type complex="extension" name="StudentObjectReferenceType"/>
 		</Item>
 		<Item>
 			<Element>Role</Element>

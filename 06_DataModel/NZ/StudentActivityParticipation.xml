@@ -43,7 +43,7 @@
     <Description>
       <p>Generic object reference to the student participating in the activity. </p>
     </Description>
-    <Type ref='CommonTypes' name='ObjectReferenceType'/>
+    <Type ref='CommonTypes' name='StudentObjectReferenceType'/>
   </Item>    <!-- Student -->
   <Item>
     <Element>Provider</Element>

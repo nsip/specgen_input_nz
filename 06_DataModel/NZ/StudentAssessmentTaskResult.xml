@@ -78,7 +78,7 @@
       <p>Generic object reference to the student held in the StudentPersonal
          data object whose assessment task result this is.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
   </Item>    <!-- Student -->
 
   <!--  Providers & Markers involved in setting the Assessment Task (and result) -->

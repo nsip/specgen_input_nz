@@ -297,7 +297,7 @@
 			<Description>
 				<p>A repeatable element recording the identifier and details of another person that was involved in the Wellbeing Event/Response.</p>
 			</Description>
-			<Type complex="extension" name="ObjectReferenceType"/>
+			<Type complex="extension" name="StudentObjectReferenceType"/>
 		</Item>
 		<Item>
 			<Element>HowInvolved</Element>
@@ -316,7 +316,7 @@
 				<p>The type of person that the person involved is, e.g. Teacher, Peers, etc.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsPersonInvolvedTypeType"/>
-		</Item>    <!-- HowInvolved -->
+		</Item>    <!-- PersonType -->
 	</CommonElement>
 
 	<CommonElement name="RecognitionListType" type="true" dm="true">

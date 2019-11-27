@@ -54,7 +54,7 @@
       <p>Generic object reference to the student held in the StudentPersonal data object
          whose intention to participate in an assessment task is being registered.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"/>
+    <Type ref="CommonTypes" name="StudentObjectReferenceType"/>
   </Item>    <!-- Student -->
 
   <Item>
@@ -166,8 +166,9 @@
           </ProviderInvolved>
         </ProviderInvolvedList>
       <Student>
-        <RefId>19059103-3c50-4970-bc48-341349c32858</RefId>
+        <LocalId>851039-HP</LocalId>
         <Name>Harry Potter</Name>
+        <NationalStudentNumber>23423421</NationalStudentNumber>
       </Student>
       <StaffMember>
         <RefId>c23c6fa1-4093-4c21-9ea8-4cdd3c7dd7fb</RefId>

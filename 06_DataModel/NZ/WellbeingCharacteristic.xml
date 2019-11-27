@@ -47,7 +47,7 @@
     <Description>
       <p>Generic object reference to the student to whom this WellbeingCharacteristic belongs.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
   </Item>    <!-- Student -->
 
   <Item>

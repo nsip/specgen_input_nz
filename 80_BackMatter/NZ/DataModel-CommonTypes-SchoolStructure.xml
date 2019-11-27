@@ -113,7 +113,7 @@
 			<Description>
 				<p>Student reference in the StudentList.</p>
 			</Description>
-			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+			<Type ref="CommonTypes" name="StudentObjectReferenceType"/>
 		</Item>       <!-- Student -->
 	</CommonElement>
 

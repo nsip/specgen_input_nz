@@ -44,7 +44,7 @@
     <Description>
       <p>The ID (GUID) of the student for whom this attendance information is being reported.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReference"></Type>
+    <Type ref="CommonTypes" name="StudentObjectReference"></Type>
   </Item>    <!-- Student -->
  <Item>
     <Element>Provider</Element>

@@ -43,7 +43,7 @@
 		<Description>
 			<p>Generic object reference to the student granting or revoking this student consent.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+		<Type ref="CommonTypes" name="StudentObjectReferenceType"/> 
 	</Item>    <!-- Student -->
 
 	<Item>

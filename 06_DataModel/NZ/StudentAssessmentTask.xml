@@ -44,7 +44,7 @@
       <p>Generic object reference to the student held in the StudentPersonal 
         data object who is being assessed against the assessment task.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
   </Item>    <!-- Student -->
 
   <Item>
@@ -238,8 +238,9 @@
       <StudentAssessmentTaskRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskRefId>
       <Student>
         <RefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</RefId>
-        <LocalId>HP-850139</LocalId>
+        <LocalId>850139-HP</LocalId>
         <Name>Harry Potter</Name>
+        <NationalStudentNumber>23423421</NationalStudentNumber>
       </Student>
       <AssessmentTask>
         <RefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</RefId>

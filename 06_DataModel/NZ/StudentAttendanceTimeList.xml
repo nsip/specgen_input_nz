@@ -32,7 +32,7 @@
 		<Description>
 			<p>The student for whom this attendance time list is being reported.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ObjectReference"/>
+		<Type ref="CommonTypes" name="StudentObjectReference"/>
 	</Item>    <!-- Student -->
 	<Item>
 		<Element>Provider</Element>
