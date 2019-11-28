@@ -190,15 +190,9 @@
           <PreferenceNumber>1</PreferenceNumber>
           <Code>ENGL</Code>
           <YearLevels>
-            <YearLevel>
-              <YearLevel json:force-string="true">11</YearLevel>
-            </YearLevel>
-            <YearLevel>
-              <YearLevel json:force-string="true">12</YearLevel>
-            </YearLevel>
-            <YearLevel>
-              <YearLevel json:force-string="true">13</YearLevel>
-            </YearLevel>
+            <YearLevel>11</YearLevel>
+            <YearLevel>12</YearLevel>
+            <YearLevel>13</YearLevel>
           </YearLevels>
         </StaffSubject>
         <StaffSubject>

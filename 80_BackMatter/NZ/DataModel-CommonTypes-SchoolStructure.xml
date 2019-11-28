@@ -386,9 +386,8 @@
 
 		<xhtml:Example xmlns="" name="NZ Year Level List Example">
 			<YearLevelList>
-				<YearLevel>
-					<YearLevel json:force-string="true">9</YearLevel>
-				</YearLevel>
+				<YearLevel>9</YearLevel>
+				<YearLevel>10</YearLevel>
 			</YearLevelList>
 		</xhtml:Example>
 
@@ -398,25 +397,12 @@
 		<Item>
 			<Element>YearLevelType</Element>
 			<Description>
-				<p>The student Year Level that the staff member is responsible for. e.g.  "Junior Student Dean" could have responsibility for all students in year levels 9 and 10. May only contain the values 1 through to 13 inclusive.</p>
-			</Description>
-		</Item>
-		<Item>
-			<Element>YearLevel</Element>			
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
 				<p>The student Year Level that the staff member is responsible for. e.g.  "Junior Student Dean" could have responsibility for all students in year levels 9 and 10.May only contain the values 1 through to 13 inclusive.</p>
 			</Description>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
 			<Type name="xs:int"/>
 		</Item>
-
-		<xhtml:Example xmlns="" name="NZ Year Level List Example">
-			<YearLevel>
-				<YearLevel json:force-string="true">9</YearLevel>
-			</YearLevel>
-		</xhtml:Example>
-
 	</CommonElement>
 
 	<CommonElement name="EnactedPolicyListType" type="true" dm="true">

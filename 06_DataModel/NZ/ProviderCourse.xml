@@ -158,9 +158,7 @@
         <SubjectArea json:force-array="true">CHEM</SubjectArea>
       </SubjectAreaList>
 			<YearLevelList>
-				<YearLevel>
-					<YearLevel json:force-string="true" json:force-array="true">12</YearLevel>
-				</YearLevel>
+				<YearLevel json:force-array="true">12</YearLevel>
 			</YearLevelList>
       <Title>Year 12 Chemistry</Title>
       <Description>Organic &amp; Inorganic Chemistry for NCEA Level 2</Description>
