@@ -2082,20 +2082,10 @@
 			<Description>
 				<p>An object that this document relates to, e.g. a Wellbeing Response or Characteristic, Physical Restraint.</p>
 			</Description>			
-			<Type ref="CommonTypes" name="RelatedToType"/>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>
-	</CommonElement> 
-	<CommonElement name="RelatedToType" type="true" dm="true">
-		<Item>
-			<Element>RelatedToType</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>An object that this document relates to, e.g. a Wellbeing Response or Characteristic, Physical Restraint.</p>
-			</Description>
-			<Type complex="extension" name="ObjectReferenceType"/>
-		</Item>
-	</CommonElement> 
-
+	</CommonElement>
+	
 	<CommonElement name="PersonDocumentRoleListType" type="true" dm="true">
 		<Item>
 			<Element>PersonDocumentRoleListType</Element>
