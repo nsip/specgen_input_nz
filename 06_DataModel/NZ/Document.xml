@@ -40,7 +40,7 @@
 
   <Item>
     <Element>Provider</Element>    
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the Provider that first uploaded this document.</p>
@@ -85,7 +85,7 @@
     <Description>
       <p>The date the document was added at the source system.</p>
     </Description>
-    <Type name="xs:date"/>
+    <Type name="xs:dateTime"/>
   </Item>    <!-- AddedDateTime -->
 
   <Item>
@@ -189,14 +189,19 @@
       <DocumentType>IEP</DocumentType>
       <PersonDocumentRoleList>
         <PersonDocumentRole>
-          <RefId>17c9b7aa-bc34-435f-8bba-7e337891f53b</RefId>
-          <ObjectType>StudentPersonal</ObjectType>
           <Role>SU</Role>
+          <Student>
+            <RefId>17c9b7aa-bc34-435f-8bba-7e337891f53b</RefId>
+            <ObjectType>StudentPersonal</ObjectType>
+            <NSN>6788765445</NSN>
+          </Student>
         </PersonDocumentRole>
         <PersonDocumentRole>
-          <RefId>2a288f40-c3fb-4d9c-857e-0e562f3f5dde</RefId>
-          <ObjectType>StaffPersonal</ObjectType>
           <Role>AU</Role>
+          <Person>
+            <RefId>2a288f40-c3fb-4d9c-857e-0e562f3f5dde</RefId>
+            <ObjectType>StaffPersonal</ObjectType>
+          </Person>
         </PersonDocumentRole>
       </PersonDocumentRoleList>
       <RecordAudit>

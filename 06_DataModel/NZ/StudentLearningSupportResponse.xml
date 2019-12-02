@@ -45,7 +45,11 @@
     <Description>
       <p>The student that the learning support need response its for.</p>
     </Description>
+<<<<<<< HEAD
     <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
+=======
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+>>>>>>> rc6Amy
   </Item>    <!-- Student -->
 
   <Item>
@@ -254,7 +258,7 @@
         <RefId>CA222226-359D-7510-1A8C-36432A901A16</RefId>
       </LearningSupportNeed>
       <ResponseType>ADA</ResponseType>
-      <ResponseDetail>CUR</ResponseDetail>
+      <ResponseDetail>ACU</ResponseDetail>
       <ResponseGoals>The student is confident in their reading ability.</ResponseGoals>
         <TierOfResponse>IND</TierOfResponse>
         <InternalResponse>
