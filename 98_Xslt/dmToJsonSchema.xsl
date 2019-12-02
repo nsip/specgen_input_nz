@@ -87,6 +87,7 @@
 		<!-- DataObject maybe extension of a base type -->
 		<xsl:if test="specgen:Item[1]/specgen:Type[@complex]">
 			<xsl:value-of select="concat('    type: object&#x0a;',
+										 '    additionalProperties: false&#x0a;',
 										 '    properties:&#x0a;',
 										 '      allOf:&#x0a;',
 										 '      - $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '/properties''&#x0a;')"/>
@@ -403,7 +404,7 @@
 			</xsl:if>
 		</xsl:if>
 		<xsl:if test="count(specgen:Item|specgen:Choice) gt 0">
-			<xsl:text>    properties:&#x0a;</xsl:text>
+			<xsl:text>    additionalProperties: false&#x0a;    properties:&#x0a;</xsl:text>
 		</xsl:if>
 		<xsl:text>      allOf:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('      - $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '/properties''&#x0a;')"/>
