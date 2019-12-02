@@ -2115,6 +2115,7 @@
 			<Type ref="CommonTypes" name="PersonDocumentRoleType"/>
 		</Item>
 	</CommonElement> 
+
 	<CommonElement name="PersonDocumentRoleType" type="true" dm="true">
 		<Item>
 			<Element>PersonDocumentRoleType</Element>
@@ -2122,7 +2123,6 @@
 				<p>A person associated to a document and their role in
 				relation to it, e.g. author, owner, reviewer, subject of.</p>
 			</Description>
-			<Type complex="extension" name="ObjectReferenceType"/>
 		</Item>
 		<Item>
 			<Element>Role</Element>
@@ -2133,6 +2133,22 @@
 				owner, reviewer, subject of.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsDocumentRoleType"/>
+		</Item>
+		<Item>
+			<Element>Person</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A non student person associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>
+		<Item>
+			<Element>Student</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A student associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>
 	</CommonElement> 
 

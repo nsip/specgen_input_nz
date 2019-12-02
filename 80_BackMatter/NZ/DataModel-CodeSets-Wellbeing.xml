@@ -824,12 +824,12 @@
 				</Value>
 				<Value>
 					<Code>BLIN</Code>
-					<Text xml:lang="en">Blindness or vision impairment</Text>
+					<Text xml:lang="en">Blind or vision impaired</Text>
 					<Text xml:lang="mi">Pura</Text>
 				</Value>
 				<Value>
 					<Code>DEAF</Code>
-					<Text xml:lang="en">Deafness or hearing impairment</Text>
+					<Text xml:lang="en">Deaf or hard of hearing</Text>
 					<Text xml:lang="mi">Turi / Hakiri</Text>
 				</Value>
 				<Value>
@@ -2037,8 +2037,15 @@
 		<ID>Learning Support Response Detail</ID>
 		<Values>
 			<Value>
-				<Code>CUR</Code>
+				<Code>ACU</Code>
 				<Text>Curriculum</Text>
+				<Description>Links to Adaptation for access Response Type.
+</Description>
+			</Value>
+			<Value>
+				<Code>ASC</Code>
+				<Text>School property</Text>
+				<Description>Links to Adaptation for access Response Type.</Description>
 			</Value>
 			<Value>
 				<Code>HUP</Code>
@@ -2053,12 +2060,25 @@
 				<Text>Other agency/NGO specialists</Text>
 			</Value>
 			<Value>
-				<Code>OTH</Code>
-				<Text>Other</Text>
+				<Code>ODS</Code>
+				<Text>Other adaptation for access</Text>
 			</Value>
 			<Value>
-				<Code>SCH</Code>
-				<Text>School property</Text>
+				<Code>OSS</Code>
+				<Text>Other specialist support</Text>
+			</Value>
+			<Value>
+				<Code>OTA</Code>
+				<Text>Other teacher aide support in the classroom</Text>
+			</Value>
+			<Value>
+				<Code>OUD</Code>
+				<Text>Other universal design</Text>
+			</Value>
+			<Value>
+				<Code>SCU</Code>
+				<Text>Curriculum</Text>
+				<Description>Links to the Universal Design Response Type</Description>
 			</Value>
 			<Value>
 				<Code>SPC</Code>
@@ -2071,6 +2091,11 @@
 			<Value>
 				<Code>SRL</Code>
 				<Text>To support and reinforce learning</Text>
+			</Value>
+			<Value>
+				<Code>USC</Code>
+				<Text>School property</Text>
+				<Description>Links to the Universal Design Response Type</Description>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Response Detail -->
@@ -2087,7 +2112,7 @@
 			</Value>
 			<Value>
 				<Code>ADA</Code>
-				<Text>Adaptation for success</Text>
+				<Text>Adaptation for access</Text>
 			</Value>
 			<Value>
 				<Code>INC</Code>
