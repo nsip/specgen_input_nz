@@ -50,7 +50,7 @@
 
 	<Item>
 		<Element>Provider</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 		<p>Generic object reference to the school that collected this StudentVoice entry.</p>

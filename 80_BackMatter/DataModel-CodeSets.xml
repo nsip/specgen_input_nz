@@ -377,6 +377,11 @@
 				<Code>LSR</Code>
 				<Text>Learning Support Receive Service</Text>
 			</Value>			<!-- Learning Support Receive Service -->
+			<Value>
+				<Code>PAR</Code>
+				<Text>Parental Consent To Share With Next ECE Or School</Text>
+				<Description>This value is for learning support.</Description>
+			</Value>			<!-- Parental Consent To Share With Next ECE Or School -->
 		</Values>
 	</CodeSet>	<!-- Student Consent To -->
 

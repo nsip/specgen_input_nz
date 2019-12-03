@@ -130,7 +130,16 @@
 				<p>Code set denoting the year level of students attending early childhood education.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsECEYearLevelType"/>
-		</Item>    <!-- Type -->		
+		</Item>    <!-- Type -->	
+		<Item>
+			<Element>Curriculum</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Code denoting which part of the National Curriculum (NZ Curriculum or Te Marautanga o Aotearoa) the ECE learner is enrolled in.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsCurriculumType"/>
+		</Item>    <!-- Curriculum -->		
 	</CommonElement>
 
 	<CommonElement name="StudentTertiaryEnrolmentType" type="true" dm="true">

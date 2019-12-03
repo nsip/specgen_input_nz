@@ -474,24 +474,29 @@
 		<Values>
 			<Value>
 				<Code>TPU</Code>
-				<Text>Teen Parent Unit</Text>
+				<Text xml:lang="en">Teen Parent Unit</Text>
 				<Description>Related organisation is a Teen Parent Unit co-located with the main Organisation.</Description>
 			</Value>
 			<Value>
 				<Code>ACR</Code>
-				<Text>Activity Centre</Text>
+				<Text xml:lang="en">Activity Centre</Text>
 				<Description>Related organisation is an Activity Centre co-located with the main Organisation.</Description>
 			</Value>
 			<Value>
 				<Code>MOE</Code>
-				<Text>MoE Local Office</Text>
+				<Text xml:lang="en">MoE Local Office</Text>
 				<Description>Related organisation is Ministry of Education Local Office that deals with the Provider.</Description>
 			</Value>
 			<Value>
 				<Code>COL</Code>
 				<Text xml:lang="en">Community of Learning</Text>
 				<Text xml:lang="mi">Kāhui Ako</Text>
-				<Description>Related organisation is the Community of Learning / Kāhui Ako that the main Organisation is a member of</Description>
+				<Description>Related organisation is the Community of Learning / Kāhui Ako that the main Organisation is a member of.</Description>
+			</Value>
+			<Value>
+				<Code>LSC</Code>
+				<Text xml:lang="en">Learning Support Cluster</Text>
+				<Description>Related organisation is the Learning Support Cluster that the main Organisation is a member of.</Description>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Organisation Relationship Type -->

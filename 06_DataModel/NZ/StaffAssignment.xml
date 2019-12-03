@@ -70,6 +70,16 @@
   </Item>      <!-- AssignedLocation -->  
 
   <Item>
+    <Element>EmployingOrAccommodatingProvider</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Indicates whether or not this is the staff member's employing/accommodating provider. Only applies to staff members assigned to schools.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+  </Item>      <!-- EmployingOrAccommodatingProvider -->
+
+  <Item>
     <Element>Description</Element>
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
