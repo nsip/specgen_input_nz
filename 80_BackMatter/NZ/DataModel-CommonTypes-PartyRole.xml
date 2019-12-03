@@ -2124,40 +2124,24 @@
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsDocumentRoleType"/>
 		</Item>
-		<Item>
-			<Element>Person</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>A non student person associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
-			</Description>
-			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>
-		<Item>
-			<Element>Student</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>A student associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
-			</Description>
-			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>
-	</CommonElement> 
-
-	<CommonElement name="MedicalNeedListType" type="true" dm="true">
-		<Item>
-			<Element>MedicalNeedListType</Element>
-			<Description>
-				<p>A list of a persons known medical needs.</p>
-			</Description>
-			<List mode="List"/>
-		</Item>
-		<Item>
-			<Element>MedicalNeed</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>A persons known medical need.</p>
-			</Description>
-			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>
+		<Choice>
+			<Item>
+				<Element>Person</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>A non student person associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+				</Description>
+				<Type ref="CommonTypes" name="ObjectReferenceType"/>
+			</Item>
+			<Item>
+				<Element>Student</Element>
+				<Characteristics>O</Characteristics>
+				<Description>
+					<p>A student associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+				</Description>
+				<Type ref="CommonTypes" name="StudentObjectReferenceType"/>
+			</Item>
+		</Choice>
 	</CommonElement> 
 
 	<CommonElement name="MedicalNeedListType" type="true" dm="true">

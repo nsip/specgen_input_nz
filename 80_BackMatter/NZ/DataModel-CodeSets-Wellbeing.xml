@@ -563,7 +563,6 @@
 		<Value>
 			<Code>LSN-DEV</Code>
 			<Text xml:lang="en">Developing strengths, interests and specific abilities or gifts</Text>
-<<<<<<< HEAD
 		</Value>
 		<Value>
 			<Code>LSN-LIT</Code>
@@ -586,30 +585,6 @@
 			<Text xml:lang="en">Problem solving</Text>
 		</Value>
 		<Value>
-=======
-		</Value>
-		<Value>
-			<Code>LSN-LIT</Code>
-			<Text xml:lang="en">Literacy</Text>
-		</Value>
-		<Value>
-			<Code>LSN-MAN</Code>
-			<Text xml:lang="en">Managing self</Text>
-		</Value>
-		<Value>
-			<Code>LSN-NUM</Code>
-			<Text xml:lang="en">Numeracy</Text>
-		</Value>
-		<Value>
-			<Code>LSN-COM</Code>
-			<Text xml:lang="en">Communication</Text>
-		</Value>
-		<Value>
-			<Code>LSN-PRO</Code>
-			<Text xml:lang="en">Problem solving</Text>
-		</Value>
-		<Value>
->>>>>>> rc6Amy
 			<Code>LSN-REL</Code>
 			<Text xml:lang="en">Relating to others</Text>
 		</Value>
@@ -816,47 +791,6 @@
 					<Code>DSLD</Code>
 					<Text xml:lang="en">Developmental speech or language disorders</Text>
 					<Text xml:lang="mi"></Text>
-<<<<<<< HEAD
-				</Value>
-				<Value>
-					<Code>ADHD</Code>
-					<Text xml:lang="en">Attention Deficit Hyperactivity Disorder</Text>
-					<Text xml:lang="mi"></Text>
-				</Value>
-				<Value>
-					<Code>ANXI</Code>
-					<Text xml:lang="en">Anxiety or fear-related disorders</Text>
-					<Text xml:lang="mi">Manawapā</Text>
-				</Value>
-				<Value>
-					<Code>OTHN</Code>
-					<Text xml:lang="en">Other neurodevelopmental disorders/developmental anomalies</Text>
-					<Text xml:lang="mi"></Text>
-				</Value>
-				<Value>
-					<Code>DLDI</Code>
-					<Text xml:lang="en">Developmental learning disorders e.g. dyslexia</Text>
-					<Text xml:lang="mi"></Text>
-				</Value>
-				<Value>
-					<Code>AUTI</Code>
-					<Text xml:lang="en">Autism Sprectrum Disorder</Text>
-					<Text xml:lang="mi">Takiwātanga</Text>
-				</Value>
-				<Value>
-					<Code>SUBS</Code>
-					<Text xml:lang="en">Substance abuse or addictive behaviours</Text>
-					<Text xml:lang="mi"></Text>
-				</Value>
-				<Value>
-					<Code>BLIN</Code>
-					<Text xml:lang="en">Blindness or vision impairment</Text>
-					<Text xml:lang="mi">Pura</Text>
-				</Value>
-				<Value>
-					<Code>DEAF</Code>
-					<Text xml:lang="en">Deafness or hearing impairment</Text>
-=======
 				</Value>
 				<Value>
 					<Code>ADHD</Code>
@@ -896,7 +830,6 @@
 				<Value>
 					<Code>DEAF</Code>
 					<Text xml:lang="en">Deaf or hard of hearing</Text>
->>>>>>> rc6Amy
 					<Text xml:lang="mi">Turi / Hakiri</Text>
 				</Value>
 				<Value>
@@ -2077,7 +2010,6 @@
 			<Value>
 				<Code>COM</Code>
 				<Text>Complete</Text>
-<<<<<<< HEAD
 			</Value>
 			<Value>
 				<Code>ILM</Code>
@@ -2092,22 +2024,6 @@
 				<Text>No longer funded</Text>
 			</Value>
 			<Value>
-=======
-			</Value>
-			<Value>
-				<Code>ILM</Code>
-				<Text>Incomplete (Support no longer required)</Text>
-			</Value>
-			<Value>
-				<Code>ISN</Code>
-				<Text>Incomplete (learner moved from school)</Text>
-			</Value>
-			<Value>
-				<Code>NLF</Code>
-				<Text>No longer funded</Text>
-			</Value>
-			<Value>
->>>>>>> rc6Amy
 				<Code>OTH</Code>
 				<Text>Other</Text>
 			</Value>
@@ -2121,42 +2037,6 @@
 		<ID>Learning Support Response Detail</ID>
 		<Values>
 			<Value>
-<<<<<<< HEAD
-				<Code>CUR</Code>
-				<Text>Curriculum</Text>
-			</Value>
-			<Value>
-				<Code>HUP</Code>
-				<Text>For help undertaking personal care tasks</Text>
-			</Value>
-			<Value>
-				<Code>MOE</Code>
-				<Text>MOE specialists</Text>
-			</Value>
-			<Value>
-				<Code>OAN</Code>
-				<Text>Other agency/NGO specialists</Text>
-			</Value>
-			<Value>
-				<Code>OTH</Code>
-				<Text>Other</Text>
-			</Value>
-			<Value>
-				<Code>SCH</Code>
-				<Text>School property</Text>
-			</Value>
-			<Value>
-				<Code>SPC</Code>
-				<Text>Support from community</Text>
-			</Value>
-			<Value>
-				<Code>SPI</Code>
-				<Text>Support from Iwi</Text>
-			</Value>
-			<Value>
-				<Code>SRL</Code>
-				<Text>To support and reinforce learning</Text>
-=======
 				<Code>ACU</Code>
 				<Text>Curriculum</Text>
 				<Description>Links to Adaptation for access Response Type.
@@ -2237,40 +2117,14 @@
 			<Value>
 				<Code>INC</Code>
 				<Text>In class strategies / school</Text>
->>>>>>> rc6Amy
-			</Value>
-		</Values>
-	</CodeSet>    <!-- Learning Support Response Detail -->
-
-	<CodeSet>
-		<Intro>
-			<p>Code set denoting the type of response provided to the student to support the need.</p>
-		</Intro>
-		<ID>Learning Support Response Type</ID>
-		<Values>
-			<Value>
-<<<<<<< HEAD
-				<Code>ACC</Code>
-				<Text>Accessible technology</Text>
 			</Value>
 			<Value>
-				<Code>ADA</Code>
-				<Text>Adaptation for success</Text>
-			</Value>
-			<Value>
-				<Code>INC</Code>
-				<Text>In class strategies / school</Text>
-			</Value>
-			<Value>
-=======
->>>>>>> rc6Amy
 				<Code>PRO</Code>
 				<Text>Professional learning and upskilling</Text>
 			</Value>
 			<Value>
 				<Code>SCH</Code>
 				<Text>School financial support</Text>
-<<<<<<< HEAD
 			</Value>
 			<Value>
 				<Code>SPE</Code>
@@ -2281,18 +2135,6 @@
 				<Text>Teacher aide support in the classroom</Text>
 			</Value>
 			<Value>
-=======
-			</Value>
-			<Value>
-				<Code>SPE</Code>
-				<Text>Specialist support</Text>
-			</Value>
-			<Value>
-				<Code>TEA</Code>
-				<Text>Teacher aide support in the classroom</Text>
-			</Value>
-			<Value>
->>>>>>> rc6Amy
 				<Code>UNI</Code>
 				<Text>Universal Design</Text>
 			</Value>
@@ -2378,7 +2220,6 @@
 			<Value>
 				<Code>ACC</Code>
 				<Text>Accessible Format Materials</Text>
-<<<<<<< HEAD
 			</Value>
 			<Value>
 				<Code>ACT</Code>
@@ -2521,150 +2362,6 @@
 				<Text>PB4L (Restorative Practice)</Text>
 			</Value>
 			<Value>
-=======
-			</Value>
-			<Value>
-				<Code>ACT</Code>
-				<Text>Activity Centres</Text>
-			</Value>
-			<Value>
-				<Code>ADE</Code>
-				<Text>ASSIST - Deaf Education Centres Regional Service</Text>
-			</Value>
-			<Value>
-				<Code>AED</Code>
-				<Text>Alternative Education</Text>
-			</Value>
-			<Value>
-				<Code>AEI</Code>
-				<Text>Alternative Early Intervention Service Providers</Text>
-			</Value>
-			<Value>
-				<Code>ATE</Code>
-				<Text>Assistive Technology (AT) Equipment</Text>
-			</Value>
-			<Value>
-				<Code>ATT</Code>
-				<Text>Attendance Services (Non Enrolment Truancy Service (NETS) and DTS)</Text>
-			</Value>
-			<Value>
-				<Code>BEH</Code>
-				<Text>Behaviour Service</Text>
-			</Value>
-			<Value>
-				<Code>BIL</Code>
-				<Text>Bilingual Support Workers</Text>
-			</Value>
-			<Value>
-				<Code>BLE</Code>
-				<Text>BLENNZ</Text>
-			</Value>
-			<Value>
-				<Code>BOA</Code>
-				<Text>Boarding Allowances</Text>
-			</Value>
-			<Value>
-				<Code>CHO</Code>
-				<Text>Cholmondeley Children's Centre</Text>
-			</Value>
-			<Value>
-				<Code>CLA</Code>
-				<Text>Class Funding</Text>
-			</Value>
-			<Value>
-				<Code>COC</Code>
-				<Text>Cochlear Implant Habilitation</Text>
-			</Value>
-			<Value>
-				<Code>COM</Code>
-				<Text>Communication Service (Language and Learning Intervention)</Text>
-			</Value>
-			<Value>
-				<Code>CON</Code>
-				<Text>Conductive Education</Text>
-			</Value>
-			<Value>
-				<Code>DEC</Code>
-				<Text>Deaf Education Centres</Text>
-			</Value>
-			<Value>
-				<Code>DHH</Code>
-				<Text>Deaf and Hard of Hearing Moderate Needs (not ORS)</Text>
-			</Value>
-			<Value>
-				<Code>EDY</Code>
-				<Text>Education Services for Youth Courts</Text>
-			</Value>
-			<Value>
-				<Code>EIN</Code>
-				<Text>Early Intervention</Text>
-			</Value>
-			<Value>
-				<Code>EIS</Code>
-				<Text>Early Intervention: Specialist Services</Text>
-			</Value>
-			<Value>
-				<Code>ENG</Code>
-				<Text>Engaging Priority Families</Text>
-			</Value>
-			<Value>
-				<Code>ESO</Code>
-				<Text>ESOL (English for Speakers of Other Languages)</Text>
-			</Value>
-			<Value>
-				<Code>FIR</Code>
-				<Text>First Signs</Text>
-			</Value>
-			<Value>
-				<Code>ICS</Code>
-				<Text>In-Class Support (ICS) funding</Text>
-			</Value>
-			<Value>
-				<Code>IMO</Code>
-				<Text>Intensive wraparound service (IWS) MOE provided</Text>
-			</Value>
-			<Value>
-				<Code>IRF</Code>
-				<Text>Interim response fund (IRF)</Text>
-			</Value>
-			<Value>
-				<Code>ITK</Code>
-				<Text>Intensive wraparound service (IWS) Te Kahutoi Assessment Hub</Text>
-			</Value>
-			<Value>
-				<Code>NAT</Code>
-				<Text>National Mentoring Service (for Māori and Pasifika students)</Text>
-			</Value>
-			<Value>
-				<Code>NZS</Code>
-				<Text>NZ Sign Language in Schools</Text>
-			</Value>
-			<Value>
-				<Code>ORS</Code>
-				<Text>ORS</Text>
-			</Value>
-			<Value>
-				<Code>PBA</Code>
-				<Text>PB4L (IY Autism)</Text>
-			</Value>
-			<Value>
-				<Code>PBC</Code>
-				<Text>PB4L (check and connect)</Text>
-			</Value>
-			<Value>
-				<Code>PBH</Code>
-				<Text>PB4L (Huakina Mai)</Text>
-			</Value>
-			<Value>
-				<Code>PBI</Code>
-				<Text>PB4L (incredible Years Parents)</Text>
-			</Value>
-			<Value>
-				<Code>PBR</Code>
-				<Text>PB4L (Restorative Practice)</Text>
-			</Value>
-			<Value>
->>>>>>> rc6Amy
 				<Code>PBS</Code>
 				<Text>PB4L (School-Wide)</Text>
 			</Value>
@@ -2675,7 +2372,6 @@
 			<Value>
 				<Code>PDM</Code>
 				<Text>Physical Disability Service (MOE provided)</Text>
-<<<<<<< HEAD
 			</Value>
 			<Value>
 				<Code>PDS</Code>
@@ -2710,42 +2406,6 @@
 				<Text>Resource Teachers: Deaf (RTD) Deaf Education Centres Regional Service</Text>
 			</Value>
 			<Value>
-=======
-			</Value>
-			<Value>
-				<Code>PDS</Code>
-				<Text>Physical Disability Service (Specialist service providers)</Text>
-			</Value>
-			<Value>
-				<Code>PFS</Code>
-				<Text>Programme for Students (PfS)</Text>
-			</Value>
-			<Value>
-				<Code>REA</Code>
-				<Text>Reading Recovery</Text>
-			</Value>
-			<Value>
-				<Code>REG</Code>
-				<Text>Regional Health Schools</Text>
-			</Value>
-			<Value>
-				<Code>RFF</Code>
-				<Text>Refugee Flexible Funding Pool</Text>
-			</Value>
-			<Value>
-				<Code>RPC</Code>
-				<Text>Refugee Pathway and Career Planning</Text>
-			</Value>
-			<Value>
-				<Code>RTB</Code>
-				<Text>Resource Teachers: Learning and Behaviour (RTLB)</Text>
-			</Value>
-			<Value>
-				<Code>RTD</Code>
-				<Text>Resource Teachers: Deaf (RTD) Deaf Education Centres Regional Service</Text>
-			</Value>
-			<Value>
->>>>>>> rc6Amy
 				<Code>RTL</Code>
 				<Text>Resource Teachers: Literacy (RTLit)</Text>
 			</Value>

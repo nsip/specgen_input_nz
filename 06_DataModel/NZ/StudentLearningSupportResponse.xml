@@ -45,11 +45,7 @@
     <Description>
       <p>The student that the learning support need response its for.</p>
     </Description>
-<<<<<<< HEAD
     <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
-=======
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
->>>>>>> rc6Amy
   </Item>    <!-- Student -->
 
   <Item>
