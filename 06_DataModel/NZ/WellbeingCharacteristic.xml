@@ -52,7 +52,7 @@
 
   <Item>
     <Element>RecordingProvider</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the provider which recorded this Wellbeing Characteristic.</p>

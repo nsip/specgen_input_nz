@@ -40,7 +40,7 @@
 
   <Item>
     <Element>Provider</Element>    
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the Provider that first uploaded this document.</p>

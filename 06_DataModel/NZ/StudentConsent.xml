@@ -48,7 +48,7 @@
 
 	<Item>
 		<Element>Organisation</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>Generic object reference to the organisation being granted this student consent.</p>
