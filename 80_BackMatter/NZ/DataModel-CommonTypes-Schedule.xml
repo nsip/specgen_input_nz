@@ -192,7 +192,6 @@
 	<CommonElement name="AcademicDayType" type="true" dm="true">
 		<Item>
 			<Element>AcademicDayType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
 				<p>An academic day that is part of this schedule</p>
 			</Description>
@@ -284,7 +283,6 @@
 	<CommonElement name="SchedulePeriodTimeType" type="true" dm="true">
 		<Item>
 			<Element>SchedulePeriodTimeType</Element>
-			<Characteristics>M</Characteristics>
 			<Description>
 				<p>The definition of a SchedulePeriod start and end time, on a particular Bell Schedule.</p>
 			</Description>
