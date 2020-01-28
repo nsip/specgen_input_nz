@@ -31,7 +31,7 @@
 		<Type ref="CommonTypes" name="RefIdType"></Type>
 	</Item>   <!-- StudentContactRelationshipRefId -->
 	<Item>
-		<Element>StudentContactRelationshipLocalID</Element>
+		<Element>StudentContactRelationshipLocalId</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
@@ -39,7 +39,7 @@
 			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"></Type>
-	</Item>   <!-- StudentContactRelationshipLocalID -->
+	</Item>   <!-- StudentContactRelationshipLocalId -->
 	<Item>
 		<Element>Student</Element>
 		<Characteristics>M</Characteristics>
