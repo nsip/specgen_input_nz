@@ -577,6 +577,11 @@
 					<xsl:with-param name="indent" select="concat($indent, '  ')"/>
 				</xsl:apply-templates>
 
+				<!-- Facets need different indents -->
+				<xsl:apply-templates select="specgen:Facets/xs:*">
+					<xsl:with-param name="indent" select="concat($indent, '  ')"/>
+				</xsl:apply-templates>
+
 				<!-- Item might be an attribute -->
 				<xsl:if test="specgen:Attribute"> 
 					<xsl:value-of select="concat($indent, '  - xml:&#x0a;', $indent, '      attribute: true&#x0a;')"/>
@@ -605,6 +610,9 @@
 
 		<xsl:apply-templates select="specgen:Values">
 			<xsl:with-param name="indent" select="concat($indent,'  ')"/>
+		</xsl:apply-templates>
+		<xsl:apply-templates select="specgen:Facets/xs:*">
+			<xsl:with-param name="indent" select="concat($indent, '  ')"/>
 		</xsl:apply-templates>
 
 		<xsl:if test="specgen:Attribute"> 
@@ -647,6 +655,9 @@
 
 		<xsl:apply-templates select="specgen:Values">
 			<xsl:with-param name="indent" select="$indent"/>
+		</xsl:apply-templates>
+		<xsl:apply-templates select="specgen:Facets/xs:*">
+			<xsl:with-param name="indent" select="concat($indent, '  ')"/>
 		</xsl:apply-templates>
 
 		<xsl:if test="specgen:Attribute"> 
@@ -729,6 +740,11 @@
 		<xsl:value-of select="concat($indent, 'pattern: ''^', @value, '$''&#x0a;')"/>
 	</xsl:template>
 
+	<xsl:template match="specgen:Facets/xs:minLength|specgen:Facets/xs:maxLength">
+		<xsl:param name="indent"/>
+		<xsl:value-of select="concat($indent, local-name(.), ': ', @value, '&#x0a;')"/>
+	</xsl:template>
+
 	<!-- CodeSets become enums - with code definitions in the description field -->
 	<xsl:template match="specgen:CodeSet">
 		<xsl:text>&#x0a;  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
@@ -761,24 +777,30 @@
 		title & description alongside the code value;  can't do that with 'enum' -->
 	<xsl:template match="specgen:Values">
 		<xsl:param name="indent"/>
-		<xsl:value-of select="concat($indent, 'oneOf:&#x0a;')"/>
-		<xsl:apply-templates select="specgen:Value" mode="enum">
-			<xsl:with-param name="indent" select="$indent"/>
-		</xsl:apply-templates>
-	</xsl:template>
-	
-	<xsl:template match="specgen:Value" mode="enum">
-		<xsl:param name="indent"/>
-
-		<!-- JSON Schema for OpenAPI doesn't (currently) support 'const' as synonym for singleton 'enum' array -->
 		<xsl:choose>
 			<xsl:when test="$strictJSON eq 'true'">
-				<xsl:value-of select="concat($indent, '- enum: [ ', $q, specgen:Code, $q, ' ]&#x0a;')"/>
+				<xsl:value-of select="concat($indent, 'enum:&#x0a;')"/>
+				<xsl:apply-templates select="specgen:Value" mode="enum">
+					<xsl:with-param name="indent" select="$indent"/>
+				</xsl:apply-templates>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="concat($indent, '- const: ', $q, specgen:Code, $q, '&#x0a;')"/>
+				<xsl:value-of select="concat($indent, 'oneOf:&#x0a;')"/>
+				<xsl:apply-templates select="specgen:Value" mode="oneof">
+					<xsl:with-param name="indent" select="$indent"/>
+				</xsl:apply-templates>
 			</xsl:otherwise>
 		</xsl:choose>
+	</xsl:template>
+
+	<xsl:template match="specgen:Value" mode="enum">
+		<xsl:param name="indent"/>
+		<xsl:value-of select="concat($indent, '- ', $q, specgen:Code, $q, '&#x0a;')"/>
+	</xsl:template>
+
+	<xsl:template match="specgen:Value" mode="oneof">
+		<xsl:param name="indent"/>
+		<xsl:value-of select="concat($indent, '- const: ', $q, specgen:Code, $q, '&#x0a;')"/>
 
 		<xsl:apply-templates select="specgen:Text" mode="enum">
 			<xsl:with-param name="indent" select="$indent"/>
@@ -790,7 +812,7 @@
 	</xsl:template>
 
 
-	<!-- Enumaeration doesn't have multiple languages -->
+	<!-- Enumeration doesn't have multiple languages -->
 	<xsl:template match="specgen:Text" mode="enum">
 		<xsl:param name="indent"/>
 
