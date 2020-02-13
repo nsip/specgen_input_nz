@@ -55,17 +55,30 @@
 	</xsl:template>
 	
 	<xsl:template match="specgen:DataObject" mode="rootObj">
+		<xsl:variable name="desc">
+			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+		</xsl:variable>
+
+		<!-- The single object -->
 		<xsl:value-of select="concat('  ', @name, ':&#x0a;')"/>
 		<xsl:value-of select="concat('    $ref: ''#/definitions/', @name, '''&#x0a;')"/>
+		<xsl:if test="string-length($desc) gt 0">
+			<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
+		</xsl:if>
+
+		<!-- The array of objects -->
 		<xsl:value-of select="concat('  ', @name, 's:&#x0a;',
 									 '    type: object&#x0a;',
 									 '    additionalProperties: false&#x0a;',
+									 '    description: Wrapper around an array of ', @name, 's&#x0a;',
 									 '    properties:&#x0a;',
 									 '      ', @name , ':&#x0a;',
 									 '        type: array&#x0a;',
 									 '        items:&#x0a;',
 									 '          $ref: ''#/properties/', @name, '''&#x0a;')"/>
-
+		<xsl:if test="string-length($desc) gt 0">
+			<xsl:value-of select="concat('        description: &gt;-&#x0a;          ', $desc, '&#x0a;')"/>
+		</xsl:if>									 
 	</xsl:template>
 
 	<xsl:template match="specgen:DataObject" mode="definitions">
