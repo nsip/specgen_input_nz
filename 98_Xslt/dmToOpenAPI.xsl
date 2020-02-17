@@ -22,7 +22,14 @@
                                       'info:&#x0a;',
                                       '  version: ', $sifVersion, '&#x0a;',
                                       '  title: &quot;SIF ', $sifLocale, ' derived API&quot;&#x0a;',
-									  '  description: ', normalize-space(specgen:TitlePage/specgen:h1), '&#x0a;',
+									  '  description: >-&#x0a;', 
+									  '    ', normalize-space(specgen:TitlePage/specgen:h1), '&#x0a;',
+									  '    &lt;p&gt;Sample OpenAPI specification, (although somewhat incomplete) derived from SIF locale data model&#x0a;',
+									  '    A complete specification requires:&lt;/p&gt;&lt;ul&gt;&#x0a;',
+                                      '    &lt;li&gt;Responses on POST, PUT and DELETE verbs&lt;/li&gt;&#x0a;',
+									  '    &lt;li&gt;Decide which requests can accept / return single object or object collection&lt;/li&gt;&#x0a;',
+									  '    &lt;li&gt;Decide which SIF Infrastructure API endpoints are to be included&lt;/li&gt;&#x0a;',
+									  '    &lt;/ul&gt;&#x0a;',
 									  '  host: &quot;api.terito.education.govt.nz&quot;&#x0a;',
 									  '  basePath: &quot;v3&quot;&#x0a;')"/>
 
@@ -99,23 +106,17 @@
 			<xsl:with-param name="schemaId">Create</xsl:with-param>
 		</xsl:apply-templates>
 
+		<xsl:text>    post:&#x0a;</xsl:text>
+		<xsl:value-of select="concat('      tags:&#x0a;      - ', $q, @name, $q, '&#x0a;')"/>
+		<xsl:value-of select="concat('      summary: Default operation to create a single ', @name, '&#x0a;')"/>
+		<xsl:apply-templates select="." mode="requestBody">
+			<xsl:with-param name="operationId" select="concat('create', @name)"/>
+			<xsl:with-param name="schemaId">Create</xsl:with-param>
+		</xsl:apply-templates>
+		
 		<xsl:if test="specgen:Key">
 			<xsl:text>  # /////////////////////////////////////////////////////////////&#x0a;</xsl:text>
 			<xsl:value-of select="concat('  /', @name, 's/{', translate(specgen:Key, '@', ''), '}:&#x0a;')"/>
-
-			<xsl:text>    post:&#x0a;</xsl:text>
-			<xsl:value-of select="concat('      tags:&#x0a;      - ', $q, @name, $q, '&#x0a;')"/>
-			<xsl:value-of select="concat('      summary: Default operation to create a single ', @name, '&#x0a;')"/>
-			<xsl:value-of select="concat('      parameters:&#x0a;      - name: ', translate(specgen:Key, '@', ''), '&#x0a;')"/>
-			<xsl:text>        in: path&#x0a;        description: >-&#x0a;          </xsl:text>
-			<xsl:apply-templates select="specgen:Item[specgen:Element eq current()/specgen:Key]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
-			<xsl:text>        required: true&#x0a;</xsl:text>
-			<xsl:text>        schema:&#x0a;</xsl:text>
-			<xsl:text>          type: string&#x0a;</xsl:text>
-			<xsl:apply-templates select="." mode="requestBody">
-				<xsl:with-param name="operationId" select="concat('create', @name)"/>
-				<xsl:with-param name="schemaId">Create</xsl:with-param>
-			</xsl:apply-templates>
 
 			<xsl:text>    put:&#x0a;</xsl:text>
 			<xsl:value-of select="concat('      tags:&#x0a;      - ', $q, @name, $q, '&#x0a;')"/>

@@ -102,9 +102,19 @@
 				<a href="JSON/jsonSchemaUpdate.yaml">(yaml)</a>
 			</dd>
 			<dd>
-				Open API definition <a href="JSON/OpenAPI.json"> (json)</a>
-				<a href="JSON/OpenAPI.yaml">(yaml)</a>
+				Sample Open API definition <a href="JSON/OpenAPI.json"> (json)</a>
+				<a href="JSON/OpenAPI.yaml">(yaml)</a>  
 			</dd>
+			<dd style="font-size: smaller">
+				<br/>
+				<em>Note:</em>
+				<em>The Open API definition presented, is a sample specification, and will need to be augmented:</em><ul>
+				<li><em>Responses for POST, PUT &amp; DELETE verbs must be chosen</em></li>
+				<li><em>Decide which requests can accept / return single object or object collection</em></li>
+				<li><em>Decide which SIF Infrastructure API endpoints are to be included</em></li>
+				</ul>
+			</dd>
+
 		</dl>
 		<p>Please refer to the <a href="errata/">errata</a> for this document, which may include some normative corrections.</p>
 		<p>This document is also available in these non-normative formats: <a href="ImplementationSpecification.zip">ZIP archive</a>, <a href="ImplementationSpecification.pdf">PDF (for printing as a single file)</a>,
