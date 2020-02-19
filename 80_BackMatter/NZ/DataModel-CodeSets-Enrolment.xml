@@ -629,55 +629,77 @@
 		<ID>Language Instruction Level</ID>
 		<Values>
 			<Value>
-				<Code>0</Code>
-				<Text xml:lang="en">Student not involved in Māori or Pacific Medium Education</Text>
-				<Text xml:lang="mi">Ākonga kei ngā Mātauranga Māori, Pasifica hoki</Text>
-			</Value>
-			<Value>
 				<Code>1</Code>
 				<Text xml:lang="en">81-100%</Text>
 				<Text xml:lang="mi">81-100%</Text>
-				<Description>
-					Student is taught in the specified language for more than 20  and up to 25 hrs per week (81-100% of total time). Ākonga i ākona ki tētahi reo mō te 20 tae atu ki te 25 hāora i te wiki (81-100% o te wā katoa).
+				<Description xml:lang="en">
+					Student is taught in the specified language for more than 20  and up to 25 hrs per week (81-100% of total time).
+				</Description>
+				<Description xml:lang="mi">
+					Ākonga i ākona ki tētahi reo mō te 20 tae atu ki te 25 hāora i te wiki (81-100% o te wā katoa).
 				</Description>
 			</Value>
 			<Value>
 				<Code>2</Code>
 				<Text xml:lang="en">51-80%</Text>
 				<Text xml:lang="mi">51-80%</Text>
-				<Description>
-					Student is taught in the specified language for more than 12.5  and up to 20 hrs per week (51-80% of total time). Ākonga i ākona ki tētahi reo mō te 12.5  tae atu ki te 20 hāora i te wiki (51-80% o te wā katoa).
+				<Description xml:lang="en">
+					Student is taught in the specified language for more than 12.5  and up to 20 hrs per week (51-80% of total time).
+				</Description>
+				<Description xml:lang="mi">
+					Ākonga i ākona ki tētahi reo mō te 12.5 tae atu ki te 20 hāora i te wiki (51-80% o te wā katoa).
 				</Description>
 			</Value>
 			<Value>
 				<Code>3</Code>
 				<Text xml:lang="en">31-50%</Text>
 				<Text xml:lang="mi">31-50%</Text>
-				<Description>
-					Student is taught in the specified language for more than 7.5  and up to 12.5 hrs per week (31-50% of total time). Ākonga i ākona ki tētahi reo mō te 7.5  tae atu ki te 12.5 hāora i te wiki (31-50% o te wā katoa).
+				<Description xml:lang="en">
+					Student is taught in the specified language for more than 7.5  and up to 12.5 hrs per week (31-50% of total time).
+				</Description>
+				<Description xml:lang="mi">
+					Ākonga i ākona ki tētahi reo mō te 7.5  tae atu ki te 12.5 hāora i te wiki (31-50% o te wā katoa).
 				</Description>
 			</Value>
 			<Value>
-				<Code>4</Code>
+				<Code>4a</Code>
 				<Text xml:lang="en">12-30%</Text>
 				<Text xml:lang="mi">12-30%</Text>
-				<Description>
-					Student is taught in the specified language for more than 3  and up to 7.5 hrs per week (12-30% of total time). Ākonga i ākona ki tētahi reo mō te 3 tae atu ki te 7.5 hrs i te wiki (12-30% o te wā katoa) 
+				<Description xml:lang="en">
+					Student is taught in the specified language for more than 3 and up to 7.5 hrs per week (12-30% of total time).
+				</Description>
+				<Description xml:lang="mi">
+					Ākonga i ākona ki tētahi reo mō te 3 tae atu ki te 7.5 hāora i te wiki (12-30% o te wā katoa) 
+				</Description>
+			</Value>
+			<Value>
+				<Code>4b</Code>
+				<Text xml:lang="en">3 hours per week</Text>
+				<Text xml:lang="mi">3 hāora i te wiki</Text>
+				<Description xml:lang="en">
+					Student is taught in the specified language for 3hrs per week.
+				</Description>
+				<Description xml:lang="mi">
+					Ākonga i ākona ki tētahi reo mō te 3 hāora i te wiki
 				</Description>
 			</Value>
 			<Value>
 				<Code>5</Code>
-				<Text xml:lang="en">0-11%</Text>
-				<Text xml:lang="mi">0-11%</Text>
-				<Description>
-					Student is taught in the specified language for less than 3 hours per week or as a separate subject (0-11% of total time). Ākonga i ākona ki tētahi reo mō te 3 iti iho rānei i te wiki, hei akoranga kē (0-11% o te wā katoa).
+				<Text xml:lang="en">&lt; 3 hours per week</Text>
+				<Text xml:lang="mi">iti iho 3 hāora i te wiki</Text>
+				<Description xml:lang="en">
+					Student is taught in the specified language for less than 3 hours per week or as a separate subject (0-11% of total time).
+				</Description>
+				<Description xml:lang="mi">
+					Ākonga i ākona ki tētahi reo mō te iti iho 3 hāora i te wiki, hei akoranga kē (0-11% o te wā katoa).
 				</Description>
 			</Value>
 			<Value>
 				<Code>6</Code>
 				<Text xml:lang="en">Taha Māori</Text>
 				<Text xml:lang="mi">Taha Māori</Text>
-				<Description>Student is learning Taha Māori. E ako ana te Akonga i te Taha Māori.</Description>
+				<Description xml:lang="en">Student is learning Taha Māori.</Description>
+				<Description xml:lang="mi">E ako ana te Akonga i te Taha Māori.</Description>
 			</Value>
 		</Values>
 	</CodeSet>	<!-- Language Instruction Level (Te Reo Māori) -->

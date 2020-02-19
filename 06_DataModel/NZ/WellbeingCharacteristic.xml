@@ -118,7 +118,7 @@
       <p>Category of WellbeingCharacteristic.</p>
     </Description>
 		<Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicCategoryType"/>
-  </Item>    <!-- CharacteristicCategory -->
+  </Item>    <!-- Category -->
   
   <Item>
     <Element>SubCategory</Element>
@@ -128,7 +128,7 @@
       <p>Sub category of the WellbeingCharacteristic.</p>
     </Description>
 		<Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicSubCategoryType"/>
-  </Item>    <!-- CharacteristicSubCategory -->
+  </Item>    <!-- SubCategory -->
  
    <Item>
     <Element>SubCategoryDetail</Element>
@@ -138,7 +138,7 @@
       <p>Additional detail about a sub category.</p>
     </Description>
 		<Type name="xs:normalizedString"/>
-  </Item>    <!-- SubCategoryDetail -->
+   </Item>    <!-- SubCategoryDetail -->
 
   <Item>
     <Element>CharacteristicPriority</Element>
@@ -332,7 +332,8 @@
       <StartDate>2017-11-01</StartDate>
       <EndDate>2017-11-10</EndDate>
       <CharacteristicNotes>This Student has a special need.</CharacteristicNotes>
-      <Category>LSN-LIT</Category>
+      <Category>LSN-SOC</Category>
+      <SubCategory>LSN-HYP</SubCategory>
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>

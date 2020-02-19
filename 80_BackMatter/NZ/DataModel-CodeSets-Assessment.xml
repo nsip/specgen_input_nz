@@ -74,6 +74,35 @@
 
 	<CodeSet>
 		<Intro>
+			<p>Standard codes denoting assessment tools that may be used in an assessment task.</p>
+		</Intro>
+		<ID>Assessment Tool Type</ID>
+		<Values>
+			<Value>
+				<Code>EASMATH</Code>
+				<Text>e-asTTle Mathematics</Text>
+			</Value>    <!-- e-asTTle Mathematics -->
+			<Value>
+				<Code>EASREAD</Code>
+				<Text>e-asTTle Reading</Text>
+			</Value>    <!-- e-asTTle Reading -->
+			<Value>
+				<Code>PATCOMP</Code>
+				<Text>PAT: Reading Comprehension</Text>
+			</Value>    <!-- PAT Reading Comprehension -->
+			<Value>
+				<Code>PATMATH</Code>
+				<Text>PAT: Mathematics</Text>
+			</Value>    <!-- PAT Mathematics -->
+			<Value>
+				<Code>STARREA</Code>
+				<Text>Star Reading</Text>
+			</Value>    <!-- STAR Reading -->
+		</Values>
+	</CodeSet>    <!-- Assessment Tool Type -->
+
+	<CodeSet>
+		<Intro>
 			<p>Code set denoting the type of assessment evaluation taking place, e.g. formative or summative.</p>
 		</Intro>
 		<ID>Assessment Evaluation Type</ID>

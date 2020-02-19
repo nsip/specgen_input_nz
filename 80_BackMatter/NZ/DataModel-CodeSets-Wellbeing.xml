@@ -67,6 +67,198 @@
 	<!-- Wellbeing Characteristic classification codes -->
 	<CodeSet>
 		<Intro>
+			<p>Code set denoting codes that provide an additional layer of detail around a wellbeing characteristic sub category. For examples
+			 for the learner’s support need sub category, e.g. if the support need of ‘Vision’ is selected for the user, the sub needs
+			 ‘Low Vision’ and ‘Blind’ are available to further define the type of vision issue the learner has. Not all 
+			 support needs have sub needs.</p>
+		</Intro>
+		<ID>Wellbeing Characteristic Sub Sub Category</ID>
+		<Values>
+			<Value>
+			  <Code>LSN-ATT</Code>
+			  <Text xml:lang="en">Attending and focusing</Text>
+			</Value>
+			<Value>
+			  <Code>LSN-BLI</Code>
+			  <Text xml:lang="en">Blind</Text>
+			</Value>
+			<Value>
+			  <Code>LSN-COM</Code>
+			  <Text xml:lang="en">Comprehension</Text>
+			</Value>
+			<Value>
+			  <Code>LSN-DEA</Code>
+			  <Text xml:lang="en">Deaf</Text>
+			</Value>
+			<Value>
+			  <Code>LSN-EAT</Code>
+			  <Text xml:lang="en">Eating</Text>
+			</Value>
+			<Value>
+			  <Code>LSN-EXP</Code>
+			  <Text xml:lang="en">Expressing emotion</Text>
+			</Value>
+			<Value>
+				<Code>LSN-FIN</Code>
+				<Text xml:lang="en">Fine</Text>
+			</Value>
+			<Value>
+				<Code>LSN-FOL</Code>
+				<Text xml:lang="en">Following instructions</Text>
+			</Value>
+			<Value>
+				<Code>LSN-GRO</Code>
+				<Text xml:lang="en">Gross</Text>
+			</Value>
+			<Value>
+				<Code>LSN-HAR</Code>
+				<Text xml:lang="en">Hard of hearing</Text>
+			</Value>
+			<Value>
+				<Code>LSN-HYA</Code>
+				<Text xml:lang="en">Hyperactive</Text>
+			</Value>
+			<Value>
+				<Code>LSN-HYO</Code>
+				<Text xml:lang="en">Hypoactive</Text>
+			</Value>
+			<Value>
+				<Code>LSN-INV</Code>
+				<Text xml:lang="en">Inventing and experimenting</Text>
+			</Value>
+			<Value>
+				<Code>LSN-LEM</Code>
+				<Text xml:lang="en">Low energy and motivation</Text>
+			</Value>
+			<Value>
+				<Code>LSN-LOW</Code>
+				<Text xml:lang="en">Low mood/Signs of depression</Text>
+			</Value>
+			<Value>
+				<Code>LSN-LVI</Code>
+				<Text xml:lang="en">Low vision</Text>
+			</Value>
+			<Value>
+				<Code>LSN-MAE</Code>
+				<Text xml:lang="en">Managing anxiety (externalised response)</Text>
+			</Value>
+			<Value>
+				<Code>LSN-MAK</Code>
+				<Text xml:lang="en">Making choices and decisions</Text>
+			</Value>
+			<Value>
+				<Code>LSN-MAN</Code>
+				<Text xml:lang="en">Managing emotions/self control</Text>
+			</Value>
+			<Value>
+				<Code>LSN-MAX</Code>
+				<Text xml:lang="en">Managing anxiety (internalised response)</Text>
+			</Value>
+			<Value>
+				<Code>LSN-MEM</Code>
+				<Text xml:lang="en">Memory</Text>
+			</Value>
+			<Value>
+				<Code>LSN-MPR</Code>
+				<Text xml:lang="en">Managing peer relationships</Text>
+			</Value>
+			<Value>
+				<Code>LSN-NUM</Code>
+				<Text xml:lang="en">Number sense</Text>
+			</Value>
+			<Value>
+				<Code>LSN-ONN</Code>
+				<Text xml:lang="en">Other numeracy needs</Text>
+			</Value>
+			<Value>
+				<Code>LSN-OPP</Code>
+				<Text xml:lang="en">Oppositional</Text>
+			</Value>
+			<Value>
+				<Code>LSN-ORN</Code>
+				<Text xml:lang="en">Other reading needs</Text>
+			</Value>
+			<Value>
+				<Code>LSN-OWN</Code>
+				<Text xml:lang="en">Other writing needs</Text>
+			</Value>
+			<Value>
+				<Code>LSN-PER</Code>
+				<Text xml:lang="en">Perservering</Text>
+			</Value>
+			<Value>
+				<Code>LSN-PHO</Code>
+				<Text xml:lang="en">Phonological awareness</Text>
+			</Value>
+			<Value>
+				<Code>LSN-PHY</Code>
+				<Text xml:lang="en">Physical aggression</Text>
+			</Value>
+			<Value>
+				<Code>LSN-PLA</Code>
+				<Text xml:lang="en">Planning</Text>
+			</Value>
+			<Value>
+				<Code>LSN-PLY</Code>
+				<Text xml:lang="en">Playing and imagining</Text>
+			</Value>
+			<Value>
+				<Code>LSN-PRO</Code>
+				<Text xml:lang="en">Processing information</Text>
+			</Value>
+			<Value>
+				<Code>LSN-PSP</Code>
+				<Text xml:lang="en">Personal space</Text>
+			</Value>
+			<Value>
+				<Code>LSN-REC</Code>
+				<Text xml:lang="en">Recognising emotion</Text>
+			</Value>
+			<Value>
+			  <Code>LSN-RES</Code>
+			  <Text xml:lang="en">Resilience</Text>
+			</Value>
+			<Value>
+			  <Code>LSN-RPS</Code>
+			  <Text xml:lang="en">Reasoning and problem-solving</Text>
+			</Value>
+			<Value>
+			  <Code>LSN-RUN</Code>
+			  <Text xml:lang="en">Running away</Text>
+			</Value>
+			<Value>
+			  <Code>LSN-SEL</Code>
+			  <Text xml:lang="en">Self perception as a learner</Text>
+			</Value>
+			<Value>
+			  <Code>LSN-SEQ</Code>
+			  <Text xml:lang="en">Sequencing</Text>
+			</Value>
+			<Value>
+			  <Code>LSN-SHA</Code>
+			  <Text xml:lang="en">Self-harm</Text>
+			</Value>
+			<Value>
+			  <Code>LSN-SHO</Code>
+			  <Text xml:lang="en">Showing empathy</Text>
+			</Value>
+			<Value>
+			  <Code>LSN-SIW</Code>
+			  <Text xml:lang="en">Socially isolated/withdrawn</Text>
+			</Value>
+			<Value>
+			  <Code>LSN-TRA</Code>
+			  <Text xml:lang="en">Transcription</Text>
+			</Value>
+			<Value>
+			  <Code>LSN-VER</Code>
+			  <Text xml:lang="en">Verbal aggression</Text>
+			</Value>
+		</Values>		  
+	</CodeSet>    <!-- Wellbeing Characteristic Sub Sub Category -->
+
+	<CodeSet>
+		<Intro>
 			<p>Standard codes denoting the third level category of the Wellbeing Characteristic.</p>
 		</Intro>
 		<ID>Wellbeing Characteristic Sub Category</ID>
@@ -96,108 +288,120 @@
 			  <Text xml:lang="en">Gluten-free</Text>
 			</Value>
 			<Value>
-				<Code>LSN-ALT</Code>
-				<Text xml:lang="en">Attending to learning tasks</Text>
+				<Code>LSN-ACT</Code>
+				<Text xml:lang="en">Activity</Text>
 			</Value>
 			<Value>
-				<Code>LSN-CCO</Code>
-				<Text xml:lang="en">Communicating confidently</Text>
+				<Code>LSN-ADV</Code>
+				<Text xml:lang="en">Advanced learner | gifted</Text>
 			</Value>
 			<Value>
-				<Code>LSN-CCV</Code>
-				<Text xml:lang="en">Connecting with cultural values and identities</Text>
+				<Code>LSN-ATT</Code>
+				<Text xml:lang="en">Attendance and Engagement</Text>
 			</Value>
 			<Value>
-				<Code>LSN-CPO</Code>
-				<Text xml:lang="en">Connecting positively with others</Text>
+				<Code>LSN-CHR</Code>
+				<Text xml:lang="en">Chronic Pain</Text>
 			</Value>
 			<Value>
-				<Code>LSN-DSA</Code>
-				<Text xml:lang="en">Developing strengths, interests and specific abilities or gifts</Text>
+				<Code>LSN-CUL</Code>
+				<Text xml:lang="en">Cultural and linguistic diversity needs</Text>
 			</Value>
 			<Value>
 				<Code>LSN-EMO</Code>
-				<Text xml:lang="en">Energy and motivation</Text>
+				<Text xml:lang="en">Emotional regulation</Text>
 			</Value>
 			<Value>
-				<Code>LSN-FCF</Code>
-				<Text xml:lang="en">Feeling cared for</Text>
+				<Code>LSN-ENG</Code>
+				<Text xml:lang="en">English language learner/emerging bilingual</Text>
 			</Value>
 			<Value>
-				<Code>LSN-FCO</Code>
-				<Text xml:lang="en">Feeling confident</Text>
+				<Code>LSN-EXT</Code>
+				<Text xml:lang="en">Externalised behavioural responses</Text>
 			</Value>
 			<Value>
-				<Code>LSN-FIG</Code>
-				<Text xml:lang="en">Following instructions and guidelines</Text>
+				<Code>LSN-FLU</Code>
+				<Text xml:lang="en">Fluency</Text>
 			</Value>
 			<Value>
-				<Code>LSN-LCP</Code>
-				<Text xml:lang="en">Learning collaboratively with peers</Text>
+				<Code>LSN-GEN</Code>
+				<Text xml:lang="en">Gender Identity needs</Text>
 			</Value>
 			<Value>
-				<Code>LSN-LIS</Code>
-				<Text xml:lang="en">Listening</Text>
+				<Code>LSN-GLC</Code>
+				<Text xml:lang="en">General Learning Challenges</Text>
 			</Value>
 			<Value>
-				<Code>LSN-MRK</Code>
-				<Text xml:lang="en">Managing risks and keeping safe</Text>
+				<Code>LSN-HEA</Code>
+				<Text xml:lang="en">Hearing</Text>
 			</Value>
 			<Value>
-				<Code>LSN-PSO</Code>
-				<Text xml:lang="en">Problem solving</Text>
+				<Code>LSN-HYP</Code>
+				<Text xml:lang="en">Hyperfocus</Text>
+			</Value>
+			<Value>
+				<Code>LSN-INT</Code>
+				<Text xml:lang="en">Internalised behavioural responses</Text>
+			</Value>
+			<Value>
+				<Code>LSN-MED</Code>
+				<Text xml:lang="en">Medical</Text>
+			</Value>
+			<Value>
+				<Code>LSN-MOB</Code>
+				<Text xml:lang="en">Mobility - accessibility</Text>
+			</Value>
+			<Value>
+				<Code>LSN-MOT</Code>
+				<Text xml:lang="en">Motor skills</Text>
+			</Value>
+			<Value>
+				<Code>LSN-NUM</Code>
+				<Text xml:lang="en">Numeracy</Text>
+			</Value>
+			<Value>
+				<Code>LSN-NZS</Code>
+				<Text xml:lang="en">NZ Sign Language</Text>
 			</Value>
 			<Value>
 				<Code>LSN-REA</Code>
 				<Text xml:lang="en">Reading</Text>
 			</Value>
 			<Value>
-				<Code>LSN-REE</Code>
-				<Text xml:lang="en">Recognising and expressing emotions</Text>
+				<Code>LSN-SEL</Code>
+				<Text xml:lang="en">Self-care (e.e. toileting)</Text>
 			</Value>
 			<Value>
-				<Code>LSN-RPR</Code>
-				<Text xml:lang="en">Recognising patterns and relationships</Text>
+				<Code>LSN-SEN</Code>
+				<Text xml:lang="en">Sensory needs</Text>
+			</Value>
+			<Value>
+				<Code>LSN-SLA</Code>
+				<Text xml:lang="en">Social use of language</Text>
+			</Value>
+			<Value>
+				<Code>LSN-SOC</Code>
+				<Text xml:lang="en">Social awareness</Text>
 			</Value>
 			<Value>
 				<Code>LSN-SPE</Code>
-				<Text xml:lang="en">Spelling</Text>
+				<Text xml:lang="en">Speech</Text>
 			</Value>
 			<Value>
-				<Code>LSN-SRE</Code>
-				<Text xml:lang="en">Showing resilience</Text>
+				<Code>LSN-SUB</Code>
+				<Text xml:lang="en">Substance abuse</Text>
 			</Value>
 			<Value>
-				<Code>LSN-TAC</Code>
-				<Text xml:lang="en">Transition and change</Text>
+				<Code>LSN-UND</Code>
+				<Text xml:lang="en">Understanding language</Text>
 			</Value>
 			<Value>
-				<Code>LSN-ULA</Code>
+				<Code>LSN-USI</Code>
 				<Text xml:lang="en">Using language</Text>
 			</Value>
 			<Value>
-				<Code>LSN-ULB</Code>
-				<Text xml:lang="en">Understanding language, body language and tone</Text>
-			</Value>
-			<Value>
-				<Code>LSN-UMS</Code>
-				<Text xml:lang="en">Understanding mathematical symbols</Text>
-			</Value>
-			<Value>
-				<Code>LSN-UNU</Code>
-				<Text xml:lang="en">Understanding numbers</Text>
-			</Value>
-			<Value>
-				<Code>LSN-USR</Code>
-				<Text xml:lang="en">Using spatial reasoning</Text>
-			</Value>
-			<Value>
-				<Code>LSN-UVT</Code>
-				<Text xml:lang="en">Understanding visual texts</Text>
-			</Value>
-			<Value>
-				<Code>LSN-UWT</Code>
-				<Text xml:lang="en">Understanding written texts</Text>
+				<Code>LSN-VIS</Code>
+				<Text xml:lang="en">Vision</Text>
 			</Value>
 			<Value>
 				<Code>LSN-WRI</Code>
@@ -543,8 +747,7 @@
 			  <Code>MCM-26</Code>
 			  <Text xml:lang="en">Wolf-Hirschhorn Syndrome</Text>
 			</Value>
-		</Values>
-		  
+		</Values>  
 	</CodeSet>    <!-- Wellbeing Characteristic Sub Category -->
 
 	<CodeSet>
@@ -553,149 +756,142 @@
 		</Intro>
 		<ID>Wellbeing Characteristic Category</ID>
 		<Values>
-			<Value><Code>MAO</Code>
-			<Text xml:lang="en">Allergies - other</Text>
-		</Value>
-		<Value>
-		  <Code>DIET</Code>
-		  <Text xml:lang="en">Dietary Preferences</Text>
-		</Value>
-		<Value>
-			<Code>LSN-DEV</Code>
-			<Text xml:lang="en">Developing strengths, interests and specific abilities or gifts</Text>
-		</Value>
-		<Value>
-			<Code>LSN-LIT</Code>
-			<Text xml:lang="en">Literacy</Text>
-		</Value>
-		<Value>
-			<Code>LSN-MAN</Code>
-			<Text xml:lang="en">Managing self</Text>
-		</Value>
-		<Value>
-			<Code>LSN-NUM</Code>
-			<Text xml:lang="en">Numeracy</Text>
-		</Value>
-		<Value>
-			<Code>LSN-COM</Code>
-			<Text xml:lang="en">Communication</Text>
-		</Value>
-		<Value>
-			<Code>LSN-PRO</Code>
-			<Text xml:lang="en">Problem solving</Text>
-		</Value>
-		<Value>
-			<Code>LSN-REL</Code>
-			<Text xml:lang="en">Relating to others</Text>
-		</Value>
-		<Value>
-		  <Code>MAIM</Code>
-		  <Text xml:lang="en">Auto-immune/Immune Disorders</Text>
-		</Value>
-		<Value>
-		  <Code>MRD</Code>
-		  <Text xml:lang="en">Respiratory Disorder</Text>
-		</Value>
-		<Value>
-		  <Code>MB</Code>
-		  <Text xml:lang="en">Blood disorder</Text>
-		</Value>
-		<Value>
-		  <Code>MMD</Code>
-		  <Text xml:lang="en">Heart Disease/ Disorder</Text>
-		</Value>
-		<Value>
-		  <Code>MMS</Code>
-		  <Text xml:lang="en">Musculo – skeletal conditions</Text>
-		</Value>
-		<Value>
-		  <Code>MEM</Code>
-		  <Text xml:lang="en">Endocrine and Metabolic Disorders</Text>
-		</Value>
-		<Value>
-		  <Code>MC</Code>
-		  <Text xml:lang="en">Childhood cancer</Text>
-		</Value>
-		<Value>
-		  <Code>MAA</Code>
-		  <Text xml:lang="en">Allergy – Anaphylaxis</Text>
-		</Value>
-		<Value>
-		  <Code>MH</Code>
-		  <Text xml:lang="en">Mental and behavioural disorders</Text>
-		</Value>
-		<Value>
-		  <Code>MN</Code>
-		  <Text xml:lang="en">Diseases/conditions of the nervous system</Text>
-		</Value>
-		<Value>
-		  <Code>MS</Code>
-		  <Text xml:lang="en">Seizure disorders</Text>
-		</Value>
-		<Value>
-		  <Code>MCM</Code>
-		  <Text xml:lang="en">Congenital malformations, deformations and chromosomal abnormalities</Text>
-		</Value>
-		<Value>
-		  <Code>MI</Code>
-		  <Text xml:lang="en">Infectious Diseases</Text>
-		</Value>
-		<Value>
-		  <Code>MGI</Code>
-		  <Text xml:lang="en">Gastro Intestinal/Urinary conditions</Text>
-		</Value>
-		<Value>
-		  <Code>MND</Code>
-		  <Text xml:lang="en">Neuro/Developmental Disorders</Text>
-		</Value>
-		<Value>
-		  <Code>MO</Code>
-		  <Text xml:lang="en">Oral/Phalangeal Disorders</Text>
-		</Value>
-		<Value>
-		  <Code>MD</Code>
-		  <Text xml:lang="en">Deaf and Hard of Hearing</Text>
-		</Value>
-		<Value>
-		  <Code>MOP</Code>
-		  <Text xml:lang="en">Optical/ Vision Disorder</Text>
-		</Value>
-		<Value>
-		  <Code>M-OTHER</Code>
-		  <Text xml:lang="en">Medical Other</Text>
-		</Value>
-		<Value>
-		  <Code>D-OTHER</Code>
-		  <Text xml:lang="en">Disability Other</Text>
-		</Value>
-		<Value>
-		  <Code>S-OTHER</Code>
-		  <Text xml:lang="en">Special Needs Other</Text>
-		</Value>
-		<Value>
-		  <Code>OTHER</Code>
-		  <Text xml:lang="en">Other</Text>
-		</Value>
-		<Value>
-		  <Code>MCD-AST</Code>
-		  <Text xml:lang="en">Asthma</Text>
-		</Value>
-		<Value>
-		  <Code>MCD-DIA</Code>
-		  <Text xml:lang="en">Diabetes</Text>
-		</Value>
-		<Value>
-		  <Code>MCD-EPI</Code>
-		  <Text xml:lang="en">Epilepsy</Text>
-		</Value>
-		<Value>
-		  <Code>MCD-OTH</Code>
-		  <Text xml:lang="en">Other</Text>
-		</Value>
-		<Value>
-		  <Code>MCD-REG</Code>
-		  <Text xml:lang="en">Regular medication</Text>
-		</Value>
+			<Value>
+				<Code>MAO</Code>
+				<Text xml:lang="en">Allergies - other</Text>
+			</Value>
+			<Value>
+				<Code>DIET</Code>
+				<Text xml:lang="en">Dietary Preferences</Text>
+			</Value>
+			<Value>
+				<Code>LSN-COG</Code>
+				<Text xml:lang="en">Cognition and Learning</Text>
+			</Value>
+			<Value>
+				<Code>LSN-PHY</Code>
+				<Text xml:lang="en">Physical</Text>
+			</Value>
+			<Value>
+				<Code>LSN-SEN</Code>
+				<Text xml:lang="en">Sensory Needs</Text>
+			</Value>
+			<Value>
+				<Code>LSN-SOC</Code>
+				<Text xml:lang="en">Social, Emotional and Behavioural</Text>
+			</Value>
+			<Value>
+				<Code>LSN-SPE</Code>
+				<Text xml:lang="en">Speech, Language and Communication</Text>
+			</Value>
+			<Value>
+				<Code>MAIM</Code>
+				<Text xml:lang="en">Auto-immune/Immune Disorders</Text>
+			</Value>
+			<Value>
+				<Code>MRD</Code>
+				<Text xml:lang="en">Respiratory Disorder</Text>
+			</Value>
+			<Value>
+				<Code>MB</Code>
+				<Text xml:lang="en">Blood disorder</Text>
+			</Value>
+			<Value>
+				<Code>MMD</Code>
+				<Text xml:lang="en">Heart Disease/ Disorder</Text>
+			</Value>
+			<Value>
+				<Code>MMS</Code>
+				<Text xml:lang="en">Musculo – skeletal conditions</Text>
+			</Value>
+			<Value>
+				<Code>MEM</Code>
+				<Text xml:lang="en">Endocrine and Metabolic Disorders</Text>
+			</Value>
+			<Value>
+				<Code>MC</Code>
+				<Text xml:lang="en">Childhood cancer</Text>
+			</Value>
+			<Value>
+				<Code>MAA</Code>
+				<Text xml:lang="en">Allergy – Anaphylaxis</Text>
+			</Value>
+			<Value>
+				<Code>MH</Code>
+				<Text xml:lang="en">Mental and behavioural disorders</Text>
+			</Value>
+			<Value>
+				<Code>MN</Code>
+				<Text xml:lang="en">Diseases/conditions of the nervous system</Text>
+			</Value>
+			<Value>
+				<Code>MS</Code>
+				<Text xml:lang="en">Seizure disorders</Text>
+			</Value>
+			<Value>
+				<Code>MCM</Code>
+				<Text xml:lang="en">Congenital malformations, deformations and chromosomal abnormalities</Text>
+			</Value>
+			<Value>
+				<Code>MI</Code>
+				<Text xml:lang="en">Infectious Diseases</Text>
+			</Value>
+			<Value>
+				<Code>MGI</Code>
+				<Text xml:lang="en">Gastro Intestinal/Urinary conditions</Text>
+			</Value>
+				<Value>
+				<Code>MND</Code>
+				<Text xml:lang="en">Neuro/Developmental Disorders</Text>
+			</Value>
+			<Value>
+				<Code>MO</Code>
+				<Text xml:lang="en">Oral/Phalangeal Disorders</Text>
+			</Value>
+			<Value>
+				<Code>MD</Code>
+				<Text xml:lang="en">Deaf and Hard of Hearing</Text>
+			</Value>
+			<Value>
+				<Code>MOP</Code>
+				<Text xml:lang="en">Optical/ Vision Disorder</Text>
+			</Value>
+			<Value>
+				<Code>M-OTHER</Code>
+				<Text xml:lang="en">Medical Other</Text>
+			</Value>
+			<Value>
+				<Code>D-OTHER</Code>
+				<Text xml:lang="en">Disability Other</Text>
+			</Value>
+			<Value>
+				<Code>S-OTHER</Code>
+				<Text xml:lang="en">Special Needs Other</Text>
+			</Value>
+			<Value>
+				<Code>OTHER</Code>
+				<Text xml:lang="en">Other</Text>
+			</Value>
+			<Value>
+				<Code>MCD-AST</Code>
+				<Text xml:lang="en">Asthma</Text>
+			</Value>
+			<Value>
+				<Code>MCD-DIA</Code>
+				<Text xml:lang="en">Diabetes</Text>
+			</Value>
+			<Value>
+				<Code>MCD-EPI</Code>
+				<Text xml:lang="en">Epilepsy</Text>
+			</Value>
+			<Value>
+				<Code>MCD-OTH</Code>
+				<Text xml:lang="en">Other</Text>
+			</Value>
+			<Value>
+				<Code>MCD-REG</Code>
+				<Text xml:lang="en">Regular medication</Text>
+			</Value>
 		</Values>
 	</CodeSet>	  <!-- Wellbeing Characteristic Category -->
 
@@ -707,12 +903,12 @@
 		<ID>Wellbeing Characteristic Class</ID>
 		<Values>
 			<Value>
-			  <Code>OTH</Code>
-			  <Text xml:lang="en">Other</Text>
+				<Code>OTH</Code>
+				<Text xml:lang="en">Other</Text>
 			</Value>
 			<Value>
-			  <Code>MDC</Code>
-			  <Text xml:lang="en">Medical</Text>
+				<Code>MDC</Code>
+				<Text xml:lang="en">Medical</Text>
 			</Value>
 			<Value>
 				<Code>LSN</Code>
@@ -720,12 +916,12 @@
 				<Text xml:lang="mi">Hiahia Tautoko Akoranga</Text>
 			</Value>
 			<Value>
-			  <Code>ALG</Code>
-			  <Text xml:lang="en">Allergy</Text>
+				<Code>ALG</Code>
+				<Text xml:lang="en">Allergy</Text>
 			</Value>
 			<Value>
-			  <Code>DPR</Code>
-			  <Text xml:lang="en">Dietary Preference</Text>
+				<Code>DPR</Code>
+				<Text xml:lang="en">Dietary Preference</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Wellbeing Characteristic Class -->
@@ -2039,8 +2235,7 @@
 			<Value>
 				<Code>ACU</Code>
 				<Text>Curriculum</Text>
-				<Description>Links to Adaptation for access Response Type.
-</Description>
+				<Description>Links to Adaptation for access Response Type.</Description>
 			</Value>
 			<Value>
 				<Code>ASC</Code>

@@ -275,7 +275,7 @@
 					<LanguageOfInstructionList>
 						<Language json:force-array="true">
 							<Code>NZS01112</Code>
-							<Level json:force-string="true">0</Level>
+							<Level json:force-string="true">5</Level>
 						</Language>
 					</LanguageOfInstructionList>
 					<SubjectChoiceList>
