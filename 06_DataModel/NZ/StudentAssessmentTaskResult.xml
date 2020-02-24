@@ -38,18 +38,37 @@
   </Item>    <!-- StudentAssessmentTaskResultLocalId -->
 
   <Item>
+    <Element>AssessmentTask</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Reference to the AssessmentTask the student was assessed against and the result is for.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"/>
+  </Item>    <!-- AssessmentTask -->
+
+  <Item>
     <Element>StudentAssessmentTask</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The StudentAssessmentTask data object that the student assessment result belongs to. A student may 
-      make more than one attempt at an AssessmentTask, hence the possibility of multiple StudentAssessment
-      and matching StudentAssessmentTaskResult entities.</p>
-      <p>A StudentAssessmentTaskResult can exist in isolation; without a matching StudentAssessmentTask or AssessmentTask, 
-      in which case the result is merely an after-the-fact record of the Student's result</p>
+      <p>Reference to the StudentAssessmentTask data object that the assessment result belongs to.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"/>
-  </Item>    <!-- AssessmentTask -->
+  </Item>    <!-- StudentAssessmentTask -->
+
+  <Item>
+    <Element>Student</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the student held in the StudentPersonal
+         data object whose assessment task result this is.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
+  </Item>    <!-- Student -->
+
+  <!-- Fields de-normalised from the AssesmentTask etc. -->
   <Item>
     <Element>AssessmentType</Element>
     <Characteristics>O</Characteristics>
@@ -69,17 +88,24 @@
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentMethodologyType"/>
   </Item>    <!-- AssessmentMethodologyType -->
-
   <Item>
-    <Element>Student</Element>
-    <Characteristics>M</Characteristics>
+    <Element>Status</Element>
+    <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Generic object reference to the student held in the StudentPersonal
-         data object whose assessment task result this is.</p>
+      <p>The status of the assessment, e.g. Marked, Moderated.</p>
     </Description>
-    <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
-  </Item>    <!-- Student -->
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentStatusType"/>
+  </Item>    <!-- Status -->
+  <Item>
+    <Element>PointsPossible</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The points possible on the assignment.</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>    <!-- PointsPossible -->
 
   <!--  Providers & Markers involved in setting the Assessment Task (and result) -->
   <Item>
@@ -106,19 +132,19 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The ProviderCourse that this assessment task was assigned as part of.</p>
+      <p>Reference to the ProviderCourse that this assessment task belongs to.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"/>
   </Item>    <!-- ProviderCourse -->
   <Item>
-    <Element>LearningStandard</Element>
+    <Element>LearningStandardList</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The LearningStandard that the student was assessed against.</p>
+      <p>A list of references to the LearningStandards the assessment task result is related to.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"/>
-  </Item>    <!-- LearningStandard -->  
+    <Type ref="CommonTypes" name="LearningStandardListType"/>
+  </Item>    <!-- LearningStandardList -->  
   <Item>
     <Element>SubjectAreaList</Element>
     <Characteristics>O</Characteristics>
@@ -129,14 +155,18 @@
     <Type ref="CommonTypes" name="SubjectAreaListType"></Type>
   </Item>    <!-- SubjectAreaList -->
   <Item>
-    <Element>StudentYearLevel</Element>
+    <Element>AssessedAtYearLevel</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The Year Level of the student when they were assessed by this Assessment Task. May only contain the values 1 through to 13 inclusive.</p>
+      <p>Year Level of the Assessment Task the student is being assessed against. May only contain the values 1 through to 13 inclusive.</p>
     </Description>
     <Type name="xs:int"/>
-  </Item>    <!-- StudentYearLevel -->
+    <Facets>
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="13"/>
+    </Facets>
+  </Item>    <!-- AssessedAtYearLevel -->
   <Item>
     <Element>Curriculum</Element>
     <Characteristics>O</Characteristics>
@@ -151,10 +181,21 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The type of assessment tool used for the assessment task.</p>
+      <p>The type of assessment tool used for the assessment task. Both the original free text value sent by the SMS vendors
+       and the value it is mapped to in this code set are held. This holds the original free text value.</p>
     </Description>
     <Type name="xs:normalizedString"/>
   </Item>    <!-- AssessmentToolTypeName -->
+  <Item>
+    <Element>AssessmentToolUsed</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The type of assessment tool used for the assessment task. Both the original free text value sent by the SMS vendors
+       and the value it is mapped to in this code set are held.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentToolTypeType"/>
+  </Item>    <!-- AssessmentTool -->  
   <Item>
     <Element>Timeframe</Element>
     <Characteristics>O</Characteristics>
@@ -165,14 +206,14 @@
     <Type ref="CodeSets" name="NZCodeSetsAssessmentTimeframeType"/>
   </Item>    <!-- Timeframe -->
   <Item>
-    <Element>AchievementAttempt</Element>
+    <Element>AssessmentAttempt</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The attempt number the student is making to pass this assessment, e.g. is it their first or second attempt.</p>
+      <p>The attempt number the student is making to pass this assessment, e.g. is it their first, second attempt.</p>
     </Description>
     <Type name="xs:int"/>
-  </Item>    <!-- AchievementAttempt -->
+  </Item>    <!-- AssessmentAttempt -->
   <Item>
     <Element>EvaluationType</Element>
     <Characteristics>O</Characteristics>
@@ -199,14 +240,14 @@
     <Type name="xs:date"></Type>
   </Item>    <!-- DateMarked -->
   <Item>
-    <Element>DateAssessed</Element>
+    <Element>DateTimeAssessed</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Date the student was asssessed against this assessment.</p>
+      <p>The date and time the student was assessed against the assessment task.</p>
     </Description>
-    <Type name="xs:date"></Type>
-  </Item>    <!-- DateAssessed -->
+    <Type name="xs:dateTime"></Type>
+  </Item>    <!-- DateTimeAssessed -->
   <Item>
     <Element>DateStudentNotified</Element>
     <Characteristics>O</Characteristics>
@@ -254,22 +295,6 @@
     <Type ref="CommonTypes" name="AssessmentResultScoreListType"></Type>
   </Item>    <!-- ResultScoreList -->
   <Item>
-    <Element>FinalResultCode</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>The final result that was given to the student for this assessment task. If the result is for an NZQA or International Baccalaureate then the FinalResultCode using the enumeration NZCodeSetsAssessmentResultType must be used.</Description>
-    <Type ref="CodeSets" name="NZCodeSetsAssessmentResultType"/>
-  </Item>    <!-- FinalResultCode -->
-  <Item>
-    <Element>FinalResultValue</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The final result that was given to the student for this assessment task. If the result is for an NZQA or International Baccalaureate then the FinalResultCode using the enumeration NZCodeSetsAssessmentResultType must be used instead.</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- FinalResultValue -->
-  <Item>
     <Element>EffortComment</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -310,11 +335,11 @@
   <xhtml:Example xmlns="" name="Student Assessment Task Result - PAT Example">
       <StudentAssessmentTaskResult>
         <StudentAssessmentTaskResultRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskResultRefId>
-        <AssessmentType>INT</AssessmentType>
-        <AssessmentMethodology>P</AssessmentMethodology>
         <Student>
           <RefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</RefId>
         </Student>
+        <AssessmentType>INT</AssessmentType>
+        <AssessmentMethodology>P</AssessmentMethodology>
         <ProviderInvolvedList>
           <ProviderInvolved>
             <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
@@ -327,7 +352,7 @@
         <Curriculum>NZC</Curriculum>
         <AssessmentToolTypeName>PAT</AssessmentToolTypeName>
         <EvaluationType>F</EvaluationType>
-        <DateAssessed>2018-11-21</DateAssessed>
+        <DateTimeAssessed>2018-11-21T15:34:22</DateTimeAssessed>
         <ResultScoreList>
           <ResultScore>
             <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
@@ -363,11 +388,11 @@
   <xhtml:Example xmlns="" name="Student Assessment Task Result - STAR Example">
     <StudentAssessmentTaskResult>
       <StudentAssessmentTaskResultRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskResultRefId>
-      <AssessmentType>INT</AssessmentType>
-      <AssessmentMethodology>P</AssessmentMethodology>
       <Student>
         <RefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</RefId>
       </Student>
+      <AssessmentType>INT</AssessmentType>
+      <AssessmentMethodology>P</AssessmentMethodology>
       <ProviderInvolvedList>
         <ProviderInvolved>
           <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
@@ -380,7 +405,7 @@
       <Curriculum>NZC</Curriculum>
       <AssessmentToolTypeName>STAR</AssessmentToolTypeName>
       <EvaluationType>F</EvaluationType>
-      <DateAssessed>2018-11-01</DateAssessed>
+      <DateTimeAssessed>2018-11-01T15:34:22</DateTimeAssessed>
       <ResultScoreList>
         <ResultScore>
           <Competency>SubTest1</Competency>
@@ -433,11 +458,11 @@
   <xhtml:Example xmlns="" name="Student Assessment Task Result - asTTle Example">
     <StudentAssessmentTaskResult>
       <StudentAssessmentTaskResultRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskResultRefId>
-      <AssessmentType>INT</AssessmentType>
-      <AssessmentMethodology>P</AssessmentMethodology>
       <Student>
         <RefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</RefId>
       </Student>
+      <AssessmentType>INT</AssessmentType>
+      <AssessmentMethodology>P</AssessmentMethodology>
       <ProviderInvolvedList>
         <ProviderInvolved>
           <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
@@ -450,7 +475,7 @@
       <Curriculum>NZC</Curriculum>
       <AssessmentToolTypeName>e-asTTle</AssessmentToolTypeName>
       <EvaluationType>F</EvaluationType>
-      <DateAssessed>2018-11-01</DateAssessed>
+      <DateTimeAssessed>2018-11-01T15:34:22</DateTimeAssessed>
       <ResultScoreList>
         <ResultScore>
           <Competency>Overall</Competency>
@@ -486,11 +511,11 @@
   <xhtml:Example xmlns="" name="Student Assessment Task Result - IKAN Example">
     <StudentAssessmentTaskResult>
       <StudentAssessmentTaskResultRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskResultRefId>
-      <AssessmentType>INT</AssessmentType>
-      <AssessmentMethodology>P</AssessmentMethodology>
       <Student>
         <RefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</RefId>
       </Student>
+      <AssessmentType>INT</AssessmentType>
+      <AssessmentMethodology>P</AssessmentMethodology>
       <ProviderInvolvedList>
         <ProviderInvolved>
           <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
@@ -503,7 +528,7 @@
       <Curriculum>NZC</Curriculum>
       <AssessmentToolTypeName>IKAN</AssessmentToolTypeName>
       <EvaluationType>F</EvaluationType>
-      <DateAssessed>2018-11-01</DateAssessed>
+      <DateTimeAssessed>2018-11-01T15:34:22</DateTimeAssessed>
       <ResultScoreList>
         <ResultScore>
           <Competency>Number Sequence and Order</Competency>

@@ -29,6 +29,7 @@
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>    <!-- AssessmentTaskRefId -->
+
   <Item>
     <Element>AssessmentTaskLocalId</Element>
     <Characteristics>O</Characteristics>
@@ -103,16 +104,6 @@
   </Item>    <!-- StaffInvolvedList -->
 
   <Item>
-    <Element>GradingCategory</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>A particular grading category for the assignment, used to provide grouping and type information.</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- GradingCategory -->
-
-  <Item>
     <Element>Description</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -131,16 +122,6 @@
     </Description>
     <Type name="xs:unsignedInt"></Type>
   </Item>    <!-- PointsPossible -->
-
-  <Item>
-    <Element>CreatedDate</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Creation date of the assignment.</p>
-    </Description>
-    <Type name="xs:date"></Type>
-  </Item>    <!-- CreatedDate -->
 
   <Item>
     <Element>DueDate</Element>
@@ -218,20 +199,22 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The type of assessment tool used for the assessment task.</p>
+      <p>The assessment tool the assessment is used as part of. Both the original free text value sent by 
+      the SMS vendors and the value it is mapped to in this code set are held. This holds the original free text value.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>    <!-- AssessmentToolTypeName -->
 
   <Item>
-    <Element>LevelAssessed</Element>
+    <Element>AssessmentTool</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Level at which assessment is aimed; may be year level.</p>
+      <p>The assessment tool the assessment is used as part of. Both the original free text value sent by the 
+      SMS vendors and the value it is mapped to in this code set are held.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsScoreMetricType"/>
-  </Item>    <!-- LevelAssessed -->
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentToolTypeType"/>
+  </Item>    <!-- AssessmentTool -->
   
   <Item>
     <Element>AssessmentPurpose</Element>
@@ -265,24 +248,28 @@
   </Item>    <!-- PrerequisiteList -->
   
   <Item>
-    <Element>SubjectArea</Element>
+    <Element>SubjectAreaList</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The Learning or Subject Area this assessment is for.</p>
+      <p>A list of the subject areas being assessed.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
-  </Item>    <!-- SubjectArea -->  
+    <Type ref="CodeSets" name="SubjectAreaListType"/>
+  </Item>    <!-- SubjectAreaList -->
 
   <Item>
-    <Element>YearLevel</Element>
+    <Element>AssessedAtYearLevel</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The Year Level of the students being assessed.</p>
+      <p>The year level the Assessment Task pertains to. May only contain the values 1 through to 13 inclusive.</p>
     </Description>
     <Type name="xs:int"/>
-  </Item>    <!-- YearLevel -->
+    <Facets>
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="13"/>
+    </Facets>
+  </Item>    <!-- AssessedAtYearLevel -->
 
   <Item>
     <Element>LearningStandardList</Element>
@@ -343,10 +330,8 @@
           <StaffRole>ASS</StaffRole>
         </StaffInvolved>
       </StaffInvolvedList>
-      <GradingCategory>Classroom Test</GradingCategory>
       <Description>Pop Quiz</Description>
       <PointsPossible>100</PointsPossible>
-      <CreatedDate>2018-11-21</CreatedDate>
       <DueDate>2018-11-25</DueDate>
       <Weight>1.0</Weight>
       <DetailedDescriptionURL>http://www.assignmentinfo.com/assignment1.pdf</DetailedDescriptionURL> 

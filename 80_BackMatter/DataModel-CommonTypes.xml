@@ -84,6 +84,8 @@
 			</Description>
 			<Type complex="extension" name="ObjectReferenceType"/>
 		</Item>
+
+		<!-- Extra fields de-normalised from the StudentPersonal object -->
 		<Item>
 			<Element>NationalStudentNumber</Element>
 			<Characteristics>O</Characteristics>
@@ -91,6 +93,18 @@
 			<Description><p>The NSN of the referenced Student</p></Description>
 			<Type  name="xs:positiveInteger"/>
 		</Item>   <!-- NationalStudentNumber -->
+		<Item>
+			<Element>YearLevel</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description><p>The NSN of the referenced Student</p></Description>
+			<Type  name="xs:positiveInteger"/>
+			<Facets>
+				<xs:minInclusive value="1"/>
+				<xs:maxInclusive value="13"/>
+			</Facets>
+		</Item>   <!-- NationalStudentNumber -->
+
 
  		<xhtml:Example xmlns="" name="Complete StudentReferenceType Example">
 			<ObjectReference>
@@ -271,6 +285,14 @@
 			<Type name="xs:dateTime"></Type>
 		</Item>    <!-- LastUpdatedDateTime -->
 		<Item>
+			<Element>DeletedDateTime</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date and time the record was deleted.</p>
+			</Description>
+			<Type name="xs:dateTime"></Type>
+		</Item>    <!-- DeletedDateTime -->
+		<Item>
 			<Element>CreatedBy</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
@@ -285,7 +307,23 @@
 				<p>The user that last updated the record.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
-		</Item>    <!-- CreatedBy -->
+		</Item>    <!-- LastUpdatedBy -->
+		<Item>
+			<Element>DeletedBy</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The user that deleted the record.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
+		</Item>    <!-- DeletedBy -->
+		<Item>
+			<Element>DeletedReason</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The reason the record was deleted.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsDeletedReasonType"/>
+		</Item>    <!-- DeletedReason -->
 	</CommonElement>	
 
 </IncludeGroup>

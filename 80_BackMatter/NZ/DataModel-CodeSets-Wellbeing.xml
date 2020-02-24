@@ -324,10 +324,6 @@
 				<Text xml:lang="en">Fluency</Text>
 			</Value>
 			<Value>
-				<Code>LSN-GEN</Code>
-				<Text xml:lang="en">Gender Identity needs</Text>
-			</Value>
-			<Value>
 				<Code>LSN-GLC</Code>
 				<Text xml:lang="en">General Learning Challenges</Text>
 			</Value>

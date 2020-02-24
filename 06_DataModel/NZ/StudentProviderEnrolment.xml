@@ -115,6 +115,16 @@
 	</Item>		<!-- Exit -->
 
 	<Item>
+		<Element>ECEEducationHistoryList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The list of the types of early childhood education the parent told a primary
+			 school that the student received and the hours per week and/or day the student attended.</p></Description>
+		<Type ref="CommonTypes" name="ECEEducationHistoryList"></Type>
+	</Item>    <!-- ECE Education History List -->
+
+	<Item>
 		<Element>EarlyChildhoodEnrolment</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>

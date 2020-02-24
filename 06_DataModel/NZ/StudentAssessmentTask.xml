@@ -58,6 +58,16 @@
   </Item>    <!-- AssessmentTask -->
 
   <Item>
+    <Element>StudentAssessmentTaskRegistration</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the registration made on behalf of the student by the school to sit this assessment.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- StudentAssessmentTaskRegistration -->
+
+  <Item>
     <Element>ProviderInvolvedList</Element>    
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -80,14 +90,13 @@
   </Item>    <!-- ProviderCourse -->
 
   <Item>
-    <Element>LearningStandard</Element>    
+    <Element>LearningStandardList</Element>    
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Generic object reference to the LearningStandard that the student who is 
-        participating in the assessment task is being assessed against.</p>
+      <p>A list of references to the learning standards the student is being assessed against.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="LearningStandardListType"></Type>
   </Item>    <!-- LearningStandard -->
 
   <Item>
@@ -112,24 +121,14 @@
   </Item>    <!-- DateTimeAssessmentScheduled -->
 
   <Item>
-    <Element>DateTimeAssessmentOccurred</Element>
+    <Element>DateTimeAssessed</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The date and time the student was assessed against the assessment task.</p>
     </Description>
     <Type name="xs:dateTime"></Type>
-  </Item>    <!-- DateTimeAssessmentOccurred -->
-
-  <Item>
-    <Element>YearAssessmentOccurred</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The year the student was assessed against the assessment task.</p>
-    </Description>
-    <Type name="xs:gYear"></Type>
-  </Item>    <!-- YearAssessmentOccurred -->
+  </Item>    <!-- DateTimeAssessed -->
 
   <Item>
     <Element>AssessmentType</Element>
@@ -153,6 +152,16 @@
   </Item>    <!-- AssessmentMethodology -->
 
   <Item>
+    <Element>EvaluationType</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The type of assessment evaluation, e.g. formative or summative.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentEvaluationTypeType"/>
+  </Item>    <!-- EvaluationType -->
+
+  <Item>
     <Element>Status</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -161,6 +170,18 @@
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentStatusType"/>
   </Item>    <!-- Status -->
+
+  <Item>
+    <Element>FinalResult</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The final result the student received for this assessment. Especially pertinent when an assessment has 
+      multiple sections where it is required that the results for each section are also kept; in which case detailed
+      results are kept in matching StudentAssessmentTaskResult data object.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>    <!-- FinalResult -->
 
   <Item>
     <Element>Timeframe</Element>
@@ -183,14 +204,14 @@
   </Item>    <!-- NCEAStatusDate -->
 
   <Item>
-    <Element>AchievementAttempt</Element>
+    <Element>AssessmentAttempt</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The attempt number the student is making to pass this assessment, e.g. is it their first, second attempt.</p>
     </Description>
     <Type name="xs:int"></Type>
-  </Item>    <!-- AchievementAttempt -->
+  </Item>    <!-- AssessmentAttempt -->
 
   <Item>
     <Element>SubjectAreaList</Element>
@@ -203,14 +224,14 @@
   </Item>    <!-- SubjectAreaList -->  
 
   <Item>
-    <Element>YearLevel</Element>
+    <Element>AssessedAtYearLevel</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Year Level of the Assessment Task the student is being assessed against. May only contain the values 1 through to 13 inclusive.</p>
     </Description>
     <Type name="xs:int"/>
-  </Item>    <!-- YearLevel -->
+  </Item>    <!-- AssessedAtYearLevel -->
 
   <Item>
     <Element>SpecialAssessmentConditionList</Element>
@@ -271,7 +292,7 @@
       <SubjectAreaList json:force-array="true">
           <SubjectArea>PHYS</SubjectArea>
       </SubjectAreaList>
-      <YearLevel json:force-string="true">11</YearLevel>
+      <AssessedAtYearLevel json:force-string="true">11</AssessedAtYearLevel>
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>

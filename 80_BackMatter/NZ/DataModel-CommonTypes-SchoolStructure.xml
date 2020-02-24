@@ -381,7 +381,11 @@
 			<Description>
 				<p>The student Year Level that the staff member is responsible for. e.g.  "Junior Student Dean" could have responsibility for all students in year levels 9 and 10. May only contain the values 1 through to 13 inclusive.</p>
 			</Description>
-			<Type ref="CommonTypes" name="YearLevelType"/>
+			<Type name="xs:int"/>
+			<Facets>
+				<xs:minInclusive value="1"/>
+				<xs:maxInclusive value="15"/>
+			</Facets>
 		</Item>
 
 		<xhtml:Example xmlns="" name="NZ Year Level List Example">
@@ -391,18 +395,6 @@
 			</YearLevelList>
 		</xhtml:Example>
 
-	</CommonElement>
-
-	<CommonElement name="YearLevelType" type="true" dm="true">
-		<Item>
-			<Element>YearLevelType</Element>
-			<Description>
-				<p>The student Year Level that the staff member is responsible for. e.g.  "Junior Student Dean" could have responsibility for all students in year levels 9 and 10.May only contain the values 1 through to 13 inclusive.</p>
-			</Description>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Type name="xs:int"/>
-		</Item>
 	</CommonElement>
 
 	<CommonElement name="EnactedPolicyListType" type="true" dm="true">
@@ -520,6 +512,26 @@
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsECEServiceTypeType"/>
 		</Item>    <!-- Type -->
+	</CommonElement>
+
+	<CommonElement name="TertiaryServiceType" type="true" dm="true">
+		<Item>
+			<Element>TertiaryServiceType</Element>
+			<Description>
+				<p>Contains Organisation properties that are specific to Organisations
+				that are Providers of early tertiary education services.
+				</p>
+			</Description>
+			<Item>
+				<Element>Type</Element>
+				<Characteristics>M</Characteristics>
+				<privacyRating>Low</privacyRating>
+				<Description>
+					<p>Code denoting the kind of Tertiary service. eg: University, Wananga, etc.</p>
+				</Description>
+				<Type name="xs:string"/>
+			</Item>    <!-- Type -->
+		</Item>
 	</CommonElement>
 
 </IncludeGroup>

@@ -49,6 +49,16 @@
   </Item>    <!-- Student -->
 
   <Item>
+    <Element>Provider</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The provider that created this learning support need reponse.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"/>
+  </Item>    <!-- Provider -->
+
+  <Item>
     <Element>LearningSupportNeed</Element>    
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -77,7 +87,7 @@
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsLearningSupportResponseDetailType"></Type>
   </Item>    <!-- ResponseDetail -->
-
+  
   <Item>
     <Element>ReviewDate</Element>
     <Characteristics>M</Characteristics>
@@ -170,8 +180,7 @@
     <Type ref="CommonTypes" name="DocumentListType"></Type>
   </Item>    <!-- AttachmentList -->
 
-<!--Response Completion-->
-
+  <!--Response Completion-->
   <Item>
     <Element>CompletionDate</Element>
     <Characteristics>O</Characteristics>
@@ -232,8 +241,7 @@
     <Type name="xs:normalizedString"></Type>
   </Item>    <!-- CompletionNote -->
 
-<!--Record Audit-->
-
+  <!--Record Audit-->
 	<Item>
 		<Element>RecordAudit</Element>    
 		<Characteristics>M</Characteristics>

@@ -59,6 +59,15 @@
 		<Type  name="xs:date"/>
 	</Item>    <!-- EventDate -->
 
+	<Item>
+		<Element>EventEndDate</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The end date of the event.</p>
+		</Description>
+		<Type  name="xs:date"/>
+	</Item>    <!-- EventEndDate -->
 
 	<Item>
 		<Element>Duration</Element>
