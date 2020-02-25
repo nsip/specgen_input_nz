@@ -213,7 +213,7 @@
       <p>The assessment tool the assessment is used as part of. Both the original free text value sent by the 
       SMS vendors and the value it is mapped to in this code set are held.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsAssessmentToolTypeType"/>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentToolUsedType"/>
   </Item>    <!-- AssessmentTool -->
   
   <Item>

@@ -97,15 +97,6 @@
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentStatusType"/>
   </Item>    <!-- Status -->
-  <Item>
-    <Element>PointsPossible</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The points possible on the assignment.</p>
-    </Description>
-    <Type name="xs:unsignedInt"></Type>
-  </Item>    <!-- PointsPossible -->
 
   <!--  Providers & Markers involved in setting the Assessment Task (and result) -->
   <Item>
@@ -194,7 +185,7 @@
       <p>The type of assessment tool used for the assessment task. Both the original free text value sent by the SMS vendors
        and the value it is mapped to in this code set are held.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsAssessmentToolTypeType"/>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentToolUsedType"/>
   </Item>    <!-- AssessmentTool -->  
   <Item>
     <Element>Timeframe</Element>
@@ -533,26 +524,22 @@
         <ResultScore>
           <Competency>Number Sequence and Order</Competency>
           <ScoreMetric>NKS</ScoreMetric>  <!-- Number Knowledge Stage -->
-          <ScoreValue json:force-string="true">7</ScoreValue>
-          <ScoreCode>NKS-AP</ScoreCode>   <!-- Advanced Proportional -->
+          <ScoreValue>NKS-AP</ScoreValue> <!-- Advanced Proportional -->
         </ResultScore>
         <ResultScore>
           <Competency>Fractions</Competency>
           <ScoreMetric>NKS</ScoreMetric>  <!-- Number Knowledge Stage -->
-          <ScoreValue json:force-string="true">6</ScoreValue>
-          <ScoreCode>NKS-AM</ScoreCode>   <!-- Advanced Multiplicative -->
+          <ScoreValue>NKS-AM</ScoreValue> <!-- Advanced Multiplicative -->
         </ResultScore>
         <ResultScore>
           <Competency>Place Value</Competency>
           <ScoreMetric>NKS</ScoreMetric>  <!-- Number Knowledge Stage -->
-          <ScoreValue json:force-string="true">7</ScoreValue>
-          <ScoreCode>NKS-AP</ScoreCode>   <!-- Advanced Proportional -->
+          <ScoreValue>NKS-AP</ScoreValue> <!-- Advanced Proportional -->
         </ResultScore>
         <ResultScore>
           <Competency>Basic Facts</Competency>
           <ScoreMetric>NKS</ScoreMetric>  <!-- Number Knowledge Stage -->
-          <ScoreValue json:force-string="true">6</ScoreValue>
-          <ScoreCode>NKS-AM</ScoreCode>   <!-- Advanced Multiplicative -->
+          <ScoreValue>NKS-AM</ScoreValue> <!-- Advanced Multiplicative -->
         </ResultScore>
       </ResultScoreList>
       <RecordAudit>
