@@ -76,7 +76,7 @@
 		<Intro>
 			<p>Standard codes denoting assessment tools that may be used in an assessment task.</p>
 		</Intro>
-		<ID>Assessment Tool Used</ID>
+		<ID>Assessment Tool</ID>
 		<Values>
 			<Value>
 				<Code>EASMATH</Code>
@@ -99,7 +99,155 @@
 				<Text>Star Reading</Text>
 			</Value>    <!-- STAR Reading -->
 		</Values>
-	</CodeSet>    <!-- Assessment Tool Type -->
+	</CodeSet>    <!-- Assessment Tool -->
+
+	<CodeSet>
+		<Intro>
+			<p>Standard code set denoting the tests available within an assessment tool that may be used in an assessment task.</p>
+		</Intro>
+		<ID>Assessment Tool Test</ID>
+		<Values>
+			<!-- PAT Maths Tests -->
+			<Value>
+				<Code>PMT1</Code>
+				<Text>PAT Maths - Test 1</Text>
+			</Value>    <!-- PAT Maths - Test 1 -->
+			<Value>
+				<Code>PMT1A</Code>
+				<Text>PAT Maths - Test 1A</Text>
+			</Value>    <!-- PAT Maths - Test 1A -->
+			<Value>
+				<Code>PMT2</Code>
+				<Text>PAT Maths - Test 2</Text>
+			</Value>    <!-- PAT Maths - Test 2 -->
+			<Value>
+				<Code>PMT2A</Code>
+				<Text>PAT Maths - Test 2A</Text>
+			</Value>    <!-- PAT Maths - Test 2A -->
+			<Value>
+				<Code>PMT3</Code>
+				<Text>PAT Maths - Test 3</Text>
+			</Value>    <!-- PAT Maths - Test 3 -->
+			<Value>
+				<Code>PMT3A</Code>
+				<Text>PAT Maths - Test 3A</Text>
+			</Value>    <!-- PAT Maths - Test 3A -->
+			<Value>
+				<Code>PMT4</Code>
+				<Text>PAT Maths - Test 4</Text>
+			</Value>    <!-- PAT Maths - Test 4 -->
+			<Value>
+				<Code>PMT4A</Code>
+				<Text>PAT Maths - Test 4A</Text>
+			</Value>    <!-- PAT Maths - Test 4A -->
+			<Value>
+				<Code>PMT5</Code>
+				<Text>PAT Maths - Test 5</Text>
+			</Value>    <!-- PAT Maths - Test 5 -->
+			<Value>
+				<Code>PMT5A</Code>
+				<Text>PAT Maths - Test 5A</Text>
+			</Value>    <!-- PAT Maths - Test 5A -->
+			<Value>
+				<Code>PMT6</Code>
+				<Text>PAT Maths - Test 6</Text>
+			</Value>    <!-- PAT Maths - Test 6 -->
+			<Value>
+				<Code>PMT6A</Code>
+				<Text>PAT Maths - Test 6A</Text>
+			</Value>    <!-- PAT Maths - Test 6A -->
+			<Value>
+				<Code>PMT7</Code>
+				<Text>PAT Maths - Test 7</Text>
+			</Value>    <!-- PAT Maths - Test 7 -->
+			<Value>
+				<Code>PMT7A</Code>
+				<Text>PAT Maths - Test 7A</Text>
+			</Value>    <!-- PAT Maths - Test 7A -->
+			<Value>
+				<Code>PMT8A</Code>
+				<Text>PAT Maths - Test 8A</Text>
+			</Value>    <!-- PAT Maths - Test 8A -->
+			<Value>
+				<Code>PMTADA</Code>
+				<Text>PAT Maths - Adaptive</Text>
+			</Value>    <!-- PAT Maths - Adaptive -->
+
+
+			<!-- PAT Reading Comprehension Tests -->
+			<Value>
+				<Code>PRCT1</Code>
+				<Text>PAT Reading Comp - Test 1</Text>
+			</Value>    <!-- PAT Reading Comp - Test 1 -->			
+			<Value>
+				<Code>PRCT2</Code>
+				<Text>PAT Reading Comp - Test 2</Text>
+			</Value>    <!-- PAT Reading Comp - Test 2 -->			
+			<Value>
+				<Code>PRCT3</Code>
+				<Text>PAT Reading Comp - Test 3</Text>
+			</Value>    <!-- PAT Reading Comp - Test 3 -->			
+			<Value>
+				<Code>PRCT4</Code>
+				<Text>PAT Reading Comp - Test 4</Text>
+			</Value>    <!-- PAT Reading Comp - Test 4 -->			
+			<Value>
+				<Code>PRCT5</Code>
+				<Text>PAT Reading Comp - Test 5</Text>
+			</Value>    <!-- PAT Reading Comp - Test 5 -->			
+			<Value>
+				<Code>PRCT6</Code>
+				<Text>PAT Reading Comp - Test 6</Text>
+			</Value>    <!-- PAT Reading Comp - Test 6 -->			
+			<Value>
+				<Code>PRCT7</Code>
+				<Text>PAT Reading Comp - Test 7</Text>
+			</Value>    <!-- PAT Reading Comp - Test 7 -->
+
+
+			<!-- STAR Reading Tests -->
+			<Value>
+				<Code>SRT34A</Code>
+				<Text>STAR Reading - 3-4 A</Text>
+			</Value>    <!-- STAR Reading - 3-4 A -->
+			<Value>
+				<Code>SRT34B</Code>
+				<Text>STAR Reading - 3-4 B</Text>
+			</Value>    <!-- STAR Reading - 3-4 B -->
+			<Value>
+				<Code>SRT34C</Code>
+				<Text>STAR Reading - 3-4 C</Text>
+			</Value>    <!-- STAR Reading - 3-4 C -->
+			<Value>
+				<Code>SRT56A</Code>
+				<Text>STAR Reading - 5-6 A</Text>
+			</Value>    <!-- STAR Reading - 5-6 A -->
+			<Value>
+				<Code>SRT56B</Code>
+				<Text>STAR Reading - 5-6 B</Text>
+			</Value>    <!-- STAR Reading - 5-6 B -->
+			<Value>
+				<Code>SRT56C</Code>
+				<Text>STAR Reading - 5-6 C</Text>
+			</Value>    <!-- STAR Reading - 5-6 C -->
+			<Value>
+				<Code>SRT78A</Code>
+				<Text>STAR Reading - 7-8 A</Text>
+			</Value>    <!-- STAR Reading - 7-8 A -->
+			<Value>
+				<Code>SRT78B</Code>
+				<Text>STAR Reading - 7-8 B</Text>
+			</Value>    <!-- STAR Reading - 7-8 B -->
+			<Value>
+				<Code>SRT78C</Code>
+				<Text>STAR Reading - 7-8 C</Text>
+			</Value>    <!-- STAR Reading - 7-8 C -->
+			<Value>
+				<Code>SRT9A</Code>
+				<Text>STAR Reading - 9A</Text>
+			</Value>    <!-- STAR Reading - 9A -->
+		</Values>
+	</CodeSet>    <!-- Assessment Tool Test -->
 
 	<CodeSet>
 		<Intro>
@@ -242,6 +390,33 @@
 			</Value>    <!-- NAME -->
 		</Values>
 	</CodeSet>    <!-- Score Metric -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting that the score is an over-arching final aggregate score derived from a collection of other scores, 
+			or the fact that the score is derived from a multi-stage marking and moderation process, e.g. inital, interim, moderated
+			 and final scores for a single assessment.</p>
+		</Intro>
+		<ID>Score Type</ID>
+		<Values>
+			<Value>
+				<Code>INI</Code>
+				<Text>Initial</Text>
+			</Value>    <!-- Initial -->
+			<Value>
+				<Code>INT</Code>
+				<Text>Interim</Text>
+			</Value>    <!-- Interim -->
+			<Value>
+				<Code>MOD</Code>
+				<Text>Moderated</Text>
+			</Value>    <!-- Moderated -->
+			<Value>
+				<Code>FIN</Code>
+				<Text>Final</Text>
+			</Value>    <!-- Final -->
+		</Values>
+	</CodeSet>    <!-- Score Type -->
 
 	<CodeSet>
 		<Intro>

@@ -79,27 +79,6 @@
   </Item>    <!-- ProviderInvovledList -->
 
   <Item>
-    <Element>ProviderCourse</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Generic object reference to the ProviderCourse that the students are 
-        participating in the assessment task for.</p>
-    </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>    <!-- ProviderCourse -->
-
-  <Item>
-    <Element>LearningStandardList</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>A list of references to the learning standards the student is being assessed against.</p>
-    </Description>
-    <Type ref="CommonTypes" name="LearningStandardListType"></Type>
-  </Item>    <!-- LearningStandard -->
-
-  <Item>
     <Element>StaffInvolvedList</Element>    
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -131,37 +110,6 @@
   </Item>    <!-- DateTimeAssessed -->
 
   <Item>
-    <Element>AssessmentType</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Code denoting the type of assessment the student is undergoing for the assessment task.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsAssessmentTypeType"/>
-  </Item>    <!-- AssessmentType -->
-
-  <Item>
-    <Element>AssessmentMethodology</Element>
-    <Characteristics>M</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Code denoting the nature of the assessment process;  Primary assessment against NZ Curriculum or Te Marautanga
-      o Aotearoa; Secondary assessment against NCEA, Cambridge, International Baccalaureate, or similar.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsAssessmentMethodologyType"/>
-  </Item>    <!-- AssessmentMethodology -->
-
-  <Item>
-    <Element>EvaluationType</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The type of assessment evaluation, e.g. formative or summative.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsAssessmentEvaluationTypeType"/>
-  </Item>    <!-- EvaluationType -->
-
-  <Item>
     <Element>Status</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -170,28 +118,6 @@
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentStatusType"/>
   </Item>    <!-- Status -->
-
-  <Item>
-    <Element>FinalResult</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The final result the student received for this assessment. Especially pertinent when an assessment has 
-      multiple sections where it is required that the results for each section are also kept; in which case detailed
-      results are kept in matching StudentAssessmentTaskResult data object.</p>
-    </Description>
-    <Type name="xs:normalizedString"/>
-  </Item>    <!-- FinalResult -->
-
-  <Item>
-    <Element>Timeframe</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Code denoting the timeframe of the assessment.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsAssessmentTimeframeType"/>
-  </Item>    <!-- AssessmentTimeframe -->
 
   <Item>
     <Element>NCEAStatusDate</Element>
@@ -212,26 +138,6 @@
     </Description>
     <Type name="xs:int"></Type>
   </Item>    <!-- AssessmentAttempt -->
-
-  <Item>
-    <Element>SubjectAreaList</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The list of Subject Area the assessment task pertains to.</p>
-    </Description>
-    <Type ref="CommonTypes" name="SubjectAreaListType"/>
-  </Item>    <!-- SubjectAreaList -->  
-
-  <Item>
-    <Element>AssessedAtYearLevel</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Year Level of the Assessment Task the student is being assessed against. May only contain the values 1 through to 13 inclusive.</p>
-    </Description>
-    <Type name="xs:int"/>
-  </Item>    <!-- AssessedAtYearLevel -->
 
   <Item>
     <Element>SpecialAssessmentConditionList</Element>
@@ -276,9 +182,6 @@
           <ProviderRole>PRO</ProviderRole>
         </ProviderInvolved>
       </ProviderInvolvedList>
-      <ProviderCourse>
-        <RefId>2c55ec5e-7def-4815-ae08-caad3b9f274d</RefId>
-      </ProviderCourse>
       <StaffInvolvedList>
         <StaffInvolved json:force-array="true">
           <RefId>228a2cbe-93c4-46ba-91fa-b3ae689eb437</RefId>
@@ -287,12 +190,6 @@
         </StaffInvolved>
       </StaffInvolvedList>
       <DateTimeAssessmentScheduled>2018-11-25T09:00:00+12:00</DateTimeAssessmentScheduled>
-      <AssessmentType>EXT</AssessmentType>
-      <AssessmentMethodology>S</AssessmentMethodology>
-      <SubjectAreaList json:force-array="true">
-          <SubjectArea>PHYS</SubjectArea>
-      </SubjectAreaList>
-      <AssessedAtYearLevel json:force-string="true">11</AssessedAtYearLevel>
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>

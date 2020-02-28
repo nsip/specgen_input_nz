@@ -126,6 +126,17 @@
 			</Description>
 		</Item>
 		<Item>
+			<Element>ScoreType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Either defines that the score is an over-arching final aggregate score derived from
+				 a collection of other scores, or the fact that the score is derived from a multi-stage
+				 marking and moderation process, e.g. inital, interim, moderated and final scores for
+				  a single assessment.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsScoreTypeType"/>
+		</Item>    <!-- ScoreType -->
+		<Item>
 			<Element>Competency</Element>
 			<Characteristics>O</Characteristics>
 			<Description>

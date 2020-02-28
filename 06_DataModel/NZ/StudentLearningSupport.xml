@@ -284,13 +284,6 @@
             <RefId>461423B4-BBEF-4820-8345-E724E54555CB</RefId>
             <Name>Literacy</Name>
           </Need>
-          <CaseLead>MO</CaseLead>
-          <CaseLeadContactPerson>John Doe</CaseLeadContactPerson>
-          <SupportingDocumentList>
-            <Document>
-              <RefId>461423B4-BBEF-4820-8345-E724854555CB</RefId>
-            </Document>
-          </SupportingDocumentList>
           <ResponseList>
             <Response>
               <RefId>461423B4-BBEF-4820-8345-E724E5455BBB</RefId>

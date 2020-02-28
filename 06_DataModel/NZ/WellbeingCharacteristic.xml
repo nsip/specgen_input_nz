@@ -163,6 +163,36 @@
   </Item>    <!-- CharacteristicPriority -->
 
   <Item>
+    <Element>CaseLead</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Agency taking the lead on the learning support need case, e.g. MOE, Police, Corrections etc.)</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportCaseLeadType"></Type>
+  </Item>    <!-- CaseLead (agency) -->
+
+  <Item>
+    <Element>CaseLeadOtherDesc</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Free text describing the Case Lead Agency when a Case Lead of 'Other' is selected.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- CaseLeadOtherDesc -->
+
+  <Item>
+    <Element>CaseLeadContactPerson</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The name of the contact person for the Case Lead Agency.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- CaseLeadContactPerson -->
+
+  <Item>
     <Element>DailyManagement</Element>
     <Characteristics>O</Characteristics>
   	<privacyRating>High</privacyRating>
@@ -377,6 +407,8 @@
       <CharacteristicNotes>This Student has a special need.</CharacteristicNotes>
       <Category>LSN-SOC</Category>
       <SubCategory>LSN-HYP</SubCategory>
+      <CaseLead>RT</CaseLead>
+      <CaseLeadContactPerson>Dr RTL Bush</CaseLeadContactPerson>
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
