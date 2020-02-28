@@ -76,6 +76,7 @@
 		  Contains properties that are Tertiary Education specific.</p>
 		  <p>A placeholder for future expansion</p>
 	  </Description>
+	  <Type ref="CommonTypes" name="TertiaryServiceType"/>
   </Item>   <!-- TertiaryService --> 
   
   <Item>

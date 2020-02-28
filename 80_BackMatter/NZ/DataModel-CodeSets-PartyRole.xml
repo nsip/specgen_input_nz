@@ -3312,7 +3312,10 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Code set denoting the student's Oranga Tamariki care status.</p>
+			<p>Code set denoting the student's care status as notified to the school (by whānau, the learner 
+			   or an Oranga Tamariki staff member), e.g. state care (other family), back with family, 
+			   state care, not applicable.
+			</p>
 		</Intro>
 		<ID>Care Status</ID>
 		<Values>

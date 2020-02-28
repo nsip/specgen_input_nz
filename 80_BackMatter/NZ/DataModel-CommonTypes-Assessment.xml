@@ -31,21 +31,6 @@
 		</Item>
 	</CommonElement>
 
-	<CommonElement name="LearningStandardListType" type="true" dm="true">
-		<Item>
-			<Element>LearningStandardListType</Element>
-			<List mode="List"/>
-		</Item>
-		<Item>
-			<Element>LearningStandard</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>Generic object reference to the LearningStandard</p>
-			</Description>
-			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>
-	</CommonElement>
-
 	<CommonElement name="SpecialAssessmentConditionListType" type="true" dm="true">
 		<Item>
 			<Element>SpecialAssessmentConditionListType</Element>
@@ -165,20 +150,24 @@
 			<Type name="xs:normalizedString"></Type>
 		</Item>    <!-- ScoreValue -->
 		<Item>
-			<Element>ScoreCode</Element>
+			<Element>ScoreMax</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
-			<Description>The score the student received for assessment task against that metric. If the result score is for an NZQA or International Baccalaureate then the ScoreResultCode using the enumeration NZCodeSetsAssessmentResultType must be used.</Description>
-			<Type ref="CodeSets" name="NZCodeSetsAssessmentResultType"/>
-		</Item>    <!-- ScoreCode -->
+			<Description>The maximum value possible for the score.</Description>
+			<Type name="xs:decimal"/>
+		</Item>    <!-- ScoreMax -->
 		<Item>
-			<Element>NZQAItemNumber</Element>
+			<Element>ItemNumber</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>The Item within an NZQA Assessment Task that the score is for. When a marker marks an external assessment (a paper for a standard in an examination, for example) they provide a score of 0-8 for each item (question) in the paper. Typically a paper will have 3 items for a total score of 24. However there can be more items than this. The individual item scores, and the total are then sent back to NZQA’s eQA system from the marking application.</p>
+				<p>The Item within an NZQA Assessment Task that the score is for. When a marker marks an external 
+				assessment (a paper for a standard in an examination, for example) they provide a score of 0-8 for
+				each item (question) in the paper. </p>
+				<p>Typically a paper will have 3 items for a total score of 24. However there can be more items than this.</p>
+				<p>The individual item scores, and the total are then sent back to NZQA’s eQA system from the marking application. </p>
 			</Description>
 			<Type name="xs:int"></Type>
-		</Item>    <!-- NZQAItemNumber -->
+		</Item>    <!-- ItemNumber -->
 	</CommonElement>
 
 	<CommonElement name="JustificationListType" type="true" dm="true">

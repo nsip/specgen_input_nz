@@ -122,9 +122,9 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>A list of <code>ObjectReference</code>s to the LearningStandards covered by the Course.</p>
+      <p>A list of references to LearningStandard data objects that students are assessed against as part of the Course</p>
     </Description>
-    <Type ref="CommonTypes" name='LearningStandardReferenceListType'/>
+    <Type ref="CommonTypes" name='LearningStandardListType'/>
   </Item>    <!-- LearningStandardList -->
   <Item>
     <Element>CredentialList</Element>

@@ -21,13 +21,13 @@
 		<Choice repeatable="true">
 			<Item>
 				<Element>SubjectArea</Element>
-				<Characteristics>M</Characteristics>
+				<Characteristics>O</Characteristics>
 				<Description/>
 				<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
 			</Item>
 			<Item>
 				<Element>NCEASubjectArea</Element>
-				<Characteristics>M</Characteristics>
+				<Characteristics>O</Characteristics>
 				<Description/>
 				<Type ref="CodeSets" name="NZCodeSetsNCEASubjectAreaType"/>
 			</Item>
@@ -163,9 +163,9 @@
 
 
 	<!-- Credentials and Learning Standards -->
-	<CommonElement name="LearningStandardReferenceListType" type="true" dm="true">
+	<CommonElement name="LearningStandardListType" type="true" dm="true">
 		<Item>
-			<Element>LearningStandardReferenceListType</Element>
+			<Element>LearningStandardListType</Element>
 			<Description>
 				<p>A list of <code>ObjectReference</code>s providing a manner of referring
 				to a collection of <code>LearningStandards</code>.</p>

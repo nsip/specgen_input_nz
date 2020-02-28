@@ -1,4 +1,4 @@
-﻿<IncludeGroup    
+﻿<IncludeGroup
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:xi="http://www.w3.org/2001/XInclude" 
@@ -114,15 +114,6 @@
 			</Description>
 		</Item>
 		<Item>
-			<Element>ECEType</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Description>
-				<p>The type of early childhood education the student is enrolling in.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsEarlyChildhoodEducationTypeType"/>
-		</Item>    <!-- Type -->
-		<Item>
 			<Element>ECEYearLevel</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
@@ -130,7 +121,7 @@
 				<p>Code set denoting the year level of students attending early childhood education.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsECEYearLevelType"/>
-		</Item>    <!-- Type -->	
+		</Item>    <!-- ECEYearLevel -->	
 		<Item>
 			<Element>Curriculum</Element>
 			<Characteristics>O</Characteristics>
@@ -771,4 +762,62 @@
 		</Item>    <!-- Intervention -->
 	</CommonElement>
 	
+
+	<!-- ECE History - collected as part of primary enrolment, not to be confused with actual ECE Enrolment data -->
+	<CommonElement name="ECEEducationHistoryListType" type="true" dm="true">
+		<Item>
+			<Element>ECEEducationHistoryListType</Element>
+			<Description>
+				<p>The list of the types of early childhood education the parent told a primary school
+				 that the student received and the hours per week and/or day the student attended.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>ECEType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The type of early childhood education the student received and the hours per week and/or day the student attended.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ECEHistoryType"/>
+		</Item>		<!-- ECEType -->
+	</CommonElement>
+
+	<CommonElement name="ECEHistoryType" type="true" dm="true">
+		<Item>
+			<Element>ECEHistoryType</Element>
+			<Description>
+				<p>History of a type of early childhood education the student received and 
+				the hours per week and/or day the student attended.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Type</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>The type of early childhood education the student attended.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsEarlyChildhoodEducationTypeType"/>
+		</Item>    <!-- Type -->
+		<Item>
+			<Element>HoursPerDayAttended</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>The number of hours per day the student attended this ECE Type.</p>
+			</Description>
+			<Type name="xs:int"/>
+		</Item>    <!-- HoursPerDayAttended -->	
+		<Item>
+			<Element>HoursPerWeekAttended</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>The number of hours per week the student attended this ECE Type.</p>
+			</Description>
+			<Type name="xs:int"/>
+		</Item>    <!-- HoursPerWeekAttended -->
+	</CommonElement>
+
 </IncludeGroup>

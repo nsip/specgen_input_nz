@@ -74,6 +74,35 @@
 
 	<CodeSet>
 		<Intro>
+			<p>Standard codes denoting assessment tools that may be used in an assessment task.</p>
+		</Intro>
+		<ID>Assessment Tool Used</ID>
+		<Values>
+			<Value>
+				<Code>EASMATH</Code>
+				<Text>e-asTTle Mathematics</Text>
+			</Value>    <!-- e-asTTle Mathematics -->
+			<Value>
+				<Code>EASREAD</Code>
+				<Text>e-asTTle Reading</Text>
+			</Value>    <!-- e-asTTle Reading -->
+			<Value>
+				<Code>PATCOMP</Code>
+				<Text>PAT: Reading Comprehension</Text>
+			</Value>    <!-- PAT Reading Comprehension -->
+			<Value>
+				<Code>PATMATH</Code>
+				<Text>PAT: Mathematics</Text>
+			</Value>    <!-- PAT Mathematics -->
+			<Value>
+				<Code>STARREA</Code>
+				<Text>Star Reading</Text>
+			</Value>    <!-- STAR Reading -->
+		</Values>
+	</CodeSet>    <!-- Assessment Tool Type -->
+
+	<CodeSet>
+		<Intro>
 			<p>Code set denoting the type of assessment evaluation taking place, e.g. formative or summative.</p>
 		</Intro>
 		<ID>Assessment Evaluation Type</ID>
@@ -210,7 +239,7 @@
 				<Text xml:lang="en">NAME</Text>
 				<Text xml:lang="mi">NAME</Text>
 				<Description>NZQA Achievement Standards: Not Achieved, Achieved, Achieved with Merit, Achieved with Excellence</Description>
-			</Value>    <!-- NAME -->			
+			</Value>    <!-- NAME -->
 		</Values>
 	</CodeSet>    <!-- Score Metric -->
 
@@ -336,17 +365,17 @@
 				<Text xml:lang="en">Pass</Text>
 				<Text xml:lang="mi">Paetae</Text>
 			</Value>
-		<!-- Number Knowledge Stages -->
+			<!-- Number Knowledge Stages -->
 			<Value>
 				<Code>NKS-EM</Code>
 				<Text xml:lang="en">Emergent</Text>
 				<Description>Number Knowledge Stage 1 - Emergent</Description>
-			</Value>
+			</Value>   <!-- Emergent -->
 			<Value>
 				<Code>NKS-CA</Code>
 				<Text xml:lang="en">Counting All</Text>
 				<Description>Number Knowledge Stages 2-3 - Counting All</Description>
-			</Value>
+			</Value>    <!-- Counting All -->
 			<Value>
 				<Code>NKS-AC</Code>
 				<Text xml:lang="en">Advanced Counting</Text>

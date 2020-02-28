@@ -9,8 +9,9 @@
 		   effort required to keep them in sync between AU & NZ is too much, for
 		   very little gain.
 
-           NOTE:  We're still doing the <if intl="au"> thing, to chop out those AU defined
-		   code sets that we're not (currently) using in the SIF NZ Data Model.
+           NOTE:  We're NOT doing the <if intl="au"> thing, to chop out those AU defined
+		   code sets that we're not (currently) using in the SIF NZ Data Model; again it's
+		    too much effort and very little gain.
 	  -->
 
 	  
@@ -318,7 +319,6 @@
 		</Values>
 	  </CodeSet>      <!-- Referrable Data Object -->
 
-
 	  <CodeSet>
 		<Intro>
 		  	<p>Code set denoting the role of the person who gave consent on behalf of the student, e.g. Whānau, Student.</p>
@@ -340,7 +340,7 @@
 		</Values>
 	  </CodeSet>      <!-- Consent Given By -->
 
-	<CodeSet>
+	  <CodeSet>
 		<Intro>
 			<p>Code set denoting what the student is consenting or not consenting to.</p>
 		</Intro>
@@ -383,7 +383,29 @@
 				<Description>This value is for learning support.</Description>
 			</Value>			<!-- Parental Consent To Share With Next ECE Or School -->
 		</Values>
-	</CodeSet>	<!-- Student Consent To -->
+	  </CodeSet>	  <!-- Student Consent To -->
+
+	  <CodeSet>
+		<Intro>
+			<p>Code set denoting the reason a record was deleted.</p>
+		</Intro>
+		<ID>Deleted Reason</ID>
+		<Values>
+			<Value>
+				<Code>LEA</Code>
+				<Text>Learner Created in Error</Text>
+			</Value>			<!-- Learner Created in Error -->
+			<Value>
+				<Code>RES</Code>
+				<Text>Response Created in Error</Text>
+			</Value>			<!-- Response Created in Error -->
+			<Value>
+				<Code>SUP</Code>
+				<Text>Support Need Created in Error</Text>
+			</Value>			<!-- Support Need Created in Error -->
+		</Values>
+	  </CodeSet>	  <!-- Deleted Reason Type -->
+
 
 	  <xi:include parse="xml" href="NZ/DataModel-CodeSets-PartyRole.xml"/>
 	  <xi:include parse="xml" href="NZ/DataModel-CodeSets-Location.xml"/>
