@@ -869,24 +869,24 @@
 				<Text xml:lang="en">Other</Text>
 			</Value>
 			<Value>
-				<Code>MCD-AST</Code>
+				<Code>MDC-AST</Code>
 				<Text xml:lang="en">Asthma</Text>
 			</Value>
 			<Value>
-				<Code>MCD-DIA</Code>
+				<Code>MDC-DIA</Code>
 				<Text xml:lang="en">Diabetes</Text>
 			</Value>
 			<Value>
-				<Code>MCD-EPI</Code>
+				<Code>MDC-EPI</Code>
 				<Text xml:lang="en">Epilepsy</Text>
 			</Value>
 			<Value>
-				<Code>MCD-OTH</Code>
-				<Text xml:lang="en">Other</Text>
+				<Code>MDC-REG</Code>
+				<Text xml:lang="en">Regular medication</Text>
 			</Value>
 			<Value>
-				<Code>MCD-REG</Code>
-				<Text xml:lang="en">Regular medication</Text>
+				<Code>MDC-OTH</Code>
+				<Text xml:lang="en">Other</Text>
 			</Value>
 		</Values>
 	</CodeSet>	  <!-- Wellbeing Characteristic Category -->
