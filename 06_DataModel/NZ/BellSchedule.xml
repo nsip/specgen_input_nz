@@ -63,8 +63,9 @@
 		<Description>
 			<p>The provider the bell schedule belongs to.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/> 
 	</Item>    <!-- Provider -->
+
 	<Item>
 		<Element>Schedule</Element>
 		<Characteristics>M</Characteristics>
@@ -100,7 +101,7 @@
 			<BellScheduleLocalId>2019a-Normal</BellScheduleLocalId>
 			<BellScheduleName>Schedule 2019a, Normal Bell Schedule</BellScheduleName>
 			<Provider>
-				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
+				<RefId>844</RefId>
 				<Name>Hogwarts High</Name>
 			</Provider>
 			<Schedule>

@@ -55,7 +55,7 @@
 		<Description>
 		<p>Generic object reference to the school that collected this StudentVoice entry.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+		<Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
 	</Item>    <!-- Provider -->  
 
     <Item>
@@ -135,6 +135,9 @@
 			<Student>
 				<RefId>5c33548a-1141-40eb-94d3-9267a2258435</RefId>
 			</Student>
+			<Provider>
+				<RefId>234</RefId>
+			</Provider>
 			<StudentVoiceNote>Timothy doesn't like talking about setting goals. These goals have been gathered through observation.</StudentVoiceNote>
 			<StudentInterestList>
 				<StudentInterest>

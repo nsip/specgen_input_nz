@@ -56,7 +56,7 @@
     <Description>
       <p>Generic object reference to the source provider in the relationship.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
   </Item>  <!-- SourceProvider -->
   <Item>
     <Element>SourceProviderAgreementDate</Element>
@@ -76,7 +76,7 @@
     <Description>
       <p>Generic object reference to the related provider in the relationship.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
   </Item>  <!-- RelatedProvider -->
   <Item>
     <Element>RelatedProviderAgreementDate</Element>
@@ -145,4 +145,4 @@
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
 	</Item>    <!-- RecordAudit -->
-  </DataObject>
+</DataObject>

@@ -1298,7 +1298,7 @@
 			<Description>
 				<p>	The unique Ministry of Education created global identifier for an Education Provider.</p>
 			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/>
+			<Type ref="CommonTypes" name="MoEOrgIdType"/>
 		</Item>   <!-- MinistryOfEducationId -->	
 		<Item>
 			<Element>AddressList</Element>

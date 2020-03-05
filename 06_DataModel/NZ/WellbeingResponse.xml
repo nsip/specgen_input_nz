@@ -56,7 +56,7 @@
     <Description>
       <p>Object reference to the provider for which this WellbeingResponse is being reported.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"/>
+    <Type ref="CommonTypes" name="ProviderObjectReferenceType"/>
   </Item>    <!-- Provider -->
   
   <Item>
@@ -236,7 +236,7 @@
         <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
       </Student>
       <Provider>
-        <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
+        <RefId>877</RefId>
       </Provider>
       <PublishedDate>2017-11-01</PublishedDate>
       <StartDate>2017-11-01</StartDate>

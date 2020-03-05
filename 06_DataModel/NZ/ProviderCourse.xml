@@ -35,6 +35,7 @@
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>    <!-- ProviderCourseLocalId -->
+  
   <Item>
     <Element>Provider</Element>
     <Characteristics>M</Characteristics>
@@ -42,7 +43,7 @@
     <Description>
       <p>Generic object reference to the Provider (school) that defines and offers the Course.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="ProviderObjectReferenceType"/>
   </Item>    <!-- Provider -->
   
   <Item>
@@ -150,8 +151,7 @@
       <ProviderCourseRefId>9D75101A-8C3D-00AA-001A-0000A2E35B35</ProviderCourseRefId>
       <ProviderCourseLocalId>12CHEM</ProviderCourseLocalId>
       <Provider>
-        <RefId>101A8C3D-00AA-001A-0000-A2E35B359D75</RefId>
-        <LocalId json:force-string="true">208</LocalId>
+        <RefId>632</RefId>
       </Provider>
       <Curriculum>NZC</Curriculum>
       <SubjectAreaList>

@@ -45,7 +45,7 @@
     <Description>
       <p>Generic object reference to the Provider defining the TeachingGroup.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"/>
+    <Type ref="CommonTypes" name="ProviderObjectReferenceType"/>
   </Item>       <!-- Provider -->
   <Item>
     <Element>TeachingGroup</Element>
@@ -147,7 +147,7 @@
 			<TeachingGroupEventRefId>9356909d-e46a-456a-a177-6a914af861ae</TeachingGroupEventRefId>
 			<TeachingGroupEventLocalId>20197A-SPN-1</TeachingGroupEventLocalId>
 			<Provider>
-				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
+				<RefId>9961</RefId>
 				<Name>Hogwarts High</Name>
 			</Provider>
 			<TeachingGroup>

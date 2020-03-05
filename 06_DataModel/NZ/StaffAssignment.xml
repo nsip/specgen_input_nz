@@ -66,7 +66,7 @@
       <p>A generic object reference to either <code>Provider</code> or <code>Organisation</code>
         that the staff member is assigned to.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
   </Item>      <!-- AssignedLocation -->  
 
   <Item>
@@ -180,10 +180,8 @@
         <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1651</RefId>
       </StaffMember>
       <AssignedLocation>
-        <RefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</RefId>
-        <LocalId json:force-string="true">203</LocalId>
+        <RefId>203</RefId>
         <Name>Wellington College</Name>
-        <ObjectType>Provider</ObjectType>
       </AssignedLocation>
       <Description>Senior English Teacher</Description>
       <StaffRoleList>
@@ -229,10 +227,8 @@
         <Name>Steve McGannaway</Name>
       </StaffMember>
       <AssignedLocation>
-        <RefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</RefId>
-        <LocalId json:force-string="true">9556</LocalId>
+        <RefId>9556</RefId>
         <Name>Masterton (Whakaoriori) Kāhui Ako</Name>
-        <ObjectType>Organisation</ObjectType>
       </AssignedLocation>
       <Description>Kāhui Ako Cross School Teacher</Description>
       <StaffRoleList>

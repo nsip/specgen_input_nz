@@ -44,7 +44,7 @@
     <Description>
       <p>Generic object reference to the Provider/Organisation who is granting the attainment to the student, e.g. NZQA, TEC.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
   </Item>    <!-- GrantingProvider -->
 
   <Item>
@@ -145,7 +145,7 @@
     <StudentAttainment>
       <StudentAttainmentRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAttainmentRefId>
       <GrantingProvider>
-        <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+        <RefId>762</RefId>
       </GrantingProvider>
       <Attainment>
         <RefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</RefId>
@@ -208,7 +208,7 @@
     <StudentAttainment>
       <StudentAttainmentRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAttainmentRefId>
       <GrantingProvider>
-        <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+        <RefId>9962</RefId>
       </GrantingProvider>
       <Attainment>
         <RefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</RefId>

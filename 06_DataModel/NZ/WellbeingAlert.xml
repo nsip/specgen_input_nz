@@ -60,7 +60,7 @@
     <Description>
       <p>Generic object reference to the school for which this WellbeingAlert is being reported.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
   </Item>    <!-- Provider -->  
 
   <Item>
@@ -190,7 +190,7 @@
         <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
       </Student>
       <Provider>
-        <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
+        <RefId>672</RefId>
       </Provider>
       <StaffMember>
         <RefId>BA265776-359D-7510-1A8C-77432A901A16</RefId>

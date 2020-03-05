@@ -76,6 +76,36 @@
 		</xhtml:Example>
 	</CommonElement>
 
+	<CommonElement name="ProviderObjectReferenceType" type="true" dm="true">
+		<Item>
+			<Element>ProviderObjectReferenceType</Element>
+			<Description>
+				<p>A reference to a Provider Data Object</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>RefId</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description><p>The Ministry of Education Organisation Id of the referenced provider</p></Description>
+			<Type ref="CommonTypes" name="MoEOrgIdType"/>
+		</Item>   <!-- RefId -->
+		<Item>
+			<Element>Name</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description><p>The normal descriptive name of the referenced object.</p></Description>
+			<Type name="xs:string"/>
+		</Item>   <!-- Name -->
+
+ 		<xhtml:Example xmlns="" name="ProviderObjectReferenceType Example">
+			<ObjectReference>
+				<RefId json:force-string="true">672</RefId>
+				<Name>Masterton Primary School</Name>
+			</ObjectReference>
+		</xhtml:Example>
+	</CommonElement>
+
 	<CommonElement name="StudentObjectReferenceType" type="true" dm="true">
 		<Item>
 			<Element>StudentObjectReferenceType</Element>
@@ -172,7 +202,7 @@
 				<p>The provider involved with the assessment task and the role they play,
 					 e.g. assessing provider, assessment location provider, assessment provider, registering provider.</p>
 			</Description>
-			<Type complex="extension" name="ObjectReferenceType"/>
+			<Type complex="extension" name="ProviderObjectReferenceType"/>
 		</Item>
 		<Item>
 			<Element>ProviderRole</Element>

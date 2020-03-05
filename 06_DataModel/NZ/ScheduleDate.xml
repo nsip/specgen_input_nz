@@ -57,7 +57,7 @@
 		<Description>
 			<p>The provider, e.g. school, tertiary institution etc, that this schedule date record belongs to.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/> 
 	</Item>    <!-- Provider -->
 	<Item>
 		<Element>Term</Element>
@@ -133,7 +133,7 @@
 			<ScheduleDateLocalId>2019a-A-06</ScheduleDateLocalId>
 			<CalendarDate>2019-03-14</CalendarDate>
 			<Provider>
-				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
+				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
 			</Provider>
 			<Term>

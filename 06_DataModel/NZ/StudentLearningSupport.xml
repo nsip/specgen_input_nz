@@ -55,7 +55,7 @@
     <Description>
       <p>Reference to the Provider that created the learning support record for the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
   </Item>    <!-- Provider -->
 
   <Item>
@@ -256,6 +256,9 @@
 		  <Student>
 			  <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
 		  </Student>
+      <Provider>
+        <RefId>744</RefId>
+      </Provider>
 		  <LearnerStatus>ACT</LearnerStatus>
 		  <StudentConsentList>
 		    <StudentConsent>

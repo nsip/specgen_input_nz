@@ -58,7 +58,7 @@
 		<Description>
 			<p>The provider the academic day belongs to.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/> 
 	</Item>    <!-- Provider -->
 	<Item>
 		<Element>Schedule</Element>
@@ -103,7 +103,7 @@
 			<ScheduleAcademicDayLocalId>2019a-A</ScheduleAcademicDayLocalId>
 			<AcademicDayName>Scheule 2019a, Day A</AcademicDayName>
 			<Provider>
-				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
+				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
 			</Provider>
 			<Schedule>

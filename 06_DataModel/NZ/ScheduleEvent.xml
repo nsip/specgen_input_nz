@@ -47,7 +47,7 @@
 		<Description>
 			<p>The provider at which this event will occur</p>
 		</Description>
-		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/> 
 	</Item>    <!-- Provider -->
 	<Item>
 		<Element>EventDate</Element>
@@ -226,7 +226,7 @@
 			<ScheduleEventRefId>c79e65df-0b11-4a97-9062-9fbd1c1a38e3</ScheduleEventRefId>
 			<ScheduleEventLocalId>evMarSlip</ScheduleEventLocalId>
 			<Provider>
-				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
+				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
 			</Provider>
 			<EventDate>2019-03-14</EventDate>
@@ -248,7 +248,7 @@
 			<ScheduleEventRefId>c315d397-6d8d-46bd-b183-ad3a3653a42b</ScheduleEventRefId>
 			<ScheduleEventLocalId>evMarCan</ScheduleEventLocalId>
 			<Provider>
-				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
+				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
 			</Provider>
 			<EventDate>2019-03-14</EventDate>
@@ -277,7 +277,7 @@
 			<ScheduleEventRefId>f84d9681-03f6-4434-a867-967dba517cf5</ScheduleEventRefId>
 			<ScheduleEventLocalId>evWinSprt</ScheduleEventLocalId>
 			<Provider>
-				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
+				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
 			</Provider>
 			<EventDate>2019-07-05</EventDate>

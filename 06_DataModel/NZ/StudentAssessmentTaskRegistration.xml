@@ -153,18 +153,18 @@
   <xhtml:Example xmlns="" name="Student Assessment Task Registration">
     <StudentAssessmentTaskRegistration>
       <StudentAssessmentTaskRegistrationRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskRegistrationRefId>
-        <ProviderInvolvedList>
+      <ProviderInvolvedList>
           <!-- NZQA is Assessor -->
           <ProviderInvolved>
-            <RefId>5556b4eb-850f-4102-800c-9a3fde8bfa9f</RefId>
+            <RefId>9772</RefId>
             <ProviderRole>ASR</ProviderRole>
           </ProviderInvolved>
           <!-- School is Provider -->
           <ProviderInvolved>
-            <RefId>6661f830-13a6-44d7-bd96-be00cbad68f1</RefId>
+            <RefId>377</RefId>
             <ProviderRole>PRO</ProviderRole>
           </ProviderInvolved>
-        </ProviderInvolvedList>
+      </ProviderInvolvedList>
       <Student>
         <LocalId>851039-HP</LocalId>
         <Name>Harry Potter</Name>

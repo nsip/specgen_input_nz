@@ -45,7 +45,7 @@
     <Description>
       <p>Generic object reference to the Provider that first uploaded this document.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
   </Item>    <!-- Provider -->
 
   <Item>
@@ -182,7 +182,7 @@
     <Document>
       <DocumentRefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</DocumentRefId>
       <Provider>
-        <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
+        <RefId>386</RefId>
       </Provider>
       <DocumentDescription>Timmy McGannaway's IEP for 2019</DocumentDescription>
       <URL>http://somehost.co.nz/docs/ghf12312</URL>

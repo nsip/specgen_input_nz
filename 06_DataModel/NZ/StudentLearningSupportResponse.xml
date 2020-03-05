@@ -55,7 +55,7 @@
     <Description>
       <p>The provider that created this learning support need reponse.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"/>
+    <Type ref="CommonTypes" name="ProviderObjectReferenceType"/>
   </Item>    <!-- Provider -->
 
   <Item>
@@ -256,7 +256,7 @@
     <StudentLearningSupportResponse>
       <StudentLearningSupportResponseRefId>461B63B4-CFEF-4820-8501-E7DBBB4555CB</StudentLearningSupportResponseRefId>
       <Student>
-        <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
+        <RefId>8631e737-c9db-4e6c-804d-a78c65f98f67</RefId>
       </Student>
       <LearningSupportNeed>
         <RefId>CA222226-359D-7510-1A8C-36432A901A16</RefId>
