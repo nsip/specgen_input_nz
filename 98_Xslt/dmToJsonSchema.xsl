@@ -131,7 +131,7 @@
 			</xsl:choose>
 		</xsl:variable>
 
-		<xsl:apply-templates select="specgen:Item[position() gt 1]">
+		<xsl:apply-templates select="specgen:Item[position() gt 1]|specgen:Choice/specgen:Item">
 			<xsl:with-param name="indent" select="$objIndent"/>
 			<xsl:with-param name="inArray" select="$objArray"/>
 		</xsl:apply-templates>
