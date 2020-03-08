@@ -56,7 +56,7 @@
 		<Description>
 			<p>Generic object reference to the education Provider, eg school, that has the TeachingGroup</p>
 		</Description>
-		<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/>
 	</Item>    <!-- Provider -->
 
 	<Item>
@@ -107,7 +107,7 @@
 				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
 			</Student>
 			<Provider>
-				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
+				<RefId>9961</RefId>
 			</Provider>
 			<TeachingGroup>
 				<RefId>93b9b77e-a23f-4acd-a65e-e26f1034317f</RefId>

@@ -61,7 +61,7 @@
     <Description>
       <p>Generic object reference to the Provider (school) who is making this curriculum progress report.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"/>
+    <Type ref="CommonTypes" name="ProviderObjectReferenceType"/>
   </Item>    <!-- Provider -->
 
   <Item>
@@ -132,7 +132,7 @@
         <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
       </Student>
       <Provider>
-        <RefId>407405d9-caae-4853-a397-4053e0cda895</RefId>
+        <RefId>9961</RefId>
       </Provider>
       <TeachingGroup>
         <RefId>4f6dce25-cca6-49ef-8be4-675e2cfce8b8</RefId>

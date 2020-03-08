@@ -195,27 +195,36 @@
   </Item>    <!-- EvaluationType --> 
 
   <Item>
-    <Element>AssessmentToolTypeName</Element>
+    <Element>Curriculum</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The assessment tool the assessment is used as part of. Both the original free text value sent by 
-      the SMS vendors and the value it is mapped to in this code set are held. This holds the original free text value.</p>
+      <p>The curriculum the assessment is for.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- AssessmentToolTypeName -->
+    <Type ref="CodeSets" name="NZCodeSetsCurriculumType"/>
+  </Item>    <!-- Curriculum -->
 
   <Item>
-    <Element>AssessmentTool</Element>
+    <Element>AssessmentToolUsed</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The assessment tool the assessment is used as part of. Both the original free text value sent by the 
       SMS vendors and the value it is mapped to in this code set are held.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsAssessmentToolUsedType"/>
-  </Item>    <!-- AssessmentTool -->
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentToolType"/>
+  </Item>    <!-- AssessmentToolUsed -->
   
+  <Item>
+    <Element>AssessmentToolTest</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The tests available within an assessment tool that is being used by this assessment task.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentToolTestType"/>
+  </Item>    <!-- AssessmentToolTest -->
+
   <Item>
     <Element>AssessmentPurpose</Element>
     <Characteristics>O</Characteristics>
@@ -282,6 +291,17 @@
   </Item>    <!-- LearningStandardList -->
 
   <Item>
+    <Element>StandardType</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The type of standard the result is for. Applies to secondary level assessments, e.g.
+       unit and achievement standards, scholarships and International Baccalaureate.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningStandardTypeType"></Type>
+  </Item>    <!-- LearningStandardType -->
+
+  <Item>
     <Element>SpecialAssessmentConditionExclusionList</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -317,7 +337,7 @@
       <AssessmentName>NZ History Classroom Test</AssessmentName>
       <ProviderInvolvedList>
         <ProviderInvolved>
-          <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+          <RefId>9962</RefId>
           <ProviderRole>PRO</ProviderRole>
         </ProviderInvolved>
       </ProviderInvolvedList>

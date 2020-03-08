@@ -57,7 +57,7 @@
 		<Description>
 			<p>The provider the schedule term applies to, ommitted if it applies to all providers.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/> 
 	</Item>    <!-- Provider -->
 
 	<Item>
@@ -88,21 +88,24 @@
 		<Type name="xs:date"/>
 	</Item>    <!-- EndDate -->
 
-  <Item>
-    <Element>RecordAudit</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
-    </Description>
-    <Type ref="CommonTypes" name="RecordAuditType"></Type>
-  </Item>    <!-- RecordAudit -->
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
   
 	<xhtml:Example xmlns="" name ="Schedule Term">
 		<ScheduleTerm>
 			<ScheduleTermRefId>eed03e3c-b088-4b69-bba7-b042f6f7a040</ScheduleTermRefId>
 			<ScheduleTermLocalId>2019-1</ScheduleTermLocalId>
 			<TermName>Term I of 2019</TermName>
+			<Provider>
+				<RefId>783</RefId>
+			</Provider>
 			<StartDate>2019-01-28</StartDate>
 			<EndDate>2019-03-13</EndDate>
 			<RecordAudit>

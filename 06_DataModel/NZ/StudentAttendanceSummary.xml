@@ -46,14 +46,14 @@
     </Description>
     <Type ref="CommonTypes" name="StudentObjectReference"></Type>
   </Item>    <!-- Student -->
- <Item>
+  <Item>
     <Element>Provider</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The SIF ID of the Provider who is recording this attendance information.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReference"></Type>
+    <Type ref="CommonTypes" name="ProviderObjectReference"></Type>
   </Item>    <!-- Provider -->
   <Item>
     <Element>SchoolCalendarYear</Element>
@@ -205,14 +205,14 @@
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
 	</Item>    <!-- RecordAudit -->
     
-  <xhtml:Example xmlns="" name="StudentAttendanceSummary" intl="nz">
+  <xhtml:Example xmlns="" name="StudentAttendanceSummary">
     <StudentAttendanceSummary>
       <StudentAttendanceSummaryRefId>d3476fae-8647-384b-da24-31eda3583211</StudentAttendanceSummaryRefId>
       <Student>
         <RefId>7c834ea9-eda1-2090-347f-83297e1c290c</RefId>
       </Student>
       <Provider>
-        <RefId>ca285746-359d-7510-1a8c-36432a901a16</RefId>
+        <RefId>743</RefId>
       </Provider>
       <SchoolCalendarYear>2015</SchoolCalendarYear>
       <StartDate>2014-08-30</StartDate>

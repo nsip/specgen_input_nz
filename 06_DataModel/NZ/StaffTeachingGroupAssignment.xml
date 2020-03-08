@@ -53,7 +53,7 @@
     <Description>
       <p>A generic object reference to the Provider making the assignment.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
   </Item>      <!-- Provider -->  
 
   <Item>
@@ -114,7 +114,7 @@
         <RefId>6c12f5ae-ca86-40e2-b252-593154c8b967</RefId>
       </StaffMember>
       <Provider>
-        <RefId>f91cd380-2e14-43ef-b181-aedccea399f9</RefId>
+        <RefId>636</RefId>
       </Provider>
       <TeachingGroup>
         <RefId>edc3ac19-264f-4734-b75b-6d56fbf84a18</RefId>

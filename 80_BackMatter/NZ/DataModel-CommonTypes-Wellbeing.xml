@@ -1588,38 +1588,6 @@
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>    <!-- Need -->
 		<Item>
-			<Element>CaseLead</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The Agency taking the lead on the learning support need case, e.g. MOE, Police, Corrections etc.)</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsLearningSupportCaseLeadType"/>
-		</Item>    <!-- CaseLead -->
-		<Item>
-			<Element>CaseLeadOtherDesc</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Free text describing the Case Lead Agency when a Case Lead of 'Other' is selected.</p>
-			</Description>
-			<Type name="xs:normalizedString"/>
-		</Item>    <!-- CaseLeadOtherDesc -->
-		<Item>
-			<Element>CaseLeadContactPerson</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The name of the contact person for the Case Lead Agency.</p>
-			</Description>
-			<Type name="xs:normalizedString"/>
-		</Item>    <!-- CaseLeadContactPerson -->
-		<Item>
-			<Element>SupportingDocumentList</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>A list of supporting documents for a learning support need.</p>
-			</Description>
-			<Type ref="CommonTypes" name="DocumentList"/>
-		</Item>    <!-- SupportingDocumentList -->
-		<Item>
 			<Element>ResponseList</Element>
 			<Characteristics>O</Characteristics>
 			<Description>

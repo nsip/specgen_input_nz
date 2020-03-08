@@ -41,7 +41,7 @@
 		<Description>
 			<p>The provider who is providing this attendance time list record.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ObjectReference"/>
+		<Type ref="CommonTypes" name="ProviderObjectReference"/>
 	</Item>    <!-- Provider -->
 	<Item>
 		<Element>TeachingGroup</Element>
@@ -69,7 +69,7 @@
 				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd991234</RefId>
 			</Student>
 			<Provider>
-				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd996698</RefId>
+				<RefId>762</RefId>
 			</Provider>
 			<TeachingGroup>
 				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd993378</RefId>

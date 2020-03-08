@@ -57,18 +57,8 @@
     <Description>
       <p>Generic object reference to the provider which recorded this Wellbeing Characteristic.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
   </Item>    <!-- RecordingProvider -->
-
-  <Item>
-    <Element>Classification</Element>
-    <Characteristics>C</Characteristics>
-  	<privacyRating>High</privacyRating>
-    <Description>
-      <p>Category of WellbeingCharacteristic.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicClassType"></Type>
-  </Item>    <!-- CharacteristicClassification -->
   
   <Item>
     <Element>StartDate</Element>
@@ -111,8 +101,18 @@
   </Item>    <!-- CharacteristicNotes -->
   
   <Item>
+    <Element>Classification</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Top most category of WellbeingCharacteristic.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicClassType"></Type>
+  </Item>    <!-- CharacteristicClassification -->
+
+  <Item>
     <Element>Category</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
   	<privacyRating>High</privacyRating>
     <Description>
       <p>Category of WellbeingCharacteristic.</p>
@@ -161,6 +161,36 @@
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicPriorityType"/>
   </Item>    <!-- CharacteristicPriority -->
+
+  <Item>
+    <Element>CaseLead</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Agency taking the lead on the learning support need case, e.g. MOE, Police, Corrections etc.)</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportCaseLeadType"></Type>
+  </Item>    <!-- CaseLead (agency) -->
+
+  <Item>
+    <Element>CaseLeadOtherDesc</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Free text describing the Case Lead Agency when a Case Lead of 'Other' is selected.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- CaseLeadOtherDesc -->
+
+  <Item>
+    <Element>CaseLeadContactPerson</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The name of the contact person for the Case Lead Agency.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- CaseLeadContactPerson -->
 
   <Item>
     <Element>DailyManagement</Element>
@@ -370,13 +400,16 @@
         <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
       </Student>
       <RecordingProvider>
-        <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
+        <RefId>672</RefId>
       </RecordingProvider>
       <StartDate>2017-11-01</StartDate>
       <EndDate>2017-11-10</EndDate>
       <CharacteristicNotes>This Student has a special need.</CharacteristicNotes>
+      <Classification>LSN</Classification>
       <Category>LSN-SOC</Category>
       <SubCategory>LSN-HYP</SubCategory>
+      <CaseLead>RT</CaseLead>
+      <CaseLeadContactPerson>Dr RTL Bush</CaseLeadContactPerson>
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>

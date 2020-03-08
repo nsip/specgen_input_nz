@@ -53,7 +53,7 @@
 		<Description>
 			<p>Generic object reference to the organisation being granted this student consent.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/> 
 	</Item>    <!-- Organisation -->
 
 	<Item>
@@ -144,6 +144,12 @@
 		<StudentConsent>
 			<StudentConsentRefId>7C834EA9-EDA1-2090-347F-83297E1C290C</StudentConsentRefId>
 			<StudentConsentLocalId>S1234567</StudentConsentLocalId>
+			<Student>
+				<RefId>fe659ed3-8a78-4bc0-8876-7b75ac585edf</RefId>
+			</Student>
+			<Organisation>
+				<RefId>9961</RefId>
+			</Organisation>
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>

@@ -88,15 +88,6 @@
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentMethodologyType"/>
   </Item>    <!-- AssessmentMethodologyType -->
-  <Item>
-    <Element>Status</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The status of the assessment, e.g. Marked, Moderated.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsAssessmentStatusType"/>
-  </Item>    <!-- Status -->
 
   <!--  Providers & Markers involved in setting the Assessment Task (and result) -->
   <Item>
@@ -168,15 +159,24 @@
     <Type ref="CodeSets" name="NZCodeSetsCurriculumType"/>
   </Item>    <!-- Curriculum -->   
   <Item>
-    <Element>AssessmentToolTypeName</Element>
+    <Element>AssessmentToolUsed</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The type of assessment tool used for the assessment task. Both the original free text value sent by the SMS vendors
-       and the value it is mapped to in this code set are held. This holds the original free text value.</p>
+       and the value it is mapped to in this code set are held.</p>
     </Description>
-    <Type name="xs:normalizedString"/>
-  </Item>    <!-- AssessmentToolTypeName -->
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentToolType"/>
+  </Item>    <!-- AssessmentTool -->  
+  <Item>
+    <Element>AssessmentToolTest</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The tests available within an assessment tool that is being used by this assessment task.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentToolTestType"/>
+  </Item>    <!-- AssessmentToolTest -->
   <Item>
     <Element>AssessmentToolUsed</Element>
     <Characteristics>O</Characteristics>
@@ -278,13 +278,22 @@
   </Item>    <!-- CreditsAchieved -->
   <Item>
     <Element>ResultScoreList</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A list of the assessment result scores that the student received for this assessment task.</p>
     </Description>
     <Type ref="CommonTypes" name="AssessmentResultScoreListType"></Type>
   </Item>    <!-- ResultScoreList -->
+  <Item>
+    <Element>Weight</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Weight placed upon this result</p>
+    </Description>
+    <Type name="xs:decimal"/>
+  </Item>    <!-- Weight -->
   <Item>
     <Element>EffortComment</Element>
     <Characteristics>O</Characteristics>
@@ -333,7 +342,7 @@
         <AssessmentMethodology>P</AssessmentMethodology>
         <ProviderInvolvedList>
           <ProviderInvolved>
-            <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+            <RefId>9953</RefId>
             <ProviderRole>PRO</ProviderRole>
           </ProviderInvolved>
         </ProviderInvolvedList>
@@ -341,27 +350,32 @@
             <SubjectArea>MATH</SubjectArea>
         </SubjectAreaList>
         <Curriculum>NZC</Curriculum>
-        <AssessmentToolTypeName>PAT</AssessmentToolTypeName>
+        <AssessmentToolUsed>PATCOMP</AssessmentToolUsed>
         <EvaluationType>F</EvaluationType>
         <DateTimeAssessed>2018-11-21T15:34:22</DateTimeAssessed>
         <ResultScoreList>
           <ResultScore>
+            <ScoreType>FIN</ScoreType>
             <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
             <ScoreValue json:force-string="true">25</ScoreValue>
           </ResultScore>
           <ResultScore>
+            <ScoreType>FIN</ScoreType>
             <ScoreMetric>SCA</ScoreMetric>  <!-- Scale Score -->
             <ScoreValue  json:force-string="true">38.5</ScoreValue>
           </ResultScore>
           <ResultScore>
+            <ScoreType>FIN</ScoreType>
             <ScoreMetric>MAR</ScoreMetric>  <!-- Margin of Error -->
             <ScoreValue  json:force-string="true">5.0</ScoreValue>
           </ResultScore>
           <ResultScore>
+            <ScoreType>FIN</ScoreType>
             <ScoreMetric>YEA</ScoreMetric>  <!-- Year Level -->
             <ScoreValue  json:force-string="true">4</ScoreValue>
           </ResultScore>				
           <ResultScore>
+            <ScoreType>FIN</ScoreType>
             <ScoreMetric>STA</ScoreMetric>  <!-- Stanine -->
             <ScoreValue  json:force-string="true">6</ScoreValue>
           </ResultScore>
@@ -386,7 +400,7 @@
       <AssessmentMethodology>P</AssessmentMethodology>
       <ProviderInvolvedList>
         <ProviderInvolved>
-          <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+          <RefId>722</RefId>
           <ProviderRole>PRO</ProviderRole>
         </ProviderInvolved>
       </ProviderInvolvedList>
@@ -394,41 +408,48 @@
           <SubjectArea>ENGL</SubjectArea>
       </SubjectAreaList>
       <Curriculum>NZC</Curriculum>
-      <AssessmentToolTypeName>STAR</AssessmentToolTypeName>
+      <AssessmentToolUsed>STARREA</AssessmentToolUsed>
       <EvaluationType>F</EvaluationType>
       <DateTimeAssessed>2018-11-01T15:34:22</DateTimeAssessed>
       <ResultScoreList>
         <ResultScore>
+          <ScoreType>FIN</ScoreType>
           <Competency>SubTest1</Competency>
           <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
           <ScoreValue json:force-string="true">8</ScoreValue>
         </ResultScore>
         <ResultScore>
+          <ScoreType>FIN</ScoreType>
           <Competency>SubTest2</Competency>
           <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
           <ScoreValue json:force-string="true">7</ScoreValue>
         </ResultScore>
         <ResultScore>
+          <ScoreType>FIN</ScoreType>
           <Competency>SubTest3</Competency>
           <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
           <ScoreValue json:force-string="true">10</ScoreValue>
         </ResultScore>
         <ResultScore>
+          <ScoreType>FIN</ScoreType>
           <Competency>SubTest9</Competency>
           <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
           <ScoreValue json:force-string="true">9</ScoreValue>
         </ResultScore>
         <ResultScore>
+          <ScoreType>FIN</ScoreType>
           <Competency>Summary</Competency>
           <ScoreMetric>SCA</ScoreMetric>  <!-- Scale Score -->
           <ScoreValue json:force-string="true">22</ScoreValue>
         </ResultScore>
         <ResultScore>
+          <ScoreType>FIN</ScoreType>
           <Competency>Summary</Competency>
           <ScoreMetric>YEA</ScoreMetric>  <!-- Year Level -->
           <ScoreValue  json:force-string="true">5</ScoreValue>
         </ResultScore>				
         <ResultScore>
+          <ScoreType>FIN</ScoreType>
           <Competency>Summary</Competency>
           <ScoreMetric>STA</ScoreMetric>  <!-- Stanine Score -->
           <ScoreValue json:force-string="true">4</ScoreValue>
@@ -456,7 +477,7 @@
       <AssessmentMethodology>P</AssessmentMethodology>
       <ProviderInvolvedList>
         <ProviderInvolved>
-          <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+          <RefId>752</RefId>
           <ProviderRole>PRO</ProviderRole>
         </ProviderInvolved>
       </ProviderInvolvedList>
@@ -464,26 +485,30 @@
           <SubjectArea>ENGL</SubjectArea>
       </SubjectAreaList>
       <Curriculum>NZC</Curriculum>
-      <AssessmentToolTypeName>e-asTTle</AssessmentToolTypeName>
+      <AssessmentToolUsed>EASREAD</AssessmentToolUsed>
       <EvaluationType>F</EvaluationType>
       <DateTimeAssessed>2018-11-01T15:34:22</DateTimeAssessed>
       <ResultScoreList>
         <ResultScore>
+          <ScoreType>FIN</ScoreType>
           <Competency>Overall</Competency>
           <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
           <ScoreValue json:force-string="true">1591</ScoreValue>
         </ResultScore>
         <ResultScore>
+          <ScoreType>FIN</ScoreType>
           <Competency>Overall</Competency>
           <ScoreMetric>CUR</ScoreMetric>  <!-- Curriculum Level -->
           <ScoreValue json:force-string="true">5</ScoreValue>
         </ResultScore>
         <ResultScore>
+          <ScoreType>FIN</ScoreType>
           <Competency>Ideas</Competency>
           <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
           <ScoreValue json:force-string="true">1234</ScoreValue>
         </ResultScore>
         <ResultScore>
+          <ScoreType>FIN</ScoreType>
           <Competency>Ideas</Competency>
           <ScoreMetric>CUR</ScoreMetric>  <!-- Curriculum Level -->
           <ScoreValue json:force-string="true">5</ScoreValue>
@@ -509,7 +534,7 @@
       <AssessmentMethodology>P</AssessmentMethodology>
       <ProviderInvolvedList>
         <ProviderInvolved>
-          <RefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RefId>
+          <RefId>277</RefId>
           <ProviderRole>PRO</ProviderRole>
         </ProviderInvolved>
       </ProviderInvolvedList>
@@ -517,26 +542,29 @@
           <SubjectArea>MATH</SubjectArea>
       </SubjectAreaList>
       <Curriculum>NZC</Curriculum>
-      <AssessmentToolTypeName>IKAN</AssessmentToolTypeName>
       <EvaluationType>F</EvaluationType>
       <DateTimeAssessed>2018-11-01T15:34:22</DateTimeAssessed>
       <ResultScoreList>
         <ResultScore>
+          <ScoreType>FIN</ScoreType>
           <Competency>Number Sequence and Order</Competency>
           <ScoreMetric>NKS</ScoreMetric>  <!-- Number Knowledge Stage -->
           <ScoreValue>NKS-AP</ScoreValue> <!-- Advanced Proportional -->
         </ResultScore>
         <ResultScore>
+          <ScoreType>FIN</ScoreType>
           <Competency>Fractions</Competency>
           <ScoreMetric>NKS</ScoreMetric>  <!-- Number Knowledge Stage -->
           <ScoreValue>NKS-AM</ScoreValue> <!-- Advanced Multiplicative -->
         </ResultScore>
         <ResultScore>
+          <ScoreType>FIN</ScoreType>
           <Competency>Place Value</Competency>
           <ScoreMetric>NKS</ScoreMetric>  <!-- Number Knowledge Stage -->
           <ScoreValue>NKS-AP</ScoreValue> <!-- Advanced Proportional -->
         </ResultScore>
         <ResultScore>
+          <ScoreType>FIN</ScoreType>
           <Competency>Basic Facts</Competency>
           <ScoreMetric>NKS</ScoreMetric>  <!-- Number Knowledge Stage -->
           <ScoreValue>NKS-AM</ScoreValue> <!-- Advanced Multiplicative -->

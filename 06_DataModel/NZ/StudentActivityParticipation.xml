@@ -52,7 +52,7 @@
     <Description>
       <p>Generic object reference to the Provider running the activity the student is participating in, e.g. schools.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
   </Item>    <!-- Provider -->
 
   <Item>
@@ -161,7 +161,7 @@
         <RefId>646C5D4A-C829-4886-A02B-971695C7BC06</RefId>
       </Student>
       <Provider>
-        <RefId>33d610cd-40d3-44db-b21b-3cffe695503a</RefId>
+        <RefId>2342</RefId>
       </Provider>
       <ActivityGroup>SPO</ActivityGroup>
       <ActivityType>CRI</ActivityType>

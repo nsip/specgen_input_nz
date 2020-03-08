@@ -23,18 +23,8 @@
 		<Description>
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
 		</Description>
-		<Type ref="CommonTypes" name="RefIdType"/>
+		<Type ref="CommonTypes" name="MoEOrgIdType"/>
   </Item>   <!-- ProviderRefId -->
-  <Item>
-		<Element>ProviderLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The Id of the data object record that was provided by the system that the information 
-			was originally sourced from.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"/>
-  </Item>   <!-- ProviderLocalId -->	  
   <Item>
 	  <Element>Authority</Element>
 	  <Characteristics>O</Characteristics>
@@ -242,8 +232,7 @@
 		</RelatedOrganisationList>
 		<OperationalStatus>O</OperationalStatus>
 		<Type json:force-string="true">21</Type>
-		<ProviderRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</ProviderRefId>
-		<ProviderLocalId>01011234</ProviderLocalId>
+		<ProviderRefId>448</ProviderRefId>
 		<Authority>STATE</Authority>
 		<SchoolService>
 			<CoEdStatus>COED</CoEdStatus>

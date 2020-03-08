@@ -73,7 +73,7 @@
 		<Description>
 			<p>The provider the schedule is for.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/> 
 	</Item>    <!-- Provider -->
 
 	<Item>
@@ -104,7 +104,7 @@
 			<StartDate>2019-01-30</StartDate>
 			<EndDate>2019-04-07</EndDate>
 			<Provider>
-				<RefId>ab987eeb-cf1d-4e62-aecd-96d942a12828</RefId>
+				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
 			</Provider>
 			<AcademicDayList>

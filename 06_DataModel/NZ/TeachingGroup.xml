@@ -74,7 +74,7 @@
     <Description>
       <p>RefId  of the Provider who defines the TeachingGroup. Either RefId or LocalId must be provided.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
   </Item>       <!-- Provider -->
   <Item>
     <Element>TeachingProvider</Element>
@@ -86,34 +86,14 @@
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
   </Item>       <!-- TeachingProvider -->
   <Item>
-    <Element>SchoolYear</Element>
-    <Characteristics>M</Characteristics>
-	  <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The SchoolYear that the class represented by the TeachingGroup is being taught.</p>
-    </Description>
-    <Type name="xs:gYear"></Type>
-  </Item>       <!-- SchoolYear -->
-  <Item>
-    <Element>BeginDate</Element>
+    <Element>ScheduleTerm</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
+	  <privacyRating>Medium</privacyRating>
     <Description>
-      <p>The start date of the first Timetable that the class represented by the TeachingGroup
-        is being taught in the nominated school year.</p>
+      <p>The term that the teaching groups run for, e.g. Term 1, Full Year etc.</p>
     </Description>
-    <Type name="xs:date"></Type>
-  </Item>       <!-- BeginDate -->
-  <Item>
-    <Element>EndDate</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The end date of the last Timetable that the class represented by the TeachingGroup
-        is being taught in the nominated school year.</p>
-    </Description>
-    <Type name="xs:date"></Type>
-  </Item>       <!-- EndDate -->
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>       <!-- ScheduleTerm -->
   <Item>
     <Element>StudentList</Element>
     <Characteristics>O</Characteristics>
@@ -180,12 +160,11 @@
       <LongName>Year 7A Maths - Space and Numbers</LongName>
       <GroupType>SC</GroupType>
       <Provider>
-        <RefId>64A309DA-063A-2E35-B359-FACEA8C12312</RefId>
-        <LocalId>234</LocalId> 
+        <RefId>234</RefId>
       </Provider>
-      <SchoolYear>2018</SchoolYear>
-      <BeginDate>2018-02-04</BeginDate>
-      <EndDate>2018-12-05</EndDate>
+      <ScheduleTerm>
+        <LocalId>FY2020</LocalId>
+      </ScheduleTerm>
       <StudentList>
         <Student>
           <RefId>9897466F-200E-4BC1-B9AE-D1507DA15CEF</RefId>

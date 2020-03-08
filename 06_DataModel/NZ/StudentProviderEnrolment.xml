@@ -59,7 +59,7 @@
 		<Description>
 			<p>Generic object reference to the education Provider, eg school.</p>
 		</Description>
-		<Type ref="CommonTypes" relationship="records enrollment of student in" count="1:1" name="ObjectReferenceType"/>
+		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/>
 	</Item>    <!-- Provider -->
 
 	<Item>
@@ -169,7 +169,7 @@
 				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
 			</Student>
 			<Provider>
-				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
+				<RefId>872</RefId>
 			</Provider>
 			<StudentId>123ABC</StudentId>
 			<EntryDate>2018-01-29</EntryDate>
@@ -219,7 +219,7 @@
 				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
 			</Student>
 			<Provider>
-				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
+				<RefId>9961</RefId>
 			</Provider>
 			<StudentId>123ABC</StudentId>
 			<EntryDate>2017-01-29</EntryDate>
