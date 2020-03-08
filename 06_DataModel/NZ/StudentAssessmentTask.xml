@@ -110,16 +110,6 @@
   </Item>    <!-- DateTimeAssessed -->
 
   <Item>
-    <Element>EvaluationType</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The type of assessment evaluation, e.g. formative or summative.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsAssessmentEvaluationTypeType"/>
-  </Item>    <!-- EvaluationType -->
-
-  <Item>
     <Element>Status</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
