@@ -109,6 +109,7 @@
 				<img src="images/SIFNZ-LogicalModel-WellbeingDomain.png" usemap="#Hauora / WellbeingMap"/>
 			</Intro>
 
+			<DataObject coords="163,178,281,211" role="member">StudentConsent</DataObject>
 			<DataObject coords="282,282,430,333" role="member">WellbeingCharacteristic</DataObject>
 			<DataObject coords="437,198,543,261" role="member">WellbeingAlert</DataObject>
 			<DataObject coords="593,284,712,331" role="member">WellbeingEvent</DataObject>
