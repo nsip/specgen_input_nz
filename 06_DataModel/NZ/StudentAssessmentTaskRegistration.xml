@@ -118,6 +118,10 @@
       <p>The Year Level of the assessment task the registration is for. May only contain the values 1 through to 13 inclusive.</p>
     </Description>
     <Type name="xs:int"/>
+			<Facets>
+				<xs:minInclusive value="1"/>
+				<xs:maxInclusive value="13"/>
+			</Facets>
   </Item>    <!-- YearLevel -->
 
   <Item>

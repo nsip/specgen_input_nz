@@ -1,4 +1,4 @@
-	<DataObject name="StudentProviderEnrolment"
+<DataObject name="StudentProviderEnrolment"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xi="http://www.w3.org/2001/XInclude"

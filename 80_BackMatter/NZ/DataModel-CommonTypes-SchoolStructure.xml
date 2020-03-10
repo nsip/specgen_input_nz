@@ -352,6 +352,10 @@
 				<p>Which year level are we describing?</p>
 			</Description>
 			<Type name="xs:int"/>
+			<Facets>
+				<xs:minInclusive value="1"/>
+				<xs:maxInclusive value="13"/>
+			</Facets>
 		</Item>
 		<Item>
 			<Element>Gender</Element>			
@@ -384,7 +388,7 @@
 			<Type name="xs:int"/>
 			<Facets>
 				<xs:minInclusive value="1"/>
-				<xs:maxInclusive value="15"/>
+				<xs:maxInclusive value="13"/>
 			</Facets>
 		</Item>
 

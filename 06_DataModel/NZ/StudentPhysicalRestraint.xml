@@ -171,16 +171,6 @@
   </Item>    <!-- RestraintReason -->
 
   <Item>
-    <Element>StudentYearLevel</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The year level of the student that the physical restraint was applied to. Can only contain the values 1 through to 13 inclusive.</p>
-    </Description>
-    <Type name="xs:int"></Type>
-  </Item>    <!-- StudentYearLevel -->
-
-  <Item>
     <Element>DocumentList</Element>    
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>

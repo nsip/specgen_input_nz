@@ -221,6 +221,10 @@
 				<p>Represents the year level at which the student is considered to be predominantly taught. For example – Year 10, Year 11. Can only contain the values 1 through to 13 inclusive.</p>
 			</Description>
 			<Type name="xs:int"/>
+			<Facets>
+				<xs:minInclusive value="1"/>
+				<xs:maxInclusive value="13"/>
+			</Facets>
 		</Item>		<!-- YearLevel -->
 		<Item>
 			<Element>EligibilityCriteria</Element>
@@ -274,6 +278,10 @@
 				<p>Indicates the number of years for which funding has been provided by MoE. Must only contain values from 0 through to 15 inclusive.</p>
 			</Description>
 			<Type name="xs:int"/>
+			<Facets>
+				<xs:minInclusive value="0"/>
+				<xs:maxInclusive value="15"/>
+			</Facets>
 		</Item>		<!-- FundingYearLevel -->
 		<Item>
 			<Element>Curriculum</Element>
