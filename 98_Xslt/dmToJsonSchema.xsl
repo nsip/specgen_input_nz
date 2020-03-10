@@ -375,9 +375,78 @@
 				<xsl:text>          type: string&#x0a;</xsl:text>
 			</xsl:when>
 			<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:integer' 
+							or specgen:Item[2]/specgen:Type/@name eq 'xs:byte'
+							or specgen:Item[2]/specgen:Type/@name eq 'xs:short'
 							or specgen:Item[2]/specgen:Type/@name eq 'xs:int'
-							or specgen:Item[2]/specgen:Type/@name eq 'xs:unsignedInt'">
+							or specgen:Item[2]/specgen:Type/@name eq 'xs:long'
+							or specgen:Item[2]/specgen:Type/@name eq 'xs:positiveInteger'
+							or specgen:Item[2]/specgen:Type/@name eq 'xs:negativeInteger'
+							or specgen:Item[2]/specgen:Type/@name eq 'xs:nonPositiveInteger'
+							or specgen:Item[2]/specgen:Type/@name eq 'xs:nonNegativeInteger'
+							or specgen:Item[2]/specgen:Type/@name eq 'xs:unsignedByte'
+							or specgen:Item[2]/specgen:Type/@name eq 'xs:unsignedShort'
+							or specgen:Item[2]/specgen:Type/@name eq 'xs:unsignedInt'
+							or specgen:Item[2]/specgen:Type/@name eq 'xs:unsignedLong'">
 				<xsl:text>          type: integer&#x0a;</xsl:text>
+					<!-- What's the minimum value?? -->
+					<xsl:choose>
+						<xsl:when test="count(specgen:Item[2]/specgen:Facets) gt 0"/>
+
+						<xsl:when test="contains(specgen:Item[2]/specgen:Type/@name, 'xs:unsigned') or specgen:Item[2]/specgen:Type/@name eq 'xs:nonNegativeInteger'">
+							<xsl:text>          minimum: 0&#x0a;</xsl:text>
+						</xsl:when>
+						<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:positiveInteger'">
+							<xsl:text>          minimum: 1&#x0a;</xsl:text>
+						</xsl:when>
+						<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:byte'">
+							<xsl:text>          minimum: -128&#x0a;</xsl:text>
+						</xsl:when>
+						<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:short'">
+							<xsl:text>          minimum: -32768&#x0a;</xsl:text>
+						</xsl:when>
+						<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:int'">
+							<xsl:text>          minimum: -2147483648&#x0a;</xsl:text>
+						</xsl:when>
+						<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:long'">
+							<xsl:text>          minimum: -9223372036854775808&#x0a;</xsl:text>
+						</xsl:when>
+					</xsl:choose>
+
+					<!-- What's the maximum value?? -->
+					<xsl:choose>
+						<xsl:when test="count(specgen:Item[2]/specgen:Facets) gt 0"/>
+
+						<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:nonPositiveInteger'">
+							<xsl:text>          maximum: 0&#x0a;</xsl:text>
+						</xsl:when>
+						<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:negativeInteger'">
+							<xsl:text>          maximum: -1&#x0a;</xsl:text>
+						</xsl:when>
+						<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:byte'">
+							<xsl:text>          maximum: 127&#x0a;</xsl:text>
+						</xsl:when>
+						<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:short'">
+							<xsl:text>          maximum: 32767&#x0a;</xsl:text>
+						</xsl:when>
+						<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:int'">
+							<xsl:text>          maximum: 2147483647&#x0a;</xsl:text>
+						</xsl:when>
+						<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:long'">
+							<xsl:text>          maximum: 9223372036854775807&#x0a;</xsl:text>
+						</xsl:when>
+						<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:unsignedByte'">
+							<xsl:text>          maximum: 255&#x0a;</xsl:text>
+						</xsl:when>
+						<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:unsignedShort'">
+							<xsl:text>          maximum: 65535&#x0a;</xsl:text>
+						</xsl:when>
+						<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:unsignedInt'">
+							<xsl:text>          maximum: 4294967295&#x0a;</xsl:text>
+						</xsl:when>
+						<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:long'">
+							<xsl:text>          maximum: 18446744073709551615&#x0a;</xsl:text>
+						</xsl:when>
+					</xsl:choose>
 			</xsl:when>
 			<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:date'"> 
 				<xsl:text>          type: string&#x0a;</xsl:text>
@@ -686,11 +755,82 @@
 		<xsl:param name="indent"/>
 
 		<xsl:choose>
-			<xsl:when test="   @name eq 'xs:integer'
+			<xsl:when test="   @name eq 'xs:integer' 
+							or @name eq 'xs:byte'
+							or @name eq 'xs:short'
 							or @name eq 'xs:int'
-							or @name eq 'xs:unsignedInt'">
+							or @name eq 'xs:long'
+							or @name eq 'xs:positiveInteger'
+							or @name eq 'xs:negativeInteger'
+							or @name eq 'xs:nonPositiveInteger'
+							or @name eq 'xs:nonNegativeInteger'
+							or @name eq 'xs:unsignedByte'
+							or @name eq 'xs:unsignedShort'
+							or @name eq 'xs:unsignedInt'
+							or @name eq 'xs:unsignedLong'">
 				<xsl:value-of select="concat($indent, '  type: integer&#x0a;')"/>
+
+				<!-- What's the minimum value?? -->
+				<xsl:choose>
+					<xsl:when test="count(following-sibling::specgen:Facets) gt 0"/>
+
+					<xsl:when test="contains(@name, 'unsigned') or @name eq 'nonNegativeInteger'">
+						<xsl:value-of select="concat($indent, '  minimum: 0&#x0a;')"/>
+					</xsl:when>
+					<xsl:when test="@name eq 'xs:positiveInteger'">
+						<xsl:value-of select="concat($indent, '  minimum: 1&#x0a;')"/>
+					</xsl:when>
+					<xsl:when test="@name eq 'xs:byte'">
+						<xsl:value-of select="concat($indent, '  minimum: -128&#x0a;')"/>   <!-- 127 -->
+					</xsl:when>
+					<xsl:when test="@name eq 'xs:short'">
+						<xsl:value-of select="concat($indent, '  minimum: -32768&#x0a;')"/>  <!-- 32767 -->
+					</xsl:when>
+					<xsl:when test="@name eq 'xs:int'">
+						<xsl:value-of select="concat($indent, '  minimum: -2147483648&#x0a;')"/>  <!-- 2147483647 -->
+					</xsl:when>
+					<xsl:when test="@name eq 'xs:long'">
+						<xsl:value-of select="concat($indent, '  minimum: -9223372036854775808&#x0a;')"/> <!-- 9223372036854775807 -->
+					</xsl:when>
+				</xsl:choose>
+
+				<!-- What's the maximum value?? -->
+				<xsl:choose>
+					<xsl:when test="count(following-sibling::specgen:Facets) gt 0"/>
+
+					<xsl:when test="@name eq 'xs:nonPositiveInteger'">
+						<xsl:value-of select="concat($indent, '  maximum: 0&#x0a;')"/>
+					</xsl:when>
+					<xsl:when test="@name eq 'xs:negativeInteger'">
+						<xsl:value-of select="concat($indent, '  maximum: -1&#x0a;')"/>
+					</xsl:when>
+					<xsl:when test="@name eq 'xs:byte'">
+						<xsl:value-of select="concat($indent, '  maximum: 127&#x0a;')"/>
+					</xsl:when>
+					<xsl:when test="@name eq 'xs:short'">
+						<xsl:value-of select="concat($indent, '  maximum: 32767&#x0a;')"/>
+					</xsl:when>
+					<xsl:when test="@name eq 'xs:int'">
+						<xsl:value-of select="concat($indent, '  maximum: 2147483647&#x0a;')"/>
+					</xsl:when>
+					<xsl:when test="@name eq 'xs:long'">
+						<xsl:value-of select="concat($indent, '  maximum: 9223372036854775807&#x0a;')"/> 
+					</xsl:when>
+					<xsl:when test="@name eq 'xs:unsignedByte'">
+						<xsl:value-of select="concat($indent, '  maximum: 255&#x0a;')"/>
+					</xsl:when>
+					<xsl:when test="@name eq 'xs:unsignedShort'">
+						<xsl:value-of select="concat($indent, '  maximum: 65535&#x0a;')"/>
+					</xsl:when>
+					<xsl:when test="@name eq 'xs:unsignedInt'">
+						<xsl:value-of select="concat($indent, '  maximum: 4294967295&#x0a;')"/>
+					</xsl:when>
+					<xsl:when test="@name eq 'xs:long'">
+						<xsl:value-of select="concat($indent, '  maximum: 18446744073709551615&#x0a;')"/> 
+					</xsl:when>
+				</xsl:choose>
 			</xsl:when>
+			
 			<xsl:when test="@name eq 'xs:decimal'">
 				<xsl:value-of select="concat($indent, '  type: number&#x0a;')"/>
 			</xsl:when>
@@ -751,6 +891,26 @@
 		<xsl:param name="indent"/>
 
 		<xsl:value-of select="concat($indent, 'pattern: ''^', @value, '$''&#x0a;')"/>
+	</xsl:template>
+
+	<xsl:template match="specgen:Facets/xs:minInclusive">
+		<xsl:param name="indent"/>
+		<xsl:value-of select="concat($indent, 'minimum: ', @value, '&#x0a;')"/>
+	</xsl:template>
+
+	<xsl:template match="specgen:Facets/xs:maxInclusive">
+		<xsl:param name="indent"/>
+		<xsl:value-of select="concat($indent, 'maximum: ', @value, '&#x0a;')"/>
+	</xsl:template>
+
+	<xsl:template match="specgen:Facets/xs:minExclusive">
+		<xsl:param name="indent"/>
+		<xsl:value-of select="concat($indent, 'exclusiveMinimum: ', @value, '&#x0a;')"/>
+	</xsl:template>
+	
+	<xsl:template match="specgen:Facets/xs:maxExclusive">
+		<xsl:param name="indent"/>
+		<xsl:value-of select="concat($indent, 'exclusiveMaximum: ', @value, '&#x0a;')"/>
 	</xsl:template>
 
 	<xsl:template match="specgen:Facets/xs:minLength|specgen:Facets/xs:maxLength">
