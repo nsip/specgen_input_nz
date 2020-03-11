@@ -175,7 +175,7 @@
 				<Description>
 					<p>Developed by Industry Training Organisations or NZQA.</p>
 				</Description>
-			</Value>
+			</Value>    <!-- Unit Standard -->
 			<Value>
 				<Code>AS</Code>
 				<Text xml:lang="en">Achievement Standard</Text>
@@ -184,22 +184,54 @@
 					<p>Developed by MoE, derived from the achievement objectives 
 						of the NZ Curriculum or Te Marautanga o Aotearoa</p>
 				</Description>
-			</Value>
+			</Value>    <!-- Achievement Standard -->
 			<Value>
 				<Code>SC</Code>
 				<Text xml:lang="en">Scholarship</Text>
 				<Text xml:lang="mi">Karahipi</Text>
+				<Description>Administered by NZQA as the highest level of assessment available, above NCEA</Description>
+			</Value>    <!-- Scholarship -->
+			<Value>
+				<Code>OT</Code>
+				<Text>Other</Text>
+			</Value>    <!-- Other -->
+		</Values>
+	</CodeSet>   <!-- LearningStandardType -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the family the learning standard is part of, e.g. NCEA, International Baccalaureate, Cambridge etc.</p>
+		</Intro>
+		<ID>Learning Standard Family</ID>
+		<Values>
+			<Value>
+				<Code>NC</Code>
+				<Text>NCEA</Text>
+				<Description>
+					<p>Administered by NZQA and contributes to NCEA qualifications</p>
+				</Description>
+			</Value>    <!-- NCEA -->
+			<Value>
+				<Code>NZ</Code>
+				<Text>NZQF</Text>
+				<Description>
+					<p>Contributes to qualifications other than NCEA on the NZQF</p>
+				</Description>
+			</Value>    <!-- NZQF -->
+			<Value>
+				<Code>CA</Code>
+				<Text>Cambridge International Education</Text>
+				<Description>Administered by Cambridge International Education in the UK</Description>
 			</Value>
 			<Value>
 				<Code>IB</Code>
-				<Text xml:lang="en">International Baccalaureate</Text>
-				<Text xml:lang="mi"></Text>
-			</Value>
+				<Text>International Baccalaureate</Text>
+				<Description>Administered by the International Baccalaureate Organisation in Switzerland.</Description>
+			</Value>	<!-- International Baccalaureate -->
 			<Value>
 				<Code>OT</Code>
-				<Text xml:lang="en">Other</Text>
-				<Text xml:lang="mi"></Text>
-			</Value>
+				<Text>Other</Text>
+			</Value>    <!-- Other -->
 		</Values>
 	</CodeSet>   <!-- LearningStandardType -->
 

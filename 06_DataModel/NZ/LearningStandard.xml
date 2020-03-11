@@ -78,6 +78,16 @@
   </Item>    <!-- StandardType -->
 
   <Item>
+    <Element>LearningStandardFamily</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The family the learning standard is part of.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningStandardFamilyType"/>
+  </Item>    <!-- LearningStandardFamily -->
+
+  <Item>
     <Element>Description</Element>
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
