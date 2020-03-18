@@ -239,6 +239,15 @@
     <Type name="xs:date"></Type>
   </Item>    <!-- DateStudentNotified -->
   <Item>
+    <Element>Published</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Indicates whether or not the result has been published.</p>
+    </Description>
+    <Type  ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+  </Item>    <!-- Published -->
+  <Item>
     <Element>PublishedDate</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>

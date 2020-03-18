@@ -34,7 +34,10 @@
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>Code assigned by the LearningStandard publisher to identify the LearningStandard.  This may not uniquely identify the LearningStandard, where there may be multiple editions or versions of a particular LearningStandard. The Id of the data object record that was provided by the system that the information was originally sourced from.</p>
+      <p>Code assigned by the LearningStandard publisher to identify the LearningStandard.  This may
+       not uniquely identify the LearningStandard, where there may be multiple editions or versions
+       of a particular LearningStandard. The Id of the data object record that was provided by the
+       system that the information was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"/>
   </Item>    <!-- LearningStandardLocalId -->  
@@ -48,6 +51,19 @@
     <Type name="xs:normalizedString"></Type>
   </Item>    <!-- Title -->
 
+
+  <!-- Alternate Composite Key -->
+  <Item>
+    <Element>Number</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A unique number that is used to identify the learning standard. One use of this is for NZQA standard numbers which 
+        cannot be used as a unique identifier (in LocalId) on their own as they are versioned so are part of a composite key
+       with VersionNo.</p>
+    </Description>
+    <Type name="xs:int"/>
+  </Item>    <!-- Number -->
   <Item>
     <Element>VersionNo</Element>
     <Characteristics>O</Characteristics>
@@ -57,6 +73,7 @@
     </Description>
     <Type name="xs:decimal"/>
   </Item>    <!-- VersionNo -->
+
   <Item>
     <Element>Publisher</Element>
     <Characteristics>O</Characteristics>
