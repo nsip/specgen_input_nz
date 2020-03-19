@@ -1292,15 +1292,6 @@
 			</Description>
 		</Item>
 		<Item>
-			<Element>MinistryOfEducationId</Element>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>	The unique Ministry of Education created global identifier for an Education Provider.</p>
-			</Description>
-			<Type ref="CommonTypes" name="MoEOrgIdType"/>
-		</Item>   <!-- MinistryOfEducationId -->	
-		<Item>
 			<Element>AddressList</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>

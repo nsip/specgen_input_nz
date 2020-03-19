@@ -18,7 +18,7 @@
   </Item>   <!-- Provider -->
   <Item>
 		<Element>ProviderRefId</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
