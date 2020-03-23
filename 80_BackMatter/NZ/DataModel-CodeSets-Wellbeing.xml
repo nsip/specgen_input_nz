@@ -871,22 +871,27 @@
 			<Value>
 				<Code>MDC-AST</Code>
 				<Text xml:lang="en">Asthma</Text>
+				<Text xml:lang="mi">Mate Huango</Text>
 			</Value>
 			<Value>
 				<Code>MDC-DIA</Code>
 				<Text xml:lang="en">Diabetes</Text>
+				<Text xml:lang="mi">Mate Huka</Text>
 			</Value>
 			<Value>
 				<Code>MDC-EPI</Code>
 				<Text xml:lang="en">Epilepsy</Text>
+				<Text xml:lang="mi">Mate Hūhuki</Text>
 			</Value>
 			<Value>
 				<Code>MDC-REG</Code>
 				<Text xml:lang="en">Regular medication</Text>
+				<Text xml:lang="mi">Rongoā</Text>
 			</Value>
 			<Value>
 				<Code>MDC-OTH</Code>
 				<Text xml:lang="en">Other</Text>
+				<Text xml:lang="mi">Mate Kē Atu</Text>
 			</Value>
 		</Values>
 	</CodeSet>	  <!-- Wellbeing Characteristic Category -->
@@ -931,15 +936,18 @@
 		<Values>
 			<Value>
 				<Code>N</Code>
-				<Text>Non-urgent</Text>
+				<Text xml:lang="en">Non-urgent</Text>
+				<Text xml:lang="mi">Nonoi kore</Text>
 			</Value>
 			<Value>
 				<Code>S</Code>
-				<Text>Semi-urgent</Text>
+				<Text xml:lang="en">Semi-urgent</Text>
+				<Text xml:lang="mi">Āhua Nonoi</Text>
 			</Value>
 			<Value>
 				<Code>U</Code>
-				<Text>Urgent</Text>
+				<Text xml:lang="en">Urgent</Text>
+				<Text xml:lang="mi">Nonoi</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Wellbeing Characteristic Priority -->
@@ -953,17 +961,17 @@
 				<Value>
 					<Code>ACTI</Code>
 					<Text xml:lang="en">Active</Text>
-					<Text xml:lang="mi">Whakaae</Text>
+					<Text xml:lang="mi">Tuwhera</Text>
 				</Value>
 				<Value>
 					<Code>CLOS</Code>
 					<Text xml:lang="en">Closed</Text>
-					<Text xml:lang="mi">Kua kati</Text>
+					<Text xml:lang="mi">kati</Text>
 				</Value>
 				<Value>
 					<Code>AWAI</Code>
 					<Text xml:lang="en">Awaiting Consent</Text>
-					<Text xml:lang="mi"></Text>
+					<Text xml:lang="mi">Tāria kia mana</Text>
 				</Value>
 		</Values>
 	</CodeSet>    <!-- Wellbeing Status -->
@@ -977,12 +985,12 @@
 				<Value>
 					<Code>DISO</Code>
 					<Text xml:lang="en">Disorders of intellectual development</Text>
-					<Text xml:lang="mi"></Text>
+					<Text xml:lang="mi">He Whakaupa ā-hinengaro</Text>
 				</Value>
 				<Value>
 					<Code>DSLD</Code>
 					<Text xml:lang="en">Developmental speech or language disorders</Text>
-					<Text xml:lang="mi"></Text>
+					<Text xml:lang="mi">He Tapepatanga Reo</Text>
 				</Value>
 				<Value>
 					<Code>ADHD</Code>
@@ -1012,22 +1020,22 @@
 				<Value>
 					<Code>SUBS</Code>
 					<Text xml:lang="en">Substance abuse or addictive behaviours</Text>
-					<Text xml:lang="mi"></Text>
+					<Text xml:lang="mi">He Whanonga Waranga</Text>
 				</Value>
 				<Value>
 					<Code>BLIN</Code>
 					<Text xml:lang="en">Blind or vision impaired</Text>
-					<Text xml:lang="mi">Pura</Text>
+					<Text xml:lang="mi">Kāpō, he atarua</Text>
 				</Value>
 				<Value>
 					<Code>DEAF</Code>
 					<Text xml:lang="en">Deaf or hard of hearing</Text>
-					<Text xml:lang="mi">Turi / Hakiri</Text>
+					<Text xml:lang="mi">Turi, he mate taringa</Text>
 				</Value>
 				<Value>
 					<Code>FEED</Code>
 					<Text xml:lang="en">Feeding or eating disorders</Text>
-					<Text xml:lang="mi"></Text>
+					<Text xml:lang="mi">He māuiuitanga ā-kai</Text>
 				</Value>
 				<Value>
 					<Code>STRE</Code>
@@ -1037,17 +1045,17 @@
 				<Value>
 					<Code>DNDD</Code>
 					<Text xml:lang="en">Disruptive behaviour or dissocial disorders</Text>
-					<Text xml:lang="mi"></Text>
+					<Text xml:lang="mi">He Pōrearea</Text>
 				</Value>
 				<Value>
 					<Code>OTHM</Code>
 					<Text xml:lang="en">Other mental health disorders</Text>
-					<Text xml:lang="mi"></Text>
+					<Text xml:lang="mi">He māuiui ā-hinengaro kē</Text>
 				</Value>
 				<Value>
 					<Code>OTHS</Code>
 					<Text xml:lang="en">Other sensory impairment</Text>
-					<Text xml:lang="mi"></Text>
+					<Text xml:lang="mi">He Mate Aurongo Kē</Text>
 				</Value>
 				<Value>
 					<Code>FOET</Code>
@@ -1076,22 +1084,27 @@
 			<Value>
 				<Code>MED</Code>
 				<Text xml:lang="en">Medical</Text>
+				<Text xml:lang="mi">ā-rongoā</Text>
 			</Value>
 			<Value>
 				<Code>MEN</Code>
 				<Text xml:lang="en">Mental health and behavioural</Text>
+				<Text xml:lang="mi">ā-hauora Hinengaro, ā-whanonga hoki</Text>
 			</Value>
 			<Value>
 				<Code>NEU</Code>
 				<Text xml:lang="en">Neurodevelopmental</Text>
+				<Text xml:lang="mi">Whanaketanga ā-Ioio</Text>
 			</Value>
 			<Value>
 				<Code>PHY</Code>
 				<Text xml:lang="en">Physical</Text>
+				<Text xml:lang="mi">ā-tinana</Text>
 			</Value>
 			<Value>
 				<Code>SEN</Code>
 				<Text xml:lang="en">Sensory</Text>
+				<Text xml:lang="mi">ā-tairongo</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Official Diagnosis Type -->
@@ -2101,11 +2114,13 @@
 		<Values>
 			<Value>
 				<Code>ACT</Code>
-				<Text>Active</Text>
+				<Text xml:lang="en">Active</Text>
+				<Text xml:lang="mi">E Tuwhera Ana</Text>
 			</Value>
 			<Value>
 				<Code>ARC</Code>
-				<Text>Archived</Text>
+				<Text xml:lang="en">Archived</Text>
+				<Text xml:lang="mi">Pūrangatia</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Learner Status -->
@@ -2118,31 +2133,38 @@
 		<Values>
 			<Value>
 				<Code>CO</Code>
-				<Text>Corrections</Text>
+				<Text xml:lang="en">Corrections</Text>
+				<Text xml:lang="mi">Ara Poutama Aotearoa</Text>
 			</Value>
 			<Value>
 				<Code>IH</Code>
-				<Text>IHC</Text>
+				<Text xml:lang="en">IHC</Text>
+				<Text xml:lang="mi">IHC</Text>
 			</Value>
 			<Value>
 				<Code>MO</Code>
-				<Text>MOE</Text>
+				<Text xml:lang="en">MOE</Text>
+				<Text xml:lang="mi">Te Tāhuhu o te Mātauranga</Text>				
 			</Value>
 			<Value>
 				<Code>OT</Code>
-				<Text>OT</Text>
+				<Text xml:lang="en">Oranga Tamariki</Text>
+				<Text xml:lang="mi">Oranga Tamariki</Text>
 			</Value>
 			<Value>
 				<Code>OH</Code>
-				<Text>Other</Text>
+				<Text xml:lang="en">Other</Text>
+				<Text xml:lang="mi">Rōpū kē</Text>
 			</Value>
 			<Value>
 				<Code>PO</Code>
-				<Text>Police</Text>
+				<Text xml:lang="en">Police</Text>
+				<Text xml:lang="mi">Ngā Pirihimana o Aotearoa</Text>
 			</Value>
 			<Value>
 				<Code>RT</Code>
-				<Text>RTLB</Text>
+				<Text xml:lang="en">RTLB</Text>
+				<Text xml:lang="mi">RTLB</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Case Lead -->
@@ -2155,19 +2177,23 @@
 		<Values>
 			<Value>
 				<Code>FSR</Code>
-				<Text>Further support required</Text>
+				<Text xml:lang="en">Further support required</Text>
+				<Text xml:lang="mi">Me Whai Tautoko Anō</Text>
 			</Value>
 			<Value>
 				<Code>GAC</Code>
-				<Text>Goal achieved</Text>
+				<Text xml:lang="en">Goal achieved</Text>
+				<Text xml:lang="mi">Whāinga i tutuki</Text>
 			</Value>
 			<Value>
 				<Code>GNA</Code>
-				<Text>Goal not achieved</Text>
+				<Text xml:lang="en">Goal not achieved</Text>
+				<Text xml:lang="mi">Whāinga kāre i tutuki</Text>
 			</Value>
 			<Value>
 				<Code>RNA</Code>
-				<Text>Response not effective</Text>
+				<Text xml:lang="en">Response not effective</Text>
+				<Text xml:lang="mi">Urupare kāre i tika</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Response Outcome -->
@@ -2180,15 +2206,18 @@
 		<Values>
 			<Value>
 				<Code>IND</Code>
-				<Text>Individual</Text>
+				<Text xml:lang="en">Individual</Text>
+				<Text xml:lang="mi">Takitahi</Text>
 			</Value>
 			<Value>
 				<Code>TAR</Code>
-				<Text>Targeted / Group</Text>
+				<Text xml:lang="en">Targeted / Group</Text>
+				<Text xml:lang="mi">Hāngai/Rōpū</Text>
 			</Value>
 			<Value>
 				<Code>UNI</Code>
-				<Text>Universal</Text>
+				<Text xml:lang="en">Universal</Text>
+				<Text xml:lang="mi">Ao whānui</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Response Tier -->
@@ -2201,23 +2230,28 @@
 		<Values>
 			<Value>
 				<Code>COM</Code>
-				<Text>Complete</Text>
+				<Text xml:lang="en">Complete</Text>
+				<Text xml:lang="mi">Oti</Text>
 			</Value>
 			<Value>
 				<Code>ILM</Code>
-				<Text>Incomplete (Support no longer required)</Text>
+				<Text xml:lang="en">Incomplete (Support no longer required)</Text>
+				<Text xml:lang="mi">Noho tārewa (Kāre ngā mahi tautoko i hiahiatia)</Text>
 			</Value>
 			<Value>
 				<Code>ISN</Code>
-				<Text>Incomplete (learner moved from school)</Text>
+				<Text xml:lang="en">Incomplete (learner moved from school)</Text>
+				<Text xml:lang="mi">Noho tārewa (kua haere te ākonga ki kura kē)</Text>
 			</Value>
 			<Value>
 				<Code>NLF</Code>
-				<Text>No longer funded</Text>
+				<Text xml:lang="en">No longer funded</Text>
+				<Text xml:lang="mi">Kāre he pūtea tautoko</Text>
 			</Value>
 			<Value>
 				<Code>OTH</Code>
-				<Text>Other</Text>
+				<Text xml:lang="en">Other</Text>
+				<Text xml:lang="mi">He mea kē</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Response Closure Status -->
@@ -2230,62 +2264,76 @@
 		<Values>
 			<Value>
 				<Code>ACU</Code>
-				<Text>Curriculum</Text>
+				<Text xml:lang="en">Curriculum</Text>
+				<Text xml:lang="mi">Marau</Text>
 				<Description>Links to Adaptation for access Response Type.</Description>
 			</Value>
 			<Value>
 				<Code>ASC</Code>
-				<Text>School property</Text>
+				<Text xml:lang="en">School property</Text>
+				<Text xml:lang="mi">Rawa ā-kura</Text>
 				<Description>Links to Adaptation for access Response Type.</Description>
 			</Value>
 			<Value>
 				<Code>HUP</Code>
-				<Text>For help undertaking personal care tasks</Text>
+				<Text xml:lang="en">For help undertaking personal care tasks</Text>
+				<Text xml:lang="mi">Hei Āwhina i ngā Tūmahi Atawhai</Text>
 			</Value>
 			<Value>
 				<Code>MOE</Code>
-				<Text>MOE specialists</Text>
+				<Text xml:lang="en">MOE specialists</Text>
+				<Text xml:lang="mi">Mātanga na Te Tāhuhu o te Mātauranga</Text>
 			</Value>
 			<Value>
 				<Code>OAN</Code>
-				<Text>Other agency/NGO specialists</Text>
+				<Text xml:lang="en">Other agency/NGO specialists</Text>
+				<Text xml:lang="mi">Umanga Kē/Mātanga NGO</Text>
 			</Value>
 			<Value>
 				<Code>ODS</Code>
-				<Text>Other adaptation for access</Text>
+				<Text xml:lang="en">Other adaptation for access</Text>
+				<Text xml:lang="mi">Urutaunga Angitu Kē</Text>
 			</Value>
 			<Value>
 				<Code>OSS</Code>
-				<Text>Other specialist support</Text>
+				<Text xml:lang="en">Other specialist support</Text>
+				<Text xml:lang="mi">Mātanga Tautoko Kē</Text>
 			</Value>
 			<Value>
 				<Code>OTA</Code>
-				<Text>Other teacher aide support in the classroom</Text>
+				<Text xml:lang="en">Other teacher aide support in the classroom</Text>
+				<Text xml:lang="mi">He Tautoko Kairīwhi Kē ki te Akomanga</Text>
 			</Value>
 			<Value>
 				<Code>OUD</Code>
-				<Text>Other universal design</Text>
+				<Text xml:lang="en">Other universal design</Text>
+				<Text xml:lang="mi">Hoahoatanga Whānui Kē</Text>
 			</Value>
 			<Value>
 				<Code>SCU</Code>
-				<Text>Curriculum</Text>
+				<Text xml:lang="en">Curriculum</Text>
+				<Text xml:lang="mi">Marau</Text>
 				<Description>Links to the Universal Design Response Type</Description>
 			</Value>
 			<Value>
 				<Code>SPC</Code>
-				<Text>Support from community</Text>
+				<Text xml:lang="en">Support from community</Text>
+				<Text xml:lang="mi">Tautoko ā-hapori</Text>
 			</Value>
 			<Value>
 				<Code>SPI</Code>
-				<Text>Support from Iwi</Text>
+				<Text xml:lang="en">Support from Iwi</Text>
+				<Text xml:lang="mi">Tautoko ā-iwi</Text>
 			</Value>
 			<Value>
 				<Code>SRL</Code>
-				<Text>To support and reinforce learning</Text>
+				<Text xml:lang="en">To support and reinforce learning</Text>
+				<Text xml:lang="mi">Te tautoko me te taunaki akoako</Text>
 			</Value>
 			<Value>
 				<Code>USC</Code>
-				<Text>School property</Text>
+				<Text xml:lang="en">School property</Text>
+				<Text xml:lang="mi">Rawa ā-kura</Text>
 				<Description>Links to the Universal Design Response Type</Description>
 			</Value>
 		</Values>
@@ -2299,35 +2347,43 @@
 		<Values>
 			<Value>
 				<Code>ACC</Code>
-				<Text>Accessible technology</Text>
+				<Text xml:lang="en">Accessible technology</Text>
+				<Text xml:lang="mi">Hangarau Whakamahi</Text>
 			</Value>
 			<Value>
 				<Code>ADA</Code>
-				<Text>Adaptation for access</Text>
+				<Text xml:lang="en">Adaptation for access</Text>
+				<Text xml:lang="mi">Urutaunga Tomo</Text>
 			</Value>
 			<Value>
 				<Code>INC</Code>
-				<Text>In class strategies / school</Text>
+				<Text xml:lang="en">In class strategies / school</Text>
+				<Text xml:lang="mi">Rautaki ā-akomanga, ā-kura</Text>
 			</Value>
 			<Value>
 				<Code>PRO</Code>
-				<Text>Professional learning and upskilling</Text>
+				<Text xml:lang="en">Professional learning and upskilling</Text>
+				<Text xml:lang="mi">Whakahiki pūkenga</Text>
 			</Value>
 			<Value>
 				<Code>SCH</Code>
-				<Text>School financial support</Text>
+				<Text xml:lang="en">School financial support</Text>
+				<Text xml:lang="mi">Tahua Tautoko ā-kura</Text>
 			</Value>
 			<Value>
 				<Code>SPE</Code>
-				<Text>Specialist support</Text>
+				<Text xml:lang="en">Specialist support</Text>
+				<Text xml:lang="mi">Tautoko Mātanga</Text>
 			</Value>
 			<Value>
 				<Code>TEA</Code>
-				<Text>Teacher aide support in the classroom</Text>
+				<Text xml:lang="en">Teacher aide support in the classroom</Text>
+				<Text xml:lang="mi">Tautokotanga Kairīwhi ki te akomanga</Text>
 			</Value>
 			<Value>
 				<Code>UNI</Code>
-				<Text>Universal Design</Text>
+				<Text xml:lang="en">Universal Design</Text>
+				<Text xml:lang="mi">Hoahoatanga Whānui</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Response Type -->
@@ -2338,17 +2394,25 @@
 		</Intro>
 		<ID>Learning Support External Funder</ID>
 		<Values>
-			<Value><Code>ACC</Code><Text>ACC</Text></Value>
-			<Value><Code>BEH</Code><Text>Behaviour Support</Text></Value>
-			<Value><Code>ESO</Code><Text>ESOL</Text></Value>
-			<Value><Code>ESW</Code><Text>ESW</Text></Value>
-			<Value><Code>ICS</Code><Text>ICS</Text></Value>
-			<Value><Code>IWS</Code><Text>IWS</Text></Value>
-			<Value><Code>ORS</Code><Text>ORS</Text></Value>
-			<Value><Code>OTH</Code><Text>Other</Text></Value>
-			<Value><Code>PCC</Code><Text>PCCS</Text></Value>
-			<Value><Code>RTL</Code><Text>RTLB</Text></Value>
-			<Value><Code>IRF</Code><Text>IRF</Text></Value>
+			<Value><Code>ACC</Code><Text xml:lang="en">ACC</Text></Value>
+			<Value>
+				<Code>BEH</Code>
+				<Text xml:lang="en">Behaviour Support</Text>
+				<Text xml:lang="mi">Tautoko whanonga</Text>
+			</Value>
+			<Value><Code>ESO</Code><Text xml:lang="en">ESOL</Text></Value>
+			<Value><Code>ESW</Code><Text xml:lang="en">ESW</Text></Value>
+			<Value><Code>ICS</Code><Text xml:lang="en">ICS</Text></Value>
+			<Value><Code>IWS</Code><Text xml:lang="en">IWS</Text></Value>
+			<Value><Code>ORS</Code><Text xml:lang="en">ORS</Text></Value>
+			<Value>
+				<Code>OTH</Code>
+				<Text xml:lang="en">Other</Text>
+				<Text xml:lang="mi">He mea Kē</Text>
+			</Value>
+			<Value><Code>PCC</Code><Text xml:lang="en">PCCS</Text></Value>
+			<Value><Code>RTL</Code><Text xml:lang="en">RTLB</Text></Value>
+			<Value><Code>IRF</Code><Text xml:lang="en">IRF</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support External Funder -->
 
@@ -2358,15 +2422,51 @@
 		</Intro>
 		<ID>Learning Support External Provider</ID>
 		<Values>
-			<Value><Code>MOE</Code><Text>MOE</Text></Value>
-			<Value><Code>MOH</Code><Text>MOH</Text></Value>
-			<Value><Code>ORA</Code><Text>Oranga Tamariki</Text></Value>
-			<Value><Code>CLU</Code><Text>Cluster organisation</Text></Value>
-			<Value><Code>NGO</Code><Text>NGO</Text></Value>
-			<Value><Code>OTH</Code><Text>Other</Text></Value>
-			<Value><Code>RTB</Code><Text>RTLB</Text></Value>
-			<Value><Code>RTL</Code><Text>RTLit</Text></Value>
-			<Value><Code>RTM</Code><Text>RT Māori</Text></Value>
+			<Value>
+				<Code>MOE</Code>
+				<Text xml:lang="en">MOE</Text>
+				<Text xml:lang="mi">Te Tāhuhu o te Mātauranga</Text>
+			</Value>
+			<Value>
+				<Code>MOH</Code>
+				<Text xml:lang="en">MOH</Text>
+				<Text xml:lang="mi"></Text>
+			</Value>
+			<Value>
+				<Code>ORA</Code>
+				<Text xml:lang="en">Oranga Tamariki</Text>
+				<Text xml:lang="mi">Oranga Tamariki</Text>
+			</Value>
+			<Value>
+				<Code>CLU</Code>
+				<Text xml:lang="en">Cluster organisation</Text>
+				<Text xml:lang="mi">Kāhui Whakahaere</Text>
+			</Value>
+			<Value>
+				<Code>NGO</Code>
+				<Text xml:lang="en">NGO</Text>
+				<Text xml:lang="mi"></Text>
+			</Value>
+			<Value>
+				<Code>OTH</Code>
+				<Text xml:lang="en">Other</Text>
+				<Text xml:lang="mi">He mea kē</Text>
+			</Value>
+			<Value>
+				<Code>RTB</Code>
+				<Text xml:lang="en">RTLB</Text>
+				<Text xml:lang="mi"></Text>
+			</Value>
+			<Value>
+				<Code>RTL</Code>
+				<Text xml:lang="en">RTLit</Text>
+				<Text xml:lang="mi"></Text>
+			</Value>
+			<Value>
+				<Code>RTM</Code>
+				<Text xml:lang="en">RT Māori</Text>
+				<Text xml:lang="mi"></Text>
+			</Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support External Provider-->
 
@@ -2376,12 +2476,36 @@
 		</Intro>
 		<ID>Learning Support Funding Status</ID>
 		<Values>
-			<Value><Code>AP</Code><Text>Approved</Text></Value>
-			<Value><Code>DE</Code><Text>Declined</Text></Value>
-			<Value><Code>NO</Code><Text>None</Text></Value>
-			<Value><Code>RE</Code><Text>Referred on</Text></Value>
-			<Value><Code>SU</Code><Text>Submitted</Text></Value>
-			<Value><Code>WA</Code><Text>Waiting list</Text></Value>
+			<Value>
+				<Code>AP</Code>
+				<Text xml:lang="en">Approved</Text>
+				<Text xml:lang="mi">I whakaaetia</Text>
+			</Value>
+			<Value>
+				<Code>DE</Code>
+				<Text xml:lang="en">Declined</Text>
+				<Text xml:lang="mi">Kāre i whakaaetia</Text>
+			</Value>
+			<Value>
+				<Code>NO</Code>
+				<Text xml:lang="en">None</Text>
+				<Text xml:lang="mi">Kore</Text>
+			</Value>
+			<Value>
+				<Code>RE</Code>
+				<Text xml:lang="en">Referred on</Text>
+				<Text xml:lang="mi">I tonoa i</Text>
+			</Value>
+			<Value>
+				<Code>SU</Code>
+				<Text xml:lang="en">Submitted</Text>
+				<Text xml:lang="mi">Kua tukuna</Text>
+			</Value>
+			<Value>
+				<Code>WA</Code>
+				<Text xml:lang="en">Waiting list</Text>
+				<Text xml:lang="mi">Rārangi roa</Text>
+			</Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Funding Status -->
 
@@ -2393,11 +2517,13 @@
 		<Values>
 			<Value>
 				<Code>ACT</Code>
-				<Text>Active</Text>
+				<Text xml:lang="en">Active</Text>
+				<Text xml:lang="mi">Tuwhera</Text>
 			</Value>
 			<Value>
 				<Code>CLO</Code>
-				<Text>Closed</Text>
+				<Text xml:lang="en">Closed</Text>
+				<Text xml:lang="mi">Kati</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Ext Response Status -->
@@ -2410,235 +2536,265 @@
 		<Values>
 			<Value>
 				<Code>ACC</Code>
-				<Text>Accessible Format Materials</Text>
+				<Text xml:lang="en">Accessible Format Materials</Text>
+				<Text xml:lang="mi">Tānga Kōrero E Taea Ana</Text>
 			</Value>
 			<Value>
 				<Code>ACT</Code>
-				<Text>Activity Centres</Text>
+				<Text xml:lang="en">Activity Centres</Text>
+				<Text xml:lang="mi">Pokapū Tūmahi</Text>
 			</Value>
 			<Value>
 				<Code>ADE</Code>
-				<Text>ASSIST - Deaf Education Centres Regional Service</Text>
+				<Text xml:lang="en">ASSIST - Deaf Education Centres Regional Service</Text>
 			</Value>
 			<Value>
 				<Code>AED</Code>
-				<Text>Alternative Education</Text>
+				<Text xml:lang="en">Alternative Education</Text>
+				<Text xml:lang="mi">Mātauranga Kē</Text>
 			</Value>
 			<Value>
 				<Code>AEI</Code>
-				<Text>Alternative Early Intervention Service Providers</Text>
+				<Text xml:lang="en">Alternative Early Intervention Service Providers</Text>
+				<Text xml:lang="mi">Kaituku Ratonga Wawaotanga Tōmua</Text>
 			</Value>
 			<Value>
 				<Code>ATE</Code>
-				<Text>Assistive Technology (AT) Equipment</Text>
+				<Text xml:lang="en">Assistive Technology (AT) Equipment</Text>
 			</Value>
 			<Value>
 				<Code>ATT</Code>
-				<Text>Attendance Services (Non Enrolment Truancy Service (NETS) and DTS)</Text>
+				<Text xml:lang="en">Attendance Services (Non Enrolment Truancy Service (NETS) and DTS)</Text>
 			</Value>
 			<Value>
 				<Code>BEH</Code>
-				<Text>Behaviour Service</Text>
+				<Text xml:lang="en">Behaviour Service</Text>
+				<Text xml:lang="mi">Ratonga Whanonga</Text>
 			</Value>
 			<Value>
 				<Code>BIL</Code>
-				<Text>Bilingual Support Workers</Text>
+				<Text xml:lang="en">Bilingual Support Workers</Text>
+				<Text xml:lang="mi">Kaimahi Tautoko Reorua</Text>
 			</Value>
 			<Value>
 				<Code>BLE</Code>
-				<Text>BLENNZ</Text>
+				<Text xml:lang="en">BLENNZ</Text>
 			</Value>
 			<Value>
 				<Code>BOA</Code>
-				<Text>Boarding Allowances</Text>
+				<Text xml:lang="en">Boarding Allowances</Text>
 			</Value>
 			<Value>
 				<Code>CHO</Code>
-				<Text>Cholmondeley Children's Centre</Text>
+				<Text xml:lang="en">Cholmondeley Children's Centre</Text>
 			</Value>
 			<Value>
 				<Code>CLA</Code>
-				<Text>Class Funding</Text>
+				<Text xml:lang="en">Class Funding</Text>
+				<Text xml:lang="mi">Tahua Akomanga</Text>
 			</Value>
 			<Value>
 				<Code>COC</Code>
-				<Text>Cochlear Implant Habilitation</Text>
+				<Text xml:lang="en">Cochlear Implant Habilitation</Text>
 			</Value>
 			<Value>
 				<Code>COM</Code>
-				<Text>Communication Service (Language and Learning Intervention)</Text>
+				<Text xml:lang="en">Communication Service (Language and Learning Intervention)</Text>
+				<Text xml:lang="mi">Ratonga Whakapānga (Wawaotanga ā-Reo, ā-Akoranga)</Text>
 			</Value>
 			<Value>
 				<Code>CON</Code>
-				<Text>Conductive Education</Text>
+				<Text xml:lang="en">Conductive Education</Text>
+				<Text xml:lang="mi">Conductive Education</Text>
 			</Value>
 			<Value>
 				<Code>DEC</Code>
-				<Text>Deaf Education Centres</Text>
+				<Text xml:lang="en">Deaf Education Centres</Text>
+				<Text xml:lang="mi">Pokapū Akoranga Turi</Text>
 			</Value>
 			<Value>
 				<Code>DHH</Code>
-				<Text>Deaf and Hard of Hearing Moderate Needs (not ORS)</Text>
+				<Text xml:lang="en">Deaf and Hard of Hearing Moderate Needs (not ORS)</Text>
 			</Value>
 			<Value>
 				<Code>EDY</Code>
-				<Text>Education Services for Youth Courts</Text>
+				<Text xml:lang="en">Education Services for Youth Courts</Text>
+				<Text xml:lang="mi">Education Services for Youth Courts</Text>
 			</Value>
 			<Value>
 				<Code>EIN</Code>
-				<Text>Early Intervention</Text>
+				<Text xml:lang="en">Early Intervention</Text>
+				<Text xml:lang="mi">Wawaotanga Tōmua</Text>
 			</Value>
 			<Value>
 				<Code>EIS</Code>
-				<Text>Early Intervention: Specialist Services</Text>
+				<Text xml:lang="en">Early Intervention: Specialist Services</Text>
+				<Text xml:lang="mi">Wawaotanga Tōmua: Ratonga Whāiti</Text>
 			</Value>
 			<Value>
 				<Code>ENG</Code>
-				<Text>Engaging Priority Families</Text>
+				<Text xml:lang="en">Engaging Priority Families</Text>
+				<Text xml:lang="mi">Te Whakaanga ki ngā Whānau Tōmua</Text>
 			</Value>
 			<Value>
 				<Code>ESO</Code>
-				<Text>ESOL (English for Speakers of Other Languages)</Text>
+				<Text xml:lang="en">ESOL (English for Speakers of Other Languages)</Text>
 			</Value>
 			<Value>
 				<Code>FIR</Code>
-				<Text>First Signs</Text>
+				<Text xml:lang="en">First Signs</Text>
 			</Value>
 			<Value>
 				<Code>ICS</Code>
-				<Text>In-Class Support (ICS) funding</Text>
+				<Text xml:lang="en">In-Class Support (ICS) funding</Text>
 			</Value>
 			<Value>
 				<Code>IMO</Code>
-				<Text>Intensive wraparound service (IWS) MOE provided</Text>
+				<Text xml:lang="en">Intensive wraparound service (IWS) MOE provided</Text>
 			</Value>
 			<Value>
 				<Code>IRF</Code>
-				<Text>Interim response fund (IRF)</Text>
+				<Text xml:lang="en">Interim response fund (IRF)</Text>
 			</Value>
 			<Value>
 				<Code>ITK</Code>
-				<Text>Intensive wraparound service (IWS) Te Kahutoi Assessment Hub</Text>
+				<Text xml:lang="en">Intensive wraparound service (IWS) Te Kahutoi Assessment Hub</Text>
 			</Value>
 			<Value>
 				<Code>NAT</Code>
-				<Text>National Mentoring Service (for Māori and Pasifika students)</Text>
+				<Text xml:lang="en">National Mentoring Service (for Māori and Pasifika students)</Text>
+				<Text xml:lang="mi">Ratonga Kaitohutohu ā-Motu (ākonga Māori, ākonga Pasifika hoki)</Text>
 			</Value>
 			<Value>
 				<Code>NZS</Code>
-				<Text>NZ Sign Language in Schools</Text>
+				<Text xml:lang="en">NZ Sign Language in Schools</Text>
+				<Text xml:lang="mi">Te Reo Turi i ngā Kura</Text>
 			</Value>
 			<Value>
 				<Code>ORS</Code>
-				<Text>ORS</Text>
+				<Text xml:lang="en">ORS</Text>
 			</Value>
 			<Value>
 				<Code>PBA</Code>
-				<Text>PB4L (IY Autism)</Text>
+				<Text xml:lang="en">PB4L (IY Autism)</Text>
 			</Value>
 			<Value>
 				<Code>PBC</Code>
-				<Text>PB4L (check and connect)</Text>
+				<Text xml:lang="en">PB4L (check and connect)</Text>
 			</Value>
 			<Value>
 				<Code>PBH</Code>
-				<Text>PB4L (Huakina Mai)</Text>
+				<Text xml:lang="en">PB4L (Huakina Mai)</Text>
 			</Value>
 			<Value>
 				<Code>PBI</Code>
-				<Text>PB4L (incredible Years Parents)</Text>
+				<Text xml:lang="en">PB4L (incredible Years Parents)</Text>
 			</Value>
 			<Value>
 				<Code>PBR</Code>
-				<Text>PB4L (Restorative Practice)</Text>
+				<Text xml:lang="en">PB4L (Restorative Practice)</Text>
 			</Value>
 			<Value>
 				<Code>PBS</Code>
-				<Text>PB4L (School-Wide)</Text>
+				<Text xml:lang="en">PB4L (School-Wide)</Text>
 			</Value>
 			<Value>
 				<Code>PBT</Code>
-				<Text>PB4L (IY Teachers)</Text>
+				<Text xml:lang="en">PB4L (IY Teachers)</Text>
 			</Value>
 			<Value>
 				<Code>PDM</Code>
-				<Text>Physical Disability Service (MOE provided)</Text>
+				<Text xml:lang="en">Physical Disability Service (MOE provided)</Text>
+				<Text xml:lang="mi">Ratonga Hauā (nā te Tāhuhu o te Mātauranga)</Text>
 			</Value>
 			<Value>
 				<Code>PDS</Code>
-				<Text>Physical Disability Service (Specialist service providers)</Text>
+				<Text xml:lang="en">Physical Disability Service (Specialist service providers)</Text>
+				<Text xml:lang="mi">Ratonga Hauā (nā te kaituku ratonga motuhake)</Text>
 			</Value>
 			<Value>
 				<Code>PFS</Code>
-				<Text>Programme for Students (PfS)</Text>
+				<Text xml:lang="en">Programme for Students (PfS)</Text>
 			</Value>
 			<Value>
 				<Code>REA</Code>
-				<Text>Reading Recovery</Text>
+				<Text xml:lang="en">Reading Recovery</Text>
+				<Text xml:lang="mi">Te Pānui Tautāwhi</Text>
 			</Value>
 			<Value>
 				<Code>REG</Code>
-				<Text>Regional Health Schools</Text>
+				<Text xml:lang="en">Regional Health Schools</Text>
+				<Text xml:lang="mi">Kura Hauora ā-Rohe</Text>
 			</Value>
 			<Value>
 				<Code>RFF</Code>
-				<Text>Refugee Flexible Funding Pool</Text>
+				<Text xml:lang="en">Refugee Flexible Funding Pool</Text>
+				<Text xml:lang="mi">Te Tahua mō ngā Manene</Text>
 			</Value>
 			<Value>
 				<Code>RPC</Code>
-				<Text>Refugee Pathway and Career Planning</Text>
+				<Text xml:lang="en">Refugee Pathway and Career Planning</Text>
+				<Text xml:lang="mi">Rapu Ara Mahi mō te Manene</Text>
 			</Value>
 			<Value>
 				<Code>RTB</Code>
-				<Text>Resource Teachers: Learning and Behaviour (RTLB)</Text>
+				<Text xml:lang="en">Resource Teachers: Learning and Behaviour (RTLB)</Text>
 			</Value>
 			<Value>
 				<Code>RTD</Code>
-				<Text>Resource Teachers: Deaf (RTD) Deaf Education Centres Regional Service</Text>
+				<Text xml:lang="en">Resource Teachers: Deaf (RTD) Deaf Education Centres Regional Service</Text>
 			</Value>
 			<Value>
 				<Code>RTL</Code>
-				<Text>Resource Teachers: Literacy (RTLit)</Text>
+				<Text xml:lang="en">Resource Teachers: Literacy (RTLit)</Text>
 			</Value>
 			<Value>
 				<Code>SCH</Code>
-				<Text>School High Health Needs Fund</Text>
+				<Text xml:lang="en">School High Health Needs Fund</Text>
+				<Text xml:lang="mi">Tahua Hauora mō ngā Kura</Text>
 			</Value>
 			<Value>
 				<Code>SER</Code>
-				<Text>Service Academies</Text>
+				<Text xml:lang="en">Service Academies</Text>
+				<Text xml:lang="mi">Rōpū Tuku Ratonga</Text>
 			</Value>
 			<Value>
 				<Code>SES</Code>
-				<Text>Special Education Transport Assistance (SESTA)</Text>
+				<Text xml:lang="en">Special Education Transport Assistance (SESTA)</Text>
 			</Value>
 			<Value>
 				<Code>STA</Code>
-				<Text>STAND Children's Services</Text>
+				<Text xml:lang="en">STAND Children's Services</Text>
 			</Value>
 			<Value>
 				<Code>STO</Code>
-				<Text>Specialist Teacher Outreach Service</Text>
+				<Text xml:lang="en">Specialist Teacher Outreach Service</Text>
+				<Text xml:lang="mi">Specialist Teacher Outreach Service</Text>
 			</Value>
 			<Value>
 				<Code>STU</Code>
-				<Text>Study Support Centres</Text>
+				<Text xml:lang="en">Study Support Centres</Text>
+				<Text xml:lang="mi">Pokapū Tautoko Ākonga</Text>
 			</Value>
 			<Value>
 				<Code>TEK</Code>
-				<Text>Te Kura (Learning Support gateways)</Text>
+				<Text xml:lang="en">Te Kura (Learning Support gateways)</Text>
+				<Text xml:lang="mi">Te Kura (Learning Support gateways)</Text>
 			</Value>
 			<Value>
 				<Code>TIP</Code>
-				<Text>Tips for Autism</Text>
+				<Text xml:lang="en">Tips for Autism</Text>
+				<Text xml:lang="mi">Tautoko mō te takiwātanga</Text>
 			</Value>
 			<Value>
 				<Code>TPM</Code>
-				<Text>Teen Parents in the Mainstream</Text>
+				<Text xml:lang="en">Teen Parents in the Mainstream</Text>
+				<Text xml:lang="mi">Rōpū Mātātahi Kura Auraki</Text>
 			</Value>
 			<Value>
 				<Code>TPU</Code>
-				<Text>Teen Parent Unit (TPU)</Text>
+				<Text xml:lang="en">Teen Parent Unit (TPU)</Text>
+				<Text xml:lang="mi">Rangapū Mātua Mātātahi (TPU)</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- MOE Specialist Service-->
@@ -2651,15 +2807,17 @@
 		<Values>
 			<Value>
 				<Code>BOA</Code>
-				<Text>Board funded</Text>
+				<Text xml:lang="en">Board funded</Text>
+				<Text xml:lang="mi">Nā te Poari i tautoko</Text>
 			</Value>
 			<Value>
 				<Code>NTA</Code>
-				<Text>Not applicable</Text>
+				<Text xml:lang="en">Not applicable</Text>
+				<Text xml:lang="mi">Kāre i arohia</Text>
 			</Value>
 			<Value>
 				<Code>SEG</Code>
-				<Text>SEG</Text>
+				<Text xml:lang="en">SEG</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Internal Funder -->
@@ -2672,15 +2830,18 @@
 		<Values>
 			<Value>
 				<Code>CLO</Code>
-				<Text>Closed</Text>
+				<Text xml:lang="en">Closed</Text>
+				<Text xml:lang="mi">Kati</Text>
 			</Value>
 			<Value>
 				<Code>MON</Code>
-				<Text>Monitoring</Text>
+				<Text xml:lang="en">Monitoring</Text>
+				<Text xml:lang="mi">Te Aro turuki</Text>
 			</Value>
 			<Value>
 				<Code>OBS</Code>
-				<Text>Observing</Text>
+				<Text xml:lang="en">Observing</Text>
+				<Text xml:lang="mi">Te Mātaki</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Int Response Status -->
@@ -2693,35 +2854,39 @@
 		<Values>
 			<Value>
 				<Code>COU</Code>
-				<Text>Counsellor</Text>
+				<Text xml:lang="en">Counsellor</Text>
+				<Text xml:lang="mi">Kaitautāwhi</Text>
 			</Value>
 			<Value>
 				<Code>ESW</Code>
-				<Text>ESW</Text>
+				<Text xml:lang="en">ESW</Text>
 			</Value>
 			<Value>
 				<Code>HEA</Code>
-				<Text>Health Professional</Text>
+				<Text xml:lang="en">Health Professional</Text>
+				<Text xml:lang="mi">Mātanga Hauora</Text>
 			</Value>
 			<Value>
 				<Code>RTL</Code>
-				<Text>RTLB</Text>
+				<Text xml:lang="en">RTLB</Text>
 			</Value>
 			<Value>
 				<Code>SEN</Code>
-				<Text>SENCO</Text>
+				<Text xml:lang="en">SENCO</Text>
 			</Value>
 			<Value>
 				<Code>SWI</Code>
-				<Text>SWIS</Text>
+				<Text xml:lang="en">SWIS</Text>
 			</Value>
 			<Value>
 				<Code>TAI</Code>
-				<Text>Teacher Aide</Text>
+				<Text xml:lang="en">Teacher Aide</Text>
+				<Text xml:lang="mi">Kairīwhi</Text>
 			</Value>
 			<Value>
 				<Code>TEA</Code>
-				<Text>Teacher</Text>
+				<Text xml:lang="en">Teacher</Text>
+				<Text xml:lang="mi">Kaiako</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Learning Support Internal Provider -->
@@ -2782,9 +2947,21 @@
 		</Intro>
 		<ID>Student Voice Type</ID>
 		<Values>
-			<Value><Code>GOA</Code><Text>Student Goal</Text></Value>
-			<Value><Code>INT</Code><Text>Student Interest</Text></Value>
-			<Value><Code>VOI</Code><Text>Student Voice</Text></Value>
+			<Value>
+				<Code>GOA</Code>
+				<Text xml:lang="en">Student Goal</Text>
+				<Text xml:lang="mi">Whainga Ākonga</Text>
+			</Value>
+			<Value>
+				<Code>INT</Code>
+				<Text xml:lang="en">Student Interest</Text>
+				<Text xml:lang="mi">Aronga Ākonga</Text>
+			</Value>
+			<Value>
+				<Code>VOI</Code>
+				<Text xml:lang="en">Student Voice</Text>
+				<Text xml:lang="mi">Reo Ākonga</Text>
+			</Value>
 		</Values>
 	</CodeSet>    <!-- Student Voice Type -->
 

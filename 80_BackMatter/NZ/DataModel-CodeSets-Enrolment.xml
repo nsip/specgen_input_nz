@@ -488,22 +488,27 @@
 			<Value>
 				<Code>10</Code>
 				<Text xml:lang="en">Further education or training</Text>
+				<Text xml:lang="mi">Me whai mātauranga/whakangungu kē</Text>
 			</Value>
 			<Value>
 				<Code>11</Code>
 				<Text xml:lang="en">Employment and further education/training</Text>
+				<Text xml:lang="mi">Me whai mahi, mātauranga/whakangungu kē</Text>
 			</Value>
 			<Value>
 				<Code>12</Code>
 				<Text xml:lang="en">Employment</Text>
+				<Text xml:lang="mi">Me whai mahi</Text>
 			</Value>
 			<Value>
 				<Code>13</Code>
 				<Text xml:lang="en">Other</Text>
+				<Text xml:lang="mi">He mea kē</Text>
 			</Value>
 			<Value>
 				<Code>88</Code>
 				<Text xml:lang="en">Unknown</Text>
+				<Text xml:lang="mi">Kāre e mōhiotia</Text>
 			</Value>
 		</Values>
 	</CodeSet>	<!-- Post School Activity -->

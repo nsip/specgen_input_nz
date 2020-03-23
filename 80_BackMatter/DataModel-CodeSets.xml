@@ -23,11 +23,13 @@
 		  <Values>
 			  <Value>
 				  <Code>N</Code>
-				  <Text>No</Text>
+				  <Text xml:lang="en">No</Text>
+				  <Text xml:lang="mi">Kāo</Text>
 			  </Value>
 			  <Value>
 				  <Code>Y</Code>
-				  <Text>Yes</Text>
+				  <Text xml:lang="en">Yes</Text>
+				  <Text xml:lang="mi">Āe</Text>
 			  </Value>			  
 		  </Values>
 	  </CodeSet>      <!-- Yes or No -->
@@ -40,15 +42,18 @@
 		  <Values>
 			  <Value>
 				  <Code>N</Code>
-				  <Text>No</Text>
+				  <Text xml:lang="en">No</Text>
+				  <Text xml:lang="mi">Kāo</Text>
 			  </Value>
 			  <Value>
 				  <Code>R</Code>
-				  <Text>Not Required</Text>
+				  <Text xml:lang="en">Not Required</Text>
+				  <Text xml:lang="mi">Kāre i hiahiatia</Text>
 			  </Value>
 			  <Value>
 				  <Code>Y</Code>
-				  <Text>Yes</Text>
+				  <Text xml:lang="en">Yes</Text>
+				  <Text xml:lang="mi">Āe</Text>
 			  </Value>			  
 		  </Values>
 	  </CodeSet>      <!-- Yes No Not Required -->
@@ -328,14 +333,17 @@
 			<Value>
 				<Code>NOT</Code>
 				<Text xml:lang="en">Not provided</Text>
+				<Text xml:lang="mi"> Kāre he whakaaetanga</Text>
 			</Value>
 			<Value>
 				<Code>STU</Code>
 				<Text xml:lang="en">Student</Text>
+				<Text xml:lang="mi">Ākonga</Text>
 			</Value>
 			<Value>
 				<Code>WHA</Code>
 				<Text xml:lang="en">Whānau</Text>
+				<Text xml:lang="mi">Whānau</Text>				
 			</Value>
 		</Values>
 	  </CodeSet>      <!-- Consent Given By -->
@@ -348,38 +356,46 @@
 		<Values>
 			<Value>
 				<Code>PHT</Code>
-				<Text>Share Photos</Text>
+				<Text xml:lang="en">Share Photos</Text>
+				<Text xml:lang="mi"></Text>
 				<Description>To use and share photographs of the student</Description>
 			</Value>			<!-- Share Photos -->
 			<Value>
 				<Code>ART</Code>
-				<Text>Share Art</Text>
+				<Text xml:lang="en">Share Art</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>			<!-- Share Art -->
 			<Value>
 				<Code>WRI</Code>
-				<Text>Share Writing</Text>
+				<Text xml:lang="en">Share Writing</Text>
+				<Text xml:lang="mi"></Text>
 			</Value>			<!-- Share Writing -->
 			<Value>
 				<Code>MED</Code>
-				<Text>Medical Treatment</Text>
+				<Text xml:lang="en">Medical Treatment</Text>
+				<Text xml:lang="mi"></Text>
 				<Description>Seek medical treatment in an emergency when the caregiver cannot be contacted</Description>
 			</Value>			<!-- Medical Treatment -->
 			<Value>
 				<Code>ADM</Code>
-				<Text>Panadol</Text>
+				<Text xml:lang="en">Panadol</Text>
+				<Text xml:lang="mi"></Text>
 				<Description>Administer Panadol</Description>
 			</Value>			<!-- Administer Panadol -->
 			<Value>
 				<Code>LSC</Code>
-				<Text>Learning Support Cluster Sharing</Text>Sharing
+				<Text xml:lang="en">Learning Support Cluster Sharing</Text>Sharing
+				<Text xml:lang="mi">Ratonga Tautoko Akoranga Tuari ā-Kahui</Text>
 			</Value>			<!-- Learning Support Cluster Register -->
 			<Value>
 				<Code>LSR</Code>
-				<Text>Learning Support Receive Service</Text>
+				<Text xml:lang="en">Learning Support Receive Service</Text>
+				<Text xml:lang="mi">Ratonga Tautoko Akoranga Kua Whiwhia</Text>
 			</Value>			<!-- Learning Support Receive Service -->
 			<Value>
 				<Code>PAR</Code>
-				<Text>Parental Consent To Share With Next ECE Or School</Text>
+				<Text xml:lang="en">Parental Consent To Share With Next ECE Or School</Text>
+				<Text xml:lang="mi">Whakaaetanga Tuari ki te Kura Kōhungahunga, ki te Kura rānei</Text>
 				<Description>This value is for learning support.</Description>
 			</Value>			<!-- Parental Consent To Share With Next ECE Or School -->
 		</Values>
@@ -393,15 +409,18 @@
 		<Values>
 			<Value>
 				<Code>LEA</Code>
-				<Text>Learner Created in Error</Text>
+				<Text xml:lang="en">Learner Created in Error</Text>
+				<Text xml:lang="mi">I hē te tapiri a te Akonga</Text>
 			</Value>			<!-- Learner Created in Error -->
 			<Value>
 				<Code>RES</Code>
-				<Text>Response Created in Error</Text>
+				<Text xml:lang="en">Response Created in Error</Text>
+				<Text xml:lang="mi">I hē te tāpiri i te whakautu</Text>
 			</Value>			<!-- Response Created in Error -->
 			<Value>
 				<Code>SUP</Code>
-				<Text>Support Need Created in Error</Text>
+				<Text xml:lang="en">Support Need Created in Error</Text>
+				<Text xml:lang="mi">I hē te tāpiri i tēnei tautokotanga</Text>
 			</Value>			<!-- Support Need Created in Error -->
 		</Values>
 	  </CodeSet>	  <!-- Deleted Reason Type -->
