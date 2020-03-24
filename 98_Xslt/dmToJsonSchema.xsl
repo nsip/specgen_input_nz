@@ -982,6 +982,10 @@
 		<xsl:apply-templates select="specgen:Description" mode="enum">
 			<xsl:with-param name="indent" select="$indent"/>
 		</xsl:apply-templates>
+
+		<xsl:apply-templates select="specgen:StartDate|specgen:EndDate" mode="enum">
+			<xsl:with-param name="indent" select="$indent"/>
+		</xsl:apply-templates>
 	</xsl:template>
 
 
@@ -1093,6 +1097,15 @@
 
 		<xsl:value-of select="concat($indent, '    &lt;li&gt;''', specgen:Code, '''', $valDesc, '&lt;/li&gt;&#x0a;')"/>
 	</xsl:template>
+
+	<!-- Enumeration may be time bound -->
+	<xsl:template match="specgen:StartDate|specgen:EndDate" mode="enum">
+		<xsl:param name="indent"/>
+
+		<xsl:value-of select="concat($indent, '  x-', translate(name(), 'StartEndDte', 'startendDte'), ': ', ., '&#x0a;')"/>
+	</xsl:template>
+
+
 
 
 	<!-- Bring Description, Intro or Text mixed content elements across with all its embedded html -->
