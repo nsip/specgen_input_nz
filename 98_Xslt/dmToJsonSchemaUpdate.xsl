@@ -22,9 +22,7 @@
 	<xsl:param name="strictJSON">false</xsl:param>
 
 	<!-- Where is the SIF HTML documentation available for links -->
-	<xsl:variable name="extDocURLBase">
-		<xsl:value-of select="concat('https://sifnzmodel.azurewebsites.net/SIFNZ-v', translate(replace($sifVersion, ' \(', '-'), ') ', ''), '/')"/>
-	</xsl:variable>
+	<xsl:variable name="extDocURLBase">https://specification.sifassociation.org/Implementation/NZ/3.0/</xsl:variable>
 
     <!-- Now that we've configured all the options -->
     <xsl:include href="dmToJsonSchema.xsl"/>
