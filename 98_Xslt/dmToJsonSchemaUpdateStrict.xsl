@@ -23,7 +23,7 @@
 
 	<!-- Where is the SIF HTML documentation available for links -->
 	<xsl:variable name="extDocURLBase">
-		<xsl:value-of select="concat('https://sifnzmodel.azurewebsites.net/SIFNZ-v', translate(replace($sifVersion, ' \(', '-'), ') ', ''), '/')"/>
+		<xsl:value-of select="concat('https://specification.sifassociation.org/Implementation/NZ/', translate(replace($sifVersion, ' \(', '-'), ') ', ''), '/')"/>
 	</xsl:variable>
 
     <!-- Now that we've configured all the options -->
