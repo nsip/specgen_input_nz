@@ -41,7 +41,7 @@
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>    <!-- AssessmentTaskLocalId -->
 
-  <Item>.
+  <Item>
     <Element>AssessmentName</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>

@@ -329,10 +329,21 @@
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
-				<p>Indicates whether or not the student is enrolled under a Section 8 agreement</p>
+				<p>Indicates whether or not the student is enrolled under a Section 9 agreement</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
 		</Item>		<!-- Section9Agreement -->
+		
+		<Item>
+			<Element>NZQA</Element>    
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+			<p>NZQA details for a student for this school year.</p>
+			</Description>
+			<Type ref="CommonTypes" name="NZQAEnrolmentType"></Type>
+		</Item>     <!-- NZQA -->
+
 		<Item>
 			<Element>OngoingResourceScheme</Element>
 			<Characteristics>O</Characteristics>
@@ -471,6 +482,90 @@
 				</InternationalEnrolment>
 			</StudentSchoolEnrolment>
 		</xhtml:Example>
+	</CommonElement>
+
+	<CommonElement name="NZQAEnrolmentType" type="true" dm="true">
+		<Item>
+			<Element>NZQAEnrolmentType</Element>
+			<Description>NZQA details for a student for this school year.</Description>
+		</Item>
+
+		<Item>
+			<Element>EnrolmentId</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The student's NZQA enrolment Id.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>  
+		</Item>     <!-- EnrolmentId -->
+
+		<Item>
+			<Element>EnrolmentLocation</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Reference to the Provider's location that the learner is enrolled in.  
+				Only used when provider has multiple locations.</p>
+			</Description>
+			<Type ref="CommonTypes" name="EduOrgLocationObjectReferenceType"/>
+		</Item>	    <!-- EnrolmentLocation -->
+
+		<Item>
+			<Element>FeeAmount</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Amount paid by student to school for current year's NZQA fees.</p>
+			</Description>
+			<Type name="xs:decimal"/>  
+		</Item>     <!-- FeeAmount -->
+
+		<Item>
+			<Element>FinancialAssistance</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Code set denoting the type of financial assistance the student is receiving.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsNZQAFinancialAssistanceType"/>
+		</Item>	    <!-- FinancialAssistance -->
+
+		<Item>
+			<Element>SortCode</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Student’s NZQA sort code, e.g. 13AB. Sort order for admission slips.
+				 Often the form class of the student.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>  
+		</Item>     <!-- SortCode -->
+
+		<Item>
+			<Element>SubmitterName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Full name of person submitting student information to NZQA.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>  
+		</Item>     <!-- SubmitterName -->
+
+		<Item>
+			<Element>SubmitterEmailAddress</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>E-mail address of person submitting student information to NZQA.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>  
+		</Item>     <!-- SubmitterEmailAddress -->
+
+		<Item>
+			<Element>WithdrawnAllAssessmentsInd</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Indicates that the student has withdrawn from all NZQA assessments.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+		</Item>		<!-- WithdrawnAllAssessmentsInd -->		
 	</CommonElement>
 
 	<CommonElement name="AcademicAttainmentGoalListType" type="true" dm="true">

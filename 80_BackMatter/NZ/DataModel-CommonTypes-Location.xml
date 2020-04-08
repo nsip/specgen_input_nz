@@ -382,6 +382,14 @@
 			<Type name="xs:string"/>
 		</Item>     <!-- Description -->
 		<Item>
+			<Element>LocationNum</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Number identifying the individual location within the set of locations used by the Provider.</p>
+			</Description>
+			<Type name="xs:int"/>
+		</Item>     <!-- LocationNum -->
+		<Item>
 			<Element>Address</Element>
 			<Characteristics>O</Characteristics>
 			<Description>

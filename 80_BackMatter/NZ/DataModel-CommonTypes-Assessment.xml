@@ -31,6 +31,69 @@
 		</Item>
 	</CommonElement>
 
+	<CommonElement name="NZQAAssessmentRegistrationType" type="true" dm="true">
+		<Item>
+			<Element>NZQAAssessmentRegistrationType</Element>
+			<Description>
+				Extra details to support NZQA assessment registration process
+			</Description>
+		</Item>
+
+		<Item>
+			<Element>EnrolmentId</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p></p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- EnrolmentId -->
+
+		<Item>
+			<Element>EntryId</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The student's NZQA entry Id provided upon confirmation of the student's registration
+				 to be assessed against a unit or achievement standard. Identifies what entry the result
+				 is for to NZQA.
+				</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- EntryId -->
+
+		<Item>
+			<Element>AssessmentRequestType</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p></p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsAssessmentRequestTypeType"/>
+		</Item>    <!-- AssessmentRequestType -->
+
+		<Item>
+			<Element>PaperLanguage</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p></p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
+		</Item>    <!-- PaperLanguage -->
+
+		<Item>
+			<Element>AnswerLanguage</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p></p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
+		</Item>    <!-- AnswerLanguage -->
+
+	</CommonElement>
+
 	<CommonElement name="SpecialAssessmentConditionListType" type="true" dm="true">
 		<Item>
 			<Element>SpecialAssessmentConditionListType</Element>

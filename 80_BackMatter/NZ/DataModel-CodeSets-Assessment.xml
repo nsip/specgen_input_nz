@@ -2,7 +2,6 @@
 	xmlns:xi="http://www.w3.org/2001/XInclude"
  	xmlns="http://sifassociation.org/SpecGen">
 	
-	
 	<CodeSet>
 		<Intro>
 			<p>Code denoting the nature of the assessment process;  Primary assessment against NZ Curriculum or Te Marautanga
@@ -417,6 +416,80 @@
 			</Value>    <!-- Final -->
 		</Values>
 	</CodeSet>    <!-- Score Type -->
+
+	<CodeSet>
+		<Intro>
+			<p> Code set denoting the status of the student's registration for an assessment
+			 task, e.g. applied, approved, withdrawn.</p>
+		</Intro>
+		<ID>Assessment Registration Status</ID>
+		<Values>
+			<Value>
+				<Code>ALD</Code>
+				<Text>Applied</Text>
+			</Value>    <!--  Applied -->
+			<Value>
+				<Code>APD</Code>
+				<Text>Approved</Text>
+			</Value>    <!--  Approved -->
+			<Value>
+				<Code>WTH</Code>
+				<Text>Withdrawn</Text>
+			</Value>    <!-- Withdrawn -->
+		</Values>
+	</CodeSet>    <!-- Assessment Registration Status -->
+
+	<CodeSet>
+		<Intro>
+			<p>Denotes the request type to NZQA for a Digital Exam/ Paper Exam or 
+			Digital Submission / Physical Submission.</p>
+		</Intro>
+		<ID>Assessment Request Type</ID>
+		<Values>
+			<Value>
+				<Code>DE</Code>
+				<Text>Digital Exam</Text>
+			</Value>    <!-- Digital Exam -->
+			<Value>
+				<Code>DS</Code>
+				<Text>Digital Submission</Text>
+			</Value>    <!-- Digital Submission -->
+			<Value>
+				<Code>NS</Code>
+				<Text>Not Selected</Text>
+			</Value>    <!-- Not Selected -->
+			<Value>
+				<Code>PE</Code>
+				<Text>Paper Exam</Text>
+			</Value>    <!-- Paper Exam -->
+			<Value>
+				<Code>PS</Code>
+				<Text>Physical Submission</Text>
+			</Value>    <!-- Physical Submission -->
+		</Values>
+	</CodeSet>    <!-- Assessment Request Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the type of financial assistance the learner 
+			is receiving from NZQA</p>
+		</Intro>
+		<ID>NZQA Financial Assistance</ID>
+		<Values>
+			<Value>
+				<Code>B</Code>
+				<Text>Benefit</Text>
+			</Value>    <!-- Benefit -->
+			<Value>
+				<Code>F</Code>
+				<Text>Family</Text>
+			</Value>    <!-- Family -->
+			<Value>
+				<Code>I</Code>
+				<Text>Income</Text>
+			</Value>    <!-- Income -->
+		</Values>
+	</CodeSet>    <!-- NZQA Financial Assistnace -->
 
 	<CodeSet>
 		<Intro>
