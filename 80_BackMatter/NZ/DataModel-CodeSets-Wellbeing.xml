@@ -1852,6 +1852,7 @@
 				<Code>DISRE</Code>
 				<Text xml:lang="en">Disrespect</Text>
 				<Text xml:lang="mi">Tōtōā – Iti noa</Text>
+				<EndDate>2020-04-09</EndDate>				
 				<Description>Student delivers low-intensity, socially rude or dismissive messages to adults or students.</Description>
 			</Value>
 			<Value>
@@ -1932,6 +1933,7 @@
 					<Code>BULLY</Code>
 					<Text xml:lang="en">Bullying</Text>
 					<Text xml:lang="mi">Te mahi poke – Nui rawa</Text>
+					<EndDate>2020-04-09</EndDate>
 					<Description>The delivery of direct or technology-based messages that involve intimidation, teasing, taunting, threats, or name calling.</Description>
 				</Value>
 				<Value>
@@ -1944,6 +1946,7 @@
 					<Code>DISRE</Code>
 					<Text xml:lang="en">Disrespect</Text>
 					<Text xml:lang="mi">Tōtōā – Nui rawa</Text>
+					<EndDate>2020-04-09</EndDate>					
 					<Description>Student delivers socially rude or dismissive messages to adults or students.</Description>
 				</Value>
 				<Value>
