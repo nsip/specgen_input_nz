@@ -14,7 +14,7 @@
 	<xsl:param name="sifLocale"/>
 	
 	<xsl:variable name="extDocUrlRoot">
-		<xsl:value-of select="concat('https://sifnzmodel.azurewebsites.net/SIFNZ-v', translate(replace($sifVersion, ' \(', '-'), ') ', ''))"/>
+	    <xsl:value-of select="concat('http://specification.sifassociation.org/Implementation/NZ/', translate(replace($sifVersion, ' \(', '-'), ') ', ''), '/')"/>
 	</xsl:variable>
 	
 	<xsl:template match="/specgen:SIFSpecification">
