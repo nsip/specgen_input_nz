@@ -9,11 +9,73 @@
 		</Intro>
 		<ID>Operational Status</ID>
 		<Values>
-			<Value><Code>C</Code><Text>Closed</Text></Value>
-			<Value><Code>O</Code><Text>Open</Text></Value>
-			<Value><Code>P</Code><Text>Proposed</Text><Description>SIF AU uses the term ‘Pending’</Description></Value>
+			<Value>
+				<Code>C</Code>
+				<Text>Closed</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>	<!-- C - retired -->
+			<Value>
+				<Code>O</Code>
+				<Text>Open</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>	<!-- O - retired -->
+			<Value>
+				<Code>P</Code>
+				<Text>Proposed</Text>
+				<EndDate>2020-05-08</EndDate>
+				<Description>SIF AU uses the term ‘Pending’</Description>
+			</Value>	<!-- P - retired -->
+			<Value>
+				<Code>28000</Code>
+				<Text>Proposed</Text>
+			</Value>	<!-- Proposed -->			
+			<Value>
+				<Code>28001</Code>
+				<Text>Open</Text>
+			</Value>	<!-- Open -->			
+			<Value>
+				<Code>28002</Code>
+				<Text>Closed</Text>
+			</Value>	<!-- Closed -->			
+			<Value>
+				<Code>28003</Code>
+				<Text>Active</Text>
+			</Value>	<!-- Active -->			
+			<Value>
+				<Code>28004</Code>
+				<Text>Inactive</Text>
+			</Value>	<!-- Inactive -->			
+			<Value>
+				<Code>28005</Code>
+				<Text>Dissolved while Commissioner in place</Text>
+			</Value>	<!-- Dissolved -->			
+			<Value>
+				<Code>28006</Code>
+				<Text>Operating with Limited Statutory Manager</Text>
+			</Value>	<!-- Limited Statutory Mgr -->			
+			<Value>
+				<Code>28007</Code>
+				<Text>Merging Board</Text>
+			</Value>	<!-- Merging Board -->			
+			<Value>
+				<Code>28008</Code>
+				<Text>Not Applicable</Text>
+			</Value>	<!-- N/A -->			
+			<Value>
+				<Code>28009</Code>
+				<Text>Approved</Text>
+			</Value>	<!-- Approved -->			
+			<Value>
+				<Code>28010</Code>
+				<Text>Formed</Text>
+			</Value>	<!-- Formed -->			
+			<Value>
+				<Code>28011</Code>
+				<Text>Disestablished</Text>
+			</Value>	<!-- Disestablished -->			
 		</Values>
 	</CodeSet>    <!-- Operational Status -->
+
 	<CodeSet>
 		<Intro>
 			<p>A summary description of the gender of students that a school accepts, indicating the 
@@ -55,56 +117,221 @@
 				<Code>TAIT</Code>
 				<Text xml:lang="en">Tai Tokerau</Text>
 				<Text xml:lang="mi">Tai Tokerau</Text>
-			</Value>    <!-- Tai Tokerau -->
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- TAIK - retired -->
 			<Value>
 				<Code>AUCK</Code>
 				<Text xml:lang="en">Auckland</Text>
 				<Text xml:lang="mi">Tāmaki Makaurau</Text>
-			</Value>    <!-- Auckland -->
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- AUCK - retired -->
 			<Value>
 				<Code>WAIK</Code>
 				<Text xml:lang="en">Waikato</Text>
 				<Text xml:lang="mi">Waikato</Text>
-			</Value>    <!-- Waikato -->
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- WAIK - retired -->
 			<Value>
 				<Code>BOPW</Code>
 				<Text xml:lang="en">Bay of Plenty, Waiariki</Text>
 				<Text xml:lang="mi">Te Moana a Toitehuatahi, Waiariki</Text>
-			</Value>    <!-- Bay of Plenty -->
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- BOPW - retired -->
 			<Value>
 				<Code>HAWK</Code>
 				<Text xml:lang="en">Hawke's Bay, Tairāwhiti</Text>
 				<Text xml:lang="mi">Te Matau a Māui, Tairāwhiti</Text>
-			</Value>    <!-- Hawke's Bay -->
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- HAWK - retired -->
 			<Value>
 				<Code>TARA</Code>
 				<Text xml:lang="en">Taranaki, Whanganui, Manawatū</Text>
 				<Text xml:lang="mi">Taranaki, Whanganui, Manawatū</Text>
-			</Value>    <!-- Taranaki, Whanganui, Manawatu -->
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- TARA - retired -->
 			<Value>
 				<Code>WELL</Code>
 				<Text xml:lang="en">Wellington</Text>
 				<Text xml:lang="mi">Te Whanganui a Tara</Text>
-			</Value>    <!-- Wellington -->
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- WELL - retired -->
 			<Value>
 				<Code>NELS</Code>
 				<Text xml:lang="en">Nelson, Marlborough, West Coast</Text>
 				<Text xml:lang="mi">Whakatū, Te Tau Ihu o te Waka-a-Māui, Te Tai Poutini</Text>
-			</Value>    <!-- Nelson, Marlborough, West Coast -->			
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- NELS - retired -->			
 			<Value>
 				<Code>CANT</Code>
 				<Text xml:lang="en">Canterbury, Chatham Islands</Text>
 				<Text xml:lang="mi">Waitaha, Wharekauri</Text>
-			</Value>    <!-- Canterbury -->
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- CANT - retired -->
 			<Value>
 				<Code>OTAG</Code>
 				<Text xml:lang="en">Otago, Southland</Text>
 				<Text xml:lang="mi">Otākou, Murihiku</Text>
-			</Value>    <!-- Otago, Southland -->
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- OTAG - retired -->
+
+			<Value>
+				<Code>12000</Code>
+				<Text xml:lang="en">Missing</Text>
+			</Value>    <!-- Missing -->
+			<Value>
+				<Code>12005</Code>
+				<Text xml:lang="en">Correspondence</Text>
+			</Value>    <!-- Correspondence -->
+			<Value>
+				<Code>12006</Code>
+				<Text xml:lang="en">Not Applicable</Text>
+			</Value>    <!-- N/A -->
+
+			<Value>
+				<Code>12007</Code>
+				<Text xml:lang="en">Tai Tokerau</Text>
+				<Text xml:lang="mi">Tai Tokerau</Text>
+			</Value>    <!-- Tai Tokerau -->
+			<Value>
+				<Code>12008</Code>
+				<Text xml:lang="en">Auckland</Text>
+				<Text xml:lang="mi">Tāmaki Makaurau</Text>
+			</Value>    <!-- Auckland -->
+			<Value>
+				<Code>12009</Code>
+				<Text xml:lang="en">Waikato</Text>
+				<Text xml:lang="mi">Waikato</Text>
+			</Value>    <!-- Waikato -->
+			<Value>
+				<Code>12010</Code>
+				<Text xml:lang="en">Bay of Plenty/Waiariki</Text>
+				<Text xml:lang="mi">Te Moana a Toitehuatahi/Waiariki</Text>
+			</Value>    <!-- Bay of Plenty -->
+			<Value>
+				<Code>12011</Code>
+				<Text xml:lang="en">Taranaki/Whanganui/Manawatū</Text>
+				<Text xml:lang="mi">Taranaki/Whanganui/Manawatū</Text>
+			</Value>    <!-- Taranaki, Whanganui, Manawatu -->
+			<Value>
+				<Code>12012</Code>
+				<Text xml:lang="en">Hawke's Bay/Tairāwhiti</Text>
+				<Text xml:lang="mi">Te Matau a Māui/Tairāwhiti</Text>
+			</Value>    <!-- Hawke's Bay -->
+			<Value>
+				<Code>12013</Code>
+				<Text xml:lang="en">Wellington</Text>
+				<Text xml:lang="mi">Te Whanganui a Tara</Text>
+			</Value>    <!-- Wellington -->
+			<Value>
+				<Code>12014</Code>
+				<Text xml:lang="en">Nelson/Marlborough/West Coast</Text>
+				<Text xml:lang="mi">Whakatū/Te Tau Ihu o te Waka-a-Māui/Te Tai Poutini</Text>
+			</Value>    <!-- Nelson, Marlborough, West Coast -->			
+			<Value>
+				<Code>12015</Code>
+				<Text xml:lang="en">Canterbury/Chatham Islands</Text>
+				<Text xml:lang="mi">Waitaha/Wharekauri</Text>
+			</Value>    <!-- Canterbury -->
+			<Value>
+				<Code>12016</Code>
+				<Text xml:lang="en">Otago/Southland</Text>
+				<Text xml:lang="mi">Otākou/Murihiku</Text>
+			</Value>    <!-- Otago, Southland -->			
 		</Values>
 	</CodeSet>    <!-- Education Region -->
+
 	<CodeSet>
-		<Intro>Describes the organisation type of the provider, indicating the services provided,
+		<Intro>
+			Special Education district a provider may belong to
+		</Intro>
+		<ID>Special Education District</ID>
+		<Values>
+			<Value>
+				<Code>182000</Code>
+				<Text xml:lang="en">Tai Tokerau</Text>
+				<Text xml:lang="mi">Tai Tokerau</Text>	
+			</Value>    <!-- Tai Tokerau -->
+			<Value>
+				<Code>182001</Code>
+				<Text xml:lang="en">North West</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- North West  -->
+			<Value>
+				<Code>182002</Code>
+				<Text xml:lang="en">Manukau</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Manukau -->			
+			<Value>
+				<Code>182003</Code>
+				<Text xml:lang="en">Auckland</Text>
+				<Text xml:lang="mi">Tāmaki Makaurau</Text>				
+			</Value>    <!-- Auckland -->
+			<Value>
+				<Code>182004</Code>
+				<Text xml:lang="en">Waikato</Text>
+				<Text xml:lang="mi">Waikato</Text>				
+			</Value>    <!-- Waikato -->
+			<Value>
+				<Code>182005</Code>
+				<Text xml:lang="en">Bay of Plenty West</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Bay of Plenty West -->			
+			<Value>
+				<Code>182006</Code>
+				<Text xml:lang="en">Bay of Plenty, Waiariki</Text>
+				<Text xml:lang="mi">Te Moana a Toitehuatahi, Waiariki</Text>				
+			</Value>    <!-- Bay of Plenty, Waiariki -->
+			<Value>
+				<Code>182007</Code>
+				<Text xml:lang="en">Gisborne</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Gisborne -->			
+			<Value>
+				<Code>182008</Code>
+				<Text xml:lang="en">Hawke's Bay, Tairāwhiti</Text>
+				<Text xml:lang="mi">Te Matau a Māui, Tairāwhiti</Text>				
+			</Value>    <!-- Hawke's Bay, Tairāwhiti -->
+			<Value>
+				<Code>182009</Code>
+				<Text xml:lang="en">Taranaki</Text>
+				<Text xml:lang="mi">Taranaki</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Taranaki -->			
+			<Value>
+				<Code>182010</Code>
+				<Text xml:lang="en">Taranaki, Whanganui, Manawatū</Text>
+				<Text xml:lang="mi">Taranaki, Whanganui, Manawatū</Text>				
+			</Value>    <!-- Taranaki, Whanganui, Manawatu -->
+			<Value>
+				<Code>182011</Code>
+				<Text xml:lang="en">Wellington</Text>
+				<Text xml:lang="mi">Te Whanganui a Tara</Text>				
+			</Value>    <!-- Wellington -->
+			<Value>
+				<Code>182012</Code>
+				<Text xml:lang="en">Nelson, Marlborough, West Coast</Text>
+				<Text xml:lang="mi">Whakatū, Te Tau Ihu o te Waka-a-Māui, Te Tai Poutini</Text>				
+			</Value>    <!-- Nelson, Marlborough, West Coast -->			
+			<Value>
+				<Code>182013</Code>
+				<Text xml:lang="en">Canterbury, Chatham Islands</Text>
+				<Text xml:lang="mi">Waitaha, Wharekauri</Text>				
+			</Value>    <!-- Canterbury, Chatham Islands -->
+			<Value>
+				<Code>182014</Code>
+				<Text xml:lang="en">Otago, Southland</Text>
+				<Text xml:lang="mi">Otākou, Murihiku</Text>				
+			</Value>    <!-- Otago, Southland -->
+			<Value>
+				<Code>182015</Code>
+				<Text xml:lang="en">Southland</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Southland -->			
+		</Values>
+	</CodeSet>    <!-- Special Education District -->
+
+	<CodeSet>
+		<Intro>Describes the organisation type of the provider, indicating the services provided, 
 			function or purpose of the organisation.
 		</Intro>
 		<ID>Organisation Type</ID>
@@ -115,7 +342,25 @@
 				<Code>35000</Code>
 				<Text xml:lang="en">Early Childhood Education (ECE)</Text>
 				<Text xml:lang="mi">Kura Kōhungahunga</Text>
+				<EndDate>2020-05-08</EndDate>
 			</Value>    <!-- ECE -->
+			<Value>
+				<Code>10052</Code>
+				<Text xml:lang="en">Kindergarten Association</Text>
+			</Value>
+			<Value>
+				<Code>10053</Code>
+				<Text xml:lang="en">Playcentre Association</Text>
+			</Value>
+			<Value>
+				<Code>10054</Code>
+				<Text xml:lang="en">Commercial ECE Service Provider</Text>
+			</Value>
+			<Value>
+				<Code>10055</Code>
+				<Text xml:lang="en">Other ECE Service Provider</Text>
+			</Value>
+
 			<Value>
 				<Code>1</Code>
 				<Text xml:lang="en">Casual-Education and Care</Text>
@@ -149,14 +394,67 @@
 				<Text xml:lang="en">Te Kohanga Reo</Text>
 				<Text xml:lang="mi">Te Kohanga Reo</Text>
 			</Value>    <!-- Te Kohanga Reo -->
-
-
-			<!-- Compulsory Schooling - all from FIRST -->
+			
+			<Value>
+				<Code>10000</Code>
+				<Text xml:lang="en">Casual-Education and Care</Text>
+			</Value>
+			
+			<Value>
+				<Code>10001</Code>
+				<Text xml:lang="en">Free Kindergarten</Text>
+			</Value>
+			
+			<Value>
+				<Code>10002</Code>
+				<Text xml:lang="en">Playcentre</Text>
+			</Value>
+			
+			<Value>
+				<Code>10003</Code>
+				<Text xml:lang="en">Education and Care Service</Text>
+			</Value>
+			
+			<Value>
+				<Code>10004</Code>
+				<Text xml:lang="en">Homebased Network</Text>
+			</Value>
+			
+			<Value>
+				<Code>10005</Code>
+				<Text xml:lang="en">Te Kōhanga Reo</Text>
+				<Text xml:lang="mi">Te Kōhanga Reo</Text>
+			</Value>
+			
+			<Value>
+				<Code>10007</Code>
+				<Text xml:lang="en">Licence Exempt Kōhanga Reo</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>
+			<Value>
+				<Code>10008</Code>
+				<Text xml:lang="en">Hospital Based</Text>
+			</Value>
+			<Value>
+				<Code>10009</Code>
+				<Text xml:lang="en">Playgroup</Text>
+			</Value>
+			
+			<!-- Compulsory Schooling - all from FIRST -->			
 			<Value>
 				<Code>35003</Code>
 				<Text xml:lang="en">School</Text>
 				<Text xml:lang="mi">Kura</Text>
+				<EndDate>2020-05-08</EndDate>
 			</Value>    <!-- School -->
+			<Value>
+				<Code>10056</Code>
+				<Text xml:lang="en">Board of Trustees</Text>
+			</Value>
+			<Value>
+				<Code>10057</Code>
+				<Text xml:lang="en">Private School Provider</Text>
+			</Value>
 			<Value>
 				<Code>20</Code>
 				<Text xml:lang="en">Full Primary (Year 1-8)</Text>
@@ -213,6 +511,69 @@
 				<Text xml:lang="en">Activity Centre</Text>
 				<Text xml:lang="mi">Pokapū Mahi</Text>
 			</Value>    <!-- Activity Centre -->
+			<Value>
+				<Code>10023</Code>
+				<Text xml:lang="en">Full Primary (Year 1-8)</Text>
+				<Text xml:lang="mi">Kura Tuatahi (Tau 1-8)</Text>
+			</Value>
+			<Value>
+				<Code>10024</Code>
+				<Text xml:lang="en">Contributing Primary (Year 1-6)</Text>
+				<Text xml:lang="mi">Kura Tuatahi (Tau 1-6)</Text>
+			</Value>
+			<Value>
+				<Code>10025</Code>
+				<Text xml:lang="en">Intermediate School (Year 7-8)</Text>
+				<Text xml:lang="mi">Kura Takawaenga (Tau 7 me te 8)</Text>
+			</Value>
+			<Value>
+				<Code>10026</Code>
+				<Text xml:lang="en">Special School</Text>
+				<Text xml:lang="mi">Kura Motuhake</Text>
+			</Value>
+			<Value>
+				<Code>10027</Code>
+				<Text xml:lang="en">Centre for Extra Support</Text>
+			</Value>
+			<Value>
+				<Code>10028</Code>
+				<Text xml:lang="en">Correspondance Unit</Text>
+			</Value>
+			<Value>
+				<Code>10029</Code>
+				<Text xml:lang="en">Secondary School (Year 7-15)</Text>
+				<Text xml:lang="mi">Kura Tuarua (Tau 7-15)</Text>
+			</Value>
+			<Value>
+				<Code>10030</Code>
+				<Text xml:lang="en">Composite School (Year 1-15)</Text>
+				<Text xml:lang="mi">Kura Hiato (Tau 1-15)</Text>
+			</Value>
+			<Value>
+				<Code>10031</Code>
+				<Text xml:lang="en">The Correspondence School</Text>
+				<Text xml:lang="mi">Te Kura</Text>
+			</Value>
+			<Value>
+				<Code>10032</Code>
+				<Text xml:lang="en">Restricted Composite School (Year 7-10)</Text>
+				<Text xml:lang="mi">Kura Hiato (Tau 7-10)</Text>
+			</Value>
+			<Value>
+				<Code>10033</Code>
+				<Text xml:lang="en">Secondary School (Year 9-15)</Text>
+				<Text xml:lang="mi">Kura Tuarua (Tau 9-15)</Text>
+			</Value>
+			<Value>
+				<Code>10034</Code>
+				<Text xml:lang="en">Teen Parent Unit (Year 9-15)</Text>
+				<Text xml:lang="mi">Ranga Mātātahi (Tau 9-15)</Text>
+			</Value>
+			<Value>
+				<Code>10036</Code>
+				<Text xml:lang="en">Activity Centre</Text>
+				<Text xml:lang="mi">Pokapū Mahi</Text>
+			</Value>
 
 
 
@@ -221,47 +582,247 @@
 				<Code>35002</Code>
 				<Text xml:lang="en">Tertiary</Text>
 				<Text xml:lang="mi">Kura Wānanga</Text>
-			</Value>    <!-- Tertiary -->
+				<EndDate>2020-05-08</EndDate>
+			</Value>
+			<Value>
+				<Code>10010</Code>
+				<Text xml:lang="en">Private Training Establishment</Text>
+			</Value>
+			<Value>
+				<Code>10011</Code>
+				<Text xml:lang="en">Government Training Establishment</Text>
+			</Value>
+			<Value>
+				<Code>10012</Code>
+				<Text xml:lang="en">Polytechnic</Text>
+			</Value>
+			<Value>
+				<Code>10013</Code>
+				<Text xml:lang="en">College of Education</Text>
+			</Value>
+			<Value>
+				<Code>10014</Code>
+				<Text xml:lang="en">University</Text>
+			</Value>
+			<Value>
+				<Code>10015</Code>
+				<Text xml:lang="en">Wānanga</Text>
+			</Value>
+			<Value>
+				<Code>10016</Code>
+				<Text xml:lang="en">Other Tertiary Education Provider</Text>
+			</Value>
+			<Value>
+				<Code>10017</Code>
+				<Text xml:lang="en">Industry Training Organisation</Text>
+			</Value>
+
+
+			<!-- Other Organisation Types -->
+			<Value>
+				<Code>10018</Code>
+				<Text xml:lang="en">Other Certifying Authorities</Text>
+			</Value>
+			<Value>
+				<Code>10019</Code>
+				<Text xml:lang="en">OTEP Resource Centre</Text>
+			</Value>
+			<Value>
+				<Code>10020</Code>
+				<Text xml:lang="en">OTEP RS24</Text>
+			</Value>
+			<Value>
+				<Code>10021</Code>
+				<Text xml:lang="en">Government Agency</Text>
+			</Value>
+			<Value>
+				<Code>10022</Code>
+				<Text xml:lang="en">Peak Body</Text>
+			</Value>
+			<Value>
+				<Code>10035</Code>
+				<Text xml:lang="en">Alternative Education Provider</Text>
+			</Value>
+			<Value>
+				<Code>10037</Code>
+				<Text xml:lang="en">Kura Teina - Primary</Text>
+			</Value>
+			<Value>
+				<Code>10038</Code>
+				<Text xml:lang="en">Side-school</Text>
+			</Value>
+			<Value>
+				<Code>10039</Code>
+				<Text xml:lang="en">Special Unit</Text>
+			</Value>
+			<Value>
+				<Code>10040</Code>
+				<Text xml:lang="en">Kura Teina - Composite</Text>
+			</Value>
+			<Value>
+				<Code>10041</Code>
+				<Text xml:lang="en">Land Site</Text>
+			</Value>
+			<Value>
+				<Code>10042</Code>
+				<Text xml:lang="en">Manual Training Centre (Stand Alone)</Text>
+			</Value>
+			<Value>
+				<Code>10043</Code>
+				<Text xml:lang="en">Community Education/Resource/Youth Learning Centre</Text>
+			</Value>
+			<Value>
+				<Code>10044</Code>
+				<Text xml:lang="en">Rural Education Activities Programme (REAP)</Text>
+			</Value>
+			<Value>
+				<Code>10045</Code>
+				<Text xml:lang="en">Special Education Service Centre</Text>
+			</Value>
+			<Value>
+				<Code>10047</Code>
+				<Text xml:lang="en">Examination Centre</Text>
+			</Value>
+			<Value>
+				<Code>10048</Code>
+				<Text xml:lang="en">School Cluster for NZQA</Text>
+			</Value>
+			<Value>
+				<Code>10049</Code>
+				<Text xml:lang="en">School Camp</Text>
+			</Value>
+			<Value>
+				<Code>10050</Code>
+				<Text xml:lang="en">Subsidiary Provider</Text>
+			</Value>
+			<Value>
+				<Code>10051</Code>
+				<Text xml:lang="en">Miscellaneous</Text>
+			</Value>
+			<Value>
+				<Code>10058</Code>
+				<Text xml:lang="en">Campus</Text>
+			</Value>
+			<Value>
+				<Code>10060</Code>
+				<Text xml:lang="en">Special Unit Funded</Text>
+			</Value>			
+			<Value>
+				<Code>10062</Code>
+				<Text xml:lang="en">Attachment to Kura Kaupapa Māori</Text>
+			</Value>
+			<Value>
+				<Code>10063</Code>
+				<Text xml:lang="en">Secondary (Year 9-10 Att. Int.)</Text>
+			</Value>
 
 
 
 			<!-- Groups of Providers, MoE Local Office, etc -->
 			<Value>
-				<Code>35007</Code>
-				<Text xml:lang="en">Ministry of Education Local Office</Text>
-				<Text xml:lang="mi"></Text>
-				<StartDate>2020-03-25</StartDate>
-			</Value>    <!-- Ministry of Education Local Office -->
-			<Value>
 				<Code>999</Code>
 				<Text xml:lang="en">Ministry of Education Local Office</Text>
 				<Text xml:lang="mi"></Text>
 				<EndDate>2020-03-24</EndDate>
-			</Value>    <!-- Ministry of Education Local Office -->
-
+			</Value>    <!-- 999 - retired -->
 			<Value>
-				<Code>35008</Code>
-				<Text xml:lang="en">Community of Learning | Kāhui Ako</Text>
-				<Text xml:lang="mi">Kāhui Ako</Text>
+				<Code>35007</Code>
+				<Text xml:lang="en">Ministry of Education Local Office</Text>
+				<Text xml:lang="mi"></Text>
 				<StartDate>2020-03-25</StartDate>
-			</Value>    <!-- Community of Learning | Kāhui Ako -->
+				<EndDate>2020-05-08</EndDate>
+			</Value>	<!-- 35007 - retired -->
+			<Value>
+				<Code>10059</Code>
+				<Text xml:lang="en">Local Office</Text>
+			</Value>    <!-- Ministry of Education Local Office -->
 
 			<Value>
 				<Code>998</Code>
 				<Text xml:lang="en">Community of Learning | Kāhui Ako</Text>
 				<Text xml:lang="mi">Kāhui Ako</Text>
 				<EndDate>2020-03-24</EndDate>
-			</Value>    <!-- Community of Learning | Kāhui Ako -->
+			</Value>    <!-- 998 - retired  -->	
+			<Value>
+				<Code>35008</Code>
+				<Text xml:lang="en">Community of Learning | Kāhui Ako</Text>
+				<Text xml:lang="mi">Kāhui Ako</Text>
+				<StartDate>2020-03-25</StartDate>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- 35008 - retired -->
+			<Value>
+				<Code>10061</Code>
+				<Text xml:lang="en">Community of Learning | Kāhui Ako</Text>
+				<Text xml:lang="mi">Kāhui Ako</Text>
+			</Value>	<!-- Community of Learning | Kāhui Ako -->
 
-
+			<Value>
+				<Code>10065</Code>
+				<Text xml:lang="en">Learning Support Cluster</Text>
+				<Text xml:lang="mi">Kāhui Akoranga Tautoko</Text>
+			</Value>	<!-- 10065 - retired  -->
 			<Value>
 				<Code>996</Code>  <!-- Not yet defined by FIRST -->
 				<Text xml:lang="en">Learning Support Cluster</Text>
 				<Text xml:lang="mi">Kāhui Akoranga Tautoko</Text>
-			</Value>    <!-- Learning Support Cluster -->
+			</Value>    <!-- 996 - Learning Support Cluster -->			
 
+			<Value>
+				<Code>10064</Code>
+				<Text xml:lang="en">RTLB Cluster</Text>
+			</Value>	<!-- RTLB Cluster -->
 		</Values>
 	</CodeSet>    <!-- Organisation Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>Describes the roles for organisations within the education sector, e.g. School 
+			Sector Institution, Learnign Support Cluster, etc.</p>
+		</Intro>
+		<ID>Organisation Sector Role</ID>
+		<Values>
+			<Value>
+				<Code>35000</Code>
+				<Text xml:lang="en">Licenced ECE Service</Text>
+			</Value>
+			<Value>
+				<Code>35001</Code>
+				<Text xml:lang="en">Playgroup</Text>
+			</Value>
+			<Value>
+				<Code>35002</Code>
+				<Text xml:lang="en">Tertiary Sector Institution</Text>
+			</Value>
+			<Value>
+				<Code>35003</Code>
+				<Text xml:lang="en">School Sector Institution</Text>
+			</Value>
+			<Value>
+				<Code>35004</Code>
+				<Text xml:lang="en">Other Organisation Type</Text>
+			</Value>
+			<Value>
+				<Code>35005</Code>
+				<Text xml:lang="en">ECE Service Provider</Text>
+			</Value>
+			<Value>
+				<Code>35006</Code>
+				<Text xml:lang="en">Board of Trustees</Text>
+			</Value>
+			<Value>
+				<Code>35007</Code>
+				<Text xml:lang="en">Local Office</Text>
+			</Value>
+			<Value>
+				<Code>35008</Code>
+				<Text xml:lang="en">Community of Schools</Text>
+			</Value>
+			<Value>
+				<Code>35009</Code>
+				<Text xml:lang="en">Learning Support Cluster</Text>
+			</Value>
+		</Values>
+	</CodeSet>
 	<CodeSet>
 		<Intro>
 		  <p>A standardised method of describing a communication channel used to communicate with or
@@ -371,6 +932,7 @@
 			</Value>
 		</Values>
 	</CodeSet>	  <!-- Enacted Policy -->
+
 	<CodeSet>
 		<Intro>
 			The authority by which the provider is authorised to provide education services.
@@ -406,90 +968,85 @@
 			</Value>
 		</Values>
 	</CodeSet>	  <!-- Provider Authority -->
+
 	<CodeSet>
 		<Intro>
-			<p>A school-specific definition of a provider, describing the school according to 
-				specialist services or facilities that it provides for students or for teaching staff.</p>
+			<p>Code set denoting the classifications that can be given to a school.</p>
 		</Intro>
-		<ID>School Definition</ID>
+		<ID>School Classification</ID>
 		<Values>
-
-			<!-- Ex:  MoE  School Classifications -->
 			<Value>
-				<Code>DCSC</Code>
-				<Text>Designated Character School</Text>
-			</Value>
+				<Code>52000</Code>
+				<Text>Kura Teina</Text>
+			</Value>	<!-- Kura Teina -->
 			<Value>
-				<Code>SMBS</Code>
+				<Code>52001</Code>
+				<Text>Designated Charter School</Text>
+			</Value>	<!-- Charter School -->
+			<Value>
+				<Code>52002</Code>
 				<Text>Secondary Māori Boarding School</Text>
-			</Value>
+			</Value>	<!-- Māori Boarding School -->
 			<Value>
-				<Code>BISC</Code>
+				<Code>52003</Code>
 				<Text>Bilingual School</Text>
-				<Description>Historic: Not to be used</Description>
-			</Value>
+			</Value>	<!-- Bilingual School -->
 			<Value>
-				<Code>KKMA</Code>
+				<Code>52004</Code>
 				<Text>Kura Kaupapa Māori</Text>
-			</Value>
+			</Value>	<!-- Kura Kaupapa Māori -->
 			<Value>
-				<Code>CYBS</Code>
-				<Text>Contributing with Year 7 &amp; 8 Bilingual Students</Text>
-				<Description>Contributing School - but is able to retain Y7 &amp;amp; 8 bilingual students</Description>
-			</Value>
+				<Code>52005</Code>
+				<Text>School with Side School</Text>
+			</Value>	<!-- School with Side School -->
 			<Value>
-				<Code>SWBF</Code>
+				<Code>52006</Code>
+				<Text>Alternative School</Text>
+			</Value>	<!-- Alternative School -->
+			<Value>
+				<Code>52007</Code>
+				<Text>Contributing with Year 7 and 8 Bilingual Students</Text>
+			</Value>	<!--  Contributing with Year 7 and 8 Bilingual Students -->
+			<Value>
+				<Code>52008</Code>
+				<Text>Restricted Composite (Year 7-9)</Text>
+			</Value>	<!-- Restricted Composite (Year 7-9) -->
+			<Value>
+				<Code>52009</Code>
+				<Text>Restricted Composite (Year 7-10)</Text>
+			</Value>	<!-- Restricted Composite (Year 7-10) -->
+			<Value>
+				<Code>52010</Code>
 				<Text>School with Boarding Facilities</Text>
-			</Value>
-			
-
-			<!-- Ex: MoE Special Schooling Types -->
-			<Value>
-				<Code>SFVI</Code>
-				<Text>School for Vision Impaired</Text>
-			</Value>
-			<Value>
-				<Code>SDHI</Code>
-				<Text>School for Deaf/Hearing Impaired</Text>
-			</Value>
-			<Value>
-				<Code>SFPD</Code>
-				<Text>School for Physical Disabilities</Text>
-			</Value>
-			<Value>
-				<Code>SFII</Code>
-				<Text>School for Intellectual Impairments</Text>
-			</Value>
-			<Value>
-				<Code>SLSD</Code>
-				<Text>School for Learning/Social Difficulties</Text>
-			</Value>
-			<Value>
-				<Code>RHSC</Code>
-				<Text>Regional Health School</Text>
-			</Value>
-
-
-			
-			<!-- Ex:  MoE Teaching of Teaching Classification -->
-			<Value>
-				<Code>NORM</Code>
-				<Text>Normal School</Text>
-				<Description>A school with extra resources for teacher training purposes</Description>
-			</Value>
-			<Value>
-				<Code>MODE</Code>
-				<Text>Model School</Text>
-				<Description>Set up like a rural school, for teacher training purposes</Description>
-			</Value>
-			<Value>
-				<Code>MSMC</Code>
-				<Text>Normal School (Model Classes)</Text>
-				<Description>Normal School with Model Classes</Description>
-			</Value>
-					
+			</Value>	<!-- School with Boarding Facilities -->
 		</Values>
-	</CodeSet>	  <!-- School Definition -->
+	</CodeSet>    <!-- School Classification -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting if the school has boarding and if so, if it is for girls only, boys only or both.</p>
+		</Intro>
+		<ID>School Boarding Type</ID>
+		<Values>
+			<Value>
+				<Code>56000</Code>
+				<Text>Girls Only</Text>
+			</Value>    <!-- Female -->
+			<Value>
+				<Code>56001</Code>
+				<Text>Boys Only</Text>
+			</Value>    <!-- Male -->
+			<Value>
+				<Code>56002</Code>
+				<Text>Both Girls and Boys</Text>
+			</Value>   <!-- Both -->
+			<Value>
+				<Code>56003</Code>
+				<Text>None</Text>
+			</Value>   <!-- None -->
+		</Values>
+	</CodeSet>    <!-- School Boarding Gender -->
+
 	<CodeSet>
 		<Intro>
 			<p>A description of the gender of students that the school accepts at a certain year 
@@ -502,15 +1059,30 @@
 			<Value>
 				<Code>C</Code>
 				<Text>Both Girls and Boys</Text>
-			</Value>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!--  CoEd - retired -->
 			<Value>
 				<Code>F</Code>
 				<Text>Girls Only</Text>
-			</Value>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Female - retired -->
 			<Value>
 				<Code>M</Code>
 				<Text>Boys Only</Text>
-			</Value>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Male - retired -->
+			<Value>
+				<Code>55002</Code>
+				<Text>Both Girls and Boys</Text>
+			</Value>    <!--  CoEd -->
+			<Value>
+				<Code>55000</Code>
+				<Text>Girls Only</Text>
+			</Value>    <!-- Female -->
+			<Value>
+				<Code>55001</Code>
+				<Text>Boys Only</Text>
+			</Value>    <!-- Male -->
 		</Values>
 	</CodeSet>    <!-- Schooling Gender -->
 
@@ -537,78 +1109,225 @@
 
 	<CodeSet>
 		<Intro>
-			<p>A code describing the nature of the relationship between a pair of Organisations</p>
+			<p>Code set denoting the type of ECE Service Provider ownership, e.g. Sole Trader, 
+			Company, Charitable Trust etc.</p>
+		</Intro>
+		<ID>ECE Service Provider Ownership Type</ID>
+		<Values>
+			<Value><Code>18000</Code><Text>Sole Trader</Text></Value>
+			<Value><Code>18001</Code><Text>Company</Text></Value>
+			<Value><Code>18002</Code><Text>Partnership</Text></Value>
+			<Value><Code>18004</Code><Text>Incorporated Society</Text></Value>
+			<Value><Code>18005</Code><Text>Statutory Trust</Text></Value>
+			<Value><Code>18006</Code><Text>Private Trust</Text></Value>
+			<Value><Code>18007</Code><Text>Community Trust</Text></Value>
+			<Value><Code>18008</Code><Text>Government Department</Text></Value>
+			<Value><Code>18009</Code><Text>State Owned Enterprise</Text></Value>
+			<Value><Code>18010</Code><Text>Health Board</Text></Value>
+			<Value><Code>18011</Code><Text>City Council/Local Authority Trading Enterprise</Text></Value>
+			<Value><Code>18012</Code><Text>Public Education Institution</Text></Value>
+			<Value><Code>18013</Code><Text>Crown</Text></Value>
+			<Value><Code>18014</Code><Text>Not Categorised</Text></Value>
+		</Values>
+	</CodeSet>	  <!-- ECE Service Provider Ownership Type -->
+
+	<CodeSet>
+		<Intro>
+			<p>A code describing the nature of the relationship between a pair of Organisations.</p>
 		</Intro>
 		<ID>Organisation Relationship Type</ID>
 		<Values>
 			<Value>
+				<Code>CAH</Code>
+				<Text>Client and Host</Text>
+				<Description>
+					Source Provider sends learners to the related Provider for the provision of some classes. Exact
+					student and class details will be recorded in co-enrolment flavour of StudentProviderEnrolment.
+				</Description>
+			</Value>	<!-- Client and Host Schools -->
+			<Value>
+				<Code>CAR</Code>
+				<Text>Contributor and Receiver</Text>
+				<Description>
+					Source Provider contributes learners to the related Provider, once the learners have completed education 
+					at the source Provider.
+				</Description>
+			</Value>	<!-- Contributor and Receiver -->
+			<Value>
 				<Code>TPU</Code>
-				<Text xml:lang="en">Teen Parent Unit</Text>
-				<Description>Related organisation is a Teen Parent Unit co-located with the main Organisation.</Description>
+				<Text>Teen Parent Unit</Text>
+				<Description>
+					Source Provider is a Teen Parent Unit which is operated as part of the related Provider. Learners
+					who are also parents attend classes at both the Teen Parent Unit and the host school.
+				</Description>
+				<EndDate>2020-05-08</EndDate>
 			</Value>    <!-- Teen Parent Unit -->
 			<Value>
-				<Code>ACR</Code>
-				<Text xml:lang="en">Activity Centre</Text>
-				<Description>Related organisation is an Activity Centre co-located with the main Organisation.</Description>
+				<Code>ACE</Code>
+				<Text>Activity Centre</Text>
+				<Description>
+					Source Provider is an Activity Centre which is operated as part of the related Provider. Learners
+					who have been identified as being at risk of disengaging from mainstream Schooling attend classes
+					at both the Activity Centre and the host school.
+				</Description>
+				<EndDate>2020-05-08</EndDate>
 			</Value>    <!-- Activity Centre -->
 			<Value>
-				<Code>MOE</Code>
-				<Text xml:lang="en">MoE Local Office</Text>
-				<Description>Related organisation is Ministry of Education Local Office that deals with the Provider.</Description>
-			</Value>    <!-- MoE Local Office -->
+				<Code>LOF</Code>
+				<Text>Local Office and Organisation</Text>
+			</Value>    <!-- MoE Local Office and Organisation -->
 			<Value>
-				<Code>COL</Code>
-				<Text xml:lang="en">Community of Learning</Text>
-				<Text xml:lang="mi">Kāhui Ako</Text>
-				<Description>Related organisation is the Community of Learning / Kāhui Ako that the main Organisation is a member of.</Description>
-			</Value>    <!-- Kāhui Ako -->
+				<Code>EPL</Code>
+				<Text>ECE Service Provider and Playgroup</Text>
+			</Value>	<!-- ECE Service Provider and Playgroup -->
 			<Value>
-				<Code>LSC</Code>
-				<Text xml:lang="en">Learning Support Cluster</Text>
-				<Description>Related organisation is the Learning Support Cluster that the main Organisation is a member of.</Description>
-			</Value>    <!-- Learning Support Cluster -->
+				<Code>ESP</Code>
+				<Text>ECE Service Provider and Licenced ECEService</Text>
+			</Value>	<!-- ECE Service Provider and Licensed ECE Service -->
 			<Value>
-				<Code>EXA</Code>
-				<Text xml:lang="en">Exam Centre</Text>
-			</Value>    <!-- Exam Centre -->
+				<Code>34008</Code>
+				<Text xml:lang="en">School and Attached Unit</Text>
+			</Value>    <!-- School and Attached Unit -->
+			<Value>
+				<Code>34028</Code>
+				<Text xml:lang="en">Community of Learning and Funded Member</Text>
+			</Value>    <!-- Kāhui Ako and Funded Member -->
+			<Value>
+				<Code>34029</Code>
+				<Text xml:lang="en">Community of Learning and Unfunded Member</Text>
+			</Value>    <!-- Kāhui Ako and Unfunded Member -->
+			<Value>
+				<Code>34037</Code>
+				<Text xml:lang="en">Learning Support Cluster and Member</Text>
+			</Value>    <!-- Learning Support Cluster and Member -->
+			<Value>
+				<Code>34031</Code>
+				<Text xml:lang="en">School RTLB Cluster and Member</Text>
+			</Value>    <!-- RTLB Cluster and Member -->			
 		</Values>
 	</CodeSet>    <!-- Organisation Relationship Type -->
 	
 	<CodeSet>
 		<Intro>
-			<p>A code describing the nature of the relationship between the pair of Providers</p>
+			<p>Code set denoting the role the source organisation is playing in this relationship.</p>
 		</Intro>
-		<ID>Provider Relationship Type</ID>
+		<ID>Source Organisation Role</ID>
 		<Values>
 			<Value>
-				<Code>CAR</Code>
-				<Text>Contributor and Receiver</Text>
-				<Description>Source Provider contributes learners to the related Provider, once the learners have
-					completed education at the source Provider.</Description> 
-			</Value>
+				<Code>COL</Code>
+				<Text xml:lang="en">Community of Learning</Text>
+				<Text xml:lang="mi">Kāhui Ako</Text>
+			</Value>    <!-- CoL/Kāhui Ako -->
 			<Value>
-				<Code>CAH</Code>
-				<Text>Client and Host</Text>
-				<Description>Source Provider sends learners to the related Provider for the provision of some classes.
-					Exact student and class details will be recorded in co-enrolment flavour of
-					StudentProviderEnrolment.</Description>
-			</Value>
+				<Code>ECE</Code>
+				<Text xml:lang="en">ECE Service Provider</Text>
+				<Text xml:lang="mi">Kura Kōhungahunga</Text>
+			</Value>    <!-- ECE Service Provider -->
 			<Value>
-				<Code>TPU</Code>
-				<Text>Teen Parent Unit</Text>
-				<Description>Source Provider is a Teen Parent Unit which is operated as part of the related Provider.
-					Learners who are also parents attend classes at both the Teen Parent Unit and the host school.</Description>
-			</Value>
+				<Code>LOC</Code>
+				<Text xml:lang="en">Local Office</Text>
+			</Value>    <!-- MoE Local Office -->
 			<Value>
-				<Code>ACE</Code>
-				<Text>Activity Centre</Text>
-				<Description>Source Provider is an Activity Centre which is operated as part of the related Provider.
-					Learners who have been identified as being at risk of disengaging from mainstream Schooling
-					attend classes at both the Activity Centre and the host school.</Description>
-			</Value>
+				<Code>LSC</Code>
+				<Text xml:lang="en">Learning Support Cluster</Text>
+				<Text xml:lang="mi">Kāhui Akoranga Tautoko</Text>
+			</Value>    <!-- Learning Support Cluster -->
+			<Value>
+				<Code>RTL</Code>
+				<Text xml:lang="en">RTLB Cluster</Text>
+			</Value>    <!-- RTLB Cluster -->
+			<Value>
+				<Code>SCH</Code>
+				<Text xml:lang="en">School</Text>
+				<Text xml:lang="mi">Kura</Text>
+			</Value>    <!-- School -->			
 		</Values>
-	</CodeSet>    <!-- Provider Relationship Type -->
+	</CodeSet>    <!-- Source Organisation Role -->
 	
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the role the related organisation is playing in this relationship.</p>
+		</Intro>
+		<ID>Related Organisation Role</ID>
+		<Values>
+			<!-- Learning Support Cluster roles -->
+			<Value>
+				<Code>184000</Code>
+				<Text>Standard Member</Text>
+				<Description>Role applies to School/ECE's membership of Learning Support Cluster</Description>
+			</Value>	<!-- LSC - Standard Member -->
+			<Value>
+				<Code>184001</Code>
+				<Text>Employing Member</Text>
+				<Description>Role applies to School/ECE's membership of Learning Support Cluster</Description>				
+			</Value>	<!-- LSC - Employing Member -->
+			<Value>
+				<Code>184002</Code>
+				<Text>Accommodating Member</Text>
+				<Description>Role applies to School/ECE's membership of Learning Support Cluster</Description>
+			</Value>	<!-- LSC - Accommodating Member -->
+
+
+			<!-- Kāhui Ako roles -->
+			<Value>
+				<Code>33038</Code>
+				<Text>Approved Funded Member</Text>
+				<Description>Role applies to School/ECE's membershp of Kāhui Ako</Description>
+			</Value>	<!-- CoL - Approved Funded -->
+			<Value>
+				<Code>33039</Code>
+				<Text>Joined Funded Member</Text>
+				<Description>Role applies to School/ECE's membershp of Kāhui Ako</Description>
+			</Value>	<!-- CoL - Joined Funded -->
+			<Value>
+				<Code>33040</Code>
+				<Text>Approved Unfunded Member</Text>
+				<Description>Role applies to School/ECE's membershp of Kāhui Ako</Description>
+			</Value>	<!-- CoL - Approved Unfunded -->
+			<Value>
+				<Code>33041</Code>
+				<Text>Joined Unfunded Member</Text>
+				<Description>Role applies to School/ECE's membershp of Kāhui Ako</Description>
+			</Value>	<!-- CoL - Joined Unfunded -->
+			<Value>
+				<Code>LOM</Code>
+				<Text>Local Office Member</Text>
+				<Description>Role applies to School/ECE's membershp of Kāhui Ako</Description>
+			</Value>	<!-- CoL - Local Office -->
+			<Value>
+				<Code>SPM</Code>
+				<Text>ECE Service Provider Member</Text>
+				<Description>Role applies to School/ECE's membershp of Kāhui Ako</Description>
+			</Value>	<!-- CoL - ECE Service -->
+
+			<!-- Provider Peer Relationship roles -->
+			<Value>
+				<Code>33046</Code>
+				<Text>Attached Funded Unit</Text>
+			</Value>	<!-- Attached Funded Unit -->
+			<Value>
+				<Code>33047</Code>
+				<Text>Activity Centre</Text>
+			</Value>	<!-- Activity Centre -->
+			<Value>
+				<Code>33048</Code>
+				<Text>Teen Parent Unit</Text>
+			</Value>	<!-- Teen Parent Unit -->
+
+			<!-- RTLB Cluster roles -->							
+			<Value>
+				<Code>33044</Code>
+				<Text>RTLB Cluster Leader</Text>
+				<Description>Role applies to School/ECE's membershp of RTLB Cluster</Description>
+			</Value>	<!-- RTLB - Cluster Leader -->
+			<Value>
+				<Code>33045</Code>
+				<Text>RTLB Cluster Member</Text>
+				<Description>Role applies to School/ECE's membershp of RTLB Cluster</Description>
+			</Value>	<!-- RTLB - Cluster Member -->			
+		</Values>
+	</CodeSet>    <!-- Related Organisation Role -->
+
 	<!-- StaffAssignment -->
 	<CodeSet>
 		<Intro>

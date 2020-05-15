@@ -1642,7 +1642,7 @@
 					<Name>Tai Tokerau</Name>
 					<ObjectType>Organisation</ObjectType>
 					<StartDate>2010-04-12</StartDate>
-					<Type>MOE</Type>
+					<Type>LOF</Type>
 				</RelatedOrganisation>
 				<RelatedOrganisation>
 				    <RefId>ac0871d9-6562-4209-ae86-abdb3661842b</RefId>
@@ -1650,7 +1650,7 @@
 					<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
 					<ObjectType>Organisation</ObjectType>
 					<StartDate>2013-10-31</StartDate>
-					<Type>COL</Type>
+					<Type json:force-string="true">34028</Type>
 				</RelatedOrganisation>
 			</RelatedOrganisationList>
 		</xhtml:Example>
@@ -1698,7 +1698,7 @@
 				<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
 				<ObjectType>Organisation</ObjectType>
 				<StartDate>2012-04-30</StartDate>
-				<Type>COL</Type>
+				<Type json:force-string="true">34028</Type>
 			</RelatedOrganisation>
 		</xhtml:Example>
 	</CommonElement>

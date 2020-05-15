@@ -28,7 +28,7 @@
 			</Value>
 			<Value>
 				<Code>HOS</Code>
-				<Text xml:lang="en">Host Family</Text>
+				<Text xml:lang="en">Host Parent</Text>
 				<Text xml:lang="mi">Whānau Tiaki</Text>
 			</Value>
 			<Value>
@@ -76,6 +76,7 @@
 				<Code>NOT</Code>
 				<Text xml:lang="en">Not provided</Text>
 				<Text xml:lang="mi">Kāre i whakaratoa</Text>
+				<EndDate>2020-05-20</EndDate>
 			</Value>
 			<Value>
 				<Code>GRF</Code>
@@ -91,6 +92,78 @@
 				<Code>WHA</Code>
 				<Text xml:lang="en">Whāngai Parent</Text>
 				<Text xml:lang="mi">Matua Whāngai</Text>
+			</Value>
+			<Value>
+				<Code>CAS</Code>
+				<Text xml:lang="en">Case Worker</Text>
+			</Value>
+			<Value>
+				<Code>EXT</Code>
+				<Text xml:lang="en">Extended Family</Text>
+			</Value>
+			<Value>
+				<Code>FOF</Code>
+				<Text xml:lang="en">Foster Father</Text>
+			</Value>
+			<Value>
+				<Code>FOM</Code>
+				<Text xml:lang="en">Foster Mother</Text>
+			</Value>
+			<Value>
+				<Code>FOS</Code>
+				<Text xml:lang="en">Foster Parent</Text>
+			</Value>
+			<Value>
+				<Code>GDF</Code>
+				<Text xml:lang="en">Godfather</Text>
+			</Value>
+			<Value>
+				<Code>GDM</Code>
+				<Text xml:lang="en">Godmother</Text>
+			</Value>
+			<Value>
+				<Code>GDP</Code>
+				<Text xml:lang="en">Godparent</Text>
+			</Value>												
+			<Value>
+				<Code>HOF</Code>
+				<Text xml:lang="en">Host Father</Text>
+			</Value>
+			<Value>
+				<Code>HOM</Code>
+				<Text xml:lang="en">Host Mother</Text>
+			</Value>
+			<Value>
+				<Code>INT</Code>
+				<Text xml:lang="en">International Liasion</Text>
+			</Value>
+			<Value>
+				<Code>PAI</Code>
+				<Text xml:lang="en">Paid CHild Help</Text>
+			</Value>
+			<Value>
+				<Code>PAP</Code>
+				<Text xml:lang="en">Parent's Partner</Text>
+			</Value>
+			<Value>
+				<Code>PAR</Code>
+				<Text xml:lang="en">Parent</Text>
+			</Value>
+			<Value>
+				<Code>GRP</Code>
+				<Text xml:lang="en">Grandparent</Text>
+			</Value>
+			<Value>
+				<Code>SIB</Code>
+				<Text xml:lang="en">Sibling</Text>
+			</Value>
+			<Value>
+				<Code>STP</Code>
+				<Text xml:lang="en">Step-parent</Text>
+			</Value>
+			<Value>
+				<Code>TRU</Code>
+				<Text xml:lang="en">Truancy Officer</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Relationship to Student -->
@@ -3434,23 +3507,6 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Default role of the staff member, outside of any particular organisation.</p>
-		</Intro>
-		<ID>Staff Type</ID>
-		<Values>
-			<Value>
-				<Code>ADM</Code>
-				<Text>Administrator</Text>
-			</Value>    <!-- Administrator -->
-			<Value>
-				<Code>EDU</Code>
-				<Text>Educator</Text>
-			</Value>    <!-- Educator -->
-		</Values>
-	</CodeSet>    <!-- Staff Type -->
-
-	<CodeSet>
-		<Intro>
 			<p>A code list denoting the School Management Systems (SMS) that are in use by Providers.</p>
 		</Intro>
 		<ID>School Management System</ID>
@@ -3488,7 +3544,7 @@
 				<Text>Synergetic</Text>
 			</Value>    <!-- Synergetic -->
 		</Values>
-	</CodeSet>    <!-- Staff Type -->
+	</CodeSet>    <!-- School Management System -->
 
 	<CodeSet>
 		<Intro>

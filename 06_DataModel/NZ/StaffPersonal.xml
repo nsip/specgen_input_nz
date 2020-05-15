@@ -71,16 +71,6 @@
   </Item>    <!-- PersonInfo -->
 
   <Item>
-    <Element>StaffType</Element>
-    <Characteristics>O</Characteristics>
-	  <privacyRating>Medium</privacyRating>
-    <Description>
-		<p>Default role of the staff member, outside of any particular organisation.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsStaffTypeType"></Type>
-  </Item>    <!-- PersonInfo -->
-
-  <Item>
     <Element>RecordAudit</Element>    
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>

@@ -310,6 +310,7 @@
 			<Value><Code>ASR</Code><Text>Assessor</Text></Value>
 			<Value><Code>LOC</Code><Text>Location Provider</Text></Value>
 			<Value><Code>PRO</Code><Text>Provider</Text></Value>
+			<Value><Code>REG</Code><Text>Registering Organisation</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Asssessment Provider Role -->
 

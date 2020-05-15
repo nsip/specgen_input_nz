@@ -47,7 +47,7 @@
     <Description>
       <p>The SIF GUID for the source provider in the relationship.</p>
     </Description>
-    <Type ref="CodeSets" name="NZCodeSetsProviderRelationshipTypeType"/>
+    <Type name="xs:string"/>
   </Item>  <!-- RelationshipType -->
   <Item>
     <Element>SourceProvider</Element>
