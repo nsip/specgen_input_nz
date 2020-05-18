@@ -1516,6 +1516,34 @@
 			</Description>
 			<List mode="List"/>	
 		</Item>
+		<Item>
+			<Element>BehaviourIdentified</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The type of minor problem behaviour identified as a result of the Wellbeing Event.</p>
+			</Description>
+			<Type ref="CommonData" name="BehaviourIdentifiedType"/>
+		</Item>    <!-- BehaviourIdentified -->
+	</CommonElement>
+
+	<CommonElement name="BehaviourIdentifiedType" type="true" dm="true">
+		<Item>
+			<Element>BehaviourIdentifiedType</Element>
+			<Description>
+				<p>A problem behaviour identified for the student as a result of the Wellbeing Event.</p>
+				<p>The severity of a behaviour may be minor or major. If it is minor only values from 
+				NZCodeSetsWellbeingEventMinorBehaviour are applicable. If it is majoronly values from 
+				NZCodeSetsWellbeingEventMajorBehaviour are applicable.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Severity</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The severity of the Wellbeing Event.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsWellbeingEventSeverityType"/>
+		</Item>    <!-- Severity -->
 		<Choice>
 			<Item>
 				<Element>MinorBehaviour</Element>
@@ -1533,7 +1561,7 @@
 				</Description>
 				<Type ref="CodeSets" name="NZCodeSetsWellbeingEventMajorBehaviourType"/>
 			</Item>    <!-- MajorBehaviour -->
-		</Choice>
+		</Choice>		
 	</CommonElement>
 
 	<CommonElement name="StudentVoiceListType" type="true" dm="true">

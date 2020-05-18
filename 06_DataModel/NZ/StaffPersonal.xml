@@ -95,10 +95,8 @@
 			    <Address json:force-array="true">
             <Type>TH</Type>
             <Role>PHY</Role>
-            <Street>
               <Line1>The Enchanted Wood</Line1>
               <Line2>533 Hogwart's Way</Line2>
-            </Street>
             <Suburb>RD 1</Suburb>
             <City>Hogsmeade</City>
             <PostalCode>5780</PostalCode>

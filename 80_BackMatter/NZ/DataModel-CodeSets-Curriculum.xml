@@ -1173,14 +1173,14 @@
 			<Value><Code>97</Code><Text>Horticulture</Text></Value>
 			<Value><Code>99</Code><Text>Pest Management</Text></Value>
 
-			<Value><Code>ACCO</Code><Text>Accounting</Text><EndDate>2020-04-15</EndDate><EndDate>2020-04-15</EndDate></Value>
-			<Value><Code>AGHO</Code><Text>Agricultural and Horticultural Science</Text><EndDate>2020-04-15</EndDate><EndDate>2020-04-15</EndDate></Value>
-			<Value><Code>AGRI</Code><Text>Agribusiness (Business Studies)</Text><EndDate>2020-04-15</EndDate><EndDate>2020-04-15</EndDate></Value>
-			<Value><Code>ARTC</Code><Text>Visual Arts</Text><EndDate>2020-04-15</EndDate><EndDate>2020-04-15</EndDate></Value>
-			<Value><Code>ARTH</Code><Text>Art History</Text><EndDate>2020-04-15</EndDate><EndDate>2020-04-15</EndDate></Value>
-			<Value><Code>BIOL</Code><Text>Biology</Text><EndDate>2020-04-15</EndDate><EndDate>2020-04-15</EndDate></Value>
-			<Value><Code>BUST</Code><Text>Business Studies</Text><EndDate>2020-04-15</EndDate><EndDate>2020-04-15</EndDate></Value>
-			<Value><Code>CHEM</Code><Text>Chemistry</Text><EndDate>2020-04-15</EndDate><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>ACCO</Code><Text>Accounting</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>AGHO</Code><Text>Agricultural and Horticultural Science</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>AGRI</Code><Text>Agribusiness (Business Studies)</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>ARTC</Code><Text>Visual Arts</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>ARTH</Code><Text>Art History</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>BIOL</Code><Text>Biology</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>BUST</Code><Text>Business Studies</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>CHEM</Code><Text>Chemistry</Text><EndDate>2020-04-15</EndDate></Value>
 			<Value><Code>CHIN</Code><Text>Chinese</Text><EndDate>2020-04-15</EndDate></Value>
 			<Value><Code>CLST</Code><Text>Classical Studies</Text><EndDate>2020-04-15</EndDate></Value>
 			<Value><Code>COMP</Code><Text>Computing</Text><EndDate>2020-04-15</EndDate></Value>

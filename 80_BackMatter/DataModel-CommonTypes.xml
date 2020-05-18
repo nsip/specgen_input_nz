@@ -156,7 +156,8 @@
 		<Item>
 			<Element>EduOrgLocationObjectReferenceType</Element>
 			<Description>
-				<p>A reference to a Provider's Location via ProviderRefId and LocationNum</p>
+				<p>A reference to a Provider specific location at the Organisation; rather 
+				than the Provider as a whole.</p>
 			</Description>
 			<Type complex="extension" name="ProviderObjectReferenceType"/>			
 		</Item>

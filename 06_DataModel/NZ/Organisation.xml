@@ -6,6 +6,7 @@
 			xmlns:json="http://json.org/"
 			
       xmlns="http://sifassociation.org/SpecGen">
+	  
   	<Key>OrganisationRefId</Key>
   	<EventsReported>true</EventsReported>
 	<Item>
@@ -64,9 +65,7 @@
 						<Address>
 							<Type>TH</Type>
 							<Role>PHY</Role>
-							<Street>
-								<Line1>533 Hogwart's Way</Line1>
-							</Street>
+							<Line1>533 Hogwart's Way</Line1>
 							<City>Hogsmead</City>
 							<PostalCode json:force-string="true">7733</PostalCode>
 						</Address>

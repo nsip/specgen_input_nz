@@ -204,19 +204,15 @@
 					<Address>
 						<Type>TH</Type>
 						<Role>PHY</Role>
-						<Street>
-							<Line1>The Enchanted Wood</Line1>
-							<Line2>533 Hogwart's Way</Line2>
-						</Street>
+						<Line1>The Enchanted Wood</Line1>
+						<Line2>533 Hogwart's Way</Line2>
 						<City>Hogsmead</City>
 						<PostalCode json:force-string="true">7733</PostalCode>
 					</Address>
 					<Address>
 						<Type>TH</Type>
 						<Role>PHY</Role>
-						<Street>
-							<Line1>1175 Lake Ferry Rd</Line1>
-						</Street>
+						<Line1>1175 Lake Ferry Rd</Line1>
 						<Suburb>RD 1</Suburb>
 						<City>Martinborough</City>
 					</Address>
@@ -241,9 +237,7 @@
 							<Address json:force-array="true">
 								<Type>DE</Type>
 								<Role>POS</Role>
-								<Street>
-									<Line1>P O Box 81</Line1>
-								</Street>
+								<Line1>P O Box 81</Line1>
 								<City>Martinborough</City>
 								<PostalCode json:force-string="true">5781</PostalCode>
 							</Address>
@@ -884,6 +878,15 @@
 			<Type ref="CodeSets" name="NZCodeSetsEmailTypeType"/>
 		</Item>    <!-- Type -->
 		<Item>
+			<Element>SourceProvider</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Generic object reference to the organisation that provided the email address.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ProviderObjectReference"/>
+		</Item>    <!-- SourceProvider -->		
+		<Item>
 			<Element>Address</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
@@ -1236,9 +1239,7 @@
 					<Address json:force-array="true">
 						<Type>DE</Type>
 						<Role>POS</Role>
-						<Street>
-							<Line1>P O Box 81</Line1>
-						</Street>
+						<Line1>P O Box 81</Line1>
 						<City>Martinborough</City>
 						<PostalCode json:force-string="true">5781</PostalCode>
 					</Address>
@@ -1452,9 +1453,7 @@
 						<Address json:force-array="true">
 							<Type>TH</Type>
 							<Role>PHY</Role>
-							<Street>
-								<Line1>533 Hogwart's Way</Line1>
-							</Street>
+							<Line1>533 Hogwart's Way</Line1>
 							<City>Hogsmead</City>
 							<PostalCode json:force-string="true">7733</PostalCode>
 						</Address>
@@ -1474,10 +1473,8 @@
 						<Address json:force-array="true">
 							<Type>TH</Type>
 							<Role>PHY</Role>
-							<Street>
-								<Line1>The Enchanted Wood</Line1>
-								<Line2>533 Hogwart's Way</Line2>
-							</Street>
+							<Line1>The Enchanted Wood</Line1>
+							<Line2>533 Hogwart's Way</Line2>
 							<City>Hogsmead</City>
 							<PostalCode json:force-string="true">7733</PostalCode>
 						</Address>
@@ -1558,9 +1555,7 @@
 					<Address json:force-array="true">
 						<Type>TH</Type>
 						<Role>PHY</Role>
-						<Street>
-							<Line1>533 Hogwart's Way</Line1>
-						</Street>
+						<Line1>533 Hogwart's Way</Line1>
 						<City>Hogsmead</City>
 						<PostalCode json:force-string="true">7733</PostalCode>
 					</Address>
@@ -2000,6 +1995,76 @@
 				<ReligiousAffiliation>NZS215</ReligiousAffiliation>
 			</ReligiousAffiliationList>
 		</xhtml:Example>
+	</CommonElement>
+
+	<!-- StudentPersonal extras for Te Rito sLSR -->
+	<CommonElement name="CaregiverListType" type="true" dm="true">
+		<Item>
+			<Element>CaregiverListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>List of caregiver details, de-normalised from StudentContactPersonal</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Caregiver</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Name and contact details of the person.</p>
+			</Description>
+			<Type ref="CommonTypes" name="CaregiverType"/>
+		</Item>    <!-- Caregiver -->
+	</CommonElement>
+
+	<CommonElement name="CaregiverType" type="true" dm="true">
+		<Item>
+			<Element>CaregiverType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Caregiver details, de-normalised from StudentContactPersonal</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>FirstName</Element>
+			<Characteristics>C</Characteristics>
+			<Description>
+				<p>First Name of the caregiver.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- FirstName -->
+		<Item>
+			<Element>LastName</Element>
+			<Characteristics>C</Characteristics>
+			<Description>
+				<p>Last Name of the caregiver.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- LastName -->
+		<Item>
+			<Element>PhoneNumber</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Phone number of the caregiver.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- PhoneNumber -->
+		<Item>
+			<Element>EmailAddress</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Email address of the caregiver.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- EmailAddress -->
+		<Item>
+			<Element>Type</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Email address of the caregiver.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsRelationshipToStudentType"/>
+		</Item>    <!-- Type (relationship) -->
 	</CommonElement>
 
 	<!-- StudentContactPersonal details -->
