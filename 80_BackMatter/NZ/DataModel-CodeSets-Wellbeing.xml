@@ -1411,7 +1411,7 @@
 		<ID>Wellbeing Event Action Taken</ID>
 		<Values>
 			<Value>
-        <Code>AASS</Code>
+        		<Code>AASS</Code>
 				<Text xml:lang="en">Additional Attendance / Saturday School</Text>
 				<Text xml:lang="mi">Rā kura anō/Kura Rāhoroi</Text>
 				<Description>
@@ -1525,13 +1525,13 @@
 			</Value>
 			<Value>
 				<Code>RECS</Code>
-				<Text xml:lang="en">Restitution / Community Service</Text>
-				<Text xml:lang="mi">Te Utu/Ratonga Hapori</Text>
+				<Text xml:lang="en">Restitution</Text>
+				<Text xml:lang="mi">Te Utu</Text>
 				<Description>
 					Consequence for referral results in apologizing or compensating for loss, damage,
 					or injury; community services.
 				</Description>
-			</Value>
+			</Value>    <!--  Restitution -->
 			<Value>
 				<Code>TIOF</Code>
 				<Text xml:lang="en">Time in Office</Text>
@@ -1844,7 +1844,7 @@
 		<Values>
 			<Value>
 				<Code>DEFIA</Code
-				><Text xml:lang="en">Defiance</Text>
+				><Text xml:lang="en">Defiance/Disrespect/Non-Compliance</Text>
 				<Text xml:lang="mi">Ātete – Iti noa</Text>
 				<Description>Student engages in brief or low-intensity failure to follow directions or talks back.</Description>
 			</Value>
@@ -1852,6 +1852,7 @@
 				<Code>DISRE</Code>
 				<Text xml:lang="en">Disrespect</Text>
 				<Text xml:lang="mi">Tōtōā – Iti noa</Text>
+				<EndDate>2020-04-09</EndDate>				
 				<Description>Student delivers low-intensity, socially rude or dismissive messages to adults or students.</Description>
 			</Value>
 			<Value>
@@ -1932,18 +1933,20 @@
 					<Code>BULLY</Code>
 					<Text xml:lang="en">Bullying</Text>
 					<Text xml:lang="mi">Te mahi poke – Nui rawa</Text>
+					<EndDate>2020-04-09</EndDate>
 					<Description>The delivery of direct or technology-based messages that involve intimidation, teasing, taunting, threats, or name calling.</Description>
 				</Value>
 				<Value>
 					<Code>DEFIA</Code>
-					<Text xml:lang="en">Defiance / Insubordination / Non-Compliance</Text>
+					<Text xml:lang="en">Defiance/Disrespect/Insubordination/Non-Compliance</Text>
 					<Text xml:lang="mi">Ātete/Kāre e whakarongo/Kāre e aro mai – Nui rawa</Text>
 					<Description>Student engages in refusal to follow directions or talks back.</Description>
-				</Value>
+				</Value>    <!-- Defiance / Disrespect / Insubordination / Non-Compliance -->
 				<Value>
 					<Code>DISRE</Code>
 					<Text xml:lang="en">Disrespect</Text>
 					<Text xml:lang="mi">Tōtōā – Nui rawa</Text>
+					<EndDate>2020-04-09</EndDate>					
 					<Description>Student delivers socially rude or dismissive messages to adults or students.</Description>
 				</Value>
 				<Value>
@@ -1978,10 +1981,10 @@
 				</Value>
 				<Value>
 					<Code>HARAS</Code>
-					<Text xml:lang="en">Harassment</Text>
+					<Text xml:lang="en">Harassment/Bullying</Text>
 					<Text xml:lang="mi">Inonotitanga – Nui rawa</Text>
 					<Description>The delivery of disrespectful messages in any format related to gender, ethnicity, sex, race, religion, disability, physical features, or other protected class. </Description>
-				</Value>
+				</Value>    <!-- Harassment / Bullying -->
 				<Value>
 					<Code>INADI</Code>
 					<Text xml:lang="en">Inappropriate Display of Affection</Text>

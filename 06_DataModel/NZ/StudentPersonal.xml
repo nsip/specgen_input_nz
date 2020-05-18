@@ -24,6 +24,7 @@
 		<Type ref="CommonTypes" name="RefIdType"/>
 	</Item>    <!-- StudentPersonalRefId -->
 	
+	<!-- Alternate Ids for the Student -->
 	<Item>
 		<Element>StudentPersonalLocalId</Element>
 		<Characteristics>O</Characteristics>
@@ -42,6 +43,19 @@
 		</Description>
 		<Type name="xs:positiveInteger"/>
 	</Item>    <!-- NationalStudentNumber -->
+    <Item>
+		<Element>NZQAStudentId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>NZQA's unique identifier for a student who has been registered for assessments
+			 to be conducted against the NZQA framework to achieve unit/achievement standards
+			 and national qualifications.
+			</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>    <!-- NZQAStudentId -->
+
 	<Item>
 		<Element>FirstNZSchoolingDate</Element>
 		<Characteristics>O</Characteristics>
@@ -79,6 +93,15 @@
 		</Description>
 		<Type ref="CodeSets" name="NZCodeSetsBiographicChangeReasonType"/>
 	</Item>    <!-- BiographicChangeReason -->
+	<Item>
+		<Element>CaregiverList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>List of caregivers; de-normalised from StudentContactPersonal for Te Rito sLSR.</p>
+		</Description>
+		<Type ref="CommonData" name="CaregiverListType"/>
+	</Item>    <!-- CaregiverList -->
 	<Item>
 		<Element>CareStatus</Element>
 		<Characteristics>O</Characteristics>
@@ -221,19 +244,15 @@
 					<Address>
 						<Type>TH</Type>
 						<Role>PHY</Role>
-						<Street>
-							<Line1>The Enchanted Wood</Line1>
-							<Line2>533 Hogwart's Way</Line2>
-						</Street>
+						<Line1>The Enchanted Wood</Line1>
+						<Line2>533 Hogwart's Way</Line2>
 						<City>Hogsmead</City>
 						<PostalCode json:force-string="true">7733</PostalCode>
 					</Address>
 					<Address>
 						<Type>RU</Type>
 						<Role>PHY</Role>
-						<Street>
-							<Line1>1175 Lake Ferry Rd</Line1>
-						</Street>
+						<Line1>1175 Lake Ferry Rd</Line1>
 						<Suburb>RD 1</Suburb>
 						<City>Martinborough</City>
 					</Address>
@@ -258,9 +277,7 @@
 							<Address json:force-array="true">
 								<Type>DE</Type>
 								<Role>POS</Role>
-								<Street>
-									<Line1>P O Box 81</Line1>
-								</Street>
+								<Line1>P O Box 81</Line1>
 								<City>Martinborough</City>
 								<PostalCode json:force-string="true">5781</PostalCode>
 							</Address>

@@ -119,6 +119,15 @@
     <Type ref="CommonTypes" name='LanguageOfInstructionListType'/>
   </Item>    <!-- LanguageOfInstructionList -->
   <Item>
+    <Element>NZQAShortCOurseInd</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Indicator to advise NZQA that course does not have sufficient credits for endorsement.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+  </Item>    <!-- NZQAShortCourseInd -->  
+  <Item>
     <Element>LearningStandardList</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>

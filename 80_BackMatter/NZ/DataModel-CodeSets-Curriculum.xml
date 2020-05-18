@@ -3,7 +3,7 @@
  	xmlns="http://sifassociation.org/SpecGen">
 	
 	
-	<CodeSet>h
+	<CodeSet>
 		<Intro>
 			<p>Codes denoting the two curricula used in New Zealand.
 			</p>
@@ -948,68 +948,293 @@
 		</Intro>
 		<ID>NCEA Subject Area</ID>
 		<Values>
-			<Value><Code>ACCO</Code><Text>Accounting</Text></Value>
-			<Value><Code>AGHO</Code><Text>Agricultural and Horticultural Science</Text></Value>
-			<Value><Code>AGRI</Code><Text>Agribusiness (Business Studies)</Text></Value>
-			<Value><Code>ARTC</Code><Text>Visual Arts</Text></Value>			
-			<Value><Code>ARTH</Code><Text>Art History</Text></Value>
-			<Value><Code>BIOL</Code><Text>Biology</Text></Value>
-			<Value><Code>BUST</Code><Text>Business Studies</Text></Value>
-			<Value><Code>CHEM</Code><Text>Chemistry</Text></Value>
-			<Value><Code>CHIN</Code><Text>Chinese</Text></Value>
-			<Value><Code>CLST</Code><Text>Classical Studies</Text></Value>
-			<Value><Code>COMP</Code><Text>Computing</Text></Value>
-			<Value><Code>COOK</Code><Text>Cook Island Māori</Text></Value>
-			<Value><Code>DANC</Code><Text>Dance</Text></Value>
-			<Value><Code>DLIC</Code><Text>Drivers Licence</Text></Value>
-			<Value><Code>DRAM</Code><Text>Drama</Text></Value>
-			<Value><Code>DTEC</Code><Text>Digital Technologies</Text></Value>
-			<Value><Code>EAAS</Code><Text>Earth and Space Science</Text></Value>
-			<Value><Code>ECON</Code><Text>Economics</Text></Value>
-			<Value><Code>ENAC</Code><Text>English for Academic Purposes</Text></Value>
-			<Value><Code>ENGL</Code><Text>English</Text></Value>
-			<Value><Code>ENSL</Code><Text>English Language (EL)</Text></Value>
-			<Value><Code>FIMA</Code><Text>Field Māori</Text></Value>
-			<Value><Code>FREN</Code><Text>French</Text></Value>
-			<Value><Code>GEOG</Code><Text>Geography</Text></Value>
-			<Value><Code>GERM</Code><Text>German</Text></Value>
-			<Value><Code>GRAP</Code><Text>Digital and Visual Communication (Graphics)</Text></Value>
-			<Value><Code>HANG</Code><Text>Hangarau</Text></Value>
-			<Value><Code>HAUO</Code><Text>Hauora</Text></Value>
-			<Value><Code>HEED</Code><Text>Health</Text></Value>
-			<Value><Code>HIST</Code><Text>History</Text></Value>
-			<Value><Code>HOME</Code><Text>Home Economics</Text></Value>
-			<Value><Code>JAPA</Code><Text>Japanese</Text></Value>
-			<Value><Code>KORE</Code><Text>Korean</Text></Value>
-			<Value><Code>LAFT</Code><Text>Lea Faka-Tonga</Text></Value>
-			<Value><Code>LATI</Code><Text>Latin</Text></Value>
-			<Value><Code>LAWS</Code><Text>Legal Studies</Text></Value>
-			<Value><Code>LITE</Code><Text>Literacy</Text></Value>
-			<Value><Code>MAOR</Code><Text>Te Reo Māori</Text></Value>
-			<Value><Code>MAST</Code><Text>Mathematics and Statistics</Text></Value>
-			<Value><Code>MEST</Code><Text>Media Studies</Text></Value>
-			<Value><Code>MPRT</Code><Text>Māori Performing Arts</Text></Value>
-			<Value><Code>MUSC</Code><Text>Music</Text></Value>
-			<Value><Code>NGAT</Code><Text>Ngā Toi</Text></Value>
-			<Value><Code>NUME</Code><Text>Numeracy</Text></Value>
-			<Value><Code>NZSL</Code><Text>New Zealand Sign Language</Text></Value>
-			<Value><Code>PANG</Code><Text>Pāngarau</Text></Value>
-			<Value><Code>PHED</Code><Text>Physical Education</Text></Value>
-			<Value><Code>PHYS</Code><Text>Physics</Text></Value>
-			<Value><Code>PLAN</Code><Text>Pacific Language Studies</Text></Value>
-			<Value><Code>PSYC</Code><Text>Psychology</Text></Value>
-			<Value><Code>PUTA</Code><Text>Pūtaiao</Text></Value>
-			<Value><Code>RANG</Code><Text>Te Reo Rangatira</Text></Value>
-			<Value><Code>REST</Code><Text>Religious Studies</Text></Value>
-			<Value><Code>SAMO</Code><Text>Samoan</Text></Value>
-			<Value><Code>SCIE</Code><Text>Science</Text></Value>
-			<Value><Code>SENV</Code><Text>Education for Sustainability</Text></Value>
-			<Value><Code>SOSC</Code><Text>Sociology</Text></Value>
-			<Value><Code>SOST</Code><Text>Social Studies</Text></Value>
-			<Value><Code>SPAN</Code><Text>Spanish</Text></Value>
-			<Value><Code>SULE</Code><Text>Supported Learning</Text></Value>
-			<Value><Code>TECN</Code><Text>Technology</Text></Value>
-			<Value><Code>TIKA</Code><Text>Tikanga-ā-iwi</Text></Value>
+			<Value><Code>10</Code><Text>Communication Skills</Text></Value>
+			<Value><Code>103</Code><Text>Solid Wood Processing</Text></Value>
+			<Value><Code>112</Code><Text>Human Services</Text></Value>
+			<Value><Code>113</Code><Text>Fire Fighting</Text></Value>
+			<Value><Code>116</Code><Text>Journalism</Text></Value>
+			<Value><Code>129</Code><Text>Health Studies</Text></Value>
+			<Value><Code>158</Code><Text>Service Sector Skills</Text></Value>
+			<Value><Code>166</Code><Text>Driving</Text></Value>
+			<Value><Code>174</Code><Text>Tourism</Text></Value>
+			<Value><Code>175</Code><Text>Transport Studies</Text></Value>
+			<Value><Code>182</Code><Text>Clothing Manufacture</Text></Value>
+			<Value><Code>184</Code><Text>Food Processing</Text></Value>
+			<Value><Code>185</Code><Text>Furniture Trades</Text></Value>
+			<Value><Code>186</Code><Text>Glass and Glazing</Text></Value>
+			<Value><Code>189</Code><Text>Outdoor Fabric Products</Text></Value>
+			<Value><Code>190</Code><Text>Plastics Processing Technology</Text></Value>
+			<Value><Code>191</Code><Text>Printing</Text></Value>
+			<Value><Code>194</Code><Text>Textiles Manufacture</Text></Value>
+			<Value><Code>198</Code><Text>Aeronautical Engineering</Text></Value>
+			<Value><Code>204</Code><Text>Electrical Engineering</Text></Value>
+			<Value><Code>212</Code><Text>Mechanical Engineering</Text></Value>
+			<Value><Code>215</Code><Text>Telecommunications</Text></Value>
+			<Value><Code>221</Code><Text>Architecture</Text></Value>
+			<Value><Code>224</Code><Text>Construction Trades</Text></Value>
+			<Value><Code>226</Code><Text>Joinery</Text></Value>
+			<Value><Code>228</Code><Text>Painting and Decorating</Text></Value>
+			<Value><Code>229</Code><Text>Plumbing, Gasfitting and Drainlaying</Text></Value>
+			<Value><Code>230</Code><Text>Quantity Surveying</Text></Value>
+			<Value><Code>231</Code><Text>Surveying</Text></Value>
+			<Value><Code>240</Code><Text>Adult Education and Training</Text></Value>
+			<Value><Code>245</Code><Text>Dairy Manufacturing</Text></Value>
+			<Value><Code>246</Code><Text>Roading Technology</Text></Value>
+			<Value><Code>247</Code><Text>Distribution</Text></Value>
+			<Value><Code>249</Code><Text>Social Science Studies</Text></Value>
+			<Value><Code>253</Code><Text>Core Generic</Text></Value>
+			<Value><Code>257</Code><Text>Motor Industry</Text></Value>
+			<Value><Code>258</Code><Text>Paperboard Case Manufacturing</Text></Value>
+			<Value><Code>259</Code><Text>Wood Panels Manufacturing</Text></Value>
+			<Value><Code>260</Code><Text>Footwear and Leather Trades</Text></Value>
+			<Value><Code>261</Code><Text>Manufacturing Skills</Text></Value>
+			<Value><Code>262</Code><Text>Film and Electronic Media</Text></Value>
+			<Value><Code>263</Code><Text>Equine</Text></Value>
+			<Value><Code>264</Code><Text>Cleaning and Caretaking</Text></Value>
+			<Value><Code>265</Code><Text>Commercial Road Transport</Text></Value>
+			<Value><Code>266</Code><Text>Fitness</Text></Value>
+			<Value><Code>267</Code><Text>Sport</Text></Value>
+			<Value><Code>268</Code><Text>Lifting Equipment</Text></Value>
+			<Value><Code>269</Code><Text>Industrial Measurement and Control</Text></Value>
+			<Value><Code>271</Code><Text>Reo Māori</Text></Value>
+			<Value><Code>272</Code><Text>Pulp and Paper Manufacturing</Text></Value>
+			<Value><Code>273</Code><Text>Meat Processing</Text></Value>
+			<Value><Code>275</Code><Text>Educational Administration</Text></Value>
+			<Value><Code>276</Code><Text>Māori Education and Training</Text></Value>
+			<Value><Code>277</Code><Text>Industrial Machine Knitting</Text></Value>
+			<Value><Code>278</Code><Text>Computing</Text></Value>
+			<Value><Code>279</Code><Text>Special Education</Text></Value>
+			<Value><Code>280</Code><Text>Te Matauranga Māori me te Whakangungu</Text></Value>
+			<Value><Code>281</Code><Text>Maritime</Text></Value>
+			<Value><Code>282</Code><Text>Energy and Chemical Plant</Text></Value>
+			<Value><Code>285</Code><Text>Compliance and Law Enforcement</Text></Value>
+			<Value><Code>286</Code><Text>Animal Care and Handling</Text></Value>
+			<Value><Code>288</Code><Text>Electronics Technology</Text></Value>
+			<Value><Code>289</Code><Text>Beauty Services</Text></Value>
+			<Value><Code>290</Code><Text>Pork Production</Text></Value>
+			<Value><Code>291</Code><Text>Diving</Text></Value>
+			<Value><Code>292</Code><Text>Cranes</Text></Value>
+			<Value><Code>293</Code><Text>Community Support</Text></Value>
+			<Value><Code>294</Code><Text>Public Health</Text></Value>
+			<Value><Code>295</Code><Text>Real Estate</Text></Value>
+			<Value><Code>297</Code><Text>Wool Harvesting</Text></Value>
+			<Value><Code>298</Code><Text>Statistics and Probability</Text></Value>
+			<Value><Code>299</Code><Text>Seafood</Text></Value>
+			<Value><Code>300</Code><Text>Rural Contracting</Text></Value>
+			<Value><Code>301</Code><Text>Emergency Services</Text></Value>
+			<Value><Code>303</Code><Text>Occupational Health and Safety</Text></Value>
+			<Value><Code>304</Code><Text>Ngā Mahi a te Whare Pora</Text></Value>
+			<Value><Code>305</Code><Text>Highway Construction and Maintenance</Text></Value>
+			<Value><Code>306</Code><Text>Civil Plant Operation Management</Text></Value>
+			<Value><Code>307</Code><Text>Civil Works and Services</Text></Value>
+			<Value><Code>308</Code><Text>Pavement Surfacing</Text></Value>
+			<Value><Code>309</Code><Text>Security</Text></Value>
+			<Value><Code>310</Code><Text>Hospitality</Text></Value>
+			<Value><Code>314</Code><Text>Religious Studies</Text></Value>
+			<Value><Code>315</Code><Text>Food and Related Products Processing</Text></Value>
+			<Value><Code>316</Code><Text>Science</Text></Value>
+			<Value><Code>317</Code><Text>Home and Life Sciences</Text></Value>
+			<Value><Code>318</Code><Text>Electricity Supply</Text></Value>
+			<Value><Code>319</Code><Text>Social Services</Text></Value>
+			<Value><Code>320</Code><Text>Generic Education and Training</Text></Value>
+			<Value><Code>321</Code><Text>Petrochemical Industry</Text></Value>
+			<Value><Code>322</Code><Text>Steel Manufacturing</Text></Value>
+			<Value><Code>323</Code><Text>Extractive Industries</Text></Value>
+			<Value><Code>324</Code><Text>Civil Defence</Text></Value>
+			<Value><Code>325</Code><Text>Leather Manufacturing</Text></Value>
+			<Value><Code>326</Code><Text>Funeral Services</Text></Value>
+			<Value><Code>328</Code><Text>Early Childhood Education and Care</Text></Value>
+			<Value><Code>329</Code><Text>Mana Wahine</Text></Value>
+			<Value><Code>330</Code><Text>Technology</Text></Value>
+			<Value><Code>331</Code><Text>Community Recreation</Text></Value>
+			<Value><Code>332</Code><Text>Outdoor Recreation</Text></Value>
+			<Value><Code>333</Code><Text>Ski</Text></Value>
+			<Value><Code>334</Code><Text>Public Sector Services</Text></Value>
+			<Value><Code>335</Code><Text>Economic Theory and Practice</Text></Value>
+			<Value><Code>336</Code><Text>Poultry Production</Text></Value>
+			<Value><Code>337</Code><Text>Aviation</Text></Value>
+			<Value><Code>338</Code><Text>English</Text></Value>
+			<Value><Code>342</Code><Text>Construction</Text></Value>
+			<Value><Code>343</Code><Text>Masonry</Text></Value>
+			<Value><Code>344</Code><Text>Boating Industries</Text></Value>
+			<Value><Code>345</Code><Text>Gas Industry</Text></Value>
+			<Value><Code>346</Code><Text>Tikanga</Text></Value>
+			<Value><Code>347</Code><Text>General Education Māori</Text></Value>
+			<Value><Code>349</Code><Text>Hauora</Text></Value>
+			<Value><Code>351</Code><Text>Music</Text></Value>
+			<Value><Code>352</Code><Text>Dance</Text></Value>
+			<Value><Code>354</Code><Text>Stevedoring and Ports Industry</Text></Value>
+			<Value><Code>355</Code><Text>Māori Business and Management</Text></Value>
+			<Value><Code>356</Code><Text>Furniture</Text></Value>
+			<Value><Code>357</Code><Text>Fire and Rescue Services</Text></Value>
+			<Value><Code>358</Code><Text>Supported Learning</Text></Value>
+			<Value><Code>359</Code><Text>Languages</Text></Value>
+			<Value><Code>360</Code><Text>Engineering</Text></Value>
+			<Value><Code>362</Code><Text>Retail and Wholesale</Text></Value>
+			<Value><Code>363</Code><Text>Storekeeping and Warehousing</Text></Value>
+			<Value><Code>364</Code><Text>Drama</Text></Value>
+			<Value><Code>365</Code><Text>Performing Arts General</Text></Value>
+			<Value><Code>366</Code><Text>Health and Physical Education</Text></Value>
+			<Value><Code>367</Code><Text>Pacific Islands Early Childhood Education</Text></Value>
+			<Value><Code>368</Code><Text>Career Practice</Text></Value>
+			<Value><Code>370</Code><Text>Māori Performing Arts</Text></Value>
+			<Value><Code>371</Code><Text>Meat Inspection Services</Text></Value>
+			<Value><Code>372</Code><Text>Mental Health</Text></Value>
+			<Value><Code>374</Code><Text>Environment</Text></Value>
+			<Value><Code>375</Code><Text>Offender Management</Text></Value>
+			<Value><Code>378</Code><Text>Film and Television</Text></Value>
+			<Value><Code>380</Code><Text>Electronic Media</Text></Value>
+			<Value><Code>384</Code><Text>Ngā Mahi a te Rēhia</Text></Value>
+			<Value><Code>385</Code><Text>Whenua</Text></Value>
+			<Value><Code>386</Code><Text>Call Centres</Text></Value>
+			<Value><Code>387</Code><Text>Community and Workplace Fire and Emergency Management</Text></Value>
+			<Value><Code>389</Code><Text>Sports Turf</Text></Value>
+			<Value><Code>390</Code><Text>Pacific Studies</Text></Value>
+			<Value><Code>392</Code><Text>Supply Chain Management</Text></Value>
+			<Value><Code>393</Code><Text>Civil Engineering</Text></Value>
+			<Value><Code>394</Code><Text>Seafood Māori</Text></Value>
+			<Value><Code>395</Code><Text>Tourism Māori</Text></Value>
+			<Value><Code>396</Code><Text>Wood Processing Technology</Text></Value>
+			<Value><Code>397</Code><Text>Blaster Coating</Text></Value>
+			<Value><Code>40</Code><Text>Mathematics</Text></Value>
+			<Value><Code>400</Code><Text>Water Industry</Text></Value>
+			<Value><Code>402</Code><Text>Visual Arts</Text></Value>
+			<Value><Code>403</Code><Text>Snowsport</Text></Value>
+			<Value><Code>405</Code><Text>Specialist Rescue</Text></Value>
+			<Value><Code>406</Code><Text>Rail Transport</Text></Value>
+			<Value><Code>407</Code><Text>Logistics</Text></Value>
+			<Value><Code>408</Code><Text>Retail, Distribution, and Sales</Text></Value>
+			<Value><Code>410</Code><Text>Reo Māori Media</Text></Value>
+			<Value><Code>411</Code><Text>Māori Business and Management</Text></Value>
+			<Value><Code>412</Code><Text>Electronic Engineering</Text></Value>
+			<Value><Code>413</Code><Text>Coatings, Inks, and Adhesives</Text></Value>
+			<Value><Code>414</Code><Text>Environment Māori</Text></Value>
+			<Value><Code>415</Code><Text>Niue Arts and Crafts</Text></Value>
+			<Value><Code>416</Code><Text>Museum Services</Text></Value>
+			<Value><Code>419</Code><Text>Pharmaceutical and Allied Products</Text></Value>
+			<Value><Code>420</Code><Text>Hot Dip Galvanizing</Text></Value>
+			<Value><Code>421</Code><Text>Marae Catering</Text></Value>
+			<Value><Code>422</Code><Text>Contact Centres</Text></Value>
+			<Value><Code>423</Code><Text>Fibreboard Packaging</Text></Value>
+			<Value><Code>424</Code><Text>Resource Recovery</Text></Value>
+			<Value><Code>426</Code><Text>Cadet Forces</Text></Value>
+			<Value><Code>428</Code><Text>Solid Wood Manufacturing</Text></Value>
+			<Value><Code>429</Code><Text>Wood Fibre Manufacturing</Text></Value>
+			<Value><Code>430</Code><Text>Wood Handling and Distribution</Text></Value>
+			<Value><Code>431</Code><Text>Wood Manufacturing - Generic Skills</Text></Value>
+			<Value><Code>433</Code><Text>Solid Waste</Text></Value>
+			<Value><Code>435</Code><Text>Business Operations and Development</Text></Value>
+			<Value><Code>436</Code><Text>Business Environment</Text></Value>
+			<Value><Code>437</Code><Text>Industrial Textile Fabrication</Text></Value>
+			<Value><Code>438</Code><Text>Concrete</Text></Value>
+			<Value><Code>441</Code><Text>Animal Product Examination Services</Text></Value>
+			<Value><Code>442</Code><Text>Financial Services</Text></Value>
+			<Value><Code>444</Code><Text>Metalliferous Mining</Text></Value>
+			<Value><Code>445</Code><Text>Greyhound Racing Industry</Text></Value>
+			<Value><Code>446</Code><Text>Baking Yeasts Manufacturing</Text></Value>
+			<Value><Code>447</Code><Text>Composites</Text></Value>
+			<Value><Code>449</Code><Text>Explosive Atmospheres</Text></Value>
+			<Value><Code>450</Code><Text>Civil Defence Emergency Management</Text></Value>
+			<Value><Code>451</Code><Text>Infrastructure Civil Engineering</Text></Value>
+			<Value><Code>452</Code><Text>Infrastructure Works</Text></Value>
+			<Value><Code>453</Code><Text>Health, Disability, and Aged Support</Text></Value>
+			<Value><Code>454</Code><Text>Zero Waste</Text></Value>
+			<Value><Code>456</Code><Text>Public Sector Compliance</Text></Value>
+			<Value><Code>457</Code><Text>Te Ara Nunumi - Bereavement Pathways Maori</Text></Value>
+			<Value><Code>458</Code><Text>Primary Sector</Text></Value>
+			<Value><Code>459</Code><Text>Recreation and Sport</Text></Value>
+			<Value><Code>460</Code><Text>Manaaki Marae - Marae Hospitality</Text></Value>
+			<Value><Code>464</Code><Text>Renewable Energy Systems</Text></Value>
+			<Value><Code>465</Code><Text>Mau Rākau</Text></Value>
+			<Value><Code>466</Code><Text>Fellmongery and Leather Processing</Text></Value>
+			<Value><Code>467</Code><Text>Te Marautanga o Aotearoa</Text></Value>
+			<Value><Code>468</Code><Text>Primary Products Food Processing</Text></Value>
+			<Value><Code>469</Code><Text>Industrial Coatings</Text></Value>
+			<Value><Code>470</Code><Text>Dairy Processing</Text></Value>
+			<Value><Code>471</Code><Text>Sign Making</Text></Value>
+			<Value><Code>472</Code><Text>Taonga Pūoro</Text></Value>
+			<Value><Code>473</Code><Text>Exercise</Text></Value>
+			<Value><Code>474</Code><Text>Te Ara Hou ki te Ora</Text></Value>
+			<Value><Code>475</Code><Text>Inclusive Education</Text></Value>
+			<Value><Code>5</Code><Text>Whakairo</Text></Value>
+			<Value><Code>53</Code><Text>Design</Text></Value>
+			<Value><Code>55</Code><Text>Graphic Arts</Text></Value>
+			<Value><Code>71</Code><Text>Information Processing</Text></Value>
+			<Value><Code>76</Code><Text>Accounting</Text></Value>
+			<Value><Code>78</Code><Text>Business Administration</Text></Value>
+			<Value><Code>79</Code><Text>Financial Management</Text></Value>
+			<Value><Code>82</Code><Text>Information Management</Text></Value>
+			<Value><Code>84</Code><Text>Management</Text></Value>
+			<Value><Code>85</Code><Text>Marketing</Text></Value>
+			<Value><Code>86</Code><Text>Office Systems</Text></Value>
+			<Value><Code>92</Code><Text>Land Skills</Text></Value>
+			<Value><Code>93</Code><Text>Agriculture</Text></Value>
+			<Value><Code>96</Code><Text>Forestry</Text></Value>
+			<Value><Code>97</Code><Text>Horticulture</Text></Value>
+			<Value><Code>99</Code><Text>Pest Management</Text></Value>
+
+			<Value><Code>ACCO</Code><Text>Accounting</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>AGHO</Code><Text>Agricultural and Horticultural Science</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>AGRI</Code><Text>Agribusiness (Business Studies)</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>ARTC</Code><Text>Visual Arts</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>ARTH</Code><Text>Art History</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>BIOL</Code><Text>Biology</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>BUST</Code><Text>Business Studies</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>CHEM</Code><Text>Chemistry</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>CHIN</Code><Text>Chinese</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>CLST</Code><Text>Classical Studies</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>COMP</Code><Text>Computing</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>COOK</Code><Text>Cook Island Māori</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>DANC</Code><Text>Dance</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>DLIC</Code><Text>Drivers Licence</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>DRAM</Code><Text>Drama</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>DTEC</Code><Text>Digital Technologies</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>EAAS</Code><Text>Earth and Space Science</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>ECON</Code><Text>Economics</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>ENAC</Code><Text>English for Academic Purposes</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>ENGL</Code><Text>English</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>ENSL</Code><Text>English Language (EL)</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>FIMA</Code><Text>Field Māori</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>FREN</Code><Text>French</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>GEOG</Code><Text>Geography</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>GERM</Code><Text>German</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>GRAP</Code><Text>Digital and Visual Communication (Graphics)</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>HANG</Code><Text>Hangarau</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>HAUO</Code><Text>Hauora</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>HEED</Code><Text>Health</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>HIST</Code><Text>History</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>HOME</Code><Text>Home Economics</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>JAPA</Code><Text>Japanese</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>KORE</Code><Text>Korean</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>LAFT</Code><Text>Lea Faka-Tonga</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>LATI</Code><Text>Latin</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>LAWS</Code><Text>Legal Studies</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>LITE</Code><Text>Literacy</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>MAOR</Code><Text>Te Reo Māori</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>MAST</Code><Text>Mathematics and Statistics</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>MEST</Code><Text>Media Studies</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>MPRT</Code><Text>Māori Performing Arts</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>MUSC</Code><Text>Music</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>NGAT</Code><Text>Ngā Toi</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>NUME</Code><Text>Numeracy</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>NZSL</Code><Text>New Zealand Sign Language</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>PANG</Code><Text>Pāngarau</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>PHED</Code><Text>Physical Education</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>PHYS</Code><Text>Physics</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>PLAN</Code><Text>Pacific Language Studies</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>PSYC</Code><Text>Psychology</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>PUTA</Code><Text>Pūtaiao</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>RANG</Code><Text>Te Reo Rangatira</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>REST</Code><Text>Religious Studies</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>SAMO</Code><Text>Samoan</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>SCIE</Code><Text>Science</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>SENV</Code><Text>Education for Sustainability</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>SOSC</Code><Text>Sociology</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>SOST</Code><Text>Social Studies</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>SPAN</Code><Text>Spanish</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>SULE</Code><Text>Supported Learning</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>TECN</Code><Text>Technology</Text><EndDate>2020-04-15</EndDate></Value>
+			<Value><Code>TIKA</Code><Text>Tikanga-ā-iwi</Text><EndDate>2020-04-15</EndDate></Value>
 		</Values>
 	</CodeSet>    <!-- NCEA Subject Area -->
 

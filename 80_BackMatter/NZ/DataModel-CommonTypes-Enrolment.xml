@@ -329,10 +329,21 @@
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
-				<p>Indicates whether or not the student is enrolled under a Section 8 agreement</p>
+				<p>Indicates whether or not the student is enrolled under a Section 9 agreement</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
 		</Item>		<!-- Section9Agreement -->
+		
+		<Item>
+			<Element>NZQA</Element>    
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+			<p>NZQA details for a student for this school year.</p>
+			</Description>
+			<Type ref="CommonTypes" name="NZQAEnrolmentType"></Type>
+		</Item>     <!-- NZQA -->
+
 		<Item>
 			<Element>OngoingResourceScheme</Element>
 			<Characteristics>O</Characteristics>
@@ -471,6 +482,90 @@
 				</InternationalEnrolment>
 			</StudentSchoolEnrolment>
 		</xhtml:Example>
+	</CommonElement>
+
+	<CommonElement name="NZQAEnrolmentType" type="true" dm="true">
+		<Item>
+			<Element>NZQAEnrolmentType</Element>
+			<Description>NZQA details for a student for this school year.</Description>
+		</Item>
+
+		<Item>
+			<Element>EnrolmentId</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The student's NZQA enrolment Id.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>  
+		</Item>     <!-- EnrolmentId -->
+
+		<Item>
+			<Element>EnrolmentLocation</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Reference to the Provider's location that the learner is enrolled in.  
+				Only used when provider has multiple locations.</p>
+			</Description>
+			<Type ref="CommonTypes" name="EduOrgLocationObjectReferenceType"/>
+		</Item>	    <!-- EnrolmentLocation -->
+
+		<Item>
+			<Element>FeeAmount</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Amount paid by student to school for current year's NZQA fees.</p>
+			</Description>
+			<Type name="xs:decimal"/>  
+		</Item>     <!-- FeeAmount -->
+
+		<Item>
+			<Element>FinancialAssistance</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Code set denoting the type of financial assistance the student is receiving.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsNZQAFinancialAssistanceType"/>
+		</Item>	    <!-- FinancialAssistance -->
+
+		<Item>
+			<Element>SortCode</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Student’s NZQA sort code, e.g. 13AB. Sort order for admission slips.
+				 Often the form class of the student.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>  
+		</Item>     <!-- SortCode -->
+
+		<Item>
+			<Element>SubmitterName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Full name of person submitting student information to NZQA.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>  
+		</Item>     <!-- SubmitterName -->
+
+		<Item>
+			<Element>SubmitterEmailAddress</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>E-mail address of person submitting student information to NZQA.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>  
+		</Item>     <!-- SubmitterEmailAddress -->
+
+		<Item>
+			<Element>WithdrawnAllAssessmentsInd</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>Indicates that the student has withdrawn from all NZQA assessments.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+		</Item>		<!-- WithdrawnAllAssessmentsInd -->		
 	</CommonElement>
 
 	<CommonElement name="AcademicAttainmentGoalListType" type="true" dm="true">
@@ -770,6 +865,96 @@
 		</Item>    <!-- Intervention -->
 	</CommonElement>
 	
+	<!-- StudentProviderEnrolment extras for Te Rito sLSR -->
+	<CommonElement name="ClassTeacherListType" type="true" dm="true">
+		<Item>
+			<Element>ClassTeacherListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>List of class and teacher details, de-normalised from TeachingGroup</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>ClassTeacher</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Class and Teacher details for the Student</p>
+			</Description>
+			<Type ref="CommonTypes" name="ClassTeacherType"/>
+		</Item>    <!-- ClassTeacher -->
+	</CommonElement>
+
+	<CommonElement name="ClassTeacherType" type="true" dm="true">
+		<Item>
+			<Element>ClassTeacherType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Class and Teacher details de-normalised from TeachingGroupEnrolment</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>ClassRoom</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>School specific string identifying the class / classroom the student is enroled in</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- ClassRoom -->
+		<Item>
+			<Element>TeacherList</Element>
+			<Characteristics>C</Characteristics>
+			<Description>
+				<p>List of teacher's that look after the student</p>
+			</Description>
+			<Type ref="CommonTypes" name="TeacherListType"/>
+		</Item>    <!-- TeacherList -->
+	</CommonElement>
+
+	<CommonElement name="TeacherListType" type="true" dm="true">
+		<Item>
+			<Element>TeacherListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>List of class and teacher details, de-normalised from TeachingGroup</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Teacher</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Teacher details for the Student</p>
+			</Description>
+			<Type ref="CommonTypes" name="TeacherType"/>
+		</Item>    <!-- Teacher -->
+	</CommonElement>
+
+	<CommonElement name="TeacherType" type="true" dm="true">
+		<Item>
+			<Element>TeacherType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Teacher details de-normalised from TeachingGroupEnrolment</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>FirstName</Element>
+			<Characteristics>C</Characteristics>
+			<Description>
+				<p>First Name of the teacher.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- FirstName -->
+		<Item>
+			<Element>LastName</Element>
+			<Characteristics>C</Characteristics>
+			<Description>
+				<p>Last Name of the teacher.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- LastName -->
+	</CommonElement>
 
 	<!-- ECE History - collected as part of primary enrolment, not to be confused with actual ECE Enrolment data -->
 	<CommonElement name="ECEEducationHistoryListType" type="true" dm="true">

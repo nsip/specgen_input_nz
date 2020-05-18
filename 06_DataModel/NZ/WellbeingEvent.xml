@@ -109,17 +109,7 @@
     </Description>
     <Type ref="CommonTypes" name="WellbeingEventCategoryListType"></Type>
   </Item>    <!-- EventCategoryList -->
-      
-  <Item>
-    <Element>Severity</Element>
-    <Characteristics>O</Characteristics>
-  	<privacyRating>High</privacyRating>
-    <Description>
-      <p>The severity of the Wellbeing Event.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsWellbeingEventSeverityType"></Type>
-  </Item>    <!-- Severity -->
-  
+
   <Item>
     <Element>ReportingStaffMember</Element>
     <Characteristics>O</Characteristics>

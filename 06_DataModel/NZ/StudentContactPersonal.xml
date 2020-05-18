@@ -90,19 +90,15 @@
 					<Address>
 						<Type>TH</Type>
 						<Role>PHY</Role>
-						<Street>
-							<Line1>The Enchanted Wood</Line1>
-							<Line2>533 Hogwart's Way</Line2>
-						</Street>
+						<Line1>The Enchanted Wood</Line1>
+						<Line2>533 Hogwart's Way</Line2>
 						<City>Hogsmead</City>
 						<PostalCode json:force-string="true">7733</PostalCode>
 					</Address>
 					<Address>
 						<Type>RU</Type>
 						<Role>PHY</Role>
-						<Street>
-							<Line1>1175 Lake Ferry Rd</Line1>
-						</Street>
+						<Line1>1175 Lake Ferry Rd</Line1>
 						<Suburb>RD 1</Suburb>
 						<City>Martinborough</City>
 					</Address>
@@ -127,9 +123,7 @@
 							<Address json:force-array="true">
 								<Type>DE</Type>
 								<Role>POS</Role>
-								<Street>
-									<Line1>P O Box 81</Line1>
-								</Street>
+								<Line1>P O Box 81</Line1>
 								<City>Martinborough</City>
 								<PostalCode json:force-string="true">5781</PostalCode>
 							</Address>
@@ -172,9 +166,7 @@
 					<Address json:force-array="true">
 						<Type>TH</Type>
 						<Role>PHY</Role>
-						<Street>
-							<Line1>Regent St.</Line1>
-						</Street>
+						<Line1>Regent St.</Line1>
 						<City>Martinborough</City>
 						<PostalCode json:force-string="true">5741</PostalCode>
 					</Address>

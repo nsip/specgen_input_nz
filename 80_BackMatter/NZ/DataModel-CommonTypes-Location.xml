@@ -31,18 +31,14 @@
 				<Address>
 					<Type>DE</Type>
 					<Role>POS</Role>
-					<Street>
-						<Line1>P O Box 81</Line1>
-					</Street>
+					<Line1>P O Box 81</Line1>
 					<City>Martinborough</City>
 					<PostalCode json:force-string="true">5741</PostalCode>
 				</Address>
 				<Address>
 					<Type>RU</Type>
 					<Role>PHY</Role>
-					<Street>
-						<Line1>1175 Lake Ferry Rd</Line1>
-					</Street>
+					<Line1>1175 Lake Ferry Rd</Line1>
 					<Suburb>RD 1</Suburb>
 					<City>Martinborough</City>
 					<PostalCode json:force-string="true">5781</PostalCode>
@@ -77,13 +73,37 @@
 			<Type ref="CodeSets" name="NZCodeSetsAddressRoleType"/>
 		</Item>     <!-- Role -->
 		<Item>
-			<Element>Street</Element>
+			<Element>Line1</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
-				<p>The street element is a complex element and breaks the street down into several parts. (Allow for PO Box here)</p>
+				<p>Address line 1.</p>
 			</Description>
-			<Type ref="CommonTypes" name="AddressStreetType"/>
-		</Item>     <!-- Street -->
+			<Type name="xs:normalizedString"/>
+		</Item>		<!-- Line 1 -->
+		<Item>
+			<Element>Line2</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Address line 2.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>		<!-- Line 2 -->
+		<Item>
+			<Element>Line3</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Address line 3.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>		<!-- Line 3-->
+		<Item>
+			<Element>Line4</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Address line 4.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>		<!-- Line 4 -->
 		<Item>
 			<Element>Suburb</Element>
 			<Characteristics>O</Characteristics>
@@ -162,9 +182,7 @@
 			<Address>
 				<Type>TH</Type>
 				<Role>PHY</Role>
-				<Street>
-					<Line1>84 Washington Ave</Line1>
-				</Street>
+				<Line1>84 Washington Ave</Line1>
 				<Suburb>Brooklyn</Suburb>
 				<City>Wellington</City>
 				<Country>New Zealand</Country>
@@ -175,9 +193,7 @@
 			<Address>
 				<Type>DE</Type>
 				<Role>POS</Role>
-				<Street>
-					<Line1>P O Box 81</Line1>
-				</Street>
+				<Line1>P O Box 81</Line1>
 				<City>Martinborough</City>
 				<Country>New Zealand</Country>
 				<PostalCode json:force-string="true">5741</PostalCode>
@@ -187,9 +203,7 @@
 			<Address>
 				<Type>RU</Type>
 				<Role>PHY</Role>
-				<Street>
-					<Line1>1175 Lake Ferry Rd</Line1>
-				</Street>
+				<Line1>1175 Lake Ferry Rd</Line1>
 				<Suburb>RD 1</Suburb>
 				<City>Martinborough</City>
 				<Country>New Zealand</Country>
@@ -197,39 +211,7 @@
 			</Address>
 		</xhtml:Example>
 	</CommonElement>
-	<CommonElement name="AddressStreetType" type="true" dm="true">
-		<Item>
-			<Element>AddressStreetType</Element>
-			<Description>
-				<p>The street element is a complex element and breaks the
-				street down into several parts. (Allow for PO Box here)</p>
-			</Description>
-		</Item>
-		<Item>
-			<Element>Line1</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>Address line 1.</p>
-			</Description>
-			<Type name="xs:normalizedString"/>
-		</Item>
-		<Item>
-			<Element>Line2</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Address line 2.</p>
-			</Description>
-			<Type name="xs:normalizedString"/>
-		</Item>
-		<Item>
-			<Element>Line3</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Address line 3.</p>
-			</Description>
-			<Type name="xs:normalizedString"/>
-		</Item>		
-	</CommonElement>
+	
 	<CommonElement name="GridLocationType" type="true" dm="true">
 		<Item>
 			<Element>GridLocationType</Element>
@@ -327,6 +309,7 @@
 			<Characteristics>MR</Characteristics>
 			<Type ref="CommonTypes" name="LocationType"/>
 		</Item>
+
 		<xhtml:Example xmlns="" name="Location List Example">
 			<LocationList>
 				<Location>
@@ -334,9 +317,7 @@
 					<Address>
 						<Type>TH</Type>
 						<Role>PHY</Role>
-						<Street>
-							<Line1>1175 Lake Ferry Rd</Line1>
-						</Street>
+						<Line1>1175 Lake Ferry Rd</Line1>
 						<Suburb>RD 1</Suburb>
 						<City>Martinborough</City>
 						<PostalCode json:force-string="true">5781</PostalCode>
@@ -381,6 +362,14 @@
 			</Description>
 			<Type name="xs:string"/>
 		</Item>     <!-- Description -->
+		<Item>
+			<Element>LocationNum</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Number identifying the individual location within the set of locations used by the Provider.</p>
+			</Description>
+			<Type name="xs:int"/>
+		</Item>     <!-- LocationNum -->
 		<Item>
 			<Element>Address</Element>
 			<Characteristics>O</Characteristics>
@@ -427,9 +416,7 @@
 				<Address>
 					<Type>TH</Type>
 					<Role>PHY</Role>
-					<Street>
-						<Line1>1175 Lake Ferry Rd</Line1>
-					</Street>
+					<Line1>1175 Lake Ferry Rd</Line1>
 					<Suburb>RD 1</Suburb>
 					<City>Martinborough</City>
 					<Country>New Zealand</Country>

@@ -12,9 +12,10 @@
 	<EventsReported>true</EventsReported>
 	<Item>
 		<Element>SchedulePeriod</Element>
-	  <privacyRating>Low</privacyRating>
+	  	<privacyRating>Low</privacyRating>
 		<Description>
-			Defines the periods that take place within an academic day
+			Defines the periods that take place within one or more academic days.  Periods
+			are assigned to particular days in the Schedule in SchduleAcademicDay.PeriodList
 		</Description>
 	</Item>
 	
@@ -66,15 +67,6 @@
 		</Description>
 		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
 	</Item>    <!-- Schedule -->
-	<Item>
-		<Element>AcademicDay</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The provider schedule academic day the schedule period belongs to.</p>
-		</Description>
-		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
-	</Item>    <!-- AcademicDay -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -89,8 +81,8 @@
 	<xhtml:Example xmlns="" name ="Schedule Period">
 		<SchedulePeriod>
 			<SchedulePeriodRefId>215f796c-67f7-4855-83dc-28ad9d002830</SchedulePeriodRefId>
-			<SchedulePeriodLocalId>2019a-A1</SchedulePeriodLocalId>
-			<PeriodName>Period 1 on Day A</PeriodName>
+			<SchedulePeriodLocalId>2019a-1</SchedulePeriodLocalId>
+			<PeriodName>Period 1</PeriodName>
 			<Provider>
 				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
@@ -100,11 +92,6 @@
 				<LocalId>2019a</LocalId>
 				<Name>Scheule 2019a (Term 1)</Name>
 			</Schedule>				
-			<AcademicDay>
-				<RefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</RefId>
-				<LocalId>2019a-A</LocalId>
-				<Name>Schedule 2019a, Day A</Name>
-			</AcademicDay>
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>

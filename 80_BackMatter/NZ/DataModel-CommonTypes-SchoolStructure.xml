@@ -185,14 +185,14 @@
 			<Type ref="CommonTypes" name="EnactedPolicyListType"/>
 		</Item>    <!-- NewEntrantPolicyList -->
 		<Item>
-			<Element>DefinitionList</Element>
+			<Element>ClassificationList</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
-				<p>A list of School definition descriptors that further describe the nature of a school</p>
+				<p>A list of School Classification descriptors that further describe the nature of a school</p>
 			</Description>
-			<Type ref="CommonTypes" name="SchoolDefinitionListType"/>
-		</Item>    <!-- DefinitionList -->
+			<Type ref="CommonTypes" name="SchoolClassificationListType"/>
+		</Item>    <!-- ClassificationList -->
 		<Item>
 			<Element>SchoolYearList</Element>
 			<Characteristics>O</Characteristics>
@@ -229,11 +229,11 @@
 						<Policy>CE</Policy>
 					</EnactedPolicy>
 				</NewEntrantPolicyList>
-				<DefinitionList>
-					<Definition>SMBS</Definition>
-					<Definition>KKMA</Definition>
-					<Definition>SWBF</Definition>
-				</DefinitionList>			
+				<ClassificationList>
+					<Classification json:force-string="true">52010</Classification>
+					<Classification json:force-string="true">52004</Classification>
+					<Classification json:force-string="true">52002</Classification>
+				</ClassificationList>	
 				<SchoolYearList>
 					<SchoolYear>
 						<YearLevel json:force-string="true">1</YearLevel>
@@ -472,27 +472,28 @@
 		</Item>
 	</CommonElement>			
 
-	<CommonElement name="SchoolDefinitionListType" type="true" dm="true">
+	<CommonElement name="SchoolClassificationListType" type="true" dm="true">
 		<Item>
-			<Element>SchoolDefinitionListType</Element>
+			<Element>SchoolClassificationListType</Element>
 			<Description>
-				<p>A list of <code>Definition</code> elements, further describing the
+				<p>A list of <code>Classification</code> elements, further describing the
 				nature of the school.</p>
 			</Description>
 			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>Definition</Element>
+			<Element>Classification</Element>
 			<Characteristics>MR</Characteristics>
 			<Description/>
-			<Type ref="CodeSets" name="NZCodeSetsSchoolDefinitionType"/>
+			<Type ref="CodeSets" name="NZCodeSetsSchoolClassificationType"/>
 		</Item>
 
-		<xhtml:Example xmlns="" name="NZ School Definition List Example">
-			<SchoolDefinitionList>
-				<Definition json:force-string="true">KKMA</Definition>
-				<Definition json:force-string="true">SWBF</Definition>
-			</SchoolDefinitionList>
+		<xhtml:Example xmlns="" name="NZ School Classification List Example">
+			<ClassificationList>
+				<Classification json:force-string="true">52010</Classification>
+				<Classification json:force-string="true">52004</Classification>
+				<Classification json:force-string="true">52002</Classification>
+			</ClassificationList>
 		</xhtml:Example>
 		
 	</CommonElement>

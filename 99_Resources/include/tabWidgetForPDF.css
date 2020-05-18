@@ -1,6 +1,6 @@
 .tabs {
   display:block;
-  min-height:32em;
+  height:100% !important;
   margin: 25px 0;
 }
 .content {
@@ -12,7 +12,8 @@
 div.example {
 	padding:0px;
 	margin-top:0px;
-	width:99%;
+  width:99%;
+  height:100% !important;
 }
 
 div.tabs div.tab input {display:none;}

@@ -38,6 +38,19 @@
   </Item>    <!-- StudentAssessmentTaskResultLocalId -->
 
   <Item>
+    <Element>NZQAEntryId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The student's NZQA entry Id provided upon confirmation of the student's registration
+        to be assessed against a unit or achievement standard. Identifies what entry the result
+        is for to NZQA.
+      </p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>    <!-- NZQAEntryId -->
+
+  <Item>
     <Element>AssessmentTask</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -238,6 +251,15 @@
     </Description>
     <Type name="xs:date"></Type>
   </Item>    <!-- DateStudentNotified -->
+  <Item>
+    <Element>NZQAConfirmation</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Confirmation from NZQA that they have received the result record for the student.</p>
+    </Description>
+    <Type  ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+  </Item>    <!-- NZQA Confirmation -->
   <Item>
     <Element>Published</Element>
     <Characteristics>O</Characteristics>

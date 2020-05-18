@@ -35,7 +35,21 @@
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>    <!-- StudentAssessmentTaskRegistrationLocalId -->
-  
+
+
+  <Item>
+    <Element>AssessmentRegistrationStatus</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The status of the student's registration for an assessment task, e.g. applied, 
+      approved, withdrawn.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentRegistrationStatusType"></Type>
+  </Item>    <!-- AssessmentRegistrationStatus -->
+
+
+
   <Item>
     <Element>ProviderInvolvedList</Element>    
     <Characteristics>M</Characteristics>
@@ -79,6 +93,16 @@
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
   </Item>    <!-- AssessmentTask -->
 
+	<Item>
+		<Element>NZQA</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>Extra details to support NZQA assessment registration process</p>
+		</Description>
+		<Type ref="CommonTypes" name="NZQAAssessmentRegistrationType"></Type>
+	</Item>    <!-- NZQA -->
+
   <Item>
     <Element>SpecialAssessmentConditionList</Element>
     <Characteristics>O</Characteristics>
@@ -99,6 +123,16 @@
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
   </Item>    <!-- ProviderCourse -->
+
+  <Item>
+    <Element>LearningStandard</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the LearningStandard the student is registering for.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LearningStandardObjectReferenceType"></Type>
+  </Item>    <!-- LearningStandard -->
 
   <Item>
     <Element>SubjectArea</Element>

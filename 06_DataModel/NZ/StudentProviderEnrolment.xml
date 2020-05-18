@@ -160,7 +160,16 @@
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
 	</Item>    <!-- RecordAudit -->
-	
+
+	<Item>
+		<Element>ClassTeacherList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>List of classes and teachers student is enrolled in.  De-normalised from TeachingGroupEnrolment for Te Rito sLSR.</p></Description>
+		<Type ref="CommonTypes" name="ClassTeacherListType"></Type>
+	</Item>    <!-- ClassTeacherList -->
+
 	<xhtml:Example xmlns="" name="Completed International Student School Enrolment">
 		<StudentProviderEnrolment>
 			<StudentProviderEnrolmentRefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</StudentProviderEnrolmentRefId>

@@ -38,24 +38,15 @@
 				<img src="images/SIFNZ-LogicalModel-ProviderDomain.png" usemap="#ProviderMap"/>
 			</Intro>
 			
-			<DataObject coords="301,157,562,258" role="member">Provider</DataObject>
-			<DataObject coords="786,169,961,227" role="member">Organisation</DataObject>
-			<DataObject coords="807,226,940,307" role="member">ProviderRelationship</DataObject>
-			<DataObject coords="218,52,324,124" role="member">StaffPersonal</DataObject>
-			<DataObject coords="598,51,704,134" role="member">StaffAssignment</DataObject>
-			<DataObject coords="368,423,476,465" role="member">ProviderCourse</DataObject>
-			<DataObject coords="74,286,182,324" role="member">TeachingGroup</DataObject>
-			<DataObject coords="43,364,187,411" role="member">AcademicDepartment</DataObject>
-			<DataObject coords="577,387,682,421" role="member">Schedule</DataObject>
-			<DataObject coords="812,385,957,418" role="member">ScheduleAcademicDay</DataObject>
-			<DataObject coords="828,484,936,519" role="member">SchedulePeriod</DataObject>
-			<DataObject coords="578,480,683,521" role="member">ScheduleTerm</DataObject>
-			<DataObject coords="577,606,682,640" role="member">ScheduleDate</DataObject>
-			<DataObject coords="738,718,845,758" role="member">ScheduleEvent</DataObject>
-			<DataObject coords="813,598,921,633" role="member">BellSchedule</DataObject>
-			<DataObject coords="812,324,914,352" role="member">ScheduleHoliday</DataObject>
-			<DataObject coords="387,665,508,708" role="member">TeachingGroupEvent</DataObject>
-			<DataObject role="member">LearningSupportRegisterDirectory</DataObject>
+			<DataObject coords="500,56,785,166" role="member">Provider</DataObject>
+			<DataObject coords="1096,69,1286,133" role="member">Organisation</DataObject>
+			<DataObject coords="859,203,1005,247" role="member">ProviderRelationship</DataObject>
+			<DataObject coords="617,720,735,799" role="member">StaffPersonal</DataObject>
+			<DataObject coords="869,282,987,372" role="member">StaffAssignment</DataObject>
+			<DataObject coords="46,441,282,491" role="member">StaffTeachingGroupAssignment</DataObject>
+			<DataObject coords="507,517,625,563" role="member">ProviderCourse</DataObject>
+			<DataObject coords="272,84,390,142" role="member">TeachingGroup</DataObject>
+			<DataObject coords="258,614,424,662" role="member">AcademicDepartment</DataObject>
 		</Domain>
 
 		<Domain name="Student &amp; Whānau">
@@ -110,19 +101,20 @@
 			</Intro>
 
 			<DataObject coords="163,178,281,211" role="member">StudentConsent</DataObject>
-			<DataObject coords="282,282,430,333" role="member">WellbeingCharacteristic</DataObject>
-			<DataObject coords="437,198,543,261" role="member">WellbeingAlert</DataObject>
-			<DataObject coords="593,284,712,331" role="member">WellbeingEvent</DataObject>
-			<DataObject coords="750,340,855,387" role="member">WellbeingResponse</DataObject>
-			<DataObject coords="895,405,1007,450" role="member">WellbeingAppeal</DataObject>
-			<DataObject coords="42,285,209,331" role="member">StudentLearningSupport</DataObject>
-			<DataObject coords="102,443,313,489" role="member">StudentLearningSupportResponse</DataObject>
-			<DataObject coords="1051,274,1148,317" role="member">Document</DataObject>
-			<DataObject coords="976,202,1086,248" role="member">StudentVoice</DataObject>
-			<DataObject coords="679,53,906,135">StudentPersonal</DataObject>
-			<DataObject coords="610,481,800,569">Provider</DataObject>
-			<DataObject coords="1168,130,1334,176" role="member">StudentPhysicalRestraint</DataObject>
-			<DataObject coords="1214,273,1334,317">StaffPersonal</DataObject>
+			<DataObject coords="312,313,476,367" role="member">WellbeingCharacteristic</DataObject>
+			<DataObject coords="483,219,600,285" role="member">WellbeingAlert</DataObject>
+			<DataObject coords="657,315,789,367" role="member">WellbeingEvent</DataObject>
+			<DataObject coords="832,374,948,430" role="member">WellbeingResponse</DataObject>
+			<DataObject coords="999,444,1110,502" role="member">WellbeingAppeal</DataObject>
+			<DataObject coords="48,317,228,367"   role="member">StudentLearningSupport</DataObject>
+			<DataObject coords="113,486,346,537"  role="member">StudentLearningSupportResponse</DataObject>
+			<DataObject coords="1162,303,1269,349" role="member">Document</DataObject>
+			<DataObject coords="1082,222,1199,269" role="member">StudentVoice</DataObject>
+			<DataObject coords="751,58,994,148">StudentPersonal</DataObject>
+			<DataObject coords="671,527,878,624">Provider</DataObject>
+			<DataObject coords="1292,146,1472,189" role="member">StudentPhysicalRestraint</DataObject>
+			<DataObject coords="1342,304,1475,352">StaffPersonal</DataObject>
+			<DataObject coords="1314,631,1530,684" role="member">StudentActivityParticipation</DataObject>
 		</Domain>
 		
 		<Domain name="Schedule &amp; Attendance">

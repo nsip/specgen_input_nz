@@ -97,12 +97,11 @@
 			<Description><p>The normal descriptive name of the referenced object.</p></Description>
 			<Type name="xs:string"/>
 		</Item>   <!-- Name -->
-
  		<xhtml:Example xmlns="" name="ProviderObjectReferenceType Example">
-			<ObjectReference>
+			<ProviderObjectReference>
 				<RefId json:force-string="true">672</RefId>
 				<Name>Masterton Primary School</Name>
-			</ObjectReference>
+			</ProviderObjectReference>
 		</xhtml:Example>
 	</CommonElement>
 
@@ -153,6 +152,68 @@
 		</xhtml:Example>
 	</CommonElement>
 
+	<CommonElement name="EduOrgLocationObjectReferenceType" type="true" dm="true">
+		<Item>
+			<Element>EduOrgLocationObjectReferenceType</Element>
+			<Description>
+				<p>A reference to a Provider specific location at the Organisation; rather 
+				than the Provider as a whole.</p>
+			</Description>
+			<Type complex="extension" name="ProviderObjectReferenceType"/>			
+		</Item>
+		<Item>
+			<Element>LocationNum</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Number identifying the individual location within the set of locations used by the Provider.</p>
+			</Description>
+			<Type name="xs:int"/>
+		</Item>     <!-- LocationNum -->
+
+ 		<xhtml:Example xmlns="" name="LocationObjectReferenceType Example">
+			<LocationObjectReference>
+				<RefId json:force-string="true">672</RefId>
+				<Name>Massey University - Wellington Campus</Name>
+				<LocationNum>3</LocationNum>
+			</LocationObjectReference>
+		</xhtml:Example>
+	</CommonElement>
+
+	<CommonElement name="LearningStandardObjectReferenceType" type="true" dm="true">
+		<Item>
+			<Element>LearningStandardObjectReferenceType</Element>
+			<Description>
+				<p>A reference to a LearningStandard via Number and VersionNum</p>
+			</Description>		
+		</Item>
+		<Item>
+			<Element>Number</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>A unique number that is used to identify the learning standard. One use of this is for NZQA standard numbers
+				which cannot be used as a unique identifier (in LocalId) on their own as they are versioned so are part of
+				a composite key with VersionNo.
+				</p>
+			</Description>
+			<Type name="xs:int"/>
+		</Item>     <!-- Number-->
+		<Item>
+			<Element>VersionNo</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The version of the learning standard.</p>
+			</Description>
+			<Type name="xs:decimal"/>
+		</Item>     <!-- VersionNo-->
+
+ 		<xhtml:Example xmlns="" name="LearningStandardObjectReferenceType Example">
+			<LearningStandardObjectReference>
+				<Number>6733</Number>
+				<VersionNo>2</VersionNo>
+			</LearningStandardObjectReference>
+		</xhtml:Example>
+	</CommonElement>
+
 	<CommonElement name="PrerequisiteListType" type="true" dm="true">
 		<Item>
 			<Element>PrerequisiteListType</Element>
@@ -199,10 +260,10 @@
 		<Item>
 			<Element>ProviderInvolvedType</Element>
 			<Description>
-				<p>The provider involved with the assessment task and the role they play,
+				<p>The provider and Location with the assessment task and the role they play,
 					 e.g. assessing provider, assessment location provider, assessment provider, registering provider.</p>
 			</Description>
-			<Type complex="extension" name="ProviderObjectReferenceType"/>
+			<Type complex="extension" name="EduOrgLocationObjectReferenceType"/>
 		</Item>
 		<Item>
 			<Element>ProviderRole</Element>
