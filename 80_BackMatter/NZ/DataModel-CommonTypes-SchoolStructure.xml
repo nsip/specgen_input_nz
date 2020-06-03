@@ -185,14 +185,14 @@
 			<Type ref="CommonTypes" name="EnactedPolicyListType"/>
 		</Item>    <!-- NewEntrantPolicyList -->
 		<Item>
-			<Element>ClassificationList</Element>
+			<Element>SchoolClassificationList</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>A list of School Classification descriptors that further describe the nature of a school</p>
 			</Description>
 			<Type ref="CommonTypes" name="SchoolClassificationListType"/>
-		</Item>    <!-- ClassificationList -->
+		</Item>    <!-- SchoolClassificationList -->
 		<Item>
 			<Element>SchoolYearList</Element>
 			<Characteristics>O</Characteristics>
@@ -229,11 +229,11 @@
 						<Policy>CE</Policy>
 					</EnactedPolicy>
 				</NewEntrantPolicyList>
-				<ClassificationList>
+				<SchoolClassificationList>
 					<Classification json:force-string="true">52010</Classification>
 					<Classification json:force-string="true">52004</Classification>
 					<Classification json:force-string="true">52002</Classification>
-				</ClassificationList>	
+				</SchoolClassificationList>	
 				<SchoolYearList>
 					<SchoolYear>
 						<YearLevel json:force-string="true">1</YearLevel>
@@ -356,7 +356,21 @@
 				<xs:minInclusive value="1"/>
 				<xs:maxInclusive value="13"/>
 			</Facets>
-		</Item>
+		</Item>    <!-- Year Level -->
+		<Item>
+			<Element>FIRSTSchoolYearGenderId</Element>			
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>This is the unique identifier for the combination of School Year, Gender 
+				and Boarding received from FIRST.
+				</p>
+				<p>There may be multiple sets of School Year, Gender and boarding for a school,
+				 each with their own identifier. A record must be created for each set.
+				</p>
+			</Description>
+			<Type name="xs:int"/>
+		</Item>    <!-- FIRSTSchoolYearGenderId -->
 		<Item>
 			<Element>Gender</Element>			
 			<Characteristics>M</Characteristics>
@@ -365,7 +379,16 @@
 				<p>Which genders are accepted for enrolment in this Year Level?</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsSchoolingGenderType"/>
-		</Item>
+		</Item>	   <!-- Gender -->
+		<Item>
+			<Element>Boarding</Element>			
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Says if the school has boarding and if so, if it is for girls only, boys only or both.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsSchoolBoardingTypeType"/>
+		</Item>	   <!-- Boarding -->
 	</CommonElement>
 
 	<CommonElement name="YearLevelListType" type="true" dm="true">
@@ -510,13 +533,31 @@
 		</Item>
 		<Item>
 			<Element>Type</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>Code denoting the kind of ECE service. eg: Kindergarten, PLayCentre, Te Kohanga Reo, etc.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsECEServiceTypeType"/>
 		</Item>    <!-- Type -->
+		<Item>
+			<Element>PrimaryLanguage</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The primary language utilised by the ECE Service.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
+		</Item>    <!-- PrimaryLanguage -->
+		<Item>
+			<Element>PrimaryLanguageOther</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Additional information about a language when one of the 'Other' language codes sets is selected.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>    <!-- PrimaryLanguageOther -->
 	</CommonElement>
 
 	<CommonElement name="TertiaryServiceType" type="true" dm="true">

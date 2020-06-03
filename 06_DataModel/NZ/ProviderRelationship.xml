@@ -47,19 +47,29 @@
     <Description>
       <p>The SIF GUID for the source provider in the relationship.</p>
     </Description>
-    <Type name="xs:string"/>
+	  <Type ref="CodeSets" name="NZCodeSetsOrganisationRelationshipTypeType"/>
   </Item>  <!-- RelationshipType -->
+
   <Item>
-    <Element>SourceProvider</Element>
+    <Element>SourceOrganisation</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the source provider in the relationship.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
-  </Item>  <!-- SourceProvider -->
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
+  </Item>  <!-- SourceOrganisation -->
   <Item>
-    <Element>SourceProviderAgreementDate</Element>
+    <Element>SourceOrganisationRole</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The role the source organisation is playing in this relationship.</p>
+    </Description>
+	  <Type ref="CodeSets" name="NZCodeSetsSourceOrganisationRoleType"/>
+  </Item>  <!-- SourceOrganisationRole -->
+  <Item>
+    <Element>SourceOrganisationAgreementDate</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
@@ -67,19 +77,28 @@
       nil value if the source Provider is yet to register their agreement ot the relationship.</p>
     </Description>
     <Type name="xs:date"/>
-  </Item>  <!-- SourceProviderAgreementDate -->
+  </Item>  <!-- SourceOrganisationAgreementDate -->
 
   <Item>
-    <Element>RelatedProvider</Element>
+    <Element>RelatedOrganisation</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the related provider in the relationship.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
-  </Item>  <!-- RelatedProvider -->
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
+  </Item>  <!-- RelatedOrganisation -->
   <Item>
-    <Element>RelatedProviderAgreementDate</Element>
+    <Element>RelatedOrganisationRole</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The role the related organisation is playing in this relationship.</p>
+    </Description>
+	  <Type ref="CodeSets" name="NZCodeSetsRelatedOrganisationRoleType"/>
+  </Item>  <!-- RelatedOrganisationRole -->  
+  <Item>
+    <Element>RelatedOrganisationAgreementDate</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
@@ -87,7 +106,7 @@
       nil value if the related Provider is yet to register their agreement ot the relationship.</p>
     </Description>
     <Type name="xs:date"/>
-  </Item>  <!-- RelatedProviderAgreementDate -->
+  </Item>  <!-- RelatedOrganisationAgreementDate -->
 
   <Item>
     <Element>EffectiveDate</Element>
@@ -107,6 +126,7 @@
     </Description>
     <Type name="xs:date"/>
   </Item>  <!-- ExpirationDate -->
+
   <Item>
     <Element>YearLevelList</Element>
     <Characteristics>O</Characteristics>
@@ -136,6 +156,7 @@
     </Description>
     <Type name="xs:normalizedString"/>
   </Item>  <!-- Description -->
+
 	<Item>
 		<Element>RecordAudit</Element>    
 		<Characteristics>O</Characteristics>
