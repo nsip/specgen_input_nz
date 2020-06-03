@@ -193,6 +193,7 @@
 			</Description>
 			<Type ref="CommonTypes" name="SchoolClassificationListType"/>
 		</Item>    <!-- SchoolClassificationList -->
+
 		<Item>
 			<Element>SchoolYearList</Element>
 			<Characteristics>O</Characteristics>
@@ -229,11 +230,13 @@
 						<Policy>CE</Policy>
 					</EnactedPolicy>
 				</NewEntrantPolicyList>
+
 				<SchoolClassificationList>
 					<Classification json:force-string="true">52010</Classification>
 					<Classification json:force-string="true">52004</Classification>
 					<Classification json:force-string="true">52002</Classification>
 				</SchoolClassificationList>	
+
 				<SchoolYearList>
 					<SchoolYear>
 						<YearLevel json:force-string="true">1</YearLevel>
