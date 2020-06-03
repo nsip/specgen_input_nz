@@ -262,7 +262,7 @@
 				<p>The provider and Location with the assessment task and the role they play,
 					 e.g. assessing provider, assessment location provider, assessment provider, registering provider.</p>
 			</Description>
-			<Type complex="extension" name="OrganisationObjectReferenceType"/>
+			<Type complex="extension" name="ProviderObjectReferenceType"/>
 		</Item>
 		<Item>
 			<Element>ProviderRole</Element>
