@@ -119,6 +119,16 @@
   </Item>    <!-- ResponseNote -->
 
   <Item>
+    <Element>NoteList</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of notes that have been written about the learning support response.</p>
+    </Description>
+     <Type ref="CommonTypes" name="NoteListType"></Type>
+  </Item>    <!-- NoteList -->
+
+  <Item>
     <Element>ResponseDesc</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>

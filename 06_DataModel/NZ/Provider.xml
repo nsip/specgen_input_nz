@@ -239,11 +239,11 @@
 					<Policy>CE</Policy>
 				</EnactedPolicy>
 			</NewEntrantPolicyList>
-			<ClassificationList>
+			<SchoolClassificationList>
 				<Classification json:force-string="true">52010</Classification>
 				<Classification json:force-string="true">52004</Classification>
 				<Classification json:force-string="true">52002</Classification>
-			</ClassificationList>			
+			</SchoolClassificationList>			
 			<SchoolYearList>
 				<SchoolYear>
 					<YearLevel json:force-string="true">1</YearLevel>
