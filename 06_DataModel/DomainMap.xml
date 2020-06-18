@@ -13,7 +13,7 @@
 			<p>
 				<img src="images/zone512.png" usemap="#DomainMap"/>
 				<map id="DomainMap" name="DomainMap">
-					<area title="Provider" href="DomainMap.html#Domain__Provider" shape="rect" coords="71,65,166,126"/>
+					<area title="Organisation" href="DomainMap.html#Domain__Organisation" shape="rect" coords="71,65,166,126"/>
 					<area title="Student &amp; Whānau" href="DomainMap.html#Domain__StudentWhānau" shape="rect" coords="284,331,375,390"/>
 					<area title="Enrolment" href="DomainMap.html#Domain__Enrolment" shape="rect" coords="206,0,301,60"/>
 					<area title="Schedule &amp; Attendance" href="DomainMap.html#Domain__ScheduleAttendance" shape="rect" coords="344,66,439,126"/>
@@ -25,28 +25,28 @@
 			</p>
 		</Intro>
 
-		<Domain name="Provider">
+		<Domain name="Organisation">
 			<Intro>
 				<p>
-					The Provider domain describes education provider
-					entities, the relationships between them, and the
-					Staff that work at them.				
+					The Organisation domain describes education provider
+					entities (ECEs, Schools &amp; Tertiary Education Institutions), 
+					Communities (Kāhui Ako, Learning Support Clusters, etc.)
+					the relationships between them, and the Staff that work at them.				
 				</p>
 				<p>
-					Background documentation on the Provider domain is available here <a href="background/1.%20SIF%20NZ%20-%20Background%20-%20Organisation%20-%20v1.4.pdf"><img width="40px" src="images/pdf.png"/></a>
+					Background documentation on the Organisation domain is available here <a href="background/1.%20SIF%20NZ%20-%20Background%20-%20Organisation%20-%20v1.4.pdf"><img width="40px" src="images/pdf.png"/></a>
 				</p>
-				<img src="images/SIFNZ-LogicalModel-ProviderDomain.png" usemap="#ProviderMap"/>
+				<img src="images/SIFNZ-LogicalModel-OrganisationDomain.png" usemap="#OrganisationMap"/>
 			</Intro>
 			
-			<DataObject coords="500,56,785,166" role="member">Provider</DataObject>
-			<DataObject coords="1096,69,1286,133" role="member">Organisation</DataObject>
-			<DataObject coords="859,203,1005,247" role="member">ProviderRelationship</DataObject>
-			<DataObject coords="617,720,735,799" role="member">StaffPersonal</DataObject>
-			<DataObject coords="869,282,987,372" role="member">StaffAssignment</DataObject>
-			<DataObject coords="46,441,282,491" role="member">StaffTeachingGroupAssignment</DataObject>
-			<DataObject coords="507,517,625,563" role="member">ProviderCourse</DataObject>
-			<DataObject coords="272,84,390,142" role="member">TeachingGroup</DataObject>
-			<DataObject coords="258,614,424,662" role="member">AcademicDepartment</DataObject>
+			<DataObject coords="386,44,602,127"  role="member">Organisation</DataObject>
+			<DataObject coords="656,142,789,199" role="member">OrganisationRelationship</DataObject>
+			<DataObject coords="466,472,555,536" role="member">StaffPersonal</DataObject>
+			<DataObject coords="664,212,754,284" role="member">StaffAssignment</DataObject>
+			<DataObject coords="38,263,215,303"  role="member">StaffTeachingGroupAssignment</DataObject>
+			<DataObject coords="387,284,476,320" role="member">ProviderCourse</DataObject>
+			<DataObject coords="215,65,305,107"  role="member">TeachingGroup</DataObject>
+			<DataObject coords="196,392,316,427" role="member">AcademicDepartment</DataObject>
 		</Domain>
 
 		<Domain name="Student &amp; Whānau">
@@ -79,14 +79,14 @@
 				</p>
 				<img src="images/SIFNZ-LogicalModel-EnrolmentDomain.png" usemap="#EnrolmentMap"/>
 			</Intro>
-			<DataObject coords="69,225,246,267" role="member">StudentProviderEnrolment</DataObject>
-			<DataObject coords="703,170,921,212" role="member">StudentTeachingGroupEnrolment</DataObject>
-			<DataObject coords="43,50,204,122">StudentPersonal</DataObject>
-			<DataObject coords="77,469,205,517">Provider</DataObject>
-			<DataObject coords="372,141,538,198">ProviderCourse</DataObject>
-			<DataObject coords="568,317,719,400">TeachingGroup</DataObject>
-			<DataObject coords="1105,282,1242,320">StaffPersonal</DataObject>
-			<DataObject coords="851,361,1057,401">StaffTeachingGroupAssignment</DataObject>
+			<DataObject coords="58,185,207,222"  role="member">StudentProviderEnrolment</DataObject>
+			<DataObject coords="586,140,766,174" role="member">StudentTeachingGroupEnrolment</DataObject>
+			<DataObject coords="35,44,171,104">StudentPersonal</DataObject>
+			<DataObject coords="67,392,170,431">Organisation</DataObject>
+			<DataObject coords="310,118,451,167">ProviderCourse</DataObject>
+			<DataObject coords="476,267,598,333">TeachingGroup</DataObject>
+			<DataObject coords="921,235,1034,265">StaffPersonal</DataObject>
+			<DataObject coords="708,302,881,333">StaffTeachingGroupAssignment</DataObject>
 		</Domain>
 
 		<Domain name="Hauora / Wellbeing">
@@ -100,21 +100,21 @@
 				<img src="images/SIFNZ-LogicalModel-WellbeingDomain.png" usemap="#Hauora / WellbeingMap"/>
 			</Intro>
 
-			<DataObject coords="163,178,281,211" role="member">StudentConsent</DataObject>
-			<DataObject coords="312,313,476,367" role="member">WellbeingCharacteristic</DataObject>
-			<DataObject coords="483,219,600,285" role="member">WellbeingAlert</DataObject>
-			<DataObject coords="657,315,789,367" role="member">WellbeingEvent</DataObject>
-			<DataObject coords="832,374,948,430" role="member">WellbeingResponse</DataObject>
-			<DataObject coords="999,444,1110,502" role="member">WellbeingAppeal</DataObject>
-			<DataObject coords="48,317,228,367"   role="member">StudentLearningSupport</DataObject>
-			<DataObject coords="113,486,346,537"  role="member">StudentLearningSupportResponse</DataObject>
-			<DataObject coords="1162,303,1269,349" role="member">Document</DataObject>
-			<DataObject coords="1082,222,1199,269" role="member">StudentVoice</DataObject>
-			<DataObject coords="751,58,994,148">StudentPersonal</DataObject>
-			<DataObject coords="671,527,878,624">Provider</DataObject>
-			<DataObject coords="1292,146,1472,189" role="member">StudentPhysicalRestraint</DataObject>
-			<DataObject coords="1342,304,1475,352">StaffPersonal</DataObject>
-			<DataObject coords="1314,631,1530,684" role="member">StudentActivityParticipation</DataObject>
+			<DataObject coords="135,149,236,176" role="member">StudentConsent</DataObject>
+			<DataObject coords="235,236,361,274" role="member">WellbeingCharacteristic</DataObject>
+			<DataObject coords="368,166,454,216" role="member">WellbeingAlert</DataObject>
+			<DataObject coords="494,237,592,275" role="member">WellbeingEvent</DataObject>
+			<DataObject coords="626,285,716,325" role="member">WellbeingResponse</DataObject>
+			<DataObject coords="748,338,836,374" role="member">WellbeingAppeal</DataObject>
+			<DataObject coords="35,239,174,275"  role="member">StudentLearningSupport</DataObject>
+			<DataObject coords="85,368,261,406"  role="member">StudentLearningSupportResponse</DataObject>
+			<DataObject coords="874,228,956,263" role="member">Document</DataObject>
+			<DataObject coords="815,166,906,204" role="member">StudentVoice</DataObject>
+			<DataObject coords="565,44,752,110">StudentPersonal</DataObject>
+			<DataObject coords="505,400,662,472">Organisation</DataObject>
+			<DataObject coords="975,106,1111,144" role="member">StudentPhysicalRestraint</DataObject>
+			<DataObject coords="1012,229,1111,265">StaffPersonal</DataObject>
+			<DataObject coords="996,478,1157,517" role="member">StudentActivityParticipation</DataObject>
 		</Domain>
 		
 		<Domain name="Schedule &amp; Attendance">
@@ -133,22 +133,22 @@
 				</p>
 				<img src="images/SIFNZ-LogicalModel-TimetableAttendanceDomain.png" usemap="#Schedule &amp; AttendanceMap"/>
 			</Intro>
-			<DataObject coords="41,162,184,207">StudentPersonal</DataObject>
-			<DataObject coords="571,51,1079,96">Provider</DataObject>
-			<DataObject coords="217,226,410,268" role="member">StudentAttendanceTimeList</DataObject>
-			<DataObject coords="366,165,560,211" role="member">StudentAttendanceSummary</DataObject>
-			<DataObject coords="773,606,893,650">TeachingGroup</DataObject>
-			<DataObject coords="775,731,894,788">ProviderCourse</DataObject>
+			<DataObject coords="36,134,151,170">StudentPersonal</DataObject>
+			<DataObject coords="479,43,899,80">Organisation</DataObject>
+			<DataObject coords="183,189,342,223" role="member">StudentAttendanceTimeList</DataObject>
+			<DataObject coords="306,139,466,175" role="member">StudentAttendanceSummary</DataObject>
+			<DataObject coords="646,514,744,549">TeachingGroup</DataObject>
+			<DataObject coords="647,607,743,655">ProviderCourse</DataObject>
 
-			<DataObject coords="906,197,1013,243">Schedule</DataObject>
-			<DataObject coords="712,198,805,245">ScheduleTerm</DataObject>
-			<DataObject coords="769,290,876,331">ScheduleHoliday</DataObject>
-			<DataObject coords="521,282,630,336">ScheduleDate</DataObject>
-			<DataObject coords="391,365,498,411">ScheduleEvent</DataObject>
-			<DataObject coords="497,438,632,484">SchedulePeriod</DataObject>
-			<DataObject coords="752,439,905,483">ScheduleAcademicDay</DataObject>
-			<DataObject coords="775,367,882,421">BellSchedule</DataObject>
-			<DataObject coords="762,498,895,540">TeachingGroupEvent</DataObject>
+			<DataObject coords="756,163,845,200">Schedule</DataObject>
+			<DataObject coords="595,165,669,199">ScheduleTerm</DataObject>
+			<DataObject coords="642,240,733,275">ScheduleHoliday</DataObject>
+			<DataObject coords="436,223,523,279">ScheduleDate</DataObject>
+			<DataObject coords="296,307,386,342">ScheduleEvent</DataObject>
+			<DataObject coords="418,366,530,401">SchedulePeriod</DataObject>
+			<DataObject coords="626,360,757,394">ScheduleAcademicDay</DataObject>
+			<DataObject coords="645,306,735,351">BellSchedule</DataObject>
+			<DataObject coords="635,406,748,464">TeachingGroupEvent</DataObject>
 		</Domain>
 
 		<Domain name="Aromatawai / Assessment">
@@ -166,18 +166,18 @@
 				</p>
 				<img src="images/SIFNZ-LogicalModel-AssessmentDomain.png" usemap="#Aromatawai / AssessmentMap"/>
 			</Intro>
-			<DataObject coords="41,53,159,533">StudentPersonal</DataObject>
-			<DataObject coords="326,82,554,136" role="member">StudentAssessmentTaskRegistration</DataObject>
-			<DataObject coords="635,172,754,257" role="member">AssessmentTask</DataObject>
-			<DataObject coords="349,216,504,268" role="member">StudentAssessmentTask</DataObject>
-			<DataObject coords="230,289,419,339" role="member">StudentAssessmentTaskResult</DataObject>
-			<DataObject coords="278,422,471,471" role="member">StudentAttainment</DataObject>
-			<DataObject coords="49,633,156,673" role="member">Credential</DataObject>
-			<DataObject coords="720,506,855,546" role="member">LearningStandard</DataObject>
-			<DataObject coords="848,329,988,397">ProviderCourse</DataObject>
-			<DataObject coords="1057,224,1164,310">Provider</DataObject>
-			<DataObject coords="861,68,983,114">TeachingGroup</DataObject>
-			<DataObject coords="271,151,479,199" role="member">StudentCurriculumProgressReport</DataObject>
+			<DataObject coords="34,43,133,446">StudentPersonal</DataObject>
+			<DataObject coords="274,70,462,110" role="member">StudentAssessmentTaskRegistration</DataObject>
+			<DataObject coords="533,145,631,214" role="member">AssessmentTask</DataObject>
+			<DataObject coords="292,179,421,222" role="member">StudentAssessmentTask</DataObject>
+			<DataObject coords="253,284,410,324" role="member">StudentAssessmentTaskResult</DataObject>
+			<DataObject coords="233,351,390,390" role="member">StudentAttainment</DataObject>
+			<DataObject coords="44,525,132,557" role="member">Credential</DataObject>
+			<DataObject coords="601,420,716,453" role="member">LearningStandard</DataObject>
+			<DataObject coords="706,275,823,331">ProviderCourse</DataObject>
+			<DataObject coords="884,190,973,256">Organisation</DataObject>
+			<DataObject coords="720,57,817,97">TeachingGroup</DataObject>
+			<DataObject coords="228,126,412,163" role="member">StudentCurriculumProgressReport</DataObject>
 		</Domain>
 	</Section>
 

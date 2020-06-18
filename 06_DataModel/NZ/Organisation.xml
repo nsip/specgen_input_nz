@@ -10,11 +10,12 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>Organisation</Element>
-		<privacyRating>Low</privacyRating>
-    	<Description>A recognised provider of education services in the New Zealand
-			education system.  Providers may operate in the Early Childhood, Compulsory Schooling or Tertiary sectors.
-    	</Description>
-		<Type complex="extension" name="EduOrganisationType"/>
+	<privacyRating>Low</privacyRating>
+	<Description>
+		Education Provider entities (ECEs, Schools &amp; Tertiary Education Institutions), 
+		Communities (Kāhui Ako, Learning Support Clusters, etc.), and others (Teen Parent Units, Activity Centres. etc.)
+	</Description>
+	<Type complex="extension" name="EduOrganisationType"/>
   </Item>   <!-- Organisation -->
   <Item>
 		<Element>OrganisationRefId</Element>

@@ -27,7 +27,7 @@
 		<p>
 			<img src="images/zone512.png" usemap="#DomainMap"/>
 			<map id="DomainMap" name="DomainMap">
-				<area title="Provider" href="DomainMap.html#Domain__Provider" shape="rect" coords="71,65,166,126"/>
+				<area title="Organisation" href="DomainMap.html#Domain__Organisation" shape="rect" coords="71,65,166,126"/>
 				<area title="Student &amp; Whānau" href="DomainMap.html#Domain__StudentWhānau" shape="rect" coords="284,331,375,390"/>
 				<area title="Enrolment" href="DomainMap.html#Domain__Enrolment" shape="rect" coords="206,0,301,60"/>
 				<area title="Schedule &amp; Attendance" href="DomainMap.html#Domain__ScheduleAttendance" shape="rect" coords="344,66,439,126"/>
