@@ -97,7 +97,7 @@
 		</Item>   <!-- Name -->
 		<Item>
 			<Element>ObjectType</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>The type of the referenced object:</p>
