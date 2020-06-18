@@ -53,7 +53,7 @@
 		<Description>
 			<p>Generic object reference to the organisation being granted this student consent.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/> 
+		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
 	</Item>    <!-- Organisation -->
 
 	<Item>

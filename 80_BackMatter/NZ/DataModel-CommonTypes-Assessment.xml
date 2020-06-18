@@ -307,7 +307,7 @@
 					justifies the student achieving this attainment.
 				</p>
 			</Description>
-			<Type complex="extension" name="ObjectReferenceType"/>
+			<Type complex="extension" name="NamedObjectReferenceType"/>
 		</Item>
 
 		<Item>

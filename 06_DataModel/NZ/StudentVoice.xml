@@ -55,7 +55,7 @@
 		<Description>
 		<p>Generic object reference to the school that collected this StudentVoice entry.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
+		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
 	</Item>    <!-- Provider -->  
 
     <Item>

@@ -55,7 +55,7 @@
     <Description>
       <p>Reference to the Provider that created the learning support record for the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
   </Item>    <!-- Provider -->
 
   <Item>

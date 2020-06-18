@@ -50,14 +50,14 @@
 	</Item>    <!-- Student -->
 
 	<Item>
-		<Element>Provider</Element>
+		<Element>Organisation</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>Generic object reference to the education Provider, eg school, that has the TeachingGroup</p>
+			<p>Generic object reference to the Organisation, eg school, that has the TeachingGroup</p>
 		</Description>
-		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/>
-	</Item>    <!-- Provider -->
+		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
+	</Item>    <!-- Organisation -->
 
 	<Item>
 		<Element>TeachingGroup</Element>
@@ -106,9 +106,9 @@
 			<Student>
 				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
 			</Student>
-			<Provider>
+			<Organisation>
 				<RefId>9961</RefId>
-			</Provider>
+			</Organisation>
 			<TeachingGroup>
 				<RefId>93b9b77e-a23f-4acd-a65e-e26f1034317f</RefId>
 			</TeachingGroup>

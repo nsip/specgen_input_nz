@@ -56,7 +56,7 @@
     <Description>
       <p>Object reference to the provider for which this WellbeingResponse is being reported.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderObjectReferenceType"/>
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
   </Item>    <!-- Provider -->
   
   <Item>

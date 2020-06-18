@@ -51,14 +51,14 @@
 
 
   <Item>
-    <Element>ProviderInvolvedList</Element>    
+    <Element>OrganisationInvolvedList</Element>    
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>A list of the providers involved and their role, e.g. assessment provider, registering provider.</p>
+      <p>A list of the Providers/Organisations involved and their role, e.g. assessment provider, registering provider.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderInvolvedListType"/>
-  </Item>    <!-- ProviderInvolvedList -->
+    <Type ref="CommonTypes" name="OrganisationInvolvedListType"/>
+  </Item>    <!-- OrganisationInvolvedList -->
 
   <Item>
     <Element>Student</Element>
@@ -191,18 +191,18 @@
   <xhtml:Example xmlns="" name="Student Assessment Task Registration">
     <StudentAssessmentTaskRegistration>
       <StudentAssessmentTaskRegistrationRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskRegistrationRefId>
-      <ProviderInvolvedList>
+      <OrganisationInvolvedList>
           <!-- NZQA is Assessor -->
-          <ProviderInvolved>
+          <OrganisationInvolved>
             <RefId>9772</RefId>
-            <ProviderRole>ASR</ProviderRole>
-          </ProviderInvolved>
-          <!-- School is Provider -->
-          <ProviderInvolved>
+            <OrganisationRole>ASR</OrganisationRole>
+          </OrganisationInvolved>
+          <!-- School is Organisation -->
+          <OrganisationInvolved>
             <RefId>377</RefId>
-            <ProviderRole>PRO</ProviderRole>
-          </ProviderInvolved>
-      </ProviderInvolvedList>
+            <OrganisationRole>PRO</OrganisationRole>
+          </OrganisationInvolved>
+      </OrganisationInvolvedList>
       <Student>
         <LocalId>851039-HP</LocalId>
         <Name>Harry Potter</Name>

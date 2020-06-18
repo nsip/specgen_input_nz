@@ -56,6 +56,45 @@
 			<Description><p>The normal descriptive name of the referenced object.</p></Description>
 			<Type name="xs:string"/>
 		</Item>   <!-- Name -->
+
+ 		<xhtml:Example xmlns="" name="ObjectReferenceType Example">
+			<ObjectReference>
+				<RefId>ac0871d9-6562-4209-ae86-abdb3661842b</RefId>
+				<LocalId json:force-string="true">99204</LocalId>
+			</ObjectReference>
+		</xhtml:Example>
+	</CommonElement>
+
+	<CommonElement name="NamedObjectReferenceType" type="true" dm="true">
+		<Item>
+			<Element>NamedObjectReferenceType</Element>
+			<Description>
+				<p>A reference to another named SIF Data Object</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>RefId</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description><p>The GUUID of the referenced object</p></Description>
+			<Type ref="CommonTypes" name="IdRefType"/>
+		</Item>   <!-- RefId -->
+		<Item>
+			<Element>LocalId</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Local identifier representing the referenced object.</p>
+			</Description>
+			<Type ref="CommonTypes" name="LocalIdType"/>
+		</Item>   <!-- LocalId -->
+		<Item>
+			<Element>Name</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description><p>The normal descriptive name of the referenced object.</p></Description>
+			<Type name="xs:string"/>
+		</Item>   <!-- Name -->
 		<Item>
 			<Element>ObjectType</Element>
 			<Characteristics>O</Characteristics>
@@ -66,21 +105,21 @@
 			<Type ref="CodeSets" name="NZCodeSetsReferrableDataObjectsType"/>
 		</Item>   <!-- ObjectType -->
 
- 		<xhtml:Example xmlns="" name="ObjectReferenceType Example">
-			<ObjectReference>
+ 		<xhtml:Example xmlns="" name="NamedObjectReferenceType Example">
+			<NamedObjectReference>
 				<RefId>ac0871d9-6562-4209-ae86-abdb3661842b</RefId>
 				<LocalId json:force-string="true">99204</LocalId>
 				<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
 				<ObjectType>Organisation</ObjectType>
-			</ObjectReference>
+			</NamedObjectReference>
 		</xhtml:Example>
 	</CommonElement>
 
-	<CommonElement name="ProviderObjectReferenceType" type="true" dm="true">
+	<CommonElement name="OrganisationObjectReferenceType" type="true" dm="true">
 		<Item>
-			<Element>ProviderObjectReferenceType</Element>
+			<Element>OrganisationObjectReferenceType</Element>
 			<Description>
-				<p>A reference to a Provider Data Object</p>
+				<p>A reference to an Organisation Data Object, (or a specific location at that Organisation)</p>
 			</Description>
 		</Item>
 		<Item>
@@ -90,6 +129,17 @@
 			<Description><p>The Ministry of Education Organisation Id of the referenced provider</p></Description>
 			<Type ref="CommonTypes" name="MoEOrgIdType"/>
 		</Item>   	<!-- RefId -->
+		<!--
+			<Item>
+				<Element>LocalId</Element>
+				<Characteristics>O</Characteristics>
+				<privacyRating>Low</privacyRating>
+				<Description>
+					<p>Local identifier representing the referenced object.</p>
+				</Description>
+				<Type ref="CommonTypes" name="LocalIdType"/>
+			</Item>
+		-->
 		<Item>
 			<Element>Name</Element>
 			<Characteristics>O</Characteristics>
@@ -105,11 +155,11 @@
 			</Description>
 			<Type name="xs:int"/>
 		</Item>     <!-- LocationNum -->
- 		<xhtml:Example xmlns="" name="ProviderObjectReferenceType Example">
-			<ProviderObjectReference>
+ 		<xhtml:Example xmlns="" name="OrganisationObjectReferenceType Example">
+			<OrganisationObjectReference>
 				<RefId json:force-string="true">672</RefId>
 				<Name>Masterton Primary School</Name>
-			</ProviderObjectReference>
+			</OrganisationObjectReference>
 		</xhtml:Example>
 	</CommonElement>
 
@@ -157,24 +207,6 @@
 				<LocalId>851039-HP</LocalId>
 				<NationalStudentNumber>23423421</NationalStudentNumber>
 			</ObjectReference>
-		</xhtml:Example>
-	</CommonElement>
-
-	<CommonElement name="OrganisationObjectReferenceType" type="true" dm="true">
-		<Item>
-			<Element>OrganisationObjectReferenceType</Element>
-			<Description>
-				<p>A reference to a Provider specific location at the Organisation; rather 
-				than the Provider as a whole.</p>
-			</Description>
-			<Type complex="extension" name="ProviderObjectReferenceType"/>			
-		</Item>
- 		<xhtml:Example xmlns="" name="LocationObjectReferenceType Example">
-			<LocationObjectReference>
-				<RefId json:force-string="true">672</RefId>
-				<Name>Massey University - Wellington Campus</Name>
-				<LocationNum>3</LocationNum>
-			</LocationObjectReference>
 		</xhtml:Example>
 	</CommonElement>
 
@@ -235,9 +267,9 @@
 		</Item>
 	</CommonElement>
 
-	<CommonElement name="ProviderInvolvedListType" type="true" dm="true">
+	<CommonElement name="OrganisationInvolvedListType" type="true" dm="true">
 		<Item>
-			<Element>ProviderInvolvedListType</Element>
+			<Element>OrganisationInvolvedListType</Element>
 			<Description>
 				<p>A list of the providers involved and their role,
 					 e.g. assessing provider, assessment provider, assessment location provider, registering provider.</p>
@@ -245,34 +277,34 @@
 			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>ProviderInvolved</Element>
+			<Element>OrganisationInvolved</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>The provider involved with the assessment task and the role they play,
 					 e.g. assessing provider, assessment location provider, assessment provider, registering provider.</p>
 			</Description>
-			<Type ref="CommonTypes" name="ProviderInvolvedType"/>
+			<Type ref="CommonTypes" name="OrganisationInvolvedType"/>
 		</Item>
 	</CommonElement>
 
-	<CommonElement name="ProviderInvolvedType" type="true" dm="true">
+	<CommonElement name="OrganisationInvolvedType" type="true" dm="true">
 		<Item>
-			<Element>ProviderInvolvedType</Element>
+			<Element>OrganisationInvolvedType</Element>
 			<Description>
 				<p>The provider and Location with the assessment task and the role they play,
 					 e.g. assessing provider, assessment location provider, assessment provider, registering provider.</p>
 			</Description>
-			<Type complex="extension" name="ProviderObjectReferenceType"/>
+			<Type complex="extension" name="OrganisationObjectReferenceType"/>
 		</Item>
 		<Item>
-			<Element>ProviderRole</Element>
+			<Element>OrganisationRole</Element>
 			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>The role of the provider in relation to the assessment task, e.g. assessing provider, assessment location provider, assessment provider, registering provider.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsAssessmentProviderRoleType"/>
-		</Item>    <!-- ProviderRole -->
+		</Item>    <!-- OrganisationRole -->
 	</CommonElement>
 
 	<CommonElement name="StaffInvolvedListType" type="true" dm="true">

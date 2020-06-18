@@ -51,14 +51,14 @@
 	</Item>    <!-- TermName -->
 
 	<Item>
-		<Element>Provider</Element>
+		<Element>Organisation</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The provider the schedule term applies to, ommitted if it applies to all providers.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/> 
-	</Item>    <!-- Provider -->
+		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
+	</Item>    <!-- Organisation -->
 
 	<Item>
 		<Element>SchoolYear</Element>
@@ -103,9 +103,9 @@
 			<ScheduleTermRefId>eed03e3c-b088-4b69-bba7-b042f6f7a040</ScheduleTermRefId>
 			<ScheduleTermLocalId>2019-1</ScheduleTermLocalId>
 			<TermName>Term I of 2019</TermName>
-			<Provider>
+			<Organisation>
 				<RefId>783</RefId>
-			</Provider>
+			</Organisation>
 			<StartDate>2019-01-28</StartDate>
 			<EndDate>2019-03-13</EndDate>
 			<RecordAudit>

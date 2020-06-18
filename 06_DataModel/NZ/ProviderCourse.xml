@@ -43,7 +43,7 @@
     <Description>
       <p>Generic object reference to the Provider (school) that defines and offers the Course.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderObjectReferenceType"/>
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
   </Item>    <!-- Provider -->
   
   <Item>

@@ -39,14 +39,14 @@
   </Item>    <!-- DocumentLocalId -->
 
   <Item>
-    <Element>Provider</Element>    
+    <Element>Organisation</Element>    
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Generic object reference to the Provider that first uploaded this document.</p>
+      <p>Generic object reference to the Organisation/Provider that first uploaded this document.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
-  </Item>    <!-- Provider -->
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
+  </Item>    <!-- Organisation -->
 
   <Item>
     <Element>Location</Element>
@@ -181,9 +181,9 @@
   <xhtml:Example xmlns="" name="Document">
     <Document>
       <DocumentRefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</DocumentRefId>
-      <Provider>
+      <Organisation>
         <RefId>386</RefId>
-      </Provider>
+      </Organisation>
       <DocumentDescription>Timmy McGannaway's IEP for 2019</DocumentDescription>
       <URL>http://somehost.co.nz/docs/ghf12312</URL>
       <DocumentType>IEP</DocumentType>
@@ -192,7 +192,6 @@
           <Role>SU</Role>
           <Student>
             <RefId>17c9b7aa-bc34-435f-8bba-7e337891f53b</RefId>
-            <ObjectType>StudentPersonal</ObjectType>
             <NationalStudentNumber>6788765445</NationalStudentNumber>
           </Student>
         </PersonDocumentRole>

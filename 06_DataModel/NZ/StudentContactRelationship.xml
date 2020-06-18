@@ -55,12 +55,12 @@
 		<Type ref='CommonTypes' name='ObjectReferenceType'/>
 	</Item>   <!-- StudentContact -->
 	<Item>
-		<Element>Provider</Element>
+		<Element>Organisation</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
-		<Description>Generic object reference to the Provider associated with the relationship.</Description>
-		<Type ref='CommonTypes' name='ObjectReferenceType'/>
-	</Item>   <!-- Provider -->
+		<Description>Generic object reference to the Organisation associated with the relationship.</Description>
+		<Type ref='CommonTypes' name='OrganisationObjectReferenceType'/>
+	</Item>   <!-- Organisation -->
 	<Item>
 		<Element>Relationship</Element>
 		<Characteristics>M</Characteristics>
@@ -125,9 +125,9 @@
       <StudentContact>
 		<RefId>6472B261-0947-583A-463D-BB345291B001</RefId>
 	  </StudentContact>
-	  <Provider>
-		<RefId>4661c4c8-fd03-4fc6-8af7-5084338494db</RefId>
-	  </Provider>
+	  <Organisation>
+		<RefId>9961</RefId>
+	  </Organisation>
       <Relationship>
         <Code>LEG</Code>
       </Relationship>

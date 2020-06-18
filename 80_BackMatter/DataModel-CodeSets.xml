@@ -399,6 +399,10 @@
 				<Description>This value is for learning support.</Description>
 			</Value>			<!-- Parental Consent To Share With Next ECE Or School -->
 			<Value>
+				<Code>TER</Code>
+				<Text xml:lang="en">Share Student NZQA information with Tertiary Providers</Text>
+			</Value>			<!-- Share NZQA achievement with Tertiary Providers -->
+			<Value>
 				<Code>TRI</Code>
 				<Text xml:lang="en">Authority to release student's NZQA results to a tertiary institution</Text>
 			</Value>

@@ -38,14 +38,14 @@
   </Item>    <!-- StudentAttainmentLocalId -->
 
   <Item>
-    <Element>GrantingProvider</Element>    
+    <Element>GrantingOrganisation</Element>    
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the Provider/Organisation who is granting the attainment to the student, e.g. NZQA, TEC.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
-  </Item>    <!-- GrantingProvider -->
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
+  </Item>    <!-- GrantingOrganisation -->
 
   <Item>
     <Element>Attainment</Element>    
@@ -55,7 +55,7 @@
       <p>A generic object reference to the type of attainment the student has achieved
           e.g. ProviderCourse, LeanringStandard etc.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="NamedObjectReferenceType"></Type>
   </Item>    <!-- Attainment -->
 
   <Item>
@@ -144,9 +144,9 @@
   <xhtml:Example xmlns="" name="Student Attainment - NCEA Course Endorsement">
     <StudentAttainment>
       <StudentAttainmentRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAttainmentRefId>
-      <GrantingProvider>
+      <GrantingOrganisation>
         <RefId>762</RefId>
-      </GrantingProvider>
+      </GrantingOrganisation>
       <Attainment>
         <RefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</RefId>
         <Name>NCEA Level 2 Chemistry - Endorsed with merit</Name>
@@ -207,9 +207,9 @@
   <xhtml:Example xmlns="" name="Student Attainment - School Course Completion">
     <StudentAttainment>
       <StudentAttainmentRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAttainmentRefId>
-      <GrantingProvider>
+      <GrantingOrganisation>
         <RefId>9962</RefId>
-      </GrantingProvider>
+      </GrantingOrganisation>
       <Attainment>
         <RefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</RefId>
         <Name>Introduction to Astrophysics</Name>

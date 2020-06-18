@@ -52,7 +52,7 @@
     <Description>
       <p>Generic object reference to the Provider running the activity the student is participating in, e.g. schools.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
   </Item>    <!-- Provider -->
 
   <Item>

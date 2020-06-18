@@ -55,7 +55,7 @@
     <Description>
       <p>Generic object reference to the school for which this WellbeingAppeal is being reported.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
   </Item>    <!-- Provider -->
 
   <Item>

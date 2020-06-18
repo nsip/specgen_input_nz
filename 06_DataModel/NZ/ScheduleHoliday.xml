@@ -39,15 +39,15 @@
 	</Item>    <!-- ScheduleHolidayLocalId -->
 
 	<Item>
-		<Element>Provider</Element>
+		<Element>Organisation</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The provider the ScheduleHoliday relates to. Not populated if it is a National
 			 Holiday that applies to all providers.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/>
-	</Item>    <!-- Provider -->
+		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
+	</Item>    <!-- Organisation -->
 
 	<Item>
 		<Element>HolidayDate</Element>

@@ -68,7 +68,7 @@
     <Description>
       <p>The ID (GUID) of the provider for this acadmic department resides in.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
   </Item>    <!-- Provider -->
 
   <Item>

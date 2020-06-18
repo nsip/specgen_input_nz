@@ -50,14 +50,14 @@
 	</Item>    <!-- PeriodName -->
 
 	<Item>
-		<Element>Provider</Element>
+		<Element>Organisation</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The provider the schedule period belongs to.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/> 
-	</Item>    <!-- Provider -->
+		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
+	</Item>    <!-- Organisation -->
 	<Item>
 		<Element>Schedule</Element>
 		<Characteristics>M</Characteristics>
@@ -83,10 +83,10 @@
 			<SchedulePeriodRefId>215f796c-67f7-4855-83dc-28ad9d002830</SchedulePeriodRefId>
 			<SchedulePeriodLocalId>2019a-1</SchedulePeriodLocalId>
 			<PeriodName>Period 1</PeriodName>
-			<Provider>
+			<Organisation>
 				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
-			</Provider>
+			</Organisation>
 			<Schedule>
 				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
 				<LocalId>2019a</LocalId>

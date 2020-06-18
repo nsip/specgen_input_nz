@@ -55,7 +55,7 @@
     <Description>
       <p>The provider that created this learning support need reponse.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderObjectReferenceType"/>
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
   </Item>    <!-- Provider -->
 
   <Item>

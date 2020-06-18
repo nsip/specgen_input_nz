@@ -52,15 +52,15 @@
   </Item>    <!-- AssessmentName -->
 
   <Item>
-    <Element>ProviderInvolvedList</Element>    
+    <Element>OrganisationInvolvedList</Element>    
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>A list of the providers involved and their role, e.g. assessing provider, assessment provider, 
+      <p>A list of the Providers/Organisations involved and their role, e.g. assessing provider, assessment provider, 
         assessment location provider, registering provider.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderInvolvedListType"></Type>
-  </Item>    <!-- ProviderInvolvedList -->
+    <Type ref="CommonTypes" name="OrganisationInvolvedListType"></Type>
+  </Item>    <!-- OrganisationInvolvedList -->
 
   <Item>
     <Element>TeachingGroup</Element>
@@ -335,12 +335,12 @@
     <AssessmentTask>
       <AssessmentTaskRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</AssessmentTaskRefId>
       <AssessmentName>NZ History Classroom Test</AssessmentName>
-      <ProviderInvolvedList>
-        <ProviderInvolved>
+      <OrganisationInvolvedList>
+        <OrganisationInvolved>
           <RefId>9962</RefId>
-          <ProviderRole>PRO</ProviderRole>
-        </ProviderInvolved>
-      </ProviderInvolvedList>
+          <OrganisationRole>PRO</OrganisationRole>
+        </OrganisationInvolved>
+      </OrganisationInvolvedList>
       <TeachingGroup>
         <RefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</RefId>
       </TeachingGroup>

@@ -68,23 +68,24 @@
     <Type ref="CodeSets" name="NZCodeSetsTeachingGroupTypeType"/>
   </Item>       <!-- GroupType -->
   <Item>
-    <Element>Provider</Element>
+    <Element>Organisation</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>RefId  of the Provider who defines the TeachingGroup. Either RefId or LocalId must be provided.</p>
+      <p>The organisation who defines the TeachingGroup. Either OrganisationRefId or OrganisationLocalId must be provided.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
   </Item>       <!-- Provider -->
   <Item>
-    <Element>TeachingProvider</Element>
+    <Element>TeachingOrganisation</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>RefId of the Provider who actually teaches the TeachingGroup. Only present when the teaching provider is not the defining provider.</p>
+      <p>The organisation who actually teaches the TeachingGroup. 
+      Only present when the teaching organisation is not the defining organisation.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>       <!-- TeachingProvider -->
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
+  </Item>       <!-- TeachingOrganisation -->
   <Item>
     <Element>ScheduleTerm</Element>
     <Characteristics>O</Characteristics>
@@ -159,9 +160,9 @@
       <ShortName>7A SPN</ShortName>
       <LongName>Year 7A Maths - Space and Numbers</LongName>
       <GroupType>SC</GroupType>
-      <Provider>
+      <Organisation>
         <RefId>234</RefId>
-      </Provider>
+      </Organisation>
       <ScheduleTerm>
         <LocalId>FY2020</LocalId>
       </ScheduleTerm>

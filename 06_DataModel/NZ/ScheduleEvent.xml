@@ -41,14 +41,14 @@
 	</Item>    <!-- ScheduleEventLocalId -->
 
 	<Item>
-		<Element>Provider</Element>
+		<Element>Organisation</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The provider at which this event will occur</p>
 		</Description>
-		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/> 
-	</Item>    <!-- Provider -->
+		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
+	</Item>    <!-- Organisation -->
 	<Item>
 		<Element>EventDate</Element>
 		<Characteristics>M</Characteristics>
@@ -225,10 +225,10 @@
 		<ScheduleEvent>
 			<ScheduleEventRefId>c79e65df-0b11-4a97-9062-9fbd1c1a38e3</ScheduleEventRefId>
 			<ScheduleEventLocalId>evMarSlip</ScheduleEventLocalId>
-			<Provider>
+			<Organisation>
 				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
-			</Provider>
+			</Organisation>
 			<EventDate>2019-03-14</EventDate>
 
 			<Duration>1</Duration>
@@ -247,10 +247,10 @@
 		<ScheduleEvent>
 			<ScheduleEventRefId>c315d397-6d8d-46bd-b183-ad3a3653a42b</ScheduleEventRefId>
 			<ScheduleEventLocalId>evMarCan</ScheduleEventLocalId>
-			<Provider>
+			<Organisation>
 				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
-			</Provider>
+			</Organisation>
 			<EventDate>2019-03-14</EventDate>
 
 			<Duration>1</Duration>
@@ -276,10 +276,10 @@
 		<ScheduleEvent>
 			<ScheduleEventRefId>f84d9681-03f6-4434-a867-967dba517cf5</ScheduleEventRefId>
 			<ScheduleEventLocalId>evWinSprt</ScheduleEventLocalId>
-			<Provider>
+			<Organisation>
 				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
-			</Provider>
+			</Organisation>
 			<EventDate>2019-07-05</EventDate>
 			<Duration>1</Duration>
 			<EventName>Winter Sports - 3 Short Periods, Afternoon Off</EventName>

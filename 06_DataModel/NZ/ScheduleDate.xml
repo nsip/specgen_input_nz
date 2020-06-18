@@ -51,14 +51,14 @@
 		<Type  name="xs:date"/>
 	</Item>    <!-- CalendarDate -->
 	<Item>
-		<Element>Provider</Element>
+		<Element>Organisation</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The provider, e.g. school, tertiary institution etc, that this schedule date record belongs to.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/> 
-	</Item>    <!-- Provider -->
+		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
+	</Item>    <!-- Organisation -->
 	<Item>
 		<Element>Term</Element>
 		<Characteristics>O</Characteristics>
@@ -132,10 +132,10 @@
 			<ScheduleDateRefId>84c40f87-769d-46cc-8077-f5efb912e099</ScheduleDateRefId>
 			<ScheduleDateLocalId>2019a-A-06</ScheduleDateLocalId>
 			<CalendarDate>2019-03-14</CalendarDate>
-			<Provider>
+			<Organisation>
 				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
-			</Provider>
+			</Organisation>
 			<Term>
 				<RefId>2f97ed99-7291-4b88-91c3-709be4308c63</RefId>
 				<Name>Hogwarts High, Term I, 2019</Name>

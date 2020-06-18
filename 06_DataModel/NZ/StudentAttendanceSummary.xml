@@ -53,7 +53,7 @@
     <Description>
       <p>The SIF ID of the Provider who is recording this attendance information.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderObjectReference"></Type>
+    <Type ref="CommonTypes" name="OrganisationObjectReference"></Type>
   </Item>    <!-- Provider -->
   <Item>
     <Element>SchoolCalendarYear</Element>

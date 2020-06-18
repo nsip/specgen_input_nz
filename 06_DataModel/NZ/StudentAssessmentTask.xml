@@ -68,15 +68,15 @@
   </Item>    <!-- StudentAssessmentTaskRegistration -->
 
   <Item>
-    <Element>ProviderInvolvedList</Element>    
+    <Element>OrganisationInvolvedList</Element>    
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>A list of the providers involved and their role, e.g.
+      <p>A list of the Providers/Organisations involved and their role, e.g.
          assessing provider, assessment provider, assessment location provider.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderInvolvedListType"></Type>
-  </Item>    <!-- ProviderInvovledList -->
+    <Type ref="CommonTypes" name="OrganisationInvolvedListType"></Type>
+  </Item>    <!-- OrganisationInvovledList -->
 
   <Item>
     <Element>StaffInvolvedList</Element>    
@@ -172,16 +172,16 @@
       <AssessmentTask>
         <RefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</RefId>
       </AssessmentTask>
-      <ProviderInvolvedList>
-        <ProviderInvolved>
+      <OrganisationInvolvedList>
+        <OrganisationInvolved>
           <RefId>762</RefId>
-          <ProviderRole>LOC</ProviderRole>
-        </ProviderInvolved>
-        <ProviderInvolved>
+          <OrganisationRole>LOC</OrganisationRole>
+        </OrganisationInvolved>
+        <OrganisationInvolved>
           <RefId>9962</RefId>
-          <ProviderRole>PRO</ProviderRole>
-        </ProviderInvolved>
-      </ProviderInvolvedList>
+          <OrganisationRole>PRO</OrganisationRole>
+        </OrganisationInvolved>
+      </OrganisationInvolvedList>
       <StaffInvolvedList>
         <StaffInvolved json:force-array="true">
           <RefId>228a2cbe-93c4-46ba-91fa-b3ae689eb437</RefId>

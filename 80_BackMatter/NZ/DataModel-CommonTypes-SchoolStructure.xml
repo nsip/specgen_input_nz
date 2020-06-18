@@ -542,7 +542,7 @@
 		</Item>    <!-- Type -->
 		<Item>
 			<Element>PrimaryLanguage</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>The primary language utilised by the ECE Service.</p>
@@ -551,7 +551,7 @@
 		</Item>    <!-- PrimaryLanguage -->
 		<Item>
 			<Element>PrimaryLanguageOther</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>Additional information about a language when one of the 'Other' language codes sets is selected.</p>

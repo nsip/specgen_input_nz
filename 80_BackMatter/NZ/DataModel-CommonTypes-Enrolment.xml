@@ -500,6 +500,15 @@
 		</Item>     <!-- EnrolmentId -->
 
 		<Item>
+			<Element>ExamCentre</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Organisation Object reference for the exam centre that will conduct assessment tasks</p>
+			</Description>
+			<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
+		</Item>     <!-- ExamCentre -->
+
+		<Item>
 			<Element>FeeAmount</Element>
 			<Characteristics>O</Characteristics>
 			<Description>

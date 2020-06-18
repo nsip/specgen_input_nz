@@ -102,15 +102,15 @@
     <Type ref="CodeSets" name="NZCodeSetsAssessmentMethodologyType"/>
   </Item>    <!-- AssessmentMethodologyType -->
 
-  <!--  Providers & Markers involved in setting the Assessment Task (and result) -->
+  <!--  Organisations & Markers involved in setting the Assessment Task (and result) -->
   <Item>
-    <Element>ProviderInvolvedList</Element>
+    <Element>OrganisationInvolvedList</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
     </Description>
-    <Type ref="CommonTypes" name="ProviderInvolvedListType"></Type>
-  </Item>    <!-- ProviderInvolvedList -->
+    <Type ref="CommonTypes" name="OrganisationInvolvedListType"></Type>
+  </Item>    <!-- OrganisationInvolvedList -->
   <Item>
     <Element>StaffInvolvedList</Element>
     <Characteristics>O</Characteristics>
@@ -130,7 +130,7 @@
       <p>Reference to the ProviderCourse that this assessment task belongs to.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"/>
-  </Item>    <!-- ProviderCourse -->
+  </Item>    <!-- ProvidernCourse -->
   <Item>
     <Element>LearningStandardList</Element>
     <Characteristics>O</Characteristics>
@@ -361,12 +361,12 @@
         </Student>
         <AssessmentType>INT</AssessmentType>
         <AssessmentMethodology>P</AssessmentMethodology>
-        <ProviderInvolvedList>
-          <ProviderInvolved>
+        <OrganisationInvolvedList>
+          <OrganisationInvolved>
             <RefId>9953</RefId>
-            <ProviderRole>PRO</ProviderRole>
-          </ProviderInvolved>
-        </ProviderInvolvedList>
+            <OrganisationRole>PRO</OrganisationRole>
+          </OrganisationInvolved>
+        </OrganisationInvolvedList>
         <SubjectAreaList>
             <SubjectArea>MATH</SubjectArea>
         </SubjectAreaList>
@@ -419,12 +419,12 @@
       </Student>
       <AssessmentType>INT</AssessmentType>
       <AssessmentMethodology>P</AssessmentMethodology>
-      <ProviderInvolvedList>
-        <ProviderInvolved>
+      <OrganisationInvolvedList>
+        <OrganisationInvolved>
           <RefId>722</RefId>
-          <ProviderRole>PRO</ProviderRole>
-        </ProviderInvolved>
-      </ProviderInvolvedList>
+          <OrganisationRole>PRO</OrganisationRole>
+        </OrganisationInvolved>
+      </OrganisationInvolvedList>
       <SubjectAreaList>
           <SubjectArea>ENGL</SubjectArea>
       </SubjectAreaList>
@@ -496,12 +496,12 @@
       </Student>
       <AssessmentType>INT</AssessmentType>
       <AssessmentMethodology>P</AssessmentMethodology>
-      <ProviderInvolvedList>
-        <ProviderInvolved>
+      <OrganisationInvolvedList>
+        <OrganisationInvolved>
           <RefId>752</RefId>
-          <ProviderRole>PRO</ProviderRole>
-        </ProviderInvolved>
-      </ProviderInvolvedList>
+          <OrganisationRole>PRO</OrganisationRole>
+        </OrganisationInvolved>
+      </OrganisationInvolvedList>
       <SubjectAreaList>
           <SubjectArea>ENGL</SubjectArea>
       </SubjectAreaList>
@@ -553,12 +553,12 @@
       </Student>
       <AssessmentType>INT</AssessmentType>
       <AssessmentMethodology>P</AssessmentMethodology>
-      <ProviderInvolvedList>
-        <ProviderInvolved>
+      <OrganisationInvolvedList>
+        <OrganisationInvolved>
           <RefId>277</RefId>
-          <ProviderRole>PRO</ProviderRole>
-        </ProviderInvolved>
-      </ProviderInvolvedList>
+          <OrganisationRole>PRO</OrganisationRole>
+        </OrganisationInvolved>
+      </OrganisationInvolvedList>
       <SubjectAreaList>
           <SubjectArea>MATH</SubjectArea>
       </SubjectAreaList>

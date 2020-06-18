@@ -8,7 +8,7 @@
 		<inputDocument>SIF_DataModel.xml</inputDocument>
 		<sifNamespace>http://www.sifassociation.org/datamodel/nz/3.1</sifNamespace>
 		<localizationCode>nz</localizationCode>
-		<schemaVersion>3.1 (rc 3)</schemaVersion>
+		<schemaVersion>3.2 (rc 1)</schemaVersion>
 		<jsonExamplesXslt>98_Xslt/xmlToJson.xsl</jsonExamplesXslt>
 		<resolveExtensions>true</resolveExtensions>
 		<isDraft>true</isDraft>
@@ -33,7 +33,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Data Model (New Zealand) 3.1 (rc 3)</rootTitle>
+			<rootTitle>SIF Data Model (New Zealand) 3.2 (rc 1)</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -41,7 +41,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Data Model (New Zealand) 3.1 (rc 3)</rootTitle>
+			<rootTitle>SIF Data Model (New Zealand) 3.2 (rc 1)</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		

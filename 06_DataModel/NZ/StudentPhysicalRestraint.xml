@@ -47,7 +47,7 @@
     <Description>
       <p>Generic object reference to the provider under whose supervision the student was, at the time the physical restraint incient occured.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderObjectReferenceType"/>
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
   </Item>    <!-- Provider -->
 
   <Item>

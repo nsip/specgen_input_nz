@@ -57,7 +57,7 @@
     <Description>
       <p>Generic object reference to the provider which recorded this Wellbeing Characteristic.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
   </Item>    <!-- RecordingProvider -->
   
   <Item>

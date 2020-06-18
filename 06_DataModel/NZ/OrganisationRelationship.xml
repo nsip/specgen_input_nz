@@ -1,4 +1,4 @@
-<DataObject name="ProviderRelationship" 
+<DataObject name="OrganisationRelationship" 
   xmlns:xs="http://www.w3.org/2001/XMLSchema" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xmlns:xi="http://www.w3.org/2001/XInclude" 
@@ -6,31 +6,31 @@
   xmlns:json="http://json.org/" 
   xmlns="http://sifassociation.org/SpecGen">
 
-  <Key>ProviderRelationshipRefId</Key>
+  <Key>OrganisationRelationshipRefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
-    <Element>ProviderRelationship</Element>
+    <Element>OrganisationRelationship</Element>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Records a recognised relationship between two education Providers. The two providers
-         are referred	 to as the Source Provider and the Related Provider.
+      <p>Records a recognised relationship between two education Organisations. The two organisations
+         are referred	 to as the Source Organisation and the Related Organisation.
       </p>
-      <p>RelationshipType records the nature of the relationship between the two providers, and gives
-      guidance on which Provider is the Source Provider and which is the Related Provider.
+      <p>RelationshipType records the nature of the relationship between the two organisations, and gives
+      guidance on which is the Source Organisation and which is the Related Organisation.
       </p>
     </Description>
   </Item>
   <Item>
-    <Element>ProviderRelationshipRefId</Element>
+    <Element>OrganisationRelationshipRefId</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>  <!-- ProviderRelationshipRefId -->
+  </Item>  <!-- OrganisationRelationshipRefId -->
   <Item>
-    <Element>ProviderRelationshipLocalId</Element>
+    <Element>OrganisationRelationshipLocalId</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
@@ -38,14 +38,14 @@
 			was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>  <!-- ProviderRelationshipLocalId -->
+  </Item>  <!-- OrganisationRelationshipLocalId -->
 
   <Item>
     <Element>RelationshipType</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The SIF GUID for the source provider in the relationship.</p>
+      <p>The SIF GUID for the source organisation in the relationship.</p>
     </Description>
 	  <Type ref="CodeSets" name="NZCodeSetsOrganisationRelationshipTypeType"/>
   </Item>  <!-- RelationshipType -->
@@ -55,7 +55,7 @@
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Generic object reference to the source provider in the relationship.</p>
+      <p>Generic object reference to the source Organisation in the relationship.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
   </Item>  <!-- SourceOrganisation -->
@@ -64,7 +64,7 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The role the source organisation is playing in this relationship.</p>
+      <p>The role the source Organisation is playing in this relationship.</p>
     </Description>
 	  <Type ref="CodeSets" name="NZCodeSetsSourceOrganisationRoleType"/>
   </Item>  <!-- SourceOrganisationRole -->
@@ -73,8 +73,8 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The date the source Provider in the relationship registered their agreement to the relationship.
-      nil value if the source Provider is yet to register their agreement ot the relationship.</p>
+      <p>The date the source Organisation in the relationship registered their agreement to the relationship.
+      nil value if the source Organisation is yet to register their agreement ot the relationship.</p>
     </Description>
     <Type name="xs:date"/>
   </Item>  <!-- SourceOrganisationAgreementDate -->
@@ -84,7 +84,7 @@
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Generic object reference to the related provider in the relationship.</p>
+      <p>Generic object reference to the related Organisation in the relationship.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
   </Item>  <!-- RelatedOrganisation -->
@@ -93,7 +93,7 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The role the related organisation is playing in this relationship.</p>
+      <p>The role the related Organisation is playing in this relationship.</p>
     </Description>
 	  <Type ref="CodeSets" name="NZCodeSetsRelatedOrganisationRoleType"/>
   </Item>  <!-- RelatedOrganisationRole -->  
@@ -102,8 +102,8 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The date the related Provider in the relationship registered their agreement to the relationship.
-      nil value if the related Provider is yet to register their agreement ot the relationship.</p>
+      <p>The date the related Organisation in the relationship registered their agreement to the relationship.
+      nil value if the related Organisation is yet to register their agreement ot the relationship.</p>
     </Description>
     <Type name="xs:date"/>
   </Item>  <!-- RelatedOrganisationAgreementDate -->
@@ -113,7 +113,7 @@
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The date from which the provider relationship is active.</p>
+      <p>The date from which the organisation relationship is active.</p>
     </Description>
     <Type name="xs:date"/>
   </Item>  <!-- EffectiveDate -->
@@ -122,7 +122,7 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The date after which the provider relationship is no longer active.</p>
+      <p>The date after which the organisation relationship is no longer active.</p>
     </Description>
     <Type name="xs:date"/>
   </Item>  <!-- ExpirationDate -->
@@ -133,7 +133,7 @@
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A list of YearLevels, denoting the year levels of the
-		  learners being hosted or sent from the client or contributing provider</p>
+		  learners being hosted or sent from the client or contributing organisation</p>
     </Description>
     <Type ref="CommonTypes" name="YearLevelListType"/>
   </Item>  <!-- YearLevelList -->
@@ -143,7 +143,7 @@
     <privacyRating>Low</privacyRating>
     <Description>
       <p>A list of Subject or Learning Areas, denoting the curriculum subjects or learning areas that 
-      the learners being sent by the Source Provider are taught at the Related Provider.</p>
+      the learners being sent by the Source Organisation are taught at the Related Organisation.</p>
     </Description>
     <Type ref="CommonTypes" name="SubjectAreaListType"/>
   </Item>  <!-- SubjectAreaList -->
@@ -152,7 +152,7 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Free text description providing more detail about the provider relationship.</p>
+      <p>Free text description providing more detail about the organisation relationship.</p>
     </Description>
     <Type name="xs:normalizedString"/>
   </Item>  <!-- Description -->

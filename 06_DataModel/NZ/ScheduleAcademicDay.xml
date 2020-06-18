@@ -52,14 +52,14 @@
 	</Item>    <!-- AcademicDayName -->
 
 	<Item>
-		<Element>Provider</Element>
+		<Element>Organisation</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The provider the academic day belongs to.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/> 
-	</Item>    <!-- Provider -->
+		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
+	</Item>    <!-- Organisation -->
 	<Item>
 		<Element>Schedule</Element>
 		<Characteristics>M</Characteristics>
@@ -102,10 +102,10 @@
 			<ScheduleAcademicDayRefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</ScheduleAcademicDayRefId>
 			<ScheduleAcademicDayLocalId>2019a-A</ScheduleAcademicDayLocalId>
 			<AcademicDayName>Scheule 2019a, Day A</AcademicDayName>
-			<Provider>
+			<Organisation>
 				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
-			</Provider>
+			</Organisation>
 			<Schedule>
 				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
 				<Name>Scheule 2019a (Term 1)</Name>

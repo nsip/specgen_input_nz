@@ -57,7 +57,7 @@
     <Description>
       <p>Object reference to the provider for which this WellbeingEvent is being reported.</p>
     </Description>
-    <Type ref="CommonTypes" name="ProviderObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
   </Item>    <!-- ReportingProvider -->
   
   <Item>

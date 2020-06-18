@@ -67,14 +67,14 @@
 	</Item>    <!-- EndDate -->
 
 	<Item>
-		<Element>Provider</Element>
+		<Element>Organisation</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The provider the schedule is for.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ProviderObjectReferenceType"/> 
-	</Item>    <!-- Provider -->
+		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
+	</Item>    <!-- Organisation -->
 
 	<Item>
 		<Element>AcademicDayList</Element>
@@ -103,10 +103,10 @@
 			<ScheduleName>Scheule 2019a (Term 1)</ScheduleName>
 			<StartDate>2019-01-30</StartDate>
 			<EndDate>2019-04-07</EndDate>
-			<Provider>
+			<Organisation>
 				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
-			</Provider>
+			</Organisation>
 			<AcademicDayList>
 				<AcademicDay>
 					<RefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</RefId>

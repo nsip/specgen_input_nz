@@ -6,100 +6,311 @@
 			xmlns:json="http://json.org/"
 			
       xmlns="http://sifassociation.org/SpecGen">
-	  
-  	<Key>OrganisationRefId</Key>
-  	<EventsReported>true</EventsReported>
-	<Item>
-		<Element>Organisation</Element>
+  <Key>OrganisationRefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>Organisation</Element>
 		<privacyRating>Low</privacyRating>
-		<Description>
-			A generic organisation that operates within the education sector; but doesn’t provide education 
-			services. e.g. Communities of Learning | Kāhui Ako, Ministry local offices, 
-			Industry training organisations, etc. 
-		</Description>
+    	<Description>A recognised provider of education services in the New Zealand
+			education system.  Providers may operate in the Early Childhood, Compulsory Schooling or Tertiary sectors.
+    	</Description>
 		<Type complex="extension" name="EduOrganisationType"/>
-	</Item>
-	<Item>
+  </Item>   <!-- Organisation -->
+  <Item>
 		<Element>OrganisationRefId</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The universally unique identifier for the data object record that is used across systems.</p>
+			<p>The Ministry OrganisationId for the Organisation that is used across systems.</p>
 		</Description>
-		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>   <!-- OrganisationRefId -->
-	<Item>
+		<Type ref="CommonTypes" name="MoEOrgIdType"/>
+  </Item>   <!-- OrganisationRefId -->
+  <Item>
 		<Element>OrganisationLocalId</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The Id of the data object record that was provided by the system that the information 
-			was originally sourced from.</p>
+			<p>The Id of the data object record that was provided by the system that the information was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/>
-	</Item>   <!-- OrganisationLocalId -->		
-	<Item>
-		<Element>RecordAudit</Element>    
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-	
-	<xhtml:Example xmlns="" name="Kāhui Ako Organisation Example">
-		<Organisation>
-			<AddressList/>
-			<CommunicationChannelList/>
-			<ContactList>
-				<Contact>
-					<Name>
-						<FamilyName>Dumbledore</FamilyName>
-						<GivenName>Albus</GivenName>
-						<FullName>Albus Dumbledore</FullName>
-					</Name>
-					<PositionTitle>Lead School Headmaster</PositionTitle>
-					<Role>PRI</Role>
-					<AddressList>
-						<Address>
-							<Type>TH</Type>
-							<Role>PHY</Role>
-							<Line1>533 Hogwart's Way</Line1>
-							<City>Hogsmead</City>
-							<PostalCode json:force-string="true">7733</PostalCode>
-						</Address>
-					</AddressList>
-					<EmailList/>
-					<PhoneNumberList/>
-				</Contact>
-				</ContactList>
-				<EmailList>
-					<Email json:force-array="true">
-						<Type>PRIM</Type>
-						<Address>stuart@gmail.com</Address>
-					</Email>
-				</EmailList>
-			<LocationList/>
-			<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
-			<PhoneNumberList>
-				<PhoneNumber>
-					<Notes>Lead School Secretary (Mobile)</Notes>
-					<Type>MOB</Type>
-					<Number>(021) 300 999</Number>
-				</PhoneNumber>
-			</PhoneNumberList>
-			<Type json:force-string="true">35008</Type>
-			<OrganisationRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</OrganisationRefId>
-			<OrganisationLocalId>99204</OrganisationLocalId>
-			<RecordAudit>
-				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-				<CreatedBy>
-				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
-				<Name>Bobby Test</Name>
-				</CreatedBy>
-			</RecordAudit>
-		</Organisation>
-	</xhtml:Example>
+  </Item>   <!-- OrganisationLocalId -->
+  <Item>
+	  <Element>Authority</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>
+		  <p>A code denoting the authority by which the Provider is authorised to
+		  provide education services.
+		  </p>
+	  </Description>
+	  <Type ref="CodeSets" name="NZCodeSetsProviderAuthorityType"/>
+  </Item>   <!-- Authority -->
+  <Item>
+	  <Element>SchoolService</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>
+		  <p>Only present if the Provider is a provider of school education services.
+		  Contains properties that are school-specific. </p>
+	  </Description>
+	  <Type ref="CommonTypes" name="SchoolServiceType"/>
+  </Item>   <!-- SchoolService -->
+  <Item>
+	  <Element>ECEService</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>
+		  <p>Only present if the Provider is a provider of early childhood education services.
+		  Contains properties that are ECE specific.</p>
+	  </Description>
+	  <Type ref="CommonTypes" name="ECEServiceType"/>
+  </Item>   <!-- ECEService -->
+  
+  <Item>
+	  <Element>TertiaryService</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>
+		  <p>Only present if the Provider is a provider of tertiary education services.
+		  Contains properties that are Tertiary Education specific.</p>
+		  <p>A placeholder for future expansion</p>
+	  </Description>
+	  <Type ref="CommonTypes" name="TertiaryServiceType"/>
+  </Item>   <!-- TertiaryService --> 
+  
+  <Item>
+	  <Element>RecordAudit</Element>    
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>
+	  <p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+	  </Description>
+	  <Type ref="CommonTypes" name="RecordAuditType"></Type>
+  </Item>    <!-- RecordAudit -->
+
+  <xhtml:Example xmlns="" name="School Provider Example">
+    <Organisation>
+		<AddressList>
+			<Address json:force-array="true">
+				<Type>RU</Type>
+				<Role>PHY</Role>
+				<Line1>1175 Lake Ferry Rd</Line1>
+				<Suburb>RD 1</Suburb>
+				<City>Martinborough</City>
+			</Address>
+		</AddressList>
+		<CommunicationChannelList>
+			<Channel>
+				<Notes>Attendance System (Self Service)</Notes>
+				<Type>WEB</Type>
+				<Value>http://att.hogwarts.school.nz</Value>
+			</Channel>
+			<Channel>
+				<Notes>School Website</Notes>
+				<Type>WEB</Type>
+				<Value>http://www.hogwarts.school.nz</Value>
+			</Channel>
+		</CommunicationChannelList>
+		<ContactList>
+			<Contact>
+				<Name>
+					<FamilyName>Dumbledore</FamilyName>
+					<GivenName>Albus</GivenName>
+					<FullName>Albus Dumbledore</FullName>
+				</Name>
+				<PositionTitle>Headmaster</PositionTitle>
+				<Role>PRI</Role>
+				<AddressList>
+					<Address json:force-array="true">
+						<Type>TH</Type>
+						<Role>PHY</Role>
+						<Line1>533 Hogwart's Way</Line1>
+						<City>Hogsmead</City>
+						<PostalCode json:force-string="true">7733</PostalCode>
+					</Address>
+				</AddressList>
+				<EmailList/>
+				<PhoneNumberList/>
+			</Contact>
+			<Contact>
+				<Name>
+					<FamilyName>Hagrid</FamilyName>
+					<GivenName>Rubeus</GivenName>
+					<FullName>Rubeus Hagrid</FullName>
+				</Name>
+				<PositionTitle>Gamekeeper</PositionTitle>
+				<Role>DIR</Role>
+				<AddressList>
+					<Address json:force-array="true">
+						<Type>TH</Type>
+						<Role>PHY</Role>
+						<Line1>The Enchanted Wood</Line1>
+						<Line2>533 Hogwart's Way</Line2>
+						<City>Hogsmead</City>
+						<PostalCode json:force-string="true">7733</PostalCode>
+					</Address>
+				</AddressList>
+				<EmailList/>
+				<PhoneNumberList/>
+			</Contact>
+		</ContactList>
+		<EducationRegion>TAIT</EducationRegion>
+		<EmailList>
+			<Email json:force-array="true">
+				<Type>PRIM</Type>
+				<Address>stuart@gmail.com</Address>
+			</Email>
+		</EmailList>
+		<EntityOpen>1652-04-01</EntityOpen>
+		<LocationList>
+			<Location json:force-array="true">
+				<Description>Only Campus</Description>
+				<Address>
+					<Type>RU</Type>
+					<Role>PHY</Role>
+					<Line1>1175 Lake Ferry Rd</Line1>
+					<Suburb>RD 1</Suburb>
+					<City>Martinborough</City>
+					<PostalCode json:force-string="true">5781</PostalCode>
+				</Address>
+				<GridLocation>
+					<Latitude>-41.2814719</Latitude>
+					<Longitude>175.3458472</Longitude>
+				</GridLocation>
+				<StatisticalAreaList>
+					<StatisticalArea>
+						<SpatialUnitType>GE</SpatialUnitType>
+						<Code>058</Code>
+					</StatisticalArea>
+					<StatisticalArea>
+						<SpatialUnitType>TA</SpatialUnitType>
+						<Code>050</Code>
+					</StatisticalArea>
+					<StatisticalArea>
+						<SpatialUnitType>WA</SpatialUnitType>
+						<Code>05003</Code>
+					</StatisticalArea>
+				</StatisticalAreaList>
+			</Location>
+		</LocationList>			
+		<Name>Hogwart's Area School</Name>			
+		<PhoneNumberList>
+			<PhoneNumber>
+				<Notes>Attendance Office (Automated)</Notes>
+				<Usage>SMS</Usage>
+				<Type>WTE</Type>
+				<Number>(0274) 300 9991</Number>
+			</PhoneNumber>
+			<PhoneNumber>
+				<Notes>Attendance Office</Notes>
+				<Usage>INT</Usage>
+				<Type>WTE</Type>
+				<Number>(04) 300 9992</Number>
+			</PhoneNumber>
+			<PhoneNumber>
+				<Notes>School Secretary DDI</Notes>
+				<Type>WTE</Type>
+				<Number>(04) 300 9993</Number>
+			</PhoneNumber>
+		</PhoneNumberList>
+		<RelatedOrganisationList>
+			<RelatedOrganisation>
+				<RefId>9965</RefId>
+				<Name>Tai Tokerau</Name>
+				<StartDate>2012-10-31</StartDate>
+				<Type>LOF</Type>
+			</RelatedOrganisation>
+			<RelatedOrganisation>
+				<RefId>9651</RefId>
+				<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
+				<StartDate>2012-04-30</StartDate>
+				<Type json:force-string="true">34028</Type>
+			</RelatedOrganisation>
+		</RelatedOrganisationList>
+		<OperationalStatus>O</OperationalStatus>
+		<Type json:force-string="true">21</Type>
+		<OrganisationRefId>448</OrganisationRefId>
+		<Authority>STATE</Authority>
+		<SchoolService>
+			<CoEdStatus>COED</CoEdStatus>
+			<Decile>5</Decile>
+			<NewEntrantPolicyList>
+				<EnactedPolicy>
+					<EffectiveTo>2018-12-31</EffectiveTo>
+					<Policy>AE</Policy>
+				</EnactedPolicy>
+				<EnactedPolicy>
+					<EffectiveFrom>2019-01-01</EffectiveFrom>
+					<Policy>CE</Policy>
+				</EnactedPolicy>
+			</NewEntrantPolicyList>
+			<SchoolClassificationList>
+				<Classification json:force-string="true">52010</Classification>
+				<Classification json:force-string="true">52004</Classification>
+				<Classification json:force-string="true">52002</Classification>
+			</SchoolClassificationList>			
+			<SchoolYearList>
+				<SchoolYear>
+					<YearLevel json:force-string="true">1</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel json:force-string="true">2</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel json:force-string="true">3</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel json:force-string="true">4</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel json:force-string="true">5</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel json:force-string="true">6</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel json:force-string="true">7</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel json:force-string="true">8</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel json:force-string="true">9</YearLevel>
+					<Gender>F</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel json:force-string="true">10</YearLevel>
+					<Gender>F</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel json:force-string="true">11</YearLevel>
+					<Gender>F</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel json:force-string="true">12</YearLevel>
+					<Gender>F</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel json:force-string="true">13</YearLevel>
+					<Gender>F</Gender>
+					</SchoolYear>
+			</SchoolYearList>
+		</SchoolService>
+		<RecordAudit>
+			<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+			<CreatedBy>
+			<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+			<Name>Bobby Test</Name>
+			</CreatedBy>
+		</RecordAudit>
+    </Organisation>
+  </xhtml:Example>
 </DataObject>
-	
