@@ -185,7 +185,7 @@
 			</Value>	<!-- Changed from Standalone -->
 		</Values>
 	</CodeSet>    <!-- Operational Status Reason -->
-
+  
 	<CodeSet>
 		<Intro>
 			<p>A summary description of the gender of students that a school accepts, indicating the 
@@ -1297,6 +1297,7 @@
 				<Code>ESP</Code>
 				<Text>Licenced ECEService - ECE Service Provider</Text>
 			</Value>	<!-- Licensed ECE Service, ECE Service Provider -->
+
 			<Value>
 				<Code>34008</Code>
 				<Text xml:lang="en">School and Attached Unit</Text>

@@ -105,6 +105,7 @@
 			</Description>
 			<Type name="xs:int"/>
 		</Item>     <!-- LocationNum -->
+
  		<xhtml:Example xmlns="" name="ProviderObjectReferenceType Example">
 			<ProviderObjectReference>
 				<RefId json:force-string="true">672</RefId>
@@ -169,7 +170,8 @@
 			</Description>
 			<Type complex="extension" name="ProviderObjectReferenceType"/>			
 		</Item>
- 		<xhtml:Example xmlns="" name="LocationObjectReferenceType Example">
+
+    	<xhtml:Example xmlns="" name="LocationObjectReferenceType Example">
 			<LocationObjectReference>
 				<RefId json:force-string="true">672</RefId>
 				<Name>Massey University - Wellington Campus</Name>
