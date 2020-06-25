@@ -3,7 +3,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xi="http://www.w3.org/2001/XInclude"
 	xmlns:xhtml="http://www.w3.org/1999/xhtml"
-	
+    xmlns:json="http://json.org/"
+
 	xmlns="http://sifassociation.org/SpecGen">
 
 	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
@@ -1306,7 +1307,7 @@
 
 		<xhtml:Example xmlns="" name ="SocialGoalList">
 			<SocialGoalList>
-				<SocialGoal>
+				<SocialGoal json:force-array="true">
 					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
 					<GoalDescription>Timothy would like to have more friends to play with at lunchtime.</GoalDescription>
 					<GoalName>Have more friends</GoalName>
@@ -1334,7 +1335,7 @@
 
 		<xhtml:Example xmlns="" name ="CareerGoalList">
 			<CareerGoalList>
-				<CareerGoal>
+				<CareerGoal json:force-array="true">
 					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
 					<GoalDescription>Jemima would like to be a Marine Biologist, or Deep Sea Diver</GoalDescription>
 					<GoalName>Marine Biologist</GoalName>
@@ -1363,7 +1364,7 @@
 
 		<xhtml:Example xmlns="" name ="AcademicGoalList">
 			<AcademicGoalList>
-				<AcademicGoal>
+				<AcademicGoal json:force-array="true">
 					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
 					<GoalDescription>Te Huia wants to excel at Te Reo Māori</GoalDescription>
 					<GoalName>Excel Te Reo</GoalName>
@@ -1451,7 +1452,7 @@
 
 		<xhtml:Example xmlns="" name ="StudentInterestList">
 			<StudentInterestList>
-				<StudentInterest>
+				<StudentInterest json:force-array="true">
 					<InterestRecordedDate>2018-11-30</InterestRecordedDate>
 					<InterestDescription>Tobias spends most lunchtimes playing with the piano, or watching others playing music</InterestDescription>
 					<InterestName>Music/Piano</InterestName>

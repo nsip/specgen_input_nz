@@ -282,7 +282,7 @@
         <FundedBy>BOA</FundedBy>		
       </InternalResponse>
       <ReviewList>
-        <Review>
+        <Review json:force-array="true">
           <Reviewer>
             <RefId>CA2BBB26-359D-2480-1A8C-36432A901A16</RefId>
           </Reviewer>
@@ -292,7 +292,7 @@
         </Review>
       </ReviewList>
       <AttachmentList>
-        <Document>
+        <Document json:force-array="true">
           <RefId>CA2BBB26-359D-3480-1A8C-36432A901A16</RefId>
         </Document>
       </AttachmentList>

@@ -185,8 +185,8 @@
       </AssignedLocation>
       <Description>Senior English Teacher</Description>
       <StaffRoleList>
-        <StaffRole>
-          <Role json:force-array="true" json:force-string="true">1102</Role>
+        <StaffRole json:force-array="true">
+          <Role json:force-string="true">1102</Role>
         </StaffRole>
       </StaffRoleList>
       <StartDate>2000-09-05</StartDate>
@@ -232,8 +232,8 @@
       </AssignedLocation>
       <Description>Kāhui Ako Cross School Teacher</Description>
       <StaffRoleList>
-        <StaffRole>
-          <Role json:force-array="true" json:force-string="true">1102</Role>
+        <StaffRole json:force-array="true">
+          <Role json:force-string="true">1102</Role>
           <StartDate>2000-09-05</StartDate>
           <EndDate>2001-03-31</EndDate>
         </StaffRole>

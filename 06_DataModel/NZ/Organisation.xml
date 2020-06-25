@@ -53,7 +53,7 @@
 			<AddressList/>
 			<CommunicationChannelList/>
 			<ContactList>
-				<Contact>
+				<Contact json:force-array="true">
 					<Name>
 						<FamilyName>Dumbledore</FamilyName>
 						<GivenName>Albus</GivenName>
@@ -62,7 +62,7 @@
 					<PositionTitle>Lead School Headmaster</PositionTitle>
 					<Role>PRI</Role>
 					<AddressList>
-						<Address>
+						<Address json:force-array="true">
 							<Type>TH</Type>
 							<Role>PHY</Role>
 							<Line1>533 Hogwart's Way</Line1>
@@ -83,7 +83,7 @@
 			<LocationList/>
 			<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
 			<PhoneNumberList>
-				<PhoneNumber>
+				<PhoneNumber json:force-array="true">
 					<Notes>Lead School Secretary (Mobile)</Notes>
 					<Type>MOB</Type>
 					<Number>(021) 300 999</Number>

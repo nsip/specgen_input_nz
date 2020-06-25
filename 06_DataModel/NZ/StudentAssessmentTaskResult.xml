@@ -362,13 +362,13 @@
         <AssessmentType>INT</AssessmentType>
         <AssessmentMethodology>P</AssessmentMethodology>
         <ProviderInvolvedList>
-          <ProviderInvolved>
+          <ProviderInvolved json:force-array="true">
             <RefId>9953</RefId>
             <ProviderRole>PRO</ProviderRole>
           </ProviderInvolved>
         </ProviderInvolvedList>
         <SubjectAreaList>
-            <SubjectArea>MATH</SubjectArea>
+            <SubjectArea json:force-array="true">MATH</SubjectArea>
         </SubjectAreaList>
         <Curriculum>NZC</Curriculum>
         <AssessmentToolUsed>PATCOMP</AssessmentToolUsed>
@@ -420,13 +420,13 @@
       <AssessmentType>INT</AssessmentType>
       <AssessmentMethodology>P</AssessmentMethodology>
       <ProviderInvolvedList>
-        <ProviderInvolved>
+        <ProviderInvolved json:force-array="true">
           <RefId>722</RefId>
           <ProviderRole>PRO</ProviderRole>
         </ProviderInvolved>
       </ProviderInvolvedList>
       <SubjectAreaList>
-          <SubjectArea>ENGL</SubjectArea>
+          <SubjectArea json:force-array="true">ENGL</SubjectArea>
       </SubjectAreaList>
       <Curriculum>NZC</Curriculum>
       <AssessmentToolUsed>STARREA</AssessmentToolUsed>
@@ -497,13 +497,13 @@
       <AssessmentType>INT</AssessmentType>
       <AssessmentMethodology>P</AssessmentMethodology>
       <ProviderInvolvedList>
-        <ProviderInvolved>
+        <ProviderInvolved json:force-array="true">
           <RefId>752</RefId>
           <ProviderRole>PRO</ProviderRole>
         </ProviderInvolved>
       </ProviderInvolvedList>
       <SubjectAreaList>
-          <SubjectArea>ENGL</SubjectArea>
+          <SubjectArea json:force-array="true">ENGL</SubjectArea>
       </SubjectAreaList>
       <Curriculum>NZC</Curriculum>
       <AssessmentToolUsed>EASREAD</AssessmentToolUsed>
@@ -554,13 +554,13 @@
       <AssessmentType>INT</AssessmentType>
       <AssessmentMethodology>P</AssessmentMethodology>
       <ProviderInvolvedList>
-        <ProviderInvolved>
+        <ProviderInvolved json:force-array="true">
           <RefId>277</RefId>
           <ProviderRole>PRO</ProviderRole>
         </ProviderInvolved>
       </ProviderInvolvedList>
       <SubjectAreaList>
-          <SubjectArea>MATH</SubjectArea>
+          <SubjectArea json:force-array="true">MATH</SubjectArea>
       </SubjectAreaList>
       <Curriculum>NZC</Curriculum>
       <EvaluationType>F</EvaluationType>
