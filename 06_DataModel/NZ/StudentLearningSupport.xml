@@ -261,7 +261,7 @@
       </Provider>
 		  <LearnerStatus>ACT</LearnerStatus>
 		  <StudentConsentList>
-		    <StudentConsent>
+		    <StudentConsent json:force-array="true">
 			    <RefId>461423B4-CFEF-4820-8501-E7D1E54555CB</RefId>
 		    </StudentConsent>
       </StudentConsentList>
@@ -282,13 +282,13 @@
 			  </StudentVoice>
 	  	</StudentVoiceList>
       <SupportNeedList>
-        <SupportNeed>
+        <SupportNeed json:force-array="true">
           <Need>
             <RefId>461423B4-BBEF-4820-8345-E724E54555CB</RefId>
             <Name>Literacy</Name>
           </Need>
           <ResponseList>
-            <Response>
+            <Response json:force-array="true">
               <RefId>461423B4-BBEF-4820-8345-E724E5455BBB</RefId>
             </Response>
           </ResponseList>

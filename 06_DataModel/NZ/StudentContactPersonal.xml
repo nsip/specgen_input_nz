@@ -178,7 +178,7 @@
 					</Email>
 				</EmailList>
 				<PhoneNumberList>
-					<PhoneNumber>
+					<PhoneNumber json:force-array="true">
 						<Type>MOB</Type>
 						<Number>(021) 300 999</Number>
 					</PhoneNumber>

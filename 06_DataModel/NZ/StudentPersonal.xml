@@ -187,7 +187,7 @@
 							<Code>NZS01110</Code>
 							<Usage>FL</Usage>
 							<ProficiencyList>
-								<Proficiency>
+								<Proficiency json:force-array="true">
 									<Level>AD</Level>
 									<Type>SP</Type>
 								</Proficiency>
@@ -197,7 +197,7 @@
 							<Code>NZS01112</Code>
 							<Usage>SL</Usage>
 							<ProficiencyList>
-								<Proficiency>
+								<Proficiency json:force-array="true">
 									<Level>BE</Level>
 									<Type>SP</Type>
 								</Proficiency>
@@ -215,11 +215,11 @@
 						</Ethnicity>
 					</EthnicityList>
 					<IwiAffiliationList>
-						<Iwi>
+						<Iwi json:force-array="true">
 							<Code>NZS1001</Code>
 							<PreferenceOrderNumber>1</PreferenceOrderNumber>
 							<HapuAffiliationList>
-								<Hapu>
+								<Hapu json:force-array="true">
 									<HapuName>Manukorihi</HapuName>
 									<PreferenceOrderNumber>1</PreferenceOrderNumber>
 								</Hapu>
@@ -255,7 +255,7 @@
 					</Email>
 				</EmailList>
 				<PhoneNumberList>
-					<PhoneNumber>
+					<PhoneNumber json:force-array="true">
 						<Type>MOB</Type>
 						<Number>(021) 300 999</Number>
 					</PhoneNumber>

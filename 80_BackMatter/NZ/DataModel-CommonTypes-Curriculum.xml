@@ -35,8 +35,8 @@
 		<xhtml:Example xmlns="" name="Subject Area List Example">
 			<SubjectAreaList>
 				<SubjectArea>FREN</SubjectArea>
-				<NCEASubjectArea>TIKA</NCEASubjectArea>
 				<SubjectArea>HIST</SubjectArea>
+				<NCEASubjectArea json:force-array="true">TIKA</NCEASubjectArea>
 			</SubjectAreaList>
 		</xhtml:Example>
 	</CommonElement>

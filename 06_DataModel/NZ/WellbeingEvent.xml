@@ -3,6 +3,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xi="http://www.w3.org/2001/XInclude"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:json="http://json.org/"
 
   xmlns="http://sifassociation.org/SpecGen">
 
@@ -294,7 +295,7 @@
       <EventTimePeriod>AM</EventTimePeriod>
       <RestraintType>NON</RestraintType>
       <ActionTakenList>
-        <ActionTaken>ININ</ActionTaken>
+        <ActionTaken json:force-array="true">ININ</ActionTaken>
       </ActionTakenList>
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>

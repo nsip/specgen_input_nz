@@ -156,7 +156,7 @@
 							<Code>NZS01110</Code>
 							<Usage>FL</Usage>
 							<ProficiencyList>
-								<Proficiency>
+								<Proficiency json:force-array="true">
 									<Level>AD</Level>
 									<Type>SP</Type>
 								</Proficiency>
@@ -166,7 +166,7 @@
 							<Code>NZS01112</Code>
 							<Usage>SL</Usage>
 							<ProficiencyList>
-								<Proficiency>
+								<Proficiency json:force-array="true">
 									<Level>BE</Level>
 									<Type>RE</Type>
 								</Proficiency>
@@ -184,11 +184,11 @@
 						</Ethnicity>
 					</EthnicityList>
 					<IwiAffiliationList>
-						<Iwi>
+						<Iwi json:force-array="true">
 							<Code>NZS1001</Code>
 							<PreferenceOrderNumber>1</PreferenceOrderNumber>
 							<HapuAffiliationList>
-								<Hapu>
+								<Hapu json:force-array="true">
 									<HapuName>Manukorihi</HapuName>
 									<PreferenceOrderNumber>1</PreferenceOrderNumber>
 								</Hapu>
@@ -224,7 +224,7 @@
 					</Email>
 				</EmailList>
 				<PhoneNumberList>
-					<PhoneNumber>
+					<PhoneNumber json:force-array="true">
 						<Type>MOB</Type>
 						<Number>(021) 300 999</Number>
 					</PhoneNumber>
@@ -242,14 +242,14 @@
 								<PostalCode json:force-string="true">5781</PostalCode>
 							</Address>
 						</AddressList>
-						<EmailList json:force-array="true">
-							<Email>
+						<EmailList>
+							<Email json:force-array="true">
 								<Type>PRIM</Type>
 								<Address>hagrid@gmail.com</Address>
 							</Email>
 						</EmailList>
 						<PhoneNumberList>
-							<PhoneNumber>
+							<PhoneNumber json:force-array="true">
 								<Usage>INT</Usage>
 								<Type>MAI</Type>
 								<Number>(021) 300 999</Number>
@@ -703,11 +703,11 @@
 					</Ethnicity>
 				</EthnicityList>
 				<IwiAffiliationList>
-					<Iwi>
+					<Iwi json:force-array="true">
 						<Code>NZS1001</Code>
 						<PreferenceOrderNumber>1</PreferenceOrderNumber>
 						<HapuAffiliationList>
-							<Hapu>
+							<Hapu json:force-array="true">
 								<HapuName>Manukorihi</HapuName>
 								<PreferenceOrderNumber>1</PreferenceOrderNumber>
 							</Hapu>
@@ -1970,11 +1970,11 @@
 		
 		<xhtml:Example xmlns="" name="Iwi List Example">
 			<IwiAffiliationList>
-				<Iwi>
+				<Iwi json:force-array="true">
 					<Code>NZS1001</Code>
 					<PreferenceOrderNumber>1</PreferenceOrderNumber>
 					<HapuAffiliationList>
-						<Hapu>
+						<Hapu json:force-array="true">
 							<HapuName>Manukorihi</HapuName>
 							<PreferenceOrderNumber>1</PreferenceOrderNumber>
 						</Hapu>
@@ -2021,7 +2021,7 @@
 				<Code>NZS1001</Code>
 				<PreferenceOrderNumber>1</PreferenceOrderNumber>
 				<HapuAffiliationList>
-					<Hapu>
+					<Hapu json:force-array="true">
 						<HapuName>Manukorihi</HapuName>
 						<PreferenceOrderNumber>1</PreferenceOrderNumber>
 					</Hapu>
@@ -2049,7 +2049,7 @@
 		
 		<xhtml:Example xmlns="" name="Hapu List Example">
 			<HapuAffiliationList>
-				<Hapu>
+				<Hapu json:force-array="true">
 					<HapuName>Manukorihi</HapuName>
 					<PreferenceOrderNumber>1</PreferenceOrderNumber>
 				</Hapu>

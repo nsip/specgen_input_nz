@@ -140,7 +140,7 @@
 			</Provider>
 			<StudentVoiceNote>Timothy doesn't like talking about setting goals. These goals have been gathered through observation.</StudentVoiceNote>
 			<StudentInterestList>
-				<StudentInterest>
+				<StudentInterest json:force-array="true">
 					<InterestRecordedDate>2018-11-30</InterestRecordedDate>
 					<InterestDescription>Timothy spends most lunchtimes playing with the piano, or watching others playing music</InterestDescription>
 					<InterestName>Music/Piano</InterestName>
@@ -149,14 +149,14 @@
 				</StudentInterest>
 			</StudentInterestList>
 			<SocialGoalList>
-				<SocialGoal>
+				<SocialGoal json:force-array="true">
 					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
 					<GoalDescription>Timothy would like to have more friends to play with at lunchtime.</GoalDescription>
 					<GoalName>Have more friends</GoalName>
 				</SocialGoal>
 			</SocialGoalList>
 			<AcademicGoalList>
-				<AcademicGoal>
+				<AcademicGoal json:force-array="true">
 					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
 					<GoalDescription>Timothy wants to excel at Te Reo Māori</GoalDescription>
 					<GoalName>Excel Te Reo</GoalName>
@@ -164,7 +164,7 @@
 				</AcademicGoal>
 			</AcademicGoalList>			
 			<CareerGoalList>
-				<CareerGoal>
+				<CareerGoal json:force-array="true">
 					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
 					<GoalDescription>Timothy would like to be a Marine Biologist, or Deep Sea Diver</GoalDescription>
 					<GoalName>Marine Biologist</GoalName>

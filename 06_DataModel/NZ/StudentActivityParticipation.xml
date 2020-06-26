@@ -170,7 +170,7 @@
       <StartDate>2008-09-01</StartDate>
       <Role>Team Member</Role>
       <RecognitionList>
-        <Recognition>Player of the Day</Recognition>
+        <Recognition json:force-array="true">Player of the Day</Recognition>
       </RecognitionList>
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
