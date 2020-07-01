@@ -74,7 +74,7 @@
 			</Value>
 			<Value>
 				<Code>NOT</Code>
-				<Text xml:lang="en">Not provided</Text>
+				<Text xml:lang="en">Not Provided</Text>
 				<Text xml:lang="mi">Kāre i whakaratoa</Text>
 				<EndDate>2020-05-20</EndDate>
 			</Value>
@@ -139,7 +139,7 @@
 			</Value>
 			<Value>
 				<Code>PAI</Code>
-				<Text xml:lang="en">Paid CHild Help</Text>
+				<Text xml:lang="en">Paid Child Help</Text>
 			</Value>
 			<Value>
 				<Code>PAP</Code>

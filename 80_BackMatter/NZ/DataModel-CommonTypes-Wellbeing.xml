@@ -1815,7 +1815,7 @@
 			<Description>
 				<p>The MoE specialist service that has been selected as a response to a student's support need. Required if Response Detail = 'MOE' (MOE Specialists).</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsMOESpecialistServiceType"/>
+			<Type ref="CodeSets" name="NZCodeSetsMoESpecialistServiceType"/>
 		</Item>    <!-- MOESpecialistService -->
 		<Item>
 			<Element>FundedBy</Element>
