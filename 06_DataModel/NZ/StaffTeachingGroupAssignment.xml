@@ -3,7 +3,8 @@
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			xmlns:xi="http://www.w3.org/2001/XInclude"
 			xmlns:xhtml="http://www.w3.org/1999/xhtml"
-	
+      xmlns:json="http://json.org/"
+      
   xmlns="http://sifassociation.org/SpecGen">
 
   <Key>StaffTeachingGroupAssignmentRefId</Key>
@@ -121,7 +122,7 @@
         <LocalId>11FrenA</LocalId>
         <Name>Year 11 French, Stream A</Name>
       </TeachingGroup>
-      <Role>1201</Role>
+      <Role json:force-string="true">1201</Role>
       <StartDate>2000-09-05</StartDate>
       <EndDate>2001-06-25</EndDate>
       <RecordAudit>
