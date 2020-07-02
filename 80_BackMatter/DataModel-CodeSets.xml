@@ -47,7 +47,7 @@
 			  </Value>
 			  <Value>
 				  <Code>R</Code>
-				  <Text xml:lang="en">Not Required</Text>
+				  <Text xml:lang="en">Not required</Text>
 				  <Text xml:lang="mi">Kāre i hiahiatia</Text>
 			  </Value>
 			  <Value>
@@ -400,7 +400,7 @@
 			</Value>			<!-- Parental Consent To Share With Next ECE Or School -->
 			<Value>
 				<Code>TER</Code>
-				<Text xml:lang="en">Share Student NZQA information with Tertiary Providers</Text>
+				<Text xml:lang="en">Share Student NZQA Information with Tertiary Providers</Text>
 			</Value>			<!-- Share NZQA achievement with Tertiary Providers -->
 			<Value>
 				<Code>TRI</Code>
@@ -417,17 +417,17 @@
 		<Values>
 			<Value>
 				<Code>LEA</Code>
-				<Text xml:lang="en">Learner Created in Error</Text>
+				<Text xml:lang="en">Learner created in error</Text>
 				<Text xml:lang="mi">I hē te tapiri a te Akonga</Text>
 			</Value>			<!-- Learner Created in Error -->
 			<Value>
 				<Code>RES</Code>
-				<Text xml:lang="en">Response Created in Error</Text>
+				<Text xml:lang="en">Response created in error</Text>
 				<Text xml:lang="mi">I hē te tāpiri i te whakautu</Text>
 			</Value>			<!-- Response Created in Error -->
 			<Value>
 				<Code>SUP</Code>
-				<Text xml:lang="en">Support Need Created in Error</Text>
+				<Text xml:lang="en">Support need created in error</Text>
 				<Text xml:lang="mi">I hē te tāpiri i tēnei tautokotanga</Text>
 			</Value>			<!-- Support Need Created in Error -->
 		</Values>

@@ -112,7 +112,7 @@
 			</Value>
 			<Value>
 				<Code>LSN-HAR</Code>
-				<Text xml:lang="en">Hard of hearing</Text>
+				<Text xml:lang="en">Hard of Hearing</Text>
 			</Value>
 			<Value>
 				<Code>LSN-HYA</Code>
@@ -297,7 +297,7 @@
 			</Value>
 			<Value>
 				<Code>LSN-ATT</Code>
-				<Text xml:lang="en">Attendance and Engagement</Text>
+				<Text xml:lang="en">Attendance and engagement</Text>
 			</Value>
 			<Value>
 				<Code>LSN-CHR</Code>
@@ -966,7 +966,7 @@
 				<Value>
 					<Code>CLOS</Code>
 					<Text xml:lang="en">Closed</Text>
-					<Text xml:lang="mi">kati</Text>
+					<Text xml:lang="mi">Kati</Text>
 				</Value>
 				<Value>
 					<Code>AWAI</Code>
@@ -1412,7 +1412,7 @@
 		<Values>
 			<Value>
         		<Code>AASS</Code>
-				<Text xml:lang="en">Additional Attendance / Saturday School</Text>
+				<Text xml:lang="en">Additional Attendance/Saturday School</Text>
 				<Text xml:lang="mi">Rā kura anō/Kura Rāhoroi</Text>
 				<Description>
 					Consequence for referral results in student attending classes on a Saturday.
@@ -1543,7 +1543,7 @@
 			</Value>
 			<Value>
 				<Code>TODE</Code>
-				<Text xml:lang="en">Time Out / Detention</Text>
+				<Text xml:lang="en">Time Out/Detention</Text>
 				<Text xml:lang="mi">Te whakawehe/Tautāwhi</Text>
 				<Description>
 					Consequence for referral results in student spending time in a specified area
@@ -1709,7 +1709,7 @@
 				</Value>
 				<Value>
 					<Code>BATH</Code>
-					<Text xml:lang="en">Bathroom / Restroom</Text>
+					<Text xml:lang="en">Bathroom/Restroom</Text>
 					<Text xml:lang="mi">Nga Wharepaku</Text>
 					<Description>Areas used by students for taking care of personal needs.</Description>
 				</Value>
@@ -1739,7 +1739,7 @@
 				</Value>
 				<Value>
 					<Code>COMM</Code>
-					<Text xml:lang="en">Commons / Common Area</Text>
+					<Text xml:lang="en">Commons/Common Area</Text>
 					<Text xml:lang="mi">Ngā wāhi o te kura</Text>
 					<Description>Areas shared by students and staff for specific activities.</Description>
 				</Value>
@@ -1757,7 +1757,7 @@
 				</Value>
 				<Value>
 					<Code>HALL</Code>
-					<Text xml:lang="en">Hallway / Breezeway</Text>
+					<Text xml:lang="en">Hallway/Breezeway</Text>
 					<Text xml:lang="mi">Ngā huarahi haere ki ngā akomanga</Text>
 					<Description>Areas designated for passing from one activity/class to another.</Description>
 				</Value>
@@ -1811,7 +1811,7 @@
 				</Value>
 				<Value>
 					<Code>SPEC</Code>
-					<Text xml:lang="en">Special Event / Assembly / Field Trip</Text>
+					<Text xml:lang="en">Special Event/Assembly/Field Trip</Text>
 					<Text xml:lang="mi">He kaupapa motuhake, he huihuinga, he haerenga</Text>
 					<Description>Areas used for infrequent activities that occur in and/or out of school.</Description>
 				</Value>
@@ -1881,7 +1881,7 @@
 			</Value>
 			<Value>
 				<Code>PHYSI</Code>
-				<Text xml:lang="en">Physical Contact / Physical Aggression</Text>
+				<Text xml:lang="en">Physical Contact/Physical Aggression</Text>
 				<Text xml:lang="mi">Te pa ā-ringa/Te tukituki – Iti noa</Text>
 				<Description>Student engages in non-serious, but inappropriate physical contact.</Description>
 			</Value>
@@ -1913,7 +1913,7 @@
 		<Values>
 				<Value>
 					<Code>ABUSI</Code>
-					<Text xml:lang="en">Abusive Language / Inappropriate Language / Profanity</Text>
+					<Text xml:lang="en">Abusive Language/Inappropriate Language/Profanity</Text>
 					<Text xml:lang="mi">Reo whakataki/Reo Pakirara/ Reo kohukohu – Nui rawa</Text>
 					<Description>Student delivers verbal messages that include swearing, name calling, or use of words in an inappropriate way.</Description>
 				</Value>
@@ -1925,7 +1925,7 @@
 				</Value>
 				<Value>
 					<Code>BOMBT</Code>
-					<Text xml:lang="en">Bomb Threat / False Alarm</Text>
+					<Text xml:lang="en">Bomb Threat/False Alarm</Text>
 					<Text xml:lang="mi">Tuma Pāhu/Whakaaraara parau – Nui rawa</Text>
 					<Description>Student delivers a message of possible explosive materials being on-campus, near campus, and/or pending explosion.</Description>
 				</Value>
@@ -1969,7 +1969,7 @@
 				</Value>
 				<Value>
 					<Code>FORGE</Code>
-					<Text xml:lang="en">Forgery / Theft / Plagiarism</Text>
+					<Text xml:lang="en">Forgery/Theft/Plagiarism</Text>
 					<Text xml:lang="mi">Te Tāwhai/Te whānako/Te Tuhi whānako – Nui rawa</Text>
 					<Description>Student is involved by being in possession of, having passed on, or being responsible for removing someone else's property; or the student has signed a person’s name without that person’s permission, or claims someone else’s work as their own.</Description>
 				</Value>
@@ -1993,13 +1993,13 @@
 				</Value>
 				<Value>
 					<Code>INALO</Code>
-					<Text xml:lang="en">Inappropriate Location / Out of Bounds Area</Text>
+					<Text xml:lang="en">Inappropriate Location/Out of Bounds Area</Text>
 					<Text xml:lang="mi">Tētahi wāhi pakirara/Wāhi rāhui – Nui rawa </Text>
 					<Description>Student is in an area that is outside of school boundaries (as defined by school).</Description>
 				</Value>
 				<Value>
 					<Code>LYING</Code>
-					<Text xml:lang="en">Lying / Cheating</Text>
+					<Text xml:lang="en">Lying/Cheating</Text>
 					<Text xml:lang="mi">Te rūkahu/Te tāhae – Nui rawa</Text>
 					<Description>Student delivers message that is untrue and/or deliberately violates rules.</Description>
 				</Value>
@@ -2017,7 +2017,7 @@
 				</Value>
 				<Value>
 					<Code>PROPE</Code>
-					<Text xml:lang="en">Property Damage / Vandalism</Text>
+					<Text xml:lang="en">Property Damage/Vandalism</Text>
 					<Text xml:lang="mi">Wāwahi whare/Mahi Kaiauru – Nui rawa</Text>
 					<Description>Student participates in an activity that results in destruction or disfigurement of property.</Description>
 				</Value>
@@ -2047,31 +2047,31 @@
 				</Value>
 				<Value>
 					<Code>UPOAL</Code>
-					<Text xml:lang="en">Use / Possession of Alcohol</Text>
+					<Text xml:lang="en">Use/Possession of Alcohol</Text>
 					<Text xml:lang="mi">Te kai/mau waipiro – Nui rawa</Text>
 					<Description>Student is in possession of or is using alcohol.</Description>
 				</Value>
 				<Value>
 					<Code>UPOCO</Code>
-					<Text xml:lang="en">Use / Possession of Combustibles</Text>
+					<Text xml:lang="en">Use/Possession of Combustibles</Text>
 					<Text xml:lang="mi">Te kai/mau ngingiha – Nui rawa</Text>
 					<Description>Student is/was in possession of substances/objects readily capable of causing bodily harm and/or property damage (matches, lighters, firecrackers, gasoline, lighter fluid).</Description>
 				</Value>
 				<Value>
 					<Code>UPODR</Code>
-					<Text xml:lang="en">Use / Possession of Drugs</Text>
+					<Text xml:lang="en">Use/Possession of Drugs</Text>
 					<Text xml:lang="mi">Te kai/mau pōauau – Nui rawa</Text>
 					<Description>Student is in possession of or is using illegal drugs/substances or imitations.</Description>
 				</Value>
 				<Value>
 					<Code>UPOTO</Code>
-					<Text xml:lang="en">Use / Possession of Tobacco</Text>
+					<Text xml:lang="en">Use/Possession of Tobacco</Text>
 					<Text xml:lang="mi">Te kai/mau tupeka – Nui rawa</Text>'
 					<Description>Student is in possession of or is using tobacco.</Description>
 				</Value>
 				<Value>
 					<Code>UPOWE</Code>
-					<Text xml:lang="en">Use / Possession of Weapons</Text>
+					<Text xml:lang="en">Use/Possession of Weapons</Text>
 					<Text xml:lang="mi">Te kai/mau rākau riri – Nui rawa</Text>
 					<Description>Student is in possession of knives (greater than 6 in., less than 6 in.) and guns (real or look alike), or other objects readily capable of causing bodily harm.</Description>
 				</Value>
@@ -2238,7 +2238,7 @@
 			</Value>
 			<Value>
 				<Code>ILM</Code>
-				<Text xml:lang="en">Incomplete (Support no longer required)</Text>
+				<Text xml:lang="en">Incomplete (support no longer required)</Text>
 				<Text xml:lang="mi">Noho tārewa (Kāre ngā mahi tautoko i hiahiatia)</Text>
 			</Value>
 			<Value>
@@ -2355,7 +2355,7 @@
 			</Value>
 			<Value>
 				<Code>ADA</Code>
-				<Text xml:lang="en">Adaptation for access</Text>
+				<Text xml:lang="en">Adaptation for Access</Text>
 				<Text xml:lang="mi">Urutaunga Tomo</Text>
 			</Value>
 			<Value>
@@ -2411,7 +2411,7 @@
 			<Value>
 				<Code>OTH</Code>
 				<Text xml:lang="en">Other</Text>
-				<Text xml:lang="mi">He mea Kē</Text>
+				<Text xml:lang="mi">He mea kē</Text>
 			</Value>
 			<Value><Code>PCC</Code><Text xml:lang="en">PCCS</Text></Value>
 			<Value><Code>RTL</Code><Text xml:lang="en">RTLB</Text></Value>
@@ -2535,7 +2535,7 @@
 		<Intro>
 			<p>Code set denoting the MOE specialist services available to as a response to a students support need.</p>
 		</Intro>
-		<ID>MOE Specialist Service</ID>
+		<ID>MoE Specialist Service</ID>
 		<Values>
 			<Value>
 				<Code>ACC</Code>
@@ -3085,7 +3085,7 @@
 			</Value> 
 			<Value>
 				<Code>AVTA</Code>
-				<Text xml:lang="en">Avoid Tasks / Activities</Text>
+				<Text xml:lang="en">Avoid Tasks/Activities</Text>
 				<Text xml:lang="mi">Karo Tūmahi/Ngohe</Text>
 			</Value> 
 			<Value>
@@ -3095,7 +3095,7 @@
 			</Value> 
 			<Value>
 				<Code>OBIT</Code>
-				<Text xml:lang="en">Obtain Items / Activities</Text>
+				<Text xml:lang="en">Obtain Items/Activities</Text>
 				<Text xml:lang="mi">Whai mea/tūmahi</Text>
 			</Value> 
 			<Value>
