@@ -103,15 +103,6 @@
 		<Type ref="CommonData" name="CaregiverListType"/>
 	</Item>    <!-- CaregiverList -->
 	<Item>
-		<Element>CareStatus</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>The student's Oranga Tamariki care status.</p>
-		</Description>
-		<Type ref="CodeSets" name="NZCodeSetsCareStatusType"/>
-	</Item>    <!-- CareStatus -->
-	<Item>
 		<Element>CustodyNote</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>

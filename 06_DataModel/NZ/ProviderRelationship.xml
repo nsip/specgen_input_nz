@@ -41,6 +41,16 @@
   </Item>  <!-- ProviderRelationshipLocalId -->
 
   <Item>
+    <Element>Status</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Records if this OrganisationRelationship is Active or Inactive</p>
+    </Description>
+	  <Type ref="CodeSets" name="NZCodeSetsOrganisationRelationshipStatusType"/>
+  </Item>  <!-- Status -->
+
+  <Item>
     <Element>RelationshipType</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>

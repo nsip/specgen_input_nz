@@ -41,6 +41,15 @@
 		<Type ref="CommonTypes" name="LocalIdType"></Type>
 	</Item>   <!-- StudentContactRelationshipLocalId -->
 	<Item>
+		<Element>Status</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		<p>States whether or not this is an inactive or active Student Contact Relationship.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsStudentContactRelationshipStatusType"/>
+	</Item>   <!-- Status -->	
+	<Item>
 		<Element>Student</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
