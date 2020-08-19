@@ -37,6 +37,17 @@
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>      <!-- StaffTeachingGroupAssignmentLocalId -->
 
+
+  <Item>
+    <Element>Status</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>States whether or not this is an inactive or active assignment for a staff member.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsStaffTeachingGroupAssignmentStatusType"/>
+  </Item>      <!-- Staff Taching Group Assignment Status -->
+
   <Item>
     <Element>StaffMember</Element>
     <Characteristics>M</Characteristics>

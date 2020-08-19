@@ -37,6 +37,7 @@
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>      <!-- StaffAssignmentRefId -->
+
   <Item>
     <Element>StaffAssignmentLocalId</Element>
     <Characteristics>O</Characteristics>
@@ -47,6 +48,16 @@
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>      <!-- StaffAssignmentLocalId -->
+
+  <Item>
+    <Element>StaffAssignmentStatus</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>States whether or not this is an inactive or active assignment for a staff member.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsStaffAssignmentStatusType"/>
+  </Item>      <!-- Staff Assignment Status -->
 
   <Item>
     <Element>StaffMember</Element>
@@ -108,6 +119,7 @@
     </Description>
     <Type name="xs:date"></Type>
   </Item>      <!-- StartDate -->
+
   <Item>
     <Element>EndDate</Element>
     <Characteristics>O</Characteristics>

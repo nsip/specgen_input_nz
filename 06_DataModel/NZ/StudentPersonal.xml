@@ -94,14 +94,14 @@
 		<Type ref="CodeSets" name="NZCodeSetsBiographicChangeReasonType"/>
 	</Item>    <!-- BiographicChangeReason -->
 	<Item>
-		<Element>CareStatus</Element>
+		<Element>CaregiverList</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
 		<Description>
-			<p>The student's Oranga Tamariki care status.</p>
+			<p>List of caregivers; de-normalised from StudentContactPersonal for Te Rito sLSR.</p>
 		</Description>
-		<Type ref="CodeSets" name="NZCodeSetsCareStatusType"/>
-	</Item>    <!-- CareStatus -->
+		<Type ref="CommonData" name="CaregiverListType"/>
+	</Item>    <!-- CaregiverList -->
 	<Item>
 		<Element>CustodyNote</Element>
 		<Characteristics>O</Characteristics>

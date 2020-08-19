@@ -1322,6 +1322,17 @@
 	
 	<CodeSet>
 		<Intro>
+			<p>Code set denoting whether or not this is an Active or Inactive assignment for the organisations.</p>
+		</Intro>
+		<ID>Organisation Relationship Status</ID>
+		<Values>
+			<Value><Code>A</Code><Text>Active</Text></Value>
+			<Value><Code>I</Code><Text>Inactive</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Organisation Relationship Status -->
+
+	<CodeSet>
+		<Intro>
 			<p>Code set denoting the role the source organisation is playing in this relationship.</p>
 		</Intro>
 		<ID>Source Organisation Role</ID>
@@ -1664,6 +1675,17 @@
 		</Values>
 	</CodeSet>    <!-- Staff Status -->
 
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting whether or not this is an Active or Inactive assignment for the staff member.</p>
+		</Intro>
+		<ID>Staff Assignment Status</ID>
+		<Values>
+			<Value><Code>A</Code><Text>Active</Text></Value>
+			<Value><Code>I</Code><Text>Inactive</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Staff Assignment Status -->
+
 	<!-- TeachingGroup -->
 	<CodeSet>
 		<Intro>
@@ -1713,5 +1735,16 @@
 		  <Value><Code>1301</Code><Text>Teacher Aide</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Staff Teaching Group Role -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting whether or not this is an Active or Inactive assignment for the staff member.</p>
+		</Intro>
+		<ID>Staff Teaching Group Assignment Status</ID>
+		<Values>
+			<Value><Code>A</Code><Text>Active</Text></Value>
+			<Value><Code>I</Code><Text>Inactive</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Staff Teaching Group Assignment Status -->
 
 </IncludeGroup>

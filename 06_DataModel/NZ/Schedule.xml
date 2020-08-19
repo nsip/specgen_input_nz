@@ -13,7 +13,7 @@
 		<Element>Schedule</Element>
 	    <privacyRating>Low</privacyRating>
 		<Description>
-			<p>The universally unique identifier for the data object record that is used across systems.</p>
+			<p>A rotation of ScheduleAcademicDays that a Provider has in place to manage their timetable.</p>
 		</Description>
 	</Item>
 	

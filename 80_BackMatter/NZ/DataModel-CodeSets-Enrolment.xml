@@ -42,7 +42,7 @@
 	</CodeSet>	<!-- School Enrolment Type -->
 
 
-	<!-- Defind by SIF NZ - StudentProviderEnrolment -->
+	<!-- Defined by SIF NZ - StudentProviderEnrolment -->
 	<CodeSet>
 		<Intro>
 			<p>Records the status of a potentially multi-year Provider enrolment, which goes through
@@ -100,6 +100,17 @@
 			</Value>			<!-- Pending -->
 		</Values>
 	</CodeSet>	<!-- Provider Enrolment Status -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting whether or not this is an Active or Inactive Student TeachingGroup Enrolment.</p>
+		</Intro>
+		<ID>Student TeachingGroup Enrolment Status</ID>
+		<Values>
+			<Value><Code>A</Code><Text>Active</Text></Value>
+			<Value><Code>I</Code><Text>Inactive</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Student TeachingGroup Enrolment Status -->
 
 	<CodeSet>
 		<Intro>
