@@ -101,14 +101,14 @@
   </Item>      <!-- Description -->
 
   <Item>
-    <Element>StaffRoleList</Element>
+    <Element>StaffRole</Element>
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>The list of roles the StaffMember has in relation to all students at the assigned location.</p>
+      <p>The single role the StaffMember has in relation to all students at the assigned location.</p>
     </Description>
-    <Type ref="CommonTypes" name="StaffRoleListType"></Type>
-  </Item>      <!-- StaffRoleList -->
+    <Type  ref="CodeSets" name="NZCodeSetsStaffRoleType"/>    
+  </Item>      <!-- StaffRole -->
 
   <Item>
     <Element>StartDate</Element>
@@ -196,11 +196,7 @@
         <Name>Wellington College</Name>
       </AssignedLocation>
       <Description>Senior English Teacher</Description>
-      <StaffRoleList>
-        <StaffRole json:force-array="true">
-          <Role json:force-string="true">1102</Role>
-        </StaffRole>
-      </StaffRoleList>
+      <StaffRole json:force-string="true">1102</StaffRole>
       <StartDate>2000-09-05</StartDate>
       <EndDate>2001-06-25</EndDate>
       <CasualReliefTeacher>N</CasualReliefTeacher>
@@ -243,13 +239,7 @@
         <Name>Masterton (Whakaoriori) Kāhui Ako</Name>
       </AssignedLocation>
       <Description>Kāhui Ako Cross School Teacher</Description>
-      <StaffRoleList>
-        <StaffRole json:force-array="true">
-          <Role json:force-string="true">1102</Role>
-          <StartDate>2000-09-05</StartDate>
-          <EndDate>2001-03-31</EndDate>
-        </StaffRole>
-      </StaffRoleList>
+      <StaffRole json:force-string="true">1102</StaffRole>
       <StartDate>2000-09-05</StartDate>
       <EndDate>2001-06-25</EndDate>
       <CasualReliefTeacher>N</CasualReliefTeacher>
