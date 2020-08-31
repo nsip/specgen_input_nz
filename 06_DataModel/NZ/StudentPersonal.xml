@@ -100,7 +100,7 @@
 		<Description>
 			<p>List of caregivers; de-normalised from StudentContactPersonal for Te Rito sLSR.</p>
 		</Description>
-		<Type ref="CommonData" name="CaregiverListType"/>
+		<Type ref="CommonTypes" name="CaregiverListType"/>
 	</Item>    <!-- CaregiverList -->
 	<Item>
 		<Element>CustodyNote</Element>
