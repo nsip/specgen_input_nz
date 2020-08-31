@@ -48,56 +48,6 @@
 		</Item>    <!-- Role -->
 	</CommonElement>
 
-	<CommonElement name="StaffRoleListType" type="true" dm="true">
-		<Item>
-			<Element>StaffRoleListType</Element>
-			<Description>
-				<p>A list of roles that are assigned to the staff member.</p>
-			</Description>
-			<List mode="List"/>
-		</Item>
-		<Item>
-			<Element>StaffRole</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>The individual role that is assigned to the staff member.</p>
-			</Description>
-			<Type ref="CommonTypes" name="StaffRoleType"/>
-		</Item>    <!-- StaffRole -->
-	</CommonElement>
-	<CommonElement name="StaffRoleType" type="true" dm="true">
-		<Item>
-			<Element>StaffRoleType</Element>
-			<Description>
-				<p>A list of roles that are assigned to the staff member.</p>
-			</Description>
-		</Item>
-		<Item>
-			<Element>Role</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>The individual role that is assigned to the staff member.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsStaffRoleType"/>
-		</Item>    <!-- Role -->
-		<Item>
-			<Element>StartDate</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>The date from which (inclusive) the role was assigned to the staff member.</p>
-			</Description>
-			<Type name="xs:date"/>
-		</Item>    <!-- StartDate -->
-		<Item>
-			<Element>EndDate</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The date after which the role is no longer assigned to the staff member.</p>
-			</Description>
-			<Type name="xs:date"/>
-		</Item>    <!-- EndDate -->
-	</CommonElement>
-
 	<CommonElement name="StudentListType" type="true" dm="true">
 		<Item>
 			<Element>StudentListType</Element>
