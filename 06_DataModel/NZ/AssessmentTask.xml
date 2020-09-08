@@ -358,6 +358,9 @@
       <AssessmentType>INT</AssessmentType>
       <AssessmentMethodology>P</AssessmentMethodology>
       <EvaluationType>F</EvaluationType>
+      <LearningStandardList>
+        <LearningStandardRefId json:force-array="true">NC-91165-2</LearningStandardRefId>
+      </LearningStandardList>
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>

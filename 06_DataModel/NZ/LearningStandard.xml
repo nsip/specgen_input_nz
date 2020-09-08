@@ -25,9 +25,16 @@
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-			<p>The universally unique identifier for the data object record that is used across systems.</p>
+			<p>A unique identifier for the LearningStandard assembled by concatenating the following
+      fields, with '-' between each piece:
+        <ul>
+          <li>LearningStandardFamily</li>
+          <li>Number</li>
+          <li>VersionNo</li>
+        </ul>
+      </p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>    <!-- LearningStandardRefId -->
   <Item>
     <Element>LearningStandardLocalId</Element>
@@ -58,8 +65,9 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>A unique number that is used to identify the learning standard. One use of this is for NZQA standard numbers which 
-        cannot be used as a unique identifier (in LocalId) on their own as they are versioned so are part of a composite key
+      <p>A unique number that is used to identify the learning standard. One use of this is for
+       NZQA standard numbers which cannot be used as a unique identifier (in LocalId) on their 
+       own as they are versioned so are part of a composite key
        with VersionNo.</p>
     </Description>
     <Type name="xs:int"/>
@@ -221,9 +229,9 @@
   
   <xhtml:Example xmlns="" name="NZQA Learning Standard Example">
     <LearningStandard>
-      <LearningStandardRefId>cedf9eae-4358-408d-af57-ec0ea1b0d210</LearningStandardRefId>
-      <LearningStandardLocalId>91165</LearningStandardLocalId>
-      <Title>Chemistry</Title>
+      <LearningStandardRefId>NC-91165-2</LearningStandardRefId>
+      <Title>Chemistry - Organic Compounds</Title>
+      <Number>91165</Number>
       <VersionNo>2</VersionNo>
       <Publisher>
         <RefId>cedf9eae-4358-408d-af57-ec0ea1b0d210</RefId>
@@ -248,9 +256,9 @@
 
   <xhtml:Example xmlns="" name="Cambridge Learning Standard Example">
     <LearningStandard>
-      <LearningStandardRefId>cd071ee1-d5fd-4821-8406-9852ba916231</LearningStandardRefId>
-      <LearningStandardLocalId>9709</LearningStandardLocalId>
+      <LearningStandardRefId>CA-9709-2018</LearningStandardRefId>
       <Title>Pure Mathematics</Title>
+      <Number>9709</Number>
       <VersionNo>2018</VersionNo>
       <Publisher>
         <RefId>a4c9f1dc-5e31-46b4-97aa-6d8534998707</RefId>

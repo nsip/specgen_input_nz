@@ -130,7 +130,7 @@
       <p>Reference to the ProviderCourse that this assessment task belongs to.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"/>
-  </Item>    <!-- ProvidernCourse -->
+  </Item>    <!-- ProviderCourse -->
   <Item>
     <Element>LearningStandardList</Element>
     <Characteristics>O</Characteristics>
