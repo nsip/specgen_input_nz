@@ -13,10 +13,12 @@
   <CommonElement type="true" name='GUIDType'>
 		<Item>
 			<Element>GUIDType</Element>
-			<Description>SIF format for a GUID." ></Description>
+			<Description>
+				<p>SIF format for a UUID; as defined in <a href="https://tools.ietf.org/html/rfc4122">rfc-4122</a></p>
+			</Description>
 			<Type name='xs:token'/>
 			<Facets>
-				<xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"/>
+				<xs:pattern value="[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}"/>
 				<!--<xs:pattern value='[0-9A-F]{32}'/>-->
 			</Facets>
 		</Item>
@@ -54,7 +56,8 @@
 			<Element>LocalIdType</Element>
 			<Description>
 				<p>
-					This is a common element used to define the locally assigned identifier associated with an entity. 
+					This is a common element used to define the locally assigned identifier
+					associated with an entity. 
 				</p>
 			</Description>
 			<Type name="xs:normalizedString"/>

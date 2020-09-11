@@ -162,7 +162,7 @@
   
   <xhtml:Example xmlns="" name="Student Assessment Task">
     <StudentAssessmentTask>
-      <StudentAssessmentTaskRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskRefId>
+      <StudentAssessmentTaskRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</StudentAssessmentTaskRefId>
       <Student>
         <RefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</RefId>
         <LocalId>850139-HP</LocalId>
@@ -170,7 +170,7 @@
         <NationalStudentNumber>23423421</NationalStudentNumber>
       </Student>
       <AssessmentTask>
-        <RefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</RefId>
+        <RefId>d0a0a27a-d0a8-510a-d9d7-5101a8c3da39</RefId>
       </AssessmentTask>
       <ProviderInvolvedList>
         <ProviderInvolved>
@@ -193,7 +193,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>

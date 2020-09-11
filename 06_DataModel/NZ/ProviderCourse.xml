@@ -157,7 +157,7 @@
   
   <xhtml:Example xmlns="" name="ProviderCourse Example">
     <ProviderCourse>
-      <ProviderCourseRefId>9D75101A-8C3D-00AA-001A-0000A2E35B35</ProviderCourseRefId>
+      <ProviderCourseRefId>9d75101a-8c3d-00aa-001a-0000a2e35b35</ProviderCourseRefId>
       <ProviderCourseLocalId>12CHEM</ProviderCourseLocalId>
       <Provider>
         <RefId>632</RefId>
@@ -199,7 +199,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>

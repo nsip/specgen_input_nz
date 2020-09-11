@@ -76,7 +76,7 @@
 	
 	<xhtml:Example xmlns='' name="StudentContactPersonal Family Member Example">
 		<StudentContactPersonal>
-			<StudentContactPersonalRefId>7C834EA9-EDA1-2090-347F-83297E1C290F</StudentContactPersonalRefId>
+			<StudentContactPersonalRefId>7c834ea9-eda1-2090-347f-83297e1c290f</StudentContactPersonalRefId>
 			<StudentContactPersonalLocalId>P1234567</StudentContactPersonalLocalId>
 			<HasBOTVote>N</HasBOTVote>
 			<PersonInfo>
@@ -146,7 +146,7 @@
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>
-				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
 				<Name>Bobby Test</Name>
 				</CreatedBy>
 			</RecordAudit>
@@ -155,7 +155,7 @@
 
 	<xhtml:Example xmlns='' name="StudentContactPersonal Doctor Example">
 		<StudentContactPersonal>
-		    <StudentContactPersonalRefId>7C834EA9-EDA1-2090-347F-FACE7E1C290F</StudentContactPersonalRefId>
+		    <StudentContactPersonalRefId>7c834ea9-eda1-2090-347f-face7e1c290f</StudentContactPersonalRefId>
 			<StudentContactPersonalLocalId>P1234567</StudentContactPersonalLocalId>
 			<HasBOTVote>N</HasBOTVote>
 			<PersonInfo>
@@ -193,7 +193,7 @@
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>
-				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
 				<Name>Bobby Test</Name>
 				</CreatedBy>
 			</RecordAudit>

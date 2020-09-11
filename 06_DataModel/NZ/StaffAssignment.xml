@@ -187,9 +187,9 @@
   
   <xhtml:Example xmlns="" name="StaffAssignment English Teacher Example">
     <StaffAssignment>
-      <StaffAssignmentRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StaffAssignmentRefId>
+      <StaffAssignmentRefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</StaffAssignmentRefId>
       <StaffMember>
-        <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1651</RefId>
+        <RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
       </StaffMember>
       <AssignedLocation>
         <RefId>203</RefId>
@@ -219,7 +219,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>
@@ -228,9 +228,9 @@
   
   <xhtml:Example xmlns="" name="StaffAssignment Kāhui Ako Cross School Teacher Example">
     <StaffAssignment>
-      <StaffAssignmentRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StaffAssignmentRefId>
+      <StaffAssignmentRefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</StaffAssignmentRefId>
       <StaffMember>
-        <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1651</RefId>
+        <RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
         <LocalId>SMcG</LocalId>
         <Name>Steve McGannaway</Name>
       </StaffMember>
@@ -247,7 +247,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>
