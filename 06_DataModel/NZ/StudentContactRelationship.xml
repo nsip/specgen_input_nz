@@ -127,12 +127,12 @@
 		
   <xhtml:Example xmlns='' name="StudentContactRelationship">
     <StudentContactRelationship>
-	  <StudentContactRelationshipRefId>7572B261-0947-583A-463D-BB345291B332</StudentContactRelationshipRefId>
+	  <StudentContactRelationshipRefId>7572b261-0947-583a-463d-bb345291b332</StudentContactRelationshipRefId>
       <Student>
-	    <RefId>DEE34B35-9D75-101A-8C3D-00AA001A1652</RefId>
+	    <RefId>dee34b35-9d75-101a-8c3d-00aa001a1652</RefId>
       </Student>
       <StudentContact>
-		<RefId>6472B261-0947-583A-463D-BB345291B001</RefId>
+		<RefId>6472b261-0947-583a-463d-bb345291b001</RefId>
 	  </StudentContact>
 	  <Organisation>
 		<RefId>9961</RefId>
@@ -162,7 +162,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>

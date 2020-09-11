@@ -185,15 +185,15 @@
    
   <xhtml:Example xmlns="" name="Wellbeing Alert">
     <WellbeingAlert>
-      <WellbeingAlertRefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</WellbeingAlertRefId>
+      <WellbeingAlertRefId>2ffb63b4-cfef-4820-8501-e7d1e54555cb</WellbeingAlertRefId>
       <Student>
-        <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
+        <RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
       </Student>
       <Provider>
         <RefId>672</RefId>
       </Provider>
       <StaffMember>
-        <RefId>BA265776-359D-7510-1A8C-77432A901A16</RefId>
+        <RefId>ba265776-359d-7510-1a8c-77432a901a16</RefId>
       </StaffMember>
       <PublishedDate>2017-11-01</PublishedDate>
       <StartDate>2017-11-01</StartDate>
@@ -202,7 +202,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>

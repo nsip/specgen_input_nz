@@ -333,7 +333,7 @@
   
   <xhtml:Example xmlns="" name="Assessment Task">
     <AssessmentTask>
-      <AssessmentTaskRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</AssessmentTaskRefId>
+      <AssessmentTaskRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</AssessmentTaskRefId>
       <AssessmentName>NZ History Classroom Test</AssessmentName>
       <OrganisationInvolvedList>
         <OrganisationInvolved json:force-array="true">
@@ -342,7 +342,7 @@
         </OrganisationInvolved>
       </OrganisationInvolvedList>
       <TeachingGroup>
-        <RefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</RefId>
+        <RefId>d0a0a27a-d0a8-510a-d9d7-5101a8c3da39</RefId>
       </TeachingGroup>
       <StaffInvolvedList>
         <StaffInvolved json:force-array="true">
@@ -364,7 +364,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>

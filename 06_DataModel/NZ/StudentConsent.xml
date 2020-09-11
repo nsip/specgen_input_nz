@@ -142,7 +142,7 @@
 	
 	<xhtml:Example xmlns="" name ="Student Consent">
 		<StudentConsent>
-			<StudentConsentRefId>7C834EA9-EDA1-2090-347F-83297E1C290C</StudentConsentRefId>
+			<StudentConsentRefId>7c834ea9-eda1-2090-347f-83297e1c290c</StudentConsentRefId>
 			<StudentConsentLocalId>S1234567</StudentConsentLocalId>
 			<Student>
 				<RefId>fe659ed3-8a78-4bc0-8876-7b75ac585edf</RefId>
@@ -153,7 +153,7 @@
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>
-				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
 				<Name>Bobby Test</Name>
 				</CreatedBy>
 			</RecordAudit>

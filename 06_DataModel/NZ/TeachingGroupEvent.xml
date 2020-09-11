@@ -174,7 +174,7 @@
 			<TakeAttendanceFlag>Y</TakeAttendanceFlag>
       <TeacherList>
         <StaffMember json:force-array="true">
-          <RefId>A8C3A2E3-5B35-9D75-101D-00AA001A0000</RefId>
+          <RefId>a8c3a2e3-5b35-9d75-101d-00aa001a0000</RefId>
           <LocalId>SMI1</LocalId>
           <Name>Thomas Smith</Name>
 					<Role json:force-string="true">1001</Role>
@@ -183,7 +183,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>

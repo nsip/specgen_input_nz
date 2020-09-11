@@ -252,9 +252,9 @@
 
   <xhtml:Example xmlns="" name="StudentLearningSupport">
     <StudentLearningSupport>
-		  <StudentLearningSupportRefId>461B63B4-CFEF-4820-8501-E7D1E54555CB</StudentLearningSupportRefId>
+		  <StudentLearningSupportRefId>461b63b4-cfef-4820-8501-e7d1e54555cb</StudentLearningSupportRefId>
 		  <Student>
-			  <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
+			  <RefId>ca285746-359d-7510-1a8c-36432a901a16</RefId>
 		  </Student>
       <Provider>
         <RefId>744</RefId>
@@ -262,7 +262,7 @@
 		  <LearnerStatus>ACT</LearnerStatus>
 		  <StudentConsentList>
 		    <StudentConsent json:force-array="true">
-			    <RefId>461423B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+			    <RefId>461423b4-cfef-4820-8501-e7d1e54555cb</RefId>
 		    </StudentConsent>
       </StudentConsentList>
 		  <DyslexiaScreeningTool>Y</DyslexiaScreeningTool>
@@ -275,21 +275,21 @@
 		  <OtherFamilyContext>N</OtherFamilyContext>
 		  <StudentVoiceList>
 		  	<StudentVoice>
-			  	<RefId>461423B4-CFEF-4820-8345-E7D1E54555CB</RefId>
+			  	<RefId>461423b4-cfef-4820-8345-e7d1e54555cb</RefId>
 			  </StudentVoice>
 			  <StudentVoice>
-			  	<RefId>461423B4-BBEF-4820-8345-E7D1E54555CB</RefId>
+			  	<RefId>461423b4-bbef-4820-8345-e7d1e54555cb</RefId>
 			  </StudentVoice>
 	  	</StudentVoiceList>
       <SupportNeedList>
         <SupportNeed json:force-array="true">
           <Need>
-            <RefId>461423B4-BBEF-4820-8345-E724E54555CB</RefId>
+            <RefId>461423b4-bbef-4820-8345-e724e54555cb</RefId>
             <Name>Literacy</Name>
           </Need>
           <ResponseList>
             <Response json:force-array="true">
-              <RefId>461423B4-BBEF-4820-8345-E724E5455BBB</RefId>
+              <RefId>461423b4-bbef-4820-8345-e724e5455bbb</RefId>
             </Response>
           </ResponseList>
         </SupportNeed>

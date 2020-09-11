@@ -155,7 +155,7 @@
   
   <xhtml:Example xmlns="" name="TeachingGroup">
     <TeachingGroup>
-      <TeachingGroupRefId>64A309DA-063A-2E35-B359-D75101A8C3D1</TeachingGroupRefId>
+      <TeachingGroupRefId>64a309da-063a-2e35-b359-d75101a8c3d1</TeachingGroupRefId>
       <TeachingGroupLocalId>20087ASPN</TeachingGroupLocalId>
       <ShortName>7A SPN</ShortName>
       <LongName>Year 7A Maths - Space and Numbers</LongName>
@@ -168,30 +168,30 @@
       </ScheduleTerm>
       <StudentList>
         <Student>
-          <RefId>9897466F-200E-4BC1-B9AE-D1507DA15CEF</RefId>
+          <RefId>9897466f-200e-4bc1-b9ae-d1507da15cef</RefId>
           <LocalId>SMI001</LocalId>
 					<Name>Peter Smith</Name>
 				</Student>
         <Student>
-          <RefId>7C834EA9-EDA1-2090-347F-83297E1C290D</RefId>
+          <RefId>7c834ea9-eda1-2090-347f-83297e1c290d</RefId>
           <LocalId>SMI002</LocalId>
           <Name>Jennifer Smith</Name>
         </Student>
         <Student>
-          <RefId>7C834EA9-EDA1-2090-347F-83297E1C290E</RefId>
+          <RefId>7c834ea9-eda1-2090-347f-83297e1c290e</RefId>
           <LocalId>SMI003</LocalId>
           <Name>Terence Smith</Name>
         </Student>
       </StudentList>
       <TeacherList>
         <StaffMember>
-          <RefId>A8C3A2E3-5B35-9D75-101D-00AA001A0000</RefId>
+          <RefId>a8c3a2e3-5b35-9d75-101d-00aa001a0000</RefId>
           <LocalId>SMI1</LocalId>
           <Name>Thomas Smith</Name>
           <Role json:force-string="true">1001</Role>
         </StaffMember>
         <StaffMember>
-          <RefId>A8CCCCE3-5B35-9D75-101D-00AA001A0000</RefId>
+          <RefId>a8cccce3-5b35-9d75-101d-00aa001a0000</RefId>
           <LocalId>LONG2</LocalId>
           <Name>Tamara Long</Name>
           <Role  json:force-string="true">1002</Role>
@@ -200,7 +200,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>

@@ -111,7 +111,7 @@
 	
 	<xhtml:Example xmlns="" name="Student TeachingGroup Enrolment">
 		<StudentTeachingGroupEnrolment>
-			<StudentTeachingGroupEnrolmentRefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</StudentTeachingGroupEnrolmentRefId>
+			<StudentTeachingGroupEnrolmentRefId>a8c3d3e3-4b35-9d75-101d-00aa001a1652</StudentTeachingGroupEnrolmentRefId>
 			<StudentTeachingGroupEnrolmentLocalId>2004H102</StudentTeachingGroupEnrolmentLocalId>
 			<Student>
 				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
@@ -127,7 +127,7 @@
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>
-				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
 				<Name>Bobby Test</Name>
 				</CreatedBy>
 			</RecordAudit>

@@ -143,12 +143,12 @@
   
   <xhtml:Example xmlns="" name="Student Attainment - NCEA Course Endorsement">
     <StudentAttainment>
-      <StudentAttainmentRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAttainmentRefId>
+      <StudentAttainmentRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</StudentAttainmentRefId>
       <GrantingOrganisation>
         <RefId>762</RefId>
       </GrantingOrganisation>
       <Attainment>
-        <RefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</RefId>
+        <RefId>d0a0a27a-d0a8-510a-d9d7-5101a8c3da39</RefId>
         <Name>NCEA Level 2 Chemistry - Endorsed with merit</Name>
         <ObjectType>Credential</ObjectType>
       </Attainment>
@@ -197,7 +197,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>
@@ -206,12 +206,12 @@
 
   <xhtml:Example xmlns="" name="Student Attainment - School Course Completion">
     <StudentAttainment>
-      <StudentAttainmentRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAttainmentRefId>
+      <StudentAttainmentRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</StudentAttainmentRefId>
       <GrantingOrganisation>
         <RefId>9962</RefId>
       </GrantingOrganisation>
       <Attainment>
-        <RefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</RefId>
+        <RefId>d0a0a27a-d0a8-510a-d9d7-5101a8c3da39</RefId>
         <Name>Introduction to Astrophysics</Name>
         <ObjectType>ProviderCourse</ObjectType>
       </Attainment>
@@ -232,7 +232,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>
