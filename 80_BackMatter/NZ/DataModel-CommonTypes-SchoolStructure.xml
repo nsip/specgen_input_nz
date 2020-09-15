@@ -135,6 +135,15 @@
 			<Type ref="CommonTypes" name="EnactedPolicyListType"/>
 		</Item>    <!-- NewEntrantPolicyList -->
 		<Item>
+			<Element>AllowManualProvisioning</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Indicates whether or not the school has a student management system.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+		</Item>    <!-- AllowManualProvisioning -->
+		<Item>
 			<Element>SchoolClassificationList</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>

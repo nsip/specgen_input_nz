@@ -176,7 +176,7 @@
 			<Element>LearningStandardRefId</Element>
 			<Characteristics>MR</Characteristics>
 			<Description/>
-			<Type name="xs:normalizedString"/>
+		    <Type ref="CommonTypes" name="LocalIdType"/>
 		</Item>
 	</CommonElement>
 

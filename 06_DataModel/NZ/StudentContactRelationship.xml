@@ -48,7 +48,26 @@
 		<p>States whether or not this is an inactive or active Student Contact Relationship.</p>
 		</Description>
 		<Type ref="CodeSets" name="NZCodeSetsStudentContactRelationshipStatusType"/>
-	</Item>   <!-- Status -->	
+	</Item>   <!-- Status -->
+	<Item>
+		<Element>StartDate</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The date the relationship between the student and contact was recorded.</p>
+		</Description>
+		<Type name="xs:date"/>
+  	</Item>  <!-- StartDate -->
+	<Item>
+		<Element>EndDate</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The date the relationship between the student and contact was removed.</p>
+		</Description>
+		<Type name="xs:date"/>
+  	</Item>  <!-- EndDate -->
+	
 	<Item>
 		<Element>Student</Element>
 		<Characteristics>M</Characteristics>

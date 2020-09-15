@@ -34,7 +34,7 @@
         </ul>
       </p>
     </Description>
-    <Type name="xs:normalizedString"/>
+    <Type ref="CommonTypes" name="LocalIdType"/>
   </Item>    <!-- LearningStandardRefId -->
   <Item>
     <Element>LearningStandardLocalId</Element>
