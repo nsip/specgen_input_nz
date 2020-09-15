@@ -167,16 +167,16 @@
 		<Item>
 			<Element>LearningStandardListType</Element>
 			<Description>
-				<p>A list of <code>ObjectReference</code>s providing a manner of referring
+				<p>A list of LearningStandardRefIds providing a manner of referring
 				to a collection of <code>LearningStandards</code>.</p>
 			</Description>
 			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>LearningStandard</Element>
+			<Element>LearningStandardRefId</Element>
 			<Characteristics>MR</Characteristics>
 			<Description/>
-			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+			<Type ref="CommonTypes" name="LocalIdType"/>
 		</Item>
 	</CommonElement>
 

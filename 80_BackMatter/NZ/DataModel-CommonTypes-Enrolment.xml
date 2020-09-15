@@ -825,13 +825,13 @@
 			<Type ref="CommonTypes" name="InterventionListType"/>
 		</Item>		<!-- InterventionList -->
 		<Item>
-			<Element>PotentialDestinationSchool</Element>
+			<Element>PotentialDestinationSchoolList</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>The potential destination school of the student.</p>
+				<p>List of potential destination schools for the departing student.</p>
 			</Description>
-			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>     <!-- PotentialDestinationSchool -->
+			<Type ref="CommonTypes" name="PotentialDestinationSchoolListType"/>
+		</Item>     <!-- PotentialDestinationSchoolList -->
 	</CommonElement>
 
 	<CommonElement name="InterventionListType" type="true" dm="true">
@@ -854,6 +854,24 @@
 		</Item>    <!-- Intervention -->
 	</CommonElement>
 	
+	<CommonElement name="PotentialDestinationSchoolListType" type="true" dm="true">
+		<Item>
+			<Element>PotentialDestinationSchoolListType</Element>
+			<Description>
+				<p>List of references to potential destination schools for the departing student.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>School</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A reference to a potential destination school for the departing student.</p>
+			</Description>
+			<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
+		</Item>    <!-- School -->
+	</CommonElement>
+		
 	<!-- ECE History - collected as part of primary enrolment, not to be confused with actual ECE Enrolment data -->
 	<CommonElement name="ECEEducationHistoryListType" type="true" dm="true">
 		<Item>

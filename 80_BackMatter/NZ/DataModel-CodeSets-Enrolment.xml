@@ -103,7 +103,10 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Code set denoting whether or not this is an Active or Inactive Student TeachingGroup Enrolment.</p>
+			<p>Code set denoting the status of the student's teaching group enrolment.</p>
+			<p>Set to Active when: StartDate =&gt; today's date and EndDate is NULL 
+				or EndDate &gt; than today's date.</p>
+			<p>Set to Inactive when: StartDate &lt; today's date or EndDate =&lt; today's date.</p>
 		</Intro>
 		<ID>Student TeachingGroup Enrolment Status</ID>
 		<Values>

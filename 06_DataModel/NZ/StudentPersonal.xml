@@ -94,15 +94,6 @@
 		<Type ref="CodeSets" name="NZCodeSetsBiographicChangeReasonType"/>
 	</Item>    <!-- BiographicChangeReason -->
 	<Item>
-		<Element>CaregiverList</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>List of caregivers; de-normalised from StudentContactPersonal for Te Rito sLSR.</p>
-		</Description>
-		<Type ref="CommonTypes" name="CaregiverListType"/>
-	</Item>    <!-- CaregiverList -->
-	<Item>
 		<Element>CustodyNote</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>

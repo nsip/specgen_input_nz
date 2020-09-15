@@ -27,7 +27,7 @@
     <Description>
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>    <!-- LearningStandardRefId -->
   <Item>
     <Element>LearningStandardLocalId</Element>

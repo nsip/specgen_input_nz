@@ -1323,7 +1323,11 @@
 	
 	<CodeSet>
 		<Intro>
-			<p>Code set denoting whether or not this is an Active or Inactive assignment for the organisations.</p>
+			<p>Code set denoting the status of the relationship between the two organisations.</p>
+			<p>Set to Active when: EffectiveDate =&gt; today's date and ExpirationDate is NULL
+			 or ExpirationDate &gt; than today's date.</p>
+			<p>Set to Inactive when: EffectiveDate &lt; today's date or 
+			ExpirationDate =&lt; today's date.</p>
 		</Intro>
 		<ID>Organisation Relationship Status</ID>
 		<Values>
@@ -1665,7 +1669,7 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Describes the status of a staff member's assignment at a Provider or other EducationOrganisation.</p>
+			<p>Describes the status of a staff member's employment at a Provider or other Organisation.</p>
 		</Intro>
 		<ID>Staff Status</ID>
 		<Values>
@@ -1679,6 +1683,9 @@
 	<CodeSet>
 		<Intro>
 			<p>Code set denoting whether or not this is an Active or Inactive assignment for the staff member.</p>
+			<p>Set to Active when: StartDate =&gt; today's date and EndDate is NULL 
+				or EndDate &gt; than today's date.</p>
+			<p>Set to Inactive when: StartDate &lt; today's date or EndDate =&lt; today's date</p>			
 		</Intro>
 		<ID>Staff Assignment Status</ID>
 		<Values>
@@ -1739,7 +1746,10 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Code set denoting whether or not this is an Active or Inactive assignment for the staff member.</p>
+			<p>Code set denoting the status of the staff member's assignment to a teaching group.</p>
+			<p>Set to Active when: StartDate =&gt; today's date and EndDate is NULL 
+				or EndDate &gt; than today's date.</p>
+			<p>Set to Inactive when: StartDate &lt; today's date or EndDate =&lt; today's date.</p>
 		</Intro>
 		<ID>Staff Teaching Group Assignment Status</ID>
 		<Values>

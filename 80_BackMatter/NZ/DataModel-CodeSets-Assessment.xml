@@ -245,6 +245,68 @@
 				<Code>SRT9A</Code>
 				<Text>STAR Reading - 9A</Text>
 			</Value>    <!-- STAR Reading - 9A -->
+
+
+			<!-- e-asTTle  Maths Tests -->
+			<Value>
+				<Code>EMYR4</Code>
+				<Text>e-asTTle Maths – Year 4</Text>
+			</Value>    <!-- e-asTTle Maths - Year 4 -->
+			<Value>
+				<Code>EMYR5</Code>
+				<Text>e-asTTle Maths – Year 5</Text>
+			</Value>    <!-- e-asTTle Maths - Year 5 -->
+			<Value>
+				<Code>EMYR6</Code>
+				<Text>e-asTTle Maths – Year 6</Text>
+			</Value>    <!-- e-asTTle Maths - Year 6 -->
+			<Value>
+				<Code>EMYR7</Code>
+				<Text>e-asTTle Maths – Year 7</Text>
+			</Value>    <!-- e-asTTle Maths - Year 7 -->
+			<Value>
+				<Code>EMYR8</Code>
+				<Text>e-asTTle Maths – Year 8</Text>
+			</Value>    <!-- e-asTTle Maths - Year 8 -->
+			<Value>
+				<Code>EMYR9</Code>
+				<Text>e-asTTle Maths – Year 9</Text>
+			</Value>    <!-- e-asTTle Maths - Year 9 -->
+			<Value>
+				<Code>EMYR10</Code>
+				<Text>e-asTTle Maths – Year 10</Text>
+			</Value>    <!-- e-asTTle Maths - Year 10 -->
+
+			<!-- e-asTTle   Reading Tests-->
+			<Value>
+				<Code>ERYR4</Code>
+				<Text>e-asTTle Reading – Year 4</Text>
+			</Value>    <!-- e-asTTle Reading - Year 4 -->
+			<Value>
+				<Code>ERYR5</Code>
+				<Text>e-asTTle Reading – Year 5</Text>
+			</Value>    <!-- e-asTTle Reading - Year 5 -->
+			<Value>
+				<Code>ERYR6</Code>
+				<Text>e-asTTle Reading – Year 6</Text>
+			</Value>    <!-- e-asTTle Reading - Year 6 -->
+			<Value>
+				<Code>ERYR7</Code>
+				<Text>e-asTTle Reading – Year 7</Text>
+			</Value>    <!-- e-asTTle Reading - Year 7 -->
+			<Value>
+				<Code>ERYR8</Code>
+				<Text>e-asTTle Reading – Year 8</Text>
+			</Value>    <!-- e-asTTle Reading - Year 8 -->
+			<Value>
+				<Code>ERYR9</Code>
+				<Text>e-asTTle Reading – Year 9</Text>
+			</Value>    <!-- e-asTTle Reading - Year 9 -->
+			<Value>
+				<Code>ERYR10</Code>
+				<Text>e-asTTle Reading – Year 10</Text>
+			</Value>    <!-- e-asTTle - Year 10 -->
+
 		</Values>
 	</CodeSet>    <!-- Assessment Tool Test -->
 

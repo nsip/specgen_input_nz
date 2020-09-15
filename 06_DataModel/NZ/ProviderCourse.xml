@@ -180,21 +180,9 @@
 				</Language>
 			</LanguageOfInstructionList>
       <LearningStandardList>
-        <LearningStandard>
-          <RefId>ac0871d9-6562-4209-ae86-face3661842b</RefId>
-          <LocalId>91165-v2</LocalId>
-          <Name>Demonstrate understanding of the properties of selected organic compounds</Name>
-        </LearningStandard>
-        <LearningStandard>
-          <RefId>ac0871d9-6562-4209-ae86-aabb3661842b</RefId>
-          <LocalId>91166-v2</LocalId>
-          <Name>Demonstrate understanding of chemical reactivity</Name>
-        </LearningStandard>
-        <LearningStandard>
-          <RefId>ac0871d9-6562-4209-ae86-aabb3661842b</RefId>
-          <LocalId>91167-v2</LocalId>
-          <Name>Demonstrate understanding of oxidation-reduction</Name>
-        </LearningStandard>
+        <LearningStandardRefId>NC-91165-v2</LearningStandardRefId>
+        <LearningStandardRefId>NC-91166-v2</LearningStandardRefId>
+        <LearningStandardRefId>NC-91167-v2</LearningStandardRefId>
       </LearningStandardList>
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>

@@ -31,7 +31,7 @@
   </Item>    <!-- RefId -->
   <Item>
     <Element>StaffPersonalLocalId</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
 	  <privacyRating>Medium</privacyRating>
     <Description>
 			<p>The Id of the data object record that was provided by the system that the information 
@@ -59,6 +59,17 @@
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>    <!-- SchoolSMSUserId -->
+
+  <Item>
+    <Element>EnableLogin</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Indicates whether or not the staff member's ability to login is enabled. Yes, 
+        means the staff member can log in. No means they cannot.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+  </Item>    <!-- EnableLogin -->
 
   <Item>
     <Element>PersonInfo</Element>
