@@ -51,7 +51,7 @@
 	</Item>   <!-- Status -->
 	<Item>
 		<Element>StartDate</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The date the relationship between the student and contact was recorded.</p>
@@ -147,6 +147,7 @@
   <xhtml:Example xmlns='' name="StudentContactRelationship">
     <StudentContactRelationship>
 	  <StudentContactRelationshipRefId>7572b261-0947-583a-463d-bb345291b332</StudentContactRelationshipRefId>
+	  <StartDate>2020-06-23</StartDate>
       <Student>
 	    <RefId>dee34b35-9d75-101a-8c3d-00aa001a1652</RefId>
       </Student>

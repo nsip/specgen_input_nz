@@ -18,22 +18,22 @@
 	<Type complex="extension" name="EduOrganisationType"/>
   </Item>   <!-- Organisation -->
   <Item>
-		<Element>OrganisationRefId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The Ministry OrganisationId for the Organisation that is used across systems.</p>
-		</Description>
-		<Type ref="CommonTypes" name="MoEOrgIdType"/>
+	<Element>OrganisationRefId</Element>
+	<Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+	<Description>
+		<p>The Ministry OrganisationId for the Organisation, that is used across systems.</p>
+	</Description>
+	<Type ref="CommonTypes" name="MoEOrgIdType"/>
   </Item>   <!-- OrganisationRefId -->
   <Item>
-		<Element>OrganisationLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The Id of the data object record that was provided by the system that the information was originally sourced from.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"/>
+	<Element>OrganisationLocalId</Element>
+	<Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+	<Description>
+		<p>The Id of the organisation record that was provided by FIRST, the master data system for Ministry organisations.</p>
+	</Description>
+	<Type ref="CommonTypes" name="LocalIdType"/>
   </Item>   <!-- OrganisationLocalId -->
   <Item>
 	  <Element>Authority</Element>
