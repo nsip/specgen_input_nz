@@ -21,23 +21,13 @@
 	</Item>
 	<Item>
 		<Element>OrganisationRefId</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The universally unique identifier for the data object record that is used across systems.</p>
+			<p>1 to 5 digit Ministry Organisation Id for the Organisation, without leading zeros</p>
 		</Description>
-		<Type ref="CommonTypes" name="RefIdType"/>
+		<Type ref="CommonTypes" name="MoEOrgIdType"/>
 	</Item>   <!-- OrganisationRefId -->
-	<Item>
-		<Element>OrganisationLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The Id of the data object record that was provided by the system that the information 
-			was originally sourced from.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"/>
-	</Item>   <!-- OrganisationLocalId -->		
 	<Item>
 		<Element>RecordAudit</Element>    
 		<Characteristics>O</Characteristics>
@@ -90,8 +80,7 @@
 				</PhoneNumber>
 			</PhoneNumberList>
 			<Type json:force-string="true">35008</Type>
-			<OrganisationRefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</OrganisationRefId>
-			<OrganisationLocalId>99204</OrganisationLocalId>
+			<OrganisationRefId>99204</OrganisationRefId>
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>

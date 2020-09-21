@@ -51,7 +51,7 @@
 	</Item>   <!-- Status -->
 	<Item>
 		<Element>StartDate</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The date the relationship between the student and contact was recorded.</p>

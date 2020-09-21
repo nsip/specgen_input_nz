@@ -21,7 +21,7 @@
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The universally unique identifier for the data object record that is used across systems.</p>
+			<p>1 to 5 digit Ministry Organisation Id for the Provider, without leading zeros</p>
 		</Description>
 		<Type ref="CommonTypes" name="MoEOrgIdType"/>
   </Item>   <!-- ProviderRefId -->
