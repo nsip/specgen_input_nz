@@ -1495,6 +1495,9 @@
  			<Value>
 				<Code>1010</Code><Text xml:lang="en">Office Assistant</Text>
 			</Value>
+		  	<Value>
+				<Code>1011</Code><Text xml:lang="en">Finance Manager</Text>
+		 	</Value>
  			<Value>
 				<Code>1012</Code><Text xml:lang="en">Finance Assistant</Text>
 			</Value>
@@ -1527,6 +1530,39 @@
 			</Value>
  			<Value>
 				<Code>1201</Code><Text xml:lang="en">Subject Teacher</Text>
+			</Value>
+		  	<Value>
+				<Code>1202</Code><Text xml:lang="en">Subject Release Teacher</Text>
+			</Value>
+		  	<Value>
+				<Code>1203</Code><Text xml:lang="en">Subject Relief Teacher</Text>
+			</Value>
+		  	<Value>
+				<Code>1204</Code><Text xml:lang="en">Subject Tutor</Text>
+			</Value>
+		  	<Value>
+				<Code>1205</Code><Text xml:lang="en">Classroom Teacher</Text>
+			</Value>
+		  	<Value>
+				<Code>1206</Code><Text xml:lang="en">Classroom Release teacher</Text>
+			</Value>
+		  	<Value>
+				<Code>1207</Code><Text xml:lang="en">Classroom Relief Teacher</Text>
+			</Value>
+		  	<Value>
+				<Code>1208</Code><Text xml:lang="en">Kāhui Ako within School Teacher</Text>
+			</Value>
+		  	<Value>
+				<Code>1209</Code><Text xml:lang="en">Itinerant Subject Teacher</Text>
+			</Value>
+		  	<Value>
+				<Code>1210</Code><Text xml:lang="en">Itinerant Subject Tutor</Text>
+			</Value>
+		  	<Value>
+				<Code>1211</Code><Text xml:lang="en">Specialist Classroom Teacher</Text>
+			</Value>
+		  	<Value>
+				<Code>1301</Code><Text xml:lang="en">Teacher Aide</Text>
 			</Value>
  			<Value>
 				<Code>1302</Code><Text xml:lang="en">STP Coordinator</Text>
@@ -1569,7 +1605,9 @@
 				<Code>1403</Code><Text xml:lang="en">Relief Homeroom Teacher</Text>
 			</Value>
 		  	<Value>
-				<Code>1404</Code><Text xml:lang="en">Pastoral Carer</Text>
+				<Code>1404</Code>
+				<Text xml:lang="en">Pastoral Carer</Text>
+				<Description xml:lang="en">Includes job titles such as 'Dean',  'House Leader', etc.</Description>
 			</Value>
 		  	<Value>
 				<Code>1405</Code><Text xml:lang="en">Guidance Counsellor</Text>
@@ -1599,7 +1637,8 @@
 				<Code>1502</Code><Text xml:lang="en">Coach</Text>
 			</Value>
 		  	<Value>
-				<Code>2001</Code><Text xml:lang="en">Kāhui Ako Lead Principal</Text>
+				<Code>2001</Code>
+				<Text xml:lang="en">Kāhui Ako Lead Principal</Text>
 			</Value>
 		 	<Value>
 				<Code>2002</Code>
@@ -1622,46 +1661,36 @@
 				<Code>2105</Code><Text xml:lang="en">Ministry - SAF</Text>
 			</Value>
 		  	<Value>
-				<Code>2106</Code><Text xml:lang="en">DHB Staff</Text>
+				<Code>2106</Code>
+				<Text xml:lang="en">DHB Staff</Text>
 			</Value>
 		  	<Value>
-				<Code>1301</Code><Text xml:lang="en">Teacher Aide</Text>
+				<Code>2401</Code>
+				<Text xml:lang="en">Te Rito System Administrator</Text>
 			</Value>
 		  	<Value>
-				<Code>1203</Code><Text xml:lang="en">Subject Relief Teacher</Text>
+				<Code>2402</Code>
+				<Text xml:lang="en">Te Rito Privacy Officer</Text>
 			</Value>
 		  	<Value>
-				<Code>1202</Code><Text xml:lang="en">Subject Release Teacher</Text>
+				<Code>2501</Code>
+				<Text xml:lang="en">FIRST - API client</Text>
 			</Value>
 		  	<Value>
-				<Code>1204</Code><Text xml:lang="en">Subject Tutor</Text>
+				<Code>2502</Code>
+				<Text xml:lang="en">SUPS - API client</Text>
 			</Value>
 		  	<Value>
-				<Code>1205</Code><Text xml:lang="en">Classroom Teacher</Text>
+				<Code>2503</Code>
+				<Text xml:lang="en">NZQA - API client</Text>
 			</Value>
 		  	<Value>
-				<Code>1206</Code><Text xml:lang="en">Classroom Release teacher</Text>
+				<Code>2504</Code>
+				<Text xml:lang="en">LSR - API client</Text>
 			</Value>
 		  	<Value>
-				<Code>1207</Code><Text xml:lang="en">Classroom Relief Teacher</Text>
-			</Value>
-		  	<Value>
-				<Code>1208</Code><Text xml:lang="en">Kāhui Ako within School Teacher</Text>
-			</Value>
-		  	<Value>
-				<Code>1209</Code><Text xml:lang="en">Itinerant Subject Teacher</Text>
-			</Value>
-		  	<Value>
-				<Code>1210</Code><Text xml:lang="en">Itinerant Subject Tutor</Text>
-			</Value>
-		  	<Value>
-				<Code>1211</Code><Text xml:lang="en">Specialist Classroom Teacher</Text>
-			</Value>
-		  	<Value>
-				<Code>1011</Code><Text xml:lang="en">Finance Manager</Text>
-		 	</Value>
-		  	<Value>
-				<Code>2107</Code><Text xml:lang="en">Dean</Text>
+				<Code>2505</Code>
+				<Text xml:lang="en">SMS - API client</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Staff Role -->
