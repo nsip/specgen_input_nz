@@ -38,7 +38,7 @@
 			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description><p>The GUUID of the referenced object</p></Description>
-			<Type ref="CommonTypes" name="IdRefType"/>
+			<Type ref="CommonTypes" name="RefIdType"/>
 		</Item>   <!-- RefId -->
 		<Item>
 			<Element>LocalId</Element>
@@ -77,7 +77,7 @@
 			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description><p>The GUUID of the referenced object</p></Description>
-			<Type ref="CommonTypes" name="IdRefType"/>
+			<Type ref="CommonTypes" name="RefIdType"/>
 		</Item>   <!-- RefId -->
 		<Item>
 			<Element>LocalId</Element>
