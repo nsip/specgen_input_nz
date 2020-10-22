@@ -46,14 +46,14 @@
     <Type ref='CommonTypes' name='StudentObjectReferenceType'/>
   </Item>    <!-- Student -->
   <Item>
-    <Element>Provider</Element>
+    <Element>Organisation</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the Provider running the activity the student is participating in, e.g. schools.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
-  </Item>    <!-- Provider -->
+  </Item>    <!-- Organisation -->
 
   <Item>
     <Element>ActivityGroup</Element>
@@ -160,9 +160,9 @@
       <Student>
         <RefId>646c5d4a-c829-4886-a02b-971695c7bc06</RefId>
       </Student>
-      <Provider>
+      <Organisation>
         <RefId>2342</RefId>
-      </Provider>
+      </Organisation>
       <ActivityGroup>SPO</ActivityGroup>
       <ActivityType>CRI</ActivityType>
       <ActivityName>First XI</ActivityName>

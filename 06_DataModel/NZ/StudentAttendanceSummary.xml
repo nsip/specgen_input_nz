@@ -47,14 +47,14 @@
     <Type ref="CommonTypes" name="StudentObjectReference"></Type>
   </Item>    <!-- Student -->
   <Item>
-    <Element>Provider</Element>
+    <Element>Organisation</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The SIF ID of the Provider who is recording this attendance information.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReference"></Type>
-  </Item>    <!-- Provider -->
+  </Item>    <!-- Organisation -->
   <Item>
     <Element>SchoolCalendarYear</Element>
     <Characteristics>M</Characteristics>
@@ -211,9 +211,9 @@
       <Student>
         <RefId>7c834ea9-eda1-2090-347f-83297e1c290c</RefId>
       </Student>
-      <Provider>
+      <Organisation>
         <RefId>743</RefId>
-      </Provider>
+      </Organisation>
       <SchoolCalendarYear>2015</SchoolCalendarYear>
       <StartDate>2014-08-30</StartDate>
       <EndDate>2015-06-10</EndDate>		

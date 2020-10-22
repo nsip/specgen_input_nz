@@ -55,14 +55,14 @@
   </Item>    <!-- Student -->
 
   <Item>
-    <Element>Provider</Element>    
+    <Element>Organisation</Element>    
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the Provider (school) who is making this curriculum progress report.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
-  </Item>    <!-- Provider -->
+  </Item>    <!-- Organisation -->
 
   <Item>
     <Element>TeachingGroup</Element>
@@ -131,9 +131,9 @@
       <Student>
         <RefId>ca285746-359d-7510-1a8c-36432a901a16</RefId>
       </Student>
-      <Provider>
+      <Organisation>
         <RefId>9961</RefId>
-      </Provider>
+      </Organisation>
       <TeachingGroup>
         <RefId>4f6dce25-cca6-49ef-8be4-675e2cfce8b8</RefId>
         <LocalId>HM8P</LocalId>

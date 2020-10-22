@@ -49,14 +49,14 @@
   </Item>    <!-- Student -->
 
   <Item>
-    <Element>Provider</Element>    
+    <Element>Organisation</Element>    
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Reference to the Provider that created the learning support record for the student.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
-  </Item>    <!-- Provider -->
+  </Item>    <!-- Organisation -->
 
   <Item>
     <Element>LearnerStatus</Element>    
@@ -256,9 +256,9 @@
 		  <Student>
 			  <RefId>ca285746-359d-7510-1a8c-36432a901a16</RefId>
 		  </Student>
-      <Provider>
+      <Organisation>
         <RefId>744</RefId>
-      </Provider>
+      </Organisation>
 		  <LearnerStatus>ACT</LearnerStatus>
 		  <StudentConsentList>
 		    <StudentConsent json:force-array="true">

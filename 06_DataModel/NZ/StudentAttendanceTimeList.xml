@@ -35,14 +35,14 @@
 		<Type ref="CommonTypes" name="StudentObjectReference"/>
 	</Item>    <!-- Student -->
 	<Item>
-		<Element>Provider</Element>
+		<Element>Organisation</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The provider who is providing this attendance time list record.</p>
 		</Description>
 		<Type ref="CommonTypes" name="OrganisationObjectReference"/>
-	</Item>    <!-- Provider -->
+	</Item>    <!-- Organisation -->
 	<Item>
 		<Element>TeachingGroup</Element>
 		<Characteristics>O</Characteristics>
@@ -68,9 +68,9 @@
 			<Student>
 				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd991234</RefId>
 			</Student>
-			<Provider>
+			<Organisation>
 				<RefId>762</RefId>
-			</Provider>
+			</Organisation>
 			<TeachingGroup>
 				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd993378</RefId>
 			</TeachingGroup>

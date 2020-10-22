@@ -49,14 +49,14 @@
   </Item>    <!-- Student -->
 
   <Item>
-    <Element>Provider</Element>    
+    <Element>Organisation</Element>    
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>The provider that created this learning support need reponse.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
-  </Item>    <!-- Provider -->
+  </Item>    <!-- Organisation -->
 
   <Item>
     <Element>LearningSupportNeed</Element>    
