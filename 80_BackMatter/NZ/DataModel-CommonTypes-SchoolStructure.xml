@@ -527,16 +527,16 @@
 				that are Providers of early tertiary education services.
 				</p>
 			</Description>
-			<Item>
-				<Element>Type</Element>
-				<Characteristics>M</Characteristics>
-				<privacyRating>Low</privacyRating>
-				<Description>
-					<p>Code denoting the kind of Tertiary service. eg: University, Wananga, etc.</p>
-				</Description>
-				<Type name="xs:string"/>
-			</Item>    <!-- Type -->
 		</Item>
+		<Item>
+			<Element>Type</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Code denoting the kind of Tertiary service. eg: University, Wananga, etc.</p>
+			</Description>
+			<Type name="xs:string"/>
+		</Item>    <!-- Type -->
 	</CommonElement>
 
 </IncludeGroup>

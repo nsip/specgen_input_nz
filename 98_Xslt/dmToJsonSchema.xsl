@@ -139,7 +139,7 @@
 		</xsl:apply-templates>
 
 		<xsl:variable name="desc">
-			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+			<xsl:apply-templates select="xfn:escapeXml(specgen:Item[1]/specgen:Description)"/>
 		</xsl:variable>
 		<xsl:if test="string-length($desc) gt 0">
 			<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
@@ -161,7 +161,7 @@
 
 
 		<xsl:variable name="desc">
-			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+			<xsl:apply-templates select="xfn:escapeXml(specgen:Item[1]/specgen:Description)"/>
 		</xsl:variable>
 		<xsl:if test="string-length($desc) gt 0">
 			<xsl:value-of select="concat('      - description: &gt;-&#x0a;          ', $desc, '&#x0a;')"/>
@@ -183,7 +183,7 @@
 		</xsl:apply-templates>
 
 		<xsl:variable name="desc">
-			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+			<xsl:apply-templates select="xfn:escapeXml(specgen:Item[1]/specgen:Description)"/>
 		</xsl:variable>
 		<xsl:if test="string-length($desc) gt 0">
 			<xsl:value-of select="concat('      - description: &gt;-&#x0a;          ', $desc, '&#x0a;')"/>
@@ -208,7 +208,7 @@
 		</xsl:apply-templates>
 
 		<xsl:variable name="desc">
-			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+			<xsl:apply-templates select="xfn:escapeXml(specgen:Item[1]/specgen:Description)"/>
 		</xsl:variable>
 		<xsl:if test="string-length($desc) gt 0">
 			<xsl:value-of select="concat('      - description: &gt;-&#x0a;          ', $desc, '&#x0a;')"/>
@@ -229,7 +229,7 @@
 
 		<!-- There might be a description -->
 		<xsl:variable name="desc">
-			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+			<xsl:apply-templates select="xfn:escapeXml(specgen:Item[1]/specgen:Description)"/>
 		</xsl:variable>
 		<xsl:if test="string-length($desc) gt 0">
 			<xsl:value-of select="concat('      - description: &gt;-&#x0a;          ', $desc, '&#x0a;')"/>
@@ -268,7 +268,7 @@
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;')"/>
 
 		<xsl:variable name="desc">
-			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+			<xsl:apply-templates select="xfn:escapeXml(specgen:Item[1]/specgen:Description)"/>
 		</xsl:variable>
 
 		<xsl:if test="string-length($desc) gt 0">
@@ -300,7 +300,7 @@
 		</xsl:apply-templates>
 
 		<xsl:text>    - description: &gt;-&#x0a;        </xsl:text>
-		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+		<xsl:apply-templates select="xfn:escapeXml(specgen:Item[1]/specgen:Description)"/><xsl:text>&#x0a;</xsl:text>
 	</xsl:template>
 	
 	<!-- Common type is a list (implicit or explict), with repeatable choice (hetrogynous list) -->
@@ -309,7 +309,7 @@
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;')"/>
 
 		<xsl:text>    description: &gt;-&#x0a;      </xsl:text>
-		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+		<xsl:apply-templates select="xfn:escapeXml(specgen:Item[1]/specgen:Description)"/><xsl:text>&#x0a;</xsl:text>
 		<xsl:text>    type: object&#x0a;    additionalProperties: false&#x0a;    properties:&#x0a;</xsl:text>
 
 		<xsl:apply-templates select="specgen:Choice">
@@ -324,7 +324,7 @@
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;')"/>
 
 		<xsl:variable name="desc">
-			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+			<xsl:apply-templates select="xfn:escapeXml(specgen:Item[1]/specgen:Description)"/>
 		</xsl:variable>
 		<xsl:if test="string-length($desc) gt 0">
 			<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
@@ -349,7 +349,7 @@
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;')"/>
 
 		<xsl:variable name="desc">
-			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+			<xsl:apply-templates select="xfn:escapeXml(specgen:Item[1]/specgen:Description)"/>
 		</xsl:variable>
 		<xsl:if test="string-length($desc) gt 0">
 			<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
@@ -471,7 +471,7 @@
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;')"/>
 
 		<xsl:variable name="desc">
-			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+			<xsl:apply-templates select="xfn:escapeXml(specgen:Item[1]/specgen:Description)"/>
 		</xsl:variable>
 		<xsl:if test="string-length($desc) gt 0">
 			<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
@@ -507,7 +507,7 @@
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;')"/>
 
 		<xsl:variable name="desc">
-			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+			<xsl:apply-templates select="xfn:escapeXml(specgen:Item[1]/specgen:Description)"/>
 		</xsl:variable>
 		<xsl:if test="string-length($desc) gt 0">
 			<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
@@ -596,7 +596,7 @@
 
 				<xsl:if test="normalize-space(specgen:Description) ne ''">
 					<xsl:value-of select="concat($indent, '    - description: &gt;-&#x0a;', $indent, '        ')"/>
-					<xsl:apply-templates select="specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+					<xsl:apply-templates select="xfn:escapeXml(specgen:Description)"/><xsl:text>&#x0a;</xsl:text>
 
 					<!-- If the Item is a codeset then include (at least some of) the values in the description -->
 					<xsl:if test="specgen:Type/@ref eq 'CodeSets'">
@@ -616,7 +616,7 @@
 														count(//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value) - $enumCount, 
 														' more value(s) at &lt;a href=',$q,
 														$extDocURLBase, 'CodeSets.html#', specgen:Type/@name, $q, '&gt;',
-														specgen:Type/@name, '&lt;a&gt;&#x0a;')"/>
+														specgen:Type/@name, '&lt;/a&gt;&#x0a;')"/>
 						</xsl:if>
 					</xsl:if>
 				</xsl:if>
@@ -631,7 +631,7 @@
 				
 				<xsl:if test="normalize-space(specgen:Description) ne ''">
 					<xsl:value-of select="concat($indent, '  - description: &gt;-&#x0a;', $indent, '      ')"/>
-					<xsl:apply-templates select="specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+					<xsl:apply-templates select="xfn:escapeXml(specgen:Description)"/><xsl:text>&#x0a;</xsl:text>
 
 					<!-- If the Item is a codeset then include (at least some of) the values in the description -->
 					<xsl:if test="specgen:Type/@ref eq 'CodeSets'">
@@ -651,7 +651,7 @@
 														count(//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value) - $enumCount, 
 														' more value(s) at &lt;a href=',$q,
 														$extDocURLBase, 'CodeSets.html#', specgen:Type/@name, $q, '&gt;',
-														specgen:Type/@name, '&lt;a&gt;&#x0a;')"/>
+														specgen:Type/@name, '&lt;/a&gt;&#x0a;')"/>
 						</xsl:if>
 					</xsl:if>
 				</xsl:if>
@@ -689,7 +689,7 @@
 		
 		<xsl:if test="normalize-space(specgen:Description) ne ''">
 			<xsl:value-of select="concat($indent, '  description: &gt;-&#x0a;', $indent, '    ')"/>
-			<xsl:apply-templates select="specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+			<xsl:apply-templates select="xfn:escapeXml(specgen:Description)"/><xsl:text>&#x0a;</xsl:text>
 		</xsl:if>
 
 		<xsl:apply-templates select="specgen:Values">
@@ -734,7 +734,7 @@
 		
 		<xsl:if test="normalize-space(specgen:Description) ne ''">
 			<xsl:value-of select="concat($indent, '  description: &gt;-&#x0a;', $indent, '    ')"/>
-			<xsl:apply-templates select="specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+			<xsl:apply-templates select="xfn:escapeXml(specgen:Description)"/><xsl:text>&#x0a;</xsl:text>
 		</xsl:if>
 
 		<xsl:apply-templates select="specgen:Values">
@@ -769,7 +769,8 @@
 							or @name eq 'xs:unsignedByte'
 							or @name eq 'xs:unsignedShort'
 							or @name eq 'xs:unsignedInt'
-							or @name eq 'xs:unsignedLong'">
+							or @name eq 'xs:unsignedLong'
+							or @name eq 'xs:gYear'">
 				<xsl:value-of select="concat($indent, '  type: integer&#x0a;')"/>
 
 				<!-- What's the minimum value?? -->
@@ -793,6 +794,9 @@
 					</xsl:when>
 					<xsl:when test="@name eq 'xs:long'">
 						<xsl:value-of select="concat($indent, '  minimum: -9223372036854775808&#x0a;')"/> <!-- 9223372036854775807 -->
+					</xsl:when>
+					<xsl:when test="@name eq 'xs:gYear'">
+						<xsl:value-of select="concat($indent, '  minimum: 1&#x0a;')"/>
 					</xsl:when>
 				</xsl:choose>
 
@@ -830,6 +834,9 @@
 					<xsl:when test="@name eq 'xs:long'">
 						<xsl:value-of select="concat($indent, '  maximum: 18446744073709551615&#x0a;')"/> 
 					</xsl:when>
+					<xsl:when test="@name eq 'xs:gYear'">
+						<xsl:value-of select="concat($indent, '  maximum: 9999&#x0a;')"/>
+					</xsl:when>					
 				</xsl:choose>
 			</xsl:when>
 			
@@ -941,7 +948,7 @@
 									  	count(specgen:Values/specgen:Value) - $enumCount, 
 										' more value(s) at &lt;a href=',$q,
 										$extDocURLBase, 'CodeSets.html#', $codeSetId, 'Type', $q, '&gt;',
-										$codeSetId, 'Type&lt;a&gt;&#x0a;')"/>
+										$codeSetId, 'Type&lt;/a&gt;&#x0a;')"/>
 		</xsl:if>
 		<xsl:apply-templates select="specgen:Values">
 			<xsl:with-param name="indent" select="'    '"/>
@@ -1144,5 +1151,11 @@
 				<xsl:value-of select="$inp"/>
 			</xsl:otherwise>
 		</xsl:choose>
+	</xsl:function>
+
+	<!-- Custom function to escape < and > chars in Description strings -->
+	<xsl:function name="xfn:escapeXml" as="xs:string">
+		<xsl:param name="inp"/>
+		<xsl:value-of select="normalize-space($inp)"/>
 	</xsl:function>
 </xsl:stylesheet>
