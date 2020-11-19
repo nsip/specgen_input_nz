@@ -62,6 +62,15 @@
 		</Description>
 		<Type ref="CommonTypes" name="AttendanceTimeListType"/>
 	</Item>    <!-- AttendanceTimeList -->
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
 
 	<xhtml:Example xmlns="" name="Student Attendance Time List">
 		<StudentAttendanceTimeList>
@@ -103,6 +112,13 @@
 					</RecordAudit>
 				</AttendanceTime>
 			</AttendanceTimeList>
+			<RecordAudit>
+				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+				<CreatedBy>
+				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+				<Name>Bobby Test</Name>
+				</CreatedBy>
+			</RecordAudit>
 		</StudentAttendanceTimeList>	
 	</xhtml:Example>
 
