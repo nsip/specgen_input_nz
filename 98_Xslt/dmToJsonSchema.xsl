@@ -71,6 +71,7 @@
 		<xsl:value-of select="concat('  ', @name, 's:&#x0a;',
 									 '    type: object&#x0a;',
 									 '    additionalProperties: false&#x0a;',
+									 '    required: [''', @name, ''']&#x0a;',
 									 '    title: ', @name, 's&#x0a;',
 									 '    description: Wrapper around an array of ', @name, 's&#x0a;',
 									 '    properties:&#x0a;',

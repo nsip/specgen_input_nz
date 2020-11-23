@@ -26,6 +26,16 @@
 		<Type ref="CommonTypes" name="RefIdType"/>
 	</Item>    <!-- StudentAttendanceTimeListRefId -->
 	<Item>
+		<Element>StudentAttendanceTimeListLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+				<p>The Id of the data object record that was provided by the system that the information 
+				was originally sourced from.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"></Type>
+	</Item>    <!-- StudentAttendanceTimeListLocalId -->
+	<Item>
 		<Element>Student</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
