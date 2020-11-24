@@ -61,19 +61,6 @@
   </Item>    <!-- SchoolSMSUserId -->
 
   <Item>
-    <Element>EnableLogin</Element>
-    <Characteristics>O</Characteristics>
-	  <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Indicates whether or not the staff member's ability to login is enabled. Yes, 
-        means the staff member can log in. No means they cannot.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>      <!-- EnableLogin -->
-
-
-
-  <Item>
     <Element>PersonInfo</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>High</privacyRating>
