@@ -78,7 +78,7 @@
 
 	<Item>
 		<Element>AcademicDayList</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>A list of the academic days within this schedule.</p>
