@@ -86,60 +86,53 @@
 					<FullName>Fridwulfa Hagrid</FullName>
 					<Type>LGL</Type>
 				</Name>
-				<AddressList>
-					<Address>
+				<Address>
+					<Physical>
 						<Type>TH</Type>
-						<Role>PHY</Role>
 						<Line1>The Enchanted Wood</Line1>
 						<Line2>533 Hogwart's Way</Line2>
 						<City>Hogsmead</City>
 						<PostalCode json:force-string="true">7733</PostalCode>
-					</Address>
-					<Address>
+					</Physical>
+					<Postal>
 						<Type>RU</Type>
-						<Role>PHY</Role>
 						<Line1>1175 Lake Ferry Rd</Line1>
 						<Suburb>RD 1</Suburb>
 						<City>Martinborough</City>
-					</Address>
-				</AddressList>
-				<EmailList>
-					<Email json:force-array="true">
-						<Type>PRIM</Type>
+					</Postal>
+				</Address>
+				<Email>
+					<Personal>
 						<Address>ridwulfa@gmail.com</Address>
-					</Email>
-				</EmailList>
-				<PhoneNumberList>
-					<PhoneNumber json:force-array="true">
-						<Type>MOB</Type>
+					</Personal>
+				</Email>
+				<Phone>
+					<Mobile>
 						<Number>(021) 300 999</Number>
-					</PhoneNumber>
-				</PhoneNumberList>
+					</Mobile>
+				</Phone>
 				<HouseholdContactInfoList>
 					<HouseholdContactInfo json:force-array="true">
 						<PreferenceNumber>1</PreferenceNumber>
 						<HouseholdContactId>7d5c3f5c-d89c-4551-9442-6b008207986e</HouseholdContactId>
-						<AddressList>
-							<Address json:force-array="true">
+						<Address>
+							<Postal>
 								<Type>DE</Type>
-								<Role>POS</Role>
 								<Line1>P O Box 81</Line1>
 								<City>Martinborough</City>
 								<PostalCode json:force-string="true">5781</PostalCode>
-							</Address>
-						</AddressList>
-						<EmailList>
-							<Email json:force-array="true">
-								<Type>WORK</Type>
+							</Postal>
+						</Address>
+						<Email>
+							<Work>
 								<Address>ridwulfa@gmail.com</Address>
-							</Email>
-						</EmailList>
-						<PhoneNumberList>
-							<PhoneNumber json:force-array="true">
-								<Type>MOB</Type>
+							</Work>
+						</Email>
+						<Phone>
+							<Mobile>
 								<Number>(021) 300 999</Number>
-							</PhoneNumber>
-						</PhoneNumberList>
+							</Mobile>
+						</Phone>
 					</HouseholdContactInfo>
 				</HouseholdContactInfoList>
 			</PersonInfo>
@@ -162,27 +155,24 @@
 				<Name>
 					<FullName>Dr Phillips</FullName>
 				</Name>
-				<AddressList>
-					<Address json:force-array="true">
+				<Address>
+					<Physical>
 						<Type>TH</Type>
-						<Role>PHY</Role>
 						<Line1>Regent St.</Line1>
 						<City>Martinborough</City>
 						<PostalCode json:force-string="true">5741</PostalCode>
-					</Address>
-				</AddressList>
-				<EmailList>
-					<Email json:force-array="true">
-						<Type>PRIM</Type>
+					</Physical>
+				</Address>
+				<Email>
+					<Work>
 						<Address>Phillips@mboroHealth.com</Address>
-					</Email>
-				</EmailList>
-				<PhoneNumberList>
-					<PhoneNumber json:force-array="true">
-						<Type>MOB</Type>
+					</Work>
+				</Email>
+				<Phone>
+					<Work>
 						<Number>(021) 300 999</Number>
-					</PhoneNumber>
-				</PhoneNumberList>
+					</Work>
+				</Phone>
 			</PersonInfo>
 			<HealthcareServiceInfo>
 				<OrganisationName>Martinborough Medical Centre</OrganisationName>

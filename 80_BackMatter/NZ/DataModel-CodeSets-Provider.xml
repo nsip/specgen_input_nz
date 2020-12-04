@@ -935,33 +935,6 @@
 
 	<CodeSet>
 		<Intro>
-		  <p>A standardised method of describing a communication channel used to communicate with or
-		   	find information about a party. Provides a more generic definition than phone and email. Intended 
-			to provide for future requirements to record social network channels, eg Facebook &amp;amp; Twitter
-			 identifiers for a school.</p>
-		</Intro>
-		<ID>Communication Channel Type</ID>
-		<Values>
-			<Value>
-				<Code>WEB</Code>
-				<Text>Website</Text>
-				<Description>Typically refers to the home page for an entity</Description>
-			</Value>     <!-- Web -->
-			<Value>
-				<Code>TWT</Code>
-				<Text>Twitter</Text>
-				<Description>Twitter handle</Description>
-			</Value>     <!-- Twitter -->
-			<Value>
-				<Code>FBK</Code>
-				<Text>Facebook</Text>
-				<Description>Facebook page</Description>
-			</Value>     <!-- Facebook -->
-		</Values>
-	</CodeSet>    <!-- Communication Channel Type -->
-
-	<CodeSet>
-		<Intro>
 			<p>A standardised method of describing how (or when) a communication channel may be used to
 				communicate with a party. Where a party has more than one electronic contact type (eg several
 				phone numbers), this provides context for deciding which to use. A communication usage type

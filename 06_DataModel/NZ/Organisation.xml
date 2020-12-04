@@ -91,27 +91,20 @@
 
   <xhtml:Example xmlns="" name="School Provider Example">
     <Organisation>
-		<AddressList>
-			<Address json:force-array="true">
+		<Address>
+			<Physical>
 				<Type>RU</Type>
-				<Role>PHY</Role>
 				<Line1>1175 Lake Ferry Rd</Line1>
 				<Suburb>RD 1</Suburb>
 				<City>Martinborough</City>
-			</Address>
-		</AddressList>
-		<CommunicationChannelList>
-			<Channel>
+			</Physical>
+		</Address>
+		<CommunicationChannel>
+			<Website>
 				<Notes>Attendance System (Self Service)</Notes>
-				<Type>WEB</Type>
 				<Value>http://att.hogwarts.school.nz</Value>
-			</Channel>
-			<Channel>
-				<Notes>School Website</Notes>
-				<Type>WEB</Type>
-				<Value>http://www.hogwarts.school.nz</Value>
-			</Channel>
-		</CommunicationChannelList>
+			</Website>
+		</CommunicationChannel>
 		<ContactList>
 			<Contact>
 				<Name>
@@ -121,17 +114,16 @@
 				</Name>
 				<PositionTitle>Headmaster</PositionTitle>
 				<Role>PRI</Role>
-				<AddressList>
-					<Address json:force-array="true">
+				<Address>
+					<Physical>
 						<Type>TH</Type>
-						<Role>PHY</Role>
 						<Line1>533 Hogwart's Way</Line1>
 						<City>Hogsmead</City>
 						<PostalCode json:force-string="true">7733</PostalCode>
-					</Address>
-				</AddressList>
-				<EmailList/>
-				<PhoneNumberList/>
+					</Physical>
+				</Address>
+				<Email/>
+				<Phone/>
 			</Contact>
 			<Contact>
 				<Name>
@@ -141,34 +133,31 @@
 				</Name>
 				<PositionTitle>Gamekeeper</PositionTitle>
 				<Role>DIR</Role>
-				<AddressList>
-					<Address json:force-array="true">
+				<Address>
+					<Physical>
 						<Type>TH</Type>
-						<Role>PHY</Role>
 						<Line1>The Enchanted Wood</Line1>
 						<Line2>533 Hogwart's Way</Line2>
 						<City>Hogsmead</City>
 						<PostalCode json:force-string="true">7733</PostalCode>
-					</Address>
-				</AddressList>
-				<EmailList/>
-				<PhoneNumberList/>
+					</Physical>
+				</Address>
+				<Email/>
+				<Phone/>
 			</Contact>
 		</ContactList>
 		<EducationRegion>TAIT</EducationRegion>
-		<EmailList>
-			<Email json:force-array="true">
-				<Type>PRIM</Type>
+		<Email>
+			<Main>
 				<Address>stuart@gmail.com</Address>
-			</Email>
-		</EmailList>
+			</Main>
+		</Email>
 		<EntityOpen>1652-04-01</EntityOpen>
 		<LocationList>
 			<Location json:force-array="true">
 				<Description>Only Campus</Description>
 				<Address>
 					<Type>RU</Type>
-					<Role>PHY</Role>
 					<Line1>1175 Lake Ferry Rd</Line1>
 					<Suburb>RD 1</Suburb>
 					<City>Martinborough</City>
@@ -195,25 +184,12 @@
 			</Location>
 		</LocationList>			
 		<Name>Hogwart's Area School</Name>			
-		<PhoneNumberList>
-			<PhoneNumber>
-				<Notes>Attendance Office (Automated)</Notes>
-				<Usage>SMS</Usage>
-				<Type>WTE</Type>
-				<Number>(0274) 300 9991</Number>
-			</PhoneNumber>
-			<PhoneNumber>
-				<Notes>Attendance Office</Notes>
-				<Usage>INT</Usage>
-				<Type>WTE</Type>
-				<Number>(04) 300 9992</Number>
-			</PhoneNumber>
-			<PhoneNumber>
+		<Phone>
+			<Main>
 				<Notes>School Secretary DDI</Notes>
-				<Type>WTE</Type>
 				<Number>(04) 300 9993</Number>
-			</PhoneNumber>
-		</PhoneNumberList>
+			</Main>
+		</Phone>
 		<RelatedOrganisationList>
 			<RelatedOrganisation>
 				<RefId>9965</RefId>

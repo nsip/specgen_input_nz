@@ -51,27 +51,23 @@
 			<Type ref="CommonTypes" name="DemographicsType"/>
 		</Item>    <!-- Demographics -->
 		<Item>
-			<Element>AddressList</Element>
+			<Element>Address</Element>
 			<Characteristics>O</Characteristics>
-			<Description>The person's address(es) - one or more addresses</Description>
-			<Type ref="CommonTypes" name="AddressListType"/>
-		</Item>    <!-- AddressList -->
+			<Description>The person's address(es) - one or more addresses.</Description>
+			<Type ref="CommonTypes" name="AddressesType"/>
+		</Item>    <!-- Address -->
 		<Item>
-			<Element>EmailList</Element>
+			<Element>Email</Element>
 			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The person's e-mail address(es) - one or more emails.</p>
-			</Description>
-			<Type ref="CommonTypes" name="EmailListType"/>
-		</Item>    <!-- EmailList -->
+			<Description><p>The person's e-mail address(es) - one or more emails.</p></Description>
+			<Type ref="CommonTypes" name="PersonEmailsType"/>
+		</Item>    <!-- Email -->
 		<Item>
-			<Element>PhoneNumberList</Element>
+			<Element>Phone</Element>
 			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The person's phone number(s) - one or more phone numbers.</p>
-			</Description>
-			<Type ref="CommonTypes" name="PhoneNumberListType"/>
-		</Item>    <!-- PhoneNumberList -->
+			<Description><p>The person's phone number(s) - one or more phone numbers.</p></Description>
+			<Type ref="CommonTypes" name="PersonPhonesType"/>
+		</Item>    <!-- Phone -->
 		<Item>
 			<Element>HouseholdContactInfoList</Element>
 			<Characteristics>O</Characteristics>
@@ -200,61 +196,54 @@
 						<ReligiousAffiliation>NZS215</ReligiousAffiliation>
 					</ReligiousAffiliationList>
 				</Demographics>
-				<AddressList>
-					<Address>
+				<Address>
+					<Physical>
 						<Type>TH</Type>
-						<Role>PHY</Role>
+						<Line1>1175 Lake Ferry Rd</Line1>
+						<Suburb>RD 1</Suburb>
+						<City>Martinborough</City>
+					</Physical>
+					<Postal>
+						<Type>TH</Type>
 						<Line1>The Enchanted Wood</Line1>
 						<Line2>533 Hogwart's Way</Line2>
 						<City>Hogsmead</City>
 						<PostalCode json:force-string="true">7733</PostalCode>
-					</Address>
-					<Address>
-						<Type>TH</Type>
-						<Role>PHY</Role>
-						<Line1>1175 Lake Ferry Rd</Line1>
-						<Suburb>RD 1</Suburb>
-						<City>Martinborough</City>
-					</Address>
-				</AddressList>
-				<EmailList>
-					<Email json:force-array="true">
-						<Type>PRIM</Type>
+					</Postal>
+				</Address>
+				<Email>
+					<Personal>
 						<Address>hagrid@gmail.com</Address>
-					</Email>
-				</EmailList>
-				<PhoneNumberList>
-					<PhoneNumber json:force-array="true">
-						<Type>MOB</Type>
+					</Personal>
+				</Email>
+				<Phone>
+					<Mobile>
 						<Number>(021) 300 999</Number>
-					</PhoneNumber>
-				</PhoneNumberList>
+					</Mobile>
+				</Phone>
 				<HouseholdContactInfoList>
 					<HouseholdContactInfo json:force-array="true">
 						<PreferenceNumber>1</PreferenceNumber>
 						<HouseholdContactId>7d5c3f5c-d89c-4551-9442-6b008207986e</HouseholdContactId>
-						<AddressList>
-							<Address json:force-array="true">
+						<Address>
+							<Postal>
 								<Type>DE</Type>
-								<Role>POS</Role>
 								<Line1>P O Box 81</Line1>
 								<City>Martinborough</City>
 								<PostalCode json:force-string="true">5781</PostalCode>
-							</Address>
-						</AddressList>
-						<EmailList>
-							<Email json:force-array="true">
-								<Type>PRIM</Type>
+							</Postal>
+						</Address>
+						<Email>
+							<Personal>
 								<Address>hagrid@gmail.com</Address>
-							</Email>
-						</EmailList>
-						<PhoneNumberList>
-							<PhoneNumber json:force-array="true">
+							</Personal>
+						</Email>
+						<Phone>
+							<Home>
 								<Usage>INT</Usage>
-								<Type>MAI</Type>
 								<Number>(021) 300 999</Number>
-							</PhoneNumber>
-						</PhoneNumberList>
+							</Home>
+						</Phone>
 					</HouseholdContactInfo>
 					
 				</HouseholdContactInfoList>
@@ -278,7 +267,7 @@
 			<Type name="xs:string"/>
 		</Item>    <!-- Notes -->
 		<Item>
-			<Element>Preference</Element>
+			<Element>PreferenceOrderNumber</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>Preference number indicating an order in which communication channels should be used
@@ -834,38 +823,61 @@
 		</Item>    <!-- Type -->
 	</CommonElement>
 
-	<CommonElement name="EmailListType" type="true" dm="true">
+	<CommonElement name="PersonEmailsType" type="true" dm="true">
 		<Item>
-			<Element>EmailListType</Element>
+			<Element>PersonEmailsType</Element>
 			<Description>
-				<p>A list of e-mail addresses associated with an individual or organization.</p>
+				<p>The set of e-mail addresses associated with a person (StaffPersonal, StudentPersonal or StudentContactPersonal)</p>
 			</Description>
-			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>Email</Element>
-			<Characteristics>MR</Characteristics>
+			<Element>Personal</Element>
+			<Characteristics>O</Characteristics>
 			<Type ref="CommonTypes" name="EmailType"/>
-		</Item>    <!-- Email -->
-		<xhtml:Example xmlns="" name="Email List Example">
-			<EmailList>
-				<Email>
-					<Notes>Not on Thursdays</Notes>
-					<Preference>1</Preference>
-					<Usage>INT</Usage>
-					<Type>WORK</Type>
-					<Address>contact@sifinfo.org</Address>
-				</Email>
-				<Email>
-					<Notes>Only on Thursdays</Notes>
-					<Preference>1</Preference>
-					<Usage>INT</Usage>
-					<Type>WORK</Type>
+		</Item>    <!-- Personal -->
+		<Item>
+			<Element>Work</Element>
+			<Characteristics>O</Characteristics>
+			<Type ref="CommonTypes" name="EmailType"/>
+		</Item>    <!-- Work -->
+		<xhtml:Example xmlns="" name="Person Emails Example">
+			<PersonEmails>
+				<Personal>
+					<PreferenceOrderNumber>2</PreferenceOrderNumber>
 					<Address>info@sifinfo.org</Address>
-				</Email>
-			</EmailList>
+				</Personal>
+				<Work>
+					<Notes>Not after 3pm</Notes>
+					<PreferenceOrderNumber>1</PreferenceOrderNumber>
+					<Address>contact@sifinfo.org</Address>
+				</Work>
+			</PersonEmails>
 		</xhtml:Example>
 	</CommonElement>
+
+	<CommonElement name="OrganisationEmailsType" type="true" dm="true">
+		<Item>
+			<Element>OrganisationEmailsType</Element>
+			<Description>
+				<p>The set of e-mail addresses associated with an Organisation</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Main</Element>
+			<Characteristics>O</Characteristics>
+			<Type ref="CommonTypes" name="EmailType"/>
+		</Item>    <!-- Main -->
+		<xhtml:Example xmlns="" name="Organisation Emails Example">
+			<OrganisationEmails>
+				<Main>
+					<Notes>Not after 3pm</Notes>
+					<PreferenceOrderNumber>1</PreferenceOrderNumber>
+					<Address>contact@sifinfo.org</Address>
+				</Main>
+			</OrganisationEmails>
+		</xhtml:Example>
+	</CommonElement>
+
 	<CommonElement name="EmailType" type="true" dm="true">
 		<Item>
 			<Element>EmailType</Element>
@@ -879,15 +891,6 @@
 			</Description>
 			<Type complex="extension" name="BaseCommunicationChannelType"/>
 		</Item>
-		<Item>
-			<Element>Type</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Description>
-				<p>A Code denoting how the owner of the e-mail address describes it.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsEmailTypeType"/>
-		</Item>    <!-- Type -->
 		<Item>
 			<Element>SourceOrganisation</Element>
 			<Characteristics>O</Characteristics>
@@ -909,66 +912,86 @@
 		<xhtml:Example xmlns="" name="NZ Email Type Example">
 			<Email>
 				<Notes>Not on Thursdays</Notes>
-				<Preference>1</Preference>
+				<PreferenceOrderNumber>1</PreferenceOrderNumber>
 				<Usage>INT</Usage>
-				<Type>WORK</Type>
 				<Address>contact@sifinfo.org</Address>
 			</Email>
 		</xhtml:Example>
 	</CommonElement>
-	
-	<CommonElement name="PhoneNumberListType" type="true" dm="true">
+
+	<CommonElement name="OrganisationPhonesType" type="true" dm="true">
 		<Item>
-			<Element>PhoneNumberListType</Element>
+			<Element>OrganisationPhonesType</Element>
 			<Description>
-				<p>Lists phone numbers associated with an entity.</p>
+				<p>Lists phone numbers associated with an Organisation</p>
 			</Description>
-			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>PhoneNumber</Element>
-			<Characteristics>MR</Characteristics>
+			<Element>Main</Element>
+			<Characteristics>O</Characteristics>
+			<Description>An organisation's main contact number.</Description>
 			<Type ref="CommonTypes" name="PhoneNumberType"/>
-		</Item>    <!-- PhoneNumber -->
-		<xhtml:Example xmlns="" name="Phone Number List Example">
-			<PhoneNumberList>
-				<PhoneNumber>
+		</Item>    <!-- Main	 -->
+		<xhtml:Example xmlns="" name="Organisation Phones Example">
+			<Phone>
+				<Main>
 					<Notes>Not on Thursdays</Notes>
-					<Preference>1</Preference>
-					<Usage>INT</Usage>
-					<Type>WTE</Type>
+					<PreferenceOrderNumber>1</PreferenceOrderNumber>
 					<Number>(03) 273 2000</Number>
-				</PhoneNumber>
-				<PhoneNumber>
-					<Notes>Only on Thursdays</Notes>
-					<Preference>1</Preference>
-					<Usage>INT</Usage>
-					<Type>WMO</Type>
-					<Number>(0274) 273 2000</Number>
-				</PhoneNumber>
-			</PhoneNumberList>
+				</Main>
+			</Phone>
 		</xhtml:Example>
 	</CommonElement>
+
+	<CommonElement name="PersonPhonesType" type="true" dm="true">
+		<Item>
+			<Element>PersonPhonesType</Element>
+			<Description>
+				<p>Lists phone numbers associated with a person (StaffPersonal, StudentPersonal, StudentContactPersonal)</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Home</Element>
+			<Characteristics>O</Characteristics>
+			<Description>A person's home number.</Description>
+			<Type ref="CommonTypes" name="PhoneNumberType"/>
+		</Item>    <!-- Home -->
+		<Item>
+			<Element>Work</Element>
+			<Characteristics>O</Characteristics>
+			<Description>A person's work number.</Description>
+			<Type ref="CommonTypes" name="PhoneNumberType"/>
+		</Item>    <!-- Work -->
+		<Item>
+			<Element>Mobile</Element>
+			<Characteristics>O</Characteristics>
+			<Type ref="CommonTypes" name="PhoneNumberType"/>
+			<Description>A person's mobile number.</Description>
+		</Item>    <!-- Mobile -->
+		<xhtml:Example xmlns="" name="Person Phones Example">
+			<Phone>
+				<Home>
+					<Notes>Weeday Evenings Only</Notes>
+					<PreferenceOrderNumber>2</PreferenceOrderNumber>
+					<Number>(03) 273 2000</Number>
+				</Home>
+				<Mobile>
+					<PreferenceOrderNumber>1</PreferenceOrderNumber>
+					<Number>(0274) 273 2000</Number>
+				</Mobile>
+			</Phone>
+		</xhtml:Example>
+	</CommonElement>
+
 	<CommonElement name="PhoneNumberType" type="true" dm="true">
 		<Item>
 			<Element>PhoneNumberType</Element>
 			<Description>
 				<p>This element represents a phone number and occurs within
-				objects such as StudentPersonal, StaffPersonal, etc.</p>
+				objects such as StudentPersonal, StaffPersonal, Organisation etc.</p>
 			</Description>
 			<Type complex="extension" name="BaseCommunicationChannelType"/>
 		</Item>
-		<Item>
-			<Element>Type</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Description>
-				<p>Code that specifies what type of phone number this is.
-				Note: A subset of valid values may be specified in data
-				objects.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsTelephoneNumberTypeType"/>
-		</Item>     <!-- Type -->
 		<Item>
 			<Element>Number</Element>
 			<Characteristics>M</Characteristics>
@@ -990,24 +1013,12 @@
 			</Description>
 			<Type name="xs:normalizedString"/>
 		</Item>     <!-- Extension -->
-		<Item>
-			<Element>ListedStatus</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Description>
-				<p>Indicates whether or not the phone number is available to the public.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-		</Item>     <!-- ListedStatus -->		
 		<xhtml:Example xmlns="" name="Phone Number Example">
 			<PhoneNumber>
 				<Notes>Not on Thursdays</Notes>
-				<Preference>1</Preference>
-				<Usage>INT</Usage>
-				<Type>WTE</Type>
+				<PreferenceOrderNumber>1</PreferenceOrderNumber>
 				<Number>(03) 9543 2000</Number>
 				<Extension json:force-string="true">245</Extension>
-				<ListedStatus>Y</ListedStatus>
 			</PhoneNumber>
 		</xhtml:Example>
 	</CommonElement>
@@ -1219,56 +1230,53 @@
 			<Type name="xs:normalizedString"/>
 		</Item>     <!-- HouseholdSalutation -->
 		<Item>
-			<Element>AddressList</Element>
+			<Element>Address</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p/>
 			</Description>
-			<Type ref="CommonTypes" name="AddressListType"/>
-		</Item>     <!-- AddressList -->
+			<Type ref="CommonTypes" name="AddressesType"/>
+		</Item>     <!-- Address -->
 		<Item>
-			<Element>EmailList</Element>
+			<Element>Email</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>List of Email elements.</p>
 			</Description>
-			<Type ref="CommonTypes" name="EmailListType"/>
-		</Item>     <!-- EmailList -->
+			<Type ref="CommonTypes" name="PersonEmailsType"/>
+		</Item>     <!-- Email -->
 		<Item>
-			<Element>PhoneNumberList</Element>
+			<Element>Phone</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>List of PhoneNumber elements.</p>
 			</Description>
-			<Type ref="CommonTypes" name="PhoneNumberListType"/>
-		</Item>     <!-- PhoneNumberList -->
+			<Type ref="CommonTypes" name="PersonPhonesType"/>
+		</Item>     <!-- Phone -->
 
 		<xhtml:Example xmlns="" name="Household Contact Info Example">
 			<HouseholdContactInfo>
 				<PreferenceNumber>1</PreferenceNumber>
 				<HouseholdContactId>7d5c3f5c-d89c-4551-9442-6b008207986e</HouseholdContactId>
-				<AddressList>
-					<Address json:force-array="true">
+				<Address>
+					<Postal>
 						<Type>DE</Type>
-						<Role>POS</Role>
 						<Line1>P O Box 81</Line1>
 						<City>Martinborough</City>
 						<PostalCode json:force-string="true">5781</PostalCode>
-					</Address>
-				</AddressList>
-				<EmailList>
-					<Email json:force-array="true">
-						<Type>WORK</Type>
+					</Postal>
+				</Address>
+				<Email>
+					<Work>
 						<Address>hagrid@gmail.com</Address>
-					</Email>
-				</EmailList>
-				<PhoneNumberList>
-					<PhoneNumber json:force-array="true">
+					</Work>
+				</Email>
+				<Phone>
+					<Home>
 						<Usage>INT</Usage>
-						<Type>MAI</Type>
 						<Number>(021) 300 999</Number>
-					</PhoneNumber>
-				</PhoneNumberList>
+					</Home>
+				</Phone>
 			</HouseholdContactInfo>
 		</xhtml:Example>
 	</CommonElement>
@@ -1305,23 +1313,23 @@
 			</Description>
 		</Item>
 		<Item>
-			<Element>AddressList</Element>
+			<Element>Address</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
 				<p>The set of postal and other addresses that the Organisation uses</p>
 			</Description>
-			<Type ref="CommonTypes" name="AddressListType"/>
-		</Item>   <!-- AddressList -->
+			<Type ref="CommonTypes" name="AddressesType"/>
+		</Item>   <!-- Address -->
 		<Item>
-			<Element>CommunicationChannelList</Element>
+			<Element>CommunicationChannel</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>A list of one or more methods of communication with the organisation</p>
 			</Description>
-			<Type ref="CommonTypes" name="CommunicationChannelListType"/>
-		</Item>   <!-- CommunicationChannelList -->
+			<Type ref="CommonTypes" name="CommunicationChannelsType"/>
+		</Item>   <!-- CommunicationChannel -->
 		<Item>
 			<Element>ContactList</Element>
 			<Characteristics>O</Characteristics>
@@ -1350,14 +1358,14 @@
 			<Type ref="CodeSets" name="NZCodeSetsSpecialEducationDistrictType"/>
 		</Item>   <!-- SpecialEducationDistrict -->
 		<Item>
-			<Element>EmailList</Element>
+			<Element>Email</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
 				<p>The set of contact email addresses that the Organisation uses</p>
 			</Description>
-			<Type ref="CommonTypes" name="EmailListType"/>
-		</Item>   <!-- EmailList -->
+			<Type ref="CommonTypes" name="OrganisationEmailsType"/>
+		</Item>   <!-- Email -->
 		<Item>
 			<Element>EntityClose</Element>
 			<Characteristics>O</Characteristics>
@@ -1398,14 +1406,14 @@
 			<Type name="xs:normalizedString"/>
 		</Item>   <!-- Name -->
 		<Item>
-			<Element>PhoneNumberList</Element>
+			<Element>Phone</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
 				<p>The set of contact phone numbers that the Organisation uses</p>
 			</Description>
-			<Type ref="CommonTypes" name="PhoneNumberListType"/>
-		</Item>   <!-- PhoneNumberList -->
+			<Type ref="CommonTypes" name="OrganisationPhonesType"/>
+		</Item>   <!-- Phone -->
 		<Item>
 			<Element>RelatedOrganisationList</Element>
 			<Characteristics>O</Characteristics>
@@ -1570,17 +1578,16 @@
 					</Name>
 					<PositionTitle>Headmaster</PositionTitle>
 					<Role>PRI</Role>
-					<AddressList>
-						<Address json:force-array="true">
+					<Address>
+						<Physical>
 							<Type>TH</Type>
-							<Role>PHY</Role>
 							<Line1>533 Hogwart's Way</Line1>
 							<City>Hogsmead</City>
 							<PostalCode json:force-string="true">7733</PostalCode>
-						</Address>
-					</AddressList>
-					<EmailList/>
-					<PhoneNumberList/>
+						</Physical>
+					</Address>
+					<Email/>
+					<Phone/>
 				</Contact>
 				<Contact>
 					<Name>
@@ -1590,18 +1597,17 @@
 					</Name>
 					<PositionTitle>Gamekeeper</PositionTitle>
 					<Role>DIR</Role>
-					<AddressList>
-						<Address json:force-array="true">
+					<Address>
+						<Physical>
 							<Type>TH</Type>
-							<Role>PHY</Role>
 							<Line1>The Enchanted Wood</Line1>
 							<Line2>533 Hogwart's Way</Line2>
 							<City>Hogsmead</City>
 							<PostalCode json:force-string="true">7733</PostalCode>
-						</Address>
-					</AddressList>
-					<EmailList/>
-					<PhoneNumberList/>
+						</Physical>
+					</Address>
+					<Email/>
+					<Phone/>
 				</Contact>
 			</ContactList>
 		</xhtml:Example>	
@@ -1639,29 +1645,29 @@
 			<Type ref="CodeSets" name="NZCodeSetsOrganisationContactRoleType"/>
 		</Item>   <!-- Role -->
 		<Item>
-			<Element>AddressList</Element>
+			<Element>Address</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p/>
 			</Description>
-			<Type ref="CommonTypes" name="AddressListType"/>
-		</Item>   <!-- AddressList -->
+			<Type ref="CommonTypes" name="AddressesType"/>
+		</Item>   <!-- Address -->
 		<Item>
-			<Element>EmailList</Element>
+			<Element>Email</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>List of Email elements.</p>
 			</Description>
-			<Type ref="CommonTypes" name="EmailListType"/>
-		</Item>   <!-- EmailList -->
+			<Type ref="CommonTypes" name="PersonEmailsType"/>
+		</Item>   <!-- Email -->
 		<Item>
-			<Element>PhoneNumberList</Element>
+			<Element>Phone</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>List of PhoneNumber elements.</p>
 			</Description>
-			<Type ref="CommonTypes" name="PhoneNumberListType"/>
-		</Item>   <!-- PhoneNumberList -->
+			<Type ref="CommonTypes" name="PersonPhonesType"/>
+		</Item>   <!-- Phone -->
 		
 		<xhtml:Example xmlns="" name="Contact Example">
 			<Contact>
@@ -1672,33 +1678,31 @@
 				</Name>
 				<PositionTitle>Head Cattle Wrangler</PositionTitle>
 				<Role>PRI</Role>
-				<AddressList>
-					<Address json:force-array="true">
+				<Address>
+					<Physical>
 						<Type>TH</Type>
-						<Role>PHY</Role>
 						<Line1>533 Hogwart's Way</Line1>
 						<City>Hogsmead</City>
 						<PostalCode json:force-string="true">7733</PostalCode>
-					</Address>
-				</AddressList>
-				<EmailList/>
-				<PhoneNumberList/>
+					</Physical>
+				</Address>
+				<Email/>
+				<Phone/>
 			</Contact>
 		</xhtml:Example>
 	</CommonElement>
 
-	<CommonElement name="CommunicationChannelListType" type="true" dm="true">
+	<CommonElement name="CommunicationChannelsType" type="true" dm="true">
 		<Item>
-			<Element>CommunicationChannelListType</Element>
+			<Element>CommunicationChannelsType</Element>
 			<Description>
-				<p>A list of people/organisation's ccommunications channels</p>
+				<p>A set of people/organisation's ccommunications channels</p>
 			</Description>
-			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>Channel</Element>
-			<Characteristics>MR</Characteristics>
-			<Description/>
+			<Element>Website</Element>
+			<Characteristics>O</Characteristics>
+			<Description>The person/organisation's Website address</Description>
 			<Type ref="CommonTypes" name="CommunicationChannelType"/>
 		</Item>
 	</CommonElement>
@@ -1711,14 +1715,6 @@
 			<Type complex="extension" name="BaseCommunicationChannelType"/>
 		</Item>	
 		<Item>
-			<Element>Type</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>A code classifying the Communication's method</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsCommunicationChannelTypeType"/>
-		</Item>    <!-- Type -->
-		<Item>
 			<Element>Value</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
@@ -1730,7 +1726,6 @@
 		<xhtml:Example xmlns="" name="Communication Channel Example">
 			<CommunicationChannel>
 				<Notes>School Attendance System (Self Service)</Notes>
-				<Type>WEB</Type>
 				<Value>http://www.hogwarts.school.nz/Attendance</Value>
 			</CommunicationChannel>
 		</xhtml:Example>

@@ -69,13 +69,31 @@
 		</Item>
 
 		<Item>
-			<Element>AttendanceTimeLocalId</Element>
-			<Characteristics>M</Characteristics>
+			<Element>AttendanceTimeRefId</Element>
+			<Characteristics>O</Characteristics>
 			<Description>
-				<p>The source system identifier of the attendance time list record.</p>
+				<p>The globally unique identifier of the student's particular attendance record.</p>
 			</Description>
-			<Type ref="CommonTypes" name="LocalId"/>
+			<Type ref="CommonTypes" name="RefIdType"/>
 		</Item>		<!-- AttendanceTimeLocalId -->
+		<Item>
+			<Element>AttendanceTimeLocalId</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The source system identifier of the student's particular attendance record.</p>
+			</Description>
+			<Type ref="CommonTypes" name="LocalIdType"/>
+		</Item>		<!-- AttendanceTimeLocalId -->
+
+		<Item>
+			<Element>TeachingGroup</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The teaching group that is reporting this student's particular attendance record</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReference"/>
+		</Item>    <!-- TeachingGroup -->
 
 		<Item>
 			<Element>AttendanceType</Element>

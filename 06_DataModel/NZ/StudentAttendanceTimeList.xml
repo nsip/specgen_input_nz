@@ -19,23 +19,6 @@
 		</Description>
 	</Item>
 	<Item>
-		<Element>StudentAttendanceTimeListRefId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-			<p>The universally unique identifier for the data object record that is used across systems.</p>
-		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- StudentAttendanceTimeListRefId -->
-	<Item>
-		<Element>StudentAttendanceTimeListLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-				<p>The Id of the data object record that was provided by the system that the information 
-				was originally sourced from.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"></Type>
-	</Item>    <!-- StudentAttendanceTimeListLocalId -->
-	<Item>
 		<Element>Student</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
@@ -54,15 +37,6 @@
 		<Type ref="CommonTypes" name="OrganisationObjectReference"/>
 	</Item>    <!-- Organisation -->
 	<Item>
-		<Element>TeachingGroup</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The teaching group that is reporting this student's attenandce time list.</p>
-		</Description>
-		<Type ref="CommonTypes" name="ObjectReference"/>
-	</Item>    <!-- TeachingGroup -->
-	<Item>
 		<Element>AttendanceTimeList</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
@@ -72,15 +46,6 @@
 		</Description>
 		<Type ref="CommonTypes" name="AttendanceTimeListType"/>
 	</Item>    <!-- AttendanceTimeList -->
-	<Item>
-		<Element>RecordAudit</Element>    
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
 
 	<xhtml:Example xmlns="" name="Student Attendance Time List">
 		<StudentAttendanceTimeList>
@@ -90,12 +55,13 @@
 			<Organisation>
 				<RefId>762</RefId>
 			</Organisation>
-			<TeachingGroup>
-				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd993378</RefId>
-			</TeachingGroup>
 			<AttendanceTimeList>
 				<AttendanceTime>
-					<AttendanceTimeLocalId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934554</AttendanceTimeLocalId>
+					<AttendanceTimeRefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934554</AttendanceTimeRefId>
+					<AttendanceTimeLocalId>2018-06-26:McGS002:am</AttendanceTimeLocalId>
+					<TeachingGroup>
+						<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd993378</RefId>
+					</TeachingGroup>
 					<AttendanceType>SCH</AttendanceType>
 					<Code>P</Code>
 					<AttendanceDate>2018-06-26</AttendanceDate>	
@@ -109,7 +75,11 @@
 					</RecordAudit>
 				</AttendanceTime>	
 				<AttendanceTime>
-					<AttendanceTimeLocalId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934667</AttendanceTimeLocalId>
+					<AttendanceTimeRefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934667</AttendanceTimeRefId>
+					<AttendanceTimeLocalId>2018-06-26:McGS002:pm</AttendanceTimeLocalId>
+					<TeachingGroup>
+						<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd993378</RefId>
+					</TeachingGroup>
 					<AttendanceType>ADH</AttendanceType>
 					<Code>E</Code>
 					<AttendanceDate>2018-06-27</AttendanceDate>	
@@ -122,13 +92,6 @@
 					</RecordAudit>
 				</AttendanceTime>
 			</AttendanceTimeList>
-			<RecordAudit>
-				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-				<CreatedBy>
-				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-				<Name>Bobby Test</Name>
-				</CreatedBy>
-			</RecordAudit>
 		</StudentAttendanceTimeList>	
 	</xhtml:Example>
 

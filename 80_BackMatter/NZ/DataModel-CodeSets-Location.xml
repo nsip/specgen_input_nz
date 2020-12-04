@@ -107,26 +107,6 @@
 	</CodeSet>	<!-- NZ Address Type -->
 	<CodeSet>
 		<Intro>
-			<p>A standardised description of the role or usage of an address by a party 
-			(person or organisation). Where a party has more than one address, this
-			provides context for deciding which address to use.</p>
-		</Intro>
-		<ID>Address Role</ID>
-		<Values>
-			<Value>
-				<Code>PHY</Code>
-				<Text>Physical Address</Text>
-				<Description>Applies to addresses associated with persons</Description>
-			</Value>
-			<Value>
-				<Code>POS</Code>
-				<Text>Postal Address</Text>
-				<Description>Applies to addresses associated with persons or organisations</Description>
-			</Value>
-		</Values>
-	</CodeSet>	<!-- NZ Address Role -->
-	<CodeSet>
-		<Intro>
 			<p>A classification of geographical boundaries or statistical 
 				areas as defined by Statistics NZ’s geographic hierarchy.</p>
 		</Intro>

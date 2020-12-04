@@ -113,7 +113,7 @@
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
 	</Item>    <!-- RecordAudit -->
 	
-	<xhtml:Example xmlns="" name ="StudentPersonal">
+	<xhtml:Example xmlns="" name ="StudentPersonal Example">
 		<StudentPersonal>
 			<StudentPersonalRefId>7c834ea9-eda1-2090-347f-83297e1c290c</StudentPersonalRefId>
 			<StudentPersonalLocalId>S1234567</StudentPersonalLocalId>
@@ -222,60 +222,53 @@
 						<ReligiousAffiliation>NZS215</ReligiousAffiliation>
 					</ReligiousAffiliationList>
 				</Demographics>
-				<AddressList>
-					<Address>
+				<Address>
+					<Physical>
 						<Type>TH</Type>
-						<Role>PHY</Role>
 						<Line1>The Enchanted Wood</Line1>
 						<Line2>533 Hogwart's Way</Line2>
 						<City>Hogsmead</City>
 						<PostalCode json:force-string="true">7733</PostalCode>
-					</Address>
-					<Address>
+					</Physical>
+					<Postal>
 						<Type>RU</Type>
-						<Role>PHY</Role>
 						<Line1>1175 Lake Ferry Rd</Line1>
 						<Suburb>RD 1</Suburb>
 						<City>Martinborough</City>
-					</Address>
-				</AddressList>
-				<EmailList>
-					<Email json:force-array="true">
-						<Type>PRIM</Type>
+					</Postal>
+				</Address>
+				<Email>
+					<Personal>
 						<Address>hagrid@gmail.com</Address>
-					</Email>
-				</EmailList>
-				<PhoneNumberList>
-					<PhoneNumber json:force-array="true">
-						<Type>MOB</Type>
+					</Personal>
+				</Email>
+				<Phone>
+					<Mobile>
 						<Number>(021) 300 999</Number>
-					</PhoneNumber>
-				</PhoneNumberList>
+					</Mobile>
+				</Phone>
 				<HouseholdContactInfoList>
 					<HouseholdContactInfo json:force-array="true">
 						<PreferenceNumber>1</PreferenceNumber>
 						<HouseholdContactId>7d5c3f5c-d89c-4551-9442-6b008207986e</HouseholdContactId>
-						<AddressList>
-							<Address json:force-array="true">
+						<Address>
+							<Postal>
 								<Type>DE</Type>
-								<Role>POS</Role>
 								<Line1>P O Box 81</Line1>
 								<City>Martinborough</City>
 								<PostalCode json:force-string="true">5781</PostalCode>
-							</Address>
-						</AddressList>
-						<EmailList>
-							<Email json:force-array="true">
-								<Type>PRIM</Type>
-								<Address>hagrid@gmail.com</Address>
-							</Email>
-						</EmailList>
-						<PhoneNumberList>
-							<PhoneNumber json:force-array="true">
-								<Type>MOB</Type>
-								<Number>(021) 300 999</Number>
-							</PhoneNumber>
-						</PhoneNumberList>
+							</Postal>
+						</Address>
+						<Email>
+							<Work>
+								<Address>hagrid@hogwarts.com</Address>
+							</Work>
+						</Email>
+						<Phone>
+							<Home>
+								<Number>(03) 300 999</Number>
+							</Home>
+						</Phone>
 					</HouseholdContactInfo>
 				</HouseholdContactInfoList>
 			</PersonInfo>

@@ -12,38 +12,41 @@
 
 	<!-- CommonElement types for Location domains -->
 	
-	<!-- Borrowed from SIF AU -->
-	<CommonElement name="AddressListType" type="true" dm="true">
+	<CommonElement name="AddressesType" type="true" dm="true">
 		<Item>
-			<Element>AddressListType</Element>
+			<Element>AddressesType</Element>
 			<Description>
-				<p>A list of Address elements.</p>
+				<p>A set of Address elements.</p>
 			</Description>
-			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>Address</Element>
-			<Characteristics>MR</Characteristics>
+			<Element>Physical</Element>
+			<Description>The person or organisation's physical address</Description>
+			<Characteristics>O</Characteristics>
 			<Type ref="CommonTypes" name="AddressType"/>
 		</Item>
-		<xhtml:Example xmlns="" name="Address List Example">
-			<AddressList>
-				<Address>
-					<Type>DE</Type>
-					<Role>POS</Role>
-					<Line1>P O Box 81</Line1>
-					<City>Martinborough</City>
-					<PostalCode json:force-string="true">5741</PostalCode>
-				</Address>
-				<Address>
+		<Item>
+			<Element>Postal</Element>
+			<Description>The person or organisation's postal address</Description>
+			<Characteristics>O</Characteristics>
+			<Type ref="CommonTypes" name="AddressType"/>
+		</Item>
+		<xhtml:Example xmlns="" name="Addresses Example">
+			<Addresses>
+				<Physical>
 					<Type>RU</Type>
-					<Role>PHY</Role>
 					<Line1>1175 Lake Ferry Rd</Line1>
 					<Suburb>RD 1</Suburb>
 					<City>Martinborough</City>
 					<PostalCode json:force-string="true">5781</PostalCode>
-				</Address>
-			</AddressList>
+				</Physical>
+				<Postal>
+					<Type>DE</Type>
+					<Line1>P O Box 81</Line1>
+					<City>Martinborough</City>
+					<PostalCode json:force-string="true">5741</PostalCode>
+				</Postal>
+			</Addresses>
 		</xhtml:Example>
 	</CommonElement>
 	<CommonElement name="AddressType" type="true" dm="true">
@@ -64,14 +67,6 @@
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsAddressTypeType"/>
 		</Item>     <!-- Type -->
-		<Item>
-			<Element>Role</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Describes how the Person/Organisation uses the Address</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsAddressRoleType"/>
-		</Item>     <!-- Role -->
 		<Item>
 			<Element>Line1</Element>
 			<Characteristics>M</Characteristics>
@@ -181,7 +176,6 @@
 		<xhtml:Example name="NZ Street Postal Address Example" xmlns="">
 			<Address>
 				<Type>TH</Type>
-				<Role>PHY</Role>
 				<Line1>84 Washington Ave</Line1>
 				<Suburb>Brooklyn</Suburb>
 				<City>Wellington</City>
@@ -192,7 +186,6 @@
 		<xhtml:Example name="NZ P O Box Postal Address Example" xmlns="">
 			<Address>
 				<Type>DE</Type>
-				<Role>POS</Role>
 				<Line1>P O Box 81</Line1>
 				<City>Martinborough</City>
 				<Country>New Zealand</Country>
@@ -202,7 +195,6 @@
 		<xhtml:Example name="NZ Rural Residential Address Example" xmlns="">
 			<Address>
 				<Type>RU</Type>
-				<Role>PHY</Role>
 				<Line1>1175 Lake Ferry Rd</Line1>
 				<Suburb>RD 1</Suburb>
 				<City>Martinborough</City>
@@ -316,7 +308,6 @@
 					<Description>Junior Campus</Description>
 					<Address>
 						<Type>TH</Type>
-						<Role>PHY</Role>
 						<Line1>1175 Lake Ferry Rd</Line1>
 						<Suburb>RD 1</Suburb>
 						<City>Martinborough</City>
@@ -415,7 +406,6 @@
 				<Description>Junior Campus</Description>
 				<Address>
 					<Type>TH</Type>
-					<Role>PHY</Role>
 					<Line1>1175 Lake Ferry Rd</Line1>
 					<Suburb>RD 1</Suburb>
 					<City>Martinborough</City>

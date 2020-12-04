@@ -91,38 +91,33 @@
 		      <Type>LGL</Type>
           <IsVerified>Y</IsVerified>
         </Name>
-        <AddressList>
-			    <Address json:force-array="true">
+        <Address>
+			    <Physical>
             <Type>TH</Type>
-            <Role>PHY</Role>
               <Line1>The Enchanted Wood</Line1>
               <Line2>533 Hogwart's Way</Line2>
             <Suburb>RD 1</Suburb>
             <City>Hogsmeade</City>
             <PostalCode>5780</PostalCode>
-          </Address>
-        </AddressList>
-        <EmailList>
-          <Email>
-            <Type>ALT1</Type>
+          </Physical>
+        </Address>
+        <Email>
+          <Personal>
             <Address>fsmith@yahoo.com</Address>
-          </Email>
-          <Email>
-            <Type>PRIM</Type>
+          </Personal>
+          <Work>
             <Address>freddy@gmail.com</Address>
-          </Email>
-        </EmailList>
-        <PhoneNumberList>
-          <PhoneNumber>
-            <Type>WTE</Type>
+          </Work>
+        </Email>
+        <Phone>
+          <Home>
+            <Number>0437-765-234</Number>
+          </Home>
+          <Work>
             <Number>03 9637-2289</Number>
             <Extension>72289</Extension>
-          </PhoneNumber>
-          <PhoneNumber>
-            <Type>HTE</Type>
-            <Number>0437-765-234</Number>
-          </PhoneNumber>
-        </PhoneNumberList>
+          </Work>
+        </Phone>
       </PersonInfo> 
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
