@@ -3,7 +3,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xi="http://www.w3.org/2001/XInclude"
 	xmlns:xhtml="http://www.w3.org/1999/xhtml"
-	
+    xmlns:json="http://json.org/"
+
 	xmlns="http://sifassociation.org/SpecGen">
 
 	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
@@ -12,7 +13,74 @@
 
 	<!-- Element types for the Wellbeing Domain -->
 
-	<!-- Wellbeing Items-->   
+	<!-- Wellbeing Items-->
+	<CommonElement name="NoteListType" type="true" dm="true">
+		<Item>
+			<Element>NoteListType</Element>
+			<Description>
+				<p>A list of notes that have been written about the associated subject matter.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Note</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A free text note about the associated subject matter.</p>
+			</Description>
+			<Type ref="CommonTypes" name="NoteType"/>
+		</Item>    <!-- Note -->
+	</CommonElement>
+	<CommonElement name="NoteType" type="true" dm="true">
+		<Item>
+			<Element>NoteType</Element>
+			<Description>
+				<p>A free text note about the associated subject matter.</p>
+			</Description>
+		</Item> 
+		<Item>
+			<Element>Note</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Free text note.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>  
+		</Item>		<!-- Note -->
+		<Item>
+			<Element>CreatedDateTime</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The date and time the note was created.</p>
+			</Description>
+			<Type name="xs:dateTime"></Type>  
+		</Item>		<!-- Created DateTime -->
+		<Item>
+			<Element>LastUpdatedDateTime</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The date and time the note was last updated.</p>
+			</Description>
+			<Type name="xs:dateTime"></Type>  
+		</Item>		<!-- Last Updated DateTime -->
+		<Item>
+			<Element>CreatedBy</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Generic reference to the user that created the note.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
+		</Item>		<!-- CreatedBy -->
+		<Item>
+			<Element>LastUpdatedBy</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Generic reference to the user that last updated the note.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
+		</Item>		<!-- LastUpdatedBy -->		
+	</CommonElement>
+
+
 	<CommonElement name="MedicationListType" type="true" dm="true">
 		<Item>
 			<Element>MedicationListType</Element>
@@ -1239,7 +1307,7 @@
 
 		<xhtml:Example xmlns="" name ="SocialGoalList">
 			<SocialGoalList>
-				<SocialGoal>
+				<SocialGoal json:force-array="true">
 					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
 					<GoalDescription>Timothy would like to have more friends to play with at lunchtime.</GoalDescription>
 					<GoalName>Have more friends</GoalName>
@@ -1267,7 +1335,7 @@
 
 		<xhtml:Example xmlns="" name ="CareerGoalList">
 			<CareerGoalList>
-				<CareerGoal>
+				<CareerGoal json:force-array="true">
 					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
 					<GoalDescription>Jemima would like to be a Marine Biologist, or Deep Sea Diver</GoalDescription>
 					<GoalName>Marine Biologist</GoalName>
@@ -1296,7 +1364,7 @@
 
 		<xhtml:Example xmlns="" name ="AcademicGoalList">
 			<AcademicGoalList>
-				<AcademicGoal>
+				<AcademicGoal json:force-array="true">
 					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
 					<GoalDescription>Te Huia wants to excel at Te Reo Māori</GoalDescription>
 					<GoalName>Excel Te Reo</GoalName>
@@ -1384,7 +1452,7 @@
 
 		<xhtml:Example xmlns="" name ="StudentInterestList">
 			<StudentInterestList>
-				<StudentInterest>
+				<StudentInterest json:force-array="true">
 					<InterestRecordedDate>2018-11-30</InterestRecordedDate>
 					<InterestDescription>Tobias spends most lunchtimes playing with the piano, or watching others playing music</InterestDescription>
 					<InterestName>Music/Piano</InterestName>
@@ -1747,7 +1815,7 @@
 			<Description>
 				<p>The MoE specialist service that has been selected as a response to a student's support need. Required if Response Detail = 'MOE' (MOE Specialists).</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsMOESpecialistServiceType"/>
+			<Type ref="CodeSets" name="NZCodeSetsMoESpecialistServiceType"/>
 		</Item>    <!-- MOESpecialistService -->
 		<Item>
 			<Element>FundedBy</Element>

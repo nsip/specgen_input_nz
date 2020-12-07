@@ -312,7 +312,7 @@
 
 		<xhtml:Example xmlns="" name="Location List Example">
 			<LocationList>
-				<Location>
+				<Location json:force-array="true">
 					<Description>Junior Campus</Description>
 					<Address>
 						<Type>TH</Type>

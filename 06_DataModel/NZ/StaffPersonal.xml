@@ -31,7 +31,7 @@
   </Item>    <!-- RefId -->
   <Item>
     <Element>StaffPersonalLocalId</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
 	  <privacyRating>Medium</privacyRating>
     <Description>
 			<p>The Id of the data object record that was provided by the system that the information 
@@ -61,6 +61,17 @@
   </Item>    <!-- SchoolSMSUserId -->
 
   <Item>
+    <Element>EnableLogin</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Indicates whether or not the staff member's ability to login is enabled. Yes, 
+        means the staff member can log in. No means they cannot.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+  </Item>    <!-- EnableLogin -->
+
+  <Item>
     <Element>PersonInfo</Element>
     <Characteristics>M</Characteristics>
 	  <privacyRating>High</privacyRating>
@@ -82,7 +93,7 @@
   
   <xhtml:Example xmlns="" name="StaffPersonal">
     <StaffPersonal>
-      <StaffPersonalRefId>D3E34F41-9D75-101A-8C3D-00AA001A1652</StaffPersonalRefId>
+      <StaffPersonalRefId>d3e34f41-9d75-101a-8c3d-00aa001a1652</StaffPersonalRefId>
       <PersonInfo>
         <Name>
           <FamilyName>Smith</FamilyName>
@@ -127,7 +138,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>     

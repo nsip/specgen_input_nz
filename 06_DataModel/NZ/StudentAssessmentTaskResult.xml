@@ -355,20 +355,20 @@
     
   <xhtml:Example xmlns="" name="Student Assessment Task Result - PAT Example">
       <StudentAssessmentTaskResult>
-        <StudentAssessmentTaskResultRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskResultRefId>
+        <StudentAssessmentTaskResultRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</StudentAssessmentTaskResultRefId>
         <Student>
-          <RefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</RefId>
+          <RefId>a75a0010-1a8c-301d-02e3-a05b359d0a00</RefId>
         </Student>
         <AssessmentType>INT</AssessmentType>
         <AssessmentMethodology>P</AssessmentMethodology>
         <ProviderInvolvedList>
-          <ProviderInvolved>
+          <ProviderInvolved json:force-array="true">
             <RefId>9953</RefId>
             <ProviderRole>PRO</ProviderRole>
           </ProviderInvolved>
         </ProviderInvolvedList>
         <SubjectAreaList>
-            <SubjectArea>MATH</SubjectArea>
+            <SubjectArea json:force-array="true">MATH</SubjectArea>
         </SubjectAreaList>
         <Curriculum>NZC</Curriculum>
         <AssessmentToolUsed>PATCOMP</AssessmentToolUsed>
@@ -404,7 +404,7 @@
         <RecordAudit>
           <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
           <CreatedBy>
-            <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+            <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
             <Name>Bobby Test</Name>
           </CreatedBy>
         </RecordAudit>
@@ -413,20 +413,20 @@
 		  
   <xhtml:Example xmlns="" name="Student Assessment Task Result - STAR Example">
     <StudentAssessmentTaskResult>
-      <StudentAssessmentTaskResultRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskResultRefId>
+      <StudentAssessmentTaskResultRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</StudentAssessmentTaskResultRefId>
       <Student>
-        <RefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</RefId>
+        <RefId>a75a0010-1a8c-301d-02e3-a05b359d0a00</RefId>
       </Student>
       <AssessmentType>INT</AssessmentType>
       <AssessmentMethodology>P</AssessmentMethodology>
       <ProviderInvolvedList>
-        <ProviderInvolved>
+        <ProviderInvolved json:force-array="true">
           <RefId>722</RefId>
           <ProviderRole>PRO</ProviderRole>
         </ProviderInvolved>
       </ProviderInvolvedList>
       <SubjectAreaList>
-          <SubjectArea>ENGL</SubjectArea>
+          <SubjectArea json:force-array="true">ENGL</SubjectArea>
       </SubjectAreaList>
       <Curriculum>NZC</Curriculum>
       <AssessmentToolUsed>STARREA</AssessmentToolUsed>
@@ -481,7 +481,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>
@@ -490,20 +490,20 @@
     
   <xhtml:Example xmlns="" name="Student Assessment Task Result - asTTle Example">
     <StudentAssessmentTaskResult>
-      <StudentAssessmentTaskResultRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskResultRefId>
+      <StudentAssessmentTaskResultRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</StudentAssessmentTaskResultRefId>
       <Student>
-        <RefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</RefId>
+        <RefId>a75a0010-1a8c-301d-02e3-a05b359d0a00</RefId>
       </Student>
       <AssessmentType>INT</AssessmentType>
       <AssessmentMethodology>P</AssessmentMethodology>
       <ProviderInvolvedList>
-        <ProviderInvolved>
+        <ProviderInvolved json:force-array="true">
           <RefId>752</RefId>
           <ProviderRole>PRO</ProviderRole>
         </ProviderInvolved>
       </ProviderInvolvedList>
       <SubjectAreaList>
-          <SubjectArea>ENGL</SubjectArea>
+          <SubjectArea json:force-array="true">ENGL</SubjectArea>
       </SubjectAreaList>
       <Curriculum>NZC</Curriculum>
       <AssessmentToolUsed>EASREAD</AssessmentToolUsed>
@@ -538,7 +538,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>
@@ -547,20 +547,20 @@
 
   <xhtml:Example xmlns="" name="Student Assessment Task Result - IKAN Example">
     <StudentAssessmentTaskResult>
-      <StudentAssessmentTaskResultRefId>359D7510-1AD0-A9D7-A8C3-DAD0A85103A2</StudentAssessmentTaskResultRefId>
+      <StudentAssessmentTaskResultRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</StudentAssessmentTaskResultRefId>
       <Student>
-        <RefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</RefId>
+        <RefId>a75a0010-1a8c-301d-02e3-a05b359d0a00</RefId>
       </Student>
       <AssessmentType>INT</AssessmentType>
       <AssessmentMethodology>P</AssessmentMethodology>
       <ProviderInvolvedList>
-        <ProviderInvolved>
+        <ProviderInvolved json:force-array="true">
           <RefId>277</RefId>
           <ProviderRole>PRO</ProviderRole>
         </ProviderInvolved>
       </ProviderInvolvedList>
       <SubjectAreaList>
-          <SubjectArea>MATH</SubjectArea>
+          <SubjectArea json:force-array="true">MATH</SubjectArea>
       </SubjectAreaList>
       <Curriculum>NZC</Curriculum>
       <EvaluationType>F</EvaluationType>
@@ -594,7 +594,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>

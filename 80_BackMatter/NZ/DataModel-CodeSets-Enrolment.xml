@@ -42,7 +42,7 @@
 	</CodeSet>	<!-- School Enrolment Type -->
 
 
-	<!-- Defind by SIF NZ - StudentProviderEnrolment -->
+	<!-- Defined by SIF NZ - StudentProviderEnrolment -->
 	<CodeSet>
 		<Intro>
 			<p>Records the status of a potentially multi-year Provider enrolment, which goes through
@@ -103,6 +103,20 @@
 
 	<CodeSet>
 		<Intro>
+			<p>Code set denoting the status of the student's teaching group enrolment.</p>
+			<p>Set to Active when: StartDate =&gt; today's date and EndDate is NULL 
+				or EndDate &gt; than today's date.</p>
+			<p>Set to Inactive when: StartDate &lt; today's date or EndDate =&lt; today's date.</p>
+		</Intro>
+		<ID>Student TeachingGroup Enrolment Status</ID>
+		<Values>
+			<Value><Code>A</Code><Text>Active</Text></Value>
+			<Value><Code>I</Code><Text>Inactive</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Student TeachingGroup Enrolment Status -->
+
+	<CodeSet>
+		<Intro>
 			<p>Enrolment Exit code, derived from code set used in School Roll Returns.</p>
 		</Intro>
 		<ID>Enrolment Exit Type</ID>
@@ -129,7 +143,7 @@
 			</Value>
 			<Value>
 				<Code>X</Code>
-				<Text xml:lang="en">Expulsion (for students aged 16 and over only)</Text>
+				<Text xml:lang="en">Expulsion (for Students Aged 16 and Over Only)</Text>
 				<Text xml:lang="mi">I panaia (mō te hunga ākonga 16 te pakeke neke atu anake)</Text>
 			</Value>
 			<Value>
@@ -410,7 +424,7 @@
 			</Value>
 			<Value>
 				<Code>E</Code>
-				<Text xml:lang="en">Extension (moderate to high)</Text>
+				<Text xml:lang="en">Extension (Moderate to High)</Text>
 				<Text xml:lang="mi">Whakaroanga (Rewatanga ki Teitei)</Text>
 			</Value>
 		</Values>
@@ -682,7 +696,7 @@
 				<Text xml:lang="en">3 hours per week</Text>
 				<Text xml:lang="mi">3 hāora i te wiki</Text>
 				<Description xml:lang="en">
-					Student is taught in the specified language for 3hrs per week.
+					Student is taught in the specified language for 3 hrs per week.
 				</Description>
 				<Description xml:lang="mi">
 					Ākonga i ākona ki tētahi reo mō te 3 hāora i te wiki

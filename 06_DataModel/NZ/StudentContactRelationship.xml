@@ -41,6 +41,33 @@
 		<Type ref="CommonTypes" name="LocalIdType"></Type>
 	</Item>   <!-- StudentContactRelationshipLocalId -->
 	<Item>
+		<Element>Status</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		<p>States whether or not this is an inactive or active Student Contact Relationship.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsStudentContactRelationshipStatusType"/>
+	</Item>   <!-- Status -->
+	<Item>
+		<Element>StartDate</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The date the relationship between the student and contact was recorded.</p>
+		</Description>
+		<Type name="xs:date"/>
+  	</Item>  <!-- StartDate -->
+	<Item>
+		<Element>EndDate</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The date the relationship between the student and contact was removed.</p>
+		</Description>
+		<Type name="xs:date"/>
+  	</Item>  <!-- EndDate -->	
+	<Item>
 		<Element>Student</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Medium</privacyRating>
@@ -118,12 +145,12 @@
 		
   <xhtml:Example xmlns='' name="StudentContactRelationship">
     <StudentContactRelationship>
-	  <StudentContactRelationshipRefId>7572B261-0947-583A-463D-BB345291B332</StudentContactRelationshipRefId>
+	  <StudentContactRelationshipRefId>7572b261-0947-583a-463d-bb345291b332</StudentContactRelationshipRefId>
       <Student>
-	    <RefId>DEE34B35-9D75-101A-8C3D-00AA001A1652</RefId>
+	    <RefId>dee34b35-9d75-101a-8c3d-00aa001a1652</RefId>
       </Student>
       <StudentContact>
-		<RefId>6472B261-0947-583A-463D-BB345291B001</RefId>
+		<RefId>6472b261-0947-583a-463d-bb345291b001</RefId>
 	  </StudentContact>
 	  <Provider>
 		<RefId>4661c4c8-fd03-4fc6-8af7-5084338494db</RefId>
@@ -153,7 +180,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>

@@ -78,6 +78,116 @@
 
 	<CodeSet>
 		<Intro>
+			<p>Code set denoting the reasons the operational status of an organisation
+			 may change.</p>
+		</Intro>
+		<ID>Operational Status Reason</ID>
+		<Values>
+			<Value>
+				<Code>30000</Code>
+				<Text>Merger</Text>
+			</Value>	<!-- Merger -->
+			<Value>
+				<Code>30001</Code>
+				<Text>Change of Type</Text>
+			</Value>	<!-- Change of Type -->
+			<Value>
+				<Code>30002</Code>
+				<Text>Declining Roll</Text>
+			</Value>	<!-- Declining Roll -->			
+			<Value>
+				<Code>30003</Code>
+				<Text>Financial Reasons</Text>
+			</Value>	<!-- Financial Reasons -->
+			<Value>
+				<Code>30004</Code>
+				<Text>Loss of Tenancy</Text>
+			</Value>	<!-- Loss of Tenancy -->			
+			<Value>
+				<Code>30005</Code>
+				<Text>Moved Premises</Text>
+			</Value>	<!-- Moved Premises -->			
+			<Value>
+				<Code>30006</Code>
+				<Text>Never Opened</Text>
+			</Value>	<!-- Never Opered -->			
+			<Value>
+				<Code>30007</Code>
+				<Text>Licence Suspended</Text>
+			</Value>	<!-- Licence Suspended -->			
+			<Value>
+				<Code>30008</Code>
+				<Text>Ministry Withdrawal of Licence Due to Non-compliance</Text>
+			</Value>	<!-- Ministry Withdrawal of Licence Due to Non-compliance -->			
+			<Value>
+				<Code>30009</Code>
+				<Text>Owner Retired / Disestablished</Text>
+			</Value>	<!-- Owner Retired / Disestablished -->			
+			<Value>
+				<Code>30010</Code>
+				<Text>Temporarily Closed</Text>
+			</Value>	<!-- Temporarily Closed -->			
+			<Value>
+				<Code>30011</Code>
+				<Text>Merger of State Schools - Forced by Minister</Text>
+			</Value>	<!-- Merger of State Schools - Forced by Minister -->			
+			<Value>
+				<Code>30012</Code>
+				<Text>Changed Type or Number, or Became a Composite School</Text>
+			</Value>	<!-- Changed Type or Number, or Became a Composite School -->			
+			<Value>
+				<Code>30013</Code>
+				<Text>Closure of State School - Forced by Minister</Text>
+			</Value>	<!-- Closure of State School - Forced by Minister -->			
+			<Value>
+				<Code>30014</Code>
+				<Text>Closure of State School - Voluntary</Text>
+			</Value>	<!-- Closure of State School - Voluntary -->
+			<Value>
+				<Code>30015</Code>
+				<Text>Closure - Voluntary of State or Private School</Text>
+			</Value>	<!-- Closure - Voluntary of State or Private School -->
+			<Value>
+				<Code>30016</Code>
+				<Text>Cancellation of Integration Agreement</Text>
+			</Value>	<!-- Cancellation of Integration Agreement -->
+			<Value>
+				<Code>30017</Code>
+				<Text>Re-numbered Continuing School in Merger</Text>
+			</Value>	<!-- Re-numbered Continuing School in Merger -->
+			<Value>
+				<Code>30019</Code>
+				<Text>Dis-establishment</Text>
+			</Value>	<!-- Dis-establishment -->
+			<Value>
+				<Code>30020</Code>
+				<Text>Loss of Registration</Text>
+			</Value>	<!-- Loss of Registration -->
+			<Value>
+				<Code>30021</Code>
+				<Text>Network Review</Text>
+			</Value>	<!-- Network Review -->
+			<Value>
+				<Code>30022</Code>
+				<Text>Tertiary Education Provider that is taken over in a merger</Text>
+			</Value>	<!-- Tertiary Education Provider that is taken over in a merger -->
+			<Value>
+				<Code>30024</Code>
+				<Text>Not Applicable</Text>
+			</Value>	<!-- N/A -->
+			<Value>
+				<Code>30025</Code>
+				<Text>Changed to Standalone</Text>
+			</Value>	<!-- Changed to Standalone -->
+			<Value>
+				<Code>30026</Code>
+				<Text>Changed from Standalone</Text>
+			</Value>	<!-- Changed from Standalone -->
+		</Values>
+	</CodeSet>    <!-- Operational Status Reason -->
+  
+	<CodeSet>
+		<Intro>
 			<p>A summary description of the gender of students that a school accepts, indicating the 
 				type of school from a gender perspective.</p>
 		</Intro>
@@ -105,7 +215,6 @@
 				</Value>    <!-- Junior Boys, Senior Co-Ed -->
 		</Values>
 	</CodeSet>    <!-- School Co-Ed Status -->
-
 
 	<CodeSet>
 		<Intro>
@@ -713,7 +822,7 @@
 			</Value>
 			<Value>
 				<Code>10063</Code>
-				<Text xml:lang="en">Secondary (Year 9-10 Att. Int.)</Text>
+				<Text xml:lang="en">Secondary (Year 9-10 Att.Int.)</Text>
 			</Value>
 
 
@@ -822,7 +931,8 @@
 				<Text xml:lang="en">Learning Support Cluster</Text>
 			</Value>
 		</Values>
-	</CodeSet>
+	</CodeSet>	  <!-- Organisation Sector Role -->
+
 	<CodeSet>
 		<Intro>
 		  <p>A standardised method of describing a communication channel used to communicate with or
@@ -849,6 +959,7 @@
 			</Value>     <!-- Facebook -->
 		</Values>
 	</CodeSet>    <!-- Communication Channel Type -->
+
 	<CodeSet>
 		<Intro>
 			<p>A standardised method of describing how (or when) a communication channel may be used to
@@ -884,6 +995,7 @@
 			</Value>   <!-- Intended Absence -->
 		</Values>
 	</CodeSet>    <!-- Communication Usage -->
+
 	<CodeSet>
 		<Intro>
 			<p>The role played by a person in an organisation where that person is recorded as a
@@ -911,6 +1023,7 @@
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Organisation Contact Role -->
+	
 	<CodeSet>
 		<Intro>
 			<p>A policy that a school may choose to implement as part of its operating rules. For example, 
@@ -1045,7 +1158,7 @@
 				<Text>None</Text>
 			</Value>   <!-- None -->
 		</Values>
-	</CodeSet>    <!-- School Boarding Gender -->
+	</CodeSet>    <!-- School Boarding Type -->
 
 	<CodeSet>
 		<Intro>
@@ -1178,35 +1291,51 @@
 			</Value>    <!-- MoE Local Office and Organisation -->
 			<Value>
 				<Code>EPL</Code>
-				<Text>ECE Service Provider and Playgroup</Text>
-			</Value>	<!-- ECE Service Provider and Playgroup -->
+				<Text>Playgroup - ECE Service Provider</Text>
+			</Value>	<!-- Playgroup, ECE Service Provider -->
 			<Value>
 				<Code>ESP</Code>
-				<Text>ECE Service Provider and Licenced ECEService</Text>
-			</Value>	<!-- ECE Service Provider and Licensed ECE Service -->
+				<Text>Licenced ECEService - ECE Service Provider</Text>
+			</Value>	<!-- Licensed ECE Service, ECE Service Provider -->
+
 			<Value>
 				<Code>34008</Code>
 				<Text xml:lang="en">School and Attached Unit</Text>
 			</Value>    <!-- School and Attached Unit -->
 			<Value>
 				<Code>34028</Code>
-				<Text xml:lang="en">Community of Learning and Funded Member</Text>
-			</Value>    <!-- Kāhui Ako and Funded Member -->
+				<Text xml:lang="en">Community of Learning Funded Member</Text>
+			</Value>    <!-- Kāhui Ako Funded Member -->
 			<Value>
 				<Code>34029</Code>
-				<Text xml:lang="en">Community of Learning and Unfunded Member</Text>
-			</Value>    <!-- Kāhui Ako and Unfunded Member -->
+				<Text xml:lang="en">Community of Learning Unfunded Member</Text>
+			</Value>    <!-- Kāhui Ako Unfunded Member -->
 			<Value>
 				<Code>34037</Code>
-				<Text xml:lang="en">Learning Support Cluster and Member</Text>
-			</Value>    <!-- Learning Support Cluster and Member -->
+				<Text xml:lang="en">Learning Support Cluster Member</Text>
+			</Value>    <!-- Learning Support Cluster Member -->
 			<Value>
 				<Code>34031</Code>
-				<Text xml:lang="en">School RTLB Cluster and Member</Text>
-			</Value>    <!-- RTLB Cluster and Member -->			
+				<Text xml:lang="en">School RTLB Cluster Member</Text>
+			</Value>    <!-- RTLB Cluster Member -->			
 		</Values>
 	</CodeSet>    <!-- Organisation Relationship Type -->
 	
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the status of the relationship between the two organisations.</p>
+			<p>Set to Active when: EffectiveDate =&gt; today's date and ExpirationDate is NULL
+			 or ExpirationDate &gt; than today's date.</p>
+			<p>Set to Inactive when: EffectiveDate &lt; today's date or 
+			ExpirationDate =&lt; today's date.</p>
+		</Intro>
+		<ID>Organisation Relationship Status</ID>
+		<Values>
+			<Value><Code>A</Code><Text>Active</Text></Value>
+			<Value><Code>I</Code><Text>Inactive</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Organisation Relationship Status -->
+
 	<CodeSet>
 		<Intro>
 			<p>Code set denoting the role the source organisation is playing in this relationship.</p>
@@ -1540,7 +1669,7 @@
 
 	<CodeSet>
 		<Intro>
-			<p>Describes the status of a staff member's assignment at a Provider or other EducationOrganisation.</p>
+			<p>Describes the status of a staff member's employment at a Provider or other Organisation.</p>
 		</Intro>
 		<ID>Staff Status</ID>
 		<Values>
@@ -1550,6 +1679,20 @@
 			<Value><Code>O</Code><Text>On Leave</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Staff Status -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting whether or not this is an Active or Inactive assignment for the staff member.</p>
+			<p>Set to Active when: StartDate =&gt; today's date and EndDate is NULL 
+				or EndDate &gt; than today's date.</p>
+			<p>Set to Inactive when: StartDate &lt; today's date or EndDate =&lt; today's date</p>			
+		</Intro>
+		<ID>Staff Assignment Status</ID>
+		<Values>
+			<Value><Code>A</Code><Text>Active</Text></Value>
+			<Value><Code>I</Code><Text>Inactive</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Staff Assignment Status -->
 
 	<!-- TeachingGroup -->
 	<CodeSet>
@@ -1600,5 +1743,19 @@
 		  <Value><Code>1301</Code><Text>Teacher Aide</Text></Value>
 		</Values>
 	</CodeSet>    <!-- Staff Teaching Group Role -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the status of the staff member's assignment to a teaching group.</p>
+			<p>Set to Active when: StartDate =&gt; today's date and EndDate is NULL 
+				or EndDate &gt; than today's date.</p>
+			<p>Set to Inactive when: StartDate &lt; today's date or EndDate =&lt; today's date.</p>
+		</Intro>
+		<ID>Staff Teaching Group Assignment Status</ID>
+		<Values>
+			<Value><Code>A</Code><Text>Active</Text></Value>
+			<Value><Code>I</Code><Text>Inactive</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Staff Teaching Group Assignment Status -->
 
 </IncludeGroup>

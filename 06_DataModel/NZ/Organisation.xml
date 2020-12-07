@@ -21,23 +21,13 @@
 	</Item>
 	<Item>
 		<Element>OrganisationRefId</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The universally unique identifier for the data object record that is used across systems.</p>
+			<p>1 to 5 digit Ministry Organisation Id for the Organisation, without leading zeros</p>
 		</Description>
-		<Type ref="CommonTypes" name="RefIdType"/>
+		<Type ref="CommonTypes" name="MoEOrgIdType"/>
 	</Item>   <!-- OrganisationRefId -->
-	<Item>
-		<Element>OrganisationLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The Id of the data object record that was provided by the system that the information 
-			was originally sourced from.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"/>
-	</Item>   <!-- OrganisationLocalId -->		
 	<Item>
 		<Element>RecordAudit</Element>    
 		<Characteristics>O</Characteristics>
@@ -53,7 +43,7 @@
 			<AddressList/>
 			<CommunicationChannelList/>
 			<ContactList>
-				<Contact>
+				<Contact json:force-array="true">
 					<Name>
 						<FamilyName>Dumbledore</FamilyName>
 						<GivenName>Albus</GivenName>
@@ -62,7 +52,7 @@
 					<PositionTitle>Lead School Headmaster</PositionTitle>
 					<Role>PRI</Role>
 					<AddressList>
-						<Address>
+						<Address json:force-array="true">
 							<Type>TH</Type>
 							<Role>PHY</Role>
 							<Line1>533 Hogwart's Way</Line1>
@@ -83,19 +73,18 @@
 			<LocationList/>
 			<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
 			<PhoneNumberList>
-				<PhoneNumber>
+				<PhoneNumber json:force-array="true">
 					<Notes>Lead School Secretary (Mobile)</Notes>
 					<Type>MOB</Type>
 					<Number>(021) 300 999</Number>
 				</PhoneNumber>
 			</PhoneNumberList>
 			<Type json:force-string="true">35008</Type>
-			<OrganisationRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</OrganisationRefId>
-			<OrganisationLocalId>99204</OrganisationLocalId>
+			<OrganisationRefId>99204</OrganisationRefId>
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>
-				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
 				<Name>Bobby Test</Name>
 				</CreatedBy>
 			</RecordAudit>

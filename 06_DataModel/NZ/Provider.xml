@@ -21,7 +21,7 @@
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The universally unique identifier for the data object record that is used across systems.</p>
+			<p>1 to 5 digit Ministry Organisation Id for the Provider, without leading zeros</p>
 		</Description>
 		<Type ref="CommonTypes" name="MoEOrgIdType"/>
   </Item>   <!-- ProviderRefId -->
@@ -239,11 +239,11 @@
 					<Policy>CE</Policy>
 				</EnactedPolicy>
 			</NewEntrantPolicyList>
-			<ClassificationList>
+			<SchoolClassificationList>
 				<Classification json:force-string="true">52010</Classification>
 				<Classification json:force-string="true">52004</Classification>
 				<Classification json:force-string="true">52002</Classification>
-			</ClassificationList>			
+			</SchoolClassificationList>			
 			<SchoolYearList>
 				<SchoolYear>
 					<YearLevel json:force-string="true">1</YearLevel>
@@ -302,7 +302,7 @@
 		<RecordAudit>
 			<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 			<CreatedBy>
-			<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+			<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
 			<Name>Bobby Test</Name>
 			</CreatedBy>
 		</RecordAudit>

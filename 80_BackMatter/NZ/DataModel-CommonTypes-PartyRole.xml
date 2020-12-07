@@ -156,7 +156,7 @@
 							<Code>NZS01110</Code>
 							<Usage>FL</Usage>
 							<ProficiencyList>
-								<Proficiency>
+								<Proficiency json:force-array="true">
 									<Level>AD</Level>
 									<Type>SP</Type>
 								</Proficiency>
@@ -166,7 +166,7 @@
 							<Code>NZS01112</Code>
 							<Usage>SL</Usage>
 							<ProficiencyList>
-								<Proficiency>
+								<Proficiency json:force-array="true">
 									<Level>BE</Level>
 									<Type>RE</Type>
 								</Proficiency>
@@ -184,11 +184,11 @@
 						</Ethnicity>
 					</EthnicityList>
 					<IwiAffiliationList>
-						<Iwi>
+						<Iwi json:force-array="true">
 							<Code>NZS1001</Code>
 							<PreferenceOrderNumber>1</PreferenceOrderNumber>
 							<HapuAffiliationList>
-								<Hapu>
+								<Hapu json:force-array="true">
 									<HapuName>Manukorihi</HapuName>
 									<PreferenceOrderNumber>1</PreferenceOrderNumber>
 								</Hapu>
@@ -224,7 +224,7 @@
 					</Email>
 				</EmailList>
 				<PhoneNumberList>
-					<PhoneNumber>
+					<PhoneNumber json:force-array="true">
 						<Type>MOB</Type>
 						<Number>(021) 300 999</Number>
 					</PhoneNumber>
@@ -242,14 +242,14 @@
 								<PostalCode json:force-string="true">5781</PostalCode>
 							</Address>
 						</AddressList>
-						<EmailList json:force-array="true">
-							<Email>
+						<EmailList>
+							<Email json:force-array="true">
 								<Type>PRIM</Type>
 								<Address>hagrid@gmail.com</Address>
 							</Email>
 						</EmailList>
 						<PhoneNumberList>
-							<PhoneNumber>
+							<PhoneNumber json:force-array="true">
 								<Usage>INT</Usage>
 								<Type>MAI</Type>
 								<Number>(021) 300 999</Number>
@@ -692,11 +692,11 @@
 					</Ethnicity>
 				</EthnicityList>
 				<IwiAffiliationList>
-					<Iwi>
+					<Iwi json:force-array="true">
 						<Code>NZS1001</Code>
 						<PreferenceOrderNumber>1</PreferenceOrderNumber>
 						<HapuAffiliationList>
-							<Hapu>
+							<Hapu json:force-array="true">
 								<HapuName>Manukorihi</HapuName>
 								<PreferenceOrderNumber>1</PreferenceOrderNumber>
 							</Hapu>
@@ -878,14 +878,14 @@
 			<Type ref="CodeSets" name="NZCodeSetsEmailTypeType"/>
 		</Item>    <!-- Type -->
 		<Item>
-			<Element>SourceProvider</Element>
+			<Element>SourceOrganisation</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
 				<p>Generic object reference to the organisation that provided the email address.</p>
 			</Description>
-			<Type ref="CommonTypes" name="ProviderObjectReference"/>
-		</Item>    <!-- SourceProvider -->		
+			<Type ref="CommonTypes" name="OrganisationObjectReference"/>
+		</Item>    <!-- SourceOrganisation -->		
 		<Item>
 			<Element>Address</Element>
 			<Characteristics>M</Characteristics>
@@ -894,6 +894,7 @@
 			</Description>
 			<Type name="xs:normalizedString"/>
 		</Item>   <!-- Address -->
+
 		<xhtml:Example xmlns="" name="NZ Email Type Example">
 			<Email>
 				<Notes>Not on Thursdays</Notes>
@@ -1329,6 +1330,15 @@
 			<Type ref="CodeSets" name="NZCodeSetsEducationRegionType"/>
 		</Item>   <!-- EducationRegion -->
 		<Item>
+			<Element>SpecialEducationDistrict</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The special education district the provider belongs to.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsSpecialEducationDistrictType"/>
+		</Item>   <!-- SpecialEducationDistrict -->
+		<Item>
 			<Element>EmailList</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
@@ -1402,7 +1412,16 @@
 				<p>Current status of the Provider</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsOperationalStatusType"/>
-		</Item>   <!-- OperationalStatus-->
+		</Item>   <!-- OperationalStatus -->
+		<Item>
+			<Element>OperationalStatusReason</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The reason the operational status of the organisation was changed.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsOperationalStatusReasonType"/>
+		</Item>   <!-- OperationalStatusReason -->
 		<Item>
 			<Element>Type</Element>
 			<Characteristics>M</Characteristics>
@@ -1415,6 +1434,19 @@
 			<Type ref="CodeSets" name="NZCodeSetsOrganisationTypeType"/>
 		</Item>   <!-- Type -->
 		<Item>
+			<Element>SectorRole</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Code denoting the role the organisation plays within the education sector,
+				 e.g. School Sector Institution, Learning Support Cluster, etc.
+				</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsOrganisationSectorRoleType"/>
+		</Item>   <!-- SectorRole -->
+
+		<!-- Technology Capabilities -->
+		<Item>
 			<Element>ProviderSMS</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
@@ -1423,6 +1455,84 @@
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsSchoolManagementSystemType"/>
 		</Item>   <!-- ProviderSMS -->
+		<Item>
+			<Element>TeRitoConfig</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Provides iinformation specific to Te Rito, e.g. which functionality in
+				 Te Rito an organisation (school, ECE etc.) is utilising.
+				</p>
+			</Description>
+			<Type ref="CommonTypes" name="TeRitoConfigurationType"/>
+		</Item>   <!-- TeRitoConfig -->
+
+
+		<!-- ECE Stuff -->
+		<Item>
+			<Element>IsLicencedECEServiceProvider</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Indicates whether or not an ECE Service Provider Organisation is a Licenced ECE Service Provider.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+		</Item>   <!-- IsLicencedECEServiceProvider -->		
+		<Item>
+			<Element>IsPlaygroupServiceProvider</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Indicates whether or not an ECE Service Provider Organisation is a Playgroup Service Provider.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+		</Item>   <!-- IsPlaygroupServiceProvider -->
+		<Item>
+			<Element>ECEServiceProviderOwnershipType</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The type of ECE Service Provider ownership, e.g. Sole Trader, 
+				Company, Charitable Trust etc.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsECEServiceProviderOwnershipTypeType"/>
+		</Item>   <!-- ECEServiceProviderOwnershipType -->				
+	</CommonElement>
+
+	<CommonElement name="TeRitoConfigurationType" type="true" dm="true">
+		<Item>
+			<Element>TeRitoConfigurationType</Element>
+			<Description>
+				<p>Indicates which features of the Te Rito platform the organisation has access to within the Te Rito platform.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>DataAnalysisDashboardsInd</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Indicates whether or not the organisation has access to the data analysis dashboards within the Te Rito platform.</p>
+			</Description>
+			<Type ref="" name="NZCodeSetsYesOrNoCategoryType"/>
+		</Item>   <!-- Data Analysis Dashboards -->
+		<Item>
+			<Element>StandardisedLearningSupportRegisterInd</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Indicates whether or not the organisation has access to the  within the Te Rito platform.</p>
+			</Description>
+			<Type ref="" name="NZCodeSetsYesOrNoCategoryType"/>
+		</Item>   <!-- sLSR -->
+		<Item>
+			<Element>VirtualLearningEnvironmentInd</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Indicates whether or not the organisation has access to the VLE within the Te Rito platform.</p>
+			</Description>
+			<Type ref="" name="NZCodeSetsYesOrNoCategoryType"/>
+		</Item>   <!-- VLE -->
 	</CommonElement>
 
 	<CommonElement name="ContactListType" type="true" dm="true">
@@ -1855,11 +1965,11 @@
 		
 		<xhtml:Example xmlns="" name="Iwi List Example">
 			<IwiAffiliationList>
-				<Iwi>
+				<Iwi json:force-array="true">
 					<Code>NZS1001</Code>
 					<PreferenceOrderNumber>1</PreferenceOrderNumber>
 					<HapuAffiliationList>
-						<Hapu>
+						<Hapu json:force-array="true">
 							<HapuName>Manukorihi</HapuName>
 							<PreferenceOrderNumber>1</PreferenceOrderNumber>
 						</Hapu>
@@ -1906,7 +2016,7 @@
 				<Code>NZS1001</Code>
 				<PreferenceOrderNumber>1</PreferenceOrderNumber>
 				<HapuAffiliationList>
-					<Hapu>
+					<Hapu json:force-array="true">
 						<HapuName>Manukorihi</HapuName>
 						<PreferenceOrderNumber>1</PreferenceOrderNumber>
 					</Hapu>
@@ -1934,7 +2044,7 @@
 		
 		<xhtml:Example xmlns="" name="Hapu List Example">
 			<HapuAffiliationList>
-				<Hapu>
+				<Hapu json:force-array="true">
 					<HapuName>Manukorihi</HapuName>
 					<PreferenceOrderNumber>1</PreferenceOrderNumber>
 				</Hapu>
@@ -1995,76 +2105,6 @@
 				<ReligiousAffiliation>NZS215</ReligiousAffiliation>
 			</ReligiousAffiliationList>
 		</xhtml:Example>
-	</CommonElement>
-
-	<!-- StudentPersonal extras for Te Rito sLSR -->
-	<CommonElement name="CaregiverListType" type="true" dm="true">
-		<Item>
-			<Element>CaregiverListType</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>List of caregiver details, de-normalised from StudentContactPersonal</p>
-			</Description>
-			<List mode="List"/>
-		</Item>
-		<Item>
-			<Element>Caregiver</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>Name and contact details of the person.</p>
-			</Description>
-			<Type ref="CommonTypes" name="CaregiverType"/>
-		</Item>    <!-- Caregiver -->
-	</CommonElement>
-
-	<CommonElement name="CaregiverType" type="true" dm="true">
-		<Item>
-			<Element>CaregiverType</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Caregiver details, de-normalised from StudentContactPersonal</p>
-			</Description>
-		</Item>
-		<Item>
-			<Element>FirstName</Element>
-			<Characteristics>C</Characteristics>
-			<Description>
-				<p>First Name of the caregiver.</p>
-			</Description>
-			<Type name="xs:normalizedString"/>
-		</Item>    <!-- FirstName -->
-		<Item>
-			<Element>LastName</Element>
-			<Characteristics>C</Characteristics>
-			<Description>
-				<p>Last Name of the caregiver.</p>
-			</Description>
-			<Type name="xs:normalizedString"/>
-		</Item>    <!-- LastName -->
-		<Item>
-			<Element>PhoneNumber</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Phone number of the caregiver.</p>
-			</Description>
-			<Type name="xs:normalizedString"/>
-		</Item>    <!-- PhoneNumber -->
-		<Item>
-			<Element>EmailAddress</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Email address of the caregiver.</p>
-			</Description>
-			<Type name="xs:normalizedString"/>
-		</Item>    <!-- EmailAddress -->
-		<Item>
-			<Element>Type</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>Email address of the caregiver.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsRelationshipToStudentType"/>
-		</Item>    <!-- Type (relationship) -->
 	</CommonElement>
 
 	<!-- StudentContactPersonal details -->

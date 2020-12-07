@@ -101,6 +101,16 @@
   </Item>    <!-- CharacteristicNotes -->
   
   <Item>
+    <Element>NoteList</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of notes that have been written about the wellbeing characteristic.</p>
+    </Description>
+     <Type ref="CommonTypes" name="NoteListType"></Type>
+  </Item>    <!-- NoteList -->
+
+  <Item>
     <Element>Classification</Element>
     <Characteristics>M</Characteristics>
   	<privacyRating>High</privacyRating>
@@ -395,9 +405,9 @@
 
   <xhtml:Example xmlns="" name="WellbeingCharacteristic">
     <WellbeingCharacteristic>
-      <WellbeingCharacteristicRefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</WellbeingCharacteristicRefId>
+      <WellbeingCharacteristicRefId>2ffb63b4-cfef-4820-8501-e7d1e54555cb</WellbeingCharacteristicRefId>
       <Student>
-        <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
+        <RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
       </Student>
       <RecordingProvider>
         <RefId>672</RefId>
@@ -413,7 +423,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>

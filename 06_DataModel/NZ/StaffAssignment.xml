@@ -37,6 +37,7 @@
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>      <!-- StaffAssignmentRefId -->
+
   <Item>
     <Element>StaffAssignmentLocalId</Element>
     <Characteristics>O</Characteristics>
@@ -47,6 +48,16 @@
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>      <!-- StaffAssignmentLocalId -->
+
+  <Item>
+    <Element>StaffAssignmentStatus</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>States whether or not this is an inactive or active assignment for a staff member.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsStaffAssignmentStatusType"/>
+  </Item>      <!-- Staff Assignment Status -->
 
   <Item>
     <Element>StaffMember</Element>
@@ -90,14 +101,14 @@
   </Item>      <!-- Description -->
 
   <Item>
-    <Element>StaffRoleList</Element>
-    <Characteristics>O</Characteristics>
+    <Element>StaffRole</Element>
+    <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-      <p>The list of roles the StaffMember has in relation to all students at the assigned location.</p>
+      <p>The single role the StaffMember has in relation to all students at the assigned location.</p>
     </Description>
-    <Type ref="CommonTypes" name="StaffRoleListType"></Type>
-  </Item>      <!-- StaffRoleList -->
+    <Type ref="CodeSets" name="NZCodeSetsStaffRoleType"/>
+  </Item>      <!-- StaffRole -->
 
   <Item>
     <Element>StartDate</Element>
@@ -108,6 +119,7 @@
     </Description>
     <Type name="xs:date"></Type>
   </Item>      <!-- StartDate -->
+
   <Item>
     <Element>EndDate</Element>
     <Characteristics>O</Characteristics>
@@ -131,7 +143,7 @@
 
   <Item>
     <Element>EmploymentStatus</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>High</privacyRating>
     <Description>
       <p>Status of staff member within this school.  Where a Staff member is employed by an organisation that
@@ -175,20 +187,16 @@
   
   <xhtml:Example xmlns="" name="StaffAssignment English Teacher Example">
     <StaffAssignment>
-      <StaffAssignmentRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StaffAssignmentRefId>
+      <StaffAssignmentRefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</StaffAssignmentRefId>
       <StaffMember>
-        <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1651</RefId>
+        <RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
       </StaffMember>
       <AssignedLocation>
         <RefId>203</RefId>
         <Name>Wellington College</Name>
       </AssignedLocation>
       <Description>Senior English Teacher</Description>
-      <StaffRoleList>
-        <StaffRole>
-          <Role json:force-array="true" json:force-string="true">1102</Role>
-        </StaffRole>
-      </StaffRoleList>
+      <StaffRole json:force-string="true">1102</StaffRole>
       <StartDate>2000-09-05</StartDate>
       <EndDate>2001-06-25</EndDate>
       <CasualReliefTeacher>N</CasualReliefTeacher>
@@ -211,7 +219,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>
@@ -220,9 +228,9 @@
   
   <xhtml:Example xmlns="" name="StaffAssignment Kāhui Ako Cross School Teacher Example">
     <StaffAssignment>
-      <StaffAssignmentRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StaffAssignmentRefId>
+      <StaffAssignmentRefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</StaffAssignmentRefId>
       <StaffMember>
-        <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1651</RefId>
+        <RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
         <LocalId>SMcG</LocalId>
         <Name>Steve McGannaway</Name>
       </StaffMember>
@@ -231,13 +239,7 @@
         <Name>Masterton (Whakaoriori) Kāhui Ako</Name>
       </AssignedLocation>
       <Description>Kāhui Ako Cross School Teacher</Description>
-      <StaffRoleList>
-        <StaffRole>
-          <Role json:force-array="true" json:force-string="true">1102</Role>
-          <StartDate>2000-09-05</StartDate>
-          <EndDate>2001-03-31</EndDate>
-        </StaffRole>
-      </StaffRoleList>
+      <StaffRole json:force-string="true">1102</StaffRole>
       <StartDate>2000-09-05</StartDate>
       <EndDate>2001-06-25</EndDate>
       <CasualReliefTeacher>N</CasualReliefTeacher>
@@ -245,7 +247,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>

@@ -89,14 +89,23 @@
 			<privacyRating>Low</privacyRating>
 			<Description><p>The Ministry of Education Organisation Id of the referenced provider</p></Description>
 			<Type ref="CommonTypes" name="MoEOrgIdType"/>
-		</Item>   <!-- RefId -->
+		</Item>   	<!-- RefId -->
 		<Item>
 			<Element>Name</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description><p>The normal descriptive name of the referenced object.</p></Description>
 			<Type name="xs:string"/>
-		</Item>   <!-- Name -->
+		</Item>   	<!-- Name -->
+		<Item>
+			<Element>LocationNum</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Number identifying the individual location within the set of locations used by the Provider.</p>
+			</Description>
+			<Type name="xs:int"/>
+		</Item>     <!-- LocationNum -->
+
  		<xhtml:Example xmlns="" name="ProviderObjectReferenceType Example">
 			<ProviderObjectReference>
 				<RefId json:force-string="true">672</RefId>
@@ -152,25 +161,17 @@
 		</xhtml:Example>
 	</CommonElement>
 
-	<CommonElement name="EduOrgLocationObjectReferenceType" type="true" dm="true">
+	<CommonElement name="OrganisationObjectReferenceType" type="true" dm="true">
 		<Item>
-			<Element>EduOrgLocationObjectReferenceType</Element>
+			<Element>OrganisationObjectReferenceType</Element>
 			<Description>
 				<p>A reference to a Provider specific location at the Organisation; rather 
 				than the Provider as a whole.</p>
 			</Description>
 			<Type complex="extension" name="ProviderObjectReferenceType"/>			
 		</Item>
-		<Item>
-			<Element>LocationNum</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Number identifying the individual location within the set of locations used by the Provider.</p>
-			</Description>
-			<Type name="xs:int"/>
-		</Item>     <!-- LocationNum -->
 
- 		<xhtml:Example xmlns="" name="LocationObjectReferenceType Example">
+    	<xhtml:Example xmlns="" name="LocationObjectReferenceType Example">
 			<LocationObjectReference>
 				<RefId json:force-string="true">672</RefId>
 				<Name>Massey University - Wellington Campus</Name>
@@ -263,7 +264,7 @@
 				<p>The provider and Location with the assessment task and the role they play,
 					 e.g. assessing provider, assessment location provider, assessment provider, registering provider.</p>
 			</Description>
-			<Type complex="extension" name="EduOrgLocationObjectReferenceType"/>
+			<Type complex="extension" name="ProviderObjectReferenceType"/>
 		</Item>
 		<Item>
 			<Element>ProviderRole</Element>

@@ -119,6 +119,16 @@
   </Item>    <!-- ResponseNote -->
 
   <Item>
+    <Element>NoteList</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of notes that have been written about the learning support response.</p>
+    </Description>
+     <Type ref="CommonTypes" name="NoteListType"></Type>
+  </Item>    <!-- NoteList -->
+
+  <Item>
     <Element>ResponseDesc</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
@@ -254,12 +264,12 @@
 
   <xhtml:Example xmlns="" name="StudentLearningSupportResponse - External Response">
     <StudentLearningSupportResponse>
-      <StudentLearningSupportResponseRefId>461B63B4-CFEF-4820-8501-E7DBBB4555CB</StudentLearningSupportResponseRefId>
+      <StudentLearningSupportResponseRefId>461b63b4-cfef-4820-8501-e7dbbb4555cb</StudentLearningSupportResponseRefId>
       <Student>
         <RefId>8631e737-c9db-4e6c-804d-a78c65f98f67</RefId>
       </Student>
       <LearningSupportNeed>
-        <RefId>CA222226-359D-7510-1A8C-36432A901A16</RefId>
+        <RefId>ca222226-359d-7510-1a8c-36432a901a16</RefId>
       </LearningSupportNeed>
       <ResponseType>ADA</ResponseType>
       <ResponseDetail>ACU</ResponseDetail>
@@ -272,9 +282,9 @@
         <FundedBy>BOA</FundedBy>		
       </InternalResponse>
       <ReviewList>
-        <Review>
+        <Review json:force-array="true">
           <Reviewer>
-            <RefId>CA2BBB26-359D-2480-1A8C-36432A901A16</RefId>
+            <RefId>ca2bbb26-359d-2480-1a8c-36432a901a16</RefId>
           </Reviewer>
           <ReviewDate>2019-11-11</ReviewDate>
           <ReviewComments>The student is progressing well. Ability to identify words is increasing and is gaining confidence in trying to sound out words they do not recognise.</ReviewComments>
@@ -282,14 +292,14 @@
         </Review>
       </ReviewList>
       <AttachmentList>
-        <Document>
-          <RefId>CA2BBB26-359D-3480-1A8C-36432A901A16</RefId>
+        <Document json:force-array="true">
+          <RefId>ca2bbb26-359d-3480-1a8c-36432a901a16</RefId>
         </Document>
       </AttachmentList>
       <RecordAudit>
         <CreatedDateTime>2019-10-28T06:30:57</CreatedDateTime>
         <CreatedBy>
-          <RefId>CA222226-359D-2480-1A8C-36432A901A16</RefId>
+          <RefId>ca222226-359d-2480-1a8c-36432a901a16</RefId>
         </CreatedBy>
       </RecordAudit>
     </StudentLearningSupportResponse>

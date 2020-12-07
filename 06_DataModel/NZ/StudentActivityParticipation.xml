@@ -156,9 +156,9 @@
   
   <xhtml:Example xmlns='' name="StudentActivityParticipation">
     <StudentActivityParticipation>
-      <StudentActivityParticipationRefId>9ECC9683-0E02-406F-926C-1C4D3542D122</StudentActivityParticipationRefId>
+      <StudentActivityParticipationRefId>9ecc9683-0e02-406f-926c-1c4d3542d122</StudentActivityParticipationRefId>
       <Student>
-        <RefId>646C5D4A-C829-4886-A02B-971695C7BC06</RefId>
+        <RefId>646c5d4a-c829-4886-a02b-971695c7bc06</RefId>
       </Student>
       <Provider>
         <RefId>2342</RefId>
@@ -170,12 +170,12 @@
       <StartDate>2008-09-01</StartDate>
       <Role>Team Member</Role>
       <RecognitionList>
-        <Recognition>Player of the Day</Recognition>
+        <Recognition json:force-array="true">Player of the Day</Recognition>
       </RecognitionList>
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>

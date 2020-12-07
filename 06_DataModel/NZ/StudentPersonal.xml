@@ -94,24 +94,6 @@
 		<Type ref="CodeSets" name="NZCodeSetsBiographicChangeReasonType"/>
 	</Item>    <!-- BiographicChangeReason -->
 	<Item>
-		<Element>CaregiverList</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>List of caregivers; de-normalised from StudentContactPersonal for Te Rito sLSR.</p>
-		</Description>
-		<Type ref="CommonData" name="CaregiverListType"/>
-	</Item>    <!-- CaregiverList -->
-	<Item>
-		<Element>CareStatus</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>The student's Oranga Tamariki care status.</p>
-		</Description>
-		<Type ref="CodeSets" name="NZCodeSetsCareStatusType"/>
-	</Item>    <!-- CareStatus -->
-	<Item>
 		<Element>CustodyNote</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
@@ -133,7 +115,7 @@
 	
 	<xhtml:Example xmlns="" name ="StudentPersonal">
 		<StudentPersonal>
-			<StudentPersonalRefId>7C834EA9-EDA1-2090-347F-83297E1C290C</StudentPersonalRefId>
+			<StudentPersonalRefId>7c834ea9-eda1-2090-347f-83297e1c290c</StudentPersonalRefId>
 			<StudentPersonalLocalId>S1234567</StudentPersonalLocalId>
 			<NationalStudentNumber>2234523</NationalStudentNumber>
 			<FirstNZSchoolingDate>1996-05-04</FirstNZSchoolingDate>
@@ -196,7 +178,7 @@
 							<Code>NZS01110</Code>
 							<Usage>FL</Usage>
 							<ProficiencyList>
-								<Proficiency>
+								<Proficiency json:force-array="true">
 									<Level>AD</Level>
 									<Type>SP</Type>
 								</Proficiency>
@@ -206,7 +188,7 @@
 							<Code>NZS01112</Code>
 							<Usage>SL</Usage>
 							<ProficiencyList>
-								<Proficiency>
+								<Proficiency json:force-array="true">
 									<Level>BE</Level>
 									<Type>SP</Type>
 								</Proficiency>
@@ -224,11 +206,11 @@
 						</Ethnicity>
 					</EthnicityList>
 					<IwiAffiliationList>
-						<Iwi>
+						<Iwi json:force-array="true">
 							<Code>NZS1001</Code>
 							<PreferenceOrderNumber>1</PreferenceOrderNumber>
 							<HapuAffiliationList>
-								<Hapu>
+								<Hapu json:force-array="true">
 									<HapuName>Manukorihi</HapuName>
 									<PreferenceOrderNumber>1</PreferenceOrderNumber>
 								</Hapu>
@@ -264,7 +246,7 @@
 					</Email>
 				</EmailList>
 				<PhoneNumberList>
-					<PhoneNumber>
+					<PhoneNumber json:force-array="true">
 						<Type>MOB</Type>
 						<Number>(021) 300 999</Number>
 					</PhoneNumber>
@@ -300,7 +282,7 @@
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>
-				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
 				<Name>Bobby Test</Name>
 				</CreatedBy>
 			</RecordAudit>

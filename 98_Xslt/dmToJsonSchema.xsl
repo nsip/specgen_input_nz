@@ -62,6 +62,7 @@
 		<!-- The single object -->
 		<xsl:value-of select="concat('  ', @name, ':&#x0a;')"/>
 		<xsl:value-of select="concat('    $ref: ''#/definitions/', @name, '''&#x0a;')"/>
+		<xsl:value-of select="concat('    title: ', @name, '&#x0a;')"/>
 		<xsl:if test="string-length($desc) gt 0">
 			<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
 		</xsl:if>
@@ -70,6 +71,7 @@
 		<xsl:value-of select="concat('  ', @name, 's:&#x0a;',
 									 '    type: object&#x0a;',
 									 '    additionalProperties: false&#x0a;',
+									 '    title: ', @name, 's&#x0a;',
 									 '    description: Wrapper around an array of ', @name, 's&#x0a;',
 									 '    properties:&#x0a;',
 									 '      ', @name , ':&#x0a;',

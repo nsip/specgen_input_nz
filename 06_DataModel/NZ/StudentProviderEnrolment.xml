@@ -161,18 +161,9 @@
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
 	</Item>    <!-- RecordAudit -->
 
-	<Item>
-		<Element>ClassTeacherList</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>List of classes and teachers student is enrolled in.  De-normalised from TeachingGroupEnrolment for Te Rito sLSR.</p></Description>
-		<Type ref="CommonTypes" name="ClassTeacherListType"></Type>
-	</Item>    <!-- ClassTeacherList -->
-
 	<xhtml:Example xmlns="" name="Completed International Student School Enrolment">
 		<StudentProviderEnrolment>
-			<StudentProviderEnrolmentRefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</StudentProviderEnrolmentRefId>
+			<StudentProviderEnrolmentRefId>a8c3d3e3-4b35-9d75-101d-00aa001a1652</StudentProviderEnrolmentRefId>
 			<StudentProviderEnrolmentLocalId>2004H102</StudentProviderEnrolmentLocalId>
 			<Student>
 				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
@@ -213,7 +204,7 @@
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>
-				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
 				<Name>Bobby Test</Name>
 				</CreatedBy>
 			</RecordAudit>
@@ -222,7 +213,7 @@
 	
 	<xhtml:Example xmlns="" name="Multiple Years, Regular Student School Enrolment">
 		<StudentProviderEnrolment>
-			<StudentProviderEnrolmentRefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</StudentProviderEnrolmentRefId>
+			<StudentProviderEnrolmentRefId>a8c3d3e3-4b35-9d75-101d-00aa001a1652</StudentProviderEnrolmentRefId>
 			<StudentProviderEnrolmentLocalId>2004H102</StudentProviderEnrolmentLocalId>
 			<Student>
 				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
@@ -326,7 +317,7 @@
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>
-					<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+					<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
 					<Name>Bobby Test</Name>
 				</CreatedBy>
 			</RecordAudit>

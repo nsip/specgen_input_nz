@@ -3,7 +3,8 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xi="http://www.w3.org/2001/XInclude"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
+  xmlns:json="http://json.org/"
+  
   xmlns="http://sifassociation.org/SpecGen">
 
   <Key>WellbeingEventRefId</Key>
@@ -282,9 +283,9 @@
   
   <xhtml:Example xmlns="" name="WellbeingEvent">
     <WellbeingEvent> 
-      <WellbeingEventRefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</WellbeingEventRefId>
+      <WellbeingEventRefId>2ffb63b4-cfef-4820-8501-e7d1e54555cb</WellbeingEventRefId>
       <Student>
-        <RefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RefId>
+        <RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
       </Student>
       <ReportingProvider>
         <RefId>773</RefId>
@@ -294,12 +295,12 @@
       <EventTimePeriod>AM</EventTimePeriod>
       <RestraintType>NON</RestraintType>
       <ActionTakenList>
-        <ActionTaken>ININ</ActionTaken>
+        <ActionTaken json:force-array="true">ININ</ActionTaken>
       </ActionTakenList>
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>

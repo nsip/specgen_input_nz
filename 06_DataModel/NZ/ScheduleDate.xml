@@ -154,7 +154,7 @@
 				<Name>Schedule 2019a, Normal Bell Schedule</Name>
 			</BellSchedule>
 			<SchedulePeriodList>
-				<SchedulePeriodTime>
+				<SchedulePeriodTime json:force-array="true">
 					<Period>
 						<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
 						<LocalId>2019a-A1</LocalId>
@@ -167,7 +167,7 @@
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>
-				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
 				<Name>Bobby Test</Name>
 				</CreatedBy>
 			</RecordAudit>

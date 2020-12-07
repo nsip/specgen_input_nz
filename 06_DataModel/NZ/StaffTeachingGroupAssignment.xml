@@ -36,6 +36,17 @@
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>      <!-- StaffTeachingGroupAssignmentLocalId -->
 
+
+  <Item>
+    <Element>Status</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>States whether or not this is an inactive or active assignment for a staff member.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsStaffTeachingGroupAssignmentStatusType"/>
+  </Item>      <!-- Staff Taching Group Assignment Status -->
+
   <Item>
     <Element>StaffMember</Element>
     <Characteristics>M</Characteristics>
@@ -127,7 +138,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>

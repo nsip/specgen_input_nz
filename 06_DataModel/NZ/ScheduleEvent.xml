@@ -235,7 +235,7 @@
 			<EventName>March Floods - School Closed - Slip Schedule</EventName>
 			<ScheduleEffect>INSERT</ScheduleEffect>
 			<ScheduleList>
-				<Schedule>
+				<Schedule json:force-array="true">
 					<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
 					<Name>Schedule 2019a (Term 1)</Name>
 				</Schedule>
@@ -257,7 +257,7 @@
 			<EventName>March Floods - School Closed - Schedule day lost</EventName>
 			<ScheduleEffect>DISPLACE</ScheduleEffect>
 			<ScheduleList>
-				<Schedule>
+				<Schedule json:force-array="true">
 					<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
 					<Name>Schedule 2019a (Term 1)</Name>
 				</Schedule>
@@ -265,7 +265,7 @@
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>
-				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
 				<Name>Bobby Test</Name>
 				</CreatedBy>
 			</RecordAudit>		
@@ -285,7 +285,7 @@
 			<EventName>Winter Sports - 3 Short Periods, Afternoon Off</EventName>
 			<ScheduleEffect>CUSTOM</ScheduleEffect>
 			<ScheduleList>
-				<Schedule>
+				<Schedule json:force-array="true">
 					<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
 					<Name>Schedule 2019a (Term 1)</Name>
 				</Schedule>
@@ -316,7 +316,7 @@
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>
-				<RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
 				<Name>Bobby Test</Name>
 				</CreatedBy>
 			</RecordAudit>

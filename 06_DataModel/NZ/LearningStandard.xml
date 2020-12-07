@@ -27,7 +27,7 @@
     <Description>
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>    <!-- LearningStandardRefId -->
   <Item>
     <Element>LearningStandardLocalId</Element>
@@ -230,7 +230,7 @@
       </Publisher>
       <Description>Demonstrate understanding of the properties of selected organic compounds</Description>
       <SubjectAreaList>
-        <SubjectArea>CHEM</SubjectArea>
+        <SubjectArea json:force-array="true">CHEM</SubjectArea>
       </SubjectAreaList>
       <Status>PU</Status>
       <Credits>4</Credits>
@@ -239,7 +239,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>
@@ -257,14 +257,14 @@
       </Publisher>
       <Description>Cambridge International AS Mathematics (2018) - Pure Mathematics</Description>
       <SubjectAreaList>
-        <SubjectArea>MATH</SubjectArea>
+        <SubjectArea json:force-array="true">MATH</SubjectArea>
       </SubjectAreaList>
       <Status>PU</Status>
       <AssessmentType>EXT</AssessmentType>
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>

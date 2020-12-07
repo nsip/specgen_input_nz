@@ -127,9 +127,9 @@
   
   <xhtml:Example xmlns="" name="Student Curriculum Progress Report">
     <StudentCurriculumProgressReport>
-      <StudentCurriculumProgressReportRefId>2FFB63B4-CFEF-4820-8501-E7D1E54555CB</StudentCurriculumProgressReportRefId>
+      <StudentCurriculumProgressReportRefId>2ffb63b4-cfef-4820-8501-e7d1e54555cb</StudentCurriculumProgressReportRefId>
       <Student>
-        <RefId>CA285746-359D-7510-1A8C-36432A901A16</RefId>
+        <RefId>ca285746-359d-7510-1a8c-36432a901a16</RefId>
       </Student>
       <Provider>
         <RefId>9961</RefId>
@@ -174,7 +174,7 @@
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
-          <RefId>44FB63B4-CFEF-4820-8501-E7D1E54555CB</RefId>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
           <Name>Bobby Test</Name>
         </CreatedBy>
       </RecordAudit>

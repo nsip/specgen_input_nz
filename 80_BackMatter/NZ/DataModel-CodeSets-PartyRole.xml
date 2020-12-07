@@ -74,7 +74,7 @@
 			</Value>
 			<Value>
 				<Code>NOT</Code>
-				<Text xml:lang="en">Not provided</Text>
+				<Text xml:lang="en">Not Provided</Text>
 				<Text xml:lang="mi">Kāre i whakaratoa</Text>
 				<EndDate>2020-05-20</EndDate>
 			</Value>
@@ -139,7 +139,7 @@
 			</Value>
 			<Value>
 				<Code>PAI</Code>
-				<Text xml:lang="en">Paid CHild Help</Text>
+				<Text xml:lang="en">Paid Child Help</Text>
 			</Value>
 			<Value>
 				<Code>PAP</Code>
@@ -167,6 +167,21 @@
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Relationship to Student -->
+
+	<CodeSet>
+		<Intro>
+			<p>Code set denoting the status of the student contact's relationship.</p>
+			<p>Set to Active when: StartDate =&gt; today's date and EndDate is NULL 
+				or EndDate &gt; than today's date.</p>
+			<p>Set to Inactive when: StartDate &lt; today's date or EndDate =&lt; today's date.</p>
+		</Intro>
+		<ID>Student Contact Relationship Status</ID>
+		<Values>
+			<Value><Code>A</Code><Text>Active</Text></Value>
+			<Value><Code>I</Code><Text>Inactive</Text></Value>
+		</Values>
+	</CodeSet>    <!-- Student Contact Relationship Status -->
+
 	<CodeSet>
 		<Intro>
 			<p>A standardised method of describing the usage of a name by a person.
@@ -3545,38 +3560,6 @@
 			</Value>    <!-- Synergetic -->
 		</Values>
 	</CodeSet>    <!-- School Management System -->
-
-	<CodeSet>
-		<Intro>
-			<p>Code set denoting the student's care status as notified to the school (by whānau, the learner 
-			   or an Oranga Tamariki staff member), e.g. state care (other family), back with family, 
-			   state care, not applicable.
-			</p>
-		</Intro>
-		<ID>Care Status</ID>
-		<Values>
-			<Value>
-				<Code>BWF</Code>
-				<Text xml:lang="en">Back with family</Text>
-				<Text xml:lang="mi">Hoki ki te Whānau</Text>
-			</Value>    <!-- Back with family -->
-			<Value>
-				<Code>NAP</Code>
-				<Text xml:lang="en">Not applicable</Text>
-				<Text xml:lang="mi">Kāre e arohia</Text>
-			</Value>    <!-- Not applicable -->
-			<Value>
-				<Code>SCA</Code>
-				<Text xml:lang="en">State care</Text>
-				<Text xml:lang="mi">Mataporenga</Text>
-			</Value>    <!-- State care -->
-			<Value>
-				<Code>SCO</Code>
-				<Text xml:lang="en">State care (other family)</Text>
-				<Text xml:lang="mi">Mataporenga (noho me whānau kē)</Text>
-			</Value>    <!-- State care (other family) -->
-		</Values>
-	</CodeSet>    <!-- Care Status -->
 
 	<CodeSet>
 		<Intro>
