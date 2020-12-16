@@ -184,6 +184,24 @@
 			</Description>
 		</Item>
 		<Item>
+			<Element>SchoolEnrolmentRefId</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The universally unique identifier for the student's school enrolment in a particular calendar year</p>
+			</Description>
+			<Type ref="CommonTypes" name="RefIdType"/>
+		</Item>    <!-- SchoolEnrolmentRefId -->
+		<Item>
+			<Element>SchoolEnrolmentLocalId</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Medium</privacyRating>
+			<Description>
+				<p>The school's identififier for the student's school enrolment in a particular calendar year</p>
+			</Description>
+			<Type ref="CommonTypes" name="LocalIdType"/> 
+		</Item>    <!-- SchoolEnrolmentLocalId -->
+		<Item>
 			<Element>SchoolCalendarYear</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
@@ -423,6 +441,8 @@
 
 		<xhtml:Example xmlns="" name="International School Enrolment">
 			<StudentSchoolEnrolment>
+				<SchoolEnrolmentRefId>38949b5e-f44c-4fb1-8587-8f63f88a8e0f</SchoolEnrolmentRefId>
+				<SchoolEnrolmentLocalId>2018-11-HPotter</SchoolEnrolmentLocalId>
 				<SchoolCalendarYear>2018</SchoolCalendarYear>
 				<MembershipType>BASE</MembershipType>
 				<YearLevel>11</YearLevel>

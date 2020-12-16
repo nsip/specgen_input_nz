@@ -176,6 +176,8 @@
 			<Status>WIT</Status>
 			<SchoolEnrolmentList>
 				<SchoolEnrolment json:force-array="true">
+					<SchoolEnrolmentRefId>38949b5e-f44c-4fb1-8587-8f63f88a8e0f</SchoolEnrolmentRefId>
+					<SchoolEnrolmentLocalId>2018-11-HPotter</SchoolEnrolmentLocalId>
 					<SchoolCalendarYear>2018</SchoolCalendarYear>
 					<MembershipType>BASE</MembershipType>
 					<YearLevel json:force-string="true">11</YearLevel>
@@ -226,6 +228,8 @@
 			<Status>ACT</Status>
 			<SchoolEnrolmentList>
 				<SchoolEnrolment json:force-array="true">
+					<SchoolEnrolmentRefId>38949b5e-3eeb-4fb1-8587-8f63f88a8e0f</SchoolEnrolmentRefId>
+					<SchoolEnrolmentLocalId>2017-10-HPotter</SchoolEnrolmentLocalId>
 					<SchoolCalendarYear>2017</SchoolCalendarYear>
 					<MembershipType>BASE</MembershipType>
 					<YearLevel json:force-string="true">10</YearLevel>
@@ -263,6 +267,8 @@
 					</SubjectChoiceList>				
 				</SchoolEnrolment>
 				<SchoolEnrolment>
+					<SchoolEnrolmentRefId>38949b5e-f44c-4fb1-8587-8f63f88a8e0f</SchoolEnrolmentRefId>
+					<SchoolEnrolmentLocalId>2018-11-HPotter</SchoolEnrolmentLocalId>
 					<SchoolCalendarYear>2018</SchoolCalendarYear>
 					<MembershipType>BASE</MembershipType>
 					<YearLevel>11</YearLevel>
