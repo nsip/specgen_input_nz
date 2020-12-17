@@ -103,6 +103,20 @@
 
 	<CodeSet>
 		<Intro>
+			<p>Code set denoting the status of the student's per-year school enrolment.</p>
+			<p>Set to Active when: StartDate =&gt; today's date and EndDate is NULL 
+				or EndDate &gt; than today's date.</p>
+			<p>Set to Inactive when: StartDate &lt; today's date or EndDate =&lt; today's date.</p>
+		</Intro>
+		<ID>School Enrolment Status</ID>
+		<Values>
+			<Value><Code>A</Code><Text>Active</Text></Value>
+			<Value><Code>I</Code><Text>Inactive</Text></Value>
+		</Values>
+	</CodeSet>    <!-- School Enrolment Status -->
+
+	<CodeSet>
+		<Intro>
 			<p>Code set denoting the status of the student's teaching group enrolment.</p>
 			<p>Set to Active when: StartDate =&gt; today's date and EndDate is NULL 
 				or EndDate &gt; than today's date.</p>
