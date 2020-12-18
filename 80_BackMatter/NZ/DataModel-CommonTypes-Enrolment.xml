@@ -202,15 +202,6 @@
 			<Type ref="CommonTypes" name="LocalIdType"/> 
 		</Item>     <!-- SchoolEnrolmentLocalId -->
 		<Item>
-			<Element>Status</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Description>
-			<p>States whether or not this is an inactive or active School enrolment.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsSchoolEnrolmentStatusType"/>
-		</Item>     <!-- Status -->
-		<Item>
 			<Element>SchoolCalendarYear</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
