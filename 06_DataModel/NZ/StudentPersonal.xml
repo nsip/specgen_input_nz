@@ -41,7 +41,7 @@
 		<Description>
 			<p>The unique identifier allocated to every student in New Zealand, also known as the NSN.</p>
 		</Description>
-		<Type name="xs:positiveInteger"/>
+		<Type ref="CommonTypes" name="NSNType"/>
 	</Item>    <!-- NationalStudentNumber -->
     <Item>
 		<Element>NZQAStudentId</Element>
@@ -117,7 +117,7 @@
 		<StudentPersonal>
 			<StudentPersonalRefId>7c834ea9-eda1-2090-347f-83297e1c290c</StudentPersonalRefId>
 			<StudentPersonalLocalId>S1234567</StudentPersonalLocalId>
-			<NationalStudentNumber>2234523</NationalStudentNumber>
+			<NationalStudentNumber json:force-string="true">2234523</NationalStudentNumber>
 			<FirstNZSchoolingDate>1996-05-04</FirstNZSchoolingDate>
 			<PersonInfo>
 				<Name>

@@ -178,7 +178,7 @@
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description><p>The NSN of the referenced Student</p></Description>
-			<Type  name="xs:positiveInteger"/>
+			<Type  ref="CommonTypes" name="NSNType"/>
 		</Item>   <!-- NationalStudentNumber -->
 		<Item>
 			<Element>YearLevel</Element>
@@ -190,7 +190,7 @@
 				<xs:minInclusive value="1"/>
 				<xs:maxInclusive value="13"/>
 			</Facets>
-		</Item>   <!-- NationalStudentNumber -->
+		</Item>   <!-- YearLevel -->
 
 
  		<xhtml:Example xmlns="" name="Complete StudentReferenceType Example">
@@ -198,14 +198,14 @@
 				<RefId>5d023508-6a07-4e77-921e-ba98d1fad212</RefId>
 				<LocalId>851039-HP</LocalId>
 				<Name>Harry Potter</Name>
-				<NationalStudentNumber>23423421</NationalStudentNumber>
+				<NationalStudentNumber json:force-string="true">23423421</NationalStudentNumber>
 			</ObjectReference>
 		</xhtml:Example>
 
  		<xhtml:Example xmlns="" name="Partial StudentReferenceType Example">
 			<ObjectReference>
 				<LocalId>851039-HP</LocalId>
-				<NationalStudentNumber>23423421</NationalStudentNumber>
+				<NationalStudentNumber json:force-string="true">23423421</NationalStudentNumber>
 			</ObjectReference>
 		</xhtml:Example>
 	</CommonElement>

@@ -192,7 +192,7 @@
           <Role>SU</Role>
           <Student>
             <RefId>17c9b7aa-bc34-435f-8bba-7e337891f53b</RefId>
-            <NationalStudentNumber>6788765445</NationalStudentNumber>
+            <NationalStudentNumber json:force-string="true">6788765445</NationalStudentNumber>
           </Student>
         </PersonDocumentRole>
         <PersonDocumentRole>

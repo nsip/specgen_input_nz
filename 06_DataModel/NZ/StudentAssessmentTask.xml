@@ -167,7 +167,7 @@
         <RefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</RefId>
         <LocalId>850139-HP</LocalId>
         <Name>Harry Potter</Name>
-        <NationalStudentNumber>23423421</NationalStudentNumber>
+        <NationalStudentNumber json:force-string="true">23423421</NationalStudentNumber>
       </Student>
       <AssessmentTask>
         <RefId>d0a0a27a-d0a8-510a-d9d7-5101a8c3da39</RefId>

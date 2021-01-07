@@ -206,7 +206,7 @@
       <Student>
         <LocalId>851039-HP</LocalId>
         <Name>Harry Potter</Name>
-        <NationalStudentNumber>23423421</NationalStudentNumber>
+        <NationalStudentNumber json:force-string="true">23423421</NationalStudentNumber>
       </Student>
       <StaffMember>
         <RefId>c23c6fa1-4093-4c21-9ea8-4cdd3c7dd7fb</RefId>
