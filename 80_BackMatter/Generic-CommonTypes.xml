@@ -37,10 +37,10 @@
   <CommonElement type="true" name='NSNType'>
 	<Item>
 		<Element>NSNType</Element>
-		<Description>1 to 14 digit National Student Number, without leading zeros, as a string because it's too big for int32</Description>
+		<Description>1 to 10 digit National Student Number, potentially with leading zeros, as a string because it's too big for int32</Description>
 		<Type name='xs:token'/>
 		<Facets>
-			<xs:pattern value="[1-9][0-9]{0,13}"/>
+			<xs:pattern value="[0-9]{1,10}"/>
 		</Facets>
 	</Item>
   </CommonElement>
