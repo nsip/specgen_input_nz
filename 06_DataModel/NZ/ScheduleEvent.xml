@@ -49,6 +49,17 @@
 		</Description>
 		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
 	</Item>    <!-- Organisation -->
+
+	<Item>
+		<Element>Schedule</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The provider schedule the schedule event is having an effect on.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- Schedule -->
+
 	<Item>
 		<Element>EventDate</Element>
 		<Characteristics>M</Characteristics>
@@ -123,18 +134,6 @@
 		<Type ref="CodeSets" name="NZCodeSetsScheduleEffectType"/>
 	</Item>    <!-- ScheduleEffect -->
 	
-	<Item>
-		<Element>ScheduleList</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>List of the schedules within the provider which the event
-			will affect. If this event is to affect the school's academic
-			schedule this field is required, otherwise it is optional.</p>
-		</Description>
-		<Type ref="CommonTypes" name="ScheduleListType"/> 
-	</Item>    <!-- ScheduleList -->
-
 	<Item>
 		<Element>ScheduleDayList</Element>
 		<Characteristics>O</Characteristics>
@@ -229,17 +228,15 @@
 				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
 			</Organisation>
+			<Schedule>
+				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
+				<Name>Schedule 2019a (Term 1)</Name>
+			</Schedule>
 			<EventDate>2019-03-14</EventDate>
 
 			<Duration>1</Duration>
 			<EventName>March Floods - School Closed - Slip Schedule</EventName>
 			<ScheduleEffect>INSERT</ScheduleEffect>
-			<ScheduleList>
-				<Schedule json:force-array="true">
-					<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
-					<Name>Schedule 2019a (Term 1)</Name>
-				</Schedule>
-			</ScheduleList>			
 		</ScheduleEvent>
 	</xhtml:Example>
 
@@ -251,17 +248,15 @@
 				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
 			</Organisation>
+			<Schedule>
+				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
+				<Name>Schedule 2019a (Term 1)</Name>
+			</Schedule>
 			<EventDate>2019-03-14</EventDate>
 
 			<Duration>1</Duration>
 			<EventName>March Floods - School Closed - Schedule day lost</EventName>
 			<ScheduleEffect>DISPLACE</ScheduleEffect>
-			<ScheduleList>
-				<Schedule json:force-array="true">
-					<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
-					<Name>Schedule 2019a (Term 1)</Name>
-				</Schedule>
-			</ScheduleList>	
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>
@@ -280,16 +275,14 @@
 				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
 			</Organisation>
+			<Schedule>
+				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
+				<Name>Schedule 2019a (Term 1)</Name>
+			</Schedule>
 			<EventDate>2019-07-05</EventDate>
 			<Duration>1</Duration>
 			<EventName>Winter Sports - 3 Short Periods, Afternoon Off</EventName>
 			<ScheduleEffect>CUSTOM</ScheduleEffect>
-			<ScheduleList>
-				<Schedule json:force-array="true">
-					<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
-					<Name>Schedule 2019a (Term 1)</Name>
-				</Schedule>
-			</ScheduleList>
 			<CustomPeriodList>
 				<Period>
 					<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>

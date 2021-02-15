@@ -8,26 +8,6 @@
 	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
 		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
 
-
-	<!-- Lists of schedule item references -->
-	<CommonElement name="ScheduleListType" type="true" dm="true">
-		<Item>
-			<Element>ScheduleListType</Element>
-			<Description>
-				<p>A list of references to a set of Schedules</p>
-			</Description>
-			<List mode="List"/>
-		</Item>
-		<Item>
-			<Element>Schedule</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>Generic object reference to a Schedule in the list.</p>
-			</Description>
-			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>		<!-- Schedule -->
-	</CommonElement>
-
 	<CommonElement name="ScheduleDayListType" type="true" dm="true">
 		<Item>
 			<Element>ScheduleDayListType</Element>

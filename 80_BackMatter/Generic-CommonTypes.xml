@@ -70,6 +70,9 @@
 				</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
+			<Facets>
+				<xs:pattern value="[^\s]+"/>
+			</Facets>
 		</Item>
 		<xhtml:Example xmlns="" name="LocalId Example">
 			<LocalId>123321A</LocalId>
