@@ -49,13 +49,14 @@
 
 	<Item>
 		<Element>StartDate</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>The start date of the schedule.</p>
 		</Description>
 		<Type name="xs:date"/> 
 	</Item>    <!-- StartDate -->
+
 	<Item>
 		<Element>EndDate</Element>
 		<Characteristics>O</Characteristics>
@@ -81,7 +82,11 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>A list of the academic days within this schedule.</p>
+			<p>A list of the academic days in the order they are used in the rotation
+				of this schedule.</p>
+			<p>If a particular academic day appears more than once in the rotation, 
+				then it will appear more than once in this list.  eg. A 5 day rotation
+				with days A, A, B, A, A, would have 5 entries in the list.</p>
 		</Description>
 		<Type ref="CommonTypes" name="AcademicDayListType"/>
 	</Item>    <!-- AcademicDayList -->
@@ -112,6 +117,10 @@
 					<RefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</RefId>
 					<LocalId>2019a-A</LocalId>
 					<Name>Schedule 2019a, Day A</Name>
+					<SchedulePeriodTime>
+						<RefId>8bda1e4a-ddd2-4d18-9a85-ffcd7a2528b8</RefId>
+						<LocalId>2019a-Normal</LocalId>
+					</SchedulePeriodTime>
 					<PeriodList>
 						<Period>
 							<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
@@ -129,6 +138,10 @@
 					<RefId>337804c6-1247-4c0f-b288-e4aa28584aad</RefId>
 					<LocalId>2019a-B</LocalId>
 					<Name>Schedule 2019a, DayB</Name>
+					<SchedulePeriodTime>
+						<RefId>8bda1e4a-ddd2-4d18-9a85-ffcd7a2528b8</RefId>
+						<LocalId>2019a-Normal</LocalId>
+					</SchedulePeriodTime>
 					<PeriodList>
 						<Period>
 							<RefId>f6776718-4680-4cb7-b649-a84f9796905c</RefId>

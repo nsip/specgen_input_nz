@@ -1,4 +1,4 @@
-<DataObject name="BellSchedule"
+<DataObject name="SchedulePeriodTime"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -8,35 +8,34 @@
 	xmlns="http://sifassociation.org/SpecGen">
 
 
-	<Key>BellScheduleRefId</Key>
+	<Key>SchedulePeriodTimeRefId</Key>
 	<EventsReported>true</EventsReported>
 	<Item>
-		<Element>BellSchedule</Element>
-	  <privacyRating>Low</privacyRating>
+		<Element>SchedulePeriodTime</Element>
+	  	<privacyRating>Low</privacyRating>
 		<Description>
-			Defines bell schedules, each of which is a collection of periods
-			within an academic day with start and end times associated. These bell
-			schedules are assigned to calendar dates
-			on which the school is in session using ScheduleDate in order to
-			specify the school schedule on those dates. These bell schedules
-			should generally only be used to define standard day
-			types. Exception days (unless they repeat multiple times and
-			follow a common template) are defined using ScheduleEvent and
-			ScheduleCustomDayEvent.
+			<p>Defines period time schedules, each of which is a collection of periods within an
+			academic day with start and end times associated. These period time schedules are
+			assigned to calendar dates on which the organisation is in session using 
+			ScheduleDate in order to specify the organisation schedule on those dates.</p>
+
+			<p>These period time schedules should generally only be used to define standard day 
+			types. Exception days (unless they repeat multiple times and follow a common template)
+			are defined using ScheduleException.</p>
 		</Description>
 	</Item>
 	
 	<Item>
-		<Element>BellScheduleRefId</Element>
+		<Element>SchedulePeriodTimeRefId</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- BellScheduleRefId -->
+	</Item>    <!-- SchedulePeriodTimeRefId -->
 	<Item>
-		<Element>BellScheduleLocalId</Element>
+		<Element>SchedulePeriodTimeLocalId</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
@@ -44,17 +43,17 @@
 			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- BellScheduleLocalId -->
+	</Item>    <!-- SchedulePeriodTimeLocalId -->
 
 	<Item>
-		<Element>BellScheduleName</Element>
+		<Element>SchedulePeriodTimeName</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The name of the Bell Schedule.</p>
 		</Description>
 		<Type  name="xs:normalizedString"/>
-	</Item>    <!-- BellScheduleName -->
+	</Item>    <!-- SchedulePeriodTimeName -->
 
 	<Item>
 		<Element>Organisation</Element>
@@ -75,15 +74,16 @@
 		</Description>
 		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
 	</Item>    <!-- Schedule -->
+
 	<Item>
-		<Element>SchedulePeriodList</Element>
+		<Element>SchedulePeriodTimeList</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>A list of periods that make up this academic day, e.g. Period 1, Period 2 etc.</p>
+			<p>A list of the periods that make up the period time schedule and their start and end times.</p>
 		</Description>
-		<Type ref="CommonTypes" name="SchedulePeriodTimeListType"/>
-	</Item>    <!-- SchedulePeriodList -->
+		<Type ref="CommonTypes" name="PeriodTimeListType"/>
+	</Item>    <!-- SchedulePeriodTimeList -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -95,38 +95,39 @@
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
 	</Item>    <!-- RecordAudit -->
 	
-	<xhtml:Example xmlns="" name ="Bell Schedule">
-		<BellSchedule>
-			<BellScheduleRefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</BellScheduleRefId>
-			<BellScheduleLocalId>2019a-Normal</BellScheduleLocalId>
-			<BellScheduleName>Schedule 2019a, Normal Bell Schedule</BellScheduleName>
+	<xhtml:Example xmlns="" name ="Schedule Period Time">
+		<SchedulePeriodTime>
+			<SchedulePeriodTimeRefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</SchedulePeriodTimeRefId>
+			<SchedulePeriodTimeLocalId>2019a-Normal</SchedulePeriodTimeLocalId>
+			<SchedulePeriodTimeName>Schedule 2019a, Normal Period Schedule</SchedulePeriodTimeName>
 			<Organisation>
 				<RefId>844</RefId>
 				<Name>Hogwarts High</Name>
 			</Organisation>
 			<Schedule>
+				<LocalId>2019a-Normal</LocalId>
 				<Name>Scheule 2019a (Term 1)</Name>
 			</Schedule>
-			<SchedulePeriodList>
+			<SchedulePeriodTimeList>
 				<SchedulePeriodTime>
-					<Period>
+					<SchedulePeriod>
 						<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
-						<LocalId>2019a-A1</LocalId>
-						<Name>Period 1 on Day A</Name>
-					</Period>
-					<StartTime>08:45:00</StartTime>
-					<EndTime>09:35:00</EndTime>
+						<LocalId>2019a-1</LocalId>
+						<Name>Period 1</Name>
+					</SchedulePeriod>
+					<StartTime>08:45:00+12:00</StartTime>
+					<EndTime>09:35:00+12:00</EndTime>
 				</SchedulePeriodTime>
 				<SchedulePeriodTime>
-					<Period>
+					<SchedulePeriod>
 						<RefId>1c48a0bb-a6cc-41ab-8aae-929ce5ec9c34</RefId>
-						<LocalId>2019a-A2</LocalId>
-						<Name>Period 2 on Day A</Name>
-					</Period>
-					<StartTime>09:45:00</StartTime>
-					<EndTime>10:35:00</EndTime>
+						<LocalId>2019a-2</LocalId>
+						<Name>Period 2</Name>
+					</SchedulePeriod>
+					<StartTime>09:45:00+12:00</StartTime>
+					<EndTime>10:35:00+12:00</EndTime>
 				</SchedulePeriodTime>
-			</SchedulePeriodList>
+			</SchedulePeriodTimeList>
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>
@@ -134,6 +135,6 @@
 				<Name>Bobby Test</Name>
 				</CreatedBy>
 			</RecordAudit>
-		</BellSchedule>
+		</SchedulePeriodTime>
 	</xhtml:Example>
 </DataObject>

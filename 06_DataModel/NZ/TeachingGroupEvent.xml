@@ -56,6 +56,7 @@
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"/>
   </Item>       <!-- TeachingGroup -->
+
   <Item>
     <Element>Schedule</Element>
     <Characteristics>M</Characteristics>
@@ -65,6 +66,17 @@
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"/>
   </Item>       <!-- Schedule -->
+  
+  <Item>
+    <Element>ScheduleAcademicDay</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the ScheduleAcademicDay that the TeachingGroup meets.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"/>
+  </Item>       <!-- ScheduleAcademicDay -->
+
   <Item>
     <Element>SchedulePeriod</Element>
     <Characteristics>M</Characteristics>
@@ -74,17 +86,19 @@
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"/>
   </Item>       <!-- SchedulePeriod -->
-	
+
   <Item>
-    <Element>AcademicDay</Element>
+    <Element>ScheduleTerm</Element>
     <Characteristics>O</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Generic object reference to the ScheduleAcademicDay that the TeachingGroup meets.</p>
+      <p>Generic object reference to the ScheduleTerm,  used when an SMS does not define teaching group events for every applicable date covered by
+       the Schedule start and end date; but rather by terms. If you do not supply a term, it is assumed that the class will occur for the duration of the Schedule. 
+      If you do supply a Term, the class will only occur during that Term.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"/>
-  </Item>       <!-- AcademicDay -->
-
+  </Item>       <!-- ScheduleTerm -->
+	
   <Item>
     <Element>RoomId</Element>
     <Characteristics>O</Characteristics>
@@ -94,6 +108,7 @@
     </Description>
     <Type name="xs:normalizedString"/>
   </Item>       <!-- RoomId -->
+
   <Item>
     <Element>RoomName</Element>
     <Characteristics>O</Characteristics>
@@ -103,6 +118,7 @@
     </Description>
     <Type name="xs:normalizedString"/>
   </Item>       <!-- RoomName -->
+
   <Item>
     <Element>TakeAttendanceFlag</Element>
     <Characteristics>O</Characteristics>
@@ -122,6 +138,7 @@
     </Description>
     <Type ref="CommonTypes" name="StaffListType"></Type>
   </Item>       <!-- TeacherList -->
+
   <Item>
     <Element>CourseList</Element>
     <Characteristics>O</Characteristics>
@@ -159,16 +176,16 @@
 				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
 				<Name>Scheule 2019a (Term 1)</Name>
 			</Schedule>
-			<SchedulePeriod>
-				<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
-				<LocalId>2019a-A1</LocalId>
-				<Name>Period 1 on Day A</Name>
-			</SchedulePeriod>
-			<AcademicDay>
+			<ScheduleAcademicDay>
 				<RefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</RefId>
 				<LocalId>2019a-A</LocalId>
 				<Name>Scheule 2019a, Day A</Name>
-			</AcademicDay>
+			</ScheduleAcademicDay>
+			<SchedulePeriod>
+				<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
+				<LocalId>2019a-1</LocalId>
+				<Name>Schedule 2019a, Period 1</Name>
+			</SchedulePeriod>
 			<RoomId>TB202</RoomId>
 			<RoomName>Tower Block, Room 202</RoomName>
 			<TakeAttendanceFlag>Y</TakeAttendanceFlag>

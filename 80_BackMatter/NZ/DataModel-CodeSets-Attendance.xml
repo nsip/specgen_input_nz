@@ -2,7 +2,6 @@
 	xmlns:xi="http://www.w3.org/2001/XInclude"
  	xmlns="http://sifassociation.org/SpecGen">
 
-
 	<CodeSet>
 		<Intro>
 			<p>Code set denoting the type of attendance being recorded for the student.</p>
@@ -10,17 +9,16 @@
 		<ID>Attendance Type</ID>
 		<Values>
 			<Value>
-				<Code>ADH</Code>
-				<Text>Ad Hoc</Text>
-			</Value>
-			<Value>
 				<Code>SCH</Code>
 				<Text>Scheduled</Text>
+			</Value>
+			<Value>
+				<Code>ADH</Code>
+				<Text>Ad Hoc</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Attendance Type -->
 
-	<!--- Defined by SIF NZ -->
 	<CodeSet>
 		<Intro>
 			<p>Code denoting presence, absence or the reason for non-attendance at school, or class.</p>
@@ -159,7 +157,7 @@
 				<Text xml:lang="mi">Hōtaka Kura Tuarua, Kura Wānanga (me ngā Kura Ahumahi)</Text>
 			</Value>
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Attendance Code -->
 
 	<CodeSet>
 		<Intro>
@@ -183,5 +181,5 @@
 				<Text xml:lang="mi">Parahau Kore</Text>
 			</Value>
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Attendance Code Group -->
 </IncludeGroup>

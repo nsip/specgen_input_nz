@@ -42,15 +42,6 @@
 	</Item>    <!-- ScheduleDateLocalId -->
 
 	<Item>
-		<Element>CalendarDate</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The actual date the school is in session.</p>
-		</Description>
-		<Type  name="xs:date"/>
-	</Item>    <!-- CalendarDate -->
-	<Item>
 		<Element>Organisation</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
@@ -59,15 +50,6 @@
 		</Description>
 		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
 	</Item>    <!-- Organisation -->
-	<Item>
-		<Element>Term</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The Term in session on this calendar date.</p>
-		</Description>
-		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
-	</Item>    <!-- Term -->
 	
 	<Item>
 		<Element>Schedule</Element>
@@ -78,44 +60,16 @@
 		</Description>
 		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
 	</Item>    <!-- Schedule -->
+
 	<Item>
-		<Element>AcademicDay</Element>
+		<Element>CalendarDateList</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The academic day from the schedule that is taking place on this calendar date.</p>
+			<p>A list of schedule calendar dates and the period times, academic day and terms that applies to each day.</p>
 		</Description>
-		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
-	</Item>    <!-- AcademicDay -->
-	<Item>
-		<Element>BellSchedule</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The bell schedule that the provider used on this calendar date.</p>
-		</Description>
-		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
-	</Item>    <!-- BellSchedule -->
-
-	<Item>
-		<Element>TeachingGroupEventList</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>List of generic object references to the set of TeachingGroupEvents that take place on this calendar date.</p>
-		</Description>
-		<Type ref="CommonTypes" name="TeachingGroupEventListType"/> 
-	</Item>    <!-- TeachingGroupEventLIst -->
-
-	<Item>
-		<Element>SchedulePeriodList</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>A list of the periods that took place on this scheduled date and their start and end times.</p>
-		</Description>
-		<Type ref="CommonTypes" name="SchedulePeriodTimeListType"/> 
-	</Item>    <!-- SchedulePeriodList -->
+		<Type ref="CommonTypes" name="CalendarDateListType"/> 
+	</Item>    <!-- CalendarDateList -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -131,39 +85,45 @@
 		<ScheduleDate>
 			<ScheduleDateRefId>84c40f87-769d-46cc-8077-f5efb912e099</ScheduleDateRefId>
 			<ScheduleDateLocalId>2019a-A-06</ScheduleDateLocalId>
-			<CalendarDate>2019-03-14</CalendarDate>
 			<Organisation>
 				<RefId>783</RefId>
 				<Name>Hogwarts High</Name>
 			</Organisation>
-			<Term>
-				<RefId>2f97ed99-7291-4b88-91c3-709be4308c63</RefId>
-				<Name>Hogwarts High, Term I, 2019</Name>
-			</Term>
 			<Schedule>
 				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
-				<Name>Scheule 2019a (Term 1)</Name>
+				<Name>Schedule 2019a (Term 1)</Name>
 			</Schedule>
-			<AcademicDay>
-				<RefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</RefId>
-				<LocalId>2019a-A</LocalId>
-				<Name>Scheule 2019a, Day A</Name>
-			</AcademicDay>				
-			<BellSchedule>
-				<RefId>8bda1e4a-ddd2-4d18-9a85-ffcd7a2528b8</RefId>
-				<Name>Schedule 2019a, Normal Bell Schedule</Name>
-			</BellSchedule>
-			<SchedulePeriodList>
-				<SchedulePeriodTime json:force-array="true">
-					<Period>
-						<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
-						<LocalId>2019a-A1</LocalId>
-						<Name>Period 1 on Day A</Name>
-					</Period>
-					<StartTime>08:45:00</StartTime>
-					<EndTime>09:35:00</EndTime>
-				</SchedulePeriodTime>
-			</SchedulePeriodList>
+			<CalendarDateList>
+				<CalendarDate>
+					<Date>2019-03-14</Date>
+					<ScheduleAcademicDay>
+						<LocalId>2019a-A</LocalId>
+					</ScheduleAcademicDay>
+					<SchedulePeriodTime>
+						<LocalId>2019a-Normal</LocalId>
+					</SchedulePeriodTime>
+					<ScheduleTermList>
+						<ScheduleTerm json:force-array="true">
+							<LocalId>2019-1</LocalId>
+						</ScheduleTerm>
+					</ScheduleTermList>
+				</CalendarDate>
+				<CalendarDate>
+					<Date>2019-03-15</Date>
+					<ScheduleAcademicDay>
+						<LocalId>2019a-B</LocalId>
+					</ScheduleAcademicDay>
+					<SchedulePeriodTime>
+						<LocalId>2019a-Normal</LocalId>
+					</SchedulePeriodTime>
+					<ScheduleTermList>
+						<ScheduleTerm json:force-array="true">
+							<LocalId>2019-1</LocalId>
+						</ScheduleTerm>
+					</ScheduleTermList>
+				</CalendarDate>
+			</CalendarDateList>	
+
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>

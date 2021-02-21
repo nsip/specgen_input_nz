@@ -1,0 +1,167 @@
+<DataObject name="ScheduleException"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
+	xmlns="http://sifassociation.org/SpecGen">
+
+
+	<Key>ScheduleExceptionRefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>ScheduleException</Element>
+	  <privacyRating>Low</privacyRating>
+		<Description>
+			<p>Defines events that may or may not impact the schedule. These
+			events may simply be for display, or may affect the schools
+			academic schedule.</p>
+		</Description>
+	</Item>
+	
+	<Item>
+		<Element>ScheduleExceptionRefId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>    <!-- ScheduleExceptionRefId -->
+	<Item>
+		<Element>ScheduleExceptionLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>    <!-- ScheduleExceptionLocalId -->
+
+	<Item>
+		<Element>Organisation</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The provider at which this schedule exception will occur</p>
+		</Description>
+		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
+	</Item>    <!-- Organisation -->
+
+	<Item>
+		<Element>Schedule</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The provider schedule the schedule exception is having an effect on.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- Schedule -->
+
+	<Item>
+		<Element>ExceptionDate</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The date of the exception.</p>
+		</Description>
+		<Type  name="xs:date"/>
+	</Item>    <!-- ExceptionDate -->
+
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The name of the schedule exception.  eg. Snow Day - March 3rd</p>
+		</Description>
+		<Type  name="xs:normalizedString"/>
+	</Item>    <!-- Name -->
+
+	<Item>
+		<Element>ScheduleAcademicDayList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of one or more academic days to be applied to the
+			school calendar for the duration of this event. </p>
+		</Description>
+		<Type ref="CommonTypes" name="ScheduleDayListType"/> 
+	</Item>    <!-- ScheduleAcademicDayList -->
+
+	<Item>
+		<Element>SchedulePeriodTimeList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of one or more bell schedules to be applied to the school calendar for the duration of this event.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SchedulePeriodTimeListType"/> 
+	</Item>    <!-- SchedulePeriodTimeList -->
+
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+
+	<xhtml:Example xmlns="" name ="Schedule Exception - Snow Day">
+		<ScheduleException>
+			<ScheduleExceptionRefId>c79e65df-0b11-4a97-9062-9fbd1c1a38e3</ScheduleExceptionRefId>
+			<ScheduleExceptionLocalId>excMarSnow</ScheduleExceptionLocalId>
+			<Organisation>
+				<RefId>783</RefId>
+				<Name>Hogwarts High</Name>
+			</Organisation>
+			<Schedule>
+				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
+				<Name>Schedule 2019a (Term 1)</Name>
+			</Schedule>
+			<ExceptionDate>2019-03-14</ExceptionDate>
+			<Name>14 Mar 2019 - Snow Day</Name>
+			<ScheduleAcademicDayList/>
+			<SchedulePeriodTimeList/>
+		</ScheduleException>
+	</xhtml:Example>
+
+
+	<xhtml:Example xmlns="" name ="Schedule Exception - Custom Schedule">
+		<ScheduleException>
+			<ScheduleExceptionRefId>f84d9681-03f6-4434-a867-967dba517cf5</ScheduleExceptionRefId>
+			<ScheduleExceptionLocalId>excWinSprt</ScheduleExceptionLocalId>
+			<Organisation>
+				<RefId>783</RefId>
+				<Name>Hogwarts High</Name>
+			</Organisation>
+			<Schedule>
+				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
+				<Name>Schedule 2019a (Term 1)</Name>
+			</Schedule>
+			<ExceptionDate>2019-07-05</ExceptionDate>
+			<Name>Winter Sports - 3 Short Periods, Afternoon Off</Name>
+			<ScheduleAcademicDayList>
+				<ScheduleAcademicDay json:force-array="true">
+					<LocalId>2019a-A</LocalId>
+				</ScheduleAcademicDay>
+			</ScheduleAcademicDayList>
+			<SchedulePeriodTimeList>
+				<SchedulePeriodTime json:force-array="true">
+					<LocalId>2019a-Short3</LocalId>
+				</SchedulePeriodTime>
+			</SchedulePeriodTimeList>
+			<RecordAudit>
+				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+				<CreatedBy>
+				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+				<Name>Bobby Test</Name>
+				</CreatedBy>
+			</RecordAudit>
+		</ScheduleException>
+	</xhtml:Example>
+</DataObject>

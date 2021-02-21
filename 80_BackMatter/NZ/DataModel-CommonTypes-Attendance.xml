@@ -9,109 +9,65 @@
 		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
 
 
-	<CommonElement name="AttendanceTimeListType" type="true" dm="true">
+	<CommonElement name="StudentAttendanceListType" type="true" dm="true">
 		<Item>
-			<Element>AttendanceTimeListType</Element>
+			<Element>StudentAttendanceListType</Element>
 			<Description>
-				<p>Breakdown of times that the student entered or returned to school.</p>
+				<p>A list of the students that attended the teaching group meeting 
+				and their recorded attendance.</p>
 			</Description>
 			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>AttendanceTime</Element>
+			<Element>StudentAttendance</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>
-				<p/>
+				<p>A student that attended the teaching group meeting and their recorded attendance.</p>
 			</Description>
-			<Type ref="CommonTypes" name="AttendanceTimeType"/>
-		</Item>		<!-- AttendanceTime -->
+			<Type ref="CommonTypes" name="StudentAttendanceType"/>
+		</Item>		<!-- StudentAttendance -->
 
-		<xhtml:Example xmlns="" name="Attendance Time List">
-			<AttendanceTimeList>
-				<AttendanceTime>
-					<AttendanceTimeLocalId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934554</AttendanceTimeLocalId>
-					<AttendanceType>SCH</AttendanceType>
+		<xhtml:Example xmlns="" name="Student Attendance list">
+			<StudentAttendanceList>
+				<StudentAttendance>
+					<Student>
+						<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934554</RefId>
+					</Student>
 					<Code>P</Code>
-					<AttendanceDate>2018-06-26</AttendanceDate>	
-					<SchedulePeriod>
-						<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd999999</RefId>
-					</SchedulePeriod>
-					<SubmissionDateTime>2018-06-30T06:30:57</SubmissionDateTime>	
+					<CodeGroup>P</CodeGroup>
 					<Note>Student was present.</Note>	
-					<RecordAudit>	
-						<LastUpdatedDateTime>2018-06-28T06:30:57</LastUpdatedDateTime>
-					</RecordAudit>
-				</AttendanceTime>	
-				<AttendanceTime>
-					<AttendanceTimeLocalId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934667</AttendanceTimeLocalId>
-					<AttendanceType>ADH</AttendanceType>
-					<Code>E</Code>
-					<AttendanceDate>2018-06-27</AttendanceDate>	
+				</StudentAttendance>	
+				<StudentAttendance>
+					<Student>
+						<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934667</RefId>
+					</Student>
+					<Code>L</Code>
+					<CodeGroup>U</CodeGroup>
+					<Note>Late to class; Unjustified</Note>		
 					<StartTime>09:45:00</StartTime>
 					<EndTime>10:30:00</EndTime>
-					<SubmissionDateTime>2018-06-30T06:30:57</SubmissionDateTime>
-					<Note>Explained absence, but unjustified.</Note>		
-					<RecordAudit>	
-						<LastUpdatedDateTime>2018-06-28T06:30:57</LastUpdatedDateTime>
-					</RecordAudit>
-				</AttendanceTime>
-			</AttendanceTimeList>	
+				</StudentAttendance>
+			</StudentAttendanceList>
 		</xhtml:Example>
-
 	</CommonElement>
 
-	<CommonElement name="AttendanceTimeType" type="true" dm="true">
+	<CommonElement name="StudentAttendanceType" type="true" dm="true">
 		<Item>
-			<Element>AttendanceTimeType</Element>
+			<Element>StudentAttendanceType</Element>
 			<Description>
-				<p>Time span that the student entered or returned to school</p>
+				<p>A student that attended the teaching group meeting and their recorded attendance.</p>
 			</Description>
 		</Item>
 
 		<Item>
-			<Element>AttendanceTimeRefId</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The globally unique identifier of the student's particular attendance record.</p>
-			</Description>
-			<Type ref="CommonTypes" name="RefIdType"/>
-		</Item>		<!-- AttendanceTimeLocalId -->
-		<Item>
-			<Element>AttendanceTimeLocalId</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The source system identifier of the student's particular attendance record.</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/>
-		</Item>		<!-- AttendanceTimeLocalId -->
-
-		<Item>
-			<Element>TeachingGroup</Element>
-			<Characteristics>O</Characteristics>
+			<Element>Student</Element>
+			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
-				<p>The teaching group that is reporting this student's particular attendance record</p>
+				<p>A student that attended the teaching group meeting and their recorded attendance.</p>
 			</Description>
-			<Type ref="CommonTypes" name="ObjectReference"/>
-		</Item>    <!-- TeachingGroup -->
-
-		<Item>
-			<Element>AttendanceType</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>The type of attendance being recorded e.g. Scheduled or Ad Hoc. If it is a schedule attendance then the SchedulePeriod must also be provided. If it is an Ad Hoc attendance then StartDateTime and EndDateTime must also be provided.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsAttendanceTypeType"/>
-		</Item>		<!-- AttendanceType -->
-
-		<Item>
-			<Element>AttendanceCodeGroup</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The attendance code group the students attendance code belongs to.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsAttendanceCodeGroupType"/>
-		</Item>		<!-- AttendanceCodeGroup -->
+			<Type ref="CommonTypes" name="StudentObjectReference"/>
+		</Item>    <!-- Student -->
 
 		<Item>
 			<Element>Code</Element>
@@ -123,23 +79,23 @@
 		</Item>		<!-- Code -->
 
 		<Item>
-			<Element>AttendanceDate</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>The date the attendance is being record for.</p>
-			</Description>
-			<Type name="xs:date"/>
-		</Item>		<!-- AttendanceDate -->
-
-		<Item>
-			<Element>SchedulePeriod</Element>
+			<Element>CodeGroup</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>The scheduled period this attendnance time list record is for. The SchedulePeriod must be provided if the AttendanceType = 'Scheduled'.</p>
+				<p>The attendance code group the students attendance code belongs to.</p>
 			</Description>
-			<Type ref="CommonTypes" name="ObjectReference"/>
-		</Item>		<!-- SchedulePeriod -->
-		
+			<Type ref="CodeSets" name="NZCodeSetsAttendanceCodeGroupType"/>
+		</Item>		<!-- CodeGroup -->
+	
+		<Item>
+			<Element>Note</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Free text note about the students attendance for the provided date and time/period.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>		<!-- Note -->
+
 		<Item>
 			<Element>StartTime</Element>
 			<Characteristics>O</Characteristics>
@@ -157,35 +113,75 @@
 			</Description>
 			<Type name="xs:time"/>
 		</Item>		<!-- EndTime -->
-
-		<Item>
-			<Element>SubmissionDateTime</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The date the students attendance for this date and time/period was submitted.</p>
-			</Description>
-			<Type name="xs:dateTime"/>
-		</Item>		<!-- SubmissionDateTime -->
-
-		<Item>
-			<Element>Note</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Free text note about the students attendance for the provided date and time/period.</p>
-			</Description>
-			<Type name="xs:normalizedString"/>
-		</Item>		<!-- Note -->
-
-		<Item>
-			<Element>RecordAudit</Element>    
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-			<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
-			</Description>
-			<Type ref="CommonTypes" name="RecordAuditType"></Type>
-		</Item>    <!-- RecordAudit -->
-
 	</CommonElement>
 
+	<CommonElement name="ScheduledMeetingType" type="true" dm="true">
+		<Item>
+			<Element>ScheduledMeetingType</Element>
+			<Description>
+				<p>Defines details about a scheduled meeting. When scheduled meeting details are provided ad hoc meeting details cannot be provided.</p>
+			</Description>
+		</Item>
+
+		<Item>
+			<Element>SchedulePeriod</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Reference to the SchedulePeriod this teaching group meeting attendance is being recorded for.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReference"/>
+		</Item>    <!-- SchedulePeriod -->
+
+		<Item>
+			<Element>StartTime</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The time the scheduled meeting started.</p>
+			</Description>
+			<Type name="xs:time"/>
+		</Item>		<!-- StartTime -->
+		<Item>
+			<Element>EndTime</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The time the scheduled meeting ended.</p>
+			</Description>
+			<Type name="xs:time"/>
+		</Item>		<!-- EndTime -->
+	</CommonElement>
+
+	<CommonElement name="AdHocMeetingType" type="true" dm="true">
+		<Item>
+			<Element>AdHocMeetingType</Element>
+			<Description>
+				<p>Defines details about an ad hoc meeting. When ad hoc meeting details are provided scheduled meeting details cannot be provided.</p>
+			</Description>
+		</Item>
+
+		<Item>
+			<Element>MeetingName</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The name of the ad hoc meeting.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>		<!-- MeetingName -->
+		<Item>
+			<Element>StartTime</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The time the scheduled meeting started.</p>
+			</Description>
+			<Type name="xs:time"/>
+		</Item>		<!-- StartTime -->
+		<Item>
+			<Element>EndTime</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The time the scheduled meeting ended.</p>
+			</Description>
+			<Type name="xs:time"/>
+		</Item>		<!-- EndTime -->
+	</CommonElement>
 </IncludeGroup>

@@ -17,8 +17,8 @@
 			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>ScheduleDay</Element>
-			<Characteristics>MR</Characteristics>
+			<Element>ScheduleAcademicDay</Element>
+			<Characteristics>OR</Characteristics>
 			<Description>
 				<p>Generic object reference to a ScheduleAcademicDay in the list</p>
 			</Description>
@@ -26,24 +26,83 @@
 		</Item>		<!-- ScheduleDay -->
 	</CommonElement>
 
-	<CommonElement name="BellScheduleListType" type="true" dm="true">
+	<CommonElement name="SchedulePeriodTimeListType" type="true" dm="true">
 		<Item>
-			<Element>BellScheduleListType</Element>
+			<Element>SchedulePeriodTimeListType</Element>
 			<Description>
-				<p>A list of BellSchedule object references.</p>
+				<p>A list of SchedulePeriodTime object references.</p>
 			</Description>
 			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>BellSchedule</Element>
-			<Characteristics>MR</Characteristics>
+			<Element>SchedulePeriodTime</Element>
+			<Characteristics>OR</Characteristics>
 			<Description>
-				<p>Generic object reference to a BellSchedule in the list</p>
+				<p>Generic object reference to a SchedulePeriodTime entry in the list</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>		<!-- BellSchedule -->
+		</Item>		<!-- SchedulePeriodTime -->
 	</CommonElement>
-	
+
+	<CommonElement name="CalendarDateListType" type="true" dm="true">
+		<Item>
+			<Element>CalendarDateListType</Element>
+			<Description>
+				<p>A list of schedule calendar dates and the period times, academic day and terms that applies to each day.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>CalendarDate</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A particular schedule calendar date and the period times, academic day and terms that apply to that day.</p>
+			</Description>
+			<Type ref="CommonTypes" name="CalendarDateType"/>
+		</Item>		<!-- CalendarDate -->
+	</CommonElement>
+
+	<CommonElement name="CalendarDateType" type="true" dm="true">
+		<Item>
+			<Element>CalendarDateType</Element>
+			<Description>
+				<p>A particular schedule calendar date and the period times, academic day and terms that apply to that day.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Date</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The calendar date being assigned to the schedule</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>		<!-- Date -->
+		<Item>
+			<Element>ScheduleAcademicDay</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p> A generic object references to the ScheduleAcademicDay for the given date</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>		<!-- AcademicDay -->
+		<Item>
+			<Element>SchedulePeriodTime</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p> A generic object references to the SchedulePeriodTime for the given date</p>
+			</Description>
+			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+		</Item>		<!-- AcademicDay -->
+		<Item>
+			<Element>ScheduleTermList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of object references to the ScheduleTerms that apply on the given date</p>
+			</Description>
+			<Type ref="CommonTypes" name="ScheduleTermListType"/>
+		</Item>		<!-- ScheduleTermList -->
+	</CommonElement>
+
 	<CommonElement name="PeriodListType" type="true" dm="true">
 		<Item>
 			<Element>PeriodListType</Element>
@@ -76,6 +135,7 @@
 			</PeriodList>
 		</xhtml:Example>
 	</CommonElement>
+
 	<CommonElement name="ScheduleTermListType" type="true" dm="true">
 		<Item>
 			<Element>ScheduleTermListType</Element>
@@ -86,13 +146,14 @@
 		</Item>
 		<Item>
 			<Element>ScheduleTerm</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>OR</Characteristics>
 			<Description>
 				<p>Generic object reference to a ScheduleTerm in the list</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>		<!-- ScheduleTerm -->
 	</CommonElement>
+
 	<CommonElement name="TeachingGroupEventListType" type="true" dm="true">
 		<Item>
 			<Element>TeachingGroupEventListType</Element>
@@ -117,7 +178,11 @@
 		<Item>
 			<Element>AcademicDayListType</Element>
 			<Description>
-				<p>A list of the academic days within this schedule</p>
+				<p>A list of the academic days in the order they are used in the rotation
+				 	of this schedule.</p>
+				<p>If a particular academic day appears more than once in the rotation, 
+					then it will appear more than once in this list.  eg. A 5 day rotation
+				 	with days A, A, B, A, A, would have 5 entries in the list.</p>
 			</Description>
 			<List mode="List"/>
 		</Item>
@@ -136,6 +201,10 @@
 					<RefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</RefId>
 					<LocalId>2019a-A</LocalId>
 					<Name>Schedule 2019a, Day A</Name>
+					<SchedulePeriodTime>
+						<RefId>8bda1e4a-ddd2-4d18-9a85-ffcd7a2528b8</RefId>
+						<LocalId>2019a-Normal</LocalId>
+					</SchedulePeriodTime>
 					<PeriodList>
 						<Period>
 							<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
@@ -153,6 +222,10 @@
 					<RefId>337804c6-1247-4c0f-b288-e4aa28584aad</RefId>
 					<LocalId>2019a-B</LocalId>
 					<Name>Schedule 2019a, DayB</Name>
+					<SchedulePeriodTime>
+						<RefId>8bda1e4a-ddd2-4d18-9a85-ffcd7a2528b8</RefId>
+						<LocalId>2019a-Normal</LocalId>
+					</SchedulePeriodTime>
 					<PeriodList>
 						<Period>
 							<RefId>f6776718-4680-4cb7-b649-a84f9796905c</RefId>
@@ -169,6 +242,7 @@
 			</AcademicDayList>
 		</xhtml:Example>
 	</CommonElement>
+
 	<CommonElement name="AcademicDayType" type="true" dm="true">
 		<Item>
 			<Element>AcademicDayType</Element>
@@ -178,13 +252,13 @@
 			<Type complex="extension" name="ObjectReferenceType"/>
 		</Item>
 		<Item>
-			<Element>BellSchedule</Element>
+			<Element>SchedulePeriodTime</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>The bell schedule this academic day is following.</p>
+				<p>The period times within the schedule this academic day is following.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>		<!-- BellSchedule -->
+		</Item>		<!-- SchedulePeriodTime -->
 		<Item>
 			<Element>PeriodList</Element>
 			<Characteristics>M</Characteristics>
@@ -199,10 +273,10 @@
 				<RefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</RefId>
 				<LocalId>2019a-A</LocalId>
 				<Name>Schedule 2019a, Day A</Name>
-				<BellSchedule>
+				<SchedulePeriodTime>
 					<RefId>8bda1e4a-ddd2-4d18-9a85-ffcd7a2528b8</RefId>
-					<Name>Schedule 2019a, Normal Bell Schedule</Name>
-				</BellSchedule>
+					<LocalId>2019a-Normal</LocalId>
+				</SchedulePeriodTime>
 				<PeriodList>
 					<Period>
 						<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
@@ -219,11 +293,11 @@
 		</xhtml:Example>
 	</CommonElement>	
 
-	<CommonElement name="SchedulePeriodTimeListType" type="true" dm="true">
+	<CommonElement name="PeriodTimeListType" type="true" dm="true">
 		<Item>
-			<Element>SchedulePeriodTimeListType</Element>
+			<Element>PeriodTimeListType</Element>
 			<Description>
-				<p>A list of the periods that make up the bell schedule and their start and end times.</p>
+				<p>A list of the periods that make up the period time schedule and their start and end times.</p>
 			</Description>
 			<List mode="List"/>
 		</Item>
@@ -231,55 +305,55 @@
 			<Element>SchedulePeriodTime</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>
-				<p>A period that makes up or partially makes up the bell schedule and its start and end times.</p>
+				<p>A period that makes up or partially makes up the period time schedule and its start and end times.</p>
 			</Description>
-			<Type ref="CommonTypes" name="SchedulePeriodTimeType"/>
-		</Item>		<!-- SchedulePeriodTimeType -->
+			<Type ref="CommonTypes" name="PeriodTimeType"/>
+		</Item>		<!-- SchedulePeriodTime -->
 		
-		<xhtml:Example xmlns="" name="SchedulePeriodList Example">
-			<SchedulePeriodList>
+		<xhtml:Example xmlns="" name="PeriodList Example">
+			<PeriodTimeList>
 				<SchedulePeriodTime>
-					<Period>
+					<SchedulePeriod>
 						<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
 						<LocalId>2019a-A1</LocalId>
-						<Name>Period 1 on Day A</Name>
-					</Period>
-					<StartTime>08:45:00</StartTime>
-					<EndTime>09:35:00</EndTime>
+						<Name>Period 1</Name>
+					</SchedulePeriod>
+					<StartTime>08:45:00+12:00</StartTime>
+					<EndTime>09:35:00+12:00</EndTime>
 				</SchedulePeriodTime>
 				<SchedulePeriodTime>
-					<Period>
+					<SchedulePeriod>
 						<RefId>1c48a0bb-a6cc-41ab-8aae-929ce5ec9c34</RefId>
 						<LocalId>2019a-A2</LocalId>
-						<Name>Period 2 on Day A</Name>
-					</Period>
-					<StartTime>09:45:00</StartTime>
-					<EndTime>10:35:00</EndTime>
+						<Name>Period 2</Name>
+					</SchedulePeriod>
+					<StartTime>09:45:00+12:00</StartTime>
+					<EndTime>10:35:00+12:00</EndTime>
 				</SchedulePeriodTime>
-			</SchedulePeriodList>
+			</PeriodTimeList>
 		</xhtml:Example>
 	</CommonElement>
 
-	<CommonElement name="SchedulePeriodTimeType" type="true" dm="true">
+	<CommonElement name="PeriodTimeType" type="true" dm="true">
 		<Item>
-			<Element>SchedulePeriodTimeType</Element>
+			<Element>PeriodTimeType</Element>
 			<Description>
-				<p>The definition of a SchedulePeriod start and end time, on a particular Bell Schedule.</p>
+				<p>A period that makes up or partially makes up the period time schedule and its start and end times.</p>
 			</Description>
 		</Item>
 		<Item>
-			<Element>Period</Element>
+			<Element>SchedulePeriod</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
-				<p>Generic object reference to the schedule period whose start and end times are being defined.</p>
+				<p>A period that makes up or partially makes up the period time schedule.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>		<!-- Period -->		
+		</Item>		<!-- SchedulePeriod -->		
 		<Item>
 			<Element>StartTime</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
-				<p>The time the period starts.</p>
+				<p>The time the period starts.  Note inclusion of timezone indicator.</p>
 			</Description>
 			<Type name="xs:time"/>
 		</Item>		<!-- StartTime -->
@@ -287,83 +361,22 @@
 			<Element>EndTime</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
-				<p>The time the period ends.</p>
+				<p>The time the period ends.   Note inclusion of timezone indicator.</p>
 			</Description>
 			<Type name="xs:time"/>
 		</Item>		<!-- EndTime -->
 
-		<xhtml:Example xmlns="" name="SchedulePeriodTime Example">
-			<SchedulePeriodTime>
-				<Period>
+		<xhtml:Example xmlns="" name="PeriodTime Example">
+			<PeriodTime>
+				<SchedulePeriod>
 					<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
 					<LocalId>2019a-A1</LocalId>
-					<Name>Period 1 on Day A</Name>
-				</Period>
-				<StartTime>08:45:00</StartTime>
-				<EndTime>09:35:00</EndTime>
-			</SchedulePeriodTime>
+					<Name>Period 1</Name>
+				</SchedulePeriod>
+				<StartTime>08:45:00+12:00</StartTime>
+				<EndTime>09:35:00+12:00</EndTime>
+			</PeriodTime>
 		</xhtml:Example>
-	</CommonElement>
-
-	<CommonElement name="ScheduleCustomDayPeriodListType" type="true" dm="true">
-		<Item>
-			<Element>ScheduleCustomDayPeriodListType</Element>
-			<Description>
-				<p>A list of generic object references to a set of
-				SchedulePeriods, along with their custom start and end times,
-				which are part of a 'CUSTOM' ScheduleEvent.</p>
-				<p>Used in the creation of "one off" events defined in
-				ScheduleEvent to have a custom set of SchedulePeriods, each with
-				custom start and end times that don't match any particular bell
-				schedule.</p>
-				<p>Used for exception days in the school schedule, such as
-				assembly days or activity days.</p>				
-			</Description>
-		</Item>
-		<Item>
-			<Element>Period</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>Generic object reference to a SchedulePeriod, along with
-				its custom start and end times, which are part of a 'CUSTOM'
-				ScheduleEvent.</p>
-			</Description>
-			<Type ref="CommonTypes" name="ScheduleCustomDayPeriodType"/>
-		</Item>		<!-- Period -->
-	</CommonElement>
-
-	<CommonElement name="ScheduleCustomDayPeriodType" type="true" dm="true">
-		<Item>
-			<Element>ScheduleCustomDayPeriodType</Element>
-			<Description>
-				<p>Generic object reference to a single SchedulePeriod, along
-				with its custom start and end times, which are part of a
-				'CUSTOM' ScheduleEvent.</p>
-				<p>Used in the creation of "one off" events defined in
-				ScheduleEvent to have a custom set of SchedulePeriods, each with
-				custom start and end times that don't match any particular bell
-				schedule.</p>
-				<p>Used for exception days in the school schedule, such as
-				assembly days or activity days.</p>				
-			</Description>
-			<Type complex="extension" name="ObjectReferenceType"/>
-		</Item>
-		<Item>
-			<Element>StartTime</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>The time the custom schedule period starts.</p>
-			</Description>
-			<Type name="xs:time"/>
-		</Item>		<!-- StartTime -->
-		<Item>
-			<Element>EndTime</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>The time the custom schedule period ends.</p>
-			</Description>
-			<Type name="xs:time"/>
-		</Item>		<!-- EndTime -->
 	</CommonElement>
 
 </IncludeGroup>

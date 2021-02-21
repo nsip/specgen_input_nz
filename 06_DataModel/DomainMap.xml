@@ -133,22 +133,22 @@
 				</p>
 				<img src="images/SIFNZ-LogicalModel-TimetableAttendanceDomain.png" usemap="#Schedule &amp; AttendanceMap"/>
 			</Intro>
-			<DataObject coords="36,134,151,170">StudentPersonal</DataObject>
-			<DataObject coords="479,43,926,80">Organisation</DataObject>
-			<DataObject coords="183,189,342,223" role="member">StudentAttendanceTimeList</DataObject>
-			<DataObject coords="306,139,466,175" role="member">StudentAttendanceSummary</DataObject>
-			<DataObject coords="645,546,743,579">TeachingGroup</DataObject>
-			<DataObject coords="646,638,744,685">ProviderCourse</DataObject>
+			<DataObject coords="47,180,201,229">StudentPersonal</DataObject>
+			<DataObject coords="637,58,1224,102">Organisation</DataObject>
+			<DataObject coords="242,249,447,298" role="member">TeachingGroupMeetingAttendance</DataObject>
+			<DataObject coords="418,183,621,237" role="member">StudentAttendanceSummary</DataObject>
+			<DataObject coords="845,762,970,808">TeachingGroup</DataObject>
+			<DataObject coords="875,887,986,953">ProviderCourse</DataObject>
 
-			<DataObject coords="763,166,864,202">Schedule</DataObject>
-			<DataObject coords="594,165,670,200">ScheduleTerm</DataObject>
-			<DataObject coords="674,215,766,248">ScheduleHoliday</DataObject>
-			<DataObject coords="436,224,523,283">ScheduleDate</DataObject>
-			<DataObject coords="296,307,386,342">ScheduleEvent</DataObject>
-			<DataObject coords="418,366,530,401">SchedulePeriod</DataObject>
-			<DataObject coords="625,376,757,411">ScheduleAcademicDay</DataObject>
-			<DataObject coords="642,295,735,342">BellSchedule</DataObject>
-			<DataObject coords="635,435,748,494">TeachingGroupEvent</DataObject>
+			<DataObject coords="1056,220,1173,266" role="member">Schedule</DataObject>
+			<DataObject coords="791,220,890,265"   role="member">ScheduleTerm</DataObject>
+			<DataObject coords="885,310,1026,351"  role="member">ScheduleException</DataObject>
+			<DataObject coords="579,300,697,373"   role="member">ScheduleDate</DataObject>
+			<DataObject coords="390,432,508,476"   role="member">ScheduleEvent</DataObject>
+			<DataObject coords="856,391,1001,454"  role="member">SchedulePeriodTime</DataObject>
+			<DataObject coords="550,537,703,584"   role="member">SchedulePeriod</DataObject>
+			<DataObject coords="830,536,999,587"   role="member">ScheduleAcademicDay</DataObject>
+			<DataObject coords="842,617,990,700"   role="member">TeachingGroupEvent</DataObject>
 		</Domain>
 
 		<Domain name="Aromatawai / Assessment">
