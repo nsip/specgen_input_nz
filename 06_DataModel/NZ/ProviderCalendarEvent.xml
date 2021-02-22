@@ -12,9 +12,9 @@
 	<EventsReported>true</EventsReported>
 	<Item>
 		<Element>ProviderCalendarEvent</Element>
-	  <privacyRating>Low</privacyRating>
+	  	<privacyRating>Low</privacyRating>
 		<Description>
-			<p>Provides information about a holiday that may or may not impact upon the schedule of a provider.</p>
+			<p>Provides information about a holiday or other Event that may or may not impact upon the schedule of a provider.</p>
 		</Description>
 	</Item>
 	

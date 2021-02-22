@@ -144,7 +144,7 @@
 			<DataObject coords="791,220,890,265"   role="member">ScheduleTerm</DataObject>
 			<DataObject coords="885,310,1026,351"  role="member">ScheduleException</DataObject>
 			<DataObject coords="579,300,697,373"   role="member">ScheduleDate</DataObject>
-			<DataObject coords="390,432,508,476"   role="member">ScheduleEvent</DataObject>
+			<DataObject coords="377,416,561,484"   role="member">ProviderCalendarEvent</DataObject>
 			<DataObject coords="856,391,1001,454"  role="member">SchedulePeriodTime</DataObject>
 			<DataObject coords="550,537,703,584"   role="member">SchedulePeriod</DataObject>
 			<DataObject coords="830,536,999,587"   role="member">ScheduleAcademicDay</DataObject>
