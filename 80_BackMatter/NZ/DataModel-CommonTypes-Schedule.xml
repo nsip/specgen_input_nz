@@ -18,9 +18,9 @@
 		</Item>
 		<Item>
 			<Element>ScheduleAcademicDay</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
-				<p>Generic object reference to a ScheduleAcademicDay in the list</p>
+				<p>Generic object reference to a ScheduleAcademicDay in the list. If the list is present it must contain at least one entry.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>		<!-- ScheduleDay -->
@@ -36,9 +36,9 @@
 		</Item>
 		<Item>
 			<Element>SchedulePeriodTime</Element>
-			<Characteristics>OR</Characteristics>
+			<Characteristics>MR</Characteristics>
 			<Description>
-				<p>Generic object reference to a SchedulePeriodTime entry in the list</p>
+				<p>Generic object reference to a SchedulePeriodTime entry in the list. If the list is present it must contain at least one entry.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>		<!-- SchedulePeriodTime -->

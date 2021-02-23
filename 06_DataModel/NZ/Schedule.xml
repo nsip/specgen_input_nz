@@ -124,13 +124,13 @@
 					<PeriodList>
 						<Period>
 							<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
-							<LocalId>2019a-A1</LocalId>
-							<Name>Period 1 on Day A</Name>
+							<LocalId>2019a-1</LocalId>
+							<Name>Period 1</Name>
 						</Period>
 						<Period>
 							<RefId>1c48a0bb-a6cc-41ab-8aae-929ce5ec9c34</RefId>
-							<LocalId>2019a-A2</LocalId>
-							<Name>Period 2 on Day A</Name>
+							<LocalId>2019a-2</LocalId>
+							<Name>Period 2</Name>
 						</Period>
 					</PeriodList>					
 				</AcademicDay>
@@ -144,14 +144,14 @@
 					</SchedulePeriodTime>
 					<PeriodList>
 						<Period>
-							<RefId>f6776718-4680-4cb7-b649-a84f9796905c</RefId>
-							<LocalId>2019a-B1</LocalId>
-							<Name>Period 1 on Day B</Name>
+							<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
+							<LocalId>2019a-1</LocalId>
+							<Name>Period 1</Name>
 						</Period>
 						<Period>
-							<RefId>0ddaa486-adf1-4cb3-bd06-71397f4bbdd9</RefId>
-							<LocalId>2019a-B2</LocalId>
-							<Name>Period 2 on Day B</Name>
+							<RefId>1c48a0bb-a6cc-41ab-8aae-929ce5ec9c34</RefId>
+							<LocalId>2019a-2</LocalId>
+							<Name>Period 2</Name>
 						</Period>
 					</PeriodList>					
 				</AcademicDay>

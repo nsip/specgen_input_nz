@@ -82,21 +82,21 @@
 
 	<Item>
 		<Element>ScheduleAcademicDayList</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>A list of one or more academic days to be applied to the
-			school calendar for the duration of this event. </p>
+			school calendar for the duration of this event.  Not present if the Provider is closed for the duration of the ScheduleException.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ScheduleDayListType"/> 
 	</Item>    <!-- ScheduleAcademicDayList -->
 
 	<Item>
 		<Element>SchedulePeriodTimeList</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>A list of one or more bell schedules to be applied to the school calendar for the duration of this event.</p>
+			<p>A list of one or more bell schedules to be applied to the school calendar for the duration of this event.  Not present if the Provider is closed for the duration of the ScheduleException.</p>
 		</Description>
 		<Type ref="CommonTypes" name="SchedulePeriodTimeListType"/> 
 	</Item>    <!-- SchedulePeriodTimeList -->
@@ -125,8 +125,6 @@
 			</Schedule>
 			<ExceptionDate>2019-03-14</ExceptionDate>
 			<Name>14 Mar 2019 - Snow Day</Name>
-			<ScheduleAcademicDayList/>
-			<SchedulePeriodTimeList/>
 		</ScheduleException>
 	</xhtml:Example>
 

@@ -65,6 +65,7 @@
 		</Description>
 		<Type name="xs:date"/>
 	</Item>		<!-- MeetingDate -->
+
 	<Item>
 		<Element>SubmissionDateTime</Element>
 		<Characteristics>O</Characteristics>
@@ -130,6 +131,9 @@
 			</TeachingGroup>
 			<MeetingDate>2020-04-03</MeetingDate>
 			<Scheduled>
+				<SchedulePeriod>
+					<LocalId>2020a-A</LocalId>
+				</SchedulePeriod>
 				<StartTime>09:30:00</StartTime>
 				<EndTime>10:30:00</EndTime>
 			</Scheduled>

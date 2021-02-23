@@ -180,6 +180,11 @@
 				<Text xml:lang="en">Unjustified</Text>
 				<Text xml:lang="mi">Parahau Kore</Text>
 			</Value>
+			<Value>
+				<Code>X</Code>
+				<Text xml:lang="en">Exam Leave</Text>
+				<Text xml:lang="mi">Haerenga whakamātautau</Text>
+			</Value>
 		</Values>
 	</CodeSet>    <!-- Attendance Code Group -->
 </IncludeGroup>
