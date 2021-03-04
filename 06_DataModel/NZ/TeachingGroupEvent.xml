@@ -69,7 +69,7 @@
   
   <Item>
     <Element>ScheduleAcademicDay</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
   	<privacyRating>Low</privacyRating>
     <Description>
       <p>Generic object reference to the ScheduleAcademicDay that the TeachingGroup meets.</p>

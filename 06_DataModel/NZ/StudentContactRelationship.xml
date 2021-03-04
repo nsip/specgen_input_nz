@@ -42,7 +42,7 @@
 	</Item>   <!-- StudentContactRelationshipLocalId -->
 	<Item>
 		<Element>Status</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<privacyRating>High</privacyRating>
 		<Description>
 		<p>States whether or not this is an inactive or active Student Contact Relationship.</p>

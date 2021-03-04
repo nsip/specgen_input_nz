@@ -87,12 +87,12 @@
 		</Item>		<!-- AcademicDay -->
 		<Item>
 			<Element>SchedulePeriodTime</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p> A generic object references to the SchedulePeriodTime for the given date</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>		<!-- AcademicDay -->
+		</Item>		<!-- SchedulePeriodTime -->
 		<Item>
 			<Element>ScheduleTermList</Element>
 			<Characteristics>O</Characteristics>
@@ -293,26 +293,26 @@
 		</xhtml:Example>
 	</CommonElement>	
 
-	<CommonElement name="PeriodTimeListType" type="true" dm="true">
+	<CommonElement name="DayPeriodTimeListType" type="true" dm="true">
 		<Item>
-			<Element>PeriodTimeListType</Element>
+			<Element>DayPeriodTimeListType</Element>
 			<Description>
 				<p>A list of the periods that make up the period time schedule and their start and end times.</p>
 			</Description>
 			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>SchedulePeriodTime</Element>
+			<Element>DayPeriodTime</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>
 				<p>A period that makes up or partially makes up the period time schedule and its start and end times.</p>
 			</Description>
-			<Type ref="CommonTypes" name="PeriodTimeType"/>
-		</Item>		<!-- SchedulePeriodTime -->
+			<Type ref="CommonTypes" name="DayPeriodTimeType"/>
+		</Item>		<!-- DayPeriodTime -->
 		
-		<xhtml:Example xmlns="" name="PeriodList Example">
-			<PeriodTimeList>
-				<SchedulePeriodTime>
+		<xhtml:Example xmlns="" name="DayPeriodList Example">
+			<DayPeriodTimeList>
+				<DayPeriodTime>
 					<SchedulePeriod>
 						<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
 						<LocalId>2019a-A1</LocalId>
@@ -320,8 +320,8 @@
 					</SchedulePeriod>
 					<StartTime>08:45:00+12:00</StartTime>
 					<EndTime>09:35:00+12:00</EndTime>
-				</SchedulePeriodTime>
-				<SchedulePeriodTime>
+				</DayPeriodTime>
+				<DayPeriodTime>
 					<SchedulePeriod>
 						<RefId>1c48a0bb-a6cc-41ab-8aae-929ce5ec9c34</RefId>
 						<LocalId>2019a-A2</LocalId>
@@ -329,14 +329,14 @@
 					</SchedulePeriod>
 					<StartTime>09:45:00+12:00</StartTime>
 					<EndTime>10:35:00+12:00</EndTime>
-				</SchedulePeriodTime>
-			</PeriodTimeList>
+				</DayPeriodTime>
+			</DayPeriodTimeList>
 		</xhtml:Example>
 	</CommonElement>
 
-	<CommonElement name="PeriodTimeType" type="true" dm="true">
+	<CommonElement name="DayPeriodTimeType" type="true" dm="true">
 		<Item>
-			<Element>PeriodTimeType</Element>
+			<Element>DayPeriodTimeType</Element>
 			<Description>
 				<p>A period that makes up or partially makes up the period time schedule and its start and end times.</p>
 			</Description>
@@ -367,7 +367,7 @@
 		</Item>		<!-- EndTime -->
 
 		<xhtml:Example xmlns="" name="PeriodTime Example">
-			<PeriodTime>
+			<DayPeriodTime>
 				<SchedulePeriod>
 					<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
 					<LocalId>2019a-A1</LocalId>
@@ -375,7 +375,7 @@
 				</SchedulePeriod>
 				<StartTime>08:45:00+12:00</StartTime>
 				<EndTime>09:35:00+12:00</EndTime>
-			</PeriodTime>
+			</DayPeriodTime>
 		</xhtml:Example>
 	</CommonElement>
 

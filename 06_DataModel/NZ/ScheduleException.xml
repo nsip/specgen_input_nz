@@ -92,14 +92,14 @@
 	</Item>    <!-- ScheduleAcademicDayList -->
 
 	<Item>
-		<Element>SchedulePeriodTimeList</Element>
+		<Element>DayPeriodTimeList</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>A list of one or more bell schedules to be applied to the school calendar for the duration of this event.  Not present if the Provider is closed for the duration of the ScheduleException.</p>
+			<p>A list of the periods that make up the period time schedule and their start and end times for the duration of this event.  Not present if the Provider is closed for the duration of the ScheduleException.</p>
 		</Description>
-		<Type ref="CommonTypes" name="SchedulePeriodTimeListType"/> 
-	</Item>    <!-- SchedulePeriodTimeList -->
+		<Type ref="CommonTypes" name="DayPeriodTimeListType"/> 
+	</Item>    <!-- DayPeriodTimeList -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -148,11 +148,17 @@
 					<LocalId>2019a-A</LocalId>
 				</ScheduleAcademicDay>
 			</ScheduleAcademicDayList>
-			<SchedulePeriodTimeList>
-				<SchedulePeriodTime json:force-array="true">
-					<LocalId>2019a-Short3</LocalId>
-				</SchedulePeriodTime>
-			</SchedulePeriodTimeList>
+			<DayPeriodTimeList>
+				<DayPeriodTime json:force-array="true">
+					<SchedulePeriod>
+						<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
+						<LocalId>2019a-A1</LocalId>
+						<Name>Period 1</Name>
+					</SchedulePeriod>
+					<StartTime>08:45:00+12:00</StartTime>
+					<EndTime>09:35:00+12:00</EndTime>
+				</DayPeriodTime>
+			</DayPeriodTimeList>
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>

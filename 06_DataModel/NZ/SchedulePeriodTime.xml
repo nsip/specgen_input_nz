@@ -76,14 +76,14 @@
 	</Item>    <!-- Schedule -->
 
 	<Item>
-		<Element>SchedulePeriodTimeList</Element>
+		<Element>DayPeriodTimeList</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>A list of the periods that make up the period time schedule and their start and end times.</p>
 		</Description>
-		<Type ref="CommonTypes" name="PeriodTimeListType"/>
-	</Item>    <!-- SchedulePeriodTimeList -->
+		<Type ref="CommonTypes" name="DayPeriodTimeListType"/>
+	</Item>    <!-- DayPeriodTimeList -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -108,8 +108,8 @@
 				<LocalId>2019a-Normal</LocalId>
 				<Name>Scheule 2019a (Term 1)</Name>
 			</Schedule>
-			<SchedulePeriodTimeList>
-				<SchedulePeriodTime>
+			<DayPeriodTimeList>
+				<DayPeriodTime>
 					<SchedulePeriod>
 						<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
 						<LocalId>2019a-1</LocalId>
@@ -117,8 +117,8 @@
 					</SchedulePeriod>
 					<StartTime>08:45:00+12:00</StartTime>
 					<EndTime>09:35:00+12:00</EndTime>
-				</SchedulePeriodTime>
-				<SchedulePeriodTime>
+				</DayPeriodTime>
+				<DayPeriodTime>
 					<SchedulePeriod>
 						<RefId>1c48a0bb-a6cc-41ab-8aae-929ce5ec9c34</RefId>
 						<LocalId>2019a-2</LocalId>
@@ -126,8 +126,8 @@
 					</SchedulePeriod>
 					<StartTime>09:45:00+12:00</StartTime>
 					<EndTime>10:35:00+12:00</EndTime>
-				</SchedulePeriodTime>
-			</SchedulePeriodTimeList>
+				</DayPeriodTime>
+			</DayPeriodTimeList>
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>
