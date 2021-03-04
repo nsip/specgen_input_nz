@@ -41,7 +41,7 @@
 
 	<Item>
 		<Element>Status</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
 		<Description>
 		<p>States whether or not this is an inactive or active TeachingGroup enrolment.</p>

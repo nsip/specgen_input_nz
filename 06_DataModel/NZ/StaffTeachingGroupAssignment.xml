@@ -40,13 +40,13 @@
 
   <Item>
     <Element>Status</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
   	<privacyRating>High</privacyRating>
     <Description>
       <p>States whether or not this is an inactive or active assignment for a staff member.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsStaffTeachingGroupAssignmentStatusType"/>
-  </Item>      <!-- Staff Taching Group Assignment Status -->
+  </Item>      <!-- Status -->
 
   <Item>
     <Element>StaffMember</Element>
@@ -98,6 +98,7 @@
     </Description>
     <Type name="xs:date"></Type>
   </Item>      <!-- StartDate -->
+
   <Item>
     <Element>EndDate</Element>
     <Characteristics>O</Characteristics>
