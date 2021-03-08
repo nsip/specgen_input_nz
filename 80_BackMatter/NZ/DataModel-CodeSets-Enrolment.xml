@@ -427,19 +427,28 @@
 		<ID>Ongoing Resource Scheme</ID>
 		<Values>
 			<Value>
-				<Code>H</Code>
-				<Text xml:lang="en">High ORS</Text>
-				<Text xml:lang="mi">Teitei te ORS</Text>
-			</Value>
-			<Value>
 				<Code>V</Code>
 				<Text xml:lang="en">Very High ORS</Text>
 				<Text xml:lang="mi">Tino Teitei te ORS</Text>
 			</Value>
 			<Value>
+				<Code>H</Code>
+				<Text xml:lang="en">High ORS</Text>
+				<Text xml:lang="mi">Teitei te ORS</Text>
+			</Value>
+			<Value>
+				<Code>S</Code>
+				<Text xml:lang="en">Specialist Education Agreement without ORS</Text>
+			</Value>
+			<Value>
+				<Code>N</Code>
+				<Text xml:lang="en">No ORS or Specialist Education Agreement</Text>
+			</Value>		
+			<Value>
 				<Code>E</Code>
 				<Text xml:lang="en">Extension (Moderate to High)</Text>
 				<Text xml:lang="mi">Whakaroanga (Rewatanga ki Teitei)</Text>
+				<EndDate>2021-03-05</EndDate>
 			</Value>
 		</Values>
 	</CodeSet>	<!-- Ongoing Resource Scheme -->
