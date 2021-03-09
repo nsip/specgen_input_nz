@@ -639,15 +639,15 @@
 			<Description>
 				<p>A list of one or more iwi with which the person has an affiliation.</p>
 			</Description>
-			<Type ref="CommonTypes" name="IwiAffiliationList"/>
+			<Type ref="CommonTypes" name="IwiAffiliationListType"/>
 		</Item>    <!-- IwiAffiliationList -->
 		<Item>
-		<Element>ReligiousAffiliationList</Element>
+			<Element>ReligiousAffiliationList</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of one or more religions with which the person has an affiliation.</p>
 			</Description>
-			<Type ref="CommonTypes" name="ReligiousAffiliationList"/>
+			<Type ref="CommonTypes" name="ReligiousAffiliationListType"/>
 		</Item>    <!-- ReligiousAffiliationList -->
 	
 		<xhtml:Example name="Demographics Example" xmlns="">
