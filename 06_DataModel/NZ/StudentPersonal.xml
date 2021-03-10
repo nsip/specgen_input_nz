@@ -82,7 +82,7 @@
 		<Description>
 			<p>Personal Information </p>
 		</Description>
-		<Type ref="CommonTypes" name="PersonInfoType"/>
+		<Type ref="CommonTypes" name="StudentPersonInfoType"/>
 	</Item>    <!-- PersonInfo -->
 	<Item>
 		<Element>BiographicChangeReason</Element>
@@ -127,6 +127,11 @@
 					<Type>LGL</Type>
 					<IsVerified>N</IsVerified>
 				</Name>
+				<Email>
+					<Personal>
+						<Address>hagrid@gmail.com</Address>
+					</Personal>
+				</Email>
 				<OtherNameList>
 					<Name>
 						<FamilyName>Anderson</FamilyName>
@@ -237,11 +242,6 @@
 						<City>Martinborough</City>
 					</Postal>
 				</Address>
-				<Email>
-					<Personal>
-						<Address>hagrid@gmail.com</Address>
-					</Personal>
-				</Email>
 				<Phone>
 					<Mobile>
 						<Number>(021) 300 999</Number>

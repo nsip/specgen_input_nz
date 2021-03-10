@@ -52,7 +52,7 @@
 			<p>Personal Information collected about the StudentContact, when that contact is a member
 			of the Student's whānau.</p>
 		</Description>
-		<Type ref="CommonTypes" name="PersonInfoType"></Type>
+		<Type ref="CommonTypes" name="StudentContactPersonInfoType"></Type>
 	</Item>    <!-- PersonInfo -->
     <Item>
 		<Element>HealthcareServiceInfo</Element>
@@ -86,6 +86,11 @@
 					<FullName>Fridwulfa Hagrid</FullName>
 					<Type>LGL</Type>
 				</Name>
+				<Email>
+					<Personal>
+						<Address>ridwulfa@gmail.com</Address>
+					</Personal>
+				</Email>
 				<Address>
 					<Physical>
 						<Type>TH</Type>
@@ -101,11 +106,6 @@
 						<City>Martinborough</City>
 					</Postal>
 				</Address>
-				<Email>
-					<Personal>
-						<Address>ridwulfa@gmail.com</Address>
-					</Personal>
-				</Email>
 				<Phone>
 					<Mobile>
 						<Number>(021) 300 999</Number>
@@ -155,6 +155,11 @@
 				<Name>
 					<FullName>Dr Phillips</FullName>
 				</Name>
+				<Email>
+					<Work>
+						<Address>Phillips@mboroHealth.com</Address>
+					</Work>
+				</Email>
 				<Address>
 					<Physical>
 						<Type>TH</Type>
@@ -163,11 +168,6 @@
 						<PostalCode json:force-string="true">5741</PostalCode>
 					</Physical>
 				</Address>
-				<Email>
-					<Work>
-						<Address>Phillips@mboroHealth.com</Address>
-					</Work>
-				</Email>
 				<Phone>
 					<Work>
 						<Number>(021) 300 999</Number>

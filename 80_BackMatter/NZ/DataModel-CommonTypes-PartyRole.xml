@@ -10,9 +10,10 @@
 	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
 		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
 
-	<CommonElement name="PersonInfoType" type="true" dm="true">
+
+	<CommonElement name="BasePersonInfoType" type="true" dm="true">
 		<Item>
-			<Element>PersonInfoType</Element>
+			<Element>BasePersonInfoType</Element>
 			<Description>
 				<p>The personal information collected about students.</p>
 			</Description>
@@ -25,6 +26,51 @@
 			</Description>
 			<Type ref="CommonTypes" name="BaseNameType"/>
 		</Item>    <!-- Name -->
+		<Item>
+			<Element>Email</Element>
+			<Characteristics>O</Characteristics>
+			<Description><p>The person's e-mail address(es) - one or more emails.</p></Description>
+			<Type ref="CommonTypes" name="PersonEmailsType"/>
+		</Item>    <!-- Email -->
+	</CommonElement>
+
+
+	<CommonElement name="StaffPersonInfoType" type="true" dm="true">
+		<Item>
+			<Element>StaffPersonInfoType</Element>
+			<Description>
+				<p>Extension of BasePersonInfoType for just the fields used by StaffPersonal</p>
+			</Description>
+			<Type complex="extension" name="BasePersonInfoType"/>
+		</Item>
+
+		<xhtml:Example xmlns="" name="Staff PersonInfo Example">
+			<PersonInfo>
+				<Name>
+					<FamilyName>Rubeus</FamilyName>
+					<GivenName>Hagrid</GivenName>
+					<FullName>Rubeus Hagrid</FullName>
+					<Type>LGL</Type>
+					<IsVerified>N</IsVerified>
+				</Name>
+				<Email>
+					<Personal>
+						<Address>hagrid@gmail.com</Address>
+					</Personal>
+				</Email>
+			</PersonInfo>
+		</xhtml:Example>
+	</CommonElement>
+
+	<CommonElement name="StudentPersonInfoType" type="true" dm="true">
+		<Item>
+			<Element>StudentPersonInfoType</Element>
+			<Description>
+				<p>Extension of BasePersonInfoType for just the fields used by StudentPersonal</p>
+			</Description>
+			<Type complex="extension" name="BasePersonInfoType"/>
+		</Item>
+
 		<Item>
 			<Element>OtherNameList</Element>
 			<Characteristics>O</Characteristics>
@@ -57,12 +103,6 @@
 			<Type ref="CommonTypes" name="AddressesType"/>
 		</Item>    <!-- Address -->
 		<Item>
-			<Element>Email</Element>
-			<Characteristics>O</Characteristics>
-			<Description><p>The person's e-mail address(es) - one or more emails.</p></Description>
-			<Type ref="CommonTypes" name="PersonEmailsType"/>
-		</Item>    <!-- Email -->
-		<Item>
 			<Element>Phone</Element>
 			<Characteristics>O</Characteristics>
 			<Description><p>The person's phone number(s) - one or more phone numbers.</p></Description>
@@ -94,7 +134,7 @@
 			<Type ref="CommonTypes" name="MedicalNeedListType"/>
 		</Item>    <!-- MedicalNeedList -->
 
-		<xhtml:Example xmlns="" name="PersonInfo Example">
+		<xhtml:Example xmlns="" name="Student PersonInfo Example">
 			<PersonInfo>
 				<Name>
 					<FamilyName>Rubeus</FamilyName>
@@ -103,6 +143,11 @@
 					<Type>LGL</Type>
 					<IsVerified>N</IsVerified>
 				</Name>
+				<Email>
+					<Personal>
+						<Address>hagrid@gmail.com</Address>
+					</Personal>
+				</Email>
 				<OtherNameList>
 					<Name>
 						<FamilyName>Anderson</FamilyName>
@@ -211,11 +256,6 @@
 						<PostalCode json:force-string="true">7733</PostalCode>
 					</Postal>
 				</Address>
-				<Email>
-					<Personal>
-						<Address>hagrid@gmail.com</Address>
-					</Personal>
-				</Email>
 				<Phone>
 					<Mobile>
 						<Number>(021) 300 999</Number>
@@ -247,6 +287,75 @@
 					</HouseholdContactInfo>
 					
 				</HouseholdContactInfoList>
+			</PersonInfo>
+		</xhtml:Example>
+	</CommonElement>
+
+	<CommonElement name="StudentContactPersonInfoType" type="true" dm="true">
+		<Item>
+			<Element>StudentContactPersonInfoType</Element>
+			<Description>
+				<p>Extension of BasePersonInfoType for just the fields used by StudentContactPersonal</p>
+			</Description>
+			<Type complex="extension" name="BasePersonInfoType"/>
+		</Item>
+
+		<Item>
+			<Element>Address</Element>
+			<Characteristics>O</Characteristics>
+			<Description>The person's address(es) - one or more addresses.</Description>
+			<Type ref="CommonTypes" name="AddressesType"/>
+		</Item>    <!-- Address -->
+		<Item>
+			<Element>Phone</Element>
+			<Characteristics>O</Characteristics>
+			<Description><p>The person's phone number(s) - one or more phone numbers.</p></Description>
+			<Type ref="CommonTypes" name="PersonPhonesType"/>
+		</Item>    <!-- Phone -->
+		<Item>
+			<Element>HouseholdContactInfoList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The person's household/s contact information. A list of
+				one or more household’s contact information.</p>
+			</Description>
+			<Type ref="CommonTypes" name="HouseholdContactInfoListType"/>
+		</Item>    <!-- HouseholdContactInfoList -->
+
+		<xhtml:Example xmlns="" name="Student Contact PersonInfo Example">
+			<PersonInfo>
+				<Name>
+					<FamilyName>Rubeus</FamilyName>
+					<GivenName>Hagrid</GivenName>
+					<FullName>Rubeus Hagrid</FullName>
+					<Type>LGL</Type>
+					<IsVerified>N</IsVerified>
+				</Name>
+				<Email>
+					<Personal>
+						<Address>hagrid@gmail.com</Address>
+					</Personal>
+				</Email>
+				<Address>
+					<Physical>
+						<Type>TH</Type>
+						<Line1>1175 Lake Ferry Rd</Line1>
+						<Suburb>RD 1</Suburb>
+						<City>Martinborough</City>
+					</Physical>
+					<Postal>
+						<Type>TH</Type>
+						<Line1>The Enchanted Wood</Line1>
+						<Line2>533 Hogwart's Way</Line2>
+						<City>Hogsmead</City>
+						<PostalCode json:force-string="true">7733</PostalCode>
+					</Postal>
+				</Address>
+				<Phone>
+					<Mobile>
+						<Number>(021) 300 999</Number>
+					</Mobile>
+				</Phone>
 			</PersonInfo>
 		</xhtml:Example>
 	</CommonElement>
