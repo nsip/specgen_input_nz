@@ -12,12 +12,18 @@
 	<EventsReported>true</EventsReported>
 	<Item>
 		<Element>ScheduleAcademicDay</Element>
-	  <privacyRating>Low</privacyRating>
+	  	<privacyRating>Low</privacyRating>
 		<Description>
-			An academic day that makes up all or part of a schedule for a
-			provider. An academic day represents a structured day that
-			reoccurs consistently e.g. Day A has five periods that occurs
-			Mon-Wed and Day B has four periods and occurs Thurs-Fri.
+			<p>ScheduleAcademicDay defines an abstract day level construct that is referenced by a teaching group’s
+			 timetable (TeachingGroupEvent) to determine on which dates meetings will occur.</p>
+
+			 <p>These academic days may occur in a rotational manner on a daily basis 
+			 (“A Day”, “B Day”, “C Day”, “A Day”, etc…), be tied to weekdays or alternating weeks.
+			 The nature of these patterns is specified by the way that they are mapped
+			 to the real world calendar using the ScheduleDate endpoint.</p>
+
+			 <p>ScheduleAcademicDay, in combination with TeachingGroupEvent determines WHICH
+			 classes will occur on a given day of the rotation.</p>
 		</Description>
 	</Item>
 	

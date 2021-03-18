@@ -12,12 +12,15 @@
 	<EventsReported>true</EventsReported>
 	<Item>
 		<Element>ScheduleDate</Element>
-	  <privacyRating>Low</privacyRating>
+	 	 <privacyRating>Low</privacyRating>
 		<Description>
-			Provides information about the schedule that is being followed on a
-			specific calendar date at a particular Provider, e.g. Academic Day A from the Term 1
-			Schedule using the Periods and their start and end times defined
-			in Bell Schedule Day A.
+			<p>The core of the scheduling system, that assigns a particular ScheduleAcademicDay
+			 and SchedulePeriodTime to each of a set of calendar dates.</p>
+			 
+			<p> Each entry in the CalendaDateList determines WHICH meetings will occur on 
+			that date (via the ScheduleAcademicDay) and WHEN those meetings will take place
+			(via the SchedulePeriodTime), as well as which ScheduleTerms are in session on 
+			that particular CalendarDate</p>
 		</Description>
 	</Item>
 	

@@ -14,8 +14,12 @@
 		<Element>SchedulePeriod</Element>
 	  	<privacyRating>Low</privacyRating>
 		<Description>
-			Defines the periods that take place within one or more academic days.  Periods
-			are assigned to particular days in the Schedule in SchduleAcademicDay.PeriodList
+			<p>A SchedulePeriod defines an abstract time slot in which the meeting of a 
+				TeachingGroup may take place. </p>
+			<p>SchedulePeriods do not directly have times because the time at which a given
+				 period may occur might vary depending on what day they occur on (for example,
+				 on a “full” day period 1 might occur from 9:00 to 10:00, but on a “half” day 
+				 period 1 might go from 9:00 to 9:30).</p>
 		</Description>
 	</Item>
 	

@@ -14,14 +14,11 @@
 		<Element>SchedulePeriodTime</Element>
 	  	<privacyRating>Low</privacyRating>
 		<Description>
-			<p>Defines period time schedules, each of which is a collection of periods within an
-			academic day with start and end times associated. These period time schedules are
-			assigned to calendar dates on which the organisation is in session using 
-			ScheduleDate in order to specify the organisation schedule on those dates.</p>
-
-			<p>These period time schedules should generally only be used to define standard day 
-			types. Exception days (unless they repeat multiple times and follow a common template)
-			are defined using ScheduleException.</p>
+			<p>A SchedulePeriodTime defines a set of periods that are to occur on a given
+			 AcademicDay. It takes the abstract time slots defined by SchedulePeriod
+			 (and referenced by TeachingGroupEvent)  and assigns start and end times
+			 to that set of periods.</p>
+			 <p>SchedulePeriodTime defines WHEN classes will occur on a given day of the rotation</p>
 		</Description>
 	</Item>
 	
