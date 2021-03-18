@@ -78,6 +78,15 @@
 			<Type name="xs:date"/>
 		</Item>		<!-- Date -->
 		<Item>
+			<Element>SchoolClosed</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Indicates whether or not the event is resulting in the closure of the school for the duration of the event.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+		</Item>    <!-- SchoolClosed -->
+		<Item>
 			<Element>ScheduleAcademicDay</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
@@ -87,7 +96,7 @@
 		</Item>		<!-- AcademicDay -->
 		<Item>
 			<Element>SchedulePeriodTime</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<Description>
 				<p> A generic object references to the SchedulePeriodTime for the given date</p>
 			</Description>

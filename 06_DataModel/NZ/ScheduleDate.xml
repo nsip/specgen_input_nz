@@ -96,6 +96,7 @@
 			<CalendarDateList>
 				<CalendarDate>
 					<Date>2019-03-14</Date>
+					<SchoolClosed>N</SchoolClosed>
 					<ScheduleAcademicDay>
 						<LocalId>2019a-A</LocalId>
 					</ScheduleAcademicDay>
@@ -110,17 +111,7 @@
 				</CalendarDate>
 				<CalendarDate>
 					<Date>2019-03-15</Date>
-					<ScheduleAcademicDay>
-						<LocalId>2019a-B</LocalId>
-					</ScheduleAcademicDay>
-					<SchedulePeriodTime>
-						<LocalId>2019a-Normal</LocalId>
-					</SchedulePeriodTime>
-					<ScheduleTermList>
-						<ScheduleTerm json:force-array="true">
-							<LocalId>2019-1</LocalId>
-						</ScheduleTerm>
-					</ScheduleTermList>
+					<SchoolClosed>Y</SchoolClosed>
 				</CalendarDate>
 			</CalendarDateList>	
 

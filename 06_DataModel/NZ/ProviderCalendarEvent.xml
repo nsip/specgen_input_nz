@@ -90,16 +90,6 @@
 	</Item>    <!-- Location -->
 
 	<Item>
-		<Element>SchoolClosed</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>Indicates whether or not the event is resulting in the closure of the school for the duration of the event.</p>
-		</Description>
-		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-	</Item>    <!-- SchoolClosed -->
-
-	<Item>
 		<Element>RecordAudit</Element>    
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
@@ -116,14 +106,13 @@
 			<StartDateTime>2019-04-25T00:00:00+12:00</StartDateTime>
 			<EndDateTime>2019-04-25T23:59:59+12:00</EndDateTime>
 			<ProviderCalendarEventName>ANZAC Day, 2019</ProviderCalendarEventName>
-			<SchoolClosed>Y</SchoolClosed>
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>
 					<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
 					<Name>Bobby Test</Name>
 				</CreatedBy>
-		</RecordAudit>
+			</RecordAudit>
 		</ProviderCalendarEvent>
 	</xhtml:Example>
 </DataObject>
