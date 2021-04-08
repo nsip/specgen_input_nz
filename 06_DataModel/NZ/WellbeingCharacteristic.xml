@@ -3,7 +3,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:xi="http://www.w3.org/2001/XInclude"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        
+    xmlns:json="http://json.org/"
+    
     xmlns="http://sifassociation.org/SpecGen">
 
   <Key>WellbeingCharacteristicRefId</Key>  
@@ -410,7 +411,8 @@
         <RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
       </Student>
       <RecordingProvider>
-        <RefId>672</RefId>
+          <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+		    	<LocalId json:force-string="true">9961</LocalId>
       </RecordingProvider>
       <StartDate>2017-11-01</StartDate>
       <EndDate>2017-11-10</EndDate>

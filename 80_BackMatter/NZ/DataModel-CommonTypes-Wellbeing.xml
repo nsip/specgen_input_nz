@@ -320,7 +320,7 @@
 			<Description>
 				<p>The RefId of a WellbeingResponse Object if it exists.</p>
 			</Description>
-			<Type ref="CommonTypes" name="IdRefType"></Type>
+			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>
 		</Item>    <!-- WellbeingResponseRefId -->
 		
 			<Item>

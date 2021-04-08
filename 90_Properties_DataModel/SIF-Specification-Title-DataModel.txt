@@ -1,1 +1,1 @@
-SIF Implementation Specification (New Zealand) v3.2 (rc-3)
+SIF Implementation Specification (New Zealand) v3.2 (rc-4)

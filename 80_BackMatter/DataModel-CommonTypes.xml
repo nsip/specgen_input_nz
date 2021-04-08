@@ -126,20 +126,18 @@
 			<Element>RefId</Element>
 			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
-			<Description><p>The Ministry of Education Organisation Id of the referenced provider</p></Description>
-			<Type ref="CommonTypes" name="MoEOrgIdType"/>
+			<Description><p>The system assigned GUID of the referenced Organisation</p></Description>
+			<Type ref="CommonTypes" name="RefIdType"/>
 		</Item>   	<!-- RefId -->
-		<!--
-			<Item>
-				<Element>LocalId</Element>
-				<Characteristics>O</Characteristics>
-				<privacyRating>Low</privacyRating>
-				<Description>
-					<p>Local identifier representing the referenced object.</p>
-				</Description>
-				<Type ref="CommonTypes" name="LocalIdType"/>
-			</Item>
-		-->
+		<Item>
+			<Element>LocalId</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The Ministry of Education Organisation Id of the referenced Organisation</p>
+			</Description>
+			<Type ref="CommonTypes" name="LocalIdType"/>
+		</Item>     <!-- LocalId -->
 		<Item>
 			<Element>Name</Element>
 			<Characteristics>O</Characteristics>
@@ -157,7 +155,8 @@
 		</Item>     <!-- LocationNum -->
  		<xhtml:Example xmlns="" name="OrganisationObjectReferenceType Example">
 			<OrganisationObjectReference>
-				<RefId json:force-string="true">672</RefId>
+				<RefId>af55ccfc-df11-4c97-be98-fd347ecf47b0</RefId>
+				<LocalId json:force-string="true">9651</LocalId>
 				<Name>Masterton Primary School</Name>
 			</OrganisationObjectReference>
 		</xhtml:Example>

@@ -148,7 +148,8 @@
 				<RefId>fe659ed3-8a78-4bc0-8876-7b75ac585edf</RefId>
 			</Student>
 			<Organisation>
-				<RefId>9961</RefId>
+				<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+				<LocalId json:force-string="true">9961</LocalId>
 			</Organisation>
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>

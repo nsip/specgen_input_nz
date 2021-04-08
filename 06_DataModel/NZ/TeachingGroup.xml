@@ -161,7 +161,8 @@
       <LongName>Year 7A Maths - Space and Numbers</LongName>
       <GroupType>SC</GroupType>
       <Organisation>
-        <RefId>234</RefId>
+  	  	<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+	    	<LocalId json:force-string="true">9961</LocalId>
       </Organisation>
       <ScheduleTerm>
         <LocalId>FY2020</LocalId>

@@ -155,7 +155,8 @@
 		<RefId>6472b261-0947-583a-463d-bb345291b001</RefId>
 	  </StudentContact>
 	  <Organisation>
-		<RefId>9961</RefId>
+	  	<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+		<LocalId json:force-string="true">9961</LocalId>
 	  </Organisation>
       <Relationship>
         <Code>LEG</Code>

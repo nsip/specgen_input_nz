@@ -117,7 +117,8 @@
 				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
 			</Student>
 			<Organisation>
-				<RefId>9961</RefId>
+				<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+				<LocalId json:force-string="true">9961</LocalId>
 			</Organisation>
 			<TeachingGroup>
 				<RefId>93b9b77e-a23f-4acd-a65e-e26f1034317f</RefId>

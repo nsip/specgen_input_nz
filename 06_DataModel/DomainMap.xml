@@ -16,11 +16,10 @@
 					<area title="Organisation" href="DomainMap.html#Domain__Organisation" shape="rect" coords="71,65,166,126"/>
 					<area title="Student &amp; Whānau" href="DomainMap.html#Domain__StudentWhānau" shape="rect" coords="284,331,375,390"/>
 					<area title="Enrolment" href="DomainMap.html#Domain__Enrolment" shape="rect" coords="206,0,301,60"/>
-					<area title="Schedule &amp; Attendance" href="DomainMap.html#Domain__ScheduleAttendance" shape="rect" coords="344,66,439,126"/>
 					<area title="Hauora / Wellbeing" href="DomainMap.html#Domain__HauoraWellbeing" shape="rect" coords="37,214,132,273"/>
 					<area title="Aromatawai / Assessment" href="DomainMap.html#Domain__AromatawaiAssessment" shape="rect" coords="378,214,471,272"/> 
-					<area title="Timetable" href="DomainMap.html#Domain__ScheduleAttendance" shape="rect" coords="132,333,221,391"/> 
-					<area title="Attendance" href="DomainMap.html#Domain__ScheduleAttendance" shape="rect" coords="344,65,437,126"/> 
+					<area title="Timetable" href="DomainMap.html#Domain__Schedule" shape="rect" coords="132,333,221,391"/> 
+					<area title="Attendance" href="DomainMap.html#Domain__Attendance" shape="rect" coords="344,65,437,126"/> 
 				</map>
 			</p>
 		</Intro>
@@ -117,38 +116,56 @@
 			<DataObject coords="996,478,1157,517" role="member">StudentActivityParticipation</DataObject>
 		</Domain>
 		
-		<Domain name="Schedule &amp; Attendance">
+		<Domain name="Schedule">
 			<Intro>
 				<p>
-					The Schedule &amp; Attendance domain describes the school's schedule or timetable, 
-					along with transactional entities that record a Student's attendance at &amp; absence from Providers.
+					The Schedule domain describes the school's schedule or timetable, including the 
+					structure of the school day; how many periods per day; how many days in the timetable
+					rotation; which teaching groups meet in which periods.  Regular adjustments for particular
+					days of the rotation, as well as ad-hoc adjustments for specific dates are recorded; as
+					well as custom period times on particular rotation days or specific dates.
+				</p>
+				<p>
+					Background documentation including worked examples of the Schedule domain is available here <a href="background/7.%20SIF%20NZ%20-%20Background%20-%20Schedule%20-%20v1.4.pdf"><img width="40px" src="images/pdf.png"/></a>
+				</p>
+				<img src="images/SIFNZ-LogicalModel-TimetableScheduleDomain.png" usemap="#Schedule &amp; AttendanceMap"/>
+			</Intro>
+			<DataObject coords="637,58,1224,102">Organisation</DataObject>
+			<DataObject coords="855,762,989,810">TeachingGroup</DataObject>
+			<DataObject coords="857,888,987,950">ProviderCourse</DataObject>
+
+			<DataObject coords="1056,219,1174,266" role="member">Schedule</DataObject>
+			<DataObject coords="790,219,891,268"   role="member">ScheduleTerm</DataObject>
+			<DataObject coords="882,327,1027,366"  role="member">ScheduleException</DataObject>
+			<DataObject coords="498,285,616,375"   role="member">ScheduleDate</DataObject>
+			<DataObject coords="312,166,495,232"   role="member">ProviderCalendarEvent</DataObject>
+			<DataObject coords="857,392,1000,454"  role="member">SchedulePeriodTime</DataObject>
+			<DataObject coords="550,537,703,587"   role="member">SchedulePeriod</DataObject>
+			<DataObject coords="835,535,100,585"   role="member">ScheduleAcademicDay</DataObject>
+			<DataObject coords="843,617,984,694"   role="member">TeachingGroupEvent</DataObject>
+		</Domain>
+
+		<Domain name="Attendance">
+			<Intro>
+				<p>
+					The Schedule &amp; Attendance domain describes the school's transactional entities
+					that record a Student's attendance at &amp; absence from Providers.
 					Attendance is recorded at either Day, Half-Day or individual Period granuality
 					at the choice of the Provider; and reported back in summary form.
 				</p>
 				<p>
-					Background documentation on the Schedule domain is available here <a href="background/7.%20SIF%20NZ%20-%20Background%20-%20Schedule%20-%20v1.4.pdf"><img width="40px" src="images/pdf.png"/></a>
-				</p>
-				<p>
 					Background documentation on the Attendance domain is available here <a href="background/4.%20SIF%20NZ%20-%20Background%20-%20Attendance%20-%20v1.6.pdf"><img width="40px" src="images/pdf.png"/></a>
 				</p>
-				<img src="images/SIFNZ-LogicalModel-TimetableAttendanceDomain.png" usemap="#Schedule &amp; AttendanceMap"/>
+				<img src="images/SIFNZ-LogicalModel-AttendanceDomain.png" usemap="#AttendanceMap"/>
 			</Intro>
 			<DataObject coords="47,180,201,229">StudentPersonal</DataObject>
-			<DataObject coords="637,58,1224,102">Organisation</DataObject>
-			<DataObject coords="242,249,447,298" role="member">TeachingGroupMeetingAttendance</DataObject>
-			<DataObject coords="418,183,621,237" role="member">StudentAttendanceSummary</DataObject>
-			<DataObject coords="845,762,970,808">TeachingGroup</DataObject>
-			<DataObject coords="875,887,986,953">ProviderCourse</DataObject>
+			<DataObject coords="637,58,1016,108">Organisation</DataObject>
+			<DataObject coords="244,284,481,334" role="member">TeachingGroupMeetingAttendance</DataObject>
+			<DataObject coords="407,182,624,231" role="member">StudentAttendanceSummary</DataObject>
+			<DataObject coords="606,525,737,574">TeachingGroup</DataObject>
 
-			<DataObject coords="1056,220,1173,266" role="member">Schedule</DataObject>
-			<DataObject coords="791,220,890,265"   role="member">ScheduleTerm</DataObject>
-			<DataObject coords="885,310,1026,351"  role="member">ScheduleException</DataObject>
-			<DataObject coords="579,300,697,373"   role="member">ScheduleDate</DataObject>
-			<DataObject coords="377,416,561,484"   role="member">ProviderCalendarEvent</DataObject>
-			<DataObject coords="856,391,1001,454"  role="member">SchedulePeriodTime</DataObject>
-			<DataObject coords="550,537,703,584"   role="member">SchedulePeriod</DataObject>
-			<DataObject coords="830,536,999,587"   role="member">ScheduleAcademicDay</DataObject>
-			<DataObject coords="842,617,990,700"   role="member">TeachingGroupEvent</DataObject>
+			<DataObject coords="831,218,948,267" role="member">Schedule</DataObject>
+			<DataObject coords="591,378,739,460" role="member">TeachingGroupEvent</DataObject>
 		</Domain>
 
 		<Domain name="Aromatawai / Assessment">

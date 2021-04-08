@@ -1857,14 +1857,14 @@
 		<xhtml:Example xmlns="" name="Related Organisation List Example">
 			<RelatedOrganisationList>
 				<RelatedOrganisation>
-					<RefId>99102</RefId>
-					<Name>Tai Tokerau</Name>
+					<RefId>8ec05a56-1c5f-4fc7-9ea1-d328c5467c59</RefId>
+					<LocalId json:force-string="true">9772</LocalId>
 					<StartDate>2010-04-12</StartDate>
 					<Type>LOF</Type>
 				</RelatedOrganisation>
 				<RelatedOrganisation>
-				    <RefId>99204</RefId>
-					<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
+					<RefId>af55ccfc-df11-4c97-be98-fd347ecf47b0</RefId>
+					<LocalId json:force-string="true">9651</LocalId>
 					<StartDate>2013-10-31</StartDate>
 					<Type json:force-string="true">34028</Type>
 				</RelatedOrganisation>
@@ -1909,8 +1909,8 @@
 		</Item>    <!-- Type -->
 		<xhtml:Example xmlns="" name="Kāhui Ako Related Organisation">
 			<RelatedOrganisation>
-				<RefId>99204</RefId>
-				<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
+				<RefId>af55ccfc-df11-4c97-be98-fd347ecf47b0</RefId>
+				<LocalId>9651</LocalId>
 				<StartDate>2012-04-30</StartDate>
 				<Type json:force-string="true">34028</Type>
 			</RelatedOrganisation>

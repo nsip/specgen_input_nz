@@ -116,8 +116,8 @@
 			<ScheduleExceptionRefId>c79e65df-0b11-4a97-9062-9fbd1c1a38e3</ScheduleExceptionRefId>
 			<ScheduleExceptionLocalId>excMarSnow</ScheduleExceptionLocalId>
 			<Organisation>
-				<RefId>783</RefId>
-				<Name>Hogwarts High</Name>
+  	  			<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+		    	<LocalId json:force-string="true">9961</LocalId>
 			</Organisation>
 			<Schedule>
 				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
@@ -134,8 +134,8 @@
 			<ScheduleExceptionRefId>f84d9681-03f6-4434-a867-967dba517cf5</ScheduleExceptionRefId>
 			<ScheduleExceptionLocalId>excWinSprt</ScheduleExceptionLocalId>
 			<Organisation>
-				<RefId>783</RefId>
-				<Name>Hogwarts High</Name>
+  	  			<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+		    	<LocalId json:force-string="true">9961</LocalId>
 			</Organisation>
 			<Schedule>
 				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>

@@ -9,31 +9,6 @@
 	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
 		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
 
-  <!-- Generic types all over the place -->
-  <CommonElement type="true" name='GUIDType'>
-	<Item>
-		<Element>GUIDType</Element>
-		<Description>
-			<p>SIF format for a UUID; as defined in <a href="https://tools.ietf.org/html/rfc4122">rfc-4122</a></p>
-		</Description>
-		<Type name='xs:token'/>
-		<Facets>
-			<xs:pattern value="[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}"/>
-		</Facets>
-	</Item>
-  </CommonElement>
-
-  <CommonElement type="true" name='MoEOrgIdType'>
-	<Item>
-		<Element>MoEOrgIdType</Element>
-		<Description>1 to 5 digit Ministry Organisation Id, without leading zeros</Description>
-		<Type name='xs:token'/>
-		<Facets>
-			<xs:pattern value="[1-9][0-9]{0,4}"/>
-		</Facets>
-	</Item>
-  </CommonElement>
-
   <CommonElement type="true" name='NSNType'>
 	<Item>
 		<Element>NSNType</Element>
@@ -49,15 +24,10 @@
 		<Item>
 			<Element>RefIdType</Element>
 			<Description>An object or element identifier.</Description>
-			<Type name='GUIDType'/>
-		</Item>
-  </CommonElement>
-
-  <CommonElement type="true" name='IdRefType'>
-		<Item>
-			<Element>IdRefType</Element>
-			<Description>A reference to a RefId.</Description>
-			<Type name='RefIdType'/>
+			<Type name='xs:token'/>
+			<Facets>
+				<xs:pattern value="[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}"/>
+			</Facets>
 		</Item>
   </CommonElement>
 	

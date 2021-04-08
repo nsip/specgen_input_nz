@@ -72,24 +72,15 @@ follow certain conventions in SIF in most objects:
 </p>
 <ul>
 <li>
-	An element or attribute of type <a href="CommonTypes.html#IdRefType">
-		<code>IdRefType</code>
-	</a> can be defined that consists of the referenced object name
-	concatenated with <code>RefId</code>, e.g., <code>DataPersonalRefId</code> (a reference to the object identifier/primary key/<code>RefId</code>
-	of a <code>DataPersonal</code> object);
+	An element or attribute of type <a href="CommonTypes.html#ObjectReferenceType">
+		<code>ObjectReferenceType</code></a> holds either the <code>RefId</code> or <code>LocalId</code>
+		of the referenced object;
 </li>
 <li>
-	An element requiring a more descriptive name for the reference or one that refers to more than one object type is defined as <a href="CommonTypes.html#IdRefType">
-		<code>IdRefType</code>
-	</a>, has an element name of a group's choosing (or generically <code>SIF_RefId</code>) and enumerates all possible object types that can be referenced
-	in the <code>SIF_RefObject</code> attribute; or
-</li>
-<li>
-	A pair of attributes can be defined, one of type <a href="CommonTypes.html#IdRefType">
-		<code>IdRefType</code>
-	</a> containing the referenced object's <code>RefId</code>, the other enumerating
-	all possible object types that can be referenced; generically these are named <code>SIF_RefId</code> and <code>SIF_RefObject</code>, respectively;
-	naming conventions that programmatically allow identification of the pair beyond the generic names will be documented when the need arises.
+	An element reference that may refer to more than one object type is defined as <a href="CommonTypes.html#NamedObjectReferenceType">
+		<code>NamedObjectReferenceType</code>
+	</a>; in addition to <code>RefId</code> and <code>LocalId</code> has an <code>ObjectType</code>
+	element that enumerates which SIF object type is being referenced.
 </li>
 </ul>
 </Section>

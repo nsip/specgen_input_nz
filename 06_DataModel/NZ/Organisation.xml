@@ -22,16 +22,17 @@
 	<Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
 	<Description>
-		<p>The Ministry OrganisationId for the Organisation, that is used across systems.</p>
+		<p>The system assigned GUID for the Organisation, that is used across systems.</p>
 	</Description>
-	<Type ref="CommonTypes" name="MoEOrgIdType"/>
+	<Type ref="CommonTypes" name="RefIdType"/>
   </Item>   <!-- OrganisationRefId -->
   <Item>
 	<Element>OrganisationLocalId</Element>
 	<Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
 	<Description>
-		<p>The Id of the organisation record that was provided by FIRST, the master data system for Ministry organisations.</p>
+		<p>The Ministry of Education Organisation Id of the Organisation, as received from FIRST, 
+		the master data system for Ministry organisations.</p>
 	</Description>
 	<Type ref="CommonTypes" name="LocalIdType"/>
   </Item>   <!-- OrganisationLocalId -->
@@ -192,21 +193,22 @@
 		</Phone>
 		<RelatedOrganisationList>
 			<RelatedOrganisation>
-				<RefId>9965</RefId>
-				<Name>Tai Tokerau</Name>
+				<RefId>5155a60d-b4fd-43b4-9861-77c19df47ed9</RefId>
+				<LocalId json:force-string="true">9965</LocalId>
 				<StartDate>2012-10-31</StartDate>
 				<Type>LOF</Type>
 			</RelatedOrganisation>
 			<RelatedOrganisation>
-				<RefId>9651</RefId>
-				<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
+				<RefId>592bfa0d-52f8-4468-935c-ae48c71f71c9</RefId>
+				<LocalId json:force-string="true">9651</LocalId>
 				<StartDate>2012-04-30</StartDate>
 				<Type json:force-string="true">34028</Type>
 			</RelatedOrganisation>
 		</RelatedOrganisationList>
 		<OperationalStatus>O</OperationalStatus>
 		<Type json:force-string="true">21</Type>
-		<OrganisationRefId>448</OrganisationRefId>
+        <OrganisationRefId>e189fd55-a6d8-413a-b85c-caf79868938b</OrganisationRefId>
+		<OrganisationLocalId>448</OrganisationLocalId>
 		<Authority>STATE</Authority>
 		<SchoolService>
 			<CoEdStatus>COED</CoEdStatus>

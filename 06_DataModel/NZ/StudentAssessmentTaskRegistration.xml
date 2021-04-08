@@ -194,12 +194,14 @@
       <OrganisationInvolvedList>
           <!-- NZQA is Assessor -->
           <OrganisationInvolved>
-            <RefId>9772</RefId>
+            <RefId>8ec05a56-1c5f-4fc7-9ea1-d328c5467c59</RefId>
+            <LocalId json:force-string="true">9772</LocalId>
             <OrganisationRole>ASR</OrganisationRole>
           </OrganisationInvolved>
           <!-- School is Organisation -->
           <OrganisationInvolved>
-            <RefId>377</RefId>
+            <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+            <LocalId json:force-string="true">9961</LocalId>
             <OrganisationRole>PRO</OrganisationRole>
           </OrganisationInvolved>
       </OrganisationInvolvedList>

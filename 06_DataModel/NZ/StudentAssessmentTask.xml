@@ -174,11 +174,13 @@
       </AssessmentTask>
       <OrganisationInvolvedList>
         <OrganisationInvolved>
-          <RefId>762</RefId>
+          <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+		    	<LocalId json:force-string="true">9961</LocalId>
           <OrganisationRole>LOC</OrganisationRole>
         </OrganisationInvolved>
         <OrganisationInvolved>
-          <RefId>9962</RefId>
+          <RefId>8ec05a56-1c5f-4fc7-9ea1-d328c5467c59</RefId>
+          <LocalId json:force-string="true">9962</LocalId>
           <OrganisationRole>PRO</OrganisationRole>
         </OrganisationInvolved>
       </OrganisationInvolvedList>

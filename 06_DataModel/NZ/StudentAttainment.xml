@@ -145,7 +145,8 @@
     <StudentAttainment>
       <StudentAttainmentRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</StudentAttainmentRefId>
       <GrantingOrganisation>
-        <RefId>762</RefId>
+          <RefId>8ec05a56-1c5f-4fc7-9ea1-d328c5467c59</RefId>
+          <LocalId>9772</LocalId>
       </GrantingOrganisation>
       <Attainment>
         <RefId>d0a0a27a-d0a8-510a-d9d7-5101a8c3da39</RefId>
@@ -208,7 +209,8 @@
     <StudentAttainment>
       <StudentAttainmentRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</StudentAttainmentRefId>
       <GrantingOrganisation>
-        <RefId>9962</RefId>
+          <RefId>8ec05a56-1c5f-4fc7-9ea1-d328c5467c59</RefId>
+          <LocalId json:force-string="true">9772</LocalId>
       </GrantingOrganisation>
       <Attainment>
         <RefId>d0a0a27a-d0a8-510a-d9d7-5101a8c3da39</RefId>

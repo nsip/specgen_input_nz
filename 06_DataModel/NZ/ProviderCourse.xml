@@ -160,7 +160,8 @@
       <ProviderCourseRefId>9d75101a-8c3d-00aa-001a-0000a2e35b35</ProviderCourseRefId>
       <ProviderCourseLocalId>12CHEM</ProviderCourseLocalId>
       <Provider>
-        <RefId>632</RefId>
+  	  	<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+	    	<LocalId json:force-string="true">9961</LocalId>
       </Provider>
       <Curriculum>NZC</Curriculum>
       <SubjectAreaList>

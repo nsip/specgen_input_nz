@@ -113,8 +113,8 @@
 			<ScheduleAcademicDayLocalId>2019a-A</ScheduleAcademicDayLocalId>
 			<AcademicDayName>Schedule 2019a, Day A</AcademicDayName>
 			<Organisation>
-				<RefId>783</RefId>
-				<Name>Hogwarts High</Name>
+  	  			<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+		    	<LocalId json:force-string="true">9961</LocalId>
 			</Organisation>
 			<Schedule>
 				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>

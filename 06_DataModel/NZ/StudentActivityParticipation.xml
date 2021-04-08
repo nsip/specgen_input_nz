@@ -161,7 +161,8 @@
         <RefId>646c5d4a-c829-4886-a02b-971695c7bc06</RefId>
       </Student>
       <Organisation>
-        <RefId>2342</RefId>
+          <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+		    	<LocalId json:force-string="true">9961</LocalId>
       </Organisation>
       <ActivityGroup>SPO</ActivityGroup>
       <ActivityType>CRI</ActivityType>

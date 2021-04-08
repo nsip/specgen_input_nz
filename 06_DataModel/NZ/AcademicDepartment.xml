@@ -116,7 +116,7 @@
       <AcademicDepartmentRefId>2ffb63b4-cfef-4820-8501-e7d1e54555cb</AcademicDepartmentRefId>
       <Name>Science Department</Name>
       <Provider>
-        <RefId>9961</RefId>
+        <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
       </Provider>
       <StaffList>
         <StaffMember json:force-array="true">

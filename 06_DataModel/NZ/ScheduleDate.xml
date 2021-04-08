@@ -89,8 +89,8 @@
 			<ScheduleDateRefId>84c40f87-769d-46cc-8077-f5efb912e099</ScheduleDateRefId>
 			<ScheduleDateLocalId>2019a-A-06</ScheduleDateLocalId>
 			<Organisation>
-				<RefId>783</RefId>
-				<Name>Hogwarts High</Name>
+  	  			<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+		    	<LocalId json:force-string="true">9961</LocalId>
 			</Organisation>
 			<Schedule>
 				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>

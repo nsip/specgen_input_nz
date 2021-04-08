@@ -98,8 +98,8 @@
 			<SchedulePeriodTimeLocalId>2019a-Normal</SchedulePeriodTimeLocalId>
 			<SchedulePeriodTimeName>Schedule 2019a, Normal Period Schedule</SchedulePeriodTimeName>
 			<Organisation>
-				<RefId>844</RefId>
-				<Name>Hogwarts High</Name>
+  	  			<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+		    	<LocalId json:force-string="true">9961</LocalId>
 			</Organisation>
 			<Schedule>
 				<LocalId>2019a-Normal</LocalId>

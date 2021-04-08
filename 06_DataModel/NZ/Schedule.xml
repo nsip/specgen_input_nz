@@ -109,8 +109,8 @@
 			<StartDate>2019-01-30</StartDate>
 			<EndDate>2019-04-07</EndDate>
 			<Organisation>
-				<RefId>783</RefId>
-				<Name>Hogwarts High</Name>
+				<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+				<LocalId json:force-string="true">9961</LocalId>
 			</Organisation>
 			<AcademicDayList>
 				<AcademicDay>
