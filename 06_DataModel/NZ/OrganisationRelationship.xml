@@ -42,7 +42,7 @@
 
   <Item>
     <Element>Status</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>Records if this OrganisationRelationship is Active or Inactive</p>

@@ -25,16 +25,9 @@
     <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
-			<p>A unique identifier for the LearningStandard assembled by concatenating the following
-      fields, with '-' between each piece:
-        <ul>
-          <li>LearningStandardFamily</li>
-          <li>Number</li>
-          <li>VersionNo</li>
-        </ul>
-      </p>
+			<p>System assigned unique identifier for the LearningStandard</p>
     </Description>
-    <Type ref="CommonTypes" name="LocalIdType"/>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>    <!-- LearningStandardRefId -->
   <Item>
     <Element>LearningStandardLocalId</Element>
@@ -229,7 +222,8 @@
   
   <xhtml:Example xmlns="" name="NZQA Learning Standard Example">
     <LearningStandard>
-      <LearningStandardRefId>NC-91165-2</LearningStandardRefId>
+      <LearningStandardRefId>cf851d37-6667-4bc6-aa11-ac34ef73af2b</LearningStandardRefId>
+      <LearningStandardLocalId>91165-v2</LearningStandardLocalId>
       <Title>Chemistry - Organic Compounds</Title>
       <Number>91165</Number>
       <VersionNo>2</VersionNo>
@@ -256,7 +250,8 @@
 
   <xhtml:Example xmlns="" name="Cambridge Learning Standard Example">
     <LearningStandard>
-      <LearningStandardRefId>CA-9709-2018</LearningStandardRefId>
+      <LearningStandardRefId>89568965-c0a5-4cdb-9c48-b3642dbf08ee</LearningStandardRefId>
+      <LearningStandardLocalId>9709-2018</LearningStandardLocalId>
       <Title>Pure Mathematics</Title>
       <Number>9709</Number>
       <VersionNo>2018</VersionNo>

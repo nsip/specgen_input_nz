@@ -8,7 +8,7 @@
 		<inputDocument>SIF_DataModel.xml</inputDocument>
 		<sifNamespace>http://www.sifassociation.org/datamodel/nz/3.2</sifNamespace>
 		<localizationCode>nz</localizationCode>
-		<schemaVersion>3.2 (rc 3)</schemaVersion>
+		<schemaVersion>3.2 (rc 4)</schemaVersion>
 		<jsonExamplesXslt>98_Xslt/xmlToJson.xsl</jsonExamplesXslt>
 		<resolveExtensions>true</resolveExtensions>
 		<isDraft>true</isDraft>

@@ -181,9 +181,9 @@
 				</Language>
 			</LanguageOfInstructionList>
       <LearningStandardList>
-        <LearningStandardRefId>NC-91165-2</LearningStandardRefId>
-        <LearningStandardRefId>NC-91166-2</LearningStandardRefId>
-        <LearningStandardRefId>NC-91167-2</LearningStandardRefId>
+        <LearningStandard><LocalId>91165-v2</LocalId></LearningStandard>
+        <LearningStandard><LocalId>91166-v2</LocalId></LearningStandard>
+        <LearningStandard><LocalId>91167-v2</LocalId></LearningStandard>
       </LearningStandardList>
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>

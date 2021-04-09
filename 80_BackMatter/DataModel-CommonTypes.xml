@@ -124,7 +124,7 @@
 		</Item>
 		<Item>
 			<Element>RefId</Element>
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description><p>The system assigned GUID of the referenced Organisation</p></Description>
 			<Type ref="CommonTypes" name="RefIdType"/>

@@ -173,10 +173,10 @@
 			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>LearningStandardRefId</Element>
+			<Element>LearningStandard</Element>
 			<Characteristics>MR</Characteristics>
 			<Description/>
-		    <Type ref="CommonTypes" name="LocalIdType"/>
+		    <Type ref="CommonTypes" name="ObjectReferenceType"/>
 		</Item>
 	</CommonElement>
 
