@@ -378,6 +378,10 @@
 							or specgen:Item[2]/specgen:Type/@name eq 'xs:token'
 							or specgen:Item[2]/specgen:Type/@name eq 'NCName'">
 				<xsl:text>          type: string&#x0a;</xsl:text>
+				<!-- Inline facets, etc. -->
+				<xsl:apply-templates select="specgen:Item[2]/specgen:Facets/xs:*">
+					<xsl:with-param name="indent" select="'          '"/>
+				</xsl:apply-templates>						
 			</xsl:when>
 			<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:integer' 
 							or specgen:Item[2]/specgen:Type/@name eq 'xs:byte'
@@ -393,6 +397,11 @@
 							or specgen:Item[2]/specgen:Type/@name eq 'xs:unsignedInt'
 							or specgen:Item[2]/specgen:Type/@name eq 'xs:unsignedLong'">
 				<xsl:text>          type: integer&#x0a;</xsl:text>
+					<!-- Inline facets, etc. -->
+					<xsl:apply-templates select="specgen:Item[2]/specgen:Facets/xs:*">
+						<xsl:with-param name="indent" select="'          '"/>
+					</xsl:apply-templates>						
+
 					<!-- What's the minimum value?? -->
 					<xsl:choose>
 						<xsl:when test="count(specgen:Item[2]/specgen:Facets) gt 0"/>
@@ -452,6 +461,7 @@
 							<xsl:text>          maximum: 18446744073709551615&#x0a;</xsl:text>
 						</xsl:when>
 					</xsl:choose>
+
 			</xsl:when>
 			<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:date'"> 
 				<xsl:text>          type: string&#x0a;</xsl:text>
