@@ -210,7 +210,11 @@
 					expressed as the four-digit year in which the school year
 					ends (eg 2018).</p>
 			</Description>
-			<Type name="xs:gYear"/>
+			<Type name="xs:int"/>
+			<Facets>
+				<xs:minInclusive value="2000"/>
+				<xs:maxInclusive value="2999"/>
+			</Facets>
 		</Item>		<!-- SchoolCalendarYear -->
 		<Item>
 			<Element>StartDate</Element>
@@ -943,18 +947,24 @@
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
-				<p>The number of hours per day the student attended this ECE Type.</p>
+				<p>The number of hours per day the student attended this ECE Type; Decimal string constrained to the range 0-24, with max 2 decimal digits</p>
 			</Description>
-			<Type name="xs:int"/>
+			<Type name="xs:normalizedString"/>
+			<Facets>
+				<xs:pattern value="(((\d|(1\d)|2[0-3])(\.\d{1,2})?)|24(\.0{1,2})?)"/>
+			</Facets>
 		</Item>    <!-- HoursPerDayAttended -->	
 		<Item>
 			<Element>HoursPerWeekAttended</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
-				<p>The number of hours per week the student attended this ECE Type.</p>
+				<p>The number of hours per week the student attended this ECE Type; Decimal string constrained to the range 0-168, with max 2 decimal digits</p>
 			</Description>
-			<Type name="xs:int"/>
+			<Type name="xs:normalizedString"/>
+			<Facets>
+				<xs:pattern value="(((\d{1,2}|(1[0-5]\d)|16[0-7])(\.\d{1,2})?)|168(\.0{1,2})?)"/>
+			</Facets>
 		</Item>    <!-- HoursPerWeekAttended -->
 	</CommonElement>
 
