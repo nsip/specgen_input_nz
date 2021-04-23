@@ -27,7 +27,7 @@
   </Item>    <!-- ProviderCourseRefId -->
   <Item>
     <Element>ProviderCourseLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
     <Description>
  			<p>The Id of the data object record that was provided by the system that the information 

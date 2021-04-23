@@ -31,7 +31,7 @@
   </Item>    <!-- RefId -->
   <Item>
     <Element>StaffPersonalLocalId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	  <privacyRating>Medium</privacyRating>
     <Description>
 			<p>The Id of the data object record that was provided by the system that the information 

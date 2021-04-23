@@ -809,7 +809,7 @@
 						<xsl:value-of select="concat($indent, '  minimum: -9223372036854775808&#x0a;')"/> <!-- 9223372036854775807 -->
 					</xsl:when>
 					<xsl:when test="@name eq 'xs:gYear'">
-						<xsl:value-of select="concat($indent, '  minimum: 1&#x0a;')"/>
+						<xsl:value-of select="concat($indent, '  minimum: 1900&#x0a;')"/>
 					</xsl:when>
 				</xsl:choose>
 
