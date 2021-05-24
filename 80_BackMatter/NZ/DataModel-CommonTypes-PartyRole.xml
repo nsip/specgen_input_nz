@@ -2291,21 +2291,51 @@
 		</Item>
 	</CommonElement>
 	
-	<CommonElement name="PersonDocumentRoleListType" type="true" dm="true">
+	<CommonElement name="PersonDocumentRolesType" type="true" dm="true">
 		<Item>
-			<Element>PersonDocumentRoleListType</Element>
+			<Element>PersonDocumentRolesType</Element>
 			<Description>
-				<p>The list of people associated to a document and their role in relation to it,
+				<p>The set of people associated to a document and their role in relation to it,
 					 e.g. author, owner, reviewer, subject of.</p>
 			</Description>
-			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>PersonDocumentRole</Element>
-			<Characteristics>MR</Characteristics>
+			<Element>Owner</Element>
+			<Characteristics>O</Characteristics>
 			<Description>
-				<p>A person associated to a document and their role in relation to it,
-					 e.g. author, owner, reviewer, subject of.</p>
+				<p>The Owner of the document</p>
+			</Description>
+			<Type ref="CommonTypes" name="PersonDocumentRoleType"/>
+		</Item>
+		<Item>
+			<Element>Author</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The Author of the document (if known)</p>
+			</Description>
+			<Type ref="CommonTypes" name="PersonDocumentRoleType"/>
+		</Item>
+		<Item>
+			<Element>SubjectOf</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The Subject of the document (if known)</p>
+			</Description>
+			<Type ref="CommonTypes" name="PersonDocumentRoleType"/>
+		</Item>
+		<Item>
+			<Element>Reviewer</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The Reviewer of the document (if known)</p>
+			</Description>
+			<Type ref="CommonTypes" name="PersonDocumentRoleType"/>
+		</Item>
+		<Item>
+			<Element>AddedBy</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The person who added the document to the system.</p>
 			</Description>
 			<Type ref="CommonTypes" name="PersonDocumentRoleType"/>
 		</Item>
@@ -2315,19 +2345,8 @@
 		<Item>
 			<Element>PersonDocumentRoleType</Element>
 			<Description>
-				<p>A person associated to a document and their role in
-				relation to it, e.g. author, owner, reviewer, subject of.</p>
+				<p>A person associated to a document </p>
 			</Description>
-		</Item>
-		<Item>
-			<Element>Role</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>A code set denoting the role a person performs in relation
-				to a document and their role in relation to it, e.g. author,
-				owner, reviewer, subject of.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsDocumentRoleType"/>
 		</Item>
 		<Choice>
 			<Item>

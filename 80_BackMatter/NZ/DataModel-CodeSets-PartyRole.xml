@@ -3413,36 +3413,6 @@
 
 	<CodeSet>
 		<Intro>
-			<p>A code set denoting the role a person performs in relation to a document and 
-				their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
-		</Intro>
-		<ID>Document Role</ID>
-		<Values>
-			<Value>
-				<Code>OW</Code>
-				<Text>Owner</Text>
-			</Value>    <!-- Owner -->
-			<Value>
-				<Code>AU</Code>
-				<Text>Author</Text>
-			</Value>    <!-- Author -->
-			<Value>
-				<Code>RE</Code>
-				<Text>Reviewer</Text>
-			</Value>    <!-- Reviewer -->
-			<Value>
-				<Code>SU</Code>
-				<Text>Subject Of</Text>
-			</Value>    <!-- Subject Of -->
-			<Value>
-				<Code>AD</Code>
-				<Text>Added By</Text>
-			</Value>    <!-- Added By -->			
-		</Values>
-	</CodeSet>    <!-- Document Role -->
-
-	<CodeSet>
-		<Intro>
 			<p>A code list denoting the School Management Systems (SMS) that are in use by Providers.</p>
 		</Intro>
 		<ID>School Management System</ID>

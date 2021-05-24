@@ -52,11 +52,20 @@
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>A generic object reference to the type of attainment the student has achieved
-          e.g. ProviderCourse, LeanringStandard etc.</p>
+      <p>A generic object reference to the Credential the student has achieved.</p>
     </Description>
-    <Type ref="CommonTypes" name="NamedObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
   </Item>    <!-- Attainment -->
+
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The name of the actual attainment conferred; e.g. "NCEA Level 2 Chemistry Endorsed with Merit"</p>
+    </Description>
+    <Type name="xs:string"/>
+  </Item>    <!-- Name -->
 
   <Item>
     <Element>Student</Element>
@@ -150,9 +159,8 @@
       </GrantingOrganisation>
       <Attainment>
         <RefId>d0a0a27a-d0a8-510a-d9d7-5101a8c3da39</RefId>
-        <Name>NCEA Level 2 Chemistry - Endorsed with merit</Name>
-        <ObjectType>Credential</ObjectType>
       </Attainment>
+      <Name>NCEA Level 2 Chemistry - Endorsed with merit</Name>
       <Student>
         <RefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</RefId>
         <LocalId>HP85-1039</LocalId>
@@ -194,42 +202,6 @@
 			</JustificationList>  
       <SubjectAreaList>
           <SubjectArea json:force-array="true">CHEM</SubjectArea>
-      </SubjectAreaList>
-      <RecordAudit>
-        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-        <CreatedBy>
-          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-          <Name>Bobby Test</Name>
-        </CreatedBy>
-      </RecordAudit>
-    </StudentAttainment>
-  </xhtml:Example>
-
-  <xhtml:Example xmlns="" name="Student Attainment - School Course Completion">
-    <StudentAttainment>
-      <StudentAttainmentRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</StudentAttainmentRefId>
-      <GrantingOrganisation>
-          <RefId>8ec05a56-1c5f-4fc7-9ea1-d328c5467c59</RefId>
-          <LocalId json:force-string="true">9772</LocalId>
-      </GrantingOrganisation>
-      <Attainment>
-        <RefId>d0a0a27a-d0a8-510a-d9d7-5101a8c3da39</RefId>
-        <Name>Introduction to Astrophysics</Name>
-        <ObjectType>ProviderCourse</ObjectType>
-      </Attainment>
-      <Student>
-        <RefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</RefId>
-        <LocalId>HP-850139</LocalId>
-        <Name>Harry Potter</Name>
-        <NationalStudentNumber json:force-string="true">23423421</NationalStudentNumber>
-      </Student>
-      <AuthorisingStaffMember>
-        <RefId>5f399b12-b81f-405a-aa55-648341ca2e3c</RefId>
-        <Name>Prof. McGonnegal</Name>
-      </AuthorisingStaffMember>
-      <DateAttained>2018-07-25</DateAttained>
-      <SubjectAreaList>
-          <SubjectArea json:force-array="true">PHYS</SubjectArea>
       </SubjectAreaList>
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>

@@ -121,12 +121,6 @@
 				<Text xml:lang="mi">Te haere ki tētahi Rāngai Mātātahi</Text>
 			</Value>
 			<Value>
-				<Code>?</Code>
-				<Text xml:lang="en">Unknown reason</Text>
-				<Text xml:lang="mi">Kāre he kōrero</Text>
-				<Description>Unknown reason for absence</Description>
-			</Value>
-			<Value>
 				<Code>Y</Code>
 				<Text xml:lang="en">Attending an Activity Centre</Text>
 				<Text xml:lang="mi">Te haere ki te Pokapū Tūmahi</Text>

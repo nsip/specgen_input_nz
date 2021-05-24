@@ -153,26 +153,6 @@
 		</Item>    <!-- Type -->		
 	</CommonElement>
 
-	<CommonElement name="StudentSchoolEnrolmentListType" type="true" dm="true">
-		<Item>
-			<Element>StudentSchoolEnrolmentListType</Element>
-			<Description>
-				<p>A list of school enrolments, one for each academic year (or part thereof) that the Student
-				was enroled at the particular Provider.</p>
-			</Description>
-			<List mode="List"/>
-		</Item>
-		<Item>
-			<Element>SchoolEnrolment</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>Defines information related to a student's enrolment at a school education Provider 
-					for a particular academic year (or part thereof)</p>
-			</Description>
-			<Type ref="CommonTypes" name="StudentSchoolEnrolmentType"/>
-		</Item>		<!-- SchoolEnrolment -->
-	</CommonElement>
-
 	<CommonElement name="StudentSchoolEnrolmentType" type="true" dm="true">
 		<Item>
 			<Element>StudentSchoolEnrolmentType</Element>
@@ -184,24 +164,6 @@
 			</Description>
 		</Item>
 		<Item>
-			<Element>SchoolEnrolmentRefId</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The universally unique identifier for the student's school enrolment in a particular calendar year</p>
-			</Description>
-			<Type ref="CommonTypes" name="RefIdType"/>
-		</Item>     <!-- SchoolEnrolmentRefId -->
-		<Item>
-			<Element>SchoolEnrolmentLocalId</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Medium</privacyRating>
-			<Description>
-				<p>The school's identififier for the student's school enrolment in a particular calendar year</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/> 
-		</Item>     <!-- SchoolEnrolmentLocalId -->
-		<Item>
 			<Element>SchoolCalendarYear</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
@@ -210,7 +172,7 @@
 					expressed as the four-digit year in which the school year
 					ends (eg 2018).</p>
 			</Description>
-			<Type name="xs:int"/>
+			<Type name="xs:gYear"/>
 			<Facets>
 				<xs:minInclusive value="2000"/>
 				<xs:maxInclusive value="2999"/>
@@ -445,8 +407,6 @@
 
 		<xhtml:Example xmlns="" name="International School Enrolment">
 			<StudentSchoolEnrolment>
-				<SchoolEnrolmentRefId>38949b5e-f44c-4fb1-8587-8f63f88a8e0f</SchoolEnrolmentRefId>
-				<SchoolEnrolmentLocalId>2018-11-HPotter</SchoolEnrolmentLocalId>
 				<SchoolCalendarYear>2018</SchoolCalendarYear>
 				<MembershipType>BASE</MembershipType>
 				<YearLevel>11</YearLevel>
@@ -949,7 +909,7 @@
 			<Description>
 				<p>The number of hours per day the student attended this ECE Type; Decimal string constrained to the range 0-24, with max 2 decimal digits</p>
 			</Description>
-			<Type name="xs:normalizedString"/>
+			<Type name="xs:string"/>
 			<Facets>
 				<xs:pattern value="(((\d|(1\d)|2[0-3])(\.\d{1,2})?)|24(\.0{1,2})?)"/>
 			</Facets>
@@ -961,7 +921,7 @@
 			<Description>
 				<p>The number of hours per week the student attended this ECE Type; Decimal string constrained to the range 0-168, with max 2 decimal digits</p>
 			</Description>
-			<Type name="xs:normalizedString"/>
+			<Type name="xs:string"/>
 			<Facets>
 				<xs:pattern value="(((\d{1,2}|(1[0-5]\d)|16[0-7])(\.\d{1,2})?)|168(\.0{1,2})?)"/>
 			</Facets>

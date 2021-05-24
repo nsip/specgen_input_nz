@@ -134,13 +134,13 @@
 	</Item>    <!-- EarlyChildhoodEnrolment -->
 
 	<Item>
-		<Element>SchoolEnrolmentList</Element>
+		<Element>SchoolEnrolment</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
 		<Description>
 			<p>Properties of an enrolment in a school</p></Description>
-		<Type ref="CommonTypes" name="StudentSchoolEnrolmentListType"></Type>
-	</Item>    <!-- SchoolEnrolmentList -->
+		<Type ref="CommonTypes" name="StudentSchoolEnrolmentType"></Type>
+	</Item>    <!-- SchoolEnrolment -->
 
 	<Item>
 		<Element>TertiaryEducationEnrolment</Element>
@@ -175,158 +175,36 @@
 			<StudentId>123ABC</StudentId>
 			<EntryDate>2018-01-29</EntryDate>
 			<Status>WIT</Status>
-			<SchoolEnrolmentList>
-				<SchoolEnrolment json:force-array="true">
-					<SchoolEnrolmentRefId>38949b5e-f44c-4fb1-8587-8f63f88a8e0f</SchoolEnrolmentRefId>
-					<SchoolEnrolmentLocalId>2018-11-HPotter</SchoolEnrolmentLocalId>
-					<SchoolCalendarYear>2018</SchoolCalendarYear>
-					<MembershipType>BASE</MembershipType>
-					<YearLevel json:force-string="true">11</YearLevel>
-					<EligibilityCriteria>GAE</EligibilityCriteria>
-					<EligibilityVerification>
-						<Source>AUSPA</Source>
-						<DocumentSerialNumber>L905673</DocumentSerialNumber>
-						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
-						<IsConfirmed>true</IsConfirmed>
-						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-						<Provider>
-							<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
-						</Provider>
-					</EligibilityVerification>
-					<FTE>1.0</FTE>
-					<FundingType>EX</FundingType>
-					<FundingYearLevel json:force-string="true">1</FundingYearLevel>
-					<Curriculum>NZC</Curriculum>
-					<CurriculumLevel>5</CurriculumLevel>
-					<InternationalEnrolment>
-						<NZArrivalDate>2018-05-02</NZArrivalDate>
-						<ExchangeScheme>STA</ExchangeScheme>
-					</InternationalEnrolment>
-				</SchoolEnrolment>
-			</SchoolEnrolmentList>
+			<SchoolEnrolment>
+				<SchoolCalendarYear>2018</SchoolCalendarYear>
+				<MembershipType>BASE</MembershipType>
+				<YearLevel json:force-string="true">11</YearLevel>
+				<EligibilityCriteria>GAE</EligibilityCriteria>
+				<EligibilityVerification>
+					<Source>AUSPA</Source>
+					<DocumentSerialNumber>L905673</DocumentSerialNumber>
+					<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
+					<IsConfirmed>true</IsConfirmed>
+					<Timestamp>2003-11-30T12:34:56.7</Timestamp>
+					<Provider>
+						<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
+					</Provider>
+				</EligibilityVerification>
+				<FTE>1.0</FTE>
+				<FundingType>EX</FundingType>
+				<FundingYearLevel json:force-string="true">1</FundingYearLevel>
+				<Curriculum>NZC</Curriculum>
+				<CurriculumLevel>5</CurriculumLevel>
+				<InternationalEnrolment>
+					<NZArrivalDate>2018-05-02</NZArrivalDate>
+					<ExchangeScheme>STA</ExchangeScheme>
+				</InternationalEnrolment>
+			</SchoolEnrolment>
 			<RecordAudit>
 				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 				<CreatedBy>
 				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
 				<Name>Bobby Test</Name>
-				</CreatedBy>
-			</RecordAudit>
-		</StudentProviderEnrolment>
-	</xhtml:Example>
-	
-	<xhtml:Example xmlns="" name="Multiple Years, Regular Student School Enrolment">
-		<StudentProviderEnrolment>
-			<StudentProviderEnrolmentRefId>a8c3d3e3-4b35-9d75-101d-00aa001a1652</StudentProviderEnrolmentRefId>
-			<StudentProviderEnrolmentLocalId>2004H102</StudentProviderEnrolmentLocalId>
-			<Student>
-				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
-			</Student>
-			<Provider>
-		  	  	<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-	    		<LocalId json:force-string="true">9961</LocalId>
-			</Provider>
-			<StudentId>123ABC</StudentId>
-			<EntryDate>2017-01-29</EntryDate>
-			<Status>ACT</Status>
-			<SchoolEnrolmentList>
-				<SchoolEnrolment json:force-array="true">
-					<SchoolEnrolmentRefId>38949b5e-3eeb-4fb1-8587-8f63f88a8e0f</SchoolEnrolmentRefId>
-					<SchoolEnrolmentLocalId>2017-10-HPotter</SchoolEnrolmentLocalId>
-					<SchoolCalendarYear>2017</SchoolCalendarYear>
-					<MembershipType>BASE</MembershipType>
-					<YearLevel json:force-string="true">10</YearLevel>
-					<EligibilityCriteria>NZC</EligibilityCriteria>
-					<EligibilityVerification>
-						<Source>NZBIR</Source>
-						<DocumentSerialNumber>L905673</DocumentSerialNumber>
-						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
-						<IsConfirmed>true</IsConfirmed>
-						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-						<Provider>
-							<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
-						</Provider>
-					</EligibilityVerification>
-					<FTE>1.0</FTE>
-					<FundingType>RE</FundingType>
-					<FundingYearLevel json:force-string="true">10</FundingYearLevel>
-					<Curriculum>NZC</Curriculum>
-					<CurriculumLevel>4</CurriculumLevel>
-					<LanguageOfInstructionList>
-						<Language json:force-array="true">
-							<Code>NZS01112</Code>
-							<Level json:force-string="true">1</Level>
-						</Language>
-					</LanguageOfInstructionList>
-					<SubjectChoiceList>
-						<StudentSubjectChoice>
-							<PreferenceNumber>1</PreferenceNumber>
-							<Code>FREN</Code>
-						</StudentSubjectChoice>
-						<StudentSubjectChoice>
-							<PreferenceNumber>2</PreferenceNumber>
-							<Code>HIST</Code>
-						</StudentSubjectChoice>
-					</SubjectChoiceList>				
-				</SchoolEnrolment>
-				<SchoolEnrolment>
-					<SchoolEnrolmentRefId>38949b5e-f44c-4fb1-8587-8f63f88a8e0f</SchoolEnrolmentRefId>
-					<SchoolEnrolmentLocalId>2018-11-HPotter</SchoolEnrolmentLocalId>
-					<SchoolCalendarYear>2018</SchoolCalendarYear>
-					<MembershipType>BASE</MembershipType>
-					<YearLevel>11</YearLevel>
-					<EligibilityCriteria>NZC</EligibilityCriteria>
-					<EligibilityVerification>
-						<Source>NZPAS</Source>
-						<DocumentSerialNumber>L905673</DocumentSerialNumber>
-						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
-						<IsConfirmed>true</IsConfirmed>
-						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-						<Provider>
-							<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
-						</Provider>
-					</EligibilityVerification>
-					<FTE>1.0</FTE>
-					<FundingType>RE</FundingType>
-					<FundingYearLevel>11</FundingYearLevel>
-					<Curriculum>NZC</Curriculum>
-					<CurriculumLevel>5</CurriculumLevel>
-					<LanguageOfInstructionList>
-						<Language json:force-array="true">
-							<Code>NZS01112</Code>
-							<Level json:force-string="true">5</Level>
-						</Language>
-					</LanguageOfInstructionList>
-					<SubjectChoiceList>
-						<StudentSubjectChoice>
-							<PreferenceNumber>1</PreferenceNumber>
-							<Code>HIST</Code>
-						</StudentSubjectChoice>
-						<StudentSubjectChoice>
-							<PreferenceNumber>2</PreferenceNumber>
-							<Code>GEOG</Code>
-						</StudentSubjectChoice>
-					</SubjectChoiceList>
-					<CourseChoiceList>
-						<StudentCourseChoice>
-							<PreferenceNumber>1</PreferenceNumber>
-							<Course>
-								<LocalId>Y11HIST</LocalId>
-							</Course>
-						</StudentCourseChoice>
-						<StudentCourseChoice>
-							<PreferenceNumber>2</PreferenceNumber>
-							<Course>
-								<LocalId>Y11GEOG</LocalId>
-							</Course>
-						</StudentCourseChoice>
-					</CourseChoiceList>
-				</SchoolEnrolment>
-			</SchoolEnrolmentList>
-			<RecordAudit>
-				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-				<CreatedBy>
-					<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-					<Name>Bobby Test</Name>
 				</CreatedBy>
 			</RecordAudit>
 		</StudentProviderEnrolment>

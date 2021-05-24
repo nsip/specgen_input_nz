@@ -149,14 +149,14 @@
   </Item>    <!-- DocumentType -->
 
   <Item>
-    <Element>PersonDocumentRoleList</Element>    
+    <Element>PersonDocumentRoles</Element>    
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The list of people associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+      <p>The set of people associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
     </Description>
-    <Type ref="CommonTypes" name="PersonDocumentRoleListType"></Type>
-  </Item>    <!-- PersonDocumentRoleList -->
+    <Type ref="CommonTypes" name="PersonDocumentRolesType"></Type>
+  </Item>    <!-- PersonDocumentRoles -->
 
   <Item>
     <Element>DocumentDate</Element>    
@@ -188,22 +188,20 @@
       <DocumentDescription>Timmy McGannaway's IEP for 2019</DocumentDescription>
       <URL>http://somehost.co.nz/docs/ghf12312</URL>
       <DocumentType>IEP</DocumentType>
-      <PersonDocumentRoleList>
-        <PersonDocumentRole>
-          <Role>SU</Role>
-          <Student>
-            <RefId>17c9b7aa-bc34-435f-8bba-7e337891f53b</RefId>
-            <NationalStudentNumber json:force-string="true">6788765445</NationalStudentNumber>
-          </Student>
-        </PersonDocumentRole>
-        <PersonDocumentRole>
-          <Role>AU</Role>
+      <PersonDocumentRoles>
+        <Author>
           <Person>
             <RefId>2a288f40-c3fb-4d9c-857e-0e562f3f5dde</RefId>
             <ObjectType>StaffPersonal</ObjectType>
           </Person>
-        </PersonDocumentRole>
-      </PersonDocumentRoleList>
+        </Author>
+        <SubjectOf>
+          <Student>
+            <RefId>17c9b7aa-bc34-435f-8bba-7e337891f53b</RefId>
+            <NationalStudentNumber json:force-string="true">6788765445</NationalStudentNumber>
+          </Student>
+        </SubjectOf>
+      </PersonDocumentRoles>
       <RecordAudit>
         <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
         <CreatedBy>
