@@ -16,8 +16,8 @@
 		<Description>
 			<p>A student's association with an education provider for the purpose of receiving
 				educational servics.</p>
-			<p>Provider enrolments span multiple years with the ProviderEnrolment containing one or
-				more ECE, School or Tertiary Enrolment sub-objects for each particular year.</p>	
+			<p>Provider enrolments are specific to a particular calendar year; and contain one of
+				ECE, School or Tertiary Enrolment sub-object.</p>
 		</Description>
 	</Item>
 
@@ -73,24 +73,26 @@
 	</Item>    <!-- StudentId -->
 
 	<Item>
-		<Element>EntryDate</Element>
+		<Element>ProviderEntryDate</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The date from when this enrolment is ACTIVE. The date
-			of the student’s first attendance at the provider. If
-			future dated, then the intended first attendance date of
+			<p>The date of the student’s first attendance at the provider. When The
+			student has been continuously enrolled at the Provider for multiple years, this
+			is the start date of the first year of enrolment.</p>
+			<p>If future dated, then the intended first attendance date of
 			the enrolment.</p>
 		</Description>
 		<Type name="xs:date"></Type>
 	</Item>    <!-- EntryDate -->
 
 	<Item>
-		<Element>ExitDate</Element>
+		<Element>ProviderExitDate</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>The date of a student’s last attendance at the provider.</p>
+			<p>The date of a student’s last attendance at the provider, in the current sequence
+			of contiguous StudentProviderEnrolment records.</p>
 		</Description>
 		<Type name="xs:date"></Type>
 	</Item>    <!-- ExitDate -->
@@ -173,10 +175,13 @@
 	    		<LocalId json:force-string="true">9961</LocalId>
 			</Provider>
 			<StudentId>123ABC</StudentId>
-			<EntryDate>2018-01-29</EntryDate>
+			<ProviderEntryDate>2017-03-30</ProviderEntryDate>
+			<ProviderExitDate>2018-12-18</ProviderExitDate>
 			<Status>WIT</Status>
 			<SchoolEnrolment>
 				<SchoolCalendarYear>2018</SchoolCalendarYear>
+				<StartDate>2018-01-29</StartDate>
+				<EndDate>2018-12-18</EndDate>
 				<MembershipType>BASE</MembershipType>
 				<YearLevel json:force-string="true">11</YearLevel>
 				<EligibilityCriteria>GAE</EligibilityCriteria>

@@ -183,10 +183,19 @@
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
-				<p>  The date the student started at the school.</p>
+				<p>The date of the student's first attendance at the school in the SchoolCalendarYear.</p>
 			</Description>
 			<Type name="xs:date"/>
 		</Item>		<!-- StartDate -->
+		<Item>
+			<Element>EndDate</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>High</privacyRating>
+			<Description>
+				<p>The date of the student's final attendance at the school in the SchoolCalendarYear.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>		<!-- EndDate -->
 		<Item>
 			<Element>MembershipType</Element>
 			<Characteristics>M</Characteristics>
