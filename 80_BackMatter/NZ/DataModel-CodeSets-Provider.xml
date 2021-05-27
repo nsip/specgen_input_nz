@@ -1232,6 +1232,11 @@
 				<Text>Local Office and Organisation</Text>
 			</Value>    <!-- MoE Local Office and Organisation -->
 			<Value>
+				<Code>NBO</Code>
+				<Text>National Body and Organisation</Text>
+				<Description>Source Organisation is a Provider that is a member of the Related Organisation, which is a national body</Description>
+			</Value>
+			<Value>
 				<Code>EPL</Code>
 				<Text>Playgroup - ECE Service Provider</Text>
 			</Value>	<!-- Playgroup, ECE Service Provider -->
@@ -1359,16 +1364,6 @@
 				<Text>Joined Unfunded Member</Text>
 				<Description>Role applies to School/ECE's membershp of Kāhui Ako</Description>
 			</Value>	<!-- CoL - Joined Unfunded -->
-			<Value>
-				<Code>LOM</Code>
-				<Text>Local Office Member</Text>
-				<Description>Role applies to School/ECE's membershp of Kāhui Ako</Description>
-			</Value>	<!-- CoL - Local Office -->
-			<Value>
-				<Code>SPM</Code>
-				<Text>ECE Service Provider Member</Text>
-				<Description>Role applies to School/ECE's membershp of Kāhui Ako</Description>
-			</Value>	<!-- CoL - ECE Service -->
 
 			<!-- Provider Peer Relationship roles -->
 			<Value>
@@ -1395,6 +1390,23 @@
 				<Text>RTLB Cluster Member</Text>
 				<Description>Role applies to School/ECE's membershp of RTLB Cluster</Description>
 			</Value>	<!-- RTLB - Cluster Member -->			
+
+			<!-- misc -->
+			<Value>
+				<Code>LOM</Code>
+				<Text>Local Office Member</Text>
+				<Description>Role applies to School/ECE's membership of a Local Office</Description>
+			</Value>	<!-- Local Office -->
+			<Value>
+				<Code>SPM</Code>
+				<Text>ECE Service Provider Member</Text>
+				<Description>Role indicates that an ECE is a member of an ECE Service Provider.</Description>
+			</Value>	<!-- ECE Service Provider -->
+			<Value>
+				<Code>NAB</Code>
+				<Text>National Body</Text>
+				<Description>Role indicates that a school is a member of a national body.</Description>
+			</Value>	<!-- National Body -->
 		</Values>
 	</CodeSet>    <!-- Related Organisation Role -->
 
