@@ -131,7 +131,7 @@
     <Description>
       <p>Generic object reference to the LearningStandard the student is registering for.</p>
     </Description>
-    <Type ref="CommonTypes" name="LearningStandardObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
   </Item>    <!-- LearningStandard -->
 
   <Item>

@@ -209,41 +209,6 @@
 		</xhtml:Example>
 	</CommonElement>
 
-	<CommonElement name="LearningStandardObjectReferenceType" type="true" dm="true">
-		<Item>
-			<Element>LearningStandardObjectReferenceType</Element>
-			<Description>
-				<p>A reference to a LearningStandard via Number and VersionNum</p>
-			</Description>		
-		</Item>
-		<Item>
-			<Element>Number</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>A unique number that is used to identify the learning standard. One use of this is for NZQA standard numbers
-				which cannot be used as a unique identifier (in LocalId) on their own as they are versioned so are part of
-				a composite key with VersionNo.
-				</p>
-			</Description>
-			<Type name="xs:int"/>
-		</Item>     <!-- Number-->
-		<Item>
-			<Element>VersionNo</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>The version of the learning standard.</p>
-			</Description>
-			<Type name="xs:decimal"/>
-		</Item>     <!-- VersionNo-->
-
- 		<xhtml:Example xmlns="" name="LearningStandardObjectReferenceType Example">
-			<LearningStandardObjectReference>
-				<Number>6733</Number>
-				<VersionNo>2</VersionNo>
-			</LearningStandardObjectReference>
-		</xhtml:Example>
-	</CommonElement>
-
 	<CommonElement name="PrerequisiteListType" type="true" dm="true">
 		<Item>
 			<Element>PrerequisiteListType</Element>
