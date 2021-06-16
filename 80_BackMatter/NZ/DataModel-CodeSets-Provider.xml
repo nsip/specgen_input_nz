@@ -1172,7 +1172,8 @@
 			<Value><Code>18000</Code><Text>Sole Trader</Text></Value>
 			<Value><Code>18001</Code><Text>Company</Text></Value>
 			<Value><Code>18002</Code><Text>Partnership</Text></Value>
-			<Value><Code>18004</Code><Text>Incorporated Society</Text></Value>
+			<Value><Code>18003</Code><Text>Incorporated Society</Text></Value>
+			<Value><Code>18004</Code><Text>Charitable Trust</Text></Value>
 			<Value><Code>18005</Code><Text>Statutory Trust</Text></Value>
 			<Value><Code>18006</Code><Text>Private Trust</Text></Value>
 			<Value><Code>18007</Code><Text>Community Trust</Text></Value>
