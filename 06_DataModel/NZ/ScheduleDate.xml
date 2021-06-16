@@ -15,35 +15,18 @@
 	 	 <privacyRating>Low</privacyRating>
 		<Description>
 			<p>The core of the scheduling system, that assigns a particular ScheduleAcademicDay
-			 and SchedulePeriodTime to each of a set of calendar dates.</p>
+			 and SchedulePeriodTime to the set of calendar dates covered by a particular Schedule.</p>
 			 
 			<p> Each entry in the CalendaDateList determines WHICH meetings will occur on 
 			that date (via the ScheduleAcademicDay) and WHEN those meetings will take place
 			(via the SchedulePeriodTime), as well as which ScheduleTerms are in session on 
 			that particular CalendarDate</p>
+
+			<p>Could be thought of as a member of Schedule data object; but it has been extracted
+			as a separate object, without identifiers, to make it easier to build API endpoint definitions</p>
 		</Description>
 	</Item>
 	
-	<Item>
-		<Element>ScheduleDateRefId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The universally unique identifier for the data object record that is used across systems.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- ScheduleDateRefId -->
-	<Item>
-		<Element>ScheduleDateLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>The Id of the data object record that was provided by the system that the information 
-			was originally sourced from.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- ScheduleDateLocalId -->
-
 	<Item>
 		<Element>Organisation</Element>
 		<Characteristics>M</Characteristics>
@@ -86,8 +69,6 @@
 
 	<xhtml:Example xmlns="" name ="Schedule Date">
 		<ScheduleDate>
-			<ScheduleDateRefId>84c40f87-769d-46cc-8077-f5efb912e099</ScheduleDateRefId>
-			<ScheduleDateLocalId>2019a-A-06</ScheduleDateLocalId>
 			<Organisation>
   	  			<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
 		    	<LocalId json:force-string="true">9961</LocalId>
