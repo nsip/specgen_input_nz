@@ -164,20 +164,16 @@
 			</Description>
 		</Item>
 		<Item>
-			<Element>SchoolCalendarYear</Element>
+			<Element>SchoolYear</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
-				<p>School year for which this enrolment is applicable,
-					expressed as the four-digit year in which the school year
-					ends (eg 2018).</p>
+				<p>School year for which this enrolment is applicable</p>
+				<p><strong>Note:</strong> Maramataka calendars for māori medium kura
+					will have school years like:  '2021/22'</p>
 			</Description>
-			<Type name="xs:gYear"/>
-			<Facets>
-				<xs:minInclusive value="2000"/>
-				<xs:maxInclusive value="2999"/>
-			</Facets>
-		</Item>		<!-- SchoolCalendarYear -->
+			<Type name="xs:normalizedString"/>
+		</Item>		<!-- SchoolYear -->
 		<Item>
 			<Element>StartDate</Element>
 			<Characteristics>O</Characteristics>
@@ -416,7 +412,7 @@
 
 		<xhtml:Example xmlns="" name="International School Enrolment">
 			<StudentSchoolEnrolment>
-				<SchoolCalendarYear>2018</SchoolCalendarYear>
+				<SchoolYear>2018</SchoolYear>
 				<MembershipType>BASE</MembershipType>
 				<YearLevel>11</YearLevel>
 				<EligibilityCriteria>GAE</EligibilityCriteria>

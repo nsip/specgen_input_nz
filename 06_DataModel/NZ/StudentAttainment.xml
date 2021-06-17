@@ -104,7 +104,7 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The year the student achieved the attainment.</p>
+      <p>The calendar year the student achieved the attainment.</p>
     </Description>
     <Type name="xs:gYear"></Type>
   </Item>    <!-- YearAttained -->

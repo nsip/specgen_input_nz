@@ -66,8 +66,10 @@
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The school year the Term is part of.</p>
+			<p><strong>Note:</strong> Maramataka calendars for māori medium kura
+			will have school years like:  '2021/22'</p>
 		</Description>
-		<Type name="xs:gYear"/>
+		<Type name="xs:normalizedString"/>
 	</Item>    <!-- SchoolYear -->
 	<Item>
 		<Element>StartDate</Element>

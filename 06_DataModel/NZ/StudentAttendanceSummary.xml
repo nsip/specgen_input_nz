@@ -56,14 +56,16 @@
     <Type ref="CommonTypes" name="OrganisationObjectReference"></Type>
   </Item>    <!-- Organisation -->
   <Item>
-    <Element>SchoolCalendarYear</Element>
+    <Element>SchoolYear</Element>
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
       <p>School year for which the information is applicable.</p>
+      <p><strong>Note:</strong> Maramataka calendars for māori medium kura
+			  will have school years like:  '2021/22'</p>
     </Description>
-    <Type name="xs:gYear"/>
-  </Item>    <!-- SchoolCalendarYear -->
+    <Type name="xs:normalizedString"/>
+  </Item>    <!-- SchoolYear -->
   <Item>
     <Element>StartDate</Element>
     <Characteristics>M</Characteristics>
@@ -215,7 +217,7 @@
           <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
 		    	<LocalId json:force-string="true">9961</LocalId>
       </Organisation>
-      <SchoolCalendarYear>2015</SchoolCalendarYear>
+      <SchoolYear>2015</SchoolYear>
       <StartDate>2014-08-30</StartDate>
       <EndDate>2015-06-10</EndDate>		
       <StartDay>1</StartDay>
