@@ -68,7 +68,7 @@
     <Description>
       <p>Starting Date for this Characteristic to be noted.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type ref="CommonTypes" name="StartDateType"/>
   </Item>    <!-- StartDate -->
 
   <Item>
@@ -78,7 +78,7 @@
     <Description>
       <p>End date for this Characteristic to be noted, if there is one.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type ref="CommonTypes" name="EndDateType"/>
   </Item>    <!-- EndDate -->
   
   <Item>

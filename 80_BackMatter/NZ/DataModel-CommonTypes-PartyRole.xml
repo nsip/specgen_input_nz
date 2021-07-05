@@ -1482,7 +1482,7 @@
 			<Description>
 				<p>Closing date of entity. Only present for closed providers.</p>
 			</Description>
-			<Type name="xs:date"/>
+			<Type ref="CommonTypes" name="StartDateType"/>
 		</Item>   <!-- EntityClose -->
 		<Item>
 			<Element>EntityOpen</Element>
@@ -1493,7 +1493,7 @@
 				be the projected opening date.  For open schools this may
 				not be present.</p>
 			</Description>
-			<Type name="xs:date"/>
+			<Type ref="CommonTypes" name="EndDateType"/>
 		</Item>   <!-- EntityOpen -->
 		<Item>
 			<Element>LocationList</Element>
@@ -1887,7 +1887,7 @@
 			<Description>
 				<p>The start date of the relationship between the two organisations</p>
 			</Description>
-			<Type name="xs:date"/>
+			<Type ref="CommonTypes" name="StartDateType"/>
 		</Item>    <!-- StartDate -->
 		<Item>
 			<Element>EndDate</Element>
@@ -1896,7 +1896,7 @@
 			<Description>
 				<p>The end date of the relationship between the two organisations</p>
 			</Description>
-			<Type name="xs:date"/>
+			<Type ref="CommonTypes" name="EndDateType"/>
 		</Item>    <!-- EndDate -->
 		<Item>
 			<Element>Type</Element>
@@ -1956,7 +1956,7 @@
 			<Description>
 				<p>The expiry date on the document that was used to verify the name or birthdate.</p>
 			</Description>
-			<Type name="xs:date"/>
+			<Type ref="CommonTypes" name="StartDateType"/>
 		</Item>    <!-- DocumentExpiryDate -->
 		<Item>
 			<Element>IsConfirmed</Element>

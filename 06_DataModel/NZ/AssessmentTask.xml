@@ -130,7 +130,7 @@
     <Description>
       <p>Date the assignment is due.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type ref="CommonTypes" name="EndDateType"/>
   </Item>    <!-- DueDate -->
 
   <Item>

@@ -431,7 +431,7 @@
 				<p>The date from which the school adopted the policy.  If not populated
 				then this is the current/original policy of the school.</p>
 			</Description>
-			<Type name="xs:date"/>
+			<Type ref="CommonTypes" name="StartDateType"/>
 		</Item>
 		<Item>
 			<Element>EffectiveTo</Element>			
@@ -441,7 +441,7 @@
 				<p>The date after which the school has no longer adopted the policy.  If not populated
 				then the school has no planned date to end the policy.</p>
 			</Description>
-			<Type name="xs:date"/>
+			<Type ref="CommonTypes" name="EndDateType"/>
 		</Item>
 		<Item>
 			<Element>Policy</Element>			

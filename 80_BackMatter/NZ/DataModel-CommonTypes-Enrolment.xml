@@ -181,7 +181,7 @@
 			<Description>
 				<p>The date of the student's first attendance at the school in the SchoolCalendarYear.</p>
 			</Description>
-			<Type name="xs:date"/>
+			<Type ref="CommonTypes" name="StartDateType"/>
 		</Item>		<!-- StartDate -->
 		<Item>
 			<Element>EndDate</Element>
@@ -190,7 +190,7 @@
 			<Description>
 				<p>The date of the student's final attendance at the school in the SchoolCalendarYear.</p>
 			</Description>
-			<Type name="xs:date"/>
+			<Type ref="CommonTypes" name="EndDateType"/>
 		</Item>		<!-- EndDate -->
 		<Item>
 			<Element>MembershipType</Element>

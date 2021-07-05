@@ -181,16 +181,16 @@
 			<Description>
 				<p>The date from which the student or student caretaker consented to the medicine being administered to the student by a particular individual.</p>
 			</Description>
-			<Type name="xs:date"></Type>  
-		</Item>
+			<Type ref="CommonTypes" name="StartDateType"/>
+		</Item>   <!-- StartDate-->
 		<Item>
 			<Element>EndDate</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>The date the consent for administration of the medicine ends or is revoked.</p>
 			</Description>
-			<Type name="xs:date"></Type>  
-		</Item>
+			<Type ref="CommonTypes" name="EndDateType"/>
+		</Item>    <!-- EndDate -->
 		<Item>
 			<Element>ConsentedBy</Element>
 			<Characteristics>M</Characteristics>
@@ -198,7 +198,7 @@
 				<p>The student or student caregiver that has consented to the medicine being administered to the student by the school.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>
+		</Item>    <!-- ConsentedBy -->
 		<Item>
 			<Element>ProviderApplicableTo</Element>
 			<Characteristics>O</Characteristics>
@@ -206,7 +206,7 @@
 				<p>The provider the medication administartion consent is applicable to.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>
+		</Item>    <!-- ProviderApplicableTo -->
 		<Item>
 			<Element>AdministeredBy</Element>
 			<Characteristics>O</Characteristics>
@@ -214,7 +214,7 @@
 				<p>The staff member at the school that have been given permission by the student or the student's caregiver to administer the medicine to the student.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>
+		</Item>    <!-- AdministeredBy -->
 	</CommonElement>
 		
 	<CommonElement name="WellbeingEventCategoryListType" type="true" dm="true">
@@ -436,7 +436,7 @@
 			<Description>
 				<p>The start date of the withdrawal.</p>
 			</Description>
-			<Type name="xs:date"></Type>  
+			<Type ref="CommonTypes" name="StartDateType"/>
 		</Item>
 		<Item>
 			<Element>WithdrawalEndDate</Element>
@@ -444,7 +444,7 @@
 			<Description>
 				<p>The end date of the withdrawal.</p>
 			</Description>
-			<Type name="xs:date"></Type>  
+			<Type ref="CommonTypes" name="EndDateType"/>
 		</Item>
 		<Item>
 			<Element>WithdrawalStartTime</Element>

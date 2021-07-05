@@ -78,7 +78,7 @@
 		<Description>
 			<p>The start date of the term</p>
 		</Description>
-		<Type name="xs:date"/>
+		<Type ref="CommonTypes" name="StartDateType"/>
 	</Item>    <!-- StartDate -->
 	<Item>
 		<Element>EndDate</Element>
@@ -87,7 +87,7 @@
 		<Description>
 			<p>The end date of the term</p>
 		</Description>
-		<Type name="xs:date"/>
+		<Type ref="CommonTypes" name="StartDateType"/>
 	</Item>    <!-- EndDate -->
 
 	<Item>

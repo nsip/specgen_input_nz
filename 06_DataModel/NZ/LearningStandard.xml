@@ -151,7 +151,7 @@
       <p>The date the publishing organization superceded (or will supercede) 
       the LearningStandard. May be future dated.</p>
     </Description>
-    <Type name="xs:date"/>
+    <Type ref="CommonTypes" name="EndDateType"/>>
   </Item>      <!-- SupercededDate -->
   <Item>
     <Element>DiscontinuedDate</Element>
@@ -161,7 +161,7 @@
       <p>The date the publishing organization discontinued (or will discontinue) 
         the LearningStandard.  May be future dated.</p>
     </Description>
-    <Type name="xs:date"/>
+    <Type ref="CommonTypes" name="EndDateType"/>
   </Item>      <!-- DiscontinuedDate -->
   <Item>
     <Element>Credits</Element>

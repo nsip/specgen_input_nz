@@ -86,7 +86,7 @@
 		<Description>
 			<p>The date the Student's enrolment in the teaching group starts.</p>
 		</Description>
-		<Type name="xs:date"></Type>
+		<Type ref="CommonTypes" name="StartDateType"/>
 	</Item>    <!-- StartDate -->
 
 	<Item>
@@ -96,7 +96,7 @@
 		<Description>
 			<p>The date of a student’s enrolment in the teaching group ends.</p>
 		</Description>
-		<Type name="xs:date"></Type>
+		<Type ref="CommonTypes" name="EndDateType"/>
 	</Item>    <!-- EndDate -->
 
 	<Item>

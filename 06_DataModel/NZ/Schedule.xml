@@ -54,7 +54,7 @@
 		<Description>
 			<p>The start date of the schedule.</p>
 		</Description>
-		<Type name="xs:date"/> 
+		<Type ref="CommonTypes" name="StartDateType"/>
 	</Item>    <!-- StartDate -->
 
 	<Item>
@@ -64,7 +64,7 @@
 		<Description>
 			<p>The end date of the schedule.</p>
 		</Description>
-		<Type name="xs:date"/> 
+		<Type ref="CommonTypes" name="EndDateType"/>
 	</Item>    <!-- EndDate -->
 
 	<Item>

@@ -56,7 +56,7 @@
 		<Description>
 			<p>The date the relationship between the student and contact was recorded.</p>
 		</Description>
-		<Type name="xs:date"/>
+		<Type ref="CommonTypes" name="StartDateType"/>
   	</Item>  <!-- StartDate -->
 	<Item>
 		<Element>EndDate</Element>
@@ -65,7 +65,7 @@
 		<Description>
 			<p>The date the relationship between the student and contact was removed.</p>
 		</Description>
-		<Type name="xs:date"/>
+		<Type ref="CommonTypes" name="EndDateType"/>
   	</Item>  <!-- EndDate -->
 	
 	<Item>

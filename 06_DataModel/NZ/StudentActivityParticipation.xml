@@ -110,7 +110,7 @@
     <Description>
       <p>This is the date from which the activity participation is valid (inclusive). </p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type ref="CommonTypes" name="StartDateType"/>
   </Item>    <!-- StartDate -->
   <Item>
     <Element>EndDate</Element>
@@ -123,7 +123,7 @@
       withdraws from the activity before the end of the school
       year. </p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type ref="CommonTypes" name="EndDateType"/>
   </Item>    <!-- EndDate -->
   <Item>
     <Element>Role</Element>

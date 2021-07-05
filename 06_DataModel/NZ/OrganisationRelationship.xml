@@ -125,7 +125,7 @@
     <Description>
       <p>The date from which the organisation relationship is active.</p>
     </Description>
-    <Type name="xs:date"/>
+    <Type ref="CommonTypes" name="StartDateType"/>
   </Item>  <!-- EffectiveDate -->
   <Item>
     <Element>ExpirationDate</Element>
@@ -134,7 +134,7 @@
     <Description>
       <p>The date after which the organisation relationship is no longer active.</p>
     </Description>
-    <Type name="xs:date"/>
+    <Type ref="CommonTypes" name="EndDateType"/>
   </Item>  <!-- ExpirationDate -->
 
   <Item>

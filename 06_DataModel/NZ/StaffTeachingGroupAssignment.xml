@@ -96,7 +96,7 @@
     <Description>
       <p>This is the date from which the staff assignment is valid (inclusive).</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type ref="CommonTypes" name="StartDateType"/>
   </Item>      <!-- StartDate -->
 
   <Item>
@@ -107,7 +107,7 @@
       <p>This is the date through which the staff assignment is valid (inclusive). This
           can be NULL when the staff member's assignment to a particular role is open-ended.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type ref="CommonTypes" name="EndDateType"/>
   </Item>      <!-- EndDate -->
 
   <Item>

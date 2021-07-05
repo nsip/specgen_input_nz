@@ -90,7 +90,7 @@
     <Description>
       <p>The date the wellbeing alert period commenced.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type ref="CommonTypes" name="StartDateType"/>
   </Item>    <!-- StartDate -->
 
   <Item>
@@ -100,7 +100,7 @@
     <Description>
       <p>The date the wellbeing alert is due to finish.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type ref="CommonTypes" name="EndDateType"/>
   </Item>    <!-- EndDate -->  
 
   <Item>

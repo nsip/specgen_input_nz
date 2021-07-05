@@ -36,7 +36,7 @@
 			<Element>LocalIdType</Element>
 			<Description>
 				<p>
-					This is a common element used to define the locally assigned identifier associated with an entity. 
+					Locally assigned identifier associated with an entity. 
 				</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
@@ -47,5 +47,28 @@
 		<xhtml:Example xmlns="" name="LocalId Example">
 			<LocalId>123321A</LocalId>
 		</xhtml:Example>
-  </CommonElement>	
+  </CommonElement>
+
+  <CommonElement type="true" name="StartDateType" dm="true">
+		<Item>
+			<Element>StartDateType</Element>
+			<Description>
+				<p>
+					A start date, which includes an implied 00:00:00.000 if it was expressed as a date-time
+				</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>
+  </CommonElement>  
+  <CommonElement type="true" name="EndDateType" dm="true">
+		<Item>
+			<Element>EndDateType</Element>
+			<Description>
+				<p>
+					An end date, which includes an implied 23:59:59.999 if it was expressed as a date-time
+				</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>
+  </CommonElement>  
 </IncludeGroup>

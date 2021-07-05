@@ -859,7 +859,17 @@
 
 			<xsl:when test="@name eq 'xs:date'">
 				<xsl:value-of select="concat($indent, '  type: string&#x0a;')"/>
-				<xsl:value-of select="concat($indent, '  format: date&#x0a;')"/>
+				<xsl:choose>
+					<xsl:when test="preceding-sibling::specgen:Element eq 'StartDateType'">
+						<xsl:value-of select="concat($indent, '  format: start-date&#x0a;')"/>
+					</xsl:when>
+					<xsl:when test="preceding-sibling::specgen:Element eq 'EndDateType'">
+						<xsl:value-of select="concat($indent, '  format: end-date&#x0a;')"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="concat($indent, '  format: date&#x0a;')"/>
+					</xsl:otherwise>
+				</xsl:choose>
 			</xsl:when>
 
 			<xsl:when test="@name eq 'xs:time'">

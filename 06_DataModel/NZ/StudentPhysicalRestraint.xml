@@ -135,7 +135,7 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The date the use of physical restraint on the student was report.</p>
+      <p>The date the use of physical restraint on the student was reported.</p>
     </Description>
     <Type name="xs:date"></Type>
   </Item>    <!-- ReportedDate -->

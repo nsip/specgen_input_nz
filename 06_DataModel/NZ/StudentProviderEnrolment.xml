@@ -83,7 +83,7 @@
 			<p>If future dated, then the intended first attendance date of
 			the enrolment.</p>
 		</Description>
-		<Type name="xs:date"></Type>
+		<Type ref="CommonTypes" name="StartDateType"/>
 	</Item>    <!-- EntryDate -->
 
 	<Item>
@@ -94,7 +94,7 @@
 			<p>The date of a student’s last attendance at the provider, in the current sequence
 			of contiguous StudentProviderEnrolment records.</p>
 		</Description>
-		<Type name="xs:date"></Type>
+		<Type ref="CommonTypes" name="EndDateType"/>
 	</Item>    <!-- ExitDate -->
 
 	<Item>
