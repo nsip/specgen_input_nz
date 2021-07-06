@@ -1482,7 +1482,7 @@
 			<Description>
 				<p>Closing date of entity. Only present for closed providers.</p>
 			</Description>
-			<Type ref="CommonTypes" name="StartDateType"/>
+			<Type ref="CommonTypes" name="EndDateType"/>
 		</Item>   <!-- EntityClose -->
 		<Item>
 			<Element>EntityOpen</Element>
@@ -1493,7 +1493,7 @@
 				be the projected opening date.  For open schools this may
 				not be present.</p>
 			</Description>
-			<Type ref="CommonTypes" name="EndDateType"/>
+			<Type ref="CommonTypes" name="StartDateType"/>
 		</Item>   <!-- EntityOpen -->
 		<Item>
 			<Element>LocationList</Element>
