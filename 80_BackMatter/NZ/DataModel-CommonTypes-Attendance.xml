@@ -100,7 +100,8 @@
 			<Element>StartTime</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>The Start Time of the students attendance for the provided Attendance Date. Mandatory for attendance records with a type of 'Ad Hoc'.</p>
+				<p>The Student's actual start time if not equal the start time of the meeting.  e.g. if the meeting scheduled for 9am
+				and the student arrived at 9:10am set this field to 09:10.  If the student was present at 9am leave empty.</p>
 			</Description>
 			<Type name="xs:time"/>
 		</Item>		<!-- StartTime -->
@@ -109,7 +110,8 @@
 			<Element>EndTime</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>The End Time of the students attendance for the provided Attendance Date. Mandatory for attendance records with a type of 'Ad Hoc'.</p>
+				<p>The student's actual end time if not equal to the end time of the meeting, e.g. if the meeting is scheduled to end at 10am 
+				and the student left at 9:50am set this field to 09:50. If the student was left at 10am leave empty.</p>
 			</Description>
 			<Type name="xs:time"/>
 		</Item>		<!-- EndTime -->
