@@ -54,7 +54,7 @@
     <Description>
       <p>A generic object reference to the Credential the student has achieved.</p>
     </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+    <Type ref="CommonTypes" name="NamedObjectReferenceType"></Type>
   </Item>    <!-- Attainment -->
 
   <Item>

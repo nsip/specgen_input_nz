@@ -911,7 +911,7 @@
 			<Description>
 				<p>A person that witnessed the physical restraint incident.</p>
 			</Description>
-			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+			<Type ref="CommonTypes" name="NamedObjectReferenceType"/>
 		</Item>
 	</CommonElement>	
 
@@ -946,7 +946,7 @@
 			<Description>
 				<p>The person who administered the physical restraint to the student.</p>
 			</Description>
-			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+			<Type ref="CommonTypes" name="NamedObjectReferenceType"/>
 		</Item>    <!-- AdministeredBy -->
 		<Item>
 			<Element>SafePhysicalRestraintTraining</Element>
@@ -1005,7 +1005,7 @@
 			<Description>
 				<p>The person the student's behaviour was directed at.</p>
 			</Description>
-			<Type ref="CommonTypes" name="ObjectReferenceType"/>
+			<Type ref="CommonTypes" name="NamedObjectReferenceType"/>
 		</Item>    <!-- DirectedAt -->
 		<Item>
 			<Element>BehaviourDescription</Element>
