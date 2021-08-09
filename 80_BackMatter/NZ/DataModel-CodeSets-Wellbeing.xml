@@ -1849,13 +1849,6 @@
 				<Description>Student engages in brief or low-intensity failure to follow directions or talks back.</Description>
 			</Value>
 			<Value>
-				<Code>DISRE</Code>
-				<Text xml:lang="en">Disrespect</Text>
-				<Text xml:lang="mi">Tōtōā – Iti noa</Text>
-				<EndDate>2020-04-09</EndDate>				
-				<Description>Student delivers low-intensity, socially rude or dismissive messages to adults or students.</Description>
-			</Value>
-			<Value>
 				<Code>DISRU</Code>
 				<Text xml:lang="en">Disruption</Text>
 				<Text xml:lang="mi">Tauwhati – Iti noa</Text>
@@ -1902,6 +1895,13 @@
 				<Text xml:lang="mi">Te whakamahi hē i te hangarau – Iti noa</Text>
 				<Description>Student engages in non-serious, but inappropriate (as defined by school) use of cell phone, pager, music/video players, camera, and/or computer.</Description>
 			</Value>
+			<Value>
+				<Code>DISRE</Code>
+				<Text xml:lang="en">Disrespect</Text>
+				<Text xml:lang="mi">Tōtōā – Iti noa</Text>
+				<EndDate>2020-04-09</EndDate>				
+				<Description>Student delivers low-intensity, socially rude or dismissive messages to adults or students.</Description>
+			</Value>
 		</Values>
   	</CodeSet>    <!-- Wellbeing Event Minor Behaviour -->
 
@@ -1930,25 +1930,11 @@
 					<Description>Student delivers a message of possible explosive materials being on-campus, near campus, and/or pending explosion.</Description>
 				</Value>
 				<Value>
-					<Code>BULLY</Code>
-					<Text xml:lang="en">Bullying</Text>
-					<Text xml:lang="mi">Te mahi poke – Nui rawa</Text>
-					<EndDate>2020-04-09</EndDate>
-					<Description>The delivery of direct or technology-based messages that involve intimidation, teasing, taunting, threats, or name calling.</Description>
-				</Value>
-				<Value>
 					<Code>DEFIA</Code>
 					<Text xml:lang="en">Defiance/Disrespect/Insubordination/Non-Compliance</Text>
 					<Text xml:lang="mi">Ātete/Kāre e whakarongo/Kāre e aro mai – Nui rawa</Text>
 					<Description>Student engages in refusal to follow directions or talks back.</Description>
 				</Value>    <!-- Defiance / Disrespect / Insubordination / Non-Compliance -->
-				<Value>
-					<Code>DISRE</Code>
-					<Text xml:lang="en">Disrespect</Text>
-					<Text xml:lang="mi">Tōtōā – Nui rawa</Text>
-					<EndDate>2020-04-09</EndDate>					
-					<Description>Student delivers socially rude or dismissive messages to adults or students.</Description>
-				</Value>
 				<Value>
 					<Code>DISRU</Code>
 					<Text xml:lang="en">Disruption</Text>
@@ -2074,6 +2060,20 @@
 					<Text xml:lang="en">Use/Possession of Weapons</Text>
 					<Text xml:lang="mi">Te kai/mau rākau riri – Nui rawa</Text>
 					<Description>Student is in possession of knives (greater than 6 in., less than 6 in.) and guns (real or look alike), or other objects readily capable of causing bodily harm.</Description>
+				</Value>
+				<Value>
+					<Code>BULLY</Code>
+					<Text xml:lang="en">Bullying</Text>
+					<Text xml:lang="mi">Te mahi poke – Nui rawa</Text>
+					<EndDate>2020-04-09</EndDate>
+					<Description>The delivery of direct or technology-based messages that involve intimidation, teasing, taunting, threats, or name calling.</Description>
+				</Value>
+				<Value>
+					<Code>DISRE</Code>
+					<Text xml:lang="en">Disrespect</Text>
+					<Text xml:lang="mi">Tōtōā – Nui rawa</Text>
+					<EndDate>2020-04-09</EndDate>					
+					<Description>Student delivers socially rude or dismissive messages to adults or students.</Description>
 				</Value>
 			</Values>
   	</CodeSet>    <!-- Wellbeing Event Major Behaviour -->

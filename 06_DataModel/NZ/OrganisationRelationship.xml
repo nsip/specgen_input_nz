@@ -55,7 +55,7 @@
     <Characteristics>M</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The SIF GUID for the source organisation in the relationship.</p>
+      <p>Code denoting the nature of the relationship between source and destination organisations.</p>
     </Description>
 	  <Type ref="CodeSets" name="NZCodeSetsOrganisationRelationshipTypeType"/>
   </Item>  <!-- RelationshipType -->

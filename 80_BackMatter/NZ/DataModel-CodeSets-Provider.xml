@@ -10,22 +10,6 @@
 		<ID>Operational Status</ID>
 		<Values>
 			<Value>
-				<Code>C</Code>
-				<Text>Closed</Text>
-				<EndDate>2020-05-08</EndDate>
-			</Value>	<!-- C - retired -->
-			<Value>
-				<Code>O</Code>
-				<Text>Open</Text>
-				<EndDate>2020-05-08</EndDate>
-			</Value>	<!-- O - retired -->
-			<Value>
-				<Code>P</Code>
-				<Text>Proposed</Text>
-				<EndDate>2020-05-08</EndDate>
-				<Description>SIF AU uses the term ‘Pending’</Description>
-			</Value>	<!-- P - retired -->
-			<Value>
 				<Code>28000</Code>
 				<Text>Proposed</Text>
 			</Value>	<!-- Proposed -->			
@@ -73,6 +57,22 @@
 				<Code>28011</Code>
 				<Text>Disestablished</Text>
 			</Value>	<!-- Disestablished -->			
+			<Value>
+				<Code>C</Code>
+				<Text>Closed</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>	<!-- C - retired -->
+			<Value>
+				<Code>O</Code>
+				<Text>Open</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>	<!-- O - retired -->
+			<Value>
+				<Code>P</Code>
+				<Text>Proposed</Text>
+				<EndDate>2020-05-08</EndDate>
+				<Description>SIF AU uses the term ‘Pending’</Description>
+			</Value>	<!-- P - retired -->
 		</Values>
 	</CodeSet>    <!-- Operational Status -->
 
@@ -223,67 +223,6 @@
 		<ID>Education Region</ID>
 		<Values>
 			<Value>
-				<Code>TAIT</Code>
-				<Text xml:lang="en">Tai Tokerau</Text>
-				<Text xml:lang="mi">Tai Tokerau</Text>
-				<EndDate>2020-05-18</EndDate>
-			</Value>    <!-- TAIK - retired -->
-			<Value>
-				<Code>AUCK</Code>
-				<Text xml:lang="en">Auckland</Text>
-				<Text xml:lang="mi">Tāmaki Makaurau</Text>
-				<EndDate>2020-05-18</EndDate>
-			</Value>    <!-- AUCK - retired -->
-			<Value>
-				<Code>WAIK</Code>
-				<Text xml:lang="en">Waikato</Text>
-				<Text xml:lang="mi">Waikato</Text>
-				<EndDate>2020-05-18</EndDate>
-			</Value>    <!-- WAIK - retired -->
-			<Value>
-				<Code>BOPW</Code>
-				<Text xml:lang="en">Bay of Plenty, Waiariki</Text>
-				<Text xml:lang="mi">Te Moana a Toitehuatahi, Waiariki</Text>
-				<EndDate>2020-05-18</EndDate>
-			</Value>    <!-- BOPW - retired -->
-			<Value>
-				<Code>HAWK</Code>
-				<Text xml:lang="en">Hawke's Bay, Tairāwhiti</Text>
-				<Text xml:lang="mi">Te Matau a Māui, Tairāwhiti</Text>
-				<EndDate>2020-05-18</EndDate>
-			</Value>    <!-- HAWK - retired -->
-			<Value>
-				<Code>TARA</Code>
-				<Text xml:lang="en">Taranaki, Whanganui, Manawatū</Text>
-				<Text xml:lang="mi">Taranaki, Whanganui, Manawatū</Text>
-				<EndDate>2020-05-18</EndDate>
-			</Value>    <!-- TARA - retired -->
-			<Value>
-				<Code>WELL</Code>
-				<Text xml:lang="en">Wellington</Text>
-				<Text xml:lang="mi">Te Whanganui a Tara</Text>
-				<EndDate>2020-05-18</EndDate>
-			</Value>    <!-- WELL - retired -->
-			<Value>
-				<Code>NELS</Code>
-				<Text xml:lang="en">Nelson, Marlborough, West Coast</Text>
-				<Text xml:lang="mi">Whakatū, Te Tau Ihu o te Waka-a-Māui, Te Tai Poutini</Text>
-				<EndDate>2020-05-18</EndDate>
-			</Value>    <!-- NELS - retired -->			
-			<Value>
-				<Code>CANT</Code>
-				<Text xml:lang="en">Canterbury, Chatham Islands</Text>
-				<Text xml:lang="mi">Waitaha, Wharekauri</Text>
-				<EndDate>2020-05-18</EndDate>
-			</Value>    <!-- CANT - retired -->
-			<Value>
-				<Code>OTAG</Code>
-				<Text xml:lang="en">Otago, Southland</Text>
-				<Text xml:lang="mi">Otākou, Murihiku</Text>
-				<EndDate>2020-05-18</EndDate>
-			</Value>    <!-- OTAG - retired -->
-
-			<Value>
 				<Code>12000</Code>
 				<Text xml:lang="en">Missing</Text>
 			</Value>    <!-- Missing -->
@@ -346,6 +285,66 @@
 				<Text xml:lang="en">Otago/Southland</Text>
 				<Text xml:lang="mi">Otākou/Murihiku</Text>
 			</Value>    <!-- Otago, Southland -->			
+			<Value>
+				<Code>TAIT</Code>
+				<Text xml:lang="en">Tai Tokerau</Text>
+				<Text xml:lang="mi">Tai Tokerau</Text>
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- TAIK - retired -->
+			<Value>
+				<Code>AUCK</Code>
+				<Text xml:lang="en">Auckland</Text>
+				<Text xml:lang="mi">Tāmaki Makaurau</Text>
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- AUCK - retired -->
+			<Value>
+				<Code>WAIK</Code>
+				<Text xml:lang="en">Waikato</Text>
+				<Text xml:lang="mi">Waikato</Text>
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- WAIK - retired -->
+			<Value>
+				<Code>BOPW</Code>
+				<Text xml:lang="en">Bay of Plenty, Waiariki</Text>
+				<Text xml:lang="mi">Te Moana a Toitehuatahi, Waiariki</Text>
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- BOPW - retired -->
+			<Value>
+				<Code>HAWK</Code>
+				<Text xml:lang="en">Hawke's Bay, Tairāwhiti</Text>
+				<Text xml:lang="mi">Te Matau a Māui, Tairāwhiti</Text>
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- HAWK - retired -->
+			<Value>
+				<Code>TARA</Code>
+				<Text xml:lang="en">Taranaki, Whanganui, Manawatū</Text>
+				<Text xml:lang="mi">Taranaki, Whanganui, Manawatū</Text>
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- TARA - retired -->
+			<Value>
+				<Code>WELL</Code>
+				<Text xml:lang="en">Wellington</Text>
+				<Text xml:lang="mi">Te Whanganui a Tara</Text>
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- WELL - retired -->
+			<Value>
+				<Code>NELS</Code>
+				<Text xml:lang="en">Nelson, Marlborough, West Coast</Text>
+				<Text xml:lang="mi">Whakatū, Te Tau Ihu o te Waka-a-Māui, Te Tai Poutini</Text>
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- NELS - retired -->			
+			<Value>
+				<Code>CANT</Code>
+				<Text xml:lang="en">Canterbury, Chatham Islands</Text>
+				<Text xml:lang="mi">Waitaha, Wharekauri</Text>
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- CANT - retired -->
+			<Value>
+				<Code>OTAG</Code>
+				<Text xml:lang="en">Otago, Southland</Text>
+				<Text xml:lang="mi">Otākou, Murihiku</Text>
+				<EndDate>2020-05-18</EndDate>
+			</Value>    <!-- OTAG - retired -->
 		</Values>
 	</CodeSet>    <!-- Education Region -->
 
@@ -361,16 +360,6 @@
 				<Text xml:lang="mi">Tai Tokerau</Text>	
 			</Value>    <!-- Tai Tokerau -->
 			<Value>
-				<Code>182001</Code>
-				<Text xml:lang="en">North West</Text>
-				<EndDate>2020-05-08</EndDate>
-			</Value>    <!-- North West  -->
-			<Value>
-				<Code>182002</Code>
-				<Text xml:lang="en">Manukau</Text>
-				<EndDate>2020-05-08</EndDate>
-			</Value>    <!-- Manukau -->			
-			<Value>
 				<Code>182003</Code>
 				<Text xml:lang="en">Auckland</Text>
 				<Text xml:lang="mi">Tāmaki Makaurau</Text>				
@@ -381,31 +370,15 @@
 				<Text xml:lang="mi">Waikato</Text>				
 			</Value>    <!-- Waikato -->
 			<Value>
-				<Code>182005</Code>
-				<Text xml:lang="en">Bay of Plenty West</Text>
-				<EndDate>2020-05-08</EndDate>
-			</Value>    <!-- Bay of Plenty West -->			
-			<Value>
 				<Code>182006</Code>
 				<Text xml:lang="en">Bay of Plenty, Waiariki</Text>
 				<Text xml:lang="mi">Te Moana a Toitehuatahi, Waiariki</Text>				
 			</Value>    <!-- Bay of Plenty, Waiariki -->
 			<Value>
-				<Code>182007</Code>
-				<Text xml:lang="en">Gisborne</Text>
-				<EndDate>2020-05-08</EndDate>
-			</Value>    <!-- Gisborne -->			
-			<Value>
 				<Code>182008</Code>
 				<Text xml:lang="en">Hawke's Bay, Tairāwhiti</Text>
 				<Text xml:lang="mi">Te Matau a Māui, Tairāwhiti</Text>				
 			</Value>    <!-- Hawke's Bay, Tairāwhiti -->
-			<Value>
-				<Code>182009</Code>
-				<Text xml:lang="en">Taranaki</Text>
-				<Text xml:lang="mi">Taranaki</Text>
-				<EndDate>2020-05-08</EndDate>
-			</Value>    <!-- Taranaki -->			
 			<Value>
 				<Code>182010</Code>
 				<Text xml:lang="en">Taranaki, Whanganui, Manawatū</Text>
@@ -431,6 +404,32 @@
 				<Text xml:lang="en">Otago, Southland</Text>
 				<Text xml:lang="mi">Otākou, Murihiku</Text>				
 			</Value>    <!-- Otago, Southland -->
+			<Value>
+				<Code>182001</Code>
+				<Text xml:lang="en">North West</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- North West  -->
+			<Value>
+				<Code>182002</Code>
+				<Text xml:lang="en">Manukau</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Manukau -->
+			<Value>
+				<Code>182005</Code>
+				<Text xml:lang="en">Bay of Plenty West</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Bay of Plenty West -->
+			<Value>
+				<Code>182007</Code>
+				<Text xml:lang="en">Gisborne</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Gisborne -->			
+			<Value>
+				<Code>182009</Code>
+				<Text xml:lang="en">Taranaki</Text>
+				<Text xml:lang="mi">Taranaki</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Taranaki -->			
 			<Value>
 				<Code>182015</Code>
 				<Text xml:lang="en">Southland</Text>
@@ -1112,6 +1111,18 @@
 		<ID>Schooling Gender</ID>
 		<Values>
 			<Value>
+				<Code>55002</Code>
+				<Text>Both Girls and Boys</Text>
+			</Value>    <!--  CoEd -->
+			<Value>
+				<Code>55000</Code>
+				<Text>Girls Only</Text>
+			</Value>    <!-- Female -->
+			<Value>
+				<Code>55001</Code>
+				<Text>Boys Only</Text>
+			</Value>    <!-- Male -->
+			<Value>
 				<Code>C</Code>
 				<Text>Both Girls and Boys</Text>
 				<EndDate>2020-05-08</EndDate>
@@ -1126,18 +1137,6 @@
 				<Text>Boys Only</Text>
 				<EndDate>2020-05-08</EndDate>
 			</Value>    <!-- Male - retired -->
-			<Value>
-				<Code>55002</Code>
-				<Text>Both Girls and Boys</Text>
-			</Value>    <!--  CoEd -->
-			<Value>
-				<Code>55000</Code>
-				<Text>Girls Only</Text>
-			</Value>    <!-- Female -->
-			<Value>
-				<Code>55001</Code>
-				<Text>Boys Only</Text>
-			</Value>    <!-- Male -->
 		</Values>
 	</CodeSet>    <!-- Schooling Gender -->
 
@@ -1210,25 +1209,6 @@
 				</Description>
 			</Value>	<!-- Contributor and Receiver -->
 			<Value>
-				<Code>TPU</Code>
-				<Text>Teen Parent Unit</Text>
-				<Description>
-					Source Provider is a Teen Parent Unit which is operated as part of the related Provider. Learners
-					who are also parents attend classes at both the Teen Parent Unit and the host school.
-				</Description>
-				<EndDate>2020-05-08</EndDate>
-			</Value>    <!-- Teen Parent Unit -->
-			<Value>
-				<Code>ACE</Code>
-				<Text>Activity Centre</Text>
-				<Description>
-					Source Provider is an Activity Centre which is operated as part of the related Provider. Learners
-					who have been identified as being at risk of disengaging from mainstream Schooling attend classes
-					at both the Activity Centre and the host school.
-				</Description>
-				<EndDate>2020-05-08</EndDate>
-			</Value>    <!-- Activity Centre -->
-			<Value>
 				<Code>LOF</Code>
 				<Text>Local Office and Organisation</Text>
 			</Value>    <!-- MoE Local Office and Organisation -->
@@ -1265,6 +1245,25 @@
 				<Code>34031</Code>
 				<Text xml:lang="en">School RTLB Cluster Member</Text>
 			</Value>    <!-- RTLB Cluster Member -->			
+			<Value>
+				<Code>TPU</Code>
+				<Text>Teen Parent Unit</Text>
+				<Description>
+					Source Provider is a Teen Parent Unit which is operated as part of the related Provider. Learners
+					who are also parents attend classes at both the Teen Parent Unit and the host school.
+				</Description>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Teen Parent Unit -->
+			<Value>
+				<Code>ACE</Code>
+				<Text>Activity Centre</Text>
+				<Description>
+					Source Provider is an Activity Centre which is operated as part of the related Provider. Learners
+					who have been identified as being at risk of disengaging from mainstream Schooling attend classes
+					at both the Activity Centre and the host school.
+				</Description>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Activity Centre -->
 		</Values>
 	</CodeSet>    <!-- Organisation Relationship Type -->
 	
