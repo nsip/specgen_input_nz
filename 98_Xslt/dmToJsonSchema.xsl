@@ -13,7 +13,6 @@
 	<!-- Shorthand to get a quote character into the output -->
 	<xsl:variable name="q"><xsl:text>"</xsl:text></xsl:variable>
 
-
 	<!-- ....and off we go -->
 	<xsl:template match="/specgen:SIFSpecification">
 		<xsl:value-of select="concat( '# &#x0a;',
@@ -989,6 +988,10 @@
 				<xsl:apply-templates select="specgen:Value" mode="enum">
 					<xsl:with-param name="indent" select="$indent"/>
 				</xsl:apply-templates>
+				<xsl:value-of select="concat($indent, 'x-docs:&#x0a;')"/>
+				<xsl:apply-templates select="specgen:Value" mode="enumDocs">
+					<xsl:with-param name="indent" select="$indent"/>
+				</xsl:apply-templates>				
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of select="concat($indent, 'oneOf:&#x0a;')"/>
@@ -1002,6 +1005,18 @@
 	<xsl:template match="specgen:Value" mode="enum">
 		<xsl:param name="indent"/>
 		<xsl:value-of select="concat($indent, '- ', $q, specgen:Code, $q, '&#x0a;')"/>
+	</xsl:template>
+
+	<xsl:template match="specgen:Value" mode="enumDocs">
+		<xsl:param name="indent"/>
+		<xsl:value-of select="concat($indent, '- code: ', specgen:Code, '&#x0a;')"/>
+		<xsl:apply-templates select="specgen:Text" mode="enumDocs">
+			<xsl:with-param name="indent" select="$indent"/>
+		</xsl:apply-templates>
+
+		<xsl:apply-templates select="specgen:Description" mode="enum">
+			<xsl:with-param name="indent" select="$indent"/>
+		</xsl:apply-templates>
 	</xsl:template>
 
 	<xsl:template match="specgen:Value" mode="oneof">
@@ -1068,6 +1083,43 @@
 				<xsl:text>&#x0a;</xsl:text>
 			</xsl:otherwise>
 		</xsl:choose>
+	</xsl:template>
+
+	<!-- Enumeration doesn't have multiple languages; clean-up title for use in code-generators -->
+	<xsl:template match="specgen:Text" mode="enumDocs">
+		<xsl:param name="indent"/>
+
+		<xsl:value-of select="concat($indent, '  title: ')"/>
+		<xsl:variable name="text"><xsl:apply-templates/></xsl:variable>
+		<xsl:if test="contains($text, ':')"><xsl:text>"</xsl:text></xsl:if>
+		<xsl:value-of select="normalize-space($text)"/>
+		<xsl:if test="contains($text, ':')"><xsl:text>"</xsl:text></xsl:if>
+		<xsl:text>&#x0a;</xsl:text>
+
+		<xsl:value-of select="concat($indent, '  titleNoSpace: ')"/>
+		<xsl:variable name="text"><xsl:apply-templates/></xsl:variable>
+		<xsl:value-of select="translate(normalize-space(translate(translate($text, &quot;'&quot;, ''),'$q:-#()/.,', '')), ' ', '_')"/>
+		<xsl:text>&#x0a;</xsl:text>
+	</xsl:template>
+
+	<!-- Enumeration has multiple languages; clean-up title for use in code-generators -->
+	<xsl:template match="specgen:Text[@xml:lang]" mode="enumDocs">
+		<xsl:param name="indent"/>
+
+		<xsl:variable name="text"><xsl:apply-templates/></xsl:variable>
+
+		<!-- Only use the english translation -->
+		<xsl:if test="@xml:lang eq 'en'">
+			<xsl:value-of select="concat($indent, '  title: ')"/>
+			<xsl:if test="contains($text, ':')"><xsl:text>"</xsl:text></xsl:if>
+			<xsl:value-of select="normalize-space($text)"/>
+			<xsl:if test="contains($text, ':')"><xsl:text>"</xsl:text></xsl:if>
+			<xsl:text>&#x0a;</xsl:text>
+
+			<xsl:value-of select="concat($indent, '  titleNoSpace: ')"/>
+			<xsl:value-of select="translate(normalize-space(translate(translate($text, &quot;'&quot;, ''),'$q:-#()/.,', '')), ' ', '_')"/>
+			<xsl:text>&#x0a;</xsl:text>
+		</xsl:if>
 	</xsl:template>
 
 	<!-- Enumeration description doesn't have multiple languages -->
