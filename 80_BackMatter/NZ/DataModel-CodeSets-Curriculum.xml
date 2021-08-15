@@ -825,6 +825,7 @@
 			<Value>
 				<Code>DE</Code>
 				<Text>3D Design</Text>
+				<Enum>Three_D_Design</Enum>
 			</Value>
 			<Value>
 				<Code>MM</Code>

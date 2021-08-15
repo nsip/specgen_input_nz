@@ -1010,9 +1010,20 @@
 	<xsl:template match="specgen:Value" mode="enumDocs">
 		<xsl:param name="indent"/>
 		<xsl:value-of select="concat($indent, '- code: ', specgen:Code, '&#x0a;')"/>
-		<xsl:apply-templates select="specgen:Text" mode="enumDocs">
-			<xsl:with-param name="indent" select="$indent"/>
-		</xsl:apply-templates>
+
+		<xsl:choose>
+			<xsl:when test="specgen:Enum">
+				<xsl:apply-templates select="specgen:Text" mode="enum">
+					<xsl:with-param name="indent" select="$indent"/>
+				</xsl:apply-templates>
+				<xsl:value-of select="concat($indent, '  titleNoSpace: ', specgen:Enum, '&#x0a;')"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:apply-templates select="specgen:Text" mode="enumDocs">
+					<xsl:with-param name="indent" select="$indent"/>
+				</xsl:apply-templates>
+			</xsl:otherwise>
+		</xsl:choose>
 
 		<xsl:apply-templates select="specgen:Description" mode="enum">
 			<xsl:with-param name="indent" select="$indent"/>
@@ -1098,7 +1109,7 @@
 
 		<xsl:value-of select="concat($indent, '  titleNoSpace: ')"/>
 		<xsl:variable name="text"><xsl:apply-templates/></xsl:variable>
-		<xsl:value-of select="translate(normalize-space(translate(translate($text, &quot;'&quot;, ''),'$q:-#()/.,', '')), ' ', '_')"/>
+		<xsl:value-of select="translate(normalize-space(translate(translate($text, &quot;'&quot;, ''),'’$q:-–#|()/.,', '')), ' ', '_')"/>
 		<xsl:text>&#x0a;</xsl:text>
 	</xsl:template>
 
@@ -1117,7 +1128,7 @@
 			<xsl:text>&#x0a;</xsl:text>
 
 			<xsl:value-of select="concat($indent, '  titleNoSpace: ')"/>
-			<xsl:value-of select="translate(normalize-space(translate(translate($text, &quot;'&quot;, ''),'$q:-#()/.,', '')), ' ', '_')"/>
+			<xsl:value-of select="translate(normalize-space(translate(translate($text, &quot;'&quot;, ''),'’$q:-–#|()/.,', '')), ' ', '_')"/>
 			<xsl:text>&#x0a;</xsl:text>
 		</xsl:if>
 	</xsl:template>

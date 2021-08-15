@@ -217,6 +217,7 @@
 			<Value>
 				<Code>DAY</Code>
 				<Text>28 Day Waiver</Text>
+				<Enum>Waiver_28_Day</Enum>
 			</Value>
 			<Value>
 				<Code>EXT</Code>
@@ -660,6 +661,7 @@
 				<Code>1</Code>
 				<Text xml:lang="en">81-100%</Text>
 				<Text xml:lang="mi">81-100%</Text>
+				<Enum>Level1_81_to_100_percent</Enum>
 				<Description xml:lang="en">
 					Student is taught in the specified language for more than 20  and up to 25 hrs per week (81-100% of total time).
 				</Description>
@@ -671,6 +673,7 @@
 				<Code>2</Code>
 				<Text xml:lang="en">51-80%</Text>
 				<Text xml:lang="mi">51-80%</Text>
+				<Enum>Level2_51_to_80_percent</Enum>
 				<Description xml:lang="en">
 					Student is taught in the specified language for more than 12.5  and up to 20 hrs per week (51-80% of total time).
 				</Description>
@@ -682,6 +685,7 @@
 				<Code>3</Code>
 				<Text xml:lang="en">31-50%</Text>
 				<Text xml:lang="mi">31-50%</Text>
+				<Enum>Level3_31_to_50_percent</Enum>
 				<Description xml:lang="en">
 					Student is taught in the specified language for more than 7.5  and up to 12.5 hrs per week (31-50% of total time).
 				</Description>
@@ -693,6 +697,7 @@
 				<Code>4a</Code>
 				<Text xml:lang="en">12-30%</Text>
 				<Text xml:lang="mi">12-30%</Text>
+				<Enum>Level4a_12_to_30_percent</Enum>
 				<Description xml:lang="en">
 					Student is taught in the specified language for more than 3 and up to 7.5 hrs per week (12-30% of total time).
 				</Description>
@@ -704,6 +709,7 @@
 				<Code>4b</Code>
 				<Text xml:lang="en">3 hours per week</Text>
 				<Text xml:lang="mi">3 hāora i te wiki</Text>
+				<Enum>Level4b_3_hours_per_week</Enum>
 				<Description xml:lang="en">
 					Student is taught in the specified language for 3 hrs per week.
 				</Description>
@@ -715,6 +721,7 @@
 				<Code>5</Code>
 				<Text xml:lang="en">&lt; 3 hours per week</Text>
 				<Text xml:lang="mi">iti iho 3 hāora i te wiki</Text>
+				<Enum>Level5_less_than_3_hours_per_week</Enum>
 				<Description xml:lang="en">
 					Student is taught in the specified language for less than 3 hours per week or as a separate subject (0-11% of total time).
 				</Description>
@@ -726,6 +733,7 @@
 				<Code>6</Code>
 				<Text xml:lang="en">Taha Māori</Text>
 				<Text xml:lang="mi">Taha Māori</Text>
+				<Enum>Level6_Taha_Māori</Enum>
 				<Description xml:lang="en">Student is learning Taha Māori.</Description>
 				<Description xml:lang="mi">E ako ana te Akonga i te Taha Māori.</Description>
 			</Value>
@@ -742,36 +750,43 @@
 				<Code>ABF</Code>
 				<Text xml:lang="en">5 years and above</Text>
 				<Text xml:lang="mi">5 te pakeke neke atu</Text>
+				<Enum>Level_5plus</Enum>
 			</Value>
 			<Value>
 				<Code>FIV</Code>
 				<Text xml:lang="en">5 year old</Text>
 				<Text xml:lang="mi">5 te pakeke</Text>
+				<Enum>Level_5yo</Enum>
 			</Value>
 			<Value>
 				<Code>FOU</Code>
 				<Text xml:lang="en">4 year old</Text>
 				<Text xml:lang="mi">4 te pakeke</Text>
-			</Value>
-			<Value>
-				<Code>ONE</Code>
-				<Text xml:lang="en">1 year old</Text>
-				<Text xml:lang="mi">1 te pakeke</Text>
+				<Enum>Level_4yo</Enum>
 			</Value>
 			<Value>
 				<Code>THR</Code>
 				<Text xml:lang="en">3 year old</Text>
 				<Text xml:lang="mi">3 te pakeke</Text>
+				<Enum>Level_3yo</Enum>
 			</Value>
 			<Value>
 				<Code>TWO</Code>
 				<Text xml:lang="en">2 year old</Text>
 				<Text xml:lang="mi">2 te pakeke</Text>
+				<Enum>Level_2yo</Enum>
+			</Value>
+			<Value>
+				<Code>ONE</Code>
+				<Text xml:lang="en">1 year old</Text>
+				<Text xml:lang="mi">1 te pakeke</Text>
+				<Enum>Level_1yo</Enum>
 			</Value>
 			<Value>
 				<Code>UNK</Code>
 				<Text xml:lang="en">Unknown</Text>
 				<Text xml:lang="mi">Kāre i mōhiotia</Text>
+				<Enum>Level_Unknown</Enum>
 			</Value>
 			<Value>
 				<Code>ZER</Code>
