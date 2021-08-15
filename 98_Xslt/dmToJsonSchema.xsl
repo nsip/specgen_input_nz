@@ -1017,9 +1017,15 @@
 					<xsl:with-param name="indent" select="$indent"/>
 				</xsl:apply-templates>
 				<xsl:value-of select="concat($indent, '  titleNoSpace: ', specgen:Enum, '&#x0a;')"/>
+				<xsl:apply-templates select="specgen:EndDate" mode="enumDocs">
+					<xsl:with-param name="indent" select="$indent"/>
+				</xsl:apply-templates>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:apply-templates select="specgen:Text" mode="enumDocs">
+					<xsl:with-param name="indent" select="$indent"/>
+				</xsl:apply-templates>
+				<xsl:apply-templates select="specgen:EndDate" mode="enumDocs">
 					<xsl:with-param name="indent" select="$indent"/>
 				</xsl:apply-templates>
 			</xsl:otherwise>
@@ -1094,6 +1100,12 @@
 				<xsl:text>&#x0a;</xsl:text>
 			</xsl:otherwise>
 		</xsl:choose>
+	</xsl:template>
+
+	<!-- Enumeration value is expired  -->
+	<xsl:template match="specgen:EndDate" mode="enumDocs">
+		<xsl:param name="indent"/>
+		<xsl:value-of select="concat($indent, '  expired: true&#x0a;')"/>
 	</xsl:template>
 
 	<!-- Enumeration doesn't have multiple languages; clean-up title for use in code-generators -->
