@@ -242,6 +242,7 @@
 				<Code>MDC-OTH</Code>
 				<Text xml:lang="en">Other</Text>
 				<Text xml:lang="mi">Mate Kē Atu</Text>
+				<Enum>MedicalConditionOther</Enum>
 			</Value>
 		</Values>
 	</CodeSet>	  <!-- Wellbeing Characteristic Category -->

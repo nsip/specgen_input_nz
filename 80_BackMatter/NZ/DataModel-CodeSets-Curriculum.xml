@@ -1065,7 +1065,11 @@
 			<Value><Code>351</Code><Text>Music</Text></Value>
 			<Value><Code>352</Code><Text>Dance</Text></Value>
 			<Value><Code>354</Code><Text>Stevedoring and Ports Industry</Text></Value>
-			<Value><Code>355</Code><Text>Māori Business and Management</Text></Value>
+			<Value>
+				<Code>355</Code>
+				<Text>Māori Business and Management</Text>
+				<Enum>MāoriBusinessAndManagement_355</Enum>
+			</Value>
 			<Value><Code>356</Code><Text>Furniture</Text></Value>
 			<Value><Code>357</Code><Text>Fire and Rescue Services</Text></Value>
 			<Value><Code>358</Code><Text>Supported Learning</Text></Value>
@@ -1106,7 +1110,11 @@
 			<Value><Code>407</Code><Text>Logistics</Text></Value>
 			<Value><Code>408</Code><Text>Retail, Distribution, and Sales</Text></Value>
 			<Value><Code>410</Code><Text>Reo Māori Media</Text></Value>
-			<Value><Code>411</Code><Text>Māori Business and Management</Text></Value>
+			<Value>
+				<Code>411</Code>
+				<Text>Māori Business and Management</Text>
+				<Enum>MāoriBusinessAndManagement_411</Enum>
+			</Value>
 			<Value><Code>412</Code><Text>Electronic Engineering</Text></Value>
 			<Value><Code>413</Code><Text>Coatings, Inks, and Adhesives</Text></Value>
 			<Value><Code>414</Code><Text>Environment Māori</Text></Value>
