@@ -1,8 +1,7 @@
-<IncludeGroup
-	xmlns:xi="http://www.w3.org/2001/XInclude"
+<IncludeGroup xmlns:xi="http://www.w3.org/2001/XInclude"
 	xmlns:xml="http://www.w3.org/XML/1998/namespace"
- 	xmlns="http://sifassociation.org/SpecGen">
-	
+	xmlns="http://sifassociation.org/SpecGen">
+
 	<CodeSet>
 		<Intro>
 			<p>A standardised method of describing the personal relationship between two persons.
@@ -124,7 +123,7 @@
 			<Value>
 				<Code>GDP</Code>
 				<Text xml:lang="en">Godparent</Text>
-			</Value>												
+			</Value>
 			<Value>
 				<Code>HOF</Code>
 				<Text xml:lang="en">Host Father</Text>
@@ -166,7 +165,7 @@
 				<Text xml:lang="en">Truancy Officer</Text>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Relationship to Student -->
+	</CodeSet>	<!-- Relationship to Student -->
 
 	<CodeSet>
 		<Intro>
@@ -177,10 +176,16 @@
 		</Intro>
 		<ID>Student Contact Relationship Status</ID>
 		<Values>
-			<Value><Code>A</Code><Text>Active</Text></Value>
-			<Value><Code>I</Code><Text>Inactive</Text></Value>
+			<Value>
+				<Code>A</Code>
+				<Text>Active</Text>
+			</Value>
+			<Value>
+				<Code>I</Code>
+				<Text>Inactive</Text>
+			</Value>
 		</Values>
-	</CodeSet>    <!-- Student Contact Relationship Status -->
+	</CodeSet>	<!-- Student Contact Relationship Status -->
 
 	<CodeSet>
 		<Intro>
@@ -199,27 +204,27 @@
 					<p>Only usage type applicable for student name usage (other types
 					 are not supported by NSI).</p>
 				</Description>
-			</Value>    <!-- PRF -->
-      		<Value>
+			</Value>			<!-- PRF -->
+			<Value>
 				<Code>FON</Code>
 				<Text>Foreign Official Name</Text>
 				<Description>
 					<p>Included for future usage in NZ, especially for tertiary students.</p>
 				</Description>
-			</Value>    <!-- FON -->
+			</Value>			<!-- FON -->
 			<Value>
 				<Code>PRV</Code>
 				<Text>Previous name</Text>
-			</Value>    <!-- PRV -->			
+			</Value>			<!-- PRV -->
 			<Value>
 				<Code>AKA</Code>
 				<Text>Also Known As</Text>
 				<Description>AKA or Alias</Description>
-			</Value>    <!-- AKA -->
+			</Value>			<!-- AKA -->
 			<Value>
 				<Code>BTH</Code>
 				<Text>Name at Birth</Text>
-			</Value>    <!-- BTH -->
+			</Value>			<!-- BTH -->
 			<Value>
 				<Code>LGL</Code>
 				<Text>Legal Name</Text>
@@ -227,16 +232,17 @@
 					<p>Legal Name or Official Name as defined by the organisation which collects it 
 						(legal name is not defined in this standard)</p>
 				</Description>
-			</Value>    <!-- LGL -->
+			</Value>			<!-- LGL -->
 		</Values>
-	</CodeSet>    <!-- Name Usage Type -->
+	</CodeSet>	<!-- Name Usage Type -->
 
 	<!-- Defined by NZ - Student & Contact Demographics -->
 	<CodeSet>
 		<Intro>
 			<p>A Person may identify as having a Gender (or Gender Identity). Biological sex and sexual
 				orientation are related but different concepts.
-			Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/LfWjOFK1NqtZCv5i">Statistics NZ Standard for Gender Identity</a></p>
+			Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/LfWjOFK1NqtZCv5i">Statistics NZ Standard for Gender Identity</a>
+			</p>
 		</Intro>
 		<ID>Gender</ID>
 		<Values>
@@ -245,37 +251,37 @@
 				<Code>1</Code>
 				<Text xml:lang="en">Male</Text>
 				<Text xml:lang="mi">Tāne</Text>
-			</Value>  <!-- Male -->
+			</Value>			<!-- Male -->
 			<Value>
 				<Code>2</Code>
 				<Text xml:lang="en">Female</Text>
 				<Text xml:lang="mi">Wahine</Text>
-			</Value>  <!-- Female -->
+			</Value>			<!-- Female -->
 			<Value>
 				<Code>3</Code>
 				<Text xml:lang="en">Gender Diverse</Text>
 				<Text xml:lang="mi">Ira tāngata kōwhiri kore</Text>
 				<Description>But not further defined</Description>
-			</Value>  <!-- Gender Diverse -->
+			</Value>			<!-- Gender Diverse -->
 			<Value>
 				<Code>31</Code>
 				<Text xml:lang="en">Transgender Male to Female</Text>
 				<Text xml:lang="mi">Whakawahine</Text>
 				<Description>Can be rolled up to 3:Gender Diverse</Description>
-			</Value>  <!-- MTF -->
+			</Value>			<!-- MTF -->
 			<Value>
 				<Code>32</Code>
 				<Text xml:lang="en">Transgender Female to Male</Text>
 				<Text xml:lang="mi">Tangata ira tāne</Text>
 				<Description>Can be rolled up to 3:Gender Diverse</Description>
-			</Value>  <!-- FTM -->
+			</Value>			<!-- FTM -->
 			<Value>
 				<Code>9</Code>
 				<Text xml:lang="en">Not Willing to Disclose</Text>
 				<Text xml:lang="mi">Kāre e taea te Whakaatu</Text>
-			</Value>  <!-- Not Willing to Disclose -->
+			</Value>			<!-- Not Willing to Disclose -->
 		</Values>
-	</CodeSet>    <!-- Gender -->
+	</CodeSet>	<!-- Gender -->
 	<CodeSet>
 		<Intro>
 			<p>The citizenship or residency status of a person,
@@ -309,7 +315,7 @@
 				<Text>Not provided</Text>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Citizenship Status -->
+	</CodeSet>	<!-- Citizenship Status -->
 	<CodeSet>
 		<Intro>
 			<p>Records the source of the identity or eligibility verification, that has been made.
@@ -322,7 +328,7 @@
 				<Code>NZBIR</Code>
 				<Text>NZ Birth Certificate</Text>
 				<Description>Applies if the child was born before 1 Jan 2006</Description>
-			</Value>  <!-- NZ Birth Certificate -->
+			</Value>			<!-- NZ Birth Certificate -->
 			<Value>
 				<Code>NZBCO</Code>
 				<Text>NZ Birth Certificate (with confirmation of NZ Citizen by birth)</Text>
@@ -350,15 +356,15 @@
 			<Value>
 				<Code>CENAT</Code>
 				<Text>Certification of Naturalisation (COK, TKL, NIU)</Text>
-			</Value>			
+			</Value>
 			<Value>
 				<Code>CAREG</Code>
 				<Text>Certification of Registration (COK, TKL, NIU)</Text>
-			</Value>			
+			</Value>
 			<Value>
 				<Code>LETCO</Code>
 				<Text>Letter of Confirmation (COK, TKL, NIU)</Text>
-			</Value>			
+			</Value>
 			<Value>
 				<Code>OTHPA</Code>
 				<Text>Other Passport with NZ residence class Visa</Text>
@@ -386,7 +392,7 @@
 				<Text>MoE Approval</Text>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Verification Source -->
+	</CodeSet>	<!-- Verification Source -->
 	<CodeSet>
 		<Intro>
 			<p>A standardised method of describing the usage of a language by a person, 
@@ -408,291 +414,1606 @@
 				<Code>SH</Code>
 				<Text xml:lang="en">Spoken At Home</Text>
 				<Text xml:lang="mi">Reo Kāinga</Text>
-			</Value>			 
+			</Value>
 		</Values>
-	</CodeSet>    <!-- Language Usage Type -->
-  	<CodeSet>
+	</CodeSet>	<!-- Language Usage Type -->
+	<CodeSet>
 		<Intro>
 			<p>Language refers to recognised human communication systems, typically oral and/or written.
-				Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/CARS3211">Statistics NZ - Language Standard Classification 1999 v2.0.0</a></p>
+				Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/CARS3211">Statistics NZ - Language Standard Classification 1999 v2.0.0</a>
+			</p>
 		</Intro>
 		<ID>Language</ID>
 		<Values>
-			<Value><Code>NZS01</Code><Text xml:lang="en">Germanic</Text></Value>
-			<Value><Code>NZS011</Code><Text xml:lang="en">West Germanic</Text></Value>
-			<Value><Code>NZS01100</Code><Text xml:lang="en">West Germanic not further defined</Text></Value>
-			<Value><Code>NZS01110</Code><Text xml:lang="en">Afrikaans</Text></Value>
-			<Value><Code>NZS01111</Code><Text xml:lang="en">Dutch</Text></Value>
+			<Value>
+				<Code>NZS01</Code>
+				<Text xml:lang="en">Germanic</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS011</Code>
+				<Text xml:lang="en">West Germanic</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS01100</Code>
+				<Text xml:lang="en">West Germanic not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS01110</Code>
+				<Text xml:lang="en">Afrikaans</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS01111</Code>
+				<Text xml:lang="en">Dutch</Text>
+				<Level>3</Level>
+			</Value>
+
 			<Value>
 				<Code>NZS01112</Code>
 				<Text xml:lang="en">English</Text>
 				<Text xml:lang="mi">Pākehā</Text>
+				<Level>3</Level>
 			</Value>
-			<Value><Code>NZS01113</Code><Text xml:lang="en">German</Text></Value>
-			<Value><Code>NZS01114</Code><Text xml:lang="en">Friesian</Text></Value>
-			<Value><Code>NZS01115</Code><Text xml:lang="en">Yiddish</Text></Value>
-			<Value><Code>NZS01116</Code><Text xml:lang="en">Scots</Text></Value>
-			<Value><Code>NZS01199</Code><Text xml:lang="en">West Germanic not elsewhere classified</Text></Value>
-			<Value><Code>NZS012</Code><Text xml:lang="en">North Germanic</Text></Value>
-			<Value><Code>NZS01200</Code><Text xml:lang="en">North Germanic not further defined</Text></Value>
-			<Value><Code>NZS01210</Code><Text xml:lang="en">Danish</Text></Value>
-			<Value><Code>NZS01211</Code><Text xml:lang="en">Norwegian</Text></Value>
-			<Value><Code>NZS01212</Code><Text xml:lang="en">Swedish</Text></Value>
-			<Value><Code>NZS01213</Code><Text xml:lang="en">Icelandic</Text></Value>
-			<Value><Code>NZS01299</Code><Text xml:lang="en">North Germanic not elsewhere classified</Text></Value>
-			<Value><Code>NZS02</Code><Text xml:lang="en">Romance</Text></Value>
-			<Value><Code>NZS021</Code><Text xml:lang="en">Romance</Text></Value>
-			<Value><Code>NZS02100</Code><Text xml:lang="en">Romance not further defined</Text></Value>
-			<Value><Code>NZS02110</Code><Text xml:lang="en">French</Text></Value>
-			<Value><Code>NZS02111</Code><Text xml:lang="en">Catalan</Text></Value>
-			<Value><Code>NZS02112</Code><Text xml:lang="en">Portuguese</Text></Value>
-			<Value><Code>NZS02113</Code><Text xml:lang="en">Spanish</Text></Value>
-			<Value><Code>NZS02114</Code><Text xml:lang="en">Italian</Text></Value>
-			<Value><Code>NZS02115</Code><Text xml:lang="en">Romanian</Text></Value>
-			<Value><Code>NZS02199</Code><Text xml:lang="en">Romance not elsewhere classified</Text></Value>
-			<Value><Code>NZS03</Code><Text xml:lang="en">Greek</Text></Value>
-			<Value><Code>NZS031</Code><Text xml:lang="en">Greek</Text></Value>
-			<Value><Code>NZS03110</Code><Text xml:lang="en">Greek</Text></Value>
-			<Value><Code>NZS04</Code><Text xml:lang="en">Balto-Slavic</Text></Value>
-			<Value><Code>NZS041</Code><Text xml:lang="en">Baltic</Text></Value>
-			<Value><Code>NZS04100</Code><Text xml:lang="en">Baltic not further defined</Text></Value>
-			<Value><Code>NZS04110</Code><Text xml:lang="en">Latvian</Text></Value>
-			<Value><Code>NZS04111</Code><Text xml:lang="en">Lithuanian</Text></Value>
-			<Value><Code>NZS04199</Code><Text xml:lang="en">Baltic not elsewhere classified</Text></Value>
-			<Value><Code>NZS042</Code><Text xml:lang="en">Slavic</Text></Value>
-			<Value><Code>NZS04200</Code><Text xml:lang="en">Slavic not further defined</Text></Value>
-			<Value><Code>NZS04210</Code><Text xml:lang="en">Belorussian</Text></Value>
-			<Value><Code>NZS04211</Code><Text xml:lang="en">Russian</Text></Value>
-			<Value><Code>NZS04212</Code><Text xml:lang="en">Ukrainian</Text></Value>
-			<Value><Code>NZS04213</Code><Text xml:lang="en">Bulgarian</Text></Value>
-			<Value><Code>NZS04214</Code><Text xml:lang="en">Macedonian</Text></Value>
-			<Value><Code>NZS04215</Code><Text xml:lang="en">Serbo-Croatian</Text></Value>
-			<Value><Code>NZS04216</Code><Text xml:lang="en">Slovene</Text></Value>
-			<Value><Code>NZS04217</Code><Text xml:lang="en">Czech</Text></Value>
-			<Value><Code>NZS04218</Code><Text xml:lang="en">Polish</Text></Value>
-			<Value><Code>NZS04219</Code><Text xml:lang="en">Slovak</Text></Value>
-			<Value><Code>NZS04299</Code><Text xml:lang="en">Slavic not elsewhere classified</Text></Value>
-			<Value><Code>NZS05</Code><Text xml:lang="en">Albanian</Text></Value>
-			<Value><Code>NZS051</Code><Text xml:lang="en">Albanian</Text></Value>
-			<Value><Code>NZS05110</Code><Text xml:lang="en">Albanian</Text></Value>
-			<Value><Code>NZS06</Code><Text xml:lang="en">Armenian</Text></Value>
-			<Value><Code>NZS061</Code><Text xml:lang="en">Armenian</Text></Value>
-			<Value><Code>NZS06110</Code><Text xml:lang="en">Armenian</Text></Value>
-			<Value><Code>NZS07</Code><Text xml:lang="en">Indo-Aryan</Text></Value>
-			<Value><Code>NZS071</Code><Text xml:lang="en">Indo-Aryan</Text></Value>
-			<Value><Code>NZS07100</Code><Text xml:lang="en">Indo-Aryan not further defined</Text></Value>
-			<Value><Code>NZS07110</Code><Text xml:lang="en">Hindi</Text></Value>
-			<Value><Code>NZS07111</Code><Text xml:lang="en">Urdu</Text></Value>
-			<Value><Code>NZS07112</Code><Text xml:lang="en">Fiji Hindi</Text></Value>
-			<Value><Code>NZS07113</Code><Text xml:lang="en">Bengali</Text></Value>
-			<Value><Code>NZS07114</Code><Text xml:lang="en">Oriya</Text></Value>
-			<Value><Code>NZS07115</Code><Text xml:lang="en">Nepalese</Text></Value>
-			<Value><Code>NZS07116</Code><Text xml:lang="en">Panjabi</Text></Value>
-			<Value><Code>NZS07117</Code><Text xml:lang="en">Sindhi</Text></Value>
-			<Value><Code>NZS07118</Code><Text xml:lang="en">Kashmiri</Text></Value>
-			<Value><Code>NZS07119</Code><Text xml:lang="en">Sinhala</Text></Value>
-			<Value><Code>NZS07120</Code><Text xml:lang="en">Gujarati</Text></Value>
-			<Value><Code>NZS07121</Code><Text xml:lang="en">Konkani</Text></Value>
-			<Value><Code>NZS07122</Code><Text xml:lang="en">Marathi</Text></Value>
-			<Value><Code>NZS07123</Code><Text xml:lang="en">Romani</Text></Value>
-			<Value><Code>NZS07199</Code><Text xml:lang="en">Indo-Aryan not elsewhere classified</Text></Value>
-			<Value><Code>NZS08</Code><Text xml:lang="en">Celtic</Text></Value>
-			<Value><Code>NZS081</Code><Text xml:lang="en">Celtic</Text></Value>
-			<Value><Code>NZS08100</Code><Text xml:lang="en">Celtic not further defined</Text></Value>
-			<Value><Code>NZS08110</Code><Text xml:lang="en">Welsh</Text></Value>
-			<Value><Code>NZS08111</Code><Text xml:lang="en">Scottish Gaelic</Text></Value>
-			<Value><Code>NZS08112</Code><Text xml:lang="en">Irish</Text></Value>
-			<Value><Code>NZS08113</Code><Text xml:lang="en">Breton</Text></Value>
-			<Value><Code>NZS08199</Code><Text xml:lang="en">Celtic not elsewhere classified</Text></Value>
-			<Value><Code>NZS09</Code><Text xml:lang="en">Iranian</Text></Value>
-			<Value><Code>NZS091</Code><Text xml:lang="en">Iranian</Text></Value>
-			<Value><Code>NZS09100</Code><Text xml:lang="en">Iranian not further defined</Text></Value>
-			<Value><Code>NZS09110</Code><Text xml:lang="en">Persian</Text></Value>
-			<Value><Code>NZS09111</Code><Text xml:lang="en">Kurdish</Text></Value>
-			<Value><Code>NZS09112</Code><Text xml:lang="en">Pashto</Text></Value>
-			<Value><Code>NZS09199</Code><Text xml:lang="en">Iranian not elsewhere classified</Text></Value>
-			<Value><Code>NZS10</Code><Text xml:lang="en">Turko-Altaic</Text></Value>
-			<Value><Code>NZS101</Code><Text xml:lang="en">Turko-Altaic</Text></Value>
-			<Value><Code>NZS10100</Code><Text xml:lang="en">Turko-Altaic not further defined</Text></Value>
-			<Value><Code>NZS10110</Code><Text xml:lang="en">Turkish</Text></Value>
-			<Value><Code>NZS10111</Code><Text xml:lang="en">Azeri</Text></Value>
-			<Value><Code>NZS10199</Code><Text xml:lang="en">Turko-Altaic not elsewhere classified</Text></Value>
-			<Value><Code>NZS11</Code><Text xml:lang="en">Uralic</Text></Value>
-			<Value><Code>NZS111</Code><Text xml:lang="en">Uralic</Text></Value>
-			<Value><Code>NZS11100</Code><Text xml:lang="en">Uralic not further defined</Text></Value>
-			<Value><Code>NZS11110</Code><Text xml:lang="en">Estonian</Text></Value>
-			<Value><Code>NZS11111</Code><Text xml:lang="en">Finnish</Text></Value>
-			<Value><Code>NZS11112</Code><Text xml:lang="en">Hungarian</Text></Value>
-			<Value><Code>NZS11199</Code><Text xml:lang="en">Uralic not elsewhere classified</Text></Value>
-			<Value><Code>NZS12</Code><Text xml:lang="en">Dravidian</Text></Value>
-			<Value><Code>NZS121</Code><Text xml:lang="en">Dravidian</Text></Value>
-			<Value><Code>NZS12100</Code><Text xml:lang="en">Dravidian not further defined</Text></Value>
-			<Value><Code>NZS12110</Code><Text xml:lang="en">Kannada</Text></Value>
-			<Value><Code>NZS12111</Code><Text xml:lang="en">Malayalam</Text></Value>
-			<Value><Code>NZS12112</Code><Text xml:lang="en">Tamil</Text></Value>
-			<Value><Code>NZS12113</Code><Text xml:lang="en">Telugu</Text></Value>
-			<Value><Code>NZS12199</Code><Text xml:lang="en">Dravidian not elsewhere classified</Text></Value>
-			<Value><Code>NZS13</Code><Text xml:lang="en">Sino-Tibeto-Burman</Text></Value>
-			<Value><Code>NZS131</Code><Text xml:lang="en">Sinitic</Text></Value>
-			<Value><Code>NZS13100</Code><Text xml:lang="en">Sinitic not further defined</Text></Value>
-			<Value><Code>NZS13110</Code><Text xml:lang="en">Cantonese (Yue)</Text></Value>
-			<Value><Code>NZS13111</Code><Text xml:lang="en">Hakka</Text></Value>
-			<Value><Code>NZS13112</Code><Text xml:lang="en">Min</Text></Value>
-			<Value><Code>NZS13113</Code><Text xml:lang="en">Mandarin (Northern Chinese)</Text></Value>
-			<Value><Code>NZS13114</Code><Text xml:lang="en">Wu</Text></Value>
-			<Value><Code>NZS13115</Code><Text xml:lang="en">Tieu-Chow</Text></Value>
-			<Value><Code>NZS13199</Code><Text xml:lang="en">Sinitic not elsewhere classified</Text></Value>
-			<Value><Code>NZS132</Code><Text xml:lang="en">Tibeto-Lolo-Burman</Text></Value>
-			<Value><Code>NZS13200</Code><Text xml:lang="en">Tibeto-Lolo-Burman not further defined</Text></Value>
-			<Value><Code>NZS13210</Code><Text xml:lang="en">Burmese</Text></Value>
-			<Value><Code>NZS13211</Code><Text xml:lang="en">Tibetan</Text></Value>
-			<Value><Code>NZS13299</Code><Text xml:lang="en">Tibeto-Lolo-Burman not elsewhere classified</Text></Value>
-			<Value><Code>NZS14</Code><Text xml:lang="en">Austroasiatic</Text></Value>
-			<Value><Code>NZS141</Code><Text xml:lang="en">Mon-Khmer</Text></Value>
-			<Value><Code>NZS14100</Code><Text xml:lang="en">Mon-Khmer not further defined</Text></Value>
-			<Value><Code>NZS14110</Code><Text xml:lang="en">Khmer</Text></Value>
-			<Value><Code>NZS14199</Code><Text xml:lang="en">Mon-Khmer not elsewhere classified</Text></Value>
-			<Value><Code>NZS142</Code><Text xml:lang="en">Viet-Muong</Text></Value>
-			<Value><Code>NZS14200</Code><Text xml:lang="en">Viet-Muong not further defined</Text></Value>
-			<Value><Code>NZS14210</Code><Text xml:lang="en">Vietnamese</Text></Value>
-			<Value><Code>NZS14299</Code><Text xml:lang="en">Viet-Muong not elsewhere classified</Text></Value>
-			<Value><Code>NZS15</Code><Text xml:lang="en">Tai-Kadai</Text></Value>
-			<Value><Code>NZS151</Code><Text xml:lang="en">Tai-Kadai</Text></Value>
-			<Value><Code>NZS15100</Code><Text xml:lang="en">Tai-Kadai not further defined</Text></Value>
-			<Value><Code>NZS15110</Code><Text xml:lang="en">Lao</Text></Value>
-			<Value><Code>NZS15111</Code><Text xml:lang="en">Thai</Text></Value>
-			<Value><Code>NZS15112</Code><Text xml:lang="en">Shan</Text></Value>
-			<Value><Code>NZS15199</Code><Text xml:lang="en">Tai-Kadai not elsewhere classified</Text></Value>
-			<Value><Code>NZS16</Code><Text xml:lang="en">Central-Eastern Malayo-Polynesian</Text></Value>
-			<Value><Code>NZS161</Code><Text xml:lang="en">Central Pacific</Text></Value>
-			<Value><Code>NZS16100</Code><Text xml:lang="en">Central Pacific not further defined</Text></Value>
+
+			<Value>
+				<Code>NZS01113</Code>
+				<Text xml:lang="en">German</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS01114</Code>
+				<Text xml:lang="en">Friesian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS01115</Code>
+				<Text xml:lang="en">Yiddish</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS01116</Code>
+				<Text xml:lang="en">Scots</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS01199</Code>
+				<Text xml:lang="en">West Germanic not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS012</Code>
+				<Text xml:lang="en">North Germanic</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS01200</Code>
+				<Text xml:lang="en">North Germanic not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS01210</Code>
+				<Text xml:lang="en">Danish</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS01211</Code>
+				<Text xml:lang="en">Norwegian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS01212</Code>
+				<Text xml:lang="en">Swedish</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS01213</Code>
+				<Text xml:lang="en">Icelandic</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS01299</Code>
+				<Text xml:lang="en">North Germanic not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS02</Code>
+				<Text xml:lang="en">Romance</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS021</Code>
+				<Text xml:lang="en">Romance</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS02100</Code>
+				<Text xml:lang="en">Romance not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS02110</Code>
+				<Text xml:lang="en">French</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS02111</Code>
+				<Text xml:lang="en">Catalan</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS02112</Code>
+				<Text xml:lang="en">Portuguese</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS02113</Code>
+				<Text xml:lang="en">Spanish</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS02114</Code>
+				<Text xml:lang="en">Italian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS02115</Code>
+				<Text xml:lang="en">Romanian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS02199</Code>
+				<Text xml:lang="en">Romance not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS03</Code>
+				<Text xml:lang="en">Greek</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS031</Code>
+				<Text xml:lang="en">Greek</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS03110</Code>
+				<Text xml:lang="en">Greek</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS04</Code>
+				<Text xml:lang="en">Balto-Slavic</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS041</Code>
+				<Text xml:lang="en">Baltic</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS04100</Code>
+				<Text xml:lang="en">Baltic not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS04110</Code>
+				<Text xml:lang="en">Latvian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS04111</Code>
+				<Text xml:lang="en">Lithuanian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS04199</Code>
+				<Text xml:lang="en">Baltic not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS042</Code>
+				<Text xml:lang="en">Slavic</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS04200</Code>
+				<Text xml:lang="en">Slavic not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS04210</Code>
+				<Text xml:lang="en">Belorussian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS04211</Code>
+				<Text xml:lang="en">Russian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS04212</Code>
+				<Text xml:lang="en">Ukrainian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS04213</Code>
+				<Text xml:lang="en">Bulgarian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS04214</Code>
+				<Text xml:lang="en">Macedonian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS04215</Code>
+				<Text xml:lang="en">Serbo-Croatian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS04216</Code>
+				<Text xml:lang="en">Slovene</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS04217</Code>
+				<Text xml:lang="en">Czech</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS04218</Code>
+				<Text xml:lang="en">Polish</Text>
+				<Level></Level>
+			</Value>
+
+			<Value>
+				<Code>NZS04219</Code>
+				<Text xml:lang="en">Slovak</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS04299</Code>
+				<Text xml:lang="en">Slavic not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS05</Code>
+				<Text xml:lang="en">Albanian</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS051</Code>
+				<Text xml:lang="en">Albanian</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS05110</Code>
+				<Text xml:lang="en">Albanian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS06</Code>
+				<Text xml:lang="en">Armenian</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS061</Code>
+				<Text xml:lang="en">Armenian</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS06110</Code>
+				<Text xml:lang="en">Armenian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS07</Code>
+				<Text xml:lang="en">Indo-Aryan</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS071</Code>
+				<Text xml:lang="en">Indo-Aryan</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS07100</Code>
+				<Text xml:lang="en">Indo-Aryan not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS07110</Code>
+				<Text xml:lang="en">Hindi</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS07111</Code>
+				<Text xml:lang="en">Urdu</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS07112</Code>
+				<Text xml:lang="en">Fiji Hindi</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS07113</Code>
+				<Text xml:lang="en">Bengali</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS07114</Code>
+				<Text xml:lang="en">Oriya</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS07115</Code>
+				<Text xml:lang="en">Nepalese</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS07116</Code>
+				<Text xml:lang="en">Panjabi</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS07117</Code>
+				<Text xml:lang="en">Sindhi</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS07118</Code>
+				<Text xml:lang="en">Kashmiri</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS07119</Code>
+				<Text xml:lang="en">Sinhala</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS07120</Code>
+				<Text xml:lang="en">Gujarati</Text>
+				<Level></Level>
+			</Value>
+
+			<Value>
+				<Code>NZS07121</Code>
+				<Text xml:lang="en">Konkani</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS07122</Code>
+				<Text xml:lang="en">Marathi</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS07123</Code>
+				<Text xml:lang="en">Romani</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS07199</Code>
+				<Text xml:lang="en">Indo-Aryan not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS08</Code>
+				<Text xml:lang="en">Celtic</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS081</Code>
+				<Text xml:lang="en">Celtic</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS08100</Code>
+				<Text xml:lang="en">Celtic not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS08110</Code>
+				<Text xml:lang="en">Welsh</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS08111</Code>
+				<Text xml:lang="en">Scottish Gaelic</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS08112</Code>
+				<Text xml:lang="en">Irish</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS08113</Code>
+				<Text xml:lang="en">Breton</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS08199</Code>
+				<Text xml:lang="en">Celtic not elsewhere classified</Text>
+				<Level></Level>
+			</Value>
+
+			<Value>
+				<Code>NZS09</Code>
+				<Text xml:lang="en">Iranian</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS091</Code>
+				<Text xml:lang="en">Iranian</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS09100</Code>
+				<Text xml:lang="en">Iranian not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS09110</Code>
+				<Text xml:lang="en">Persian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS09111</Code>
+				<Text xml:lang="en">Kurdish</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS09112</Code>
+				<Text xml:lang="en">Pashto</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS09199</Code>
+				<Text xml:lang="en">Iranian not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS10</Code>
+				<Text xml:lang="en">Turko-Altaic</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS101</Code>
+				<Text xml:lang="en">Turko-Altaic</Text>
+				<Level>23</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS10100</Code>
+				<Text xml:lang="en">Turko-Altaic not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS10110</Code>
+				<Text xml:lang="en">Turkish</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS10111</Code>
+				<Text xml:lang="en">Azeri</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS10199</Code>
+				<Text xml:lang="en">Turko-Altaic not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS11</Code>
+				<Text xml:lang="en">Uralic</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS111</Code>
+				<Text xml:lang="en">Uralic</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS11100</Code>
+				<Text xml:lang="en">Uralic not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS11110</Code>
+				<Text xml:lang="en">Estonian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS11111</Code>
+				<Text xml:lang="en">Finnish</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS11112</Code>
+				<Text xml:lang="en">Hungarian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS11199</Code>
+				<Text xml:lang="en">Uralic not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS12</Code>
+				<Text xml:lang="en">Dravidian</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS121</Code>
+				<Text xml:lang="en">Dravidian</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS12100</Code>
+				<Text xml:lang="en">Dravidian not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS12110</Code>
+				<Text xml:lang="en">Kannada</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS12111</Code>
+				<Text xml:lang="en">Malayalam</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS12112</Code>
+				<Text xml:lang="en">Tamil</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS12113</Code>
+				<Text xml:lang="en">Telugu</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS12199</Code>
+				<Text xml:lang="en">Dravidian not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS13</Code>
+				<Text xml:lang="en">Sino-Tibeto-Burman</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS131</Code>
+				<Text xml:lang="en">Sinitic</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS13100</Code>
+				<Text xml:lang="en">Sinitic not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS13110</Code>
+				<Text xml:lang="en">Cantonese (Yue)</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS13111</Code>
+				<Text xml:lang="en">Hakka</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS13112</Code>
+				<Text xml:lang="en">Min</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS13113</Code>
+				<Text xml:lang="en">Mandarin (Northern Chinese)</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS13114</Code>
+				<Text xml:lang="en">Wu</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS13115</Code>
+				<Text xml:lang="en">Tieu-Chow</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS13199</Code>
+				<Text xml:lang="en">Sinitic not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS132</Code>
+				<Text xml:lang="en">Tibeto-Lolo-Burman</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS13200</Code>
+				<Text xml:lang="en">Tibeto-Lolo-Burman not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS13210</Code>
+				<Text xml:lang="en">Burmese</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS13211</Code>
+				<Text xml:lang="en">Tibetan</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS13299</Code>
+				<Text xml:lang="en">Tibeto-Lolo-Burman not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS14</Code>
+				<Text xml:lang="en">Austroasiatic</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS141</Code>
+				<Text xml:lang="en">Mon-Khmer</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS14100</Code>
+				<Text xml:lang="en">Mon-Khmer not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS14110</Code>
+				<Text xml:lang="en">Khmer</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS14199</Code>
+				<Text xml:lang="en">Mon-Khmer not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS142</Code>
+				<Text xml:lang="en">Viet-Muong</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS14200</Code>
+				<Text xml:lang="en">Viet-Muong not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS14210</Code>
+				<Text xml:lang="en">Vietnamese</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS14299</Code>
+				<Text xml:lang="en">Viet-Muong not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS15</Code>
+				<Text xml:lang="en">Tai-Kadai</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS151</Code>
+				<Text xml:lang="en">Tai-Kadai</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS15100</Code>
+				<Text xml:lang="en">Tai-Kadai not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS15110</Code>
+				<Text xml:lang="en">Lao</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS15111</Code>
+				<Text xml:lang="en">Thai</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS15112</Code>
+				<Text xml:lang="en">Shan</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS15199</Code>
+				<Text xml:lang="en">Tai-Kadai not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16</Code>
+				<Text xml:lang="en">Central-Eastern Malayo-Polynesian</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS161</Code>
+				<Text xml:lang="en">Central Pacific</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16100</Code>
+				<Text xml:lang="en">Central Pacific not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
 			<Value>
 				<Code>NZS16110</Code>
 				<Text xml:lang="en">Māori</Text>
 				<Text xml:lang="mi">Te Reo Māori</Text>
+				<Level>3</Level>
 			</Value>
-			<Value><Code>NZS16111</Code><Text xml:lang="en">Samoan</Text></Value>
-			<Value><Code>NZS16112</Code><Text xml:lang="en">Tongan</Text></Value>
-			<Value><Code>NZS16113</Code><Text xml:lang="en">Cook Islands Maori</Text></Value>
-			<Value><Code>NZS16114</Code><Text xml:lang="en">Niuean</Text></Value>
-			<Value><Code>NZS16115</Code><Text xml:lang="en">Tokelauan</Text></Value>
-			<Value><Code>NZS16116</Code><Text xml:lang="en">Tuvaluan</Text></Value>
-			<Value><Code>NZS16117</Code><Text xml:lang="en">Tahitian</Text></Value>
-			<Value><Code>NZS16118</Code><Text xml:lang="en">Pukapukan</Text></Value>
-			<Value><Code>NZS16119</Code><Text xml:lang="en">Fijian</Text></Value>
-			<Value><Code>NZS16120</Code><Text xml:lang="en">Rotuman</Text></Value>
-			<Value><Code>NZS16199</Code><Text xml:lang="en">Central Pacific not elsewhere classified</Text></Value>
-			<Value><Code>NZS162</Code><Text xml:lang="en">Solomon Islands Languages (Non-Central-Pacific)</Text></Value>
-			<Value><Code>NZS16210</Code><Text xml:lang="en">Solomon Islands Languages (Non-Central-Pacific)</Text></Value>
-			<Value><Code>NZS163</Code><Text xml:lang="en">Micronesian</Text></Value>
-			<Value><Code>NZS16300</Code><Text xml:lang="en">Micronesian not further defined</Text></Value>
-			<Value><Code>NZS16310</Code><Text xml:lang="en">Kiribati</Text></Value>
-			<Value><Code>NZS16311</Code><Text xml:lang="en">Nauruan</Text></Value>
-			<Value><Code>NZS16399</Code><Text xml:lang="en">Micronesian not elsewhere classified</Text></Value>
-			<Value><Code>NZS164</Code><Text xml:lang="en">Vanuatu Languages</Text></Value>
-			<Value><Code>NZS16410</Code><Text xml:lang="en">Vanuatu Languages</Text></Value>
-			<Value><Code>NZS17</Code><Text xml:lang="en">Western Malayo-Polynesian</Text></Value>
-			<Value><Code>NZS171</Code><Text xml:lang="en">Western Malayo-Polynesian</Text></Value>
-			<Value><Code>NZS17100</Code><Text xml:lang="en">Western Malayo-Polynesian not further defined</Text></Value>
-			<Value><Code>NZS17110</Code><Text xml:lang="en">Bisayan</Text></Value>
-			<Value><Code>NZS17111</Code><Text xml:lang="en">Cebuano</Text></Value>
-			<Value><Code>NZS17112</Code><Text xml:lang="en">Ilokano</Text></Value>
-			<Value><Code>NZS17113</Code><Text xml:lang="en">Bahasa Indonesia</Text></Value>
-			<Value><Code>NZS17114</Code><Text xml:lang="en">Malaysian</Text></Value>
-			<Value><Code>NZS17115</Code><Text xml:lang="en">Tagalog</Text></Value>
-			<Value><Code>NZS17116</Code><Text xml:lang="en">Javanese</Text></Value>
-			<Value><Code>NZS17199</Code><Text xml:lang="en">Western Malayo-Polynesian not elsewhere classified</Text></Value>
-			<Value><Code>NZS18</Code><Text xml:lang="en">Afro-Asiatic</Text></Value>
-			<Value><Code>NZS181</Code><Text xml:lang="en">Cushitic</Text></Value>
-			<Value><Code>NZS18100</Code><Text xml:lang="en">Cushitic not further defined</Text></Value>
-			<Value><Code>NZS18110</Code><Text xml:lang="en">Somali</Text></Value>
-			<Value><Code>NZS18199</Code><Text xml:lang="en">Cushitic not elsewhere classified</Text></Value>
-			<Value><Code>NZS182</Code><Text xml:lang="en">Semitic</Text></Value>
-			<Value><Code>NZS18200</Code><Text xml:lang="en">Semitic not further defined</Text></Value>
-			<Value><Code>NZS18210</Code><Text xml:lang="en">Assyrian</Text></Value>
-			<Value><Code>NZS18211</Code><Text xml:lang="en">Arabic</Text></Value>
-			<Value><Code>NZS18212</Code><Text xml:lang="en">Maltese</Text></Value>
-			<Value><Code>NZS18213</Code><Text xml:lang="en">Amharic</Text></Value>
-			<Value><Code>NZS18214</Code><Text xml:lang="en">Tigrinya</Text></Value>
-			<Value><Code>NZS18215</Code><Text xml:lang="en">Hebrew</Text></Value>
-			<Value><Code>NZS18299</Code><Text xml:lang="en">Semitic not elsewhere classified</Text></Value>
-			<Value><Code>NZS183</Code><Text xml:lang="en">Chadic</Text></Value>
-			<Value><Code>NZS18300</Code><Text xml:lang="en">Chadic not further defined</Text></Value>
-			<Value><Code>NZS18310</Code><Text xml:lang="en">Hausa</Text></Value>
-			<Value><Code>NZS18399</Code><Text xml:lang="en">Chadic not elsewhere classified</Text></Value>
-			<Value><Code>NZS19</Code><Text xml:lang="en">Niger-Congo (Congo-Kordafanian)</Text></Value>
-			<Value><Code>NZS191</Code><Text xml:lang="en">Bantu languages</Text></Value>
-			<Value><Code>NZS19100</Code><Text xml:lang="en">Bantu not further defined</Text></Value>
-			<Value><Code>NZS19110</Code><Text xml:lang="en">Swahili</Text></Value>
-			<Value><Code>NZS19111</Code><Text xml:lang="en">Yoruba</Text></Value>
-			<Value><Code>NZS19112</Code><Text xml:lang="en">Zulu</Text></Value>
-			<Value><Code>NZS19199</Code><Text xml:lang="en">Bantu, not elsewhere classified</Text></Value>
-			<Value><Code>NZS192</Code><Text xml:lang="en">Other Niger-Congo</Text></Value>
-			<Value><Code>NZS19200</Code><Text xml:lang="en">Other Niger-Congo not further defined</Text></Value>
-			<Value><Code>NZS19210</Code><Text xml:lang="en">Fulani</Text></Value>
-			<Value><Code>NZS19299</Code><Text xml:lang="en">Other Niger-Congo not elsewhere classified</Text></Value>
-			<Value><Code>NZS20</Code><Text xml:lang="en">Pidgins and Creoles</Text></Value>
-			<Value><Code>NZS201</Code><Text xml:lang="en">Pidgins and Creoles</Text></Value>
-			<Value><Code>NZS20100</Code><Text xml:lang="en">Pidgins and Creoles not further defined</Text></Value>
-			<Value><Code>NZS20110</Code><Text xml:lang="en">Creole</Text></Value>
-			<Value><Code>NZS20111</Code><Text xml:lang="en">French Creole</Text></Value>
-			<Value><Code>NZS20112</Code><Text xml:lang="en">Pidgin English</Text></Value>
-			<Value><Code>NZS20113</Code><Text xml:lang="en">Neo Melanesian</Text></Value>
-			<Value><Code>NZS20114</Code><Text xml:lang="en">Mauritian Creole</Text></Value>
-			<Value><Code>NZS20115</Code><Text xml:lang="en">Tok Pisin</Text></Value>
-			<Value><Code>NZS20116</Code><Text xml:lang="en">Hindi Bat</Text></Value>
-			<Value><Code>NZS20117</Code><Text xml:lang="en">Solomon Islands Pidgin</Text></Value>
-			<Value><Code>NZS20118</Code><Text xml:lang="en">Bislama</Text></Value>
-			<Value><Code>NZS20199</Code><Text xml:lang="en">Pidgins and Creoles not elsewhere classified</Text></Value>
-			<Value><Code>NZS21</Code><Text xml:lang="en">Language Isolates</Text></Value>
-			<Value><Code>NZS211</Code><Text xml:lang="en">Japanese</Text></Value>
-			<Value><Code>NZS21110</Code><Text xml:lang="en">Japanese</Text></Value>
-			<Value><Code>NZS212</Code><Text xml:lang="en">Korean</Text></Value>
-			<Value><Code>NZS21210</Code><Text xml:lang="en">Korean</Text></Value>
-			<Value><Code>NZS213</Code><Text xml:lang="en">Basque</Text></Value>
-			<Value><Code>NZS21310</Code><Text xml:lang="en">Basque</Text></Value>
-			<Value><Code>NZS219</Code><Text xml:lang="en">Language Isolates not elsewhere classified</Text></Value>
-			<Value><Code>NZS21999</Code><Text xml:lang="en">Language Isolates not elsewhere classified</Text></Value>
-			<Value><Code>NZS22</Code><Text xml:lang="en">Miscellaneous Language Groupings</Text></Value>
-			<Value><Code>NZS221</Code><Text xml:lang="en">Papuan</Text></Value>
-			<Value><Code>NZS22110</Code><Text xml:lang="en">Papuan</Text></Value>
-			<Value><Code>NZS222</Code><Text xml:lang="en">Nilo-Saharan languages</Text></Value>
-			<Value><Code>NZS22210</Code><Text xml:lang="en">Nilo-Saharan</Text></Value>
-			<Value><Code>NZS223</Code><Text xml:lang="en">Miaow-Yao</Text></Value>
-			<Value><Code>NZS22310</Code><Text xml:lang="en">Miaow-Yao</Text></Value>
-			<Value><Code>NZS224</Code><Text xml:lang="en">Caucasian</Text></Value>
-			<Value><Code>NZS22400</Code><Text xml:lang="en">Caucasian not further defined</Text></Value>
-			<Value><Code>NZS22410</Code><Text xml:lang="en">Georgian</Text></Value>
-			<Value><Code>NZS22499</Code><Text xml:lang="en">Caucasian not elsewhere classified</Text></Value>
-			<Value><Code>NZS225</Code><Text xml:lang="en">Australian</Text></Value>
-			<Value><Code>NZS22510</Code><Text xml:lang="en">Australian</Text></Value>
-			<Value><Code>NZS226</Code><Text xml:lang="en">Amerind</Text></Value>
-			<Value><Code>NZS22610</Code><Text xml:lang="en">Amerind</Text></Value>
-			<Value><Code>NZS229</Code><Text xml:lang="en">Other Miscellaneous Languages</Text></Value>
-			<Value><Code>NZS22910</Code><Text xml:lang="en">Other Miscellaneous Languages</Text></Value>
-			<Value><Code>NZS23</Code><Text xml:lang="en">Artificial Languages</Text></Value>
-			<Value><Code>NZS231</Code><Text xml:lang="en">Artificial Languages</Text></Value>
-			<Value><Code>NZS23100</Code><Text xml:lang="en">Artificial Languages not further defined</Text></Value>
-			<Value><Code>NZS23110</Code><Text xml:lang="en">Esperanto</Text></Value>
-			<Value><Code>NZS23199</Code><Text xml:lang="en">Artificial Languages not elsewhere classified</Text></Value>
-			<Value><Code>NZS24</Code><Text xml:lang="en">Sign Language</Text></Value>
-			<Value><Code>NZS241</Code><Text xml:lang="en">Sign Language</Text></Value>
-			<Value><Code>NZS24100</Code><Text xml:lang="en">Sign Language not further defined</Text></Value>
-			<Value><Code>NZS24110</Code><Text xml:lang="en">New Zealand Sign Language</Text></Value>
-			<Value><Code>NZS24111</Code><Text xml:lang="en">Signed English</Text></Value>
-			<Value><Code>NZS24112</Code><Text xml:lang="en">American Sign Language</Text></Value>
-			<Value><Code>NZS24113</Code><Text xml:lang="en">Australian Sign Language</Text></Value>
-			<Value><Code>NZS24114</Code><Text xml:lang="en">British Sign Language</Text></Value>
-			<Value><Code>NZS24199</Code><Text xml:lang="en">Sign Language not elsewhere classified</Text></Value>
-			<Value><Code>NZS44</Code><Text xml:lang="en">Don't Know</Text></Value>
-			<Value><Code>NZS55</Code><Text xml:lang="en">Refused to Answer</Text></Value>
-			<Value><Code>NZS66</Code><Text xml:lang="en">None (eg too young to talk)</Text></Value>
-			<Value><Code>NZS77</Code><Text xml:lang="en">Response Unidentifiable</Text></Value>
-			<Value><Code>NZS88</Code><Text xml:lang="en">Response Outside Scope</Text></Value>
-			<Value><Code>NZS99</Code><Text xml:lang="en">Not Stated</Text></Value>
+
+			<Value>
+				<Code>NZS16111</Code>
+				<Text xml:lang="en">Samoan</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16112</Code>
+				<Text xml:lang="en">Tongan</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16113</Code>
+				<Text xml:lang="en">Cook Islands Maori</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16114</Code>
+				<Text xml:lang="en">Niuean</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16115</Code>
+				<Text xml:lang="en">Tokelauan</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16116</Code>
+				<Text xml:lang="en">Tuvaluan</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16117</Code>
+				<Text xml:lang="en">Tahitian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16118</Code>
+				<Text xml:lang="en">Pukapukan</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16119</Code>
+				<Text xml:lang="en">Fijian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16120</Code>
+				<Text xml:lang="en">Rotuman</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16199</Code>
+				<Text xml:lang="en">Central Pacific not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS162</Code>
+				<Text xml:lang="en">Solomon Islands Languages (Non-Central-Pacific)</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16210</Code>
+				<Text xml:lang="en">Solomon Islands Languages (Non-Central-Pacific)</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS163</Code>
+				<Text xml:lang="en">Micronesian</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16300</Code>
+				<Text xml:lang="en">Micronesian not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16310</Code>
+				<Text xml:lang="en">Kiribati</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16311</Code>
+				<Text xml:lang="en">Nauruan</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16399</Code>
+				<Text xml:lang="en">Micronesian not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS164</Code>
+				<Text xml:lang="en">Vanuatu Languages</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS16410</Code>
+				<Text xml:lang="en">Vanuatu Languages</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS17</Code>
+				<Text xml:lang="en">Western Malayo-Polynesian</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS171</Code>
+				<Text xml:lang="en">Western Malayo-Polynesian</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS17100</Code>
+				<Text xml:lang="en">Western Malayo-Polynesian not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS17110</Code>
+				<Text xml:lang="en">Bisayan</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS17111</Code>
+				<Text xml:lang="en">Cebuano</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS17112</Code>
+				<Text xml:lang="en">Ilokano</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS17113</Code>
+				<Text xml:lang="en">Bahasa Indonesia</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS17114</Code>
+				<Text xml:lang="en">Malaysian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS17115</Code>
+				<Text xml:lang="en">Tagalog</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS17116</Code>
+				<Text xml:lang="en">Javanese</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS17199</Code>
+				<Text xml:lang="en">Western Malayo-Polynesian not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS18</Code>
+				<Text xml:lang="en">Afro-Asiatic</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS181</Code>
+				<Text xml:lang="en">Cushitic</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS18100</Code>
+				<Text xml:lang="en">Cushitic not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS18110</Code>
+				<Text xml:lang="en">Somali</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS18199</Code>
+				<Text xml:lang="en">Cushitic not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS182</Code>
+				<Text xml:lang="en">Semitic</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS18200</Code>
+				<Text xml:lang="en">Semitic not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS18210</Code>
+				<Text xml:lang="en">Assyrian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS18211</Code>
+				<Text xml:lang="en">Arabic</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS18212</Code>
+				<Text xml:lang="en">Maltese</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS18213</Code>
+				<Text xml:lang="en">Amharic</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS18214</Code>
+				<Text xml:lang="en">Tigrinya</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS18215</Code>
+				<Text xml:lang="en">Hebrew</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS18299</Code>
+				<Text xml:lang="en">Semitic not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS183</Code>
+				<Text xml:lang="en">Chadic</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS18300</Code>
+				<Text xml:lang="en">Chadic not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS18310</Code>
+				<Text xml:lang="en">Hausa</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS18399</Code>
+				<Text xml:lang="en">Chadic not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS19</Code>
+				<Text xml:lang="en">Niger-Congo (Congo-Kordafanian)</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS191</Code>
+				<Text xml:lang="en">Bantu languages</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS19100</Code>
+				<Text xml:lang="en">Bantu not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS19110</Code>
+				<Text xml:lang="en">Swahili</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS19111</Code>
+				<Text xml:lang="en">Yoruba</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS19112</Code>
+				<Text xml:lang="en">Zulu</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS19199</Code>
+				<Text xml:lang="en">Bantu, not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS192</Code>
+				<Text xml:lang="en">Other Niger-Congo</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS19200</Code>
+				<Text xml:lang="en">Other Niger-Congo not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS19210</Code>
+				<Text xml:lang="en">Fulani</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS19299</Code>
+				<Text xml:lang="en">Other Niger-Congo not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20</Code>
+				<Text xml:lang="en">Pidgins and Creoles</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS201</Code>
+				<Text xml:lang="en">Pidgins and Creoles</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20100</Code>
+				<Text xml:lang="en">Pidgins and Creoles not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20110</Code>
+				<Text xml:lang="en">Creole</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20111</Code>
+				<Text xml:lang="en">French Creole</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20112</Code>
+				<Text xml:lang="en">Pidgin English</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20113</Code>
+				<Text xml:lang="en">Neo Melanesian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20114</Code>
+				<Text xml:lang="en">Mauritian Creole</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20115</Code>
+				<Text xml:lang="en">Tok Pisin</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20116</Code>
+				<Text xml:lang="en">Hindi Bat</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20117</Code>
+				<Text xml:lang="en">Solomon Islands Pidgin</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20118</Code>
+				<Text xml:lang="en">Bislama</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20199</Code>
+				<Text xml:lang="en">Pidgins and Creoles not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21</Code>
+				<Text xml:lang="en">Language Isolates</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS211</Code>
+				<Text xml:lang="en">Japanese</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21110</Code>
+				<Text xml:lang="en">Japanese</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS212</Code>
+				<Text xml:lang="en">Korean</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21210</Code>
+				<Text xml:lang="en">Korean</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS213</Code>
+				<Text xml:lang="en">Basque</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21310</Code>
+				<Text xml:lang="en">Basque</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS219</Code>
+				<Text xml:lang="en">Language Isolates not elsewhere classified</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21999</Code>
+				<Text xml:lang="en">Language Isolates not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS22</Code>
+				<Text xml:lang="en">Miscellaneous Language Groupings</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS221</Code>
+				<Text xml:lang="en">Papuan</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS22110</Code>
+				<Text xml:lang="en">Papuan</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS222</Code>
+				<Text xml:lang="en">Nilo-Saharan languages</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS22210</Code>
+				<Text xml:lang="en">Nilo-Saharan</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS223</Code>
+				<Text xml:lang="en">Miaow-Yao</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS22310</Code>
+				<Text xml:lang="en">Miaow-Yao</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS224</Code>
+				<Text xml:lang="en">Caucasian</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS22400</Code>
+				<Text xml:lang="en">Caucasian not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS22410</Code>
+				<Text xml:lang="en">Georgian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS22499</Code>
+				<Text xml:lang="en">Caucasian not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS225</Code>
+				<Text xml:lang="en">Australian</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS22510</Code>
+				<Text xml:lang="en">Australian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS226</Code>
+				<Text xml:lang="en">Amerind</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS22610</Code>
+				<Text xml:lang="en">Amerind</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS229</Code>
+				<Text xml:lang="en">Other Miscellaneous Languages</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS22910</Code>
+				<Text xml:lang="en">Other Miscellaneous Languages</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS23</Code>
+				<Text xml:lang="en">Artificial Languages</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS231</Code>
+				<Text xml:lang="en">Artificial Languages</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS23100</Code>
+				<Text xml:lang="en">Artificial Languages not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS23110</Code>
+				<Text xml:lang="en">Esperanto</Text>
+				<Level></Level>
+			</Value>
+
+			<Value>
+				<Code>NZS23199</Code>
+				<Text xml:lang="en">Artificial Languages not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS24</Code>
+				<Text xml:lang="en">Sign Language</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS241</Code>
+				<Text xml:lang="en">Sign Language</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS24100</Code>
+				<Text xml:lang="en">Sign Language not further defined</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS24110</Code>
+				<Text xml:lang="en">New Zealand Sign Language</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS24111</Code>
+				<Text xml:lang="en">Signed English</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS24112</Code>
+				<Text xml:lang="en">American Sign Language</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS24113</Code>
+				<Text xml:lang="en">Australian Sign Language</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS24114</Code>
+				<Text xml:lang="en">British Sign Language</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS24199</Code>
+				<Text xml:lang="en">Sign Language not elsewhere classified</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS44</Code>
+				<Text xml:lang="en">Don't Know</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS55</Code>
+				<Text xml:lang="en">Refused to Answer</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS66</Code>
+				<Text xml:lang="en">None (eg too young to talk)</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS77</Code>
+				<Text xml:lang="en">Response Unidentifiable</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS88</Code>
+				<Text xml:lang="en">Response Outside Scope</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS99</Code>
+				<Text xml:lang="en">Not Stated</Text>
+				<Level>1</Level>
+			</Value>
+
 		</Values>
-	</CodeSet>    <!-- Language -->
-  	<CodeSet>
+	</CodeSet>	<!-- Language -->
+	<CodeSet>
 		<Intro>
 			<p>Ethnicity is the ethnic group or groups that people
 			identify with or feel they belong to. Ethnicity is a
@@ -712,1368 +2033,1988 @@
 				<Code>1</Code>
 				<Text xml:lang="en">European</Text>
 				<Text xml:lang="mi">Ūropi</Text>
+				<Level>1</Level>
 			</Value>
 			<Value>
 				<Code>10</Code>
 				<Text xml:lang="en">European nfd</Text>
 				<Text xml:lang="mi">Ūropi</Text>
+				<Level>2</Level>
 			</Value>
 			<Value>
 				<Code>100</Code>
 				<Text xml:lang="en">European nfd</Text>
 				<Text xml:lang="mi">Ūropi</Text>
+				<Enum>European_nfd_100</Enum>
+				<Level>3</Level>
 			</Value>
 			<Value>
 				<Code>10000</Code>
 				<Text xml:lang="en">European nfd</Text>
 				<Text xml:lang="mi">Ūropi</Text>
+				<Enum>European_nfd</Enum>
+				<Level>4</Level>
 			</Value>
 			<Value>
 				<Code>11</Code>
 				<Text xml:lang="en">New Zealand European</Text>
 				<Text xml:lang="mi">Pākehā</Text>
+				<Level>2</Level>
 			</Value>
 			<Value>
 				<Code>111</Code>
 				<Text xml:lang="en">New Zealand European</Text>
 				<Text xml:lang="mi">Pākehā</Text>
+				<Level>3</Level>
 			</Value>
 			<Value>
 				<Code>11111</Code>
 				<Text xml:lang="en">New Zealand European</Text>
 				<Text xml:lang="mi">Pākehā</Text>
+				<Level>4</Level>
 			</Value>
 			<Value>
 				<Code>12</Code>
 				<Text xml:lang="en">Other European</Text>
+				<Level>2</Level>
 			</Value>
 			<Value>
 				<Code>121</Code>
 				<Text xml:lang="en">British and Irish</Text>
 				<Text xml:lang="mi">Ingarangi me Airana</Text>
+				<Level>3</Level>
 			</Value>
 			<Value>
 				<Code>12100</Code>
 				<Text xml:lang="en">British nfd</Text>
+				<Level>4</Level>
 			</Value>
 			<Value>
 				<Code>12111</Code>
 				<Text xml:lang="en">Celtic nfd</Text>
+				<Level>4</Level>
 			</Value>
 			<Value>
 				<Code>12112</Code>
 				<Text xml:lang="en">Channel Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12113</Code>
 				<Text xml:lang="en">Cornish</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12114</Code>
 				<Text xml:lang="en">English</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12115</Code>
 				<Text xml:lang="en">Gaelic</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12116</Code>
 				<Text xml:lang="en">Irish</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12117</Code>
 				<Text xml:lang="en">Manx</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12118</Code>
 				<Text xml:lang="en">Orkney Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12119</Code>
 				<Text xml:lang="en">Scottish</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12120</Code>
 				<Text xml:lang="en">Shetland Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12121</Code>
 				<Text xml:lang="en">Welsh</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12199</Code>
 				<Text xml:lang="en">British nec</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>122</Code>
 				<Text xml:lang="en">Dutch</Text>
 				<Text xml:lang="mi">Tati</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>12211</Code>
 				<Text xml:lang="en">Dutch</Text>
 				<Text xml:lang="mi">Tati</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>123</Code>
 				<Text xml:lang="en">Greek</Text>
 				<Text xml:lang="mi">Kirihi</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>12311</Code>
 				<Text xml:lang="en">Greek</Text>
 				<Text xml:lang="mi">Kirihi</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>124</Code>
 				<Text xml:lang="en">Polish</Text>
 				<Text xml:lang="mi">Pōrihi</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>12411</Code>
 				<Text xml:lang="en">Polish</Text>
 				<Text xml:lang="mi">Pōrihi</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>125</Code>
 				<Text xml:lang="en">South Slav</Text>
 				<Text xml:lang="mi">South Slav</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>12500</Code>
 				<Text xml:lang="en">South Slav nfd</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12511</Code>
 				<Text xml:lang="en">Croatian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12512</Code>
 				<Text xml:lang="en">Dalmatian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12513</Code>
 				<Text xml:lang="en">Macedonian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12514</Code>
 				<Text xml:lang="en">Serbian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12515</Code>
 				<Text xml:lang="en">Slovenian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12516</Code>
 				<Text xml:lang="en">Bosnian</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>12599</Code>
 				<Text xml:lang="en">South Slav nec</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>126</Code>
 				<Text xml:lang="en">Italian</Text>
 				<Text xml:lang="mi">Itāria</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>12611</Code>
 				<Text xml:lang="en">Italian</Text>
 				<Text xml:lang="mi">Itāria</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>127</Code>
 				<Text xml:lang="en">German</Text>
 				<Text xml:lang="mi">Tiamana</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>12711</Code>
 				<Text xml:lang="en">German</Text>
 				<Text xml:lang="mi">Tiamana</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>128</Code>
 				<Text xml:lang="en">Australian</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>12811</Code>
 				<Text xml:lang="en">Australian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>129</Code>
 				<Text xml:lang="en">Other European</Text>
 				<Text xml:lang="mi">Tauiwi Kē</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12911</Code>
 				<Text xml:lang="en">Albanian</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>12912</Code>
 				<Text xml:lang="en">Armenian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12913</Code>
 				<Text xml:lang="en">Austrian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12914</Code>
 				<Text xml:lang="en">Belgian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12915</Code>
 				<Text xml:lang="en">Bulgarian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12916</Code>
 				<Text xml:lang="en">Belorussian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12917</Code>
 				<Text xml:lang="en">Corsican</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12918</Code>
 				<Text xml:lang="en">Cypriot nfd</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12919</Code>
 				<Text xml:lang="en">Czech</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12920</Code>
 				<Text xml:lang="en">Danish</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12921</Code>
 				<Text xml:lang="en">Estonian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12922</Code>
 				<Text xml:lang="en">Finnish</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12923</Code>
 				<Text xml:lang="en">Flemish</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12924</Code>
 				<Text xml:lang="en">French</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12925</Code>
 				<Text xml:lang="en">Greenlander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12926</Code>
 				<Text xml:lang="en">Hungarian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12927</Code>
 				<Text xml:lang="en">Icelandic</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12928</Code>
 				<Text xml:lang="en">Latvian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12929</Code>
 				<Text xml:lang="en">Lithuanian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12930</Code>
 				<Text xml:lang="en">Maltese</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12931</Code>
 				<Text xml:lang="en">Norwegian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12932</Code>
 				<Text xml:lang="en">Portuguese</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12933</Code>
 				<Text xml:lang="en">Romanian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12934</Code>
 				<Text xml:lang="en">Gypsy</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12935</Code>
 				<Text xml:lang="en">Russian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12936</Code>
 				<Text xml:lang="en">Sardinian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12937</Code>
 				<Text xml:lang="en">Slavic</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12938</Code>
 				<Text xml:lang="en">Slovak</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>12939</Code>
 				<Text xml:lang="en">Spanish</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12940</Code>
 				<Text xml:lang="en">Swedish</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12941</Code>
 				<Text xml:lang="en">Swiss</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12942</Code>
 				<Text xml:lang="en">Ukrainian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12943</Code>
 				<Text xml:lang="en">American</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12944</Code>
 				<Text xml:lang="en">Burgher</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12945</Code>
 				<Text xml:lang="en">Canadian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12946</Code>
 				<Text xml:lang="en">Falkland Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12947</Code>
 				<Text xml:lang="en">New Caledonian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12948</Code>
 				<Text xml:lang="en">South African nec</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12949</Code>
 				<Text xml:lang="en">Afrikaner</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12950</Code>
 				<Text xml:lang="en">Zimbabwean</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>12999</Code>
 				<Text xml:lang="en">European nec</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>2</Code>
 				<Text xml:lang="en">Māori</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>21</Code>
 				<Text xml:lang="en">Māori</Text>
 				<Text xml:lang="mi">Māori</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>211</Code>
 				<Text xml:lang="en">Māori</Text>
 				<Text xml:lang="mi">Māori</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>21111</Code>
 				<Text xml:lang="en">Māori</Text>
 				<Text xml:lang="mi">Māori</Text>
- 			</Value>
+				<Level>4</Level>
+			</Value>
+
 			<Value>
 				<Code>3</Code>
 				<Text xml:lang="en">Pacific Peoples</Text>
 				<Text xml:lang="mi">Ngā Iwi Pasifika</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>30</Code>
 				<Text xml:lang="en">Pacific Peoples nfd</Text>
 				<Text xml:lang="mi">Ngā Iwi Pasifika</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>300</Code>
 				<Text xml:lang="en">Pacific Peoples nfd</Text>
 				<Text xml:lang="mi">Ngā Iwi Pasifika</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>30000</Code>
 				<Text xml:lang="en">Pacific Peoples nfd</Text>
 				<Text xml:lang="mi">Ngā Iwi Pasifika</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>31</Code>
 				<Text xml:lang="en">Samoan</Text>
 				<Text xml:lang="mi">Hamoa</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>311</Code>
 				<Text xml:lang="en">Samoan</Text>
 				<Text xml:lang="mi">Hamoa</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>31111</Code>
 				<Text xml:lang="en">Samoan</Text>
 				<Text xml:lang="mi">Hamoa</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>32</Code>
 				<Text xml:lang="en">Cook Islands Maori</Text>
 				<Text xml:lang="mi">Kuki Airani</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>321</Code>
 				<Text xml:lang="en">Cook Islands Maori</Text>
 				<Text xml:lang="mi">Kuki Airani</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>32100</Code>
 				<Text xml:lang="en">Cook Islands Maori nfd</Text>
 				<Text xml:lang="mi">Kuki Airani</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>32111</Code>
 				<Text xml:lang="en">Aitutaki Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>32112</Code>
 				<Text xml:lang="en">Atiu Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>32113</Code>
 				<Text xml:lang="en">Mangaia Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>32114</Code>
 				<Text xml:lang="en">Manihiki Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>32115</Code>
 				<Text xml:lang="en">Mauke Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>32116</Code>
 				<Text xml:lang="en">Mitiaro Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>32117</Code>
 				<Text xml:lang="en">Palmerston Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>32118</Code>
 				<Text xml:lang="en">Penrhyn Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>32119</Code>
 				<Text xml:lang="en">Pukapuka Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>32120</Code>
 				<Text xml:lang="en">Rakahanga Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>32121</Code>
 				<Text xml:lang="en">Rarotongan</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>33</Code>
 				<Text xml:lang="en">Tongan</Text>
 				<Text xml:lang="mi">Tonga</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>331</Code>
 				<Text xml:lang="en">Tongan</Text>
-				<Text xml:lang="mi">Tonga</Text>				
+				<Text xml:lang="mi">Tonga</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>33111</Code>
 				<Text xml:lang="en">Tongan</Text>
 				<Text xml:lang="mi">Tonga</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>34</Code>
 				<Text xml:lang="en">Niuean</Text>
 				<Text xml:lang="mi">Niue</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>341</Code>
 				<Text xml:lang="en">Niuean</Text>
 				<Text xml:lang="mi">Niue</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>34111</Code>
 				<Text xml:lang="en">Niuean</Text>
 				<Text xml:lang="mi">Niue</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>35</Code>
 				<Text xml:lang="en">Tokelauan</Text>
 				<Text xml:lang="mi">Tokerau</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>351</Code>
 				<Text xml:lang="en">Tokelauan</Text>
 				<Text xml:lang="mi">Tokerau</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>35111</Code>
 				<Text xml:lang="en">Tokelauan</Text>
 				<Text xml:lang="mi">Tokerau</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>36</Code>
 				<Text xml:lang="en">Fijian</Text>
 				<Text xml:lang="mi">Whītiana</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>361</Code>
 				<Text xml:lang="en">Fijian</Text>
 				<Text xml:lang="mi">Whītiana</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>36111</Code>
 				<Text xml:lang="en">Fijian</Text>
 				<Text xml:lang="mi">Whītiana</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37</Code>
 				<Text xml:lang="en">Other Pacific Peoples</Text>
 				<Text xml:lang="mi">Hunga Pasifika Kē</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>371</Code>
 				<Text xml:lang="en">Other Pacific Peoples</Text>
 				<Text xml:lang="mi">Hunga Pasifika Kē</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>37111</Code>
 				<Text xml:lang="en">Admiralty Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37112</Code>
 				<Text xml:lang="en">Australian Aboriginal</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37113</Code>
 				<Text xml:lang="en">Austral Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37114</Code>
 				<Text xml:lang="en">Palau Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37115</Code>
 				<Text xml:lang="en">Bismark Archipelagoan</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37116</Code>
 				<Text xml:lang="en">Bougainvillean</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37117</Code>
 				<Text xml:lang="en">Caroline Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37118</Code>
 				<Text xml:lang="en">Easter Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37119</Code>
 				<Text xml:lang="en">Gambier Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37120</Code>
 				<Text xml:lang="en">Guadalcanalian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37121</Code>
 				<Text xml:lang="en">Chamorro</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37122</Code>
 				<Text xml:lang="en">Hawaiian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37123</Code>
 				<Text xml:lang="en">Kanak</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37124</Code>
 				<Text xml:lang="en">Kiribati</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37125</Code>
 				<Text xml:lang="en">Malatian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37126</Code>
 				<Text xml:lang="en">Manus Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37127</Code>
 				<Text xml:lang="en">Marianas Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37128</Code>
 				<Text xml:lang="en">Marquesas Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37129</Code>
 				<Text xml:lang="en">Marshall Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37130</Code>
 				<Text xml:lang="en">Nauruan</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37131</Code>
 				<Text xml:lang="en">New Britain Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37132</Code>
 				<Text xml:lang="en">New Georgian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37133</Code>
 				<Text xml:lang="en">New Irelander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37134</Code>
 				<Text xml:lang="en">Banaban</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37135</Code>
 				<Text xml:lang="en">Papua New Guinean</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37136</Code>
 				<Text xml:lang="en">Phoenix Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37137</Code>
 				<Text xml:lang="en">Pitcairn Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37138</Code>
 				<Text xml:lang="en">Rotuman</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37139</Code>
 				<Text xml:lang="en">Santa Cruz Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37140</Code>
 				<Text xml:lang="en">Tahitian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37141</Code>
 				<Text xml:lang="en">Solomon Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37142</Code>
 				<Text xml:lang="en">Torres Strait Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37143</Code>
 				<Text xml:lang="en">Tuamotu Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37144</Code>
 				<Text xml:lang="en">Tuvaluan</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37145</Code>
 				<Text xml:lang="en">Ni Vanuatu</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37146</Code>
 				<Text xml:lang="en">Wake Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37147</Code>
 				<Text xml:lang="en">Wallis Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37148</Code>
 				<Text xml:lang="en">Yap Islander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>37199</Code>
 				<Text xml:lang="en">Pacific Peoples nec</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>4</Code>
 				<Text xml:lang="en">Asian</Text>
 				<Text xml:lang="mi">Āhia</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>40</Code>
 				<Text xml:lang="en">Asian nfd</Text>
 				<Text xml:lang="mi">Āhia</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>400</Code>
 				<Text xml:lang="en">Asian nfd</Text>
 				<Text xml:lang="mi">Āhia</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>40000</Code>
 				<Text xml:lang="en">Asian nfd</Text>
 				<Text xml:lang="mi">Āhia</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>41</Code>
 				<Text xml:lang="en">South East Asian</Text>
 				<Text xml:lang="mi">Hunga Āhia ki te Tonga</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>410</Code>
 				<Text xml:lang="en">South East Asian nfd</Text>
 				<Text xml:lang="mi">Hunga Āhia ki te Tonga</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>41000</Code>
 				<Text xml:lang="en">South East Asian nfd</Text>
 				<Text xml:lang="mi">Hunga Āhia ki te Tonga</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>411</Code>
 				<Text xml:lang="en">Filipino</Text>
 				<Text xml:lang="mi">Piripīni</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>41111</Code>
 				<Text xml:lang="en">Filipino</Text>
 				<Text xml:lang="mi">Piripīni</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>412</Code>
 				<Text xml:lang="en">Cambodian</Text>
 				<Text xml:lang="mi">Kamapōtia</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>41211</Code>
 				<Text xml:lang="en">Cambodian</Text>
 				<Text xml:lang="mi">Kamapōtia</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>413</Code>
 				<Text xml:lang="en">Vietnamese</Text>
 				<Text xml:lang="mi">Whitināmu</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>41311</Code>
 				<Text xml:lang="en">Vietnamese</Text>
 				<Text xml:lang="mi">Whitināmu</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>414</Code>
 				<Text xml:lang="en">Other Southeast Asian</Text>
 				<Text xml:lang="mi">Hunga Āhia ki te Tonga Kē</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>41411</Code>
 				<Text xml:lang="en">Burmese</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>41412</Code>
 				<Text xml:lang="en">Indonesian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>41413</Code>
 				<Text xml:lang="en">Laotian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>41414</Code>
 				<Text xml:lang="en">Malay</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>41415</Code>
 				<Text xml:lang="en">Thai</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>41499</Code>
 				<Text xml:lang="en">Southeast Asian nec</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>42</Code>
 				<Text xml:lang="en">Chinese</Text>
 				<Text xml:lang="mi">Hainamana</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>421</Code>
 				<Text xml:lang="en">Chinese</Text>
 				<Text xml:lang="mi">Hainamana</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>42100</Code>
 				<Text xml:lang="en">Chinese nfd</Text>
 				<Text xml:lang="mi">Hainamana</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>42111</Code>
 				<Text xml:lang="en">Hong Kong Chinese</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>42112</Code>
 				<Text xml:lang="en">Cambodian Chinese</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>42113</Code>
 				<Text xml:lang="en">Malaysian Chinese</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>42114</Code>
 				<Text xml:lang="en">Singaporean Chinese</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>42115</Code>
 				<Text xml:lang="en">Vietnamese Chinese</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>42116</Code>
 				<Text xml:lang="en">Taiwanese</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>42199</Code>
 				<Text xml:lang="en">Chinese nec</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>43</Code>
 				<Text xml:lang="en">Indian</Text>
 				<Text xml:lang="mi">Iniana</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>431</Code>
 				<Text xml:lang="en">Indian</Text>
 				<Text xml:lang="mi">Iniana</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>43100</Code>
 				<Text xml:lang="en">Indian nfd</Text>
 				<Text xml:lang="mi">Iniana</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>43111</Code>
 				<Text xml:lang="en">Bengali</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>43112</Code>
 				<Text xml:lang="en">Fijian Indian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>43113</Code>
 				<Text xml:lang="en">Gujarati</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>43114</Code>
 				<Text xml:lang="en">Indian Tamil</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>43115</Code>
 				<Text xml:lang="en">Punjabi</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>43116</Code>
 				<Text xml:lang="en">Sikh</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>43117</Code>
 				<Text xml:lang="en">Anglo Indian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>43199</Code>
 				<Text xml:lang="en">Indian nec</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>44</Code>
 				<Text xml:lang="en">Other Asian</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>441</Code>
 				<Text xml:lang="en">Sri Lankan</Text>
 				<Text xml:lang="mi">Hiri Rānaka</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>44100</Code>
 				<Text xml:lang="en">Sri Lankan nfd</Text>
 				<Text xml:lang="mi">Hiri Rānaka</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>44111</Code>
 				<Text xml:lang="en">Sinhalese</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>44112</Code>
 				<Text xml:lang="en">Sri Lankan Tamil</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>44199</Code>
 				<Text xml:lang="en">Sri Lankan nec</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>442</Code>
 				<Text xml:lang="en">Japanese</Text>
 				<Text xml:lang="mi">Hapanihi</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>44211</Code>
 				<Text xml:lang="en">Japanese</Text>
 				<Text xml:lang="mi">Hapanihi</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>443</Code>
 				<Text xml:lang="en">Korean</Text>
 				<Text xml:lang="mi">Kōrea</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>44311</Code>
 				<Text xml:lang="en">Korean</Text>
 				<Text xml:lang="mi">Kōrea</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>444</Code>
 				<Text xml:lang="en">Other Asian</Text>
 				<Text xml:lang="mi">Iwi Āhia Kē</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>44411</Code>
 				<Text xml:lang="en">Afghani</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>44412</Code>
 				<Text xml:lang="en">Bangladeshi</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>44413</Code>
 				<Text xml:lang="en">Nepalese</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>44414</Code>
 				<Text xml:lang="en">Pakistani</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>44415</Code>
 				<Text xml:lang="en">Tibetan</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>44416</Code>
 				<Text xml:lang="en">Eurasian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>44499</Code>
 				<Text xml:lang="en">Asian nec</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>5</Code>
 				<Text xml:lang="en">Middle Eastern/Latin American/African</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>51</Code>
 				<Text xml:lang="en">Middle Eastern</Text>
 				<Text xml:lang="mi">Middle Eastern</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>511</Code>
 				<Text xml:lang="en">Middle Eastern</Text>
 				<Text xml:lang="mi">Middle Eastern</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>51100</Code>
 				<Text xml:lang="en">Middle Eastern nfd</Text>
 				<Text xml:lang="mi">Middle Eastern</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51111</Code>
 				<Text xml:lang="en">Algerian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51112</Code>
 				<Text xml:lang="en">Arab</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51113</Code>
 				<Text xml:lang="en">Assyrian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51114</Code>
 				<Text xml:lang="en">Egyptian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51115</Code>
 				<Text xml:lang="en">Iranian/Persian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51116</Code>
 				<Text xml:lang="en">Iraqi</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51117</Code>
 				<Text xml:lang="en">Israeli/Jewish</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51118</Code>
 				<Text xml:lang="en">Jordanian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51119</Code>
 				<Text xml:lang="en">Kurd</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51120</Code>
 				<Text xml:lang="en">Lebanese</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51121</Code>
 				<Text xml:lang="en">Libyan</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51122</Code>
 				<Text xml:lang="en">Moroccan</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51123</Code>
 				<Text xml:lang="en">Omani</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>51124</Code>
 				<Text xml:lang="en">Palestinian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51125</Code>
 				<Text xml:lang="en">Syrian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51126</Code>
 				<Text xml:lang="en">Tunisian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51127</Code>
 				<Text xml:lang="en">Turkish</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51128</Code>
 				<Text xml:lang="en">Yemeni</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>51199</Code>
 				<Text xml:lang="en">Middle Eastern nec</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52</Code>
 				<Text xml:lang="en">Latin American</Text>
 				<Text xml:lang="mi">Rātini Amerikana</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>521</Code>
 				<Text xml:lang="en">Latin American</Text>
 				<Text xml:lang="mi">Rātini Amerikana</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>52100</Code>
 				<Text xml:lang="en">Latin American nfd</Text>
 				<Text xml:lang="mi">Rātini Amerikana</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52111</Code>
 				<Text xml:lang="en">Argentinian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52112</Code>
 				<Text xml:lang="en">Bolivian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52113</Code>
 				<Text xml:lang="en">Brazilian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52114</Code>
 				<Text xml:lang="en">Chilean</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>52115</Code>
 				<Text xml:lang="en">Colombian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52116</Code>
 				<Text xml:lang="en">Costa Rican</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52117</Code>
 				<Text xml:lang="en">Latin American Creole</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52118</Code>
 				<Text xml:lang="en">Ecuadorian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52119</Code>
 				<Text xml:lang="en">Guatemalan</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52120</Code>
 				<Text xml:lang="en">Guyanese</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52121</Code>
 				<Text xml:lang="en">Honduran</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52122</Code>
 				<Text xml:lang="en">Malvinian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52123</Code>
 				<Text xml:lang="en">Mexican</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52124</Code>
 				<Text xml:lang="en">Nicaraguan</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52125</Code>
 				<Text xml:lang="en">Panamanian</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>52126</Code>
 				<Text xml:lang="en">Paraguayan</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52127</Code>
 				<Text xml:lang="en">Peruvian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52128</Code>
 				<Text xml:lang="en">Puerto Rican</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52129</Code>
 				<Text xml:lang="en">Uruguayan</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52130</Code>
 				<Text xml:lang="en">Venezuelan</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>52199</Code>
 				<Text xml:lang="en">Latin American nec</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>53</Code>
 				<Text xml:lang="en">African</Text>
 				<Text xml:lang="mi">Awherika</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>531</Code>
 				<Text xml:lang="en">African</Text>
 				<Text xml:lang="mi">Awherika</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>53100</Code>
 				<Text xml:lang="en">African nfd</Text>
 				<Text xml:lang="mi">Awherika</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>53112</Code>
 				<Text xml:lang="en">United States Creole</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>53113</Code>
 				<Text xml:lang="en">Jamaican</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>53114</Code>
 				<Text xml:lang="en">Kenyan</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>53115</Code>
 				<Text xml:lang="en">Nigerian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>53116</Code>
 				<Text xml:lang="en">African American</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>53117</Code>
 				<Text xml:lang="en">Ugangan</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>53118</Code>
 				<Text xml:lang="en">West Indian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>53119</Code>
 				<Text xml:lang="en">Somali</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>53120</Code>
 				<Text xml:lang="en">Eritrean</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>53121</Code>
 				<Text xml:lang="en">Ethiopian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>53122</Code>
 				<Text xml:lang="en">Ghanaian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>53199</Code>
 				<Text xml:lang="en">African nec</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>6</Code>
 				<Text xml:lang="en">Other Ethnicity</Text>
 				<Text xml:lang="mi">Iwi kē</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>61</Code>
 				<Text xml:lang="en">Other Ethnicity</Text>
 				<Text xml:lang="mi">Iwi kē</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>611</Code>
 				<Text xml:lang="en">Other Ethnicity</Text>
 				<Text xml:lang="mi">Iwi kē</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>61111</Code>
 				<Text xml:lang="en">Central American Indian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>61112</Code>
 				<Text xml:lang="en">Inuit</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>61113</Code>
 				<Text xml:lang="en">North American Indian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>61114</Code>
 				<Text xml:lang="en">South American Indian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>61115</Code>
 				<Text xml:lang="en">Mauritian</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>61116</Code>
 				<Text xml:lang="en">Seychellois</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>61117</Code>
 				<Text xml:lang="en">South African Coloured</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>61118</Code>
 				<Text xml:lang="en">New Zealander</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>61199</Code>
 				<Text xml:lang="en">Other Ethnicity nec</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>9</Code>
 				<Text xml:lang="en">Residual Categories</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>94</Code>
 				<Text xml:lang="en">Don't Know</Text>
 				<Text xml:lang="mi">Kāre i mōhiotia</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>944</Code>
 				<Text xml:lang="en">Don't Know</Text>
 				<Text xml:lang="mi">Kāre i mōhiotia</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>94444</Code>
 				<Text xml:lang="en">Don't Know</Text>
 				<Text xml:lang="mi">Kāre i mōhiotia</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>95</Code>
 				<Text xml:lang="en">Refused to Answer</Text>
 				<Text xml:lang="mi">Kāre i whakautu</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>955</Code>
 				<Text xml:lang="en">Refused to Answer</Text>
 				<Text xml:lang="mi">Kāre i whakautu</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>95555</Code>
 				<Text xml:lang="en">Refused to Answer</Text>
 				<Text xml:lang="mi">Kāre i whakautu</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>96</Code>
 				<Text xml:lang="en">Repeated Value</Text>
 				<Text xml:lang="mi">Uara Tārua</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>966</Code>
 				<Text xml:lang="en">Repeated Value</Text>
 				<Text xml:lang="mi">Uara Tārua</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>96666</Code>
 				<Text xml:lang="en">Repeated Value</Text>
 				<Text xml:lang="mi">Uara Tārua</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>97</Code>
 				<Text xml:lang="en">Response Unidentifiable</Text>
 				<Text xml:lang="mi">Urupare tē mōhiotia</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>977</Code>
 				<Text xml:lang="en">Response Unidentifiable</Text>
 				<Text xml:lang="mi">Urupare tē mōhiotia</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>97777</Code>
 				<Text xml:lang="en">Response Unidentifiable</Text>
 				<Text xml:lang="mi">Urupare tē mōhiotia</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>98</Code>
 				<Text xml:lang="en">Response Outside Scope</Text>
 				<Text xml:lang="mi">Urupare i waho atu i te aronga</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>988</Code>
 				<Text xml:lang="en">Response Outside Scope</Text>
 				<Text xml:lang="mi">Urupare i waho atu i te aronga</Text>
+				<Level>3</Level>
 			</Value>
+
 			<Value>
 				<Code>98888</Code>
 				<Text xml:lang="en">Response Outside Scope</Text>
 				<Text xml:lang="mi">Urupare i waho atu i te aronga</Text>
+				<Level>4</Level>
 			</Value>
+
 			<Value>
 				<Code>99</Code>
 				<Text xml:lang="en">Not Stated</Text>
 				<Text xml:lang="mi">Kāre i tohua</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>999</Code>
 				<Text xml:lang="en">Not Stated</Text>
 				<Text xml:lang="mi">Kāre i tohua</Text>
+				<Level>34</Level>
 			</Value>
+
 			<Value>
 				<Code>99999</Code>
 				<Text xml:lang="en">Not Stated</Text>
 				<Text xml:lang="mi">Kāre i tohua</Text>
+				<Level>4</Level>
 			</Value>
 		</Values>
-	</CodeSet>    <!-- Ethnicity -->
+	</CodeSet>	<!-- Ethnicity -->
 	<CodeSet>
 		<Intro>
 			<p>An iwi, or Māori tribe, is one of the largest kinship
@@ -2082,7 +4023,8 @@
 			clusters of whānau where the whānau is usually an extended
 			family grouping consisting of children, parents, often
 			grandparents, and other closely related kin.</p>
-			<p>Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/QjykuWT5BTJrGdVs">Statistics NZ - Iwi and Iwi related groups statistical standard v1.0.0.0</a></p>
+			<p>Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/QjykuWT5BTJrGdVs">Statistics NZ - Iwi and Iwi related groups statistical standard v1.0.0.0</a>
+			</p>
 		</Intro>
 		<ID>Iwi</ID>
 		<Values>
@@ -2090,1157 +4032,2215 @@
 				<Code>NZS01</Code>
 				<Text xml:lang="en">Te Tai Tokerau/Tāmaki-makaurau (Northland/Auckland) Region Iwi</Text>
 				<Text xml:lang="mi">Te Tai Tokerau/Tāmaki-makaurau</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0101</Code>
 				<Text xml:lang="en">Te Aupōuri</Text>
 				<Text xml:lang="mi">Te Aupōuri</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0102</Code>
 				<Text xml:lang="en">Ngāti Kahu</Text>
 				<Text xml:lang="mi">Ngāti Kahu</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0103</Code>
 				<Text xml:lang="en">Ngāti Kurī</Text>
 				<Text xml:lang="mi">Ngāti Kurī</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0104</Code>
 				<Text xml:lang="en">Ngāpuhi</Text>
 				<Text xml:lang="mi">Ngāpuhi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0105</Code>
 				<Text xml:lang="en">Ngāpuhi ki Whaingaroa-Ngāti Kahu ki Whaingaroa</Text>
 				<Text xml:lang="mi">Ngāpuhi ki Whaingaroa-Ngāti Kahu ki Whaingaroa</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0106</Code>
 				<Text xml:lang="en">Te Rarawa</Text>
 				<Text xml:lang="mi">Te Rarawa</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0107</Code>
 				<Text xml:lang="en">Ngāi Takoto</Text>
 				<Text xml:lang="mi">Ngāi Takoto</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0108</Code>
 				<Text xml:lang="en">Ngāti Wai</Text>
 				<Text xml:lang="mi">Ngāti Wai</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0109</Code>
 				<Text xml:lang="en">Ngāti Whātua (not Ōrākei or Kaipara)</Text>
 				<Text xml:lang="mi">Ngāti Whātua (i tua atu i Ōrākei, i Kaipara hoki)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0110</Code>
 				<Text xml:lang="en">Te Kawerau ā Maki</Text>
 				<Text xml:lang="mi">Te Kawerau ā Maki</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0111</Code>
 				<Text xml:lang="en">Te Uri-o-Hau</Text>
 				<Text xml:lang="mi">Te Uri-o-Hau</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0112</Code>
 				<Text xml:lang="en">Te Roroa</Text>
 				<Text xml:lang="mi">Te Roroa</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0113</Code>
 				<Text xml:lang="en">Ngāti Whātua o Kaipara</Text>
 				<Text xml:lang="mi">Ngāti Whātua o Kaipara</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0114</Code>
 				<Text xml:lang="en">Ngāti Whātua o Ōrākei</Text>
 				<Text xml:lang="mi">Ngāti Whātua o Ōrākei</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0115</Code>
 				<Text xml:lang="en">Ngāi Tai ki Tāmaki</Text>
 				<Text xml:lang="mi">Ngāi Tai ki Tāmaki</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0116</Code>
 				<Text xml:lang="en">Ngāti Hine (Te Tai Tokerau)</Text>
 				<Text xml:lang="mi">Ngāti Hine (Te Tai Tokerau)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0117</Code>
 				<Text xml:lang="en">Te Paatu</Text>
 				<Text xml:lang="mi">Te Paatu</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0118</Code>
 				<Text xml:lang="en">Ngāti Manuhiri</Text>
 				<Text xml:lang="mi">Ngāti Manuhiri</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0119</Code>
 				<Text xml:lang="en">Ngāti Rēhua</Text>
 				<Text xml:lang="mi">Ngāti Rēhua</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS02</Code>
 				<Text xml:lang="en">Hauraki (Coromandel) Region Iwi</Text>
 				<Text xml:lang="mi">Hauraki Rohenga</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0201</Code>
 				<Text xml:lang="en">Ngāti Hako</Text>
 				<Text xml:lang="mi">Ngāti Hako</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0202</Code>
 				<Text xml:lang="en">Ngāti Hei</Text>
 				<Text xml:lang="mi">Ngāti Hei</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0203</Code>
 				<Text xml:lang="en">Ngāti Maru (Hauraki)</Text>
 				<Text xml:lang="mi">Ngāti Maru (Hauraki)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0204</Code>
 				<Text xml:lang="en">Ngāti Paoa</Text>
 				<Text xml:lang="mi">Ngāti Paoa</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0205</Code>
 				<Text xml:lang="en">Patukirikiri</Text>
 				<Text xml:lang="mi">Patukirikiri</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0206</Code>
 				<Text xml:lang="en">Ngāti Porou ki Harataunga ki Mataora</Text>
 				<Text xml:lang="mi">Ngāti Porou ki Harataunga ki Mataora</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0207</Code>
 				<Text xml:lang="en">Ngāti Pūkenga ki Waiau</Text>
 				<Text xml:lang="mi">Ngāti Pūkenga ki Waiau</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0208</Code>
 				<Text xml:lang="en">Ngāti Rāhiri Tumutumu</Text>
 				<Text xml:lang="mi">Ngāti Rāhiri Tumutumu</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0210</Code>
 				<Text xml:lang="en">Ngāti Tamaterā</Text>
 				<Text xml:lang="mi">Ngāti Tamaterā</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0211</Code>
 				<Text xml:lang="en">Ngāti Tara Tokanui</Text>
 				<Text xml:lang="mi">Ngāti Tara Tokanui</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0212</Code>
 				<Text xml:lang="en">Ngāti Whanaunga</Text>
 				<Text xml:lang="mi">Ngāti Whanaunga</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS03</Code>
 				<Text xml:lang="en">Waikato/Te Rohe Pōtae (Waikato/King Country) Region Iwi</Text>
 				<Text xml:lang="mi">Waikato/Te Rohe Pōtae</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0301</Code>
 				<Text xml:lang="en">Ngāti Haua (Waikato)</Text>
 				<Text xml:lang="mi">Ngāti Haua (Waikato)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0302</Code>
 				<Text xml:lang="en">Ngāti Maniapoto</Text>
 				<Text xml:lang="mi">Ngāti Maniapoto</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0303</Code>
 				<Text xml:lang="en">Raukawa (Waikato)</Text>
 				<Text xml:lang="mi">Raukawa (Waikato)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0304</Code>
 				<Text xml:lang="en">Waikato</Text>
 				<Text xml:lang="mi">Waikato</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0305</Code>
 				<Text xml:lang="en">Ngāti Te Ata</Text>
 				<Text xml:lang="mi">Ngāti Te Ata</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0306</Code>
 				<Text xml:lang="en">Ngāti Hīkairo</Text>
 				<Text xml:lang="mi">Ngāti Hīkairo</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0307</Code>
 				<Text xml:lang="en">Rereahu</Text>
 				<Text xml:lang="mi">Rereahu</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0308</Code>
 				<Text xml:lang="en">Ngāti Tiipa</Text>
 				<Text xml:lang="mi">Ngāti Tiipa</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0309</Code>
 				<Text xml:lang="en">Ngāti Korokī Kahukura</Text>
 				<Text xml:lang="mi">Ngāti Korokī Kahukura</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0310</Code>
 				<Text xml:lang="en">Ngāti Tamaoho</Text>
 				<Text xml:lang="mi">Ngāti Tamaoho</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0311</Code>
 				<Text xml:lang="en">Te Ākitai-Waiohua</Text>
 				<Text xml:lang="mi">Te Ākitai-Waiohua</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS04</Code>
 				<Text xml:lang="en">Te Arawa/Taupō (Rotorua/Taupō) Region Iwi</Text>
 				<Text xml:lang="mi">Te Arawa/Taupō</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0401</Code>
 				<Text xml:lang="en">Ngāti Pikiao (Te Arawa)</Text>
 				<Text xml:lang="mi">Ngāti Pikiao (Te Arawa)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0402</Code>
 				<Text xml:lang="en">Ngāti Rangiteaorere (Te Arawa)</Text>
 				<Text xml:lang="mi">Ngāti Rangiteaorere (Te Arawa)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0403</Code>
 				<Text xml:lang="en">Ngāti Rangitihi (Te Arawa)</Text>
 				<Text xml:lang="mi">Ngāti Rangitihi (Te Arawa)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0404</Code>
 				<Text xml:lang="en">Ngāti Rangiwewehi (Te Arawa)</Text>
 				<Text xml:lang="mi">Ngāti Rangiwewehi (Te Arawa)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0405</Code>
 				<Text xml:lang="en">Tapuika (Te Arawa)</Text>
 				<Text xml:lang="mi">Tapuika (Te Arawa)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0406</Code>
 				<Text xml:lang="en">Ngāti Tarāwhai (Te Arawa)</Text>
 				<Text xml:lang="mi">Ngāti Tarāwhai (Te Arawa)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0407</Code>
 				<Text xml:lang="en">Tūhourangi (Te Arawa)</Text>
 				<Text xml:lang="mi">Tūhourangi (Te Arawa)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0408</Code>
 				<Text xml:lang="en">Uenuku-Kōpako (Te Arawa)</Text>
 				<Text xml:lang="mi">Uenuku-Kōpako (Te Arawa)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0409</Code>
 				<Text xml:lang="en">Waitaha (Te Arawa)</Text>
 				<Text xml:lang="mi">Waitaha (Te Arawa)</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0410</Code>
 				<Text xml:lang="en">Ngāti Whakaue (Te Arawa)</Text>
 				<Text xml:lang="mi">Ngāti Whakaue (Te Arawa)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0411</Code>
 				<Text xml:lang="en">Ngāti Tūwharetoa (ki Taupō)</Text>
 				<Text xml:lang="mi">Ngāti Tūwharetoa (ki Taupō)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0412</Code>
 				<Text xml:lang="en">Ngāti Tahu-Ngāti Whaoa (Te Arawa)</Text>
 				<Text xml:lang="mi">Ngāti Tahu-Ngāti Whaoa (Te Arawa)</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0413</Code>
 				<Text xml:lang="en">Ngāti Mākino</Text>
 				<Text xml:lang="mi">Ngāti Mākino</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0414</Code>
 				<Text xml:lang="en">Ngāti Kearoa / Ngāti Tuarā</Text>
 				<Text xml:lang="mi">Ngāti Kearoa / Ngāti Tuarā</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0415</Code>
 				<Text xml:lang="en">Ngāti Rongomai (Te Arawa)</Text>
 				<Text xml:lang="mi">Ngāti Rongomai (Te Arawa)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS05</Code>
 				<Text xml:lang="en">Tauranga Moana/Mātaatua (Bay of Plenty) Region Iwi</Text>
 				<Text xml:lang="mi">Tauranga Moana/Mātaatua</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0501</Code>
 				<Text xml:lang="en">Ngāti Pūkenga</Text>
 				<Text xml:lang="mi">Ngāti Pūkenga</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0502</Code>
 				<Text xml:lang="en">Ngāi Te Rangi </Text>
 				<Text xml:lang="mi">Ngāi Te Rangi </Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0503</Code>
 				<Text xml:lang="en">Ngāti Ranginui</Text>
 				<Text xml:lang="mi">Ngāti Ranginui</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0504</Code>
 				<Text xml:lang="en">Ngāti Awa</Text>
 				<Text xml:lang="mi">Ngāti Awa</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0505</Code>
 				<Text xml:lang="en">Ngāti Manawa</Text>
 				<Text xml:lang="mi">Ngāti Manawa</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0506</Code>
 				<Text xml:lang="en">Ngāi Tai (Tauranga Moana/Mātaatua)</Text>
 				<Text xml:lang="mi">Ngāi Tai (Tauranga Moana/Mātaatua)</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0507</Code>
 				<Text xml:lang="en">Tūhoe</Text>
 				<Text xml:lang="mi">Tūhoe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0508</Code>
 				<Text xml:lang="en">Whakatōhea</Text>
 				<Text xml:lang="mi">Whakatōhea</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0509</Code>
 				<Text xml:lang="en">Te Whānau-ā-Apanui</Text>
 				<Text xml:lang="mi">Te Whānau-ā-Apanui</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0510</Code>
 				<Text xml:lang="en">Ngāti Whare</Text>
 				<Text xml:lang="mi">Ngāti Whare</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0511</Code>
 				<Text xml:lang="en">Ngā Pōtiki ā Tamapahore</Text>
 				<Text xml:lang="mi">Ngā Pōtiki ā Tamapahore</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0512</Code>
 				<Text xml:lang="en">Te Upokorehe</Text>
 				<Text xml:lang="mi">Te Upokorehe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0513</Code>
 				<Text xml:lang="en">Ngāti Tūwharetoa ki Kawerau </Text>
 				<Text xml:lang="mi">Ngāti Tūwharetoa ki Kawerau </Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS06</Code>
 				<Text xml:lang="en">Te Tai Rāwhiti (East Coast) Region Iwi</Text>
 				<Text xml:lang="mi">Te Tai Rāwhiti Rohenga</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0601</Code>
 				<Text xml:lang="en">Ngāti Porou</Text>
 				<Text xml:lang="mi">Ngāti Porou</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0602</Code>
 				<Text xml:lang="en">Te Aitanga-a-Māhaki</Text>
 				<Text xml:lang="mi">Te Aitanga-a-Māhaki</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0603</Code>
 				<Text xml:lang="en">Rongowhakaata</Text>
 				<Text xml:lang="mi">Rongowhakaata</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0604</Code>
 				<Text xml:lang="en">Ngāi Tāmanuhiri</Text>
 				<Text xml:lang="mi">Ngāi Tāmanuhiri</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0605</Code>
 				<Text xml:lang="en">Te Aitanga ā Hauiti</Text>
 				<Text xml:lang="mi">Te Aitanga ā Hauiti</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS07</Code>
 				<Text xml:lang="en">Te Matau-a-Māui/Wairarapa (Hawke's Bay/Wairarapa) Region Iwi</Text>
 				<Text xml:lang="mi">Te Matau-a-Māui/Wairarapa</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0701</Code>
 				<Text xml:lang="en">Rongomaiwahine (Te Māhia)</Text>
 				<Text xml:lang="mi">Rongomaiwahine (Te Māhia)</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0702</Code>
 				<Text xml:lang="en">Ngāti Kahungunu ki Te Wairoa</Text>
 				<Text xml:lang="mi">Ngāti Kahungunu ki Te Wairoa</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0703</Code>
 				<Text xml:lang="en">Ngāti Kahungunu ki Heretaunga</Text>
 				<Text xml:lang="mi">Ngāti Kahungunu ki Heretaunga</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0704</Code>
 				<Text xml:lang="en">Ngāti Kahungunu ki Wairarapa</Text>
 				<Text xml:lang="mi">Ngāti Kahungunu ki Wairarapa</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0706</Code>
 				<Text xml:lang="en">Rangitāne (Te Matau-a-Māui/Hawke's Bay/Wairarapa)</Text>
 				<Text xml:lang="mi">Rangitāne (Te Matau-a-Māui/Wairarapa)</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0707</Code>
 				<Text xml:lang="en">Ngāti Kahungunu ki Te Whanganui-a-Orotu</Text>
 				<Text xml:lang="mi">Ngāti Kahungunu ki Te Whanganui-a-Orotu</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0708</Code>
 				<Text xml:lang="en">Ngāti Kahungunu ki Tamatea</Text>
 				<Text xml:lang="mi">Ngāti Kahungunu ki Tamatea</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0709</Code>
 				<Text xml:lang="en">Ngāti Kahungunu ki Tamakinui a Rua</Text>
 				<Text xml:lang="mi">Ngāti Kahungunu ki Tamakinui a Rua</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0710</Code>
 				<Text xml:lang="en">Ngāti Pāhauwera</Text>
 				<Text xml:lang="mi">Ngāti Pāhauwera</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0711</Code>
 				<Text xml:lang="en">Ngāti Rākaipaaka</Text>
 				<Text xml:lang="mi">Ngāti Rākaipaaka</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0712</Code>
 				<Text xml:lang="en">Ngāti Hineuru</Text>
 				<Text xml:lang="mi">Ngāti Hineuru</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0713</Code>
 				<Text xml:lang="en">Maungaharuru Tangitū</Text>
 				<Text xml:lang="mi">Maungaharuru Tangitū</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0714</Code>
 				<Text xml:lang="en">Rangitāne o Tamaki nui ā Rua</Text>
 				<Text xml:lang="mi">Rangitāne o Tamaki nui ā Rua</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0715</Code>
 				<Text xml:lang="en">Ngāti Ruapani ki Waikaremoana</Text>
 				<Text xml:lang="mi">Ngāti Ruapani ki Waikaremoana</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0716</Code>
 				<Text xml:lang="en">Te Hika o Pāpāuma</Text>
 				<Text xml:lang="mi">Te Hika o Pāpāuma</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS08</Code>
 				<Text xml:lang="en">Taranaki Region Iwi</Text>
 				<Text xml:lang="mi">Taranaki</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0801</Code>
 				<Text xml:lang="en">Te Atiawa (Taranaki)</Text>
 				<Text xml:lang="mi">Te Atiawa (Taranaki)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0802</Code>
 				<Text xml:lang="en">Ngāti Maru (Taranaki)</Text>
 				<Text xml:lang="mi">Ngāti Maru (Taranaki)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0803</Code>
 				<Text xml:lang="en">Ngāti Mutunga (Taranaki)</Text>
 				<Text xml:lang="mi">Ngāti Mutunga (Taranaki)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0804</Code>
 				<Text xml:lang="en">Ngā Rauru</Text>
 				<Text xml:lang="mi">Ngā Rauru</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0805</Code>
 				<Text xml:lang="en">Ngā Ruahine</Text>
 				<Text xml:lang="mi">Ngā Ruahine</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0806</Code>
 				<Text xml:lang="en">Ngāti Ruanui</Text>
 				<Text xml:lang="mi">Ngāti Ruanui</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0807</Code>
 				<Text xml:lang="en">Ngāti Tama (Taranaki)</Text>
 				<Text xml:lang="mi">Ngāti Tama (Taranaki)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0808</Code>
 				<Text xml:lang="en">Taranaki</Text>
 				<Text xml:lang="mi">Taranaki</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0809</Code>
 				<Text xml:lang="en">Tangāhoe</Text>
 				<Text xml:lang="mi">Tangāhoe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0810</Code>
 				<Text xml:lang="en">Pakakohi</Text>
 				<Text xml:lang="mi">Pakakohi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS09</Code>
 				<Text xml:lang="en">Whanganui/Rangitīkei (Wanganui/Rangitīkei) Region Iwi</Text>
 				<Text xml:lang="mi">Whanganui/Rangitīkei</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0901</Code>
 				<Text xml:lang="en">Ngāti Apa (Rangitīkei)</Text>
 				<Text xml:lang="mi">Ngāti Apa (Rangitīkei)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0902</Code>
 				<Text xml:lang="en">Te Ati Haunui-a-Pāpārangi</Text>
 				<Text xml:lang="mi">Te Ati Haunui-a-Pāpārangi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0903</Code>
 				<Text xml:lang="en">Ngāti Haua (Taumarunui)</Text>
 				<Text xml:lang="mi">Ngāti Haua (Taumarunui)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0904</Code>
 				<Text xml:lang="en">Ngāti Hauiti (Rangitīkei)</Text>
 				<Text xml:lang="mi">Ngāti Hauiti (Rangitīkei)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0905</Code>
 				<Text xml:lang="en">Ngāti Whitikaupeka (Rangitīkei)</Text>
 				<Text xml:lang="mi">Ngāti Whitikaupeka (Rangitīkei)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0906</Code>
 				<Text xml:lang="en">Ngāi Te Ohuake (Rangitīkei)</Text>
 				<Text xml:lang="mi">Ngāi Te Ohuake (Rangitīkei)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0907</Code>
 				<Text xml:lang="en">Ngāti Tamakōpiri (Rangitīkei)</Text>
 				<Text xml:lang="mi">Ngāti Tamakōpiri (Rangitīkei)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0908</Code>
 				<Text xml:lang="en">Ngāti Rangi (Ruapehu, Whanganui)</Text>
 				<Text xml:lang="mi">Ngāti Rangi (Ruapehu, Whanganui)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0909</Code>
 				<Text xml:lang="en">Uenuku (Ruapehu, Waimarino)</Text>
 				<Text xml:lang="mi">Uenuku (Ruapehu, Waimarino)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0910</Code>
 				<Text xml:lang="en">Tamahaki (Ruapehu, Waimarino)</Text>
 				<Text xml:lang="mi">Tamahaki (Ruapehu, Waimarino)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS0911</Code>
 				<Text xml:lang="en">Tamakana (Ruapehu, Waimarino)</Text>
 				<Text xml:lang="mi">Tamakana (Ruapehu, Waimarino)</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>NZS10</Code>
 				<Text xml:lang="en">Manawatū/Horowhenua/Te Whanganui-a-Tara (Manawatū/Horowhenua/Wellington) Region Iwi</Text>
 				<Text xml:lang="mi">Manawatū/Horowhenua/Te Whanganui-a-Tara</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1001</Code>
 				<Text xml:lang="en">Te Atiawa (Te Whanganui-a-Tara/Wellington)</Text>
 				<Text xml:lang="mi">Te Atiawa (Te Whanganui-a-Tara)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1002</Code>
 				<Text xml:lang="en">Muaūpoko</Text>
 				<Text xml:lang="mi">Muaūpoko</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1003</Code>
 				<Text xml:lang="en">Rangitāne (Manawatū)</Text>
 				<Text xml:lang="mi">Rangitāne (Manawatū)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1004</Code>
 				<Text xml:lang="en">Ngāti Raukawa (Horowhenua/Manawatū)</Text>
 				<Text xml:lang="mi">Ngāti Raukawa (Horowhenua/Manawatū)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1005</Code>
 				<Text xml:lang="en">Ngāti Toarangatira (Te Whanganui-a-Tara/Wellington)</Text>
 				<Text xml:lang="mi">Ngāti Toarangatira (Te Whanganui-a-Tara)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1006</Code>
 				<Text xml:lang="en">Te Atiawa ki Whakarongotai</Text>
 				<Text xml:lang="mi">Te Atiawa ki Whakarongotai</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1007</Code>
 				<Text xml:lang="en">Ngāti Tama ki Te Upoko o Te Ika (Te Whanganui-a-Tara/Wellington)</Text>
 				<Text xml:lang="mi">Ngāti Tama ki Te Ūpoko o Te Ika (Te Whanganui-a-Tara)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1008</Code>
 				<Text xml:lang="en">Ngāti Kauwhata</Text>
 				<Text xml:lang="mi">Ngāti Kauwhata</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1009</Code>
 				<Text xml:lang="en">Ngāti Tukorehe</Text>
 				<Text xml:lang="mi">Ngāti Tukorehe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS11</Code>
 				<Text xml:lang="en">Te Waipounamu/Wharekauri (South Island/Chatham Islands) Region Iwi</Text>
 				<Text xml:lang="mi">Te Waipounamu/Wharekauri</Text>
+				<Level></Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1101</Code>
 				<Text xml:lang="en">Te Atiawa (Te Waipounamu/South Island)</Text>
 				<Text xml:lang="mi">Te Atiawa (Te Waipounamu)</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1102</Code>
 				<Text xml:lang="en">Ngāti Koata</Text>
 				<Text xml:lang="mi">Ngāti Koata</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1103</Code>
 				<Text xml:lang="en">Ngāti Kuia</Text>
 				<Text xml:lang="mi">Ngāti Kuia</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1104</Code>
 				<Text xml:lang="en">Kāti Māmoe</Text>
 				<Text xml:lang="mi">Kāti Māmoe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1105</Code>
 				<Text xml:lang="en">Moriori</Text>
 				<Text xml:lang="mi">Moriori</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1106</Code>
 				<Text xml:lang="en">Ngāti Mutunga (Wharekauri/Chatham Islands)</Text>
 				<Text xml:lang="mi">Ngāti Mutunga (Wharekauri)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1107</Code>
 				<Text xml:lang="en">Rangitāne (Te Waipounamu/South Island)</Text>
 				<Text xml:lang="mi">Rangitāne (Te Waipounamu)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1108</Code>
 				<Text xml:lang="en">Ngāti Rārua</Text>
 				<Text xml:lang="mi">Ngāti Rārua</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1109</Code>
 				<Text xml:lang="en">Ngāi Tahu / Kāi Tahu</Text>
 				<Text xml:lang="mi">Ngāi Tahu / Kāi Tahu</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1110</Code>
 				<Text xml:lang="en">Ngāti Tama (Te Waipounamu/South Island)</Text>
 				<Text xml:lang="mi">Ngāti Tama (Te Waipounamu)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1111</Code>
 				<Text xml:lang="en">Ngāti Toarangatira (Te Waipounamu/South Island)</Text>
 				<Text xml:lang="mi">Ngāti Toarangatira (Te Waipounamu)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1112</Code>
 				<Text xml:lang="en">Waitaha (Te Waipounamu/South Island)</Text>
 				<Text xml:lang="mi">Waitaha (Te Waipounamu)</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS1113</Code>
 				<Text xml:lang="en">Ngāti Apa ki Te Rā Tō</Text>
 				<Text xml:lang="mi">Ngāti Apa ki Te Rā Tō</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS20</Code>
 				<Text xml:lang="en">Confederations and Waka, iwi not named</Text>
 				<Text xml:lang="mi">Ngā Whakaminenga me nga Waka, kāre i kīia te iwi</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2001</Code>
 				<Text xml:lang="en">Tainui, iwi not named</Text>
 				<Text xml:lang="mi">Tainui, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2002</Code>
 				<Text xml:lang="en">Te Arawa, iwi not named</Text>
 				<Text xml:lang="mi">Te Arawa, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2003</Code>
 				<Text xml:lang="en">Tākitimu, iwi not named</Text>
 				<Text xml:lang="mi">Tākitimu, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2004</Code>
 				<Text xml:lang="en">Aotea, iwi not named</Text>
 				<Text xml:lang="mi">Aotea, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2005</Code>
 				<Text xml:lang="en">Mātaatua, iwi not named</Text>
 				<Text xml:lang="mi">Mātaatua, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2006</Code>
 				<Text xml:lang="en">Mahuru, iwi not named</Text>
 				<Text xml:lang="mi">Mahuru, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2007</Code>
 				<Text xml:lang="en">Māmari, iwi not named</Text>
 				<Text xml:lang="mi">Māmari, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2008</Code>
 				<Text xml:lang="en">Ngātokimatawhaorua, iwi not named</Text>
 				<Text xml:lang="mi">Ngātokimatawhaorua, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2009</Code>
 				<Text xml:lang="en">Nukutere, iwi not named</Text>
 				<Text xml:lang="mi">Nukutere, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2010</Code>
 				<Text xml:lang="en">Tokomaru, iwi not named</Text>
 				<Text xml:lang="mi">Tokomaru, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2011</Code>
 				<Text xml:lang="en">Kurahaupō, iwi not named</Text>
 				<Text xml:lang="mi">Kurahaupō, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2012</Code>
 				<Text xml:lang="en">Muriwhenua, iwi not named</Text>
 				<Text xml:lang="mi">Muriwhenua, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2013</Code>
 				<Text xml:lang="en">Hauraki / Pare Hauraki, iwi not named</Text>
 				<Text xml:lang="mi">Hauraki / Pare Hauraki, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2014</Code>
 				<Text xml:lang="en">Tūranganui a Kiwa, iwi not named</Text>
 				<Text xml:lang="mi">Tūranganui a Kiwa, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2015</Code>
 				<Text xml:lang="en">Te Tauihu o Te Waka a Māui, iwi not named</Text>
 				<Text xml:lang="mi">Te Tauihu o Te Waka a Māui, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2016</Code>
 				<Text xml:lang="en">Tauranga Moana, iwi not named</Text>
 				<Text xml:lang="mi">Tauranga Moana, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2017</Code>
 				<Text xml:lang="en">Horouta, iwi not named</Text>
 				<Text xml:lang="mi">Horouta, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2018</Code>
 				<Text xml:lang="en">Mōkai Pātea, iwi not named </Text>
 				<Text xml:lang="mi">Mōkai Pātea, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS21</Code>
 				<Text xml:lang="en">Iwi named, region not known</Text>
 				<Text xml:lang="mi">Ko te iwi noa iho</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2101</Code>
 				<Text xml:lang="en">Te Atiawa, region not known</Text>
 				<Text xml:lang="mi">Te Atiawa, kāre i mōhiotia te rohe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2102</Code>
 				<Text xml:lang="en">Ngāti Haua, region not known</Text>
 				<Text xml:lang="mi">Ngāti Hauā, kāre i mōhiotia te rohe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2103</Code>
 				<Text xml:lang="en">Ngāti Maru, region not known</Text>
 				<Text xml:lang="mi">Ngāti Maru, kāre i mōhiotia te rohe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2104</Code>
 				<Text xml:lang="en">Ngāti Mutunga, region not known</Text>
 				<Text xml:lang="mi">Ngāti Mutunga, kāre i mōhiotia te rohe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2105</Code>
 				<Text xml:lang="en">Rangitāne, region not known</Text>
 				<Text xml:lang="mi">Rangitāne, kāre i mōhiotia te rohe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2106</Code>
 				<Text xml:lang="en">Ngāti Raukawa, region not known</Text>
 				<Text xml:lang="mi">Ngāti Raukawa, kāre i mōhiotia te rohe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2107</Code>
 				<Text xml:lang="en">Ngāti Tama, region not known</Text>
 				<Text xml:lang="mi">Ngāti Tama, kāre i mōhiotia te rohe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2108</Code>
 				<Text xml:lang="en">Ngāti Toa, region not known</Text>
 				<Text xml:lang="mi">Ngāti Toa, kāre i mōhiotia te rohe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2109</Code>
 				<Text xml:lang="en">Waitaha, region not known</Text>
 				<Text xml:lang="mi">Waitaha, kāre i mōhiotia te rohe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2110</Code>
 				<Text xml:lang="en">Ngāti Apa, region not known</Text>
 				<Text xml:lang="mi">Ngāti Apa, kāre i mōhiotia te rohe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2111</Code>
 				<Text xml:lang="en">Ngāi Tai, region not known</Text>
 				<Text xml:lang="mi">Ngāi Tai, kāre i mōhiotia te rohe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2112</Code>
 				<Text xml:lang="en">Ngāti Kahungunu, region not known</Text>
 				<Text xml:lang="mi">Ngāti Kahungunu, kāre i mōhiotia te rohe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2113</Code>
 				<Text xml:lang="en">Ngāti Tūwharetoa, region not known</Text>
 				<Text xml:lang="mi">Ngāti Tūwharetoa, kāre i mōhiotia te rohe</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS22</Code>
 				<Text xml:lang="en">Hapū affiliated to more than one iwi</Text>
 				<Text xml:lang="mi">Hapū he pānga ki iwi kē</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2201</Code>
 				<Text xml:lang="en">Hapū affiliated to more than one iwi</Text>
 				<Text xml:lang="mi">Hapū he pānga ki iwi kē</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS23</Code>
 				<Text xml:lang="en">Region known, Iwi not named</Text>
 				<Text xml:lang="mi">Mōhiotia te rohe, kāre te iwi</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2301</Code>
 				<Text xml:lang="en">Te Tai Tokerau/Tāmaki-makaurau Region, Iwi not named</Text>
 				<Text xml:lang="mi">Te Tai Tokerau/Tāmaki-makaurau, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2302</Code>
 				<Text xml:lang="en">Hauraki Region, Iwi not named</Text>
 				<Text xml:lang="mi">Hauraki, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2303</Code>
 				<Text xml:lang="en">Waikato/Te Rohe Pōtae Region, Iwi not named</Text>
 				<Text xml:lang="mi">Waikato/Te Rohe Pōtae, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2304</Code>
 				<Text xml:lang="en">Te Arawa/Taupō Region, Iwi not named</Text>
 				<Text xml:lang="mi">Te Arawa/Taupō, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2305</Code>
 				<Text xml:lang="en">Tauranga Moana/Mātaatua Region, Iwi not named</Text>
 				<Text xml:lang="mi">Tauranga Moana/Mātaatua, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2306</Code>
 				<Text xml:lang="en">Te Tai Rāwhiti Region, Iwi not named</Text>
 				<Text xml:lang="mi">Te Tai Rāwhiti, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2307</Code>
 				<Text xml:lang="en">Te Matau-a-Māui/Wairarapa Region, Iwi not named</Text>
 				<Text xml:lang="mi">Te Matau-a-Māui/Wairarapa, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2308</Code>
 				<Text xml:lang="en">Taranaki Region, Iwi not named</Text>
 				<Text xml:lang="mi">Taranaki, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2309</Code>
 				<Text xml:lang="en">Whanganui/Rangitīkei Region, Iwi not named</Text>
 				<Text xml:lang="mi">Whanganui/Rangitīkei, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2310</Code>
 				<Text xml:lang="en">Manawatū/Horowhenua/Te Whanganui-a-Tara Region, Iwi not named</Text>
 				<Text xml:lang="mi">Manawatū/Horowhenua/Te Whanganui-a-Tara, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS2311</Code>
 				<Text xml:lang="en">Te Waipounamu/Wharekauri Region, Iwi not named</Text>
 				<Text xml:lang="mi">Te Waipounamu/Wharekauri, kāre i kīia te iwi</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS44</Code>
 				<Text xml:lang="en">Don't Know</Text>
 				<Text xml:lang="mi">Kāre i te mōhio</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS4444</Code>
 				<Text xml:lang="en">Don't Know</Text>
 				<Text xml:lang="mi">Kāre i te mōhio</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS55</Code>
 				<Text xml:lang="en">Refused To Answer</Text>
 				<Text xml:lang="mi">Kāre i whakautu</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS5555</Code>
 				<Text xml:lang="en">Refused To Answer</Text>
 				<Text xml:lang="mi">Kāre i whakautu</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS77</Code>
 				<Text xml:lang="en">Response Unidentifiable</Text>
 				<Text xml:lang="mi">Kāre i arohia te whakautu</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS7777</Code>
 				<Text xml:lang="en">Response Unidentifiable</Text>
 				<Text xml:lang="mi">Kāre i arohia te whakautu</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS88</Code>
 				<Text xml:lang="en">Response Outside Scope</Text>
 				<Text xml:lang="mi">Kāre te whakautu e hāngai</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS8888</Code>
 				<Text xml:lang="en">Response Outside Scope</Text>
 				<Text xml:lang="mi">Kāre te whakautu e hāngai</Text>
+				<Level>2</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS99</Code>
 				<Text xml:lang="en">Not Stated</Text>
 				<Text xml:lang="mi">Kāre i kīia</Text>
+				<Level>1</Level>
 			</Value>
+
 			<Value>
 				<Code>NZS9999</Code>
 				<Text xml:lang="en">Not Stated</Text>
 				<Text xml:lang="mi">Kāre i kīia</Text>
+				<Level>2</Level>
 			</Value>
+
 		</Values>
-	</CodeSet>    <!-- Iwi -->
+	</CodeSet>	<!-- Iwi -->
 
 	<CodeSet>
 		<Intro>
 			<p>Religious affiliation is the self-identified association of a person with a religion,
 			 denomination or sub-denominational religious group.</p>
 
-			<p>Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/CARS2902">Statistics NZ - Religious Affiliation 1999 v1.0.0.0</a></p>
+			<p>Sourced from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/CARS2902">Statistics NZ - Religious Affiliation 1999 v1.0.0.0</a>
+			</p>
 		</Intro>
 		<ID>Religion</ID>
 		<Values>
-			<Value><Code>NZS0</Code><Text>No Religion</Text></Value>
-			<Value><Code>NZS1</Code><Text>Buddhist</Text></Value>
-			<Value><Code>NZS101</Code><Text>Buddhist</Text></Value>
-			<Value><Code>NZS10101</Code><Text>Zen Buddhist</Text></Value>
-			<Value><Code>NZS10199</Code><Text>Buddhist nec</Text></Value>
-			<Value><Code>NZS2</Code><Text>Christian</Text></Value>
-			<Value><Code>NZS201</Code><Text>Adventist</Text></Value>
-			<Value><Code>NZS20101</Code><Text>Christadelphian</Text></Value>
-			<Value><Code>NZS20102</Code><Text>Seventh Day Adventist</Text></Value>
-			<Value><Code>NZS20103</Code><Text>Worldwide Church of God</Text></Value>
-			<Value><Code>NZS20199</Code><Text>Adventist nec</Text></Value>
-			<Value><Code>NZS202</Code><Text>Anglican</Text></Value>
-			<Value><Code>NZS203</Code><Text>Asian Christian</Text></Value>
-			<Value><Code>NZS20301</Code><Text>Chinese Christian</Text></Value>
-			<Value><Code>NZS20302</Code><Text>Korean Christian</Text></Value>
-			<Value><Code>NZS204</Code><Text>Baptist</Text></Value>
-			<Value><Code>NZS20401</Code><Text>Bible Baptist</Text></Value>
-			<Value><Code>NZS20402</Code><Text>Independent Baptist</Text></Value>
-			<Value><Code>NZS20403</Code><Text>Reformed Baptist</Text></Value>
-			<Value><Code>NZS20499</Code><Text>Baptist nec</Text></Value>
-			<Value><Code>NZS205</Code><Text>Brethren</Text></Value>
-			<Value><Code>NZS20501</Code><Text>Exclusive Brethren</Text></Value>
-			<Value><Code>NZS20502</Code><Text>Open Brethren</Text></Value>
-			<Value><Code>NZS20503</Code><Text>Plymouth Brethren</Text></Value>
-			<Value><Code>NZS20599</Code><Text>Brethren nec</Text></Value>
-			<Value><Code>NZS206</Code><Text>Catholic</Text></Value>
-			<Value><Code>NZS20601</Code><Text>Roman Catholic</Text></Value>
-			<Value><Code>NZS20699</Code><Text>Catholic nec</Text></Value>
-			<Value><Code>NZS207</Code><Text>Church of Christ and Associated Churches of Christ</Text></Value>
-			<Value><Code>NZS20701</Code><Text>Associated Churches of Christ</Text></Value>
-			<Value><Code>NZS20799</Code><Text>Other Church of Christ and Churches of Christ nec</Text></Value>
-			<Value><Code>NZS208</Code><Text>Evangelical, Born Again and Fundamentalist</Text></Value>
-			<Value><Code>NZS20801</Code><Text>Evangelical</Text></Value>
-			<Value><Code>NZS20802</Code><Text>Born Again</Text></Value>
-			<Value><Code>NZS20803</Code><Text>Fundamentalist</Text></Value>
-			<Value><Code>NZS20804</Code><Text>Independent Evangelical Churches</Text></Value>
-			<Value><Code>NZS209</Code><Text>Jehovah's Witnesses</Text></Value>
-			<Value><Code>NZS20901</Code><Text>Jehovah's Witnesses</Text></Value>
-			<Value><Code>NZS210</Code><Text>Latter-day Saints</Text></Value>
-			<Value><Code>NZS211</Code><Text>Lutheran</Text></Value>
-			<Value><Code>NZS212</Code><Text>Methodist</Text></Value>
-			<Value><Code>NZS21201</Code><Text>Tongan Methodist</Text></Value>
-			<Value><Code>NZS21299</Code><Text>Methodist nec</Text></Value>
-			<Value><Code>NZS213</Code><Text>Orthodox</Text></Value>
-			<Value><Code>NZS21301</Code><Text>Assyrian Orthodox</Text></Value>
-			<Value><Code>NZS21302</Code><Text>Coptic Orthodox</Text></Value>
-			<Value><Code>NZS21303</Code><Text>Greek Orthodox</Text></Value>
-			<Value><Code>NZS21304</Code><Text>Russian Orthodox</Text></Value>
-			<Value><Code>NZS21305</Code><Text>Serbian Orthodox</Text></Value>
-			<Value><Code>NZS21399</Code><Text>Orthodox nec</Text></Value>
-			<Value><Code>NZS214</Code><Text>Pentecostal</Text></Value>
-			<Value><Code>NZS21401</Code><Text>Apostolic Church of New Zealand</Text></Value>
-			<Value><Code>NZS21402</Code><Text>Assemblies of God</Text></Value>
-			<Value><Code>NZS21403</Code><Text>Christian Fellowship</Text></Value>
-			<Value><Code>NZS21404</Code><Text>Christian Outreach</Text></Value>
-			<Value><Code>NZS21405</Code><Text>Christian Revival Crusade</Text></Value>
-			<Value><Code>NZS21406</Code><Text>Elim</Text></Value>
-			<Value><Code>NZS21407</Code><Text>Full Gospel</Text></Value>
-			<Value><Code>NZS21408</Code><Text>Independent Pentecostal</Text></Value>
-			<Value><Code>NZS21409</Code><Text>New Life Centres</Text></Value>
-			<Value><Code>NZS21410</Code><Text>Revival Centres</Text></Value>
-			<Value><Code>NZS21411</Code><Text>United Pentecostal</Text></Value>
-			<Value><Code>NZS21412</Code><Text>Vineyard Christian Fellowship</Text></Value>
-			<Value><Code>NZS21499</Code><Text>Pentecostal nec</Text></Value>
-			<Value><Code>NZS215</Code><Text>Presbyterian, Congregational and Reformed</Text></Value>
-			<Value><Code>NZS21501</Code><Text>Presbyterian</Text></Value>
-			<Value><Code>NZS21502</Code><Text>Congregational</Text></Value>
-			<Value><Code>NZS21503</Code><Text>Cook Island Congregational</Text></Value>
-			<Value><Code>NZS21504</Code><Text>Samoan Congregational</Text></Value>
-			<Value><Code>NZS21505</Code><Text>Reformed</Text></Value>
-			<Value><Code>NZS216</Code><Text>Protestant</Text></Value>
-			<Value><Code>NZS217</Code><Text>Salvation Army</Text></Value>
-			<Value><Code>NZS218</Code><Text>Uniting/Union Church and Ecumenical</Text></Value>
-			<Value><Code>NZS21801</Code><Text>Uniting/Union Church</Text></Value>
-			<Value><Code>NZS21802</Code><Text>Ecumenical</Text></Value>
-			<Value><Code>NZS299</Code><Text>Other Christian</Text></Value>
-			<Value><Code>NZS29901</Code><Text>Christian and Missionary Alliance</Text></Value>
-			<Value><Code>NZS29902</Code><Text>Christian Science</Text></Value>
-			<Value><Code>NZS29903</Code><Text>Church of God</Text></Value>
-			<Value><Code>NZS29904</Code><Text>Commonwealth Covenant Church</Text></Value>
-			<Value><Code>NZS29905</Code><Text>Liberal Catholic</Text></Value>
-			<Value><Code>NZS29906</Code><Text>Metropolitan</Text></Value>
-			<Value><Code>NZS29907</Code><Text>Nazarene</Text></Value>
-			<Value><Code>NZS29908</Code><Text>Religious Society of Friends (Quaker)</Text></Value>
-			<Value><Code>NZS29909</Code><Text>Unitarian</Text></Value>
-			<Value><Code>NZS3</Code><Text>Hindu</Text></Value>
-			<Value><Code>NZS30101</Code><Text>Hare Krishna</Text></Value>
-			<Value><Code>NZS30102</Code><Text>Yoga</Text></Value>
-			<Value><Code>NZS4</Code><Text>Islam/Muslim</Text></Value>
-			<Value><Code>NZS40101</Code><Text>Sufi</Text></Value>
-			<Value><Code>NZS5</Code><Text>Judaism/Jewish</Text></Value>
-			<Value><Code>NZS6</Code><Text>Māori Christian</Text></Value>
-			<Value><Code>NZS601</Code><Text>Ratana</Text></Value>
-			<Value><Code>NZS602</Code><Text>Ringatū</Text></Value>
-			<Value><Code>NZS609</Code><Text>Other Māori Christian</Text></Value>
-			<Value><Code>NZS7</Code><Text>Spiritualism and New Age Religions</Text></Value>
-			<Value><Code>NZS701</Code><Text>Church of Scientology</Text></Value>
-			<Value><Code>NZS702</Code><Text>Nature and Earth Based Religions</Text></Value>
-			<Value><Code>NZS70201</Code><Text>Animist</Text></Value>
-			<Value><Code>NZS70202</Code><Text>Druid</Text></Value>
-			<Value><Code>NZS70203</Code><Text>Pantheist</Text></Value>
-			<Value><Code>NZS70204</Code><Text>Wiccan</Text></Value>
-			<Value><Code>NZS703</Code><Text>Satanism</Text></Value>
-			<Value><Code>NZS704</Code><Text>Spiritualist</Text></Value>
-			<Value><Code>NZS709</Code><Text>Other New Age Religions</Text></Value>
-			<Value><Code>NZS70901</Code><Text>Rastafarianism</Text></Value>
-			<Value><Code>NZS8</Code><Text>Other Religions</Text></Value>
-			<Value><Code>NZS801</Code><Text>Baha'i</Text></Value>
-			<Value><Code>NZS802</Code><Text>Chinese Religions</Text></Value>
-			<Value><Code>NZS80201</Code><Text>Confucianism</Text></Value>
-			<Value><Code>NZS80202</Code><Text>Taoism</Text></Value>
-			<Value><Code>NZS803</Code><Text>Jainism</Text></Value>
-			<Value><Code>NZS804</Code><Text>Japanese Religion</Text></Value>
-			<Value><Code>NZS80401</Code><Text>Mahikari</Text></Value>
-			<Value><Code>NZS80402</Code><Text>Shinto</Text></Value>
-			<Value><Code>NZS80403</Code><Text>Tenrikyo</Text></Value>
-			<Value><Code>NZS805</Code><Text>Māori Religion</Text></Value>
-			<Value><Code>NZS80501</Code><Text>Hauhau</Text></Value>
-			<Value><Code>NZS806</Code><Text>Sikh</Text></Value>
-			<Value><Code>NZS807</Code><Text>Theism</Text></Value>
-			<Value><Code>NZS808</Code><Text>Zoroastrian</Text></Value>
-			<Value><Code>NZS809</Code><Text>Other Religions</Text></Value>
-			<Value><Code>NZS80901</Code><Text>Unification Church (Moonist)</Text></Value>
-			<Value><Code>NZS80999</Code><Text>Other Religions nec</Text></Value>
-			<Value><Code>NZS944</Code><Text>Don't Know</Text></Value>
-			<Value><Code>NZS955</Code><Text>Object to answering</Text></Value>
-			<Value><Code>NZS977</Code><Text>Religion Unidentifiable</Text></Value>
-			<Value><Code>NZS988</Code><Text>Response Outside Scope</Text></Value>
-			<Value><Code>NZS999</Code><Text>Not Stated</Text></Value>
+			<Value>
+				<Code>NZS0</Code>
+				<Text xml:lang="en">No Religion</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS1</Code>
+				<Text xml:lang="en">Buddhist</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS101</Code>
+				<Text xml:lang="en">Buddhist</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS10101</Code>
+				<Text xml:lang="en">Zen Buddhist</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS10199</Code>
+				<Text xml:lang="en">Buddhist nec</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS2</Code>
+				<Text xml:lang="en">Christian</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS201</Code>
+				<Text xml:lang="en">Adventist</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20101</Code>
+				<Text xml:lang="en">Christadelphian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20102</Code>
+				<Text xml:lang="en">Seventh Day Adventist</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20103</Code>
+				<Text xml:lang="en">Worldwide Church of God</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20199</Code>
+				<Text xml:lang="en">Adventist nec</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS202</Code>
+				<Text xml:lang="en">Anglican</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS203</Code>
+				<Text xml:lang="en">Asian Christian</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20301</Code>
+				<Text xml:lang="en">Chinese Christian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20302</Code>
+				<Text xml:lang="en">Korean Christian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS204</Code>
+				<Text xml:lang="en">Baptist</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20401</Code>
+				<Text xml:lang="en">Bible Baptist</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20402</Code>
+				<Text xml:lang="en">Independent Baptist</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20403</Code>
+				<Text xml:lang="en">Reformed Baptist</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20499</Code>
+				<Text xml:lang="en">Baptist nec</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS205</Code>
+				<Text xml:lang="en">Brethren</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20501</Code>
+				<Text xml:lang="en">Exclusive Brethren</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20502</Code>
+				<Text xml:lang="en">Open Brethren</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20503</Code>
+				<Text xml:lang="en">Plymouth Brethren</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20599</Code>
+				<Text xml:lang="en">Brethren nec</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS206</Code>
+				<Text xml:lang="en">Catholic</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20601</Code>
+				<Text xml:lang="en">Roman Catholic</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20699</Code>
+				<Text xml:lang="en">Catholic nec</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS207</Code>
+				<Text xml:lang="en">Church of Christ and Associated Churches of Christ</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20701</Code>
+				<Text xml:lang="en">Associated Churches of Christ</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20799</Code>
+				<Text xml:lang="en">Other Church of Christ and Churches of Christ nec</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS208</Code>
+				<Text xml:lang="en">Evangelical, Born Again and Fundamentalist</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20801</Code>
+				<Text xml:lang="en">Evangelical</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20802</Code>
+				<Text xml:lang="en">Born Again</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20803</Code>
+				<Text xml:lang="en">Fundamentalist</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20804</Code>
+				<Text xml:lang="en">Independent Evangelical Churches</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS209</Code>
+				<Text xml:lang="en">Jehovah's Witnesses</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS20901</Code>
+				<Text xml:lang="en">Jehovah's Witnesses</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS210</Code>
+				<Text xml:lang="en">Latter-day Saints</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS211</Code>
+				<Text xml:lang="en">Lutheran</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS212</Code>
+				<Text xml:lang="en">Methodist</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21201</Code>
+				<Text xml:lang="en">Tongan Methodist</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21299</Code>
+				<Text xml:lang="en">Methodist nec</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS213</Code>
+				<Text xml:lang="en">Orthodox</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21301</Code>
+				<Text xml:lang="en">Assyrian Orthodox</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21302</Code>
+				<Text xml:lang="en">Coptic Orthodox</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21303</Code>
+				<Text xml:lang="en">Greek Orthodox</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21304</Code>
+				<Text xml:lang="en">Russian Orthodox</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21305</Code>
+				<Text xml:lang="en">Serbian Orthodox</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21399</Code>
+				<Text xml:lang="en">Orthodox nec</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS214</Code>
+				<Text xml:lang="en">Pentecostal</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21401</Code>
+				<Text xml:lang="en">Apostolic Church of New Zealand</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21402</Code>
+				<Text xml:lang="en">Assemblies of God</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21403</Code>
+				<Text xml:lang="en">Christian Fellowship</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21404</Code>
+				<Text xml:lang="en">Christian Outreach</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21405</Code>
+				<Text xml:lang="en">Christian Revival Crusade</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21406</Code>
+				<Text xml:lang="en">Elim</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21407</Code>
+				<Text xml:lang="en">Full Gospel</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21408</Code>
+				<Text xml:lang="en">Independent Pentecostal</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21409</Code>
+				<Text xml:lang="en">New Life Centres</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21410</Code>
+				<Text xml:lang="en">Revival Centres</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21411</Code>
+				<Text xml:lang="en">United Pentecostal</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21412</Code>
+				<Text xml:lang="en">Vineyard Christian Fellowship</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21499</Code>
+				<Text xml:lang="en">Pentecostal nec</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS215</Code>
+				<Text xml:lang="en">Presbyterian, Congregational and Reformed</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21501</Code>
+				<Text xml:lang="en">Presbyterian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21502</Code>
+				<Text xml:lang="en">Congregational</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21503</Code>
+				<Text xml:lang="en">Cook Island Congregational</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21504</Code>
+				<Text xml:lang="en">Samoan Congregational</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21505</Code>
+				<Text xml:lang="en">Reformed</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS216</Code>
+				<Text xml:lang="en">Protestant</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS217</Code>
+				<Text xml:lang="en">Salvation Army</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS218</Code>
+				<Text xml:lang="en">Uniting/Union Church and Ecumenical</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21801</Code>
+				<Text xml:lang="en">Uniting/Union Church</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS21802</Code>
+				<Text xml:lang="en">Ecumenical</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS299</Code>
+				<Text xml:lang="en">Other Christian</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS29901</Code>
+				<Text xml:lang="en">Christian and Missionary Alliance</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS29902</Code>
+				<Text xml:lang="en">Christian Science</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS29903</Code>
+				<Text xml:lang="en">Church of God</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS29904</Code>
+				<Text xml:lang="en">Commonwealth Covenant Church</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS29905</Code>
+				<Text xml:lang="en">Liberal Catholic</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS29906</Code>
+				<Text xml:lang="en">Metropolitan</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS29907</Code>
+				<Text xml:lang="en">Nazarene</Text>
+				<Level></Level>
+			</Value>
+
+			<Value>
+				<Code>NZS29908</Code>
+				<Text xml:lang="en">Religious Society of Friends (Quaker)</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS29909</Code>
+				<Text xml:lang="en">Unitarian</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS3</Code>
+				<Text xml:lang="en">Hindu</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS30101</Code>
+				<Text xml:lang="en">Hare Krishna</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS30102</Code>
+				<Text xml:lang="en">Yoga</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS4</Code>
+				<Text xml:lang="en">Islam/Muslim</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS40101</Code>
+				<Text xml:lang="en">Sufi</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS5</Code>
+				<Text xml:lang="en">Judaism/Jewish</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS6</Code>
+				<Text xml:lang="en">Māori Christian</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS601</Code>
+				<Text xml:lang="en">Ratana</Text>
+				<Level></Level>
+			</Value>
+
+			<Value>
+				<Code>NZS602</Code>
+				<Text xml:lang="en">Ringatū</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS609</Code>
+				<Text xml:lang="en">Other Māori Christian</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS7</Code>
+				<Text xml:lang="en">Spiritualism and New Age Religions</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS701</Code>
+				<Text xml:lang="en">Church of Scientology</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS702</Code>
+				<Text xml:lang="en">Nature and Earth Based Religions</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS70201</Code>
+				<Text xml:lang="en">Animist</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS70202</Code>
+				<Text xml:lang="en">Druid</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS70203</Code>
+				<Text xml:lang="en">Pantheist</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS70204</Code>
+				<Text xml:lang="en">Wiccan</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS703</Code>
+				<Text xml:lang="en">Satanism</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS704</Code>
+				<Text xml:lang="en">Spiritualist</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS709</Code>
+				<Text xml:lang="en">Other New Age Religions</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS70901</Code>
+				<Text xml:lang="en">Rastafarianism</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS8</Code>
+				<Text xml:lang="en">Other Religions</Text>
+				<Level>1</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS801</Code>
+				<Text xml:lang="en">Baha'i</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS802</Code>
+				<Text xml:lang="en">Chinese Religions</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS80201</Code>
+				<Text xml:lang="en">Confucianism</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS80202</Code>
+				<Text xml:lang="en">Taoism</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS803</Code>
+				<Text xml:lang="en">Jainism</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS804</Code>
+				<Text xml:lang="en">Japanese Religion</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS80401</Code>
+				<Text xml:lang="en">Mahikari</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS80402</Code>
+				<Text xml:lang="en">Shinto</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS80403</Code>
+				<Text xml:lang="en">Tenrikyo</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS805</Code>
+				<Text xml:lang="en">Māori Religion</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS80501</Code>
+				<Text xml:lang="en">Hauhau</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS806</Code>
+				<Text xml:lang="en">Sikh</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS807</Code>
+				<Text xml:lang="en">Theism</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS808</Code>
+				<Text xml:lang="en">Zoroastrian</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS809</Code>
+				<Text xml:lang="en">Other Religions</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS80901</Code>
+				<Text xml:lang="en">Unification Church (Moonist)</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS80999</Code>
+				<Text xml:lang="en">Other Religions nec</Text>
+				<Level>3</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS944</Code>
+				<Text xml:lang="en">Don't Know</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS955</Code>
+				<Text xml:lang="en">Object to answering</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS977</Code>
+				<Text xml:lang="en">Religion Unidentifiable</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS988</Code>
+				<Text xml:lang="en">Response Outside Scope</Text>
+				<Level>2</Level>
+			</Value>
+
+			<Value>
+				<Code>NZS999</Code>
+				<Text xml:lang="en">Not Stated</Text>
+				<Level>2</Level>
+			</Value>
+
 		</Values>
-	</CodeSet>    <!-- Religion -->
+	</CodeSet>	<!-- Religion -->
 	<CodeSet>
 		<Intro>
 			<p>Code denoting the type of healthcare service provided by a StudentContact.</p>
 		</Intro>
 		<ID>Healthcare Service Type</ID>
 		<Values>
-			<Value><Code>DOC</Code><Text>Doctor</Text></Value>
-			<Value><Code>DEN</Code><Text>Dentist</Text></Value>
-			<Value><Code>THE</Code><Text>Therapist</Text></Value>
-			<Value><Code>OTH</Code><Text>Other</Text></Value>
+			<Value>
+				<Code>DOC</Code>
+				<Text>Doctor</Text>
+			</Value>
+			<Value>
+				<Code>DEN</Code>
+				<Text>Dentist</Text>
+			</Value>
+			<Value>
+				<Code>THE</Code>
+				<Text>Therapist</Text>
+			</Value>
+			<Value>
+				<Code>OTH</Code>
+				<Text>Other</Text>
+			</Value>
 		</Values>
-	</CodeSet>    <!-- Healthcare Service -->
+	</CodeSet>	<!-- Healthcare Service -->
 
 	<CodeSet>
 		<Intro>
@@ -3251,17 +6251,17 @@
 			<Value>
 				<Code>SP</Code>
 				<Text>Speaking</Text>
-			</Value>    <!-- Speaking -->
+			</Value>			<!-- Speaking -->
 			<Value>
 				<Code>RE</Code>
 				<Text>Reading</Text>
-			</Value>    <!-- Reading -->
+			</Value>			<!-- Reading -->
 			<Value>
 				<Code>WR</Code>
 				<Text>Writing</Text>
-			</Value>    <!-- Writing -->
+			</Value>			<!-- Writing -->
 		</Values>
-	</CodeSet>    <!-- Language Proficiency Type -->
+	</CodeSet>	<!-- Language Proficiency Type -->
 
 	<CodeSet>
 		<Intro>
@@ -3272,21 +6272,21 @@
 			<Value>
 				<Code>NO</Code>
 				<Text>None</Text>
-			</Value>    <!-- None -->
+			</Value>			<!-- None -->
 			<Value>
 				<Code>BE</Code>
 				<Text>Beginner</Text>
-			</Value>    <!-- Beginner -->
+			</Value>			<!-- Beginner -->
 			<Value>
 				<Code>IN</Code>
 				<Text>Intermediate</Text>
-			</Value>    <!-- Intermediate -->
+			</Value>			<!-- Intermediate -->
 			<Value>
 				<Code>AD</Code>
 				<Text>Advanced</Text>
-			</Value>    <!-- Advanced -->
+			</Value>			<!-- Advanced -->
 		</Values>
-	</CodeSet>    <!-- Language Proficiency Level -->
+	</CodeSet>	<!-- Language Proficiency Level -->
 
 	<CodeSet>
 		<Intro>
@@ -3298,94 +6298,94 @@
 				<Code>IBP</Code>
 				<Text xml:lang="en">Individualised Behavioural Plan</Text>
 				<Text xml:lang="mi">Mahere Whanonga mā te Ākonga</Text>
-			</Value>    <!-- Individualised Behavioural Plan -->
+			</Value>			<!-- Individualised Behavioural Plan -->
 			<Value>
 				<Code>IEP</Code>
 				<Text xml:lang="en">Individualised Education Plan</Text>
 				<Text xml:lang="mi">Mahere Mātauranga mā te Ākonga</Text>
-			</Value>    <!-- Individualised Education Plan -->
+			</Value>			<!-- Individualised Education Plan -->
 			<Value>
 				<Code>MED</Code>
 				<Text xml:lang="en">Medical</Text>
 				<Text xml:lang="mi">Toha rongoā</Text>
-			</Value>    <!-- Medical -->
+			</Value>			<!-- Medical -->
 			<Value>
 				<Code>ATT</Code>
 				<Text xml:lang="en">Attendance</Text>
 				<Text xml:lang="mi">Te Tae ki te Kura</Text>
-			</Value>    <!-- Attendance -->
+			</Value>			<!-- Attendance -->
 			<Value>
 				<Code>BEH</Code>
 				<Text xml:lang="en">Behavioural</Text>
 				<Text xml:lang="mi">Whanonga</Text>
-			</Value>    <!-- Behavioural -->
+			</Value>			<!-- Behavioural -->
 			<Value>
 				<Code>ACA</Code>
 				<Text xml:lang="en">Academic</Text>
 				<Text xml:lang="mi">Mātauranga</Text>
-			</Value>    <!-- Academic -->
+			</Value>			<!-- Academic -->
 			<Value>
 				<Code>LEG</Code>
 				<Text xml:lang="en">Legal</Text>
 				<Text xml:lang="mi">Ture</Text>
-			</Value>    <!-- Legal -->
+			</Value>			<!-- Legal -->
 			<Value>
 				<Code>OTH</Code>
 				<Text xml:lang="en">Other</Text>
 				<Text xml:lang="mi">Mea kē</Text>
-			</Value>    <!-- Other -->
+			</Value>			<!-- Other -->
 			<Value>
 				<Code>PHO</Code>
 				<Text xml:lang="en">Photo</Text>
 				<Text xml:lang="mi">Whakaahua</Text>
-			</Value>    <!-- Photo -->
+			</Value>			<!-- Photo -->
 			<Value>
 				<Code>MEA</Code>
 				<Text xml:lang="en">Media (e.g. video)</Text>
 				<Text xml:lang="mi">Pāpāho (h.t. whitiata)</Text>
-			</Value>    <!-- Media -->
+			</Value>			<!-- Media -->
 			<Value>
 				<Code>DOC</Code>
 				<Text xml:lang="en">Document</Text>
 				<Text xml:lang="mi">Tuhinga</Text>
-			</Value>    <!-- Document -->
+			</Value>			<!-- Document -->
 			<Value>
 				<Code>NOT</Code>
 				<Text xml:lang="en">Note</Text>
 				<Text xml:lang="mi">Pito kōrero</Text>
-			</Value>    <!-- Note -->
+			</Value>			<!-- Note -->
 			<Value>
 				<Code>LSN</Code>
 				<Text xml:lang="en">Learning Support Need - Supporting Document</Text>
 				<Text xml:lang="mi">Me whai tautoko akoranga</Text>
-			</Value>     <!-- LSR Need Supporting Document -->
+			</Value>			<!-- LSR Need Supporting Document -->
 			<Value>
 				<Code>PPH</Code>
 				<Text xml:lang="en">Person Photo</Text>
 				<Text xml:lang="mi">Whakaahua</Text>
-			</Value>     <!-- Person Photo -->
+			</Value>			<!-- Person Photo -->
 			<Value>
 				<Code>NRA</Code>
 				<Text xml:lang="en">Learning Support Need Response Attachment</Text>
 				<Text xml:lang="mi">Matea Ako - Tāpiringa Urupare</Text>
-			</Value>     <!-- LSR Need Response Attachment -->
+			</Value>			<!-- LSR Need Response Attachment -->
 			<Value>
 				<Code>NRC</Code>
 				<Text xml:lang="en">Learning Support Need Response Closure Attachment</Text>
 				<Text xml:lang="mi">Matea Ako Urupare Whakakapi</Text>
-			</Value>     <!-- LSR Need Response Closure Attachment -->
+			</Value>			<!-- LSR Need Response Closure Attachment -->
 			<Value>
 				<Code>NRR</Code>
 				<Text xml:lang="en">Learning Support Need Response Review Attachment</Text>
 				<Text xml:lang="mi">Matea Ako Urupare Arotake</Text>
-			</Value>    <!-- LSR Need Response Review Attachment -->
+			</Value>			<!-- LSR Need Response Review Attachment -->
 			<Value>
 				<Code>ODA</Code>
 				<Text xml:lang="en">Official Diagnosis Attachment</Text>
 				<Text xml:lang="mi">Whakataunga Matua</Text>
-			</Value>     <!-- Official Diagnosis Attachment -->
+			</Value>			<!-- Official Diagnosis Attachment -->
 		</Values>
-	</CodeSet>    <!-- Document Type -->
+	</CodeSet>	<!-- Document Type -->
 
 	<CodeSet>
 		<Intro>
@@ -3397,19 +6397,19 @@
 				<Code>IC</Code>
 				<Text xml:lang="en">In-Confidence</Text>
 				<Text xml:lang="mi">Noho muna</Text>
-			</Value>    <!-- In-Confidence -->
+			</Value>			<!-- In-Confidence -->
 			<Value>
 				<Code>SE</Code>
 				<Text xml:lang="en">Sensitive</Text>
 				<Text xml:lang="mi">Āritarita</Text>
-			</Value>    <!-- Sensitive -->
+			</Value>			<!-- Sensitive -->
 			<Value>
 				<Code>UC</Code>
 				<Text xml:lang="en">Unclassified</Text>
 				<Text xml:lang="mi">Kāre anō kia kōmakatia</Text>
-			</Value>    <!-- Not Classified -->
+			</Value>			<!-- Not Classified -->
 		</Values>
-	</CodeSet>    <!-- Document Classification -->
+	</CodeSet>	<!-- Document Classification -->
 
 	<CodeSet>
 		<Intro>
@@ -3420,37 +6420,37 @@
 			<Value>
 				<Code>ASS</Code>
 				<Text>Assembly</Text>
-			</Value>    <!-- Assembly -->
+			</Value>			<!-- Assembly -->
 			<Value>
 				<Code>ETA</Code>
 				<Text>eTAP</Text>
-			</Value>    <!-- eTAP -->
+			</Value>			<!-- eTAP -->
 			<Value>
 				<Code>INT</Code>
 				<Text>INTEGRATOR</Text>
-			</Value>    <!-- INTEGRATOR -->
+			</Value>			<!-- INTEGRATOR -->
 			<Value>
 				<Code>KAM</Code>
 				<Text>KAMAR</Text>
-			</Value>    <!-- KAMAR -->
+			</Value>			<!-- KAMAR -->
 			<Value>
 				<Code>LIN</Code>
 				<Text>LINC-ED</Text>
-			</Value>    <!-- LINC-ED -->
+			</Value>			<!-- LINC-ED -->
 			<Value>
 				<Code>MUS</Code>
 				<Text>MUSAC edge</Text>
-			</Value>    <!-- MUSAC edge -->
+			</Value>			<!-- MUSAC edge -->
 			<Value>
 				<Code>PCS</Code>
 				<Text>PCSchool</Text>
-			</Value>    <!-- PCSchool -->
+			</Value>			<!-- PCSchool -->
 			<Value>
 				<Code>SYN</Code>
 				<Text>Synergetic</Text>
-			</Value>    <!-- Synergetic -->
+			</Value>			<!-- Synergetic -->
 		</Values>
-	</CodeSet>    <!-- School Management System -->
+	</CodeSet>	<!-- School Management System -->
 
 	<CodeSet>
 		<Intro>
@@ -3462,18 +6462,18 @@
 				<Code>CF</Code>
 				<Text xml:lang="en">Changed by family (PA request)</Text>
 				<Text xml:lang="mi">He Panoni Nā te Whānau</Text>
-			</Value>    <!-- Changed by family (PA request) -->
+			</Value>			<!-- Changed by family (PA request) -->
 			<Value>
 				<Code>EI</Code>
 				<Text xml:lang="en">Entered incorrectly</Text>
 				<Text xml:lang="mi">I hē te whakauru</Text>
-			</Value>    <!-- Entered incorrectly -->
+			</Value>			<!-- Entered incorrectly -->
 			<Value>
 				<Code>ON</Code>
 				<Text xml:lang="en">Official name change</Text>
 				<Text xml:lang="mi">Kua mana te panoni ingoa</Text>
-			</Value>    <!-- Official name change -->
+			</Value>			<!-- Official name change -->
 		</Values>
-	</CodeSet>    <!-- Biographic Change Reason -->
+	</CodeSet>	<!-- Biographic Change Reason -->
 
 </IncludeGroup>

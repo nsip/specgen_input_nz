@@ -1012,6 +1012,23 @@
 		<xsl:value-of select="concat($indent, '- code: ', specgen:Code, '&#x0a;')"/>
 
 		<xsl:choose>
+			<xsl:when test="specgen:Level">
+				<xsl:apply-templates select="specgen:Text" mode="enum">
+					<xsl:with-param name="indent" select="$indent"/>
+				</xsl:apply-templates>
+
+				<xsl:variable name="text">
+					<xsl:value-of select="specgen:Text[@xml:lang='en']"/>
+				</xsl:variable>
+				<xsl:variable name="title">
+					<xsl:value-of select="translate(normalize-space(translate(translate($text, &quot;'’$q:&quot;, ''),'-–#|()/.,', ' ')), ' ', '_')"/>
+				</xsl:variable>
+
+				<xsl:value-of select="concat($indent, '  titleNoSpace: Level', specgen:Level, '_', $title, '&#x0a;')"/>
+				<xsl:apply-templates select="specgen:EndDate" mode="enumDocs">
+					<xsl:with-param name="indent" select="$indent"/>
+				</xsl:apply-templates>
+			</xsl:when>
 			<xsl:when test="specgen:Enum">
 				<xsl:apply-templates select="specgen:Text" mode="enum">
 					<xsl:with-param name="indent" select="$indent"/>
@@ -1121,7 +1138,7 @@
 
 		<xsl:value-of select="concat($indent, '  titleNoSpace: ')"/>
 		<xsl:variable name="text"><xsl:apply-templates/></xsl:variable>
-		<xsl:value-of select="translate(normalize-space(translate(translate($text, &quot;'&quot;, ''),'’$q:-–#|()/.,', '')), ' ', '_')"/>
+		<xsl:value-of select="translate(normalize-space(translate(translate($text, &quot;'’$q:&quot;, ''),'-–#|()/.,', ' ')), ' ', '_')"/>
 		<xsl:text>&#x0a;</xsl:text>
 	</xsl:template>
 
@@ -1140,7 +1157,7 @@
 			<xsl:text>&#x0a;</xsl:text>
 
 			<xsl:value-of select="concat($indent, '  titleNoSpace: ')"/>
-			<xsl:value-of select="translate(normalize-space(translate(translate($text, &quot;'&quot;, ''),'’$q:-–#|()/.,', '')), ' ', '_')"/>
+			<xsl:value-of select="translate(normalize-space(translate(translate($text, &quot;'’$q:&quot;, ''),'-–#|()/.,', ' ')), ' ', '_')"/>
 			<xsl:text>&#x0a;</xsl:text>
 		</xsl:if>
 	</xsl:template>

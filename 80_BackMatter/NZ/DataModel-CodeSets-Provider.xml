@@ -462,40 +462,6 @@
 				<Code>10055</Code>
 				<Text xml:lang="en">Other ECE Service Provider</Text>
 			</Value>
-
-			<Value>
-				<Code>1</Code>
-				<Text xml:lang="en">Casual-Education and Care</Text>
-			</Value>
-			<Value>
-				<Code>2</Code>
-				<Text xml:lang="en">Free Kindergarten</Text>
-			</Value>
-			<Value>
-				<Code>3</Code>
-				<Text xml:lang="en">Hospital Based ECE</Text>
-			</Value>    <!-- Hospital Based ECE -->
-			<Value>
-				<Code>4</Code>
-				<Text xml:lang="en">Playcentre</Text>
-			</Value>    <!-- Playcentre -->
-			<Value>
-				<Code>6</Code>
-				<Text xml:lang="en">Education and Care Service</Text>
-			</Value>    <!-- Education and Care -->
-			<Value>
-				<Code>7</Code>
-				<Text xml:lang="en">Homebased Network</Text>
-			</Value>    <!-- Homebased Network -->
-			<Value>
-				<Code>8</Code>
-				<Text xml:lang="en">Licence Exempt Kohanga Reo</Text>
-			</Value>    <!-- Licence Exempt Kohanga Reo -->
-			<Value>
-				<Code>9</Code>
-				<Text xml:lang="en">Te Kohanga Reo</Text>
-				<Text xml:lang="mi">Te Kohanga Reo</Text>
-			</Value>    <!-- Te Kohanga Reo -->
 			
 			<Value>
 				<Code>10000</Code>
@@ -551,62 +517,6 @@
 				<Code>10057</Code>
 				<Text xml:lang="en">Private School Provider</Text>
 			</Value>
-			<Value>
-				<Code>20</Code>
-				<Text xml:lang="en">Full Primary (Year 1-8)</Text>
-				<Text xml:lang="mi">Kura Tuatahi (Tau 1 – 8)</Text>
-			</Value>    <!-- Full Primary (Year 1-8) -->
-			<Value>
-				<Code>21</Code>
-				<Text xml:lang="en">Contributing Primary (Year 1-6)</Text>
-				<Text xml:lang="mi">Kura Tuatahi (Tau 1 – 6)</Text>
-			</Value>    <!-- Contributing Primary (Year 1-6) -->
-			<Value>
-				<Code>22</Code>
-				<Text xml:lang="en">Intermediate School (Year 7-8)</Text>
-				<Text xml:lang="mi">Kura Takawaenga (Tau 7 me te 8)</Text>
-			</Value>    <!-- Intermediate (Year 7-8) -->
-			<Value>
-				<Code>23</Code>
-				<Text xml:lang="en">Special School</Text>
-				<Text xml:lang="mi">Kura Motuhake</Text>
-			</Value>    <!-- Special School -->
-			<Value>
-				<Code>30</Code>
-				<Text xml:lang="en">Secondary School (Year 7-15)</Text>
-				<Text xml:lang="mi">Kura Tuarua (Tau 7 – 15)</Text>
-			</Value>    <!-- Secondary (Year 7-15) -->
-			<Value>
-				<Code>32</Code>
-				<Text xml:lang="en">Composite School (Year 1-15)</Text>
-				<Text xml:lang="mi">Kura Hiato (Tau 1 – 15)</Text>
-			</Value>    <!-- Composite (Year 1-15) -->
-			<Value>
-				<Code>34</Code>
-				<Text xml:lang="en">The Correspondence School</Text>
-				<Text xml:lang="mi">Te Kura</Text>
-			</Value>    <!-- Correspondence School -->
-			<Value>
-				<Code>35</Code>
-				<Text xml:lang="en">Restricted Composite School (Year 7-10)</Text>
-				<Text xml:lang="mi">Kura Hiato (Tau 7 – 10)</Text>
-			</Value>    <!-- Restricted Composite (Year 7-10) -->
-			<Value>
-				<Code>40</Code>
-				<Text xml:lang="en">Secondary School (Year 9-15)</Text>
-				<Text xml:lang="mi">Kura Tuarua (Tau 9 – 15)</Text>
-			</Value>    <!-- Secondary (Year 9-15) -->
-			<Value>
-				<Code>41</Code>
-				<Text xml:lang="en">Teen Parent Unit (Year 9-15)</Text>
-				<Text xml:lang="mi">Ranga Mātātahi (Tau 9 – 15)</Text>
-			</Value>    <!-- Teen Parent Unit -->
-
-			<Value>
-				<Code>43</Code>
-				<Text xml:lang="en">Activity Centre</Text>
-				<Text xml:lang="mi">Pokapū Mahi</Text>
-			</Value>    <!-- Activity Centre -->
 			<Value>
 				<Code>10023</Code>
 				<Text xml:lang="en">Full Primary (Year 1-8)</Text>
@@ -810,23 +720,10 @@
 
 			<!-- Groups of Providers, MoE Local Office, etc -->
 			<Value>
-				<Code>999</Code>
-				<Text xml:lang="en">Ministry of Education Local Office</Text>
-				<Text xml:lang="mi"></Text>
-				<EndDate>2020-03-24</EndDate>
-			</Value>    <!-- 999 - retired -->
-
-			<Value>
 				<Code>10059</Code>
 				<Text xml:lang="en">Local Office</Text>
 			</Value>    <!-- 10059 - Ministry of Education Local Office -->
 
-			<Value>
-				<Code>998</Code>
-				<Text xml:lang="en">Community of Learning | Kāhui Ako</Text>
-				<Text xml:lang="mi">Kāhui Ako</Text>
-				<EndDate>2020-03-24</EndDate>
-			</Value>    <!-- 998 - retired  -->	
 			<Value>
 				<Code>10061</Code>
 				<Text xml:lang="en">Community of Learning | Kāhui Ako</Text>
@@ -838,16 +735,144 @@
 				<Text xml:lang="en">Learning Support Cluster</Text>
 				<Text xml:lang="mi">Kāhui Akoranga Tautoko</Text>
 			</Value>	<!-- 10065 - Learning Support Cluster  -->
-			<Value>
-				<Code>996</Code>  <!-- Not yet defined by FIRST -->
-				<Text xml:lang="en">Learning Support Cluster</Text>
-				<Text xml:lang="mi">Kāhui Akoranga Tautoko</Text>
-			</Value>    <!-- 996 - Learning Support Cluster -->			
 
 			<Value>
 				<Code>10064</Code>
 				<Text xml:lang="en">RTLB Cluster</Text>
 			</Value>	<!-- 10064 - RTLB Cluster -->
+
+
+			<!--  Expired Values -->
+			<Value>
+				<Code>1</Code>
+				<Text xml:lang="en">Casual-Education and Care</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text xml:lang="en">Free Kindergarten</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text xml:lang="en">Hospital Based ECE</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Hospital Based ECE -->
+			<Value>
+				<Code>4</Code>
+				<Text xml:lang="en">Playcentre</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Playcentre -->
+			<Value>
+				<Code>6</Code>
+				<Text xml:lang="en">Education and Care Service</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Education and Care -->
+			<Value>
+				<Code>7</Code>
+				<Text xml:lang="en">Homebased Network</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Homebased Network -->
+			<Value>
+				<Code>8</Code>
+				<Text xml:lang="en">Licence Exempt Kohanga Reo</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Licence Exempt Kohanga Reo -->
+			<Value>
+				<Code>9</Code>
+				<Text xml:lang="en">Te Kohanga Reo</Text>
+				<Text xml:lang="mi">Te Kohanga Reo</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Te Kohanga Reo -->
+
+
+			<Value>
+				<Code>20</Code>
+				<Text xml:lang="en">Full Primary (Year 1-8)</Text>
+				<Text xml:lang="mi">Kura Tuatahi (Tau 1 – 8)</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Full Primary (Year 1-8) -->
+			<Value>
+				<Code>21</Code>
+				<Text xml:lang="en">Contributing Primary (Year 1-6)</Text>
+				<Text xml:lang="mi">Kura Tuatahi (Tau 1 – 6)</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Contributing Primary (Year 1-6) -->
+			<Value>
+				<Code>22</Code>
+				<Text xml:lang="en">Intermediate School (Year 7-8)</Text>
+				<Text xml:lang="mi">Kura Takawaenga (Tau 7 me te 8)</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Intermediate (Year 7-8) -->
+			<Value>
+				<Code>23</Code>
+				<Text xml:lang="en">Special School</Text>
+				<Text xml:lang="mi">Kura Motuhake</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Special School -->
+			<Value>
+				<Code>30</Code>
+				<Text xml:lang="en">Secondary School (Year 7-15)</Text>
+				<Text xml:lang="mi">Kura Tuarua (Tau 7 – 15)</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Secondary (Year 7-15) -->
+			<Value>
+				<Code>32</Code>
+				<Text xml:lang="en">Composite School (Year 1-15)</Text>
+				<Text xml:lang="mi">Kura Hiato (Tau 1 – 15)</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Composite (Year 1-15) -->
+			<Value>
+				<Code>34</Code>
+				<Text xml:lang="en">The Correspondence School</Text>
+				<Text xml:lang="mi">Te Kura</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Correspondence School -->
+			<Value>
+				<Code>35</Code>
+				<Text xml:lang="en">Restricted Composite School (Year 7-10)</Text>
+				<Text xml:lang="mi">Kura Hiato (Tau 7 – 10)</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Restricted Composite (Year 7-10) -->
+			<Value>
+				<Code>40</Code>
+				<Text xml:lang="en">Secondary School (Year 9-15)</Text>
+				<Text xml:lang="mi">Kura Tuarua (Tau 9 – 15)</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Secondary (Year 9-15) -->
+			<Value>
+				<Code>41</Code>
+				<Text xml:lang="en">Teen Parent Unit (Year 9-15)</Text>
+				<Text xml:lang="mi">Ranga Mātātahi (Tau 9 – 15)</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Teen Parent Unit -->
+
+			<Value>
+				<Code>43</Code>
+				<Text xml:lang="en">Activity Centre</Text>
+				<Text xml:lang="mi">Pokapū Mahi</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- Activity Centre -->
+
+			<Value>
+				<Code>996</Code>  <!-- Not yet defined by FIRST -->
+				<Text xml:lang="en">Learning Support Cluster</Text>
+				<Text xml:lang="mi">Kāhui Akoranga Tautoko</Text>
+				<EndDate>2020-05-08</EndDate>
+			</Value>    <!-- 996 - Learning Support Cluster -->			
+			<Value>
+				<Code>998</Code>
+				<Text xml:lang="en">Community of Learning | Kāhui Ako</Text>
+				<Text xml:lang="mi">Kāhui Ako</Text>
+				<EndDate>2020-03-24</EndDate>
+			</Value>    <!-- 998 - retired  -->	
+
+			<Value>
+				<Code>999</Code>
+				<Text xml:lang="en">Ministry of Education Local Office</Text>
+				<Text xml:lang="mi"></Text>
+				<EndDate>2020-03-24</EndDate>
+			</Value>    <!-- 999 - retired -->
 		</Values>
 	</CodeSet>    <!-- Organisation Type -->
 
