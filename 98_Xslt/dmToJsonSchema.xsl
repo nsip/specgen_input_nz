@@ -160,10 +160,11 @@
 		<xsl:text>&#x0a;  # /////////////////////////////// empty extn ///////////////////////////&#x0a;</xsl:text>
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;',
 									 '		  allOf:&#x0a;',
-							         '      - $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;',
-									 '      - type: object&#x0a;',
-									 '        additionalProperties: false&#x0a;')"/>
-
+							         '      - $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;')"/>
+		<xsl:if test="$strictJSON ne 'true'">
+   			<xsl:value-of select="concat('      - type: object&#x0a;',
+									  	 '      - additionalProperties: false&#x0a;')"/>
+		</xsl:if>
 
 		<xsl:variable name="desc">
 			<xsl:apply-templates select="xfn:escapeXml(specgen:Item[1]/specgen:Description)"/>
@@ -910,8 +911,10 @@
 	<!-- Type is of named type -->
 	<xsl:template match="specgen:Type[not(@complex) and @name ne '' and not(starts-with(@name, 'xs:'))]">
 		<xsl:param name="indent"/>
-		<xsl:value-of select="concat($indent, '$ref: ''#/definitions/', xfn:chopType(@name), '''&#x0a;',
-		                             $indent, 'title: ', xfn:chopType(@name), '&#x0a;')"/>
+		<xsl:value-of select="concat($indent, '$ref: ''#/definitions/', xfn:chopType(@name), '''&#x0a;')"/>
+		<xsl:if test="$strictJSON ne 'true'">
+			<xsl:value-of select="concat($indent, 'title: ', xfn:chopType(@name), '&#x0a;')"/>
+		</xsl:if>
 	</xsl:template>
 
 	<!-- Un-named type, so inline object -->
