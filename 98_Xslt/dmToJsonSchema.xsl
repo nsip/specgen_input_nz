@@ -610,29 +610,31 @@
 					<xsl:with-param name="indent" select="concat($indent, '    - ')"/>
 				</xsl:apply-templates>
 
-				<xsl:if test="normalize-space(specgen:Description) ne ''">
-					<xsl:value-of select="concat($indent, '    - description: &gt;-&#x0a;', $indent, '        ')"/>
-					<xsl:apply-templates select="xfn:escapeXml(specgen:Description)"/><xsl:text>&#x0a;</xsl:text>
+				<xsl:if test="$strictJSON ne 'true'">
+					<xsl:if test="normalize-space(specgen:Description) ne ''">
+						<xsl:value-of select="concat($indent, '    - description: &gt;-&#x0a;', $indent, '        ')"/>
+						<xsl:apply-templates select="xfn:escapeXml(specgen:Description)"/><xsl:text>&#x0a;</xsl:text>
 
-					<!-- If the Item is a codeset then include (at least some of) the values in the description -->
-					<xsl:if test="specgen:Type/@ref eq 'CodeSets'">
-						<xsl:variable name="codeSetId">
-							<xsl:value-of select="xfn:chopType(substring-after(specgen:Type/@name, 'CodeSets'))"/>
-						</xsl:variable>
-						<xsl:variable name="codeSetGroupId">
-							<xsl:value-of select="substring-before(specgen:Type/@name, $codeSetId)"/>
-						</xsl:variable>
-						<xsl:value-of select="concat($indent, '        &lt;ul&gt;&#x0a;')"/>
-						<xsl:apply-templates select="//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value[position() &lt;= $enumCount and count(specgen:EndDate) eq 0 and count(specgen:StartDate) eq 0]" mode="descr">
-							<xsl:with-param name="indent" select="concat($indent, '        ')"/>
-						</xsl:apply-templates>
-						<xsl:value-of select="concat($indent, '        &lt;/ul&gt;&#x0a;')"/>
-						<xsl:if test="count(//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value) &lt;= $enumCount">
-							<xsl:value-of select="concat($indent, '          plus ', 
-														count(//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value) - $enumCount, 
-														' more value(s) at &lt;a href=',$q,
-														$extDocURLBase, 'CodeSets.html#', specgen:Type/@name, $q, '&gt;',
-														specgen:Type/@name, '&lt;/a&gt;&#x0a;')"/>
+						<!-- If the Item is a codeset then include (at least some of) the values in the description -->
+						<xsl:if test="specgen:Type/@ref eq 'CodeSets'">
+							<xsl:variable name="codeSetId">
+								<xsl:value-of select="xfn:chopType(substring-after(specgen:Type/@name, 'CodeSets'))"/>
+							</xsl:variable>
+							<xsl:variable name="codeSetGroupId">
+								<xsl:value-of select="substring-before(specgen:Type/@name, $codeSetId)"/>
+							</xsl:variable>
+							<xsl:value-of select="concat($indent, '        &lt;ul&gt;&#x0a;')"/>
+							<xsl:apply-templates select="//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value[position() &lt;= $enumCount and count(specgen:EndDate) eq 0 and count(specgen:StartDate) eq 0]" mode="descr">
+								<xsl:with-param name="indent" select="concat($indent, '        ')"/>
+							</xsl:apply-templates>
+							<xsl:value-of select="concat($indent, '        &lt;/ul&gt;&#x0a;')"/>
+							<xsl:if test="count(//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value) &lt;= $enumCount">
+								<xsl:value-of select="concat($indent, '          plus ', 
+															count(//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value) - $enumCount, 
+															' more value(s) at &lt;a href=',$q,
+															$extDocURLBase, 'CodeSets.html#', specgen:Type/@name, $q, '&gt;',
+															specgen:Type/@name, '&lt;/a&gt;&#x0a;')"/>
+							</xsl:if>
 						</xsl:if>
 					</xsl:if>
 				</xsl:if>
@@ -645,29 +647,31 @@
 					<xsl:with-param name="indent" select="concat($indent, '  - ')"/>
 				</xsl:apply-templates>
 				
-				<xsl:if test="normalize-space(specgen:Description) ne ''">
-					<xsl:value-of select="concat($indent, '  - description: &gt;-&#x0a;', $indent, '      ')"/>
-					<xsl:apply-templates select="xfn:escapeXml(specgen:Description)"/><xsl:text>&#x0a;</xsl:text>
+				<xsl:if test="$strictJSON ne 'true'">
+					<xsl:if test="normalize-space(specgen:Description) ne ''">
+						<xsl:value-of select="concat($indent, '  - description: &gt;-&#x0a;', $indent, '      ')"/>
+						<xsl:apply-templates select="xfn:escapeXml(specgen:Description)"/><xsl:text>&#x0a;</xsl:text>
 
-					<!-- If the Item is a codeset then include (at least some of) the values in the description -->
-					<xsl:if test="specgen:Type/@ref eq 'CodeSets'">
-						<xsl:variable name="codeSetId">
-							<xsl:value-of select="xfn:chopType(substring-after(specgen:Type/@name, 'CodeSets'))"/>
-						</xsl:variable>
-						<xsl:variable name="codeSetGroupId">
-							<xsl:value-of select="substring-before(specgen:Type/@name, $codeSetId)"/>
-						</xsl:variable>
-						<xsl:value-of select="concat($indent, '      &lt;ul&gt;&#x0a;')"/>
-						<xsl:apply-templates select="//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value[position() &lt;= $enumCount and count(specgen:EndDate) eq 0 and count(specgen:StartDate) eq 0]" mode="descr">
-							<xsl:with-param name="indent" select="concat($indent, '      ')"/>
-						</xsl:apply-templates>
-						<xsl:value-of select="concat($indent, '      &lt;/ul&gt;&#x0a;')"/>
-						<xsl:if test="count(//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value) &gt; $enumCount">
-							<xsl:value-of select="concat($indent, '        plus ', 
-														count(//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value) - $enumCount, 
-														' more value(s) at &lt;a href=',$q,
-														$extDocURLBase, 'CodeSets.html#', specgen:Type/@name, $q, '&gt;',
-														specgen:Type/@name, '&lt;/a&gt;&#x0a;')"/>
+						<!-- If the Item is a codeset then include (at least some of) the values in the description -->
+						<xsl:if test="specgen:Type/@ref eq 'CodeSets'">
+							<xsl:variable name="codeSetId">
+								<xsl:value-of select="xfn:chopType(substring-after(specgen:Type/@name, 'CodeSets'))"/>
+							</xsl:variable>
+							<xsl:variable name="codeSetGroupId">
+								<xsl:value-of select="substring-before(specgen:Type/@name, $codeSetId)"/>
+							</xsl:variable>
+							<xsl:value-of select="concat($indent, '      &lt;ul&gt;&#x0a;')"/>
+							<xsl:apply-templates select="//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value[position() &lt;= $enumCount and count(specgen:EndDate) eq 0 and count(specgen:StartDate) eq 0]" mode="descr">
+								<xsl:with-param name="indent" select="concat($indent, '      ')"/>
+							</xsl:apply-templates>
+							<xsl:value-of select="concat($indent, '      &lt;/ul&gt;&#x0a;')"/>
+							<xsl:if test="count(//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value) &gt; $enumCount">
+								<xsl:value-of select="concat($indent, '        plus ', 
+															count(//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value) - $enumCount, 
+															' more value(s) at &lt;a href=',$q,
+															$extDocURLBase, 'CodeSets.html#', specgen:Type/@name, $q, '&gt;',
+															specgen:Type/@name, '&lt;/a&gt;&#x0a;')"/>
+							</xsl:if>
 						</xsl:if>
 					</xsl:if>
 				</xsl:if>
