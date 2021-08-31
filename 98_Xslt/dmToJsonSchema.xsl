@@ -61,9 +61,11 @@
 		<!-- The single object -->
 		<xsl:value-of select="concat('  ', @name, ':&#x0a;')"/>
 		<xsl:value-of select="concat('    $ref: ''#/definitions/', @name, '''&#x0a;')"/>
-		<xsl:value-of select="concat('    title: ', xfn:chopType(@name), '&#x0a;')"/>		
-		<xsl:if test="string-length($desc) gt 0">
-			<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
+		<xsl:if test="$strictJSON ne 'true'">
+			<xsl:value-of select="concat('    title: ', xfn:chopType(@name), '&#x0a;')"/>		
+			<xsl:if test="string-length($desc) gt 0">
+				<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
+			</xsl:if>
 		</xsl:if>
 
 		<!-- The array of objects -->
@@ -77,12 +79,13 @@
 									 '      ', @name , ':&#x0a;',
 									 '        type: array&#x0a;',
 									 '        items:&#x0a;',
-									 '          $ref: ''#/properties/', @name, '''&#x0a;',
-									 '          title: ', xfn:chopType(@name), '&#x0a;')"/>
-
-		<xsl:if test="string-length($desc) gt 0">
-			<xsl:value-of select="concat('        description: &gt;-&#x0a;          ', $desc, '&#x0a;')"/>
-		</xsl:if>									 
+									 '          $ref: ''#/properties/', @name, '''&#x0a;')"/>
+		<xsl:if test="$strictJSON ne 'true'">
+			<xsl:value-of select="concat('          title: ', xfn:chopType(@name), '&#x0a;')"/>
+			<xsl:if test="string-length($desc) gt 0">
+				<xsl:value-of select="concat('        description: &gt;-&#x0a;          ', $desc, '&#x0a;')"/>
+			</xsl:if>
+		</xsl:if>
 	</xsl:template>
 
 	<xsl:template match="specgen:DataObject" mode="definitions">
