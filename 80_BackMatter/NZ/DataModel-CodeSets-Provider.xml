@@ -1341,6 +1341,11 @@
 				<Text xml:lang="en">School</Text>
 				<Text xml:lang="mi">Kura</Text>
 			</Value>    <!-- School -->			
+			<Value>
+				<Code>NAB</Code>
+				<Text>National Body</Text>
+				<Description>Role indicates that organisation is a national body.</Description>
+			</Value>	<!-- National Body -->
 		</Values>
 	</CodeSet>    <!-- Source Organisation Role -->
 	
@@ -1428,9 +1433,9 @@
 				<Description>Role indicates that an ECE is a member of an ECE Service Provider.</Description>
 			</Value>	<!-- ECE Service Provider -->
 			<Value>
-				<Code>NAB</Code>
-				<Text>National Body</Text>
-				<Description>Role indicates that a school is a member of a national body.</Description>
+				<Code>NBM</Code>
+				<Text>National Body Member</Text>
+				<Description>Role indicates that the provider is a member of a national body.</Description>
 			</Value>	<!-- National Body -->
 		</Values>
 	</CodeSet>    <!-- Related Organisation Role -->
