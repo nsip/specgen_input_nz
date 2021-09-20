@@ -1490,8 +1490,7 @@
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>Opening date of entity.  For proposed schools this will
-				be the projected opening date.  For open schools this may
-				not be present.</p>
+				be the projected opening date.</p>
 			</Description>
 			<Type ref="CommonTypes" name="StartDateType"/>
 		</Item>   <!-- EntityOpen -->

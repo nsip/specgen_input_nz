@@ -1656,28 +1656,50 @@
 				<Code>2402</Code>
 				<Text xml:lang="en">Te Rito Privacy Officer</Text>
 			</Value>
+
+			<!-- API Client Roles -->
 		  	<Value>
 				<Code>2501</Code>
 				<Text xml:lang="en">FIRST - API client</Text>
-			</Value>
+				<Description xml:lang="en">Organiation &amp; Organisation master data access</Description>
+			</Value>  <!-- FIRST -->
 		  	<Value>
 				<Code>2502</Code>
 				<Text xml:lang="en">SUPS - API client</Text>
-			</Value>
+				<Description xml:lang="en">StaffPersonal and StaffAssignment user provisioning access</Description>
+			</Value>  <!-- SUPS -->
 		  	<Value>
 				<Code>2503</Code>
 				<Text xml:lang="en">NZQA - API client</Text>
-			</Value>
+				<Description xml:lang="en">Credential, Attainment &amp; LearningStandard master data access</Description>
+			</Value>  <!-- NZQA -->
 		  	<Value>
 				<Code>2504</Code>
 				<Text xml:lang="en">LSR - API client</Text>
-			</Value>
+				<Description xml:lang="en">Learning Support Register read only access</Description>
+			</Value>  <!-- LSR -->
 		  	<Value>
 				<Code>2505</Code>
 				<Text xml:lang="en">SMS - API client</Text>
-			</Value>
+				<Description xml:lang="en">SMS read &amp; write access to a single Provider with a single access token.</Description>
+			</Value>  <!-- SMS -->
+		  	<Value>
+				<Code>2506</Code>
+				<Text xml:lang="en">SMSMULTI - API client</Text>
+				<Description xml:lang="en">SMS read &amp; write access to multiple Providers with a single access token.</Description>
+			</Value>  <!-- SMSMULTI -->
+		  	<Value>
+				<Code>2507</Code>
+				<Text xml:lang="en">SMSSYNC - API client</Text>
+				<Description xml:lang="en">SMS write only access via Sync endpoint to a sinlge Provider with a single access token.</Description>
+			</Value>  <!-- SMSSYNC -->
+		  	<Value>
+				<Code>2508</Code>
+				<Text xml:lang="en">SMSMULTISYNC - API client</Text>
+				<Description xml:lang="en">SMS write only access via Sync endpoint to multiple Providers with a single access token.</Description>
+			</Value>  <!-- SMSMULTISYNC -->
 		</Values>
-	</CodeSet>    <!-- Staff Role -->
+	</CodeSet>    <!-- Staff Role  (& API Client Roles) -->
 
 	<CodeSet>
 		<Intro>
