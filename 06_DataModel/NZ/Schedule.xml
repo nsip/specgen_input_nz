@@ -52,7 +52,7 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
-			<p>The start date of the schedule.</p>
+			<p>The start date of the schedule; the earliest startDate from the set of Terms attached to the Schedule.</p>
 		</Description>
 		<Type ref="CommonTypes" name="StartDateType"/>
 	</Item>    <!-- StartDate -->
@@ -62,7 +62,7 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Medium</privacyRating>
 		<Description>
-			<p>The end date of the schedule.</p>
+			<p>The end date of the schedule; the latest endDate from the set of Terms attached to the Schedule.</p>
 		</Description>
 		<Type ref="CommonTypes" name="EndDateType"/>
 	</Item>    <!-- EndDate -->
