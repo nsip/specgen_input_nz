@@ -189,13 +189,13 @@
           <RefId>a8c3a2e3-5b35-9d75-101d-00aa001a0000</RefId>
           <LocalId>SMI1</LocalId>
           <Name>Thomas Smith</Name>
-          <Role json:force-string="true">1001</Role>
+          <Role json:force-string="true">1205</Role>
         </StaffMember>
         <StaffMember>
           <RefId>a8cccce3-5b35-9d75-101d-00aa001a0000</RefId>
           <LocalId>LONG2</LocalId>
           <Name>Tamara Long</Name>
-          <Role  json:force-string="true">1002</Role>
+          <Role  json:force-string="true">1210</Role>
         </StaffMember>
       </TeacherList>
       <RecordAudit>

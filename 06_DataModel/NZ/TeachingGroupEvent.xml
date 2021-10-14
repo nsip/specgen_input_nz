@@ -194,7 +194,7 @@
           <RefId>a8c3a2e3-5b35-9d75-101d-00aa001a0000</RefId>
           <LocalId>SMI1</LocalId>
           <Name>Thomas Smith</Name>
-					<Role json:force-string="true">1001</Role>
+					<Role json:force-string="true">1205</Role>
         </StaffMember>
       </TeacherList>
       <RecordAudit>

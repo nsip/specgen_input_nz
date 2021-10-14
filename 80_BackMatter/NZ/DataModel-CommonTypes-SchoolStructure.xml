@@ -44,7 +44,7 @@
 				may affect the Teacher's access to the students data for
 				those students who are members of the TeachingGroup.</p>
 			</Description>
-			<Type  ref="CodeSets" name="NZCodeSetsStaffRoleType"/>
+			<Type  ref="CodeSets" name="NZCodeSetsStaffTeachingGroupRoleType"/>
 		</Item>    <!-- Role -->
 	</CommonElement>
 

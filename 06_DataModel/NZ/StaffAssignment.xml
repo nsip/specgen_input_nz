@@ -107,7 +107,7 @@
     <Description>
       <p>The single role the StaffMember has in relation to all students at the assigned location.</p>
     </Description>
-    <Type  ref="CodeSets" name="NZCodeSetsStaffRoleType"/>    
+    <Type  ref="CodeSets" name="NZCodeSetsStaffOrganisationRoleType"/>    
   </Item>      <!-- StaffRole -->
 
   <Item>
@@ -196,7 +196,7 @@
 	    	<LocalId json:force-string="true">9961</LocalId>
       </AssignedLocation>
       <Description>Senior English Teacher</Description>
-      <StaffRole json:force-string="true">1102</StaffRole>
+      <StaffRole json:force-string="true">1205</StaffRole>
       <StartDate>2000-09-05</StartDate>
       <EndDate>2001-06-25</EndDate>
       <CasualReliefTeacher>N</CasualReliefTeacher>
@@ -239,7 +239,7 @@
 				<LocalId json:force-string="true">9651</LocalId>
       </AssignedLocation>
       <Description>Kāhui Ako Cross School Teacher</Description>
-      <StaffRole json:force-string="true">1102</StaffRole>
+      <StaffRole json:force-string="true">1205</StaffRole>
       <StartDate>2000-09-05</StartDate>
       <EndDate>2001-06-25</EndDate>
       <CasualReliefTeacher>N</CasualReliefTeacher>

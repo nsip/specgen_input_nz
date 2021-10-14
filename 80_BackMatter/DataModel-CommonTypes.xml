@@ -305,7 +305,7 @@
 			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
-				<p>NZCodeSetsAssessmentStaffRoleTYpe</p>
+				<p>NZCodeSetsAssessmentStaffRoleType</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsAssessmentStaffRoleType"/>
 		</Item>    <!-- StaffRole -->

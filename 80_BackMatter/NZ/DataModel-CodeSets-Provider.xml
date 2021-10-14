@@ -1440,7 +1440,7 @@
 		</Values>
 	</CodeSet>    <!-- Related Organisation Role -->
 
-	<!-- StaffAssignment -->
+	<!-- StaffAssignment, StaffTeachingGroupAssignment, etc -->
 	<CodeSet>
 		<Intro>
 			<p>Describes the role a staff member has at a Provider or other EducationOrganisation.</p>
@@ -1700,6 +1700,87 @@
 			</Value>  <!-- SMSMULTISYNC -->
 		</Values>
 	</CodeSet>    <!-- Staff Role  (& API Client Roles) -->
+
+	<CodeSet>
+		<Intro>
+			<p>The subset of available roles when assigning a staff member to an Organisation</p>
+		</Intro>
+		<ID>Staff Organisation Role</ID>
+		<Values>
+		 	<Value>
+				<Code>1001</Code>
+				<Text xml:lang="en">Principal</Text>
+				<Text xml:lang="mi">Tumuaki</Text>
+			</Value>
+ 			<Value>
+				<Code>1002</Code><Text xml:lang="en">Deputy Principal</Text>
+			</Value>
+
+		  	<Value>
+				<Code>1205</Code><Text xml:lang="en">Classroom Teacher</Text>
+			</Value>
+
+ 			<Value>
+				<Code>1303</Code>
+				<Text xml:lang="en">Learning Support Coordinator</Text>
+				<Text xml:lang="mi">Kaiwhakahaere Akoranga Tautoko</Text>
+			</Value>
+ 			<Value>
+				<Code>1306</Code>
+				<Text xml:lang="en">Special Needs Coordinator (SENCO)</Text>
+				<Text xml:lang="mi">Kaiwhakarite Mātauranga Whāiti</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Staff Organisation Role -->
+
+	<CodeSet>
+		<Intro>
+			<p>Describes the role an API Client has at a Provider or other EducationOrganisation.</p>
+		</Intro>
+		<ID>API Client Role</ID>
+		<Values>
+		  	<Value>
+				<Code>2501</Code>
+				<Text xml:lang="en">FIRST - API client</Text>
+				<Description xml:lang="en">Organiation &amp; Organisation master data access</Description>
+			</Value>  <!-- FIRST -->
+		  	<Value>
+				<Code>2502</Code>
+				<Text xml:lang="en">SUPS - API client</Text>
+				<Description xml:lang="en">StaffPersonal and StaffAssignment user provisioning access</Description>
+			</Value>  <!-- SUPS -->
+		  	<Value>
+				<Code>2503</Code>
+				<Text xml:lang="en">NZQA - API client</Text>
+				<Description xml:lang="en">Credential, Attainment &amp; LearningStandard master data access</Description>
+			</Value>  <!-- NZQA -->
+		  	<Value>
+				<Code>2504</Code>
+				<Text xml:lang="en">LSR - API client</Text>
+				<Description xml:lang="en">Learning Support Register read only access</Description>
+			</Value>  <!-- LSR -->
+		  	<Value>
+				<Code>2505</Code>
+				<Text xml:lang="en">SMS - API client</Text>
+				<Description xml:lang="en">SMS read &amp; write access to a single Provider with a single access token.</Description>
+			</Value>  <!-- SMS -->
+		  	<Value>
+				<Code>2506</Code>
+				<Text xml:lang="en">SMSMULTI - API client</Text>
+				<Description xml:lang="en">SMS read &amp; write access to multiple Providers with a single access token.</Description>
+			</Value>  <!-- SMSMULTI -->
+		  	<Value>
+				<Code>2507</Code>
+				<Text xml:lang="en">SMSSYNC - API client</Text>
+				<Description xml:lang="en">SMS write only access via Sync endpoint to a sinlge Provider with a single access token.</Description>
+			</Value>  <!-- SMSSYNC -->
+		  	<Value>
+				<Code>2508</Code>
+				<Text xml:lang="en">SMSMULTISYNC - API client</Text>
+				<Description xml:lang="en">SMS write only access via Sync endpoint to multiple Providers with a single access token.</Description>
+			</Value>  <!-- SMSMULTISYNC -->
+		</Values>
+	</CodeSet>    <!-- API Client Role -->
 
 	<CodeSet>
 		<Intro>
