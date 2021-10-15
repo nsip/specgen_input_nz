@@ -193,7 +193,7 @@
 			</Value>    <!-- Scholarship -->
 			<Value>
 				<Code>OT</Code>
-				<Text>Other</Text>
+				<Text xml:lang="en">Other</Text>
 			</Value>    <!-- Other -->
 		</Values>
 	</CodeSet>   <!-- LearningStandardType -->
@@ -457,7 +457,7 @@
 			</Value>
 			<Value>
 				<Code>TONG</Code>
-				<Text>Tongan</Text>
+				<Text xml:lang="en">Tongan</Text>
 			</Value>
 			<Value>
 				<Code>ENSL</Code>
@@ -584,8 +584,8 @@
 				<Text xml:lang="en">Dancing</Text>
 			</Value>
 			<Value>
-				<Code xml:lang="en">DRAM</Code>
-			  <Text>Drama</Text>
+				<Code>DRAM</Code>
+			  <Text xml:lang="en">Drama</Text>
 			</Value>
 			<Value>
 			  <Code>MUSC</Code>

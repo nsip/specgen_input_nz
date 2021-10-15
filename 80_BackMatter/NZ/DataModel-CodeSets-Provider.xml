@@ -1236,46 +1236,72 @@
 			<Value>
 				<Code>LOF</Code>
 				<Text>Local Office and Organisation</Text>
+				<Description>
+					Source Organisation represents a Ministry Local Office, and the related organisation represents the 
+					Provider (or other organisation) that has an established relationship with the local office.
+				</Description>
 			</Value>    <!-- MoE Local Office and Organisation -->
 			<Value>
 				<Code>NBO</Code>
 				<Text>National Body and Organisation</Text>
-				<Description>Source Organisation is a Provider that is a member of the Related Organisation, which is a national body</Description>
+				<Description>Source Organisation represents a national body of an external organisation, and the related
+				organisation represents the Provider (or other organisation), that is part of (or a member of) the national body</Description>
 			</Value>
 			<Value>
 				<Code>EPL</Code>
 				<Text>Playgroup - ECE Service Provider</Text>
+				<Description>Source Organisation represents an ECE Service Provider, and the related
+				organisation represents a Playgroup (or other ECE service), that is part of (or a member of)
+				the ECE service provider</Description>
 			</Value>	<!-- Playgroup, ECE Service Provider -->
 			<Value>
 				<Code>ESP</Code>
 				<Text>Licenced ECEService - ECE Service Provider</Text>
+				<Description>Source Organisation represents an ECE Service Provider, and the related
+				organisation represents a Licensed ECE Service that is part of (or a member of)
+				the ECE service provider</Description>
 			</Value>	<!-- Licensed ECE Service, ECE Service Provider -->
 			<Value>
 				<Code>34008</Code>
 				<Text xml:lang="en">School and Attached Unit</Text>
+				<Description>Source Organisation represents a School, and the related
+				organisation represents an attached unit (Teen Parent Unit, Activity Centre etc)</Description>
 			</Value>    <!-- School and Attached Unit -->
 			<Value>
 				<Code>34028</Code>
 				<Text xml:lang="en">Community of Learning Funded Member</Text>
+				<Description>Source Organisation represents a Kāhui Ako | Community of Learning,
+				and the related organisation represents a Provider that is a funded member of the
+				Kāhui Ako</Description>
 			</Value>    <!-- Kāhui Ako Funded Member -->
 			<Value>
 				<Code>34029</Code>
 				<Text xml:lang="en">Community of Learning Unfunded Member</Text>
+				<Description>Source Organisation represents a Kāhui Ako | Community of Learning,
+				and the related organisation represents a Provider that is an unfunded member of the
+				Kāhui Ako</Description>
 			</Value>    <!-- Kāhui Ako Unfunded Member -->
 			<Value>
 				<Code>34037</Code>
 				<Text xml:lang="en">Learning Support Cluster Member</Text>
+				<Description>Source Organisation represents a Learning Support Cluster,
+				and the related organisation represents a Provider that is a member of the
+				cluster</Description>
 			</Value>    <!-- Learning Support Cluster Member -->
 			<Value>
 				<Code>34031</Code>
 				<Text xml:lang="en">School RTLB Cluster Member</Text>
-			</Value>    <!-- RTLB Cluster Member -->			
+				<Description>Source Organisation represents an RTLB (Resource Teacher; Learning and Behaviour)
+					Cluster, and the related organisation represents a Provider that is a member of the
+					cluster.
+				</Description>
+			</Value>    <!-- RTLB Cluster Member -->
 			<Value>
 				<Code>TPU</Code>
 				<Text>Teen Parent Unit</Text>
 				<Description>
 					Source Provider is a Teen Parent Unit which is operated as part of the related Provider. Learners
-					who are also parents attend classes at both the Teen Parent Unit and the host school.
+					who are also parents and attend classes at both the Teen Parent Unit and the host school.
 				</Description>
 				<EndDate>2020-05-08</EndDate>
 			</Value>    <!-- Teen Parent Unit -->
@@ -1317,34 +1343,61 @@
 				<Code>COL</Code>
 				<Text xml:lang="en">Community of Learning</Text>
 				<Text xml:lang="mi">Kāhui Ako</Text>
+				<Description>
+					Source organisation is a Kāhui Ako | Community of Learning 
+					that has the related organisation Provider as a member.
+				</Description>
 			</Value>    <!-- CoL/Kāhui Ako -->
 			<Value>
 				<Code>ECE</Code>
 				<Text xml:lang="en">ECE Service Provider</Text>
 				<Text xml:lang="mi">Kura Kōhungahunga</Text>
+				<Description>
+					Source organisation is a an ECE Service Provider
+					that has the related organisation ECE Service as a member.
+				</Description>
 			</Value>    <!-- ECE Service Provider -->
 			<Value>
 				<Code>LOC</Code>
 				<Text xml:lang="en">Local Office</Text>
+				<Description>
+					Source organisation is a Ministry local office 
+					that has an established relationship with the local office.
+				</Description>
 			</Value>    <!-- MoE Local Office -->
 			<Value>
 				<Code>LSC</Code>
 				<Text xml:lang="en">Learning Support Cluster</Text>
 				<Text xml:lang="mi">Kāhui Akoranga Tautoko</Text>
+				<Description>
+					Source organisation is a Learning Support Cluster
+					that has the related organisation Provider as a funded or unfunded member.
+				</Description>
 			</Value>    <!-- Learning Support Cluster -->
 			<Value>
 				<Code>RTL</Code>
 				<Text xml:lang="en">RTLB Cluster</Text>
+				<Description>
+					Source organisation is an RTLB (Resource Teacher; Learning and Behaviour) Cluster
+					that has the related organisation Provider as a member.
+				</Description>
 			</Value>    <!-- RTLB Cluster -->
 			<Value>
 				<Code>SCH</Code>
 				<Text xml:lang="en">School</Text>
 				<Text xml:lang="mi">Kura</Text>
+				<Description>
+					Source organisation is a School 
+					that has the related organisation as an attached unit.
+				</Description>
 			</Value>    <!-- School -->			
 			<Value>
 				<Code>NAB</Code>
 				<Text>National Body</Text>
-				<Description>Role indicates that organisation is a national body.</Description>
+				<Description>
+					Source organisation is a National Body 
+					that has the related organisation Provider as a member or branch.
+				</Description>
 			</Value>	<!-- National Body -->
 		</Values>
 	</CodeSet>    <!-- Source Organisation Role -->
