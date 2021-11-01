@@ -896,7 +896,7 @@
 				<xsl:value-of select="concat($indent, '  type: string&#x0a;')"/>
 				<xsl:if test="starts-with(preceding-sibling::specgen:Characteristics, 'M')
 				           or starts-with(preceding-sibling::specgen:Characteristics, 'C')">
-					<xsl:value-of select="concat($indent, '  format: non-empty-string&#x0a;')"/>
+					<xsl:value-of select="concat($indent, '  pattern: ''^\S(.*\S)?$''&#x0a;')"/>
 				</xsl:if>
 			</xsl:when>
 			
