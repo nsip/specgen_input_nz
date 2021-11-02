@@ -1769,6 +1769,9 @@
 				<Code>1002</Code><Text xml:lang="en">Deputy Principal</Text>
 			</Value>
 
+ 			<Value>
+				<Code>1201</Code><Text xml:lang="en">Subject Teacher</Text>
+			</Value>
 		  	<Value>
 				<Code>1205</Code><Text xml:lang="en">Classroom Teacher</Text>
 			</Value>
