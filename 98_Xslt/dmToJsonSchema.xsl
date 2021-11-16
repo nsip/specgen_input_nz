@@ -1026,6 +1026,7 @@
 		<xsl:value-of select="concat($indent, '- code: ', specgen:Code, '&#x0a;')"/>
 
 		<xsl:choose>
+			<!-- Multi-level enumerations (ex: Stats NZ) need Level included in Enumeration String -->
 			<xsl:when test="specgen:Level">
 				<xsl:apply-templates select="specgen:Text" mode="enum">
 					<xsl:with-param name="indent" select="$indent"/>
@@ -1043,6 +1044,8 @@
 					<xsl:with-param name="indent" select="$indent"/>
 				</xsl:apply-templates>
 			</xsl:when>
+
+			<!-- Some texts are so weird they need custom ENUM values -->
 			<xsl:when test="specgen:Enum">
 				<xsl:apply-templates select="specgen:Text" mode="enum">
 					<xsl:with-param name="indent" select="$indent"/>
@@ -1052,6 +1055,8 @@
 					<xsl:with-param name="indent" select="$indent"/>
 				</xsl:apply-templates>
 			</xsl:when>
+
+			<!-- Derive ENUM value from title....-->
 			<xsl:otherwise>
 				<xsl:apply-templates select="specgen:Text" mode="enumDocs">
 					<xsl:with-param name="indent" select="$indent"/>
@@ -1062,7 +1067,7 @@
 			</xsl:otherwise>
 		</xsl:choose>
 
-		<xsl:apply-templates select="specgen:Description" mode="enum">
+		<xsl:apply-templates select="specgen:Description[@xml:lang='en']" mode="enum">
 			<xsl:with-param name="indent" select="$indent"/>
 		</xsl:apply-templates>
 	</xsl:template>
@@ -1079,7 +1084,7 @@
 			<xsl:with-param name="indent" select="$indent"/>
 		</xsl:apply-templates>
 
-		<xsl:apply-templates select="specgen:StartDate|specgen:EndDate" mode="enum">
+		<xsl:apply-templates select="specgen:StartDate|specgen:EndDate|specgen:ReadOnly" mode="enum">
 			<xsl:with-param name="indent" select="$indent"/>
 		</xsl:apply-templates>
 	</xsl:template>
@@ -1238,10 +1243,10 @@
 	</xsl:template>
 
 	<!-- Enumeration may be time bound -->
-	<xsl:template match="specgen:StartDate|specgen:EndDate" mode="enum">
+	<xsl:template match="specgen:StartDate|specgen:EndDate|specgen:ReadOnly" mode="enum">
 		<xsl:param name="indent"/>
 
-		<xsl:value-of select="concat($indent, '  x-', translate(name(), 'StartEndDte', 'startendDte'), ': ', ., '&#x0a;')"/>
+		<xsl:value-of select="concat($indent, '  x-', translate(name(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), ': ', ., '&#x0a;')"/>
 	</xsl:template>
 
 

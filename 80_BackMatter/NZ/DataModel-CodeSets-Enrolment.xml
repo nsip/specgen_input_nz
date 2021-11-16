@@ -176,6 +176,13 @@
 				<Text xml:lang="en">Caregiver Decision</Text>
 				<Text xml:lang="mi">Whakarite a te Kaitiaki</Text>
 			</Value>
+			<Value>
+				<Code>AUTO</Code>
+				<Text xml:lang="en">Automatic Termination</Text>
+				<Text xml:lang="mi">Automatic Termination</Text>
+				<Description xml:Lang="en">Enrolment automatically terminated by Te Rito synchronisation engine; read-only value</Description>
+				<ReadOnly>true</ReadOnly>
+			</Value>
 		</Values>
 	</CodeSet>	<!-- Enrolment Exit Type -->
 
