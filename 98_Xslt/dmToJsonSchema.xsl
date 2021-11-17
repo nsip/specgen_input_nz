@@ -1040,9 +1040,6 @@
 				</xsl:variable>
 
 				<xsl:value-of select="concat($indent, '  titleNoSpace: Level', specgen:Level, '_', $title, '&#x0a;')"/>
-				<xsl:apply-templates select="specgen:EndDate" mode="enumDocs">
-					<xsl:with-param name="indent" select="$indent"/>
-				</xsl:apply-templates>
 			</xsl:when>
 
 			<!-- Some texts are so weird they need custom ENUM values -->
@@ -1051,9 +1048,6 @@
 					<xsl:with-param name="indent" select="$indent"/>
 				</xsl:apply-templates>
 				<xsl:value-of select="concat($indent, '  titleNoSpace: ', specgen:Enum, '&#x0a;')"/>
-				<xsl:apply-templates select="specgen:EndDate" mode="enumDocs">
-					<xsl:with-param name="indent" select="$indent"/>
-				</xsl:apply-templates>
 			</xsl:when>
 
 			<!-- Derive ENUM value from title....-->
@@ -1061,13 +1055,14 @@
 				<xsl:apply-templates select="specgen:Text" mode="enumDocs">
 					<xsl:with-param name="indent" select="$indent"/>
 				</xsl:apply-templates>
-				<xsl:apply-templates select="specgen:EndDate" mode="enumDocs">
-					<xsl:with-param name="indent" select="$indent"/>
-				</xsl:apply-templates>
 			</xsl:otherwise>
 		</xsl:choose>
 
 		<xsl:apply-templates select="specgen:Description[@xml:lang='en']" mode="enum">
+			<xsl:with-param name="indent" select="$indent"/>
+		</xsl:apply-templates>
+
+		<xsl:apply-templates select="specgen:EndDate|specgen:ReadOnly" mode="enumDocs">
 			<xsl:with-param name="indent" select="$indent"/>
 		</xsl:apply-templates>
 	</xsl:template>
@@ -1142,6 +1137,12 @@
 	<xsl:template match="specgen:EndDate" mode="enumDocs">
 		<xsl:param name="indent"/>
 		<xsl:value-of select="concat($indent, '  expired: true&#x0a;')"/>
+	</xsl:template>
+
+	<!-- Enumeration value is readOnly -->
+	<xsl:template match="specgen:ReadOnly" mode="enumDocs">
+		<xsl:param name="indent"/>
+		<xsl:value-of select="concat($indent, '  readonly: ', ., '&#x0a;')"/>
 	</xsl:template>
 
 	<!-- Enumeration doesn't have multiple languages; clean-up title for use in code-generators -->
