@@ -1001,15 +1001,6 @@
 			<Type complex="extension" name="BaseCommunicationChannelType"/>
 		</Item>
 		<Item>
-			<Element>SourceOrganisation</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>High</privacyRating>
-			<Description>
-				<p>Generic object reference to the organisation that provided the email address.</p>
-			</Description>
-			<Type ref="CommonTypes" name="OrganisationObjectReference"/>
-		</Item>    <!-- SourceOrganisation -->		
-		<Item>
 			<Element>Address</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
