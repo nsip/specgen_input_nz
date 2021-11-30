@@ -207,11 +207,16 @@
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
 			<Description>
-				<p>Represents the year level at which the student is considered to be predominantly taught. For example – Year 10, Year 11. Can only contain the values 1 through to 13 inclusive.</p>
+				<p>Represents the year level at which the student is considered to be predominantly taught. 
+				For example – Year 10, Year 11. Can only contain the values 0 through to 13 inclusive.</p>
+				<p><strong>Note:</strong>  Students who commence school at age 5 in the 
+				second half of a school year, are placed in Year Level 0; and will move
+				into Year Level 1 at the commencement of the following school year.
+				</p>				
 			</Description>
 			<Type name="xs:int"/>
 			<Facets>
-				<xs:minInclusive value="1"/>
+				<xs:minInclusive value="0"/>
 				<xs:maxInclusive value="13"/>
 			</Facets>
 		</Item>		<!-- YearLevel -->

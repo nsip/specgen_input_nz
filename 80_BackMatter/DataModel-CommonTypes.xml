@@ -183,10 +183,16 @@
 			<Element>YearLevel</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>High</privacyRating>
-			<Description><p>The YearLevel of the referenced Student; (optional and read-only)</p></Description>
-			<Type  name="xs:positiveInteger"/>
+			<Description>
+				<p>The YearLevel of the referenced Student; (optional and read-only)</p>
+				<p><strong>Note:</strong>  Students who commence school at age 5 in the 
+				second half of a school year, are placed in Year Level 0; and will move
+				into Year Level 1 at the commencement of the following school year.
+				</p>
+			</Description>
+			<Type  name="xs:int"/>
 			<Facets>
-				<xs:minInclusive value="1"/>
+				<xs:minInclusive value="0"/>
 				<xs:maxInclusive value="13"/>
 			</Facets>
 		</Item>   <!-- YearLevel -->

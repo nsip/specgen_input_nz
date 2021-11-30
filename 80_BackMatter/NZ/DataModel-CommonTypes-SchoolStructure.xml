@@ -308,11 +308,11 @@
 			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
-				<p>Which year level are we describing?</p>
+				<p>Which year level are we describing? Possible values 0 - 13</p>
 			</Description>
 			<Type name="xs:int"/>
 			<Facets>
-				<xs:minInclusive value="1"/>
+				<xs:minInclusive value="0"/>
 				<xs:maxInclusive value="13"/>
 			</Facets>
 		</Item>    <!-- Year Level -->
@@ -355,7 +355,10 @@
 			<Element>YearLevelListType</Element>
 			<Description>
 				<p>A list of <code>NZSchoolYearLevel</code> elements, describing the Year Levels
-				taught to the Course or TeachingGroup.
+				taught to the Course or TeachingGroup.</p>
+				<p><strong>Note:</strong>  Students who commence school at age 5 in the 
+				second half of a school year, are placed in Year Level 0; and will move
+				into Year Level 1 at the commencement of the following school year.
 				</p>
 			</Description>
 			<List mode="List"/>
@@ -369,7 +372,7 @@
 			</Description>
 			<Type name="xs:int"/>
 			<Facets>
-				<xs:minInclusive value="1"/>
+				<xs:minInclusive value="0"/>
 				<xs:maxInclusive value="13"/>
 			</Facets>
 		</Item>
