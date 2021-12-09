@@ -125,63 +125,88 @@
 				<Code>S</Code>
 				<Text xml:lang="en">Transferred to Another School in NZ</Text>
 				<Text xml:lang="mi">Whakawhiti ki kura kē o Aotearoa</Text>
+				<DisplayOrder xml:lang="en">1</DisplayOrder>
+				<DisplayOrder xml:lang="mi">1</DisplayOrder>
+				<Default>true</Default>
 			</Value>
 			<Value>
 				<Code>H</Code>
 				<Text xml:lang="en">Transferring to Home Schooling</Text>
 				<Text xml:lang="mi">Whakawhiti ki te kura-kāinga</Text>
+				<DisplayOrder xml:lang="en">10</DisplayOrder>
+				<DisplayOrder xml:lang="mi">10</DisplayOrder>
 			</Value>
 			<Value>
 				<Code>O</Code>
 				<Text xml:lang="en">Gone Overseas</Text>
 				<Text xml:lang="mi">Haere ki tāwāhi</Text>
+				<DisplayOrder xml:lang="en">11</DisplayOrder>
+				<DisplayOrder xml:lang="mi">11</DisplayOrder>
 			</Value>
 			<Value>
 				<Code>D</Code>
 				<Text xml:lang="en">Deceased</Text>
 				<Text xml:lang="mi">Kua mate</Text>
+				<DisplayOrder xml:lang="en">12</DisplayOrder>
+				<DisplayOrder xml:lang="mi">12</DisplayOrder>
 			</Value>
 			<Value>
 				<Code>X</Code>
 				<Text xml:lang="en">Expulsion (for Students Aged 16 and Over Only)</Text>
 				<Text xml:lang="mi">I panaia (mō te hunga ākonga 16 te pakeke neke atu anake)</Text>
+				<DisplayOrder xml:lang="en">3</DisplayOrder>
+				<DisplayOrder xml:lang="mi">3</DisplayOrder>
 			</Value>
 			<Value>
 				<Code>L</Code>
 				<Text xml:lang="en">End of Schooling (for Students Aged 16 and Over Only)</Text>
 				<Text xml:lang="mi">Kua mutu te kura (mō te hunga ākonga 16 te pakeke neke atu anake)</Text>
+				<DisplayOrder xml:lang="en">2</DisplayOrder>
+				<DisplayOrder xml:lang="mi">2</DisplayOrder>
 			</Value>
 			<Value>
 				<Code>E</Code>
 				<Text xml:lang="en">Granted Early Exemption (Applies to Those Younger Than 16yrs Old)</Text>
 				<Text xml:lang="mi">Whakaaetia kia wāteatia mai (e pā ana ki ērā ākonga tau heke 16 te pakeke)</Text>
+				<DisplayOrder xml:lang="en">4</DisplayOrder>
+				<DisplayOrder xml:lang="mi">4</DisplayOrder>
 			</Value>
 			<Value>
 				<Code>K</Code>
 				<Text xml:lang="en">Exclusion (for Students Aged Younger Than 16)</Text>
 				<Text xml:lang="mi">Whakarerenga (mō te hunga ākonga tau heke 16 te pakeke)</Text>
+				<DisplayOrder xml:lang="en">5</DisplayOrder>
+				<DisplayOrder xml:lang="mi">5</DisplayOrder>
 			</Value>
 			<Value>
 				<Code>C</Code>
 				<Text xml:lang="en">Continuous Absence</Text>
 				<Text xml:lang="mi">Ka ngaro i ia te wā</Text>
+				<DisplayOrder xml:lang="en">6</DisplayOrder>
+				<DisplayOrder xml:lang="mi">6</DisplayOrder>
 			</Value>
 			<Value>
 				<Code>J</Code>
 				<Text xml:lang="en">Eligibility Expired</Text>
 				<Text xml:lang="mi">Kua kati te māraurau</Text>
+				<DisplayOrder xml:lang="en">13</DisplayOrder>
+				<DisplayOrder xml:lang="mi">13</DisplayOrder>
 			</Value>
 			<Value>
 				<Code>P</Code>
 				<Text xml:lang="en">Caregiver Decision</Text>
 				<Text xml:lang="mi">Whakarite a te Kaitiaki</Text>
+				<DisplayOrder xml:lang="en">14</DisplayOrder>
+				<DisplayOrder xml:lang="mi">14</DisplayOrder>
 			</Value>
 			<Value>
 				<Code>AUTO</Code>
 				<Text xml:lang="en">Automatic Termination</Text>
 				<Text xml:lang="mi">Automatic Termination</Text>
-				<Description xml:Lang="en">Enrolment automatically terminated by Te Rito synchronisation engine; read-only value</Description>
+				<Description>Enrolment automatically terminated by Te Rito synchronisation engine; read-only value</Description>
 				<ReadOnly>true</ReadOnly>
+				<DisplayOrder xml:lang="en">100</DisplayOrder>
+				<DisplayOrder xml:lang="mi">100</DisplayOrder>
 			</Value>
 		</Values>
 	</CodeSet>	<!-- Enrolment Exit Type -->

@@ -1062,7 +1062,7 @@
 			<xsl:with-param name="indent" select="$indent"/>
 		</xsl:apply-templates>
 
-		<xsl:apply-templates select="specgen:EndDate|specgen:ReadOnly" mode="enumDocs">
+		<xsl:apply-templates select="specgen:DisplayOrder[@xml:lang='en']|specgen:Default|specgen:EndDate|specgen:ReadOnly" mode="enumDocs">
 			<xsl:with-param name="indent" select="$indent"/>
 		</xsl:apply-templates>
 	</xsl:template>
@@ -1079,9 +1079,14 @@
 			<xsl:with-param name="indent" select="$indent"/>
 		</xsl:apply-templates>
 
+		<xsl:apply-templates select="specgen:DisplayOrder|specgen:Default" mode="enum">
+			<xsl:with-param name="indent" select="$indent"/>
+		</xsl:apply-templates>
+
 		<xsl:apply-templates select="specgen:StartDate|specgen:EndDate|specgen:ReadOnly" mode="enum">
 			<xsl:with-param name="indent" select="$indent"/>
 		</xsl:apply-templates>
+
 	</xsl:template>
 
 
@@ -1133,6 +1138,21 @@
 		</xsl:choose>
 	</xsl:template>
 
+	<!-- Enumeration value has display order -->
+	<xsl:template match="specgen:DisplayOrder[@xml:lang]" mode="enum">
+		<xsl:param name="indent"/>
+		<xsl:if test="position() = 1">
+			<xsl:value-of select="concat($indent, '  displayOrder*: &#x0a;')"/>
+		</xsl:if>
+		<xsl:value-of select="concat($indent, '    ', @xml:lang, ': ', ., '&#x0a;')"/>
+	</xsl:template>
+
+	<!-- Enumeration value can be the default one -->
+	<xsl:template match="specgen:Default" mode="enum">
+		<xsl:param name="indent"/>
+		<xsl:value-of select="concat($indent, '  default: ', ., '&#x0a;')"/>
+	</xsl:template>
+
 	<!-- Enumeration value is expired  -->
 	<xsl:template match="specgen:EndDate" mode="enumDocs">
 		<xsl:param name="indent"/>
@@ -1180,6 +1200,18 @@
 			<xsl:value-of select="translate(normalize-space(translate(translate($text, &quot;'’$q:&quot;, ''),'-–#|()/.,', ' ')), ' ', '_')"/>
 			<xsl:text>&#x0a;</xsl:text>
 		</xsl:if>
+	</xsl:template>
+
+	<!-- Enumeration value has display order (only need the 'en' value) -->
+	<xsl:template match="specgen:DisplayOrder" mode="enumDocs">
+		<xsl:param name="indent"/>
+		<xsl:value-of select="concat($indent, '  displayOrder: ', ., '&#x0a;')"/>
+	</xsl:template>
+
+	<!-- Enumeration value can be the default one -->
+	<xsl:template match="specgen:Default" mode="enumDocs">
+		<xsl:param name="indent"/>
+		<xsl:value-of select="concat($indent, '  default: ', ., '&#x0a;')"/>
 	</xsl:template>
 
 	<!-- Enumeration description doesn't have multiple languages -->
@@ -1250,7 +1282,12 @@
 		<xsl:value-of select="concat($indent, '  x-', translate(name(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), ': ', ., '&#x0a;')"/>
 	</xsl:template>
 
+	<!-- Enumeration has display order  -->
+	<xsl:template match="specgen:DisplayOrder" mode="enum">
+		<xsl:param name="indent"/>
 
+		<xsl:value-of select="concat($indent, '  x-', translate(name(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), ': ', ., '&#x0a;')"/>
+	</xsl:template>
 
 
 	<!-- Bring Description, Intro or Text mixed content elements across with all its embedded html -->

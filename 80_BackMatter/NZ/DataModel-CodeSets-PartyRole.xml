@@ -170,9 +170,9 @@
 	<CodeSet>
 		<Intro>
 			<p>Code set denoting the status of the student contact's relationship.</p>
-			<p>Set to Active when: StartDate =&gt; today's date and EndDate is NULL 
+			<p>Set to Active when: StartDate =&lt; today's date and EndDate is NULL 
 				or EndDate &gt; than today's date.</p>
-			<p>Set to Inactive when: StartDate &lt; today's date or EndDate =&lt; today's date.</p>
+			<p>Set to Inactive when: StartDate &gt; today's date or EndDate =&lt; today's date.</p>
 		</Intro>
 		<ID>Student Contact Relationship Status</ID>
 		<Values>

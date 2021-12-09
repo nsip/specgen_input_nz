@@ -12,50 +12,74 @@
 			<Value>
 				<Code>28000</Code>
 				<Text>Proposed</Text>
+				<DisplayOrder xml:lang="en">3</DisplayOrder>
+				<DisplayOrder xml:lang="mi">3</DisplayOrder>
 			</Value>	<!-- Proposed -->			
 			<Value>
 				<Code>28001</Code>
 				<Text>Open</Text>
+				<DisplayOrder xml:lang="en">1</DisplayOrder>
+				<DisplayOrder xml:lang="mi">1</DisplayOrder>
 			</Value>	<!-- Open -->			
 			<Value>
 				<Code>28002</Code>
 				<Text>Closed</Text>
+				<DisplayOrder xml:lang="en">2</DisplayOrder>
+				<DisplayOrder xml:lang="mi">2</DisplayOrder>
 			</Value>	<!-- Closed -->			
 			<Value>
 				<Code>28003</Code>
 				<Text>Active</Text>
+				<DisplayOrder xml:lang="en">4</DisplayOrder>
+				<DisplayOrder xml:lang="mi">4</DisplayOrder>
 			</Value>	<!-- Active -->			
 			<Value>
 				<Code>28004</Code>
 				<Text>Inactive</Text>
+				<DisplayOrder xml:lang="en">5</DisplayOrder>
+				<DisplayOrder xml:lang="mi">5</DisplayOrder>
 			</Value>	<!-- Inactive -->			
 			<Value>
 				<Code>28005</Code>
 				<Text>Dissolved while Commissioner in place</Text>
+				<DisplayOrder xml:lang="en">6</DisplayOrder>
+				<DisplayOrder xml:lang="mi">6</DisplayOrder>
 			</Value>	<!-- Dissolved -->			
 			<Value>
 				<Code>28006</Code>
 				<Text>Operating with Limited Statutory Manager</Text>
+				<DisplayOrder xml:lang="en">7</DisplayOrder>
+				<DisplayOrder xml:lang="mi">7</DisplayOrder>
 			</Value>	<!-- Limited Statutory Mgr -->			
 			<Value>
 				<Code>28007</Code>
 				<Text>Merging Board</Text>
+				<DisplayOrder xml:lang="en">8</DisplayOrder>
+				<DisplayOrder xml:lang="mi">8</DisplayOrder>
 			</Value>	<!-- Merging Board -->			
 			<Value>
 				<Code>28008</Code>
 				<Text>Not Applicable</Text>
+				<DisplayOrder xml:lang="en">9</DisplayOrder>
+				<DisplayOrder xml:lang="mi">9</DisplayOrder>
 			</Value>	<!-- N/A -->			
 			<Value>
 				<Code>28009</Code>
 				<Text>Approved</Text>
+				<DisplayOrder xml:lang="en">10</DisplayOrder>
+				<DisplayOrder xml:lang="mi">10</DisplayOrder>
 			</Value>	<!-- Approved -->			
 			<Value>
 				<Code>28010</Code>
 				<Text>Formed</Text>
+				<DisplayOrder xml:lang="en">11</DisplayOrder>
+				<DisplayOrder xml:lang="mi">11</DisplayOrder>
 			</Value>	<!-- Formed -->			
 			<Value>
 				<Code>28011</Code>
 				<Text>Disestablished</Text>
+				<DisplayOrder xml:lang="en">12</DisplayOrder>
+				<DisplayOrder xml:lang="mi">12</DisplayOrder>
 			</Value>	<!-- Disestablished -->			
 			<Value>
 				<Code>C</Code>
@@ -1256,7 +1280,7 @@
 			</Value>	<!-- Playgroup, ECE Service Provider -->
 			<Value>
 				<Code>ESP</Code>
-				<Text>Licenced ECEService - ECE Service Provider</Text>
+				<Text>Licenced ECE Service - ECE Service Provider</Text>
 				<Description>Source Organisation represents an ECE Service Provider, and the related
 				organisation represents a Licensed ECE Service that is part of (or a member of)
 				the ECE service provider</Description>
@@ -1291,7 +1315,8 @@
 			<Value>
 				<Code>34031</Code>
 				<Text xml:lang="en">School RTLB Cluster Member</Text>
-				<Description>Source Organisation represents an RTLB (Resource Teacher; Learning and Behaviour)
+				<Description>
+					Source Organisation represents an RTLB (Resource Teacher; Learning and Behaviour)
 					Cluster, and the related organisation represents a Provider that is a member of the
 					cluster.
 				</Description>
@@ -1488,7 +1513,7 @@
 			<Value>
 				<Code>NBM</Code>
 				<Text>National Body Member</Text>
-				<Description>Role indicates that the provider is a member of a national body.</Description>
+				<Description>Role indicates that a school/ECE is a member of a national body.</Description>
 			</Value>	<!-- National Body -->
 		</Values>
 	</CodeSet>    <!-- Related Organisation Role -->
@@ -1714,7 +1739,7 @@
 		  	<Value>
 				<Code>2501</Code>
 				<Text xml:lang="en">FIRST - API client</Text>
-				<Description xml:lang="en">Organiation &amp; Organisation master data access</Description>
+				<Description xml:lang="en">Organisation and OrganisationRelationship master data access</Description>
 			</Value>  <!-- FIRST -->
 		  	<Value>
 				<Code>2502</Code>
@@ -1724,7 +1749,7 @@
 		  	<Value>
 				<Code>2503</Code>
 				<Text xml:lang="en">NZQA - API client</Text>
-				<Description xml:lang="en">Credential, Attainment &amp; LearningStandard master data access</Description>
+				<Description xml:lang="en">Credential, Attainment and LearningStandard master data access</Description>
 			</Value>  <!-- NZQA -->
 		  	<Value>
 				<Code>2504</Code>
@@ -1734,22 +1759,22 @@
 		  	<Value>
 				<Code>2505</Code>
 				<Text xml:lang="en">SMS - API client</Text>
-				<Description xml:lang="en">SMS read &amp; write access to a single Provider with a single access token.</Description>
+				<Description xml:lang="en">SMS read and write access to a single Provider with a single access token.</Description>
 			</Value>  <!-- SMS -->
 		  	<Value>
 				<Code>2506</Code>
 				<Text xml:lang="en">SMSMULTI - API client</Text>
-				<Description xml:lang="en">SMS read &amp; write access to multiple Providers with a single access token.</Description>
+				<Description xml:lang="en">SMS read and write access to multiple Providers with a single access token.</Description>
 			</Value>  <!-- SMSMULTI -->
 		  	<Value>
 				<Code>2507</Code>
 				<Text xml:lang="en">SMSSYNC - API client</Text>
-				<Description xml:lang="en">SMS write only access via Sync endpoint to a sinlge Provider with a single access token.</Description>
+				<Description xml:lang="en">SMS write-only access via Sync endpoint to a sinlge Provider with a single access token.</Description>
 			</Value>  <!-- SMSSYNC -->
 		  	<Value>
 				<Code>2508</Code>
 				<Text xml:lang="en">SMSMULTISYNC - API client</Text>
-				<Description xml:lang="en">SMS write only access via Sync endpoint to multiple Providers with a single access token.</Description>
+				<Description xml:lang="en">SMS write-only access via Sync endpoint to multiple Providers with a single access token.</Description>
 			</Value>  <!-- SMSMULTISYNC -->
 		</Values>
 	</CodeSet>    <!-- Staff Role  (& API Client Roles) -->
@@ -1797,43 +1822,43 @@
 		<Values>
 		  	<Value>
 				<Code>2501</Code>
-				<Text xml:lang="en">FIRST - API client</Text>
-				<Description xml:lang="en">Organiation &amp; Organisation master data access</Description>
+				<Text xml:lang="en">FIRST - API Client</Text>
+				<Description xml:lang="en">Organisation and OrganisationRelationship master data access</Description>
 			</Value>  <!-- FIRST -->
 		  	<Value>
 				<Code>2502</Code>
-				<Text xml:lang="en">SUPS - API client</Text>
+				<Text xml:lang="en">SUPS - API Client</Text>
 				<Description xml:lang="en">StaffPersonal and StaffAssignment user provisioning access</Description>
 			</Value>  <!-- SUPS -->
 		  	<Value>
 				<Code>2503</Code>
-				<Text xml:lang="en">NZQA - API client</Text>
-				<Description xml:lang="en">Credential, Attainment &amp; LearningStandard master data access</Description>
+				<Text xml:lang="en">NZQA - API Client</Text>
+				<Description xml:lang="en">Credential and LearningStandard master data access</Description>
 			</Value>  <!-- NZQA -->
 		  	<Value>
 				<Code>2504</Code>
-				<Text xml:lang="en">LSR - API client</Text>
-				<Description xml:lang="en">Learning Support Register read only access</Description>
+				<Text xml:lang="en">LSR - API Client</Text>
+				<Description xml:lang="en">Learning Support Register read-only access</Description>
 			</Value>  <!-- LSR -->
 		  	<Value>
 				<Code>2505</Code>
-				<Text xml:lang="en">SMS - API client</Text>
-				<Description xml:lang="en">SMS read &amp; write access to a single Provider with a single access token.</Description>
+				<Text xml:lang="en">SMS - API Client</Text>
+				<Description xml:lang="en">SMS read and write access to a single Provider with a single access token</Description>
 			</Value>  <!-- SMS -->
 		  	<Value>
 				<Code>2506</Code>
-				<Text xml:lang="en">SMSMULTI - API client</Text>
-				<Description xml:lang="en">SMS read &amp; write access to multiple Providers with a single access token.</Description>
+				<Text xml:lang="en">SMSMULTI - API Client</Text>
+				<Description xml:lang="en">SMS read and write access to multiple Providers with a single access token</Description>
 			</Value>  <!-- SMSMULTI -->
 		  	<Value>
 				<Code>2507</Code>
-				<Text xml:lang="en">SMSSYNC - API client</Text>
-				<Description xml:lang="en">SMS write only access via Sync endpoint to a sinlge Provider with a single access token.</Description>
+				<Text xml:lang="en">SMSSYNC - API Client</Text>
+				<Description xml:lang="en">SMS write-only access via the Sync endpoint to a single Provider with a single access token</Description>
 			</Value>  <!-- SMSSYNC -->
 		  	<Value>
 				<Code>2508</Code>
-				<Text xml:lang="en">SMSMULTISYNC - API client</Text>
-				<Description xml:lang="en">SMS write only access via Sync endpoint to multiple Providers with a single access token.</Description>
+				<Text xml:lang="en">SMSMULTISYNC - API Client</Text>
+				<Description xml:lang="en">SMS write-only access via the Sync endpoint to multiple Providers with a single access token</Description>
 			</Value>  <!-- SMSMULTISYNC -->
 		</Values>
 	</CodeSet>    <!-- API Client Role -->
