@@ -677,15 +677,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>Usage</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A code describing the acceptable usage of a person or organisation's communication channel</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsCommunicationUsageType"/>
-      </Item>
-      <Item>
          <Element>Notes</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Notes on when / how to use the communication channel. eg: Phone after 4pm. Schools may also use this note to record caregiver related contact details, eg “Mon to Wed only”.</p>
@@ -694,11 +687,21 @@
       </Item>
       <Item>
          <Element>PreferenceOrderNumber</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Preference number indicating an order in which communication channels should be used when contacting person or organisation.</p>
          </Description>
          <Type name="xs:unsignedInt"/>
+      </Item>
+      <Item>
+         <Element>Usage</Element>
+         <Position>3</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A code describing the acceptable usage of a person or organisation's communication channel</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsCommunicationUsageType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="BaseNameType">
@@ -834,20 +837,22 @@
          </Description>
       </Item>
       <Item>
-         <Element>Email</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The person's e-mail address(es).</p>
-         </Description>
-         <Type ref="CommonTypes" name="PersonEmailsType"/>
-      </Item>
-      <Item>
          <Element>Name</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>The name of the person.</p>
          </Description>
          <Type ref="CommonTypes" name="BaseNameType"/>
+      </Item>
+      <Item>
+         <Element>Email</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The person's e-mail address(es).</p>
+         </Description>
+         <Type ref="CommonTypes" name="PersonEmailsType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="BehaviourDirectedAtListType">
@@ -1116,15 +1121,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>Usage</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A code describing the acceptable usage of a person or organisation's communication channel</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsCommunicationUsageType"/>
-      </Item>
-      <Item>
          <Element>Notes</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Notes on when / how to use the communication channel. eg: Phone after 4pm. Schools may also use this note to record caregiver related contact details, eg “Mon to Wed only”.</p>
@@ -1133,6 +1131,7 @@
       </Item>
       <Item>
          <Element>PreferenceOrderNumber</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Preference number indicating an order in which communication channels should be used when contacting person or organisation.</p>
@@ -1140,7 +1139,17 @@
          <Type name="xs:unsignedInt"/>
       </Item>
       <Item>
+         <Element>Usage</Element>
+         <Position>3</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A code describing the acceptable usage of a person or organisation's communication channel</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsCommunicationUsageType"/>
+      </Item>
+      <Item>
          <Element>Value</Element>
+         <Position>10</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The unique value that provides access to the channel. eg: URL for a website; Facebook page address, Twitter handle.</p>
@@ -1965,30 +1974,6 @@
          </Description>
       </Item>
       <Item>
-         <Element>Usage</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A code describing the acceptable usage of a person or organisation's communication channel</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsCommunicationUsageType"/>
-      </Item>
-      <Item>
-         <Element>Notes</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Notes on when / how to use the communication channel. eg: Phone after 4pm. Schools may also use this note to record caregiver related contact details, eg “Mon to Wed only”.</p>
-         </Description>
-         <Type name="xs:string"/>
-      </Item>
-      <Item>
-         <Element>PreferenceOrderNumber</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Preference number indicating an order in which communication channels should be used when contacting person or organisation.</p>
-         </Description>
-         <Type name="xs:unsignedInt"/>
-      </Item>
-      <Item>
          <Element>SourceOrganisation</Element>
          <Characteristics>O</Characteristics>
          <Description>
@@ -1997,7 +1982,35 @@
          <Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
       </Item>
       <Item>
+         <Element>Notes</Element>
+         <Position>1</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Notes on when / how to use the communication channel. eg: Phone after 4pm. Schools may also use this note to record caregiver related contact details, eg “Mon to Wed only”.</p>
+         </Description>
+         <Type name="xs:string"/>
+      </Item>
+      <Item>
+         <Element>PreferenceOrderNumber</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Preference number indicating an order in which communication channels should be used when contacting person or organisation.</p>
+         </Description>
+         <Type name="xs:unsignedInt"/>
+      </Item>
+      <Item>
+         <Element>Usage</Element>
+         <Position>3</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A code describing the acceptable usage of a person or organisation's communication channel</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsCommunicationUsageType"/>
+      </Item>
+      <Item>
          <Element>Address</Element>
+         <Position>10</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The actual email address.</p>
@@ -3570,6 +3583,7 @@
       </Item>
       <Item>
          <Element>Personal</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>A person's personal email address.</p>
@@ -3578,6 +3592,7 @@
       </Item>
       <Item>
          <Element>Work</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>A person's work email address.</p>
@@ -3713,15 +3728,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>Usage</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A code describing the acceptable usage of a person or organisation's communication channel</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsCommunicationUsageType"/>
-      </Item>
-      <Item>
          <Element>Notes</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Notes on when / how to use the communication channel. eg: Phone after 4pm. Schools may also use this note to record caregiver related contact details, eg “Mon to Wed only”.</p>
@@ -3730,6 +3738,7 @@
       </Item>
       <Item>
          <Element>PreferenceOrderNumber</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Preference number indicating an order in which communication channels should be used when contacting person or organisation.</p>
@@ -3737,7 +3746,17 @@
          <Type name="xs:unsignedInt"/>
       </Item>
       <Item>
+         <Element>Usage</Element>
+         <Position>3</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A code describing the acceptable usage of a person or organisation's communication channel</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsCommunicationUsageType"/>
+      </Item>
+      <Item>
          <Element>Number</Element>
+         <Position>10</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Phone number. Free-form, but typical New Zealand formats include:</p>
@@ -3746,6 +3765,7 @@
       </Item>
       <Item>
          <Element>Extension</Element>
+         <Position>11</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Phone number extension.</p>
@@ -4917,20 +4937,22 @@
          </Description>
       </Item>
       <Item>
-         <Element>Email</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The person's e-mail address(es).</p>
-         </Description>
-         <Type ref="CommonTypes" name="PersonEmailsType"/>
-      </Item>
-      <Item>
          <Element>Name</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>The name of the person.</p>
          </Description>
          <Type ref="CommonTypes" name="BaseNameType"/>
+      </Item>
+      <Item>
+         <Element>Email</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The person's e-mail address(es).</p>
+         </Description>
+         <Type ref="CommonTypes" name="PersonEmailsType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="StaffReflectionListType">
@@ -5270,22 +5292,6 @@
          </Description>
       </Item>
       <Item>
-         <Element>Email</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The person's e-mail address(es).</p>
-         </Description>
-         <Type ref="CommonTypes" name="PersonEmailsType"/>
-      </Item>
-      <Item>
-         <Element>Name</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>The name of the person.</p>
-         </Description>
-         <Type ref="CommonTypes" name="BaseNameType"/>
-      </Item>
-      <Item>
          <Element>HouseholdContactInfoList</Element>
          <Characteristics>OR</Characteristics>
          <Description>
@@ -5308,6 +5314,24 @@
             <p>The person's phone number(s) - one or more phone numbers.</p>
          </Description>
          <Type ref="CommonTypes" name="PersonPhoneType"/>
+      </Item>
+      <Item>
+         <Element>Name</Element>
+         <Position>1</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The name of the person.</p>
+         </Description>
+         <Type ref="CommonTypes" name="BaseNameType"/>
+      </Item>
+      <Item>
+         <Element>Email</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The person's e-mail address(es).</p>
+         </Description>
+         <Type ref="CommonTypes" name="PersonEmailsType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentCourseChoiceListType">
@@ -5518,22 +5542,6 @@
          </Description>
       </Item>
       <Item>
-         <Element>Email</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The person's e-mail address(es).</p>
-         </Description>
-         <Type ref="CommonTypes" name="PersonEmailsType"/>
-      </Item>
-      <Item>
-         <Element>Name</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>The name of the person.</p>
-         </Description>
-         <Type ref="CommonTypes" name="BaseNameType"/>
-      </Item>
-      <Item>
          <Element>Address</Element>
          <Characteristics>O</Characteristics>
          <Description>
@@ -5596,6 +5604,24 @@
             <p>The verified name of the person.</p>
          </Description>
          <Type ref="CommonTypes" name="VerifiedNameType"/>
+      </Item>
+      <Item>
+         <Element>Name</Element>
+         <Position>1</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The name of the person.</p>
+         </Description>
+         <Type ref="CommonTypes" name="BaseNameType"/>
+      </Item>
+      <Item>
+         <Element>Email</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The person's e-mail address(es).</p>
+         </Description>
+         <Type ref="CommonTypes" name="PersonEmailsType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentSchoolCoEnrolmentType">
