@@ -367,7 +367,7 @@
 				<p>The date and time the record being sent through was created in the source system.</p>
 			</Description>
 			<Type name="xs:dateTime"></Type>
-		</Item>    <!-- CreatedDateTime -->
+		</Item>    <!-- CreatedDateTime, 1 -->
 		<Item>
 			<Element>LastUpdatedDateTime</Element>
 			<Characteristics>O</Characteristics>
@@ -375,7 +375,7 @@
 				<p>The date and time the record was last updated.</p>
 			</Description>
 			<Type name="xs:dateTime"></Type>
-		</Item>    <!-- LastUpdatedDateTime -->
+		</Item>    <!-- LastUpdatedDateTime, 2 -->
 		<Item>
 			<Element>DeletedDateTime</Element>
 			<Characteristics>O</Characteristics>
@@ -383,7 +383,7 @@
 				<p>The date and time the record was deleted.</p>
 			</Description>
 			<Type name="xs:dateTime"></Type>
-		</Item>    <!-- DeletedDateTime -->
+		</Item>    <!-- DeletedDateTime, 3 -->
 		<Item>
 			<Element>CreatedBy</Element>
 			<Characteristics>O</Characteristics>
@@ -391,7 +391,7 @@
 				<p>The user that created the record in the source system.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
-		</Item>    <!-- CreatedBy -->
+		</Item>    <!-- CreatedBy, 4 -->
 		<Item>
 			<Element>LastUpdatedBy</Element>
 			<Characteristics>O</Characteristics>
@@ -399,7 +399,7 @@
 				<p>The user that last updated the record.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
-		</Item>    <!-- LastUpdatedBy -->
+		</Item>    <!-- LastUpdatedBy, 5 -->
 		<Item>
 			<Element>DeletedBy</Element>
 			<Characteristics>O</Characteristics>
@@ -407,7 +407,7 @@
 				<p>The user that deleted the record.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
-		</Item>    <!-- DeletedBy -->
+		</Item>    <!-- DeletedBy, 6 -->
 		<Item>
 			<Element>DeletedReason</Element>
 			<Characteristics>O</Characteristics>
@@ -415,7 +415,7 @@
 				<p>The reason the record was deleted.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsDeletedReasonType"/>
-		</Item>    <!-- DeletedReason -->
+		</Item>    <!-- DeletedReason, 7 -->
 	</CommonElement>	
 
 </IncludeGroup>

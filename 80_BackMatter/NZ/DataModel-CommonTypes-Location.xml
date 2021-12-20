@@ -344,7 +344,7 @@
 			<Description>
 				<p>This element contains data about a geographical location.</p>
 			</Description>
-		</Item>
+		</Item>     
 		<Item>
 			<Element>Description</Element>
 			<Characteristics>O</Characteristics>
@@ -352,7 +352,7 @@
 				<p>A description for the Location.</p>
 			</Description>
 			<Type name="xs:string"/>
-		</Item>     <!-- Description -->
+		</Item>     <!-- Description, 1 -->
 		<Item>
 			<Element>LocationNum</Element>
 			<Characteristics>O</Characteristics>
@@ -360,7 +360,7 @@
 				<p>Number identifying the individual location within the set of locations used by the Provider.</p>
 			</Description>
 			<Type name="xs:int"/>
-		</Item>     <!-- LocationNum -->
+		</Item>     <!-- LocationNum, 2 -->
 		<Item>
 			<Element>Address</Element>
 			<Characteristics>O</Characteristics>
@@ -368,7 +368,7 @@
 				<p>The physical address of the Location</p>
 			</Description>
 			<Type ref="CommonTypes" name="AddressType"/>
-		</Item>     <!-- Address -->
+		</Item>     <!-- Address, 3 -->
 		<Item>
 			<Element>GridLocation</Element>
 			<Characteristics>O</Characteristics>
@@ -379,7 +379,7 @@
 				</p>
 			</Description>
 			<Type ref="CommonTypes" name="GridLocationType"/>
-		</Item>     <!-- GridLocation -->
+		</Item>     <!-- GridLocation, 4 -->
 		<Item>
 			<Element>StatisticalAreaList</Element>
 			<Characteristics>O</Characteristics>
@@ -400,7 +400,7 @@
 				</ul>
 			</Description>
 			<Type ref="CommonTypes" name="StatisticalAreaListType"/>
-		</Item>     <!-- StatisticalAreaList -->
+		</Item>     <!-- StatisticalAreaList, 5 -->
 		<xhtml:Example xmlns="" name="Location Example">
 			<Location>
 				<Description>Junior Campus</Description>

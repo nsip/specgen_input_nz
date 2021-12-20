@@ -1,0 +1,137 @@
+<DataObject name="StudentTeachingGroupEnrolment"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<Key>StudentTeachingGroupEnrolmentRefId</Key>
+	<EventsReported>true</EventsReported>
+
+	<Item>
+		<Element>StudentTeachingGroupEnrolment</Element>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Records a student's arrival to and departure from a TeachingGroup.</p>
+		</Description>
+	</Item>
+
+	<Item>
+		<Element>StudentTeachingGroupEnrolmentRefId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"></Type>
+	</Item>    <!-- StudentTeachingGroupEnrolmentRefId -->
+
+    <Item>
+		<Element>StudentTeachingGroupEnrolmentLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>    <!-- StudentTeachingGroupEnrolmentLocalId -->
+
+	<Item>
+		<Element>Status</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		<p>States whether or not this is an inactive or active TeachingGroup enrolment.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsStudentTeachingGroupEnrolmentStatusType"/>
+	</Item>      <!-- Status -->
+	
+	<Item>
+		<Element>Student</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Generic object reference to the Student enrolling in the TeachingGroup</p>
+		</Description>
+		<Type ref="CommonTypes" relationship="records enrollment of" count="*:1" name="StudentObjectReferenceType"></Type>
+	</Item>    <!-- Student -->
+
+	<Item>
+		<Element>Organisation</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Generic object reference to the Organisation, eg school, that has the TeachingGroup</p>
+		</Description>
+		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
+	</Item>    <!-- Organisation -->
+
+	<Item>
+		<Element>TeachingGroup</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Generic object reference to the TeachingGroup the student is enroling in.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/>
+	</Item>    <!-- TeachingGroup -->
+
+	<Item>
+		<Element>StartDate</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The date the Student's enrolment in the teaching group starts.</p>
+		</Description>
+		<Type ref="CommonTypes" name="StartDateType"/>
+	</Item>    <!-- StartDate -->
+
+	<Item>
+		<Element>EndDate</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The date of a student’s enrolment in the teaching group ends.</p>
+		</Description>
+		<Type ref="CommonTypes" name="EndDateType"/>
+	</Item>    <!-- EndDate -->
+
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+	
+	<xhtml:Example xmlns="" name="Student TeachingGroup Enrolment">
+		<StudentTeachingGroupEnrolment>
+			<StudentTeachingGroupEnrolmentRefId>a8c3d3e3-4b35-9d75-101d-00aa001a1652</StudentTeachingGroupEnrolmentRefId>
+			<StudentTeachingGroupEnrolmentLocalId>2004H102</StudentTeachingGroupEnrolmentLocalId>
+			<Student>
+				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
+			</Student>
+			<Organisation>
+				<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+				<LocalId json:force-string="true">9961</LocalId>
+			</Organisation>
+			<TeachingGroup>
+				<RefId>93b9b77e-a23f-4acd-a65e-e26f1034317f</RefId>
+			</TeachingGroup>
+			<StartDate>2018-01-29</StartDate>
+			<EndDate>2018-12-05</EndDate>
+			<RecordAudit>
+				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+				<CreatedBy>
+				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+				<Name>Bobby Test</Name>
+				</CreatedBy>
+			</RecordAudit>
+		</StudentTeachingGroupEnrolment>
+	</xhtml:Example>
+</DataObject>

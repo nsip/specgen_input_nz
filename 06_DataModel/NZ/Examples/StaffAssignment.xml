@@ -1,0 +1,256 @@
+<DataObject name="StaffAssignment"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:json="http://json.org/"
+	
+      xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>StaffAssignmentRefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StaffAssignment</Element>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Records assignment of a Staff member to a particular role at a Provider or
+        other EducationOrganisation. A staff member can have multiple concurrent roles
+        at Schools (via Provider data object) and Kāhui Ako (via the EducationOrganisation data object);
+        each role would be a separate StaffAssignment record.</p>
+        
+      <p>Role assignments can be restricted to categories of Students with the StaffSubjectList 
+        and YearLevelList. This allows for assignment to roles with particular responsibility for 
+        general cohorts of students, such as "Head of Department (Maths)" or "Year 8 Student Dean".</p>
+
+      <p>While assignment to student contact roles such as Subject Teacher, Homeroom Teacher, Whānau Teacher
+        or House Master is made with this data object; Details of the particular group of specific students 
+        the staff member is responsible for are made via the TeachingGroup data object.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>StaffAssignmentRefId</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>      <!-- StaffAssignmentRefId -->
+
+  <Item>
+    <Element>StaffAssignmentLocalId</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>      <!-- StaffAssignmentLocalId -->
+
+  <Item>
+    <Element>StaffAssignmentStatus</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>States whether or not this is an inactive or active assignment for a staff member.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsStaffAssignmentStatusType"/>
+  </Item>      <!-- Staff Assignment Status -->
+
+  <Item>
+    <Element>StaffMember</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the staff member, as represented in the StaffPersonal object.&#160;</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>      <!-- StaffMember -->
+
+  <Item>
+    <Element>AssignedLocation</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A generic object reference to either <code>Provider</code> or <code>Organisation</code>
+        that the staff member is assigned to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
+  </Item>      <!-- AssignedLocation -->  
+
+  <Item>
+    <Element>EmployingOrAccommodatingProvider</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Indicates whether or not this is the staff member's employing/accommodating provider. Only applies to staff members assigned to schools.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+  </Item>      <!-- EmployingOrAccommodatingProvider -->
+
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Short description of the staff member's assignment to the provider.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>      <!-- Description -->
+
+  <Item>
+    <Element>StaffRole</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The single role the StaffMember has in relation to all students at the assigned location.</p>
+    </Description>
+    <Type  ref="CodeSets" name="NZCodeSetsStaffOrganisationRoleType"/>    
+  </Item>      <!-- StaffRole -->
+
+  <Item>
+    <Element>StartDate</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>This is the date from which the staff assignment is valid (inclusive).</p>
+    </Description>
+    <Type ref="CommonTypes" name="StartDateType"/>
+  </Item>      <!-- StartDate -->
+
+  <Item>
+    <Element>EndDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>This is the date through which the staff assignment is valid (inclusive). This
+          can be NULL when the staff member's assignment to a particular role is open-ended.</p>
+    </Description>
+    <Type ref="CommonTypes" name="EndDateType"/>
+  </Item>      <!-- EndDate -->
+
+  <Item>
+    <Element>CasualReliefTeacher</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Is this teacher a casual relief teacher CRT?</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+  </Item>      <!-- CasualReliefTeacher -->
+
+  <Item>
+    <Element>EmploymentStatus</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Status of staff member within this school.  Where a Staff member is employed by an organisation that
+       covers more than one school, employment status may be different at each school.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsStaffStatusType"/>
+  </Item>      <!-- EmploymentStatus -->
+  
+  <Item>
+    <Element>StaffSubjectList</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The set of SubjectArea/LearningAreas the that the staff member is responsible for. 
+       e.g.  "Head of Dept (Maths)"  includes students learning any flavour of Mathematics.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StaffSubjectListType"></Type>
+  </Item>      <!-- StaffSubjectList -->
+  
+  <Item>
+    <Element>YearLevels</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The set of student Year Levels that the staff member is responsible for.
+        e.g.  "Junior Student Dean" could have responsibility for all students in
+         year levels 9 &amp; 10.</p>
+    </Description>
+    <Type ref="CommonTypes" name="YearLevelListType"></Type>
+  </Item>      <!-- YearLevels -->
+
+  <Item>
+    <Element>RecordAudit</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RecordAuditType"></Type>
+  </Item>    <!-- RecordAudit -->
+  
+  <xhtml:Example xmlns="" name="StaffAssignment English Teacher Example">
+    <StaffAssignment>
+      <StaffAssignmentRefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</StaffAssignmentRefId>
+      <StaffMember>
+        <RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
+      </StaffMember>
+      <AssignedLocation>
+  	  	<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+	    	<LocalId json:force-string="true">9961</LocalId>
+      </AssignedLocation>
+      <Description>Senior English Teacher</Description>
+      <StaffRole json:force-string="true">1205</StaffRole>
+      <StartDate>2000-09-05</StartDate>
+      <EndDate>2001-06-25</EndDate>
+      <CasualReliefTeacher>N</CasualReliefTeacher>
+      <EmploymentStatus>A</EmploymentStatus>
+      <StaffSubjectList>
+        <StaffSubject>
+          <PreferenceNumber>1</PreferenceNumber>
+          <Code>ENGL</Code>
+          <YearLevels>
+            <YearLevel>11</YearLevel>
+            <YearLevel>12</YearLevel>
+            <YearLevel>13</YearLevel>
+          </YearLevels>
+        </StaffSubject>
+        <StaffSubject>
+          <PreferenceNumber>2</PreferenceNumber>
+          <Code>HIST</Code>
+        </StaffSubject>
+      </StaffSubjectList>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
+    </StaffAssignment>
+  </xhtml:Example>
+  
+  <xhtml:Example xmlns="" name="StaffAssignment Kāhui Ako Cross School Teacher Example">
+    <StaffAssignment>
+      <StaffAssignmentRefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</StaffAssignmentRefId>
+      <StaffMember>
+        <RefId>d3e34b35-9d75-101a-8c3d-00aa001a1651</RefId>
+        <LocalId>SMcG</LocalId>
+        <Name>Steve McGannaway</Name>
+      </StaffMember>
+      <AssignedLocation>
+				<RefId>592bfa0d-52f8-4468-935c-ae48c71f71c9</RefId>
+				<LocalId json:force-string="true">9651</LocalId>
+      </AssignedLocation>
+      <Description>Kāhui Ako Cross School Teacher</Description>
+      <StaffRole json:force-string="true">1205</StaffRole>
+      <StartDate>2000-09-05</StartDate>
+      <EndDate>2001-06-25</EndDate>
+      <CasualReliefTeacher>N</CasualReliefTeacher>
+      <EmploymentStatus>A</EmploymentStatus>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
+    </StaffAssignment>
+  </xhtml:Example>
+</DataObject>

@@ -143,6 +143,7 @@
 			</Description>
 			<Type name="xs:time"/>
 		</Item>		<!-- StartTime -->
+		
 		<Item>
 			<Element>EndTime</Element>
 			<Characteristics>O</Characteristics>

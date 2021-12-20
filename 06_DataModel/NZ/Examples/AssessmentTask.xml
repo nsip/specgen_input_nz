@@ -1,0 +1,376 @@
+<DataObject name="AssessmentTask"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:json="http://json.org/"
+
+      xmlns="http://sifassociation.org/SpecGen">
+	
+  <Key>AssessmentTaskRefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>AssessmentTask</Element>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>
+        This object provides information about a particular assignment, allows applications to
+        synchronize each other's assignment tables, gathers the definition for a StudentAssessmentTask object, etc.  
+      </p>
+     </Description>
+  </Item>
+
+  <Item>
+    <Element>AssessmentTaskRefId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>    <!-- AssessmentTaskRefId -->
+
+  <Item>
+    <Element>AssessmentTaskLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- AssessmentTaskLocalId -->
+
+  <Item>
+    <Element>AssessmentName</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The name of the assessment task.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>    <!-- AssessmentName -->
+
+  <Item>
+    <Element>OrganisationInvolvedList</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the Providers/Organisations involved and their role, e.g. assessing provider, assessment provider, 
+        assessment location provider, registering provider.</p>
+    </Description>
+    <Type ref="CommonTypes" name="OrganisationInvolvedListType"></Type>
+  </Item>    <!-- OrganisationInvolvedList -->
+
+  <Item>
+    <Element>TeachingGroup</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the TeachingGroup object in which this assignment has been set.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- TeachingGroup -->
+
+  <Item>
+    <Element>ProviderCourse</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the ProviderCourse all of whose students will be
+        participating in the assessment task.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- ProviderCourse -->
+
+  <Item>
+    <Element>StudentList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The GUIDs for students that are the intended participants for this Assessement Task.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentListType"></Type>
+  </Item>    <!-- StudentList -->
+
+  <Item>
+    <Element>StaffInvolvedList</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the staff involved and their role in relation to the assessment task, e.g. the moderator, the marker.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StaffInvolvedListType"></Type>
+  </Item>    <!-- StaffInvolvedList -->
+
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The text-based description of the assignment.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- Description -->
+
+  <Item>
+    <Element>PointsPossible</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The points possible on the assignment.</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>    <!-- PointsPossible -->
+
+  <Item>
+    <Element>DueDate</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Date the assignment is due.</p>
+    </Description>
+    <Type ref="CommonTypes" name="EndDateType"/>
+  </Item>    <!-- DueDate -->
+
+  <Item>
+    <Element>Weight</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The weight of the assignment.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>    <!-- Weight -->
+
+  <Item>
+      <Element>MaxAttemptsAllowed</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>How many attempts the student is allowed on the assignment (applicable particularly to online activities).</p>
+      </Description>
+      <Type name="xs:integer"></Type>
+  </Item>    <!-- MaxAttemptsAllowed -->
+
+  <Item>
+    <Element>DetailedDescriptionURL</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The location of the document that describes the assignment. If Type is PDF, this element will contain the Base64 encoding of the entire document. Preferred against DetailedDescriptionBinary for online assessment.</p>
+    </Description>
+    <Type name="xs:anyURI"></Type>
+  </Item>    <!-- DetailedDescriptionURL -->
+
+  <Item>
+    <Element>AssessmentType</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Type of assessment (e.g. diagnostic vs paedagogical - Summative or Formative).</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentTypeType"/>
+  </Item>    <!-- AssessmentType -->
+
+  <Item>
+    <Element>AssessmentMethodology</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting the nature of the assessment process;  Primary assessment against NZ Curriculum or Te Marautanga
+      o Aotearoa; Secondary assessment against NCEA, Cambridge, International Baccalaureate, or similar.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentMethodologyType"/>
+  </Item>    <!-- AssessmentMethodology -->
+
+  <Item>
+    <Element>EvaluationType</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The type of assessment evaluation, e.g. formative or summative.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentEvaluationTypeType"/>
+  </Item>    <!-- EvaluationType --> 
+
+  <Item>
+    <Element>Curriculum</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The curriculum the assessment is for.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsCurriculumType"/>
+  </Item>    <!-- Curriculum -->
+
+  <Item>
+    <Element>AssessmentToolUsed</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The assessment tool the assessment is used as part of. Both the original free text value sent by the 
+      SMS vendors and the value it is mapped to in this code set are held.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentToolType"/>
+  </Item>    <!-- AssessmentToolUsed -->
+  
+  <Item>
+    <Element>AssessmentToolTest</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The tests available within an assessment tool that is being used by this assessment task.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentToolTestType"/>
+  </Item>    <!-- AssessmentToolTest -->
+
+  <Item>
+    <Element>AssessmentPurpose</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Purpose for the assessment.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- AssessmentPurpose -->
+
+  <Item>
+    <Element>SubAssessmentTaskList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>AssessmentTasks which this assessment task is composed of.</p>
+    </Description>
+    <Type ref="CommonTypes" name="AssessmentTaskListType"></Type>
+  </Item>    <!-- SubAssessmentTaskList -->
+  
+  <Item>
+    <Element>PrerequisiteList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>References to objects (Course, LearningStandard, AssessmentTask etc.) being prerequisite conditions
+         to be met for assessment.</p>
+    </Description>
+    <Type ref="CommonTypes" name="PrerequisiteListType"></Type>
+  </Item>    <!-- PrerequisiteList -->
+  
+  <Item>
+    <Element>SubjectAreaList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the subject areas being assessed.</p>
+    </Description>
+    <Type ref="CodeSets" name="SubjectAreaListType"/>
+  </Item>    <!-- SubjectAreaList -->
+
+  <Item>
+    <Element>AssessedAtYearLevel</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The year level the Assessment Task pertains to. May only contain the values 1 through to 13 inclusive.</p>
+    </Description>
+    <Type name="xs:int"/>
+    <Facets>
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="13"/>
+    </Facets>
+  </Item>    <!-- AssessedAtYearLevel -->
+
+  <Item>
+    <Element>LearningStandardList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of references to LearningStandards that will be assessed as part of this AssessmentTask.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LearningStandardListType"></Type>
+  </Item>    <!-- LearningStandardList -->
+
+  <Item>
+    <Element>StandardType</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The type of standard the result is for. Applies to secondary level assessments, e.g.
+       unit and achievement standards, scholarships and International Baccalaureate.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningStandardTypeType"></Type>
+  </Item>    <!-- LearningStandardType -->
+
+  <Item>
+    <Element>SpecialAssessmentConditionExclusionList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of SACs that are excluded for this particular assessment task.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SpecialAssessmentConditionListType"></Type>
+  </Item>    <!-- SpecialAssessmentConditionExclusionList -->
+
+  <Item>
+    <Element>Timeframe</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The timeframe of the assessment, e.g. Mid-Year, End of Year.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentTimeframeType"/>
+  </Item>    <!-- Timeframe -->
+
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+  
+  <xhtml:Example xmlns="" name="Assessment Task">
+    <AssessmentTask>
+      <AssessmentTaskRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</AssessmentTaskRefId>
+      <AssessmentName>NZ History Classroom Test</AssessmentName>
+      <OrganisationInvolvedList>
+        <OrganisationInvolved json:force-array="true">
+          <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+		    	<LocalId json:force-string="true">9961</LocalId>
+          <OrganisationRole>PRO</OrganisationRole>
+        </OrganisationInvolved>
+      </OrganisationInvolvedList>
+      <TeachingGroup>
+        <RefId>d0a0a27a-d0a8-510a-d9d7-5101a8c3da39</RefId>
+      </TeachingGroup>
+      <StaffInvolvedList>
+        <StaffInvolved json:force-array="true">
+          <RefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</RefId>
+          <StaffRole>ASS</StaffRole>
+        </StaffInvolved>
+      </StaffInvolvedList>
+      <Description>Pop Quiz</Description>
+      <PointsPossible>100</PointsPossible>
+      <DueDate>2018-11-25</DueDate>
+      <Weight>1.0</Weight>
+      <DetailedDescriptionURL>http://www.assignmentinfo.com/assignment1.pdf</DetailedDescriptionURL> 
+      <AssessmentType>INT</AssessmentType>
+      <AssessmentMethodology>P</AssessmentMethodology>
+      <EvaluationType>F</EvaluationType>
+      <LearningStandardList>
+        <LearningStandard json:force-array="true">
+          <LocalId>91165-v2</LocalId>
+        </LearningStandard>
+      </LearningStandardList>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
+    </AssessmentTask>
+  </xhtml:Example>
+</DataObject>

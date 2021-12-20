@@ -1,0 +1,204 @@
+<DataObject name="StudentAssessmentTask"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+			xmlns:json="http://json.org/"
+
+      xmlns="http://sifassociation.org/SpecGen">
+	
+  <Key>StudentAssessmentTaskRefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StudentAssessmentTask</Element>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Record of a student's attempt at a particular assessment task.</p>
+     </Description>
+  </Item>
+  <Item>
+    <Element>StudentAssessmentTaskRefId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>    <!-- StudentAssessmentTaskRefId -->
+  <Item>
+    <Element>StudentAssessmentTaskLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- StudentAssessmentTaskLocalId -->
+
+  <Item>
+    <Element>Student</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the student held in the StudentPersonal 
+        data object who is being assessed against the assessment task.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
+  </Item>    <!-- Student -->
+
+  <Item>
+    <Element>AssessmentTask</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the AssessmentTask data object that the student assessment is for.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- AssessmentTask -->
+
+  <Item>
+    <Element>StudentAssessmentTaskRegistration</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the registration made on behalf of the student by the school to sit this assessment.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- StudentAssessmentTaskRegistration -->
+
+  <Item>
+    <Element>OrganisationInvolvedList</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the Providers/Organisations involved and their role, e.g.
+         assessing provider, assessment provider, assessment location provider.</p>
+    </Description>
+    <Type ref="CommonTypes" name="OrganisationInvolvedListType"></Type>
+  </Item>    <!-- OrganisationInvovledList -->
+
+  <Item>
+    <Element>StaffInvolvedList</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the staff involved and their role in relation to the assessment task, 
+        e.g. the staff members that supervise the undertaking of the assessment task by the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StaffInvolvedListType"></Type>
+  </Item>    <!-- StaffInvolvedList -->
+
+  <Item>
+    <Element>DateTimeAssessmentScheduled</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date and time the student is scheduled to be assessed against the assessment task.</p>
+    </Description>
+    <Type name="xs:dateTime"></Type>
+  </Item>    <!-- DateTimeAssessmentScheduled -->
+
+  <Item>
+    <Element>DateTimeAssessed</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date and time the student was assessed against the assessment task.</p>
+    </Description>
+    <Type name="xs:dateTime"></Type>
+  </Item>    <!-- DateTimeAssessed -->
+
+  <Item>
+    <Element>Status</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting the current status of the student assessment task</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentStatusType"/>
+  </Item>    <!-- Status -->
+
+  <Item>
+    <Element>NCEAStatusDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Date the current NCEA status was set.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>    <!-- NCEAStatusDate -->
+
+  <Item>
+    <Element>AssessmentAttempt</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The attempt number the student is making to pass this assessment, e.g. is it their first, second attempt.</p>
+    </Description>
+    <Type name="xs:int"></Type>
+  </Item>    <!-- AssessmentAttempt -->
+
+  <Item>
+    <Element>SpecialAssessmentConditionList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The list of the special assessment conditions that the student is
+          entitled to have when sitting this assessment task.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SpecialAssessmentConditionListType"></Type>
+  </Item>    <!-- SpecialAssessmentConditionList -->
+
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+  
+  <xhtml:Example xmlns="" name="Student Assessment Task">
+    <StudentAssessmentTask>
+      <StudentAssessmentTaskRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</StudentAssessmentTaskRefId>
+      <Student>
+        <RefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</RefId>
+        <LocalId>850139-HP</LocalId>
+        <Name>Harry Potter</Name>
+        <NationalStudentNumber json:force-string="true">23423421</NationalStudentNumber>
+      </Student>
+      <AssessmentTask>
+        <RefId>d0a0a27a-d0a8-510a-d9d7-5101a8c3da39</RefId>
+      </AssessmentTask>
+      <OrganisationInvolvedList>
+        <OrganisationInvolved>
+          <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+		    	<LocalId json:force-string="true">9961</LocalId>
+          <OrganisationRole>LOC</OrganisationRole>
+        </OrganisationInvolved>
+        <OrganisationInvolved>
+          <RefId>8ec05a56-1c5f-4fc7-9ea1-d328c5467c59</RefId>
+          <LocalId json:force-string="true">9962</LocalId>
+          <OrganisationRole>PRO</OrganisationRole>
+        </OrganisationInvolved>
+      </OrganisationInvolvedList>
+      <StaffInvolvedList>
+        <StaffInvolved json:force-array="true">
+          <RefId>228a2cbe-93c4-46ba-91fa-b3ae689eb437</RefId>
+          <Name>Prof. McGonnegal</Name>
+          <StaffRole>INV</StaffRole>
+        </StaffInvolved>
+      </StaffInvolvedList>
+      <DateTimeAssessmentScheduled>2018-11-25T09:00:00+12:00</DateTimeAssessmentScheduled>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
+    </StudentAssessmentTask>
+  </xhtml:Example>
+</DataObject>

@@ -1,0 +1,28 @@
+<IncludeGroup
+  xmlns:xhtml="http://www.w3.org/1999/xhtml" 
+  xmlns:json="http://json.org/">
+
+  <xhtml:Example xmlns="" name="Organisation Relatoinship Example">
+    <OrganisationRelationship>
+      <OrganisationRelationshipRefId>41e38b5a-da3d-4659-b1df-54dc8780727e</OrganisationRelationshipRefId>
+      <OrganisationRelationshipLocalId>90100_8001</OrganisationRelationshipLocalId>
+      <Status>A</Status>
+      <RelationshipType json:force-string="true">34037</RelationshipType>
+      <SourceOrganisation>
+        <RefId>64a55e7e-cf05-490d-bf76-b5b5baf0d391</RefId>
+        <LocalId json:force-string="true">90100</LocalId>
+      </SourceOrganisation>
+      <SourceOrganisationRole>LSC</SourceOrganisationRole>
+      <RelatedOrganisation>
+        <RefId>206d0684-bfa0-45d3-a2fd-f88dbcc4434b</RefId>
+        <LocalId json:force-string="true">8001</LocalId>
+      </RelatedOrganisation>
+      <RelatedOrganisationRole json:force-string="true">184000</RelatedOrganisationRole>
+      <EffectiveDate>2020-01-15</EffectiveDate>
+      <RecordAudit>
+        <CreatedDateTime>2020-05-26T00:00:00</CreatedDateTime>
+        <LastUpdatedDateTime>2020-05-26T00:00:00</LastUpdatedDateTime>
+      </RecordAudit>
+    </OrganisationRelationship>
+  </xhtml:Example>
+</IncludeGroup>

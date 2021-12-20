@@ -1,0 +1,45 @@
+<IncludeGroup
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+		  xmlns:json="http://json.org/">
+
+  
+  <xhtml:Example xmlns="" name="Provider Course Example">
+    <ProviderCourse>
+      <ProviderCourseRefId>9d75101a-8c3d-00aa-001a-0000a2e35b35</ProviderCourseRefId>
+      <ProviderCourseLocalId>12CHEM</ProviderCourseLocalId>
+      <Provider>
+  	  	<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+	    	<LocalId json:force-string="true">9961</LocalId>
+      </Provider>
+      <Curriculum>NZC</Curriculum>
+      <SubjectAreaList>
+        <SubjectArea json:force-array="true">CHEM</SubjectArea>
+      </SubjectAreaList>
+			<YearLevelList>
+				<YearLevel json:force-array="true">12</YearLevel>
+			</YearLevelList>
+      <Title>Year 12 Chemistry</Title>
+      <Description>Organic &amp; Inorganic Chemistry for NCEA Level 2</Description>
+      <Duration>35</Duration>
+      <Credits>11</Credits>
+			<LanguageOfInstructionList>
+				<Language json:force-array="true">
+					<Code>NZS01112</Code>
+					<Level json:force-string="true">1</Level>
+				</Language>
+			</LanguageOfInstructionList>
+      <LearningStandardList>
+        <LearningStandard><LocalId>91165-v2</LocalId></LearningStandard>
+        <LearningStandard><LocalId>91166-v2</LocalId></LearningStandard>
+        <LearningStandard><LocalId>91167-v2</LocalId></LearningStandard>
+      </LearningStandardList>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
+    </ProviderCourse>
+  </xhtml:Example>
+</IncludeGroup>

@@ -1,0 +1,308 @@
+<DataObject name="StudentLearningSupportResponse"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:json="http://json.org/"
+
+      xmlns="http://sifassociation.org/SpecGen">
+	
+  <Key>StudentLearningSupportResponseRefId</Key>
+  <EventsReported>true</EventsReported>
+  
+  <Item>
+    <Element>StudentLearningSupportResponse</Element>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Provides information about a response provided for a students learning support need.</p>
+     </Description>
+  </Item>
+
+  <Item>
+    <Element>StudentLearningSupportResponseRefId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>    <!-- StudentLearningSupportResponseRefId -->
+
+  <Item>
+    <Element>StudentLearningSupportResponseLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+			<p>The Id of the data object record that was provided by the system that the information was originally sourced from.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- StudentLearningSupportResponseLocalId -->
+
+  <Item>
+    <Element>Student</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The student that the learning support need response its for.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
+  </Item>    <!-- Student -->
+
+  <Item>
+    <Element>Organisation</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The provider that created this learning support need reponse.</p>
+    </Description>
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
+  </Item>    <!-- Organisation -->
+
+  <Item>
+    <Element>LearningSupportNeed</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The learning support need the reponse is for.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- LearningSupportNeed -->
+
+  <Item>
+    <Element>ResponseType</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The type of response provided to the student to support the need.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportResponseTypeType"></Type>
+  </Item>    <!-- ResponseType -->
+
+  <Item>
+    <Element>ResponseDetail</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code set denoting the additional detail about the response type provided to the student to support the need.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportResponseDetailType"></Type>
+  </Item>    <!-- ResponseDetail -->
+  
+  <Item>
+    <Element>ReviewDate</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date the response is due to be reviewed.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- ReviewDate -->
+
+  <Item>
+    <Element>ResponseGoals</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The goals of the response in relation to the student's learning support need.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- ResponseGoals -->
+
+  <Item>
+    <Element>ResponseNote</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Free text notes about the response.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- ResponseNote -->
+
+  <Item>
+    <Element>NoteList</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of notes that have been written about the learning support response.</p>
+    </Description>
+     <Type ref="CommonTypes" name="NoteListType"></Type>
+  </Item>    <!-- NoteList -->
+
+  <Item>
+    <Element>ResponseDesc</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Free text description about the response type and detail. Mandatory when a response detail of 'Other' is selected.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- ResponseDesc -->
+
+  <Item>
+    <Element>TierOfResponse</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The tier of response for the learning support need response.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportResponseTierType"></Type>
+  </Item>    <!-- B4SchoolCheck -->
+
+  <Choice>	
+    <Item>
+      <Element>ExternalResponse</Element>
+      <Characteristics>C</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Additional information for an external response.</p>
+      </Description>
+      <Type ref="CommonTypes" name="SupportNeedExternalResponseType"></Type>
+    </Item>    <!-- ExternalResponse -->
+
+    <Item>
+      <Element>InternalResponse</Element>
+      <Characteristics>C</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+        <p>Additional information for an internal response.</p>
+      </Description>
+      <Type ref="CommonTypes" name="SupportNeedInternalResponseType"></Type>
+    </Item>    <!-- InternalResponse -->
+  </Choice>  <!-- Choice: External Response or Internal Response-->
+
+  <Item>
+    <Element>ReviewList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the reviews made about the response.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SupportNeedResponseReviewListType"></Type>
+  </Item>    <!-- ReviewList -->
+
+  <Item>
+    <Element>AttachmentList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of attachments associated to the learning support need response.</p>
+    </Description>
+    <Type ref="CommonTypes" name="DocumentListType"></Type>
+  </Item>    <!-- AttachmentList -->
+
+  <!--Response Completion-->
+  <Item>
+    <Element>CompletionDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date the response was completed.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- CompletionDate -->
+
+  <Item>
+    <Element>Outcome</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The outcome of the response.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportResponseOutcomeType"></Type>
+  </Item>    <!-- Outcome -->
+
+  <Item>
+    <Element>OutcomeComment</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Free text comment about the outcome of the response made for the students learning support need.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- OutcomeComment -->
+
+  <Item>
+    <Element>ClosureStatus</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The status of the learning support need response when it is closed.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsLearningSupportResponseClosureStatusType"></Type>
+  </Item>    <!-- ClosureStatus -->
+
+  <Item>
+    <Element>ClosureStatusDetail</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Additional detail about the responses closure status.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- ClosureStatusDetail -->
+
+  <Item>
+    <Element>CompletionNote</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Free text notes about the completion of the response to the students learning support need.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- CompletionNote -->
+
+  <!--Record Audit-->
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+
+  <xhtml:Example xmlns="" name="StudentLearningSupportResponse - External Response">
+    <StudentLearningSupportResponse>
+      <StudentLearningSupportResponseRefId>461b63b4-cfef-4820-8501-e7dbbb4555cb</StudentLearningSupportResponseRefId>
+      <Student>
+        <RefId>8631e737-c9db-4e6c-804d-a78c65f98f67</RefId>
+      </Student>
+      <LearningSupportNeed>
+        <RefId>ca222226-359d-7510-1a8c-36432a901a16</RefId>
+      </LearningSupportNeed>
+      <ResponseType>ADA</ResponseType>
+      <ResponseDetail>ACU</ResponseDetail>
+      <ResponseGoals>The student is confident in their reading ability.</ResponseGoals>
+        <TierOfResponse>IND</TierOfResponse>
+        <InternalResponse>
+        <ProvidedBy>TEA</ProvidedBy>
+        <ProvidedByName>Jane Doe</ProvidedByName>
+        <Status>MON</Status>
+        <FundedBy>BOA</FundedBy>		
+      </InternalResponse>
+      <ReviewList>
+        <Review json:force-array="true">
+          <Reviewer>
+            <RefId>ca2bbb26-359d-2480-1a8c-36432a901a16</RefId>
+          </Reviewer>
+          <ReviewDate>2019-11-11</ReviewDate>
+          <ReviewComments>The student is progressing well. Ability to identify words is increasing and is gaining confidence in trying to sound out words they do not recognise.</ReviewComments>
+          <NextReviewDate>2010-01-21</NextReviewDate>				
+        </Review>
+      </ReviewList>
+      <AttachmentList>
+        <Document json:force-array="true">
+          <RefId>ca2bbb26-359d-3480-1a8c-36432a901a16</RefId>
+        </Document>
+      </AttachmentList>
+      <RecordAudit>
+        <CreatedDateTime>2019-10-28T06:30:57</CreatedDateTime>
+        <CreatedBy>
+          <RefId>ca222226-359d-2480-1a8c-36432a901a16</RefId>
+        </CreatedBy>
+      </RecordAudit>
+    </StudentLearningSupportResponse>
+  </xhtml:Example>
+
+</DataObject>

@@ -447,22 +447,6 @@
 			<Type ref="CommonTypes" name="EndDateType"/>
 		</Item>
 		<Item>
-			<Element>WithdrawalStartTime</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Start time of the Withdrawal on that day.</p>
-			</Description>
-			<Type name="xs:time"></Type>  
-		</Item>
-		<Item>
-			<Element>WithdrawalEndTime</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>End time of the Withdrawal on that day.</p>
-			</Description>
-			<Type name="xs:time"></Type>  
-		</Item>
-		<Item>
 			<Element>SchoolTerm</Element>
 			<Characteristics>O</Characteristics>
 			<Description>

@@ -1,0 +1,28 @@
+<IncludeGroup
+  xmlns:xhtml="http://www.w3.org/1999/xhtml" 
+  xmlns:json="http://json.org/">
+	
+  <xhtml:Example xmlns="" name="Academic Department Example">
+    <AcademicDepartment>
+      <AcademicDepartmentRefId>2ffb63b4-cfef-4820-8501-e7d1e54555cb</AcademicDepartmentRefId>
+      <Name>Science Department</Name>
+      <Provider>
+        <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+      </Provider>
+      <StaffList>
+        <StaffMember json:force-array="true">
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+          <Name>Bobby Test</Name>
+        </StaffMember>
+      </StaffList>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
+    </AcademicDepartment>
+  </xhtml:Example>
+
+</IncludeGroup>

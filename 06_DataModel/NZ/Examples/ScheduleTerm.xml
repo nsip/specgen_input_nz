@@ -1,0 +1,123 @@
+<DataObject name="ScheduleTerm"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
+	xmlns="http://sifassociation.org/SpecGen">
+
+
+	<Key>ScheduleTermRefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>ScheduleTerm</Element>
+	  <privacyRating>Low</privacyRating>
+		<Description>
+			<p>Provides information about school terms, tertiary terms etc.,
+			either at a national, or provider level, within a school
+			year. If the term is being supplied at a national level, no
+			provider information will be linked.</p>
+		</Description>
+	</Item>
+	
+	<Item>
+		<Element>ScheduleTermRefId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>    <!-- ScheduleTermRefId -->
+	<Item>
+		<Element>ScheduleTermLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The Id of the data object record that was provided by the system that the information was originally sourced from.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>    <!-- ScheduleTermLocalId -->
+
+	<Item>
+		<Element>TermName</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The name of the schedule term.</p>
+		</Description>
+		<Type  name="xs:normalizedString"/>
+	</Item>    <!-- TermName -->
+
+	<Item>
+		<Element>Organisation</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The provider the schedule term applies to, ommitted if it applies to all providers.</p>
+		</Description>
+		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
+	</Item>    <!-- Organisation -->
+
+	<Item>
+		<Element>SchoolYear</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The school year the Term is part of.</p>
+			<p><strong>Note:</strong> Maramataka calendars for māori medium kura
+			will have school years like:  '2021/22'</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>    <!-- SchoolYear -->
+	<Item>
+		<Element>StartDate</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The start date of the term</p>
+		</Description>
+		<Type ref="CommonTypes" name="StartDateType"/>
+	</Item>    <!-- StartDate -->
+	<Item>
+		<Element>EndDate</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The end date of the term</p>
+		</Description>
+		<Type ref="CommonTypes" name="StartDateType"/>
+	</Item>    <!-- EndDate -->
+
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+  
+	<xhtml:Example xmlns="" name ="Schedule Term">
+		<ScheduleTerm>
+			<ScheduleTermRefId>eed03e3c-b088-4b69-bba7-b042f6f7a040</ScheduleTermRefId>
+			<ScheduleTermLocalId>2019-1</ScheduleTermLocalId>
+			<TermName>Term I of 2019</TermName>
+			<Organisation>
+  	  			<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+		    	<LocalId json:force-string="true">9961</LocalId>
+			</Organisation>
+			<StartDate>2019-01-28</StartDate>
+			<EndDate>2019-03-13</EndDate>
+			<RecordAudit>
+				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+				<CreatedBy>
+				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+				<Name>Bobby Test</Name>
+				</CreatedBy>
+			</RecordAudit>
+		</ScheduleTerm>
+	</xhtml:Example>
+</DataObject>

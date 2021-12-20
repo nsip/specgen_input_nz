@@ -1027,6 +1027,11 @@
 
 		<xsl:choose>
 			<!-- Multi-level enumerations (ex: Stats NZ) need Level included in Enumeration String -->
+			<xsl:when test="count(specgen:Level) gt 1">
+				<xsl:message terminate="yes">
+					<xsl:value-of select="concat('CodeSet:', ../../ID, ' Code:', specgen:Code, ' has ', count(specgen:Level), ' nodes')"/>
+				</xsl:message>
+			</xsl:when>
 			<xsl:when test="specgen:Level">
 				<xsl:apply-templates select="specgen:Text" mode="enum">
 					<xsl:with-param name="indent" select="$indent"/>

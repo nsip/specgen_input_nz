@@ -1,0 +1,284 @@
+<DataObject name="StudentPersonal"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
+	xmlns="http://sifassociation.org/SpecGen">
+	<Key>StudentPersonalRefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>StudentPersonal</Element>
+	    <privacyRating>Extreme</privacyRating>
+		<Description>Contains all the personal information related to the student.</Description>
+	</Item>
+	
+	<Item>
+		<Element>StudentPersonalRefId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>    <!-- StudentPersonalRefId -->
+	
+	<!-- Alternate Ids for the Student -->
+	<Item>
+		<Element>StudentPersonalLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The Id of the data object record that was provided by the system that the information was originally sourced from. This identifier may be set for each student independently for each provider. Each identifier is only available to be retrieved or maintained by the provider that created it.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>    <!-- StudentPersonalLocalId -->
+    <Item>
+		<Element>NationalStudentNumber</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The unique identifier allocated to every student in New Zealand, also known as the NSN.</p>
+		</Description>
+		<Type ref="CommonTypes" name="NSNType"/>
+	</Item>    <!-- NationalStudentNumber -->
+    <Item>
+		<Element>NZQAStudentId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>NZQA's unique identifier for a student who has been registered for assessments
+			 to be conducted against the NZQA framework to achieve unit/achievement standards
+			 and national qualifications.
+			</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>    <!-- NZQAStudentId -->
+
+	<Item>
+		<Element>FirstNZSchoolingDate</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The date a student first ever started schooling in New
+			Zealand. This field is used to establish most students’
+			Funding Year Level.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>    <!-- FirstNZSchoolingDate -->
+	<Item>
+		<Element>EarlyChildhoodEducation</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The type of early childhood education the student received before enrolling in their first school.</p></Description>
+		<Type ref="CommonTypes" name="EarlyChildhoodEducationType"></Type>
+	</Item>    <!-- EarlyChildhoodEducation -->
+	<Item>
+		<Element>PersonInfo</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Personal Information </p>
+		</Description>
+		<Type ref="CommonTypes" name="StudentPersonInfoType"/>
+	</Item>    <!-- PersonInfo -->
+	<Item>
+		<Element>BiographicChangeReason</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The reason that the persons biographic data was changed.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsBiographicChangeReasonType"/>
+	</Item>    <!-- BiographicChangeReason -->
+	<Item>
+		<Element>CustodyNote</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Notes about a students care and custody status.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>    <!-- CustodyNote -->
+
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+	
+	<xhtml:Example xmlns="" name ="StudentPersonal Example">
+		<StudentPersonal>
+			<StudentPersonalRefId>7c834ea9-eda1-2090-347f-83297e1c290c</StudentPersonalRefId>
+			<StudentPersonalLocalId>S1234567</StudentPersonalLocalId>
+			<NationalStudentNumber json:force-string="true">2234523</NationalStudentNumber>
+			<FirstNZSchoolingDate>1996-05-04</FirstNZSchoolingDate>
+			<PersonInfo>
+				<Name>
+					<FamilyName>Hagrid</FamilyName>
+					<GivenName>Rubeus</GivenName>
+					<FullName>Rubeus Hagrid</FullName>
+					<Type>LGL</Type>
+					<IsVerified>N</IsVerified>
+				</Name>
+				<Email>
+					<Personal>
+						<Address>hagrid@gmail.com</Address>
+					</Personal>
+				</Email>
+				<OtherNameList>
+					<Name>
+						<FamilyName>Anderson</FamilyName>
+						<GivenName>Samuel</GivenName>
+						<FullName>Samuel Anderson</FullName>
+						<Type>AKA</Type>
+						<IsVerified>Y</IsVerified>
+						<Verification>
+							<Source>NZPAS</Source>
+							<DocumentSerialNumber>L905673</DocumentSerialNumber>
+							<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
+							<IsConfirmed>true</IsConfirmed>
+							<Timestamp>2003-11-30T12:34:56.7</Timestamp>
+							<Provider>
+								<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
+							</Provider>
+						</Verification>	
+					</Name>
+					<Name>
+						<FamilyName>Rowinski</FamilyName>
+						<GivenName>Sam</GivenName>
+						<FullName>Sam Rowinski </FullName>
+						<Type>PRF</Type>
+						<IsVerified>N</IsVerified>
+					</Name>
+				</OtherNameList>
+				<Demographics>
+					<BirthDate>1990-09-26</BirthDate>
+					<PlaceOfBirth>Dunedin</PlaceOfBirth>
+					<CountryOfBirth>ZAF</CountryOfBirth>
+					<CitizenshipList>
+						<Country>NZL</Country>
+						<Country>ZAF</Country>
+					</CitizenshipList>
+					<CitizenshipStatus>NZCI</CitizenshipStatus>
+					<CitizenshipVerification>
+						<Source>NZPAS</Source>
+						<DocumentSerialNumber>L905673</DocumentSerialNumber>
+						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
+						<IsConfirmed>true</IsConfirmed>
+						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
+						<Provider>
+							<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
+						</Provider>
+					</CitizenshipVerification>
+					<Gender>2</Gender>
+					<LanguageList>
+						<Language>
+							<Code>NZS01110</Code>
+							<Usage>FL</Usage>
+							<ProficiencyList>
+								<Proficiency json:force-array="true">
+									<Level>AD</Level>
+									<Type>SP</Type>
+								</Proficiency>
+							</ProficiencyList>	
+						</Language>
+						<Language>
+							<Code>NZS01112</Code>
+							<Usage>SL</Usage>
+							<ProficiencyList>
+								<Proficiency json:force-array="true">
+									<Level>BE</Level>
+									<Type>SP</Type>
+								</Proficiency>
+							</ProficiencyList>	
+						</Language>
+					</LanguageList>
+					<EthnicityList>
+						<Ethnicity>
+							<PreferenceOrderNumber>1</PreferenceOrderNumber>
+							<Code>111</Code>
+						</Ethnicity>
+						<Ethnicity>
+							<PreferenceOrderNumber>1</PreferenceOrderNumber>
+							<Code>211</Code>
+						</Ethnicity>
+					</EthnicityList>
+					<IwiAffiliationList>
+						<Iwi json:force-array="true">
+							<Code>NZS1001</Code>
+							<PreferenceOrderNumber>1</PreferenceOrderNumber>
+							<HapuAffiliationList>
+								<Hapu json:force-array="true">
+									<HapuName>Manukorihi</HapuName>
+									<PreferenceOrderNumber>1</PreferenceOrderNumber>
+								</Hapu>
+							</HapuAffiliationList>
+						</Iwi>
+					</IwiAffiliationList>
+					<ReligiousAffiliationList>
+						<ReligiousAffiliation>NZS212</ReligiousAffiliation>
+						<ReligiousAffiliation>NZS215</ReligiousAffiliation>
+					</ReligiousAffiliationList>
+				</Demographics>
+				<Address>
+					<Physical>
+						<Type>TH</Type>
+						<Line1>The Enchanted Wood</Line1>
+						<Line2>533 Hogwart's Way</Line2>
+						<City>Hogsmead</City>
+						<PostalCode json:force-string="true">7733</PostalCode>
+					</Physical>
+					<Postal>
+						<Type>RU</Type>
+						<Line1>1175 Lake Ferry Rd</Line1>
+						<Suburb>RD 1</Suburb>
+						<City>Martinborough</City>
+					</Postal>
+				</Address>
+				<Phone>
+					<Mobile>
+						<Number>(021) 300 999</Number>
+					</Mobile>
+				</Phone>
+				<HouseholdContactInfoList>
+					<HouseholdContactInfo json:force-array="true">
+						<PreferenceNumber>1</PreferenceNumber>
+						<HouseholdContactId>7d5c3f5c-d89c-4551-9442-6b008207986e</HouseholdContactId>
+						<Address>
+							<Postal>
+								<Type>DE</Type>
+								<Line1>P O Box 81</Line1>
+								<City>Martinborough</City>
+								<PostalCode json:force-string="true">5781</PostalCode>
+							</Postal>
+						</Address>
+						<Email>
+							<Work>
+								<Address>hagrid@hogwarts.com</Address>
+							</Work>
+						</Email>
+						<Phone>
+							<Home>
+								<Number>(03) 300 999</Number>
+							</Home>
+						</Phone>
+					</HouseholdContactInfo>
+				</HouseholdContactInfoList>
+			</PersonInfo>
+			<RecordAudit>
+				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+				<CreatedBy>
+				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+				<Name>Bobby Test</Name>
+				</CreatedBy>
+			</RecordAudit>
+		</StudentPersonal>
+	</xhtml:Example>
+</DataObject>

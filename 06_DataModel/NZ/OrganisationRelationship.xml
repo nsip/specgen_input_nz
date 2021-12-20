@@ -176,4 +176,6 @@
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
 	</Item>    <!-- RecordAudit -->
+
+  <xi:include parse="xml" href="Examples/OrganisationRelationship.xml"/>	
 </DataObject>

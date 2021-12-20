@@ -1,0 +1,118 @@
+	<DataObject name="ProviderCalendarEvent"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
+	xmlns="http://sifassociation.org/SpecGen">
+
+
+	<Key>ProviderCalendarEventRefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>ProviderCalendarEvent</Element>
+	  	<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Provides information about a holiday or other Event that may or may not impact upon the schedule of a provider.</p>
+		</Description>
+	</Item>
+	
+	<Item>
+		<Element>ProviderCalendarEventRefId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>    <!-- ProviderCalendarEventRefId -->
+	<Item>
+		<Element>ProviderCalendarEventLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>    <!-- ProviderCalendarEventLocalId -->
+
+	<Item>
+		<Element>Organisation</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The provider the ProviderCalendarEvent relates to. Not populated if it is a National
+			 Holiday that applies to all providers.</p>
+		</Description>
+		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
+	</Item>    <!-- Organisation -->
+
+	<Item>
+		<Element>StartDateTime</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The date and time the calendar event starts.</p>
+		</Description>
+		<Type name="xs:dateTime"/>	
+	</Item>    <!-- StartDateTime -->
+
+	<Item>
+		<Element>EndDateTime</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The date and time the calendar event ends.</p>
+		</Description>
+		<Type name="xs:dateTime"/>
+	</Item>    <!-- EndDateTime -->
+
+	<Item>
+		<Element>ProviderCalendarEventName</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The name of the provider's event happening at this date and time.</p>
+		</Description>
+		<Type  name="xs:normalizedString"/>
+	</Item>    <!-- ProviderCalendarEventName -->
+
+	<Item>
+		<Element>Location</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Free text denoting the location the event is occurring at.</p>
+		</Description>
+		<Type  name="xs:normalizedString"/>
+	</Item>    <!-- Location -->
+
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+  
+	<xhtml:Example xmlns="" name ="Provider Calendar Event">
+		<ProviderCalendarEvent>
+			<ProviderCalendarEventRefId>4e8387f0-faed-4eb5-84ef-2139da62133d</ProviderCalendarEventRefId>
+			<ProviderCalendarEventLocalId>2019-ANZAC</ProviderCalendarEventLocalId>
+			<StartDateTime>2019-04-25T00:00:00+12:00</StartDateTime>
+			<EndDateTime>2019-04-25T23:59:59+12:00</EndDateTime>
+			<ProviderCalendarEventName>ANZAC Day, 2019</ProviderCalendarEventName>
+			<RecordAudit>
+				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+				<CreatedBy>
+					<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+					<Name>Bobby Test</Name>
+				</CreatedBy>
+			</RecordAudit>
+		</ProviderCalendarEvent>
+	</xhtml:Example>
+</DataObject>

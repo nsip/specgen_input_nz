@@ -80,33 +80,5 @@
     <Type ref="CommonTypes" name="RecordAuditType"></Type>
   </Item>    <!-- RecordAudit -->
   
-  <xhtml:Example xmlns="" name="StaffPersonal">
-    <StaffPersonal>
-      <StaffPersonalRefId>d3e34f41-9d75-101a-8c3d-00aa001a1652</StaffPersonalRefId>
-      <PersonInfo>
-        <Name>
-          <FamilyName>Smith</FamilyName>
-          <GivenName>Fred</GivenName>
-          <FullName>Fred Smith</FullName>
-		      <Type>LGL</Type>
-          <IsVerified>Y</IsVerified>
-        </Name>
-        <Email>
-          <Personal>
-            <Address>fsmith@yahoo.com</Address>
-          </Personal>
-          <Work>
-            <Address>freddy@gmail.com</Address>
-          </Work>
-        </Email>
-      </PersonInfo> 
-      <RecordAudit>
-        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-        <CreatedBy>
-          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-          <Name>Bobby Test</Name>
-        </CreatedBy>
-      </RecordAudit>     
-    </StaffPersonal>
-  </xhtml:Example>
+  <xi:include parse="xml" href="Examples/StaffPersonal.xml"/>	
 </DataObject>

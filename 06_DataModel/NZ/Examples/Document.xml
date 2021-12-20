@@ -1,0 +1,215 @@
+<DataObject name="Document"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:json="http://json.org/"
+
+      xmlns="http://sifassociation.org/SpecGen">
+	
+  <Key>DocumentRefId</Key>
+  <EventsReported>true</EventsReported>
+
+  <Item>
+    <Element>Document</Element>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
+     </Description>
+  </Item>
+
+  <Item>
+    <Element>DocumentRefId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The ID (GUID) assigned to uniquely identify this Document.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>    <!-- DocumentRefId -->
+  <Item>
+    <Element>DocumentLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- DocumentLocalId -->
+
+  <Item>
+    <Element>Organisation</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the Organisation/Provider that first uploaded this document.</p>
+    </Description>
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
+  </Item>    <!-- Organisation -->
+
+  <Item>
+    <Element>Location</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Location of Documentation.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- Location -->
+
+  <Item>
+    <Element>DocumentTitle</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Document's full title.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- DocumentTitle -->
+
+  <Item>
+    <Element>DocumentDescription</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>What the document is and how it is related to the Student.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- DocumentDescription -->
+
+  <Item>
+    <Element>AddedDateTime</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date the document was added at the source system.</p>
+    </Description>
+    <Type name="xs:dateTime"/>
+  </Item>    <!-- AddedDateTime -->
+
+  <Item>
+    <Element>ReviewDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Document Review Date.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- ReviewDate -->
+
+  <Item>
+    <Element>URL</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>URL if known.</p>
+    </Description>
+    <Type name="xs:anyURI"></Type>
+  </Item>    <!-- URL -->
+
+  <Item>
+    <Element>NoteText</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>If the type of document is 'Note' then this is populated with the free text that makes up the note.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- NoteText -->
+
+  <Item>
+    <Element>RelatedToList</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of objects that this document relates to, e.g. a Wellbeing Response or Characteristic, Physical Restraint. </p>
+    </Description>
+    <Type ref="CommonTypes" name="RelatedToListType"></Type>
+  </Item>    <!-- RelatedToList -->
+
+  <Item>
+    <Element>DocumentClassification</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The classification of the document to give an indication of the audience who should have access.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsDocumentClassificationType"></Type>
+  </Item>    <!-- DocumentClassification -->
+
+  <Item>
+    <Element>DocumentType</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The type of document, e.g. Personalised Plan, Wellbeing Event or Response supporting documentation.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsDocumentTypeType"></Type>
+  </Item>    <!-- DocumentType -->
+
+  <Item>
+    <Element>PersonDocumentRoles</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The set of people associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
+    </Description>
+    <Type ref="CommonTypes" name="PersonDocumentRolesType"></Type>
+  </Item>    <!-- PersonDocumentRoles -->
+
+  <Item>
+    <Element>DocumentDate</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date of the document, e.g. the date the document was produced.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- DocumentType -->
+
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+  
+  <xhtml:Example xmlns="" name="Document">
+    <Document>
+      <DocumentRefId>2ffb63b4-cfef-4820-8501-e7d1e54555cb</DocumentRefId>
+      <Organisation>
+  	  	<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+	    	<LocalId json:force-string="true">9961</LocalId>
+      </Organisation>
+      <DocumentDescription>Timmy McGannaway's IEP for 2019</DocumentDescription>
+      <URL>http://somehost.co.nz/docs/ghf12312</URL>
+      <DocumentType>IEP</DocumentType>
+      <PersonDocumentRoles>
+        <Author>
+          <Person>
+            <RefId>2a288f40-c3fb-4d9c-857e-0e562f3f5dde</RefId>
+            <ObjectType>StaffPersonal</ObjectType>
+          </Person>
+        </Author>
+        <SubjectOf>
+          <Student>
+            <RefId>17c9b7aa-bc34-435f-8bba-7e337891f53b</RefId>
+            <NationalStudentNumber json:force-string="true">6788765445</NationalStudentNumber>
+          </Student>
+        </SubjectOf>
+      </PersonDocumentRoles>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
+    </Document>
+  </xhtml:Example>
+
+</DataObject>

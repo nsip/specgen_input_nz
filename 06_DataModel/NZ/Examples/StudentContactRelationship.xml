@@ -1,0 +1,192 @@
+<DataObject name='StudentContactRelationship'
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+			xmlns:json="http://json.org/"
+			
+      xmlns="http://sifassociation.org/SpecGen">
+	
+	<EventsReported>true</EventsReported>
+	<Key>StudentContactRelationshipRefId</Key>
+	
+	<Item>
+		<Element>StudentContactRelationship</Element>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>A relationship between a person who is part of a Student's whānau and that Student.
+				Relationship properties include the relationship type and roles played by the student contact
+				in respect of the student.</p>
+			<p>Individual details about the student and student contact are provided in other data objects - 
+				StudentPersonal and StudentContactPersonal respectively.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>StudentContactRelationshipRefId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"></Type>
+	</Item>   <!-- StudentContactRelationshipRefId -->
+	<Item>
+		<Element>StudentContactRelationshipLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"></Type>
+	</Item>   <!-- StudentContactRelationshipLocalId -->
+	<Item>
+		<Element>Status</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		<p>States whether or not this is an inactive or active Student Contact Relationship.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsStudentContactRelationshipStatusType"/>
+	</Item>   <!-- Status -->
+	<Item>
+		<Element>StartDate</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The date the relationship between the student and contact was recorded.</p>
+		</Description>
+		<Type ref="CommonTypes" name="StartDateType"/>
+  	</Item>  <!-- StartDate -->
+	<Item>
+		<Element>EndDate</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The date the relationship between the student and contact was removed.</p>
+		</Description>
+		<Type ref="CommonTypes" name="EndDateType"/>
+  	</Item>  <!-- EndDate -->
+	
+	<Item>
+		<Element>Student</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>Generic object reference to the Student.</Description>
+		<Type ref='CommonTypes' name='StudentObjectReferenceType'/>
+	</Item>   <!-- Student -->
+	<Item>
+		<Element>StudentContact</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>Generic object reference to the student contact.</Description>
+		<Type ref='CommonTypes' name='ObjectReferenceType'/>
+	</Item>   <!-- StudentContact -->
+	<Item>
+		<Element>Organisation</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>Generic object reference to the Organisation associated with the relationship.</Description>
+		<Type ref='CommonTypes' name='OrganisationObjectReferenceType'/>
+	</Item>   <!-- Organisation -->
+	<Item>
+		<Element>Relationship</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>Defines the relationship of the contact to the student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RelationshipType"></Type>
+	</Item>   <!-- Relationship -->
+	<Item>
+			<Element>LanguageUsed</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>The language the student and their contact use to communicate.</Description>
+			<Type ref='CodeSets' name='NZCodeSetsLanguageType'/>
+	</Item>   <!-- LanguageUsed -->
+	<Item>
+		<Element>HouseholdList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>A list of one or more household identifiers indicating the
+			households associated with this relationship.</p>
+		</Description>
+		<Type ref="CommonTypes" name="HouseholdListType"></Type>
+	</Item>   <!-- HouseholdList -->
+	<Item>
+		<Element>ContactFlags</Element>
+		<Characteristics>C</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Contains characteristics of the contact person's role with the Student. 
+			At least one of the flags must be populated with a 'Yes' value.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ContactFlagsType"></Type>
+	</Item>   <!-- ContactFlags -->
+	<Item>
+		<Element>ContactSequence</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Number indicating the order in which the student contact should be contacted.</p>
+		</Description>
+		<Type name="xs:unsignedInt"></Type>
+	</Item>   <!-- ContactSequence -->
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+		
+  <xhtml:Example xmlns='' name="StudentContactRelationship">
+    <StudentContactRelationship>
+	  <StudentContactRelationshipRefId>7572b261-0947-583a-463d-bb345291b332</StudentContactRelationshipRefId>
+	  <StartDate>2020-06-23</StartDate>
+      <Student>
+	    <RefId>dee34b35-9d75-101a-8c3d-00aa001a1652</RefId>
+      </Student>
+      <StudentContact>
+		<RefId>6472b261-0947-583a-463d-bb345291b001</RefId>
+	  </StudentContact>
+	  <Organisation>
+	  	<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+		<LocalId json:force-string="true">9961</LocalId>
+	  </Organisation>
+      <Relationship>
+        <Code>LEG</Code>
+      </Relationship>
+      <HouseholdList>
+        <HouseholdId>FamilyA</HouseholdId>
+        <HouseholdId>FamilyB</HouseholdId>
+      </HouseholdList>
+      <ContactFlags>
+        <ParentLegalGuardian>Y</ParentLegalGuardian>
+        <LivesWith>N</LivesWith>
+        <AccessToRecords>N</AccessToRecords>
+        <ReceivesAssessmentReport>Y</ReceivesAssessmentReport>
+        <EmergencyContact>Y</EmergencyContact>
+		<CivilDefenceEmergencyContact>N</CivilDefenceEmergencyContact>
+        <DisciplinaryContact>N</DisciplinaryContact>
+        <AttendanceContact>N</AttendanceContact>
+        <PrimaryCareProvider>N</PrimaryCareProvider>
+        <FeesBilling>Y</FeesBilling>
+        <FamilyMail>Y</FamilyMail>
+        <CourtOrder>N</CourtOrder>
+      </ContactFlags>
+	  <ContactSequence>1</ContactSequence>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
+	</StudentContactRelationship>
+  </xhtml:Example>
+</DataObject>

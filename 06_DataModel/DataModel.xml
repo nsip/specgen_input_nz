@@ -46,11 +46,12 @@
 
 		<!-- Providers and other education oranisations -->
 		<xi:include parse="xml" href="NZ/Organisation.xml"/>
-		<xi:include parse="xml" href="NZ/ORganisationRelationship.xml"/>
+		<xi:include parse="xml" href="NZ/OrganisationRelationship.xml"/>
 		<xi:include parse="xml" href="NZ/AcademicDepartment.xml"/>
+		<xi:include parse="xml" href="NZ/ProviderCourse.xml"/>
 
-		<!-- Staff, Students & their whānau -->
 		<xi:include parse="xml" href="NZ/StaffPersonal.xml"/>
+<!-- 
 		<xi:include parse="xml" href="NZ/StaffAssignment.xml"/>
 		<xi:include parse="xml" href="NZ/StaffTeachingGroupAssignment.xml"/>
 		<xi:include parse="xml" href="NZ/StudentPersonal.xml"/>
@@ -59,17 +60,13 @@
 		<xi:include parse="xml" href="NZ/Document.xml"/>
 		<xi:include parse="xml" href="NZ/StudentConsent.xml"/>
 		
-		<!-- Curriculum, Courses, Learning Standards & Credentials -->
 		<xi:include parse="xml" href="NZ/TeachingGroup.xml"/>
-		<xi:include parse="xml" href="NZ/ProviderCourse.xml"/>
 		<xi:include parse="xml" href="NZ/LearningStandard.xml"/>
 		<xi:include parse="xml" href="NZ/Credential.xml"/>
 
-		<!-- Student Enrolment -->
 		<xi:include parse="xml" href="NZ/StudentProviderEnrolment.xml"/>
 		<xi:include parse="xml" href="NZ/StudentTeachingGroupEnrolment.xml"/>
 
-		<!-- Schedule / Timetable -->
 		<xi:include parse="xml" href="NZ/Schedule.xml"/>
 		<xi:include parse="xml" href="NZ/ScheduleAcademicDay.xml"/>
 		<xi:include parse="xml" href="NZ/SchedulePeriod.xml"/>
@@ -80,11 +77,9 @@
 		<xi:include parse="xml" href="NZ/ScheduleException.xml"/>
 		<xi:include parse="xml" href="NZ/ProviderCalendarEvent.xml"/>
 		
-		<!-- Student Attendance -->
 		<xi:include parse="xml" href="NZ/StudentAttendanceSummary.xml"/>
 		<xi:include parse="xml" href="NZ/TeachingGroupMeetingAttendance.xml"/>
 
-		<!-- Student Hauora / Wellbeing -->
 		<xi:include parse="xml" href="NZ/WellbeingAlert.xml"/>
 		<xi:include parse="xml" href="NZ/WellbeingCharacteristic.xml"/>
 		<xi:include parse="xml" href="NZ/WellbeingEvent.xml"/>
@@ -96,12 +91,12 @@
 	    <xi:include parse="xml" href="NZ/StudentLearningSupport.xml"/>
 	    <xi:include parse="xml" href="NZ/StudentLearningSupportResponse.xml"/>
 		
-		<!-- Aromatawai / Assessment and progress -->
 		<xi:include parse="xml" href="NZ/AssessmentTask.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAssessmentTaskResult.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAssessmentTaskRegistration.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAssessmentTask.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAttainment.xml"/>
 		<xi:include parse="xml" href="NZ/StudentCurriculumProgressReport.xml"/>
+-->		
 	</Group>
 </DataObjects>

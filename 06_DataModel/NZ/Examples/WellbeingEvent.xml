@@ -1,0 +1,310 @@
+<DataObject name="WellbeingEvent"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:json="http://json.org/"
+
+  xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>WellbeingEventRefId</Key>
+  
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>WellbeingEvent</Element>
+	  <privacyRating>High</privacyRating>
+    <Description>
+      <p>Record of an event happening that impacts on a school's duty of care to its students.
+					The event records both 'positive' and 'negative' behaviours and is not just the recording
+					of a discipline incident or an accident.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>WellbeingEventRefId</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>    <!-- WellbeingEventRefId -->
+
+  <Item>
+		<Element>WellbeingEventLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+  </Item>    <!-- WellbeingEventLocalId -->
+
+  <Item>
+    <Element>Student</Element>
+    <Characteristics>M</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Object reference to the student to whom this WellbeingEvent belongs.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
+  </Item>    <!-- Student -->
+
+  <Item>
+    <Element>ReportingProvider</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Object reference to the provider for which this WellbeingEvent is being reported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
+  </Item>    <!-- ReportingProvider -->
+  
+  <Item>
+    <Element>PhysicalRestraint</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Object reference tothe StudentPhysicalRestraint if it was administered to the student as part of this WellbeingEvent.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- PhysicalRestraint -->
+   
+  <Item>
+    <Element>EventNotes</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Text relating to the particular WellbeingEvent.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- EventNotes -->
+
+  <Item>
+    <Element>PossibleMotivationList</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of the possible motivations that triggered the event.</p>
+    </Description>
+    <Type ref="CommonTypes" name="PossibleMotivationListType"></Type>
+  </Item>    <!-- PossibleMotivationList -->
+  
+  <Item>
+    <Element>EventCategoryClass</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Category of WellbeingEvent.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsWellbeingEventCategoryClassType"></Type>
+  </Item>    <!-- EventCategoryClass -->
+    
+  <Item>
+    <Element>EventCategoryList</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>List of Categories of WellbeingEvent.</p>
+    </Description>
+    <Type ref="CommonTypes" name="WellbeingEventCategoryListType"></Type>
+  </Item>    <!-- EventCategoryList -->
+
+  <Item>
+    <Element>ReportingStaffMember</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Object refernece to the staff member who logged the Wellbeing Event record.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"/>
+  </Item>    <!-- ReportingStaffMember -->
+
+  <Item>
+    <Element>EventLocationList</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the locations where the incident took place.</p>
+    </Description>
+    <Type ref="CommonTypes" name="EventLocationListType"/>
+  </Item>    <!-- EventLocationList -->
+
+  <Item>
+    <Element>EventLocationDescription</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>Details of Event Location.</p>
+    </Description>
+     <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- EventLocationDescription -->
+
+  <Item>
+    <Element>EventCreationTimeStamp</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Date and time of the WellbeingEvent record creation.</p>
+    </Description>
+    <Type name="xs:dateTime"></Type>
+  </Item>    <!-- EventCreationTimeStamp -->  
+  
+  <Item>
+    <Element>EventDate</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+    <Description>
+      <p>The calendar date on which this WellbeingEvent occured.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- EventDate -->
+    
+  <Item>
+    <Element>EventTime</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>The time when WellbeingEvent occured.</p>
+    </Description>
+    <Type name="xs:time"></Type>
+  </Item>    <!-- EventTime -->
+  
+  <Item>
+    <Element>EventDescription</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A description of the WellbeingEvent.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>    <!-- EventDescription -->
+
+  <Item>
+    <Element>EventTimePeriod</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Time period of when the event occurred.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsWellbeingEventTimePeriodType"></Type>
+  </Item>    <!-- EventTimePeriod -->  
+
+  <Item>
+    <Element>ConfidentialFlag</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+    <Description>
+      <p>Flag indicating if the incident is confidential or not.  If ‘Y’ should not be shared with any other system/school.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
+  </Item>    <!-- ConfidentialFlag -->  
+  
+  <Item>
+    <Element>PersonInvolvementList</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>List of People involved in the Wellbeing event.  Mandatory if more people than the student to which this event occurs is involved.</p>
+    </Description>
+     <Type ref="CommonTypes" name="PersonInvolvementListType"></Type>
+  </Item>    <!-- PersonInvolvementList -->
+  
+  <Item>
+   	<Element>Status</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>Current Status.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsWellbeingStatusType"/>
+  </Item>    <!-- Status -->
+
+  <Item>
+   	<Element>BehaviourIdentifiedList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>A list of the problem behaviours identified for the student as a result of the Wellbeing Event. There are both minor and major behaviours.</p>
+		</Description>
+		<Type ref="CommonTypes" name="BehaviourIdentifiedListType"/>
+  </Item>    <!-- BehaviourIdentifiedList -->
+
+  <Item>
+   	<Element>RestraintType</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>The StudentPhysicalRestraint if it was administered to the student as part of this WellbeingEvent.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsWellbeingEventRestraintTypeType"/>
+  </Item>    <!-- RestraintType -->
+
+  <Item>
+   	<Element>ActionTakenList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>A list of the actions taken as a result of this WellbeingEvent.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ActionTakenListType"/>
+  </Item>    <!-- ActionTakenList -->
+  
+  <Item>
+    <Element>DocumentList</Element>
+    <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+    <Description>
+      <p>Describes the Location of any associated documents kept in relation to this Response.</p>
+    </Description>
+     <Type ref="CommonTypes" name="DocumentListType"></Type>
+  </Item>    <!-- DocumentList -->
+
+  <Item>
+    <Element>RelatedWellbeingEventList</Element>
+    <Characteristics>O</Characteristics>
+  	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A Wellbeing Event gets created for every student involved in an event. This list links together all related Wellbeing Events.</p>
+    </Description>
+     <Type ref="CommonTypes" name="RelatedWellbeingEventListType"></Type>
+  </Item>    <!-- RelatedWellbeingEventList -->
+
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+  
+  <xhtml:Example xmlns="" name="WellbeingEvent">
+    <WellbeingEvent> 
+      <WellbeingEventRefId>2ffb63b4-cfef-4820-8501-e7d1e54555cb</WellbeingEventRefId>
+      <Student>
+        <RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
+      </Student>
+      <ReportingProvider>
+          <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+		    	<LocalId json:force-string="true">9961</LocalId>
+      </ReportingProvider>
+      <EventCategoryClass>POS</EventCategoryClass>
+      <EventDate>2017-11-01</EventDate>
+      <EventTimePeriod>AM</EventTimePeriod>
+      <RestraintType>NON</RestraintType>
+      <ActionTakenList>
+        <ActionTaken json:force-array="true">ININ</ActionTaken>
+      </ActionTakenList>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
+    </WellbeingEvent>
+  </xhtml:Example>
+</DataObject>

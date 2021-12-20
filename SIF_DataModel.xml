@@ -145,31 +145,25 @@
 		<Intro>
 			<p>Common and supporting types referenced in this specification are included here as a reference.</p>
 		</Intro>
-			<!--Section A-->
+
+		<!--Section A-->
+		<xi:include parse="xml" href="80_BackMatter/DataModel-CommonTypes-NZ.xml"/>
+<!--
 		<xi:include parse="xml" href="80_BackMatter/DataModel-CommonTypes.xml"/>
 		<xi:include parse="xml" href="80_BackMatter/Generic-CommonTypes.xml"/>
+-->		
 	</Appendix>
 	
-		<!--Section B-->
-	<Appendix name="Code Sets">
-		<Intro>
-			<p>Select shared and named code sets defined in SIF are included here for reference.</p>
-			<p>AU code set enumerations are defined by NSIP primarily for use in the Australian SIF Data Model, but
-			some are re-used by the New Zealand SIF Data Model</p>
-		</Intro>
-		<CodeSets>
-			<xi:include parse="xml" href="80_BackMatter/DataModel-CodeSets.xml"/>
-		  </CodeSets>
-		</Appendix>
+	<!--Section B-->
+	<xi:include parse="xml" href="80_BackMatter/DataModel-NZCodeSets.xml"/>
 	
-		<!--Section C-->
+	<!--Section C-->
 	<xi:include parse="xml" href="80_BackMatter/DataModel-ExternalCodeSets.xml"/>
 	
-	
-		<!--Section D-->
+	<!--Section D-->
 	<xi:include parse="text" href="80_BackMatter/BackgroundSupplementaryDocumentation.xml"/>
 	
-		<!--Section -->
+	<!--Section -->
 	<Appendix name="Index of Tables"/>
 		<!--Section -->
 	<Appendix name="Index of Examples"/>

@@ -1,0 +1,237 @@
+<DataObject name="StudentAssessmentTaskRegistration"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:json="http://json.org/"
+
+      xmlns="http://sifassociation.org/SpecGen">
+	
+  <Key>StudentAssessmentTaskRegistrationRefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StudentAssessmentTaskRegistration</Element>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The student's registration for an assessment task they are intending to participate in. </p>
+     </Description>
+  </Item>
+  <Item>
+    <Element>StudentAssessmentTaskRegistrationRefId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+			<p>The universally unique identifier for the data object record that is used across systems.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>    <!-- StudentAssessmentTaskRegistrationRefId -->
+  <Item>
+    <Element>StudentAssessmentTaskRegistrationLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+			<p>The Id of the data object record that was provided by the system that the information 
+			was originally sourced from.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>    <!-- StudentAssessmentTaskRegistrationLocalId -->
+
+
+  <Item>
+    <Element>AssessmentRegistrationStatus</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The status of the student's registration for an assessment task, e.g. applied, 
+      approved, withdrawn.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsAssessmentRegistrationStatusType"></Type>
+  </Item>    <!-- AssessmentRegistrationStatus -->
+
+
+
+  <Item>
+    <Element>OrganisationInvolvedList</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of the Providers/Organisations involved and their role, e.g. assessment provider, registering provider.</p>
+    </Description>
+    <Type ref="CommonTypes" name="OrganisationInvolvedListType"/>
+  </Item>    <!-- OrganisationInvolvedList -->
+
+  <Item>
+    <Element>Student</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the student held in the StudentPersonal data object
+         whose intention to participate in an assessment task is being registered.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentObjectReferenceType"/>
+  </Item>    <!-- Student -->
+
+  <Item>
+    <Element>StaffMember</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the StaffPersonal data object representing the teacher who 
+        registered the student's intention to participate in the assessment task.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+
+  </Item>    <!-- StaffMember -->
+
+  <Item>
+    <Element>AssessmentTask</Element>    
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the AssessmentTask data object that the registration is for.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- AssessmentTask -->
+
+	<Item>
+		<Element>NZQA</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>Extra details to support NZQA assessment registration process</p>
+		</Description>
+		<Type ref="CommonTypes" name="NZQAAssessmentRegistrationType"></Type>
+	</Item>    <!-- NZQA -->
+
+  <Item>
+    <Element>SpecialAssessmentConditionList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of references identifying any Special Assessment Conditions that the student
+         is entitled to for the assessment task they are registering for.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SpecialAssessmentConditionListType"></Type>
+  </Item>    <!-- SpecialAssessmentConditionList -->
+
+  <Item>
+    <Element>ProviderCourse</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the ProviderCourse that the assessment task is being set as part of.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- ProviderCourse -->
+
+  <Item>
+    <Element>LearningStandard</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Generic object reference to the LearningStandard the student is registering for.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
+  </Item>    <!-- LearningStandard -->
+
+  <Item>
+    <Element>SubjectArea</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Code denoting the Learning or Subject Area the assessment task registration is for.</p>
+    </Description>
+    <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
+  </Item>    <!-- SubjectArea -->  
+
+  <Item>
+    <Element>YearLevel</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Year Level of the assessment task the registration is for. May only contain the values 1 through to 13 inclusive.</p>
+    </Description>
+    <Type name="xs:int"/>
+			<Facets>
+				<xs:minInclusive value="1"/>
+				<xs:maxInclusive value="13"/>
+			</Facets>
+  </Item>    <!-- YearLevel -->
+
+  <Item>
+    <Element>DateRegistered</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date the student's intent to participate in the assessment task was registered.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>    <!-- DateRegistered -->
+
+  <Item>
+    <Element>AssessmentYear</Element>
+    <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The assessment year the student's intent to participate in the assessment task was registered for.</p>
+    </Description>
+    <Type name="xs:gYear"></Type>
+  </Item>    <!-- AssessmentYear -->
+  
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+  
+  <xhtml:Example xmlns="" name="Student Assessment Task Registration">
+    <StudentAssessmentTaskRegistration>
+      <StudentAssessmentTaskRegistrationRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</StudentAssessmentTaskRegistrationRefId>
+      <OrganisationInvolvedList>
+          <!-- NZQA is Assessor -->
+          <OrganisationInvolved>
+            <RefId>8ec05a56-1c5f-4fc7-9ea1-d328c5467c59</RefId>
+            <LocalId json:force-string="true">9772</LocalId>
+            <OrganisationRole>ASR</OrganisationRole>
+          </OrganisationInvolved>
+          <!-- School is Organisation -->
+          <OrganisationInvolved>
+            <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+            <LocalId json:force-string="true">9961</LocalId>
+            <OrganisationRole>PRO</OrganisationRole>
+          </OrganisationInvolved>
+      </OrganisationInvolvedList>
+      <Student>
+        <LocalId>851039-HP</LocalId>
+        <Name>Harry Potter</Name>
+        <NationalStudentNumber json:force-string="true">23423421</NationalStudentNumber>
+      </Student>
+      <StaffMember>
+        <RefId>c23c6fa1-4093-4c21-9ea8-4cdd3c7dd7fb</RefId>
+      </StaffMember>
+      <AssessmentTask>
+        <RefId>cedd0ce7-f555-482b-887b-d130e5c40d02</RefId>
+      </AssessmentTask>
+      <SpecialAssessmentConditionList>
+        <SpecialAssessmentCondition>COM</SpecialAssessmentCondition>
+        <SpecialAssessmentCondition>EXT</SpecialAssessmentCondition>
+        <SpecialAssessmentCondition>SEP</SpecialAssessmentCondition>
+      </SpecialAssessmentConditionList>
+      <SubjectArea>PHYS</SubjectArea>
+      <YearLevel>12</YearLevel>
+      <DateRegistered>2018-03-30</DateRegistered>
+      <AssessmentYear>2018</AssessmentYear>
+      <RecordAudit>
+        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+        <CreatedBy>
+          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+          <Name>Bobby Test</Name>
+        </CreatedBy>
+      </RecordAudit>
+    </StudentAssessmentTaskRegistration>
+  </xhtml:Example>
+</DataObject>

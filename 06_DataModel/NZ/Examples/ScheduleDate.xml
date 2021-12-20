@@ -1,0 +1,111 @@
+<DataObject name="ScheduleDate"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/"
+
+	xmlns="http://sifassociation.org/SpecGen">
+
+
+	<Key>ScheduleDateRefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>ScheduleDate</Element>
+	 	 <privacyRating>Low</privacyRating>
+		<Description>
+			<p>The core of the scheduling system, that assigns a particular ScheduleAcademicDay
+			 and SchedulePeriodTime to the set of calendar dates covered by a particular Schedule.</p>
+			 
+			<p> Each entry in the CalendaDateList determines WHICH meetings will occur on 
+			that date (via the ScheduleAcademicDay) and WHEN those meetings will take place
+			(via the SchedulePeriodTime), as well as which ScheduleTerms are in session on 
+			that particular CalendarDate</p>
+
+			<p>Could be thought of as a member of Schedule data object; but it has been extracted
+			as a separate object, without identifiers, to make it easier to build API endpoint definitions</p>
+		</Description>
+	</Item>
+	
+	<Item>
+		<Element>Organisation</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The provider, e.g. school, tertiary institution etc, that this schedule date record belongs to.</p>
+		</Description>
+		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
+	</Item>    <!-- Organisation -->
+	
+	<Item>
+		<Element>Schedule</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The schedule within the provider to which this ScheduleDate applies.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
+	</Item>    <!-- Schedule -->
+
+	<Item>
+		<Element>CalendarDateList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of schedule calendar dates and the period times, academic day and terms that applies to each day.</p>
+		</Description>
+		<Type ref="CommonTypes" name="CalendarDateListType"/> 
+	</Item>    <!-- CalendarDateList -->
+
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- RecordAudit -->
+
+	<xhtml:Example xmlns="" name ="Schedule Date">
+		<ScheduleDate>
+			<Organisation>
+  	  			<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+		    	<LocalId json:force-string="true">9961</LocalId>
+			</Organisation>
+			<Schedule>
+				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
+				<Name>Schedule 2019a (Term 1)</Name>
+			</Schedule>
+			<CalendarDateList>
+				<CalendarDate>
+					<Date>2019-03-14</Date>
+					<SchoolClosed>N</SchoolClosed>
+					<ScheduleAcademicDay>
+						<LocalId>2019a-A</LocalId>
+					</ScheduleAcademicDay>
+					<SchedulePeriodTime>
+						<LocalId>2019a-Normal</LocalId>
+					</SchedulePeriodTime>
+					<ScheduleTermList>
+						<ScheduleTerm json:force-array="true">
+							<LocalId>2019-1</LocalId>
+						</ScheduleTerm>
+					</ScheduleTermList>
+				</CalendarDate>
+				<CalendarDate>
+					<Date>2019-03-15</Date>
+					<SchoolClosed>Y</SchoolClosed>
+				</CalendarDate>
+			</CalendarDateList>	
+
+			<RecordAudit>
+				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+				<CreatedBy>
+				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+				<Name>Bobby Test</Name>
+				</CreatedBy>
+			</RecordAudit>
+		</ScheduleDate>
+	</xhtml:Example>
+</DataObject>
