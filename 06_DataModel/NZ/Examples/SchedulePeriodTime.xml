@@ -1,97 +1,7 @@
-<DataObject name="SchedulePeriodTime"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:xi="http://www.w3.org/2001/XInclude"
+<IncludeGroup 
 	xmlns:xhtml="http://www.w3.org/1999/xhtml"
-	xmlns:json="http://json.org/"
+	xmlns:json="http://json.org/">
 
-	xmlns="http://sifassociation.org/SpecGen">
-
-
-	<Key>SchedulePeriodTimeRefId</Key>
-	<EventsReported>true</EventsReported>
-	<Item>
-		<Element>SchedulePeriodTime</Element>
-	  	<privacyRating>Low</privacyRating>
-		<Description>
-			<p>A SchedulePeriodTime defines a set of periods that are to occur on a given
-			 AcademicDay. It takes the abstract time slots defined by SchedulePeriod
-			 (and referenced by TeachingGroupEvent)  and assigns start and end times
-			 to that set of periods.</p>
-			 <p>SchedulePeriodTime defines WHEN classes will occur on a given day of the rotation</p>
-		</Description>
-	</Item>
-	
-	<Item>
-		<Element>SchedulePeriodTimeRefId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The universally unique identifier for the data object record that is used across systems.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- SchedulePeriodTimeRefId -->
-	<Item>
-		<Element>SchedulePeriodTimeLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>The Id of the data object record that was provided by the system that the information 
-			was originally sourced from.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- SchedulePeriodTimeLocalId -->
-
-	<Item>
-		<Element>SchedulePeriodTimeName</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The name of the Bell Schedule.</p>
-		</Description>
-		<Type  name="xs:normalizedString"/>
-	</Item>    <!-- SchedulePeriodTimeName -->
-
-	<Item>
-		<Element>Organisation</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The provider the bell schedule belongs to.</p>
-		</Description>
-		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
-	</Item>    <!-- Organisation -->
-
-	<Item>
-		<Element>Schedule</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The provider schedule the bell schedule belongs to.</p>
-		</Description>
-		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
-	</Item>    <!-- Schedule -->
-
-	<Item>
-		<Element>DayPeriodTimeList</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>A list of the periods that make up the period time schedule and their start and end times.</p>
-		</Description>
-		<Type ref="CommonTypes" name="DayPeriodTimeListType"/>
-	</Item>    <!-- DayPeriodTimeList -->
-
-	<Item>
-		<Element>RecordAudit</Element>    
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-	
 	<xhtml:Example xmlns="" name ="Schedule Period Time">
 		<SchedulePeriodTime>
 			<SchedulePeriodTimeRefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</SchedulePeriodTimeRefId>
@@ -134,4 +44,4 @@
 			</RecordAudit>
 		</SchedulePeriodTime>
 	</xhtml:Example>
-</DataObject>
+</IncludeGroup>

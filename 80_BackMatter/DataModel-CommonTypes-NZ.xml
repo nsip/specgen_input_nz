@@ -17,7 +17,7 @@
          <Element>AttainmentGoal</Element>
          <Characteristics>MR</Characteristics>
          <Description>
-            <p>The student's academic attainment goal at the time of enrolment.</p>
+            <p>Reference to StudentVoice entry recording the Student's academic attainment goals at the time of enrolment.</p>
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
@@ -46,22 +46,6 @@
          </Description>
       </Item>
       <Item>
-         <Element>PeriodList</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>A list of the periods that make up this academic day, e.g. Period 1, Period 2 etc.</p>
-         </Description>
-         <Type ref="CommonTypes" name="PeriodListType"/>
-      </Item>
-      <Item>
-         <Element>SchedulePeriodTime</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The period times within the schedule this academic day is following.</p>
-         </Description>
-         <Type ref="CommonTypes" name="ObjectReferenceType"/>
-      </Item>
-      <Item>
          <Element>RefId</Element>
          <Position>1</Position>
          <Characteristics>O</Characteristics>
@@ -88,6 +72,24 @@
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <Item>
+         <Element>SchedulePeriodTime</Element>
+         <Position>10</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The period times within the schedule this academic day is following.</p>
+         </Description>
+         <Type ref="CommonTypes" name="ObjectReferenceType"/>
+      </Item>
+      <Item>
+         <Element>PeriodList</Element>
+         <Position>11</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>A list of the periods that make up this academic day, e.g. Period 1, Period 2 etc.</p>
+         </Description>
+         <Type ref="CommonTypes" name="PeriodListType"/>
+      </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="AcademicGoalListType">
       <Item>
@@ -113,44 +115,49 @@
          </Description>
       </Item>
       <Item>
-         <Element>SubjectArea</Element>
+         <Element>GoalRecordedDate</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>The subject area the student's academic goal is for.</p>
+            <p>The date the student's goal was recorded.</p>
          </Description>
-         <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
+         <Type name="xs:date"/>
       </Item>
       <Item>
          <Element>GoalAchievedDate</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>The date the student achieved their academic goal.</p>
+            <p>The date the student achieved their goal.</p>
          </Description>
          <Type name="xs:date"/>
       </Item>
       <Item>
          <Element>GoalDescription</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>A description of the academic goal the student wants to achieve.</p>
+            <p>A description of the goal the student wants to achieve.</p>
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
       <Item>
          <Element>GoalName</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>The name of the academic goal the student wants to achieve.</p>
+            <p>The name of the goal the student wants to achieve.</p>
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
       <Item>
-         <Element>GoalRecordedDate</Element>
+         <Element>SubjectArea</Element>
+         <Position>10</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>The date the student's academic goal was recorded.</p>
+            <p>The subject area the student's academic goal is for.</p>
          </Description>
-         <Type name="xs:date"/>
+         <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="AcknowledgementListType">
@@ -194,7 +201,7 @@
       </Item>
       <Item>
          <Element>Acknowledged</Element>
-         <Characteristics>O</Characteristics>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>Indicates whether or not a staff member has viewed the alerts.</p>
          </Description>
@@ -202,7 +209,7 @@
       </Item>
       <Item>
          <Element>AcknowledgedDate</Element>
-         <Characteristics>O</Characteristics>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>The date the provider acknowledged a staff member has viewed the alerts.</p>
          </Description>
@@ -234,7 +241,8 @@
       </Item>
       <Item>
          <Element>MeetingName</Element>
-         <Characteristics>O</Characteristics>
+         <Position>1</Position>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>The name of the ad hoc meeting.</p>
          </Description>
@@ -242,7 +250,8 @@
       </Item>
       <Item>
          <Element>StartTime</Element>
-         <Characteristics>O</Characteristics>
+         <Position>2</Position>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>The time the ad hoc meeting started.</p>
          </Description>
@@ -250,7 +259,8 @@
       </Item>
       <Item>
          <Element>EndTime</Element>
-         <Characteristics>O</Characteristics>
+         <Position>3</Position>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>The time the ad hoc meeting finished.</p>
          </Description>
@@ -276,7 +286,7 @@
       <Item>
          <Element>Line1</Element>
          <Position>2</Position>
-         <Characteristics>O</Characteristics>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>Address line 1.</p>
          </Description>
@@ -381,18 +391,20 @@
          </Description>
       </Item>
       <Item>
-         <Element>Postal</Element>
+         <Element>Physical</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>The person or organisation's postal address.</p>
+            <p>The person or organisation's physical address.</p>
          </Description>
          <Type ref="CommonTypes" name="AddressType"/>
       </Item>
       <Item>
-         <Element>Physical</Element>
+         <Element>Postal</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>The person or organisation's physical address.</p>
+            <p>The person or organisation's postal address.</p>
          </Description>
          <Type ref="CommonTypes" name="AddressType"/>
       </Item>
@@ -422,6 +434,7 @@
       </Item>
       <Item>
          <Element>ScoreType</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Either defines that the score is an over-arching final aggregate score derived from a collection of other scores, or the fact that the score is derived from a multi-stage marking and moderation process, e.g. inital, interim, moderated and final scores for a single assessment.</p>
@@ -429,15 +442,8 @@
          <Type ref="CodeSets" name="NZCodeSetsScoreTypeType"/>
       </Item>
       <Item>
-         <Element>ScoreMetric</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Code denoting the score metric type of the assessment task result.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsScoreMetricType"/>
-      </Item>
-      <Item>
          <Element>Competency</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>&lt;font color="#172b4d"&gt;Competency provides a link to one or more line-items in a machine readable curriculum, and says this particular score applies to one of the “competencies” listed in the curriculum, e.g.&lt;/font&gt; &lt;a href="https://nzcurriculum.tki.org.nz/The-New-Zealand-Curriculum/English/Achievement-objectives \l collapsible1"&gt;&lt;font color="#0052cc"&gt;&lt;u&gt;NZ Curriculum for English&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;&lt;font color="#172b4d"&gt; under “Listening, Reading &amp;amp; Viewing” has the following “skills”&lt;/font&gt; &lt;ul&gt; &lt;li&gt;&lt;font color="#172b4d"&gt;Processes and Strategies&lt;/font&gt;&lt;/li&gt; &lt;li&gt;&lt;font color="#172b4d"&gt;Ideas&lt;/font&gt;&lt;/li&gt; &lt;li&gt;&lt;font color="#172b4d"&gt;Language Features&lt;/font&gt;&lt;/li&gt; &lt;li&gt;&lt;font color="#172b4d"&gt;Structure&lt;/font&gt;&lt;/li&gt; &lt;/ul&gt; &lt;font color="#172b4d"&gt;Whereas &lt;/font&gt;&lt;a href="https://nzcurriculum.tki.org.nz/The-New-Zealand-Curriculum/Mathematics-and-statistics/Achievement-objectives \l collapsible1"&gt;&lt;font color="#0052cc"&gt;&lt;u&gt;NZ Curriculum for Mathematics&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;&lt;font color="#172b4d"&gt; has the following “skills”&lt;/font&gt; &lt;ul&gt; &lt;li&gt;&lt;font color="#172b4d"&gt;Number Strategies&lt;/font&gt;&lt;/li&gt; &lt;li&gt;&lt;font color="#172b4d"&gt;Number Knowledge&lt;/font&gt;&lt;/li&gt; &lt;li&gt;&lt;font color="#172b4d"&gt;Equations and Expressions&lt;/font&gt;&lt;/li&gt; &lt;li&gt;&lt;font color="#172b4d"&gt;Patterns and Relationships&lt;/font&gt;&lt;/li&gt; &lt;/ul&gt; &lt;font color="#172b4d"&gt;When certain assessments have individual “skills” or “competencies” assessed, then individual scoreResults will have pointers to the relevant curriculum line-item.&lt;/font&gt;</p>
@@ -445,7 +451,17 @@
          <Type name="xs:normalizedString"/>
       </Item>
       <Item>
+         <Element>ScoreMetric</Element>
+         <Position>3</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Code denoting the score metric type of the assessment task result.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsScoreMetricType"/>
+      </Item>
+      <Item>
          <Element>ScoreValue</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The score the student received for assessment task against that metric. If the result score is for an NZQA or International Baccalaureate then the ScoreResultCode using the enumeration NZCodeSetsAssessmentResultType must be used instead.</p>
@@ -453,7 +469,17 @@
          <Type name="xs:normalizedString"/>
       </Item>
       <Item>
+         <Element>ScoreMax</Element>
+         <Position>5</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The maximum value possible for the score.</p>
+         </Description>
+         <Type name="xs:decimal"/>
+      </Item>
+      <Item>
          <Element>ItemNumber</Element>
+         <Position>6</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The Item within an NZQA Assessment Task that the score is for. When a marker marks an external assessment (a paper for a standard in an examination, for example) they provide a score of 0-8 for each item (question) in the paper.</p>
@@ -461,14 +487,6 @@
             <p>The individual item scores, and the total are then sent back to NZQA’s eQA system from the marking application.</p>
          </Description>
          <Type name="xs:int"/>
-      </Item>
-      <Item>
-         <Element>ScoreMax</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The maximum value possible for the score.</p>
-         </Description>
-         <Type name="xs:decimal"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="AssessmentTaskListType">
@@ -575,12 +593,12 @@
          <Type ref="CodeSets" name="NZCodeSetsAttendanceCodeType"/>
       </Item>
       <Item>
-         <Element>StartTime</Element>
-         <Characteristics>O</Characteristics>
+         <Element>AttendanceDate</Element>
+         <Characteristics>M</Characteristics>
          <Description>
-            <p>The Start Time of the students attendance for the provided Attendance Date. Mandatory for attendance records with a type of 'Ad Hoc'.</p>
+            <p>The date the attendance is being record for.</p>
          </Description>
-         <Type name="xs:time"/>
+         <Type name="xs:date"/>
       </Item>
       <Item>
          <Element>EndTime</Element>
@@ -591,12 +609,20 @@
          <Type name="xs:time"/>
       </Item>
       <Item>
-         <Element>AttendanceDate</Element>
+         <Element>Note</Element>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>The date the attendance is being record for.</p>
+            <p>Free text note about the students attendance for the provided date and time/period.</p>
          </Description>
-         <Type name="xs:date"/>
+         <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>StartTime</Element>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The Start Time of the students attendance for the provided Attendance Date. Mandatory for attendance records with a type of 'Ad Hoc'.</p>
+         </Description>
+         <Type name="xs:time"/>
       </Item>
       <Item>
          <Element>SubmissionDateTime</Element>
@@ -605,14 +631,6 @@
             <p>The date the students attendance for this date and time/period was submitted.</p>
          </Description>
          <Type name="xs:dateTime"/>
-      </Item>
-      <Item>
-         <Element>Note</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Free text note about the students attendance for the provided date and time/period.</p>
-         </Description>
-         <Type name="xs:normalizedString"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="AttendeeListType">
@@ -637,15 +655,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>AwardType</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The type of award that was achieved.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsWellbeingAwardTypeType"/>
-      </Item>
-      <Item>
          <Element>AwardDate</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Date when to be awarded.</p>
@@ -653,7 +664,17 @@
          <Type name="xs:date"/>
       </Item>
       <Item>
+         <Element>AwardType</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The type of award that was achieved.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsWellbeingAwardTypeType"/>
+      </Item>
+      <Item>
          <Element>AwardDescription</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Description of the Award.</p>
@@ -662,6 +683,7 @@
       </Item>
       <Item>
          <Element>AwardNotes</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Any comments/notes associated with the Award.</p>
@@ -855,6 +877,50 @@
          <Type ref="CommonTypes" name="PersonEmailsType"/>
       </Item>
    </CommonElement>
+   <CommonElement type="true" dm="true" name="BaseStudentGoalType">
+      <Item>
+         <Element>BaseStudentGoalType</Element>
+         <Description>
+            <p>Information common to all flavours of Student's Goals.</p>
+         </Description>
+      </Item>
+      <Item>
+         <Element>GoalRecordedDate</Element>
+         <Position>1</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The date the student's goal was recorded.</p>
+         </Description>
+         <Type name="xs:date"/>
+      </Item>
+      <Item>
+         <Element>GoalAchievedDate</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The date the student achieved their goal.</p>
+         </Description>
+         <Type name="xs:date"/>
+      </Item>
+      <Item>
+         <Element>GoalDescription</Element>
+         <Position>3</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A description of the goal the student wants to achieve.</p>
+         </Description>
+         <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>GoalName</Element>
+         <Position>4</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The name of the goal the student wants to achieve.</p>
+         </Description>
+         <Type name="xs:normalizedString"/>
+      </Item>
+   </CommonElement>
    <CommonElement type="true" dm="true" name="BehaviourDirectedAtListType">
       <Item>
          <Element>BehaviourDirectedAtListType</Element>
@@ -879,15 +945,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>DirectedAtType</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Code set denoting type of object or person the student was directing their behaviour at, e.g. Staff Member, Student, Desk, Chair.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsBehaviourDirectedAtTypeType"/>
-      </Item>
-      <Item>
          <Element>DirectedAt</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The person the student's behaviour was directed at.</p>
@@ -896,11 +955,21 @@
       </Item>
       <Item>
          <Element>BehaviourDescription</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Free text describing the behaviour the student showed towards a person of piece of property.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>DirectedAtType</Element>
+         <Position>3</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Code set denoting type of object or person the student was directing their behaviour at, e.g. Staff Member, Student, Desk, Chair.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsBehaviourDirectedAtTypeType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="BehaviourIdentifiedListType">
@@ -929,6 +998,7 @@
       <Choice>
          <Item>
             <Element>MinorBehaviour</Element>
+            <Position>1</Position>
             <Characteristics>OR</Characteristics>
             <Description>
                <p>The type of minor problem behaviour identified as a result of the Wellbeing Event.</p>
@@ -937,6 +1007,7 @@
          </Item>
          <Item>
             <Element>MajorBehaviour</Element>
+            <Position>2</Position>
             <Characteristics>OR</Characteristics>
             <Description>
                <p>The type of major problem behaviour identified as a reult of a Wellbeing Event.</p>
@@ -946,6 +1017,7 @@
       </Choice>
       <Item>
          <Element>Severity</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The severity of the Wellbeing Event.</p>
@@ -977,32 +1049,9 @@
          </Description>
       </Item>
       <Item>
-         <Element>ScheduleTermList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A list of the schedule terms that are relevant to this calendar date.</p>
-         </Description>
-         <Type ref="CommonTypes" name="ScheduleTermListType"/>
-      </Item>
-      <Item>
-         <Element>SchedulePeriodTime</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The schedule times of the periods occuring on this calendar date.</p>
-         </Description>
-         <Type ref="CommonTypes" name="ObjectReferenceType"/>
-      </Item>
-      <Item>
-         <Element>ScheduleAcademicDay</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The academic day that is taking place on this calendar date.</p>
-         </Description>
-         <Type ref="CommonTypes" name="ObjectReferenceType"/>
-      </Item>
-      <Item>
          <Element>Date</Element>
-         <Characteristics>O</Characteristics>
+         <Position>1</Position>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>The actual date the school is in session.</p>
          </Description>
@@ -1010,11 +1059,39 @@
       </Item>
       <Item>
          <Element>SchoolClosed</Element>
-         <Characteristics>O</Characteristics>
+         <Position>2</Position>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>Flag indicating that the School was closed on the indicated date.</p>
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+      </Item>
+      <Item>
+         <Element>ScheduleAcademicDay</Element>
+         <Position>3</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The academic day that is taking place on this calendar date.</p>
+         </Description>
+         <Type ref="CommonTypes" name="ObjectReferenceType"/>
+      </Item>
+      <Item>
+         <Element>SchedulePeriodTime</Element>
+         <Position>4</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The schedule times of the periods occuring on this calendar date.</p>
+         </Description>
+         <Type ref="CommonTypes" name="ObjectReferenceType"/>
+      </Item>
+      <Item>
+         <Element>ScheduleTermList</Element>
+         <Position>5</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A list of the schedule terms that are relevant to this calendar date.</p>
+         </Description>
+         <Type ref="CommonTypes" name="ScheduleTermListType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="CareerGoalListType">
@@ -1030,47 +1107,7 @@
          <Description>
             <p>Information about a student's career goal.</p>
          </Description>
-         <Type ref="CommonTypes" name="CareerGoalType"/>
-      </Item>
-   </CommonElement>
-   <CommonElement type="true" dm="true" name="CareerGoalType">
-      <Item>
-         <Element>CareerGoalType</Element>
-         <Description>
-            <p>Information about a student's career goal.</p>
-         </Description>
-      </Item>
-      <Item>
-         <Element>GoalAchievedDate</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The date the student achieved their career goal.</p>
-         </Description>
-         <Type name="xs:date"/>
-      </Item>
-      <Item>
-         <Element>GoalDescription</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A description of the career goal the student wants to achieve.</p>
-         </Description>
-         <Type name="xs:normalizedString"/>
-      </Item>
-      <Item>
-         <Element>GoalName</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The name of the career goal the student wants to achieve.</p>
-         </Description>
-         <Type name="xs:normalizedString"/>
-      </Item>
-      <Item>
-         <Element>GoalRecordedDate</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The date the student's career goal was recorded.</p>
-         </Description>
-         <Type name="xs:date"/>
+         <Type ref="CommonTypes" name="BaseStudentGoalType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="ClassStrandListType">
@@ -1098,6 +1135,7 @@
       </Item>
       <Item>
          <Element>LearningStrand</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>Code denoting the particular learning strand from the Technology curriculum, that was covered in the class, and for which the student's progress is being reported.</p>
@@ -1106,6 +1144,7 @@
       </Item>
       <Item>
          <Element>AchievementObjectiveList</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>A record of the Student's progress in a set of achievement objectives from the from the Technology curriculum strand, that was covered in the class.</p>
@@ -1150,7 +1189,7 @@
       <Item>
          <Element>Value</Element>
          <Position>10</Position>
-         <Characteristics>O</Characteristics>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>The unique value that provides access to the channel. eg: URL for a website; Facebook page address, Twitter handle.</p>
          </Description>
@@ -1182,6 +1221,7 @@
       </Item>
       <Item>
          <Element>ParentLegalGuardian</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Does the individual have parental or legal guardianship responsibility for the student?</p>
@@ -1189,55 +1229,8 @@
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
       <Item>
-         <Element>EmergencyContact</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Should this contact be notified in case of emergency?</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-      </Item>
-      <Item>
-         <Element>AttendanceContact</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Should this contact be notified in case of an attendance issue?</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-      </Item>
-      <Item>
-         <Element>CivilEmergencyContact</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Does the contact have pickup rights?</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-      </Item>
-      <Item>
-         <Element>FeesBilling</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Is this the contact responsible for Payment of Fees?</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-      </Item>
-      <Item>
-         <Element>ReceivesAssessmentReport</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>In particular, should this contact receive a copy of the student report?</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-      </Item>
-      <Item>
-         <Element>FamilyMail</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Does this person receive family mail?</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-      </Item>
-      <Item>
          <Element>LivesWith</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Does the student live with this contact?</p>
@@ -1246,6 +1239,7 @@
       </Item>
       <Item>
          <Element>AccessToRecords</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Does this contact have access to the student's records?</p>
@@ -1253,31 +1247,35 @@
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
       <Item>
-         <Element>CourtOrder</Element>
+         <Element>ReceivesAssessmentReport</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>Is there a Protection Order, Restraining Order or some other court order against this person?</p>
+            <p>In particular, should this contact receive a copy of the student report?</p>
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
       <Item>
-         <Element>PrimaryCareProvider</Element>
+         <Element>EmergencyContact</Element>
+         <Position>5</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>Does this person provide daily living or personal assistance to the student?</p>
+            <p>Should this contact be notified in case of emergency?</p>
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
       <Item>
-         <Element>DisciplinaryContact</Element>
+         <Element>CivilEmergencyContact</Element>
+         <Position>6</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>Is this person to be contacted in case of disciplinary action?</p>
+            <p>Should this contact be notified in case of a civil defence emergency?</p>
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
       <Item>
          <Element>CivilDefenceEmergencyContact</Element>
+         <Position>7</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Should this contact be notified in case of a civil defence emergency where the normal emergency contact is not close to a hosting school?</p>
@@ -1285,7 +1283,44 @@
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
       <Item>
+         <Element>DisciplinaryContact</Element>
+         <Position>8</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Is this person to be contacted in case of disciplinary action?</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+      </Item>
+      <Item>
+         <Element>AttendanceContact</Element>
+         <Position>9</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Should this contact be notified in case of an attendance issue?</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+      </Item>
+      <Item>
+         <Element>PrimaryCareProvider</Element>
+         <Position>10</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Does this person provide daily living or personal assistance to the student?</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+      </Item>
+      <Item>
+         <Element>FeesBilling</Element>
+         <Position>11</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Is this the contact responsible for Payment of Fees?</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+      </Item>
+      <Item>
          <Element>FeesAccess</Element>
+         <Position>12</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Does this contact have access to fees information?</p>
@@ -1293,7 +1328,26 @@
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
       <Item>
+         <Element>FamilyMail</Element>
+         <Position>13</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Does this person receive family mail?</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+      </Item>
+      <Item>
+         <Element>CourtOrder</Element>
+         <Position>14</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Is there a Protection Order, Restraining Order or some other court order against this person?</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+      </Item>
+      <Item>
          <Element>HealthContact</Element>
+         <Position>15</Position>
          <Characteristics>O</Characteristics>
          <Description/>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
@@ -1446,6 +1500,7 @@
       </Item>
       <Item>
          <Element>SchedulePeriod</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>A period that makes up or partially makes up the period time schedule.</p>
@@ -1454,7 +1509,8 @@
       </Item>
       <Item>
          <Element>StartTime</Element>
-         <Characteristics>O</Characteristics>
+         <Position>2</Position>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>The time the period starts.</p>
          </Description>
@@ -1462,7 +1518,8 @@
       </Item>
       <Item>
          <Element>EndTime</Element>
-         <Characteristics>O</Characteristics>
+         <Position>3</Position>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>The time the period ends.</p>
          </Description>
@@ -1477,83 +1534,15 @@
          </Description>
       </Item>
       <Item>
-         <Element>EthnicityList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>One or more ethnic groups with which the person identifies.</p>
-         </Description>
-         <Type ref="CommonTypes" name="EthnicityListType"/>
-      </Item>
-      <Item>
-         <Element>IwiAffiliationList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A list of one or more iwi with which the person has an affiliation.</p>
-         </Description>
-         <Type ref="CommonTypes" name="IwiAffiliationListType"/>
-      </Item>
-      <Item>
-         <Element>CitizenshipVerification</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The verification event that verified the residency status of the person. Absence of a verification event indicates that the residency was not verified against an identity document.</p>
-         </Description>
-         <Type ref="CommonTypes" name="VerificationEventType"/>
-      </Item>
-      <Item>
-         <Element>LanguageList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>List of languages an individual uses to communicate.</p>
-         </Description>
-         <Type ref="CommonTypes" name="LanguageListType"/>
-      </Item>
-      <Item>
-         <Element>ReligiousAffiliationList</Element>
-         <Characteristics>O</Characteristics>
-         <Description/>
-         <Type ref="CommonTypes" name="ReligiousAffiliationListType"/>
-      </Item>
-      <Item>
-         <Element>CitizenshipList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A person's country(s) of citizenship.</p>
-         </Description>
-         <Type ref="CommonTypes" name="CountryListType"/>
-      </Item>
-      <Item>
-         <Element>CitizenshipStatus</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The citizenship or residency status of the person.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsCitizenshipStatusType"/>
-      </Item>
-      <Item>
-         <Element>CountryOfBirth</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The person's country of birth.</p>
-         </Description>
-         <Type ref="ExternalCodeSets" name="ISO3166CountryType"/>
-      </Item>
-      <Item>
-         <Element>Gender</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The gender with which the person identifies.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsGenderType"/>
-      </Item>
-      <Item>
          <Element>BirthDate</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description/>
          <Type name="xs:date"/>
       </Item>
       <Item>
          <Element>DateOfDeath</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The person's date of death.</p>
@@ -1562,6 +1551,7 @@
       </Item>
       <Item>
          <Element>PlaceOfBirth</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The person's place of birth - like village, town, city etc.</p>
@@ -1569,12 +1559,92 @@
          <Type name="xs:normalizedString"/>
       </Item>
       <Item>
+         <Element>CountryOfBirth</Element>
+         <Position>4</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The person's country of birth.</p>
+         </Description>
+         <Type ref="ExternalCodeSets" name="ISO3166CountryType"/>
+      </Item>
+      <Item>
+         <Element>CitizenshipList</Element>
+         <Position>5</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A person's country(s) of citizenship.</p>
+         </Description>
+         <Type ref="CommonTypes" name="CountryListType"/>
+      </Item>
+      <Item>
+         <Element>CitizenshipStatus</Element>
+         <Position>6</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The citizenship or residency status of the person.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsCitizenshipStatusType"/>
+      </Item>
+      <Item>
+         <Element>CitizenshipVerification</Element>
+         <Position>7</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The verification event that verified the residency status of the person. Absence of a verification event indicates that the residency was not verified against an identity document.</p>
+         </Description>
+         <Type ref="CommonTypes" name="VerificationEventType"/>
+      </Item>
+      <Item>
+         <Element>Gender</Element>
+         <Position>8</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The gender with which the person identifies.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsGenderType"/>
+      </Item>
+      <Item>
+         <Element>LanguageList</Element>
+         <Position>9</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>List of languages an individual uses to communicate.</p>
+         </Description>
+         <Type ref="CommonTypes" name="LanguageListType"/>
+      </Item>
+      <Item>
          <Element>CountryArrivalDate</Element>
+         <Position>10</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Date the person first arrived in the country.</p>
          </Description>
          <Type name="xs:date"/>
+      </Item>
+      <Item>
+         <Element>EthnicityList</Element>
+         <Position>11</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>One or more ethnic groups with which the person identifies.</p>
+         </Description>
+         <Type ref="CommonTypes" name="EthnicityListType"/>
+      </Item>
+      <Item>
+         <Element>IwiAffiliationList</Element>
+         <Position>12</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A list of one or more iwi with which the person has an affiliation.</p>
+         </Description>
+         <Type ref="CommonTypes" name="IwiAffiliationListType"/>
+      </Item>
+      <Item>
+         <Element>ReligiousAffiliationList</Element>
+         <Position>13</Position>
+         <Characteristics>O</Characteristics>
+         <Description/>
+         <Type ref="CommonTypes" name="ReligiousAffiliationListType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="DetentionContainerType">
@@ -1586,6 +1656,7 @@
       </Item>
       <Item>
          <Element>DetentionCategory</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Categorisation of a Detention.</p>
@@ -1594,6 +1665,7 @@
       </Item>
       <Item>
          <Element>DetentionDate</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The date of the detention.</p>
@@ -1602,6 +1674,7 @@
       </Item>
       <Item>
          <Element>DetentionLocation</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Eventually to be typed for initial draft will be string to try and determine a valid code set.</p>
@@ -1610,6 +1683,7 @@
       </Item>
       <Item>
          <Element>DetentionNotes</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Any notes that can be provided regarding the need/response that led to the detention.</p>
@@ -1658,6 +1732,7 @@
       </Item>
       <Item>
          <Element>Type</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The type of early childhood education the student received.</p>
@@ -1665,18 +1740,20 @@
          <Type ref="CodeSets" name="NZCodeSetsEarlyChildhoodEducationTypeType"/>
       </Item>
       <Item>
-         <Element>HoursPerWeekAttended</Element>
+         <Element>HoursPerDayAttended</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>The number of hours per week the student attended this ECE Type. A string value conforming to regular expression for numeric range 0-168 hours (with max 2 decimal places)</p>
+            <p>The number of hours per day the student attended this ECE Type. A string value conforming to regular expression for numeric range 0-24hours (with max 2 decimal places)</p>
          </Description>
          <Type name="xs:string"/>
       </Item>
       <Item>
-         <Element>HoursPerDayAttended</Element>
+         <Element>HoursPerWeekAttended</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>The number of hours per day the student attended this ECE Type. A string value conforming to regular expression for numeric range 0-24hours (with max 2 decimal places)</p>
+            <p>The number of hours per week the student attended this ECE Type. A string value conforming to regular expression for numeric range 0-168 hours (with max 2 decimal places)</p>
          </Description>
          <Type name="xs:string"/>
       </Item>
@@ -1842,7 +1919,7 @@
       <Item>
          <Element>Name</Element>
          <Position>109</Position>
-         <Characteristics>O</Characteristics>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>The normal business name of the Organisation</p>
          </Description>
@@ -2011,7 +2088,7 @@
       <Item>
          <Element>Address</Element>
          <Position>10</Position>
-         <Characteristics>O</Characteristics>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>The actual email address.</p>
          </Description>
@@ -2101,6 +2178,7 @@
       </Item>
       <Item>
          <Element>Code</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>An ethnic group with which the person identifies.</p>
@@ -2109,6 +2187,7 @@
       </Item>
       <Item>
          <Element>PreferenceOrderNumber</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The order of preference for the person's ethnicity. '1' is their first preference. If left NULL means no preference is set and defers to any ethnicity with a preference of '1'.</p>
@@ -2196,7 +2275,8 @@
       </Item>
       <Item>
          <Element>HapuName</Element>
-         <Characteristics>O</Characteristics>
+         <Position>1</Position>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>The name of a Hapū that the person is affiliated with.</p>
          </Description>
@@ -2204,6 +2284,7 @@
       </Item>
       <Item>
          <Element>PreferenceOrderNumber</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Indicates the persons preferred Hapu. The order of preference for the person's Hapu. '1' is their first preference. If left NULL means no preference is set and defers to any Hapu with a preference of '1'.</p>
@@ -2219,28 +2300,32 @@
          </Description>
       </Item>
       <Item>
-         <Element>Type</Element>
-         <Characteristics>M</Characteristics>
-         <Description/>
-         <Type ref="CodeSets" name="NZCodeSetsHealthcareServiceTypeType"/>
-      </Item>
-      <Item>
          <Element>OrganisationName</Element>
-         <Characteristics>O</Characteristics>
-         <Description/>
-         <Type name="xs:normalizedString"/>
-      </Item>
-      <Item>
-         <Element>Notes</Element>
-         <Characteristics>O</Characteristics>
+         <Position>1</Position>
+         <Characteristics>M</Characteristics>
          <Description/>
          <Type name="xs:normalizedString"/>
       </Item>
       <Item>
          <Element>OrganisationPhoneNum</Element>
+         <Position>2</Position>
+         <Characteristics>M</Characteristics>
+         <Description/>
+         <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>Notes</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description/>
          <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>Type</Element>
+         <Position>4</Position>
+         <Characteristics>M</Characteristics>
+         <Description/>
+         <Type ref="CodeSets" name="NZCodeSetsHealthcareServiceTypeType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="HouseholdContactInfoListType">
@@ -2267,39 +2352,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>Address</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A list of addresses for the household.</p>
-         </Description>
-         <Type ref="CommonTypes" name="AddressesType"/>
-      </Item>
-      <Item>
-         <Element>Phone</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>List of PhoneNumber elements.</p>
-         </Description>
-         <Type ref="CommonTypes" name="PersonPhoneType"/>
-      </Item>
-      <Item>
-         <Element>Email</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>List of Email elements.</p>
-         </Description>
-         <Type ref="CommonTypes" name="PersonEmailsType"/>
-      </Item>
-      <Item>
-         <Element>HouseholdContactId</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Local identifier for the household</p>
-         </Description>
-         <Type ref="CommonTypes" name="LocalIdType"/>
-      </Item>
-      <Item>
          <Element>PreferenceNumber</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Priority of Household Contact in relation to this Person.</p>
@@ -2307,12 +2361,49 @@
          <Type name="xs:unsignedInt"/>
       </Item>
       <Item>
+         <Element>HouseholdContactId</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Local identifier for the household</p>
+         </Description>
+         <Type ref="CommonTypes" name="LocalIdType"/>
+      </Item>
+      <Item>
          <Element>HouseholdSalutation</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Salutation to be used in addressing this household.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>Address</Element>
+         <Position>4</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A list of addresses for the household.</p>
+         </Description>
+         <Type ref="CommonTypes" name="AddressesType"/>
+      </Item>
+      <Item>
+         <Element>Email</Element>
+         <Position>5</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>List of Email elements.</p>
+         </Description>
+         <Type ref="CommonTypes" name="PersonEmailsType"/>
+      </Item>
+      <Item>
+         <Element>Phone</Element>
+         <Position>6</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>List of PhoneNumber elements.</p>
+         </Description>
+         <Type ref="CommonTypes" name="PersonPhoneType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="HouseholdListType">
@@ -2339,15 +2430,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>ExchangeScheme</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The type of exchange scheme for student enrolment where the Eligibility Criteria is "Student on Government approved exchange scheme" (60005).</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsExchangeSchemeType"/>
-      </Item>
-      <Item>
          <Element>NZArrivalDate</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The date upon which the student arrived in New Zealand; not necessarily their first date of NZ schooling.</p>
@@ -2356,11 +2440,21 @@
       </Item>
       <Item>
          <Element>TuitionWeeklyFee</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The amount in NZ$ excluding GST, that the student is paying per-week, for tuition as an international student.</p>
          </Description>
          <Type name="xs:decimal"/>
+      </Item>
+      <Item>
+         <Element>ExchangeScheme</Element>
+         <Position>3</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The type of exchange scheme for student enrolment where the Eligibility Criteria is "Student on Government approved exchange scheme" (60005).</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsExchangeSchemeType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="InterventionListType">
@@ -2404,6 +2498,7 @@
       </Item>
       <Item>
          <Element>Code</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>The code of the iwi the person is affiliated to.</p>
@@ -2411,20 +2506,22 @@
          <Type ref="CodeSets" name="NZCodeSetsIwiType"/>
       </Item>
       <Item>
-         <Element>HapuAffiliationList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A list of one or more affiliations of a person with a Hapū within an Iwi.</p>
-         </Description>
-         <Type ref="CommonTypes" name="HapuAffiliationListType"/>
-      </Item>
-      <Item>
          <Element>PreferenceOrderNumber</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Indicates the persons preferred Iwi. The order of preference for the person's Iwi. '1' is their first preference. If left NULL means no preference is set and defers to any Iwi with a preference of '1'.</p>
          </Description>
          <Type name="xs:int"/>
+      </Item>
+      <Item>
+         <Element>HapuAffiliationList</Element>
+         <Position>3</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A list of one or more affiliations of a person with a Hapū within an Iwi.</p>
+         </Description>
+         <Type ref="CommonTypes" name="HapuAffiliationListType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="JustificationListType">
@@ -2449,46 +2546,6 @@
          <Description>
             <p>&lt;font color="#3c3c3c"&gt;A generic reference to an assessment task result or other student attainment that justifies the student achieving this attainment.&lt;/font&gt;</p>
          </Description>
-      </Item>
-      <Item>
-         <Element>ObjectType</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>The type of the referenced object:</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsReferrableDataObjectsType"/>
-      </Item>
-      <Item>
-         <Element>AssessmentType</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Code recording how the justifying assessment task or provider course was assessed.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsAssessmentTypeType"/>
-      </Item>
-      <Item>
-         <Element>Result</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The final result the Student achieved on the justifying assessment task or provider course.</p>
-         </Description>
-         <Type name="xs:normalizedString"/>
-      </Item>
-      <Item>
-         <Element>Date</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The date the Student achieved the justifying assessment task or provider course.</p>
-         </Description>
-         <Type name="xs:date"/>
-      </Item>
-      <Item>
-         <Element>CreditValue</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The number of credits towards this Attainment that were accrued by the justifying assessment task or provider course.</p>
-         </Description>
-         <Type name="xs:decimal"/>
       </Item>
       <Item>
          <Element>RefId</Element>
@@ -2516,6 +2573,51 @@
             <p>The normal descriptive name of the referenced object.</p>
          </Description>
          <Type name="xs:string"/>
+      </Item>
+      <Item>
+         <Element>ObjectType</Element>
+         <Position>10</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The type of the referenced object:</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsReferrableDataObjectsType"/>
+      </Item>
+      <Item>
+         <Element>AssessmentType</Element>
+         <Position>10</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Code recording how the justifying assessment task or provider course was assessed.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsAssessmentTypeType"/>
+      </Item>
+      <Item>
+         <Element>Result</Element>
+         <Position>11</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The final result the Student achieved on the justifying assessment task or provider course.</p>
+         </Description>
+         <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>Date</Element>
+         <Position>12</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The date the Student achieved the justifying assessment task or provider course.</p>
+         </Description>
+         <Type name="xs:date"/>
+      </Item>
+      <Item>
+         <Element>CreditValue</Element>
+         <Position>13</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The number of credits towards this Attainment that were accrued by the justifying assessment task or provider course.</p>
+         </Description>
+         <Type name="xs:decimal"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="KeyContactListType">
@@ -2566,15 +2668,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>Usage</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The usage of the language by a person, potentially indicating capability and preference for the language.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsLanguageUsageType"/>
-      </Item>
-      <Item>
          <Element>Code</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>The code representing the specific language that an individual uses to communicate</p>
@@ -2582,20 +2677,31 @@
          <Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
       </Item>
       <Item>
-         <Element>ProficiencyList</Element>
+         <Element>Usage</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>A list of the person's proficiency in the language in regards to speaking, reading and writing.</p>
+            <p>The usage of the language by a person, potentially indicating capability and preference for the language.</p>
          </Description>
-         <Type ref="CommonTypes" name="LanguageProficiencyListType"/>
+         <Type ref="CodeSets" name="NZCodeSetsLanguageUsageType"/>
       </Item>
       <Item>
          <Element>Dialect</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Specific dialect of a person's language.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>ProficiencyList</Element>
+         <Position>4</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A list of the person's proficiency in the language in regards to speaking, reading and writing.</p>
+         </Description>
+         <Type ref="CommonTypes" name="LanguageProficiencyListType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="LanguageListType">
@@ -2637,6 +2743,7 @@
       </Item>
       <Item>
          <Element>Code</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>Code denoting the actual language of instruction.</p>
@@ -2645,6 +2752,7 @@
       </Item>
       <Item>
          <Element>Level</Element>
+         <Position>2</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>The level of instruction that is made in the selected language.</p>
@@ -2676,20 +2784,22 @@
          </Description>
       </Item>
       <Item>
-         <Element>Type</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>The type of language proficency, e.g. speaking, writing or reading.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsLanguageProficiencyTypeType"/>
-      </Item>
-      <Item>
          <Element>Level</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>The person's proficency level in the language in regards to reading, writing or speaking.</p>
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLanguageProficiencyLevelType"/>
+      </Item>
+      <Item>
+         <Element>Type</Element>
+         <Position>2</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The type of language proficency, e.g. speaking, writing or reading.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsLanguageProficiencyTypeType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="LatitudeType">
@@ -2851,15 +2961,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>AdministeredBy</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The staff member at the school that have been given permission by the student or the student's caregiver to administer the medicine to the student.</p>
-         </Description>
-         <Type ref="CommonTypes" name="ObjectReferenceType"/>
-      </Item>
-      <Item>
          <Element>StartDate</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>The date from which the student or student caretaker consented to the medicine being administered to the student by a particular individual.</p>
@@ -2868,6 +2971,7 @@
       </Item>
       <Item>
          <Element>EndDate</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The date the consent for administration of the medicine ends or is revoked.</p>
@@ -2875,7 +2979,17 @@
          <Type ref="CommonTypes" name="EndDateType"/>
       </Item>
       <Item>
+         <Element>ConsentedBy</Element>
+         <Position>3</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The student or student caregiver that has consented to the medicine being administered to the student by the school.</p>
+         </Description>
+         <Type ref="CommonTypes" name="ObjectReferenceType"/>
+      </Item>
+      <Item>
          <Element>ProviderApplicableTo</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The provider the medication administartion consent is applicable to.</p>
@@ -2883,10 +2997,11 @@
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
       <Item>
-         <Element>ConsentedBy</Element>
-         <Characteristics>M</Characteristics>
+         <Element>AdministeredBy</Element>
+         <Position>5</Position>
+         <Characteristics>O</Characteristics>
          <Description>
-            <p>The student or student caregiver that has consented to the medicine being administered to the student by the school.</p>
+            <p>The staff member at the school that have been given permission by the student or the student's caregiver to administer the medicine to the student.</p>
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
@@ -2915,15 +3030,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>MedicationConsentList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A list consents that have been provided for administration of a medicine to a student.</p>
-         </Description>
-         <Type ref="CommonTypes" name="MedicationConsentListType"/>
-      </Item>
-      <Item>
          <Element>MedicationName</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Name of medication required for the student.</p>
@@ -2932,6 +3040,7 @@
       </Item>
       <Item>
          <Element>Dosage</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Dosage and strength of medication required for the student.</p>
@@ -2940,6 +3049,7 @@
       </Item>
       <Item>
          <Element>Frequency</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Frequency of Administration.</p>
@@ -2948,6 +3058,7 @@
       </Item>
       <Item>
          <Element>AdministrationInformation</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Information about how the medication is to be administered.</p>
@@ -2956,11 +3067,21 @@
       </Item>
       <Item>
          <Element>Method</Element>
+         <Position>5</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Method of administration.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>MedicationConsentList</Element>
+         <Position>6</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A list consents that have been provided for administration of a medicine to a student.</p>
+         </Description>
+         <Type ref="CommonTypes" name="MedicationConsentListType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="NSNType">
@@ -2983,31 +3104,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>AssessmentRequestType</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Denotes whether the request to NZQA is for a Digital Exam/ Paper Exam or Digital Submission / Physical Submission.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsAssessmentRequestTypeType"/>
-      </Item>
-      <Item>
-         <Element>AnswerLanguage</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The language the student will submit their work in, e.g. Te Reo Māori.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
-      </Item>
-      <Item>
-         <Element>PaperLanguage</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The language requested for a translated exam paper, e.g. Te Reo Māori.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
-      </Item>
-      <Item>
          <Element>EnrolmentId</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The student's NZQA enrolment Id.</p>
@@ -3016,11 +3114,39 @@
       </Item>
       <Item>
          <Element>EntryId</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The student's NZQA entry Id provided upon confirmation of the student's registration to be assessed against a unit or achievement standard.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>AssessmentRequestType</Element>
+         <Position>3</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Denotes whether the request to NZQA is for a Digital Exam/ Paper Exam or Digital Submission / Physical Submission.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsAssessmentRequestTypeType"/>
+      </Item>
+      <Item>
+         <Element>PaperLanguage</Element>
+         <Position>4</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The language requested for a translated exam paper, e.g. Te Reo Māori.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
+      </Item>
+      <Item>
+         <Element>AnswerLanguage</Element>
+         <Position>5</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The language the student will submit their work in, e.g. Te Reo Māori.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="NZQAEnrolmentType">
@@ -3031,15 +3157,17 @@
          </Description>
       </Item>
       <Item>
-         <Element>FinancialAssistance</Element>
+         <Element>EnrolmentId</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>Code set denoting the type of financial assistance the student is receiving.</p>
+            <p>The student's NZQA enrolment Id.</p>
          </Description>
-         <Type ref="CodeSets" name="NZCodeSetsNZQAFinancialAssistanceType"/>
+         <Type name="xs:normalizedString"/>
       </Item>
       <Item>
          <Element>ExamCentre</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The exam centre the student is sitting their NZQA assessments though.</p>
@@ -3047,23 +3175,8 @@
          <Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
       </Item>
       <Item>
-         <Element>WithdrawnAllAssessmentsInd</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Indicates that the student has withdrawn from all NZQA assessments.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-      </Item>
-      <Item>
-         <Element>SortCode</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Student’s NZQA sort code, e.g. 13AB. Sort order for admission slips. Often the form class of the student.</p>
-         </Description>
-         <Type name="xs:normalizedString"/>
-      </Item>
-      <Item>
          <Element>FeeAmount</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Amount paid by student to school for current year's NZQA fees.</p>
@@ -3071,7 +3184,26 @@
          <Type name="xs:decimal"/>
       </Item>
       <Item>
+         <Element>FinancialAssistance</Element>
+         <Position>4</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Code set denoting the type of financial assistance the student is receiving.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsNZQAFinancialAssistanceType"/>
+      </Item>
+      <Item>
+         <Element>SortCode</Element>
+         <Position>4</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Student’s NZQA sort code, e.g. 13AB. Sort order for admission slips. Often the form class of the student.</p>
+         </Description>
+         <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
          <Element>SubmitterName</Element>
+         <Position>5</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Full name of person submitting student information to NZQA.</p>
@@ -3080,6 +3212,7 @@
       </Item>
       <Item>
          <Element>SubmitterEmailAddress</Element>
+         <Position>6</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>E-mail address of person submitting student information to NZQA.</p>
@@ -3087,12 +3220,13 @@
          <Type name="xs:normalizedString"/>
       </Item>
       <Item>
-         <Element>EnrolmentId</Element>
+         <Element>WithdrawnAllAssessmentsInd</Element>
+         <Position>7</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>The student's NZQA enrolment Id.</p>
+            <p>Indicates that the student has withdrawn from all NZQA assessments.</p>
          </Description>
-         <Type name="xs:normalizedString"/>
+         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="NamedObjectReferenceType">
@@ -3101,14 +3235,6 @@
          <Description>
             <p>A reference to another named SIF Data Object; contains the name of the SIF object being referenced, so that the reference may refer to different object types. Eg: StudentAttainment has an attainment object reference which can refer to any one of ProviderCourse, Credential or LearningStandard.</p>
          </Description>
-      </Item>
-      <Item>
-         <Element>ObjectType</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>The type of the referenced object:</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsReferrableDataObjectsType"/>
       </Item>
       <Item>
          <Element>RefId</Element>
@@ -3137,6 +3263,15 @@
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <Item>
+         <Element>ObjectType</Element>
+         <Position>10</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The type of the referenced object:</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsReferrableDataObjectsType"/>
+      </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="NoteListType">
       <Item>
@@ -3162,7 +3297,35 @@
          </Description>
       </Item>
       <Item>
+         <Element>Note</Element>
+         <Position>1</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>Free text note.</p>
+         </Description>
+         <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>CreatedDateTime</Element>
+         <Position>2</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The date and time the note was created.</p>
+         </Description>
+         <Type name="xs:dateTime"/>
+      </Item>
+      <Item>
+         <Element>LastUpdatedDateTime</Element>
+         <Position>3</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The date and time the note was last updated.</p>
+         </Description>
+         <Type name="xs:dateTime"/>
+      </Item>
+      <Item>
          <Element>CreatedBy</Element>
+         <Position>4</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>Generic reference to the user that created the note.</p>
@@ -3171,35 +3334,12 @@
       </Item>
       <Item>
          <Element>LastUpdatedBy</Element>
+         <Position>5</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Generic reference to the user that last updated the note.</p>
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
-      </Item>
-      <Item>
-         <Element>Note</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Free text note.</p>
-         </Description>
-         <Type name="xs:normalizedString"/>
-      </Item>
-      <Item>
-         <Element>CreatedDateTime</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The date and time the note was created.</p>
-         </Description>
-         <Type name="xs:dateTime"/>
-      </Item>
-      <Item>
-         <Element>LastUpdatedDateTime</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The date and time the note was last updated.</p>
-         </Description>
-         <Type name="xs:dateTime"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="ObjectReferenceType">
@@ -3263,6 +3403,7 @@
       </Item>
       <Item>
          <Element>DiagnosisType</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>The official diagnosis type the student was given.</p>
@@ -3270,15 +3411,8 @@
          <Type ref="CodeSets" name="NZCodeSetsOfficialDiagnosisTypeType"/>
       </Item>
       <Item>
-         <Element>DocumentList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A list of documents that conatin information that pertain to this official diagnosis.</p>
-         </Description>
-         <Type ref="CommonTypes" name="DocumentListType"/>
-      </Item>
-      <Item>
          <Element>DiagnosisSubType</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The official diagnosis sub-type the student was given.</p>
@@ -3287,11 +3421,21 @@
       </Item>
       <Item>
          <Element>OfficialDiagnosisDetail</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Providers additional free text information about an official diagnosis. Mandatory when the Official Diagnosis Type selected is ‘Physical Impairments’, or ‘Medical Conditions’. Mandatory when the Official Diagnosis Sub-Type selected is ‘Other neurodevelopmental disorders/developmental anomalies’, Other mental health disorders’, or ‘Other sensory impairment’.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>DocumentList</Element>
+         <Position>4</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A list of documents that conatin information that pertain to this official diagnosis.</p>
+         </Description>
+         <Type ref="CommonTypes" name="DocumentListType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="OrganisationEmailsType">
@@ -3334,14 +3478,6 @@
          </Description>
       </Item>
       <Item>
-         <Element>OrganisationRole</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>The role of the education provider or organisation in relation to the assessment task, e.g. assessing provider, assessment location provider, assessment provider, registering provider.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsAssessmentProviderRoleType"/>
-      </Item>
-      <Item>
          <Element>RefId</Element>
          <Position>1</Position>
          <Characteristics>O</Characteristics>
@@ -3376,6 +3512,15 @@
             <p>A reference to a Provider specific location at the Organisation; rather than the Provider as a whole.</p>
          </Description>
          <Type name="xs:int"/>
+      </Item>
+      <Item>
+         <Element>OrganisationRole</Element>
+         <Position>10</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The role of the education provider or organisation in relation to the assessment task, e.g. assessing provider, assessment location provider, assessment provider, registering provider.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsAssessmentProviderRoleType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="OrganisationObjectReferenceType">
@@ -3463,6 +3608,7 @@
       </Item>
       <Item>
          <Element>OtherResponseDate</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Date of the other response</p>
@@ -3471,6 +3617,7 @@
       </Item>
       <Item>
          <Element>OtherResponseDescription</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Description of the other response.</p>
@@ -3479,6 +3626,7 @@
       </Item>
       <Item>
          <Element>OtherResponseNotes</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Any comments/notes associated with the other response.</p>
@@ -3510,6 +3658,7 @@
       <Choice>
          <Item>
             <Element>Student</Element>
+            <Position>2</Position>
             <Characteristics>O</Characteristics>
             <Description>
                <p>A student associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
@@ -3518,6 +3667,7 @@
          </Item>
          <Item>
             <Element>Person</Element>
+            <Position>1</Position>
             <Characteristics>O</Characteristics>
             <Description>
                <p>A non student person associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
@@ -3534,7 +3684,17 @@
          </Description>
       </Item>
       <Item>
+         <Element>Owner</Element>
+         <Position>1</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The owner of the document</p>
+         </Description>
+         <Type ref="CommonTypes" name="PersonDocumentRoleChoiceType"/>
+      </Item>
+      <Item>
          <Element>Author</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The author of the document.</p>
@@ -3543,6 +3703,7 @@
       </Item>
       <Item>
          <Element>SubjectOf</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The subject of the document.</p>
@@ -3551,6 +3712,7 @@
       </Item>
       <Item>
          <Element>Reviewer</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The reviewer of the document.</p>
@@ -3558,15 +3720,8 @@
          <Type ref="CommonTypes" name="PersonDocumentRoleChoiceType"/>
       </Item>
       <Item>
-         <Element>Owner</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The owner of the document</p>
-         </Description>
-         <Type ref="CommonTypes" name="PersonDocumentRoleChoiceType"/>
-      </Item>
-      <Item>
          <Element>AddedBy</Element>
+         <Position>5</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The person who add the object.</p>
@@ -3636,22 +3791,6 @@
          </Facets>
       </Item>
       <Item>
-         <Element>PersonType</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The type of person that the person involved is, e.g. Teacher, Peers, etc.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsPersonInvolvedTypeType"/>
-      </Item>
-      <Item>
-         <Element>HowInvolved</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Optional free text detailing level of involvement.</p>
-         </Description>
-         <Type name="xs:normalizedString"/>
-      </Item>
-      <Item>
          <Element>RefId</Element>
          <Position>1</Position>
          <Characteristics>O</Characteristics>
@@ -3661,6 +3800,15 @@
          <Type ref="CommonTypes" name="RefIdType"/>
       </Item>
       <Item>
+         <Element>HowInvolved</Element>
+         <Position>1</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Optional free text detailing level of involvement.</p>
+         </Description>
+         <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
          <Element>LocalId</Element>
          <Position>2</Position>
          <Characteristics>O</Characteristics>
@@ -3668,6 +3816,15 @@
             <p>The Id of the data object record that was provided by the system that the information was originally sourced from.</p>
          </Description>
          <Type ref="CommonTypes" name="LocalIdType"/>
+      </Item>
+      <Item>
+         <Element>PersonType</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The type of person that the person involved is, e.g. Teacher, Peers, etc.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsPersonInvolvedTypeType"/>
       </Item>
       <Item>
          <Element>Name</Element>
@@ -3696,15 +3853,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>Work</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A person's work number.</p>
-         </Description>
-         <Type ref="CommonTypes" name="PhoneNumberType"/>
-      </Item>
-      <Item>
          <Element>Home</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>A person's home number.</p>
@@ -3712,7 +3862,17 @@
          <Type ref="CommonTypes" name="PhoneNumberType"/>
       </Item>
       <Item>
+         <Element>Work</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A person's work number.</p>
+         </Description>
+         <Type ref="CommonTypes" name="PhoneNumberType"/>
+      </Item>
+      <Item>
          <Element>Mobile</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>A person's mobile number.</p>
@@ -3757,7 +3917,7 @@
       <Item>
          <Element>Number</Element>
          <Position>10</Position>
-         <Characteristics>O</Characteristics>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>Phone number. Free-form, but typical New Zealand formats include:</p>
          </Description>
@@ -3829,7 +3989,17 @@
          </Description>
       </Item>
       <Item>
+         <Element>NotifiedDate</Element>
+         <Position>1</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The date the school was notified of the pre-enrolment cancellation.</p>
+         </Description>
+         <Type name="xs:date"/>
+      </Item>
+      <Item>
          <Element>CancellationMethod</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>How the student's pre-enrolment was cancelled</p>
@@ -3838,6 +4008,7 @@
       </Item>
       <Item>
          <Element>CancellationReason</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The reason the pre-enrolment was cancelled.</p>
@@ -3846,19 +4017,12 @@
       </Item>
       <Item>
          <Element>CancellationReasonOtherDesc</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Free text reason the pre-enrolment was canceled if the cancellation reason of other was selected.</p>
          </Description>
          <Type name="xs:normalizedString"/>
-      </Item>
-      <Item>
-         <Element>NotifiedDate</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The date the school was notified of the pre-enrolment cancellation.</p>
-         </Description>
-         <Type name="xs:date"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="PrerequisiteListType">
@@ -3899,7 +4063,26 @@
          </Description>
       </Item>
       <Item>
+         <Element>Reason</Element>
+         <Position>1</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>A code describing how or why the student's enrolment was terminated.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsEnrolmentExitTypeType"/>
+      </Item>
+      <Item>
+         <Element>PostSchoolActivity</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The post school activity the student is moving on to once they have exited the school.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsPostSchoolActivityType"/>
+      </Item>
+      <Item>
          <Element>InterventionList</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>A list of references to Wellbeing Event, Response &amp; Appeal data objects, that record the process of terminating a students enrolment.</p>
@@ -3908,27 +4091,12 @@
       </Item>
       <Item>
          <Element>PotentialDestinationSchoolList</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>A list of the potential schools the student may go to after leaving this school.</p>
          </Description>
          <Type ref="CommonTypes" name="PotentialDestinationSchoolListType"/>
-      </Item>
-      <Item>
-         <Element>PostSchoolActivity</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The post school activity the student is moving on to once they have exited the school.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsPostSchoolActivityType"/>
-      </Item>
-      <Item>
-         <Element>Reason</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>A code describing how or why the student's enrolment was terminated.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsEnrolmentExitTypeType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="RecognitionListType">
@@ -3940,7 +4108,7 @@
       </Item>
       <Item>
          <Element>Recognition</Element>
-         <Characteristics>OR</Characteristics>
+         <Characteristics>MR</Characteristics>
          <Description>
             <p>The nature of recognition given to the student for the successful completion of work in a co-curricular or extra-curricular activity.</p>
          </Description>
@@ -4054,20 +4222,22 @@
          </Description>
       </Item>
       <Item>
-         <Element>Type</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The type of reflection that the staff member performed.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsStaffRestraintReflectionTypeType"/>
-      </Item>
-      <Item>
          <Element>ReflectionDescription</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Free text outlining the staff members thoughts on a type of reflection.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>Type</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The type of reflection that the staff member performed.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsStaffRestraintReflectionTypeType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="RelatedLearningStandardType">
@@ -4076,14 +4246,6 @@
          <Description>
             <p>A member of a list of related LearningStandard references.</p>
          </Description>
-      </Item>
-      <Item>
-         <Element>Relationship</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>Code describing the relatiosnhip from a LearningStandard to a related LearningStandard.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsLearningStandardRelationshipTypeType"/>
       </Item>
       <Item>
          <Element>RefId</Element>
@@ -4111,6 +4273,15 @@
             <p>The normal descriptive name of the referenced object.</p>
          </Description>
          <Type name="xs:string"/>
+      </Item>
+      <Item>
+         <Element>Relationship</Element>
+         <Position>10</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>Code describing the relatiosnhip from a LearningStandard to a related LearningStandard.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsLearningStandardRelationshipTypeType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="RelatedLearningStandardsListType">
@@ -4255,6 +4426,7 @@
       </Item>
       <Item>
          <Element>Code</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>Code representing the relationship.</p>
@@ -4263,6 +4435,7 @@
       </Item>
       <Item>
          <Element>OtherTypeDescription</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>A free text description of relationship type, where Relationship To Student Type is set to ‘Other’, eg ‘Au-pair’, ‘Neighbour’.</p>
@@ -4308,15 +4481,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>Role</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The role of the person who administered the physical restraint to the student.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsRestraintAdministeredByRoleType"/>
-      </Item>
-      <Item>
          <Element>AdministeredBy</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The person who administered the physical restraint to the student.</p>
@@ -4325,6 +4491,7 @@
       </Item>
       <Item>
          <Element>SafePhysicalRestraintTraining</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Indicates whether or not the person involved has received training of the safe use of physical restraint.</p>
@@ -4333,11 +4500,21 @@
       </Item>
       <Item>
          <Element>TrainingDescription</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Free text providing additional information about any training the person has had on the safe use pf physical restraint.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>Role</Element>
+         <Position>4</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The role of the person who administered the physical restraint to the student.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsRestraintAdministeredByRoleType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="RestraintDebriefingListType">
@@ -4364,23 +4541,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>AttendeeList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A list of the people that attended the debriefing.</p>
-         </Description>
-         <Type ref="CommonTypes" name="AttendeeListType"/>
-      </Item>
-      <Item>
-         <Element>DebriefingType</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The type of debriefing that occurred, e.g. staff, or student and parent/caregiver.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsRestraintDebriefingTypeType"/>
-      </Item>
-      <Item>
          <Element>DebriefingDate</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The date the debriefing about the use of physical restraint on the student occurred.</p>
@@ -4389,6 +4551,7 @@
       </Item>
       <Item>
          <Element>DebriefingTime</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The time the debriefing about the use of physical restraint on the student occurred.</p>
@@ -4397,6 +4560,7 @@
       </Item>
       <Item>
          <Element>Findings</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Free text outlining the findings of the debriefing in the use of physical restraint on the student.</p>
@@ -4405,6 +4569,7 @@
       </Item>
       <Item>
          <Element>NextStepsActions</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Free text about the next steps and/or actions that will be taken in as a result of the debriefing on the use of physical restraint on the student.</p>
@@ -4413,6 +4578,7 @@
       </Item>
       <Item>
          <Element>ParentCaregiverComment</Element>
+         <Position>5</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Parent/caregiver comments made about the use physical restraint on the student.</p>
@@ -4421,11 +4587,30 @@
       </Item>
       <Item>
          <Element>StudentComment</Element>
+         <Position>6</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Student comments made about the use physical restraint on the them.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>DebriefingType</Element>
+         <Position>7</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The type of debriefing that occurred, e.g. staff, or student and parent/caregiver.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsRestraintDebriefingTypeType"/>
+      </Item>
+      <Item>
+         <Element>AttendeeList</Element>
+         <Position>8</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A list of the people that attended the debriefing.</p>
+         </Description>
+         <Type ref="CommonTypes" name="AttendeeListType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="RestraintQuestionListType">
@@ -4453,6 +4638,7 @@
       </Item>
       <Item>
          <Element>Question</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>The question asked about the physical restraint incident.</p>
@@ -4461,6 +4647,7 @@
       </Item>
       <Item>
          <Element>Answer</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The answer to the question. Options are Yes or No.</p>
@@ -4469,6 +4656,7 @@
       </Item>
       <Item>
          <Element>AnswerSupportingDescription</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>A free text description providing additional information about the question if required.</p>
@@ -4564,6 +4752,7 @@
       </Item>
       <Item>
          <Element>SchedulePeriod</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>The scheduled period this teaching group meeting attendance is being recorded for.</p>
@@ -4572,6 +4761,7 @@
       </Item>
       <Item>
          <Element>StartTime</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The time the scheduled meeting started.</p>
@@ -4580,6 +4770,7 @@
       </Item>
       <Item>
          <Element>EndTime</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The time the scheduled meeting finished.</p>
@@ -4700,7 +4891,7 @@
       <Item>
          <Element>YearLevel</Element>
          <Position>1</Position>
-         <Characteristics>O</Characteristics>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>The year levels offered by the school. This is actual year level of the students not funding year level. May only contain values from 1 to 13 inclusive.</p>
          </Description>
@@ -4713,7 +4904,7 @@
       <Item>
          <Element>FIRSTSchoolYearGenderId</Element>
          <Position>2</Position>
-         <Characteristics>O</Characteristics>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>This is the unique identifier for the combination of School Year, Gender and Boarding received from FIRST.</p>
             <p>There may be multiple sets of School Year, Gender and boarding for a school, each with their own identifier. A record must be created for each set.</p>
@@ -4754,7 +4945,7 @@
          <Description>
             <p>Information about a student's social goal.</p>
          </Description>
-         <Type ref="CommonTypes" name="SocialGoalType"/>
+         <Type ref="CommonTypes" name="BaseStudentGoalType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="SocialGoalType">
@@ -4788,6 +4979,7 @@
       </Item>
       <Item>
          <Element>GoalRecordedDate</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The date the student's social goal was recorded.</p>
@@ -4835,14 +5027,6 @@
          </Description>
       </Item>
       <Item>
-         <Element>StaffRole</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>The role of the staff member in realtion to the assessment task, e.g. assessment task creator or moderator.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsAssessmentStaffRoleType"/>
-      </Item>
-      <Item>
          <Element>RefId</Element>
          <Position>1</Position>
          <Characteristics>O</Characteristics>
@@ -4868,6 +5052,15 @@
             <p>The normal descriptive name of the referenced object.</p>
          </Description>
          <Type name="xs:string"/>
+      </Item>
+      <Item>
+         <Element>StaffRole</Element>
+         <Position>10</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The role of the staff member in realtion to the assessment task, e.g. assessment task creator or moderator.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsAssessmentStaffRoleType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="StaffListStaffMemberType">
@@ -4878,14 +5071,6 @@
          </Description>
       </Item>
       <Item>
-         <Element>Role</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>Code describing the staff member's role. Note: This role may affect the Teacher's access to the students' data for those students who are members of the TeachingGroup.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsStaffRoleType"/>
-      </Item>
-      <Item>
          <Element>RefId</Element>
          <Position>1</Position>
          <Characteristics>O</Characteristics>
@@ -4911,6 +5096,15 @@
             <p>The normal descriptive name of the referenced object.</p>
          </Description>
          <Type name="xs:string"/>
+      </Item>
+      <Item>
+         <Element>Role</Element>
+         <Position>10</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>Code describing the staff member's role. Note: This role may affect the Teacher's access to the students' data for those students who are members of the TeachingGroup.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsStaffRoleType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="StaffListType">
@@ -4979,14 +5173,6 @@
          </Description>
       </Item>
       <Item>
-         <Element>Staff</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The staff member who performed the staff reflection.</p>
-         </Description>
-         <Type ref="CommonTypes" name="ObjectReferenceType"/>
-      </Item>
-      <Item>
          <Element>ReflectionList</Element>
          <Characteristics>O</Characteristics>
          <Description>
@@ -4995,7 +5181,17 @@
          <Type ref="CommonTypes" name="ReflectionListType"/>
       </Item>
       <Item>
+         <Element>ReflectionDate</Element>
+         <Position>1</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The date the staff member performed their reflection on the use of physical restraint on the student.</p>
+         </Description>
+         <Type name="xs:date"/>
+      </Item>
+      <Item>
          <Element>WitnessedBy</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The staff member that witnessed the person who applied the restraint performing the staff reflections.</p>
@@ -5003,12 +5199,13 @@
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
       <Item>
-         <Element>ReflectionDate</Element>
+         <Element>Staff</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>The date the staff member performed their reflection on the use of physical restraint on the student.</p>
+            <p>The staff member who performed the staff reflection.</p>
          </Description>
-         <Type name="xs:date"/>
+         <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="StaffSubjectListType">
@@ -5035,15 +5232,17 @@
          </Description>
       </Item>
       <Item>
-         <Element>YearLevels</Element>
+         <Element>PreferenceNumber</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>Staff assignment to this particular subject area / learning area applies only for students enrolled in a particular set of year levels. e.g. "Asst. Head of Dept (Maths, Jnr)" could ony be responsible for Students in year levels 9 &amp; 10, who are learning Mathematics.</p>
+            <p>Priority of Subject to Teach.</p>
          </Description>
-         <Type ref="CommonTypes" name="YearLevelListType"/>
+         <Type name="xs:unsignedInt"/>
       </Item>
       <Item>
          <Element>Code</Element>
+         <Position>2</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>NZ education standardised code denoting SubjectArea / LearningArea</p>
@@ -5051,12 +5250,13 @@
          <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
       </Item>
       <Item>
-         <Element>PreferenceNumber</Element>
+         <Element>YearLevels</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>Priority of Subject to Teach.</p>
+            <p>Staff assignment to this particular subject area / learning area applies only for students enrolled in a particular set of year levels. e.g. "Asst. Head of Dept (Maths, Jnr)" could ony be responsible for Students in year levels 9 &amp; 10, who are learning Mathematics.</p>
          </Description>
-         <Type name="xs:unsignedInt"/>
+         <Type ref="CommonTypes" name="YearLevelListType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="StartDateType">
@@ -5101,7 +5301,7 @@
       </Item>
       <Item>
          <Element>Code</Element>
-         <Characteristics>O</Characteristics>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>A valid value defined for the nominated spatial unit type, as defined by Statistics New Zealand in one of the definitions per NZCodeSetsSpatialUnitType.</p>
          </Description>
@@ -5132,15 +5332,17 @@
          </Description>
       </Item>
       <Item>
-         <Element>DocumentList</Element>
-         <Characteristics>O</Characteristics>
+         <Element>AchievementObjective</Element>
+         <Position>1</Position>
+         <Characteristics>M</Characteristics>
          <Description>
-            <p>Documents that relate to students progress in this strand achievement objective, e.g. report, photos, media, documents etc.</p>
+            <p>Code denoting the particular achievement objective against which the student's progress is being reported.</p>
          </Description>
-         <Type ref="CommonTypes" name="DocumentListType"/>
+         <Type ref="CodeSets" name="NZCodeSetsStrandAchievementObjectiveType"/>
       </Item>
       <Item>
          <Element>CurriculumLevel</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The technology curriculum level that the student's progress report is being made against for this learning strand achievement objective. e.g. 2, 3, 4 or 5.</p>
@@ -5149,6 +5351,7 @@
       </Item>
       <Item>
          <Element>ProgressLevel</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Code denoting the level of progress the student has made against the particular learning strand achievement objective. e.g. Beginner, Proficient, and Advanced.</p>
@@ -5156,15 +5359,8 @@
          <Type ref="CodeSets" name="NZCodeSetsStrandAchievementProgressLevelType"/>
       </Item>
       <Item>
-         <Element>AchievementObjective</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>Code denoting the particular achievement objective against which the student's progress is being reported.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsStrandAchievementObjectiveType"/>
-      </Item>
-      <Item>
          <Element>AchievementObjectiveDesc</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>A description of what the achievement objective covers.</p>
@@ -5172,7 +5368,17 @@
          <Type name="xs:normalizedString"/>
       </Item>
       <Item>
+         <Element>OverallStudentEffortNote</Element>
+         <Position>5</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A note about the student's overall effort in relation to this achievement objective for this strand.</p>
+         </Description>
+         <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
          <Element>PracticalAbilityDesc</Element>
+         <Position>6</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>A description of practical ability covered by the achievement objective for the strand.</p>
@@ -5181,6 +5387,7 @@
       </Item>
       <Item>
          <Element>PracticalAbilityProgressNote</Element>
+         <Position>7</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>A note about the student's practical ability progress in relation to this achievement objective for this strand.</p>
@@ -5188,12 +5395,13 @@
          <Type name="xs:normalizedString"/>
       </Item>
       <Item>
-         <Element>OverallStudentEffortNote</Element>
+         <Element>DocumentList</Element>
+         <Position>8</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>A note about the student's overall effort in relation to this achievement objective for this strand.</p>
+            <p>Documents that relate to students progress in this strand achievement objective, e.g. report, photos, media, documents etc.</p>
          </Description>
-         <Type name="xs:normalizedString"/>
+         <Type ref="CommonTypes" name="DocumentListType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentAttendanceListType">
@@ -5220,15 +5428,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>Code</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>The student's type of attednance at this teaching group meeting, e.g. present, absent or another reason for the stduent's non-attendance at school, or class.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsAttendanceCodeType"/>
-      </Item>
-      <Item>
          <Element>Student</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>A student that attended the teaching group meeting and their recorded attendance.</p>
@@ -5236,7 +5437,17 @@
          <Type ref="CommonTypes" name="StudentObjectReferenceType"/>
       </Item>
       <Item>
+         <Element>Code</Element>
+         <Position>2</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The student's type of attednance at this teaching group meeting, e.g. present, absent or another reason for the stduent's non-attendance at school, or class.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsAttendanceCodeType"/>
+      </Item>
+      <Item>
          <Element>CodeGroup</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The attendance code groups the student's attendance fell under, e.g. Present, Justified and Unjustified.</p>
@@ -5245,6 +5456,7 @@
       </Item>
       <Item>
          <Element>Note</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Free text note about the student's attendance.</p>
@@ -5253,6 +5465,7 @@
       </Item>
       <Item>
          <Element>StartTime</Element>
+         <Position>5</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The time the student arrived at the teaching group meeting. Only recorded if the student arrives after the meeting start time.</p>
@@ -5261,6 +5474,7 @@
       </Item>
       <Item>
          <Element>EndTime</Element>
+         <Position>6</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The time the student left the teaching group meeting. Only recorded if they stayed later than the meeting end time.</p>
@@ -5292,30 +5506,6 @@
          </Description>
       </Item>
       <Item>
-         <Element>HouseholdContactInfoList</Element>
-         <Characteristics>OR</Characteristics>
-         <Description>
-            <p>The person's household/s contact information. A list of one or more household’s contact information.</p>
-         </Description>
-         <Type ref="CommonTypes" name="HouseholdContactInfoListType"/>
-      </Item>
-      <Item>
-         <Element>Address</Element>
-         <Characteristics>OR</Characteristics>
-         <Description>
-            <p>The person's address(es) - one or more addresses.</p>
-         </Description>
-         <Type ref="CommonTypes" name="AddressesType"/>
-      </Item>
-      <Item>
-         <Element>Phone</Element>
-         <Characteristics>OR</Characteristics>
-         <Description>
-            <p>The person's phone number(s) - one or more phone numbers.</p>
-         </Description>
-         <Type ref="CommonTypes" name="PersonPhoneType"/>
-      </Item>
-      <Item>
          <Element>Name</Element>
          <Position>1</Position>
          <Characteristics>M</Characteristics>
@@ -5332,6 +5522,33 @@
             <p>The person's e-mail address(es).</p>
          </Description>
          <Type ref="CommonTypes" name="PersonEmailsType"/>
+      </Item>
+      <Item>
+         <Element>Address</Element>
+         <Position>10</Position>
+         <Characteristics>OR</Characteristics>
+         <Description>
+            <p>The person's address(es) - one or more addresses.</p>
+         </Description>
+         <Type ref="CommonTypes" name="AddressesType"/>
+      </Item>
+      <Item>
+         <Element>Phone</Element>
+         <Position>11</Position>
+         <Characteristics>OR</Characteristics>
+         <Description>
+            <p>The person's phone number(s) - one or more phone numbers.</p>
+         </Description>
+         <Type ref="CommonTypes" name="PersonPhoneType"/>
+      </Item>
+      <Item>
+         <Element>HouseholdContactInfoList</Element>
+         <Position>12</Position>
+         <Characteristics>OR</Characteristics>
+         <Description>
+            <p>The person's household/s contact information. A list of one or more household’s contact information.</p>
+         </Description>
+         <Type ref="CommonTypes" name="HouseholdContactInfoListType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentCourseChoiceListType">
@@ -5358,20 +5575,22 @@
          </Description>
       </Item>
       <Item>
-         <Element>Course</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>The Course the student has chosen to study during the year.</p>
-         </Description>
-         <Type ref="CommonTypes" name="ObjectReferenceType"/>
-      </Item>
-      <Item>
          <Element>PreferenceNumber</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The student's preference for this subject, with respect to the other subject choices in the list.</p>
          </Description>
          <Type name="xs:unsignedInt"/>
+      </Item>
+      <Item>
+         <Element>Course</Element>
+         <Position>2</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The Course the student has chosen to study during the year.</p>
+         </Description>
+         <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentECEEnrolmentType">
@@ -5383,6 +5602,7 @@
       </Item>
       <Item>
          <Element>ECEYearLevel</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The year level of the student enrolled in early childhood education.</p>
@@ -5391,6 +5611,7 @@
       </Item>
       <Item>
          <Element>Curriculum</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Code denoting which part of the National Curriculum (NZ Curriculum or Te Marautanga o Aotearoa) the ECE learner is enrolled in.</p>
@@ -5422,23 +5643,17 @@
          </Description>
       </Item>
       <Item>
-         <Element>InterestType</Element>
+         <Element>InterestRecordedDate</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>The type of interest, e.g. sports, arts, cultural.</p>
+            <p>The date the student's interest was recorded.</p>
          </Description>
-         <Type ref="CodeSets" name="NZCodeSetsStudentInterestTypeType"/>
-      </Item>
-      <Item>
-         <Element>SubjectArea</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>If the student's interest is academic this holds the subject area they like.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
+         <Type name="xs:date"/>
       </Item>
       <Item>
          <Element>InterestDescription</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>A description of the student's interest.</p>
@@ -5447,6 +5662,7 @@
       </Item>
       <Item>
          <Element>InterestName</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The name of the student's interest.</p>
@@ -5454,12 +5670,22 @@
          <Type name="xs:normalizedString"/>
       </Item>
       <Item>
-         <Element>InterestRecordedDate</Element>
+         <Element>InterestType</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>The date the student's interest was recorded.</p>
+            <p>The type of interest, e.g. sports, arts, cultural.</p>
          </Description>
-         <Type name="xs:date"/>
+         <Type ref="CodeSets" name="NZCodeSetsStudentInterestTypeType"/>
+      </Item>
+      <Item>
+         <Element>SubjectArea</Element>
+         <Position>5</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>If the student's interest is academic this holds the subject area they like.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentListType">
@@ -5542,70 +5768,6 @@
          </Description>
       </Item>
       <Item>
-         <Element>Address</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The person's address(es).</p>
-         </Description>
-         <Type ref="CommonTypes" name="AddressesType"/>
-      </Item>
-      <Item>
-         <Element>Phone</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The person's phone number(s).</p>
-         </Description>
-         <Type ref="CommonTypes" name="PersonPhoneType"/>
-      </Item>
-      <Item>
-         <Element>MedicalNeedList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A list of a persons known medical needs.</p>
-         </Description>
-         <Type ref="CommonTypes" name="MedicalNeedListType"/>
-      </Item>
-      <Item>
-         <Element>HouseholdContactInfoList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The person's household/s contact information.</p>
-         </Description>
-         <Type ref="CommonTypes" name="HouseholdContactInfoListType"/>
-      </Item>
-      <Item>
-         <Element>OtherNameList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Previous, alternate or other names or aliases associated with the person.</p>
-         </Description>
-         <Type ref="CommonTypes" name="OtherNameListType"/>
-      </Item>
-      <Item>
-         <Element>Demographics</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Demographic information about the person.</p>
-         </Description>
-         <Type ref="CommonTypes" name="DemographicsType"/>
-      </Item>
-      <Item>
-         <Element>PersonPhoto</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A photo of the person. A person photo is stored in Document against the student with a document type of Person Photo.</p>
-         </Description>
-         <Type ref="CommonTypes" name="ObjectReferenceType"/>
-      </Item>
-      <Item>
-         <Element>VerifiedName</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The verified name of the person.</p>
-         </Description>
-         <Type ref="CommonTypes" name="VerifiedNameType"/>
-      </Item>
-      <Item>
          <Element>Name</Element>
          <Position>1</Position>
          <Characteristics>M</Characteristics>
@@ -5623,6 +5785,78 @@
          </Description>
          <Type ref="CommonTypes" name="PersonEmailsType"/>
       </Item>
+      <Item>
+         <Element>OtherNameList</Element>
+         <Position>10</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Previous, alternate or other names or aliases associated with the person.</p>
+         </Description>
+         <Type ref="CommonTypes" name="OtherNameListType"/>
+      </Item>
+      <Item>
+         <Element>VerifiedName</Element>
+         <Position>11</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The verified name of the person.</p>
+         </Description>
+         <Type ref="CommonTypes" name="VerifiedNameType"/>
+      </Item>
+      <Item>
+         <Element>Demographics</Element>
+         <Position>12</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Demographic information about the person.</p>
+         </Description>
+         <Type ref="CommonTypes" name="DemographicsType"/>
+      </Item>
+      <Item>
+         <Element>Address</Element>
+         <Position>13</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The person's address(es).</p>
+         </Description>
+         <Type ref="CommonTypes" name="AddressesType"/>
+      </Item>
+      <Item>
+         <Element>Phone</Element>
+         <Position>14</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The person's phone number(s).</p>
+         </Description>
+         <Type ref="CommonTypes" name="PersonPhoneType"/>
+      </Item>
+      <Item>
+         <Element>HouseholdContactInfoList</Element>
+         <Position>15</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The person's household/s contact information.</p>
+         </Description>
+         <Type ref="CommonTypes" name="HouseholdContactInfoListType"/>
+      </Item>
+      <Item>
+         <Element>PersonPhoto</Element>
+         <Position>16</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A photo of the person. A person photo is stored in Document against the student with a document type of Person Photo.</p>
+         </Description>
+         <Type ref="CommonTypes" name="ObjectReferenceType"/>
+      </Item>
+      <Item>
+         <Element>MedicalNeedList</Element>
+         <Position>17</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A list of a persons known medical needs.</p>
+         </Description>
+         <Type ref="CommonTypes" name="MedicalNeedListType"/>
+      </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentSchoolCoEnrolmentType">
       <Item>
@@ -5633,6 +5867,7 @@
       </Item>
       <Item>
          <Element>OtherProvider</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>The other school where the student is concurrently enrolled.</p>
@@ -5641,6 +5876,7 @@
       </Item>
       <Item>
          <Element>CoEnrolmentType</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The type of CoEnrolment.</p>
@@ -5648,15 +5884,15 @@
          <Type ref="CodeSets" name="NZCodeSetsCoEnrolmentTypeType"/>
       </Item>
       <Item>
-         <Element>GuardianConfidentialNote</Element>
+         <Element>BehaviouralKeyIssuesNote</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
-         <Description>
-            <p>Free text confidential note made by the parents/caregivers of the student.</p>
-         </Description>
+         <Description/>
          <Type name="xs:normalizedString"/>
       </Item>
       <Item>
          <Element>ClientSchoolConfidentialNote</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Free text confidential note made by the Client School in relation to the student.</p>
@@ -5664,9 +5900,12 @@
          <Type name="xs:normalizedString"/>
       </Item>
       <Item>
-         <Element>BehaviouralKeyIssuesNote</Element>
+         <Element>GuardianConfidentialNote</Element>
+         <Position>5</Position>
          <Characteristics>O</Characteristics>
-         <Description/>
+         <Description>
+            <p>Free text confidential note made by the parents/caregivers of the student.</p>
+         </Description>
          <Type name="xs:normalizedString"/>
       </Item>
    </CommonElement>
@@ -5678,79 +5917,17 @@
          </Description>
       </Item>
       <Item>
-         <Element>CourseChoiceList</Element>
+         <Element>SchoolYear</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>Student’s choice of courses to be studied during the school year. Not to be confused with StudentSubjectChoiceList which records student's choices of general subject and learning areas to be studied during the year.</p>
+            <p>School calendar year for which this enrolment is applicable. May be either a single year or across multiple years e.g. schools using the Maramataka calendar start the school year in June or July thus the school year would be 2021-2022.</p>
          </Description>
-         <Type ref="CommonTypes" name="StudentCourseChoiceListType"/>
-      </Item>
-      <Item>
-         <Element>LanguageOfInstructionList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A list of languages, and the number of hours per week the Learner is taught in that language during the enrolment.</p>
-         </Description>
-         <Type ref="CommonTypes" name="LanguageOfInstructionListType"/>
-      </Item>
-      <Item>
-         <Element>EligibilityVerification</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Records how the Student's eligibility to enrol / for funding was verified by the school staff during the enrolment process.</p>
-         </Description>
-         <Type ref="CommonTypes" name="VerificationEventType"/>
-      </Item>
-      <Item>
-         <Element>SubjectChoiceList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Student's choice of subject or learning areas to be studied during the school year. Not to be confused with StudentCourseChoiceList which records student's choices of specific courses to be studied during the year.</p>
-         </Description>
-         <Type ref="CommonTypes" name="StudentSubjectChoiceListType"/>
-      </Item>
-      <Item>
-         <Element>InternationalEnrolment</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Additional information collected for international enrolments.</p>
-         </Description>
-         <Type ref="CommonTypes" name="InternationalSchoolEnrolmentType"/>
-      </Item>
-      <Item>
-         <Element>AcademicAttainmentGoalList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The academic attainment goals of the student when they enrol, e.g. they wish to achieve a certain qualification.</p>
-         </Description>
-         <Type ref="CommonTypes" name="AcademicAttainmentGoalListType"/>
-      </Item>
-      <Item>
-         <Element>CoEnrolment</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Describes the student's enrolment with their base school in the case where this enrolment is not a base school enrolment.</p>
-         </Description>
-         <Type ref="CommonTypes" name="StudentSchoolCoEnrolmentType"/>
-      </Item>
-      <Item>
-         <Element>StudentConsentList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A list of student consent information.</p>
-         </Description>
-         <Type ref="CommonTypes" name="StudentConsentListType"/>
-      </Item>
-      <Item>
-         <Element>OngoingResourceScheme</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Indicates the level of ORS funding the student receives.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsOngoingResourceSchemeType"/>
+         <Type name="xs:normalizedString"/>
       </Item>
       <Item>
          <Element>StartDate</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The first attendance date of the student at the school for the specified school year.</p>
@@ -5759,6 +5936,7 @@
       </Item>
       <Item>
          <Element>EndDate</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The date of the student's final attendance at the school in the school year.</p>
@@ -5766,31 +5944,8 @@
          <Type ref="CommonTypes" name="EndDateType"/>
       </Item>
       <Item>
-         <Element>Curriculum</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>Code denoting which half of the National Curriculum (NZ Curriculum or Te Marautanga o Aotearoa) the student is enrolled in.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsCurriculumType"/>
-      </Item>
-      <Item>
-         <Element>NZQA</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>NZQA details for a student for this school year.</p>
-         </Description>
-         <Type ref="CommonTypes" name="NZQAEnrolmentType"/>
-      </Item>
-      <Item>
-         <Element>FTE</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Full-time equivalent numeric value of the student's course load during this Enrolment, expressed in decimal form, where 1.00 represents a full-time Enrolment.</p>
-         </Description>
-         <Type ref="CommonTypes" name="FTEType"/>
-      </Item>
-      <Item>
          <Element>MembershipType</Element>
+         <Position>4</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>The type of enrolment as it relates to this school, eg whether base school, co-enrolment.</p>
@@ -5798,15 +5953,21 @@
          <Type ref="CodeSets" name="NZCodeSetsSchoolEnrolmentTypeType"/>
       </Item>
       <Item>
-         <Element>FundingType</Element>
+         <Element>YearLevel</Element>
+         <Position>5</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>The student classification for MoE funding purposes</p>
+            <p>Represents the year level at which the student is considered to be predominantly taught. For example – Year 10, Year 11. Can only contain the values 0 through to 13 inclusive. Note: Year 0 students are new entrants that start primary school in the second half of the year, and move into Year 1 the following year.</p>
          </Description>
-         <Type ref="CodeSets" name="NZCodeSetsStudentFundingTypeType"/>
+         <Type name="xs:int"/>
+         <Facets>
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="13"/>
+         </Facets>
       </Item>
       <Item>
          <Element>EligibilityCriteria</Element>
+         <Position>6</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The criteria used to determine the eligibility status of a student for enrolment and MoE funding purposes.</p>
@@ -5814,43 +5975,35 @@
          <Type ref="CodeSets" name="NZCodeSetsEligibilityCriteriaType"/>
       </Item>
       <Item>
-         <Element>PreEnrolmentCancellation</Element>
+         <Element>EligibilityVerification</Element>
+         <Position>7</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>Details around why a pre-enrolment for a school was canceled.</p>
+            <p>Records how the Student's eligibility to enrol / for funding was verified by the school staff during the enrolment process.</p>
          </Description>
-         <Type ref="CommonTypes" name="PreEnrolmentCancellationType"/>
+         <Type ref="CommonTypes" name="VerificationEventType"/>
       </Item>
       <Item>
-         <Element>CurriculumLevel</Element>
+         <Element>FTE</Element>
+         <Position>8</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>The level of the National Curriculum (1-5) is the student enrolling in.</p>
+            <p>Full-time equivalent numeric value of the student's course load during this Enrolment, expressed in decimal form, where 1.00 represents a full-time Enrolment.</p>
          </Description>
-         <Type name="xs:unsignedInt"/>
-         <Facets>
-            <xs:minInclusive value="1"/>
-            <xs:maxInclusive value="5"/>
-         </Facets>
+         <Type ref="CommonTypes" name="FTEType"/>
       </Item>
       <Item>
-         <Element>SchoolYear</Element>
+         <Element>FundingType</Element>
+         <Position>9</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>School calendar year for which this enrolment is applicable. May be either a single year or across multiple years e.g. schools using the Maramataka calendar start the school year in June or July thus the school year would be 2021-2022.</p>
+            <p>The student classification for MoE funding purposes</p>
          </Description>
-         <Type name="xs:normalizedString"/>
-      </Item>
-      <Item>
-         <Element>TimeInImmersion</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The number of years the student has been in immersion.</p>
-         </Description>
-         <Type name="xs:unsignedInt"/>
+         <Type ref="CodeSets" name="NZCodeSetsStudentFundingTypeType"/>
       </Item>
       <Item>
          <Element>FundingYearLevel</Element>
+         <Position>10</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Indicates the number of years for which funding has been provided by MoE. Must only contain values from 0 through to 15 inclusive.</p>
@@ -5862,7 +6015,48 @@
          </Facets>
       </Item>
       <Item>
+         <Element>Curriculum</Element>
+         <Position>11</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>Code denoting which half of the National Curriculum (NZ Curriculum or Te Marautanga o Aotearoa) the student is enrolled in.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsCurriculumType"/>
+      </Item>
+      <Item>
+         <Element>CurriculumLevel</Element>
+         <Position>12</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The level of the National Curriculum (1-5) is the student enrolling in.</p>
+         </Description>
+         <Type name="xs:unsignedInt"/>
+         <Facets>
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="5"/>
+         </Facets>
+      </Item>
+      <Item>
+         <Element>LanguageOfInstructionList</Element>
+         <Position>13</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A list of languages, and the number of hours per week the Learner is taught in that language during the enrolment.</p>
+         </Description>
+         <Type ref="CommonTypes" name="LanguageOfInstructionListType"/>
+      </Item>
+      <Item>
+         <Element>TimeInImmersion</Element>
+         <Position>14</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The number of years the student has been in immersion.</p>
+         </Description>
+         <Type name="xs:unsignedInt"/>
+      </Item>
+      <Item>
          <Element>Section9Agreement</Element>
+         <Position>15</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Indicates whether or not the student is under Section 9 agreement.</p>
@@ -5870,16 +6064,85 @@
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
       <Item>
-         <Element>YearLevel</Element>
+         <Element>NZQA</Element>
+         <Position>16</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>Represents the year level at which the student is considered to be predominantly taught. For example – Year 10, Year 11. Can only contain the values 0 through to 13 inclusive. Note: Year 0 students are new entrants that start primary school in the second half of the year, and move into Year 1 the following year.</p>
+            <p>NZQA details for a student for this school year.</p>
          </Description>
-         <Type name="xs:int"/>
-         <Facets>
-            <xs:minInclusive value="1"/>
-            <xs:maxInclusive value="13"/>
-         </Facets>
+         <Type ref="CommonTypes" name="NZQAEnrolmentType"/>
+      </Item>
+      <Item>
+         <Element>OngoingResourceScheme</Element>
+         <Position>17</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Indicates the level of ORS funding the student receives.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsOngoingResourceSchemeType"/>
+      </Item>
+      <Item>
+         <Element>SubjectChoiceList</Element>
+         <Position>18</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Student's choice of subject or learning areas to be studied during the school year. Not to be confused with StudentCourseChoiceList which records student's choices of specific courses to be studied during the year.</p>
+         </Description>
+         <Type ref="CommonTypes" name="StudentSubjectChoiceListType"/>
+      </Item>
+      <Item>
+         <Element>CourseChoiceList</Element>
+         <Position>19</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Student’s choice of courses to be studied during the school year. Not to be confused with StudentSubjectChoiceList which records student's choices of general subject and learning areas to be studied during the year.</p>
+         </Description>
+         <Type ref="CommonTypes" name="StudentCourseChoiceListType"/>
+      </Item>
+      <Item>
+         <Element>CoEnrolment</Element>
+         <Position>20</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Describes the student's enrolment with their base school in the case where this enrolment is not a base school enrolment.</p>
+         </Description>
+         <Type ref="CommonTypes" name="StudentSchoolCoEnrolmentType"/>
+      </Item>
+      <Item>
+         <Element>InternationalEnrolment</Element>
+         <Position>21</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Additional information collected for international enrolments.</p>
+         </Description>
+         <Type ref="CommonTypes" name="InternationalSchoolEnrolmentType"/>
+      </Item>
+      <Item>
+         <Element>StudentConsentList</Element>
+         <Position>22</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A list of student consent information.</p>
+         </Description>
+         <Type ref="CommonTypes" name="StudentConsentListType"/>
+      </Item>
+      <Item>
+         <Element>AcademicAttainmentGoalList</Element>
+         <Position>23</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A list of references to StudentVoice entries recording the Student's academic attainment goals at the time of enrolment. e.g. they wish to achieve a certain qualification.</p>
+         </Description>
+         <Type ref="CommonTypes" name="AcademicAttainmentGoalListType"/>
+      </Item>
+      <Item>
+         <Element>PreEnrolmentCancellation</Element>
+         <Position>24</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Details around why a pre-enrolment for a school was canceled.</p>
+         </Description>
+         <Type ref="CommonTypes" name="PreEnrolmentCancellationType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentSubjectChoiceListType">
@@ -5906,20 +6169,22 @@
          </Description>
       </Item>
       <Item>
-         <Element>Code</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>Code denoting the actual chosen subject or learning area.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
-      </Item>
-      <Item>
          <Element>PreferenceNumber</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Subject Priority</p>
          </Description>
          <Type name="xs:unsignedInt"/>
+      </Item>
+      <Item>
+         <Element>Code</Element>
+         <Position>2</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>Code denoting the actual chosen subject or learning area.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentTertiaryEnrolmentType">
@@ -5929,7 +6194,7 @@
       </Item>
       <Item>
          <Element>type</Element>
-         <Characteristics>O</Characteristics>
+         <Characteristics>M</Characteristics>
          <Description/>
          <Type name="xs:normalizedString"/>
       </Item>
@@ -5960,6 +6225,7 @@
       <Choice>
          <Item>
             <Element>NCEASubjectArea</Element>
+            <Position>2</Position>
             <Characteristics>O</Characteristics>
             <Description>
                <p>NCEA subject matter of a student's study. Used for Secondary Assessments (Year 11-12).</p>
@@ -5968,6 +6234,7 @@
          </Item>
          <Item>
             <Element>SubjectArea</Element>
+            <Position>1</Position>
             <Characteristics>O</Characteristics>
             <Description>
                <p>Subject matter of a student's study. Used for Primary Assessments (Year 1-10).</p>
@@ -5984,39 +6251,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>MoESpecialistService</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The MoE specialist service that has been selected as a response to a student's support need. Required if Response Detail = 'MOE' (MOE Specialists).</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsMoESpecialistServiceType"/>
-      </Item>
-      <Item>
-         <Element>Status</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>The status of the external response.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsLearningSupportExtResponseStatusType"/>
-      </Item>
-      <Item>
-         <Element>FundingStatus</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The status of the funding being provided for the response.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsLearningSupportFundingStatusType"/>
-      </Item>
-      <Item>
-         <Element>FundedBy</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Who the response was funded by.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsLearningSupportExternalFunderType"/>
-      </Item>
-      <Item>
          <Element>Provider</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>The response provider.</p>
@@ -6025,6 +6261,7 @@
       </Item>
       <Item>
          <Element>ProviderDetail</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Additional information about a provider.</p>
@@ -6032,7 +6269,35 @@
          <Type name="xs:normalizedString"/>
       </Item>
       <Item>
+         <Element>Status</Element>
+         <Position>3</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The status of the external response.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsLearningSupportExtResponseStatusType"/>
+      </Item>
+      <Item>
+         <Element>MoESpecialistService</Element>
+         <Position>4</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The MoE specialist service that has been selected as a response to a student's support need. Required if Response Detail = 'MOE' (MOE Specialists).</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsMoESpecialistServiceType"/>
+      </Item>
+      <Item>
+         <Element>FundedBy</Element>
+         <Position>5</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Who the response was funded by.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsLearningSupportExternalFunderType"/>
+      </Item>
+      <Item>
          <Element>FundedByDetail</Element>
+         <Position>6</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Additional detail about a funder.</p>
@@ -6041,6 +6306,7 @@
       </Item>
       <Item>
          <Element>RequestMadeDate</Element>
+         <Position>7</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The date the request about funding was made.</p>
@@ -6048,7 +6314,17 @@
          <Type name="xs:date"/>
       </Item>
       <Item>
+         <Element>FundingStatus</Element>
+         <Position>8</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The status of the funding being provided for the response.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsLearningSupportFundingStatusType"/>
+      </Item>
+      <Item>
          <Element>FundingDeclinedReason</Element>
+         <Position>10</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The reason funding was declined.</p>
@@ -6064,23 +6340,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>FundedBy</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>Who is funding the reponse.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsLearningSupportInternalFunderType"/>
-      </Item>
-      <Item>
-         <Element>Status</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>The status of the internal response.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsLearningSupportIntResponseStatusType"/>
-      </Item>
-      <Item>
          <Element>ProvidedBy</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>The response provider.</p>
@@ -6089,11 +6350,30 @@
       </Item>
       <Item>
          <Element>ProvidedByName</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The name of the person providing the response. Mandatory to be provided when the ProvidedBy = 'Teacher'.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>Status</Element>
+         <Position>3</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The status of the internal response.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsLearningSupportIntResponseStatusType"/>
+      </Item>
+      <Item>
+         <Element>FundedBy</Element>
+         <Position>4</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>Who is funding the reponse.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsLearningSupportInternalFunderType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="SupportNeedListType">
@@ -6152,15 +6432,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>AttachmentList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A list of attachments related to a learning support need response review.</p>
-         </Description>
-         <Type ref="CommonTypes" name="DocumentListType"/>
-      </Item>
-      <Item>
          <Element>Reviewer</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>The staff member reviewed the response.</p>
@@ -6169,7 +6442,8 @@
       </Item>
       <Item>
          <Element>ReviewDate</Element>
-         <Characteristics>O</Characteristics>
+         <Position>2</Position>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>The date of the review.</p>
          </Description>
@@ -6177,7 +6451,8 @@
       </Item>
       <Item>
          <Element>ReviewComments</Element>
-         <Characteristics>O</Characteristics>
+         <Position>3</Position>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>Free text comment about the review.</p>
          </Description>
@@ -6185,11 +6460,21 @@
       </Item>
       <Item>
          <Element>NextReviewDate</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The date of the next review.</p>
          </Description>
          <Type name="xs:date"/>
+      </Item>
+      <Item>
+         <Element>AttachmentList</Element>
+         <Position>5</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A list of attachments related to a learning support need response review.</p>
+         </Description>
+         <Type ref="CommonTypes" name="DocumentListType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="SupportNeedType">
@@ -6201,6 +6486,7 @@
       </Item>
       <Item>
          <Element>Need</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>A learning support need that has been identified for the student. Links to WellbeingCharacteristic.</p>
@@ -6209,6 +6495,7 @@
       </Item>
       <Item>
          <Element>ResponseList</Element>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>A list of responses made about a learning support need.</p>
@@ -6236,15 +6523,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>WithdrawalTimeList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A list of the Withdrawal Times that are included in this Wellbeing Response.</p>
-         </Description>
-         <Type ref="CommonTypes" name="WithdrawalTimeListType"/>
-      </Item>
-      <Item>
          <Element>SuspensionCategory</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Categorisation of a Suspension record to fall into, In School, Withdrawal, and Expulsion/Exclusion etc. In School is usually NOT formally recognised by a jurisdiction but managed at a school level where the student is temporarily withdrawn from normal classes. Expulsion/Exclusion may mean the student’s attendance at a school is terminated.</p>
@@ -6252,7 +6532,17 @@
          <Type ref="CodeSets" name="NZCodeSetsSuspensionCategoryType"/>
       </Item>
       <Item>
+         <Element>WithdrawalTimeList</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A list of the Withdrawal Times that are included in this Wellbeing Response.</p>
+         </Description>
+         <Type ref="CommonTypes" name="WithdrawalTimeListType"/>
+      </Item>
+      <Item>
          <Element>Duration</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The duration of a Suspension in days 0.00 – X.xx. (Half Day = 0.5, Full Day = 1.0 or the percentage of any day.) Must be provided for a Suspension when known.</p>
@@ -6261,6 +6551,7 @@
       </Item>
       <Item>
          <Element>AdvisementDate</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The date parent/carers were officially notified.</p>
@@ -6269,6 +6560,7 @@
       </Item>
       <Item>
          <Element>ResolutionMeetingTime</Element>
+         <Position>5</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The date and time at which a meeting with the student’s parents/carers was held to resolve the Suspension.</p>
@@ -6277,6 +6569,7 @@
       </Item>
       <Item>
          <Element>ResolutionNotes</Element>
+         <Position>6</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Comments about how the Suspension has been resolved, including any reparative actions the student needs to take.</p>
@@ -6285,6 +6578,7 @@
       </Item>
       <Item>
          <Element>EarlyReturnDate</Element>
+         <Position>7</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The date at which the student was permitted to return to school earlier than the agreed duration would have allowed.</p>
@@ -6300,24 +6594,24 @@
          </Description>
       </Item>
       <Item>
-         <Element>StandardisedLearningSupportRegisterInd</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Indicates which features of the Te Rito platform the organisation has access to the sLSR within the Te Rito platform.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-      </Item>
-      <Item>
          <Element>DataAnalysisDashboardsInd</Element>
-         <Characteristics>O</Characteristics>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>Indicates whether or not the organisation has access to the data analysis dashboards within the Te Rito platform.</p>
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
       <Item>
+         <Element>StandardisedLearningSupportRegisterInd</Element>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>Indicates which features of the Te Rito platform the organisation has access to the sLSR within the Te Rito platform.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+      </Item>
+      <Item>
          <Element>VirtualLearningEnvironmentInd</Element>
-         <Characteristics>O</Characteristics>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>Indicates whether or not the organisation has access to the VLE functionality within the Te Rito platform.</p>
          </Description>
@@ -6348,23 +6642,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>StrandList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A record of the Student's progress in a set of learning strands from the Technology curriculum, that were covered in the class.</p>
-         </Description>
-         <Type ref="CommonTypes" name="ClassStrandListType"/>
-      </Item>
-      <Item>
-         <Element>Teacher</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The staff member that taught the subject and assessed the student against the technology strand objectives.</p>
-         </Description>
-         <Type ref="CommonTypes" name="ObjectReferenceType"/>
-      </Item>
-      <Item>
          <Element>Class</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>A technology centre class the progress report covers.</p>
@@ -6372,7 +6651,17 @@
          <Type ref="CodeSets" name="NZCodeSetsTechnologyClassType"/>
       </Item>
       <Item>
+         <Element>Teacher</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The staff member that taught the subject and assessed the student against the technology strand objectives.</p>
+         </Description>
+         <Type ref="CommonTypes" name="ObjectReferenceType"/>
+      </Item>
+      <Item>
          <Element>BehaviourComment</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Overall comment about the behaviour of the student over the course of the lessons in the Class.</p>
@@ -6381,11 +6670,21 @@
       </Item>
       <Item>
          <Element>EffortComment</Element>
+         <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Overall comment about the effort the student made within the Class.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>StrandList</Element>
+         <Position>5</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A record of the Student's progress in a set of learning strands from the Technology curriculum, that were covered in the class.</p>
+         </Description>
+         <Type ref="CommonTypes" name="ClassStrandListType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="TertiaryServiceType">
@@ -6397,7 +6696,7 @@
       </Item>
       <Item>
          <Element>Type</Element>
-         <Characteristics>O</Characteristics>
+         <Characteristics>M</Characteristics>
          <Description>
             <p>Code denoting the kind of Tertiary service. eg: University, Wananga, etc.</p>
          </Description>
@@ -6412,15 +6711,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>Provider</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The provider, e.g. school, that provided the verification.</p>
-         </Description>
-         <Type ref="CommonTypes" name="ObjectReferenceType"/>
-      </Item>
-      <Item>
          <Element>Source</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>Code denoting the source of the person's identity or eligibility verificaiton.</p>
@@ -6428,7 +6720,17 @@
          <Type ref="CodeSets" name="NZCodeSetsVerificationSourceType"/>
       </Item>
       <Item>
+         <Element>DocumentSerialNumber</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The serial number of the identity document that was used to verify identity / eligibility</p>
+         </Description>
+         <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
          <Element>DocumentExpiryDate</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The date from which the identity document that was used to verify identity / eligibility is expired.</p>
@@ -6436,7 +6738,17 @@
          <Type ref="CommonTypes" name="StartDateType"/>
       </Item>
       <Item>
+         <Element>IsConfirmed</Element>
+         <Position>4</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>If true then verification has been confirmed by MoE</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
+      </Item>
+      <Item>
          <Element>Timestamp</Element>
+         <Position>5</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The date and time the identity verification even took place.</p>
@@ -6444,20 +6756,13 @@
          <Type name="xs:dateTime"/>
       </Item>
       <Item>
-         <Element>IsConfirmed</Element>
+         <Element>Provider</Element>
+         <Position>6</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>If true then verification has been confirmed by MoE</p>
+            <p>The provider, e.g. school, that provided the verification.</p>
          </Description>
-         <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-      </Item>
-      <Item>
-         <Element>DocumentSerialNumber</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The serial number of the identity document that was used to verify identity / eligibility</p>
-         </Description>
-         <Type name="xs:normalizedString"/>
+         <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="VerifiedNameType">
@@ -6466,14 +6771,6 @@
          <Description>
             <p>An extension of BaseName that includes the VerificationEvent details that record how the name was verified as a valid name for the person.</p>
          </Description>
-      </Item>
-      <Item>
-         <Element>Verification</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The verification event that verified this name for the person (and perhaps the date of birth).</p>
-         </Description>
-         <Type ref="CommonTypes" name="VerificationEventType"/>
       </Item>
       <Item>
          <Element>Title</Element>
@@ -6592,6 +6889,15 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <Item>
+         <Element>Verification</Element>
+         <Position>20</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The verification event that verified this name for the person (and perhaps the date of birth).</p>
+         </Description>
+         <Type ref="CommonTypes" name="VerificationEventType"/>
+      </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="WellbeingAlertListType">
       <Item>
@@ -6665,20 +6971,22 @@
          </Description>
       </Item>
       <Item>
-         <Element>EventSubCategoryList</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>List of Sub-Categories associated with the Wellbeing Event's Category.</p>
-         </Description>
-         <Type ref="CommonTypes" name="WellbeingEventSubCategoryListType"/>
-      </Item>
-      <Item>
          <Element>Category</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>The category of the Wellbeing Event.</p>
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsWellbeingEventCategoryType"/>
+      </Item>
+      <Item>
+         <Element>EventSubCategoryList</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>List of Sub-Categories associated with the Wellbeing Event's Category.</p>
+         </Description>
+         <Type ref="CommonTypes" name="WellbeingEventSubCategoryListType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="WellbeingEventListType">
@@ -6722,6 +7030,7 @@
       </Item>
       <Item>
          <Element>SubCategory</Element>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>The sub-category of the Wellbeing Event.</p>
@@ -6737,20 +7046,22 @@
          </Description>
       </Item>
       <Item>
-         <Element>PlanDocument</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The Personalised Plan Document created as a response to a wellbeing event.</p>
-         </Description>
-         <Type ref="CommonTypes" name="ObjectReferenceType"/>
-      </Item>
-      <Item>
          <Element>PlanNotes</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Any notes that can be provided regarding the need that led to the plan.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+      </Item>
+      <Item>
+         <Element>PlanDocument</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The Personalised Plan Document created as a response to a wellbeing event.</p>
+         </Description>
+         <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="WellbeingResponseListType">
@@ -6793,23 +7104,8 @@
          </Description>
       </Item>
       <Item>
-         <Element>WithdrawalEndDate</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The end date of the withdrawal.</p>
-         </Description>
-         <Type ref="CommonTypes" name="EndDateType"/>
-      </Item>
-      <Item>
-         <Element>WithdrawalFrom</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Object reference to one of: ScheduledActivity, SchedulePeriod, etc.</p>
-         </Description>
-         <Type ref="CommonTypes" name="ObjectReferenceType"/>
-      </Item>
-      <Item>
          <Element>WithdrawlStartDate</Element>
+         <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The start date of the withdrawal.</p>
@@ -6817,16 +7113,31 @@
          <Type ref="CommonTypes" name="StartDateType"/>
       </Item>
       <Item>
+         <Element>WithdrawalEndDate</Element>
+         <Position>2</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The end date of the withdrawal.</p>
+         </Description>
+         <Type ref="CommonTypes" name="EndDateType"/>
+      </Item>
+      <Item>
          <Element>SchoolTerm</Element>
+         <Position>3</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>The school term the withdrawal took place in.</p>
          </Description>
          <Type name="xs:integer"/>
-         <Facets>
-            <xs:minInclusive value="1"/>
-            <xs:maxInclusive value="4"/>
-         </Facets>
+      </Item>
+      <Item>
+         <Element>WithdrawalFrom</Element>
+         <Position>4</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Object reference to one of: ScheduledActivity, SchedulePeriod, etc.</p>
+         </Description>
+         <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
    </CommonElement>
    <CommonElement type="true" dm="true" name="YearLevelListType">
@@ -6838,7 +7149,7 @@
       </Item>
       <Item>
          <Element>YearLevel</Element>
-         <Characteristics>O</Characteristics>
+         <Characteristics>MR</Characteristics>
          <Description/>
          <Type name="xs:int"/>
          <Facets>

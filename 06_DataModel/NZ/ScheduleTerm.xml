@@ -29,7 +29,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- ScheduleTermRefId -->
+	</Item>    <!-- 1. ScheduleTermRefId -->
 	<Item>
 		<Element>ScheduleTermLocalId</Element>
 		<Characteristics>O</Characteristics>
@@ -38,7 +38,7 @@
 			<p>The Id of the data object record that was provided by the system that the information was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- ScheduleTermLocalId -->
+	</Item>    <!-- 2. ScheduleTermLocalId -->
 
 	<Item>
 		<Element>TermName</Element>
@@ -48,7 +48,7 @@
 			<p>The name of the schedule term.</p>
 		</Description>
 		<Type  name="xs:normalizedString"/>
-	</Item>    <!-- TermName -->
+	</Item>    <!-- 3. TermName -->
 
 	<Item>
 		<Element>Organisation</Element>
@@ -58,7 +58,7 @@
 			<p>The provider the schedule term applies to, ommitted if it applies to all providers.</p>
 		</Description>
 		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
-	</Item>    <!-- Organisation -->
+	</Item>    <!-- 4. Organisation -->
 
 	<Item>
 		<Element>SchoolYear</Element>
@@ -70,7 +70,7 @@
 			will have school years like:  '2021/22'</p>
 		</Description>
 		<Type name="xs:normalizedString"/>
-	</Item>    <!-- SchoolYear -->
+	</Item>    <!-- 5. SchoolYear -->
 	<Item>
 		<Element>StartDate</Element>
 		<Characteristics>M</Characteristics>
@@ -79,7 +79,7 @@
 			<p>The start date of the term</p>
 		</Description>
 		<Type ref="CommonTypes" name="StartDateType"/>
-	</Item>    <!-- StartDate -->
+	</Item>    <!-- 6. StartDate -->
 	<Item>
 		<Element>EndDate</Element>
 		<Characteristics>M</Characteristics>
@@ -88,7 +88,7 @@
 			<p>The end date of the term</p>
 		</Description>
 		<Type ref="CommonTypes" name="StartDateType"/>
-	</Item>    <!-- EndDate -->
+	</Item>    <!-- 7. EndDate -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -98,26 +98,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-  
-	<xhtml:Example xmlns="" name ="Schedule Term">
-		<ScheduleTerm>
-			<ScheduleTermRefId>eed03e3c-b088-4b69-bba7-b042f6f7a040</ScheduleTermRefId>
-			<ScheduleTermLocalId>2019-1</ScheduleTermLocalId>
-			<TermName>Term I of 2019</TermName>
-			<Organisation>
-  	  			<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-		    	<LocalId json:force-string="true">9961</LocalId>
-			</Organisation>
-			<StartDate>2019-01-28</StartDate>
-			<EndDate>2019-03-13</EndDate>
-			<RecordAudit>
-				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-				<CreatedBy>
-				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-				<Name>Bobby Test</Name>
-				</CreatedBy>
-			</RecordAudit>
-		</ScheduleTerm>
-	</xhtml:Example>
+	</Item>    <!-- 8. RecordAudit -->
+
+	<xi:include parse="xml" href="Examples/ScheduleTerm.xml"/>
 </DataObject>

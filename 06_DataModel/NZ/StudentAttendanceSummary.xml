@@ -26,7 +26,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- StudentAttendanceSummaryRefId -->
+  </Item>    <!-- 1. StudentAttendanceSummaryRefId -->
   <Item>
     <Element>StudentAttendanceSummaryLocalId</Element>
     <Characteristics>O</Characteristics>
@@ -36,7 +36,7 @@
 			was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- StudentAttendanceSummaryLocalId -->
+  </Item>    <!-- 2. StudentAttendanceSummaryLocalId -->
   <Item>
     <Element>Student</Element>
     <Characteristics>M</Characteristics>
@@ -45,7 +45,7 @@
       <p>The ID (GUID) of the student for whom this attendance information is being reported.</p>
     </Description>
     <Type ref="CommonTypes" name="StudentObjectReference"></Type>
-  </Item>    <!-- Student -->
+  </Item>    <!-- 3. Student -->
   <Item>
     <Element>Organisation</Element>
     <Characteristics>M</Characteristics>
@@ -54,7 +54,7 @@
       <p>The SIF ID of the Provider who is recording this attendance information.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReference"></Type>
-  </Item>    <!-- Organisation -->
+  </Item>    <!-- 4. Organisation -->
   <Item>
     <Element>SchoolYear</Element>
     <Characteristics>M</Characteristics>
@@ -65,7 +65,7 @@
 			  will have school years like:  '2021/22'</p>
     </Description>
     <Type name="xs:normalizedString"/>
-  </Item>    <!-- SchoolYear -->
+  </Item>    <!-- 5. SchoolYear -->
   <Item>
     <Element>StartDate</Element>
     <Characteristics>M</Characteristics>
@@ -74,7 +74,7 @@
       <p>Starting date of this attendance reporting period.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>      <!-- StartDate -->
+  </Item>    <!-- 6. StartDate -->
   <Item>
    <Element>EndDate</Element>
     <Characteristics>M</Characteristics>
@@ -83,7 +83,7 @@
       <p>Ending date of this attendance reporting period.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>      <!-- EndDate -->  
+  </Item>    <!-- 7. EndDate -->  
   <Item>
     <Element>StartDay</Element>
     <Characteristics>O</Characteristics>
@@ -92,7 +92,7 @@
       <p>Number of the school day represented in StartDate.</p>
     </Description>
     <Type name="xs:unsignedInt"></Type>
-  </Item>      <!-- StartDay -->
+  </Item>    <!-- 8. StartDay -->
   <Item>
     <Element>EndDay</Element>
     <Characteristics>O</Characteristics>
@@ -101,7 +101,7 @@
       <p>Number of the school day represented in EndDate.</p>
     </Description>
     <Type name="xs:unsignedInt"></Type>
-  </Item>    <!-- EndDay -->
+  </Item>    <!-- 9. EndDay -->
   <Item>
     <Element>FTE</Element>
     <Characteristics>O</Characteristics>
@@ -115,7 +115,7 @@
       <xs:maxInclusive value="1"/>
       <xs:fractionDigits value="2"/>
     </Facets>
-  </Item>    <!-- FTE -->
+  </Item>    <!-- 10. FTE -->
   <Item>
     <Element>AttendancePercentageHalfDays</Element>
     <Characteristics>O</Characteristics>
@@ -124,7 +124,7 @@
       <p>The percentage of half days the student was present when school was in session between the StartDate and EndDate, inclusive. Number of Sessions Present / Total Number of possible sessions = Percentage, e.g. 294/319 = 92.2%.</p>
     </Description>
     <Type name="xs:decimal"></Type>
-  </Item>    <!-- AttendancePercentageHalfDays --> 
+  </Item>    <!-- 11. AttendancePercentageHalfDays --> 
   <Item>
     <Element>AttendanceUnjustifiedHalfDays</Element>
     <Characteristics>O</Characteristics>
@@ -133,7 +133,7 @@
       <p>The percentage of half days the student had unjustified absences when school was in session between the StartDate and EndDate, inclusive.</p>
     </Description>
     <Type name="xs:decimal"></Type>
-  </Item>    <!-- AttendanceUnjustifiedHalfDays --> 
+  </Item>    <!-- 12. AttendanceUnjustifiedHalfDays --> 
   <Item>
     <Element>HalfDaysYearPresent</Element>
     <Characteristics>O</Characteristics>
@@ -142,7 +142,7 @@
       <p>The number of half days the student was present when school was in session between the StartDate and EndDate, inclusive.</p>
     </Description>
     <Type name="xs:decimal"></Type>
-  </Item>    <!-- HalfDaysYearPresent --> 
+  </Item>    <!-- 13. HalfDaysYearPresent --> 
   <Item>
     <Element>HalfDaysYearAbsent</Element>
     <Characteristics>O</Characteristics>
@@ -151,7 +151,7 @@
       <p>The number of half days the student was absent when school was in session between the StartDate and EndDate, inclusive.</p>
     </Description>
     <Type name="xs:decimal"></Type>
-  </Item>    <!-- HalfDaysYearAbsent --> 
+  </Item>    <!-- 14. HalfDaysYearAbsent --> 
   <Item>
     <Element>HalfDaysYearJustified</Element>
     <Characteristics>O</Characteristics>
@@ -160,7 +160,7 @@
       <p>The number of half days the student was absent that were justified when school was in session between the StartDate and EndDate, inclusive.</p>
     </Description>
     <Type name="xs:decimal"></Type>
-  </Item>    <!-- HalfDaysYearJustified --> 
+  </Item>    <!-- 15. HalfDaysYearJustified --> 
   <Item>
     <Element>HalfDaysYearTotal</Element>
     <Characteristics>O</Characteristics>
@@ -169,7 +169,7 @@
       <p>The total number of half days.</p>
     </Description>
     <Type name="xs:decimal"></Type>
-  </Item>    <!-- HalfDaysYearTotal -->   
+  </Item>    <!-- 16. HalfDaysYearTotal -->   
   <Item>
     <Element>HalfDaysYearIntermittantUnjustified</Element>
     <Characteristics>O</Characteristics>
@@ -178,7 +178,7 @@
       <p>The number of days the student was absent from school for an unjustifiable reason when school was in session between the StartDate and EndDate, inclusive, and weren't absence for the complete half-day.</p>
     </Description>
     <Type name="xs:decimal"></Type>
-  </Item>    <!-- HalfDaysYearIntermittantUnjustified --> 
+  </Item>    <!-- 17. HalfDaysYearIntermittantUnjustified --> 
   <Item>
     <Element>HalfDaysYearPercentagePresent</Element>
     <Characteristics>O</Characteristics>
@@ -187,7 +187,7 @@
       <p>The percentage of half days the student was present when school was in session between the StartDate and EndDate, inclusive.</p>
     </Description>
     <Type name="xs:decimal"></Type>
-  </Item>    <!-- HalfDaysYearPercentagePresent -->
+  </Item>    <!-- 18. HalfDaysYearPercentagePresent -->
   <Item>
     <Element>HalfDaysYearUnjustified</Element>
     <Characteristics>O</Characteristics>
@@ -196,7 +196,7 @@
       <p>The number of days the student was absent from school for an unjustifiable reason when school was in session between the StartDate and EndDate, inclusive.</p>
     </Description>
     <Type name="xs:decimal"></Type>
-  </Item>      <!-- HalfDaysYearUnjustified -->  
+  </Item>    <!-- 19. HalfDaysYearUnjustified -->  
 	<Item>
 		<Element>RecordAudit</Element>    
 		<Characteristics>O</Characteristics>
@@ -205,34 +205,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-    
-  <xhtml:Example xmlns="" name="StudentAttendanceSummary">
-    <StudentAttendanceSummary>
-      <StudentAttendanceSummaryRefId>d3476fae-8647-384b-da24-31eda3583211</StudentAttendanceSummaryRefId>
-      <Student>
-        <RefId>7c834ea9-eda1-2090-347f-83297e1c290c</RefId>
-      </Student>
-      <Organisation>
-          <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-		    	<LocalId json:force-string="true">9961</LocalId>
-      </Organisation>
-      <SchoolYear>2015</SchoolYear>
-      <StartDate>2014-08-30</StartDate>
-      <EndDate>2015-06-10</EndDate>		
-      <StartDay>1</StartDay>
-      <EndDay>180</EndDay>
-      <FTE>1.00</FTE>
-      <HalfDaysYearPresent>178</HalfDaysYearPresent>
-      <HalfDaysYearJustified>2</HalfDaysYearJustified>
-      <HalfDaysYearTotal>2</HalfDaysYearTotal>
-      <RecordAudit>
-        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-        <CreatedBy>
-          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-          <Name>Bobby Test</Name>
-        </CreatedBy>
-      </RecordAudit>
-    </StudentAttendanceSummary>
-  </xhtml:Example>
+	</Item>    <!-- 20. RecordAudit -->
+
+  <xi:include parse="xml" href="Examples/StudentAttendanceSummary.xml"/> 
 </DataObject>

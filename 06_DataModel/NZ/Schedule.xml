@@ -25,7 +25,7 @@
 			<p> The ID (GUID) assigned to uniquely identify this Schedule.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- ScheduleRefId -->
+	</Item>    <!-- 1. ScheduleRefId -->
 	<Item>
 		<Element>ScheduleLocalId</Element>
 		<Characteristics>O</Characteristics>
@@ -35,7 +35,7 @@
 			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- ScheduleLocalId -->
+	</Item>    <!-- 2. ScheduleLocalId -->
 
 	<Item>
 		<Element>ScheduleName</Element>
@@ -45,7 +45,7 @@
 			<p>The name of the schedule.</p>
 		</Description>
 		<Type  name="xs:normalizedString"/>
-	</Item>    <!-- ScheduleName -->
+	</Item>    <!-- 3. ScheduleName -->
 
 	<Item>
 		<Element>StartDate</Element>
@@ -55,7 +55,7 @@
 			<p>The start date of the schedule; the earliest startDate from the set of Terms attached to the Schedule.</p>
 		</Description>
 		<Type ref="CommonTypes" name="StartDateType"/>
-	</Item>    <!-- StartDate -->
+	</Item>    <!-- 4. StartDate -->
 
 	<Item>
 		<Element>EndDate</Element>
@@ -65,7 +65,7 @@
 			<p>The end date of the schedule; the latest endDate from the set of Terms attached to the Schedule.</p>
 		</Description>
 		<Type ref="CommonTypes" name="EndDateType"/>
-	</Item>    <!-- EndDate -->
+	</Item>    <!-- 5. EndDate -->
 
 	<Item>
 		<Element>Organisation</Element>
@@ -75,7 +75,7 @@
 			<p>The provider the schedule is for.</p>
 		</Description>
 		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
-	</Item>    <!-- Organisation -->
+	</Item>    <!-- 6. Organisation -->
 
 	<Item>
 		<Element>AcademicDayList</Element>
@@ -89,7 +89,7 @@
 				with days A, A, B, A, A, would have 5 entries in the list.</p>
 		</Description>
 		<Type ref="CommonTypes" name="AcademicDayListType"/>
-	</Item>    <!-- AcademicDayList -->
+	</Item>    <!-- 7. AcademicDayList -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -99,70 +99,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-	
-	<xhtml:Example xmlns="" name ="Schedule">
-		<Schedule>
-			<ScheduleRefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</ScheduleRefId>
-			<ScheduleLocalId>2019a</ScheduleLocalId>
-			<ScheduleName>Scheule 2019a (Term 1)</ScheduleName>
-			<StartDate>2019-01-30</StartDate>
-			<EndDate>2019-04-07</EndDate>
-			<Organisation>
-				<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-				<LocalId json:force-string="true">9961</LocalId>
-			</Organisation>
-			<AcademicDayList>
-				<AcademicDay>
-					<RefId>364f0aa5-49e2-434e-9c82-45770f4c71a9</RefId>
-					<LocalId>2019a-A</LocalId>
-					<Name>Schedule 2019a, Day A</Name>
-					<SchedulePeriodTime>
-						<RefId>8bda1e4a-ddd2-4d18-9a85-ffcd7a2528b8</RefId>
-						<LocalId>2019a-Normal</LocalId>
-					</SchedulePeriodTime>
-					<PeriodList>
-						<Period>
-							<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
-							<LocalId>2019a-1</LocalId>
-							<Name>Period 1</Name>
-						</Period>
-						<Period>
-							<RefId>1c48a0bb-a6cc-41ab-8aae-929ce5ec9c34</RefId>
-							<LocalId>2019a-2</LocalId>
-							<Name>Period 2</Name>
-						</Period>
-					</PeriodList>					
-				</AcademicDay>
-				<AcademicDay>
-					<RefId>337804c6-1247-4c0f-b288-e4aa28584aad</RefId>
-					<LocalId>2019a-B</LocalId>
-					<Name>Schedule 2019a, DayB</Name>
-					<SchedulePeriodTime>
-						<RefId>8bda1e4a-ddd2-4d18-9a85-ffcd7a2528b8</RefId>
-						<LocalId>2019a-Normal</LocalId>
-					</SchedulePeriodTime>
-					<PeriodList>
-						<Period>
-							<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
-							<LocalId>2019a-1</LocalId>
-							<Name>Period 1</Name>
-						</Period>
-						<Period>
-							<RefId>1c48a0bb-a6cc-41ab-8aae-929ce5ec9c34</RefId>
-							<LocalId>2019a-2</LocalId>
-							<Name>Period 2</Name>
-						</Period>
-					</PeriodList>					
-				</AcademicDay>
-			</AcademicDayList>	
-			<RecordAudit>
-				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-				<CreatedBy>
-				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-				<Name>Bobby Test</Name>
-				</CreatedBy>
-			</RecordAudit>		
-		</Schedule>
-	</xhtml:Example>
+	</Item>    <!-- 8. RecordAudit -->
+
+	<xi:include parse="xml" href="Examples/Schedule.xml"/>
 </DataObject>

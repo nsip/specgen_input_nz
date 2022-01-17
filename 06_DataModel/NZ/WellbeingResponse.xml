@@ -27,7 +27,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- WellbeingResponseRefId -->
+  </Item>    <!-- 1. WellbeingResponseRefId -->
 
   <Item>
       <Element>WellbeingResponseLocalId</Element>
@@ -38,7 +38,7 @@
 			was originally sourced from.</p>
       </Description>
       <Type ref='CommonTypes' name='LocalIdType'/>
-  </Item>    <!-- WellbeingResponseLocalId-->
+  </Item>    <!-- 2. WellbeingResponseLocalId-->
 
   <Item>
     <Element>Student</Element>
@@ -48,7 +48,7 @@
       <p>Object reference to the student to whom this WellbeingResponse belongs.</p>
     </Description>
     <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
-  </Item>    <!-- Student -->
+  </Item>    <!-- 3. Student -->
 
   <Item>
     <Element>Provider</Element>
@@ -58,7 +58,7 @@
       <p>Object reference to the provider for which this WellbeingResponse is being reported.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
-  </Item>    <!-- Provider -->
+  </Item>    <!-- 4. Provider -->
   
   <Item>
     <Element>PublishedDate</Element>
@@ -68,7 +68,7 @@
       <p>The calendar date on which this WellbeingResponse was published.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!-- PublishedDate -->
+  </Item>    <!-- 5. PublishedDate -->
   
   <Item>
     <Element>StartDate</Element>
@@ -78,7 +78,7 @@
       <p>The date the WellbeingResponse period commenced.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!-- StartDate -->
+  </Item>    <!-- 6. StartDate -->
 
   <Item>
     <Element>EndDate</Element>
@@ -88,7 +88,7 @@
       <p>The date the WellbeingResponse is due to finish.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!-- EndDate -->
+  </Item>    <!-- 7. EndDate -->
 
   <Item>
     <Element>ResponseStatus</Element>
@@ -98,7 +98,7 @@
       <p>The current status of the response to the wellbeing event.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsWellbeingStatusType"></Type>
-  </Item>    <!-- ResponseStatus -->
+  </Item>    <!-- 8. ResponseStatus -->
 
   <Item>
     <Element>ResponseCategory</Element>
@@ -108,7 +108,7 @@
       <p>Category of WellbeingResponse.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsWellbeingResponseCategoryType"></Type>
-  </Item>    <!-- ResponseCategory -->
+  </Item>    <!-- 9. ResponseCategory -->
   
   <Item>
     <Element>ResponseNotes</Element>
@@ -118,7 +118,7 @@
       <p>Text relating to the particular WellbeingResponse.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- ResponseNotes -->
+  </Item>    <!-- 10. ResponseNotes -->
 
   <Item>
     <Element>PersonInvolvementList</Element>
@@ -128,7 +128,7 @@
       <p>List of People involved in the Wellbeing Event/Response. Mandatory if more people than the student to which this event/response occurs is involved.</p>
     </Description>
      <Type ref="CommonTypes" name="PersonInvolvementListType"></Type>
-  </Item>    <!-- PersonInvolvmentList -->
+  </Item>    <!-- 11. PersonInvolvmentList -->
 
   <Item>
     <Element>Suspension</Element>
@@ -138,7 +138,7 @@
       <p>Container for details of a Suspension or Expulsion.</p>
     </Description>
     <Type ref="CommonTypes" name="SuspensionContainerType"></Type>
-  </Item>    <!-- Suspension -->
+  </Item>    <!-- 12. Suspension -->
 
   <Item>
     <Element>Detention</Element>
@@ -148,7 +148,7 @@
       <p>Container for details of a Detention.</p>
     </Description>
      <Type ref="CommonTypes" name="DetentionContainerType"></Type>
-  </Item>    <!-- Detention -->
+  </Item>    <!-- 13. Detention -->
 
   <Item>
     <Element>PlanRequiredList</Element>
@@ -158,7 +158,7 @@
       <p>List of plans that are required to be generated as part of the WellbeingResponse</p>
     </Description>
     <Type ref="CommonTypes" name="PlanRequiredListType"/>
-  </Item>    <!-- PlanRequiredList -->
+  </Item>    <!-- 14. PlanRequiredList -->
 
   <Item>
     <Element>Award</Element>
@@ -168,7 +168,7 @@
       <p>Container for details of an Award.</p>
     </Description>
      <Type ref="CommonTypes" name="AwardContainerType"></Type>
-  </Item>    <!-- Award -->
+  </Item>    <!-- 15. Award -->
 
   <Item>
     <Element>OtherResponse</Element>
@@ -178,7 +178,7 @@
       <p>Container for details of another type of Response.</p>
     </Description>
      <Type ref="CommonTypes" name="OtherWellbeingResponseContainerType"></Type>
-  </Item>    <!-- OtherResponse -->
+  </Item>    <!-- 16. OtherResponse -->
 
   <Item>
     <Element>DocumentList</Element>
@@ -188,7 +188,7 @@
       <p>Describes the Location of any associated documents kept in relation to this Response.</p>
     </Description>
      <Type ref="CommonTypes" name="DocumentListType"></Type>
-  </Item>    <!-- DocumentList -->
+  </Item>    <!-- 17. DocumentList -->
 
   <Item>
     <Element>WellbeingAlert</Element>
@@ -198,7 +198,7 @@
       <p>The ID (GUID) of the Wellbeing Alert that was generated in response to this WellbeingResponse.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>    <!-- WellbeingAlert -->
+  </Item>    <!-- 18. WellbeingAlert -->
 
   <Item>
     <Element>WellbeingEvent</Element>
@@ -208,7 +208,7 @@
       <p>The ID (GUID) of the WellbeingEvent this WellbeingResponse is for.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>    <!-- WellbeingEvent -->
+  </Item>    <!-- 19. WellbeingEvent -->
 
   <Item>
     <Element>WellbeingAppealList</Element>
@@ -218,7 +218,7 @@
       <p>A list of any appeals that have been made in relation to this Wellbeing Response.</p>
     </Description>
     <Type ref="CommonTypes" name="WellbeingAppealListType"/>
-  </Item>    <!-- WellbeingAppealList -->
+  </Item>    <!-- 20. WellbeingAppealList -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -228,31 +228,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-  
-  <xhtml:Example xmlns="" name="WellbeingResponse">
-    <WellbeingResponse>
-      <WellbeingResponseRefId>2ffb63b4-cfef-4820-8501-e7d1e54555cb</WellbeingResponseRefId>
-      <Student>
-        <RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
-      </Student>
-      <Provider>
-          <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-		    	<LocalId json:force-string="true">9961</LocalId>
-      </Provider>
-      <PublishedDate>2017-11-01</PublishedDate>
-      <StartDate>2017-11-01</StartDate>
-      <EndDate>2017-11-10</EndDate>
-      <ResponseCategory>S</ResponseCategory>
-      <ResponseNotes>This Student is to be withdrawn.</ResponseNotes>
-      <RecordAudit>
-        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-        <CreatedBy>
-          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-          <Name>Bobby Test</Name>
-        </CreatedBy>
-      </RecordAudit>
-    </WellbeingResponse>
+	</Item>    <!-- 21. RecordAudit -->
 
-  </xhtml:Example>
+  <xi:include parse="xml" href="Examples/WellbeingResponse.xml"/> 
 </DataObject>

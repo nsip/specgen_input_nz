@@ -28,7 +28,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- ScheduleExceptionRefId -->
+	</Item>    <!-- 1. cheduleExceptionRefId -->
 	<Item>
 		<Element>ScheduleExceptionLocalId</Element>
 		<Characteristics>O</Characteristics>
@@ -38,7 +38,7 @@
 			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- ScheduleExceptionLocalId -->
+	</Item>    <!-- 2. ScheduleExceptionLocalId -->
 
 	<Item>
 		<Element>Organisation</Element>
@@ -48,7 +48,7 @@
 			<p>The provider at which this schedule exception will occur</p>
 		</Description>
 		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
-	</Item>    <!-- Organisation -->
+	</Item>    <!-- 3. Organisation -->
 
 	<Item>
 		<Element>Schedule</Element>
@@ -58,7 +58,7 @@
 			<p>The provider schedule the schedule exception is having an effect on.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
-	</Item>    <!-- Schedule -->
+	</Item>    <!-- 4. Schedule -->
 
 	<Item>
 		<Element>ExceptionDate</Element>
@@ -68,7 +68,7 @@
 			<p>The date of the exception.</p>
 		</Description>
 		<Type  name="xs:date"/>
-	</Item>    <!-- ExceptionDate -->
+	</Item>    <!-- 5. ExceptionDate -->
 
 	<Item>
 		<Element>Name</Element>
@@ -78,7 +78,7 @@
 			<p>The name of the schedule exception.  eg. Snow Day - March 3rd</p>
 		</Description>
 		<Type  name="xs:normalizedString"/>
-	</Item>    <!-- Name -->
+	</Item>    <!-- 6. Name -->
 
 	<Item>
 		<Element>ScheduleAcademicDayList</Element>
@@ -89,7 +89,7 @@
 			school calendar for the duration of this event.  Not present if the Provider is closed for the duration of the ScheduleException.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ScheduleDayListType"/> 
-	</Item>    <!-- ScheduleAcademicDayList -->
+	</Item>    <!-- 7. ScheduleAcademicDayList -->
 
 	<Item>
 		<Element>DayPeriodTimeList</Element>
@@ -99,7 +99,7 @@
 			<p>A list of the periods that make up the period time schedule and their start and end times for the duration of this event.  Not present if the Provider is closed for the duration of the ScheduleException.</p>
 		</Description>
 		<Type ref="CommonTypes" name="DayPeriodTimeListType"/> 
-	</Item>    <!-- DayPeriodTimeList -->
+	</Item>    <!-- 8. DayPeriodTimeList -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -109,63 +109,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
+	</Item>    <!-- 9. RecordAudit -->
 
-	<xhtml:Example xmlns="" name ="Schedule Exception - Snow Day">
-		<ScheduleException>
-			<ScheduleExceptionRefId>c79e65df-0b11-4a97-9062-9fbd1c1a38e3</ScheduleExceptionRefId>
-			<ScheduleExceptionLocalId>excMarSnow</ScheduleExceptionLocalId>
-			<Organisation>
-  	  			<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-		    	<LocalId json:force-string="true">9961</LocalId>
-			</Organisation>
-			<Schedule>
-				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
-				<Name>Schedule 2019a (Term 1)</Name>
-			</Schedule>
-			<ExceptionDate>2019-03-14</ExceptionDate>
-			<Name>14 Mar 2019 - Snow Day</Name>
-		</ScheduleException>
-	</xhtml:Example>
-
-
-	<xhtml:Example xmlns="" name ="Schedule Exception - Custom Schedule">
-		<ScheduleException>
-			<ScheduleExceptionRefId>f84d9681-03f6-4434-a867-967dba517cf5</ScheduleExceptionRefId>
-			<ScheduleExceptionLocalId>excWinSprt</ScheduleExceptionLocalId>
-			<Organisation>
-  	  			<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-		    	<LocalId json:force-string="true">9961</LocalId>
-			</Organisation>
-			<Schedule>
-				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
-				<Name>Schedule 2019a (Term 1)</Name>
-			</Schedule>
-			<ExceptionDate>2019-07-05</ExceptionDate>
-			<Name>Winter Sports - 3 Short Periods, Afternoon Off</Name>
-			<ScheduleAcademicDayList>
-				<ScheduleAcademicDay json:force-array="true">
-					<LocalId>2019a-A</LocalId>
-				</ScheduleAcademicDay>
-			</ScheduleAcademicDayList>
-			<DayPeriodTimeList>
-				<DayPeriodTime json:force-array="true">
-					<SchedulePeriod>
-						<RefId>215f796c-67f7-4855-83dc-28ad9d002830</RefId>
-						<LocalId>2019a-A1</LocalId>
-						<Name>Period 1</Name>
-					</SchedulePeriod>
-					<StartTime>08:45:00+12:00</StartTime>
-					<EndTime>09:35:00+12:00</EndTime>
-				</DayPeriodTime>
-			</DayPeriodTimeList>
-			<RecordAudit>
-				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-				<CreatedBy>
-				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-				<Name>Bobby Test</Name>
-				</CreatedBy>
-			</RecordAudit>
-		</ScheduleException>
-	</xhtml:Example>
+	<xi:include parse="xml" href="Examples/ScheduleException.xml"/>
 </DataObject>

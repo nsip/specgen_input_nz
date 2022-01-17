@@ -1,253 +1,34 @@
-<DataObject name="StudentPhysicalRestraint"
-			xmlns:xs="http://www.w3.org/2001/XMLSchema"
-			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-			xmlns:xi="http://www.w3.org/2001/XInclude"
-			xmlns:xhtml="http://www.w3.org/1999/xhtml"
-      xmlns:json="http://json.org/"
+<IncludeGroup 
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://json.org/">
 
-      xmlns="http://sifassociation.org/SpecGen">
 	
-  <Key>StudentPhysicalRestraintRefId</Key>
-  <EventsReported>true</EventsReported>
-  <Item>
-    <Element>StudentPhysicalRestraint</Element>
-	  <privacyRating>Low</privacyRating>
-    <Description>
-      <p>
-        Provides information about an incident where staff members or other parties used physical restraint on a child. 
-      </p>
-     </Description>
-  </Item>
-
-  <Item>
-    <Element>StudentPhysicalRestraintRefId</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-			<p>The universally unique identifier for the data object record that is used across systems.</p>
-    </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- StudentPhysicalRestraintRefId -->
-
-  <Item>
-		<Element>StudentPhysicalRestraintLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The Id of the data object record that was provided by the system that the information 
-			was originally sourced from.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"></Type> 
-	</Item>    <!-- StudentPhysicalRestraintLocalId -->
-
-  <Item>
-    <Element>Provider</Element>    
-    <Characteristics>M</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Generic object reference to the provider under whose supervision the student was, at the time the physical restraint incient occured.</p>
-    </Description>
-    <Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
-  </Item>    <!-- Provider -->
-
-  <Item>
-    <Element>Student</Element>    
-    <Characteristics>M</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Generic object refernece to the student to whom the physical restraint was applied.</p>
-    </Description>
-    <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
-  </Item>    <!-- Student -->
-
-  <Item>
-    <Element>PrincipalOrDelegate</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Generic object reference to the StaffPersonal object of the Principal or their delegate who oversaw the recording of the physical restraint incident.</p>
-    </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>    <!-- PrincipalOrDelegate -->
-
-  <Item>
-    <Element>WellbeingEvent</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Generic object reference to the Wellbeing Event created for the student the physical reatrint was used on.</p>
-    </Description>
-    <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>    <!-- WellbeingEvent -->
-
-  <Item>
-    <Element>ConsideredNecessaryReason</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Free text description on why the physical restraint of the student was considered necessary.</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- ConsideredNecessaryReason -->
-
-  <Item>
-    <Element>FirstTimeStudentRestrained</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Indicates whether or not this was the first time the student was restrained.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>    <!-- FirstTimeStudentRestrained -->
-
-  <Item>
-    <Element>IncidentDate</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The date the physical restraint was used on the student.</p>
-    </Description>
-    <Type name="xs:date"></Type>
-  </Item>    <!-- IncidentDate -->
-
-  <Item>
-    <Element>LocationDescription</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Free text description of the location the physical restraint of the student occurred in.</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- LocationDescription -->
-
-  <Item>
-    <Element>OtherComment</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Any other comments on the physical restraint incident.</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- OtherComment -->
-
-  <Item>
-    <Element>ReportedDate</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The date the use of physical restraint on the student was reported.</p>
-    </Description>
-    <Type name="xs:date"></Type>
-  </Item>    <!-- ReportedDate -->
-
-  <Item>
-    <Element>RestraintEndedTime</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The time the physical restraint stopped being used.</p>
-    </Description>
-    <Type name="xs:time"></Type>
-  </Item>    <!-- RestraintEndedTime -->
-
-  <Item>
-    <Element>RestraintStartedTime</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The time the physical restraint started being used.</p>
-    </Description>
-    <Type name="xs:time"></Type>
-  </Item>    <!-- RestraintStartedTime -->  
-
-  <Item>
-    <Element>RestraintReason</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The reason the physical restraint was applied to the child.</p>
-    </Description>
-    <Type ref="CodeSets" name="NZCodeSetsRestraintReasonType"></Type>
-  </Item>    <!-- RestraintReason -->
-
-  <Item>
-    <Element>DocumentList</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>Describes the Location of any associated documents kept in relation to this physical restraint incident.</p>
-    </Description>
-    <Type ref="CommonTypes" name="DocumentListType"></Type>
-  </Item>    <!-- DocumentList -->
-
-  <Item>
-    <Element>RestraintWitnessList</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>A list of the people that witnessed the physical constraint.</p>
-    </Description>
-    <Type ref="CommonTypes" name="RestraintWitnessListType"></Type>
-  </Item>    <!-- RestraintWitnessList -->
-
-  <Item>
-    <Element>RestraintAdministeredByList</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>A list of the people who administered the physical restraint to the student.</p>
-    </Description>
-    <Type ref="CommonTypes" name="RestraintAdministeredByListType"></Type>
-  </Item>    <!-- RestraintAdministeredByList -->
-
-  <Item>
-    <Element>BehaviourDirectedAtList</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The list of the people and/or property that the student, who was restrained, was directing their behaviour at.</p>
-    </Description>
-    <Type ref="CommonTypes" name="BehaviourDirectedAtListType"></Type>
-  </Item>    <!-- BehaviourDirectedAtList -->
-
-  <Item>
-    <Element>StaffReflectionList</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>A list of the reflections made by the staff members who applied the physical restraint.</p>
-    </Description>
-    <Type ref="CommonTypes" name="StaffReflectionListType"></Type>
-  </Item>    <!-- StaffReflectionList -->
-
-  <Item>
-    <Element>RestraintDebriefingList</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>A list of the debriefings that took place after the physical restraint incident occurred.</p>
-    </Description>
-    <Type ref="CommonTypes" name="RestraintDebriefingListType"></Type>
-  </Item>    <!-- RestraintDebriefingList -->
-  
-  <Item>
-    <Element>RestraintQuestionList</Element>    
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>A list of questions and their answers about the physical restraint incident.</p>
-    </Description>
-    <Type ref="CommonTypes" name="RestraintQuestionListType"></Type>
-  </Item>    <!-- RestraintQuestionList -->
-
-	<Item>
-		<Element>RecordAudit</Element>    
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-  
-</DataObject>
+	<xhtml:Example xmlns="" name ="StudentPhysicalRestraint">
+		<StudentPhysicalRestraint>
+			<StudentPhysicalRestraintRefId>7c834ea9-eda1-2090-347f-83297e1c290c</StudentPhysicalRestraintRefId>
+			<StudentPhysicalRestraintLocalId>2234523</StudentPhysicalRestraintLocalId>
+			<Provider>
+  	  			<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
+		    	<LocalId json:force-string="true">9961</LocalId>
+			</Provider>
+			<Student>
+				<RefId>5c33548a-1141-40eb-94d3-9267a2258435</RefId>
+			</Student>
+			<PrincipalOrDelegate>
+				<RefId>e02a8745-56ea-4750-a94d-e8cc43d62269</RefId>
+			</PrincipalOrDelegate>
+			<FirstTimeStudentRestrained>Y</FirstTimeStudentRestrained>
+			<IncidentDate>2021-12-13</IncidentDate>
+			<LocationDescription>Number 1 Soccer Field</LocationDescription>
+			<RestraintStartedTime>14:12:00</RestraintStartedTime>
+			<RestraintEndedTime>14:18:00</RestraintEndedTime>
+			<RecordAudit>
+				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
+				<CreatedBy>
+				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
+				<Name>Bobby Test</Name>
+				</CreatedBy>
+			</RecordAudit>		
+		</StudentPhysicalRestraint>
+	</xhtml:Example>
+</IncludeGroup>

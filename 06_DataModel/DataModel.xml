@@ -51,10 +51,9 @@
 		<xi:include parse="xml" href="NZ/ProviderCourse.xml"/>
 
 		<xi:include parse="xml" href="NZ/StaffPersonal.xml"/>
-<!-- 
 		<xi:include parse="xml" href="NZ/StaffAssignment.xml"/>
 		<xi:include parse="xml" href="NZ/StaffTeachingGroupAssignment.xml"/>
-		<xi:include parse="xml" href="NZ/StudentPersonal.xml"/>
+	    <xi:include parse="xml" href="NZ/StudentPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StudentContactPersonal.xml"/>
 		<xi:include parse="xml" href="NZ/StudentContactRelationship.xml"/>
 		<xi:include parse="xml" href="NZ/Document.xml"/>
@@ -66,7 +65,6 @@
 
 		<xi:include parse="xml" href="NZ/StudentProviderEnrolment.xml"/>
 		<xi:include parse="xml" href="NZ/StudentTeachingGroupEnrolment.xml"/>
-
 		<xi:include parse="xml" href="NZ/Schedule.xml"/>
 		<xi:include parse="xml" href="NZ/ScheduleAcademicDay.xml"/>
 		<xi:include parse="xml" href="NZ/SchedulePeriod.xml"/>
@@ -76,7 +74,7 @@
 		<xi:include parse="xml" href="NZ/TeachingGroupEvent.xml"/>
 		<xi:include parse="xml" href="NZ/ScheduleException.xml"/>
 		<xi:include parse="xml" href="NZ/ProviderCalendarEvent.xml"/>
-		
+
 		<xi:include parse="xml" href="NZ/StudentAttendanceSummary.xml"/>
 		<xi:include parse="xml" href="NZ/TeachingGroupMeetingAttendance.xml"/>
 
@@ -92,11 +90,10 @@
 	    <xi:include parse="xml" href="NZ/StudentLearningSupportResponse.xml"/>
 		
 		<xi:include parse="xml" href="NZ/AssessmentTask.xml"/>
+		<xi:include parse="xml" href="NZ/StudentAssessmentTask.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAssessmentTaskResult.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAssessmentTaskRegistration.xml"/>
-		<xi:include parse="xml" href="NZ/StudentAssessmentTask.xml"/>
 		<xi:include parse="xml" href="NZ/StudentAttainment.xml"/>
-		<xi:include parse="xml" href="NZ/StudentCurriculumProgressReport.xml"/>
--->		
+		<xi:include parse="xml" href="NZ/StudentCurriculumProgressReport.xml"/>	
 	</Group>
 </DataObjects>

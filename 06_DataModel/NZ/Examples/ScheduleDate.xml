@@ -1,71 +1,6 @@
-<DataObject name="ScheduleDate"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:xi="http://www.w3.org/2001/XInclude"
+<IncludeGroup 
 	xmlns:xhtml="http://www.w3.org/1999/xhtml"
-	xmlns:json="http://json.org/"
-
-	xmlns="http://sifassociation.org/SpecGen">
-
-
-	<Key>ScheduleDateRefId</Key>
-	<EventsReported>true</EventsReported>
-	<Item>
-		<Element>ScheduleDate</Element>
-	 	 <privacyRating>Low</privacyRating>
-		<Description>
-			<p>The core of the scheduling system, that assigns a particular ScheduleAcademicDay
-			 and SchedulePeriodTime to the set of calendar dates covered by a particular Schedule.</p>
-			 
-			<p> Each entry in the CalendaDateList determines WHICH meetings will occur on 
-			that date (via the ScheduleAcademicDay) and WHEN those meetings will take place
-			(via the SchedulePeriodTime), as well as which ScheduleTerms are in session on 
-			that particular CalendarDate</p>
-
-			<p>Could be thought of as a member of Schedule data object; but it has been extracted
-			as a separate object, without identifiers, to make it easier to build API endpoint definitions</p>
-		</Description>
-	</Item>
-	
-	<Item>
-		<Element>Organisation</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The provider, e.g. school, tertiary institution etc, that this schedule date record belongs to.</p>
-		</Description>
-		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
-	</Item>    <!-- Organisation -->
-	
-	<Item>
-		<Element>Schedule</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The schedule within the provider to which this ScheduleDate applies.</p>
-		</Description>
-		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
-	</Item>    <!-- Schedule -->
-
-	<Item>
-		<Element>CalendarDateList</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>A list of schedule calendar dates and the period times, academic day and terms that applies to each day.</p>
-		</Description>
-		<Type ref="CommonTypes" name="CalendarDateListType"/> 
-	</Item>    <!-- CalendarDateList -->
-
-	<Item>
-		<Element>RecordAudit</Element>    
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
+	xmlns:json="http://json.org/">
 
 	<xhtml:Example xmlns="" name ="Schedule Date">
 		<ScheduleDate>
@@ -108,4 +43,4 @@
 			</RecordAudit>
 		</ScheduleDate>
 	</xhtml:Example>
-</DataObject>
+</IncludeGroup>

@@ -27,7 +27,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- StudentPhysicalRestraintRefId -->
+  </Item>    <!-- 1. StudentPhysicalRestraintRefId -->
 
   <Item>
 		<Element>StudentPhysicalRestraintLocalId</Element>
@@ -38,7 +38,7 @@
 			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"></Type> 
-	</Item>    <!-- StudentPhysicalRestraintLocalId -->
+	</Item>    <!-- 2. StudentPhysicalRestraintLocalId -->
 
   <Item>
     <Element>Provider</Element>    
@@ -48,7 +48,7 @@
       <p>Generic object reference to the provider under whose supervision the student was, at the time the physical restraint incient occured.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
-  </Item>    <!-- Provider -->
+  </Item>    <!-- 3. Provider -->
 
   <Item>
     <Element>Student</Element>    
@@ -58,7 +58,7 @@
       <p>Generic object refernece to the student to whom the physical restraint was applied.</p>
     </Description>
     <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
-  </Item>    <!-- Student -->
+  </Item>    <!-- 4. Student -->
 
   <Item>
     <Element>PrincipalOrDelegate</Element>    
@@ -68,7 +68,7 @@
       <p>Generic object reference to the StaffPersonal object of the Principal or their delegate who oversaw the recording of the physical restraint incident.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>    <!-- PrincipalOrDelegate -->
+  </Item>    <!-- 6. PrincipalOrDelegate -->
 
   <Item>
     <Element>WellbeingEvent</Element>    
@@ -78,7 +78,7 @@
       <p>Generic object reference to the Wellbeing Event created for the student the physical reatrint was used on.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>    <!-- WellbeingEvent -->
+  </Item>    <!-- 7. WellbeingEvent -->
 
   <Item>
     <Element>ConsideredNecessaryReason</Element>
@@ -88,7 +88,7 @@
       <p>Free text description on why the physical restraint of the student was considered necessary.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- ConsideredNecessaryReason -->
+  </Item>    <!-- 8. ConsideredNecessaryReason -->
 
   <Item>
     <Element>FirstTimeStudentRestrained</Element>
@@ -98,7 +98,7 @@
       <p>Indicates whether or not this was the first time the student was restrained.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>    <!-- FirstTimeStudentRestrained -->
+  </Item>    <!-- 9. FirstTimeStudentRestrained -->
 
   <Item>
     <Element>IncidentDate</Element>
@@ -108,7 +108,7 @@
       <p>The date the physical restraint was used on the student.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!-- IncidentDate -->
+  </Item>    <!-- 10. IncidentDate -->
 
   <Item>
     <Element>LocationDescription</Element>
@@ -118,7 +118,7 @@
       <p>Free text description of the location the physical restraint of the student occurred in.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- LocationDescription -->
+  </Item>    <!-- 11. LocationDescription -->
 
   <Item>
     <Element>OtherComment</Element>
@@ -128,7 +128,7 @@
       <p>Any other comments on the physical restraint incident.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- OtherComment -->
+  </Item>    <!-- 12. OtherComment -->
 
   <Item>
     <Element>ReportedDate</Element>
@@ -138,17 +138,7 @@
       <p>The date the use of physical restraint on the student was reported.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!-- ReportedDate -->
-
-  <Item>
-    <Element>RestraintEndedTime</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Description>
-      <p>The time the physical restraint stopped being used.</p>
-    </Description>
-    <Type name="xs:time"></Type>
-  </Item>    <!-- RestraintEndedTime -->
+  </Item>    <!-- 13. ReportedDate -->
 
   <Item>
     <Element>RestraintStartedTime</Element>
@@ -158,7 +148,17 @@
       <p>The time the physical restraint started being used.</p>
     </Description>
     <Type name="xs:time"></Type>
-  </Item>    <!-- RestraintStartedTime -->  
+  </Item>    <!-- 14. RestraintStartedTime -->  
+
+  <Item>
+    <Element>RestraintEndedTime</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The time the physical restraint stopped being used.</p>
+    </Description>
+    <Type name="xs:time"></Type>
+  </Item>    <!-- 15. RestraintEndedTime -->
 
   <Item>
     <Element>RestraintReason</Element>    
@@ -168,7 +168,7 @@
       <p>The reason the physical restraint was applied to the child.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsRestraintReasonType"></Type>
-  </Item>    <!-- RestraintReason -->
+  </Item>    <!-- 16. RestraintReason -->
 
   <Item>
     <Element>DocumentList</Element>    
@@ -178,7 +178,7 @@
       <p>Describes the Location of any associated documents kept in relation to this physical restraint incident.</p>
     </Description>
     <Type ref="CommonTypes" name="DocumentListType"></Type>
-  </Item>    <!-- DocumentList -->
+  </Item>    <!-- 17. DocumentList -->
 
   <Item>
     <Element>RestraintWitnessList</Element>    
@@ -188,7 +188,7 @@
       <p>A list of the people that witnessed the physical constraint.</p>
     </Description>
     <Type ref="CommonTypes" name="RestraintWitnessListType"></Type>
-  </Item>    <!-- RestraintWitnessList -->
+  </Item>    <!-- 18. RestraintWitnessList -->
 
   <Item>
     <Element>RestraintAdministeredByList</Element>    
@@ -198,7 +198,7 @@
       <p>A list of the people who administered the physical restraint to the student.</p>
     </Description>
     <Type ref="CommonTypes" name="RestraintAdministeredByListType"></Type>
-  </Item>    <!-- RestraintAdministeredByList -->
+  </Item>    <!-- 19. RestraintAdministeredByList -->
 
   <Item>
     <Element>BehaviourDirectedAtList</Element>    
@@ -208,7 +208,7 @@
       <p>The list of the people and/or property that the student, who was restrained, was directing their behaviour at.</p>
     </Description>
     <Type ref="CommonTypes" name="BehaviourDirectedAtListType"></Type>
-  </Item>    <!-- BehaviourDirectedAtList -->
+  </Item>    <!-- 20. BehaviourDirectedAtList -->
 
   <Item>
     <Element>StaffReflectionList</Element>    
@@ -218,7 +218,7 @@
       <p>A list of the reflections made by the staff members who applied the physical restraint.</p>
     </Description>
     <Type ref="CommonTypes" name="StaffReflectionListType"></Type>
-  </Item>    <!-- StaffReflectionList -->
+  </Item>    <!-- 21. StaffReflectionList -->
 
   <Item>
     <Element>RestraintDebriefingList</Element>    
@@ -228,7 +228,7 @@
       <p>A list of the debriefings that took place after the physical restraint incident occurred.</p>
     </Description>
     <Type ref="CommonTypes" name="RestraintDebriefingListType"></Type>
-  </Item>    <!-- RestraintDebriefingList -->
+  </Item>    <!-- 22. RestraintDebriefingList -->
   
   <Item>
     <Element>RestraintQuestionList</Element>    
@@ -238,7 +238,7 @@
       <p>A list of questions and their answers about the physical restraint incident.</p>
     </Description>
     <Type ref="CommonTypes" name="RestraintQuestionListType"></Type>
-  </Item>    <!-- RestraintQuestionList -->
+  </Item>    <!-- 23. RestraintQuestionList -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -248,6 +248,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-  
+	</Item>    <!-- 24. RecordAudit -->
+
+  <xi:include parse="xml" href="Examples/StudentPhysicalRestraint.xml"/>  
 </DataObject>

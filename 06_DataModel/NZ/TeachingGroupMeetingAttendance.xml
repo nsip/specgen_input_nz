@@ -26,7 +26,7 @@
 				<p>The universally unique identifier for the data object record that is used across systems.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"></Type>
-	</Item>       <!-- TeachingGroupMeetingAttendanceRefId -->
+	</Item>       <!-- 1. TeachingGroupMeetingAttendanceRefId -->
 	<Item>
 		<Element>TeachingGroupMeetingAttendanceLocalId</Element>
 		<Characteristics>O</Characteristics>
@@ -36,7 +36,7 @@
 				was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"></Type>
-	</Item>       <!-- TeachingGroupMeetingAttendanceLocalId -->
+	</Item>       <!-- 2. TeachingGroupMeetingAttendanceLocalId -->
 
 	<Item>
 		<Element>Organisation</Element>
@@ -46,7 +46,7 @@
 			<p>The provider who is providing this teaching group attendance record.</p>
 		</Description>
 		<Type ref="CommonTypes" name="OrganisationObjectReference"/>
-	</Item>    <!-- Organisation -->
+	</Item>       <!-- 3. Organisation -->
 	<Item>
 		<Element>TeachingGroup</Element>
 		<Characteristics>M</Characteristics>
@@ -55,7 +55,7 @@
 			<p>The TeachingGroup that is meeting, and having it's attendance taken.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ObjectReference"/>
-	</Item>    <!-- TeachingGroup -->
+	</Item>       <!-- 4. TeachingGroup -->
 
 	<Item>
 		<Element>MeetingDate</Element>
@@ -64,7 +64,7 @@
 			<p>The date the TeachingGroup meeting took place</p>
 		</Description>
 		<Type name="xs:date"/>
-	</Item>		<!-- MeetingDate -->
+	</Item>		  <!-- 5. MeetingDate -->
 
 	<Item>
 		<Element>SubmissionDateTime</Element>
@@ -73,9 +73,9 @@
 			<p>The date and time the teaching group meeting attendance was submitted.</p>
 		</Description>
 		<Type name="xs:dateTime"/>
-	</Item>		<!-- SubmissionDateTime 	-->
+	</Item>		  <!-- 6. SubmissionDateTime 	-->
 
-	<Choice>
+	<Choice>      <!-- 7. Choice -->
 		<Item>
 			<Element>Scheduled</Element>
 			<Characteristics>O</Characteristics>
@@ -85,7 +85,7 @@
 				provided ad hoc meeting details cannot be provided.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ScheduledMeetingType"/>
-		</Item>    <!-- Scheduled -->
+		</Item>    <!-- 1. Scheduled -->
 
 		<Item>
 			<Element>AdHoc</Element>
@@ -96,7 +96,7 @@
 				scheduled meeting details cannot be provided.</p>
 			</Description>
 			<Type ref="CommonTypes" name="AdHocMeetingType"/>
-		</Item>    <!-- AdHoc -->
+		</Item>    <!-- 2. AdHoc -->
 	</Choice>
 	
 	<Item>
@@ -108,7 +108,7 @@
 				present or absent from school or class.</p>
 		</Description>
 		<Type ref="CommonTypes" name="StudentAttendanceListType"/>
-	</Item>    <!-- StudentAttendanceList -->
+	</Item>    <!-- 8. StudentAttendanceList -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -118,47 +118,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
+	</Item>    <!-- 9. RecordAudit -->
 
-	<xhtml:Example xmlns="" name="Teaching Group Meeting Attendance">
-		<TeachingGroupMeetingAttendance>
-			<TeachingGroupMeetingAttendanceRefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934554</TeachingGroupMeetingAttendanceRefId>
-			<Organisation>
-  	  			<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-		    	<LocalId json:force-string="true">9961</LocalId>
-			</Organisation>
-			<TeachingGroup>
-				<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd993378</RefId>
-			</TeachingGroup>
-			<MeetingDate>2020-04-03</MeetingDate>
-			<Scheduled>
-				<SchedulePeriod>
-					<LocalId>2020a-A</LocalId>
-				</SchedulePeriod>
-				<StartTime>09:30:00</StartTime>
-				<EndTime>10:30:00</EndTime>
-			</Scheduled>
-			<StudentAttendanceList>
-				<StudentAttendance>
-					<Student>
-						<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934554</RefId>
-					</Student>
-					<Code>P</Code>
-					<CodeGroup>P</CodeGroup>
-					<Note>Student was present.</Note>	
-				</StudentAttendance>	
-				<StudentAttendance>
-					<Student>
-						<RefId>7f11e3ed-3ac5-4673-9fdc-bcdbcd934667</RefId>
-					</Student>
-					<Code>L</Code>
-					<CodeGroup>U</CodeGroup>
-					<Note>Late to class; Unjustified</Note>		
-					<StartTime>09:45:00</StartTime>
-					<EndTime>10:30:00</EndTime>
-				</StudentAttendance>
-			</StudentAttendanceList>
-		</TeachingGroupMeetingAttendance>
-	</xhtml:Example>
-
+	<xi:include parse="xml" href="Examples/TeachingGroupMeetingAttendance.xml"/>
 </DataObject>

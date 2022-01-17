@@ -35,7 +35,7 @@
 			<p>The provider, e.g. school, tertiary institution etc, that this schedule date record belongs to.</p>
 		</Description>
 		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
-	</Item>    <!-- Organisation -->
+	</Item>    <!-- 1. Organisation -->
 	
 	<Item>
 		<Element>Schedule</Element>
@@ -45,7 +45,7 @@
 			<p>The schedule within the provider to which this ScheduleDate applies.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
-	</Item>    <!-- Schedule -->
+	</Item>    <!-- 2. Schedule -->
 
 	<Item>
 		<Element>CalendarDateList</Element>
@@ -55,7 +55,7 @@
 			<p>A list of schedule calendar dates and the period times, academic day and terms that applies to each day.</p>
 		</Description>
 		<Type ref="CommonTypes" name="CalendarDateListType"/> 
-	</Item>    <!-- CalendarDateList -->
+	</Item>    <!-- 3. CalendarDateList -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -65,47 +65,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
+	</Item>    <!-- 4. RecordAudit -->
 
-	<xhtml:Example xmlns="" name ="Schedule Date">
-		<ScheduleDate>
-			<Organisation>
-  	  			<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-		    	<LocalId json:force-string="true">9961</LocalId>
-			</Organisation>
-			<Schedule>
-				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
-				<Name>Schedule 2019a (Term 1)</Name>
-			</Schedule>
-			<CalendarDateList>
-				<CalendarDate>
-					<Date>2019-03-14</Date>
-					<SchoolClosed>N</SchoolClosed>
-					<ScheduleAcademicDay>
-						<LocalId>2019a-A</LocalId>
-					</ScheduleAcademicDay>
-					<SchedulePeriodTime>
-						<LocalId>2019a-Normal</LocalId>
-					</SchedulePeriodTime>
-					<ScheduleTermList>
-						<ScheduleTerm json:force-array="true">
-							<LocalId>2019-1</LocalId>
-						</ScheduleTerm>
-					</ScheduleTermList>
-				</CalendarDate>
-				<CalendarDate>
-					<Date>2019-03-15</Date>
-					<SchoolClosed>Y</SchoolClosed>
-				</CalendarDate>
-			</CalendarDateList>	
-
-			<RecordAudit>
-				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-				<CreatedBy>
-				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-				<Name>Bobby Test</Name>
-				</CreatedBy>
-			</RecordAudit>
-		</ScheduleDate>
-	</xhtml:Example>
+	<xi:include parse="xml" href="Examples/ScheduleDate.xml"/>
 </DataObject>

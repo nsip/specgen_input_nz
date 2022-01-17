@@ -29,7 +29,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"></Type>
-	</Item>    <!-- StudentProviderEnrolmentRefId -->
+	</Item>    <!-- 1. StudentProviderEnrolmentRefId -->
 
     <Item>
 		<Element>StudentProviderEnrolmentLocalId</Element>
@@ -40,7 +40,7 @@
 			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- StudentProviderEnrolmentLocalId -->
+	</Item>    <!-- 2. StudentProviderEnrolmentLocalId -->
 
 	<Item>
 		<Element>Student</Element>
@@ -50,7 +50,7 @@
 			<p>Generic object reference to the Student enrolling at the Provider</p>
 		</Description>
 		<Type ref="CommonTypes" relationship="records enrollment of" count="*:1" name="StudentObjectReferenceType"/>
-	</Item>    <!-- Student -->
+	</Item>    <!-- 3. Student -->
 
 	<Item>
 		<Element>Provider</Element>
@@ -60,7 +60,7 @@
 			<p>Generic object reference to the education Provider, eg school.</p>
 		</Description>
 		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
-	</Item>    <!-- Provider -->
+	</Item>    <!-- 4. Provider -->
 
 	<Item>
 		<Element>StudentId</Element>
@@ -70,7 +70,7 @@
 			<p>A unique identifier assigned to a Student for a period of enrolment by a provider.</p>
 		</Description>
 		<Type name="xs:normalizedString"></Type>
-	</Item>    <!-- StudentId -->
+	</Item>    <!-- 5. StudentId -->
 
 	<Item>
 		<Element>ProviderEntryDate</Element>
@@ -84,7 +84,7 @@
 			the enrolment.</p>
 		</Description>
 		<Type ref="CommonTypes" name="StartDateType"/>
-	</Item>    <!-- EntryDate -->
+	</Item>    <!-- 6. ProviderEntryDate -->
 
 	<Item>
 		<Element>ProviderExitDate</Element>
@@ -95,7 +95,7 @@
 			of contiguous StudentProviderEnrolment records.</p>
 		</Description>
 		<Type ref="CommonTypes" name="EndDateType"/>
-	</Item>    <!-- ExitDate -->
+	</Item>    <!-- 7. ExitDate -->
 
 	<Item>
 		<Element>Status</Element>
@@ -104,7 +104,7 @@
 		<Description>
 			<p>The status of the enrolment WiP</p></Description>
 		<Type ref="CodeSets" name="NZCodeSetsProviderEnrolmentStatusType"></Type>
-	</Item>    <!-- Status -->
+	</Item>    <!-- 8. Status -->
 
 	<Item>
 		<Element>Exit</Element>
@@ -114,7 +114,7 @@
 			<p>Details of the reasons, and interventions leading up to the student's enrolment being terminated.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ProviderExitType"/>
-	</Item>		<!-- Exit -->
+	</Item>		<!-- 9. Exit -->
 
 	<Item>
 		<Element>ECEEducationHistoryList</Element>
@@ -124,7 +124,7 @@
 			<p>The list of the types of early childhood education the parent told a primary
 			 school that the student received and the hours per week and/or day the student attended.</p></Description>
 		<Type ref="CommonTypes" name="ECEEducationHistoryList"></Type>
-	</Item>    <!-- ECE Education History List -->
+	</Item>    <!-- 10. ECE Education History List -->
 
 	<Item>
 		<Element>EarlyChildhoodEnrolment</Element>
@@ -133,7 +133,7 @@
 		<Description>
 			<p>Properties of an enrolment in an early childhood service (WiP).</p></Description>
 		<Type ref="CommonTypes" name="StudentECEEnrolmentType"></Type>
-	</Item>    <!-- EarlyChildhoodEnrolment -->
+	</Item>    <!-- 11. EarlyChildhoodEnrolment -->
 
 	<Item>
 		<Element>SchoolEnrolment</Element>
@@ -142,7 +142,7 @@
 		<Description>
 			<p>Properties of an enrolment in a school</p></Description>
 		<Type ref="CommonTypes" name="StudentSchoolEnrolmentType"></Type>
-	</Item>    <!-- SchoolEnrolment -->
+	</Item>    <!-- 12. SchoolEnrolment -->
 
 	<Item>
 		<Element>TertiaryEducationEnrolment</Element>
@@ -151,7 +151,7 @@
 		<Description>
 			<p>Properties of an enrolment in a Tertiary Education service (WiP).</p></Description>
 		<Type ref="CommonTypes" name="StudentTertiaryEnrolmentType"></Type>
-	</Item>    <!-- TertiaryEducationEnrolment -->
+	</Item>    <!-- 13. TertiaryEducationEnrolment -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -161,57 +161,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
+	</Item>    <!-- 14. RecordAudit -->
 
-	<xhtml:Example xmlns="" name="Completed International Student School Enrolment">
-		<StudentProviderEnrolment>
-			<StudentProviderEnrolmentRefId>a8c3d3e3-4b35-9d75-101d-00aa001a1652</StudentProviderEnrolmentRefId>
-			<StudentProviderEnrolmentLocalId>2004H102</StudentProviderEnrolmentLocalId>
-			<Student>
-				<RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
-			</Student>
-			<Provider>
-		  	  	<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-	    		<LocalId json:force-string="true">9961</LocalId>
-			</Provider>
-			<StudentId>123ABC</StudentId>
-			<ProviderEntryDate>2017-03-30</ProviderEntryDate>
-			<ProviderExitDate>2018-12-18</ProviderExitDate>
-			<Status>WIT</Status>
-			<SchoolEnrolment>
-				<SchoolYear>2018</SchoolYear>
-				<StartDate>2018-01-29</StartDate>
-				<EndDate>2018-12-18</EndDate>
-				<MembershipType>BASE</MembershipType>
-				<YearLevel json:force-string="true">11</YearLevel>
-				<EligibilityCriteria>GAE</EligibilityCriteria>
-				<EligibilityVerification>
-					<Source>AUSPA</Source>
-					<DocumentSerialNumber>L905673</DocumentSerialNumber>
-					<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
-					<IsConfirmed>true</IsConfirmed>
-					<Timestamp>2003-11-30T12:34:56.7</Timestamp>
-					<Provider>
-						<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
-					</Provider>
-				</EligibilityVerification>
-				<FTE>1.0</FTE>
-				<FundingType>EX</FundingType>
-				<FundingYearLevel json:force-string="true">1</FundingYearLevel>
-				<Curriculum>NZC</Curriculum>
-				<CurriculumLevel>5</CurriculumLevel>
-				<InternationalEnrolment>
-					<NZArrivalDate>2018-05-02</NZArrivalDate>
-					<ExchangeScheme>STA</ExchangeScheme>
-				</InternationalEnrolment>
-			</SchoolEnrolment>
-			<RecordAudit>
-				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-				<CreatedBy>
-				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-				<Name>Bobby Test</Name>
-				</CreatedBy>
-			</RecordAudit>
-		</StudentProviderEnrolment>
-	</xhtml:Example>
+	<xi:include parse="xml" href="Examples/StudentProviderEnrolment.xml"/>
 </DataObject>

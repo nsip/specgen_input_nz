@@ -1,78 +1,7 @@
-<DataObject name='StudentContactPersonal'
-			xmlns:xs="http://www.w3.org/2001/XMLSchema"
-			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-			xmlns:xi="http://www.w3.org/2001/XInclude"
+<IncludeGroup 
 			xmlns:xhtml="http://www.w3.org/1999/xhtml"
-			xmlns:json="http://json.org/"
+			xmlns:json="http://json.org/">
 
-            xmlns="http://sifassociation.org/SpecGen">
-
-	<EventsReported>true</EventsReported>
-	<Key>@StudentContactPersonalRefId</Key>
-	<Item>
-		<Element>StudentContactPersonal</Element>
-		<privacyRating>High</privacyRating>
-		<Description>
-			Information about a Student's whānau member.
-		</Description>
-	</Item>
-	<Item>
-		<Element>StudentContactPersonalRefId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The universally unique identifier for the data object record that is used across systems.</p>		
-		</Description>
-		<Type ref='CommonTypes' name='RefIdType'/>
-	</Item>    <!-- StudentContactPersonalRefId -->
-	<Item>
-		<Element>StudentContactPersonalLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>The Id of the data object record that was provided by the system that the information 
-			was originally sourced from.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"></Type>
-	</Item>    <!-- StudentContactPersonalLocalId -->
-	<Item>
-		<Element>HasBOTVote</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>Records that this Whānau member holds the Whānau's Board of Trustees vote.</p>
-		</Description>
-		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-	</Item>    <!-- HasBOTVote -->
-    <Item>
-		<Element>PersonInfo</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>Personal Information collected about the StudentContact, when that contact is a member
-			of the Student's whānau.</p>
-		</Description>
-		<Type ref="CommonTypes" name="StudentContactPersonInfoType"></Type>
-	</Item>    <!-- PersonInfo -->
-    <Item>
-		<Element>HealthcareServiceInfo</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>Information about the StudentContact, when that contact is a healthcare service.
-			Details about the actual healthcare pratitioner are kept in the PersonInfo fields.</p>
-		</Description>
-		<Type ref="CommonTypes" name="HealthcareServiceInfoType"></Type>
-	</Item>    <!-- HealthcareServiceInfo -->
-	<Item>
-		<Element>RecordAudit</Element>    
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
 	
 	<xhtml:Example xmlns='' name="StudentContactPersonal Family Member Example">
 		<StudentContactPersonal>
@@ -189,4 +118,4 @@
 			</RecordAudit>
 		</StudentContactPersonal>
 	</xhtml:Example>
-</DataObject>
+</IncludeGroup>

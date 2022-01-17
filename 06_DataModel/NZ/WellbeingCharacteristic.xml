@@ -28,7 +28,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- WellbeingCharacteristicRefId -->
+  </Item>    <!-- 1. WellbeingCharacteristicRefId -->
 
   <Item>
 		<Element>WellbeingCharacteristicLocalId</Element>
@@ -39,7 +39,7 @@
 			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-  </Item>    <!-- WellbeingCharacteristicLocalId -->
+  </Item>    <!-- 2. WellbeingCharacteristicLocalId -->
 
   <Item>
     <Element>Student</Element>
@@ -49,7 +49,7 @@
       <p>Generic object reference to the student to whom this WellbeingCharacteristic belongs.</p>
     </Description>
     <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
-  </Item>    <!-- Student -->
+  </Item>    <!-- 3. Student -->
 
   <Item>
     <Element>RecordingProvider</Element>
@@ -59,7 +59,7 @@
       <p>Generic object reference to the provider which recorded this Wellbeing Characteristic.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
-  </Item>    <!-- RecordingProvider -->
+  </Item>    <!-- 4. RecordingProvider -->
   
   <Item>
     <Element>StartDate</Element>
@@ -69,7 +69,7 @@
       <p>Starting Date for this Characteristic to be noted.</p>
     </Description>
     <Type ref="CommonTypes" name="StartDateType"/>
-  </Item>    <!-- StartDate -->
+  </Item>    <!-- 5. StartDate -->
 
   <Item>
     <Element>EndDate</Element>
@@ -79,7 +79,7 @@
       <p>End date for this Characteristic to be noted, if there is one.</p>
     </Description>
     <Type ref="CommonTypes" name="EndDateType"/>
-  </Item>    <!-- EndDate -->
+  </Item>    <!-- 6. EndDate -->
   
   <Item>
     <Element>ReviewDate</Element>
@@ -89,7 +89,7 @@
       <p>Date at which this information should be reviewed.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!-- ReviewDate -->
+  </Item>    <!-- 7. ReviewDate -->
     
   <Item>
     <Element>CharacteristicNotes</Element>
@@ -99,7 +99,7 @@
       <p>Text relating to the particular WellbeingCharacteristic.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- CharacteristicNotes -->
+  </Item>    <!-- 8. CharacteristicNotes -->
   
   <Item>
     <Element>NoteList</Element>
@@ -109,7 +109,7 @@
       <p>A list of notes that have been written about the wellbeing characteristic.</p>
     </Description>
      <Type ref="CommonTypes" name="NoteListType"></Type>
-  </Item>    <!-- NoteList -->
+  </Item>    <!-- 9. NoteList -->
 
   <Item>
     <Element>Classification</Element>
@@ -119,7 +119,7 @@
       <p>Top most category of WellbeingCharacteristic.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicClassType"></Type>
-  </Item>    <!-- CharacteristicClassification -->
+  </Item>    <!-- 10. Classification -->
 
   <Item>
     <Element>Category</Element>
@@ -129,7 +129,7 @@
       <p>Category of WellbeingCharacteristic.</p>
     </Description>
 		<Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicCategoryType"/>
-  </Item>    <!-- Category -->
+  </Item>    <!-- 11. Category -->
   
   <Item>
     <Element>SubCategory</Element>
@@ -139,7 +139,7 @@
       <p>Sub category of the WellbeingCharacteristic.</p>
     </Description>
 		<Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicSubCategoryType"/>
-  </Item>    <!-- SubCategory -->
+  </Item>    <!-- 12. SubCategory -->
  
   <Item>
     <Element>SubSubCategory</Element>
@@ -151,7 +151,7 @@
       are available to further define the type of vision issue the learner has. Not all support needs have sub needs.</p>
     </Description>
 		<Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicSubSubCategoryType"/>
-  </Item>    <!-- SubCategory -->
+  </Item>    <!-- 13. SubSubCategory -->
 
   <Item>
     <Element>SubCategoryDetail</Element>
@@ -161,7 +161,7 @@
       <p>Additional detail about a sub category.</p>
     </Description>
 		<Type name="xs:normalizedString"/>
-  </Item>    <!-- SubCategoryDetail -->
+  </Item>    <!-- 14. SubCategoryDetail -->
 
   <Item>
     <Element>CharacteristicPriority</Element>
@@ -171,7 +171,7 @@
       <p>The priority of the characteristic in relation to other characteristics within the same classification.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicPriorityType"/>
-  </Item>    <!-- CharacteristicPriority -->
+  </Item>    <!-- 15. CharacteristicPriority -->
 
   <Item>
     <Element>CaseLead</Element>
@@ -181,7 +181,7 @@
       <p>The Agency taking the lead on the learning support need case, e.g. MOE, Police, Corrections etc.)</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsLearningSupportCaseLeadType"></Type>
-  </Item>    <!-- CaseLead (agency) -->
+  </Item>    <!-- 16. CaseLead (agency) -->
 
   <Item>
     <Element>CaseLeadOtherDesc</Element>
@@ -191,7 +191,7 @@
       <p>Free text describing the Case Lead Agency when a Case Lead of 'Other' is selected.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- CaseLeadOtherDesc -->
+  </Item>    <!-- 17. CaseLeadOtherDesc -->
 
   <Item>
     <Element>CaseLeadContactPerson</Element>
@@ -201,7 +201,7 @@
       <p>The name of the contact person for the Case Lead Agency.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- CaseLeadContactPerson -->
+  </Item>    <!-- 18. CaseLeadContactPerson -->
 
   <Item>
     <Element>DailyManagement</Element>
@@ -211,7 +211,7 @@
       <p></p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- DailyManagement -->
+  </Item>    <!-- 19. DailyManagement -->
   
   <Item>
     <Element>EmergencyManagement</Element>
@@ -221,7 +221,7 @@
       <p></p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- EmergencyManagement -->
+  </Item>    <!-- 20. EmergencyManagement -->
   
   <Item>
     <Element>EmergencyResponsePlan</Element>
@@ -231,7 +231,7 @@
       <p></p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- EmergencyResponsePlan -->
+  </Item>    <!-- 21. EmergencyResponsePlan -->
   
   <Item>
     <Element>Trigger</Element>
@@ -241,7 +241,7 @@
       <p></p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- Trigger -->
+  </Item>    <!-- 22. Trigger -->
 
   <Item>
     <Element>ConfidentialFlag</Element>
@@ -251,7 +251,7 @@
       <p>Flag indicating if the characteristic is confidential or not.  If ‘Y’ should not be shared with any other system/school.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>    <!-- ConfidentialFlag -->    
+  </Item>    <!-- 23. ConfidentialFlag -->    
   
   <Item>
     <Element>Alert</Element>
@@ -261,7 +261,7 @@
       <p>Create an Alert for this Characteristic?</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>    <!-- Alert -->    
+  </Item>    <!-- 24. Alert -->    
   
   <Item>
     <Element>MedicationList</Element>
@@ -271,7 +271,7 @@
       <p></p>
     </Description>
      <Type ref="CommonTypes" name="MedicationListType"></Type>
-  </Item>    <!-- MedicationList -->
+  </Item>    <!-- 25. MedicationList -->
   
   <Item>
     <Element>DocumentList</Element>
@@ -281,7 +281,7 @@
       <p>Describes the Location of any associated documents kept in relation to this Characteristic.</p>
     </Description>
      <Type ref="CommonTypes" name="DocumentListType"></Type>
-  </Item>    <!-- DocumentList -->
+  </Item>    <!-- 26. DocumentList -->
 
   <Item>
     <Element>WellbeingEventList</Element>
@@ -291,7 +291,7 @@
       <p>A list of any Wellbeing Events that have arisen as a result of this Characteristic.</p>
     </Description>
     <Type ref="CommonTypes" name="WellbeingEventListType"/>
-  </Item>    <!-- WellbeingEventList -->
+  </Item>    <!-- 27. WellbeingEventList -->
 
   <Item>
     <Element>WellbeingAlertList</Element>
@@ -301,7 +301,7 @@
       <p>A list of any Wellbeing Alerts that have arison as a result of this Chracteristic.</p>
     </Description>
     <Type ref="CommonTypes" name="WellbeingAlertListType"></Type>
-  </Item>    <!-- WellbeingAlertList -->
+  </Item>    <!-- 28. WellbeingAlertList -->
 
   <Item>
     <Element>SpecialAssessmentConditionList</Element>
@@ -311,7 +311,7 @@
       <p>A list of the special assessment conditions that a student is entitled to have when sitting an assessment.</p>
     </Description>
     <Type ref="CommonTypes" name="SpecialAssessmentConditionListType"></Type>
-  </Item>    <!-- SpecialAssessmentConditionList -->
+  </Item>    <!-- 29. SpecialAssessmentConditionList -->
 
   <Item>
     <Element>Status</Element>
@@ -321,7 +321,7 @@
       <p>The staus of the Wellbeing Characteristic.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsWellbeingCharacteristicStatusType"></Type>
-  </Item>    <!-- Status -->
+  </Item>    <!-- 30. Status -->
 
   <Item>
     <Element>MedicalCharacteristicDesc</Element>
@@ -331,7 +331,7 @@
       <p>Free text providing additional information about a medical need of a student. Especially when a medical need of 'Other' is selected.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- MedicalCharacteristicDesc -->
+  </Item>    <!-- 31. MedicalCharacteristicDesc -->
 
   <Item>
     <Element>OfficialDiagnosis</Element>
@@ -341,7 +341,7 @@
       <p>Indicates whether or not the student has an official diagnosis that pertains to this Wellbeing Characteristic.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>    <!-- OfficialDiagnosis -->
+  </Item>    <!-- 32. OfficialDiagnosis -->
 
   <Item>
     <Element>OfficialDiagnosisList</Element>
@@ -351,7 +351,7 @@
       <p>A list of official diagnoses that pertains to this wellbeing characteristic. At least one diagnosis is required if OfficialDiagnosis = 'Y'.</p>
     </Description>
     <Type ref="CommonTypes" name="OfficialDiagnosisListType"></Type>
-  </Item>    <!-- OfficialDiagnosisList -->
+  </Item>    <!-- 33. OfficialDiagnosisList -->
 
   <Item>
     <Element>StudentVoiceList</Element>
@@ -361,17 +361,7 @@
       <p>A list of the student's or their whānau's voice about their wellbeing characteristic in regards to the student 's interests, goals, and voice (comments, opinions).</p>
     </Description>
     <Type ref="CommonTypes" name="StudentVoiceListType"></Type>
-  </Item>    <!-- StudentVoiceList -->
-
-	<Item>
-		<Element>RecordAudit</Element>    
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
+  </Item>    <!-- 34. StudentVoiceList -->
 
   <!-- Free Text fields for Learning Support Register -->
   <Item>
@@ -382,7 +372,7 @@
       <p>Free text that describes the interests a learner has that pertains to this wellbeing Characteristic.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- LearnerInterests -->
+  </Item>    <!-- 35. LearnerInterests -->
 
   <Item>
     <Element>LearnerWhanauGoal</Element>
@@ -392,7 +382,7 @@
       <p>Free text describing any goals the student wants to achieve, or any goals their whānau want them to achieve that pertain to this wellbeing characteristic.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- LearnerWhanauGoal -->
+  </Item>    <!-- 36. LearnerWhanauGoal -->
 
   <Item>
     <Element>LearnerWhanauVoice</Element>
@@ -402,33 +392,17 @@
       <p>Free text capturing the learners and/or their whānaus opinions and point of view in regards to this wellbeing characteristic.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- LearnerWhanauGoal -->
+  </Item>    <!-- 37. LearnerWhanauVoice -->
 
-  <xhtml:Example xmlns="" name="WellbeingCharacteristic">
-    <WellbeingCharacteristic>
-      <WellbeingCharacteristicRefId>2ffb63b4-cfef-4820-8501-e7d1e54555cb</WellbeingCharacteristicRefId>
-      <Student>
-        <RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
-      </Student>
-      <RecordingProvider>
-          <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-		    	<LocalId json:force-string="true">9961</LocalId>
-      </RecordingProvider>
-      <StartDate>2017-11-01</StartDate>
-      <EndDate>2017-11-10</EndDate>
-      <CharacteristicNotes>This Student has a special need.</CharacteristicNotes>
-      <Classification>LSN</Classification>
-      <Category>LSN-SOC</Category>
-      <SubCategory>LSN-HYP</SubCategory>
-      <CaseLead>RT</CaseLead>
-      <CaseLeadContactPerson>Dr RTL Bush</CaseLeadContactPerson>
-      <RecordAudit>
-        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-        <CreatedBy>
-          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-          <Name>Bobby Test</Name>
-        </CreatedBy>
-      </RecordAudit>
-    </WellbeingCharacteristic>
-  </xhtml:Example>
+	<Item>
+		<Element>RecordAudit</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RecordAuditType"></Type>
+	</Item>    <!-- 38. RecordAudit -->
+
+  <xi:include parse="xml" href="Examples/WellbeingCharacteristic.xml"/>
 </DataObject>

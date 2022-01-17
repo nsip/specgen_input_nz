@@ -24,7 +24,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- StudentAttainmentRefId -->
+  </Item>    <!-- 1. StudentAttainmentRefId -->
 
   <Item>
     <Element>StudentAttainmentLocalId</Element>
@@ -35,7 +35,7 @@
 			was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- StudentAttainmentLocalId -->
+  </Item>    <!-- 2. StudentAttainmentLocalId -->
 
   <Item>
     <Element>GrantingOrganisation</Element>    
@@ -45,7 +45,7 @@
       <p>Generic object reference to the Provider/Organisation who is granting the attainment to the student, e.g. NZQA, TEC.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
-  </Item>    <!-- GrantingOrganisation -->
+  </Item>    <!-- 3. GrantingOrganisation -->
 
   <Item>
     <Element>Attainment</Element>    
@@ -55,7 +55,7 @@
       <p>A generic object reference to the Credential the student has achieved.</p>
     </Description>
     <Type ref="CommonTypes" name="NamedObjectReferenceType"></Type>
-  </Item>    <!-- Attainment -->
+  </Item>    <!-- 4. Attainment -->
 
   <Item>
     <Element>Name</Element>
@@ -65,7 +65,7 @@
       <p>The name of the actual attainment conferred; e.g. "NCEA Level 2 Chemistry Endorsed with Merit"</p>
     </Description>
     <Type name="xs:string"/>
-  </Item>    <!-- Name -->
+  </Item>    <!-- 5. Name -->
 
   <Item>
     <Element>Student</Element>
@@ -76,7 +76,7 @@
         object who the attainment is for.</p>
     </Description>
     <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
-  </Item>    <!-- Student -->
+  </Item>    <!-- 6. Student -->
 
   <Item>
     <Element>AuthorisingStaffMember</Element>
@@ -87,7 +87,7 @@
           staff member who authorised the attainment.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>    <!-- AuthorisingStaffMember -->
+  </Item>    <!-- 7. AuthorisingStaffMember -->
 
   <Item>
     <Element>DateAttained</Element>
@@ -97,7 +97,7 @@
       <p>The date the student achieved the attainment.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!-- DateAttained -->
+  </Item>    <!-- 8. DateAttained -->
 
   <Item>
     <Element>YearAttained</Element>
@@ -107,7 +107,7 @@
       <p>The calendar year the student achieved the attainment.</p>
     </Description>
     <Type name="xs:gYear"></Type>
-  </Item>    <!-- YearAttained -->
+  </Item>    <!-- 9. YearAttained -->
 
   <Item>
     <Element>JustificationList</Element>
@@ -118,7 +118,7 @@
           justify the student achieving this attainment.</p>
     </Description>
     <Type ref="CommonTypes" name="JustificationListType"/>
-  </Item>    <!-- JustificationList -->
+  </Item>    <!-- 10. JustificationList -->
 
   <Item>
     <Element>SubjectAreaList</Element>
@@ -128,7 +128,7 @@
       <p>Code denoting the Learning or Subject Area the assessment task is for.</p>
     </Description>
     <Type ref="CommonTypes" name="SubjectAreaListType"/>
-  </Item>    <!-- SubjectAreaList -->
+  </Item>    <!-- 11. SubjectAreaList -->
 
   <Item>
     <Element>EndorsementLevel</Element>
@@ -138,7 +138,7 @@
       <p>The NCEA endorsement level that was attained by the student.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsNCEAEndorsementLevelType"/>
-  </Item>    <!-- EndorsementLevel -->
+  </Item>    <!-- 12. EndorsementLevel -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -148,68 +148,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-  
-  <xhtml:Example xmlns="" name="Student Attainment - NCEA Course Endorsement">
-    <StudentAttainment>
-      <StudentAttainmentRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</StudentAttainmentRefId>
-      <GrantingOrganisation>
-          <RefId>8ec05a56-1c5f-4fc7-9ea1-d328c5467c59</RefId>
-          <LocalId>9772</LocalId>
-      </GrantingOrganisation>
-      <Attainment>
-        <RefId>d0a0a27a-d0a8-510a-d9d7-5101a8c3da39</RefId>
-      </Attainment>
-      <Name>NCEA Level 2 Chemistry - Endorsed with merit</Name>
-      <Student>
-        <RefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</RefId>
-        <LocalId>HP85-1039</LocalId>
-        <Name>Harry Potter</Name>
-        <NationalStudentNumber json:force-string="true">23423421</NationalStudentNumber>
-      </Student>
-      <DateAttained>2018-07-25</DateAttained>
-			<JustificationList>
-				<Justification>
-					<RefId>2752a16b-b62a-4973-9d44-23e13e1c037b</RefId>
-					<LocalId>91165-v2</LocalId>
-					<Name>Demonstrate understanding of the properties of selected organic compounds</Name>
-					<ObjectType>StudentAssessmentTaskResult</ObjectType>
-					<AssessmentType>EXT</AssessmentType>
-					<Result>Achieved</Result>
-					<Date>2016-06-28</Date>
-					<CreditValue>4</CreditValue>					
-				</Justification>
-				<Justification>
-					<RefId>eca0da5d-94af-4223-aaa6-7c0083006efd</RefId>
-					<LocalId>91166-v2</LocalId>
-					<Name>Demonstrate understanding of chemical reactivity</Name>
-					<ObjectType>StudentAssessmentTaskResult</ObjectType>
-					<AssessmentType>INT</AssessmentType>
-					<Result>Achieved with merit</Result>
-					<Date>2016-06-01</Date>
-					<CreditValue>3</CreditValue>					
-				</Justification>				
-				<Justification>
-					<RefId>12f4761d-5e97-4e12-804e-e16d882c86c7</RefId>
-					<LocalId>91167-v2</LocalId>
-					<Name>Demonstrate understanding of oxidation-reduction</Name>
-					<ObjectType>StudentAssessmentTaskResult</ObjectType>
-					<AssessmentType>EXT</AssessmentType>
-					<Result>Achieved</Result>
-					<Date>2016-06-28</Date>
-					<CreditValue>3</CreditValue>										
-				</Justification>				
-			</JustificationList>  
-      <SubjectAreaList>
-          <SubjectArea json:force-array="true">CHEM</SubjectArea>
-      </SubjectAreaList>
-      <RecordAudit>
-        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-        <CreatedBy>
-          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-          <Name>Bobby Test</Name>
-        </CreatedBy>
-      </RecordAudit>
-    </StudentAttainment>
-  </xhtml:Example>
+	</Item>    <!-- 13. RecordAudit -->
+
+  <xi:include parse="xml" href="Examples/StudentAttainment.xml"/> 
 </DataObject>

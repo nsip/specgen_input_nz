@@ -28,7 +28,7 @@
 			<p>System assigned unique identifier for the LearningStandard</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"/>
-  </Item>    <!-- LearningStandardRefId -->
+  </Item>    <!-- 1. LearningStandardRefId -->
   <Item>
     <Element>LearningStandardLocalId</Element>
     <Characteristics>O</Characteristics>
@@ -40,7 +40,7 @@
        system that the information was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"/>
-  </Item>    <!-- LearningStandardLocalId -->  
+  </Item>    <!-- 2. LearningStandardLocalId -->  
   <Item>
     <Element>Title</Element>
     <Characteristics>M</Characteristics>
@@ -49,7 +49,7 @@
       <p>The name of the LearningStandard. eg: "Demonstrate understanding of chemical reactivity"</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- Title -->
+  </Item>    <!-- 3. Title -->
 
 
   <!-- Alternate Composite Key -->
@@ -64,7 +64,7 @@
        with VersionNo.</p>
     </Description>
     <Type name="xs:int"/>
-  </Item>    <!-- Number -->
+  </Item>    <!-- 4. Number -->
   <Item>
     <Element>VersionNo</Element>
     <Characteristics>O</Characteristics>
@@ -73,7 +73,7 @@
       <p>The version number of the LearningStandard.</p>
     </Description>
     <Type name="xs:decimal"/>
-  </Item>    <!-- VersionNo -->
+  </Item>    <!-- 5. VersionNo -->
 
   <Item>
     <Element>Publisher</Element>
@@ -83,7 +83,7 @@
       <p>Generic object reference to the EducationOrganisation that published the LearningStandard</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"/>
-  </Item>    <!-- Publisher -->
+  </Item>    <!-- 6. Publisher -->
 
   <Item>
     <Element>StandardType</Element>
@@ -93,7 +93,7 @@
       <p>Code denoting the type of LearningStandard.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsLearningStandardTypeType"/>
-  </Item>    <!-- StandardType -->
+  </Item>    <!-- 7. StandardType -->
 
   <Item>
     <Element>LearningStandardFamily</Element>
@@ -103,7 +103,7 @@
       <p>The family the learning standard is part of.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsLearningStandardFamilyType"/>
-  </Item>    <!-- LearningStandardFamily -->
+  </Item>    <!-- 8. LearningStandardFamily -->
 
   <Item>
     <Element>Description</Element>
@@ -113,7 +113,7 @@
         <p>Description of the standards document.</p>
     </Description>
    <Type name="xs:string"></Type>
-  </Item>    <!-- Description -->
+  </Item>    <!-- 9. Description -->
 
   <Item>
     <Element>SubjectAreaList</Element>
@@ -123,7 +123,7 @@
       <p>Which standard MoE Learning / Subject Areas is this LearningStandard part of?</p>
     </Description>
     <Type ref="CommonTypes" name="SubjectAreaListType"/>
-  </Item>    <!-- SubjectAreaList -->
+  </Item>    <!-- 10. SubjectAreaList -->
   
   <Item>
     <Element>Status</Element>
@@ -133,7 +133,7 @@
       <p>A code denoting the current status of the LearningStandard, as set by the Publisher.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsLearningStandardStatus"/>
-  </Item>      <!-- Status -->
+  </Item>      <!-- 11. Status -->
   <Item>
     <Element>PublicationDate</Element>
     <Characteristics>O</Characteristics>
@@ -142,7 +142,7 @@
       <p>The date the publishing organization published the standard.</p>
     </Description>
     <Type name="xs:date"/>
-  </Item>      <!-- PublicationDate -->
+  </Item>      <!-- 12. PublicationDate -->
   <Item>
     <Element>SupercededDate</Element>
     <Characteristics>O</Characteristics>
@@ -152,7 +152,7 @@
       the LearningStandard. May be future dated.</p>
     </Description>
     <Type ref="CommonTypes" name="EndDateType"/>>
-  </Item>      <!-- SupercededDate -->
+  </Item>      <!-- 13. SupercededDate -->
   <Item>
     <Element>DiscontinuedDate</Element>
     <Characteristics>O</Characteristics>
@@ -162,7 +162,7 @@
         the LearningStandard.  May be future dated.</p>
     </Description>
     <Type ref="CommonTypes" name="EndDateType"/>
-  </Item>      <!-- DiscontinuedDate -->
+  </Item>      <!-- 13. DiscontinuedDate -->
   <Item>
     <Element>Credits</Element>
     <Characteristics>O</Characteristics>
@@ -172,7 +172,7 @@
         achieved by passing this LearningStandard.</p>
     </Description>
     <Type name="xs:decimal"/>
-  </Item>      <!-- Credits -->
+  </Item>      <!-- 14. Credits -->
   <Item>
     <Element>Level</Element>
     <Characteristics>O</Characteristics>
@@ -181,7 +181,7 @@
       <p>Where the publisher is NZQA, Which NCEA Level applies to the LearningStandard?</p>
     </Description>
     <Type name="xs:decimal"/>
-  </Item>      <!-- Level -->
+  </Item>      <!-- 15. Level -->
   <Item>
     <Element>AssessmentType</Element>
     <Characteristics>O</Characteristics>
@@ -190,7 +190,7 @@
       <p>Code denoting how the LearningStandard is assessed.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentTypeType"/>
-  </Item>      <!-- AssessmentType -->
+  </Item>      <!-- 16. AssessmentType -->
   <Item>
     <Element>RelatedLearningStandardList</Element>
     <Characteristics>O</Characteristics>
@@ -199,7 +199,7 @@
       <p>A list of related LearningStandard references</p>
     </Description>
     <Type ref="CommonTypes" name="RelatedLearningStandardsListType"/>
-  </Item>      <!-- RelatedLearningStandardList -->
+  </Item>      <!-- 17. RelatedLearningStandardList -->
   <Item>
     <Element>CredentialList</Element>
     <Characteristics>O</Characteristics>
@@ -208,7 +208,7 @@
       <p>A list of Credentials that the learning standard contributes to attaining.</p>
     </Description>
     <Type ref="CommonTypes" name="CredentialListType"/>
-  </Item>      <!-- CredentialList -->
+  </Item>      <!-- 18. CredentialList -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -218,59 +218,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-  
-  <xhtml:Example xmlns="" name="NZQA Learning Standard Example">
-    <LearningStandard>
-      <LearningStandardRefId>cf851d37-6667-4bc6-aa11-ac34ef73af2b</LearningStandardRefId>
-      <LearningStandardLocalId>91165-v2</LearningStandardLocalId>
-      <Title>Chemistry - Organic Compounds</Title>
-      <Number>91165</Number>
-      <VersionNo>2</VersionNo>
-      <Publisher>
-        <RefId>cedf9eae-4358-408d-af57-ec0ea1b0d210</RefId>
-      </Publisher>
-      <Description>Demonstrate understanding of the properties of selected organic compounds</Description>
-      <SubjectAreaList>
-        <SubjectArea json:force-array="true">CHEM</SubjectArea>
-      </SubjectAreaList>
-      <Status>PU</Status>
-      <Credits>4</Credits>
-      <Level json:force-string="true">2</Level>
-      <AssessmentType>INT</AssessmentType>
-      <RecordAudit>
-        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-        <CreatedBy>
-          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-          <Name>Bobby Test</Name>
-        </CreatedBy>
-      </RecordAudit>
-    </LearningStandard>
-  </xhtml:Example>
+	</Item>      <!-- 19. RecordAudit -->
 
-  <xhtml:Example xmlns="" name="Cambridge Learning Standard Example">
-    <LearningStandard>
-      <LearningStandardRefId>89568965-c0a5-4cdb-9c48-b3642dbf08ee</LearningStandardRefId>
-      <LearningStandardLocalId>9709-2018</LearningStandardLocalId>
-      <Title>Pure Mathematics</Title>
-      <Number>9709</Number>
-      <VersionNo>2018</VersionNo>
-      <Publisher>
-        <RefId>a4c9f1dc-5e31-46b4-97aa-6d8534998707</RefId>
-      </Publisher>
-      <Description>Cambridge International AS Mathematics (2018) - Pure Mathematics</Description>
-      <SubjectAreaList>
-        <SubjectArea json:force-array="true">MATH</SubjectArea>
-      </SubjectAreaList>
-      <Status>PU</Status>
-      <AssessmentType>EXT</AssessmentType>
-      <RecordAudit>
-        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-        <CreatedBy>
-          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-          <Name>Bobby Test</Name>
-        </CreatedBy>
-      </RecordAudit>
-    </LearningStandard>
-  </xhtml:Example>
+  <xi:include parse="xml" href="Examples/LearningStandard.xml"/> 
 </DataObject>

@@ -1,87 +1,8 @@
-<DataObject name="SchedulePeriod"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:xi="http://www.w3.org/2001/XInclude"
+<IncludeGroup 
 	xmlns:xhtml="http://www.w3.org/1999/xhtml"
-	xmlns:json="http://json.org/"
-
-	xmlns="http://sifassociation.org/SpecGen">
+	xmlns:json="http://json.org/">
 
 
-	<Key>SchedulePeriodRefId</Key>
-	<EventsReported>true</EventsReported>
-	<Item>
-		<Element>SchedulePeriod</Element>
-	  	<privacyRating>Low</privacyRating>
-		<Description>
-			<p>A SchedulePeriod defines an abstract time slot in which the meeting of a 
-				TeachingGroup may take place. </p>
-			<p>SchedulePeriods do not directly have times because the time at which a given
-				 period may occur might vary depending on what day they occur on (for example,
-				 on a “full” day period 1 might occur from 9:00 to 10:00, but on a “half” day 
-				 period 1 might go from 9:00 to 9:30).</p>
-		</Description>
-	</Item>
-	
-	<Item>
-		<Element>SchedulePeriodRefId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The universally unique identifier for the data object record that is used across systems.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- SchedulePeriodRefId -->
-	<Item>
-		<Element>SchedulePeriodLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>The Id of the data object record that was provided by the system that the information 
-			was originally sourced from.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- SchedulePeriodLocalId -->
-
-	<Item>
-		<Element>PeriodName</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The name of the schedule period.</p>
-		</Description>
-		<Type  name="xs:normalizedString"/>
-	</Item>    <!-- PeriodName -->
-
-	<Item>
-		<Element>Organisation</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The provider the schedule period belongs to.</p>
-		</Description>
-		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
-	</Item>    <!-- Organisation -->
-	<Item>
-		<Element>Schedule</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The provider schedule the schedule period belongs to.</p>
-		</Description>
-		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
-	</Item>    <!-- Schedule -->
-
-	<Item>
-		<Element>RecordAudit</Element>    
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-  
 	<xhtml:Example xmlns="" name ="Schedule Period">
 		<SchedulePeriod>
 			<SchedulePeriodRefId>215f796c-67f7-4855-83dc-28ad9d002830</SchedulePeriodRefId>
@@ -105,4 +26,4 @@
 			</RecordAudit>
 		</SchedulePeriod>
 	</xhtml:Example>
-</DataObject>
+</IncludeGroup>

@@ -1,117 +1,7 @@
-<DataObject name="StudentPersonal"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:xi="http://www.w3.org/2001/XInclude"
+<IncludeGroup
 	xmlns:xhtml="http://www.w3.org/1999/xhtml"
-	xmlns:json="http://json.org/"
+	xmlns:json="http://json.org/">
 
-	xmlns="http://sifassociation.org/SpecGen">
-	<Key>StudentPersonalRefId</Key>
-	<EventsReported>true</EventsReported>
-	<Item>
-		<Element>StudentPersonal</Element>
-	    <privacyRating>Extreme</privacyRating>
-		<Description>Contains all the personal information related to the student.</Description>
-	</Item>
-	
-	<Item>
-		<Element>StudentPersonalRefId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>The universally unique identifier for the data object record that is used across systems.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- StudentPersonalRefId -->
-	
-	<!-- Alternate Ids for the Student -->
-	<Item>
-		<Element>StudentPersonalLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>The Id of the data object record that was provided by the system that the information was originally sourced from. This identifier may be set for each student independently for each provider. Each identifier is only available to be retrieved or maintained by the provider that created it.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- StudentPersonalLocalId -->
-    <Item>
-		<Element>NationalStudentNumber</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>The unique identifier allocated to every student in New Zealand, also known as the NSN.</p>
-		</Description>
-		<Type ref="CommonTypes" name="NSNType"/>
-	</Item>    <!-- NationalStudentNumber -->
-    <Item>
-		<Element>NZQAStudentId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>NZQA's unique identifier for a student who has been registered for assessments
-			 to be conducted against the NZQA framework to achieve unit/achievement standards
-			 and national qualifications.
-			</p>
-		</Description>
-		<Type name="xs:normalizedString"/>
-	</Item>    <!-- NZQAStudentId -->
-
-	<Item>
-		<Element>FirstNZSchoolingDate</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The date a student first ever started schooling in New
-			Zealand. This field is used to establish most students’
-			Funding Year Level.</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>    <!-- FirstNZSchoolingDate -->
-	<Item>
-		<Element>EarlyChildhoodEducation</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>The type of early childhood education the student received before enrolling in their first school.</p></Description>
-		<Type ref="CommonTypes" name="EarlyChildhoodEducationType"></Type>
-	</Item>    <!-- EarlyChildhoodEducation -->
-	<Item>
-		<Element>PersonInfo</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>Personal Information </p>
-		</Description>
-		<Type ref="CommonTypes" name="StudentPersonInfoType"/>
-	</Item>    <!-- PersonInfo -->
-	<Item>
-		<Element>BiographicChangeReason</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>The reason that the persons biographic data was changed.</p>
-		</Description>
-		<Type ref="CodeSets" name="NZCodeSetsBiographicChangeReasonType"/>
-	</Item>    <!-- BiographicChangeReason -->
-	<Item>
-		<Element>CustodyNote</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>Notes about a students care and custody status.</p>
-		</Description>
-		<Type name="xs:normalizedString"/>
-	</Item>    <!-- CustodyNote -->
-
-	<Item>
-		<Element>RecordAudit</Element>    
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
 	
 	<xhtml:Example xmlns="" name ="StudentPersonal Example">
 		<StudentPersonal>
@@ -143,7 +33,7 @@
 							<Source>NZPAS</Source>
 							<DocumentSerialNumber>L905673</DocumentSerialNumber>
 							<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
-							<IsConfirmed>true</IsConfirmed>
+							<IsConfirmed>Y</IsConfirmed>
 							<Timestamp>2003-11-30T12:34:56.7</Timestamp>
 							<Provider>
 								<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
@@ -171,7 +61,7 @@
 						<Source>NZPAS</Source>
 						<DocumentSerialNumber>L905673</DocumentSerialNumber>
 						<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
-						<IsConfirmed>true</IsConfirmed>
+						<IsConfirmed>Y</IsConfirmed>
 						<Timestamp>2003-11-30T12:34:56.7</Timestamp>
 						<Provider>
 							<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
@@ -202,12 +92,12 @@
 					</LanguageList>
 					<EthnicityList>
 						<Ethnicity>
-							<PreferenceOrderNumber>1</PreferenceOrderNumber>
 							<Code>111</Code>
+							<PreferenceOrderNumber>1</PreferenceOrderNumber>
 						</Ethnicity>
 						<Ethnicity>
-							<PreferenceOrderNumber>1</PreferenceOrderNumber>
 							<Code>211</Code>
+							<PreferenceOrderNumber>2</PreferenceOrderNumber>
 						</Ethnicity>
 					</EthnicityList>
 					<IwiAffiliationList>
@@ -281,4 +171,4 @@
 			</RecordAudit>
 		</StudentPersonal>
 	</xhtml:Example>
-</DataObject>
+</IncludeGroup>

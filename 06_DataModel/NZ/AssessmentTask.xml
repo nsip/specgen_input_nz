@@ -28,7 +28,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- AssessmentTaskRefId -->
+  </Item>    <!-- 1. AssessmentTaskRefId -->
 
   <Item>
     <Element>AssessmentTaskLocalId</Element>
@@ -39,7 +39,7 @@
 			was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- AssessmentTaskLocalId -->
+  </Item>    <!-- 2. AssessmentTaskLocalId -->
 
   <Item>
     <Element>AssessmentName</Element>
@@ -49,7 +49,7 @@
       <p>The name of the assessment task.</p>
     </Description>
     <Type name="xs:normalizedString"/>
-  </Item>    <!-- AssessmentName -->
+  </Item>    <!-- 3. AssessmentName -->
 
   <Item>
     <Element>OrganisationInvolvedList</Element>    
@@ -60,7 +60,7 @@
         assessment location provider, registering provider.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationInvolvedListType"></Type>
-  </Item>    <!-- OrganisationInvolvedList -->
+  </Item>    <!-- 4. OrganisationInvolvedList -->
 
   <Item>
     <Element>TeachingGroup</Element>
@@ -70,7 +70,7 @@
       <p>Generic object reference to the TeachingGroup object in which this assignment has been set.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>    <!-- TeachingGroup -->
+  </Item>    <!-- 5. TeachingGroup -->
 
   <Item>
     <Element>ProviderCourse</Element>    
@@ -81,7 +81,7 @@
         participating in the assessment task.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>    <!-- ProviderCourse -->
+  </Item>    <!-- 6. ProviderCourse -->
 
   <Item>
     <Element>StudentList</Element>
@@ -91,7 +91,7 @@
       <p>The GUIDs for students that are the intended participants for this Assessement Task.</p>
     </Description>
     <Type ref="CommonTypes" name="StudentListType"></Type>
-  </Item>    <!-- StudentList -->
+  </Item>    <!-- 7. StudentList -->
 
   <Item>
     <Element>StaffInvolvedList</Element>    
@@ -101,7 +101,7 @@
       <p>A list of the staff involved and their role in relation to the assessment task, e.g. the moderator, the marker.</p>
     </Description>
     <Type ref="CommonTypes" name="StaffInvolvedListType"></Type>
-  </Item>    <!-- StaffInvolvedList -->
+  </Item>    <!-- 8. StaffInvolvedList -->
 
   <Item>
     <Element>Description</Element>
@@ -111,7 +111,7 @@
       <p>The text-based description of the assignment.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- Description -->
+  </Item>    <!-- 9. Description -->
 
   <Item>
     <Element>PointsPossible</Element>
@@ -121,7 +121,7 @@
       <p>The points possible on the assignment.</p>
     </Description>
     <Type name="xs:unsignedInt"></Type>
-  </Item>    <!-- PointsPossible -->
+  </Item>    <!-- 10. PointsPossible -->
 
   <Item>
     <Element>DueDate</Element>
@@ -131,7 +131,7 @@
       <p>Date the assignment is due.</p>
     </Description>
     <Type ref="CommonTypes" name="EndDateType"/>
-  </Item>    <!-- DueDate -->
+  </Item>    <!-- 11. DueDate -->
 
   <Item>
     <Element>Weight</Element>
@@ -141,7 +141,7 @@
       <p>The weight of the assignment.</p>
     </Description>
     <Type name="xs:decimal"></Type>
-  </Item>    <!-- Weight -->
+  </Item>    <!-- 12. Weight -->
 
   <Item>
       <Element>MaxAttemptsAllowed</Element>
@@ -151,7 +151,7 @@
         <p>How many attempts the student is allowed on the assignment (applicable particularly to online activities).</p>
       </Description>
       <Type name="xs:integer"></Type>
-  </Item>    <!-- MaxAttemptsAllowed -->
+  </Item>    <!-- 13. MaxAttemptsAllowed -->
 
   <Item>
     <Element>DetailedDescriptionURL</Element>
@@ -161,7 +161,7 @@
       <p>The location of the document that describes the assignment. If Type is PDF, this element will contain the Base64 encoding of the entire document. Preferred against DetailedDescriptionBinary for online assessment.</p>
     </Description>
     <Type name="xs:anyURI"></Type>
-  </Item>    <!-- DetailedDescriptionURL -->
+  </Item>    <!-- 14. DetailedDescriptionURL -->
 
   <Item>
     <Element>AssessmentType</Element>
@@ -171,7 +171,7 @@
       <p>Type of assessment (e.g. diagnostic vs paedagogical - Summative or Formative).</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentTypeType"/>
-  </Item>    <!-- AssessmentType -->
+  </Item>    <!-- 15. AssessmentType -->
 
   <Item>
     <Element>AssessmentMethodology</Element>
@@ -182,7 +182,7 @@
       o Aotearoa; Secondary assessment against NCEA, Cambridge, International Baccalaureate, or similar.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentMethodologyType"/>
-  </Item>    <!-- AssessmentMethodology -->
+  </Item>    <!-- 16. AssessmentMethodology -->
 
   <Item>
     <Element>EvaluationType</Element>
@@ -192,7 +192,7 @@
       <p>The type of assessment evaluation, e.g. formative or summative.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentEvaluationTypeType"/>
-  </Item>    <!-- EvaluationType --> 
+  </Item>    <!-- 17. EvaluationType --> 
 
   <Item>
     <Element>Curriculum</Element>
@@ -202,7 +202,7 @@
       <p>The curriculum the assessment is for.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsCurriculumType"/>
-  </Item>    <!-- Curriculum -->
+  </Item>    <!-- 18. Curriculum -->
 
   <Item>
     <Element>AssessmentToolUsed</Element>
@@ -213,7 +213,7 @@
       SMS vendors and the value it is mapped to in this code set are held.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentToolType"/>
-  </Item>    <!-- AssessmentToolUsed -->
+  </Item>    <!-- 19. AssessmentToolUsed -->
   
   <Item>
     <Element>AssessmentToolTest</Element>
@@ -223,7 +223,7 @@
       <p>The tests available within an assessment tool that is being used by this assessment task.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentToolTestType"/>
-  </Item>    <!-- AssessmentToolTest -->
+  </Item>    <!-- 20.AssessmentToolTest -->
 
   <Item>
     <Element>AssessmentPurpose</Element>
@@ -233,7 +233,7 @@
       <p>Purpose for the assessment.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- AssessmentPurpose -->
+  </Item>    <!-- 21. AssessmentPurpose -->
 
   <Item>
     <Element>SubAssessmentTaskList</Element>
@@ -243,7 +243,7 @@
       <p>AssessmentTasks which this assessment task is composed of.</p>
     </Description>
     <Type ref="CommonTypes" name="AssessmentTaskListType"></Type>
-  </Item>    <!-- SubAssessmentTaskList -->
+  </Item>    <!-- 22. SubAssessmentTaskList -->
   
   <Item>
     <Element>PrerequisiteList</Element>
@@ -254,7 +254,7 @@
          to be met for assessment.</p>
     </Description>
     <Type ref="CommonTypes" name="PrerequisiteListType"></Type>
-  </Item>    <!-- PrerequisiteList -->
+  </Item>    <!-- 23. PrerequisiteList -->
   
   <Item>
     <Element>SubjectAreaList</Element>
@@ -264,7 +264,7 @@
       <p>A list of the subject areas being assessed.</p>
     </Description>
     <Type ref="CodeSets" name="SubjectAreaListType"/>
-  </Item>    <!-- SubjectAreaList -->
+  </Item>    <!-- 24. SubjectAreaList -->
 
   <Item>
     <Element>AssessedAtYearLevel</Element>
@@ -278,7 +278,7 @@
       <xs:minInclusive value="1"/>
       <xs:maxInclusive value="13"/>
     </Facets>
-  </Item>    <!-- AssessedAtYearLevel -->
+  </Item>    <!-- 25. AssessedAtYearLevel -->
 
   <Item>
     <Element>LearningStandardList</Element>
@@ -288,7 +288,7 @@
       <p>A list of references to LearningStandards that will be assessed as part of this AssessmentTask.</p>
     </Description>
     <Type ref="CommonTypes" name="LearningStandardListType"></Type>
-  </Item>    <!-- LearningStandardList -->
+  </Item>    <!-- 26. LearningStandardList -->
 
   <Item>
     <Element>StandardType</Element>
@@ -299,7 +299,7 @@
        unit and achievement standards, scholarships and International Baccalaureate.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsLearningStandardTypeType"></Type>
-  </Item>    <!-- LearningStandardType -->
+  </Item>    <!-- 27. StandardType -->
 
   <Item>
     <Element>SpecialAssessmentConditionExclusionList</Element>
@@ -309,7 +309,7 @@
       <p>A list of SACs that are excluded for this particular assessment task.</p>
     </Description>
     <Type ref="CommonTypes" name="SpecialAssessmentConditionListType"></Type>
-  </Item>    <!-- SpecialAssessmentConditionExclusionList -->
+  </Item>    <!-- 28. SpecialAssessmentConditionExclusionList -->
 
   <Item>
     <Element>Timeframe</Element>
@@ -319,7 +319,7 @@
       <p>The timeframe of the assessment, e.g. Mid-Year, End of Year.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentTimeframeType"/>
-  </Item>    <!-- Timeframe -->
+  </Item>    <!-- 29. Timeframe -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -329,48 +329,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-  
-  <xhtml:Example xmlns="" name="Assessment Task">
-    <AssessmentTask>
-      <AssessmentTaskRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</AssessmentTaskRefId>
-      <AssessmentName>NZ History Classroom Test</AssessmentName>
-      <OrganisationInvolvedList>
-        <OrganisationInvolved json:force-array="true">
-          <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-		    	<LocalId json:force-string="true">9961</LocalId>
-          <OrganisationRole>PRO</OrganisationRole>
-        </OrganisationInvolved>
-      </OrganisationInvolvedList>
-      <TeachingGroup>
-        <RefId>d0a0a27a-d0a8-510a-d9d7-5101a8c3da39</RefId>
-      </TeachingGroup>
-      <StaffInvolvedList>
-        <StaffInvolved json:force-array="true">
-          <RefId>cd106d6d-d9d5-41fb-9943-5feb967c9435</RefId>
-          <StaffRole>ASS</StaffRole>
-        </StaffInvolved>
-      </StaffInvolvedList>
-      <Description>Pop Quiz</Description>
-      <PointsPossible>100</PointsPossible>
-      <DueDate>2018-11-25</DueDate>
-      <Weight>1.0</Weight>
-      <DetailedDescriptionURL>http://www.assignmentinfo.com/assignment1.pdf</DetailedDescriptionURL> 
-      <AssessmentType>INT</AssessmentType>
-      <AssessmentMethodology>P</AssessmentMethodology>
-      <EvaluationType>F</EvaluationType>
-      <LearningStandardList>
-        <LearningStandard json:force-array="true">
-          <LocalId>91165-v2</LocalId>
-        </LearningStandard>
-      </LearningStandardList>
-      <RecordAudit>
-        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-        <CreatedBy>
-          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-          <Name>Bobby Test</Name>
-        </CreatedBy>
-      </RecordAudit>
-    </AssessmentTask>
-  </xhtml:Example>
+	</Item>    <!-- 30. RecordAudit -->
+
+  <xi:include parse="xml" href="Examples/AssessmentTask.xml"/> 
 </DataObject>

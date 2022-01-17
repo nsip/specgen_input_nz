@@ -274,7 +274,7 @@
 				<p>The role of the provider in relation to the assessment task, e.g. assessing provider, assessment location provider, assessment provider, registering provider.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsAssessmentProviderRoleType"/>
-		</Item>    <!-- OrganisationRole -->
+		</Item>    <!-- 10. OrganisationRole -->
 	</CommonElement>
 
 	<CommonElement name="StaffInvolvedListType" type="true" dm="true">
@@ -314,7 +314,7 @@
 				<p>NZCodeSetsAssessmentStaffRoleType</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsAssessmentStaffRoleType"/>
-		</Item>    <!-- StaffRole -->
+		</Item>    <!-- 10. StaffRole -->
 	</CommonElement>
 
 	<CommonElement name="DocumentListType" type="true" dm="true">

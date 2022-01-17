@@ -24,7 +24,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>		
 		</Description>
 		<Type ref='CommonTypes' name='RefIdType'/>
-	</Item>    <!-- StudentContactPersonalRefId -->
+	</Item>    <!-- 1. StudentContactPersonalRefId -->
 	<Item>
 		<Element>StudentContactPersonalLocalId</Element>
 		<Characteristics>O</Characteristics>
@@ -34,7 +34,7 @@
 			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"></Type>
-	</Item>    <!-- StudentContactPersonalLocalId -->
+	</Item>    <!-- 2. StudentContactPersonalLocalId -->
 	<Item>
 		<Element>HasBOTVote</Element>
 		<Characteristics>O</Characteristics>
@@ -43,7 +43,7 @@
 			<p>Records that this Whānau member holds the Whānau's Board of Trustees vote.</p>
 		</Description>
 		<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-	</Item>    <!-- HasBOTVote -->
+	</Item>    <!-- 3. HasBOTVote -->
     <Item>
 		<Element>PersonInfo</Element>
 		<Characteristics>M</Characteristics>
@@ -53,7 +53,7 @@
 			of the Student's whānau.</p>
 		</Description>
 		<Type ref="CommonTypes" name="StudentContactPersonInfoType"></Type>
-	</Item>    <!-- PersonInfo -->
+	</Item>    <!-- 4. PersonInfo -->
     <Item>
 		<Element>HealthcareServiceInfo</Element>
 		<Characteristics>O</Characteristics>
@@ -63,7 +63,7 @@
 			Details about the actual healthcare pratitioner are kept in the PersonInfo fields.</p>
 		</Description>
 		<Type ref="CommonTypes" name="HealthcareServiceInfoType"></Type>
-	</Item>    <!-- HealthcareServiceInfo -->
+	</Item>    <!-- 5. HealthcareServiceInfo -->
 	<Item>
 		<Element>RecordAudit</Element>    
 		<Characteristics>O</Characteristics>
@@ -72,121 +72,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
+	</Item>    <!-- 6. RecordAudit -->
 	
-	<xhtml:Example xmlns='' name="StudentContactPersonal Family Member Example">
-		<StudentContactPersonal>
-			<StudentContactPersonalRefId>7c834ea9-eda1-2090-347f-83297e1c290f</StudentContactPersonalRefId>
-			<StudentContactPersonalLocalId>P1234567</StudentContactPersonalLocalId>
-			<HasBOTVote>N</HasBOTVote>
-			<PersonInfo>
-				<Name>
-					<FamilyName>Hagrid</FamilyName>
-					<GivenName>Fridwulfa</GivenName>
-					<FullName>Fridwulfa Hagrid</FullName>
-					<Type>LGL</Type>
-				</Name>
-				<Email>
-					<Personal>
-						<Address>ridwulfa@gmail.com</Address>
-					</Personal>
-				</Email>
-				<Address>
-					<Physical>
-						<Type>TH</Type>
-						<Line1>The Enchanted Wood</Line1>
-						<Line2>533 Hogwart's Way</Line2>
-						<City>Hogsmead</City>
-						<PostalCode json:force-string="true">7733</PostalCode>
-					</Physical>
-					<Postal>
-						<Type>RU</Type>
-						<Line1>1175 Lake Ferry Rd</Line1>
-						<Suburb>RD 1</Suburb>
-						<City>Martinborough</City>
-					</Postal>
-				</Address>
-				<Phone>
-					<Mobile>
-						<Number>(021) 300 999</Number>
-					</Mobile>
-				</Phone>
-				<HouseholdContactInfoList>
-					<HouseholdContactInfo json:force-array="true">
-						<PreferenceNumber>1</PreferenceNumber>
-						<HouseholdContactId>7d5c3f5c-d89c-4551-9442-6b008207986e</HouseholdContactId>
-						<Address>
-							<Postal>
-								<Type>DE</Type>
-								<Line1>P O Box 81</Line1>
-								<City>Martinborough</City>
-								<PostalCode json:force-string="true">5781</PostalCode>
-							</Postal>
-						</Address>
-						<Email>
-							<Work>
-								<Address>ridwulfa@gmail.com</Address>
-							</Work>
-						</Email>
-						<Phone>
-							<Mobile>
-								<Number>(021) 300 999</Number>
-							</Mobile>
-						</Phone>
-					</HouseholdContactInfo>
-				</HouseholdContactInfoList>
-			</PersonInfo>
-			<RecordAudit>
-				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-				<CreatedBy>
-				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-				<Name>Bobby Test</Name>
-				</CreatedBy>
-			</RecordAudit>
-		</StudentContactPersonal>
-	</xhtml:Example>
-
-	<xhtml:Example xmlns='' name="StudentContactPersonal Doctor Example">
-		<StudentContactPersonal>
-		    <StudentContactPersonalRefId>7c834ea9-eda1-2090-347f-face7e1c290f</StudentContactPersonalRefId>
-			<StudentContactPersonalLocalId>P1234567</StudentContactPersonalLocalId>
-			<HasBOTVote>N</HasBOTVote>
-			<PersonInfo>
-				<Name>
-					<FullName>Dr Phillips</FullName>
-				</Name>
-				<Email>
-					<Work>
-						<Address>Phillips@mboroHealth.com</Address>
-					</Work>
-				</Email>
-				<Address>
-					<Physical>
-						<Type>TH</Type>
-						<Line1>Regent St.</Line1>
-						<City>Martinborough</City>
-						<PostalCode json:force-string="true">5741</PostalCode>
-					</Physical>
-				</Address>
-				<Phone>
-					<Work>
-						<Number>(021) 300 999</Number>
-					</Work>
-				</Phone>
-			</PersonInfo>
-			<HealthcareServiceInfo>
-				<OrganisationName>Martinborough Medical Centre</OrganisationName>
-				<OrganisationPhoneNum>06 306 9311</OrganisationPhoneNum>
-				<Notes>Dr Amy also knows about the epilepsy</Notes>
-				<Type>DOC</Type>
-			</HealthcareServiceInfo>
-			<RecordAudit>
-				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-				<CreatedBy>
-				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-				<Name>Bobby Test</Name>
-				</CreatedBy>
-			</RecordAudit>
-		</StudentContactPersonal>
-	</xhtml:Example>
+	<xi:include parse="xml" href="Examples/StudentContactPersonal.xml"/>
 </DataObject>

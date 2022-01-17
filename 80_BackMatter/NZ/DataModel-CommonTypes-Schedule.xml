@@ -76,7 +76,7 @@
 				<p>The calendar date being assigned to the schedule</p>
 			</Description>
 			<Type name="xs:date"/>
-		</Item>		<!-- Date -->
+		</Item>		<!-- 1. Date -->
 		<Item>
 			<Element>SchoolClosed</Element>
 			<Characteristics>M</Characteristics>
@@ -85,7 +85,7 @@
 				<p>Indicates whether or not the event is resulting in the closure of the school for the duration of the event.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-		</Item>     <!-- SchoolClosed -->
+		</Item>     <!-- 2. SchoolClosed -->
 		<Item>
 			<Element>ScheduleAcademicDay</Element>
 			<Characteristics>O</Characteristics>
@@ -93,7 +93,7 @@
 				<p> A generic object references to the ScheduleAcademicDay for the given date</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>		<!-- AcademicDay -->
+		</Item>		<!-- 3. ScheduleAcademicDay -->
 		<Item>
 			<Element>SchedulePeriodTime</Element>
 			<Characteristics>O</Characteristics>  <!-- but required when SchoolClosed = 'N' -->
@@ -101,7 +101,7 @@
 				<p> A generic object references to the SchedulePeriodTime for the given date</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>		<!-- SchedulePeriodTime -->
+		</Item>		<!-- 4. SchedulePeriodTime -->
 		<Item>
 			<Element>ScheduleTermList</Element>
 			<Characteristics>O</Characteristics>
@@ -109,7 +109,7 @@
 				<p>A list of object references to the ScheduleTerms that apply on the given date</p>
 			</Description>
 			<Type ref="CommonTypes" name="ScheduleTermListType"/>
-		</Item>		<!-- ScheduleTermList -->
+		</Item>		<!-- 5. ScheduleTermList -->
 	</CommonElement>
 
 	<CommonElement name="PeriodListType" type="true" dm="true">
@@ -267,7 +267,7 @@
 				<p>The period times within the schedule this academic day is following.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>		<!-- SchedulePeriodTime -->
+		</Item>		<!-- 10. SchedulePeriodTime -->
 		<Item>
 			<Element>PeriodList</Element>
 			<Characteristics>M</Characteristics>
@@ -275,7 +275,7 @@
 				<p>A list of the periods that make up this academic day, e.g. Period 1, Period 2 etc.</p>
 			</Description>
 			<Type ref="CommonTypes" name="PeriodListType"/>
-		</Item>		<!-- PeriodList -->
+		</Item>		<!-- 11. PeriodList -->
 		
 		<xhtml:Example xmlns="" name="AcademicDay Example">
 			<AcademicDay>
@@ -357,7 +357,7 @@
 				<p>A period that makes up or partially makes up the period time schedule.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>		<!-- SchedulePeriod -->		
+		</Item>		<!-- 1. SchedulePeriod -->		
 		<Item>
 			<Element>StartTime</Element>
 			<Characteristics>M</Characteristics>
@@ -365,7 +365,7 @@
 				<p>The time the period starts.  Note inclusion of timezone indicator.</p>
 			</Description>
 			<Type name="xs:time"/>
-		</Item>		<!-- StartTime -->
+		</Item>		<!-- 2. StartTime -->
 		<Item>
 			<Element>EndTime</Element>
 			<Characteristics>M</Characteristics>
@@ -373,7 +373,7 @@
 				<p>The time the period ends.   Note inclusion of timezone indicator.</p>
 			</Description>
 			<Type name="xs:time"/>
-		</Item>		<!-- EndTime -->
+		</Item>		<!-- 3. EndTime -->
 
 		<xhtml:Example xmlns="" name="PeriodTime Example">
 			<DayPeriodTime>

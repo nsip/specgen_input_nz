@@ -23,7 +23,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- StudentConsentRefId -->
+	</Item>    <!-- 1. StudentConsentRefId -->
 	
 	<Item>
 		<Element>StudentConsentLocalId</Element>
@@ -34,7 +34,7 @@
 			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- StudentConsentLocalId -->
+	</Item>    <!-- 2. StudentConsentLocalId -->
 
 	<Item>
 		<Element>Student</Element>
@@ -44,7 +44,7 @@
 			<p>Generic object reference to the student granting or revoking this student consent.</p>
 		</Description>
 		<Type ref="CommonTypes" name="StudentObjectReferenceType"/> 
-	</Item>    <!-- Student -->
+	</Item>    <!-- 3. Student -->
 
 	<Item>
 		<Element>Organisation</Element>
@@ -54,7 +54,7 @@
 			<p>Generic object reference to the organisation being granted this student consent.</p>
 		</Description>
 		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
-	</Item>    <!-- Organisation -->
+	</Item>    <!-- 4. Organisation -->
 
 	<Item>
 		<Element>StaffMember</Element>
@@ -64,7 +64,7 @@
 			<p>Generic object reference to the staff member that is recording this consent.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
-	</Item>    <!-- StaffMember -->
+	</Item>    <!-- 5. StaffMember -->
 
 	<Item>
 		<Element>ConsentTo</Element>
@@ -73,7 +73,7 @@
 			<p>What the student is consenting or not consenting to.</p>
 		</Description>
 		<Type ref="CodeSets" name="NZCodeSetsStudentConsentToType"></Type>  
-	</Item>    <!-- ConsentTo -->
+	</Item>    <!-- 6. ConsentTo -->
 
 	<Item>
 		<Element>ConsentGiven</Element>
@@ -82,7 +82,7 @@
 			<p>Indicates whether or not censent was given, or specifically not given</p>
 		</Description>
 		<Type ref="CodeSets" name="NZCodeSetsYesNoNotRequiredType"></Type>  
-	</Item>    <!-- ConsentGiven -->
+	</Item>    <!-- 7. ConsentGiven -->
 
 	<Item>
 		<Element>ConsentGivenBy</Element>
@@ -91,7 +91,7 @@
 			<p>The role of the person who gave consent on behalf of the student, e.g. Whānau, Learner.</p>
 		</Description>
 		<Type ref="CodeSets" name="NZCodeSetsConsentGivenByType"></Type>  
-	</Item>    <!-- ConsentGivenBy -->
+	</Item>    <!-- 8. ConsentGivenBy -->
 
 	<Item>
 		<Element>ConsentDate</Element>
@@ -100,7 +100,7 @@
 			<p>The date the consent or no consent was given.</p>
 		</Description>
 		<Type name="xs:date"/>
-	</Item>    <!-- ConsentDate -->
+	</Item>    <!-- 9. ConsentDate -->
 
 	<Item>
 		<Element>ConsentRevokedDate</Element>
@@ -109,7 +109,7 @@
 			<p>The date the consent ended, if it was given.</p>
 		</Description>
 		<Type name="xs:date"/>
-	</Item>    <!-- EndDate -->
+	</Item>    <!-- 10. ConsentRevokedDate -->
 
 	<Item>
 		<Element>RelatedObject</Element>
@@ -119,7 +119,7 @@
 			<p>Generic object reference to a data object that relates to this consent.  e.g. the student enrolment record this consent was captured as part of.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
-	</Item>    <!-- RelatedObject -->
+	</Item>    <!-- 11. RelatedObject -->
 
 	<Item>
 		<Element>AdditionalInformation</Element>
@@ -128,7 +128,7 @@
 			<p> Additional free text information provided about the consent.</p>
 		</Description>
 		<Type name="xs:normalizedString"/>
-	</Item>    <!-- AdditionalInformation -->
+	</Item>    <!-- 12. AdditionalInformation -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -138,26 +138,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-	
-	<xhtml:Example xmlns="" name ="Student Consent">
-		<StudentConsent>
-			<StudentConsentRefId>7c834ea9-eda1-2090-347f-83297e1c290c</StudentConsentRefId>
-			<StudentConsentLocalId>S1234567</StudentConsentLocalId>
-			<Student>
-				<RefId>fe659ed3-8a78-4bc0-8876-7b75ac585edf</RefId>
-			</Student>
-			<Organisation>
-				<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-				<LocalId json:force-string="true">9961</LocalId>
-			</Organisation>
-			<RecordAudit>
-				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-				<CreatedBy>
-				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-				<Name>Bobby Test</Name>
-				</CreatedBy>
-			</RecordAudit>
-		</StudentConsent>
-	</xhtml:Example>
+	</Item>    <!-- 13. RecordAudit -->
+
+	<xi:include parse="xml" href="Examples/StudentConsent.xml"/>
 </DataObject>

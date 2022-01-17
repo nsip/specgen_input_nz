@@ -1,167 +1,7 @@
-<DataObject name="StudentProviderEnrolment"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:xi="http://www.w3.org/2001/XInclude"
+<IncludeGroup 
 	xmlns:xhtml="http://www.w3.org/1999/xhtml"
-	xmlns:json="http://json.org/"
+	xmlns:json="http://json.org/">
 
-	xmlns="http://sifassociation.org/SpecGen">
-
-	<Key>StudentProviderEnrolmentRefId</Key>
-	<EventsReported>true</EventsReported>
-
-	<Item>
-		<Element>StudentProviderEnrolment</Element>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>A student's association with an education provider for the purpose of receiving
-				educational servics.</p>
-			<p>Provider enrolments are specific to a particular calendar year; and contain one of
-				ECE, School or Tertiary Enrolment sub-object.</p>
-		</Description>
-	</Item>
-
-	<Item>
-		<Element>StudentProviderEnrolmentRefId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The universally unique identifier for the data object record that is used across systems.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RefIdType"></Type>
-	</Item>    <!-- StudentProviderEnrolmentRefId -->
-
-    <Item>
-		<Element>StudentProviderEnrolmentLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The Id of the data object record that was provided by the system that the information 
-			was originally sourced from.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- StudentProviderEnrolmentLocalId -->
-
-	<Item>
-		<Element>Student</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>Generic object reference to the Student enrolling at the Provider</p>
-		</Description>
-		<Type ref="CommonTypes" relationship="records enrollment of" count="*:1" name="StudentObjectReferenceType"/>
-	</Item>    <!-- Student -->
-
-	<Item>
-		<Element>Provider</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>Generic object reference to the education Provider, eg school.</p>
-		</Description>
-		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
-	</Item>    <!-- Provider -->
-
-	<Item>
-		<Element>StudentId</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>A unique identifier assigned to a Student for a period of enrolment by a provider.</p>
-		</Description>
-		<Type name="xs:normalizedString"></Type>
-	</Item>    <!-- StudentId -->
-
-	<Item>
-		<Element>ProviderEntryDate</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The date of the student’s first attendance at the provider. When The
-			student has been continuously enrolled at the Provider for multiple years, this
-			is the start date of the first year of enrolment.</p>
-			<p>If future dated, then the intended first attendance date of
-			the enrolment.</p>
-		</Description>
-		<Type ref="CommonTypes" name="StartDateType"/>
-	</Item>    <!-- EntryDate -->
-
-	<Item>
-		<Element>ProviderExitDate</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The date of a student’s last attendance at the provider, in the current sequence
-			of contiguous StudentProviderEnrolment records.</p>
-		</Description>
-		<Type ref="CommonTypes" name="EndDateType"/>
-	</Item>    <!-- ExitDate -->
-
-	<Item>
-		<Element>Status</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>The status of the enrolment WiP</p></Description>
-		<Type ref="CodeSets" name="NZCodeSetsProviderEnrolmentStatusType"></Type>
-	</Item>    <!-- Status -->
-
-	<Item>
-		<Element>Exit</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>Details of the reasons, and interventions leading up to the student's enrolment being terminated.</p>
-		</Description>
-		<Type ref="CommonTypes" name="ProviderExitType"/>
-	</Item>		<!-- Exit -->
-
-	<Item>
-		<Element>ECEEducationHistoryList</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>The list of the types of early childhood education the parent told a primary
-			 school that the student received and the hours per week and/or day the student attended.</p></Description>
-		<Type ref="CommonTypes" name="ECEEducationHistoryList"></Type>
-	</Item>    <!-- ECE Education History List -->
-
-	<Item>
-		<Element>EarlyChildhoodEnrolment</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>Properties of an enrolment in an early childhood service (WiP).</p></Description>
-		<Type ref="CommonTypes" name="StudentECEEnrolmentType"></Type>
-	</Item>    <!-- EarlyChildhoodEnrolment -->
-
-	<Item>
-		<Element>SchoolEnrolment</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>Properties of an enrolment in a school</p></Description>
-		<Type ref="CommonTypes" name="StudentSchoolEnrolmentType"></Type>
-	</Item>    <!-- SchoolEnrolment -->
-
-	<Item>
-		<Element>TertiaryEducationEnrolment</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
-		<Description>
-			<p>Properties of an enrolment in a Tertiary Education service (WiP).</p></Description>
-		<Type ref="CommonTypes" name="StudentTertiaryEnrolmentType"></Type>
-	</Item>    <!-- TertiaryEducationEnrolment -->
-
-	<Item>
-		<Element>RecordAudit</Element>    
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
 
 	<xhtml:Example xmlns="" name="Completed International Student School Enrolment">
 		<StudentProviderEnrolment>
@@ -189,7 +29,7 @@
 					<Source>AUSPA</Source>
 					<DocumentSerialNumber>L905673</DocumentSerialNumber>
 					<DocumentExpiryDate>2019-03-30</DocumentExpiryDate>
-					<IsConfirmed>true</IsConfirmed>
+					<IsConfirmed>Y</IsConfirmed>
 					<Timestamp>2003-11-30T12:34:56.7</Timestamp>
 					<Provider>
 						<RefId>822f6c83-2841-4a87-9ff9-49730951b3ba</RefId>
@@ -214,4 +54,4 @@
 			</RecordAudit>
 		</StudentProviderEnrolment>
 	</xhtml:Example>
-</DataObject>
+</IncludeGroup>

@@ -24,13 +24,14 @@
 			<Description>The person or organisation's physical address</Description>
 			<Characteristics>O</Characteristics>
 			<Type ref="CommonTypes" name="AddressType"/>
-		</Item>
+		</Item>   <!-- 1. Physical -->
 		<Item>
 			<Element>Postal</Element>
 			<Description>The person or organisation's postal address</Description>
 			<Characteristics>O</Characteristics>
 			<Type ref="CommonTypes" name="AddressType"/>
-		</Item>
+		</Item>    <!-- 2. Postal -->
+
 		<xhtml:Example xmlns="" name="Addresses Example">
 			<Addresses>
 				<Physical>

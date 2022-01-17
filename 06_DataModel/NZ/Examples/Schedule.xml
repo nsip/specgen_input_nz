@@ -1,106 +1,7 @@
-<DataObject name="Schedule"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:xi="http://www.w3.org/2001/XInclude"
+<IncludeGroup
 	xmlns:xhtml="http://www.w3.org/1999/xhtml"
-	xmlns:json="http://json.org/"
+	xmlns:json="http://json.org/">
 
-	xmlns="http://sifassociation.org/SpecGen">
-
-	<Key>ScheduleRefId</Key>
-	<EventsReported>true</EventsReported>
-	<Item>
-		<Element>Schedule</Element>
-	    <privacyRating>Low</privacyRating>
-		<Description>
-			<p>A rotation of ScheduleAcademicDays that a Provider has in place to manage their timetable.</p>
-		</Description>
-	</Item>
-	
-	<Item>
-		<Element>ScheduleRefId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p> The ID (GUID) assigned to uniquely identify this Schedule.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- ScheduleRefId -->
-	<Item>
-		<Element>ScheduleLocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>The Id of the data object record that was provided by the system that the information 
-			was originally sourced from.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- ScheduleLocalId -->
-
-	<Item>
-		<Element>ScheduleName</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The name of the schedule.</p>
-		</Description>
-		<Type  name="xs:normalizedString"/>
-	</Item>    <!-- ScheduleName -->
-
-	<Item>
-		<Element>StartDate</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>The start date of the schedule; the earliest startDate from the set of Terms attached to the Schedule.</p>
-		</Description>
-		<Type ref="CommonTypes" name="StartDateType"/>
-	</Item>    <!-- StartDate -->
-
-	<Item>
-		<Element>EndDate</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Medium</privacyRating>
-		<Description>
-			<p>The end date of the schedule; the latest endDate from the set of Terms attached to the Schedule.</p>
-		</Description>
-		<Type ref="CommonTypes" name="EndDateType"/>
-	</Item>    <!-- EndDate -->
-
-	<Item>
-		<Element>Organisation</Element>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The provider the schedule is for.</p>
-		</Description>
-		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
-	</Item>    <!-- Organisation -->
-
-	<Item>
-		<Element>AcademicDayList</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>A list of the academic days in the order they are used in the rotation
-				of this schedule.</p>
-			<p>If a particular academic day appears more than once in the rotation, 
-				then it will appear more than once in this list.  eg. A 5 day rotation
-				with days A, A, B, A, A, would have 5 entries in the list.</p>
-		</Description>
-		<Type ref="CommonTypes" name="AcademicDayListType"/>
-	</Item>    <!-- AcademicDayList -->
-
-	<Item>
-		<Element>RecordAudit</Element>    
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-	
 	<xhtml:Example xmlns="" name ="Schedule">
 		<Schedule>
 			<ScheduleRefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</ScheduleRefId>
@@ -165,4 +66,4 @@
 			</RecordAudit>		
 		</Schedule>
 	</xhtml:Example>
-</DataObject>
+</IncludeGroup>

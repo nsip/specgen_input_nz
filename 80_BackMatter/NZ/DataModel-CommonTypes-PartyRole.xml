@@ -25,13 +25,13 @@
 				<p>A name used by the person </p>
 			</Description>
 			<Type ref="CommonTypes" name="BaseNameType"/>
-		</Item>    <!-- Name -->
+		</Item>    <!-- 1. Name -->
 		<Item>
 			<Element>Email</Element>
 			<Characteristics>O</Characteristics>
 			<Description><p>The person's e-mail address(es) - one or more emails.</p></Description>
 			<Type ref="CommonTypes" name="PersonEmailsType"/>
-		</Item>    <!-- Email -->
+		</Item>    <!-- 2. Email -->
 	</CommonElement>
 
 
@@ -79,7 +79,7 @@
 				associated with the person.</p>
 			</Description>
 			<Type ref="CommonTypes" name="OtherNameListType"/>
-		</Item>    <!-- OtherNameList -->
+		</Item>    <!-- 10. OtherNameList -->
 		<Item>
 			<Element>VerifiedName</Element>
 			<Characteristics>O</Characteristics>
@@ -87,7 +87,7 @@
 				<p>The verified name of the person.</p>
 			</Description>
 			<Type ref="CommonTypes" name="VerifiedNameType"/>
-		</Item>    <!-- VerifiedName -->
+		</Item>    <!-- 11. VerifiedName -->
 		<Item>
 			<Element>Demographics</Element>
 			<Characteristics>O</Characteristics>
@@ -95,19 +95,19 @@
 				<p>Details of the person’s demographic properties</p>
 			</Description>
 			<Type ref="CommonTypes" name="DemographicsType"/>
-		</Item>    <!-- Demographics -->
+		</Item>    <!-- 12. Demographics -->
 		<Item>
 			<Element>Address</Element>
 			<Characteristics>O</Characteristics>
 			<Description>The person's address(es) - one or more addresses.</Description>
 			<Type ref="CommonTypes" name="AddressesType"/>
-		</Item>    <!-- Address -->
+		</Item>    <!-- 13. Address -->
 		<Item>
 			<Element>Phone</Element>
 			<Characteristics>O</Characteristics>
 			<Description><p>The person's phone number(s) - one or more phone numbers.</p></Description>
 			<Type ref="CommonTypes" name="PersonPhonesType"/>
-		</Item>    <!-- Phone -->
+		</Item>    <!-- 14. Phone -->
 		<Item>
 			<Element>HouseholdContactInfoList</Element>
 			<Characteristics>O</Characteristics>
@@ -116,7 +116,7 @@
 				one or more household’s contact information.</p>
 			</Description>
 			<Type ref="CommonTypes" name="HouseholdContactInfoListType"/>
-		</Item>    <!-- HouseholdContactInfoList -->
+		</Item>    <!-- 15. HouseholdContactInfoList -->
 		<Item>
 			<Element>PersonPhoto</Element>
 			<Characteristics>O</Characteristics>
@@ -124,7 +124,7 @@
 				<p>A photo of the person. A person photo is stored in Document against the student with a document type of Person Photo.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>    <!-- PersonPhoto -->
+		</Item>    <!-- 16. PersonPhoto -->
 		<Item>
 			<Element>MedicalNeedList</Element>
 			<Characteristics>O</Characteristics>
@@ -132,7 +132,7 @@
 				<p>A list of a persons known medical needs.</p>
 			</Description>
 			<Type ref="CommonTypes" name="MedicalNeedListType"/>
-		</Item>    <!-- MedicalNeedList -->
+		</Item>    <!-- 17. MedicalNeedList -->
 
 		<xhtml:Example xmlns="" name="Student PersonInfo Example">
 			<PersonInfo>
@@ -305,13 +305,13 @@
 			<Characteristics>O</Characteristics>
 			<Description>The person's address(es) - one or more addresses.</Description>
 			<Type ref="CommonTypes" name="AddressesType"/>
-		</Item>    <!-- Address -->
+		</Item>    <!-- 10. Address -->
 		<Item>
 			<Element>Phone</Element>
 			<Characteristics>O</Characteristics>
 			<Description><p>The person's phone number(s) - one or more phone numbers.</p></Description>
 			<Type ref="CommonTypes" name="PersonPhonesType"/>
-		</Item>    <!-- Phone -->
+		</Item>    <!-- 11. Phone -->
 		<Item>
 			<Element>HouseholdContactInfoList</Element>
 			<Characteristics>O</Characteristics>
@@ -320,7 +320,7 @@
 				one or more household’s contact information.</p>
 			</Description>
 			<Type ref="CommonTypes" name="HouseholdContactInfoListType"/>
-		</Item>    <!-- HouseholdContactInfoList -->
+		</Item>    <!-- 12. HouseholdContactInfoList -->
 
 		<xhtml:Example xmlns="" name="Student Contact PersonInfo Example">
 			<PersonInfo>
@@ -574,7 +574,7 @@
 				</p>
 			</Description>
 			<Type ref="CommonTypes" name="VerificationEventType"/>
-		</Item>    <!-- Verification -->
+		</Item>    <!-- 20. Verification -->
 
 		<xhtml:Example xmlns="" name="Verified Name Example">
 			<VerifiedName>
@@ -661,7 +661,7 @@
 				<p>The person's date of birth.</p>
 			</Description>
 			<Type name="xs:date"/>
-		</Item>    <!-- BirthDate -->
+		</Item>    <!-- 1. BirthDate -->
 		<Item>
 			<Element>DateOfDeath</Element>
 			<Characteristics>O</Characteristics>
@@ -669,7 +669,7 @@
 				<p>The person's date of death.</p>
 			</Description>
 			<Type name="xs:date"/>
-		</Item>    <!-- DateOfDeath -->
+		</Item>    <!-- 2. DateOfDeath -->
 		<Item>
 			<Element>PlaceOfBirth</Element>
 			<Characteristics>O</Characteristics>
@@ -677,7 +677,7 @@
 				<p>The person's place of birth - like village, town, city etc.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- PlaceOfBirth -->
+		</Item>    <!-- 3. PlaceOfBirth -->
 		<Item>
 			<Element>CountryOfBirth</Element>
 			<Characteristics>O</Characteristics>
@@ -685,13 +685,13 @@
 				<p>The person's country of birth.</p>
 			</Description>
 			<Type ref="ExternalCodeSets" name="ISO3166CountryType"/>
-		</Item>    <!-- CountryOfBirth -->
+		</Item>    <!-- 4. CountryOfBirth -->
 		<Item>
 			<Element>CitizenshipList</Element>
 			<Characteristics>O</Characteristics>
 			<Description/>
 			<Type ref="CommonTypes" name="CountryListType"/>
-		</Item>    <!-- CitizenshipList -->
+		</Item>    <!-- 5. CitizenshipList -->
 		<Item>
 			<Element>CitizenshipStatus</Element>
 			<Characteristics>O</Characteristics>
@@ -699,7 +699,7 @@
 				<p>The Citizenship or Residency status of the Person</p>
 			</Description>
 			<Type ref="CommonTypes" name="NZCodeSetsCitizenshipStatusType"/>
-		</Item>    <!-- CitizenshipStatus -->
+		</Item>    <!-- 6. CitizenshipStatus -->
 		<Item>
 			<Element>CitizenshipVerification</Element>
 			<Characteristics>O</Characteristics>
@@ -712,7 +712,7 @@
 				</p>
 			</Description>
 			<Type ref="CommonTypes" name="VerificationEventType"/>
-		</Item>    <!-- CitizenshipVerification -->
+		</Item>    <!-- 7. CitizenshipVerification -->
 		<Item>
 			<Element>Gender</Element>
 			<Characteristics>O</Characteristics>
@@ -721,19 +721,19 @@
 				<a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/LfWjOFK1NqtZCv5i">NZ Standard Gender Identity</a> codes.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsGenderType"/>
-		</Item>    <!-- Gender -->
+		</Item>    <!-- 8. Gender -->
 		<Item>
 			<Element>LanguageList</Element>
 			<Characteristics>O</Characteristics>
 			<Description>List of languages an individual uses to communicate.</Description>
 			<Type ref="CommonTypes" name="LanguageListType"/>
-		</Item>    <!-- LanguageList -->
+		</Item>    <!-- 9. LanguageList -->
 		<Item>
 			<Element>CountryArrivalDate</Element>
 			<Characteristics>O</Characteristics>
 			<Description>Date the person first arrived in the country.</Description>
 			<Type name="xs:date"/>
-		</Item>    <!-- CountryArrivalDate -->
+		</Item>    <!-- 10. CountryArrivalDate -->
 		<Item>
 			<Element>EthnicityList</Element>
 			<Characteristics>O</Characteristics>
@@ -741,7 +741,7 @@
 				<p>One or more ethnic groups with which the person identifies.</p>
 			</Description>
 			<Type ref="CommonTypes" name="EthnicityListType"/>
-		</Item>    <!-- EthnicityList -->
+		</Item>    <!-- 11. EthnicityList -->
 		<Item>
 			<Element>IwiAffiliationList</Element>
 			<Characteristics>O</Characteristics>
@@ -749,7 +749,7 @@
 				<p>A list of one or more iwi with which the person has an affiliation.</p>
 			</Description>
 			<Type ref="CommonTypes" name="IwiAffiliationListType"/>
-		</Item>    <!-- IwiAffiliationList -->
+		</Item>    <!-- 12. IwiAffiliationList -->
 		<Item>
 			<Element>ReligiousAffiliationList</Element>
 			<Characteristics>O</Characteristics>
@@ -757,7 +757,7 @@
 				<p>A list of one or more religions with which the person has an affiliation.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ReligiousAffiliationListType"/>
-		</Item>    <!-- ReligiousAffiliationList -->
+		</Item>    <!-- 13. ReligiousAffiliationList -->
 	
 		<xhtml:Example name="Demographics Example" xmlns="">
 			<Demographics>
@@ -862,7 +862,7 @@
 				<p>The code representing the specific language that an individual uses to communicate.�</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
-		</Item>    <!-- Code -->
+		</Item>    <!-- 1. Code -->
 		<Item>
 			<Element>Usage</Element>
 			<Characteristics>O</Characteristics>
@@ -871,7 +871,7 @@
 				indicating capability and preference for the language.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsLanguageUsageType"/>
-		</Item>    <!-- Usage -->
+		</Item>    <!-- 2. Usage -->
 		<Item>
 			<Element>Dialect</Element>
 			<Characteristics>O</Characteristics>
@@ -879,7 +879,7 @@
 				<p>Specific dialect of a person's language.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- Dialect -->
+		</Item>    <!-- 3. Dialect -->
 		<Item>
 			<Element>ProficiencyList</Element>
 			<Characteristics>O</Characteristics>
@@ -887,7 +887,7 @@
 				<p>A list of the person's proficiency in the language in regards to speaking, reading and writing.</p>
 			</Description>
 			<Type ref="CommonTypes" name="LanguageProficiencyListType"/>
-		</Item>    <!-- ProficiencyList -->
+		</Item>    <!-- 4. ProficiencyList -->
 	</CommonElement>
 	<CommonElement name="LanguageProficiencyListType" type="true" dm="true">
 		<Item>
@@ -921,7 +921,7 @@
 				<p>The person's proficency level in the language in regards to reading, writing or speaking.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsLanguageProficiencyLevelType"/>
-		</Item>    <!-- Level -->
+		</Item>    <!-- 1. Level -->
 		<Item>
 			<Element>Type</Element>
 			<Characteristics>M</Characteristics>
@@ -929,7 +929,7 @@
 				<p>The type of language proficency, e.g. speaking, writing or reading.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsLanguageProficiencyTypeType"/>
-		</Item>    <!-- Type -->
+		</Item>    <!-- 2. Type -->
 	</CommonElement>
 
 	<CommonElement name="PersonEmailsType" type="true" dm="true">
@@ -943,12 +943,12 @@
 			<Element>Personal</Element>
 			<Characteristics>O</Characteristics>
 			<Type ref="CommonTypes" name="EmailType"/>
-		</Item>    <!-- Personal -->
+		</Item>    <!-- 1. Personal -->
 		<Item>
 			<Element>Work</Element>
 			<Characteristics>O</Characteristics>
 			<Type ref="CommonTypes" name="EmailType"/>
-		</Item>    <!-- Work -->
+		</Item>    <!-- 2. Work -->
 		<xhtml:Example xmlns="" name="Person Emails Example">
 			<PersonEmails>
 				<Personal>
@@ -1055,19 +1055,19 @@
 			<Characteristics>O</Characteristics>
 			<Description>A person's home number.</Description>
 			<Type ref="CommonTypes" name="PhoneNumberType"/>
-		</Item>    <!-- Home -->
+		</Item>    <!-- 1. Home -->
 		<Item>
 			<Element>Work</Element>
 			<Characteristics>O</Characteristics>
 			<Description>A person's work number.</Description>
 			<Type ref="CommonTypes" name="PhoneNumberType"/>
-		</Item>    <!-- Work -->
+		</Item>    <!-- 2. Work -->
 		<Item>
 			<Element>Mobile</Element>
 			<Characteristics>O</Characteristics>
 			<Type ref="CommonTypes" name="PhoneNumberType"/>
 			<Description>A person's mobile number.</Description>
-		</Item>    <!-- Mobile -->
+		</Item>    <!-- 3. Mobile -->
 		<xhtml:Example xmlns="" name="Person Phones Example">
 			<Phone>
 				<Home>
@@ -1137,7 +1137,7 @@
 				<p>Code representing the relationship.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsRelationshipToStudentType"/>
-		</Item>    <!-- Code -->
+		</Item>    <!-- 1. Code -->
 		<Item>
 			<Element>OtherTypeDescription</Element>
 			<Characteristics>O</Characteristics>
@@ -1147,7 +1147,7 @@
 				‘Au-pair’, ‘Neighbour’</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- OtherTypeDescription -->
+		</Item>    <!-- 2. OtherTypeDescription -->
 			
 		<xhtml:Example xmlns="" name="Relationship Example">
 			<Relationship>
@@ -1169,7 +1169,7 @@
 				<p>Does the individual have parental or legal guardianship responsibility for the student?</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>     <!-- ParentLegalGuardian -->
+		</Item>     <!-- 1. ParentLegalGuardian -->
 		<Item>
 			<Element>LivesWith</Element>
 			<Characteristics>C</Characteristics>
@@ -1177,7 +1177,7 @@
 				<p>Does the student live with this contact?</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>     <!-- LivesWith -->
+		</Item>     <!-- 2. LivesWith -->
 		<Item>
 			<Element>AccessToRecords</Element>
 			<Characteristics>C</Characteristics>
@@ -1185,7 +1185,7 @@
 				<p>Does this contact have access to the student's records?</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>     <!-- AccessToRecords -->
+		</Item>     <!-- 3. AccessToRecords -->
 		<Item>
 			<Element>ReceivesAssessmentReport</Element>
 			<Characteristics>C</Characteristics>
@@ -1193,7 +1193,7 @@
 				<p>In particular, should this contact receive a copy of the student report? </p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>     <!-- ReceivesAssessmentReport -->
+		</Item>     <!-- 4. ReceivesAssessmentReport -->
 		<Item>
 			<Element>EmergencyContact</Element>
 			<Characteristics>C</Characteristics>
@@ -1201,7 +1201,7 @@
 				<p>Should this contact be notified in case of emergency?</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>     <!-- EmergencyContact -->
+		</Item>     <!-- 5. EmergencyContact -->
 		<Item>
 			<Element>CivilEmergencyContact</Element>
 			<Characteristics>C</Characteristics>
@@ -1209,7 +1209,7 @@
 				<p>Does the contact have pickup rights?</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>     <!-- CivilEmergencyContact -->
+		</Item>     <!-- 6. CivilEmergencyContact -->
 		<Item>
 			<Element>CivilDefenceEmergencyContact</Element>
 			<Characteristics>C</Characteristics>
@@ -1218,7 +1218,7 @@
 				where the normal emergency contact is not close to a hosting school?</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>     <!-- CivilDefenseEmergencyContact -->
+		</Item>     <!-- 7. CivilDefenseEmergencyContact -->
 		<Item>
 			<Element>DisciplinaryContact</Element>
 			<Characteristics>C</Characteristics>
@@ -1226,7 +1226,7 @@
 				<p>Is this person to be contacted in case of disciplinary action?</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>     <!-- DisciplinaryContact -->
+		</Item>     <!-- 8. DisciplinaryContact -->
 		<Item>
 			<Element>AttendanceContact</Element>
 			<Characteristics>C</Characteristics>
@@ -1234,7 +1234,7 @@
 				<p>Should this contact be notified in case of an attendance issue?</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>     <!-- AttendanceContact -->
+		</Item>     <!-- 9. AttendanceContact -->
 		<Item>
 			<Element>PrimaryCareProvider</Element>
 			<Characteristics>C</Characteristics>
@@ -1242,7 +1242,7 @@
 				<p>Does this person provide daily living or personal assistance to the student?</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>     <!-- PrimaryCareGiver -->
+		</Item>     <!-- 10. PrimaryCareGiver -->
 		<Item>
 			<Element>FeesBilling</Element>
 			<Characteristics>C</Characteristics>
@@ -1250,7 +1250,7 @@
 				<p>Is this the contact responsible for Payment of Fees?</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>     <!-- FeesBilling -->
+		</Item>     <!-- 11. FeesBilling -->
 		<Item>
 			<Element>FeesAccess</Element>
 			<Characteristics>C</Characteristics>
@@ -1258,7 +1258,7 @@
 				<p>Does this contact have access to fees information?</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>     <!-- FeesAccess -->
+		</Item>     <!-- 12. FeesAccess -->
 		<Item>
 			<Element>FamilyMail</Element>
 			<Characteristics>C</Characteristics>
@@ -1266,7 +1266,7 @@
 				<p>Does this person receive family mail?</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>     <!-- FamilyMail -->
+		</Item>     <!-- 13. FamilyMail -->
 		<Item>
 			<Element>CourtOrder</Element>
 			<Characteristics>C</Characteristics>
@@ -1275,7 +1275,7 @@
 				preventing the Person from having contact with the Student?</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>     <!-- CourtOrder -->
+		</Item>     <!-- 14. CourtOrder -->
 		<Item>
 			<Element>HealthContact</Element>
 			<Characteristics>C</Characteristics>
@@ -1283,7 +1283,7 @@
 				<p>Is this student contact a healthcare provider for the student?</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-		</Item>     <!-- HealthContact -->
+		</Item>     <!-- 15. HealthContact -->
 	</CommonElement>
 	<CommonElement name="HouseholdContactInfoListType" type="true" dm="true">
 		<Item>
@@ -1312,7 +1312,7 @@
 				<p>Priority of Household Contact in relation to this Person.</p>
 			</Description>
 			<Type name="xs:unsignedInt"/>
-		</Item>     <!-- PreferenceNumber -->
+		</Item>     <!-- 1. PreferenceNumber -->
 		<Item>
 			<Element>HouseholdContactId</Element>
 			<Characteristics>O</Characteristics>
@@ -1320,7 +1320,7 @@
 				<p>Local Household Id</p>
 			</Description>
 			<Type ref="CommonTypes" name="LocalIdType"/>
-		</Item>     <!-- HouseholdContactId -->
+		</Item>     <!-- 2. HouseholdContactId -->
 		<Item>
 			<Element>HouseholdSalutation</Element>
 			<Characteristics>O</Characteristics>
@@ -1328,7 +1328,7 @@
 				<p>Salutation to be used in addressing this household.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>     <!-- HouseholdSalutation -->
+		</Item>     <!-- 3. HouseholdSalutation -->
 		<Item>
 			<Element>Address</Element>
 			<Characteristics>O</Characteristics>
@@ -1336,7 +1336,7 @@
 				<p/>
 			</Description>
 			<Type ref="CommonTypes" name="AddressesType"/>
-		</Item>     <!-- Address -->
+		</Item>     <!-- 4. Address -->
 		<Item>
 			<Element>Email</Element>
 			<Characteristics>O</Characteristics>
@@ -1344,7 +1344,7 @@
 				<p>List of Email elements.</p>
 			</Description>
 			<Type ref="CommonTypes" name="PersonEmailsType"/>
-		</Item>     <!-- Email -->
+		</Item>     <!-- 5. Email -->
 		<Item>
 			<Element>Phone</Element>
 			<Characteristics>O</Characteristics>
@@ -1352,7 +1352,7 @@
 				<p>List of PhoneNumber elements.</p>
 			</Description>
 			<Type ref="CommonTypes" name="PersonPhonesType"/>
-		</Item>     <!-- Phone -->
+		</Item>     <!-- 6. Phone -->
 
 		<xhtml:Example xmlns="" name="Household Contact Info Example">
 			<HouseholdContactInfo>
@@ -1970,7 +1970,7 @@
 				discretion).</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsVerificationSourceType"/>
-		</Item>    <!-- Source -->
+		</Item>    <!-- 1. Source -->
 		<Item>
 			<Element>DocumentSerialNumber</Element>
 			<Characteristics>O</Characteristics>
@@ -1979,7 +1979,7 @@
 				<p>The serial number on the document that was used to verify the name or birthdate.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- DocumentSerialNumber -->
+		</Item>    <!-- 2. DocumentSerialNumber -->
 		<Item>
 			<Element>DocumentExpiryDate</Element>
 			<Characteristics>O</Characteristics>
@@ -1988,7 +1988,7 @@
 				<p>The expiry date on the document that was used to verify the name or birthdate.</p>
 			</Description>
 			<Type ref="CommonTypes" name="StartDateType"/>
-		</Item>    <!-- DocumentExpiryDate -->
+		</Item>    <!-- 3. DocumentExpiryDate -->
 		<Item>
 			<Element>IsConfirmed</Element>
 			<Characteristics>M</Characteristics>
@@ -1997,7 +1997,7 @@
 				<p>If true then verification has been confirmed by MoE.</p>
 			</Description>
 			<Type name="xs:boolean"/>
-		</Item>    <!-- IsConfirmed -->
+		</Item>    <!-- 4. IsConfirmed -->
 		<Item>
 			<Element>Timestamp</Element>
 			<Characteristics>O</Characteristics>
@@ -2006,7 +2006,7 @@
 				<p>The date &amp; time that the VerificationEvent took place.</p>
 			</Description>
 			<Type name="xs:dateTime"/>
-		</Item>    <!-- TimeStamp -->
+		</Item>    <!-- 5. TimeStamp -->
 		<Item>
 			<Element>Provider</Element>
 			<Characteristics>O</Characteristics>
@@ -2015,7 +2015,7 @@
 				<p>Generic object reference to the provider (eg school) that provided the verification.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>    <!-- Provider -->
+		</Item>    <!-- 6. Provider -->
 		
 		<xhtml:Example xmlns="" name="Citizenship Verification Event Example">
 			<VerificationEvent>
@@ -2069,21 +2069,21 @@
 			</Description>
 		</Item>
 		<Item>
-			<Element>PreferenceOrderNumber</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The order of preference for the person's ethnicity.</p>
-			</Description>
-			<Type name="xs:int"/>
-		</Item>
-		<Item>
 			<Element>Code</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
 				<p>An ethnic group with which the person identifies.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsEthnicityType"/>
-		</Item>
+		</Item>    <!-- 1. Code -->
+		<Item>
+			<Element>PreferenceOrderNumber</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The order of preference for the person's ethnicity.</p>
+			</Description>
+			<Type name="xs:int"/>
+		</Item>    <!-- 2. PreferenceOrderNumber -->
 	</CommonElement> 
 
 	<CommonElement name="IwiAffiliationListType" type="true" dm="true">
@@ -2133,7 +2133,7 @@
 				<p>The code of the iwi the person is affiliated to.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsIwiType"/>
-		</Item>
+		</Item>     <!-- Code -->
 		<Item>
 			<Element>PreferenceOrderNumber</Element>
 			<Characteristics>O</Characteristics>
@@ -2141,7 +2141,7 @@
 				<p>Indicates the persons preferred Iwi. The order of preference for the person's Iwi. '1' is their first preference. If left NULL means no preference is set and defers to any Iwi with a preference of '1'.</p>
 			</Description>
 			<Type name="xs:int"/>
-		</Item>
+		</Item>     <!-- PreferenceOrderNumber -->
 		<Item>
 			<Element>HapuAffiliationList</Element>
 			<Characteristics>O</Characteristics>
@@ -2149,7 +2149,7 @@
 				<p>A list of one or more affiliations of a person with a Hapū within an Iwi.</p>
 			</Description>
 			<Type ref="CommonTypes" name="HapuAffiliationListType"/>
-		</Item>
+		</Item>     <!-- HapuAffiliationList -->
 		
 		<xhtml:Example xmlns="" name="Iwi Example">
 			<Iwi>
@@ -2206,7 +2206,7 @@
 				<p>The name of a Hapū that the person is affiliated with.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>
+		</Item>    <!-- 1. HapuName -->
 		<Item>
 			<Element>PreferenceOrderNumber</Element>
 			<Characteristics>O</Characteristics>
@@ -2214,7 +2214,7 @@
 				<p>Indicates the persons preferred Hapu. The order of preference for the person's Hapu. '1' is their first preference. If left NULL means no preference is set and defers to any Hapu with a preference of '1'.</p>
 			</Description>
 			<Type name="xs:int"/>
-		</Item>
+		</Item>    <!-- 2. PreferenceOrderNumber -->
 		
 		<xhtml:Example xmlns="" name="Hapu Example">
 			<Hapu>
@@ -2263,7 +2263,7 @@
 				<p>The name of the healthcare service, eg: 'Martinborough Health Centre'</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- OrganisationName -->
+		</Item>    <!-- 1. OrganisationName -->
 		<Item>
 			<Element>OrganisationPhoneNum</Element>
 			<Characteristics>M</Characteristics>
@@ -2272,7 +2272,7 @@
 				<p>The name phone number of the healthcare service</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- OrganisationPhoneNum -->		
+		</Item>    <!-- 2. OrganisationPhoneNum -->		
 		<Item>
 			<Element>Notes</Element>
 			<Characteristics>O</Characteristics>
@@ -2281,7 +2281,7 @@
 				<p>Who at the healthservice is the Student's regular e.g. 'Dr Phillips'</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- Notes -->
+		</Item>    <!-- 3. Notes -->
 		<Item>
 			<Element>Type</Element>
 			<Characteristics>M</Characteristics>
@@ -2290,7 +2290,7 @@
 				<p>What kind of healthcare service is provided to the Student by the contact?</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsHealthcareServiceTypeType"/>
-		</Item>    <!-- Type -->
+		</Item>    <!-- 4. Type -->
 
 		<xhtml:Example xmlns="" name="Healthcare Service Info Example">
 			<HealthcareServiceInfo>
@@ -2337,7 +2337,7 @@
 				<p>The Owner of the document</p>
 			</Description>
 			<Type ref="CommonTypes" name="PersonDocumentRoleType"/>
-		</Item>
+		</Item>    <!-- 1. Owner -->
 		<Item>
 			<Element>Author</Element>
 			<Characteristics>O</Characteristics>
@@ -2345,7 +2345,7 @@
 				<p>The Author of the document (if known)</p>
 			</Description>
 			<Type ref="CommonTypes" name="PersonDocumentRoleType"/>
-		</Item>
+		</Item>    <!-- 2. Author -->
 		<Item>
 			<Element>SubjectOf</Element>
 			<Characteristics>O</Characteristics>
@@ -2353,7 +2353,7 @@
 				<p>The Subject of the document (if known)</p>
 			</Description>
 			<Type ref="CommonTypes" name="PersonDocumentRoleType"/>
-		</Item>
+		</Item>    <!-- 3. Subjectof -->
 		<Item>
 			<Element>Reviewer</Element>
 			<Characteristics>O</Characteristics>
@@ -2361,7 +2361,7 @@
 				<p>The Reviewer of the document (if known)</p>
 			</Description>
 			<Type ref="CommonTypes" name="PersonDocumentRoleType"/>
-		</Item>
+		</Item>    <!-- 4. Reviweer -->
 		<Item>
 			<Element>AddedBy</Element>
 			<Characteristics>O</Characteristics>
@@ -2369,7 +2369,7 @@
 				<p>The person who added the document to the system.</p>
 			</Description>
 			<Type ref="CommonTypes" name="PersonDocumentRoleType"/>
-		</Item>
+		</Item>    <!-- 5. AddedBy -->
 	</CommonElement> 
 
 	<CommonElement name="PersonDocumentRoleType" type="true" dm="true">
@@ -2387,7 +2387,7 @@
 					<p>A non student person associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
 				</Description>
 				<Type ref="CommonTypes" name="NamedObjectReferenceType"/>
-			</Item>
+			</Item>    <!-- 1. Person -->
 			<Item>
 				<Element>Student</Element>
 				<Characteristics>O</Characteristics>
@@ -2395,7 +2395,7 @@
 					<p>A student associated to a document and their role in relation to it, e.g. author, owner, reviewer, subject of.</p>
 				</Description>
 				<Type ref="CommonTypes" name="StudentObjectReferenceType"/>
-			</Item>
+			</Item>    <!-- 2. Student -->
 		</Choice>
 	</CommonElement> 
 

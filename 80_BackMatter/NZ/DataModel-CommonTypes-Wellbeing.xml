@@ -45,7 +45,7 @@
 				<p>Free text note.</p>
 			</Description>
 			<Type name="xs:normalizedString"></Type>  
-		</Item>		<!-- Note -->
+		</Item>		<!-- 1. Note -->
 		<Item>
 			<Element>CreatedDateTime</Element>
 			<Characteristics>M</Characteristics>
@@ -53,7 +53,7 @@
 				<p>The date and time the note was created.</p>
 			</Description>
 			<Type name="xs:dateTime"></Type>  
-		</Item>		<!-- Created DateTime -->
+		</Item>		<!-- 2. Created DateTime -->
 		<Item>
 			<Element>LastUpdatedDateTime</Element>
 			<Characteristics>O</Characteristics>
@@ -61,7 +61,7 @@
 				<p>The date and time the note was last updated.</p>
 			</Description>
 			<Type name="xs:dateTime"></Type>  
-		</Item>		<!-- Last Updated DateTime -->
+		</Item>		<!-- 3. Last Updated DateTime -->
 		<Item>
 			<Element>CreatedBy</Element>
 			<Characteristics>M</Characteristics>
@@ -69,7 +69,7 @@
 				<p>Generic reference to the user that created the note.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
-		</Item>		<!-- CreatedBy -->
+		</Item>		<!-- 4. CreatedBy -->
 		<Item>
 			<Element>LastUpdatedBy</Element>
 			<Characteristics>O</Characteristics>
@@ -77,7 +77,7 @@
 				<p>Generic reference to the user that last updated the note.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>  
-		</Item>		<!-- LastUpdatedBy -->		
+		</Item>		<!-- 5. LastUpdatedBy -->		
 	</CommonElement>
 
 
@@ -111,7 +111,7 @@
 				<p>Name of medication required for the student.</p>
 			</Description>
 			<Type name="xs:string"></Type>  
-		</Item>
+		</Item>   <!-- 1. MedicationName -->
 		<Item>
 			<Element>Dosage</Element>
 			<Characteristics>O</Characteristics>
@@ -119,7 +119,7 @@
 				<p>Dosage and strength of medication required for the student.</p>
 			</Description>
 			<Type name="xs:string"></Type>  
-		</Item>
+		</Item>   <!-- 2. Dosage -->
 		<Item>
 			<Element>Frequency</Element>
 			<Characteristics>O</Characteristics>
@@ -127,7 +127,7 @@
 				<p>Frequency of Administration.</p>
 			</Description>
 			<Type name="xs:string"></Type>  
-		</Item>
+		</Item>   <!-- 3. Frequency -->
 		<Item>
 			<Element>AdministrationInformation</Element>
 			<Characteristics>O</Characteristics>
@@ -135,7 +135,7 @@
 				<p>Information about how the medication is to be administered.</p>
 			</Description>
 			<Type name="xs:string"></Type>  
-		</Item>
+		</Item>   <!-- 4. AdministrationInformation -->
 		<Item>
 			<Element>Method</Element>
 			<Characteristics>O</Characteristics>
@@ -143,13 +143,13 @@
 				<p>Method of administration.</p>
 			</Description>
 			<Type name="xs:string"></Type>  
-		</Item>
+		</Item>   <!-- 5. Method -->
 		<Item>
 			<Element>MedicationConsentList</Element>
 			<Characteristics>O</Characteristics>
 			<Description></Description>
 			<Type ref="CommonTypes" name="MedicationConsentListType"/>
-		</Item>
+		</Item>	  <!-- 6. MedicationConsentList -->
 	</CommonElement>
 
 	<CommonElement name="MedicationConsentListType" type="true" dm="true">
@@ -182,7 +182,7 @@
 				<p>The date from which the student or student caretaker consented to the medicine being administered to the student by a particular individual.</p>
 			</Description>
 			<Type ref="CommonTypes" name="StartDateType"/>
-		</Item>   <!-- StartDate-->
+		</Item>    <!-- 1. StartDate-->
 		<Item>
 			<Element>EndDate</Element>
 			<Characteristics>O</Characteristics>
@@ -190,7 +190,7 @@
 				<p>The date the consent for administration of the medicine ends or is revoked.</p>
 			</Description>
 			<Type ref="CommonTypes" name="EndDateType"/>
-		</Item>    <!-- EndDate -->
+		</Item>    <!-- 2. EndDate -->
 		<Item>
 			<Element>ConsentedBy</Element>
 			<Characteristics>M</Characteristics>
@@ -198,7 +198,7 @@
 				<p>The student or student caregiver that has consented to the medicine being administered to the student by the school.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>    <!-- ConsentedBy -->
+		</Item>    <!-- 3. ConsentedBy -->
 		<Item>
 			<Element>ProviderApplicableTo</Element>
 			<Characteristics>O</Characteristics>
@@ -206,7 +206,7 @@
 				<p>The provider the medication administartion consent is applicable to.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>    <!-- ProviderApplicableTo -->
+		</Item>    <!-- 4. ProviderApplicableTo -->
 		<Item>
 			<Element>AdministeredBy</Element>
 			<Characteristics>O</Characteristics>
@@ -214,7 +214,7 @@
 				<p>The staff member at the school that have been given permission by the student or the student's caregiver to administer the medicine to the student.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>    <!-- AdministeredBy -->
+		</Item>    <!-- 5. AdministeredBy -->
 	</CommonElement>
 		
 	<CommonElement name="WellbeingEventCategoryListType" type="true" dm="true">
@@ -247,7 +247,7 @@
 				<p></p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsWellbeingEventCategory"></Type>
-		</Item>
+		</Item>   <!-- 1. Category -->
 		<Item>
 			<Element>EventSubCategoryList</Element>
 			<Characteristics>O</Characteristics>
@@ -255,7 +255,7 @@
 				<p></p>
 			</Description>
 			<Type ref="CommonTypes" name="WellbeingEventSubCategoryListType"></Type>
-		</Item>
+		</Item>   <!-- 2. EventSubCategoryList -->
 	</CommonElement>
 
 	<CommonElement name="WellbeingEventSubCategoryListType" type="true" dm="true">
@@ -291,58 +291,6 @@
 		</Item>
 	</CommonElement>	
 
-	<CommonElement name="FollowUpActionListType" type="true" dm="true">
-		<Item>
-			<Element>FollowUpActionListType</Element>
-			<Description>
-				<p>List of Actions where an action resulted and is known – maybe just a link to a WellbeingResponse Object</p>
-			</Description>
-			<List mode="List"/>
-		</Item>
-		<Item>
-			<Element>FollowUpAction</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>Container for the Follow Up details.</Description>
-			<Type ref="CommonTypes" name="FollowUpActionType"/>
-		</Item>    <!-- FollowUpAction -->
-	</CommonElement>	
-
-	<CommonElement name="FollowUpActionType" type="true" dm="true">
-		<Item>
-			<Element>FollowUpActionType</Element>
-			<Description>
-				<p>Repeatable Follow Up Action.</p>
-			</Description>
-		</Item> 	
-		<Item>
-			<Element>WellbeingResponseRefId</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>The RefId of a WellbeingResponse Object if it exists.</p>
-			</Description>
-			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-		</Item>    <!-- WellbeingResponseRefId -->
-		
-			<Item>
-					<Element>FollowUpDetails</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Optional free text to outline follow up.</p>
-			</Description>
-			<Type name="xs:string"></Type>  
-			</Item>
-			
-			<Item>
-					<Element>FollowUpActionCategory</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Category of Action - typing locally defined.</p>
-			</Description>
-			<Type name="xs:string"></Type>  
-			</Item>
-		
-	</CommonElement>
-	
 	<CommonElement name="PersonInvolvementListType" type="true" dm="true">
 		<Item>
 			<Element>PersonInvolvementListType</Element>
@@ -375,7 +323,7 @@
 				<p>Optional free text detailing involvement.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- HowInvolved -->
+		</Item>    <!-- 1. HowInvolved -->
 		<Item>
 			<Element>PersonType</Element>
 			<Characteristics>O</Characteristics>
@@ -384,7 +332,7 @@
 				<p>The type of person that the person involved is, e.g. Teacher, Peers, etc.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsPersonInvolvedTypeType"/>
-		</Item>    <!-- PersonType -->
+		</Item>    <!-- 2. PersonType -->
 	</CommonElement>
 
 	<CommonElement name="RecognitionListType" type="true" dm="true">
@@ -437,7 +385,7 @@
 				<p>The start date of the withdrawal.</p>
 			</Description>
 			<Type ref="CommonTypes" name="StartDateType"/>
-		</Item>
+		</Item>   <!-- 1. WithdrawlStartDate -->
 		<Item>
 			<Element>WithdrawalEndDate</Element>
 			<Characteristics>O</Characteristics>
@@ -445,7 +393,7 @@
 				<p>The end date of the withdrawal.</p>
 			</Description>
 			<Type ref="CommonTypes" name="EndDateType"/>
-		</Item>
+		</Item>   <!-- 2. WithdrawlEndDate -->
 		<Item>
 			<Element>SchoolTerm</Element>
 			<Characteristics>O</Characteristics>
@@ -453,7 +401,7 @@
 				<p>The school term the withdrawal took place in.</p>
 			</Description>
 			<Type name="xs:integer"></Type>  
-		</Item>
+		</Item>   <!-- 3. SchoolTerm -->
 		<Item>
 			<Element>WithdrawalFrom</Element>
 			<Characteristics>O</Characteristics>
@@ -462,7 +410,7 @@
 				the learner is withdrawn from.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-		</Item>
+		</Item>   <!-- 4. WithdrawlFrom -->
 	</CommonElement>
 	
 	<CommonElement name="SuspensionContainerType" type="true" dm="true">
@@ -480,7 +428,7 @@
 				</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsSuspensionCategoryType"/>
-		</Item>
+		</Item>    <!-- 1. SuspensionCategory -->
 		<Item>
 			<Element>WithdrawalTimeList</Element>
 			<Characteristics>O</Characteristics>
@@ -488,7 +436,7 @@
 				<p></p>
 			</Description>
 			<Type ref="CommonTypes" name="WithdrawalTimeListType"></Type>
-		</Item>
+		</Item>    <!-- 2. WithdrawlTimeList -->
 		<Item>
 			<Element>Duration</Element>
 			<Characteristics>O</Characteristics>
@@ -496,7 +444,7 @@
 				<p>The duration of a Suspension in days 0.00 – X.xx.  (Half Day = 0.5, Full Day = 1.0 or the percentage of any day.)  Must be provided for a Suspension when known.</p>
 			</Description>
 			<Type name="xs:decimal"></Type>
-		</Item>
+		</Item>    <!-- 3. Duration -->
 		<Item>
 			<Element>AdvisementDate</Element>
 			<Characteristics>O</Characteristics>
@@ -504,7 +452,7 @@
 				<p>The date parent/carers were officially notified.</p>
 			</Description>
 			<Type name="xs:date"></Type>  
-		</Item>
+		</Item>    <!-- 4. AdvisementDate -->
 		<Item>
 			<Element>ResolutionMeetingTime</Element>
 			<Characteristics>O</Characteristics>
@@ -512,7 +460,7 @@
 				<p>The date and time at which a meeting with the student’s parents/carers was held to resolve the Suspension.</p>
 			</Description>
 			<Type name="xs:dateTime"></Type>  
-		</Item>
+		</Item>    <!-- 5. ResolutionMeetingTime -->
 		<Item>
 			<Element>ResolutionNotes</Element>
 			<Characteristics>O</Characteristics>
@@ -520,7 +468,7 @@
 				<p>Comments about how the Suspension has been resolved, including any reparative actions the student needs to take.</p>
 			</Description>
 			<Type name="xs:string"></Type>  
-		</Item>
+		</Item>    <!-- 6. ResolutionNotes -->
 		<Item>
 			<Element>EarlyReturnDate</Element>
 			<Characteristics>O</Characteristics>
@@ -528,7 +476,7 @@
 				<p>The date at which the student was permitted to return to school earlier than the agreed duration would have allowed.</p>
 			</Description>
 			<Type name="xs:date"></Type>  
-		</Item>
+		</Item>    <!-- 7. EarlyReturnDate -->
 	</CommonElement>
 
 	<CommonElement name="DetentionContainerType" type="true" dm="true">
@@ -545,7 +493,7 @@
 				<p>Categorisation of a Detention.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsDetentionCategoryType"/>
-		</Item>
+		</Item>    <!-- 1. DetentionCategory -->
 		<Item>
 			<Element>DetentionDate</Element>
 			<Characteristics>O</Characteristics>
@@ -553,7 +501,7 @@
 				<p>The date of the detention.</p>
 			</Description>
 			<Type name="xs:date"></Type>  
-		</Item>
+		</Item>    <!-- 2. DetentionDate -->
 		<Item>
 			<Element>DetentionLocation</Element>
 			<Characteristics>O</Characteristics>
@@ -561,7 +509,7 @@
 				<p>Eventually to be typed for initial draft will be string to try and determine a valid code set.</p>
 			</Description>
 			<Type name="xs:string"></Type>  
-		</Item>
+		</Item>    <!-- 3. DetentionLocation -->
 		<Item>
 			<Element>DetentionNotes</Element>
 			<Characteristics>O</Characteristics>
@@ -569,7 +517,7 @@
 				<p>Any notes that can be provided regarding the need/response that led to the detention.</p>
 			</Description>
 			<Type name="xs:string"></Type>  
-		</Item>
+		</Item>    <!-- 4. DetentionNotes -->
 	</CommonElement>
 
 	<CommonElement name="PlanRequiredListType" type="true" dm="true">
@@ -602,7 +550,7 @@
 				<p>Any notes that can be provided regarding the need that led to the plan.</p>
 			</Description>
 			<Type name="xs:string"></Type>  
-		</Item>
+		</Item>    <!-- 1. PlanNotes -->
 		<Item>
 			<Element>PlanDocument</Element>
 			<Characteristics>O</Characteristics>
@@ -610,7 +558,7 @@
 				<p>The GUID of a PersonalisedPlan Object if it exists and it can be provided.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>
+		</Item>    <!-- 2. PlanDocument -->
 	</CommonElement>
 	
 	<CommonElement name="AwardContainerType" type="true" dm="true">
@@ -627,7 +575,7 @@
 				<p>Date when to be awarded.</p>
 			</Description>
 			<Type name="xs:date"></Type>  
-		</Item>
+		</Item>    <!-- 1. AwardDate -->
 		<Item>
 			<Element>AwardType</Element>
 			<Characteristics>O</Characteristics>
@@ -635,7 +583,7 @@
 				<p>Type of Award.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsWellbeingAwardTypeType"/>
-		</Item>
+		</Item>    <!-- 2. AwardType -->
 		<Item>
 			<Element>AwardDescription</Element>
 			<Characteristics>O</Characteristics>
@@ -643,7 +591,7 @@
 				<p>Description of the Award.</p>
 			</Description>
 			<Type name="xs:string"></Type>  
-		</Item>
+		</Item>    <!-- 3. AwardDescription -->
 		<Item>
 			<Element>AwardNotes</Element>
 			<Characteristics>O</Characteristics>
@@ -651,7 +599,7 @@
 				<p>Any comments/notes associated with the Award.</p>
 			</Description>
 			<Type name="xs:string"></Type>  
-		</Item>
+		</Item>    <!-- 4. AwardNotes -->
 	</CommonElement>
 
 	<CommonElement name="OtherWellbeingResponseContainerType" type="true" dm="true">
@@ -668,7 +616,7 @@
 				<p>Date of the other response</p>
 			</Description>
 			<Type name="xs:date"></Type>  
-		</Item>
+		</Item>    <!-- 1. OtherResponseDate -->
 		<Item>
 			<Element>OtherResponseDescription</Element>
 			<Characteristics>O</Characteristics>
@@ -676,7 +624,7 @@
 				<p>Description of the other response.</p>
 			</Description>
 			<Type name="xs:string"></Type>  
-		</Item>
+		</Item>    <!-- 2. OtherResponseDescription -->
 		<Item>
 			<Element>OtherResponseNotes</Element>
 			<Characteristics>O</Characteristics>
@@ -684,7 +632,7 @@
 				<p>Any comments/notes associated with the other response.</p>
 			</Description>
 			<Type name="xs:string"></Type>  
-		</Item>
+		</Item>    <!-- 3. OtherResponseNotes -->
 	</CommonElement>
 
 	<CommonElement name="AcknowledgementListType" type="true" dm="true">
@@ -931,7 +879,7 @@
 				<p>The person who administered the physical restraint to the student.</p>
 			</Description>
 			<Type ref="CommonTypes" name="NamedObjectReferenceType"/>
-		</Item>    <!-- AdministeredBy -->
+		</Item>    <!-- 1. AdministeredBy -->
 		<Item>
 			<Element>SafePhysicalRestraintTraining</Element>
 			<Characteristics>O</Characteristics>
@@ -939,7 +887,7 @@
 				<p>Indicates whether or not the person involved has received training of the safe use of physical restraint.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-		</Item>    <!-- SafePhysicalRestraintTraining -->
+		</Item>    <!-- 2. SafePhysicalRestraintTraining -->
 		<Item>
 			<Element>TrainingDescription</Element>
 			<Characteristics>O</Characteristics>
@@ -947,7 +895,7 @@
 				<p>Free text providing additional information about any training the person has had on the safe use pf physical restraint.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- TrainingDescription -->
+		</Item>    <!-- 3. TrainingDescription -->
 		<Item>
 			<Element>Role</Element>
 			<Characteristics>O</Characteristics>
@@ -955,7 +903,7 @@
 				<p>The role of the person who administered the physical restraint to the student.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsRestraintAdministeredByRoleType"/>
-		</Item>    <!-- Role -->
+		</Item>    <!-- 4. Role -->
 	</CommonElement>	
 
 	<CommonElement name="BehaviourDirectedAtListType" type="true" dm="true">
@@ -990,7 +938,7 @@
 				<p>The person the student's behaviour was directed at.</p>
 			</Description>
 			<Type ref="CommonTypes" name="NamedObjectReferenceType"/>
-		</Item>    <!-- DirectedAt -->
+		</Item>    <!-- 1. DirectedAt -->
 		<Item>
 			<Element>BehaviourDescription</Element>
 			<Characteristics>O</Characteristics>
@@ -998,7 +946,7 @@
 				<p>Free text describing the behaviour the student showed towards a person of piece of property.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- BehaviourDescription -->
+		</Item>    <!-- 2. BehaviourDescription -->
 		<Item>
 			<Element>DirectedAtType</Element>
 			<Characteristics>O</Characteristics>
@@ -1006,7 +954,7 @@
 				<p>Code set denoting type of object or person the student was directing their behaviour at, e.g. Staff Member, Student, Desk, Chair.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsBehaviourDirectedAtTypeType"/>
-		</Item>    <!-- DirectedAtType -->
+		</Item>    <!-- 3. DirectedAtType -->
 	</CommonElement>	
 
 	<CommonElement name="StaffReflectionListType" type="true" dm="true">
@@ -1041,7 +989,7 @@
 				<p>The date the staff member performed their reflection on the use of physical restraint on the student.</p>
 			</Description>
 			<Type name="xs:date"/>
-		</Item>    <!-- ReflectionDate -->
+		</Item>    <!-- 1. ReflectionDate -->
 		<Item>
 			<Element>WitnessedBy</Element>
 			<Characteristics>O</Characteristics>
@@ -1049,7 +997,7 @@
 				<p>The staff member that witnessed the person who applied the restraint performing the staff reflections.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>    <!-- WitnessedBy -->
+		</Item>    <!-- 2. WitnessedBy -->
 		<Item>
 			<Element>Staff</Element>
 			<Characteristics>O</Characteristics>
@@ -1057,7 +1005,7 @@
 				<p>The staff member who performed the staff reflection.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>    <!-- Staff -->
+		</Item>    <!-- 3. Staff -->
 		<Item>
 			<Element>ReflectionList</Element>
 			<Characteristics>O</Characteristics>
@@ -1100,7 +1048,7 @@
 				<p>Free text outlining the staff members thoughts on a type of reflection.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- ReflectionDescription -->
+		</Item>    <!-- 1. ReflectionDescription -->
 		<Item>
 			<Element>Type</Element>
 			<Characteristics>O</Characteristics>
@@ -1108,7 +1056,7 @@
 				<p>The type of reflection that the staff member performed.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsStaffRestraintReflectionTypeType"/>
-		</Item>    <!-- Type -->
+		</Item>    <!-- 2. Type -->
 	</CommonElement>
 
 	<CommonElement name="RestraintDebriefingListType" type="true" dm="true">
@@ -1143,7 +1091,7 @@
 				<p>The date the debriefing about the use of physical restraint on the student occurred.</p>
 			</Description>
 			<Type name="xs:date"/>
-		</Item>    <!-- DebriefingDate -->
+		</Item>    <!-- 1. DebriefingDate -->
 		<Item>
 			<Element>DebriefingTime</Element>
 			<Characteristics>O</Characteristics>
@@ -1151,7 +1099,7 @@
 				<p>The time the debriefing about the use of physical restraint on the student occurred.</p>
 			</Description>
 			<Type name="xs:time"/>
-		</Item>    <!-- DebriefingTime -->
+		</Item>    <!-- 2. DebriefingTime -->
 		<Item>
 			<Element>Findings</Element>
 			<Characteristics>O</Characteristics>
@@ -1159,7 +1107,7 @@
 				<p>Free text outlining the findings of the debriefing in the use of physical restraint on the student.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- Findings -->
+		</Item>    <!-- 3. Findings -->
 		<Item>
 			<Element>NextStepsActions</Element>
 			<Characteristics>O</Characteristics>
@@ -1167,7 +1115,7 @@
 				<p>Free text about the next steps and/or actions that will be taken in as a result of the debriefing on the use of physical restraint  on the student.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- NextStepsActions -->
+		</Item>    <!-- 4. NextStepsActions -->
 		<Item>
 			<Element>ParentCaregiverComment</Element>
 			<Characteristics>O</Characteristics>
@@ -1175,7 +1123,7 @@
 				<p>Parent/caregiver comments made about the use physical restraint on the student.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- ParentCaregiverComment -->
+		</Item>    <!-- 5. ParentCaregiverComment -->
 		<Item>
 			<Element>StudentComment</Element>
 			<Characteristics>O</Characteristics>
@@ -1183,7 +1131,7 @@
 				<p>Student comments made about the use physical restraint on the them.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- StudentComment -->
+		</Item>    <!-- 6. StudentComment -->
 		<Item>
 			<Element>DebriefingType</Element>
 			<Characteristics>O</Characteristics>
@@ -1191,7 +1139,7 @@
 				<p>The type of debriefing that occurred, e.g. staff, or student and parent/caregiver.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsRestraintDebriefingTypeType"/>
-		</Item>    <!-- DebriefingType -->
+		</Item>    <!-- 7. DebriefingType -->
 		<Item>
 			<Element>AttendeeList</Element>
 			<Characteristics>O</Characteristics>
@@ -1199,7 +1147,7 @@
 				<p>A list of the people that attended the debriefing.</p>
 			</Description>
 			<Type ref="CommonTypes" name="AttendeeListType"/>
-		</Item>    <!-- AttendeeList -->
+		</Item>    <!-- 8. AttendeeList -->
 	</CommonElement>
 
 	<CommonElement name="AttendeeListType" type="true" dm="true">
@@ -1252,7 +1200,7 @@
 				<p>The question asked about the physical restraint incident.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsRestraintQuestionType"/>
-		</Item>    <!-- Question -->
+		</Item>    <!-- 1. Question -->
 		<Item>
 			<Element>Answer</Element>
 			<Characteristics>O</Characteristics>
@@ -1260,7 +1208,7 @@
 				<p>The answer to the question. Options are Yes or No.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-		</Item>    <!-- Answer -->
+		</Item>    <!-- 2. Answer -->
 		<Item>
 			<Element>AnswerSupportingDescription</Element>
 			<Characteristics>O</Characteristics>
@@ -1268,7 +1216,7 @@
 				<p>A free text description providing additional information about the question if required.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- AnswerSupportingDescription -->
+		</Item>    <!-- 3. AnswerSupportingDescription -->
 	</CommonElement>
 
 	<!-- StudentVoice complex types -->
@@ -1372,7 +1320,7 @@
 				<p>The date the Student's goal was recorded.</p>
 			</Description>
 			<Type name="xs:date"/>
-		</Item>    <!-- GoalRecordedDate -->
+		</Item>    <!-- 1. GoalRecordedDate -->
 		<Item>
 			<Element>GoalAchievedDate</Element>
 			<Characteristics>O</Characteristics>
@@ -1380,7 +1328,7 @@
 				<p>The date the Student achieved their goal.</p>
 			</Description>
 			<Type name="xs:date"/>
-		</Item>    <!-- GoalAchievedDate -->			
+		</Item>    <!-- 2. GoalAchievedDate -->			
 		<Item>
 			<Element>GoalDescription</Element>
 			<Characteristics>O</Characteristics>
@@ -1388,7 +1336,7 @@
 				<p>A description of the goal the student wants to achieve</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- GoalDescription -->
+		</Item>    <!-- 3. GoalDescription -->
 		<Item>
 			<Element>GoalName</Element>
 			<Characteristics>O</Characteristics>
@@ -1396,7 +1344,7 @@
 				<p>The name of the goal the student wants to achieve</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- GoalName -->
+		</Item>    <!-- 4. GoalName -->
 	</CommonElement>
 
 	<CommonElement name="AcademicGoalType" type="true" dm="true">
@@ -1414,7 +1362,7 @@
 				<p>The subject are athe student's academic goal is for.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
-		</Item>    <!-- SubjectArea -->
+		</Item>    <!-- 10. SubjectArea -->
 	</CommonElement>
 
 	<CommonElement name="StudentInterestListType" type="true" dm="true">
@@ -1461,7 +1409,7 @@
 				<p>The date the Student's interest was recorded.</p>
 			</Description>
 			<Type name="xs:date"/>
-		</Item>    <!-- InterestRecordedDate -->
+		</Item>    <!-- 1. InterestRecordedDate -->
 		<Item>
 			<Element>InterestDescription</Element>
 			<Characteristics>O</Characteristics>
@@ -1469,7 +1417,7 @@
 				<p>A description of the interest the student wants to achieve</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- InterestDescription -->
+		</Item>    <!-- 2. InterestDescription -->
 		<Item>
 			<Element>InterestName</Element>
 			<Characteristics>O</Characteristics>
@@ -1477,7 +1425,7 @@
 				<p>The name of the interest the student has expressed</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- InterestName -->
+		</Item>    <!-- 3. InterestName -->
 		<Item>
 			<Element>InterestType</Element>
 			<Characteristics>O</Characteristics>
@@ -1485,7 +1433,7 @@
 				<p>Code denoting the type of interest the student has expressed</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsStudentInterestTypeType"></Type>
-		</Item>    <!-- InterestType -->
+		</Item>    <!-- 4. InterestType -->
 		<Item>
 			<Element>SubjectArea</Element>
 			<Characteristics>O</Characteristics>
@@ -1595,8 +1543,8 @@
 				<p>The severity of the Wellbeing Event.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsWellbeingEventSeverityType"/>
-		</Item>    <!-- Severity -->
-		<Choice>
+		</Item>    <!-- 1. Severity -->
+		<Choice>   <!-- 2. xs:choice -->
 			<Item>
 				<Element>MinorBehaviour</Element>
 				<Characteristics>OR</Characteristics>
@@ -1604,7 +1552,7 @@
 					<p>The type of minor problem behaviour identified as a result of the Wellbeing Event.</p>
 				</Description>
 				<Type ref="CodeSets" name="NZCodeSetsWellbeingEventMinorBehaviourType"/>
-			</Item>    <!-- MinorBehaviour -->
+			</Item>    <!-- 1. MinorBehaviour -->
 			<Item>
 				<Element>MajorBehaviour</Element>
 				<Characteristics>OR</Characteristics>
@@ -1612,7 +1560,7 @@
 					<p>The type of major problem behaviour identified as a result of the Wellbeing Event.</p>
 				</Description>
 				<Type ref="CodeSets" name="NZCodeSetsWellbeingEventMajorBehaviourType"/>
-			</Item>    <!-- MajorBehaviour -->
+			</Item>    <!-- 2. MajorBehaviour -->
 		</Choice>		
 	</CommonElement>
 
@@ -1666,7 +1614,7 @@
 				<p>A learning support need that has been identified for the student.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>    <!-- Need -->
+		</Item>    <!-- 1. Need -->
 		<Item>
 			<Element>ResponseList</Element>
 			<Characteristics>O</Characteristics>
@@ -1674,7 +1622,7 @@
 				<p>A list of responses made about a learning support need.</p>
 			</Description>
 			<Type ref="CommonTypes" name="SupportNeedResponseListType"/>
-		</Item>    <!-- ResponseList -->
+		</Item>    <!-- 2. ResponseList -->
 	</CommonElement>
 
 	<CommonElement name="SupportNeedResponseListType" type="true" dm="true">
@@ -1727,7 +1675,7 @@
 				<p>The staff member reviewed the response.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>    <!-- Reviewer -->
+		</Item>    <!-- 1. Reviewer -->
 		<Item>
 			<Element>ReviewDate</Element>
 			<Characteristics>M</Characteristics>
@@ -1735,7 +1683,7 @@
 				<p>The date of the review.</p>
 			</Description>
 			<Type name="xs:date"/>
-		</Item>    <!-- ReviewDate -->
+		</Item>    <!-- 2. ReviewDate -->
 		<Item>
 			<Element>ReviewComments</Element>
 			<Characteristics>M</Characteristics>
@@ -1743,7 +1691,7 @@
 				<p>Free text comment about the review.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- ReviewComments -->
+		</Item>    <!-- 3. ReviewComments -->
 		<Item>
 			<Element>NextReviewDate</Element>
 			<Characteristics>O</Characteristics>
@@ -1751,7 +1699,7 @@
 				<p>The date of the next review.</p>
 			</Description>
 			<Type name="xs:date"/>
-		</Item>    <!-- NextReviewDate -->
+		</Item>    <!-- 4. NextReviewDate -->
 		<Item>
 			<Element>AttachmentList</Element>
 			<Characteristics>O</Characteristics>
@@ -1759,7 +1707,7 @@
 				<p>A list of attachments related to a learning support need response review.</p>
 			</Description>
 			<Type ref="CommonTypes" name="DocumentListType"/>
-		</Item>    <!-- AttachmentList -->
+		</Item>    <!-- 5. AttachmentList -->
 	</CommonElement>
 
 	<CommonElement name="SupportNeedExternalResponseType" type="true" dm="true">
@@ -1776,7 +1724,7 @@
 				<p>The response provider.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsLearningSupportExternalProviderType"/>
-		</Item>    <!-- Provider -->
+		</Item>    <!-- 1. Provider -->
 		<Item>
 			<Element>ProviderDetail</Element>
 			<Characteristics>O</Characteristics>
@@ -1784,7 +1732,7 @@
 				<p>Additional information about a provider.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- ProviderDetail -->
+		</Item>    <!-- 2. ProviderDetail -->
 		<Item>
 			<Element>Status</Element>
 			<Characteristics>M</Characteristics>
@@ -1792,7 +1740,7 @@
 				<p>The status of the external response.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsLearningSupportExtResponseStatusType"/>
-		</Item>    <!-- Status -->
+		</Item>    <!-- 3. Status -->
 		<Item>
 			<Element>MOESpecialistService</Element>
 			<Characteristics>O</Characteristics>
@@ -1800,7 +1748,7 @@
 				<p>The MoE specialist service that has been selected as a response to a student's support need. Required if Response Detail = 'MOE' (MOE Specialists).</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsMoESpecialistServiceType"/>
-		</Item>    <!-- MOESpecialistService -->
+		</Item>    <!-- 4. MOESpecialistService -->
 		<Item>
 			<Element>FundedBy</Element>
 			<Characteristics>O</Characteristics>
@@ -1808,7 +1756,7 @@
 				<p>Who the response was funded by.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsLearningSupportExternalFunderType"/>
-		</Item>    <!-- FundedBy -->
+		</Item>    <!-- 5. FundedBy -->
 		<Item>
 			<Element>FundedByDetail</Element>
 			<Characteristics>O</Characteristics>
@@ -1816,7 +1764,7 @@
 				<p>Additional detail about a funder.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- FundedByDeatil -->
+		</Item>    <!-- 6. FundedByDeatil -->
 		<Item>
 			<Element>RequestMadeDate</Element>
 			<Characteristics>O</Characteristics>
@@ -1824,7 +1772,7 @@
 				<p>The date the request about funding was made.</p>
 			</Description>
 			<Type name="xs:date"/>
-		</Item>    <!-- RequestMadeDate -->
+		</Item>    <!-- 7. RequestMadeDate -->
 		<Item>
 			<Element>FundingStatus</Element>
 			<Characteristics>O</Characteristics>
@@ -1832,7 +1780,7 @@
 				<p>The status of the funding being provided for the response.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsLearningSupportFundingStatusType"/>
-		</Item>    <!-- FundingStatus -->
+		</Item>    <!-- 8. FundingStatus -->
 		<Item>
 			<Element>FundingDeclinedReason</Element>
 			<Characteristics>O</Characteristics>
@@ -1840,7 +1788,7 @@
 				<p>The reason funding was declined.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- FundingDeclinedReason -->
+		</Item>    <!-- 10. FundingDeclinedReason -->
 	</CommonElement>
 
 	<CommonElement name="SupportNeedInternalResponseType" type="true" dm="true">
@@ -1857,7 +1805,7 @@
 				<p>The response provider.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsLearningSupportInternalProviderType"/>
-		</Item>    <!-- ProvidedBy -->
+		</Item>    <!-- 1. ProvidedBy -->
 		<Item>
 			<Element>ProvidedByName</Element>
 			<Characteristics>O</Characteristics>
@@ -1865,7 +1813,7 @@
 				<p>The name of the person providing the response. Mandatory to be provided when the ProvidedBy = 'Teacher'.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- ProvidedByName -->
+		</Item>    <!-- 2. ProvidedByName -->
 		<Item>
 			<Element>Status</Element>
 			<Characteristics>M</Characteristics>
@@ -1873,7 +1821,7 @@
 				<p>The status of the internal response.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsLearningSupportIntResponseStatusType"/>
-		</Item>    <!-- Status -->
+		</Item>    <!-- 3. Status -->
 		<Item>
 			<Element>FundedBy</Element>
 			<Characteristics>M</Characteristics>
@@ -1881,7 +1829,7 @@
 				<p>Who is funding the reponse.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsLearningSupportInternalFunderType"/>
-		</Item>    <!-- FundedBy -->
+		</Item>    <!-- 4. FundedBy -->
 	</CommonElement>     <!-- SupportNeedInternalResponseType -->
 
 	<CommonElement name="OfficialDiagnosisListType" type="true" dm="true">
@@ -1916,7 +1864,7 @@
 				<p>The official diagnosis type the student was given.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsOfficialDiagnosisTypeType"/>
-		</Item>    <!-- DiagnosisType -->
+		</Item>    <!-- 1. DiagnosisType -->
 		<Item>
 			<Element>DiagnosisSubType</Element>
 			<Characteristics>O</Characteristics>
@@ -1924,7 +1872,7 @@
 				<p>The official diagnosis sub-type the student was given.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsOfficialDiagnosisSubTypeType"/>
-		</Item>    <!-- DiagnosisSubType -->
+		</Item>    <!-- 2. DiagnosisSubType -->
 		<Item>
 			<Element>OfficialDiagnosisDetail</Element>
 			<Characteristics>O</Characteristics>
@@ -1932,7 +1880,7 @@
 				<p>Providers additional free text information about an official diagnosis. Mandatory when the Official Diagnosis Type selected is ‘Physical Impairments’, or ‘Medical Conditions’. Mandatory when the Official Diagnosis Sub-Type selected is ‘Other neurodevelopmental disorders/developmental anomalies’, Other mental health disorders’, or ‘Other sensory impairment’.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- OfficialDiagnosisDetail -->
+		</Item>    <!-- 3. OfficialDiagnosisDetail -->
 		<Item>
 			<Element>DocumentList</Element>
 			<Characteristics>O</Characteristics>
@@ -1942,5 +1890,4 @@
 			<Type ref="CommonTypes" name="DocumentListType"/>
 		</Item>    <!-- DocumentList -->
 	</CommonElement>
-
 </IncludeGroup>

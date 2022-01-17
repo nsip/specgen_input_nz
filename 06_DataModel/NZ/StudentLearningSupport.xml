@@ -26,7 +26,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- StudentLearningSupportRefId -->
+  </Item>    <!-- 1. StudentLearningSupportRefId -->
 
   <Item>
     <Element>StudentLearningSupportLocalId</Element>
@@ -36,7 +36,7 @@
 			<p>The Id of the data object record that was provided by the system that the information was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- StudentLearningSupportLocalId -->
+  </Item>    <!-- 2. StudentLearningSupportLocalId -->
 
   <Item>
     <Element>Student</Element>    
@@ -46,7 +46,7 @@
       <p>Reference to the student the learning support record is for.</p>
     </Description>
     <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
-  </Item>    <!-- Student -->
+  </Item>    <!-- 3. Student -->
 
   <Item>
     <Element>Organisation</Element>    
@@ -56,7 +56,7 @@
       <p>Reference to the Provider that created the learning support record for the student.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
-  </Item>    <!-- Organisation -->
+  </Item>    <!-- 4. Organisation -->
 
   <Item>
     <Element>LearnerStatus</Element>    
@@ -66,7 +66,7 @@
       <p>The learners learning support status, e.g. are they currently being managed or not.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsLearningSupportLearnerStatus"></Type>
-  </Item>    <!-- LearnerStatus -->
+  </Item>    <!-- 5. LearnerStatus -->
 
   <Item>
     <Element>LearnerArchivedDate</Element>
@@ -76,7 +76,7 @@
       <p>The date the learner's learning support status was changed from Active to Archived.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!-- LearnerArchivedDate -->
+  </Item>    <!-- 6. LearnerArchivedDate -->
 
   <Item>
     <Element>StudentConsentList</Element>
@@ -86,7 +86,7 @@
       <p>A list of the consents the student has provided / not provided in regards to learning support, e.g. Cluster Sharing COnsent, Recieve Service Consent.</p>
     </Description>
     <Type ref="CommonTypes" name="StudentConsentListType"></Type>
-  </Item>    <!-- StudentConsentList -->
+  </Item>    <!-- 7. StudentConsentList -->
 
   <Item>
     <Element>DyslexiaScreeningTool</Element>
@@ -96,7 +96,7 @@
       <p>Indicates whether or the student has been assessed using dyslexia screening tools.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>    <!-- DyslexiaScreeningTool -->
+  </Item>    <!-- 8. DyslexiaScreeningTool -->
 
   <Item>
     <Element>OtherScreening</Element>
@@ -106,7 +106,7 @@
       <p>Indicates whether or not the student has under gone any other type of screening.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>    <!-- OtherScreening -->
+  </Item>    <!-- 9. OtherScreening -->
 
   <Item>
     <Element>OtherScreeningDetail</Element>
@@ -116,7 +116,7 @@
       <p>Free text describing any other type of screening the student has undergone. Mandatory if 'OtherScreening' = 'Y'.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- OtherScreeningDetail -->
+  </Item>    <!-- 10. OtherScreeningDetail -->
 
   <Item>
     <Element>AdolescentHealthScreening</Element>
@@ -126,7 +126,7 @@
       <p>Indicates whether or not the student has undergone an adolescent health screening, e.g. NZ Aotearoa Adolescent Health and development (NZAAHD) assessment, HEEADDSS (Home, Education/employment, Eating, Activities, Drugs and Alcohol, Sexuality, Suicide/depression, Safety).</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>    <!-- NZAAHDAssessment -->
+  </Item>    <!-- 11. AdolescentHealthScreening -->
 
   <Item>
     <Element>NonAttendance</Element>
@@ -136,7 +136,7 @@
       <p>Indicates whether or not the student has not been attending the education provider they are enrolled at.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>    <!-- NonAttendance -->
+  </Item>    <!-- 12. NonAttendance -->
 
   <Item>
     <Element>NewToNewZealand</Element>
@@ -146,7 +146,7 @@
       <p>Indicates whether or not the student is new to New Zealand.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>    <!-- NewToNewZealand -->
+  </Item>    <!-- 13. NewToNewZealand -->
 
   <Item>
     <Element>NumberOfSchoolChanges</Element>
@@ -156,7 +156,7 @@
       <p>Indicates whether or not the student has changed education providers reasonably frequently.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>    <!-- NumberOfSchoolChanges -->
+  </Item>    <!-- 14. NumberOfSchoolChanges -->
 
   <Item>
     <Element>B4SchoolCheck</Element>
@@ -166,7 +166,7 @@
       <p>Indicates whether or not the student has undergone a B4 School Check.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>    <!-- B4SchoolCheck -->
+  </Item>    <!-- 15. B4SchoolCheck -->
 
   <Item>
     <Element>OtherFamilyContext</Element>
@@ -176,7 +176,7 @@
       <p>Indicates whether or not there is other family context that pertains to the student and their needs.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>    <!-- OtherFamilyContext -->
+  </Item>    <!-- 16. OtherFamilyContext -->
 
   <Item>
     <Element>OtherFamilyContextDetail</Element>
@@ -186,7 +186,7 @@
       <p>Additional free text detail about any family context that pertains to the student and their needs. Mandatory if OtherStudentContext = 'Y'.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- OtherFamilyContextDetail -->
+  </Item>    <!-- 17. OtherFamilyContextDetail -->
 
   <Item>
     <Element>StudentVoiceList</Element>
@@ -196,7 +196,7 @@
       <p>A list of the student's or their whānau's voice about their learning support in regards to the student 's interests, goals, and voice (comments, opinions).</p>
     </Description>
     <Type ref="CommonTypes" name="StudentVoiceList"></Type>
-  </Item>    <!-- StudentVoiceList -->
+  </Item>    <!-- 18. StudentVoiceList -->
 
   <Item>
     <Element>SupportNeedList</Element>
@@ -206,7 +206,7 @@
       <p>A list of learning support needs that have been identified for the student.</p>
     </Description>
     <Type ref="CommonTypes" name="SupportNeedListType"></Type>
-  </Item>    <!-- SupportNeedList -->
+  </Item>    <!-- 19. SupportNeedList -->
 
 
   <!-- Free Text fields for Learning Support Register -->
@@ -218,7 +218,7 @@
       <p>Free text that describes the interests a learner has that pertains to this wellbeing Characteristic.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- LearnerInterests -->
+  </Item>    <!-- 20. LearnerInterests -->
 
   <Item>
     <Element>LearnerWhanauGoal</Element>
@@ -228,7 +228,7 @@
       <p>Free text describing any goals the student wants to achieve, or any goals their whānau want them to achieve that pertain to this wellbeing characteristic.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- LearnerWhanauGoal -->
+  </Item>    <!-- 21. LearnerWhanauGoal -->
 
   <Item>
     <Element>LearnerWhanauVoice</Element>
@@ -238,7 +238,7 @@
       <p>Free text capturing the learners and/or their whānaus opinions and point of view in regards to this wellbeing characteristic.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- LearnerWhanauGoal -->
+  </Item>    <!-- 22. LearnerWhanauVoice -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -250,52 +250,6 @@
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
 	</Item>    <!-- RecordAudit -->
 
-  <xhtml:Example xmlns="" name="StudentLearningSupport">
-    <StudentLearningSupport>
-		  <StudentLearningSupportRefId>461b63b4-cfef-4820-8501-e7d1e54555cb</StudentLearningSupportRefId>
-		  <Student>
-			  <RefId>ca285746-359d-7510-1a8c-36432a901a16</RefId>
-		  </Student>
-      <Organisation>
-          <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-		    	<LocalId json:force-string="true">9961</LocalId>
-      </Organisation>
-		  <LearnerStatus>ACT</LearnerStatus>
-		  <StudentConsentList>
-		    <StudentConsent json:force-array="true">
-			    <RefId>461423b4-cfef-4820-8501-e7d1e54555cb</RefId>
-		    </StudentConsent>
-      </StudentConsentList>
-		  <DyslexiaScreeningTool>Y</DyslexiaScreeningTool>
-		  <OtherScreening>N</OtherScreening>
-		  <AdolescentHealthScreening>N</AdolescentHealthScreening>
-	  	<NonAttendance>Y</NonAttendance>
-	  	<NewToNewZealand>N</NewToNewZealand>
-		  <NumberOfSchoolChanges>Y</NumberOfSchoolChanges>
-		  <B4SchoolCheck>Y</B4SchoolCheck>
-		  <OtherFamilyContext>N</OtherFamilyContext>
-		  <StudentVoiceList>
-		  	<StudentVoice>
-			  	<RefId>461423b4-cfef-4820-8345-e7d1e54555cb</RefId>
-			  </StudentVoice>
-			  <StudentVoice>
-			  	<RefId>461423b4-bbef-4820-8345-e7d1e54555cb</RefId>
-			  </StudentVoice>
-	  	</StudentVoiceList>
-      <SupportNeedList>
-        <SupportNeed json:force-array="true">
-          <Need>
-            <RefId>461423b4-bbef-4820-8345-e724e54555cb</RefId>
-            <Name>Literacy</Name>
-          </Need>
-          <ResponseList>
-            <Response json:force-array="true">
-              <RefId>461423b4-bbef-4820-8345-e724e5455bbb</RefId>
-            </Response>
-          </ResponseList>
-        </SupportNeed>
-      </SupportNeedList>
-    </StudentLearningSupport>
-  </xhtml:Example>
+  <xi:include parse="xml" href="Examples/StudentLearningSupport.xml"/>
 
 </DataObject>

@@ -24,13 +24,13 @@
 				<Characteristics>O</Characteristics>
 				<Description/>
 				<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
-			</Item>
+			</Item>   <!-- 1. SubjectArea -->
 			<Item>
 				<Element>NCEASubjectArea</Element>
 				<Characteristics>O</Characteristics>
 				<Description/>
 				<Type ref="CodeSets" name="NZCodeSetsNCEASubjectAreaType"/>
-			</Item>
+			</Item>   <!-- 2. NCEA SubjectArea -->
 		</Choice>    <!-- Choice: SubjectArea or NCEASubjectArea-->
 		<xhtml:Example xmlns="" name="Subject Area List Example">
 			<SubjectAreaList>
@@ -73,7 +73,7 @@
 				<p>Priority of Subject to Teach.</p>
 			</Description>
 			<Type name="xs:unsignedInt"/>
-		</Item>       <!-- Preference -->
+		</Item>       <!-- 1. Preference -->
 		<Item>
 			<Element>Code</Element>
 			<Characteristics>M</Characteristics>
@@ -81,7 +81,7 @@
 				<p>NZ education standardised code denoting LearningArea / SubjectArea</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
-		</Item>       <!-- Code -->
+		</Item>       <!-- 2. Code -->
 		<Item>
 			<Element>YearLevels</Element>
 			<Characteristics>O</Characteristics>
@@ -92,7 +92,7 @@
 					year levels 9 &amp; 10, who are learning Mathematics.</p>
 			</Description>
 			<Type ref="CommonTypes" name="YearLevelList"/>
-		</Item>       <!-- YearLevelList -->
+		</Item>       <!-- 3. YearLevelList -->
 	</CommonElement>
 
 	<CommonElement name="LanguageOfInstructionListType" type="true" dm="true">
@@ -142,7 +142,7 @@
 				<p>Code denoting the actual language of instruction.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
-		</Item>    <!-- Code -->
+		</Item>    <!-- 1. Code -->
 		<Item>
 			<Element>Level</Element>
 			<Characteristics>M</Characteristics>
@@ -150,7 +150,7 @@
 				<p>The level of instruction that is made in the selected language.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsLanguageInstructionLevelType"/>
-		</Item>    <!-- Level -->
+		</Item>    <!-- 2. Level -->
 
 		<xhtml:Example xmlns="" name="LanguageOfInstruction Example">
 			<LanguageOfInstruction>
@@ -212,7 +212,7 @@
 				<p>Code describing the relationship from a LearningStandard to a related LearningStandard.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsLearningStandardRelationshipTypeType"/>
-		</Item>   <!-- Relationship -->
+		</Item>   <!-- 10. Relationship -->
 	</CommonElement>	
 
 	<CommonElement name="CredentialListType" type="true" dm="true">
@@ -302,7 +302,7 @@
 				<p>A code denoting the technology class the progress report covers.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsTechnologyClassType"/>
-		</Item>    <!-- Class -->
+		</Item>    <!-- 1. Class -->
 		<Item>
 			<Element>Teacher</Element>
 			<Characteristics>O</Characteristics>
@@ -310,7 +310,7 @@
 				<p>Generic object reference to the staff member that taught the subject and assessed the student against the technology strand objectives.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>    <!-- Teacher -->
+		</Item>    <!-- 2. Teacher -->
 		<Item>
 			<Element>BehaviourComment</Element>
 			<Characteristics>O</Characteristics>
@@ -318,7 +318,7 @@
 				<p>Overall comment about the behaviour of the student over the course of the lessons in the Class.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- BehaviourComment -->
+		</Item>    <!-- 3. BehaviourComment -->
 		<Item>
 			<Element>EffortComment</Element>
 			<Characteristics>O</Characteristics>
@@ -326,7 +326,7 @@
 				<p>Overall comment about the effort the student has made in class</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- BehaviourComment -->
+		</Item>    <!-- 4. BehaviourComment -->
 		<Item>
 			<Element>StrandList</Element>
 			<Characteristics>O</Characteristics>
@@ -335,7 +335,7 @@
 					from the Technology curriculum, that were covered in the class</p>
 			</Description>
 			<Type ref="CommonTypes" name="ClassStrandListType"/>
-		</Item>    <!-- StrandList -->
+		</Item>    <!-- 5. StrandList -->
 	</CommonElement>
 
 	<CommonElement name="ClassStrandListType" type="true" dm="true">
@@ -374,7 +374,7 @@
 					and for which the student's progress is being reported.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsTechnologyLearningStrandType"/>
-		</Item>    <!-- LearningStrand -->
+		</Item>    <!-- 1. LearningStrand -->
 		<Item>
 			<Element>AchievementObjectiveList</Element>
 			<Characteristics>O</Characteristics>
@@ -383,7 +383,7 @@
 					from the Technology curriculum strand, that was covered in the class.</p>
 			</Description>
 			<Type ref="CommonTypes" name="StrandAchievementObjectiveListType"/>
-		</Item>    <!-- AchievementObjectiveList -->
+		</Item>    <!-- 2. AchievementObjectiveList -->
 	</CommonElement>
 
 	<CommonElement name="StrandAchievementObjectiveListType" type="true" dm="true">
@@ -422,7 +422,7 @@
 					 the student's progress is being reported. </p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsStrandAchievementObjectiveType"/>
-		</Item>    <!-- AchivementObjective -->
+		</Item>    <!-- 1. AchivementObjective -->
 		<Item>
 			<Element>CurriculumLevel</Element>
 			<Characteristics>O</Characteristics>
@@ -431,7 +431,7 @@
 				 is being made against for this learning strand achievement objective. e.g. 2, 3, 4 or 5. </p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsTechnologyCurriculumLevelType"/>
-		</Item>    <!-- CurriculumLevel -->
+		</Item>    <!-- 2. CurriculumLevel -->
 		<Item>
 			<Element>ProgressLevel</Element>
 			<Characteristics>O</Characteristics>
@@ -440,7 +440,7 @@
 					strand achievement objective. e.g. Beginner, Proficient, and Advanced. </p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsStrandAchievementProgressLevelType"/>
-		</Item>    <!-- ProgressLevel -->
+		</Item>    <!-- 3. ProgressLevel -->
 		<Item>
 			<Element>AchievementObjectiveDesc</Element>
 			<Characteristics>O</Characteristics>
@@ -448,7 +448,7 @@
 				<p>A description of what the achievement objective covers.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- AchievementObjectiveDesc -->
+		</Item>    <!-- 4. AchievementObjectiveDesc -->
 
 		<Item>
 			<Element>OverallStudentEffortNote</Element>
@@ -458,7 +458,7 @@
 					achievement objective for this strand.</p>
 			</Description>
 			<Type  name="xs:normalizedString"/>
-		</Item>    <!-- OverallStudentEffortNote -->
+		</Item>    <!-- 5. OverallStudentEffortNote -->
 		<Item>
 			<Element>PracticalAbilityDesc</Element>
 			<Characteristics>O</Characteristics>
@@ -467,7 +467,7 @@
 					achievement objective for the strand.</p>
 			</Description>
 			<Type  name="xs:normalizedString"/>
-		</Item>    <!-- PracticalAbilityDesc -->
+		</Item>    <!-- 6. PracticalAbilityDesc -->
 		<Item>
 			<Element>PracticalAbilityProgressNote</Element>
 			<Characteristics>O</Characteristics>
@@ -476,7 +476,7 @@
 					 this achievement objective for this strand.</p>
 			</Description>
 			<Type  name="xs:normalizedString"/>
-		</Item>    <!-- PracticalAbilityProgressNote -->
+		</Item>    <!-- 7. PracticalAbilityProgressNote -->
 
 		<Item>
 			<Element>DocumentList</Element>
@@ -486,6 +486,6 @@
 					objective, e.g. report, photos, media, documents etc.</p>
 			</Description>
 			<Type ref="CommonTypes" name="DocumentListType"/>
-		</Item>    <!-- DocumentList -->
+		</Item>    <!-- 8. DocumentList -->
 	</CommonElement>
 </IncludeGroup>

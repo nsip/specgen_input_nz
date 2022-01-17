@@ -24,7 +24,7 @@
  			<p>The universally unique identifier for the data object record that is used across systems.</p>   
     </Description>
     <Type ref='CommonTypes' name='RefIdType'/>
-  </Item>    <!-- StudentActivityParticipationRefId -->
+  </Item>    <!-- 1. StudentActivityParticipationRefId -->
   <Item>
     <Element>StudentActivityParticipationLocalId</Element>
     <Characteristics>O</Characteristics>
@@ -34,7 +34,7 @@
 			was originally sourced from.</p>    
     </Description>
     <Type ref='CommonTypes' name='LocalIdType'/>
-  </Item>    <!-- StudentActivityParticipationLocalId -->
+  </Item>    <!-- 2. StudentActivityParticipationLocalId -->
 
   <Item>
     <Element>Student</Element>
@@ -44,7 +44,7 @@
       <p>Generic object reference to the student participating in the activity. </p>
     </Description>
     <Type ref='CommonTypes' name='StudentObjectReferenceType'/>
-  </Item>    <!-- Student -->
+  </Item>    <!-- 3. Student -->
   <Item>
     <Element>Organisation</Element>
     <Characteristics>M</Characteristics>
@@ -53,7 +53,7 @@
       <p>Generic object reference to the Provider running the activity the student is participating in, e.g. schools.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
-  </Item>    <!-- Organisation -->
+  </Item>    <!-- 4. Organisation -->
 
   <Item>
     <Element>ActivityGroup</Element>
@@ -64,7 +64,7 @@
       </p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsStudentActivityGroupType"/>
-  </Item>    <!-- ActivityGroup -->
+  </Item>    <!-- 5. ActivityGroup -->
   <Item>
     <Element>ActivityType</Element>
     <Characteristics>O</Characteristics>
@@ -74,7 +74,7 @@
       </p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsStudentActivityTypeType"/>
-  </Item>    <!-- ActivityType -->
+  </Item>    <!-- 6. ActivityType -->
   <Item>
     <Element>ActivityName</Element>
     <Characteristics>M</Characteristics>
@@ -83,7 +83,7 @@
       <p>The name of the activity the student participated in.</p>
     </Description>
     <Type name='xs:normalizedString'/>
-  </Item>    <!-- ActivityName-->
+  </Item>    <!-- 7. ActivityName-->
   <Item>
     <Element>LearningArea</Element>
     <Characteristics>O</Characteristics>
@@ -92,7 +92,7 @@
       <p>The learning area the student activity the student is participating in relates to.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsLearningAreaType"/>
-  </Item>    <!-- LearningArea -->    
+  </Item>    <!-- 8. LearningArea -->    
 
   <Item>
     <Element>ParticipationComment</Element>
@@ -102,7 +102,7 @@
       <p>Comment related to the student's participation in the activity. </p>
     </Description>
     <Type name='xs:normalizedString'/>
-  </Item>    <!-- ParticipationComment-->
+  </Item>    <!-- 9. ParticipationComment-->
   <Item>
     <Element>StartDate</Element>
     <Characteristics>M</Characteristics>
@@ -111,7 +111,7 @@
       <p>This is the date from which the activity participation is valid (inclusive). </p>
     </Description>
     <Type ref="CommonTypes" name="StartDateType"/>
-  </Item>    <!-- StartDate -->
+  </Item>    <!-- 10. StartDate -->
   <Item>
     <Element>EndDate</Element>
     <Characteristics>O</Characteristics>
@@ -124,7 +124,7 @@
       year. </p>
     </Description>
     <Type ref="CommonTypes" name="EndDateType"/>
-  </Item>    <!-- EndDate -->
+  </Item>    <!-- 11. EndDate -->
   <Item>
     <Element>Role</Element>
     <Characteristics>O</Characteristics>
@@ -133,7 +133,7 @@
       <p>Specific role the student plays in the activity (e.g., band leader, student body president). </p>
     </Description>
     <Type name='xs:normalizedString'/>
-  </Item>    <!-- Role -->
+  </Item>    <!-- 12. Role -->
   <Item>
     <Element>RecognitionList</Element>
     <Characteristics>O</Characteristics>
@@ -142,7 +142,7 @@
       <p>List of awards and other types of recognition given to the student for this activity. </p>
     </Description>
    <Type ref="CommonTypes" name="RecognitionListType"></Type>
-  </Item>    <!-- RecognitionList-->
+  </Item>    <!-- 13. RecognitionList-->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -152,34 +152,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-  
-  <xhtml:Example xmlns='' name="StudentActivityParticipation">
-    <StudentActivityParticipation>
-      <StudentActivityParticipationRefId>9ecc9683-0e02-406f-926c-1c4d3542d122</StudentActivityParticipationRefId>
-      <Student>
-        <RefId>646c5d4a-c829-4886-a02b-971695c7bc06</RefId>
-      </Student>
-      <Organisation>
-          <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-		    	<LocalId json:force-string="true">9961</LocalId>
-      </Organisation>
-      <ActivityGroup>SPO</ActivityGroup>
-      <ActivityType>CRI</ActivityType>
-      <ActivityName>First XI</ActivityName>
-      <ParticipationComment>First year of participation</ParticipationComment>
-      <StartDate>2008-09-01</StartDate>
-      <Role>Team Member</Role>
-      <RecognitionList>
-        <Recognition json:force-array="true">Player of the Day</Recognition>
-      </RecognitionList>
-      <RecordAudit>
-        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-        <CreatedBy>
-          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-          <Name>Bobby Test</Name>
-        </CreatedBy>
-      </RecordAudit>
-    </StudentActivityParticipation>
-  </xhtml:Example>
+	</Item>    <!-- 14. RecordAudit -->
+
+  <xi:include parse="xml" href="Examples/StudentActivityParticipation.xml"/>
 </DataObject>

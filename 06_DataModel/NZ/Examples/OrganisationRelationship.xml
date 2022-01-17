@@ -2,7 +2,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml" 
   xmlns:json="http://json.org/">
 
-  <xhtml:Example xmlns="" name="Organisation Relatoinship Example">
+  <xhtml:Example xmlns="" name="Organisation Relationship Example">
     <OrganisationRelationship>
       <OrganisationRelationshipRefId>41e38b5a-da3d-4659-b1df-54dc8780727e</OrganisationRelationshipRefId>
       <OrganisationRelationshipLocalId>90100_8001</OrganisationRelationshipLocalId>

@@ -25,7 +25,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- StudentAssessmentTaskResultRefId -->
+  </Item>    <!-- 1. StudentAssessmentTaskResultRefId -->
   <Item>
     <Element>StudentAssessmentTaskResultLocalId</Element>
     <Characteristics>O</Characteristics>
@@ -35,7 +35,7 @@
 			was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- StudentAssessmentTaskResultLocalId -->
+  </Item>    <!-- 2. StudentAssessmentTaskResultLocalId -->
 
   <Item>
     <Element>NZQAEntryId</Element>
@@ -48,7 +48,7 @@
       </p>
     </Description>
     <Type name="xs:normalizedString"/>
-  </Item>    <!-- NZQAEntryId -->
+  </Item>    <!-- 3. NZQAEntryId -->
 
   <Item>
     <Element>AssessmentTask</Element>
@@ -58,7 +58,7 @@
       <p>Reference to the AssessmentTask the student was assessed against and the result is for.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"/>
-  </Item>    <!-- AssessmentTask -->
+  </Item>    <!-- 4. AssessmentTask -->
 
   <Item>
     <Element>StudentAssessmentTask</Element>
@@ -68,7 +68,7 @@
       <p>Reference to the StudentAssessmentTask data object that the assessment result belongs to.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"/>
-  </Item>    <!-- StudentAssessmentTask -->
+  </Item>    <!-- 5. StudentAssessmentTask -->
 
   <Item>
     <Element>Student</Element>
@@ -79,7 +79,7 @@
          data object whose assessment task result this is.</p>
     </Description>
     <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
-  </Item>    <!-- Student -->
+  </Item>    <!-- 6. Student -->
 
   <!-- Fields de-normalised from the AssesmentTask etc. -->
   <Item>
@@ -90,7 +90,7 @@
       <p>The type of assessment the result is for.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentTypeType"></Type>
-  </Item>    <!-- AssessmentType -->    
+  </Item>    <!-- 7. AssessmentType -->    
   <Item>
     <Element>AssessmentMethodology</Element>
     <Characteristics>M</Characteristics>
@@ -100,7 +100,7 @@
       o Aotearoa; Secondary assessment against NCEA, Cambridge, International Baccalaureate, or similar.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentMethodologyType"/>
-  </Item>    <!-- AssessmentMethodologyType -->
+  </Item>    <!-- 8. AssessmentMethodologyType -->
 
   <!--  Organisations & Markers involved in setting the Assessment Task (and result) -->
   <Item>
@@ -110,7 +110,7 @@
     <Description>
     </Description>
     <Type ref="CommonTypes" name="OrganisationInvolvedListType"></Type>
-  </Item>    <!-- OrganisationInvolvedList -->
+  </Item>    <!-- 9. OrganisationInvolvedList -->
   <Item>
     <Element>StaffInvolvedList</Element>
     <Characteristics>O</Characteristics>
@@ -119,7 +119,7 @@
       <p>A list of the staff involved and their role in relation to the assessment task, e.g. the moderator, the marker.</p>
     </Description>
     <Type ref="CommonTypes" name="StaffInvolvedListType"></Type>
-  </Item>    <!-- StaffInvolvedList -->
+  </Item>    <!-- 10. StaffInvolvedList -->
   
   <!-- Classifiers for the Assessment Task (and result) -->
   <Item>
@@ -130,7 +130,7 @@
       <p>Reference to the ProviderCourse that this assessment task belongs to.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"/>
-  </Item>    <!-- ProviderCourse -->
+  </Item>    <!-- 11. ProviderCourse -->
   <Item>
     <Element>LearningStandardList</Element>
     <Characteristics>O</Characteristics>
@@ -139,7 +139,7 @@
       <p>A list of references to the LearningStandards the assessment task result is related to.</p>
     </Description>
     <Type ref="CommonTypes" name="LearningStandardListType"/>
-  </Item>    <!-- LearningStandardList -->  
+  </Item>    <!-- 12. LearningStandardList -->  
   <Item>
     <Element>SubjectAreaList</Element>
     <Characteristics>O</Characteristics>
@@ -148,7 +148,7 @@
       <p>A list of the subject areas that the assessment pertains to.</p>
     </Description>
     <Type ref="CommonTypes" name="SubjectAreaListType"></Type>
-  </Item>    <!-- SubjectAreaList -->
+  </Item>    <!-- 13. SubjectAreaList -->
   <Item>
     <Element>AssessedAtYearLevel</Element>
     <Characteristics>O</Characteristics>
@@ -161,7 +161,7 @@
       <xs:minInclusive value="1"/>
       <xs:maxInclusive value="13"/>
     </Facets>
-  </Item>    <!-- AssessedAtYearLevel -->
+  </Item>    <!-- 14. AssessedAtYearLevel -->
   <Item>
     <Element>Curriculum</Element>
     <Characteristics>O</Characteristics>
@@ -170,7 +170,7 @@
       <p>Code denoting the Year Level of the Assessment Task the result is for.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsCurriculumType"/>
-  </Item>    <!-- Curriculum -->   
+  </Item>    <!-- 15. Curriculum -->   
   <Item>
     <Element>AssessmentToolUsed</Element>
     <Characteristics>O</Characteristics>
@@ -180,7 +180,7 @@
        and the value it is mapped to in this code set are held.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentToolType"/>
-  </Item>    <!-- AssessmentTool -->  
+  </Item>    <!-- 16 AssessmentToolUsed -->  
   <Item>
     <Element>AssessmentToolTest</Element>
     <Characteristics>O</Characteristics>
@@ -189,7 +189,7 @@
       <p>The tests available within an assessment tool that is being used by this assessment task.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentToolTestType"/>
-  </Item>    <!-- AssessmentToolTest -->
+  </Item>    <!-- 17. AssessmentToolTest -->
   <Item>
     <Element>Timeframe</Element>
     <Characteristics>O</Characteristics>
@@ -198,7 +198,7 @@
       <p>The timeframe of the assessment, e.g. Mid-Year, End of Year.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentTimeframeType"/>
-  </Item>    <!-- Timeframe -->
+  </Item>    <!-- 18. Timeframe -->
   <Item>
     <Element>AssessmentAttempt</Element>
     <Characteristics>O</Characteristics>
@@ -207,21 +207,21 @@
       <p>The attempt number the student is making to pass this assessment, e.g. is it their first, second attempt.</p>
     </Description>
     <Type name="xs:int"/>
-  </Item>    <!-- AssessmentAttempt -->
+  </Item>    <!-- 19. AssessmentAttempt -->
   <Item>
     <Element>EvaluationType</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>The type of assessment evaluation, e.g. formative or summative.</Description>
     <Type ref="CodeSets" name="NZCodeSetsAssessmentEvaluationTypeType"/>
-  </Item>    <!-- EvaluationType -->
+  </Item>    <!-- 20. EvaluationType -->
   <Item>
     <Element>StandardType</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>The type of standard the result is for. Applies to secondary level assessments, e.g. unit and achievement standards, scholarships and International Baccalaureate.</Description>
     <Type ref="CodeSets" name="NZCodeSetsLearningStandardTypeType"/>
-  </Item>    <!-- StandardType -->
+  </Item>    <!-- 21. StandardType -->
 
   <!-- Score, Dates, etc... -->
   <Item>
@@ -232,7 +232,7 @@
       <p>Date the assessment task was marked.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!-- DateMarked -->
+  </Item>    <!-- 22. DateMarked -->
   <Item>
     <Element>DateTimeAssessed</Element>
     <Characteristics>O</Characteristics>
@@ -241,7 +241,7 @@
       <p>The date and time the student was assessed against the assessment task.</p>
     </Description>
     <Type name="xs:dateTime"></Type>
-  </Item>    <!-- DateTimeAssessed -->
+  </Item>    <!-- 23. DateTimeAssessed -->
   <Item>
     <Element>DateStudentNotified</Element>
     <Characteristics>O</Characteristics>
@@ -250,7 +250,7 @@
       <p>The date the student was notified of their final mark for the assessment task.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!-- DateStudentNotified -->
+  </Item>    <!-- 24. DateStudentNotified -->
   <Item>
     <Element>NZQAConfirmation</Element>
     <Characteristics>O</Characteristics>
@@ -259,7 +259,7 @@
       <p>Confirmation from NZQA that they have received the result record for the student.</p>
     </Description>
     <Type  ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-  </Item>    <!-- NZQA Confirmation -->
+  </Item>    <!-- 25. NZQA Confirmation -->
   <Item>
     <Element>Published</Element>
     <Characteristics>O</Characteristics>
@@ -268,7 +268,7 @@
       <p>Indicates whether or not the result has been published.</p>
     </Description>
     <Type  ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-  </Item>    <!-- Published -->
+  </Item>    <!-- 26. Published -->
   <Item>
     <Element>PublishedDate</Element>
     <Characteristics>O</Characteristics>
@@ -277,7 +277,7 @@
       <p>The date the assessment task result was first published in a report.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!-- PublishedDate -->
+  </Item>    <!-- 27. PublishedDate -->
   <Item>
     <Element>Iteration</Element>
     <Characteristics>O</Characteristics>
@@ -287,7 +287,7 @@
           e.g. some tasks require multiple assessments before being achieved.</p>
     </Description>
     <Type name="xs:int"/> 
-  </Item>    <!-- Iteration -->
+  </Item>    <!-- 28. Iteration -->
   <Item>
     <Element>CreditsAchieved</Element>
     <Characteristics>O</Characteristics>
@@ -296,7 +296,7 @@
       <p>The number of credits the student achieved.</p>
     </Description>
     <Type name="xs:decimal"/>
-  </Item>    <!-- CreditsAchieved -->
+  </Item>    <!-- 29. CreditsAchieved -->
   <Item>
     <Element>ResultScoreList</Element>
     <Characteristics>M</Characteristics>
@@ -305,7 +305,7 @@
       <p>A list of the assessment result scores that the student received for this assessment task.</p>
     </Description>
     <Type ref="CommonTypes" name="AssessmentResultScoreListType"></Type>
-  </Item>    <!-- ResultScoreList -->
+  </Item>    <!-- 30. ResultScoreList -->
   <Item>
     <Element>Weight</Element>
     <Characteristics>O</Characteristics>
@@ -314,7 +314,7 @@
       <p>Weight placed upon this result</p>
     </Description>
     <Type name="xs:decimal"/>
-  </Item>    <!-- Weight -->
+  </Item>    <!-- 31. Weight -->
   <Item>
     <Element>EffortComment</Element>
     <Characteristics>O</Characteristics>
@@ -323,7 +323,7 @@
       <p>Free text comment about the effort the student made for the assessment.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- EffortComment -->
+  </Item>    <!-- 32. EffortComment -->
   <Item>
     <Element>OtherComment</Element>
     <Characteristics>O</Characteristics>
@@ -332,7 +332,7 @@
       <p>Free text comments providing additional information for the students assessment result.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- OtherComment -->
+  </Item>    <!-- 33. OtherComment -->
   <Item>
     <Element>DocumentList</Element>
     <Characteristics>O</Characteristics>
@@ -341,7 +341,7 @@
       <p>List which describes the meta-data for, and the Location of any associated documents.</p>
     </Description>
     <Type ref="CommonTypes" name="DocumentListType"></Type>
-  </Item>    <!-- DocumentList -->
+  </Item>    <!-- 34. DocumentList -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -352,256 +352,6 @@
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
 	</Item>    <!-- RecordAudit -->
-    
-  <xhtml:Example xmlns="" name="Student Assessment Task Result - PAT Example">
-      <StudentAssessmentTaskResult>
-        <StudentAssessmentTaskResultRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</StudentAssessmentTaskResultRefId>
-        <Student>
-          <RefId>a75a0010-1a8c-301d-02e3-a05b359d0a00</RefId>
-        </Student>
-        <AssessmentType>INT</AssessmentType>
-        <AssessmentMethodology>P</AssessmentMethodology>
-        <OrganisationInvolvedList>
-          <OrganisationInvolved json:force-array="true">
-            <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-            <LocalId json:force-string="true">9961</LocalId>
-            <OrganisationRole>PRO</OrganisationRole>
-          </OrganisationInvolved>
-        </OrganisationInvolvedList>
-        <SubjectAreaList>
-            <SubjectArea json:force-array="true">MATH</SubjectArea>
-        </SubjectAreaList>
-        <Curriculum>NZC</Curriculum>
-        <AssessmentToolUsed>PATCOMP</AssessmentToolUsed>
-        <EvaluationType>F</EvaluationType>
-        <DateTimeAssessed>2018-11-21T15:34:22</DateTimeAssessed>
-        <ResultScoreList>
-          <ResultScore>
-            <ScoreType>FIN</ScoreType>
-            <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
-            <ScoreValue json:force-string="true">25</ScoreValue>
-          </ResultScore>
-          <ResultScore>
-            <ScoreType>FIN</ScoreType>
-            <ScoreMetric>SCA</ScoreMetric>  <!-- Scale Score -->
-            <ScoreValue  json:force-string="true">38.5</ScoreValue>
-          </ResultScore>
-          <ResultScore>
-            <ScoreType>FIN</ScoreType>
-            <ScoreMetric>MAR</ScoreMetric>  <!-- Margin of Error -->
-            <ScoreValue  json:force-string="true">5.0</ScoreValue>
-          </ResultScore>
-          <ResultScore>
-            <ScoreType>FIN</ScoreType>
-            <ScoreMetric>YEA</ScoreMetric>  <!-- Year Level -->
-            <ScoreValue  json:force-string="true">4</ScoreValue>
-          </ResultScore>				
-          <ResultScore>
-            <ScoreType>FIN</ScoreType>
-            <ScoreMetric>STA</ScoreMetric>  <!-- Stanine -->
-            <ScoreValue  json:force-string="true">6</ScoreValue>
-          </ResultScore>
-        </ResultScoreList>
-        <RecordAudit>
-          <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-          <CreatedBy>
-            <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-            <Name>Bobby Test</Name>
-          </CreatedBy>
-        </RecordAudit>
-      </StudentAssessmentTaskResult>
-  </xhtml:Example>
-		  
-  <xhtml:Example xmlns="" name="Student Assessment Task Result - STAR Example">
-    <StudentAssessmentTaskResult>
-      <StudentAssessmentTaskResultRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</StudentAssessmentTaskResultRefId>
-      <Student>
-        <RefId>a75a0010-1a8c-301d-02e3-a05b359d0a00</RefId>
-      </Student>
-      <AssessmentType>INT</AssessmentType>
-      <AssessmentMethodology>P</AssessmentMethodology>
-      <OrganisationInvolvedList>
-        <OrganisationInvolved json:force-array="true">
-          <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-          <LocalId json:force-string="true">9961</LocalId>
-          <OrganisationRole>PRO</OrganisationRole>
-        </OrganisationInvolved>
-      </OrganisationInvolvedList>
-      <SubjectAreaList>
-          <SubjectArea json:force-array="true">ENGL</SubjectArea>
-      </SubjectAreaList>
-      <Curriculum>NZC</Curriculum>
-      <AssessmentToolUsed>STARREA</AssessmentToolUsed>
-      <EvaluationType>F</EvaluationType>
-      <DateTimeAssessed>2018-11-01T15:34:22</DateTimeAssessed>
-      <ResultScoreList>
-        <ResultScore>
-          <ScoreType>FIN</ScoreType>
-          <Competency>SubTest1</Competency>
-          <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
-          <ScoreValue json:force-string="true">8</ScoreValue>
-        </ResultScore>
-        <ResultScore>
-          <ScoreType>FIN</ScoreType>
-          <Competency>SubTest2</Competency>
-          <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
-          <ScoreValue json:force-string="true">7</ScoreValue>
-        </ResultScore>
-        <ResultScore>
-          <ScoreType>FIN</ScoreType>
-          <Competency>SubTest3</Competency>
-          <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
-          <ScoreValue json:force-string="true">10</ScoreValue>
-        </ResultScore>
-        <ResultScore>
-          <ScoreType>FIN</ScoreType>
-          <Competency>SubTest9</Competency>
-          <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
-          <ScoreValue json:force-string="true">9</ScoreValue>
-        </ResultScore>
-        <ResultScore>
-          <ScoreType>FIN</ScoreType>
-          <Competency>Summary</Competency>
-          <ScoreMetric>SCA</ScoreMetric>  <!-- Scale Score -->
-          <ScoreValue json:force-string="true">22</ScoreValue>
-        </ResultScore>
-        <ResultScore>
-          <ScoreType>FIN</ScoreType>
-          <Competency>Summary</Competency>
-          <ScoreMetric>YEA</ScoreMetric>  <!-- Year Level -->
-          <ScoreValue  json:force-string="true">5</ScoreValue>
-        </ResultScore>				
-        <ResultScore>
-          <ScoreType>FIN</ScoreType>
-          <Competency>Summary</Competency>
-          <ScoreMetric>STA</ScoreMetric>  <!-- Stanine Score -->
-          <ScoreValue json:force-string="true">4</ScoreValue>
-        </ResultScore>
-      </ResultScoreList>
-      <EffortComment>Good progress this year...</EffortComment>
-      <OtherComment>Read more at home</OtherComment>
-      <RecordAudit>
-        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-        <CreatedBy>
-          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-          <Name>Bobby Test</Name>
-        </CreatedBy>
-      </RecordAudit>
-    </StudentAssessmentTaskResult>
-  </xhtml:Example>
-    
-  <xhtml:Example xmlns="" name="Student Assessment Task Result - asTTle Example">
-    <StudentAssessmentTaskResult>
-      <StudentAssessmentTaskResultRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</StudentAssessmentTaskResultRefId>
-      <Student>
-        <RefId>a75a0010-1a8c-301d-02e3-a05b359d0a00</RefId>
-      </Student>
-      <AssessmentType>INT</AssessmentType>
-      <AssessmentMethodology>P</AssessmentMethodology>
-      <OrganisationInvolvedList>
-        <OrganisationInvolved json:force-array="true">
-          <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-          <LocalId json:force-string="true">9961</LocalId>
-          <OrganisationRole>PRO</OrganisationRole>
-        </OrganisationInvolved>
-      </OrganisationInvolvedList>
-      <SubjectAreaList>
-          <SubjectArea json:force-array="true">ENGL</SubjectArea>
-      </SubjectAreaList>
-      <Curriculum>NZC</Curriculum>
-      <AssessmentToolUsed>EASREAD</AssessmentToolUsed>
-      <EvaluationType>F</EvaluationType>
-      <DateTimeAssessed>2018-11-01T15:34:22</DateTimeAssessed>
-      <ResultScoreList>
-        <ResultScore>
-          <ScoreType>FIN</ScoreType>
-          <Competency>Overall</Competency>
-          <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
-          <ScoreValue json:force-string="true">1591</ScoreValue>
-        </ResultScore>
-        <ResultScore>
-          <ScoreType>FIN</ScoreType>
-          <Competency>Overall</Competency>
-          <ScoreMetric>CUR</ScoreMetric>  <!-- Curriculum Level -->
-          <ScoreValue json:force-string="true">5</ScoreValue>
-        </ResultScore>
-        <ResultScore>
-          <ScoreType>FIN</ScoreType>
-          <Competency>Ideas</Competency>
-          <ScoreMetric>RAW</ScoreMetric>  <!-- Raw Score -->
-          <ScoreValue json:force-string="true">1234</ScoreValue>
-        </ResultScore>
-        <ResultScore>
-          <ScoreType>FIN</ScoreType>
-          <Competency>Ideas</Competency>
-          <ScoreMetric>CUR</ScoreMetric>  <!-- Curriculum Level -->
-          <ScoreValue json:force-string="true">5</ScoreValue>
-        </ResultScore>
-      </ResultScoreList>
-      <RecordAudit>
-        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-        <CreatedBy>
-          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-          <Name>Bobby Test</Name>
-        </CreatedBy>
-      </RecordAudit>
-    </StudentAssessmentTaskResult>
-  </xhtml:Example>
 
-  <xhtml:Example xmlns="" name="Student Assessment Task Result - IKAN Example">
-    <StudentAssessmentTaskResult>
-      <StudentAssessmentTaskResultRefId>359d7510-1ad0-a9d7-a8c3-dad0a85103a2</StudentAssessmentTaskResultRefId>
-      <Student>
-        <RefId>a75a0010-1a8c-301d-02e3-a05b359d0a00</RefId>
-      </Student>
-      <AssessmentType>INT</AssessmentType>
-      <AssessmentMethodology>P</AssessmentMethodology>
-      <OrganisationInvolvedList>
-        <OrganisationInvolved json:force-array="true">
-          <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-          <LocalId json:force-string="true">9961</LocalId>
-          <OrganisationRole>PRO</OrganisationRole>
-        </OrganisationInvolved>
-      </OrganisationInvolvedList>
-      <SubjectAreaList>
-          <SubjectArea json:force-array="true">MATH</SubjectArea>
-      </SubjectAreaList>
-      <Curriculum>NZC</Curriculum>
-      <EvaluationType>F</EvaluationType>
-      <DateTimeAssessed>2018-11-01T15:34:22</DateTimeAssessed>
-      <ResultScoreList>
-        <ResultScore>
-          <ScoreType>FIN</ScoreType>
-          <Competency>Number Sequence and Order</Competency>
-          <ScoreMetric>NKS</ScoreMetric>  <!-- Number Knowledge Stage -->
-          <ScoreValue>NKS-AP</ScoreValue> <!-- Advanced Proportional -->
-        </ResultScore>
-        <ResultScore>
-          <ScoreType>FIN</ScoreType>
-          <Competency>Fractions</Competency>
-          <ScoreMetric>NKS</ScoreMetric>  <!-- Number Knowledge Stage -->
-          <ScoreValue>NKS-AM</ScoreValue> <!-- Advanced Multiplicative -->
-        </ResultScore>
-        <ResultScore>
-          <ScoreType>FIN</ScoreType>
-          <Competency>Place Value</Competency>
-          <ScoreMetric>NKS</ScoreMetric>  <!-- Number Knowledge Stage -->
-          <ScoreValue>NKS-AP</ScoreValue> <!-- Advanced Proportional -->
-        </ResultScore>
-        <ResultScore>
-          <ScoreType>FIN</ScoreType>
-          <Competency>Basic Facts</Competency>
-          <ScoreMetric>NKS</ScoreMetric>  <!-- Number Knowledge Stage -->
-          <ScoreValue>NKS-AM</ScoreValue> <!-- Advanced Multiplicative -->
-        </ResultScore>
-      </ResultScoreList>
-      <RecordAudit>
-        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-        <CreatedBy>
-          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-          <Name>Bobby Test</Name>
-        </CreatedBy>
-      </RecordAudit>
-    </StudentAssessmentTaskResult>
-  </xhtml:Example>
+  <xi:include parse="xml" href="Examples/StudentAssessmentTaskResult.xml"/> 
 </DataObject>

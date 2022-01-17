@@ -30,7 +30,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- WellbeingAlertRefId -->
+  </Item>    <!-- 1. WellbeingAlertRefId -->
 
   <Item>
 		<Element>WellbeingAlertLocalId</Element>
@@ -41,7 +41,7 @@
 			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- WellbeingAlertLocalId -->
+	</Item>    <!-- 2. WellbeingAlertLocalId -->
 
   <Item>
     <Element>Student</Element>
@@ -51,7 +51,7 @@
       <p>Generic object reference to the student to whom this WellbeingAlert belongs.</p>
     </Description>
     <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
-  </Item>    <!-- Student -->
+  </Item>    <!-- 3. Student -->
 
   <Item>
     <Element>Provider</Element>
@@ -61,7 +61,7 @@
       <p>Generic object reference to the school for which this WellbeingAlert is being reported.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
-  </Item>    <!-- Provider -->  
+  </Item>    <!-- 4. Provider -->  
 
   <Item>
     <Element>StaffMember</Element>
@@ -71,7 +71,7 @@
       <p>Generic object reference to the staff member that is a key contact for this wellbeing alert.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>    <!-- StaffMember -->  
+  </Item>    <!-- 5. StaffMember -->  
 
   <Item>
     <Element>PublishedDate</Element>
@@ -81,7 +81,7 @@
         <p>The calendar date on which this wellbeing alert was published.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!-- PublishedDate --> 
+  </Item>    <!-- 6. PublishedDate --> 
 
   <Item>
     <Element>StartDate</Element>
@@ -91,7 +91,7 @@
       <p>The date the wellbeing alert period commenced.</p>
     </Description>
     <Type ref="CommonTypes" name="StartDateType"/>
-  </Item>    <!-- StartDate -->
+  </Item>    <!-- 7. StartDate -->
 
   <Item>
     <Element>EndDate</Element>
@@ -101,7 +101,7 @@
       <p>The date the wellbeing alert is due to finish.</p>
     </Description>
     <Type ref="CommonTypes" name="EndDateType"/>
-  </Item>    <!-- EndDate -->  
+  </Item>    <!-- 8. EndDate -->  
 
   <Item>
     <Element>AlertCategory</Element>
@@ -111,7 +111,7 @@
       <p>Category of WellbeingAlert.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsWellbeingAlertCategoryType"></Type>
-  </Item>    <!-- AlertCategory -->
+  </Item>    <!-- 9. AlertCategory -->
 
   <Item>
     <Element>AlertDescription</Element>
@@ -121,7 +121,7 @@
       <p>Description of this particular wellbeing alert.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- AlertDescription -->
+  </Item>    <!-- 10. AlertDescription -->
 
   <Item>
     <Element>AcknowledgementList</Element>
@@ -131,7 +131,7 @@
       <p>Key Contact to get information about this wellbeing alert from.</p>
     </Description>
     <Type ref="CommonTypes" name="AcknowledgementListType"/>
-  </Item>    <!-- AcknowledgementList -->
+  </Item>    <!-- 11. AcknowledgementList -->
 
   <Item>
     <Element>KeyContactList</Element>
@@ -141,7 +141,7 @@
       <p>A list of key contacts for the alert.</p>
     </Description>
     <Type ref="CommonTypes" name="KeyContactListType"/>
-  </Item>    <!-- KeyContactList -->
+  </Item>    <!-- 12. KeyContactList -->
 
   <Item>
     <Element>WellbeingResponseList</Element>
@@ -151,7 +151,7 @@
       <p>A list of the Wellbeing Responses that contributed to the creation of this Wellbeing Alert.</p>
     </Description>
     <Type ref="CommonTypes" name="WellbeingResponseListType"/>
-  </Item>    <!-- WellbeingResponseList -->
+  </Item>    <!-- 13. WellbeingResponseList -->
 
   <Item>
     <Element>WellbeingAppealList</Element>
@@ -161,7 +161,7 @@
       <p>A list of the Wellbeing Appeal outcomes that contributed to the creation of this Wellbeing Alert.</p>
     </Description>
     <Type ref="CommonTypes" name="WellbeingAppealListType"/>
-  </Item>    <!-- WellbeingAppealList -->
+  </Item>    <!-- 14. WellbeingAppealList -->
 
   <Item>
     <Element>WellbeingCharacteristicList</Element>
@@ -171,7 +171,7 @@
       <p>A list of the Wellbeing Characteristics that contributed to the creation of this Wellbeing Alert.</p>
     </Description>
     <Type ref="CommonTypes" name="WellbeingCharacteristicList"/>
-  </Item>    <!-- WellbeingCharacteristicList -->
+  </Item>    <!-- 15. WellbeingCharacteristicList -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -181,32 +181,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-   
-  <xhtml:Example xmlns="" name="Wellbeing Alert">
-    <WellbeingAlert>
-      <WellbeingAlertRefId>2ffb63b4-cfef-4820-8501-e7d1e54555cb</WellbeingAlertRefId>
-      <Student>
-        <RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
-      </Student>
-      <Provider>
-          <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-		    	<LocalId json:force-string="true">9961</LocalId>
-      </Provider>
-      <StaffMember>
-        <RefId>ba265776-359d-7510-1a8c-77432a901a16</RefId>
-      </StaffMember>
-      <PublishedDate>2017-11-01</PublishedDate>
-      <StartDate>2017-11-01</StartDate>
-      <AlertCategory>MED</AlertCategory>
-      <AlertDescription>This Student is allergic to peanuts</AlertDescription>
-      <RecordAudit>
-        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-        <CreatedBy>
-          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-          <Name>Bobby Test</Name>
-        </CreatedBy>
-      </RecordAudit>
-    </WellbeingAlert>
-  </xhtml:Example>
+	</Item>    <!-- 16. RecordAudit -->
+
+  <xi:include parse="xml" href="Examples/WellbeingALert.xml"/> 
 </DataObject>

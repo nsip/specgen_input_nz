@@ -25,7 +25,8 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>      <!-- StaffTeachingGroupAssignmentRefId -->
+  </Item>      <!-- 1. StaffTeachingGroupAssignmentRefId -->
+
   <Item>
     <Element>StaffTeachingGroupAssignmentLocalId</Element>
     <Characteristics>O</Characteristics>
@@ -35,7 +36,7 @@
 			was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>      <!-- StaffTeachingGroupAssignmentLocalId -->
+  </Item>      <!-- 2. StaffTeachingGroupAssignmentLocalId -->
 
 
   <Item>
@@ -46,7 +47,7 @@
       <p>States whether or not this is an inactive or active assignment for a staff member.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsStaffTeachingGroupAssignmentStatusType"/>
-  </Item>      <!-- Status -->
+  </Item>      <!-- 3. Status -->
 
   <Item>
     <Element>StaffMember</Element>
@@ -56,7 +57,7 @@
       <p>Generic object reference to the staff member, as represented in the StaffPersonal object.&#160;</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>      <!-- StaffMember -->
+  </Item>      <!-- 4. StaffMember -->
 
   <Item>
     <Element>Organisation</Element>
@@ -66,7 +67,7 @@
       <p>A generic object reference to the Provider making the assignment.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
-  </Item>      <!-- Organisation -->  
+  </Item>      <!-- 5. Organisation -->  
 
   <Item>
     <Element>TeachingGroup</Element>
@@ -76,7 +77,7 @@
       <p>A generic object reference to the TeachingGroup that the staff member is assigned to.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>      <!-- TeachingGroup -->  
+  </Item>      <!-- 6. TeachingGroup -->  
 
   <Item>
     <Element>Role</Element>
@@ -87,7 +88,7 @@
         ClassroomAide, etc.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsStaffTeachingGroupRoleType"></Type>
-  </Item>      <!-- Role -->
+  </Item>      <!-- 7. Role -->
 
   <Item>
     <Element>StartDate</Element>
@@ -97,7 +98,7 @@
       <p>This is the date from which the staff assignment is valid (inclusive).</p>
     </Description>
     <Type ref="CommonTypes" name="StartDateType"/>
-  </Item>      <!-- StartDate -->
+  </Item>      <!-- 8. StartDate -->
 
   <Item>
     <Element>EndDate</Element>
@@ -108,7 +109,7 @@
           can be NULL when the staff member's assignment to a particular role is open-ended.</p>
     </Description>
     <Type ref="CommonTypes" name="EndDateType"/>
-  </Item>      <!-- EndDate -->
+  </Item>      <!-- 9. EndDate -->
 
   <Item>
     <Element>RecordAudit</Element>    
@@ -118,33 +119,7 @@
       <p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
     </Description>
     <Type ref="CommonTypes" name="RecordAuditType"></Type>
-  </Item>    <!-- RecordAudit -->
+  </Item>     <!-- 10. RecordAudit -->
 
-  <xhtml:Example xmlns="" name="Staff TeachingGroup Assignment French Teacher Example">
-    <StaffTeachingGroupAssignment>
-      <StaffTeachingGroupAssignmentRefId>92828e71-c702-4944-841e-761203142ccd</StaffTeachingGroupAssignmentRefId>
-      <StaffMember>
-        <RefId>6c12f5ae-ca86-40e2-b252-593154c8b967</RefId>
-      </StaffMember>
-      <Organisation>
-  	  	<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-	    	<LocalId json:force-string="true">9961</LocalId>
-      </Organisation>
-      <TeachingGroup>
-        <RefId>edc3ac19-264f-4734-b75b-6d56fbf84a18</RefId>
-        <LocalId>11FrenA</LocalId>
-        <Name>Year 11 French, Stream A</Name>
-      </TeachingGroup>
-      <Role json:force-string="true">1201</Role>
-      <StartDate>2000-09-05</StartDate>
-      <EndDate>2001-06-25</EndDate>
-      <RecordAudit>
-        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-        <CreatedBy>
-          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-          <Name>Bobby Test</Name>
-        </CreatedBy>
-      </RecordAudit>
-    </StaffTeachingGroupAssignment>
-  </xhtml:Example>
+  <xi:include parse="xml" href="Examples/StaffTeachingGroupAssignment.xml"/>
 </DataObject>

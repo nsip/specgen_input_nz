@@ -67,7 +67,7 @@
 				<p>A student that attended the teaching group meeting and their recorded attendance.</p>
 			</Description>
 			<Type ref="CommonTypes" name="StudentObjectReference"/>
-		</Item>    <!-- Student -->
+		</Item>    <!-- 1. Student -->
 
 		<Item>
 			<Element>Code</Element>
@@ -76,7 +76,7 @@
 				<p>MoE defined code for attendance or  absence during the time period described.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsAttendanceCodeType"/>
-		</Item>		<!-- Code -->
+		</Item>		<!-- 2. Code -->
 
 		<Item>
 			<Element>CodeGroup</Element>
@@ -85,7 +85,7 @@
 				<p>The attendance code group the students attendance code belongs to.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsAttendanceCodeGroupType"/>
-		</Item>		<!-- CodeGroup -->
+		</Item>		<!-- 3. CodeGroup -->
 	
 		<Item>
 			<Element>Note</Element>
@@ -94,7 +94,7 @@
 				<p>Free text note about the students attendance for the provided date and time/period.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>		<!-- Note -->
+		</Item>		<!-- 4. Note -->
 
 		<Item>
 			<Element>StartTime</Element>
@@ -104,7 +104,7 @@
 				and the student arrived at 9:10am set this field to 09:10.  If the student was present at 9am leave empty.</p>
 			</Description>
 			<Type name="xs:time"/>
-		</Item>		<!-- StartTime -->
+		</Item>		<!-- 5. StartTime -->
 
 		<Item>
 			<Element>EndTime</Element>
@@ -114,7 +114,7 @@
 				and the student left at 9:50am set this field to 09:50. If the student was left at 10am leave empty.</p>
 			</Description>
 			<Type name="xs:time"/>
-		</Item>		<!-- EndTime -->
+		</Item>		<!-- 6. EndTime -->
 	</CommonElement>
 
 	<CommonElement name="ScheduledMeetingType" type="true" dm="true">
@@ -133,7 +133,7 @@
 				<p>Reference to the SchedulePeriod this teaching group meeting attendance is being recorded for.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReference"/>
-		</Item>    <!-- SchedulePeriod -->
+		</Item>    <!-- 1. SchedulePeriod -->
 
 		<Item>
 			<Element>StartTime</Element>
@@ -142,7 +142,7 @@
 				<p>The time the scheduled meeting started.</p>
 			</Description>
 			<Type name="xs:time"/>
-		</Item>		<!-- StartTime -->
+		</Item>		<!-- 2. StartTime -->
 		
 		<Item>
 			<Element>EndTime</Element>
@@ -151,7 +151,7 @@
 				<p>The time the scheduled meeting ended.</p>
 			</Description>
 			<Type name="xs:time"/>
-		</Item>		<!-- EndTime -->
+		</Item>		<!-- 3. EndTime -->
 	</CommonElement>
 
 	<CommonElement name="AdHocMeetingType" type="true" dm="true">
@@ -169,7 +169,7 @@
 				<p>The name of the ad hoc meeting.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>		<!-- MeetingName -->
+		</Item>		<!-- 1. MeetingName -->
 		<Item>
 			<Element>StartTime</Element>
 			<Characteristics>M</Characteristics>
@@ -177,7 +177,7 @@
 				<p>The time the scheduled meeting started.</p>
 			</Description>
 			<Type name="xs:time"/>
-		</Item>		<!-- StartTime -->
+		</Item>		<!-- 2. StartTime -->
 		<Item>
 			<Element>EndTime</Element>
 			<Characteristics>M</Characteristics>
@@ -185,6 +185,6 @@
 				<p>The time the scheduled meeting ended.</p>
 			</Description>
 			<Type name="xs:time"/>
-		</Item>		<!-- EndTime -->
+		</Item>		<!-- 3. EndTime -->
 	</CommonElement>
 </IncludeGroup>

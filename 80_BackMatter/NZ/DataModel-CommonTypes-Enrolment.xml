@@ -56,7 +56,7 @@
 					to the other subject choices in the list.</p>
 			</Description>
 			<Type name="xs:unsignedInt"/>
-		</Item>		<!-- PreferenceNumber -->
+		</Item>		<!-- 1. PreferenceNumber -->
 
 		<Item>
 			<Element>Code</Element>
@@ -65,7 +65,7 @@
 				<p>MoE code denoting the chosen subject / learning area.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
-		</Item>         <!-- Code -->
+		</Item>     <!-- 2. Code -->
 
 		<xhtml:Example xmlns="" name="Student Subject Choice Example">
 			<StudentSubjectChoice>
@@ -76,7 +76,7 @@
 	</CommonElement>
 
 
-	<!-- Defined by SIF NZ -->
+	<!-- used in StudentPersonal -->
 	<CommonElement name="EarlyChildhoodEducationType" type="true" dm="true">
 		<Item>
 			<Element>EarlyChildhoodEducationType</Element>
@@ -121,7 +121,7 @@
 				<p>Code set denoting the year level of students attending early childhood education.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsECEYearLevelType"/>
-		</Item>    <!-- ECEYearLevel -->	
+		</Item>    <!-- 1. ECEYearLevel -->	
 		<Item>
 			<Element>Curriculum</Element>
 			<Characteristics>O</Characteristics>
@@ -130,7 +130,7 @@
 				<p>Code denoting which part of the National Curriculum (NZ Curriculum or Te Marautanga o Aotearoa) the ECE learner is enrolled in.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsCurriculumType"/>
-		</Item>    <!-- Curriculum -->		
+		</Item>    <!-- 2. Curriculum -->		
 	</CommonElement>
 
 	<CommonElement name="StudentTertiaryEnrolmentType" type="true" dm="true">
@@ -173,7 +173,7 @@
 					will have school years like:  '2021/22'</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>		<!-- SchoolYear -->
+		</Item>		<!-- 1. SchoolYear -->
 		<Item>
 			<Element>StartDate</Element>
 			<Characteristics>O</Characteristics>
@@ -182,7 +182,7 @@
 				<p>The date of the student's first attendance at the school in the SchoolCalendarYear.</p>
 			</Description>
 			<Type ref="CommonTypes" name="StartDateType"/>
-		</Item>		<!-- StartDate -->
+		</Item>		<!-- 2. StartDate -->
 		<Item>
 			<Element>EndDate</Element>
 			<Characteristics>O</Characteristics>
@@ -191,7 +191,7 @@
 				<p>The date of the student's final attendance at the school in the SchoolCalendarYear.</p>
 			</Description>
 			<Type ref="CommonTypes" name="EndDateType"/>
-		</Item>		<!-- EndDate -->
+		</Item>		<!-- 3. EndDate -->
 		<Item>
 			<Element>MembershipType</Element>
 			<Characteristics>M</Characteristics>
@@ -201,7 +201,7 @@
 					eg whether base school, co-enrolment. </p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsSchoolEnrolmentTypeType"></Type>
-		</Item>		<!-- MembershipType -->
+		</Item>		<!-- 4. MembershipType -->
 		<Item>
 			<Element>YearLevel</Element>
 			<Characteristics>O</Characteristics>
@@ -219,7 +219,7 @@
 				<xs:minInclusive value="0"/>
 				<xs:maxInclusive value="13"/>
 			</Facets>
-		</Item>		<!-- YearLevel -->
+		</Item>		<!-- 5. YearLevel -->
 		<Item>
 			<Element>EligibilityCriteria</Element>
 			<Characteristics>O</Characteristics>
@@ -228,7 +228,7 @@
 				<p>Records the Student's eligibility to enrol / for funding.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsEligibilityCriteriaType"/>
-		</Item>		<!-- EligibilityCriteria -->
+		</Item>		<!-- 6. EligibilityCriteria -->
 		<Item>
 			<Element>EligibilityVerification</Element>
 			<Characteristics>O</Characteristics>
@@ -238,7 +238,7 @@
 					school staff during the enrolment process.</p>
 			</Description>
 			<Type ref="CommonTypes" name="VerificationEventType"/>
-		</Item>		<!-- EligibilityVerification -->
+		</Item>		<!-- 7. EligibilityVerification -->
 		<Item>
 			<Element>FTE</Element>
 			<Characteristics>O</Characteristics>
@@ -254,7 +254,7 @@
 				<xs:maxInclusive value="1"/>
 				<xs:fractionDigits value="2"/>
 			</Facets>
-		</Item>		<!-- FTE -->
+		</Item>		<!-- 8. FTE -->
 		<Item>
 			<Element>FundingType</Element>
 			<Characteristics>O</Characteristics>
@@ -263,7 +263,7 @@
 				<p>The student classification for MoE funding purposes</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsStudentFundingTypeType"/>
-		</Item>		<!-- FundingType -->
+		</Item>		<!-- 9. FundingType -->
 		<Item>
 			<Element>FundingYearLevel</Element>
 			<Characteristics>O</Characteristics>
@@ -276,7 +276,7 @@
 				<xs:minInclusive value="0"/>
 				<xs:maxInclusive value="15"/>
 			</Facets>
-		</Item>		<!-- FundingYearLevel -->
+		</Item>		<!-- 10. FundingYearLevel -->
 		<Item>
 			<Element>Curriculum</Element>
 			<Characteristics>O</Characteristics>
@@ -286,7 +286,7 @@
 					(NZ Curriculum or Te Marautanga o Aotearoa) the student is enrolled in.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsCurriculumType"></Type>
-		</Item>		<!-- Curriculum -->
+		</Item>		<!-- 11. Curriculum -->
 		<Item>
 			<Element>CurriculumLevel</Element>
 			<Characteristics>M</Characteristics>
@@ -299,7 +299,7 @@
 				<xs:minInclusive value="1"/>
 				<xs:maxInclusive value="5"/>
 			</Facets>
-		</Item>		<!-- CurriculumLevel -->
+		</Item>		<!-- 12. CurriculumLevel -->
 		<Item>
 			<Element>LanguageOfInstructionList</Element>
 			<Characteristics>O</Characteristics>
@@ -308,7 +308,7 @@
 				<p>How much instruction has the student received in which languages?</p>
 			</Description>
 			<Type ref="CommonTypes" name="LanguageOfInstructionListType"/>
-		</Item>		<!-- LanguageOfInstructionList -->
+		</Item>		<!-- 13. LanguageOfInstructionList -->
 		<Item>
 			<Element>TimeInImmersion</Element>
 			<Characteristics>O</Characteristics>
@@ -317,7 +317,7 @@
 				<p>The number of years the student has been in Te Reo Māori immersion education.</p>
 			</Description>
 			<Type name="xs:unsignedInt"></Type>
-		</Item>		<!-- TimeInImmersion -->
+		</Item>		<!-- 14. TimeInImmersion -->
 		<Item>
 			<Element>Section9Agreement</Element>
 			<Characteristics>O</Characteristics>
@@ -326,7 +326,7 @@
 				<p>Indicates whether or not the student is enrolled under a Section 9 agreement</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-		</Item>		<!-- Section9Agreement -->
+		</Item>		<!-- 15. Section9Agreement -->
 		
 		<Item>
 			<Element>NZQA</Element>    
@@ -336,7 +336,7 @@
 			<p>NZQA details for a student for this school year.</p>
 			</Description>
 			<Type ref="CommonTypes" name="NZQAEnrolmentType"></Type>
-		</Item>     <!-- NZQA -->
+		</Item>     <!-- 16. NZQA -->
 
 		<Item>
 			<Element>OngoingResourceScheme</Element>
@@ -346,7 +346,7 @@
 				<p>Indicates the level of ORS funding the student receives.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsOngoingResourceSchemeType"/>
-		</Item>		<!-- OngoingResourceScheme -->		
+		</Item>		<!-- 17. OngoingResourceScheme -->		
 		<Item>
 			<Element>SubjectChoiceList</Element>
 			<Characteristics>O</Characteristics>
@@ -356,7 +356,7 @@
 					Not to be confused with CourseChoiceList which allows students to choose specific courses.</p>
 			</Description>
 			<Type ref="CommonTypes" name="StudentSubjectChoiceListType"/>
-		</Item>	    <!-- SubjectChoiceList -->
+		</Item>	    <!-- 18. SubjectChoiceList -->
 		<Item>
 			<Element>CourseChoiceList</Element>
 			<Characteristics>O</Characteristics>
@@ -367,7 +367,7 @@
 				rather than specific courses.</p>
 			</Description>
 			<Type ref="CommonTypes" name="StudentCourseChoiceListType"/>
-		</Item>		<!-- CourseChoiceList -->
+		</Item>		<!-- 19. CourseChoiceList -->
 		<Item>
 			<Element>CoEnrolment</Element>
 			<Characteristics>O</Characteristics>
@@ -377,7 +377,7 @@
 					case where this enrolment is not a base school enrolment.</p>
 			</Description>
 			<Type ref="CommonTypes" name="StudentSchoolCoEnrolmentType"/>
-		</Item>		<!-- CoEnrolment -->
+		</Item>		<!-- 20. CoEnrolment -->
 		<Item>
 			<Element>InternationalEnrolment</Element>
 			<Characteristics>O</Characteristics>
@@ -386,7 +386,7 @@
 				<p>Additional information collected for international enrolments.</p>
 			</Description>
 			<Type ref="CommonTypes" name="InternationalSchoolEnrolmentType"/>
-		</Item>		<!-- InternationalEnrolment -->
+		</Item>		<!-- 21. InternationalEnrolment -->
 		<Item>
 			<Element>StudentConsentList</Element>
 			<Characteristics>O</Characteristics>
@@ -395,7 +395,7 @@
 				<p>A list of student consent information.</p>
 			</Description>
 			<Type ref="CommonTypes" name="StudentConsentListType"/>
-		</Item>		<!-- StudentConsentList -->
+		</Item>		<!-- 22. StudentConsentList -->
 		<Item>
 			<Element>AcademicAttainmentGoalList</Element>
 			<Characteristics>O</Characteristics>
@@ -404,7 +404,7 @@
 				<p>The academic attainment goals of the student when they enrol, e.g. they wish to achieve a certain qualification.</p>
 			</Description>
 			<Type ref="CommonTypes" name="AcademicAttainmentGoalListType"/>
-		</Item>		<!-- AcademicAttainmentGoalList -->
+		</Item>		<!-- 23. AcademicAttainmentGoalList -->
 		<Item>
 			<Element>PreEnrolmentCancellation</Element>
 			<Characteristics>O</Characteristics>
@@ -413,7 +413,7 @@
 				<p>Details of why the school pre-enrolment was cancelled.</p>
 			</Description>
 			<Type ref="CommonTypes" name="PreEnrolmentCancellationType"/>
-		</Item>		<!-- PreEnrolmentCancellation -->
+		</Item>		<!-- 24. PreEnrolmentCancellation -->
 
 		<xhtml:Example xmlns="" name="International School Enrolment">
 			<StudentSchoolEnrolment>
@@ -491,7 +491,7 @@
 				<p>The student's NZQA enrolment Id.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>  
-		</Item>     <!-- EnrolmentId -->
+		</Item>     <!-- 1. EnrolmentId -->
 
 		<Item>
 			<Element>ExamCentre</Element>
@@ -500,7 +500,7 @@
 				<p>Organisation Object reference for the exam centre that will conduct assessment tasks</p>
 			</Description>
 			<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
-		</Item>     <!-- ExamCentre -->
+		</Item>     <!-- 2. ExamCentre -->
 
 		<Item>
 			<Element>FeeAmount</Element>
@@ -509,7 +509,7 @@
 				<p>Amount paid by student to school for current year's NZQA fees.</p>
 			</Description>
 			<Type name="xs:decimal"/>  
-		</Item>     <!-- FeeAmount -->
+		</Item>     <!-- 3. FeeAmount -->
 
 		<Item>
 			<Element>FinancialAssistance</Element>
@@ -519,7 +519,7 @@
 				<p>Code set denoting the type of financial assistance the student is receiving.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsNZQAFinancialAssistanceType"/>
-		</Item>	    <!-- FinancialAssistance -->
+		</Item>	    <!-- 4. FinancialAssistance -->
 
 		<Item>
 			<Element>SortCode</Element>
@@ -529,7 +529,7 @@
 				 Often the form class of the student.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>  
-		</Item>     <!-- SortCode -->
+		</Item>     <!-- 4. SortCode -->
 
 		<Item>
 			<Element>SubmitterName</Element>
@@ -538,7 +538,7 @@
 				<p>Full name of person submitting student information to NZQA.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>  
-		</Item>     <!-- SubmitterName -->
+		</Item>     <!-- 5. SubmitterName -->
 
 		<Item>
 			<Element>SubmitterEmailAddress</Element>
@@ -547,7 +547,7 @@
 				<p>E-mail address of person submitting student information to NZQA.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>  
-		</Item>     <!-- SubmitterEmailAddress -->
+		</Item>     <!-- 6. SubmitterEmailAddress -->
 
 		<Item>
 			<Element>WithdrawnAllAssessmentsInd</Element>
@@ -557,7 +557,7 @@
 				<p>Indicates that the student has withdrawn from all NZQA assessments.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
-		</Item>		<!-- WithdrawnAllAssessmentsInd -->		
+		</Item>		<!-- 7. WithdrawnAllAssessmentsInd -->		
 	</CommonElement>
 
 	<CommonElement name="AcademicAttainmentGoalListType" type="true" dm="true">
@@ -596,7 +596,7 @@
 				<p>Generic object reference to the other school where the student is concurrently enrolled.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>		<!-- OtherProvider -->
+		</Item>		<!-- 1. OtherProvider -->
 		<Item>
 			<Element>CoEnrolmentType</Element>
 			<Characteristics>O</Characteristics>
@@ -605,7 +605,7 @@
 				<p>  The type of CoEnrolment.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsCoEnrolmentTypeType"/>
-		</Item>		<!-- CoEnrolmentType -->
+		</Item>		<!-- 2. CoEnrolmentType -->
 		<Item>
 			<Element>BehaviouralKeyIssuesNote</Element>
 			<Characteristics>O</Characteristics>
@@ -614,7 +614,7 @@
 				<p>Free text note of key behavioural issues, made by the client school in relation to the student.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>		<!-- BehaviouralKeyIssuesNote -->
+		</Item>		<!-- 3. BehaviouralKeyIssuesNote -->
 		<Item>
 			<Element>ClientSchoolConfidentialNote</Element>
 			<Characteristics>O</Characteristics>
@@ -623,7 +623,7 @@
 				<p>Free text confidential note made by the client school in relation to the student.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>		<!-- ClientSchoolConfidentialNote -->
+		</Item>		<!-- 4. ClientSchoolConfidentialNote -->
 		<Item>
 			<Element>GuardianConfidentialNote</Element>
 			<Characteristics>O</Characteristics>
@@ -632,7 +632,7 @@
 				<p>Free text confidential note made by the parents/caregivers of the student.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>		<!-- GuardianConfidentialNote -->
+		</Item>		<!-- 5. GuardianConfidentialNote -->
 	</CommonElement>
 
 	<CommonElement name="InternationalSchoolEnrolmentType" type="true" dm="true">
@@ -652,7 +652,7 @@
 				<p>The date the Student arrived in New Zealand.</p>
 			</Description>
 			<Type name="xs:date"/>
-		</Item>		<!-- NZArrivalDate -->
+		</Item>		<!-- 1. NZArrivalDate -->
 		<Item>
 			<Element>TuitionWeeklyFee</Element>
 			<Characteristics>O</Characteristics>
@@ -661,7 +661,7 @@
 				<p>The amount paid by the Student per Week (GST excl) as a tuition fee.</p>
 			</Description>
 			<Type name="xs:decimal"/>
-		</Item>		<!-- TuitionWeeklyFee -->
+		</Item>		<!-- 2. TuitionWeeklyFee -->
 		<Item>
 			<Element>ExchangeScheme</Element>
 			<Characteristics>O</Characteristics>
@@ -670,7 +670,7 @@
 				<p>Which government approved exchange scheme is the student part of?</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsExchangeSchemeType"/>
-		</Item>		<!-- ExchangeScheme -->
+		</Item>		<!-- 3. ExchangeScheme -->
 		<xhtml:Example xmlns="" name="International School Enrolment">
 			<InternationalEnrolment>
 				<NZArrivalDate>1996-05-02</NZArrivalDate>
@@ -729,7 +729,7 @@
 			to the other course choices in the list.</p>
 			</Description>
 			<Type name="xs:unsignedInt"/>
-		</Item>		<!-- PreferenceNumber -->
+		</Item>		<!-- 1. PreferenceNumber -->
 		<Item>
 			<Element>Course</Element>
 			<Characteristics>M</Characteristics>
@@ -737,7 +737,7 @@
 				<p>Generic object reference to the Course the student has chosen to study during the year.</p>
 			</Description>
 			<Type ref="CommonTypes" name="ObjectReferenceType"/>
-		</Item>		<!-- Course -->
+		</Item>		<!-- 2. Course -->
 
 		<xhtml:Example xmlns="" name="Student Course Choice Example" intl="nz">
 			<StudentCourseChoice>
@@ -765,7 +765,7 @@
 				<p>The date the Student was notified of the cancellation of the pre-enrolment.</p>
 			</Description>
 			<Type name="xs:date"/>
-		</Item>		<!-- NotifiedDate -->
+		</Item>		<!-- 1. NotifiedDate -->
 		<Item>
 			<Element>CancellationMethod</Element>
 			<Characteristics>O</Characteristics>
@@ -773,7 +773,7 @@
 				<p>A code describing how the student's pre-enrolment was terminated.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsPreEnrolmentExitTypeType"/>
-		</Item>		<!-- CancellationMethod -->
+		</Item>		<!-- 2. CancellationMethod -->
 		<Item>
 			<Element>CancellationReason</Element>
 			<Characteristics>O</Characteristics>
@@ -782,7 +782,7 @@
 				<p>The reason the pre-enrolment was cancelled</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsPreEnrolmentCancellationReasonType"/>
-		</Item>		<!-- CancellationReason -->
+		</Item>		<!-- 3. CancellationReason -->
 		<Item>
 			<Element>CancellationReasonOtherDesc</Element>
 			<Characteristics>O</Characteristics>
@@ -791,7 +791,7 @@
 				<p>Free text reason the pre-enrolment was cancelled if the cancellation reason of other was selected.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>		<!-- CancellationReasonOtherDesc -->
+		</Item>		<!-- 4. CancellationReasonOtherDesc -->
 	</CommonElement>
 
 	<CommonElement name="ProviderExitType" type="true" dm="true">
@@ -809,7 +809,7 @@
 				<p>A code describing how or why the student's enrolment was terminated.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsEnrolmentExitTypeType"/>
-		</Item>		<!-- Reason -->
+		</Item>		<!-- 1. Reason -->
 		<Item>
 			<Element>PostSchoolActivity</Element>
 			<Characteristics>O</Characteristics>
@@ -817,7 +817,7 @@
 				<p> The post school activity the student is moving on to once they have exited the school.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsPostSchoolActivityType"/>
-		</Item>		<!-- PostSchoolActivity -->
+		</Item>		<!-- 2. PostSchoolActivity -->
 		<Item>
 			<Element>InterventionList</Element>
 			<Characteristics>O</Characteristics>
@@ -826,7 +826,7 @@
 					that record the process of terminating a students enrolment.</p>
 			</Description>
 			<Type ref="CommonTypes" name="InterventionListType"/>
-		</Item>		<!-- InterventionList -->
+		</Item>		<!-- 3. InterventionList -->
 		<Item>
 			<Element>PotentialDestinationSchoolList</Element>
 			<Characteristics>O</Characteristics>
@@ -834,7 +834,7 @@
 				<p>List of potential destination schools for the departing student.</p>
 			</Description>
 			<Type ref="CommonTypes" name="PotentialDestinationSchoolListType"/>
-		</Item>     <!-- PotentialDestinationSchoolList -->
+		</Item>     <!-- 4. PotentialDestinationSchoolList -->
 	</CommonElement>
 
 	<CommonElement name="InterventionListType" type="true" dm="true">
@@ -911,7 +911,7 @@
 				<p>The type of early childhood education the student attended.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsEarlyChildhoodEducationTypeType"/>
-		</Item>    <!-- Type -->
+		</Item>    <!-- 1. Type -->
 		<Item>
 			<Element>HoursPerDayAttended</Element>
 			<Characteristics>O</Characteristics>
@@ -923,7 +923,7 @@
 			<Facets>
 				<xs:pattern value="(((\d|(1\d)|2[0-3])(\.\d{1,2})?)|24(\.0{1,2})?)"/>
 			</Facets>
-		</Item>    <!-- HoursPerDayAttended -->	
+		</Item>    <!-- 2. HoursPerDayAttended -->	
 		<Item>
 			<Element>HoursPerWeekAttended</Element>
 			<Characteristics>O</Characteristics>
@@ -935,7 +935,7 @@
 			<Facets>
 				<xs:pattern value="(((\d{1,2}|(1[0-5]\d)|16[0-7])(\.\d{1,2})?)|168(\.0{1,2})?)"/>
 			</Facets>
-		</Item>    <!-- HoursPerWeekAttended -->
+		</Item>    <!-- 3. HoursPerWeekAttended -->
 	</CommonElement>
 
 </IncludeGroup>

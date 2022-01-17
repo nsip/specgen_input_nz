@@ -47,7 +47,7 @@
 				<p></p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- EnrolmentId -->
+		</Item>    <!-- 1. EnrolmentId -->
 
 		<Item>
 			<Element>EntryId</Element>
@@ -60,7 +60,7 @@
 				</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- EntryId -->
+		</Item>    <!-- 2. EntryId -->
 
 		<Item>
 			<Element>AssessmentRequestType</Element>
@@ -70,7 +70,7 @@
 				<p></p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsAssessmentRequestTypeType"/>
-		</Item>    <!-- AssessmentRequestType -->
+		</Item>    <!-- 3. AssessmentRequestType -->
 
 		<Item>
 			<Element>PaperLanguage</Element>
@@ -80,7 +80,7 @@
 				<p></p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
-		</Item>    <!-- PaperLanguage -->
+		</Item>    <!-- 4. PaperLanguage -->
 
 		<Item>
 			<Element>AnswerLanguage</Element>
@@ -90,7 +90,7 @@
 				<p></p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
-		</Item>    <!-- AnswerLanguage -->
+		</Item>    <!-- 5. AnswerLanguage -->
 
 	</CommonElement>
 
@@ -198,7 +198,7 @@
 				  a single assessment.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsScoreTypeType"/>
-		</Item>    <!-- ScoreType -->
+		</Item>    <!-- 1. ScoreType -->
 		<Item>
 			<Element>Competency</Element>
 			<Characteristics>O</Characteristics>
@@ -206,7 +206,7 @@
 				<p>String describing a particular competency that is being reported in the assessment.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>    <!-- Competency -->
+		</Item>    <!-- 2. Competency -->
 		<Item>
 			<Element>ScoreMetric</Element>
 			<Characteristics>O</Characteristics>
@@ -214,7 +214,7 @@
 				<p>A code denoting the type of metric the ScoreValue represents.</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsScoreMetricType"/>
-		</Item>    <!-- ScoreMetric -->		
+		</Item>    <!-- 3. ScoreMetric -->		
 		<Item>
 			<Element>ScoreValue</Element>
 			<Characteristics>O</Characteristics>
@@ -222,14 +222,14 @@
 				<p>The score the student received for assessment task against that metric. If the result score is for an NZQA or International Baccalaureate then the ScoreResultCode using the enumeration NZCodeSetsAssessmentResultType must be used instead.</p>
 			</Description>
 			<Type name="xs:normalizedString"></Type>
-		</Item>    <!-- ScoreValue -->
+		</Item>    <!-- 4. ScoreValue -->
 		<Item>
 			<Element>ScoreMax</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>The maximum value possible for the score.</Description>
 			<Type name="xs:decimal"/>
-		</Item>    <!-- ScoreMax -->
+		</Item>    <!-- 5. ScoreMax -->
 		<Item>
 			<Element>ItemNumber</Element>
 			<Characteristics>O</Characteristics>
@@ -241,7 +241,7 @@
 				<p>The individual item scores, and the total are then sent back to NZQA’s eQA system from the marking application. </p>
 			</Description>
 			<Type name="xs:int"></Type>
-		</Item>    <!-- ItemNumber -->
+		</Item>    <!-- 6. ItemNumber -->
 	</CommonElement>
 
 	<CommonElement name="JustificationListType" type="true" dm="true">
@@ -318,7 +318,7 @@
 				<p>A Code denoting how the Justification assessment task was assessed</p>
 			</Description>
 			<Type ref="CodeSets" name="NZCodeSetsAssessmentTypeType"/>
-		</Item>    <!-- AssessmentType -->
+		</Item>    <!-- 10. AssessmentType -->
 
 		<Item>
 			<Element>Result</Element>
@@ -327,7 +327,7 @@
 				<p>The final result of the assessment task that justifies the attainment.</p>
 			</Description>
 			<Type name="xs:normalizedString"/>
-		</Item>   <!-- Result -->
+		</Item>   <!-- 11. Result -->
 
 		<Item>
 			<Element>Date</Element>
@@ -336,7 +336,7 @@
 				<p>The date the justifying assessment task was achieved.</p>
 			</Description>
 			<Type name="xs:date"/>
-		</Item>   <!-- Date -->
+		</Item>   <!-- 12. Date -->
 
 		<Item>
 			<Element>CreditValue</Element>
@@ -345,7 +345,7 @@
 				<p>The number of credits the justifying assessment task contributes towards this attainment.</p>
 			</Description>
 			<Type name="xs:decimal"/>
-		</Item>   <!-- CreditValue -->
+		</Item>   <!-- 13. CreditValue -->
 
 		<xhtml:Example xmlns="" name="Justification Example">
 			<Justification>

@@ -31,7 +31,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- SchedulePeriodRefId -->
+	</Item>    <!-- 1. SchedulePeriodRefId -->
 	<Item>
 		<Element>SchedulePeriodLocalId</Element>
 		<Characteristics>O</Characteristics>
@@ -41,7 +41,7 @@
 			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- SchedulePeriodLocalId -->
+	</Item>    <!-- 2. SchedulePeriodLocalId -->
 
 	<Item>
 		<Element>PeriodName</Element>
@@ -51,7 +51,7 @@
 			<p>The name of the schedule period.</p>
 		</Description>
 		<Type  name="xs:normalizedString"/>
-	</Item>    <!-- PeriodName -->
+	</Item>    <!-- 3. PeriodName -->
 
 	<Item>
 		<Element>Organisation</Element>
@@ -61,7 +61,7 @@
 			<p>The provider the schedule period belongs to.</p>
 		</Description>
 		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"/> 
-	</Item>    <!-- Organisation -->
+	</Item>    <!-- 4. Organisation -->
 	<Item>
 		<Element>Schedule</Element>
 		<Characteristics>M</Characteristics>
@@ -70,7 +70,7 @@
 			<p>The provider schedule the schedule period belongs to.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ObjectReferenceType"/> 
-	</Item>    <!-- Schedule -->
+	</Item>    <!-- 5. Schedule -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -80,29 +80,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-  
-	<xhtml:Example xmlns="" name ="Schedule Period">
-		<SchedulePeriod>
-			<SchedulePeriodRefId>215f796c-67f7-4855-83dc-28ad9d002830</SchedulePeriodRefId>
-			<SchedulePeriodLocalId>2019a-1</SchedulePeriodLocalId>
-			<PeriodName>Period 1</PeriodName>
-			<Organisation>
-  	  			<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-		    	<LocalId json:force-string="true">9961</LocalId>
-			</Organisation>
-			<Schedule>
-				<RefId>d2f4aea9-564f-4bdf-a18e-42a111a0602c</RefId>
-				<LocalId>2019a</LocalId>
-				<Name>Scheule 2019a (Term 1)</Name>
-			</Schedule>				
-			<RecordAudit>
-				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-				<CreatedBy>
-				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-				<Name>Bobby Test</Name>
-				</CreatedBy>
-			</RecordAudit>
-		</SchedulePeriod>
-	</xhtml:Example>
+	</Item>    <!-- 6. RecordAudit -->
+
+	<xi:include parse="xml" href="Examples/SchedulePeriod.xml"/>
 </DataObject>

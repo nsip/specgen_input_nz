@@ -25,7 +25,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>    <!-- StudentVoiceRefId -->
+	</Item>    <!-- 1. StudentVoiceRefId -->
 	
 	<Item>
 		<Element>StudentVoiceLocalId</Element>
@@ -36,7 +36,7 @@
 			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-	</Item>    <!-- StudentVoiceLocalId -->
+	</Item>    <!-- 2. StudentVoiceLocalId -->
 
 	<Item>
 		<Element>Student</Element>
@@ -46,7 +46,7 @@
 			<p>Generic object reference to The GUID for the student's StudentPersonal record.</p>
 		</Description>
 		<Type ref="CommonTypes" name="StudentObjectReferenceType"/>
-	</Item>    <!-- Student -->
+	</Item>    <!-- 3. Student -->
 
 	<Item>
 		<Element>Provider</Element>
@@ -56,7 +56,7 @@
 		<p>Generic object reference to the school that collected this StudentVoice entry.</p>
 		</Description>
 		<Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
-	</Item>    <!-- Provider -->  
+	</Item>    <!-- 4. Provider -->  
 
     <Item>
 		<Element>VoiceType</Element>
@@ -66,7 +66,7 @@
 			<p>Code set denoting the type of student voice being heard, e.g. their interests, goals, voice (comments, opinions).</p>
 		</Description>
 		<Type ref="CodeSets" name="NZCodeSetsStudentVoiceTypeType"/>
-	</Item>    <!-- VoiceType -->
+	</Item>    <!-- 5. VoiceType -->
 	
 	<Item>
 		<Element>StudentVoiceNote</Element>
@@ -76,7 +76,7 @@
 			<p>Extra notes about the student, and their voice</p>
 		</Description>
 		<Type name="xs:normalizedString"/> 
-	</Item>    <!-- StudentVoiceNote -->
+	</Item>    <!-- 6. StudentVoiceNote -->
 
     <Item>
 		<Element>StudentInterestList</Element>
@@ -86,7 +86,7 @@
 			<p>A list of the diffent interests the student has expressed.</p>
 		</Description>
 		<Type ref="CommonTypes" name="StudentInterestListType"/>
-	</Item>    <!-- StudentInterestList -->
+	</Item>    <!-- 7. StudentInterestList -->
 
     <Item>
 		<Element>SocialGoalList</Element>
@@ -96,7 +96,7 @@
 			<p>A list of the diffent social goals the student has expressed.</p>
 		</Description>
 		<Type ref="CommonTypes" name="SocialGoalListType"/>
-	</Item>    <!-- SocialGoalList -->
+	</Item>    <!-- 8. SocialGoalList -->
 
     <Item>
 		<Element>AcademicGoalList</Element>
@@ -106,7 +106,7 @@
 			<p>A list of the diffent academic goals the student has expressed.</p>
 		</Description>
 		<Type ref="CommonTypes" name="AcademicGoalListType"/>
-	</Item>    <!-- AcademicGoalList -->
+	</Item>    <!-- 9. AcademicGoalList -->
 
     <Item>
 		<Element>CareerGoalList</Element>
@@ -116,7 +116,7 @@
 			<p>A list of the diffent career goals the student has expressed.</p>
 		</Description>
 		<Type ref="CommonTypes" name="CareerGoalListType"/>
-	</Item>    <!-- CareerGoalList -->
+	</Item>    <!-- 10. CareerGoalList -->
 	
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -126,58 +126,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-	
-	<xhtml:Example xmlns="" name ="StudentVoice">
-		<StudentVoice>
-			<StudentVoiceRefId>7c834ea9-eda1-2090-347f-83297e1c290c</StudentVoiceRefId>
-			<StudentVoiceLocalId>2234523</StudentVoiceLocalId>
-			<Student>
-				<RefId>5c33548a-1141-40eb-94d3-9267a2258435</RefId>
-			</Student>
-			<Provider>
-  	  			<RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-		    	<LocalId json:force-string="true">9961</LocalId>
-			</Provider>
-			<StudentVoiceNote>Timothy doesn't like talking about setting goals. These goals have been gathered through observation.</StudentVoiceNote>
-			<StudentInterestList>
-				<StudentInterest json:force-array="true">
-					<InterestRecordedDate>2018-11-30</InterestRecordedDate>
-					<InterestDescription>Timothy spends most lunchtimes playing with the piano, or watching others playing music</InterestDescription>
-					<InterestName>Music/Piano</InterestName>
-					<InterestType>MUS</InterestType>
-					<SubjectArea>MUSP</SubjectArea>					
-				</StudentInterest>
-			</StudentInterestList>
-			<SocialGoalList>
-				<SocialGoal json:force-array="true">
-					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
-					<GoalDescription>Timothy would like to have more friends to play with at lunchtime.</GoalDescription>
-					<GoalName>Have more friends</GoalName>
-				</SocialGoal>
-			</SocialGoalList>
-			<AcademicGoalList>
-				<AcademicGoal json:force-array="true">
-					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
-					<GoalDescription>Timothy wants to excel at Te Reo Māori</GoalDescription>
-					<GoalName>Excel Te Reo</GoalName>
-					<SubjectArea>MAOR</SubjectArea>
-				</AcademicGoal>
-			</AcademicGoalList>			
-			<CareerGoalList>
-				<CareerGoal json:force-array="true">
-					<GoalRecordedDate>2018-11-30</GoalRecordedDate>
-					<GoalDescription>Timothy would like to be a Marine Biologist, or Deep Sea Diver</GoalDescription>
-					<GoalName>Marine Biologist</GoalName>
-				</CareerGoal>
-			</CareerGoalList>	
-			<RecordAudit>
-				<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-				<CreatedBy>
-				<RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-				<Name>Bobby Test</Name>
-				</CreatedBy>
-			</RecordAudit>		
-		</StudentVoice>
-	</xhtml:Example>
+	</Item>    <!-- 11. RecordAudit -->
+
+	<xi:include parse="xml" href="Examples/StudentVoice.xml"/>	
 </DataObject>

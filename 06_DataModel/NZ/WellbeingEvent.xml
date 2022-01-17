@@ -28,7 +28,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- WellbeingEventRefId -->
+  </Item>    <!-- 1. WellbeingEventRefId -->
 
   <Item>
 		<Element>WellbeingEventLocalId</Element>
@@ -39,7 +39,7 @@
 			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/> 
-  </Item>    <!-- WellbeingEventLocalId -->
+  </Item>    <!-- 2. WellbeingEventLocalId -->
 
   <Item>
     <Element>Student</Element>
@@ -49,7 +49,7 @@
       <p>Object reference to the student to whom this WellbeingEvent belongs.</p>
     </Description>
     <Type ref="CommonTypes" name="StudentObjectReferenceType"></Type>
-  </Item>    <!-- Student -->
+  </Item>    <!-- 3. Student -->
 
   <Item>
     <Element>ReportingProvider</Element>
@@ -59,7 +59,7 @@
       <p>Object reference to the provider for which this WellbeingEvent is being reported.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
-  </Item>    <!-- ReportingProvider -->
+  </Item>    <!-- 4. ReportingProvider -->
   
   <Item>
     <Element>PhysicalRestraint</Element>
@@ -69,7 +69,7 @@
       <p>Object reference tothe StudentPhysicalRestraint if it was administered to the student as part of this WellbeingEvent.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"></Type>
-  </Item>    <!-- PhysicalRestraint -->
+  </Item>    <!-- 5. PhysicalRestraint -->
    
   <Item>
     <Element>EventNotes</Element>
@@ -79,7 +79,7 @@
       <p>Text relating to the particular WellbeingEvent.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- EventNotes -->
+  </Item>    <!-- 6. EventNotes -->
 
   <Item>
     <Element>PossibleMotivationList</Element>
@@ -89,7 +89,7 @@
       <p>A list of the possible motivations that triggered the event.</p>
     </Description>
     <Type ref="CommonTypes" name="PossibleMotivationListType"></Type>
-  </Item>    <!-- PossibleMotivationList -->
+  </Item>    <!-- 7. PossibleMotivationList -->
   
   <Item>
     <Element>EventCategoryClass</Element>
@@ -99,7 +99,7 @@
       <p>Category of WellbeingEvent.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsWellbeingEventCategoryClassType"></Type>
-  </Item>    <!-- EventCategoryClass -->
+  </Item>    <!-- 8. EventCategoryClass -->
     
   <Item>
     <Element>EventCategoryList</Element>
@@ -109,7 +109,7 @@
       <p>List of Categories of WellbeingEvent.</p>
     </Description>
     <Type ref="CommonTypes" name="WellbeingEventCategoryListType"></Type>
-  </Item>    <!-- EventCategoryList -->
+  </Item>    <!-- 9. EventCategoryList -->
 
   <Item>
     <Element>ReportingStaffMember</Element>
@@ -119,7 +119,7 @@
       <p>Object refernece to the staff member who logged the Wellbeing Event record.</p>
     </Description>
     <Type ref="CommonTypes" name="ObjectReferenceType"/>
-  </Item>    <!-- ReportingStaffMember -->
+  </Item>    <!-- 10. ReportingStaffMember -->
 
   <Item>
     <Element>EventLocationList</Element>
@@ -129,7 +129,7 @@
       <p>A list of the locations where the incident took place.</p>
     </Description>
     <Type ref="CommonTypes" name="EventLocationListType"/>
-  </Item>    <!-- EventLocationList -->
+  </Item>    <!-- 11. EventLocationList -->
 
   <Item>
     <Element>EventLocationDescription</Element>
@@ -139,7 +139,7 @@
       <p>Details of Event Location.</p>
     </Description>
      <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- EventLocationDescription -->
+  </Item>    <!-- 12. EventLocationDescription -->
 
   <Item>
     <Element>EventCreationTimeStamp</Element>
@@ -149,7 +149,7 @@
       <p>Date and time of the WellbeingEvent record creation.</p>
     </Description>
     <Type name="xs:dateTime"></Type>
-  </Item>    <!-- EventCreationTimeStamp -->  
+  </Item>    <!-- 13. EventCreationTimeStamp -->  
   
   <Item>
     <Element>EventDate</Element>
@@ -159,7 +159,7 @@
       <p>The calendar date on which this WellbeingEvent occured.</p>
     </Description>
     <Type name="xs:date"></Type>
-  </Item>    <!-- EventDate -->
+  </Item>    <!-- 14. EventDate -->
     
   <Item>
     <Element>EventTime</Element>
@@ -169,7 +169,7 @@
       <p>The time when WellbeingEvent occured.</p>
     </Description>
     <Type name="xs:time"></Type>
-  </Item>    <!-- EventTime -->
+  </Item>    <!-- 15. EventTime -->
   
   <Item>
     <Element>EventDescription</Element>
@@ -179,7 +179,7 @@
       <p>A description of the WellbeingEvent.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- EventDescription -->
+  </Item>    <!-- 16. EventDescription -->
 
   <Item>
     <Element>EventTimePeriod</Element>
@@ -189,7 +189,7 @@
       <p>Time period of when the event occurred.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsWellbeingEventTimePeriodType"></Type>
-  </Item>    <!-- EventTimePeriod -->  
+  </Item>    <!-- 17. EventTimePeriod -->  
 
   <Item>
     <Element>ConfidentialFlag</Element>
@@ -199,7 +199,7 @@
       <p>Flag indicating if the incident is confidential or not.  If ‘Y’ should not be shared with any other system/school.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>    <!-- ConfidentialFlag -->  
+  </Item>    <!-- 18. ConfidentialFlag -->  
   
   <Item>
     <Element>PersonInvolvementList</Element>
@@ -209,7 +209,7 @@
       <p>List of People involved in the Wellbeing event.  Mandatory if more people than the student to which this event occurs is involved.</p>
     </Description>
      <Type ref="CommonTypes" name="PersonInvolvementListType"></Type>
-  </Item>    <!-- PersonInvolvementList -->
+  </Item>    <!-- 19. PersonInvolvementList -->
   
   <Item>
    	<Element>Status</Element>
@@ -219,7 +219,7 @@
 		  <p>Current Status.</p>
 		</Description>
 		<Type ref="CodeSets" name="NZCodeSetsWellbeingStatusType"/>
-  </Item>    <!-- Status -->
+  </Item>    <!-- 20. Status -->
 
   <Item>
    	<Element>BehaviourIdentifiedList</Element>
@@ -229,7 +229,7 @@
 		  <p>A list of the problem behaviours identified for the student as a result of the Wellbeing Event. There are both minor and major behaviours.</p>
 		</Description>
 		<Type ref="CommonTypes" name="BehaviourIdentifiedListType"/>
-  </Item>    <!-- BehaviourIdentifiedList -->
+  </Item>    <!-- 21. BehaviourIdentifiedList -->
 
   <Item>
    	<Element>RestraintType</Element>
@@ -239,7 +239,7 @@
 		  <p>The StudentPhysicalRestraint if it was administered to the student as part of this WellbeingEvent.</p>
 		</Description>
 		<Type ref="CodeSets" name="NZCodeSetsWellbeingEventRestraintTypeType"/>
-  </Item>    <!-- RestraintType -->
+  </Item>    <!-- 22. RestraintType -->
 
   <Item>
    	<Element>ActionTakenList</Element>
@@ -249,7 +249,7 @@
 		  <p>A list of the actions taken as a result of this WellbeingEvent.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ActionTakenListType"/>
-  </Item>    <!-- ActionTakenList -->
+  </Item>    <!-- 23. ActionTakenList -->
   
   <Item>
     <Element>DocumentList</Element>
@@ -259,7 +259,7 @@
       <p>Describes the Location of any associated documents kept in relation to this Response.</p>
     </Description>
      <Type ref="CommonTypes" name="DocumentListType"></Type>
-  </Item>    <!-- DocumentList -->
+  </Item>    <!-- 24. DocumentList -->
 
   <Item>
     <Element>RelatedWellbeingEventList</Element>
@@ -269,7 +269,7 @@
       <p>A Wellbeing Event gets created for every student involved in an event. This list links together all related Wellbeing Events.</p>
     </Description>
      <Type ref="CommonTypes" name="RelatedWellbeingEventListType"></Type>
-  </Item>    <!-- RelatedWellbeingEventList -->
+  </Item>    <!-- 25. RelatedWellbeingEventList -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -279,32 +279,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
-  
-  <xhtml:Example xmlns="" name="WellbeingEvent">
-    <WellbeingEvent> 
-      <WellbeingEventRefId>2ffb63b4-cfef-4820-8501-e7d1e54555cb</WellbeingEventRefId>
-      <Student>
-        <RefId>d3e34b35-9d75-101a-8c3d-00aa001a1652</RefId>
-      </Student>
-      <ReportingProvider>
-          <RefId>e189fd55-a6d8-413a-b85c-caf79868938b</RefId>
-		    	<LocalId json:force-string="true">9961</LocalId>
-      </ReportingProvider>
-      <EventCategoryClass>POS</EventCategoryClass>
-      <EventDate>2017-11-01</EventDate>
-      <EventTimePeriod>AM</EventTimePeriod>
-      <RestraintType>NON</RestraintType>
-      <ActionTakenList>
-        <ActionTaken json:force-array="true">ININ</ActionTaken>
-      </ActionTakenList>
-      <RecordAudit>
-        <CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
-        <CreatedBy>
-          <RefId>44fb63b4-cfef-4820-8501-e7d1e54555cb</RefId>
-          <Name>Bobby Test</Name>
-        </CreatedBy>
-      </RecordAudit>
-    </WellbeingEvent>
-  </xhtml:Example>
+	</Item>    <!-- 26. RecordAudit -->
+
+  <xi:include parse="xml" href="Examples/WellbeingEvent.xml"/> 
 </DataObject>
