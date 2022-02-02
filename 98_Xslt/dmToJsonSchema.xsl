@@ -96,7 +96,7 @@
 		<xsl:if test="$mandatoryFields = 'required'">
 			<xsl:variable name="req">
 				<xsl:apply-templates select="specgen:Item|//specgen:CommonElement[@name = current()/specgen:Item[1]/specgen:Type/@name]/specgen:Item" mode="required">
-					<xsl:sort select="specgen:Element|specgen:Attribute"/>
+					<xsl:sort select="specgen:PositionElement|specgen:Attribute"/>
 				</xsl:apply-templates>
 			</xsl:variable>
 			<xsl:if test="string-length($req) gt 0">
@@ -294,6 +294,7 @@
 
 	<!-- Common type is instance of another type -->
 	<xsl:template match="specgen:CommonElement[count(specgen:Item) eq 1 and
+						specgen:Item[1]/specgen:Type and
 						 not(starts-with(specgen:Item[1]/specgen:Type/@name, 'xs:')) and
 						 not(specgen:Item[1]/specgen:Type/@complex eq 'extension')]">
 		<xsl:text>&#x0a;  # ////////////////////////////// another type ///////////////////////////////&#x0a;</xsl:text>
@@ -337,6 +338,32 @@
 		</xsl:if>
 
 		<xsl:text>    type: object&#x0a;    additionalProperties: false&#x0a;    properties:&#x0a;</xsl:text>
+		<xsl:apply-templates select="specgen:Choice">
+			<xsl:with-param name="indent" select="'      '"/>
+		</xsl:apply-templates>
+
+		<xsl:text>    oneOf:&#x0a;</xsl:text>
+		<xsl:for-each select="specgen:Choice/specgen:Item">
+			<xsl:value-of select="concat('    - required:&#x0a;      - ', $q, specgen:Element|specgen:Attribute, $q, '&#x0a;')"/>
+		</xsl:for-each>
+
+	</xsl:template>
+
+	<!-- Common type is a simple choice -->
+	<xsl:template priority="2" match="specgen:CommonElement[count(specgen:Item) eq 1 and
+	                                                        count(specgen:Choice) eq 1 and
+															not(specgen:Item/specgen:List)] ">
+		<xsl:text>&#x0a;  # ///////////////////////////// simple choice ////////////////////////////////&#x0a;</xsl:text>
+		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;')"/>
+
+		<xsl:variable name="desc">
+			<xsl:apply-templates select="xfn:escapeXml(specgen:Item[1]/specgen:Description)"/>
+		</xsl:variable>
+		<xsl:if test="string-length($desc) gt 0">
+			<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
+		</xsl:if>
+
+		<xsl:text>    properties:&#x0a;</xsl:text>
 		<xsl:apply-templates select="specgen:Choice">
 			<xsl:with-param name="indent" select="'      '"/>
 		</xsl:apply-templates>

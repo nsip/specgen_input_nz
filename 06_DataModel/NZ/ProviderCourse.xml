@@ -24,7 +24,7 @@
  			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- ProviderCourseRefId -->
+  </Item>    <!-- 1. ProviderCourseRefId -->
   <Item>
     <Element>ProviderCourseLocalId</Element>
     <Characteristics>O</Characteristics>
@@ -34,7 +34,7 @@
 			was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>    <!-- ProviderCourseLocalId -->
+  </Item>    <!-- 2. ProviderCourseLocalId -->
   
   <Item>
     <Element>Provider</Element>
@@ -44,7 +44,7 @@
       <p>Generic object reference to the Provider (school) that defines and offers the Course.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
-  </Item>    <!-- Provider -->
+  </Item>    <!-- 3. Provider -->
   
   <Item>
       <Element>Curriculum</Element>
@@ -54,7 +54,7 @@
         <p>Which of New Zealand's three Curricula is covered by the Course.</p>
       </Description>
       <Type ref="CodeSets" name="NZCodeSetsCurriculumType"></Type>
-  </Item>    <!-- Curriculum -->
+  </Item>    <!-- 4. Curriculum -->
   <Item>
       <Element>SubjectAreaList</Element>
       <Characteristics>O</Characteristics>
@@ -63,7 +63,7 @@
         <p>Subject matter areas covered by the Course.</p>
       </Description>
       <Type ref="CommonTypes" name="SubjectAreaListType"></Type>
-  </Item>    <!-- SubjectAreaList -->
+  </Item>    <!-- 5. SubjectAreaList -->
   <Item>
       <Element>YearLevelList</Element>
       <Characteristics>O</Characteristics>
@@ -72,7 +72,7 @@
         <p>Year Levels covered by the Course.</p>
       </Description>
       <Type ref="CommonTypes" name="YearLevelListType"></Type>
-  </Item>    <!-- YearLevelList -->
+  </Item>    <!-- 6. YearLevelList -->
   <Item>
       <Element>Title</Element>
       <Characteristics>M</Characteristics>
@@ -81,7 +81,7 @@
         <p>Title of the Course.</p>
       </Description>
       <Type name='xs:normalizedString'/>
-  </Item>    <!-- Title -->
+  </Item>    <!-- 7. Title -->
   <Item>
     <Element>Description</Element>
     <Characteristics>O</Characteristics>
@@ -90,7 +90,7 @@
       <p>Textual description of the Course.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- Description -->
+  </Item>    <!-- 8. Description -->
   <Item>
     <Element>Duration</Element>
     <Characteristics>O</Characteristics>
@@ -99,7 +99,7 @@
       <p>The number of weeks the course is taught for.</p>
     </Description>
     <Type name='xs:unsignedInt'/>
-  </Item>    <!-- Duration -->  
+  </Item>    <!-- 9. Duration -->  
   <Item>
     <Element>Credits</Element>
     <Characteristics>O</Characteristics>
@@ -108,7 +108,7 @@
       <p>The number of credits awarded upon Course completion.</p>
     </Description>
     <Type name="xs:decimal"/>
-  </Item>    <!-- Credits -->
+  </Item>    <!-- 10. Credits -->
   <Item>
     <Element>LanguageOfInstructionList</Element>
     <Characteristics>O</Characteristics>
@@ -117,7 +117,7 @@
       <p>The language of instruction for the Course.</p>
     </Description>
     <Type ref="CommonTypes" name='LanguageOfInstructionListType'/>
-  </Item>    <!-- LanguageOfInstructionList -->
+  </Item>    <!-- 11. LanguageOfInstructionList -->
   <Item>
     <Element>NZQAShortCOurseInd</Element>
     <Characteristics>O</Characteristics>
@@ -126,7 +126,7 @@
       <p>Indicator to advise NZQA that course does not have sufficient credits for endorsement.</p>
     </Description>
     <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"></Type>
-  </Item>    <!-- NZQAShortCourseInd -->  
+  </Item>    <!-- 12. NZQAShortCourseInd -->  
   <Item>
     <Element>LearningStandardList</Element>
     <Characteristics>O</Characteristics>
@@ -135,7 +135,7 @@
       <p>A list of references to LearningStandard data objects that students are assessed against as part of the Course</p>
     </Description>
     <Type ref="CommonTypes" name='LearningStandardListType'/>
-  </Item>    <!-- LearningStandardList -->
+  </Item>    <!-- 13. LearningStandardList -->
   <Item>
     <Element>CredentialList</Element>
     <Characteristics>O</Characteristics>
@@ -144,7 +144,7 @@
       <p>A list of <code>ObjectReference</code>s to the Credentials that may be gained by students completing the course.</p>
     </Description>
     <Type ref="CommonTypes" name='CredentialListType'/>
-  </Item>    <!-- CredentialList -->
+  </Item>    <!-- 14. CredentialList -->
 	<Item>
 		<Element>RecordAudit</Element>    
 		<Characteristics>O</Characteristics>
@@ -153,7 +153,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
+	</Item>    <!-- 15. RecordAudit -->
   
   <xi:include parse="xml" href="Examples/ProviderCourse.xml"/>
 </DataObject>

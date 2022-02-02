@@ -22,7 +22,7 @@
 		<p>The system assigned GUID for the Organisation, that is used across systems.</p>
 	</Description>
 	<Type ref="CommonTypes" name="RefIdType"/>
-  </Item>   <!-- OrganisationRefId -->
+  </Item>   <!-- 1. OrganisationRefId -->
   <Item>
 	<Element>OrganisationLocalId</Element>
 	<Characteristics>O</Characteristics>
@@ -32,7 +32,7 @@
 		the master data system for Ministry organisations.</p>
 	</Description>
 	<Type ref="CommonTypes" name="LocalIdType"/>
-  </Item>   <!-- OrganisationLocalId -->
+  </Item>   <!-- 2. OrganisationLocalId -->
   
   <Item>
 	  <Element>RecordAudit</Element>    
@@ -42,7 +42,7 @@
 	  <p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 	  </Description>
 	  <Type ref="CommonTypes" name="RecordAuditType"></Type>
-  </Item>    <!-- RecordAudit -->
+  </Item>    <!-- 100. RecordAudit -->
 
   <xi:include parse="xml" href="Examples/Organisation.xml"/>	
 </DataObject>

@@ -13,1005 +13,1255 @@
 Conforms to the International Standard ISO 3166 Codes for the Representation of Names of Countries and their Subdivisions (ISO 3166-1:2013). 
 NZ Education adopts the alpha-3 representation of this standard.</p>
          </Intro>
-         <ID>3166Country</ID>
+         <ID>3166 Country</ID>
          <Values>
             <Value>
                <Code>ABW</Code>
                <Text>Aruba</Text>
             </Value>
+            <!-- ABW . Aruba-->
             <Value>
                <Code>AFG</Code>
                <Text>Afghanistan</Text>
             </Value>
+            <!-- AFG . Afghanistan-->
             <Value>
                <Code>AGO</Code>
                <Text>Angola</Text>
             </Value>
+            <!-- AGO . Angola-->
             <Value>
                <Code>AIA</Code>
                <Text>Anguilla</Text>
             </Value>
+            <!-- AIA . Anguilla-->
             <Value>
                <Code>ALA</Code>
                <Text>Åland Islands</Text>
             </Value>
+            <!-- ALA . Åland Islands-->
             <Value>
                <Code>ALB</Code>
                <Text>Albania</Text>
             </Value>
+            <!-- ALB . Albania-->
             <Value>
                <Code>AND</Code>
                <Text>Andorra</Text>
             </Value>
+            <!-- AND . Andorra-->
             <Value>
                <Code>ARE</Code>
                <Text>United Arab Emirates</Text>
             </Value>
+            <!-- ARE . United Arab Emirates-->
             <Value>
                <Code>ARG</Code>
                <Text>Argentina</Text>
             </Value>
+            <!-- ARG . Argentina-->
             <Value>
                <Code>ARM</Code>
                <Text>Armenia</Text>
             </Value>
+            <!-- ARM . Armenia-->
             <Value>
                <Code>ASM</Code>
                <Text>American Samoa</Text>
             </Value>
+            <!-- ASM . American Samoa-->
             <Value>
                <Code>ATA</Code>
                <Text>Antarctica</Text>
             </Value>
+            <!-- ATA . Antarctica-->
             <Value>
                <Code>ATF</Code>
                <Text>French Southern Territories</Text>
             </Value>
+            <!-- ATF . French Southern Territories-->
             <Value>
                <Code>ATG</Code>
                <Text>Antigua and Barbuda</Text>
             </Value>
+            <!-- ATG . Antigua and Barbuda-->
             <Value>
                <Code>AUS</Code>
                <Text>Australia</Text>
             </Value>
+            <!-- AUS . Australia-->
             <Value>
                <Code>AUT</Code>
                <Text>Austria</Text>
             </Value>
+            <!-- AUT . Austria-->
             <Value>
                <Code>AZE</Code>
                <Text>Azerbaijan</Text>
             </Value>
+            <!-- AZE . Azerbaijan-->
             <Value>
                <Code>BDI</Code>
                <Text>Burundi</Text>
             </Value>
+            <!-- BDI . Burundi-->
             <Value>
                <Code>BEL</Code>
                <Text>Belgium</Text>
             </Value>
+            <!-- BEL . Belgium-->
             <Value>
                <Code>BEN</Code>
                <Text>Benin</Text>
             </Value>
+            <!-- BEN . Benin-->
             <Value>
                <Code>BES</Code>
                <Text>Bonaire, Sint Eustatius and Saba</Text>
             </Value>
+            <!-- BES . Bonaire, Sint Eustatius and Saba-->
             <Value>
                <Code>BFA</Code>
                <Text>Burkina Faso</Text>
             </Value>
+            <!-- BFA . Burkina Faso-->
             <Value>
                <Code>BGD</Code>
                <Text>Bangladesh</Text>
             </Value>
+            <!-- BGD . Bangladesh-->
             <Value>
                <Code>BGR</Code>
                <Text>Bulgaria</Text>
             </Value>
+            <!-- BGR . Bulgaria-->
             <Value>
                <Code>BHR</Code>
                <Text>Bahrain</Text>
             </Value>
+            <!-- BHR . Bahrain-->
             <Value>
                <Code>BHS</Code>
                <Text>Bahamas</Text>
             </Value>
+            <!-- BHS . Bahamas-->
             <Value>
                <Code>BIH</Code>
                <Text>Bosnia and Herzegovina</Text>
             </Value>
+            <!-- BIH . Bosnia and Herzegovina-->
             <Value>
                <Code>BLM</Code>
                <Text>Saint Barthélemy</Text>
             </Value>
+            <!-- BLM . Saint Barthélemy-->
             <Value>
                <Code>BLR</Code>
                <Text>Belarus</Text>
             </Value>
+            <!-- BLR . Belarus-->
             <Value>
                <Code>BLZ</Code>
                <Text>Belize</Text>
             </Value>
+            <!-- BLZ . Belize-->
             <Value>
                <Code>BMU</Code>
                <Text>Bermuda</Text>
             </Value>
+            <!-- BMU . Bermuda-->
             <Value>
                <Code>BOL</Code>
                <Text>Bolivia, Plurinational State of</Text>
             </Value>
+            <!-- BOL . Bolivia, Plurinational State of-->
             <Value>
                <Code>BRA</Code>
                <Text>Brazil</Text>
             </Value>
+            <!-- BRA . Brazil-->
             <Value>
                <Code>BRB</Code>
                <Text>Barbados</Text>
             </Value>
+            <!-- BRB . Barbados-->
             <Value>
                <Code>BRN</Code>
                <Text>Brunei Darussalam</Text>
             </Value>
+            <!-- BRN . Brunei Darussalam-->
             <Value>
                <Code>BTN</Code>
                <Text>Bhutan</Text>
             </Value>
+            <!-- BTN . Bhutan-->
             <Value>
                <Code>BVT</Code>
                <Text>Bouvet Island</Text>
             </Value>
+            <!-- BVT . Bouvet Island-->
             <Value>
                <Code>BWA</Code>
                <Text>Botswana</Text>
             </Value>
+            <!-- BWA . Botswana-->
             <Value>
                <Code>CAF</Code>
                <Text>Central African Republic</Text>
             </Value>
+            <!-- CAF . Central African Republic-->
             <Value>
                <Code>CAN</Code>
                <Text>Canada</Text>
             </Value>
+            <!-- CAN . Canada-->
             <Value>
                <Code>CCK</Code>
                <Text>Cocos (Keeling) Islands</Text>
             </Value>
+            <!-- CCK . Cocos (Keeling) Islands-->
             <Value>
                <Code>CHE</Code>
                <Text>Switzerland</Text>
             </Value>
+            <!-- CHE . Switzerland-->
             <Value>
                <Code>CHL</Code>
                <Text>Chile</Text>
             </Value>
+            <!-- CHL . Chile-->
             <Value>
                <Code>CHN</Code>
                <Text>China</Text>
             </Value>
+            <!-- CHN . China-->
             <Value>
                <Code>CIV</Code>
                <Text>Côte d'Ivoire</Text>
             </Value>
+            <!-- CIV . Côte d'Ivoire-->
             <Value>
                <Code>CMR</Code>
                <Text>Cameroon</Text>
             </Value>
+            <!-- CMR . Cameroon-->
             <Value>
                <Code>COD</Code>
                <Text>Congo, the Democratic Republic of the</Text>
             </Value>
+            <!-- COD . Congo, the Democratic Republic of the-->
             <Value>
                <Code>COG</Code>
                <Text>Congo</Text>
             </Value>
+            <!-- COG . Congo-->
             <Value>
                <Code>COK</Code>
                <Text>Cook Islands</Text>
             </Value>
+            <!-- COK . Cook Islands-->
             <Value>
                <Code>COL</Code>
                <Text>Colombia</Text>
             </Value>
+            <!-- COL . Colombia-->
             <Value>
                <Code>COM</Code>
                <Text>Comoros</Text>
             </Value>
+            <!-- COM . Comoros-->
             <Value>
                <Code>CPV</Code>
                <Text>Cabo Verde</Text>
             </Value>
+            <!-- CPV . Cabo Verde-->
             <Value>
                <Code>CRI</Code>
                <Text>Costa Rica</Text>
             </Value>
+            <!-- CRI . Costa Rica-->
             <Value>
                <Code>CUB</Code>
                <Text>Cuba</Text>
             </Value>
+            <!-- CUB . Cuba-->
             <Value>
                <Code>CUW</Code>
                <Text>Curaçao</Text>
             </Value>
+            <!-- CUW . Curaçao-->
             <Value>
                <Code>CXR</Code>
                <Text>Christmas Island</Text>
             </Value>
+            <!-- CXR . Christmas Island-->
             <Value>
                <Code>CYM</Code>
                <Text>Cayman Islands</Text>
             </Value>
+            <!-- CYM . Cayman Islands-->
             <Value>
                <Code>CYP</Code>
                <Text>Cyprus</Text>
             </Value>
+            <!-- CYP . Cyprus-->
             <Value>
                <Code>CZE</Code>
                <Text>Czechia</Text>
             </Value>
+            <!-- CZE . Czechia-->
             <Value>
                <Code>DEU</Code>
                <Text>Germany</Text>
             </Value>
+            <!-- DEU . Germany-->
             <Value>
                <Code>DJI</Code>
                <Text>Djibouti</Text>
             </Value>
+            <!-- DJI . Djibouti-->
             <Value>
                <Code>DMA</Code>
                <Text>Dominica</Text>
             </Value>
+            <!-- DMA . Dominica-->
             <Value>
                <Code>DNK</Code>
                <Text>Denmark</Text>
             </Value>
+            <!-- DNK . Denmark-->
             <Value>
                <Code>DOM</Code>
                <Text>Dominican Republic</Text>
             </Value>
+            <!-- DOM . Dominican Republic-->
             <Value>
                <Code>DZA</Code>
                <Text>Algeria</Text>
             </Value>
+            <!-- DZA . Algeria-->
             <Value>
                <Code>ECU</Code>
                <Text>Ecuador</Text>
             </Value>
+            <!-- ECU . Ecuador-->
             <Value>
                <Code>EGY</Code>
                <Text>Egypt</Text>
             </Value>
+            <!-- EGY . Egypt-->
             <Value>
                <Code>ERI</Code>
                <Text>Eritrea</Text>
             </Value>
+            <!-- ERI . Eritrea-->
             <Value>
                <Code>ESH</Code>
                <Text>Western Sahara</Text>
             </Value>
+            <!-- ESH . Western Sahara-->
             <Value>
                <Code>ESP</Code>
                <Text>Spain</Text>
             </Value>
+            <!-- ESP . Spain-->
             <Value>
                <Code>EST</Code>
                <Text>Estonia</Text>
             </Value>
+            <!-- EST . Estonia-->
             <Value>
                <Code>ETH</Code>
                <Text>Ethiopia</Text>
             </Value>
+            <!-- ETH . Ethiopia-->
             <Value>
                <Code>FIN</Code>
                <Text>Finland</Text>
             </Value>
+            <!-- FIN . Finland-->
             <Value>
                <Code>FJI</Code>
                <Text>Fiji</Text>
             </Value>
+            <!-- FJI . Fiji-->
             <Value>
                <Code>FLK</Code>
                <Text>Falkland Islands (Malvinas)</Text>
             </Value>
+            <!-- FLK . Falkland Islands (Malvinas)-->
             <Value>
                <Code>FRA</Code>
                <Text>France</Text>
             </Value>
+            <!-- FRA . France-->
             <Value>
                <Code>FRO</Code>
                <Text>Faroe Islands</Text>
             </Value>
+            <!-- FRO . Faroe Islands-->
             <Value>
                <Code>FSM</Code>
                <Text>Micronesia, Federated States of</Text>
             </Value>
+            <!-- FSM . Micronesia, Federated States of-->
             <Value>
                <Code>GAB</Code>
                <Text>Gabon</Text>
             </Value>
+            <!-- GAB . Gabon-->
             <Value>
                <Code>GBR</Code>
                <Text>United Kingdom</Text>
             </Value>
+            <!-- GBR . United Kingdom-->
             <Value>
                <Code>GEO</Code>
                <Text>Georgia</Text>
             </Value>
+            <!-- GEO . Georgia-->
             <Value>
                <Code>GGY</Code>
                <Text>Guernsey</Text>
             </Value>
+            <!-- GGY . Guernsey-->
             <Value>
                <Code>GHA</Code>
                <Text>Ghana</Text>
             </Value>
+            <!-- GHA . Ghana-->
             <Value>
                <Code>GIB</Code>
                <Text>Gibraltar</Text>
             </Value>
+            <!-- GIB . Gibraltar-->
             <Value>
                <Code>GIN</Code>
                <Text>Guinea</Text>
             </Value>
+            <!-- GIN . Guinea-->
             <Value>
                <Code>GLP</Code>
                <Text>Guadeloupe</Text>
             </Value>
+            <!-- GLP . Guadeloupe-->
             <Value>
                <Code>GMB</Code>
                <Text>Gambia</Text>
             </Value>
+            <!-- GMB . Gambia-->
             <Value>
                <Code>GNB</Code>
                <Text>Guinea-Bissau</Text>
             </Value>
+            <!-- GNB . Guinea-Bissau-->
             <Value>
                <Code>GNQ</Code>
                <Text>Equatorial Guinea</Text>
             </Value>
+            <!-- GNQ . Equatorial Guinea-->
             <Value>
                <Code>GRC</Code>
                <Text>Greece</Text>
             </Value>
+            <!-- GRC . Greece-->
             <Value>
                <Code>GRD</Code>
                <Text>Grenada</Text>
             </Value>
+            <!-- GRD . Grenada-->
             <Value>
                <Code>GRL</Code>
                <Text>Greenland</Text>
             </Value>
+            <!-- GRL . Greenland-->
             <Value>
                <Code>GTM</Code>
                <Text>Guatemala</Text>
             </Value>
+            <!-- GTM . Guatemala-->
             <Value>
                <Code>GUF</Code>
                <Text>French Guiana</Text>
             </Value>
+            <!-- GUF . French Guiana-->
             <Value>
                <Code>GUM</Code>
                <Text>Guam</Text>
             </Value>
+            <!-- GUM . Guam-->
             <Value>
                <Code>GUY</Code>
                <Text>Guyana</Text>
             </Value>
+            <!-- GUY . Guyana-->
             <Value>
                <Code>HKG</Code>
                <Text>Hong Kong</Text>
             </Value>
+            <!-- HKG . Hong Kong-->
             <Value>
                <Code>HMD</Code>
                <Text>Heard Island and McDonald Islands</Text>
             </Value>
+            <!-- HMD . Heard Island and McDonald Islands-->
             <Value>
                <Code>HND</Code>
                <Text>Honduras</Text>
             </Value>
+            <!-- HND . Honduras-->
             <Value>
                <Code>HRV</Code>
                <Text>Croatia</Text>
             </Value>
+            <!-- HRV . Croatia-->
             <Value>
                <Code>HTI</Code>
                <Text>Haiti</Text>
             </Value>
+            <!-- HTI . Haiti-->
             <Value>
                <Code>HUN</Code>
                <Text>Hungary</Text>
             </Value>
+            <!-- HUN . Hungary-->
             <Value>
                <Code>IDN</Code>
                <Text>Indonesia</Text>
             </Value>
+            <!-- IDN . Indonesia-->
             <Value>
                <Code>IMN</Code>
                <Text>Isle of Man</Text>
             </Value>
+            <!-- IMN . Isle of Man-->
             <Value>
                <Code>IND</Code>
                <Text>India</Text>
             </Value>
+            <!-- IND . India-->
             <Value>
                <Code>IOT</Code>
                <Text>British Indian Ocean Territory</Text>
             </Value>
+            <!-- IOT . British Indian Ocean Territory-->
             <Value>
                <Code>IRL</Code>
                <Text>Ireland</Text>
             </Value>
+            <!-- IRL . Ireland-->
             <Value>
                <Code>IRN</Code>
                <Text>Iran, Islamic Republic of</Text>
             </Value>
+            <!-- IRN . Iran, Islamic Republic of-->
             <Value>
                <Code>IRQ</Code>
                <Text>Iraq</Text>
             </Value>
+            <!-- IRQ . Iraq-->
             <Value>
                <Code>ISL</Code>
                <Text>Iceland</Text>
             </Value>
+            <!-- ISL . Iceland-->
             <Value>
                <Code>ISR</Code>
                <Text>Israel</Text>
             </Value>
+            <!-- ISR . Israel-->
             <Value>
                <Code>ITA</Code>
                <Text>Italy</Text>
             </Value>
+            <!-- ITA . Italy-->
             <Value>
                <Code>JAM</Code>
                <Text>Jamaica</Text>
             </Value>
+            <!-- JAM . Jamaica-->
             <Value>
                <Code>JEY</Code>
                <Text>Jersey</Text>
             </Value>
+            <!-- JEY . Jersey-->
             <Value>
                <Code>JOR</Code>
                <Text>Jordan</Text>
             </Value>
+            <!-- JOR . Jordan-->
             <Value>
                <Code>JPN</Code>
                <Text>Japan</Text>
             </Value>
+            <!-- JPN . Japan-->
             <Value>
                <Code>KAZ</Code>
                <Text>Kazakhstan</Text>
             </Value>
+            <!-- KAZ . Kazakhstan-->
             <Value>
                <Code>KEN</Code>
                <Text>Kenya</Text>
             </Value>
+            <!-- KEN . Kenya-->
             <Value>
                <Code>KGZ</Code>
                <Text>Kyrgyzstan</Text>
             </Value>
+            <!-- KGZ . Kyrgyzstan-->
             <Value>
                <Code>KHM</Code>
                <Text>Cambodia</Text>
             </Value>
+            <!-- KHM . Cambodia-->
             <Value>
                <Code>KIR</Code>
                <Text>Kiribati</Text>
             </Value>
+            <!-- KIR . Kiribati-->
             <Value>
                <Code>KNA</Code>
                <Text>Saint Kitts and Nevis</Text>
             </Value>
+            <!-- KNA . Saint Kitts and Nevis-->
             <Value>
                <Code>KOR</Code>
                <Text>Korea, Republic of</Text>
             </Value>
+            <!-- KOR . Korea, Republic of-->
             <Value>
                <Code>KWT</Code>
                <Text>Kuwait</Text>
             </Value>
+            <!-- KWT . Kuwait-->
             <Value>
                <Code>LAO</Code>
                <Text>Lao People's Democratic Republic</Text>
             </Value>
+            <!-- LAO . Lao People's Democratic Republic-->
             <Value>
                <Code>LBN</Code>
                <Text>Lebanon</Text>
             </Value>
+            <!-- LBN . Lebanon-->
             <Value>
                <Code>LBR</Code>
                <Text>Liberia</Text>
             </Value>
+            <!-- LBR . Liberia-->
             <Value>
                <Code>LBY</Code>
                <Text>Libya</Text>
             </Value>
+            <!-- LBY . Libya-->
             <Value>
                <Code>LCA</Code>
                <Text>Saint Lucia</Text>
             </Value>
+            <!-- LCA . Saint Lucia-->
             <Value>
                <Code>LIE</Code>
                <Text>Liechtenstein</Text>
             </Value>
+            <!-- LIE . Liechtenstein-->
             <Value>
                <Code>LKA</Code>
                <Text>Sri Lanka</Text>
             </Value>
+            <!-- LKA . Sri Lanka-->
             <Value>
                <Code>LSO</Code>
                <Text>Lesotho</Text>
             </Value>
+            <!-- LSO . Lesotho-->
             <Value>
                <Code>LTU</Code>
                <Text>Lithuania</Text>
             </Value>
+            <!-- LTU . Lithuania-->
             <Value>
                <Code>LUX</Code>
                <Text>Luxembourg</Text>
             </Value>
+            <!-- LUX . Luxembourg-->
             <Value>
                <Code>LVA</Code>
                <Text>Latvia</Text>
             </Value>
+            <!-- LVA . Latvia-->
             <Value>
                <Code>MAC</Code>
                <Text>Macao</Text>
             </Value>
+            <!-- MAC . Macao-->
             <Value>
                <Code>MAF</Code>
                <Text>Saint Martin (French part)</Text>
             </Value>
+            <!-- MAF . Saint Martin (French part)-->
             <Value>
                <Code>MAR</Code>
                <Text>Morocco</Text>
             </Value>
+            <!-- MAR . Morocco-->
             <Value>
                <Code>MCO</Code>
                <Text>Monaco</Text>
             </Value>
+            <!-- MCO . Monaco-->
             <Value>
                <Code>MDA</Code>
                <Text>Moldova, Republic of</Text>
             </Value>
+            <!-- MDA . Moldova, Republic of-->
             <Value>
                <Code>MDG</Code>
                <Text>Madagascar</Text>
             </Value>
+            <!-- MDG . Madagascar-->
             <Value>
                <Code>MDV</Code>
                <Text>Maldives</Text>
             </Value>
+            <!-- MDV . Maldives-->
             <Value>
                <Code>MEX</Code>
                <Text>Mexico</Text>
             </Value>
+            <!-- MEX . Mexico-->
             <Value>
                <Code>MHL</Code>
                <Text>Marshall Islands</Text>
             </Value>
+            <!-- MHL . Marshall Islands-->
             <Value>
                <Code>MKD</Code>
                <Text>Macedonia, the former Yugoslav Republic of</Text>
             </Value>
+            <!-- MKD . Macedonia, the former Yugoslav Republic of-->
             <Value>
                <Code>MLI</Code>
                <Text>Mali</Text>
             </Value>
+            <!-- MLI . Mali-->
             <Value>
                <Code>MLT</Code>
                <Text>Malta</Text>
             </Value>
+            <!-- MLT . Malta-->
             <Value>
                <Code>MMR</Code>
                <Text>Myanmar</Text>
             </Value>
+            <!-- MMR . Myanmar-->
             <Value>
                <Code>MNE</Code>
                <Text>Montenegro</Text>
             </Value>
+            <!-- MNE . Montenegro-->
             <Value>
                <Code>MNG</Code>
                <Text>Mongolia</Text>
             </Value>
+            <!-- MNG . Mongolia-->
             <Value>
                <Code>MNP</Code>
                <Text>Northern Mariana Islands</Text>
             </Value>
+            <!-- MNP . Northern Mariana Islands-->
             <Value>
                <Code>MOZ</Code>
                <Text>Mozambique</Text>
             </Value>
+            <!-- MOZ . Mozambique-->
             <Value>
                <Code>MRT</Code>
                <Text>Mauritania</Text>
             </Value>
+            <!-- MRT . Mauritania-->
             <Value>
                <Code>MSR</Code>
                <Text>Montserrat</Text>
             </Value>
+            <!-- MSR . Montserrat-->
             <Value>
                <Code>MTQ</Code>
                <Text>Martinique</Text>
             </Value>
+            <!-- MTQ . Martinique-->
             <Value>
                <Code>MUS</Code>
                <Text>Mauritius</Text>
             </Value>
+            <!-- MUS . Mauritius-->
             <Value>
                <Code>MWI</Code>
                <Text>Malawi</Text>
             </Value>
+            <!-- MWI . Malawi-->
             <Value>
                <Code>MYS</Code>
                <Text>Malaysia</Text>
             </Value>
+            <!-- MYS . Malaysia-->
             <Value>
                <Code>MYT</Code>
                <Text>Mayotte</Text>
             </Value>
+            <!-- MYT . Mayotte-->
             <Value>
                <Code>NAM</Code>
                <Text>Namibia</Text>
             </Value>
+            <!-- NAM . Namibia-->
             <Value>
                <Code>NCL</Code>
                <Text>New Caledonia</Text>
             </Value>
+            <!-- NCL . New Caledonia-->
             <Value>
                <Code>NER</Code>
                <Text>Niger</Text>
             </Value>
+            <!-- NER . Niger-->
             <Value>
                <Code>NFK</Code>
                <Text>Norfolk Island</Text>
             </Value>
+            <!-- NFK . Norfolk Island-->
             <Value>
                <Code>NGA</Code>
                <Text>Nigeria</Text>
             </Value>
+            <!-- NGA . Nigeria-->
             <Value>
                <Code>NIC</Code>
                <Text>Nicaragua</Text>
             </Value>
+            <!-- NIC . Nicaragua-->
             <Value>
                <Code>NIU</Code>
                <Text>Niue</Text>
             </Value>
+            <!-- NIU . Niue-->
             <Value>
                <Code>NLD</Code>
                <Text>Netherlands</Text>
             </Value>
+            <!-- NLD . Netherlands-->
             <Value>
                <Code>NOR</Code>
                <Text>Norway</Text>
             </Value>
+            <!-- NOR . Norway-->
             <Value>
                <Code>NPL</Code>
                <Text>Nepal</Text>
             </Value>
+            <!-- NPL . Nepal-->
             <Value>
                <Code>NRU</Code>
                <Text>Nauru</Text>
             </Value>
+            <!-- NRU . Nauru-->
             <Value>
                <Code>NZL</Code>
                <Text>New Zealand</Text>
             </Value>
+            <!-- NZL . New Zealand-->
             <Value>
                <Code>OMN</Code>
                <Text>Oman</Text>
             </Value>
+            <!-- OMN . Oman-->
             <Value>
                <Code>PAK</Code>
                <Text>Pakistan</Text>
             </Value>
+            <!-- PAK . Pakistan-->
             <Value>
                <Code>PAN</Code>
                <Text>Panama</Text>
             </Value>
+            <!-- PAN . Panama-->
             <Value>
                <Code>PCN</Code>
                <Text>Pitcairn</Text>
             </Value>
+            <!-- PCN . Pitcairn-->
             <Value>
                <Code>PER</Code>
                <Text>Peru</Text>
             </Value>
+            <!-- PER . Peru-->
             <Value>
                <Code>PHL</Code>
                <Text>Philippines</Text>
             </Value>
+            <!-- PHL . Philippines-->
             <Value>
                <Code>PLW</Code>
                <Text>Palau</Text>
             </Value>
+            <!-- PLW . Palau-->
             <Value>
                <Code>PNG</Code>
                <Text>Papua New Guinea</Text>
             </Value>
+            <!-- PNG . Papua New Guinea-->
             <Value>
                <Code>POL</Code>
                <Text>Poland</Text>
             </Value>
+            <!-- POL . Poland-->
             <Value>
                <Code>PRI</Code>
                <Text>Puerto Rico</Text>
             </Value>
+            <!-- PRI . Puerto Rico-->
             <Value>
                <Code>PRK</Code>
                <Text>Korea, Democratic People's Republic of</Text>
             </Value>
+            <!-- PRK . Korea, Democratic People's Republic of-->
             <Value>
                <Code>PRT</Code>
                <Text>Portugal</Text>
             </Value>
+            <!-- PRT . Portugal-->
             <Value>
                <Code>PRY</Code>
                <Text>Paraguay</Text>
             </Value>
+            <!-- PRY . Paraguay-->
             <Value>
                <Code>PSE</Code>
                <Text>Palestine, State of</Text>
             </Value>
+            <!-- PSE . Palestine, State of-->
             <Value>
                <Code>PYF</Code>
                <Text>French Polynesia</Text>
             </Value>
+            <!-- PYF . French Polynesia-->
             <Value>
                <Code>QAT</Code>
                <Text>Qatar</Text>
             </Value>
+            <!-- QAT . Qatar-->
             <Value>
                <Code>REU</Code>
                <Text>Réunion</Text>
             </Value>
+            <!-- REU . Réunion-->
             <Value>
                <Code>ROU</Code>
                <Text>Romania</Text>
             </Value>
+            <!-- ROU . Romania-->
             <Value>
                <Code>RUS</Code>
                <Text>Russian Federation</Text>
             </Value>
+            <!-- RUS . Russian Federation-->
             <Value>
                <Code>RWA</Code>
                <Text>Rwanda</Text>
             </Value>
+            <!-- RWA . Rwanda-->
             <Value>
                <Code>SAU</Code>
                <Text>Saudi Arabia</Text>
             </Value>
+            <!-- SAU . Saudi Arabia-->
             <Value>
                <Code>SDN</Code>
                <Text>Sudan</Text>
             </Value>
+            <!-- SDN . Sudan-->
             <Value>
                <Code>SEN</Code>
                <Text>Senegal</Text>
             </Value>
+            <!-- SEN . Senegal-->
             <Value>
                <Code>SGP</Code>
                <Text>Singapore</Text>
             </Value>
+            <!-- SGP . Singapore-->
             <Value>
                <Code>SGS</Code>
                <Text>South Georgia and the South Sandwich Islands</Text>
             </Value>
+            <!-- SGS . South Georgia and the South Sandwich Islands-->
             <Value>
                <Code>SHN</Code>
                <Text>Saint Helena, Ascension and Tristan da Cunha</Text>
             </Value>
+            <!-- SHN . Saint Helena, Ascension and Tristan da Cunha-->
             <Value>
                <Code>SJM</Code>
                <Text>Svalbard and Jan Mayen</Text>
             </Value>
+            <!-- SJM . Svalbard and Jan Mayen-->
             <Value>
                <Code>SLB</Code>
                <Text>Solomon Islands</Text>
             </Value>
+            <!-- SLB . Solomon Islands-->
             <Value>
                <Code>SLE</Code>
                <Text>Sierra Leone</Text>
             </Value>
+            <!-- SLE . Sierra Leone-->
             <Value>
                <Code>SLV</Code>
                <Text>El Salvador</Text>
             </Value>
+            <!-- SLV . El Salvador-->
             <Value>
                <Code>SMR</Code>
                <Text>San Marino</Text>
             </Value>
+            <!-- SMR . San Marino-->
             <Value>
                <Code>SOM</Code>
                <Text>Somalia</Text>
             </Value>
+            <!-- SOM . Somalia-->
             <Value>
                <Code>SPM</Code>
                <Text>Saint Pierre and Miquelon</Text>
             </Value>
+            <!-- SPM . Saint Pierre and Miquelon-->
             <Value>
                <Code>SRB</Code>
                <Text>Serbia</Text>
             </Value>
+            <!-- SRB . Serbia-->
             <Value>
                <Code>SSD</Code>
                <Text>South Sudan</Text>
             </Value>
+            <!-- SSD . South Sudan-->
             <Value>
                <Code>STP</Code>
                <Text>Sao Tome and Principe</Text>
             </Value>
+            <!-- STP . Sao Tome and Principe-->
             <Value>
                <Code>SUR</Code>
                <Text>Suriname</Text>
             </Value>
+            <!-- SUR . Suriname-->
             <Value>
                <Code>SVK</Code>
                <Text>Slovakia</Text>
             </Value>
+            <!-- SVK . Slovakia-->
             <Value>
                <Code>SVN</Code>
                <Text>Slovenia</Text>
             </Value>
+            <!-- SVN . Slovenia-->
             <Value>
                <Code>SWE</Code>
                <Text>Sweden</Text>
             </Value>
+            <!-- SWE . Sweden-->
             <Value>
                <Code>SWZ</Code>
                <Text>Swaziland</Text>
             </Value>
+            <!-- SWZ . Swaziland-->
             <Value>
                <Code>SXM</Code>
                <Text>Sint Maarten (Dutch part)</Text>
             </Value>
+            <!-- SXM . Sint Maarten (Dutch part)-->
             <Value>
                <Code>SYC</Code>
                <Text>Seychelles</Text>
             </Value>
+            <!-- SYC . Seychelles-->
             <Value>
                <Code>SYR</Code>
                <Text>Syrian Arab Republic</Text>
             </Value>
+            <!-- SYR . Syrian Arab Republic-->
             <Value>
                <Code>TCA</Code>
                <Text>Turks and Caicos Islands</Text>
             </Value>
+            <!-- TCA . Turks and Caicos Islands-->
             <Value>
                <Code>TCD</Code>
                <Text>Chad</Text>
             </Value>
+            <!-- TCD . Chad-->
             <Value>
                <Code>TGO</Code>
                <Text>Togo</Text>
             </Value>
+            <!-- TGO . Togo-->
             <Value>
                <Code>THA</Code>
                <Text>Thailand</Text>
             </Value>
+            <!-- THA . Thailand-->
             <Value>
                <Code>TJK</Code>
                <Text>Tajikistan</Text>
             </Value>
+            <!-- TJK . Tajikistan-->
             <Value>
                <Code>TKL</Code>
                <Text>Tokelau</Text>
             </Value>
+            <!-- TKL . Tokelau-->
             <Value>
                <Code>TKM</Code>
                <Text>Turkmenistan</Text>
             </Value>
+            <!-- TKM . Turkmenistan-->
             <Value>
                <Code>TLS</Code>
                <Text>Timor-Leste</Text>
             </Value>
+            <!-- TLS . Timor-Leste-->
             <Value>
                <Code>TON</Code>
                <Text>Tonga</Text>
             </Value>
+            <!-- TON . Tonga-->
             <Value>
                <Code>TTO</Code>
                <Text>Trinidad and Tobago</Text>
             </Value>
+            <!-- TTO . Trinidad and Tobago-->
             <Value>
                <Code>TUN</Code>
                <Text>Tunisia</Text>
             </Value>
+            <!-- TUN . Tunisia-->
             <Value>
                <Code>TUR</Code>
                <Text>Turkey</Text>
             </Value>
+            <!-- TUR . Turkey-->
             <Value>
                <Code>TUV</Code>
                <Text>Tuvalu</Text>
             </Value>
+            <!-- TUV . Tuvalu-->
             <Value>
                <Code>TWN</Code>
                <Text>Taiwan, Province of China</Text>
             </Value>
+            <!-- TWN . Taiwan, Province of China-->
             <Value>
                <Code>TZA</Code>
                <Text>Tanzania, United Republic of</Text>
             </Value>
+            <!-- TZA . Tanzania, United Republic of-->
             <Value>
                <Code>UGA</Code>
                <Text>Uganda</Text>
             </Value>
+            <!-- UGA . Uganda-->
             <Value>
                <Code>UKR</Code>
                <Text>Ukraine</Text>
             </Value>
+            <!-- UKR . Ukraine-->
             <Value>
                <Code>UMI</Code>
                <Text>United States Minor Outlying Islands</Text>
             </Value>
+            <!-- UMI . United States Minor Outlying Islands-->
             <Value>
                <Code>URY</Code>
                <Text>Uruguay</Text>
             </Value>
+            <!-- URY . Uruguay-->
             <Value>
                <Code>USA</Code>
                <Text>United States of America</Text>
             </Value>
+            <!-- USA . United States of America-->
             <Value>
                <Code>UZB</Code>
                <Text>Uzbekistan</Text>
             </Value>
+            <!-- UZB . Uzbekistan-->
             <Value>
                <Code>VAT</Code>
                <Text>Holy See</Text>
             </Value>
+            <!-- VAT . Holy See-->
             <Value>
                <Code>VCT</Code>
                <Text>Saint Vincent and the Grenadines</Text>
             </Value>
+            <!-- VCT . Saint Vincent and the Grenadines-->
             <Value>
                <Code>VEN</Code>
                <Text>Venezuela, Bolivarian Republic of</Text>
             </Value>
+            <!-- VEN . Venezuela, Bolivarian Republic of-->
             <Value>
                <Code>VGB</Code>
                <Text>Virgin Islands, British</Text>
             </Value>
+            <!-- VGB . Virgin Islands, British-->
             <Value>
                <Code>VIR</Code>
                <Text>Virgin Islands, U.S.</Text>
             </Value>
+            <!-- VIR . Virgin Islands, U.S.-->
             <Value>
                <Code>VNM</Code>
                <Text>Viet Nam</Text>
             </Value>
+            <!-- VNM . Viet Nam-->
             <Value>
                <Code>VUT</Code>
                <Text>Vanuatu</Text>
             </Value>
+            <!-- VUT . Vanuatu-->
             <Value>
                <Code>WLF</Code>
                <Text>Wallis and Futuna</Text>
             </Value>
+            <!-- WLF . Wallis and Futuna-->
             <Value>
                <Code>WSM</Code>
                <Text>Samoa</Text>
             </Value>
+            <!-- WSM . Samoa-->
             <Value>
                <Code>YEM</Code>
                <Text>Yemen</Text>
             </Value>
+            <!-- YEM . Yemen-->
             <Value>
                <Code>ZAF</Code>
                <Text>South Africa</Text>
             </Value>
+            <!-- ZAF . South Africa-->
             <Value>
                <Code>ZMB</Code>
                <Text>Zambia</Text>
             </Value>
+            <!-- ZMB . Zambia-->
             <Value>
                <Code>ZWE</Code>
                <Text>Zimbabwe</Text>
             </Value>
+            <!-- ZWE . Zimbabwe-->
          </Values>
       </CodeSet>
+      <!-- 3166 Country-->
    </Grouping>
 </IncludeGroup>

@@ -1572,29 +1572,6 @@
 			<Type ref="CodeSets" name="NZCodeSetsProviderAuthorityType"/>
 		</Item>   <!-- Authority, 116 -->
 
-		<!-- TODO - additions in TeRito - Technology Capabilities -->
-		<Item>
-			<Element>ProviderSMS</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>The name of the School Management System (SMS) that the provider is currently using. Note: not all education providers use an SMS.</p>
-			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsSchoolManagementSystemType"/>
-		</Item>   <!-- ProviderSMS -->
-		<Item>
-			<Element>TeRitoConfig</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>Provides iinformation specific to Te Rito, e.g. which functionality in
-				 Te Rito an organisation (school, ECE etc.) is utilising.
-				</p>
-			</Description>
-			<Type ref="CommonTypes" name="TeRitoConfigurationType"/>
-		</Item>   <!-- TeRitoConfig -->
-
-
 		<!-- ECE Stuff -->
 		<Item>
 			<Element>IsLicencedECEServiceProvider</Element>
@@ -1656,6 +1633,28 @@
 			</Description>
 			<Type ref="CommonTypes" name="TertiaryServiceType"/>
 		</Item>   <!-- TertiaryService, 122 -->
+
+		<!-- TODO - additions in TeRito - Technology Capabilities -->
+		<Item>
+			<Element>ProviderSMS</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The name of the School Management System (SMS) that the provider is currently using. Note: not all education providers use an SMS.</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsSchoolManagementSystemType"/>
+		</Item>   <!-- ProviderSMS, 123 -->
+		<Item>
+			<Element>TeRitoConfig</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Provides iinformation specific to Te Rito, e.g. which functionality in
+				 Te Rito an organisation (school, ECE etc.) is utilising.
+				</p>
+			</Description>
+			<Type ref="CommonTypes" name="TeRitoConfigurationType"/>
+		</Item>   <!-- TeRitoConfig, 124 -->
 	</CommonElement>
 
 	<CommonElement name="TeRitoConfigurationType" type="true" dm="true">

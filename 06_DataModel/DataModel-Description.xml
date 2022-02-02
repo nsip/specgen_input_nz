@@ -1,0 +1,40 @@
+<Intro
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	
+    xmlns="http://sifassociation.org/SpecGen">
+		
+    <p>The SIF NZ data model was forked from the SIF AU data model,
+    includes the following (high-level) changes:
+    </p>
+    <ul>
+        <li><p>The <code>SchoolInfo</code> data object from SIF
+        AU is replaced with <code>Organisation</code> data object,
+        as the scope of SIF NZ data model is intended to
+        encompass early childhood education, compulsory
+        schooling (K-12) and tertiary education (higher
+        education).</p>
+        <p><code>Organisation</code> also describes education organisations (such as Kāhui
+        Ako, and Learning Support Clusters) that are known to the NZ education system, not limited to
+        Schools and other Providers.</p></li>
+
+        <li><code>OrganisationRelationship</code> data object
+        records relationships between two education organisatons</li>
+
+        <li><p><code>StudentPersonal</code>, <code>StaffPersonal</code> and <code>StudentContactPersonal</code>
+        data objects no longer share the same <code>PersonInfo</code> object, as each The Privacy Act
+        means that the set of data we are permitted to store for each class of person is different.</p>
+        <p>Demographics area includes NZ statistical standard Ethnicity and Iwi affiliations.</p></li>
+        
+        <li><code>StudentProviderEnrolment</code> expands on
+        StudentSchoolEnrollment, and has extra complexity to
+        cope with SIF NZ having Schools, ECEs and TertiaryOrganisations, rather than just Schools.</li>
+
+        <li>Staff &amp; Student assignment and enrolment to <code>TeachingGroups</code> are 
+        explicitly modelled with transactional data objects <code>StaffTeachingGroupAssignment</code> and
+        <code>StudentTeachingGroupEnrolment</code>.  Merely including staff &amp; students in the TeachingGroup
+        object is insufficient for Privacy Act requirements, we need to know exactly when staff and students were
+        connected via their membership of TeachingGroup.</li>
+    </ul>
+</Intro>

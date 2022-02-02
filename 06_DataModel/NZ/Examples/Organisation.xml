@@ -4,6 +4,8 @@
 	
   <xhtml:Example xmlns="" name="School Provider Example">
     <Organisation>
+        <OrganisationRefId>e189fd55-a6d8-413a-b85c-caf79868938b</OrganisationRefId>
+		<OrganisationLocalId>448</OrganisationLocalId>
 		<Address>
 			<Physical>
 				<Type>RU</Type>
@@ -14,8 +16,8 @@
 		</Address>
 		<CommunicationChannel>
 			<Website>
-				<Notes>Attendance System (Self Service)</Notes>
 				<Value>http://att.hogwarts.school.nz</Value>
+				<Notes>Attendance System (Self Service)</Notes>
 			</Website>
 		</CommunicationChannel>
 		<ContactList>
@@ -99,8 +101,8 @@
 		<Name>Hogwart's Area School</Name>			
 		<Phone>
 			<Main>
-				<Notes>School Secretary DDI</Notes>
 				<Number>(04) 300 9993</Number>
+				<Notes>School Secretary DDI</Notes>
 			</Main>
 		</Phone>
 		<RelatedOrganisationList>
@@ -193,8 +195,6 @@
 					</SchoolYear>
 			</SchoolYearList>
 		</SchoolService>
-        <OrganisationRefId>e189fd55-a6d8-413a-b85c-caf79868938b</OrganisationRefId>
-		<OrganisationLocalId>448</OrganisationLocalId>
 		<RecordAudit>
 			<CreatedDateTime>2019-01-01T03:15:00</CreatedDateTime>
 			<CreatedBy>

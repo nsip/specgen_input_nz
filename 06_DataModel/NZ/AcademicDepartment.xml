@@ -28,7 +28,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>    <!-- AcademicDepartmentRefId -->
+  </Item>    <!-- 1. AcademicDepartmentRefId -->
 
   <Item>
 		<Element>AcademicDepartmentLocalId</Element>
@@ -39,7 +39,7 @@
 			was originally sourced from.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"></Type> 
-	</Item>    <!-- AcademicDepartmentLocalId -->
+	</Item>    <!-- 2. AcademicDepartmentLocalId -->
 
   <Item>
     <Element>Name</Element>
@@ -49,7 +49,7 @@
       <p>The name of the academic department.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- Name -->
+  </Item>    <!-- 3. Name -->
 
   <Item>
     <Element>Description</Element>
@@ -59,7 +59,7 @@
       <p>Free text description providing more detail about the academic department.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>    <!-- Description -->
+  </Item>    <!-- 4. Description -->
 
   <Item>
     <Element>Provider</Element>    
@@ -69,7 +69,7 @@
       <p>The ID (GUID) of the provider for this acadmic department resides in.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
-  </Item>    <!-- Provider -->
+  </Item>    <!-- 5. Provider -->
 
   <Item>
     <Element>StaffList</Element>    
@@ -79,7 +79,7 @@
       <p>A list of the staff members that belong to the academic department.</p>
     </Description>
     <Type ref="CommonTypes" name="StaffListType"></Type>
-  </Item>    <!-- StaffList -->
+  </Item>    <!-- 6. StaffList -->
 
   <Item>
     <Element>CourseList</Element>    
@@ -89,7 +89,7 @@
       <p>A list of the courses the academic department manages.</p>
     </Description>
     <Type ref="CommonTypes" name="CourseListType"></Type>
-  </Item>    <!-- CourseList -->
+  </Item>    <!-- 7 CourseList -->
 
   <Item>
     <Element>SubjectAreaList</Element>    
@@ -99,7 +99,7 @@
       <p>A list of the subject areas the academic department manages.</p>
     </Description>
     <Type ref="CommonTypes" name="SubjectAreaListType"></Type>
-  </Item>    <!-- SubjectAreaList -->
+  </Item>    <!-- 8. SubjectAreaList -->
 
   <Item>
     <Element>RecordAudit</Element>    
@@ -109,7 +109,7 @@
       <p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
     </Description>
     <Type ref="CommonTypes" name="RecordAuditType"></Type>
-  </Item>    <!-- RecordAudit -->
+  </Item>    <!-- 9. RecordAudit -->
 
   <xi:include parse="xml" href="Examples/AcademicDepartment.xml"/>	
 

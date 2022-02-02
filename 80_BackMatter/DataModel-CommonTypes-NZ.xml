@@ -12,6 +12,7 @@
          <Description>
             <p>The academic attainment goals of the student when they enrolment, e.g. they wish to achieve a certain qualification.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>AttainmentGoal</Element>
@@ -21,6 +22,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . AttainmentGoal-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="AcademicDayListType">
       <Item>
@@ -28,6 +30,7 @@
          <Description>
             <p>A list of the academic days in the order they are used in the rotation of this schedule. If a particular academic day appears more than once in the rotation, then it will appear more than once in this list. eg. A 5 day rotation with days A, A, B, A, A, would have 5 entries in the list.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>AcademicDay</Element>
@@ -37,6 +40,7 @@
          </Description>
          <Type ref="CommonTypes" name="AcademicDayType"/>
       </Item>
+      <!-- . AcademicDay-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="AcademicDayType">
       <Item>
@@ -54,6 +58,7 @@
          </Description>
          <Type ref="CommonTypes" name="RefIdType"/>
       </Item>
+      <!-- 1. RefId-->
       <Item>
          <Element>LocalId</Element>
          <Position>2</Position>
@@ -63,6 +68,7 @@
          </Description>
          <Type ref="CommonTypes" name="LocalIdType"/>
       </Item>
+      <!-- 2. LocalId-->
       <Item>
          <Element>Name</Element>
          <Position>3</Position>
@@ -72,6 +78,7 @@
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <!-- 3. Name-->
       <Item>
          <Element>SchedulePeriodTime</Element>
          <Position>10</Position>
@@ -81,6 +88,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 10. SchedulePeriodTime-->
       <Item>
          <Element>PeriodList</Element>
          <Position>11</Position>
@@ -90,6 +98,7 @@
          </Description>
          <Type ref="CommonTypes" name="PeriodListType"/>
       </Item>
+      <!-- 11. PeriodList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="AcademicGoalListType">
       <Item>
@@ -97,6 +106,7 @@
          <Description>
             <p>A list of the student's academic goals.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>AcademicGoal</Element>
@@ -106,6 +116,7 @@
          </Description>
          <Type ref="CommonTypes" name="AcademicGoalType"/>
       </Item>
+      <!-- . AcademicGoal-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="AcademicGoalType">
       <Item>
@@ -123,6 +134,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 1. GoalRecordedDate-->
       <Item>
          <Element>GoalAchievedDate</Element>
          <Position>2</Position>
@@ -132,6 +144,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 2. GoalAchievedDate-->
       <Item>
          <Element>GoalDescription</Element>
          <Position>3</Position>
@@ -141,6 +154,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. GoalDescription-->
       <Item>
          <Element>GoalName</Element>
          <Position>4</Position>
@@ -150,6 +164,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 4. GoalName-->
       <Item>
          <Element>SubjectArea</Element>
          <Position>10</Position>
@@ -159,6 +174,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
       </Item>
+      <!-- 10. SubjectArea-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="AcknowledgementListType">
       <Item>
@@ -166,6 +182,7 @@
          <Description>
             <p>A list of the providers and staff who have been sent the alerts and have acknowledged they have been read.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Acknowledgement</Element>
@@ -175,6 +192,7 @@
          </Description>
          <Type ref="CommonTypes" name="AcknowledgementType"/>
       </Item>
+      <!-- . Acknowledgement-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="AcknowledgementType">
       <Item>
@@ -191,6 +209,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . StaffMember-->
       <Item>
          <Element>Provider</Element>
          <Characteristics>O</Characteristics>
@@ -199,6 +218,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . Provider-->
       <Item>
          <Element>Acknowledged</Element>
          <Characteristics>M</Characteristics>
@@ -207,6 +227,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- . Acknowledged-->
       <Item>
          <Element>AcknowledgedDate</Element>
          <Characteristics>M</Characteristics>
@@ -215,6 +236,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- . AcknowledgedDate-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="ActionTakenListType">
       <Item>
@@ -222,6 +244,7 @@
          <Description>
             <p>A list of the actions taken as a result of this Wellbeing event.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>ActionTaken</Element>
@@ -231,6 +254,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsWellbeingEventActionTakenType"/>
       </Item>
+      <!-- . ActionTaken-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="AdHocMeetingType">
       <Item>
@@ -247,7 +271,11 @@
             <p>The name of the ad hoc meeting.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- 1. MeetingName-->
       <Item>
          <Element>StartTime</Element>
          <Position>2</Position>
@@ -257,6 +285,7 @@
          </Description>
          <Type name="xs:time"/>
       </Item>
+      <!-- 2. StartTime-->
       <Item>
          <Element>EndTime</Element>
          <Position>3</Position>
@@ -266,6 +295,7 @@
          </Description>
          <Type name="xs:time"/>
       </Item>
+      <!-- 3. EndTime-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="AddressType">
       <Item>
@@ -283,6 +313,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsAddressTypeType"/>
       </Item>
+      <!-- 1. Type-->
       <Item>
          <Element>Line1</Element>
          <Position>2</Position>
@@ -291,7 +322,11 @@
             <p>Address line 1.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- 2. Line1-->
       <Item>
          <Element>Line2</Element>
          <Position>3</Position>
@@ -301,6 +336,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. Line2-->
       <Item>
          <Element>Line3</Element>
          <Position>4</Position>
@@ -310,6 +346,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 4. Line3-->
       <Item>
          <Element>Line4</Element>
          <Position>5</Position>
@@ -319,6 +356,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 5. Line4-->
       <Item>
          <Element>Suburb</Element>
          <Position>6</Position>
@@ -328,6 +366,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 6. Suburb-->
       <Item>
          <Element>City</Element>
          <Position>7</Position>
@@ -337,6 +376,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 7. City-->
       <Item>
          <Element>StateProvince</Element>
          <Position>8</Position>
@@ -345,7 +385,11 @@
             <p>The region, state or province code. StateTerritory Code only applicable if a non-New Zealand Address.</p>
          </Description>
          <Type name="xs:string"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- 8. StateProvince-->
       <Item>
          <Element>PostalCode</Element>
          <Position>9</Position>
@@ -355,6 +399,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 9. PostalCode-->
       <Item>
          <Element>Country</Element>
          <Position>10</Position>
@@ -364,6 +409,7 @@
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <!-- 10. Country-->
       <Item>
          <Element>GridLocation</Element>
          <Position>11</Position>
@@ -373,6 +419,7 @@
          </Description>
          <Type ref="CommonTypes" name="GridLocationType"/>
       </Item>
+      <!-- 11. GridLocation-->
       <Item>
          <Element>StatisticalAreaList</Element>
          <Position>12</Position>
@@ -382,6 +429,7 @@
          </Description>
          <Type ref="CommonTypes" name="StatisticalAreaListType"/>
       </Item>
+      <!-- 12. StatisticalAreaList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="AddressesType">
       <Item>
@@ -399,6 +447,7 @@
          </Description>
          <Type ref="CommonTypes" name="AddressType"/>
       </Item>
+      <!-- 1. Physical-->
       <Item>
          <Element>Postal</Element>
          <Position>2</Position>
@@ -408,6 +457,7 @@
          </Description>
          <Type ref="CommonTypes" name="AddressType"/>
       </Item>
+      <!-- 2. Postal-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="AssessmentResultScoreListType">
       <Item>
@@ -415,6 +465,7 @@
          <Description>
             <p>A list of scores for the assessment task result.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>ResultScore</Element>
@@ -424,6 +475,7 @@
          </Description>
          <Type ref="CommonTypes" name="AssessmentResultScoreType"/>
       </Item>
+      <!-- . ResultScore-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="AssessmentResultScoreType">
       <Item>
@@ -441,6 +493,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsScoreTypeType"/>
       </Item>
+      <!-- 1. ScoreType-->
       <Item>
          <Element>Competency</Element>
          <Position>2</Position>
@@ -450,6 +503,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 2. Competency-->
       <Item>
          <Element>ScoreMetric</Element>
          <Position>3</Position>
@@ -459,6 +513,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsScoreMetricType"/>
       </Item>
+      <!-- 3. ScoreMetric-->
       <Item>
          <Element>ScoreValue</Element>
          <Position>4</Position>
@@ -468,6 +523,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 4. ScoreValue-->
       <Item>
          <Element>ScoreMax</Element>
          <Position>5</Position>
@@ -477,6 +533,7 @@
          </Description>
          <Type name="xs:decimal"/>
       </Item>
+      <!-- 5. ScoreMax-->
       <Item>
          <Element>ItemNumber</Element>
          <Position>6</Position>
@@ -488,6 +545,7 @@
          </Description>
          <Type name="xs:int"/>
       </Item>
+      <!-- 6. ItemNumber-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="AssessmentTaskListType">
       <Item>
@@ -495,6 +553,7 @@
          <Description>
             <p>A list of AssessmentTasks that are related to other AssessmentTasks (e.g. as prerequisites), ProviderCourses (denoting assessments required to pass the course), etc.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>SubAssessmentTask</Element>
@@ -504,139 +563,13 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
-   </CommonElement>
-   <CommonElement type="true" dm="true" name="AttendanceTimeListType">
-      <Item>
-         <Element>AttendanceTimeListType</Element>
-         <Description>
-            <p>Breakdown of times that the student was recorded as being present or absent from school or class.</p>
-         </Description>
-      </Item>
-      <Item>
-         <Element>AttendanceTime</Element>
-         <Characteristics>MR</Characteristics>
-         <Description>
-            <p>Details of a specfic time at which the student was recorded as being present or absent from school or class.</p>
-         </Description>
-         <Type ref="CommonTypes" name="AttendanceTimeType"/>
-      </Item>
-   </CommonElement>
-   <CommonElement type="true" dm="true" name="AttendanceTimeType">
-      <Item>
-         <Element>AttendanceTimeType</Element>
-         <Description>
-            <p>Time span that the student entered or returned to school</p>
-         </Description>
-      </Item>
-      <Item>
-         <Element>SchedulePeriod</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The scheduled period this attendnance time list record is for. The SchedulePeriod must be provided if the AttendanceType = 'Scheduled'.</p>
-         </Description>
-         <Type ref="CommonTypes" name="ObjectReferenceType"/>
-      </Item>
-      <Item>
-         <Element>TeachingGroup</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The teaching group that this attendance reord is for, i.e. the class the student was in when the attendance was recorded.</p>
-         </Description>
-         <Type ref="CommonTypes" name="ObjectReferenceType"/>
-      </Item>
-      <Item>
-         <Element>AttendanceType</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>The type of attendance being recorded e.g. Scheduled or Ad Hoc. If it is a schedule attendance then the SchedulePeriod must also be provided. If it is an Ad Hoc attendance then StartDateTime and EndDateTime must also be provided.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsAttendanceTypeType"/>
-      </Item>
-      <Item>
-         <Element>AttendanceCodeGroup</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The attendance code group the students attendance code belongs to.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsAttendanceCodeGroupType"/>
-      </Item>
-      <Item>
-         <Element>AttendanceTimeRefId</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The globally unique identifier for the student's particular attendance reord.</p>
-         </Description>
-         <Type ref="CommonTypes" name="RefIdType"/>
-      </Item>
-      <Item>
-         <Element>AttendanceTimeLocalId</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The source system identifier of the student's particular attendance reord.</p>
-         </Description>
-         <Type ref="CommonTypes" name="LocalIdType"/>
-      </Item>
-      <Item>
-         <Element>RecordAudit</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
-         </Description>
-         <Type ref="CommonTypes" name="RecordAuditType"/>
-      </Item>
-      <Item>
-         <Element>Code</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>MoE defined code for attendance or absence during the time period described.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsAttendanceCodeType"/>
-      </Item>
-      <Item>
-         <Element>AttendanceDate</Element>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>The date the attendance is being record for.</p>
-         </Description>
-         <Type name="xs:date"/>
-      </Item>
-      <Item>
-         <Element>EndTime</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The End Time of the students attendance for the provided Attendance Date. Mandatory for attendance records with a type of 'Ad Hoc'.</p>
-         </Description>
-         <Type name="xs:time"/>
-      </Item>
-      <Item>
-         <Element>Note</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Free text note about the students attendance for the provided date and time/period.</p>
-         </Description>
-         <Type name="xs:normalizedString"/>
-      </Item>
-      <Item>
-         <Element>StartTime</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The Start Time of the students attendance for the provided Attendance Date. Mandatory for attendance records with a type of 'Ad Hoc'.</p>
-         </Description>
-         <Type name="xs:time"/>
-      </Item>
-      <Item>
-         <Element>SubmissionDateTime</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The date the students attendance for this date and time/period was submitted.</p>
-         </Description>
-         <Type name="xs:dateTime"/>
-      </Item>
+      <!-- . SubAssessmentTask-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="AttendeeListType">
       <Item>
          <Element>AttendeeListType</Element>
          <Description/>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Attendee</Element>
@@ -644,8 +577,9 @@
          <Description>
             <p>A person that attended the debriefing.</p>
          </Description>
-         <Type ref="CommonTypes" name="ObjectReferenceType"/>
+         <Type ref="CommonTypes" name="NamedObjectReferenceType"/>
       </Item>
+      <!-- . Attendee-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="AwardContainerType">
       <Item>
@@ -663,6 +597,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 1. AwardDate-->
       <Item>
          <Element>AwardType</Element>
          <Position>2</Position>
@@ -672,6 +607,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsWellbeingAwardTypeType"/>
       </Item>
+      <!-- 2. AwardType-->
       <Item>
          <Element>AwardDescription</Element>
          <Position>3</Position>
@@ -681,6 +617,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. AwardDescription-->
       <Item>
          <Element>AwardNotes</Element>
          <Position>4</Position>
@@ -690,6 +627,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 4. AwardNotes-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="BaseCommunicationChannelType">
       <Item>
@@ -700,31 +638,34 @@
       </Item>
       <Item>
          <Element>Notes</Element>
-         <Position>1</Position>
+         <Position>10</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Notes on when / how to use the communication channel. eg: Phone after 4pm. Schools may also use this note to record caregiver related contact details, eg “Mon to Wed only”.</p>
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <!-- 10. Notes-->
       <Item>
          <Element>PreferenceOrderNumber</Element>
-         <Position>2</Position>
+         <Position>11</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Preference number indicating an order in which communication channels should be used when contacting person or organisation.</p>
          </Description>
          <Type name="xs:unsignedInt"/>
       </Item>
+      <!-- 11. PreferenceOrderNumber-->
       <Item>
          <Element>Usage</Element>
-         <Position>3</Position>
+         <Position>12</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>A code describing the acceptable usage of a person or organisation's communication channel</p>
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsCommunicationUsageType"/>
       </Item>
+      <!-- 12. Usage-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="BaseNameType">
       <Item>
@@ -742,6 +683,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 1. Title-->
       <Item>
          <Element>FamilyName</Element>
          <Position>2</Position>
@@ -750,7 +692,11 @@
             <p>Family name. That part of the person's name which is used to describe family, clan, tribal group, or marital association. Note that this element is required when known. However, it may not be possible to know the family name in which case you should add the available information to the FullName element.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- 2. FamilyName-->
       <Item>
          <Element>GivenName</Element>
          <Position>3</Position>
@@ -759,7 +705,11 @@
             <p>Given name of the person. Note that this element is required if known. However, it may not be possible to know the given name in which case you should add the available information to the FullName element.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- 3. GivenName-->
       <Item>
          <Element>MiddleName</Element>
          <Position>4</Position>
@@ -769,6 +719,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 4. MiddleName-->
       <Item>
          <Element>SecondMiddleName</Element>
          <Position>5</Position>
@@ -778,6 +729,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 5. SecondMiddleName-->
       <Item>
          <Element>FamilyNameFirst</Element>
          <Position>6</Position>
@@ -787,6 +739,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 6. FamilyNameFirst-->
       <Item>
          <Element>PreferredFamilyName</Element>
          <Position>7</Position>
@@ -796,6 +749,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 7. PreferredFamilyName-->
       <Item>
          <Element>PreferredFamilyNameFirst</Element>
          <Position>8</Position>
@@ -805,6 +759,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 8. PreferredFamilyNameFirst-->
       <Item>
          <Element>PreferredGivenName</Element>
          <Position>9</Position>
@@ -814,6 +769,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 9. PreferredGivenName-->
       <Item>
          <Element>Suffix</Element>
          <Position>10</Position>
@@ -823,6 +779,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 10. Suffix-->
       <Item>
          <Element>FullName</Element>
          <Position>11</Position>
@@ -831,7 +788,11 @@
             <p>A free text field for the complete name for display purposes. If this is associated with a StudentPersonal, StaffPersonal or StudentContactPersonal record and the FamilyName and GivenName are not both specified, then this becomes mandatory.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- 11. FullName-->
       <Item>
          <Element>Type</Element>
          <Position>12</Position>
@@ -841,6 +802,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsNameUsageTypeType"/>
       </Item>
+      <!-- 12. Type-->
       <Item>
          <Element>IsVerified</Element>
          <Position>13</Position>
@@ -850,6 +812,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 13. IsVerified-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="BasePersonInfoType">
       <Item>
@@ -867,6 +830,7 @@
          </Description>
          <Type ref="CommonTypes" name="BaseNameType"/>
       </Item>
+      <!-- 1. Name-->
       <Item>
          <Element>Email</Element>
          <Position>2</Position>
@@ -876,6 +840,7 @@
          </Description>
          <Type ref="CommonTypes" name="PersonEmailsType"/>
       </Item>
+      <!-- 2. Email-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="BaseStudentGoalType">
       <Item>
@@ -893,6 +858,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 1. GoalRecordedDate-->
       <Item>
          <Element>GoalAchievedDate</Element>
          <Position>2</Position>
@@ -902,6 +868,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 2. GoalAchievedDate-->
       <Item>
          <Element>GoalDescription</Element>
          <Position>3</Position>
@@ -911,6 +878,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. GoalDescription-->
       <Item>
          <Element>GoalName</Element>
          <Position>4</Position>
@@ -920,6 +888,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 4. GoalName-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="BehaviourDirectedAtListType">
       <Item>
@@ -927,6 +896,7 @@
          <Description>
             <p>The list of the people and/or property that the student, who was restrained, was directing their behaviour at.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>BehaviourDirectedAt</Element>
@@ -936,6 +906,7 @@
          </Description>
          <Type ref="CommonTypes" name="BehaviourDirectedAtType"/>
       </Item>
+      <!-- . BehaviourDirectedAt-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="BehaviourDirectedAtType">
       <Item>
@@ -949,10 +920,11 @@
          <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>The person the student's behaviour was directed at.</p>
+            <p>The person the student's behaviour was directed at. Could be StaffPersonal, StudentPersonal or StudentContactPersonal reference.</p>
          </Description>
-         <Type ref="CommonTypes" name="ObjectReferenceType"/>
+         <Type ref="CommonTypes" name="NamedObjectReferenceType"/>
       </Item>
+      <!-- 1. DirectedAt-->
       <Item>
          <Element>BehaviourDescription</Element>
          <Position>2</Position>
@@ -962,6 +934,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 2. BehaviourDescription-->
       <Item>
          <Element>DirectedAtType</Element>
          <Position>3</Position>
@@ -971,6 +944,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsBehaviourDirectedAtTypeType"/>
       </Item>
+      <!-- 3. DirectedAtType-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="BehaviourIdentifiedListType">
       <Item>
@@ -978,6 +952,7 @@
          <Description>
             <p>A list of the problem behaviours identified for the student as a result of the Wellbeing Event.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>BehaviourIdentified</Element>
@@ -987,6 +962,7 @@
          </Description>
          <Type ref="CommonTypes" name="BehaviourIdentifiedType"/>
       </Item>
+      <!-- . BehaviourIdentified-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="BehaviourIdentifiedType">
       <Item>
@@ -995,7 +971,19 @@
             <p>A problem behaviour identified for the student as a result of the Wellbeing Event. The severity of a behaviour may be minor or major. If it is minor only values from NZCodeSetsWellbeingEventMinorBehaviour are applicable. If it is majoronly values from NZCodeSetsWellbeingEventMajorBehaviour are applicable.</p>
          </Description>
       </Item>
-      <Choice>
+      <Item>
+         <Element>Severity</Element>
+         <Position>1</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The severity of the Wellbeing Event.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsWellbeingEventSeverityType"/>
+      </Item>
+      <!-- 1. Severity-->
+      <Choice fromAssociation="true">
+         <Position>2</Position>
+         <Element>BehaviourIdentifiedListChoice</Element>
          <Item>
             <Element>MinorBehaviour</Element>
             <Position>1</Position>
@@ -1015,15 +1003,7 @@
             <Type ref="CodeSets" name="NZCodeSetsWellbeingEventMajorBehaviourType"/>
          </Item>
       </Choice>
-      <Item>
-         <Element>Severity</Element>
-         <Position>1</Position>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The severity of the Wellbeing Event.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsWellbeingEventSeverityType"/>
-      </Item>
+      <!-- 2. BehaviourIdentifiedListChoice-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="CalendarDateListType">
       <Item>
@@ -1031,6 +1011,7 @@
          <Description>
             <p>A list of calendar dates and the period times, academic day and terms that applies to each day within the schedule.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>CalendarDate</Element>
@@ -1040,6 +1021,7 @@
          </Description>
          <Type ref="CommonTypes" name="CalendarDateType"/>
       </Item>
+      <!-- . CalendarDate-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="CalendarDateType">
       <Item>
@@ -1057,6 +1039,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 1. Date-->
       <Item>
          <Element>SchoolClosed</Element>
          <Position>2</Position>
@@ -1066,6 +1049,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 2. SchoolClosed-->
       <Item>
          <Element>ScheduleAcademicDay</Element>
          <Position>3</Position>
@@ -1075,6 +1059,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 3. ScheduleAcademicDay-->
       <Item>
          <Element>SchedulePeriodTime</Element>
          <Position>4</Position>
@@ -1084,6 +1069,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 4. SchedulePeriodTime-->
       <Item>
          <Element>ScheduleTermList</Element>
          <Position>5</Position>
@@ -1093,6 +1079,7 @@
          </Description>
          <Type ref="CommonTypes" name="ScheduleTermListType"/>
       </Item>
+      <!-- 5. ScheduleTermList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="CareerGoalListType">
       <Item>
@@ -1100,6 +1087,7 @@
          <Description>
             <p>A list of the student's career goals.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>CareerGoal</Element>
@@ -1109,6 +1097,7 @@
          </Description>
          <Type ref="CommonTypes" name="BaseStudentGoalType"/>
       </Item>
+      <!-- . CareerGoal-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="ClassStrandListType">
       <Item>
@@ -1116,6 +1105,7 @@
          <Description>
             <p>A record of the Student's progress in a set of learning strands from the Technology curriculum, that were covered in the class.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Strand</Element>
@@ -1125,6 +1115,7 @@
          </Description>
          <Type ref="CommonTypes" name="ClassStrandType"/>
       </Item>
+      <!-- . Strand-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="ClassStrandType">
       <Item>
@@ -1142,6 +1133,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsTechnologyLearningStrandType"/>
       </Item>
+      <!-- 1. LearningStrand-->
       <Item>
          <Element>AchievementObjectiveList</Element>
          <Position>2</Position>
@@ -1151,6 +1143,7 @@
          </Description>
          <Type ref="CommonTypes" name="StrandAchievementObjectiveListType"/>
       </Item>
+      <!-- 2. AchievementObjectiveList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="CommunicationChannelType">
       <Item>
@@ -1160,41 +1153,48 @@
          </Description>
       </Item>
       <Item>
-         <Element>Notes</Element>
+         <Element>Value</Element>
          <Position>1</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The unique value that provides access to the channel. eg: URL for a website; Facebook page address, Twitter handle.</p>
+         </Description>
+         <Type name="xs:string"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
+      </Item>
+      <!-- 1. Value-->
+      <Item>
+         <Element>Notes</Element>
+         <Position>10</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Notes on when / how to use the communication channel. eg: Phone after 4pm. Schools may also use this note to record caregiver related contact details, eg “Mon to Wed only”.</p>
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <!-- 10. Notes-->
       <Item>
          <Element>PreferenceOrderNumber</Element>
-         <Position>2</Position>
+         <Position>11</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Preference number indicating an order in which communication channels should be used when contacting person or organisation.</p>
          </Description>
          <Type name="xs:unsignedInt"/>
       </Item>
+      <!-- 11. PreferenceOrderNumber-->
       <Item>
          <Element>Usage</Element>
-         <Position>3</Position>
+         <Position>12</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>A code describing the acceptable usage of a person or organisation's communication channel</p>
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsCommunicationUsageType"/>
       </Item>
-      <Item>
-         <Element>Value</Element>
-         <Position>10</Position>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>The unique value that provides access to the channel. eg: URL for a website; Facebook page address, Twitter handle.</p>
-         </Description>
-         <Type name="xs:string"/>
-      </Item>
+      <!-- 12. Usage-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="CommunicationChannelsType">
       <Item>
@@ -1211,6 +1211,7 @@
          </Description>
          <Type ref="CommonTypes" name="CommunicationChannelType"/>
       </Item>
+      <!-- . Website-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="ContactFlagsType">
       <Item>
@@ -1228,6 +1229,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 1. ParentLegalGuardian-->
       <Item>
          <Element>LivesWith</Element>
          <Position>2</Position>
@@ -1237,6 +1239,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 2. LivesWith-->
       <Item>
          <Element>AccessToRecords</Element>
          <Position>3</Position>
@@ -1246,6 +1249,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 3. AccessToRecords-->
       <Item>
          <Element>ReceivesAssessmentReport</Element>
          <Position>4</Position>
@@ -1255,6 +1259,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 4. ReceivesAssessmentReport-->
       <Item>
          <Element>EmergencyContact</Element>
          <Position>5</Position>
@@ -1264,6 +1269,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 5. EmergencyContact-->
       <Item>
          <Element>CivilEmergencyContact</Element>
          <Position>6</Position>
@@ -1273,6 +1279,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 6. CivilEmergencyContact-->
       <Item>
          <Element>CivilDefenceEmergencyContact</Element>
          <Position>7</Position>
@@ -1282,6 +1289,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 7. CivilDefenceEmergencyContact-->
       <Item>
          <Element>DisciplinaryContact</Element>
          <Position>8</Position>
@@ -1291,6 +1299,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 8. DisciplinaryContact-->
       <Item>
          <Element>AttendanceContact</Element>
          <Position>9</Position>
@@ -1300,6 +1309,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 9. AttendanceContact-->
       <Item>
          <Element>PrimaryCareProvider</Element>
          <Position>10</Position>
@@ -1309,6 +1319,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 10. PrimaryCareProvider-->
       <Item>
          <Element>FeesBilling</Element>
          <Position>11</Position>
@@ -1318,6 +1329,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 11. FeesBilling-->
       <Item>
          <Element>FeesAccess</Element>
          <Position>12</Position>
@@ -1327,6 +1339,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 12. FeesAccess-->
       <Item>
          <Element>FamilyMail</Element>
          <Position>13</Position>
@@ -1336,6 +1349,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 13. FamilyMail-->
       <Item>
          <Element>CourtOrder</Element>
          <Position>14</Position>
@@ -1345,6 +1359,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 14. CourtOrder-->
       <Item>
          <Element>HealthContact</Element>
          <Position>15</Position>
@@ -1352,6 +1367,7 @@
          <Description/>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 15. HealthContact-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="ContactListType">
       <Item>
@@ -1359,6 +1375,7 @@
          <Description>
             <p>A list of people's contact details</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Contact</Element>
@@ -1366,6 +1383,7 @@
          <Description/>
          <Type ref="CommonTypes" name="ContactType"/>
       </Item>
+      <!-- . Contact-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="ContactType">
       <Item>
@@ -1383,6 +1401,7 @@
          </Description>
          <Type ref="CommonTypes" name="BaseNameType"/>
       </Item>
+      <!-- 1. Name-->
       <Item>
          <Element>PositionTitle</Element>
          <Position>2</Position>
@@ -1392,6 +1411,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 2. PositionTitle-->
       <Item>
          <Element>Role</Element>
          <Position>3</Position>
@@ -1401,6 +1421,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsOrganisationContactRoleType"/>
       </Item>
+      <!-- 3. Role-->
       <Item>
          <Element>Address</Element>
          <Position>4</Position>
@@ -1408,6 +1429,7 @@
          <Description/>
          <Type ref="CommonTypes" name="AddressesType"/>
       </Item>
+      <!-- 4. Address-->
       <Item>
          <Element>Email</Element>
          <Position>5</Position>
@@ -1417,6 +1439,7 @@
          </Description>
          <Type ref="CommonTypes" name="PersonEmailsType"/>
       </Item>
+      <!-- 5. Email-->
       <Item>
          <Element>Phone</Element>
          <Position>6</Position>
@@ -1424,8 +1447,9 @@
          <Description>
             <p>List of PhoneNumber elements.</p>
          </Description>
-         <Type ref="CommonTypes" name="PersonPhoneType"/>
+         <Type ref="CommonTypes" name="PersonPhonesType"/>
       </Item>
+      <!-- 6. Phone-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="CountryListType">
       <Item>
@@ -1433,6 +1457,7 @@
          <Description>
             <p>A list of a countries.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Country</Element>
@@ -1442,6 +1467,7 @@
          </Description>
          <Type ref="ExternalCodeSets" name="ISO3166CountryType"/>
       </Item>
+      <!-- . Country-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="CourseListType">
       <Item>
@@ -1449,6 +1475,7 @@
          <Description>
             <p>A list of associated courses.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Course</Element>
@@ -1458,6 +1485,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . Course-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="CredentialListType">
       <Item>
@@ -1465,6 +1493,7 @@
          <Description>
             <p>A list of credentials that the learning standard contributes to attaining.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Credential</Element>
@@ -1474,6 +1503,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . Credential-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="DayPeriodTimeListType">
       <Item>
@@ -1481,6 +1511,7 @@
          <Description>
             <p>A list of the periods that make up the period time schedule and their start and end times.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>DayPeriodTime</Element>
@@ -1490,6 +1521,7 @@
          </Description>
          <Type ref="CommonTypes" name="DayPeriodTimeType"/>
       </Item>
+      <!-- . DayPeriodTime-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="DayPeriodTimeType">
       <Item>
@@ -1507,6 +1539,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 1. SchedulePeriod-->
       <Item>
          <Element>StartTime</Element>
          <Position>2</Position>
@@ -1516,6 +1549,7 @@
          </Description>
          <Type name="xs:time"/>
       </Item>
+      <!-- 2. StartTime-->
       <Item>
          <Element>EndTime</Element>
          <Position>3</Position>
@@ -1525,6 +1559,7 @@
          </Description>
          <Type name="xs:time"/>
       </Item>
+      <!-- 3. EndTime-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="DemographicsType">
       <Item>
@@ -1540,6 +1575,7 @@
          <Description/>
          <Type name="xs:date"/>
       </Item>
+      <!-- 1. BirthDate-->
       <Item>
          <Element>DateOfDeath</Element>
          <Position>2</Position>
@@ -1549,6 +1585,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 2. DateOfDeath-->
       <Item>
          <Element>PlaceOfBirth</Element>
          <Position>3</Position>
@@ -1558,6 +1595,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. PlaceOfBirth-->
       <Item>
          <Element>CountryOfBirth</Element>
          <Position>4</Position>
@@ -1567,6 +1605,7 @@
          </Description>
          <Type ref="ExternalCodeSets" name="ISO3166CountryType"/>
       </Item>
+      <!-- 4. CountryOfBirth-->
       <Item>
          <Element>CitizenshipList</Element>
          <Position>5</Position>
@@ -1576,6 +1615,7 @@
          </Description>
          <Type ref="CommonTypes" name="CountryListType"/>
       </Item>
+      <!-- 5. CitizenshipList-->
       <Item>
          <Element>CitizenshipStatus</Element>
          <Position>6</Position>
@@ -1585,6 +1625,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsCitizenshipStatusType"/>
       </Item>
+      <!-- 6. CitizenshipStatus-->
       <Item>
          <Element>CitizenshipVerification</Element>
          <Position>7</Position>
@@ -1594,6 +1635,7 @@
          </Description>
          <Type ref="CommonTypes" name="VerificationEventType"/>
       </Item>
+      <!-- 7. CitizenshipVerification-->
       <Item>
          <Element>Gender</Element>
          <Position>8</Position>
@@ -1603,6 +1645,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsGenderType"/>
       </Item>
+      <!-- 8. Gender-->
       <Item>
          <Element>LanguageList</Element>
          <Position>9</Position>
@@ -1612,6 +1655,7 @@
          </Description>
          <Type ref="CommonTypes" name="LanguageListType"/>
       </Item>
+      <!-- 9. LanguageList-->
       <Item>
          <Element>CountryArrivalDate</Element>
          <Position>10</Position>
@@ -1621,6 +1665,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 10. CountryArrivalDate-->
       <Item>
          <Element>EthnicityList</Element>
          <Position>11</Position>
@@ -1630,6 +1675,7 @@
          </Description>
          <Type ref="CommonTypes" name="EthnicityListType"/>
       </Item>
+      <!-- 11. EthnicityList-->
       <Item>
          <Element>IwiAffiliationList</Element>
          <Position>12</Position>
@@ -1639,6 +1685,7 @@
          </Description>
          <Type ref="CommonTypes" name="IwiAffiliationListType"/>
       </Item>
+      <!-- 12. IwiAffiliationList-->
       <Item>
          <Element>ReligiousAffiliationList</Element>
          <Position>13</Position>
@@ -1646,6 +1693,7 @@
          <Description/>
          <Type ref="CommonTypes" name="ReligiousAffiliationListType"/>
       </Item>
+      <!-- 13. ReligiousAffiliationList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="DetentionContainerType">
       <Item>
@@ -1663,6 +1711,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsDetentionCategoryType"/>
       </Item>
+      <!-- 1. DetentionCategory-->
       <Item>
          <Element>DetentionDate</Element>
          <Position>2</Position>
@@ -1672,6 +1721,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 2. DetentionDate-->
       <Item>
          <Element>DetentionLocation</Element>
          <Position>3</Position>
@@ -1681,6 +1731,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. DetentionLocation-->
       <Item>
          <Element>DetentionNotes</Element>
          <Position>4</Position>
@@ -1690,6 +1741,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 4. DetentionNotes-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="DocumentListType">
       <Item>
@@ -1697,6 +1749,7 @@
          <Description>
             <p>List which describes the meta-data for, and the Location of any associated documents.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Document</Element>
@@ -1706,6 +1759,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . Document-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="ECEEducationHistoryListType">
       <Item>
@@ -1713,6 +1767,7 @@
          <Description>
             <p>The list of the types of early childhood education the parent told a primary school that the student received and the hours per week and/or day the student attended.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>ECEType</Element>
@@ -1720,14 +1775,15 @@
          <Description>
             <p>The type of early childhood education the student received and the hours per week and/or day the student attended.</p>
          </Description>
-         <Type ref="CommonTypes" name="ECEHistoryTypeType"/>
+         <Type ref="CommonTypes" name="ECEHistoryType"/>
       </Item>
+      <!-- . ECEType-->
    </CommonElement>
-   <CommonElement type="true" dm="true" name="ECEHistoryTypeType">
+   <CommonElement type="true" dm="true" name="ECEHistoryType">
       <Item>
-         <Element>ECEHistoryTypeType</Element>
+         <Element>ECEHistoryType</Element>
          <Description>
-            <p>History of a type of early childhood education the student received and the hours per week and/or day the student attended.</p>
+            <p>History of the type of early childhood education the student received and the hours per week and/or day the student attended.</p>
          </Description>
       </Item>
       <Item>
@@ -1739,6 +1795,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsEarlyChildhoodEducationTypeType"/>
       </Item>
+      <!-- 1. Type-->
       <Item>
          <Element>HoursPerDayAttended</Element>
          <Position>2</Position>
@@ -1747,7 +1804,11 @@
             <p>The number of hours per day the student attended this ECE Type. A string value conforming to regular expression for numeric range 0-24hours (with max 2 decimal places)</p>
          </Description>
          <Type name="xs:string"/>
+         <Facets>
+            <xs:pattern value="(((\d|(1\d)|2[0-3])(\.\d{1,2})?)|24(\.0{1,2})?)"/>
+         </Facets>
       </Item>
+      <!-- 2. HoursPerDayAttended-->
       <Item>
          <Element>HoursPerWeekAttended</Element>
          <Position>3</Position>
@@ -1756,7 +1817,11 @@
             <p>The number of hours per week the student attended this ECE Type. A string value conforming to regular expression for numeric range 0-168 hours (with max 2 decimal places)</p>
          </Description>
          <Type name="xs:string"/>
+         <Facets>
+            <xs:pattern value="(((\d{1,2}|(1[0-5]\d)|16[0-7])(\.\d{1,2})?)|168(\.0{1,2})?)"/>
+         </Facets>
       </Item>
+      <!-- 3. HoursPerWeekAttended-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="ECEServiceType">
       <Item>
@@ -1773,6 +1838,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
       </Item>
+      <!-- . PrimaryLanguage-->
       <Item>
          <Element>Type</Element>
          <Characteristics>O</Characteristics>
@@ -1781,6 +1847,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsECEServiceTypeType"/>
       </Item>
+      <!-- . Type-->
       <Item>
          <Element>PrimaryLanguageOther</Element>
          <Characteristics>O</Characteristics>
@@ -1789,6 +1856,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- . PrimaryLanguageOther-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="EarlyChildhoodEducationType">
       <Item>
@@ -1805,6 +1873,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsEarlyChildhoodEducationTypeType"/>
       </Item>
+      <!-- . Type-->
       <Item>
          <Element>HoursAttended</Element>
          <Characteristics>O</Characteristics>
@@ -1813,6 +1882,7 @@
          </Description>
          <Type name="xs:int"/>
       </Item>
+      <!-- . HoursAttended-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="EduOrganisationType">
       <Item>
@@ -1820,22 +1890,6 @@
          <Description>
             <p>Generic organisation that operates within the education sector. For example Providers, Communities of Learning, Ministry local offices, etc.</p>
          </Description>
-      </Item>
-      <Item>
-         <Element>ProviderSMS</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>The name of the School Management System (SMS) that the provider is currently using. Note: not all education providers use an SMS.</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsSchoolManagementSystemType"/>
-      </Item>
-      <Item>
-         <Element>TeRitoConfig</Element>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Provides iinformation specific to Te Rito, e.g. which functionality in Te Rito an organisation (school, ECE etc.) is utilising.</p>
-         </Description>
-         <Type ref="CommonTypes" name="TeRitoConfigurationType"/>
       </Item>
       <Item>
          <Element>Address</Element>
@@ -1846,6 +1900,7 @@
          </Description>
          <Type ref="CommonTypes" name="AddressesType"/>
       </Item>
+      <!-- 100. Address-->
       <Item>
          <Element>CommunicationChannel</Element>
          <Position>101</Position>
@@ -1855,6 +1910,7 @@
          </Description>
          <Type ref="CommonTypes" name="CommunicationChannelsType"/>
       </Item>
+      <!-- 101. CommunicationChannel-->
       <Item>
          <Element>ContactList</Element>
          <Position>102</Position>
@@ -1864,6 +1920,7 @@
          </Description>
          <Type ref="CommonTypes" name="ContactListType"/>
       </Item>
+      <!-- 102. ContactList-->
       <Item>
          <Element>EducationRegion</Element>
          <Position>103</Position>
@@ -1873,6 +1930,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsEducationRegionType"/>
       </Item>
+      <!-- 103. EducationRegion-->
       <Item>
          <Element>SpecialEducationDistrict</Element>
          <Position>104</Position>
@@ -1882,6 +1940,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsSpecialEducationDistrictType"/>
       </Item>
+      <!-- 104. SpecialEducationDistrict-->
       <Item>
          <Element>Email</Element>
          <Position>105</Position>
@@ -1891,6 +1950,7 @@
          </Description>
          <Type ref="CommonTypes" name="OrganisationEmailsType"/>
       </Item>
+      <!-- 105. Email-->
       <Item>
          <Element>EntityOpen</Element>
          <Position>106</Position>
@@ -1900,6 +1960,7 @@
          </Description>
          <Type ref="CommonTypes" name="StartDateType"/>
       </Item>
+      <!-- 106. EntityOpen-->
       <Item>
          <Element>EntityClose</Element>
          <Position>107</Position>
@@ -1909,6 +1970,7 @@
          </Description>
          <Type ref="CommonTypes" name="EndDateType"/>
       </Item>
+      <!-- 107. EntityClose-->
       <Item>
          <Element>LocationList</Element>
          <Position>108</Position>
@@ -1916,6 +1978,7 @@
          <Description/>
          <Type ref="CommonTypes" name="LocationListType"/>
       </Item>
+      <!-- 108. LocationList-->
       <Item>
          <Element>Name</Element>
          <Position>109</Position>
@@ -1924,7 +1987,11 @@
             <p>The normal business name of the Organisation</p>
          </Description>
          <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- 109. Name-->
       <Item>
          <Element>Phone</Element>
          <Position>110</Position>
@@ -1934,6 +2001,7 @@
          </Description>
          <Type ref="CommonTypes" name="OrganisationPhonesType"/>
       </Item>
+      <!-- 110. Phone-->
       <Item>
          <Element>RelatedOrganisationList</Element>
          <Position>111</Position>
@@ -1943,6 +2011,7 @@
          </Description>
          <Type ref="CommonTypes" name="RelatedOrganisationListType"/>
       </Item>
+      <!-- 111. RelatedOrganisationList-->
       <Item>
          <Element>OperationalStatus</Element>
          <Position>112</Position>
@@ -1952,6 +2021,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsOperationalStatusType"/>
       </Item>
+      <!-- 112. OperationalStatus-->
       <Item>
          <Element>OperationalStatusReason</Element>
          <Position>113</Position>
@@ -1961,6 +2031,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsOperationalStatusReasonType"/>
       </Item>
+      <!-- 113. OperationalStatusReason-->
       <Item>
          <Element>Type</Element>
          <Position>114</Position>
@@ -1970,6 +2041,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsOrganisationTypeType"/>
       </Item>
+      <!-- 114. Type-->
       <Item>
          <Element>SectorRole</Element>
          <Position>115</Position>
@@ -1979,6 +2051,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsOrganisationSectorRoleType"/>
       </Item>
+      <!-- 115. SectorRole-->
       <Item>
          <Element>Authority</Element>
          <Position>116</Position>
@@ -1988,6 +2061,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsProviderAuthorityType"/>
       </Item>
+      <!-- 116. Authority-->
       <Item>
          <Element>IsLicencedECEServiceProvider</Element>
          <Position>117</Position>
@@ -1997,6 +2071,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 117. IsLicencedECEServiceProvider-->
       <Item>
          <Element>IsPlaygroupServiceProvider</Element>
          <Position>118</Position>
@@ -2006,6 +2081,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 118. IsPlaygroupServiceProvider-->
       <Item>
          <Element>ECEServiceProviderOwnershipType</Element>
          <Position>119</Position>
@@ -2015,6 +2091,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsECEServiceProviderOwnershipTypeType"/>
       </Item>
+      <!-- 119. ECEServiceProviderOwnershipType-->
       <Item>
          <Element>SchoolService</Element>
          <Position>120</Position>
@@ -2024,6 +2101,7 @@
          </Description>
          <Type ref="CommonTypes" name="SchoolServiceType"/>
       </Item>
+      <!-- 120. SchoolService-->
       <Item>
          <Element>ECEService</Element>
          <Position>121</Position>
@@ -2033,6 +2111,7 @@
          </Description>
          <Type ref="CommonTypes" name="ECEServiceType"/>
       </Item>
+      <!-- 121. ECEService-->
       <Item>
          <Element>TertiaryService</Element>
          <Position>122</Position>
@@ -2042,10 +2121,31 @@
          </Description>
          <Type ref="CommonTypes" name="TertiaryServiceType"/>
       </Item>
-   </CommonElement>
-   <CommonElement type="true" dm="true" name="EmailAddressType">
+      <!-- 122. TertiaryService-->
       <Item>
-         <Element>EmailAddressType</Element>
+         <Element>ProviderSMS</Element>
+         <Position>123</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>The name of the School Management System (SMS) that the provider is currently using. Note: not all education providers use an SMS.</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsSchoolManagementSystemType"/>
+      </Item>
+      <!-- 123. ProviderSMS-->
+      <Item>
+         <Element>TeRitoConfig</Element>
+         <Position>124</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Provides iinformation specific to Te Rito, e.g. which functionality in Te Rito an organisation (school, ECE etc.) is utilising.</p>
+         </Description>
+         <Type ref="CommonTypes" name="TeRitoConfigurationType"/>
+      </Item>
+      <!-- 124. TeRitoConfig-->
+   </CommonElement>
+   <CommonElement type="true" dm="true" name="EmailType">
+      <Item>
+         <Element>EmailType</Element>
          <Description>
             <p>This element represents an e-mail address of one of a number of types and occurs in objects such as StudentPersonal, StaffPersonal, StudentContactPersonal, etc.</p>
          </Description>
@@ -2058,42 +2158,50 @@
          </Description>
          <Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
       </Item>
+      <!-- . SourceOrganisation-->
+      <Item>
+         <Element>Address</Element>
+         <Position>1</Position>
+         <Characteristics>M</Characteristics>
+         <Description>
+            <p>The actual email address.</p>
+         </Description>
+         <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
+      </Item>
+      <!-- 1. Address-->
       <Item>
          <Element>Notes</Element>
-         <Position>1</Position>
+         <Position>10</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Notes on when / how to use the communication channel. eg: Phone after 4pm. Schools may also use this note to record caregiver related contact details, eg “Mon to Wed only”.</p>
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <!-- 10. Notes-->
       <Item>
          <Element>PreferenceOrderNumber</Element>
-         <Position>2</Position>
+         <Position>11</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Preference number indicating an order in which communication channels should be used when contacting person or organisation.</p>
          </Description>
          <Type name="xs:unsignedInt"/>
       </Item>
+      <!-- 11. PreferenceOrderNumber-->
       <Item>
          <Element>Usage</Element>
-         <Position>3</Position>
+         <Position>12</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>A code describing the acceptable usage of a person or organisation's communication channel</p>
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsCommunicationUsageType"/>
       </Item>
-      <Item>
-         <Element>Address</Element>
-         <Position>10</Position>
-         <Characteristics>M</Characteristics>
-         <Description>
-            <p>The actual email address.</p>
-         </Description>
-         <Type name="xs:normalizedString"/>
-      </Item>
+      <!-- 12. Usage-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="EnactedPolicyListType">
       <Item>
@@ -2101,6 +2209,7 @@
          <Description>
             <p>A list of EnactedPolicy elements, describing the state legislated policy choices the school has adopted, and the time-period of that adoption.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>EnactedPolicy</Element>
@@ -2108,6 +2217,7 @@
          <Description/>
          <Type ref="CommonTypes" name="EnactedPolicyType"/>
       </Item>
+      <!-- . EnactedPolicy-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="EnactedPolicyType">
       <Item>
@@ -2123,8 +2233,9 @@
          <Description>
             <p>The date from which the school adopted the policy. If not populated then this is the current/original policy of the school.</p>
          </Description>
-         <Type ref="CommonTypes" name="EndDateType"/>
+         <Type ref="CommonTypes" name="StartDateType"/>
       </Item>
+      <!-- 1. EffectiveFrom-->
       <Item>
          <Element>EffectiveTo</Element>
          <Position>2</Position>
@@ -2132,8 +2243,9 @@
          <Description>
             <p>The date after which the school has no longer adopted the policy. If not populated then the school has no planned date to end the policy.</p>
          </Description>
-         <Type ref="CommonTypes" name="StartDateType"/>
+         <Type ref="CommonTypes" name="EndDateType"/>
       </Item>
+      <!-- 2. EffectiveTo-->
       <Item>
          <Element>Policy</Element>
          <Position>3</Position>
@@ -2143,6 +2255,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsEnactedPolicyType"/>
       </Item>
+      <!-- 3. Policy-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="EndDateType">
       <Item>
@@ -2159,6 +2272,7 @@
          <Description>
             <p>A list of one or more ethnic groups with which a person identifies.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Ethnicity</Element>
@@ -2168,6 +2282,7 @@
          </Description>
          <Type ref="CommonTypes" name="EthnicityType"/>
       </Item>
+      <!-- . Ethnicity-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="EthnicityType">
       <Item>
@@ -2185,6 +2300,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsEthnicityType"/>
       </Item>
+      <!-- 1. Code-->
       <Item>
          <Element>PreferenceOrderNumber</Element>
          <Position>2</Position>
@@ -2194,6 +2310,7 @@
          </Description>
          <Type name="xs:int"/>
       </Item>
+      <!-- 2. PreferenceOrderNumber-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="EventLocationListType">
       <Item>
@@ -2201,6 +2318,7 @@
          <Description>
             <p>A list of the locations where the incident took place.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Location</Element>
@@ -2210,6 +2328,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsWellbeingEventLocationType"/>
       </Item>
+      <!-- . Location-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="FTEType">
       <Item>
@@ -2241,6 +2360,7 @@
          </Description>
          <Type ref="CommonTypes" name="LatitudeType"/>
       </Item>
+      <!-- . Latitude-->
       <Item>
          <Element>Longitude</Element>
          <Characteristics>M</Characteristics>
@@ -2249,6 +2369,7 @@
          </Description>
          <Type ref="CommonTypes" name="LongitudeType"/>
       </Item>
+      <!-- . Longitude-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="HapuAffiliationListType">
       <Item>
@@ -2256,6 +2377,7 @@
          <Description>
             <p>A list of one or more affiliations of a person with a Hapū within an Iwi.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Hapu</Element>
@@ -2265,6 +2387,7 @@
          </Description>
          <Type ref="CommonTypes" name="HapuType"/>
       </Item>
+      <!-- . Hapu-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="HapuType">
       <Item>
@@ -2281,7 +2404,11 @@
             <p>The name of a Hapū that the person is affiliated with.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- 1. HapuName-->
       <Item>
          <Element>PreferenceOrderNumber</Element>
          <Position>2</Position>
@@ -2291,6 +2418,7 @@
          </Description>
          <Type name="xs:int"/>
       </Item>
+      <!-- 2. PreferenceOrderNumber-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="HealthcareServiceInfoType">
       <Item>
@@ -2305,14 +2433,22 @@
          <Characteristics>M</Characteristics>
          <Description/>
          <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- 1. OrganisationName-->
       <Item>
          <Element>OrganisationPhoneNum</Element>
          <Position>2</Position>
          <Characteristics>M</Characteristics>
          <Description/>
          <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- 2. OrganisationPhoneNum-->
       <Item>
          <Element>Notes</Element>
          <Position>3</Position>
@@ -2320,6 +2456,7 @@
          <Description/>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. Notes-->
       <Item>
          <Element>Type</Element>
          <Position>4</Position>
@@ -2327,6 +2464,7 @@
          <Description/>
          <Type ref="CodeSets" name="NZCodeSetsHealthcareServiceTypeType"/>
       </Item>
+      <!-- 4. Type-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="HouseholdContactInfoListType">
       <Item>
@@ -2334,6 +2472,7 @@
          <Description>
             <p>List of Households this Person is associated with</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>HouseholdContactInfo</Element>
@@ -2343,6 +2482,7 @@
          </Description>
          <Type ref="CommonTypes" name="HouseholdContactInfoType"/>
       </Item>
+      <!-- . HouseholdContactInfo-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="HouseholdContactInfoType">
       <Item>
@@ -2360,6 +2500,7 @@
          </Description>
          <Type name="xs:unsignedInt"/>
       </Item>
+      <!-- 1. PreferenceNumber-->
       <Item>
          <Element>HouseholdContactId</Element>
          <Position>2</Position>
@@ -2369,6 +2510,7 @@
          </Description>
          <Type ref="CommonTypes" name="LocalIdType"/>
       </Item>
+      <!-- 2. HouseholdContactId-->
       <Item>
          <Element>HouseholdSalutation</Element>
          <Position>3</Position>
@@ -2378,6 +2520,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. HouseholdSalutation-->
       <Item>
          <Element>Address</Element>
          <Position>4</Position>
@@ -2387,6 +2530,7 @@
          </Description>
          <Type ref="CommonTypes" name="AddressesType"/>
       </Item>
+      <!-- 4. Address-->
       <Item>
          <Element>Email</Element>
          <Position>5</Position>
@@ -2396,6 +2540,7 @@
          </Description>
          <Type ref="CommonTypes" name="PersonEmailsType"/>
       </Item>
+      <!-- 5. Email-->
       <Item>
          <Element>Phone</Element>
          <Position>6</Position>
@@ -2403,8 +2548,9 @@
          <Description>
             <p>List of PhoneNumber elements.</p>
          </Description>
-         <Type ref="CommonTypes" name="PersonPhoneType"/>
+         <Type ref="CommonTypes" name="PersonPhonesType"/>
       </Item>
+      <!-- 6. Phone-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="HouseholdListType">
       <Item>
@@ -2412,6 +2558,7 @@
          <Description>
             <p>A list of households associated with the relationship.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>HouseholdId</Element>
@@ -2421,6 +2568,7 @@
          </Description>
          <Type ref="CommonTypes" name="LocalIdType"/>
       </Item>
+      <!-- . HouseholdId-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="InternationalSchoolEnrolmentType">
       <Item>
@@ -2438,6 +2586,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 1. NZArrivalDate-->
       <Item>
          <Element>TuitionWeeklyFee</Element>
          <Position>2</Position>
@@ -2447,6 +2596,7 @@
          </Description>
          <Type name="xs:decimal"/>
       </Item>
+      <!-- 2. TuitionWeeklyFee-->
       <Item>
          <Element>ExchangeScheme</Element>
          <Position>3</Position>
@@ -2456,6 +2606,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsExchangeSchemeType"/>
       </Item>
+      <!-- 3. ExchangeScheme-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="InterventionListType">
       <Item>
@@ -2463,6 +2614,7 @@
          <Description>
             <p>A list of references to Wellbeing Event, Response &amp;amp; Appeal data objects, that record the process of terminating a students enrolment.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Intervention</Element>
@@ -2472,6 +2624,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . Intervention-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="IwiAffiliationListType">
       <Item>
@@ -2479,6 +2632,7 @@
          <Description>
             <p>A list of one or more affiliations of a person with an iwi.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Iwi</Element>
@@ -2488,6 +2642,7 @@
          </Description>
          <Type ref="CommonTypes" name="IwiType"/>
       </Item>
+      <!-- . Iwi-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="IwiType">
       <Item>
@@ -2505,6 +2660,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsIwiType"/>
       </Item>
+      <!-- 1. Code-->
       <Item>
          <Element>PreferenceOrderNumber</Element>
          <Position>2</Position>
@@ -2514,6 +2670,7 @@
          </Description>
          <Type name="xs:int"/>
       </Item>
+      <!-- 2. PreferenceOrderNumber-->
       <Item>
          <Element>HapuAffiliationList</Element>
          <Position>3</Position>
@@ -2523,6 +2680,7 @@
          </Description>
          <Type ref="CommonTypes" name="HapuAffiliationListType"/>
       </Item>
+      <!-- 3. HapuAffiliationList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="JustificationListType">
       <Item>
@@ -2530,6 +2688,7 @@
          <Description>
             <p>A list identifying the assessment task results that justify the student achieving this attainment.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Justification</Element>
@@ -2539,6 +2698,7 @@
          </Description>
          <Type ref="CommonTypes" name="JustificationType"/>
       </Item>
+      <!-- . Justification-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="JustificationType">
       <Item>
@@ -2556,6 +2716,7 @@
          </Description>
          <Type ref="CommonTypes" name="RefIdType"/>
       </Item>
+      <!-- 1. RefId-->
       <Item>
          <Element>LocalId</Element>
          <Position>2</Position>
@@ -2565,6 +2726,7 @@
          </Description>
          <Type ref="CommonTypes" name="LocalIdType"/>
       </Item>
+      <!-- 2. LocalId-->
       <Item>
          <Element>Name</Element>
          <Position>3</Position>
@@ -2574,6 +2736,7 @@
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <!-- 3. Name-->
       <Item>
          <Element>ObjectType</Element>
          <Position>10</Position>
@@ -2583,6 +2746,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsReferrableDataObjectsType"/>
       </Item>
+      <!-- 10. ObjectType-->
       <Item>
          <Element>AssessmentType</Element>
          <Position>10</Position>
@@ -2592,6 +2756,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsAssessmentTypeType"/>
       </Item>
+      <!-- 10. AssessmentType-->
       <Item>
          <Element>Result</Element>
          <Position>11</Position>
@@ -2600,7 +2765,11 @@
             <p>The final result the Student achieved on the justifying assessment task or provider course.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- 11. Result-->
       <Item>
          <Element>Date</Element>
          <Position>12</Position>
@@ -2610,6 +2779,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 12. Date-->
       <Item>
          <Element>CreditValue</Element>
          <Position>13</Position>
@@ -2619,6 +2789,7 @@
          </Description>
          <Type name="xs:decimal"/>
       </Item>
+      <!-- 13. CreditValue-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="KeyContactListType">
       <Item>
@@ -2626,6 +2797,7 @@
          <Description>
             <p>A list of key contacts for the alert.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>KeyContact</Element>
@@ -2635,6 +2807,7 @@
          </Description>
          <Type ref="CommonTypes" name="KeyContactType"/>
       </Item>
+      <!-- . KeyContact-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="KeyContactType">
       <Item>
@@ -2651,6 +2824,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsKeyContactRoleType"/>
       </Item>
+      <!-- . Role-->
       <Item>
          <Element>Contact</Element>
          <Characteristics>O</Characteristics>
@@ -2659,6 +2833,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . Contact-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="LanguageBaseType">
       <Item>
@@ -2676,6 +2851,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
       </Item>
+      <!-- 1. Code-->
       <Item>
          <Element>Usage</Element>
          <Position>2</Position>
@@ -2685,6 +2861,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLanguageUsageType"/>
       </Item>
+      <!-- 2. Usage-->
       <Item>
          <Element>Dialect</Element>
          <Position>3</Position>
@@ -2694,6 +2871,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. Dialect-->
       <Item>
          <Element>ProficiencyList</Element>
          <Position>4</Position>
@@ -2703,6 +2881,7 @@
          </Description>
          <Type ref="CommonTypes" name="LanguageProficiencyListType"/>
       </Item>
+      <!-- 4. ProficiencyList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="LanguageListType">
       <Item>
@@ -2710,6 +2889,7 @@
          <Description>
             <p>A list of languages that an individual uses to communicate.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Language</Element>
@@ -2719,6 +2899,7 @@
          </Description>
          <Type ref="CommonTypes" name="LanguageBaseType"/>
       </Item>
+      <!-- . Language-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="LanguageOfInstructionListType">
       <Item>
@@ -2726,6 +2907,7 @@
          <Description>
             <p>Records the number of hours per week the Learner is taught in each language.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Language</Element>
@@ -2735,6 +2917,7 @@
          </Description>
          <Type ref="CommonTypes" name="LanguageOfInstructionType"/>
       </Item>
+      <!-- . Language-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="LanguageOfInstructionType">
       <Item>
@@ -2750,6 +2933,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
       </Item>
+      <!-- 1. Code-->
       <Item>
          <Element>Level</Element>
          <Position>2</Position>
@@ -2759,6 +2943,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLanguageInstructionLevelType"/>
       </Item>
+      <!-- 2. Level-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="LanguageProficiencyListType">
       <Item>
@@ -2766,6 +2951,7 @@
          <Description>
             <p>A list of the person's proficiency in the language in regards to speaking, reading and writing.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Proficiency</Element>
@@ -2775,6 +2961,7 @@
          </Description>
          <Type ref="CommonTypes" name="LanguageProficiencyType"/>
       </Item>
+      <!-- . Proficiency-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="LanguageProficiencyType">
       <Item>
@@ -2792,6 +2979,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLanguageProficiencyLevelType"/>
       </Item>
+      <!-- 1. Level-->
       <Item>
          <Element>Type</Element>
          <Position>2</Position>
@@ -2801,6 +2989,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLanguageProficiencyTypeType"/>
       </Item>
+      <!-- 2. Type-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="LatitudeType">
       <Item>
@@ -2819,6 +3008,7 @@
          <Description>
             <p>A list of ObjectReferences providing a manner of referring to a collection of LearningStandards.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>LearningStandard</Element>
@@ -2828,6 +3018,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . LearningStandard-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="LocalIdType">
       <Item>
@@ -2847,6 +3038,7 @@
          <Description>
             <p>A list of Location elements.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Location</Element>
@@ -2856,6 +3048,7 @@
          </Description>
          <Type ref="CommonTypes" name="LocationType"/>
       </Item>
+      <!-- . Location-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="LocationType">
       <Item>
@@ -2873,6 +3066,7 @@
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <!-- 1. Description-->
       <Item>
          <Element>LocationNum</Element>
          <Position>2</Position>
@@ -2882,6 +3076,7 @@
          </Description>
          <Type name="xs:int"/>
       </Item>
+      <!-- 2. LocationNum-->
       <Item>
          <Element>Address</Element>
          <Position>3</Position>
@@ -2891,6 +3086,7 @@
          </Description>
          <Type ref="CommonTypes" name="AddressType"/>
       </Item>
+      <!-- 3. Address-->
       <Item>
          <Element>GridLocation</Element>
          <Position>4</Position>
@@ -2900,6 +3096,7 @@
          </Description>
          <Type ref="CommonTypes" name="GridLocationType"/>
       </Item>
+      <!-- 4. GridLocation-->
       <Item>
          <Element>StatisticalAreaList</Element>
          <Position>5</Position>
@@ -2909,6 +3106,7 @@
          </Description>
          <Type ref="CommonTypes" name="StatisticalAreaListType"/>
       </Item>
+      <!-- 5. StatisticalAreaList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="LongitudeType">
       <Item>
@@ -2927,6 +3125,7 @@
          <Description>
             <p>A list of a persons known medical needs.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>MedicalNeed</Element>
@@ -2936,6 +3135,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . MedicalNeed-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="MedicationConsentListType">
       <Item>
@@ -2943,6 +3143,7 @@
          <Description>
             <p>A list consents that have been provided for administration of a medicine to a student.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>MedicationConsent</Element>
@@ -2952,6 +3153,7 @@
          </Description>
          <Type ref="CommonTypes" name="MedicationConsentType"/>
       </Item>
+      <!-- . MedicationConsent-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="MedicationConsentType">
       <Item>
@@ -2969,6 +3171,7 @@
          </Description>
          <Type ref="CommonTypes" name="StartDateType"/>
       </Item>
+      <!-- 1. StartDate-->
       <Item>
          <Element>EndDate</Element>
          <Position>2</Position>
@@ -2978,6 +3181,7 @@
          </Description>
          <Type ref="CommonTypes" name="EndDateType"/>
       </Item>
+      <!-- 2. EndDate-->
       <Item>
          <Element>ConsentedBy</Element>
          <Position>3</Position>
@@ -2987,6 +3191,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 3. ConsentedBy-->
       <Item>
          <Element>ProviderApplicableTo</Element>
          <Position>4</Position>
@@ -2996,6 +3201,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 4. ProviderApplicableTo-->
       <Item>
          <Element>AdministeredBy</Element>
          <Position>5</Position>
@@ -3005,6 +3211,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 5. AdministeredBy-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="MedicationListType">
       <Item>
@@ -3012,6 +3219,7 @@
          <Description>
             <p>A list of the medications required for this Wellbeing Characteristic.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Medication</Element>
@@ -3021,6 +3229,7 @@
          </Description>
          <Type ref="CommonTypes" name="MedicationType"/>
       </Item>
+      <!-- . Medication-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="MedicationType">
       <Item>
@@ -3038,6 +3247,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 1. MedicationName-->
       <Item>
          <Element>Dosage</Element>
          <Position>2</Position>
@@ -3047,6 +3257,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 2. Dosage-->
       <Item>
          <Element>Frequency</Element>
          <Position>3</Position>
@@ -3056,6 +3267,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. Frequency-->
       <Item>
          <Element>AdministrationInformation</Element>
          <Position>4</Position>
@@ -3065,6 +3277,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 4. AdministrationInformation-->
       <Item>
          <Element>Method</Element>
          <Position>5</Position>
@@ -3074,6 +3287,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 5. Method-->
       <Item>
          <Element>MedicationConsentList</Element>
          <Position>6</Position>
@@ -3083,6 +3297,7 @@
          </Description>
          <Type ref="CommonTypes" name="MedicationConsentListType"/>
       </Item>
+      <!-- 6. MedicationConsentList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="NSNType">
       <Item>
@@ -3112,6 +3327,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 1. EnrolmentId-->
       <Item>
          <Element>EntryId</Element>
          <Position>2</Position>
@@ -3121,6 +3337,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 2. EntryId-->
       <Item>
          <Element>AssessmentRequestType</Element>
          <Position>3</Position>
@@ -3130,6 +3347,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsAssessmentRequestTypeType"/>
       </Item>
+      <!-- 3. AssessmentRequestType-->
       <Item>
          <Element>PaperLanguage</Element>
          <Position>4</Position>
@@ -3139,6 +3357,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
       </Item>
+      <!-- 4. PaperLanguage-->
       <Item>
          <Element>AnswerLanguage</Element>
          <Position>5</Position>
@@ -3148,6 +3367,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLanguageType"/>
       </Item>
+      <!-- 5. AnswerLanguage-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="NZQAEnrolmentType">
       <Item>
@@ -3165,6 +3385,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 1. EnrolmentId-->
       <Item>
          <Element>ExamCentre</Element>
          <Position>2</Position>
@@ -3174,6 +3395,7 @@
          </Description>
          <Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
       </Item>
+      <!-- 2. ExamCentre-->
       <Item>
          <Element>FeeAmount</Element>
          <Position>3</Position>
@@ -3183,6 +3405,7 @@
          </Description>
          <Type name="xs:decimal"/>
       </Item>
+      <!-- 3. FeeAmount-->
       <Item>
          <Element>FinancialAssistance</Element>
          <Position>4</Position>
@@ -3192,6 +3415,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsNZQAFinancialAssistanceType"/>
       </Item>
+      <!-- 4. FinancialAssistance-->
       <Item>
          <Element>SortCode</Element>
          <Position>4</Position>
@@ -3201,6 +3425,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 4. SortCode-->
       <Item>
          <Element>SubmitterName</Element>
          <Position>5</Position>
@@ -3210,6 +3435,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 5. SubmitterName-->
       <Item>
          <Element>SubmitterEmailAddress</Element>
          <Position>6</Position>
@@ -3219,6 +3445,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 6. SubmitterEmailAddress-->
       <Item>
          <Element>WithdrawnAllAssessmentsInd</Element>
          <Position>7</Position>
@@ -3228,6 +3455,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 7. WithdrawnAllAssessmentsInd-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="NamedObjectReferenceType">
       <Item>
@@ -3245,6 +3473,7 @@
          </Description>
          <Type ref="CommonTypes" name="RefIdType"/>
       </Item>
+      <!-- 1. RefId-->
       <Item>
          <Element>LocalId</Element>
          <Position>2</Position>
@@ -3254,6 +3483,7 @@
          </Description>
          <Type ref="CommonTypes" name="LocalIdType"/>
       </Item>
+      <!-- 2. LocalId-->
       <Item>
          <Element>Name</Element>
          <Position>3</Position>
@@ -3263,6 +3493,7 @@
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <!-- 3. Name-->
       <Item>
          <Element>ObjectType</Element>
          <Position>10</Position>
@@ -3272,6 +3503,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsReferrableDataObjectsType"/>
       </Item>
+      <!-- 10. ObjectType-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="NoteListType">
       <Item>
@@ -3279,6 +3511,7 @@
          <Description>
             <p>A list of notes that have been written about the associated subject matter.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Note</Element>
@@ -3288,6 +3521,7 @@
          </Description>
          <Type ref="CommonTypes" name="NoteType"/>
       </Item>
+      <!-- . Note-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="NoteType">
       <Item>
@@ -3304,7 +3538,11 @@
             <p>Free text note.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- 1. Note-->
       <Item>
          <Element>CreatedDateTime</Element>
          <Position>2</Position>
@@ -3314,6 +3552,7 @@
          </Description>
          <Type name="xs:dateTime"/>
       </Item>
+      <!-- 2. CreatedDateTime-->
       <Item>
          <Element>LastUpdatedDateTime</Element>
          <Position>3</Position>
@@ -3323,6 +3562,7 @@
          </Description>
          <Type name="xs:dateTime"/>
       </Item>
+      <!-- 3. LastUpdatedDateTime-->
       <Item>
          <Element>CreatedBy</Element>
          <Position>4</Position>
@@ -3332,6 +3572,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 4. CreatedBy-->
       <Item>
          <Element>LastUpdatedBy</Element>
          <Position>5</Position>
@@ -3341,6 +3582,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 5. LastUpdatedBy-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="ObjectReferenceType">
       <Item>
@@ -3359,6 +3601,7 @@
          </Description>
          <Type ref="CommonTypes" name="RefIdType"/>
       </Item>
+      <!-- 1. RefId-->
       <Item>
          <Element>LocalId</Element>
          <Position>2</Position>
@@ -3368,6 +3611,7 @@
          </Description>
          <Type ref="CommonTypes" name="LocalIdType"/>
       </Item>
+      <!-- 2. LocalId-->
       <Item>
          <Element>Name</Element>
          <Position>3</Position>
@@ -3377,6 +3621,7 @@
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <!-- 3. Name-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="OfficialDiagnosisListType">
       <Item>
@@ -3384,6 +3629,7 @@
          <Description>
             <p>A list of official diagnoses that pertains to this wellbeing characteristic.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>OfficialDiagnosis</Element>
@@ -3393,6 +3639,7 @@
          </Description>
          <Type ref="CommonTypes" name="OfficialDiagnosisType"/>
       </Item>
+      <!-- . OfficialDiagnosis-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="OfficialDiagnosisType">
       <Item>
@@ -3410,6 +3657,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsOfficialDiagnosisTypeType"/>
       </Item>
+      <!-- 1. DiagnosisType-->
       <Item>
          <Element>DiagnosisSubType</Element>
          <Position>2</Position>
@@ -3419,6 +3667,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsOfficialDiagnosisSubTypeType"/>
       </Item>
+      <!-- 2. DiagnosisSubType-->
       <Item>
          <Element>OfficialDiagnosisDetail</Element>
          <Position>3</Position>
@@ -3428,6 +3677,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. OfficialDiagnosisDetail-->
       <Item>
          <Element>DocumentList</Element>
          <Position>4</Position>
@@ -3437,6 +3687,7 @@
          </Description>
          <Type ref="CommonTypes" name="DocumentListType"/>
       </Item>
+      <!-- 4. DocumentList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="OrganisationEmailsType">
       <Item>
@@ -3451,8 +3702,9 @@
          <Description>
             <p>An organisation's main email address.</p>
          </Description>
-         <Type ref="CommonTypes" name="EmailAddressType"/>
+         <Type ref="CommonTypes" name="EmailType"/>
       </Item>
+      <!-- . Main-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="OrganisationInvolvedListType">
       <Item>
@@ -3460,6 +3712,7 @@
          <Description>
             <p>A list of the education providers and organisations involved, and their role, e.g. assessing provider, assessment provider, assessment location provider.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>OrganisationInvolved</Element>
@@ -3469,6 +3722,7 @@
          </Description>
          <Type ref="CommonTypes" name="OrganisationInvolvedType"/>
       </Item>
+      <!-- . OrganisationInvolved-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="OrganisationInvolvedType">
       <Item>
@@ -3486,6 +3740,7 @@
          </Description>
          <Type ref="CommonTypes" name="RefIdType"/>
       </Item>
+      <!-- 1. RefId-->
       <Item>
          <Element>LocalId</Element>
          <Position>2</Position>
@@ -3495,6 +3750,7 @@
          </Description>
          <Type ref="CommonTypes" name="LocalIdType"/>
       </Item>
+      <!-- 2. LocalId-->
       <Item>
          <Element>Name</Element>
          <Position>3</Position>
@@ -3504,6 +3760,7 @@
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <!-- 3. Name-->
       <Item>
          <Element>LocationNum</Element>
          <Position>4</Position>
@@ -3513,6 +3770,7 @@
          </Description>
          <Type name="xs:int"/>
       </Item>
+      <!-- 4. LocationNum-->
       <Item>
          <Element>OrganisationRole</Element>
          <Position>10</Position>
@@ -3522,6 +3780,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsAssessmentProviderRoleType"/>
       </Item>
+      <!-- 10. OrganisationRole-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="OrganisationObjectReferenceType">
       <Item>
@@ -3539,6 +3798,7 @@
          </Description>
          <Type ref="CommonTypes" name="RefIdType"/>
       </Item>
+      <!-- 1. RefId-->
       <Item>
          <Element>LocalId</Element>
          <Position>2</Position>
@@ -3548,6 +3808,7 @@
          </Description>
          <Type ref="CommonTypes" name="LocalIdType"/>
       </Item>
+      <!-- 2. LocalId-->
       <Item>
          <Element>Name</Element>
          <Position>3</Position>
@@ -3557,6 +3818,7 @@
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <!-- 3. Name-->
       <Item>
          <Element>LocationNum</Element>
          <Position>4</Position>
@@ -3566,6 +3828,7 @@
          </Description>
          <Type name="xs:int"/>
       </Item>
+      <!-- 4. LocationNum-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="OrganisationPhonesType">
       <Item>
@@ -3582,6 +3845,7 @@
          </Description>
          <Type ref="CommonTypes" name="PhoneNumberType"/>
       </Item>
+      <!-- . Main-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="OtherNameListType">
       <Item>
@@ -3589,6 +3853,7 @@
          <Description>
             <p>Previous, alternate or other names or aliases associated with a person.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Name</Element>
@@ -3598,6 +3863,7 @@
          </Description>
          <Type ref="CommonTypes" name="VerifiedNameType"/>
       </Item>
+      <!-- . Name-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="OtherWellbeingResponseContainerType">
       <Item>
@@ -3615,6 +3881,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 1. OtherResponseDate-->
       <Item>
          <Element>OtherResponseDescription</Element>
          <Position>2</Position>
@@ -3624,6 +3891,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 2. OtherResponseDescription-->
       <Item>
          <Element>OtherResponseNotes</Element>
          <Position>3</Position>
@@ -3633,6 +3901,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. OtherResponseNotes-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="PeriodListType">
       <Item>
@@ -3640,6 +3909,7 @@
          <Description>
             <p>A list of the periods that make up this academic day, e.g. Period 1, Period 2 etc.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Period</Element>
@@ -3649,13 +3919,16 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . Period-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="PersonDocumentRoleChoiceType">
       <Item>
          <Element>PersonDocumentRoleChoiceType</Element>
          <Description/>
       </Item>
-      <Choice>
+      <Choice fromAssociation="true">
+         <Position/>
+         <Element>DocumentRolePersonRefChoice</Element>
          <Item>
             <Element>Student</Element>
             <Position>2</Position>
@@ -3675,6 +3948,7 @@
             <Type ref="CommonTypes" name="NamedObjectReferenceType"/>
          </Item>
       </Choice>
+      <!-- . DocumentRolePersonRefChoice-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="PersonDocumentRolesType">
       <Item>
@@ -3692,6 +3966,7 @@
          </Description>
          <Type ref="CommonTypes" name="PersonDocumentRoleChoiceType"/>
       </Item>
+      <!-- 1. Owner-->
       <Item>
          <Element>Author</Element>
          <Position>2</Position>
@@ -3701,6 +3976,7 @@
          </Description>
          <Type ref="CommonTypes" name="PersonDocumentRoleChoiceType"/>
       </Item>
+      <!-- 2. Author-->
       <Item>
          <Element>SubjectOf</Element>
          <Position>3</Position>
@@ -3710,6 +3986,7 @@
          </Description>
          <Type ref="CommonTypes" name="PersonDocumentRoleChoiceType"/>
       </Item>
+      <!-- 3. SubjectOf-->
       <Item>
          <Element>Reviewer</Element>
          <Position>4</Position>
@@ -3719,6 +3996,7 @@
          </Description>
          <Type ref="CommonTypes" name="PersonDocumentRoleChoiceType"/>
       </Item>
+      <!-- 4. Reviewer-->
       <Item>
          <Element>AddedBy</Element>
          <Position>5</Position>
@@ -3728,6 +4006,7 @@
          </Description>
          <Type ref="CommonTypes" name="PersonDocumentRoleChoiceType"/>
       </Item>
+      <!-- 5. AddedBy-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="PersonEmailsType">
       <Item>
@@ -3743,8 +4022,9 @@
          <Description>
             <p>A person's personal email address.</p>
          </Description>
-         <Type ref="CommonTypes" name="EmailAddressType"/>
+         <Type ref="CommonTypes" name="EmailType"/>
       </Item>
+      <!-- 1. Personal-->
       <Item>
          <Element>Work</Element>
          <Position>2</Position>
@@ -3752,8 +4032,9 @@
          <Description>
             <p>A person's work email address.</p>
          </Description>
-         <Type ref="CommonTypes" name="EmailAddressType"/>
+         <Type ref="CommonTypes" name="EmailType"/>
       </Item>
+      <!-- 2. Work-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="PersonInvolvementListType">
       <Item>
@@ -3761,6 +4042,7 @@
          <Description>
             <p>List of People involved in the Wellbeing Event/Response. Mandatory if more people than the student to which this event/response occurs is involved.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>PersonInvolvement</Element>
@@ -3770,6 +4052,7 @@
          </Description>
          <Type ref="CommonTypes" name="PersonInvolvementType"/>
       </Item>
+      <!-- . PersonInvolvement-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="PersonInvolvementType">
       <Item>
@@ -3790,6 +4073,7 @@
             <xs:minInclusive value="0"/>
          </Facets>
       </Item>
+      <!-- . YearLevel-->
       <Item>
          <Element>RefId</Element>
          <Position>1</Position>
@@ -3799,6 +4083,7 @@
          </Description>
          <Type ref="CommonTypes" name="RefIdType"/>
       </Item>
+      <!-- 1. RefId-->
       <Item>
          <Element>HowInvolved</Element>
          <Position>1</Position>
@@ -3808,6 +4093,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 1. HowInvolved-->
       <Item>
          <Element>LocalId</Element>
          <Position>2</Position>
@@ -3817,6 +4103,7 @@
          </Description>
          <Type ref="CommonTypes" name="LocalIdType"/>
       </Item>
+      <!-- 2. LocalId-->
       <Item>
          <Element>PersonType</Element>
          <Position>2</Position>
@@ -3826,6 +4113,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsPersonInvolvedTypeType"/>
       </Item>
+      <!-- 2. PersonType-->
       <Item>
          <Element>Name</Element>
          <Position>3</Position>
@@ -3835,6 +4123,7 @@
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <!-- 3. Name-->
       <Item>
          <Element>NationalStudentNumber</Element>
          <Position>3</Position>
@@ -3844,10 +4133,11 @@
          </Description>
          <Type ref="CommonTypes" name="NSNType"/>
       </Item>
+      <!-- 3. NationalStudentNumber-->
    </CommonElement>
-   <CommonElement type="true" dm="true" name="PersonPhoneType">
+   <CommonElement type="true" dm="true" name="PersonPhonesType">
       <Item>
-         <Element>PersonPhoneType</Element>
+         <Element>PersonPhonesType</Element>
          <Description>
             <p>Lists phone numbers associated with a person (StudentPersonal, StaffPersonal or StudentContactPersonal)</p>
          </Description>
@@ -3861,6 +4151,7 @@
          </Description>
          <Type ref="CommonTypes" name="PhoneNumberType"/>
       </Item>
+      <!-- 1. Home-->
       <Item>
          <Element>Work</Element>
          <Position>2</Position>
@@ -3870,6 +4161,7 @@
          </Description>
          <Type ref="CommonTypes" name="PhoneNumberType"/>
       </Item>
+      <!-- 2. Work-->
       <Item>
          <Element>Mobile</Element>
          <Position>3</Position>
@@ -3879,6 +4171,7 @@
          </Description>
          <Type ref="CommonTypes" name="PhoneNumberType"/>
       </Item>
+      <!-- 3. Mobile-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="PhoneNumberType">
       <Item>
@@ -3888,50 +4181,58 @@
          </Description>
       </Item>
       <Item>
-         <Element>Notes</Element>
-         <Position>1</Position>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Notes on when / how to use the communication channel. eg: Phone after 4pm. Schools may also use this note to record caregiver related contact details, eg “Mon to Wed only”.</p>
-         </Description>
-         <Type name="xs:string"/>
-      </Item>
-      <Item>
-         <Element>PreferenceOrderNumber</Element>
-         <Position>2</Position>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>Preference number indicating an order in which communication channels should be used when contacting person or organisation.</p>
-         </Description>
-         <Type name="xs:unsignedInt"/>
-      </Item>
-      <Item>
-         <Element>Usage</Element>
-         <Position>3</Position>
-         <Characteristics>O</Characteristics>
-         <Description>
-            <p>A code describing the acceptable usage of a person or organisation's communication channel</p>
-         </Description>
-         <Type ref="CodeSets" name="NZCodeSetsCommunicationUsageType"/>
-      </Item>
-      <Item>
          <Element>Number</Element>
-         <Position>10</Position>
+         <Position>1</Position>
          <Characteristics>M</Characteristics>
          <Description>
             <p>Phone number. Free-form, but typical New Zealand formats include:</p>
          </Description>
          <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- 1. Number-->
       <Item>
          <Element>Extension</Element>
-         <Position>11</Position>
+         <Position>2</Position>
          <Characteristics>O</Characteristics>
          <Description>
             <p>Phone number extension.</p>
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 2. Extension-->
+      <Item>
+         <Element>Notes</Element>
+         <Position>10</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Notes on when / how to use the communication channel. eg: Phone after 4pm. Schools may also use this note to record caregiver related contact details, eg “Mon to Wed only”.</p>
+         </Description>
+         <Type name="xs:string"/>
+      </Item>
+      <!-- 10. Notes-->
+      <Item>
+         <Element>PreferenceOrderNumber</Element>
+         <Position>11</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>Preference number indicating an order in which communication channels should be used when contacting person or organisation.</p>
+         </Description>
+         <Type name="xs:unsignedInt"/>
+      </Item>
+      <!-- 11. PreferenceOrderNumber-->
+      <Item>
+         <Element>Usage</Element>
+         <Position>12</Position>
+         <Characteristics>O</Characteristics>
+         <Description>
+            <p>A code describing the acceptable usage of a person or organisation's communication channel</p>
+         </Description>
+         <Type ref="CodeSets" name="NZCodeSetsCommunicationUsageType"/>
+      </Item>
+      <!-- 12. Usage-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="PlanRequiredListType">
       <Item>
@@ -3939,6 +4240,7 @@
          <Description>
             <p>List to contain information of any plans that may eventuate.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Plan</Element>
@@ -3948,6 +4250,7 @@
          </Description>
          <Type ref="CommonTypes" name="WellbeingPlanType"/>
       </Item>
+      <!-- . Plan-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="PossibleMotivationListType">
       <Item>
@@ -3955,6 +4258,7 @@
          <Description>
             <p>A list of the possible motivations that triggered the event.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>PossibleMotivation</Element>
@@ -3964,6 +4268,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsWellbeingEventPossibleMotivationType"/>
       </Item>
+      <!-- . PossibleMotivation-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="PotentialDestinationSchoolListType">
       <Item>
@@ -3971,6 +4276,7 @@
          <Description>
             <p>List of references to potential destination school for the departing student.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>School</Element>
@@ -3980,6 +4286,7 @@
          </Description>
          <Type ref="CommonTypes" name="OrganisationObjectReferenceType"/>
       </Item>
+      <!-- . School-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="PreEnrolmentCancellationType">
       <Item>
@@ -3997,6 +4304,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 1. NotifiedDate-->
       <Item>
          <Element>CancellationMethod</Element>
          <Position>2</Position>
@@ -4006,6 +4314,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsPreEnrolmentExitTypeType"/>
       </Item>
+      <!-- 2. CancellationMethod-->
       <Item>
          <Element>CancellationReason</Element>
          <Position>3</Position>
@@ -4015,6 +4324,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsPreEnrolmentCancellationReasonType"/>
       </Item>
+      <!-- 3. CancellationReason-->
       <Item>
          <Element>CancellationReasonOtherDesc</Element>
          <Position>4</Position>
@@ -4024,6 +4334,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 4. CancellationReasonOtherDesc-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="PrerequisiteListType">
       <Item>
@@ -4031,6 +4342,7 @@
          <Description>
             <p>A list of SIF data object references that form pre-requisites for the SchoolCourse, or AssessmentTask.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Prerequisite</Element>
@@ -4040,11 +4352,13 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . Prerequisite-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="ProgressReportAuthorListType">
       <Item>
          <Element>ProgressReportAuthorListType</Element>
          <Description/>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Author</Element>
@@ -4054,6 +4368,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . Author-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="ProviderExitType">
       <Item>
@@ -4071,6 +4386,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsEnrolmentExitTypeType"/>
       </Item>
+      <!-- 1. Reason-->
       <Item>
          <Element>PostSchoolActivity</Element>
          <Position>2</Position>
@@ -4080,6 +4396,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsPostSchoolActivityType"/>
       </Item>
+      <!-- 2. PostSchoolActivity-->
       <Item>
          <Element>InterventionList</Element>
          <Position>3</Position>
@@ -4089,6 +4406,7 @@
          </Description>
          <Type ref="CommonTypes" name="InterventionListType"/>
       </Item>
+      <!-- 3. InterventionList-->
       <Item>
          <Element>PotentialDestinationSchoolList</Element>
          <Position>4</Position>
@@ -4098,6 +4416,7 @@
          </Description>
          <Type ref="CommonTypes" name="PotentialDestinationSchoolListType"/>
       </Item>
+      <!-- 4. PotentialDestinationSchoolList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RecognitionListType">
       <Item>
@@ -4105,6 +4424,7 @@
          <Description>
             <p>List of awards and other types of recognition given to the student for this activity.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Recognition</Element>
@@ -4114,6 +4434,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- . Recognition-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RecordAuditType">
       <Item>
@@ -4131,6 +4452,7 @@
          </Description>
          <Type name="xs:dateTime"/>
       </Item>
+      <!-- 1. CreatedDateTime-->
       <Item>
          <Element>LastUpdatedDateTime</Element>
          <Position>2</Position>
@@ -4140,6 +4462,7 @@
          </Description>
          <Type name="xs:dateTime"/>
       </Item>
+      <!-- 2. LastUpdatedDateTime-->
       <Item>
          <Element>DeletedDateTime</Element>
          <Position>3</Position>
@@ -4149,6 +4472,7 @@
          </Description>
          <Type name="xs:dateTime"/>
       </Item>
+      <!-- 3. DeletedDateTime-->
       <Item>
          <Element>CreatedBy</Element>
          <Position>4</Position>
@@ -4158,6 +4482,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 4. CreatedBy-->
       <Item>
          <Element>LastUpdatedBy</Element>
          <Position>5</Position>
@@ -4167,6 +4492,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 5. LastUpdatedBy-->
       <Item>
          <Element>DeletedBy</Element>
          <Position>6</Position>
@@ -4176,6 +4502,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 6. DeletedBy-->
       <Item>
          <Element>DeletedReason</Element>
          <Position>7</Position>
@@ -4185,6 +4512,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsDeletedReasonType"/>
       </Item>
+      <!-- 7. DeletedReason-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RefIdType">
       <Item>
@@ -4204,6 +4532,7 @@
          <Description>
             <p>A list of the reflections the staff member performed.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Reflection</Element>
@@ -4213,6 +4542,7 @@
          </Description>
          <Type ref="CommonTypes" name="ReflectionType"/>
       </Item>
+      <!-- . Reflection-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="ReflectionType">
       <Item>
@@ -4230,6 +4560,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 1. ReflectionDescription-->
       <Item>
          <Element>Type</Element>
          <Position>2</Position>
@@ -4239,6 +4570,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsStaffRestraintReflectionTypeType"/>
       </Item>
+      <!-- 2. Type-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RelatedLearningStandardType">
       <Item>
@@ -4256,6 +4588,7 @@
          </Description>
          <Type ref="CommonTypes" name="RefIdType"/>
       </Item>
+      <!-- 1. RefId-->
       <Item>
          <Element>LocalId</Element>
          <Position>2</Position>
@@ -4265,6 +4598,7 @@
          </Description>
          <Type ref="CommonTypes" name="LocalIdType"/>
       </Item>
+      <!-- 2. LocalId-->
       <Item>
          <Element>Name</Element>
          <Position>3</Position>
@@ -4274,6 +4608,7 @@
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <!-- 3. Name-->
       <Item>
          <Element>Relationship</Element>
          <Position>10</Position>
@@ -4283,6 +4618,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLearningStandardRelationshipTypeType"/>
       </Item>
+      <!-- 10. Relationship-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RelatedLearningStandardsListType">
       <Item>
@@ -4290,6 +4626,7 @@
          <Description>
             <p>A list of references to related LearningStandards</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>RelatedLearningStandard</Element>
@@ -4299,6 +4636,7 @@
          </Description>
          <Type ref="CommonTypes" name="RelatedLearningStandardType"/>
       </Item>
+      <!-- . RelatedLearningStandard-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RelatedOrganisationListType">
       <Item>
@@ -4306,6 +4644,7 @@
          <Description>
             <p>A list of an Organisation's related organisations</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>RelatedOrganisation</Element>
@@ -4313,6 +4652,7 @@
          <Description/>
          <Type ref="CommonTypes" name="RelatedOrganisationType"/>
       </Item>
+      <!-- . RelatedOrganisation-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RelatedOrganisationType">
       <Item>
@@ -4330,6 +4670,7 @@
          </Description>
          <Type ref="CommonTypes" name="RefIdType"/>
       </Item>
+      <!-- 1. RefId-->
       <Item>
          <Element>LocalId</Element>
          <Position>2</Position>
@@ -4339,6 +4680,7 @@
          </Description>
          <Type ref="CommonTypes" name="LocalIdType"/>
       </Item>
+      <!-- 2. LocalId-->
       <Item>
          <Element>Name</Element>
          <Position>3</Position>
@@ -4348,6 +4690,7 @@
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <!-- 3. Name-->
       <Item>
          <Element>LocationNum</Element>
          <Position>4</Position>
@@ -4357,6 +4700,7 @@
          </Description>
          <Type name="xs:int"/>
       </Item>
+      <!-- 4. LocationNum-->
       <Item>
          <Element>StartDate</Element>
          <Position>10</Position>
@@ -4366,6 +4710,7 @@
          </Description>
          <Type ref="CommonTypes" name="StartDateType"/>
       </Item>
+      <!-- 10. StartDate-->
       <Item>
          <Element>EndDate</Element>
          <Position>11</Position>
@@ -4375,6 +4720,7 @@
          </Description>
          <Type ref="CommonTypes" name="EndDateType"/>
       </Item>
+      <!-- 11. EndDate-->
       <Item>
          <Element>Type</Element>
          <Position>12</Position>
@@ -4384,6 +4730,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsOrganisationRelationshipTypeType"/>
       </Item>
+      <!-- 12. Type-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RelatedToListType">
       <Item>
@@ -4391,6 +4738,7 @@
          <Description>
             <p>List of objects that this document relates to, e.g. a Wellbeing Response or Characteristic, Physical Restraint.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>RelatedTo</Element>
@@ -4400,6 +4748,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . RelatedTo-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RelatedWellbeingEventListType">
       <Item>
@@ -4407,6 +4756,7 @@
          <Description>
             <p>A Wellbeing Event gets created for every student involved in an event. This list links together all related Wellbeing Events.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>RelatedWellbeingEvent</Element>
@@ -4416,6 +4766,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . RelatedWellbeingEvent-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RelationshipType">
       <Item>
@@ -4433,6 +4784,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsRelationshipToStudentType"/>
       </Item>
+      <!-- 1. Code-->
       <Item>
          <Element>OtherTypeDescription</Element>
          <Position>2</Position>
@@ -4442,11 +4794,13 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 2. OtherTypeDescription-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="ReligiousAffiliationListType">
       <Item>
          <Element>ReligiousAffiliationListType</Element>
          <Description/>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>ReligiousAffiliation</Element>
@@ -4456,6 +4810,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsReligionType"/>
       </Item>
+      <!-- . ReligiousAffiliation-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RestraintAdministeredByListType">
       <Item>
@@ -4463,6 +4818,7 @@
          <Description>
             <p>A list of the people who administered the physical restraint to the student.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>RestraintAdministeredBy</Element>
@@ -4472,6 +4828,7 @@
          </Description>
          <Type ref="CommonTypes" name="RestraintAdministeredByType"/>
       </Item>
+      <!-- . RestraintAdministeredBy-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RestraintAdministeredByType">
       <Item>
@@ -4485,10 +4842,11 @@
          <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
-            <p>The person who administered the physical restraint to the student.</p>
+            <p>The person who administered the physical restraint to the student. Could be StaffPersonal, StudentPersonal or StudentContactPersonal object reference</p>
          </Description>
-         <Type ref="CommonTypes" name="ObjectReferenceType"/>
+         <Type ref="CommonTypes" name="NamedObjectReferenceType"/>
       </Item>
+      <!-- 1. AdministeredBy-->
       <Item>
          <Element>SafePhysicalRestraintTraining</Element>
          <Position>2</Position>
@@ -4498,6 +4856,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 2. SafePhysicalRestraintTraining-->
       <Item>
          <Element>TrainingDescription</Element>
          <Position>3</Position>
@@ -4507,6 +4866,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. TrainingDescription-->
       <Item>
          <Element>Role</Element>
          <Position>4</Position>
@@ -4516,6 +4876,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsRestraintAdministeredByRoleType"/>
       </Item>
+      <!-- 4. Role-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RestraintDebriefingListType">
       <Item>
@@ -4523,6 +4884,7 @@
          <Description>
             <p>A list of the debriefings that took place after the physical restraint incident occurred.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>RestraintDebriefing</Element>
@@ -4532,6 +4894,7 @@
          </Description>
          <Type ref="CommonTypes" name="RestraintDebriefingType"/>
       </Item>
+      <!-- . RestraintDebriefing-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RestraintDebriefingType">
       <Item>
@@ -4549,6 +4912,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 1. DebriefingDate-->
       <Item>
          <Element>DebriefingTime</Element>
          <Position>2</Position>
@@ -4558,6 +4922,7 @@
          </Description>
          <Type name="xs:time"/>
       </Item>
+      <!-- 2. DebriefingTime-->
       <Item>
          <Element>Findings</Element>
          <Position>3</Position>
@@ -4567,6 +4932,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. Findings-->
       <Item>
          <Element>NextStepsActions</Element>
          <Position>4</Position>
@@ -4576,6 +4942,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 4. NextStepsActions-->
       <Item>
          <Element>ParentCaregiverComment</Element>
          <Position>5</Position>
@@ -4585,6 +4952,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 5. ParentCaregiverComment-->
       <Item>
          <Element>StudentComment</Element>
          <Position>6</Position>
@@ -4594,6 +4962,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 6. StudentComment-->
       <Item>
          <Element>DebriefingType</Element>
          <Position>7</Position>
@@ -4603,6 +4972,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsRestraintDebriefingTypeType"/>
       </Item>
+      <!-- 7. DebriefingType-->
       <Item>
          <Element>AttendeeList</Element>
          <Position>8</Position>
@@ -4612,6 +4982,7 @@
          </Description>
          <Type ref="CommonTypes" name="AttendeeListType"/>
       </Item>
+      <!-- 8. AttendeeList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RestraintQuestionListType">
       <Item>
@@ -4619,6 +4990,7 @@
          <Description>
             <p>A list of questions and their answers about the physical restraint incident.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>RestraintQuestion</Element>
@@ -4628,6 +5000,7 @@
          </Description>
          <Type ref="CommonTypes" name="RestraintQuestionType"/>
       </Item>
+      <!-- . RestraintQuestion-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RestraintQuestionType">
       <Item>
@@ -4645,6 +5018,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsRestraintQuestionType"/>
       </Item>
+      <!-- 1. Question-->
       <Item>
          <Element>Answer</Element>
          <Position>2</Position>
@@ -4654,6 +5028,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 2. Answer-->
       <Item>
          <Element>AnswerSupportingDescription</Element>
          <Position>3</Position>
@@ -4663,6 +5038,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. AnswerSupportingDescription-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RestraintWitnessListType">
       <Item>
@@ -4670,15 +5046,17 @@
          <Description>
             <p>A list of the people that witnessed the physical constraint.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Witness</Element>
          <Characteristics>MR</Characteristics>
          <Description>
-            <p>A person that witnessed the physical restraint incident.</p>
+            <p>A person that witnessed the physical restraint incident. Could be StaffPersonal, StudentPersonal or StudentContactPersonal object reference.</p>
          </Description>
-         <Type ref="CommonTypes" name="ObjectReferenceType"/>
+         <Type ref="CommonTypes" name="NamedObjectReferenceType"/>
       </Item>
+      <!-- . Witness-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="RoomListType">
       <Item>
@@ -4686,6 +5064,7 @@
          <Description>
             <p>List of rooms in which the teaching or scheduled activity is held. Used for onsite venues which are represented in the source system as rooms. Can include large venues (ovals, library, etc), if they have been represented as rooms; source system practice varies.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>RoomId</Element>
@@ -4696,6 +5075,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . RoomId-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="ScheduleDayListType">
       <Item>
@@ -4703,6 +5083,7 @@
          <Description>
             <p>&lt;font color="#4c4c4c"&gt;A list of generic references to a set of ScheduleAcademicDays&lt;/font&gt;</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>ScheduleAcademicDay</Element>
@@ -4712,6 +5093,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . ScheduleAcademicDay-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SchedulePeriodTimeListType">
       <Item>
@@ -4719,6 +5101,7 @@
          <Description>
             <p>&lt;font color="#4c4c4c"&gt;A list of generic references to a set of Schedule Terms.&lt;/font&gt;</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>SchedulePeriodTime</Element>
@@ -4728,11 +5111,13 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . SchedulePeriodTime-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="ScheduleTermListType">
       <Item>
          <Element>ScheduleTermListType</Element>
          <Description/>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>ScheduleTerm</Element>
@@ -4742,6 +5127,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . ScheduleTerm-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="ScheduledMeetingType">
       <Item>
@@ -4759,6 +5145,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 1. SchedulePeriod-->
       <Item>
          <Element>StartTime</Element>
          <Position>2</Position>
@@ -4768,6 +5155,7 @@
          </Description>
          <Type name="xs:time"/>
       </Item>
+      <!-- 2. StartTime-->
       <Item>
          <Element>EndTime</Element>
          <Position>3</Position>
@@ -4777,6 +5165,7 @@
          </Description>
          <Type name="xs:time"/>
       </Item>
+      <!-- 3. EndTime-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SchoolClassificationListType">
       <Item>
@@ -4784,6 +5173,7 @@
          <Description>
             <p>A list of classifications given to the school.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Classification</Element>
@@ -4793,6 +5183,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsSchoolClassificationType"/>
       </Item>
+      <!-- . Classification-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SchoolServiceType">
       <Item>
@@ -4810,6 +5201,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsSchoolCoEdStatusType"/>
       </Item>
+      <!-- 1. CoEdStatus-->
       <Item>
          <Element>Decile</Element>
          <Position>2</Position>
@@ -4821,6 +5213,7 @@
             <xs:maxInclusive value="10"/>
          </Facets>
       </Item>
+      <!-- 2. Decile-->
       <Item>
          <Element>NewEntrantPolicyList</Element>
          <Position>3</Position>
@@ -4830,6 +5223,7 @@
          </Description>
          <Type ref="CommonTypes" name="EnactedPolicyListType"/>
       </Item>
+      <!-- 3. NewEntrantPolicyList-->
       <Item>
          <Element>AllowManualProvisioning</Element>
          <Position>4</Position>
@@ -4839,6 +5233,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 4. AllowManualProvisioning-->
       <Item>
          <Element>SchoolClassificationList</Element>
          <Position>5</Position>
@@ -4848,6 +5243,7 @@
          </Description>
          <Type ref="CommonTypes" name="SchoolClassificationListType"/>
       </Item>
+      <!-- 5. SchoolClassificationList-->
       <Item>
          <Element>SchoolYearList</Element>
          <Position>6</Position>
@@ -4857,6 +5253,7 @@
          </Description>
          <Type ref="CommonTypes" name="SchoolYearLevelListType"/>
       </Item>
+      <!-- 6. SchoolYearList-->
       <Item>
          <Element>TechnologyCentreName</Element>
          <Position>7</Position>
@@ -4866,6 +5263,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 7. TechnologyCentreName-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SchoolYearLevelListType">
       <Item>
@@ -4873,6 +5271,7 @@
          <Description>
             <p>A list of SchoolYearLevel elements, describing the Year Levels taught by the School, and the Co-Ed Status of each year level.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>SchoolYear</Element>
@@ -4880,6 +5279,7 @@
          <Description/>
          <Type ref="CommonTypes" name="SchoolYearLevelType"/>
       </Item>
+      <!-- . SchoolYear-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SchoolYearLevelType">
       <Item>
@@ -4901,6 +5301,7 @@
             <xs:maxInclusive value="13"/>
          </Facets>
       </Item>
+      <!-- 1. YearLevel-->
       <Item>
          <Element>FIRSTSchoolYearGenderId</Element>
          <Position>2</Position>
@@ -4913,6 +5314,7 @@
          </Description>
          <Type name="xs:int"/>
       </Item>
+      <!-- 2. FIRSTSchoolYearGenderId-->
       <Item>
          <Element>Gender</Element>
          <Position>3</Position>
@@ -4922,6 +5324,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsSchoolingGenderType"/>
       </Item>
+      <!-- 3. Gender-->
       <Item>
          <Element>Boarding</Element>
          <Position>4</Position>
@@ -4931,6 +5334,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsSchoolBoardingTypeType"/>
       </Item>
+      <!-- 4. Boarding-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SocialGoalListType">
       <Item>
@@ -4938,6 +5342,7 @@
          <Description>
             <p>A list of the student's social goals.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>SocialGoal</Element>
@@ -4947,6 +5352,7 @@
          </Description>
          <Type ref="CommonTypes" name="BaseStudentGoalType"/>
       </Item>
+      <!-- . SocialGoal-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SocialGoalType">
       <Item>
@@ -4961,6 +5367,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- . GoalAchievedDate-->
       <Item>
          <Element>GoalDescription</Element>
          <Characteristics>O</Characteristics>
@@ -4969,6 +5376,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- . GoalDescription-->
       <Item>
          <Element>GoalName</Element>
          <Characteristics>O</Characteristics>
@@ -4977,6 +5385,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- . GoalName-->
       <Item>
          <Element>GoalRecordedDate</Element>
          <Position>1</Position>
@@ -4986,6 +5395,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 1. GoalRecordedDate-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SpecialAssessmentConditionListType">
       <Item>
@@ -4993,6 +5403,7 @@
          <Description>
             <p>A list of the special assessment conditions that a student is entitled to have when sitting an assessment.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>SpecialAssessmentCondition</Element>
@@ -5002,6 +5413,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsSpecialAssessmentConditionType"/>
       </Item>
+      <!-- . SpecialAssessmentCondition-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StaffInvolvedListType">
       <Item>
@@ -5009,6 +5421,7 @@
          <Description>
             <p>A list of the staff involved and their role in relation to the assessment task, e.g. the staff member that created the assessment task, the moderator, the marker, the invigilator.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>StaffInvolved</Element>
@@ -5018,6 +5431,7 @@
          </Description>
          <Type ref="CommonTypes" name="StaffInvolvedType"/>
       </Item>
+      <!-- . StaffInvolved-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StaffInvolvedType">
       <Item>
@@ -5035,6 +5449,7 @@
          </Description>
          <Type ref="CommonTypes" name="RefIdType"/>
       </Item>
+      <!-- 1. RefId-->
       <Item>
          <Element>LocalId</Element>
          <Position>2</Position>
@@ -5044,6 +5459,7 @@
          </Description>
          <Type ref="CommonTypes" name="LocalIdType"/>
       </Item>
+      <!-- 2. LocalId-->
       <Item>
          <Element>Name</Element>
          <Position>3</Position>
@@ -5053,6 +5469,7 @@
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <!-- 3. Name-->
       <Item>
          <Element>StaffRole</Element>
          <Position>10</Position>
@@ -5062,6 +5479,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsAssessmentStaffRoleType"/>
       </Item>
+      <!-- 10. StaffRole-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StaffListStaffMemberType">
       <Item>
@@ -5079,6 +5497,7 @@
          </Description>
          <Type ref="CommonTypes" name="RefIdType"/>
       </Item>
+      <!-- 1. RefId-->
       <Item>
          <Element>LocalId</Element>
          <Position>2</Position>
@@ -5088,6 +5507,7 @@
          </Description>
          <Type ref="CommonTypes" name="LocalIdType"/>
       </Item>
+      <!-- 2. LocalId-->
       <Item>
          <Element>Name</Element>
          <Position>3</Position>
@@ -5097,6 +5517,7 @@
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <!-- 3. Name-->
       <Item>
          <Element>Role</Element>
          <Position>10</Position>
@@ -5104,8 +5525,9 @@
          <Description>
             <p>Code describing the staff member's role. Note: This role may affect the Teacher's access to the students' data for those students who are members of the TeachingGroup.</p>
          </Description>
-         <Type ref="CodeSets" name="NZCodeSetsStaffRoleType"/>
+         <Type ref="CodeSets" name="NZCodeSetsStaffTeachingGroupRoleType"/>
       </Item>
+      <!-- 10. Role-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StaffListType">
       <Item>
@@ -5113,6 +5535,7 @@
          <Description>
             <p>A list of associated staff members.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>StaffMember</Element>
@@ -5122,6 +5545,7 @@
          </Description>
          <Type ref="CommonTypes" name="StaffListStaffMemberType"/>
       </Item>
+      <!-- . StaffMember-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StaffPersonInfoType">
       <Item>
@@ -5139,6 +5563,7 @@
          </Description>
          <Type ref="CommonTypes" name="BaseNameType"/>
       </Item>
+      <!-- 1. Name-->
       <Item>
          <Element>Email</Element>
          <Position>2</Position>
@@ -5148,6 +5573,7 @@
          </Description>
          <Type ref="CommonTypes" name="PersonEmailsType"/>
       </Item>
+      <!-- 2. Email-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StaffReflectionListType">
       <Item>
@@ -5155,6 +5581,7 @@
          <Description>
             <p>A list of the reflections made by the staff members who applied the physical restraint.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>StaffReflection</Element>
@@ -5164,6 +5591,7 @@
          </Description>
          <Type ref="CommonTypes" name="StaffReflectionType"/>
       </Item>
+      <!-- . StaffReflection-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StaffReflectionType">
       <Item>
@@ -5180,6 +5608,7 @@
          </Description>
          <Type ref="CommonTypes" name="ReflectionListType"/>
       </Item>
+      <!-- . ReflectionList-->
       <Item>
          <Element>ReflectionDate</Element>
          <Position>1</Position>
@@ -5189,6 +5618,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 1. ReflectionDate-->
       <Item>
          <Element>WitnessedBy</Element>
          <Position>2</Position>
@@ -5198,6 +5628,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 2. WitnessedBy-->
       <Item>
          <Element>Staff</Element>
          <Position>3</Position>
@@ -5207,6 +5638,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 3. Staff-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StaffSubjectListType">
       <Item>
@@ -5214,6 +5646,7 @@
          <Description>
             <p>Subject(s) Staff member is eligible to teach.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>StaffSubject</Element>
@@ -5223,6 +5656,7 @@
          </Description>
          <Type ref="CommonTypes" name="StaffSubjectType"/>
       </Item>
+      <!-- . StaffSubject-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StaffSubjectType">
       <Item>
@@ -5240,6 +5674,7 @@
          </Description>
          <Type name="xs:unsignedInt"/>
       </Item>
+      <!-- 1. PreferenceNumber-->
       <Item>
          <Element>Code</Element>
          <Position>2</Position>
@@ -5249,6 +5684,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
       </Item>
+      <!-- 2. Code-->
       <Item>
          <Element>YearLevels</Element>
          <Position>3</Position>
@@ -5258,6 +5694,7 @@
          </Description>
          <Type ref="CommonTypes" name="YearLevelListType"/>
       </Item>
+      <!-- 3. YearLevels-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StartDateType">
       <Item>
@@ -5274,6 +5711,7 @@
          <Description>
             <p>A list of Statistical Areas used to assign spatial areas to a location in New Zealand. It may contain exactly one StatisticalArea for each of the following spatial unit types: - Area Unit - General Electoral District - Community Board - Māori Electoral District - Mesh Block - Regional Council - Territorial Authority - Urban Area - Ward</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>StatisticalArea</Element>
@@ -5283,6 +5721,7 @@
          </Description>
          <Type ref="CommonTypes" name="StatisticalAreaType"/>
       </Item>
+      <!-- . StatisticalArea-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StatisticalAreaType">
       <Item>
@@ -5299,6 +5738,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsSpatialUnitTypeType"/>
       </Item>
+      <!-- . SpatialUnitType-->
       <Item>
          <Element>Code</Element>
          <Characteristics>M</Characteristics>
@@ -5306,7 +5746,11 @@
             <p>A valid value defined for the nominated spatial unit type, as defined by Statistics New Zealand in one of the definitions per NZCodeSetsSpatialUnitType.</p>
          </Description>
          <Type name="xs:string"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- . Code-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StrandAchievementObjectiveListType">
       <Item>
@@ -5314,6 +5758,7 @@
          <Description>
             <p>A record of the Student's progress in a set of achievement objectives from the from the Technology curriculum strand, that was covered in the class.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>AchievementObjective</Element>
@@ -5323,6 +5768,7 @@
          </Description>
          <Type ref="CommonTypes" name="StrandAchievementObjectiveType"/>
       </Item>
+      <!-- . AchievementObjective-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StrandAchievementObjectiveType">
       <Item>
@@ -5340,6 +5786,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsStrandAchievementObjectiveType"/>
       </Item>
+      <!-- 1. AchievementObjective-->
       <Item>
          <Element>CurriculumLevel</Element>
          <Position>2</Position>
@@ -5349,6 +5796,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsTechnologyCurriculumLevelType"/>
       </Item>
+      <!-- 2. CurriculumLevel-->
       <Item>
          <Element>ProgressLevel</Element>
          <Position>3</Position>
@@ -5358,6 +5806,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsStrandAchievementProgressLevelType"/>
       </Item>
+      <!-- 3. ProgressLevel-->
       <Item>
          <Element>AchievementObjectiveDesc</Element>
          <Position>4</Position>
@@ -5367,6 +5816,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 4. AchievementObjectiveDesc-->
       <Item>
          <Element>OverallStudentEffortNote</Element>
          <Position>5</Position>
@@ -5376,6 +5826,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 5. OverallStudentEffortNote-->
       <Item>
          <Element>PracticalAbilityDesc</Element>
          <Position>6</Position>
@@ -5385,6 +5836,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 6. PracticalAbilityDesc-->
       <Item>
          <Element>PracticalAbilityProgressNote</Element>
          <Position>7</Position>
@@ -5394,6 +5846,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 7. PracticalAbilityProgressNote-->
       <Item>
          <Element>DocumentList</Element>
          <Position>8</Position>
@@ -5403,6 +5856,7 @@
          </Description>
          <Type ref="CommonTypes" name="DocumentListType"/>
       </Item>
+      <!-- 8. DocumentList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentAttendanceListType">
       <Item>
@@ -5410,6 +5864,7 @@
          <Description>
             <p>A list of the students that attended the teaching group meeting and their recorded attendance.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>StudentAttendance</Element>
@@ -5419,6 +5874,7 @@
          </Description>
          <Type ref="CommonTypes" name="StudentAttendanceType"/>
       </Item>
+      <!-- . StudentAttendance-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentAttendanceType">
       <Item>
@@ -5436,6 +5892,7 @@
          </Description>
          <Type ref="CommonTypes" name="StudentObjectReferenceType"/>
       </Item>
+      <!-- 1. Student-->
       <Item>
          <Element>Code</Element>
          <Position>2</Position>
@@ -5445,6 +5902,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsAttendanceCodeType"/>
       </Item>
+      <!-- 2. Code-->
       <Item>
          <Element>CodeGroup</Element>
          <Position>3</Position>
@@ -5454,6 +5912,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsAttendanceCodeGroupType"/>
       </Item>
+      <!-- 3. CodeGroup-->
       <Item>
          <Element>Note</Element>
          <Position>4</Position>
@@ -5463,6 +5922,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 4. Note-->
       <Item>
          <Element>StartTime</Element>
          <Position>5</Position>
@@ -5472,6 +5932,7 @@
          </Description>
          <Type name="xs:time"/>
       </Item>
+      <!-- 5. StartTime-->
       <Item>
          <Element>EndTime</Element>
          <Position>6</Position>
@@ -5481,6 +5942,7 @@
          </Description>
          <Type name="xs:time"/>
       </Item>
+      <!-- 6. EndTime-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentConsentListType">
       <Item>
@@ -5488,6 +5950,7 @@
          <Description>
             <p>A list of student consent information.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>StudentConsent</Element>
@@ -5497,6 +5960,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . StudentConsent-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentContactPersonInfoType">
       <Item>
@@ -5514,6 +5978,7 @@
          </Description>
          <Type ref="CommonTypes" name="BaseNameType"/>
       </Item>
+      <!-- 1. Name-->
       <Item>
          <Element>Email</Element>
          <Position>2</Position>
@@ -5523,33 +5988,37 @@
          </Description>
          <Type ref="CommonTypes" name="PersonEmailsType"/>
       </Item>
+      <!-- 2. Email-->
       <Item>
          <Element>Address</Element>
          <Position>10</Position>
-         <Characteristics>OR</Characteristics>
+         <Characteristics>O</Characteristics>
          <Description>
             <p>The person's address(es) - one or more addresses.</p>
          </Description>
          <Type ref="CommonTypes" name="AddressesType"/>
       </Item>
+      <!-- 10. Address-->
       <Item>
          <Element>Phone</Element>
          <Position>11</Position>
-         <Characteristics>OR</Characteristics>
+         <Characteristics>O</Characteristics>
          <Description>
             <p>The person's phone number(s) - one or more phone numbers.</p>
          </Description>
-         <Type ref="CommonTypes" name="PersonPhoneType"/>
+         <Type ref="CommonTypes" name="PersonPhonesType"/>
       </Item>
+      <!-- 11. Phone-->
       <Item>
          <Element>HouseholdContactInfoList</Element>
          <Position>12</Position>
-         <Characteristics>OR</Characteristics>
+         <Characteristics>O</Characteristics>
          <Description>
             <p>The person's household/s contact information. A list of one or more household’s contact information.</p>
          </Description>
          <Type ref="CommonTypes" name="HouseholdContactInfoListType"/>
       </Item>
+      <!-- 12. HouseholdContactInfoList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentCourseChoiceListType">
       <Item>
@@ -5557,6 +6026,7 @@
          <Description>
             <p>List of Student Course Choices that can be made, or have been made by a Student.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>StudentCourseChoice</Element>
@@ -5566,6 +6036,7 @@
          </Description>
          <Type ref="CommonTypes" name="StudentCourseChoiceType"/>
       </Item>
+      <!-- . StudentCourseChoice-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentCourseChoiceType">
       <Item>
@@ -5583,6 +6054,7 @@
          </Description>
          <Type name="xs:unsignedInt"/>
       </Item>
+      <!-- 1. PreferenceNumber-->
       <Item>
          <Element>Course</Element>
          <Position>2</Position>
@@ -5592,6 +6064,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 2. Course-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentECEEnrolmentType">
       <Item>
@@ -5609,6 +6082,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsECEYearLevelType"/>
       </Item>
+      <!-- 1. ECEYearLevel-->
       <Item>
          <Element>Curriculum</Element>
          <Position>2</Position>
@@ -5618,6 +6092,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsCurriculumType"/>
       </Item>
+      <!-- 2. Curriculum-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentInterestListType">
       <Item>
@@ -5625,6 +6100,7 @@
          <Description>
             <p>A list of the student's interests.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>StudentInterest</Element>
@@ -5634,6 +6110,7 @@
          </Description>
          <Type ref="CommonTypes" name="StudentInterestType"/>
       </Item>
+      <!-- . StudentInterest-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentInterestType">
       <Item>
@@ -5651,6 +6128,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 1. InterestRecordedDate-->
       <Item>
          <Element>InterestDescription</Element>
          <Position>2</Position>
@@ -5660,6 +6138,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 2. InterestDescription-->
       <Item>
          <Element>InterestName</Element>
          <Position>3</Position>
@@ -5669,6 +6148,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. InterestName-->
       <Item>
          <Element>InterestType</Element>
          <Position>4</Position>
@@ -5678,6 +6158,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsStudentInterestTypeType"/>
       </Item>
+      <!-- 4. InterestType-->
       <Item>
          <Element>SubjectArea</Element>
          <Position>5</Position>
@@ -5687,6 +6168,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
       </Item>
+      <!-- 5. SubjectArea-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentListType">
       <Item>
@@ -5694,6 +6176,7 @@
          <Description>
             <p>A list of references to the set of Students who are assigned to the Teaching Group, SchoolCourse or AssessmentTask.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Student</Element>
@@ -5703,6 +6186,7 @@
          </Description>
          <Type ref="CommonTypes" name="StudentObjectReferenceType"/>
       </Item>
+      <!-- . Student-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentObjectReferenceType">
       <Item>
@@ -5723,6 +6207,7 @@
             <xs:minInclusive value="0"/>
          </Facets>
       </Item>
+      <!-- . YearLevel-->
       <Item>
          <Element>RefId</Element>
          <Position>1</Position>
@@ -5732,6 +6217,7 @@
          </Description>
          <Type ref="CommonTypes" name="RefIdType"/>
       </Item>
+      <!-- 1. RefId-->
       <Item>
          <Element>LocalId</Element>
          <Position>2</Position>
@@ -5741,6 +6227,7 @@
          </Description>
          <Type ref="CommonTypes" name="LocalIdType"/>
       </Item>
+      <!-- 2. LocalId-->
       <Item>
          <Element>Name</Element>
          <Position>3</Position>
@@ -5750,6 +6237,7 @@
          </Description>
          <Type name="xs:string"/>
       </Item>
+      <!-- 3. Name-->
       <Item>
          <Element>NationalStudentNumber</Element>
          <Position>3</Position>
@@ -5759,6 +6247,7 @@
          </Description>
          <Type ref="CommonTypes" name="NSNType"/>
       </Item>
+      <!-- 3. NationalStudentNumber-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentPersonInfoType">
       <Item>
@@ -5776,6 +6265,7 @@
          </Description>
          <Type ref="CommonTypes" name="BaseNameType"/>
       </Item>
+      <!-- 1. Name-->
       <Item>
          <Element>Email</Element>
          <Position>2</Position>
@@ -5785,6 +6275,7 @@
          </Description>
          <Type ref="CommonTypes" name="PersonEmailsType"/>
       </Item>
+      <!-- 2. Email-->
       <Item>
          <Element>OtherNameList</Element>
          <Position>10</Position>
@@ -5794,6 +6285,7 @@
          </Description>
          <Type ref="CommonTypes" name="OtherNameListType"/>
       </Item>
+      <!-- 10. OtherNameList-->
       <Item>
          <Element>VerifiedName</Element>
          <Position>11</Position>
@@ -5803,6 +6295,7 @@
          </Description>
          <Type ref="CommonTypes" name="VerifiedNameType"/>
       </Item>
+      <!-- 11. VerifiedName-->
       <Item>
          <Element>Demographics</Element>
          <Position>12</Position>
@@ -5812,6 +6305,7 @@
          </Description>
          <Type ref="CommonTypes" name="DemographicsType"/>
       </Item>
+      <!-- 12. Demographics-->
       <Item>
          <Element>Address</Element>
          <Position>13</Position>
@@ -5821,6 +6315,7 @@
          </Description>
          <Type ref="CommonTypes" name="AddressesType"/>
       </Item>
+      <!-- 13. Address-->
       <Item>
          <Element>Phone</Element>
          <Position>14</Position>
@@ -5828,8 +6323,9 @@
          <Description>
             <p>The person's phone number(s).</p>
          </Description>
-         <Type ref="CommonTypes" name="PersonPhoneType"/>
+         <Type ref="CommonTypes" name="PersonPhonesType"/>
       </Item>
+      <!-- 14. Phone-->
       <Item>
          <Element>HouseholdContactInfoList</Element>
          <Position>15</Position>
@@ -5839,6 +6335,7 @@
          </Description>
          <Type ref="CommonTypes" name="HouseholdContactInfoListType"/>
       </Item>
+      <!-- 15. HouseholdContactInfoList-->
       <Item>
          <Element>PersonPhoto</Element>
          <Position>16</Position>
@@ -5848,6 +6345,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 16. PersonPhoto-->
       <Item>
          <Element>MedicalNeedList</Element>
          <Position>17</Position>
@@ -5857,6 +6355,7 @@
          </Description>
          <Type ref="CommonTypes" name="MedicalNeedListType"/>
       </Item>
+      <!-- 17. MedicalNeedList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentSchoolCoEnrolmentType">
       <Item>
@@ -5874,6 +6373,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 1. OtherProvider-->
       <Item>
          <Element>CoEnrolmentType</Element>
          <Position>2</Position>
@@ -5883,6 +6383,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsCoEnrolmentTypeType"/>
       </Item>
+      <!-- 2. CoEnrolmentType-->
       <Item>
          <Element>BehaviouralKeyIssuesNote</Element>
          <Position>3</Position>
@@ -5890,6 +6391,7 @@
          <Description/>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. BehaviouralKeyIssuesNote-->
       <Item>
          <Element>ClientSchoolConfidentialNote</Element>
          <Position>4</Position>
@@ -5899,6 +6401,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 4. ClientSchoolConfidentialNote-->
       <Item>
          <Element>GuardianConfidentialNote</Element>
          <Position>5</Position>
@@ -5908,6 +6411,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 5. GuardianConfidentialNote-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentSchoolEnrolmentType">
       <Item>
@@ -5925,6 +6429,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 1. SchoolYear-->
       <Item>
          <Element>StartDate</Element>
          <Position>2</Position>
@@ -5934,6 +6439,7 @@
          </Description>
          <Type ref="CommonTypes" name="StartDateType"/>
       </Item>
+      <!-- 2. StartDate-->
       <Item>
          <Element>EndDate</Element>
          <Position>3</Position>
@@ -5943,6 +6449,7 @@
          </Description>
          <Type ref="CommonTypes" name="EndDateType"/>
       </Item>
+      <!-- 3. EndDate-->
       <Item>
          <Element>MembershipType</Element>
          <Position>4</Position>
@@ -5952,6 +6459,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsSchoolEnrolmentTypeType"/>
       </Item>
+      <!-- 4. MembershipType-->
       <Item>
          <Element>YearLevel</Element>
          <Position>5</Position>
@@ -5961,10 +6469,11 @@
          </Description>
          <Type name="xs:int"/>
          <Facets>
-            <xs:minInclusive value="1"/>
+            <xs:minInclusive value="0"/>
             <xs:maxInclusive value="13"/>
          </Facets>
       </Item>
+      <!-- 5. YearLevel-->
       <Item>
          <Element>EligibilityCriteria</Element>
          <Position>6</Position>
@@ -5974,6 +6483,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsEligibilityCriteriaType"/>
       </Item>
+      <!-- 6. EligibilityCriteria-->
       <Item>
          <Element>EligibilityVerification</Element>
          <Position>7</Position>
@@ -5983,6 +6493,7 @@
          </Description>
          <Type ref="CommonTypes" name="VerificationEventType"/>
       </Item>
+      <!-- 7. EligibilityVerification-->
       <Item>
          <Element>FTE</Element>
          <Position>8</Position>
@@ -5992,6 +6503,7 @@
          </Description>
          <Type ref="CommonTypes" name="FTEType"/>
       </Item>
+      <!-- 8. FTE-->
       <Item>
          <Element>FundingType</Element>
          <Position>9</Position>
@@ -6001,6 +6513,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsStudentFundingTypeType"/>
       </Item>
+      <!-- 9. FundingType-->
       <Item>
          <Element>FundingYearLevel</Element>
          <Position>10</Position>
@@ -6014,6 +6527,7 @@
             <xs:maxInclusive value="15"/>
          </Facets>
       </Item>
+      <!-- 10. FundingYearLevel-->
       <Item>
          <Element>Curriculum</Element>
          <Position>11</Position>
@@ -6023,6 +6537,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsCurriculumType"/>
       </Item>
+      <!-- 11. Curriculum-->
       <Item>
          <Element>CurriculumLevel</Element>
          <Position>12</Position>
@@ -6036,6 +6551,7 @@
             <xs:maxInclusive value="5"/>
          </Facets>
       </Item>
+      <!-- 12. CurriculumLevel-->
       <Item>
          <Element>LanguageOfInstructionList</Element>
          <Position>13</Position>
@@ -6045,6 +6561,7 @@
          </Description>
          <Type ref="CommonTypes" name="LanguageOfInstructionListType"/>
       </Item>
+      <!-- 13. LanguageOfInstructionList-->
       <Item>
          <Element>TimeInImmersion</Element>
          <Position>14</Position>
@@ -6054,6 +6571,7 @@
          </Description>
          <Type name="xs:unsignedInt"/>
       </Item>
+      <!-- 14. TimeInImmersion-->
       <Item>
          <Element>Section9Agreement</Element>
          <Position>15</Position>
@@ -6063,6 +6581,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 15. Section9Agreement-->
       <Item>
          <Element>NZQA</Element>
          <Position>16</Position>
@@ -6072,6 +6591,7 @@
          </Description>
          <Type ref="CommonTypes" name="NZQAEnrolmentType"/>
       </Item>
+      <!-- 16. NZQA-->
       <Item>
          <Element>OngoingResourceScheme</Element>
          <Position>17</Position>
@@ -6081,6 +6601,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsOngoingResourceSchemeType"/>
       </Item>
+      <!-- 17. OngoingResourceScheme-->
       <Item>
          <Element>SubjectChoiceList</Element>
          <Position>18</Position>
@@ -6090,6 +6611,7 @@
          </Description>
          <Type ref="CommonTypes" name="StudentSubjectChoiceListType"/>
       </Item>
+      <!-- 18. SubjectChoiceList-->
       <Item>
          <Element>CourseChoiceList</Element>
          <Position>19</Position>
@@ -6099,6 +6621,7 @@
          </Description>
          <Type ref="CommonTypes" name="StudentCourseChoiceListType"/>
       </Item>
+      <!-- 19. CourseChoiceList-->
       <Item>
          <Element>CoEnrolment</Element>
          <Position>20</Position>
@@ -6108,6 +6631,7 @@
          </Description>
          <Type ref="CommonTypes" name="StudentSchoolCoEnrolmentType"/>
       </Item>
+      <!-- 20. CoEnrolment-->
       <Item>
          <Element>InternationalEnrolment</Element>
          <Position>21</Position>
@@ -6117,6 +6641,7 @@
          </Description>
          <Type ref="CommonTypes" name="InternationalSchoolEnrolmentType"/>
       </Item>
+      <!-- 21. InternationalEnrolment-->
       <Item>
          <Element>StudentConsentList</Element>
          <Position>22</Position>
@@ -6126,6 +6651,7 @@
          </Description>
          <Type ref="CommonTypes" name="StudentConsentListType"/>
       </Item>
+      <!-- 22. StudentConsentList-->
       <Item>
          <Element>AcademicAttainmentGoalList</Element>
          <Position>23</Position>
@@ -6135,6 +6661,7 @@
          </Description>
          <Type ref="CommonTypes" name="AcademicAttainmentGoalListType"/>
       </Item>
+      <!-- 23. AcademicAttainmentGoalList-->
       <Item>
          <Element>PreEnrolmentCancellation</Element>
          <Position>24</Position>
@@ -6144,6 +6671,7 @@
          </Description>
          <Type ref="CommonTypes" name="PreEnrolmentCancellationType"/>
       </Item>
+      <!-- 24. PreEnrolmentCancellation-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentSubjectChoiceListType">
       <Item>
@@ -6151,6 +6679,7 @@
          <Description>
             <p>List of Student Subject Choices where available.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>StudentSubjectChoice</Element>
@@ -6160,6 +6689,7 @@
          </Description>
          <Type ref="CommonTypes" name="StudentSubjectChoiceType"/>
       </Item>
+      <!-- . StudentSubjectChoice-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentSubjectChoiceType">
       <Item>
@@ -6177,6 +6707,7 @@
          </Description>
          <Type name="xs:unsignedInt"/>
       </Item>
+      <!-- 1. PreferenceNumber-->
       <Item>
          <Element>Code</Element>
          <Position>2</Position>
@@ -6186,6 +6717,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
       </Item>
+      <!-- 2. Code-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentTertiaryEnrolmentType">
       <Item>
@@ -6193,11 +6725,15 @@
          <Description/>
       </Item>
       <Item>
-         <Element>type</Element>
+         <Element>Type</Element>
          <Characteristics>M</Characteristics>
          <Description/>
          <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- . Type-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="StudentVoiceListType">
       <Item>
@@ -6205,6 +6741,7 @@
          <Description>
             <p>A list of the student's or their whānau's voice in regards to the student 's interests, goals, and voice (comments, opinions).</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>StudentVoice</Element>
@@ -6214,6 +6751,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . StudentVoice-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SubjectAreaListType">
       <Item>
@@ -6221,8 +6759,11 @@
          <Description>
             <p>A list of associated subject areas.</p>
          </Description>
+         <List mode="List"/>
       </Item>
-      <Choice>
+      <Choice fromAssociation="true" repeatable="true">
+         <Position/>
+         <Element>SubjectChoiceType</Element>
          <Item>
             <Element>NCEASubjectArea</Element>
             <Position>2</Position>
@@ -6242,6 +6783,7 @@
             <Type ref="CodeSets" name="NZCodeSetsSubjectAreaType"/>
          </Item>
       </Choice>
+      <!-- . SubjectChoiceType-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SupportNeedExternalResponseType">
       <Item>
@@ -6259,6 +6801,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLearningSupportExternalProviderType"/>
       </Item>
+      <!-- 1. Provider-->
       <Item>
          <Element>ProviderDetail</Element>
          <Position>2</Position>
@@ -6268,6 +6811,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 2. ProviderDetail-->
       <Item>
          <Element>Status</Element>
          <Position>3</Position>
@@ -6277,8 +6821,9 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLearningSupportExtResponseStatusType"/>
       </Item>
+      <!-- 3. Status-->
       <Item>
-         <Element>MoESpecialistService</Element>
+         <Element>MOESpecialistService</Element>
          <Position>4</Position>
          <Characteristics>O</Characteristics>
          <Description>
@@ -6286,6 +6831,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsMoESpecialistServiceType"/>
       </Item>
+      <!-- 4. MOESpecialistService-->
       <Item>
          <Element>FundedBy</Element>
          <Position>5</Position>
@@ -6295,6 +6841,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLearningSupportExternalFunderType"/>
       </Item>
+      <!-- 5. FundedBy-->
       <Item>
          <Element>FundedByDetail</Element>
          <Position>6</Position>
@@ -6304,6 +6851,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 6. FundedByDetail-->
       <Item>
          <Element>RequestMadeDate</Element>
          <Position>7</Position>
@@ -6313,6 +6861,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 7. RequestMadeDate-->
       <Item>
          <Element>FundingStatus</Element>
          <Position>8</Position>
@@ -6322,6 +6871,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLearningSupportFundingStatusType"/>
       </Item>
+      <!-- 8. FundingStatus-->
       <Item>
          <Element>FundingDeclinedReason</Element>
          <Position>10</Position>
@@ -6331,6 +6881,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 10. FundingDeclinedReason-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SupportNeedInternalResponseType">
       <Item>
@@ -6348,6 +6899,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLearningSupportInternalProviderType"/>
       </Item>
+      <!-- 1. ProvidedBy-->
       <Item>
          <Element>ProvidedByName</Element>
          <Position>2</Position>
@@ -6357,6 +6909,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 2. ProvidedByName-->
       <Item>
          <Element>Status</Element>
          <Position>3</Position>
@@ -6366,6 +6919,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLearningSupportIntResponseStatusType"/>
       </Item>
+      <!-- 3. Status-->
       <Item>
          <Element>FundedBy</Element>
          <Position>4</Position>
@@ -6375,6 +6929,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsLearningSupportInternalFunderType"/>
       </Item>
+      <!-- 4. FundedBy-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SupportNeedListType">
       <Item>
@@ -6382,6 +6937,7 @@
          <Description>
             <p>A list of learning support needs that have been identified for the student.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>SupportNeed</Element>
@@ -6391,6 +6947,7 @@
          </Description>
          <Type ref="CommonTypes" name="SupportNeedType"/>
       </Item>
+      <!-- . SupportNeed-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SupportNeedResponseListType">
       <Item>
@@ -6398,6 +6955,7 @@
          <Description>
             <p>A list of responses made about a learning support need.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Response</Element>
@@ -6407,6 +6965,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . Response-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SupportNeedResponseReviewListType">
       <Item>
@@ -6414,6 +6973,7 @@
          <Description>
             <p>A list of the reviews made about the response.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Review</Element>
@@ -6423,6 +6983,7 @@
          </Description>
          <Type ref="CommonTypes" name="SupportNeedResponseReviewType"/>
       </Item>
+      <!-- . Review-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SupportNeedResponseReviewType">
       <Item>
@@ -6440,6 +7001,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 1. Reviewer-->
       <Item>
          <Element>ReviewDate</Element>
          <Position>2</Position>
@@ -6449,6 +7011,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 2. ReviewDate-->
       <Item>
          <Element>ReviewComments</Element>
          <Position>3</Position>
@@ -6457,7 +7020,11 @@
             <p>Free text comment about the review.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- 3. ReviewComments-->
       <Item>
          <Element>NextReviewDate</Element>
          <Position>4</Position>
@@ -6467,6 +7034,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 4. NextReviewDate-->
       <Item>
          <Element>AttachmentList</Element>
          <Position>5</Position>
@@ -6476,6 +7044,7 @@
          </Description>
          <Type ref="CommonTypes" name="DocumentListType"/>
       </Item>
+      <!-- 5. AttachmentList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SupportNeedType">
       <Item>
@@ -6493,6 +7062,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 1. Need-->
       <Item>
          <Element>ResponseList</Element>
          <Position>2</Position>
@@ -6502,11 +7072,13 @@
          </Description>
          <Type ref="CommonTypes" name="SupportNeedResponseListType"/>
       </Item>
+      <!-- 2. ResponseList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SupportingDocumentListType">
       <Item>
          <Element>SupportingDocumentListType</Element>
          <Description/>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>SupportingDocument</Element>
@@ -6514,6 +7086,7 @@
          <Description/>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . SupportingDocument-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="SuspensionContainerType">
       <Item>
@@ -6531,6 +7104,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsSuspensionCategoryType"/>
       </Item>
+      <!-- 1. SuspensionCategory-->
       <Item>
          <Element>WithdrawalTimeList</Element>
          <Position>2</Position>
@@ -6540,6 +7114,7 @@
          </Description>
          <Type ref="CommonTypes" name="WithdrawalTimeListType"/>
       </Item>
+      <!-- 2. WithdrawalTimeList-->
       <Item>
          <Element>Duration</Element>
          <Position>3</Position>
@@ -6549,6 +7124,7 @@
          </Description>
          <Type name="xs:decimal"/>
       </Item>
+      <!-- 3. Duration-->
       <Item>
          <Element>AdvisementDate</Element>
          <Position>4</Position>
@@ -6558,6 +7134,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 4. AdvisementDate-->
       <Item>
          <Element>ResolutionMeetingTime</Element>
          <Position>5</Position>
@@ -6567,6 +7144,7 @@
          </Description>
          <Type name="xs:dateTime"/>
       </Item>
+      <!-- 5. ResolutionMeetingTime-->
       <Item>
          <Element>ResolutionNotes</Element>
          <Position>6</Position>
@@ -6576,6 +7154,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 6. ResolutionNotes-->
       <Item>
          <Element>EarlyReturnDate</Element>
          <Position>7</Position>
@@ -6585,6 +7164,7 @@
          </Description>
          <Type name="xs:date"/>
       </Item>
+      <!-- 7. EarlyReturnDate-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="TeRitoConfigurationType">
       <Item>
@@ -6601,6 +7181,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- . DataAnalysisDashboardsInd-->
       <Item>
          <Element>StandardisedLearningSupportRegisterInd</Element>
          <Characteristics>M</Characteristics>
@@ -6609,6 +7190,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- . StandardisedLearningSupportRegisterInd-->
       <Item>
          <Element>VirtualLearningEnvironmentInd</Element>
          <Characteristics>M</Characteristics>
@@ -6617,6 +7199,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- . VirtualLearningEnvironmentInd-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="TechnologyClassListType">
       <Item>
@@ -6624,6 +7207,7 @@
          <Description>
             <p>A list of records of the Student's progress in particular classes from the Technology curriculum. e.g. Hard Materials, Food Technology, Digital Design etc.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>TechnologyClass</Element>
@@ -6633,6 +7217,7 @@
          </Description>
          <Type ref="CommonTypes" name="TechnologyClassType"/>
       </Item>
+      <!-- . TechnologyClass-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="TechnologyClassType">
       <Item>
@@ -6650,6 +7235,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsTechnologyClassType"/>
       </Item>
+      <!-- 1. Class-->
       <Item>
          <Element>Teacher</Element>
          <Position>2</Position>
@@ -6659,6 +7245,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 2. Teacher-->
       <Item>
          <Element>BehaviourComment</Element>
          <Position>3</Position>
@@ -6668,6 +7255,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 3. BehaviourComment-->
       <Item>
          <Element>EffortComment</Element>
          <Position>4</Position>
@@ -6677,6 +7265,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 4. EffortComment-->
       <Item>
          <Element>StrandList</Element>
          <Position>5</Position>
@@ -6686,6 +7275,7 @@
          </Description>
          <Type ref="CommonTypes" name="ClassStrandListType"/>
       </Item>
+      <!-- 5. StrandList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="TertiaryServiceType">
       <Item>
@@ -6701,7 +7291,11 @@
             <p>Code denoting the kind of Tertiary service. eg: University, Wananga, etc.</p>
          </Description>
          <Type name="xs:string"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- . Type-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="VerificationEventType">
       <Item>
@@ -6719,6 +7313,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsVerificationSourceType"/>
       </Item>
+      <!-- 1. Source-->
       <Item>
          <Element>DocumentSerialNumber</Element>
          <Position>2</Position>
@@ -6728,6 +7323,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 2. DocumentSerialNumber-->
       <Item>
          <Element>DocumentExpiryDate</Element>
          <Position>3</Position>
@@ -6737,6 +7333,7 @@
          </Description>
          <Type ref="CommonTypes" name="StartDateType"/>
       </Item>
+      <!-- 3. DocumentExpiryDate-->
       <Item>
          <Element>IsConfirmed</Element>
          <Position>4</Position>
@@ -6746,6 +7343,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 4. IsConfirmed-->
       <Item>
          <Element>Timestamp</Element>
          <Position>5</Position>
@@ -6755,6 +7353,7 @@
          </Description>
          <Type name="xs:dateTime"/>
       </Item>
+      <!-- 5. Timestamp-->
       <Item>
          <Element>Provider</Element>
          <Position>6</Position>
@@ -6764,6 +7363,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 6. Provider-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="VerifiedNameType">
       <Item>
@@ -6781,6 +7381,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 1. Title-->
       <Item>
          <Element>FamilyName</Element>
          <Position>2</Position>
@@ -6789,7 +7390,11 @@
             <p>Family name. That part of the person's name which is used to describe family, clan, tribal group, or marital association. Note that this element is required when known. However, it may not be possible to know the family name in which case you should add the available information to the FullName element.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- 2. FamilyName-->
       <Item>
          <Element>GivenName</Element>
          <Position>3</Position>
@@ -6798,7 +7403,11 @@
             <p>Given name of the person. Note that this element is required if known. However, it may not be possible to know the given name in which case you should add the available information to the FullName element.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- 3. GivenName-->
       <Item>
          <Element>MiddleName</Element>
          <Position>4</Position>
@@ -6808,6 +7417,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 4. MiddleName-->
       <Item>
          <Element>SecondMiddleName</Element>
          <Position>5</Position>
@@ -6817,6 +7427,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 5. SecondMiddleName-->
       <Item>
          <Element>FamilyNameFirst</Element>
          <Position>6</Position>
@@ -6826,6 +7437,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 6. FamilyNameFirst-->
       <Item>
          <Element>PreferredFamilyName</Element>
          <Position>7</Position>
@@ -6835,6 +7447,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 7. PreferredFamilyName-->
       <Item>
          <Element>PreferredFamilyNameFirst</Element>
          <Position>8</Position>
@@ -6844,6 +7457,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 8. PreferredFamilyNameFirst-->
       <Item>
          <Element>PreferredGivenName</Element>
          <Position>9</Position>
@@ -6853,6 +7467,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 9. PreferredGivenName-->
       <Item>
          <Element>Suffix</Element>
          <Position>10</Position>
@@ -6862,6 +7477,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 10. Suffix-->
       <Item>
          <Element>FullName</Element>
          <Position>11</Position>
@@ -6870,7 +7486,11 @@
             <p>A free text field for the complete name for display purposes. If this is associated with a StudentPersonal, StaffPersonal or StudentContactPersonal record and the FamilyName and GivenName are not both specified, then this becomes mandatory.</p>
          </Description>
          <Type name="xs:normalizedString"/>
+         <Facets>
+            <xs:pattern value="\S(.*\S)?"/>
+         </Facets>
       </Item>
+      <!-- 11. FullName-->
       <Item>
          <Element>Type</Element>
          <Position>12</Position>
@@ -6880,6 +7500,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsNameUsageTypeType"/>
       </Item>
+      <!-- 12. Type-->
       <Item>
          <Element>IsVerified</Element>
          <Position>13</Position>
@@ -6889,6 +7510,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsYesOrNoCategoryType"/>
       </Item>
+      <!-- 13. IsVerified-->
       <Item>
          <Element>Verification</Element>
          <Position>20</Position>
@@ -6898,6 +7520,7 @@
          </Description>
          <Type ref="CommonTypes" name="VerificationEventType"/>
       </Item>
+      <!-- 20. Verification-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="WellbeingAlertListType">
       <Item>
@@ -6905,6 +7528,7 @@
          <Description>
             <p>A list of any Wellbeing Alerts that have arisen as a result of this Characteristic.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>WellbeingAlert</Element>
@@ -6914,6 +7538,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . WellbeingAlert-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="WellbeingAppealListType">
       <Item>
@@ -6921,6 +7546,7 @@
          <Description>
             <p>A list of any appeals that are of interest to a Wellbeing Event, Response or Alert.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>WellbeingAppeal</Element>
@@ -6930,6 +7556,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . WellbeingAppeal-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="WellbeingCharacteristicListType">
       <Item>
@@ -6937,6 +7564,7 @@
          <Description>
             <p>A list of the Wellbeing Characteristics that contributed to the creation of this Wellbeing Alert.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>WellbeingCharacteristic</Element>
@@ -6946,6 +7574,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . WellbeingCharacteristic-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="WellbeingEventCategoryListType">
       <Item>
@@ -6953,6 +7582,7 @@
          <Description>
             <p>List of Categories of the Wellbeing Event.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>EventCategory</Element>
@@ -6962,6 +7592,7 @@
          </Description>
          <Type ref="CommonTypes" name="WellbeingEventCategoryType"/>
       </Item>
+      <!-- . EventCategory-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="WellbeingEventCategoryType">
       <Item>
@@ -6979,6 +7610,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsWellbeingEventCategoryType"/>
       </Item>
+      <!-- 1. Category-->
       <Item>
          <Element>EventSubCategoryList</Element>
          <Position>2</Position>
@@ -6988,6 +7620,7 @@
          </Description>
          <Type ref="CommonTypes" name="WellbeingEventSubCategoryListType"/>
       </Item>
+      <!-- 2. EventSubCategoryList-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="WellbeingEventListType">
       <Item>
@@ -6995,6 +7628,7 @@
          <Description>
             <p>A list of any Wellbeing Events that have arisen as a result of this Characteristic.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>WellbeingEvent</Element>
@@ -7004,6 +7638,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . WellbeingEvent-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="WellbeingEventSubCategoryListType">
       <Item>
@@ -7011,6 +7646,7 @@
          <Description>
             <p>List of Sub-Categories associated with the Wellbeing Event's Category.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>EventSubCategory</Element>
@@ -7020,6 +7656,7 @@
          </Description>
          <Type ref="CommonTypes" name="WellbeingEventSubCategoryType"/>
       </Item>
+      <!-- . EventSubCategory-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="WellbeingEventSubCategoryType">
       <Item>
@@ -7037,6 +7674,7 @@
          </Description>
          <Type ref="CodeSets" name="NZCodeSetsWellbeingEventSubCategoryType"/>
       </Item>
+      <!-- 1. SubCategory-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="WellbeingPlanType">
       <Item>
@@ -7054,6 +7692,7 @@
          </Description>
          <Type name="xs:normalizedString"/>
       </Item>
+      <!-- 1. PlanNotes-->
       <Item>
          <Element>PlanDocument</Element>
          <Position>2</Position>
@@ -7063,6 +7702,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 2. PlanDocument-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="WellbeingResponseListType">
       <Item>
@@ -7070,6 +7710,7 @@
          <Description>
             <p>A list of the Wellbeing Responses that contributed to the creation of this Wellbeing Alert.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>WellbeingResponse</Element>
@@ -7079,6 +7720,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- . WellbeingResponse-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="WithdrawalTimeListType">
       <Item>
@@ -7086,6 +7728,7 @@
          <Description>
             <p>Where a student is to be removed or withdrawn partially for particular times in a week within the Start and End dates of the Response.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>Withdrawal</Element>
@@ -7095,6 +7738,7 @@
          </Description>
          <Type ref="CommonTypes" name="WithdrawalType"/>
       </Item>
+      <!-- . Withdrawal-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="WithdrawalType">
       <Item>
@@ -7104,7 +7748,7 @@
          </Description>
       </Item>
       <Item>
-         <Element>WithdrawlStartDate</Element>
+         <Element>WithdrawalStartDate</Element>
          <Position>1</Position>
          <Characteristics>O</Characteristics>
          <Description>
@@ -7112,6 +7756,7 @@
          </Description>
          <Type ref="CommonTypes" name="StartDateType"/>
       </Item>
+      <!-- 1. WithdrawalStartDate-->
       <Item>
          <Element>WithdrawalEndDate</Element>
          <Position>2</Position>
@@ -7121,6 +7766,7 @@
          </Description>
          <Type ref="CommonTypes" name="EndDateType"/>
       </Item>
+      <!-- 2. WithdrawalEndDate-->
       <Item>
          <Element>SchoolTerm</Element>
          <Position>3</Position>
@@ -7130,6 +7776,7 @@
          </Description>
          <Type name="xs:integer"/>
       </Item>
+      <!-- 3. SchoolTerm-->
       <Item>
          <Element>WithdrawalFrom</Element>
          <Position>4</Position>
@@ -7139,6 +7786,7 @@
          </Description>
          <Type ref="CommonTypes" name="ObjectReferenceType"/>
       </Item>
+      <!-- 4. WithdrawalFrom-->
    </CommonElement>
    <CommonElement type="true" dm="true" name="YearLevelListType">
       <Item>
@@ -7146,6 +7794,7 @@
          <Description>
             <p>A list of valid year levels for a particular operation. Valid values are 0 to 13 inclusive. Note: Year 0 students are new entrants that start primary school in the second half of the year, and move into Year 1 the following year.</p>
          </Description>
+         <List mode="List"/>
       </Item>
       <Item>
          <Element>YearLevel</Element>
@@ -7153,9 +7802,10 @@
          <Description/>
          <Type name="xs:int"/>
          <Facets>
-            <xs:minInclusive value="1"/>
+            <xs:minInclusive value="0"/>
             <xs:maxInclusive value="13"/>
          </Facets>
       </Item>
+      <!-- . YearLevel-->
    </CommonElement>
 </IncludeGroup>

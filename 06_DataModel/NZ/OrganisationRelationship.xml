@@ -28,7 +28,7 @@
 			<p>The universally unique identifier for the data object record that is used across systems.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
-  </Item>  <!-- OrganisationRelationshipRefId -->
+  </Item>  <!-- 1. OrganisationRelationshipRefId -->
   <Item>
     <Element>OrganisationRelationshipLocalId</Element>
     <Characteristics>O</Characteristics>
@@ -38,7 +38,7 @@
 			was originally sourced from.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>  <!-- OrganisationRelationshipLocalId -->
+  </Item>  <!-- 2. OrganisationRelationshipLocalId -->
 
   <Item>
     <Element>Status</Element>
@@ -48,7 +48,7 @@
       <p>Records if this OrganisationRelationship is Active or Inactive</p>
     </Description>
 	  <Type ref="CodeSets" name="NZCodeSetsOrganisationRelationshipStatusType"/>
-  </Item>  <!-- Status -->
+  </Item>  <!-- 3. Status -->
 
   <Item>
     <Element>RelationshipType</Element>
@@ -58,7 +58,7 @@
       <p>Code denoting the nature of the relationship between source and destination organisations.</p>
     </Description>
 	  <Type ref="CodeSets" name="NZCodeSetsOrganisationRelationshipTypeType"/>
-  </Item>  <!-- RelationshipType -->
+  </Item>  <!-- 4. RelationshipType -->
 
   <Item>
     <Element>SourceOrganisation</Element>
@@ -68,7 +68,7 @@
       <p>Generic object reference to the source Organisation in the relationship.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
-  </Item>  <!-- SourceOrganisation -->
+  </Item>  <!-- 5. SourceOrganisation -->
   <Item>
     <Element>SourceOrganisationRole</Element>
     <Characteristics>O</Characteristics>
@@ -77,7 +77,7 @@
       <p>The role the source Organisation is playing in this relationship.</p>
     </Description>
 	  <Type ref="CodeSets" name="NZCodeSetsSourceOrganisationRoleType"/>
-  </Item>  <!-- SourceOrganisationRole -->
+  </Item>  <!-- 6. SourceOrganisationRole -->
   <Item>
     <Element>SourceOrganisationAgreementDate</Element>
     <Characteristics>O</Characteristics>
@@ -87,7 +87,7 @@
       nil value if the source Organisation is yet to register their agreement ot the relationship.</p>
     </Description>
     <Type name="xs:date"/>
-  </Item>  <!-- SourceOrganisationAgreementDate -->
+  </Item>  <!-- 7. SourceOrganisationAgreementDate -->
 
   <Item>
     <Element>RelatedOrganisation</Element>
@@ -97,7 +97,7 @@
       <p>Generic object reference to the related Organisation in the relationship.</p>
     </Description>
     <Type ref="CommonTypes" name="OrganisationObjectReferenceType"></Type>
-  </Item>  <!-- RelatedOrganisation -->
+  </Item>  <!-- 8. RelatedOrganisation -->
   <Item>
     <Element>RelatedOrganisationRole</Element>
     <Characteristics>O</Characteristics>
@@ -106,7 +106,7 @@
       <p>The role the related Organisation is playing in this relationship.</p>
     </Description>
 	  <Type ref="CodeSets" name="NZCodeSetsRelatedOrganisationRoleType"/>
-  </Item>  <!-- RelatedOrganisationRole -->  
+  </Item>  <!-- 9. RelatedOrganisationRole -->  
   <Item>
     <Element>RelatedOrganisationAgreementDate</Element>
     <Characteristics>O</Characteristics>
@@ -116,7 +116,7 @@
       nil value if the related Organisation is yet to register their agreement ot the relationship.</p>
     </Description>
     <Type name="xs:date"/>
-  </Item>  <!-- RelatedOrganisationAgreementDate -->
+  </Item>  <!-- 10. RelatedOrganisationAgreementDate -->
 
   <Item>
     <Element>EffectiveDate</Element>
@@ -126,7 +126,7 @@
       <p>The date from which the organisation relationship is active.</p>
     </Description>
     <Type ref="CommonTypes" name="StartDateType"/>
-  </Item>  <!-- EffectiveDate -->
+  </Item>  <!-- 11. EffectiveDate -->
   <Item>
     <Element>ExpirationDate</Element>
     <Characteristics>O</Characteristics>
@@ -135,7 +135,7 @@
       <p>The date after which the organisation relationship is no longer active.</p>
     </Description>
     <Type ref="CommonTypes" name="EndDateType"/>
-  </Item>  <!-- ExpirationDate -->
+  </Item>  <!-- 12. ExpirationDate -->
 
   <Item>
     <Element>YearLevelList</Element>
@@ -146,7 +146,7 @@
 		  learners being hosted or sent from the client or contributing organisation</p>
     </Description>
     <Type ref="CommonTypes" name="YearLevelListType"/>
-  </Item>  <!-- YearLevelList -->
+  </Item>  <!-- 13. YearLevelList -->
   <Item>
     <Element>SubjectAreaList</Element>
     <Characteristics>O</Characteristics>
@@ -156,7 +156,7 @@
       the learners being sent by the Source Organisation are taught at the Related Organisation.</p>
     </Description>
     <Type ref="CommonTypes" name="SubjectAreaListType"/>
-  </Item>  <!-- SubjectAreaList -->
+  </Item>  <!-- 14. SubjectAreaList -->
   <Item>
     <Element>Description</Element>
     <Characteristics>O</Characteristics>
@@ -165,7 +165,7 @@
       <p>Free text description providing more detail about the organisation relationship.</p>
     </Description>
     <Type name="xs:normalizedString"/>
-  </Item>  <!-- Description -->
+  </Item>  <!-- 15. Description -->
 
 	<Item>
 		<Element>RecordAudit</Element>    
@@ -175,7 +175,7 @@
 		<p>The audit details for a record, e.g. Created/Last Updated DateTime and Created/Last Updated By.</p>
 		</Description>
 		<Type ref="CommonTypes" name="RecordAuditType"></Type>
-	</Item>    <!-- RecordAudit -->
+	</Item>    <!-- 16. RecordAudit -->
 
   <xi:include parse="xml" href="Examples/OrganisationRelationship.xml"/>	
 </DataObject>
