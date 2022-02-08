@@ -12194,6 +12194,7 @@ EffectiveDate &lt; today's date or ExpirationDate =&lt; today's date.</p>
             <Value>
                <Code>41</Code>
                <Text xml:lang="en">Teen Parent Unit (Year 9-15)</Text>
+               <EndDate>2020-05-08</EndDate>
                <Text xml:lang="mi">Ranga Mātātahi (Tau 9 – 15)</Text>
             </Value>
             <!-- 41 . Teen Parent Unit (Year 9-15)-->
@@ -20604,24 +20605,24 @@ StartDate &lt; today's date or EndDate =&lt; today's date.</p>
                <Code>N</Code>
                <Text xml:lang="en">No</Text>
                <Text xml:lang="mi">Kāo</Text>
-               <DisplayOrder xml:lang="en">1</DisplayOrder>
-               <DisplayOrder xml:lang="mi">1</DisplayOrder>
+               <DisplayOrder xml:lang="en">2</DisplayOrder>
+               <DisplayOrder xml:lang="mi">2</DisplayOrder>
             </Value>
             <!-- N . No-->
             <Value>
                <Code>R</Code>
                <Text xml:lang="en">Not required</Text>
                <Text xml:lang="mi">Kāre i hiahiatia</Text>
-               <DisplayOrder xml:lang="en">2</DisplayOrder>
-               <DisplayOrder xml:lang="mi">2</DisplayOrder>
+               <DisplayOrder xml:lang="en">3</DisplayOrder>
+               <DisplayOrder xml:lang="mi">3</DisplayOrder>
             </Value>
             <!-- R . Not required-->
             <Value>
                <Code>Y</Code>
                <Text xml:lang="en">Yes</Text>
                <Text xml:lang="mi">Āe</Text>
-               <DisplayOrder xml:lang="en">3</DisplayOrder>
-               <DisplayOrder xml:lang="mi">3</DisplayOrder>
+               <DisplayOrder xml:lang="en">1</DisplayOrder>
+               <DisplayOrder xml:lang="mi">1</DisplayOrder>
             </Value>
             <!-- Y . Yes-->
          </Values>
@@ -20637,19 +20638,24 @@ StartDate &lt; today's date or EndDate =&lt; today's date.</p>
                <Code>N</Code>
                <Text xml:lang="en">No</Text>
                <Text xml:lang="mi">Kāo</Text>
+               <DisplayOrder xml:lang="en">2</DisplayOrder>
+               <DisplayOrder xml:lang="mi">2</DisplayOrder>
             </Value>
             <!-- N . No-->
             <Value>
                <Code>U</Code>
                <Text xml:lang="en">Not required</Text>
                <Text xml:lang="mi">Kāre i hiahiatia</Text>
-               <Default/>
+               <DisplayOrder xml:lang="en">3</DisplayOrder>
+               <DisplayOrder xml:lang="mi">3</DisplayOrder>
             </Value>
             <!-- U . Not required-->
             <Value>
                <Code>Y</Code>
                <Text xml:lang="en">Yes</Text>
                <Text xml:lang="mi">Āe</Text>
+               <DisplayOrder xml:lang="en">1</DisplayOrder>
+               <DisplayOrder xml:lang="mi">1</DisplayOrder>
             </Value>
             <!-- Y . Yes-->
          </Values>
@@ -20664,19 +20670,19 @@ StartDate &lt; today's date or EndDate =&lt; today's date.</p>
             <Value>
                <Code>N</Code>
                <Text xml:lang="en">No</Text>
-               <DisplayOrder xml:lang="en">1</DisplayOrder>
-               <DisplayOrder xml:lang="mi">1</DisplayOrder>
+               <DisplayOrder xml:lang="en">2</DisplayOrder>
+               <DisplayOrder xml:lang="mi">2</DisplayOrder>
                <Text xml:lang="mi">Kāo</Text>
             </Value>
             <!-- N . No-->
             <Value>
                <Code>Y</Code>
-               <Text xml:lang="en">No</Text>
-               <DisplayOrder xml:lang="en">2</DisplayOrder>
-               <DisplayOrder xml:lang="mi">2</DisplayOrder>
+               <Text xml:lang="en">Yes</Text>
+               <DisplayOrder xml:lang="en">1</DisplayOrder>
+               <DisplayOrder xml:lang="mi">1</DisplayOrder>
                <Text xml:lang="mi">Āe</Text>
             </Value>
-            <!-- Y . No-->
+            <!-- Y . Yes-->
          </Values>
       </CodeSet>
       <!-- Yes Or No Category-->
