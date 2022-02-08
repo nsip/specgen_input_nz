@@ -322,6 +322,15 @@
 		<xsl:apply-templates select="specgen:Choice">
 			<xsl:with-param name="indent" select="'      '"/>
 		</xsl:apply-templates>
+
+		<!-- Don't put the oneOf into the -strict (code generation) schema -->
+		<!--    Code generation ends up with weird OneOfAnyTypeAnyType composite types  which don't work -->
+		<xsl:if test="$strictJSON ne 'true'">
+			<xsl:text>    oneOf:&#x0a;</xsl:text>
+			<xsl:for-each select="specgen:Choice/specgen:Item">
+				<xsl:value-of select="concat('    - required:&#x0a;      - ', $q, specgen:Element|specgen:Attribute, $q, '&#x0a;')"/>
+			</xsl:for-each>
+		</xsl:if>
 	</xsl:template>
 
 	<!-- Common type is a list (implicit or explict), with choice items all the same (homogonous list) -->
@@ -342,11 +351,14 @@
 			<xsl:with-param name="indent" select="'      '"/>
 		</xsl:apply-templates>
 
-		<xsl:text>    oneOf:&#x0a;</xsl:text>
-		<xsl:for-each select="specgen:Choice/specgen:Item">
-			<xsl:value-of select="concat('    - required:&#x0a;      - ', $q, specgen:Element|specgen:Attribute, $q, '&#x0a;')"/>
-		</xsl:for-each>
-
+		<!-- Don't put the oneOf into the -strict (code generation) schema -->
+		<!--    Code generation ends up with weird OneOfAnyTypeAnyType composite types  which don't work -->
+		<xsl:if test="$strictJSON ne 'true'">
+			<xsl:text>    oneOf:&#x0a;</xsl:text>
+			<xsl:for-each select="specgen:Choice/specgen:Item">
+				<xsl:value-of select="concat('    - required:&#x0a;      - ', $q, specgen:Element|specgen:Attribute, $q, '&#x0a;')"/>
+			</xsl:for-each>
+		</xsl:if>
 	</xsl:template>
 
 	<!-- Common type is a simple choice -->
@@ -368,10 +380,15 @@
 			<xsl:with-param name="indent" select="'      '"/>
 		</xsl:apply-templates>
 
-		<xsl:text>    oneOf:&#x0a;</xsl:text>
-		<xsl:for-each select="specgen:Choice/specgen:Item">
-			<xsl:value-of select="concat('    - required:&#x0a;      - ', $q, specgen:Element|specgen:Attribute, $q, '&#x0a;')"/>
-		</xsl:for-each>
+
+		<!-- Don't put the oneOf into the -strict (code generation) schema -->
+		<!--    Code generation ends up with weird OneOfAnyTypeAnyType composite types  which don't work -->
+		<xsl:if test="$strictJSON ne 'true'">
+			<xsl:text>    oneOf:&#x0a;</xsl:text>
+			<xsl:for-each select="specgen:Choice/specgen:Item">
+				<xsl:value-of select="concat('    - required:&#x0a;      - ', $q, specgen:Element|specgen:Attribute, $q, '&#x0a;')"/>
+			</xsl:for-each>
+		</xsl:if>
 
 	</xsl:template>
 
@@ -921,10 +938,6 @@
                      		or @name eq 'xs:token'
 					        or @name eq 'NCName'">
 				<xsl:value-of select="concat($indent, '  type: string&#x0a;')"/>
-				<xsl:if test="starts-with(preceding-sibling::specgen:Characteristics, 'M')
-				           or starts-with(preceding-sibling::specgen:Characteristics, 'C')">
-					<xsl:value-of select="concat($indent, '  pattern: ''^\S(.*\S)?$''&#x0a;')"/>
-				</xsl:if>
 			</xsl:when>
 			
 			<xsl:when test="   @name eq 'xs:boolean'">
@@ -1065,7 +1078,8 @@
 				</xsl:apply-templates>
 
 				<xsl:variable name="text">
-					<xsl:value-of select="specgen:Text[@xml:lang='en']"/>
+					<!-- We might not have any xml:lang attribute -->
+					<xsl:value-of select="specgen:Text[@xml:lang='en']|specgen:Text[not(@xml:lang)]"/>
 				</xsl:variable>
 				<xsl:variable name="title">
 					<xsl:value-of select="translate(normalize-space(translate(translate($text, &quot;'’$q:&quot;, ''),'-–#|()/.,', ' ')), ' ', '_')"/>
